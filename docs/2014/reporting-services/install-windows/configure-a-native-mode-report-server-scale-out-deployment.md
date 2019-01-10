@@ -15,12 +15,12 @@ ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cbd26f431b71013400593858e6038fc4326f4d14
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 68951c637d0c0db1fc86bab6405868e73770aca2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606854"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395237"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>Настройка масштабного развертывания сервера отчетов в собственном режиме (диспетчер конфигурации служб SSRS)
 
@@ -42,7 +42,7 @@ ms.locfileid: "51606854"
   
 -   Просмотрите [Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации, инструкции по установке экземпляров сервера отчетов.  
   
--   Если планируется выполнить масштабное развертывание на NLB-кластере, следует настроить NLB-кластер перед настройкой масштабного развертывания. Дополнительные сведения см. в статье [Configure a Report Server on a Network Load Balancing Cluster](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
+-   Если планируется выполнить масштабное развертывание на NLB-кластере, следует настроить NLB-кластер перед настройкой масштабного развертывания. Дополнительные сведения см. в статье [настроить сервер отчетов в кластере с балансированием сетевой нагрузки](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
 -   Просмотрите процедуры этого раздела с инструкциями по организации общего доступа к базе данных сервера отчетов и присоединению серверов отчетов к масштабному развертыванию.  
   
@@ -111,9 +111,9 @@ ms.locfileid: "51606854"
 3.  На странице «масштабное развертывание» выберите экземпляр сервера отчетов, ожидающий соединения с развертыванием и нажмите кнопку **добавить сервер**.  
   
     > [!NOTE]  
-    >  **Проблема.** При попытке присоединить экземпляр сервера отчетов служб Reporting Services к масштабному развертыванию возможно появление сообщений об ошибках, подобных "Отказано в доступе".  
+    >  **Проблема:** При попытке присоединить экземпляр сервера отчетов служб Reporting Services для масштабного развертывания, возможно появление сообщения об ошибках, подобных «Отказано в доступе».  
     >   
-    >  **Обходное решение.** Создайте резервную копию ключа шифрования [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из первого экземпляра [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и восстановите его на второй сервер отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Затем попытайтесь включить в масштабное развертывание [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] второй экземпляр сервера отчетов.  
+    >  **Решение:** Создайте резервную копию ключа шифрования [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из первого экземпляра [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и восстановите его на второй сервер отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Затем попытайтесь включить в масштабное развертывание [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] второй экземпляр сервера отчетов.  
   
 4.  Теперь оба экземпляра сервера отчетов можно проверить, чтобы убедиться в их рабочем состоянии. Чтобы проверить второй экземпляр, можно при помощи программы настройки служб Reporting Services подключиться к серверу отчетов и щелкнуть URL-адрес веб-службы или URL-адрес диспетчера отчетов.  
   

@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: install
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d10d1abbd0ad54879b2a524d526b06319793c8f5
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51019019"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365496"
 ---
 # <a name="upgrade-master-data-services"></a>Обновление служб Master Data Services
   Существует четыре варианта обновления до Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Выберите тот из них, который лучше всего подходит в конкретной ситуации.  
@@ -28,12 +28,12 @@ ms.locfileid: "51019019"
   
 -   [Обновление с восстановлением базы данных из резервной копии](#restore)  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   Не поддерживается обновление с версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP1 в версии CTP2.  
 > -   Создайте резервную копию базы данных перед выполнением каких-либо обновлений.  
 > -   В процессе обновления повторно создаются хранимые процедуры, а также обновляются таблицы, используемые в [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Любая настройка какого-либо из этих компонентов может быть потеряна после обновления.  
 > -   Пакеты развертывания модели можно использовать только в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в котором они были созданы. Невозможно развернуть пакеты развертывания модели, созданные в [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-> -   Можно продолжить использование надстройки служб Master Data Services для Excel версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) после обновления служб Master Data Services и Data Quality Services до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Однако любая более ранняя версия надстройки служб Master Data Services для Excel перестанет работать после обновления до версии SQL Server 2014 CTP2. Можно загрузить надстройку служб Master Data Services для Excel версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) по [этой ссылке](http://go.microsoft.com/fwlink/?LinkId=328664).  
+> -   Можно продолжить использование надстройки служб Master Data Services для Excel версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) после обновления служб Master Data Services и Data Quality Services до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Однако любая более ранняя версия надстройки служб Master Data Services для Excel перестанет работать после обновления до версии SQL Server 2014 CTP2. Можно загрузить надстройку служб Master Data Services для Excel версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) по [этой ссылке](https://go.microsoft.com/fwlink/?LinkId=328664).  
   
 ##  <a name="noengine"></a> Обновление без обновления компонента Database Engine  
  Этот вариант можно рассматривать как side-by-side установку, поскольку оба [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливаются параллельно на одном компьютере или разных компьютерах.  
@@ -90,7 +90,7 @@ ms.locfileid: "51019019"
         > [!IMPORTANT]  
         >  На существующей веб-приложением MDS с более ранней версии SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) для выбора доступны в выпуске SQL Server 2014 диспетчер конфигурации служб Master Data Services. Не следует выбрать существующее веб-приложение, и вместо этого следует создать веб-приложение [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для MDS. В противном случае произойдет ошибка при попытке связать веб-приложение обновленной базы данных MDS, которые были запрашиваемая страница недоступна из-за неверной конфигурации данных для этой страницы.  
         >   
-        >  Если необходимо использовать одинаковые имена (псевдонимы) для веб-приложением MDS, где будет находиться существующих ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) веб-приложения, необходимо сначала удалить веб-приложения и пул приложений, связанный с IIS, а затем создать веб-приложение с тем же именем в версии SQL Server 2014 диспетчер конфигурации служб Master Data Services. Дополнительные сведения об удалении веб-приложения и пулов приложений из служб IIS см. в разделах [Удаление приложения (IIS)](http://go.microsoft.com/fwlink/?LinkId=323537) и [Удаление пула приложений (IIS)](http://go.microsoft.com/fwlink/?LinkId=323538).  
+        >  Если необходимо использовать одинаковые имена (псевдонимы) для веб-приложением MDS, где будет находиться существующих ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) веб-приложения, необходимо сначала удалить веб-приложения и пул приложений, связанный с IIS, а затем создать веб-приложение с тем же именем в версии SQL Server 2014 диспетчер конфигурации служб Master Data Services. Дополнительные сведения об удалении веб-приложения и пулов приложений из служб IIS см. в разделах [Удаление приложения (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) и [Удаление пула приложений (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538).  
   
 4.  Теперь свяжите новое веб-приложение с обновленной базой данных служб MDS.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "51019019"
   
  Чтобы выполнить эту задачу, требуются следующие действия.  
   
-1.  **Только для [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]**. Откройте **панель управления** > **Программы и компоненты** и удалите Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+1.  **Для [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] только**: Откройте **панели управления** > **программы и компоненты** и удалите Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 2.  Обновите компонент Database Engine до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -117,7 +117,7 @@ ms.locfileid: "51019019"
   
     4.  Завершите работу мастера.  
   
-3.  **Для [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] только**: Если обновление будет завершено, добавьте **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** функции.  
+3.  **Для [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] только**: Когда обновление будет завершено, добавьте **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** функции.  
   
     1.  Откройте мастер установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
@@ -161,7 +161,7 @@ ms.locfileid: "51019019"
         > [!IMPORTANT]  
         >  На существующей веб-приложением MDS с более ранней версии SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) для выбора доступны в выпуске [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] диспетчер конфигурации служб Master Data Services. Не следует выбрать существующее веб-приложение, и вместо этого следует создать веб-приложение [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для MDS. В противном случае произойдет ошибка при попытке связать веб-приложение обновленной базы данных MDS, которые были запрашиваемая страница недоступна из-за неверной конфигурации данных для этой страницы.  
         >   
-        >  Если необходимо использовать одинаковые имена (псевдонимы) для веб-приложением MDS, где будет находиться существующих ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) веб-приложения, необходимо сначала удалить веб-приложения и пул приложений, связанный с IIS, а затем создать веб-приложение с тем же именем в версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], диспетчер конфигурации служб Master Data Services. Дополнительные сведения об удалении веб-приложения и пулов приложений из служб IIS см. в разделах [Удаление приложения (IIS)](http://go.microsoft.com/fwlink/?LinkId=323537) и [Удаление пула приложений (IIS)](http://go.microsoft.com/fwlink/?LinkId=323538).  
+        >  Если необходимо использовать одинаковые имена (псевдонимы) для веб-приложением MDS, где будет находиться существующих ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) веб-приложения, необходимо сначала удалить веб-приложения и пул приложений, связанный с IIS, а затем создать веб-приложение с тем же именем в версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], диспетчер конфигурации служб Master Data Services. Дополнительные сведения об удалении веб-приложения и пулов приложений из служб IIS см. в разделах [Удаление приложения (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) и [Удаление пула приложений (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538).  
   
 6.  Теперь свяжите новое веб-приложение с обновленной базой данных служб MDS.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "51019019"
         > [!IMPORTANT]  
         >  На существующей веб-приложением MDS с более ранней версии SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) для выбора доступны в выпуске [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] диспетчер конфигурации служб Master Data Services. Не следует выбрать существующее веб-приложение, и вместо этого следует создать веб-приложение [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для MDS. В противном случае произойдет ошибка при попытке связать веб-приложение обновленной базы данных MDS, которые были запрашиваемая страница недоступна из-за неверной конфигурации данных для этой страницы.  
         >   
-        >  Если необходимо использовать одинаковые имена (псевдонимы) для веб-приложением MDS, где будет находиться существующих ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) веб-приложения, необходимо сначала удалить веб-приложения и пул приложений, связанный с IIS, а затем создать веб-приложение с тем же именем в версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], диспетчер конфигурации служб Master Data Services. Дополнительные сведения об удалении веб-приложения и пулов приложений из служб IIS см. в разделах [Удаление приложения (IIS)](http://go.microsoft.com/fwlink/?LinkId=323537) и [Удаление пула приложений (IIS)](http://go.microsoft.com/fwlink/?LinkId=323538).  
+        >  Если необходимо использовать одинаковые имена (псевдонимы) для веб-приложением MDS, где будет находиться существующих ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) веб-приложения, необходимо сначала удалить веб-приложения и пул приложений, связанный с IIS, а затем создать веб-приложение с тем же именем в версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], диспетчер конфигурации служб Master Data Services. Дополнительные сведения об удалении веб-приложения и пулов приложений из служб IIS см. в разделах [Удаление приложения (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) и [Удаление пула приложений (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538).  
   
 4.  Теперь свяжите веб-приложение с обновленной базой данных служб MDS.  
   
@@ -287,7 +287,7 @@ ms.locfileid: "51019019"
         > [!IMPORTANT]  
         >  На существующей веб-приложением MDS с более ранней версии SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) для выбора доступны в выпуске [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] диспетчер конфигурации служб Master Data Services. Не следует выбрать существующее веб-приложение, и вместо этого следует создать веб-приложение [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для MDS. В противном случае произойдет ошибка при попытке связать веб-приложение обновленной базы данных MDS, которые были запрашиваемая страница недоступна из-за неверной конфигурации данных для этой страницы.  
         >   
-        >  Если необходимо использовать одинаковые имена (псевдонимы) для веб-приложением MDS, где будет находиться существующих ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) веб-приложения, необходимо сначала удалить веб-приложения и пул приложений, связанный с IIS, а затем создать веб-приложение с тем же именем в версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], диспетчер конфигурации служб Master Data Services. Дополнительные сведения об удалении веб-приложения и пулов приложений из служб IIS см. в разделах [Удаление приложения (IIS)](http://go.microsoft.com/fwlink/?LinkId=323537) и [Удаление пула приложений (IIS)](http://go.microsoft.com/fwlink/?LinkId=323538).  
+        >  Если необходимо использовать одинаковые имена (псевдонимы) для веб-приложением MDS, где будет находиться существующих ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) веб-приложения, необходимо сначала удалить веб-приложения и пул приложений, связанный с IIS, а затем создать веб-приложение с тем же именем в версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], диспетчер конфигурации служб Master Data Services. Дополнительные сведения об удалении веб-приложения и пулов приложений из служб IIS см. в разделах [Удаление приложения (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) и [Удаление пула приложений (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538).  
   
 5.  Теперь свяжите новое веб-приложение с обновленной базой данных служб MDS.  
   
@@ -298,13 +298,13 @@ ms.locfileid: "51019019"
     3.  Нажмите кнопку **Применить**.  
   
 ## <a name="troubleshooting"></a>Устранение неполадок  
- **Проблема:** при открытии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] отображается веб-приложения, сообщение об ошибке «версия клиента несовместима с версией базы данных».  
+ **Проблема:** При открытии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] отображается веб-приложения, сообщение об ошибке «версия клиента несовместима с версией базы данных».  
   
- **Решение:** эта проблема возникает, когда [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] веб-приложения диспетчера основных данных пытается получить доступ к базе данных, который был обновлен для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] службы Master Data Services. Следует использовать веб-приложение [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+ **Решение:** Эта ошибка происходит, когда [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или веб-приложения диспетчера основных данных пытаются получить доступ к базе данных, которая была обновлена в службах Master Data Services [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Следует использовать веб-приложение [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
  Она также может возникнуть, если не были выполнены останов и перезапуск **пула приложений служб MDS** в IIS при обновлении схемы базы данных служб MDS. Перезапустите **пул приложений служб MDS** , чтобы устранить проблему.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка служб Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   
