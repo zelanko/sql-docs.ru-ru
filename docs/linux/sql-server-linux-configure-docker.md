@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 4078d2d660a2690983e34c6db024df3a93df97eb
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
-ms.translationtype: HT
+ms.openlocfilehash: ae57a6f453cf15dbb22158b49aad990cc0c3df67
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266065"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100739"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Настройка образов контейнеров SQL Server в Docker
 
@@ -64,19 +64,10 @@ docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
 
 - SQL Server в рабочей среде можно использовать, только если у вас есть действительная лицензия. Можно получить бесплатную лицензию SQL Server Express рабочей [здесь](https://go.microsoft.com/fwlink/?linkid=857693). Лицензии SQL Server Standard и Enterprise Edition можно приобрести [корпоративного лицензирования Майкрософт](https://www.microsoft.com/licensing/default.aspx).
 
-- Образы контейнеров SQL Server в рабочей среде необходимо извлечено из [Docker Store](https://store.docker.com). Если ее еще нет, создайте учетную запись на Docker Store.
 
-- Образ контейнера разработчика на Store Docker можно настроить для запуска в рабочей среде выпусках. Следуйте инструкциям ниже для запуска производственными выпусками:
+- Образ контейнера разработчика можно настроить для запуска в рабочей среде выпусках. Следуйте инструкциям ниже для запуска производственными выпусками:
 
-   1. Во-первых Войдите на свой идентификатор docker из командной строки.
-
-      ```bash
-      docker login
-      ```
-
-   2. Далее необходимо получить бесплатное разработчиков образ контейнера в Docker Store. Перейдите к [ https://store.docker.com/images/mssql-server-linux ](https://store.docker.com/images/mssql-server-linux), нажмите кнопку **оформляют заказ**и следуйте инструкциям.
-
-   3. Ознакомьтесь с требованиями и выполните процедуры [быстрого запуска](quickstart-install-connect-docker.md). Но есть два отличия. Вы должны извлечь образ **хранилища/microsoft/mssql-server-linux:\<имя тега\>**  из Store Docker. И поэтому придется указывать производственного выпуска с **MSSQL_PID** переменной среды. Приведенный ниже показано, как запустить последний образ контейнера SQL Server 2017 для выпуска Enterprise Edition:
+Ознакомьтесь с требованиями и выполните процедуры [быстрого запуска](quickstart-install-connect-docker.md). Необходимо указать производственного выпуска с **MSSQL_PID** переменной среды. Приведенный ниже показано, как запустить последний образ контейнера SQL Server 2017 для выпуска Enterprise Edition:
 
       ```bash
       docker run --name sqlenterprise \
@@ -93,10 +84,10 @@ docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
       ```
 
       > [!IMPORTANT]
-      > Путем передачи значения **Y** в переменную среды **ACCEPT_EULA** и значение edition **MSSQL_PID**, вы выражаете наличие допустимым и существующие лицензии выпуск и версия SQL Server, который вы собираетесь использовать. Кроме того, вы соглашаетесь, что использование программного обеспечения SQL Server, работающих в образ контейнера Docker, подпадают под условия лицензии SQL Server.
+      > By passing the value **Y** to the environment variable **ACCEPT_EULA** and an edition value to **MSSQL_PID**, you are expressing that you have a valid and existing license for the edition and version of SQL Server that you intend to use. You also agree that your use of SQL Server software running in a Docker container image will be governed by the terms of your SQL Server license.
 
       > [!NOTE]
-      > Полный список возможных значений для **MSSQL_PID**, см. в разделе [параметры SQL Server можно настроить с помощью переменных среды в Linux](sql-server-linux-configure-environment-variables.md).
+      > For a full list of possible values for **MSSQL_PID**, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md).
 
 ::: moniker-end
 

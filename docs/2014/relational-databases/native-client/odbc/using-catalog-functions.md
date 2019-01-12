@@ -17,12 +17,12 @@ ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 997855d160108abe530affdd2b28e464076fbbb7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 263df9986df0297c8bf1afdb35d70841835cef4d
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077014"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100639"
 ---
 # <a name="using-catalog-functions"></a>Использование функций каталога
   Все базы данных имеют структуру, содержащую данные, хранящиеся в базе данных. Определение этой структуры вместе с другими сведениями, например разрешениями, хранится в каталоге (реализованном как набор системных таблиц), который называют словарем данных.  
@@ -43,7 +43,7 @@ ms.locfileid: "48077014"
   
      Возвращает список каталогов, содержащихся на связанном сервере.  
   
- После имени связанного сервера и имя каталога, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента поддерживает получение сведений из каталога, используя двухкомпонентное имя *имя_связанного_сервера ***.*** каталог* для *CatalogName* на ODBC следующие функции работы с каталогами:  
+ После имени связанного сервера и имя каталога, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента поддерживает получение сведений из каталога, используя двухкомпонентное имя _имя_связанного_сервера_**.** _каталога_ для *CatalogName* на ODBC следующие функции работы с каталогами:  
   
 -   **SQLColumnPrivileges**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48077014"
   
 -   **SQLTables**  
   
- В два этапа *имя_связанного_сервера ***.*** каталог* также поддерживается для *FKCatalogName* и *PKCatalogName* на [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
+ В два этапа _имя_связанного_сервера_**.** _каталога_ также поддерживается для *FKCatalogName* и *PKCatalogName* на [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
   
  Использование SQLLinkedServers и SQLLinkedCatalogs требует следующих файлов.  
   

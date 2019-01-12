@@ -18,12 +18,12 @@ ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 16ba2e0130c766763c554d6ec256a8858db3373b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: 8914ce54d85e99213d923d7bebc186f61f928cf9
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204933"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100489"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@objname =** ] **"***объект***"**  
- Имя существующей таблицы, представления, определяемой пользователем функции или хранимой процедуры в текущей базе данных. *Объект* — **nvarchar(776)**, не имеет значения по умолчанию. *Объект* может быть заполнен именем владельца существующего объекта в форме *existing_owner ***.*** Объект* Если схема и ее владелец имеют тем же именем.  
+ [  **@objname =** ] **"**_объект_**"**  
+ Имя существующей таблицы, представления, определяемой пользователем функции или хранимой процедуры в текущей базе данных. *Объект* — **nvarchar(776)**, не имеет значения по умолчанию. *Объект* может быть заполнен именем владельца существующего объекта в форме _existing_owner_**.** _объект_ Если схема и ее владелец имеют тем же именем.  
   
- [  **@newowner=**] **"*** владельца* **"**  
+ [  **@newowner=**] **"**_владельца_ **"**  
  Имя учетной записи безопасности, которая станет новым владельцем объекта. *владелец* — **sysname**, не имеет значения по умолчанию. *владелец* должен быть допустимым пользователем базы данных, роли сервера, [!INCLUDE[msCoName](../../includes/msconame-md.md)] имени входа Windows или группы Windows, имеющей доступ к текущей базе данных. Если владелец является пользователем Windows или членом группы Windows, для которой нет соответствующего участника уровня базы данных, пользователь базы данных будет создан.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

@@ -19,12 +19,12 @@ ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b8d88e1098d9bfddb690685804d29b44730da4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11c704413f9668a5da99ded7d269d05b8e3f2c25
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827502"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100629"
 ---
 # <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
  [ @instance_name =] '*имя_экземпляра*"  
  Имя экземпляра. *имя_экземпляра* — **sysname** и значения по умолчанию на локальном экземпляре, если значение равно NULL.  
   
-> **Примечание:** *имя_экземпляра* должно быть полным именем экземпляра, который состоит из имени компьютера и имя экземпляра в виде *computerName* \\ *instanceName*.    
+> **Примечание:** _имя_экземпляра_ должно быть полным именем экземпляра, который состоит из имени компьютера и имя экземпляра в виде *computerName* \\ *instanceName*.    
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
