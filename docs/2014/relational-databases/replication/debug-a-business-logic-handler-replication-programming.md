@@ -1,5 +1,5 @@
 ---
-title: Отладка обработчика бизнес-логики (программирование репликации) | Документация Майкрософт
+title: Отладка обработчика бизнес-логики | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 019ff508b10859cae2388636e9189292b498e251
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761516"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128764"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>выполнить отладку обработчика бизнес-логики (программирование репликации)
   Используйте обработчик бизнес-логики для вызова пользовательской бизнес-логики во время синхронизации подписки на публикацию слиянием. Дополнительные сведения см. в статье [Выполнение бизнес-логики при синхронизации слиянием](merge/execute-business-logic-during-merge-synchronization.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "52761516"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>Отладка обработчика бизнес-логики на локальном компьютере  
   
-1.  Настройте публикацию и распространение, создайте новую публикацию, а затем подписку на нее. Дополнительные сведения см. в статьях [Настройка публикации и распространения](configure-publishing-and-distribution.md) и [Создание, изменение и удаление публикаций и статей (репликация)](publish/create-modify-and-delete-publications-and-articles-replication.md).  
+1.  Настройте публикацию и распространение, создайте новую публикацию, а затем подписку на нее. Дополнительные сведения см. в разделе [Настройка публикации и распространения](configure-publishing-and-distribution.md) и [создать публикацию](publish/create-a-publication.md).  
   
 2.  Создайте и зарегистрируйте обработчик бизнес-логики. Дополнительные сведения см. в статье [Реализация обработчика бизнес-логики для статьи публикации слиянием](implement-a-business-logic-handler-for-a-merge-article.md).  
   

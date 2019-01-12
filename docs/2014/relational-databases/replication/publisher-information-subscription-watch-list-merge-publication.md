@@ -12,12 +12,12 @@ ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dcd732dfb6944b12d4dbe2bff765a0800ae6bdbc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2fcff4e55ca4a2935f90b360965a1bc5fefe5656
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782766"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126384"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication-sql-server-2005-and-later"></a>Сведения об издателе, список просмотра подписок (публикация слиянием, SQL Server 2005 и более поздние версии)
   Вкладка **Список наблюдения за подписками** доступна для распространителей под управлением [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Она предназначается для отображения сведений о подписках на все публикации, доступные на выбранном издателе. Список подписок можно фильтровать для просмотра ошибок, предупреждений и подписок с низкой производительностью. Эта вкладка предоставляет администратору единственное местоположение для контроля за активностью всех репликаций на издателе. Монитор репликации отображает все подписки, требующие внимания администратора, на основе выбранного типа репликации и параметром, выбранным в **Показать** поле с раскрывающимся списком. Элементы отображаются на этой вкладке в соответствии с текущим состоянием и производительностью, поэтому подписки отображаются на этой странице только в случае, если они в настоящее время соответствуют параметру в списке **Показать** .  
@@ -109,7 +109,7 @@ ms.locfileid: "52782766"
   
 ## <a name="see-also"></a>См. также  
  [Запуск монитора репликации](monitor/start-the-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для издателя (монитор репликации)](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [Просмотр сведений и выполнение задач с помощью монитора репликации](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Наблюдение за репликацией](monitoring-replication.md)   
  [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)  
   

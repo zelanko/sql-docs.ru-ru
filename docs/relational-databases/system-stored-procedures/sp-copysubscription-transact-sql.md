@@ -16,19 +16,19 @@ ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29c038fb212774015f90da0ed8855e8d46c18d09
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0580ccfaa0505e027cedb5824aca26b6dbe51574
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783496"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124314"
 ---
 # <a name="spcopysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!IMPORTANT]  
->  Возможность присоединения подписок является устаревшей и в следующей версии будет удалена. Использовать эту функцию для новых разработок не рекомендуется. Для публикаций слиянием, секционированных с помощью параметризованных фильтров, рекомендуется использовать новые возможности секционированных снимков, которые упрощают инициализацию большого числа подписок. Дополнительные сведения см. в статье [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md). Для несекционированных публикаций можно инициализировать подписку с помощью резервной копии. Дополнительные сведения см. в статье [Инициализация подписки на публикацию транзакций без моментального снимка](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+>  Возможность присоединения подписок является устаревшей и в следующей версии будет удалена. Использовать эту функцию для новых разработок не рекомендуется. Для публикаций слиянием, секционированных с помощью параметризованных фильтров, рекомендуется использовать новые возможности секционированных снимков, которые упрощают инициализацию большого числа подписок. Дополнительные сведения см. в статье [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Для несекционированных публикаций можно инициализировать подписку с помощью резервной копии. Дополнительные сведения см. в статье [Инициализация подписки на публикацию транзакций без моментального снимка](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  Копирует базу данных подписки, включающую подписки по запросу, но не принудительные подписки. Могут быть скопированы только те базы данных, которые состоят из одного файла. Эта хранимая процедура выполняется на подписчике в базе данных подписки.  
   
@@ -44,13 +44,13 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@filename =**] **"***имя_файла***"**  
+ [  **@filename =**] **"**_имя_файла_**"**  
  Строковое значение, указывающее полный путь (включая имя файла), по которому будет сохранена копия файла данных (MDF-файл). *Имя файла* — **nvarchar(260)**, не имеет значения по умолчанию.  
   
- [  **@temp_dir=**] **"***temp_dir***"**  
+ [  **@temp_dir=**] **"**_temp_dir_**"**  
  Имя каталога, содержащего временные файлы. *temp_dir* — **nvarchar(260)**, значение по умолчанию NULL. Если значение равно NULL, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] каталог данных по умолчанию будет использоваться. Каталог должен включать достаточно свободного места для хранения файла с размером, равным суммарному размеру всех файлов баз данных подписчика.  
   
- [  **@overwrite_existing_file=**] **"***overwrite_existing_file***"**  
+ [  **@overwrite_existing_file=**] **"**_overwrite_existing_file_**"**  
  Необязательный логический флаг, который указывает, следует ли перезаписать существующий файл с именем, указанным в **@filename**. *overwrite_existing_file*— **бит**, значение по умолчанию **0**. Если **1**, она перезаписывает файл, указанный параметром **@filename**, если он существует. Если **0**, хранимая процедура завершается неудачей, если файл существует, и файл не перезаписывается.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -67,7 +67,7 @@ sp_copysubscription [ @filename = ] 'file_name'
  Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_copysubscription**.  
   
 ## <a name="see-also"></a>См. также  
- [Альтернативные расположения папки моментальных снимков](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+ [Альтернативные расположения папки моментальных снимков](../../relational-databases/replication/snapshot-options.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

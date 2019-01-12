@@ -14,12 +14,12 @@ ms.assetid: d6981e74-ddb8-41b8-9ea1-56c2ece63b8a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03455e0ae31712d4ce02beab7eebb697978a1a1a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c55292aff126d1955c438c9417ce0651cc6afc94
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799926"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128894"
 ---
 # <a name="log-reader-agent-security"></a>Безопасность агента чтения журнала
   С помощью диалогового окна **Безопасность агента чтения журнала** можно указать следующее.  
@@ -51,7 +51,7 @@ ms.locfileid: "52799926"
  Учетная запись Windows или учетная запись [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , используемая для соединения, должна быть, как минимум, членом предопределенной роли базы данных **db_owner** в базе данных публикации.  
   
 ## <a name="see-also"></a>См. также  
- [Управление именами для входа и паролями при репликации](security/manage-logins-and-passwords-in-replication.md)   
+ [Управление именами для входа и паролями при репликации](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Replication Agent Security Model](security/replication-agent-security-model.md)  (Модель безопасности агента репликации)  
  [Обзор агентов репликации](agents/replication-agents-overview.md)   
  [Рекомендации по защите репликации](security/replication-security-best-practices.md)  

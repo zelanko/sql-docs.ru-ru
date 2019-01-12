@@ -14,12 +14,12 @@ ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec91a27daf01a77cc9c1916db36d80de4864964f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: a93eed388f494b7d0aeaac127b95bc0d87c76963
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752706"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128980"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Оптимизация производительности репликации слиянием с помощью отслеживания условного удаления
     
@@ -46,7 +46,7 @@ ms.locfileid: "52752706"
   
  **Указание того, что удаления не должны отслеживаться**  
   
--   Программирование репликации на языке [!INCLUDE[tsql](../../../includes/tsql-md.md)]. [Specify That Deletes Should Not Be Tracked For Merge Articles](../publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md) (Отключение отслеживания операций удаления для статей публикации слиянием)  
+-   Программирование репликации на языке [!INCLUDE[tsql](../../../includes/tsql-md.md)]. [Specify That Deletes Should Not Be Tracked For Merge Articles](..//publish/specify-merge-replication-properties.md#tracking-deletes) (Отключение отслеживания операций удаления для статей публикации слиянием)  
   
 ## <a name="see-also"></a>См. также  
  [Параметры статьи для репликации слиянием](article-options-for-merge-replication.md)   

@@ -14,12 +14,12 @@ ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a95d55aa0d2722719f799af9f69f6a3b3c14689
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3bada5fc49dc344510164260330699b60a3288cc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805856"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127574"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>Проверка сведений о секции для подписчика на публикацию слиянием
   При определении параметризованного фильтра строк для публикации слиянием используется функция, ссылающаяся на данные подписчика, например на имя входа подписчика. По умолчанию репликация проверяет данные подписчика на основании этой функции перед каждой синхронизацией и при использовании моментального снимка на подписчике. Процесс проверки обеспечивает правильность секционирования данных для каждого подписчика. Характер проверки контролируется свойством публикации **validate_subscriber_info**, изменить которое можно при помощи процедуры [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) или на странице **Параметры подписки** диалогового окна **Свойства публикаций**. Дополнительные сведения об изменении свойств публикаций см. в разделе [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
@@ -34,9 +34,9 @@ ms.locfileid: "52805856"
  Когда агент слияния проверяет секцию, наряду с проверкой значений секции, возвращаемых функциями, используемыми в выражениях фильтрации, агент проверяет также, сформирован ли моментальный снимок перед изменениями, которые сделали его недействительным, например перед выполнением операций очистки метаданных или изменениями схемы. Если секционированный моментальный снимок слишком стар, агент слияния возвращает ошибку, и пользователь должен вновь сформировать секционированный моментальный снимок для этого подписчика на основании текущего стандартного моментального снимка.  
   
 ## <a name="see-also"></a>См. также  
- [Администрирование (репликация)](administration/administration-replication.md)   
- [Рекомендации по администрированию репликации](administration/best-practices-for-replication-administration.md)   
+ [Администрирование репликации часто задаваемые вопросы](administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
  [Повторная инициализация подписок](reinitialize-subscriptions.md)   
- [Проверка реплицированных данных](validate-replicated-data.md)  
+ [Проверка реплицированных данных](validate-data-at-the-subscriber.md)  
   
   

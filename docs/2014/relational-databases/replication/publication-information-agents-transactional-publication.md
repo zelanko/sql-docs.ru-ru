@@ -12,12 +12,12 @@ ms.assetid: 38ef2f54-53bb-4053-876d-86f8f06a4519
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 68996f64bd61d96b4a2938a9711519207861fcd3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7a4542370eff5ad631701f0bf988929ad56e8799
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780366"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125824"
 ---
 # <a name="publication-information-agents-transactional-publication"></a>Сведения о публикации, агенты (публикация транзакций)
   На вкладке **Агенты** отображаются общие сведения об агентах для выбранной публикации. Сведения об агенте моментальных снимков и агенте чтения журнала выводятся для всех публикаций транзакций. Сведения об агенте чтения очереди отображается только для тех публикаций транзакций, которые включены для очереди обновляемых подписок.  
@@ -49,7 +49,7 @@ ms.locfileid: "52780366"
 -   Завершено  
   
  **Агент**  
- Имя каждого агента репликации, связанного с публикацией. Агент распространителя связан с подписками на эту публикацию. Дополнительные сведения см. в статье [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Имя каждого агента репликации, связанного с публикацией. Агент распространителя связан с подписками на эту публикацию. Дополнительные сведения см. в разделе [Просмотр сведений и выполнение задач с помощью монитора репликации](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  **Время последнего запуска**  
  Время последнего запуска агента.  
@@ -62,8 +62,7 @@ ms.locfileid: "52780366"
   
 ## <a name="see-also"></a>См. также  
  [Запуск монитора репликации](monitor/start-the-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для публикации (монитор репликации)](monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](monitor/view-information-and-perform-tasks-for-publication-agents.md)   
+ [Просмотр сведений и выполнение задач с помощью монитора репликации](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Наблюдение за репликацией](monitoring-replication.md)  
   
   

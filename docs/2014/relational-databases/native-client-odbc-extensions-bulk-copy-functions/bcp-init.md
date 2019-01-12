@@ -18,12 +18,12 @@ ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13bafcd55e2e6cf95dec92e5ad2feeda20dde8f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125474"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131174"
 ---
 # <a name="bcpinit"></a>bcp_init
   Инициализирует операцию массового копирования.  
@@ -60,7 +60,7 @@ eDirection
   
  Если *eDirection* имеет значение DB_OUT, *szTable* также может быть именем представления базы данных.  
   
- Если *eDirection* имеет значение DB_OUT, и инструкция SELECT указывается с помощью [bcp_control](bcp-control.md) перед [bcp_exec](bcp-exec.md) вызове **bcp_init *** szTable*должен иметь значение NULL.  
+ Если *eDirection* имеет значение DB_OUT, и инструкция SELECT указывается с помощью [bcp_control](bcp-control.md) перед [bcp_exec](bcp-exec.md) вызове **bcp_init** _szTable_ должно быть присвоено значение NULL.  
   
  *szdatafile функции*  
  Имя пользовательского файла, в который или из которого выполняется копирование. Если данные копируются напрямую из переменных с помощью [bcp_sendrow](bcp-sendrow.md), задайте *szDataFile* значение NULL.  

@@ -14,12 +14,12 @@ ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a5f9f869c076365a4c1f10a9ffacbf4a3cbae009
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7cccde764edca2b5552fb22490d971fe095c707e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777556"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126874"
 ---
 # <a name="snapshot-agent"></a>агент моментальных снимков
   В диалоговом окне **Агент моментальных снимков** отображаются подробные сведения об агенте моментальных снимков, в том числе состояние, журнал, информационные сообщения и сообщения об ошибках.  
@@ -64,7 +64,7 @@ ms.locfileid: "52777556"
   
 ## <a name="see-also"></a>См. также  
  [Запуск монитора репликации](monitor/start-the-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](monitor/view-information-and-perform-tasks-for-publication-agents.md)   
+ [Просмотр сведений и выполнение задач с помощью монитора репликации](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Наблюдение за репликацией](monitoring-replication.md)   
  [Replication Agents Overview](agents/replication-agents-overview.md)  
   

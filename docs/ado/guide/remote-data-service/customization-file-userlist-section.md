@@ -14,12 +14,12 @@ ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b499f06254a482deea2c90f2fc570b8bb7c9d43e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5feb29337ccd0ee79cd1b6f98187cc6fdb52a942
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516755"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130674"
 ---
 # <a name="customization-file-userlist-section"></a>Настройка раздела UserList файла
 **Userlist** раздел относится к **подключения** раздел с тот же раздел *идентификатор* параметра.  
@@ -32,13 +32,13 @@ ms.locfileid: "52516755"
 ## <a name="syntax"></a>Синтаксис  
  Запись доступа пользователя имеет вид:  
   
- *имя пользователя* **=**   
- ***accessRights***  
+ _имя пользователя_ **=**   
+ **_accessRights_**  
   
 |Часть|Описание|  
 |----------|-----------------|  
 |*userName*|*Имя пользователя* лица, применение этого подключения. Допустимые имена пользователей, устанавливаются со службами IIS **Service Manager** диалоговое окно.|  
-|***accessRights***|Один из следующих прав доступа:<br /><br /> -   **NoAccess** -пользователь не может получить доступ к источнику данных.<br />-   **Только для чтения** -пользователь может просматривать источника данных.<br />-   **ReadWrite** -пользователя можно считывать или записывать в источник данных.|  
+|**_accessRights_**|Один из следующих прав доступа:<br /><br /> -   **NoAccess** -пользователь не может получить доступ к источнику данных.<br />-   **Только для чтения** -пользователь может просматривать источника данных.<br />-   **ReadWrite** -пользователя можно считывать или записывать в источник данных.|  
   
 ## <a name="see-also"></a>См. также  
  [Настройка раздела подключения файла](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   

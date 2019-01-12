@@ -14,12 +14,12 @@ ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d64d1d589d00222c7c48b4a5516dba8bd1185406
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c8a7a607221599d599438352eab5add1cc94e5d7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752646"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125025"
 ---
 # <a name="synchronize-a-pull-subscription"></a>Синхронизация подписки по запросу
   В данном разделе описывается синхронизация подписки по запросу в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [агентов репликации](agents/replication-agents-overview.md)или объектов RMO.  
@@ -43,7 +43,7 @@ ms.locfileid: "52752646"
 5.  Щелкните **Закрыть**.  
   
 ##  <a name="ReplProg"></a> Replication Agents  
- Подписки по запросу могут синхронизироваться программно и по требованию, с помощью вызова из командной строки нужного исполняемого файла агента репликации. Вызываемый исполняемый файл агента репликации зависит от типа публикации, к которой принадлежит подписка по запросу. Дополнительные сведения см. в разделе [Replication Agents](agents/replication-agents.md).  
+ Подписки по запросу могут синхронизироваться программно и по требованию, с помощью вызова из командной строки нужного исполняемого файла агента репликации. Вызываемый исполняемый файл агента репликации зависит от типа публикации, к которой принадлежит подписка по запросу. Дополнительные сведения см. в разделе [Replication Agents](agents/replication-agents-overview.md).  
   
 > [!NOTE]  
 >  Агенты репликации подключаются к локальному серверу, используя учетные данные проверки подлинности Windows пользователя, запустившего агент из командной строки. Эти учетные данные Windows также применяются при соединении с удаленными серверами с использованием встроенной проверки подлинности Windows.  

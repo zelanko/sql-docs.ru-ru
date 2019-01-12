@@ -13,12 +13,12 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb3e20913a2a7232aeeb93132fb6a8d0bb69e532
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8907d3a3644c0795608495c259a93fb64d648332
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782796"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125914"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Синхронизация подписки с помощью диспетчера синхронизации Windows (Windows Synchronization Manager)
   Диспетчер синхронизации[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows можно использовать только для синхронизации подписок на публикации Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется на том же самом компьютере, что и диспетчер синхронизации (кроме того, его можно использовать для синхронизации файлов и веб-страниц в режиме «вне сети»). Чтобы использовать диспетчер синхронизации, необходимо выполнить следующие действия:  
@@ -97,7 +97,7 @@ ms.locfileid: "52782796"
   
 ### <a name="to-use-the-interactive-resolver"></a>Использование интерактивного сопоставителя  
   
-1.  Включите для статьи и подписки использование интерактивного механизма разрешения конфликтов. Дополнительные сведения см. в статье [Настройка интерактивного устранения конфликтов для статей публикации слиянием](publish/specify-interactive-conflict-resolution-for-merge-articles.md).  
+1.  Включите для статьи и подписки использование интерактивного механизма разрешения конфликтов. Дополнительные сведения см. в статье [Настройка интерактивного устранения конфликтов для статей публикации слиянием](/publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
   
 2.  После запуска синхронизации подписки в диспетчере синхронизации интерактивный сопоставитель запускается автоматически, если включено интерактивное разрешение конфликтов и возникают конфликты для одной или нескольких статей. Интерактивный сопоставитель отображает по одному конфликту за раз и предлагает для каждого конфликта вариант разрешения, основанный на механизме разрешения конфликтов, который был указан при создании публикации и подписки.  
   

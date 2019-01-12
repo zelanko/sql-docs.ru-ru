@@ -18,12 +18,12 @@ ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a670dcf5d011bf30f7196d04b3338d05d6095ee5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a759490fdd2306d7fecfd34484708e5c24970217
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661103"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126844"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@tsqlbatch =**] **"***tsqlbatch***"**  
+ [  **@tsqlbatch =**] **"**_tsqlbatch_**"**  
  Строка в Юникоде, содержащий [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции или пакета, для какой параметр сведения, что делает. *tsqlbatch* — **nvarchar(max)** или могут быть неявно преобразованы **nvarchar(max)**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

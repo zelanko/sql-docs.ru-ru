@@ -16,12 +16,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b247e6869d3eea05325fd9020ee6a073540deb4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5cdd5f3b4c4c1dd8ddac0df34423834c3b09b839
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209133"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131244"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication =** ] **"***публикации***"**  
+ [  **@publication =** ] **"**_публикации_**"**  
  Имя публикации. *Публикация* — **sysname**, значение по умолчанию NULL.  
   
- [  **@property =** ] **"***свойство***"**  
+ [  **@property =** ] **"**_свойство_**"**  
  Изменяемое свойство публикации. *Свойство* — **nvarchar(255)**.  
   
- [  **@value =** ] **"***значение***"**  
+ [  **@value =** ] **"**_значение_**"**  
  Новое значение свойства. *значение* — **nvarchar(255)**, значение по умолчанию NULL.  
   
  В данной таблице описаны свойства публикации, доступные для изменения, а также ограничения на значения этих свойств.  
@@ -130,7 +130,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **0** указывает, что изменения статьи не вызывают повторной инициализации подписки. Если хранимая процедура определяет, что изменения потребуют повторной инициализации подписок, возникает ошибка, и изменения не выполняются.  
   - **1** указывает, что изменения в статье приводят существующую подписку для повторной инициализации и дает разрешение произвести повторную инициализацию подписки.  
   
-[ **@publisher** =] **"***издателя***"**  
+[ **@publisher** =] **"**_издателя_**"**  
  Указывает, отличный от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
   > [!NOTE]  

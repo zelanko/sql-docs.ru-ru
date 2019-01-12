@@ -18,12 +18,12 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12c44c565e6e867c2fde6a99d770c2b083e3d6f9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4193e073f4ad4c52d6b2c7f6b82c6246107e85a1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203285"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127074"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@name =** ] **"***имя***"**  
+ [  **@name =** ] **"**_имя_**"**  
  Имя предупреждения. Имя появляется в сообщении электронной почты или пейджера, отправленном в ответ на предупреждение. Оно должно быть уникальным и может содержать процент (**%**) символов. *имя* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@message_id =** ] *message_id*  
@@ -78,7 +78,7 @@ sp_add_alert [ @name = ] 'name'
   
  Установкой этого значения можно предотвратить, например отправку нежелательных почтовых сообщений, если предупреждение возникает многократно за короткий промежуток времени.  
   
- [  **@notification_message =** ] **"***notification_message***"**  
+ [  **@notification_message =** ] **"**_notification_message_**"**  
  Необязательное дополнительное сообщение, отправляемое оператору как часть сообщения электронной почты, **команды net send**, или уведомления на пейджер. *notification_message* — **nvarchar(512)**, значение по умолчанию NULL. Указание *notification_message* полезно для добавления специальных комментариев, таких как корректирующие процедуры.  
   
  [  **@include_event_description_in =** ] *include_event_description_in*  
@@ -94,16 +94,16 @@ sp_add_alert [ @name = ] 'name'
 |**2**|Пейджер|  
 |**4**|**команда net send.**|  
   
- [  **@database_name =** ] **"***базы данных***"**  
+ [  **@database_name =** ] **"**_базы данных_**"**  
  База данных, в которой должна произойти ошибка, для которой срабатывает предупреждение. Если *базы данных*не указан, предупреждение появляется независимо от того, где произошла ошибка. *База данных* — **sysname**. Символы, заключенные в квадратные скобки ([ ]), являются недопустимыми. Значение по умолчанию — NULL.  
   
- [ **@event_description_keyword =** ] **'***event_description_keyword_pattern***'**  
+ [  **@event_description_keyword =** ] **"**_event_description_keyword_pattern_**"**  
  Последовательность символов, которой должно соответствовать описание ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Могут использоваться символы-шаблоны выражений [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE. *event_description_keyword_pattern* — **nvarchar(100)**, значение по умолчанию NULL. Этот параметр полезен для фильтрации имен объектов (например, **% customer_table %**).  
   
  [  **@job_id =** ] *job_id*  
  Идентификатор задания, которое запускается в ответ на это предупреждение. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [  **@job_name =** ] **"***имя_задания***"**  
+ [  **@job_name =** ] **"**_имя_задания_**"**  
  Имя задания, которое запускается в ответ на это предупреждение. *имя_задания*— **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
@@ -112,7 +112,7 @@ sp_add_alert [ @name = ] 'name'
  [ **@raise_snmp_trap =** ] *raise_snmp_trap*  
  Не реализовано в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0. *raise_snmp_trap* — **tinyint**, значение по умолчанию 0.  
   
- [  **@performance_condition =** ] **"***performance_condition***"**  
+ [  **@performance_condition =** ] **"**_performance_condition_**"**  
  Значение, выраженное в формате "*itemcomparatorvalue*". *performance_condition* — **nvarchar(512)** значение по умолчанию NULL и состоит из следующих элементов.  
   
 |Элемент формата|Описание|  
@@ -121,13 +121,13 @@ sp_add_alert [ @name = ] 'name'
 |*Оператор сравнения*|Один из этих операторов: >, <, или =|  
 |*Значение*|Числовое значение счетчика|  
   
- [  **@category_name =** ] **"***категории***"**  
+ [  **@category_name =** ] **"**_категории_**"**  
  Имя категории предупреждения. *Категория* — **sysname**, значение по умолчанию NULL.  
   
- [ **@wmi_namespace**=] **"***wmi_namespace***"**  
+ [ **@wmi_namespace**=] **"**_wmi_namespace_**"**  
  Пространство имен WMI для запроса событий. *wmi_namespace* — **sysname**, значение по умолчанию NULL. Поддерживаются только пространства имен на локальном сервере.  
   
- [ **@wmi_query**=] **"***wmi_query***"**  
+ [ **@wmi_query**=] **"**_wmi_query_**"**  
  Запрос, указывающий событие WMI для предупреждения. *wmi_query* — **nvarchar(512)**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

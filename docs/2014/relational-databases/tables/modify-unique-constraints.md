@@ -15,12 +15,12 @@ ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bb997c180d614169600ad32e3206332aaa7deb10
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 311862d3612760da88d62f3ab51a5ca16d554b0b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782086"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131254"
 ---
 # <a name="modify-unique-constraints"></a>Изменение ограничения уникальности
   Изменить ограничение уникальности в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -63,7 +63,7 @@ ms.locfileid: "52782086"
     |Установка параметра кластеризации|В сетке в области **Конструктор таблиц**выберите **Создать как кластеризованный** и нажмите кнопку "Да". Будет создан кластеризованный индекс, в противном случае — некластеризованный. Таблица может содержать только один кластеризованный индекс. Если кластеризованный индекс уже существует в этой таблице, то необходимо сначала отменить данный параметр в исходном индексе.|  
     |Установка коэффициента заполнения|В сетке в области **Конструктор таблиц**разверните категорию **Характеристики заполнения** и введите целое число от 0 до 100 в поле **Коэффициент заполнения** .|  
   
-5.  В меню **Файл** выберите пункт **Сохранить***имя_таблицы*.  
+5.  В меню **Файл** выберите пункт **Сохранить**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> **Изменение ограничения уникальности**  
   

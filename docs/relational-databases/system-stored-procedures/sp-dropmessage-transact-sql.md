@@ -18,12 +18,12 @@ ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4aa4b07c3a7c27546990f1b5a1a25fd4f7d0da83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3eae9eeceec6d32ca616244f2ebd77f96d23e614
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725042"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124154"
 ---
 # <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_dropmessage [ @msgnum = ] message_number
  [  **@msgnum =** ] *message_number*  
  Номер удаляемого сообщения. *message_number* должно быть определенное пользователем сообщение с номером более 50000. *message_number* — **int**, значение по умолчанию NULL.  
   
- [  **@lang =** ] **"***языка***"**  
+ [  **@lang =** ] **"**_языка_**"**  
  Язык удаляемого сообщения. Если **все** указан, все языковые версии *message_number* удаляются. *Язык* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

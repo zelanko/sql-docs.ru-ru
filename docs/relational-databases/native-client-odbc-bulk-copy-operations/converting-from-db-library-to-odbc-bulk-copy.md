@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08db3afed0709f97404317ed19d8a7d9f58da374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81d44a01e46078599fe601d672211a9d615ce528
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826373"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124054"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Перевод массового копирования с DB-Library на ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47826373"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC для собственного клиента не поддерживает обработчики сообщений и ошибок DB-Library; необходимо вызвать **SQLGetDiagRec** для получения ошибок и сообщений, формируемых функциями массового копирования ODBC. Версии ODBC функций массового копирования возвращают стандартные коды возврата массового копирования SUCCEED или FAILED, а не коды возврата ODBC, такие как SQL_SUCCESS или SQL_ERROR.  
   
--   Значения, указанные для DB-Library [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* параметр интерпретируются иначе, чем ODBC **bcp_bind *** cbData* параметра.  
+-   Значения, указанные для DB-Library [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* параметр интерпретируются иначе, чем ODBC **bcp_bind**_cbData_параметра.  
   
     |Указанное условие|DB-Library *varlen* значение|ODBC *cbData* значение|  
     |-------------------------|--------------------------------|-------------------------|  
@@ -52,7 +52,7 @@ ms.locfileid: "47826373"
   
      В DB-Library *varlen* значение -1 указывает, что предоставлены данные переменной длины, а в ODBC *cbData* означает, что что предоставлены только значения NULL. Измените любой DB-Library *varlen* -1 в значение SQL_VARLEN_DATA, а также любые *varlen* равного 0 значения sql_null_data.  
   
--   DB-Library  **bcp_colfmt *** file_collen* и ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)* cbUserData * имеют ту же проблему как **bcp_bind *** varlen*и *cbData* описанных выше параметров. Измените любой DB-Library *file_collen* -1 в значение SQL_VARLEN_DATA, а также любые *file_collen* равного 0 значения sql_null_data.  
+-   DB-Library **bcp_colfmt**_file_collen_ и ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData* имеют ту же проблему как  **bcp_bind**_varlen_ и *cbData* описанных выше параметров. Измените любой DB-Library *file_collen* -1 в значение SQL_VARLEN_DATA, а также любые *file_collen* равного 0 значения sql_null_data.  
   
 -   *IValue* в ODBC [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) функция — это указатель void. В DB-Library *iValue* имело тип integer. Приведение значений для ODBC *iValue* в void *.  
   

@@ -14,12 +14,12 @@ ms.assetid: 437553b0-19df-4522-8f27-06b5bc747c69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ff65f1f4d5042e3b7c401a47e7c9df795dd681b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: c86e79928bdadb129ed0aa591e4bd035ffe22c1c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777874"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129004"
 ---
 # <a name="alternate-snapshot-folder-locations"></a>Альтернативные расположения папки моментальных снимков
   Альтернативные местоположения папки моментальных снимков позволяют хранить файлы моментальных снимков в местоположении, отличном от местоположения по умолчанию, которое обычно находится на распространителе. Альтернативным местоположением может быть другой сервер, сетевой диск или сменные носители, такие как компакт-диски или съемные диски.  
@@ -36,9 +36,9 @@ ms.locfileid: "52777874"
   
  **Указание альтернативных местоположений моментальных снимков**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [Изменение местоположения папки моментальных снимков (среда SQL Server Management Studio)](publish/specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md) 
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [Укажите альтернативное расположение папки моментальных снимков](snapshot-options.md#snapshot-folder-locations) 
   
--   Программирование репликации на языке [!INCLUDE[tsql](../../includes/tsql-md.md)]. [Настройка свойств моментального снимка (программирование репликации на языке Transact-SQL)](publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
+-   Программирование репликации на языке [!INCLUDE[tsql](../../includes/tsql-md.md)]. [Configure Snapshot Properties (Replication Transact-SQL Programming)](publish/configure-snapshot-properties-replication-transact-sql-programming.md) (Настройка свойств моментального снимка (программирование репликации на языке Transact-SQL))  
   
 ## <a name="see-also"></a>См. также  
  [Инициализация подписки с помощью моментального снимка](initialize-a-subscription-with-a-snapshot.md)   

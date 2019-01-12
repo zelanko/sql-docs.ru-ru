@@ -12,12 +12,12 @@ ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2983889b79f30c18c6b6ae1ad22d614629b37654
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ed11d8f045315130fb0d9155607625659f2b8052
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778106"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125598"
 ---
 # <a name="replication-monitor-main-page"></a>Монитор репликации, страница «Общие»
   С помощью монитора репликации можно отслеживать состояние и производительность публикаций и подписок в топологии репликации. Более подробные сведения приведены в следующих разделах.  
@@ -30,15 +30,7 @@ ms.locfileid: "52778106"
   
     -   [Обновление данных в мониторе репликации](monitor/refresh-data-in-replication-monitor.md)  
   
-    -   [Просмотр сведений и выполнение задач для издателя (монитор репликации)](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
-  
-    -   [Просмотр сведений и выполнение задач для публикации (монитор репликации)](monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
-  
-    -   [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](monitor/view-information-and-perform-tasks-for-publication-agents.md)  
-  
-    -   [Просмотр сведений и выполнение задач для подписки (монитор репликации)](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
-  
-    -   [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](monitor/view-information-and-perform-tasks-for-subscription-agents.md)  
+    -   [Просмотр сведений и выполнение задач с помощью монитора репликации](monitor/view-information-and-perform-tasks-replication-monitor.md) 
   
     -   [Измерение задержки и проверка правильности соединений для репликации транзакций](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

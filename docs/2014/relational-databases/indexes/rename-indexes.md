@@ -14,12 +14,12 @@ ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5925e277b6e1585612147918b469427e4aa92968
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 744e7a10c9c4dcd776d58b6234749f2be5aa1479
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395788"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127844"
 ---
 # <a name="rename-indexes"></a>Переименование индексов
   В этом разделе описывается процедура переименования индекса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. При переименовании индекса его текущее имя заменяется на предоставленное новое. Указанное имя должно быть уникальным в рамках таблицы или представления. Например, две таблицы могут иметь индекс с именем **XPK_1**, но для одной таблицы не может быть двух индексов с именем **XPK_1**. Нельзя создавать индекс с тем же именем, что и существующий отключенный индекс. Переименование индекса не приводит к его перестройке.  
@@ -66,7 +66,7 @@ ms.locfileid: "52395788"
   
 7.  Щелкните **Закрыть**.  
   
-8.  В меню **Файл** выберите команду **Сохранить***имя_таблицы*.  
+8.  В меню **Файл** выберите пункт **Сохранить**_имя_таблицы_.  
   
 #### <a name="to-rename-an-index-by-using-object-explorer"></a>Переименование индекса при помощи обозревателя объектов  
   

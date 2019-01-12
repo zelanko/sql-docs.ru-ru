@@ -13,12 +13,12 @@ ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2982dc2825b621248da9f9c29e4aad8ddfc51bd5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c0b0b8236187698917dddd3ca98830add6c3fde9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764396"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129024"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>Настройка инструментария WMI для отображения состояния сервера в инструментальных средствах SQL Server
   В этом разделе описывается настройка инструментария WMI для отображения состояния сервера в средствах SQL Server в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. При соединении с сервером компоненты «Зарегистрированные серверы» и «Обозреватель объектов» среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], как и диспетчер конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , используют инструментарий WMI для получения сведений о состоянии служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (MSSQLSERVER) и агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (MSSQLSERVER). Для отображения состояния службы пользователь должен иметь права удаленного доступа к объекту инструментария WMI. Для настройки этого разрешения на сервере должен быть установлен инструментарий WMI.  
@@ -37,7 +37,7 @@ ms.locfileid: "52764396"
   
 6.  Добавьте группу или пользователя в поле **Имена групп или пользователей** и выберите их.  
   
-7.  В **разрешения для ***\<группы или пользователя >* выберите **Разрешить** столбец, для **включить удаленно** у пользователей, которым требуется удаленно определить состояние службы.  
+7.  В **разрешения для**_\<группы или пользователя >_ выберите **Разрешить** столбец, для **включить удаленно** разрешение , для пользователей, которым требуется удаленно определить состояние службы.  
   
 ## <a name="see-also"></a>См. также  
  [Запуск, остановка или приостановка службы агента SQL Server](agent/start-stop-or-pause-the-sql-server-agent-service.md)  

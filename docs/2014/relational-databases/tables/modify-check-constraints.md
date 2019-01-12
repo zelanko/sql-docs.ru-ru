@@ -15,12 +15,12 @@ ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f90f0f332aff728699a92daadec2c28a71552dd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 651b13121653f5627f59bc6a8a11f1e2e49c43b2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803256"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130324"
 ---
 # <a name="modify-check-constraints"></a>Изменение проверочного ограничения
   Изменение проверочных ограничений в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] осуществляется в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] , если необходимо изменить выражение ограничения или параметры, включающие или отключающие ограничение для конкретных условий.  
@@ -69,7 +69,7 @@ ms.locfileid: "52803256"
   
 5.  Щелкните **Закрыть**.  
   
-6.  В меню **Файл** выберите пункт **Сохранить***имя_таблицы*.  
+6.  В меню **Файл** выберите пункт **Сохранить**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Изменение проверочного ограничения**  

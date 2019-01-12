@@ -13,12 +13,12 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 01027aaa813cb3859dfd6d8459b7138a071c0f2d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9c2e9c5b1a0bf136e6b21f5b3ad6f12107d1f9b9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352964"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126074"
 ---
 # <a name="sql-server-replication"></a>Репликация SQL Server
   Репликация представляет собой набор технологий копирования и распространения данных и объектов баз данных между базами данных, а также синхронизации баз данных для поддержания согласованности. Используя репликацию, можно распространять данные в различные расположения, а также удаленным или мобильным пользователям по локальным или глобальным сетям посредством коммутируемого соединения, по беспроводным соединениям и через Интернет.  
@@ -27,13 +27,112 @@ ms.locfileid: "53352964"
   
  Альтернативой для репликации является синхронизация баз данных с помощью Microsoft Sync Framework. Sync Framework включает в себя компоненты и интуитивно понятный и гибкий API, облегчающий синхронизацию баз данных SQL Server, SQL Server Express, SQL Server Compact и SQL Azure. Sync Framework также включает в себя классы, которые можно адаптировать для синхронизации базы данных SQL Server и любой другой базы данных, совместимой с ADO.NET. Подробную документацию по компонентам синхронизации баз данных Sync Framework см. в статье [Синхронизация баз данных](https://go.microsoft.com/fwlink/?LinkId=209079). Общие сведения о платформе Sync Framework см. в [Центре разработчиков Microsoft Sync Framework](https://go.microsoft.com/fwlink/?LinkId=209078). Сравнение между Sync Framework и репликацией слиянием приведено в статье [Обзор синхронизации баз данных](https://msdn.microsoft.com/library/bb902818\(SQL.110\).aspx)  
   
- **Просмотр содержимого по области**  
- ![Маленький значок папки](../../integration-services/media/filefolder-small.gif "маленький значок папки") [новые возможности](what-s-new-replication.md)  
+
+## <a name="whats-new"></a>новые возможности 
+- SQL Server 2017 не появилось несколько важных новых функций для репликации SQL Server. 
+- SQL Server 2016 не появилось несколько важных новых функций для репликации SQL Server. 
+
+Для обеспечения обратной совместимости см. сведения [обратная совместимость репликации](replication-backward-compatibility.md) 
+
+
+ ## <a name="replication-security"></a>Безопасности репликации
   
- ![Маленький значок папки](../../integration-services/media/filefolder-small.gif "маленький значок папки") [обратной совместимости](replication-backward-compatibility.md)  
+-   [Просмотр и изменение параметров безопасности репликации](security/view-and-modify-replication-security-settings.md)  
+-   [Управление именами для входа в списке доступа к публикации](security/manage-logins-in-the-publication-access-list.md)  
   
- ![Маленький значок папки](../../integration-services/media/filefolder-small.gif "маленький значок папки") [функции и задачи репликации](replication-features-and-tasks.md)  
+## <a name="publishing-and-distribution"></a>Публикации и распространения  
   
- ![Маленький значок папки](../../integration-services/media/filefolder-small.gif "маленький значок папки") [Технический справочник](technical-reference-replication.md)  
+-   [Настройка публикации и распространения](configure-publishing-and-distribution.md)   
+-   [Просмотр и изменение свойств публикации](publish/view-and-modify-publication-properties.md)   
+-   [Отключение публикации и распространения](disable-publishing-and-distribution.md)  
   
+## <a name="publications-and-articles"></a>Публикаций и статей 
+  
+-   [Create a Publication](publish/create-a-publication.md)    
+-   [Определение статьи](publish/define-an-article.md)   
+-   [Просмотр и изменение свойств публикации](publish/view-and-modify-publication-properties.md)   
+-   [View and Modify Article Properties (Просмотр и изменение свойств статьи)](publish/view-and-modify-article-properties.md)    
+-   [Delete a Publication (Удаление публикации)](publish/delete-a-publication.md)   
+-   [Delete an Article (Удаление статьи)](publish/delete-an-article.md)    
+-   [Создание публикации из базы данных Oracle](publish/create-a-publication-from-an-oracle-database.md)   
+-   [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md) (Установка срока действия подписок)  
+-   [Specify Schema Options (Указание параметров схемы)](publish/specify-schema-options.md)  
+-   [Replicate Schema Changes (Репликация изменений схемы)](publish/replicate-schema-changes.md)    
+-   [Manage Identity Columns (Управление столбцами идентификаторов)](publish/manage-identity-columns.md)   
+-   [Set the Compatibility Level for Merge Publications](publish/set-the-compatibility-level-for-merge-publications.md) (Задание уровня совместимости для публикаций слиянием)  
+  
+### <a name="snapshot-options"></a>Параметры моментального снимка  
+  
+-   [Настройка свойств моментального снимка](publish/configure-snapshot-properties-replication-transact-sql-programming.md)    
+-   [Deliver a Snapshot Through FTP](publish/deliver-a-snapshot-through-ftp.md) (Доставка моментального снимка через FTP) 
+  
+### <a name="filter-data"></a>Фильтрация данных  
+  
+-   [Определение и изменение фильтра столбцов](publish/define-and-modify-a-column-filter.md)    
+-   [Определение и изменение статического строкового фильтра](publish/define-and-modify-a-static-row-filter.md)    
+-   [Define and Modify a Parameterized Row Filter for a Merge Article](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
+-   [Optimize Parameterized Row Filters (Оптимизация параметризованных фильтров строк)](publish/optimize-parameterized-row-filters.md)    
+-   [Define and Modify a Join Filter Between Merge Articles](publish/define-and-modify-a-join-filter-between-merge-articles.md) (Определение и изменение фильтра соединения между статьями публикации слиянием)  
+  
+### <a name="transactional-replication-options"></a>Параметры репликации транзакций  
+  
+-   [Set the Propagation Method for Data Changes to Transactional Articles](publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md) (Задание метода распространения изменений данных в транзакционные статьи)    
+-   [Enable Updating Subscriptions for Transactional Publications](publish/enable-updating-subscriptions-for-transactional-publications.md) (Включение обновляемых подписок для публикаций транзакций)  
+  
+### <a name="merge-replication-options"></a>Параметры репликации слиянием  
+  
+-   [Определение связи логических записей между статьями таблиц слияния](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
+-   [Указать свойств репликации слиянием](publish/specify-merge-replication-properties.md)    
+-   [Определение арбитра для статей публикации слиянием](publish/specify-a-merge-article-resolver.md)    
+
+  
+## <a name="manage-subscriptions"></a>Управление подписками  
+  
+-   [Создание подписки по запросу](create-a-pull-subscription.md)    
+-   [Просмотр и изменение свойств подписки по запросу](view-and-modify-pull-subscription-properties.md)    
+-   [Удаление подписки по запросу](delete-a-pull-subscription.md)    
+-   [Create a Push Subscription](create-a-push-subscription.md) (Создание принудительной подписки)   
+-   [Просмотр и изменение свойств принудительной подписки](view-and-modify-push-subscription-properties.md)   
+-   [Delete a Push Subscription](delete-a-push-subscription.md) (Удаление принудительной подписки)   
+-   [Specify Synchronization Schedules](specify-synchronization-schedules.md) (Указание расписаний синхронизации)    
+-   [Создание обновляемой подписки для публикации транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+-   [Создание подписки для подписчика, отличного от подписчика SQL Server](create-a-subscription-for-a-non-sql-server-subscriber.md)  
+  
+## <a name="synchronize-subscriptions"></a>Синхронизация подписок  
+  
+-   [Создание и применение исходного моментального снимка](create-and-apply-the-initial-snapshot.md)   
+-   [Создание моментального снимка для публикации слиянием с параметризованными фильтрами](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
+-   [Инициализация транзакционной подписки из резервной копии](initialize-a-transactional-subscription-from-a-backup.md)    
+-   [Инициализация подписки вручную](initialize-a-subscription-manually.md)    
+-   [Синхронизация подписки по запросу](synchronize-a-pull-subscription.md)    
+-   [Синхронизация принудительной подписки](synchronize-a-push-subscription.md)   
+-   [Повторная инициализация подписки](reinitialize-a-subscription.md)    
+-   [Выполнение скриптов во время синхронизации](execute-scripts-during-synchronization-replication-transact-sql-programming.md)    
+-   [Реализация обработчика бизнес-логики для статьи публикации слиянием](implement-a-business-logic-handler-for-a-merge-article.md)  
+-   [Отладка обработчика бизнес-логики (программирование репликации)](debug-a-business-logic-handler-replication-programming.md)    
+-   [Управлять поведением триггеров и ограничений во время синхронизации](control-behavior-of-triggers-and-constraints-in-synchronization.md)    
+-   [Реализация пользовательского арбитра конфликтов для статьи публикации слиянием](implement-a-custom-conflict-resolver-for-a-merge-article.md)  
+  
+## <a name="administeration"></a>Administeration 
+  
+-   [Работа с профилями агента репликации](agents/work-with-replication-agent-profiles.md)   
+-   [Проверка данных на подписчике](validate-data-at-the-subscriber.md)    
+-   [Управление секциями для публикации слиянием с параметризованными фильтрами](publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)    
+-   [Массовая загрузка данных в таблицы в публикации слиянием](bulk-load-data-into-tables-in-a-merge-publication.md)    
+-   [Очистка метаданных слияния](administration/clean-up-merge-metadata-replication-transact-sql-programming.md)    
+-   [Выполнить фиктивное обновление для статьи публикации слиянием](administration/perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming.md)    
+-   [Просмотр реплицированных команд и другие сведения в базе данных распространителя](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [Включение скоординированного резервного копирования для репликации транзакций](administration/enable-coordinated-backups-for-transactional-replication.md)   
+-   [Администрирование топологии Peer-to-Peer](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)    
+-   [Замораживание топологии репликации](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)    
+-   [Настройка задания набора транзакций для издателя Oracle](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+-   [Обновление скриптов репликации ](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
+  
+## <a name="monitor"></a>Монитор
+  
+-   [Allow Non-Administrators to Use Replication Monitor](monitor/allow-non-administrators-to-use-replication-monitor.md) (Предоставление пользователям без прав администратора разрешения на использование монитора репликации)    
+-   [Наблюдение за репликацией программным образом](monitor/programmatically-monitor-replication.md)    
+-   [Просмотр реплицированных команд и другие сведения в базе данных распространителя ](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [Просмотр сведений о конфликтах для публикаций слиянием ](view-conflict-information-for-merge-publications.md) 
+-   [Измерение задержки и проверка правильности соединений для репликации транзакций](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

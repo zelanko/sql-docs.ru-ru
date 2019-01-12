@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3a7a6c0ddee6e425ff80155be3002d8deffe187
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d628f2b5dffc976e32b15bea08407c5d0740c297
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721274"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123995"
 ---
 # <a name="spautostats-transact-sql"></a>Хранимая процедура sp_autostats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@tblname=** ] **"***table_or_indexed_view_name***"**  
+ [  **@tblname=** ] **"**_table_or_indexed_view_name_**"**  
  Имя таблицы или индексированного представления, для которого отображается параметр AUTO_UPDATE_STATISTICS. *table_or_indexed_view_name* — **nvarchar(776)**, не имеет значения по умолчанию.  
   
- [  **@flagc=** ] **"***stats_value***"**  
+ [  **@flagc=** ] **"**_stats_value_**"**  
  Обновляет параметр AUTO_UPDATE_STATISTICS, присваивая ему одно из следующих значений:  
   
  **ON** = ON  
@@ -57,7 +57,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  Когда *stats_flag* является не указан, отображается текущее значение AUTO_UPDATE_STATISTICS. *stats_value* — **varchar(10)**, значение по умолчанию NULL.  
   
- [  **@indname=** ] **"***имя_статистики***"**  
+ [  **@indname=** ] **"**_имя_статистики_**"**  
  Имя объекта статистики для отображения или обновления параметра AUTO_UPDATE_STATISTICS. Чтобы отобразить статистику для индекса, можно использовать имя индекса. Имя индекса совпадает с именем соответствующего объекта статистики.  
   
  *имя_статистики* — **sysname**, значение по умолчанию NULL.  

@@ -10,12 +10,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d2409c993aad299551dcaf97e11c99fe032a96f1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0ee585f9773858848f213b3eeef6e995aedfb53f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800666"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127774"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Репликация на подписчиков оптимизированных для памяти таблиц
   Таблицы, выступающие в качестве подписчиков репликации транзакций, за исключением одноранговой репликации транзакций, можно настроить как оптимизированные для памяти таблицы. Другие конфигурации репликации несовместимы с таблицами, оптимизированными для памяти.  
@@ -317,6 +317,6 @@ GO
  Первичный ключ оптимизированной для памяти таблицы нельзя обновить. Для репликации обновлений первичного ключа на подписчике измените хранимую процедуру обновления так, чтобы обновления доставлялись в виде пары удаления и вставки.  
   
 ## <a name="see-also"></a>См. также  
- [Функции и задачи репликации](replication-features-and-tasks.md)  
+ [Репликация SQL Server](sql-server-replication.md)  
   
   

@@ -19,12 +19,12 @@ ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 47fd5d47ea064a6aa783132ff052f8b95a6f2941
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150434"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126904"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Восстановления файлов (простая модель восстановления)
   Сведения в этом разделе относятся только к базам данных, использующим простую модель восстановления и содержащим хотя бы одну вторичную файловую группу только для чтения.  
@@ -46,7 +46,7 @@ ms.locfileid: "48150434"
      Дополнительные сведения о поддержке оперативного восстановления страниц и файлов см. в разделе [Возможности, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Дополнительные сведения об оперативном восстановлении см. в разделе [Оперативное восстановление (SQL Server)](online-restore-sql-server.md).  
   
     > [!TIP]  
-    >  Если желательно, чтобы база данных находилась в режиме "вне сети" при восстановлении файлов, переведите ее в режим "вне сети" перед запуском последовательности восстановления, выполнив следующую инструкцию [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) : ALTER DATABASE *имя_базы_данных* SET OFFLINE.  
+    >  Если требуется, чтобы база данных находилась в автономном режиме, для восстановления файлов, переведите базу данных вне сети перед запуском последовательности восстановления путем выполнения следующей [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) инструкции: ALTER DATABASE *имя_базы_данных* SET OFFLINE.  
   
 
   
@@ -62,13 +62,13 @@ ms.locfileid: "48150434"
   
  Последовательность восстановления содержит только две инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Первая инструкция восстанавливает вторичный файл `A`, который восстанавливается с параметром WITH NORECOVERY. Вторая операция восстанавливает файлы `B` и `C` , которые восстанавливаются с другого устройства резервного копирования с параметром WITH RECOVERY:  
   
-1.  RESTORE DATABASE *база_данных* FILE **=***имя_файла_A*  
+1.  RESTORE DATABASE *база_данных* FILE **=**_имя_файла_A_  
   
      FROM *резервная_копия_файла_A*  
   
      WITH NORECOVERY **;**  
   
-2.  RESTORE DATABASE *база_данных* FILE **=***имя_файла_Б***,***имя_файла_В*  
+2.  RESTORE DATABASE *база_данных* FILE **=**_имя_файла_Б_**,**_имя_файла_В_  
   
      FROM *резервная_копия_файлов_Б_и_В*  
   
@@ -76,9 +76,9 @@ ms.locfileid: "48150434"
   
 ### <a name="examples"></a>Примеры  
   
--   [Пример. Оперативное восстановление доступного только для чтения файла (простая модель восстановления)](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [Пример. Оперативное восстановление файла только для чтения &#40;простой модели восстановления&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [Пример. Автономное восстановление основной и еще одной файловой группы (модель полного восстановления)](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [Пример. Автономное восстановление основной и еще одной файловой группы &#40;модель полного восстановления&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48150434"
   
   
 ## <a name="see-also"></a>См. также  
- [Резервное копирование и восстановление: взаимодействие и сосуществование (SQL Server)](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Резервное копирование и восстановление: Взаимодействие и совместная работа &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Разностные резервные копии (SQL Server)](differential-backups-sql-server.md)   
  [Полные резервные копии файлов (SQL Server)](full-file-backups-sql-server.md)   
  [Общие сведения о резервном копировании (SQL Server)](backup-overview-sql-server.md)   

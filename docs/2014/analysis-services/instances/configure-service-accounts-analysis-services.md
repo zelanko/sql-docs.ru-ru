@@ -16,12 +16,12 @@ ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 214d58fd64649b23f632b393d6b9b0a2b71a2359
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7b6be38afc2c95d6cfce80bcefa6ad0b3ab954fe
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362836"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125504"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Настройка учетных записей служб (службы Analysis Services)
   Подготовка учетной записи для большого спектра продуктов описана в разделе [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), который содержит полные сведения об учетной записи службы для всех служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , включая службу [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Обратитесь к ней для изучения допустимых типов учетных записей, привилегий Windows, назначенных при установке, разрешений файловой системы, разрешений регистра и другой информации.  
@@ -39,7 +39,7 @@ ms.locfileid: "53362836"
 ## <a name="logon-account-recommendations"></a>Рекомендации по учетной записи входа в систему  
  В отказоустойчивом кластере все экземпляры служб Analysis Services должны быть настроены для использования учетной записи пользователя домена Windows. Назначьте одну и ту же учетную запись для всех экземпляров. Подробные сведения см. в разделе [Кластеризация служб Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx) .  
   
- Изолированные экземпляры должны использовать значение по умолчанию виртуальная учетная запись, **NT Service\MSSQLServerOLAPService** для экземпляра по умолчанию, или **NT Service\MSOLAP$ *** имя_экземпляра* для именованного экземпляра. Данная рекомендация применяется для экземпляров служб Analysis Services во всех режимах сервера, при условии, что в качестве операционной системы используется Windows Server 2008 R2 и более поздних версий, а для служб Analysis Services используется SQL Server 2012 и более поздних версий.  
+ Изолированные экземпляры должны использовать виртуальную учетную запись по умолчанию, **NT Service\MSSQLServerOLAPService** для экземпляра по умолчанию или **NT Service\MSOLAP$**_имя_экземпляра_ для именованного экземпляра. Данная рекомендация применяется для экземпляров служб Analysis Services во всех режимах сервера, при условии, что в качестве операционной системы используется Windows Server 2008 R2 и более поздних версий, а для служб Analysis Services используется SQL Server 2012 и более поздних версий.  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Предоставление разрешений для служб Analysis Services  
  В этом разделе описаны разрешения, необходимые для локальных, внутренних операций служб Analysis Services, например запуск исполняемого файла, чтение файла конфигурации и загрузка баз данных из каталога данных. Если вместо этого вы ищете рекомендации по установке разрешений для доступа к внешним данным и взаимодействия с другими службами и приложениями, см. раздел [Предоставление дополнительных разрешений для определенных операций сервера](#bkmk_tasks) далее в этой статье.  

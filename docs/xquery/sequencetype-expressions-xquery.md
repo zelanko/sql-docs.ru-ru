@@ -18,12 +18,12 @@ ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5f3f2dbe576fe95f89588354785b64bf444eb27b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 542cf5a0960e967d2bebb3889af0f03656004472
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661853"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124564"
 ---
 # <a name="sequencetype-expressions-xquery"></a>Выражения SequenceType (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Expression instance of SequenceType[Occurrence indicator]
   
  Если **?** Признак встречаемости не указан, `sequence of` возвращает значение True, только если `Expression` введите совпадения `Type` указанного и `Expression` возвращает единственное значение.  
   
- **Примечание** символ "плюс" (**+**) или звездочку (**\***) признаки встречаемости не поддерживаются в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **Примечание** символ "плюс" (**+**) или звездочку (**&#42;**) признаки встречаемости не поддерживаются в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Следующие примеры иллюстрируют использование**экземпляр** оператора языка XQuery.  
   
@@ -96,7 +96,7 @@ select @x.query('data(/a[1]/@attrA) instance of xdt:untypedAtomic')
 go  
 ```  
   
-### <a name="example-b"></a>Пример B-адреса  
+### <a name="example-b"></a>Пример Б  
  В этом примере запрашиваются данные типизированного XML-столбца образца базы данных AdventureWorks. Сведения о типах предоставляет связанная с этим столбцом коллекция XML-схем.  
   
  В выражении **data()** возвращает типизированное значение атрибута ProductModelID, тип которого — xs: String, в соответствии со схемой, связанной со столбцом. Поэтому оператор `instance of` возвращает значение True.  
@@ -139,7 +139,7 @@ where ProductModelID=19
  Запрос возвращает значение True.  
   
 ### <a name="example-c"></a>Пример В  
- При использовании объединенных типов `instance of` выражение в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] имеет следующее ограничение: в частности, в том случае, когда тип элемента или атрибута является объединенным типом, `instance of` может не определить точный тип. Таким образом, если атомарные типы, использованные в выражении SequenceType, не являются самым старшим родительским элементом фактического типа выражения в иерархии simpleType, запрос возвращает False. Иначе говоря, атомарные типы, указанные в выражении SequenceType, должны быть непосредственным дочерним элементом anySimpleType. Сведения об иерархии типов см. в разделе [правила приведения типов в XQuery](../xquery/type-casting-rules-in-xquery.md).  
+ При использовании объединенных типов на оператор `instance of` в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] распространяется ограничение: если тип элемента или атрибута является объединенным типом, оператор `instance of` не всегда может определить точный тип. Таким образом, если атомарные типы, использованные в выражении SequenceType, не являются самым старшим родительским элементом фактического типа выражения в иерархии simpleType, запрос возвращает False. Иначе говоря, атомарные типы, указанные в выражении SequenceType, должны быть непосредственным дочерним элементом anySimpleType. Сведения об иерархии типов см. в разделе [правила приведения типов в XQuery](../xquery/type-casting-rules-in-xquery.md).  
   
  В приведенном ниже запросе выполняется следующее:  
   
@@ -401,7 +401,7 @@ select @x.query('xs:date("2000-01-01Z")')
     go  
     ```  
   
-     Результат:  
+     Это результат:  
   
     ```  
     <a>2002-05-25Z</a>  

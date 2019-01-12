@@ -14,12 +14,12 @@ ms.assetid: 0ca39a35-f22c-46c5-82a4-342e34bf5d1b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cdab726dcfe30e2a6309fce49ca02914bc802d6d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bd79fb3d5860847fbd522d7fb200e1138787e19d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781416"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127124"
 ---
 # <a name="validate-subscriptions"></a>Проверка подписок
   Диалоговое окно **Проверить подписки** позволяет указать подписки на публикации транзакций, которые нужно проверить в следующий раз агентом распространителя при каждом запуске подписки. Результаты подтверждения отображаются в мониторе репликации. Дополнительные сведения см. в разделе [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
@@ -35,6 +35,6 @@ ms.locfileid: "52781416"
  Нажмите, чтобы получить доступ к диалоговому окну **Параметры проверки подписки** , которое позволит указать, следует ли использовать проверку по количеству строк или по двоичной контрольной сумме.  
   
 ## <a name="see-also"></a>См. также  
- [Проверка реплицированных данных](validate-replicated-data.md)  
+ [Проверка реплицированных данных](validate-data-at-the-subscriber.md)  
   
   

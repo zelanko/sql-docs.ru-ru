@@ -13,12 +13,12 @@ ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 803acc60555c996a0556e456b8d31753506b43ab
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e6e3ecc4b125d226fc2cdf6dbe241e0ce017eae6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205793"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126694"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>создать фильтр трассировки (Transact-SQL)
   В этом разделе описывается, как использовать хранимые процедуры для создания фильтра, который возвращает только данные, необходимые для трассируемого события.  
@@ -30,7 +30,7 @@ ms.locfileid: "53205793"
 2.  Выполните хранимую процедуру **sp_trace_setfilter** , чтобы определить тип данных, которые необходимо получить для трассируемого события.  
   
 > [!IMPORTANT]
->  Параметры всех хранимых процедур [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (**sp_trace_* xx***), в отличие от обычных хранимых процедур, жестко типизированы и не поддерживают автоматическое преобразование типов данных. Если эти аргументы указываются с неправильными типами данных входных параметров, как указано в описании их аргументов, хранимая процедура возвратит ошибку.  
+>  В отличие от обычных хранимых процедур, параметры всех [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] хранимые процедуры (<strong>sp_trace_*xx*</strong>) жестко типизированы и не поддерживают автоматическое преобразование типов данных. Если эти аргументы указываются с неправильными типами данных входных параметров, как указано в описании их аргументов, хранимая процедура возвратит ошибку.  
   
 ## <a name="see-also"></a>См. также:  
  [Фильтрация трассировки](../../relational-databases/sql-trace/filter-a-trace.md)   

@@ -21,12 +21,12 @@ ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e367cc0a02e446bf915c01e5a3d846ba02dcc8b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 15f4d85d117b5af09b0f67ef788364be6adad810
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781946"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128564"
 ---
 # <a name="synchronize-data"></a>Синхронизация данных
   Под синхронизацией данных подразумевается процесс распространения изменений данных и схем между издателем и подписчиками, после того как был применен исходный моментальный снимок на подписчике. Синхронизация может происходить:  
@@ -69,6 +69,6 @@ ms.locfileid: "52781946"
 -   Обработчики бизнес-логики поддерживаются для репликации слиянием. С помощью платформы обработчиков бизнес-логики можно создать сборку управляемого кода, которая будет вызываться в процессе синхронизации слиянием. Сборка включает бизнес-логику, которая может учитывать ряд условий во время синхронизации: изменения данных, конфликты и ошибки. Дополнительные сведения см. в статье [Выполнение бизнес-логики при синхронизации слиянием](merge/execute-business-logic-during-merge-synchronization.md).  
   
 ## <a name="see-also"></a>См. также  
- [Обнаружение и разрешение конфликтов репликации слиянием](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
+ [Обнаружение и разрешение конфликтов репликации слиянием](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

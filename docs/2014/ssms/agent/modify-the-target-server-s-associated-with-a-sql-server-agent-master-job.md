@@ -10,12 +10,12 @@ ms.assetid: 176e73b6-08aa-48ec-b349-e84b431e65cc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ea87ec20b6ea16074d24d28be4ded5c1be24548
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 61173f4b9ef6c8f836b3654bdc5b7366a8a54461
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768626"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129064"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>Modify the Target Server(s) Associated with a SQL Server Agent Master Job
   В этом разделе описывается, как изменить целевые серверы, связанные с главным заданием агента SQL Server, в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "52768626"
   
 4.  Щелкните правой кнопкой мыши задание, для которого требуется изменить целевой сервер, и выберите пункт **Свойства**.  
   
-5.  В диалоговом окне **Свойства задания —***имя_задания* в разделе **Выберите страницу** выберите пункт **Цели**. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [свойства задания: Новое задание &#40;целью страница&#41;](job-properties-new-job-targets-page.md).  
+5.  В **свойства задания —**_имя_задания_ диалогового **Выбор страницы**выберите **целевых объектов**. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [свойства задания: Новое задание &#40;целью страница&#41;](job-properties-new-job-targets-page.md).  
   
 6.  После завершения нажмите кнопку **ОК**.  
   

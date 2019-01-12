@@ -16,12 +16,12 @@ ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7bf36beb01ee7d31b78e6bdf06921bc460bcbbad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d2529bc92acf32730b0462edeb7315b60fd046a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199214"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127441"
 ---
 # <a name="database-engine-scripting"></a>Работа со сценариями компонента Database Engine
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] поддерживает среду скриптов [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerShell для управления экземплярами компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и объектами в экземплярах. Можно также строить и запускать запросы компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , содержащие [!INCLUDE[tsql](../../includes/tsql-md.md)] и XQuery, в средах, подобных средам сценариев.  
@@ -60,7 +60,7 @@ ms.locfileid: "48199214"
   
 -   Чтобы открыть файл в новом окне редактора запросов компонента [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **, воспользуйтесь меню**/**/** Открыть [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
--   Используйте **-i *** входной_файл* параметр, чтобы запустить файл с `sqlcmd` служебной программы.  
+-   Используйте **-i**_входной_файл_ параметр, чтобы запустить файл с `sqlcmd` служебной программы.  
   
 -   Чтобы запустить файл с помощью командлета **Invoke-Sqlcmd** в скриптах **PowerShell, укажите параметр** -QueryFromFile [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -73,12 +73,12 @@ ms.locfileid: "48199214"
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
 |Описывает порядок использования редактора кода и текстового редактора в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] для интерактивной разработки, отладки и выполнения скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Редакторы запросов и текста (SQL Server Management Studio)](../scripting/query-and-text-editors-sql-server-management-studio.md)|  
-|Описывает использование `sqlcmd` выполнения служебной программой [!INCLUDE[tsql](../../includes/tsql-md.md)] скриптов из командной строки, включая возможность интерактивной разработки скриптов.|[Связанные инструкции по sqlcmd](../../database-engine/sqlcmd-how-to-topics.md)|  
+|Описывает порядок использования программы `sqlcmd` для выполнения скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] из командной строки, включая возможность интерактивной разработки скриптов.|[Связанные инструкции по sqlcmd](../../database-engine/sqlcmd-how-to-topics.md)|  
 |Описывает порядок интеграции компонентов SQL Server в среду Windows PowerShell 2.0 с последующим построением скриптов PowerShell для управления экземплярами и объектами SQL Server.|[SQL Server PowerShell](../../powershell/sql-server-powershell.md)|  
 |Описывает порядок использования мастера **формирования и публикации скриптов** для создания скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые повторно создают один или несколько объектов из базы данных.|[Формирование скриптов (среда SQL Server Management Studio)](generate-scripts-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>См. также  
- [Программа sqlcmd](../../tools/sqlcmd-utility.md)   
- [Учебник. Составление инструкций Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
+ [Учебник. Написание инструкций Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

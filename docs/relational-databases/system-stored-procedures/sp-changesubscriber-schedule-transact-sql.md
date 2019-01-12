@@ -16,12 +16,12 @@ ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1485849a61977d3428d5d87d37338f02f499749b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 83edeb0c94276e10528b05bc5a1cd8d9474d07aa
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204264"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127914"
 ---
 # <a name="spchangesubscriberschedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@subscriber=**] **"***подписчика***"**  
+ [  **@subscriber=**] **"**_подписчика_**"**  
  Имя подписчика. *подписчик* — **sysname**. Имя подписчика должно быть уникальным в базе данных, не должно использоваться до этого и не может иметь значения NULL.  
   
  [  **@agent_type=**] *типа*  
@@ -85,7 +85,7 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
  [  **@active_end_date=**] *active_end_date*  
  Дата, когда запланирован останов задачи распространения в формате ГГГГММДД. *active_end_date* — **int**, значение по умолчанию **99991231**, что соответствует 31 декабря 9999 года.  
   
- [ **@publisher**=] **"***издателя***"**  
+ [ **@publisher**=] **"**_издателя_**"**  
  Указывает, отличный от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  

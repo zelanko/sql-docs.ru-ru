@@ -14,12 +14,12 @@ ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0254902ce6e2b67b29cbdf2d9a4544036a0d747b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c0cabfb4cd21de54dad2be1323fd29d8bb3bf076
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773386"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126854"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>Администрирование одноранговой топологии (программирование репликации на языке Transact-SQL)
   Администрирование одноранговой топологии напоминает администрирование обычное топологии репликации транзакций, оно имеет некоторые специфические особенности. Главное отличие состоит в том, что при администрировании одноранговой топологии некоторые изменения требуют *замораживания*системы. Замораживание системы предполагает прекращение операций с опубликованными таблицами на всех узлах и проверку того, что каждый узел получил все изменения со всех других узлов. Дополнительные сведения см. в разделе [Замораживание топологии репликации (программирование репликации на языке Transact-SQL)](quiesce-a-replication-topology-replication-transact-sql-programming.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "52773386"
  [!code-sql[HowTo#sp_addp2particle_createarticle](../../../snippets/tsql/SQL15/replication/howto/tsql/addp2particle.sql#sp_addp2particle_createarticle)]  
   
 ## <a name="see-also"></a>См. также  
- [Администрирование (репликация)](administration-replication.md)   
+ [Администрирование репликации часто задаваемые вопросы](frequently-asked-questions-for-replication-administrators.md)   
  [Резервное копирование и восстановление баз данных SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Одноранговая репликация транзакций](../transactional/peer-to-peer-transactional-replication.md)  
   

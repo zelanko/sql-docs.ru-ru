@@ -13,12 +13,12 @@ ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b275f7b25d87753911548eda5225d5de29f0897c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143764"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126989"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>Обслуживание базы данных публикации AlwaysOn (SQL Server)
   В этом разделе рассматриваются специальные рекомендации в отношении обслуживания базы данных публикации при использовании групп доступности AlwaysOn.  
@@ -68,7 +68,7 @@ ms.locfileid: "48143764"
     > [!NOTE]  
     >  Если удаляется группа доступности, содержащая опубликованные базы данных, или если опубликованная база данных удаляется из группы доступности, все копии опубликованных баз данных остаются в состоянии восстановления. После восстановления каждая база данных становится опубликованной. Только одна копия может быть сохранена с метаданными публикации. Чтобы отключить репликацию для копии опубликованной базы данных, сначала удалите все подписки и публикации из базы данных.  
   
-     Запустите `sp_dropsubscription` для удаления подписки на публикацию. Убедитесь в том, что для параметра *@ignore_distributributor* задано значение 1, чтобы метаданные сохранялись для активной базы данных публикации на уровне распространителя.  
+     Выполните `sp_dropsubscription`, чтобы удалить подписки на публикацию. Убедитесь в том, что для параметра *@ignore_distributributor* задано значение 1, чтобы метаданные сохранялись для активной базы данных публикации на уровне распространителя.  
   
     ```  
     USE MyDBName;  
@@ -81,7 +81,7 @@ ms.locfileid: "48143764"
         @ignore_distributor = 1;  
     ```  
   
-     Запустите `sp_droppublication` для удаления всех публикаций. Еще раз задайте для параметра *@ignore_distributor* задано значение 1, чтобы метаданные сохранялись для активной базы данных публикации на уровне распространителя.  
+     Выполните `sp_droppublication`, чтобы удалить все публикации. Еще раз задайте для параметра *@ignore_distributor* задано значение 1, чтобы метаданные сохранялись для активной базы данных публикации на уровне распространителя.  
   
     ```  
     EXEC sys.sp_droppublication   
@@ -106,7 +106,7 @@ ms.locfileid: "48143764"
   
 -   [Репликация, отслеживание изменений, измененных данных и групп доступности AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
   
--   [Администрирование (репликация)](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [Администрирование репликации часто задаваемые вопросы](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
 -   [Подписчики репликации и группы доступности AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   

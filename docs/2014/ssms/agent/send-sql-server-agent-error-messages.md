@@ -15,12 +15,12 @@ ms.assetid: 2597d0d7-951a-48cf-989f-abb67b9fdb36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75c7fbe2997c84963f2ed1d420840b514fb89860
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c1aa0faafc6fb1cca693fe58665c7344db84c9f1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779046"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130177"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
   В этом разделе описано, как настроить отправку сообщений об ошибках агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] командой net send в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -66,7 +66,7 @@ ms.locfileid: "52779046"
   
 2.  Щелкните правой кнопкой мыши элемент **Агент SQL Server** и выберите пункт **Свойства**.  
   
-3.  В **свойства агента SQL Server — *** имя_сервера* диалогового **журнал ошибок** на **Общие** странице, введите имя пользователя или имя компьютера, к которому вы хотите отправить сообщения об ошибках в **получатель Net send** поле.  
+3.  В **свойства агента SQL Server -**_имя_сервера_ диалогового **журнал ошибок** на **Общие** странице, введите имя пользователя или Имя компьютера, к которому вы хотите ошибка при отправке сообщений в **получатель Net send** поле.  
   
 4.  Нажмите кнопку **ОК**.  
   

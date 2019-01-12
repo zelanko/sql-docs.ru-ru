@@ -14,12 +14,12 @@ ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b45418c96716cc90ac1b3f42974cd35e60c1919d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 23567accc051e72ede3b8ed079b22411de6bc7c6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797586"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126094"
 ---
 # <a name="modify-columns-database-engine"></a>Изменение столбцов (компонент Database Engine)
   Изменить тип данных столбца в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или в [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "52797586"
   
 3.  На вкладке **Свойства столбца** выберите ячейку сетки для свойства **Тип данных** и выберите новый тип данных из раскрывающегося списка.  
   
-4.  В меню **Файл** выберите пункт **Сохранить***имя_таблицы*.  
+4.  В меню **Файл** выберите пункт **Сохранить**_table name_.  
   
 > [!NOTE]  
 >  При изменении типа данных столбца конструктор таблиц применяет длину типа данных, определенную по умолчанию для выбранного типа данных, даже если была указана другая длина. Всегда устанавливайте необходимое значение длины типа данных после того, как был указан тип данных.  

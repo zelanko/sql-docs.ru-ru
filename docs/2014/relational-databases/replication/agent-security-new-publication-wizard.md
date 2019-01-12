@@ -12,12 +12,12 @@ ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b7acd2c6ab698a8fafb8e89c21376973163d88c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 555aa4e49887000354e5d31ff5d039a5f0ac75eb
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758206"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129204"
 ---
 # <a name="agent-security-new-publication-wizard"></a>Безопасность агентов (мастер создания публикаций)
   Страница **Безопасность агентов** позволяет указать учетные записи, от имени которых следующие агенты запускаются и подключаются к компьютерам в топологии репликации:  
@@ -54,10 +54,10 @@ ms.locfileid: "52758206"
   
 ## <a name="see-also"></a>См. также  
  [Create a Publication](publish/create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](create-updatable-subscription-transactional-publication-transact-sql.md)   
+ [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Просмотр и изменение свойств издателя и распространителя](view-and-modify-distributor-and-publisher-properties.md)   
  [Просмотр и изменение свойств публикации](publish/view-and-modify-publication-properties.md)   
- [Управление именами для входа и паролями при репликации](security/manage-logins-and-passwords-in-replication.md)   
+ [Управление именами для входа и паролями при репликации](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Публикация данных и объектов базы данных](publish/publish-data-and-database-objects.md)   
  [Replication Agents Overview](agents/replication-agents-overview.md)  
   

@@ -12,12 +12,12 @@ ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8e82c71834a2d41a7620f549bc6335fa15df84bf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c9b8ed6778a087c2200012c6df1409b187b39329
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813996"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125384"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>Учебник. Подготовка сервера к репликации
   Перед тем, как настраивать топологию репликации, важно предусмотреть средства безопасности. В этом учебнике описывается, как лучше обезопасить топологию репликации и как настроить распространение, которое является первым шагом в репликации данных. В первую очередь необходимо пройти именно этот учебник.  
@@ -49,6 +49,6 @@ ms.locfileid: "52813996"
   
 ## <a name="see-also"></a>См. также  
  [Настройка распространения](configure-distribution.md)   
- [Безопасность и защита (репликация)](security/security-and-protection-replication.md)  
+ [Безопасность репликации SQL Server](security/view-and-modify-replication-security-settings.md)  
   
   

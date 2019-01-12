@@ -14,12 +14,12 @@ ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85eb91717bba1642270d0851a4a11917d8c40051
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3bd29769b0ba4fd5d9a48fcef07181b7ac70f7c8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770746"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123545"
 ---
 # <a name="validate-subscription"></a>Проверка подписки
   Используйте диалоговое окно **Проверка подписки** , чтобы установить, что подписка на публикацию слиянием должна быть проверена при следующем запуске агента слияния для этой подписки. Результаты подтверждения отображаются в мониторе репликации. Дополнительные сведения см. в разделе [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
@@ -40,6 +40,6 @@ ms.locfileid: "52770746"
  Нажмите, чтобы получить доступ к диалоговому окну **Параметры проверки подписки** , которое позволит указать, следует ли использовать проверку по количеству строк или по двоичной контрольной сумме.  
   
 ## <a name="see-also"></a>См. также  
- [Проверка реплицированных данных](validate-replicated-data.md)  
+ [Проверка реплицированных данных](validate-data-at-the-subscriber.md)  
   
   

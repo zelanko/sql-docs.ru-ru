@@ -15,12 +15,12 @@ ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f309bf2f339347c6d29000b45bdaab602b3bd752
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a3e8497e4f5a8b5e74b7bb0b5d9c01cef78e275d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760736"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131084"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
   В этом разделе описывается изменение членства категории заданий в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или управляющих объектов SQL Server.  
@@ -56,13 +56,13 @@ ms.locfileid: "52760736"
   
 3.  Щелкните правой кнопкой мыши папку **Задания** и выберите пункт **Управление категориями заданий**.  
   
-4.  В диалоговом окне **Управление категориями заданий***имя_сервера* выберите категорию заданий, которую нужно изменить, и нажмите кнопку **Просмотреть задания**.  
+4.  В диалоговом окне **Управление категориями заданий**_имя_сервера_ выберите категорию заданий, которую нужно изменить, и нажмите кнопку **Просмотреть задания**.  
   
 5.  Установите флажок **Отображать все задания** .  
   
 6.  Чтобы добавить задание в категорию, в основной сетке установите флажок в столбце **Выбор** , соответствующий заданию. Чтобы удалить задание из категории, снимите флажок. После завершения нажмите кнопку **ОК**.  
   
-7.  Закройте диалоговое окно **Управление категориями заданий***имя_сервера*.  
+7.  Закройте диалоговое окно **Управление категориями заданий**_имя_сервера_ .  
   
 ##  <a name="TSQL"></a> Использование Transact-SQL  
   

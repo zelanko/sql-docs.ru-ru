@@ -16,12 +16,12 @@ ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f7894d5f7f3d3c686c8984c0386f1025f00c2890
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4bcf5b0163156fe078c3bd3382efb193ec417399
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770146"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129412"
 ---
 # <a name="spaddmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -161,7 +161,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x100000000**|Используйте этот параметр для репликации атрибута FILESTREAM, если он указан на **varbinary(max)** столбцов. Не указывайте этот параметр, если выполняется репликация таблиц на подписчики [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Репликация таблиц со столбцами FILESTREAM на [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] подписчиков не поддерживается, независимо от того, как задается этот параметр схемы. См. связанный параметр **0x800000000**.|  
 |**0x200000000**|Преобразует типы данных даты и времени (**даты**, **время**, **datetimeoffset**, и **datetime2**) в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] к данным типы, которые поддерживаются в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**0x400000000**|Проводит репликацию параметра сжатия для данных и индексов. Дополнительные сведения см. в разделе [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
-|**0x800000000**|Задайте этот параметр для сохранения данных атрибута FILESTREAM в его файловой группе на подписчике. Если этот параметр не задан, данные атрибута FILESTREAM сохраняются в файловой группе по умолчанию. Репликация не создает файловые группы, поэтому, если этот параметр задан, необходимо создать файловую группу до применения моментального снимка на подписчике. Дополнительные сведения о том, как создавать объекты, перед применением моментального снимка см. в разделе [выполнение скриптов до и после применения моментального снимка](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).<br /><br /> См. связанный параметр **0x100000000**.|  
+|**0x800000000**|Задайте этот параметр для сохранения данных атрибута FILESTREAM в его файловой группе на подписчике. Если этот параметр не задан, данные атрибута FILESTREAM сохраняются в файловой группе по умолчанию. Репликация не создает файловые группы, поэтому, если этот параметр задан, необходимо создать файловую группу до применения моментального снимка на подписчике. Дополнительные сведения о том, как создавать объекты, перед применением моментального снимка см. в разделе [выполнение скриптов до и после применения моментального снимка](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).<br /><br /> См. связанный параметр **0x100000000**.|  
 |**0x1000000000**|Преобразует типами среды CLR (CLR) пользовательских (данных UDT) в **varbinary(max)** , чтобы столбцы определяемого Пользователем типа могли реплицироваться на подписчики, работающие [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 |**0x2000000000**|Преобразует **hierarchyid** тип данных для **varbinary(max)** таким образом, столбцы типа **hierarchyid** могли реплицироваться на подписчики, работающие [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Дополнительные сведения об использовании **hierarchyid** столбцов в реплицированных таблицах см. в разделе [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 |**0x4000000000**|Проводит репликацию всех фильтруемых индексов для таблицы. Дополнительные сведения об отфильтрованных индексах см. в разделе [Создание отфильтрованных индексов](../../relational-databases/indexes/create-filtered-indexes.md).|  
@@ -296,7 +296,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 >  Если исходная таблица для статьи уже опубликована в другой публикации, то значение *partition_options* должно быть одинаковым для обеих статей.  
   
  [  **@processing_order=** ] *processing_order*  
- Показывает порядок обработки статей в публикации слиянием. *processing_order* — **int**, значение по умолчанию 0. **0** указывает, что статьи не упорядочены и любое другое значение представляет порядковый номер порядка обработки для данной статьи. Статьи обрабатываются по номерам, от меньших к большим. Если две статьи имеют то же значение, порядок обработки определяется порядком псевдонимами в [sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md) системная таблица. Дополнительные сведения см. в статье [Определение порядка обработки для статей публикации слиянием](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
+ Показывает порядок обработки статей в публикации слиянием. *processing_order* — **int**, значение по умолчанию 0. **0** указывает, что статьи не упорядочены и любое другое значение представляет порядковый номер порядка обработки для данной статьи. Статьи обрабатываются по номерам, от меньших к большим. Если две статьи имеют то же значение, порядок обработки определяется порядком псевдонимами в [sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md) системная таблица. Дополнительные сведения см. в разделе [свойства укажите Merge Replication](../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
  [  **@subscriber_upload_options=** ] *subscriber_upload_options*  
  Определяет ограничения на обновления, производимые на подписчике с клиентской подпиской. Дополнительные сведения см. в статье [Оптимизация производительности репликации слиянием при работе со статьями, доступными только для загрузки](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md). *subscriber_upload_options* — **tinyint**, и может принимать одно из следующих значений.  
@@ -358,11 +358,11 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  Если указать значение **3** для *partition_options*, может существовать только одна подписка для каждой секции данных в этой статье. Если создается вторая подписка, в которой условие фильтрации сводится к той же секции, что и в существующей подписке, то существующая подписка удаляется.  
   
- При указании значения 3 для *partition_options*, метаданные очищаются при каждом запуске агента слияния и действия секционированного снимка истекает быстрее. При использовании этого параметра следует разрешить запрошенный подписчиком секционированный снимок. Дополнительные сведения см. в статье [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ При указании значения 3 для *partition_options*, метаданные очищаются при каждом запуске агента слияния и действия секционированного снимка истекает быстрее. При использовании этого параметра следует разрешить запрошенный подписчиком секционированный снимок. Дополнительные сведения см. в статье [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
  Добавление статьи со статическим горизонтальным фильтром, используя *subset_filterclause*в существующую публикацию, содержащую статьи с параметризованными фильтрами необходима повторная инициализация подписок.  
   
- При указании *processing_order*, мы рекомендуем оставлять зазоры между порядковыми значениями статей, что упрощает задание новых значений в будущем. Например, если имеется три статьи: Статья1, Статья2 и Статья3, задать *processing_order* 10, 20 и 30, а не 1, 2 и 3. Дополнительные сведения см. в статье [Определение порядка обработки для статей публикации слиянием](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
+ При указании *processing_order*, мы рекомендуем оставлять зазоры между порядковыми значениями статей, что упрощает задание новых значений в будущем. Например, если имеется три статьи: Статья1, Статья2 и Статья3, задать *processing_order* 10, 20 и 30, а не 1, 2 и 3. Дополнительные сведения см. в разделе [свойства укажите Merge Replication](../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 ## <a name="default-schema-option-table"></a>Таблица «Параметры схемы по умолчанию»  
  Эта таблица описывает значение по умолчанию, который задается параметром хранимой процедуры, если указано значение NULL для *schema_option*, который зависит от типа статьи.  

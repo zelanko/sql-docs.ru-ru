@@ -18,12 +18,12 @@ ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 027800860166b511b0a548313de30b3d237d9930
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 711c82bb627ca9ad1620cf1e11fdbc9dfa5f4351
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513802"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127459"
 ---
 # <a name="bcpbind"></a>bcp_bind
   Привязывает данные программной переменной к столбцу таблицы для массового копирования в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -146,7 +146,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="remarks"></a>Примечания  
  Используйте **bcp_bind** быстрый и эффективный способ копирования данных из программной переменной в таблицу в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Вызовите [bcp_init](bcp-init.md) перед вызовом этой или любой другой функции массового копирования. Вызов **bcp_init** задает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] целевой таблицы для массового копирования. При вызове **bcp_init** для использования с **bcp_bind** и [bcp_sendrow](bcp-sendrow.md), **bcp_init** *szDataFile*параметр, указывающий файл данных имеет значение NULL; **bcp_init**_eDirection_ параметр имеет значение DB_IN.  
+ Вызовите [bcp_init](bcp-init.md) перед вызовом этой или любой другой функции массового копирования. Вызов **bcp_init** задает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] целевой таблицы для массового копирования. При вызове **bcp_init** для использования с **bcp_bind** и [bcp_sendrow](bcp-sendrow.md), **bcp_init** _szDataFile_параметр, указывающий файл данных имеет значение NULL; **bcp_init**_eDirection_ параметр имеет значение DB_IN.  
   
  Сделать отдельного **bcp_bind** вызова для каждого столбца в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы, в которую требуется скопировать. После необходимого **bcp_bind** вызовы были внесены, а затем вызовите **bcp_sendrow** отправлять строки данных из программной переменной в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Повторная привязка столбца не поддерживается.  
   

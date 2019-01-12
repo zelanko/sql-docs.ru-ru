@@ -12,12 +12,12 @@ ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9363dfe3bee63bb6b32ecb5d7c29468f6a3def1a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 823a6455616b412a41179d831b565e10b3286fb7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215803"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127394"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>восстановить базу данных master (Transact-SQL)
   Этот раздел посвящен восстановлению базы данных **master** из полной резервной копии.  
@@ -43,7 +43,7 @@ ms.locfileid: "53215803"
  Следующий пример восстанавливает базу данных `master` в определенном по умолчанию экземпляре сервера. В этом примере предполагается, что экземпляр сервера уже работает в однопользовательском режиме. В примере запускается `sqlcmd` и выполняется инструкция `RESTORE DATABASE` , которая восстанавливает полную резервную копию базы данных `master` с дискового устройства: `Z:\SQLServerBackups\master.bak`.  
   
 > [!NOTE]
->  Для именованного экземпляра команда **sqlcmd** должна задавать параметр **-S***\<имя_компьютера>*\\*\<имя_экземпляра*.  
+>  Для именованного экземпляра команда **sqlcmd** должна задавать параметр **-S**_\<имя_компьютера>_\\*\<имя_экземпляра>*.  
   
 ```  
   

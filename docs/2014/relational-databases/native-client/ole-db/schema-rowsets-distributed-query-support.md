@@ -17,17 +17,17 @@ ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93b285b2e06fbe9227f9012f22ded8e932c35457
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24411ceb757414f1a70f0f10bdf5b2c7660e2cd8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164312"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125184"
 ---
 # <a name="distributed-query-support-in-schema-rowsets"></a>Поддержка распределенных запросов в наборах строк схемы
   Для поддержки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] распределенные запросы, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента **IDBSchemaRowset** интерфейс возвращает метаданные связанных серверов.  
   
- Если свойство SSPROP_QUOTEDCATALOGNAMES набора свойств DBPROPSET_SQLSERVERSESSION имеет значение VARIANT_TRUE, можно указать заключенный в кавычки идентификатор имени каталога (например, "my.catalog"). При ограничении вывода набора строк схемы по каталогу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента распознает двухкомпонентное имя, содержащее имя связанного сервера и каталога. Для наборов строк схемы в приведенной ниже таблице указание двухкомпонентного имени каталога в виде *связанный_сервер ***.*** каталог* ограничивает выводимые данные подходящим каталогом именованного связанного сервера.  
+ Если свойство SSPROP_QUOTEDCATALOGNAMES набора свойств DBPROPSET_SQLSERVERSESSION имеет значение VARIANT_TRUE, можно указать заключенный в кавычки идентификатор имени каталога (например, "my.catalog"). При ограничении вывода набора строк схемы по каталогу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента распознает двухкомпонентное имя, содержащее имя связанного сервера и каталога. Для наборов строк схемы в таблице ниже, указав в качестве каталога двухкомпонентное имя _связанный_сервер_**.** _каталога_ ограничивает выходные данные подходящим каталогом именованного связанного сервера.  
   
 |Набор строк схемы|Ограничение каталога|  
 |-------------------|-------------------------|  

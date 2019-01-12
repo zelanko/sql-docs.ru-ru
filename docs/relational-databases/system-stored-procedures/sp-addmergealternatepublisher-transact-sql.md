@@ -16,12 +16,12 @@ ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: caaf907b0db55306ebd341ed727174f3531c947f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 21d0ea34f3521333976ce00a3f5b823c3fcb816a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777745"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129304"
 ---
 # <a name="spaddmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,31 +46,31 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher=**] **"***издателя***"**  
+ [  **@publisher=**] **"**_издателя_**"**  
  Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@publisher_db=**] **"***publisher_db***"**  
+ [  **@publisher_db=**] **"**_publisher_db_**"**  
  Имя базы данных публикации. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@publication=**] **"***публикации***"**  
+ [  **@publication=**] **"**_публикации_**"**  
  Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@alternate_publisher=**] **"***alternate_synchronization_partner***"**  
+ [  **@alternate_publisher=**] **"**_alternate_synchronization_partner_**"**  
  Имя альтернативного издателя. *alternate_synchronization_partner* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@alternate_publisher_db=**] **"***alternate_publisher_db***"**  
+ [  **@alternate_publisher_db=**] **"**_alternate_publisher_db_**"**  
  Имя базы данных публикации на сервере альтернативного издателя. *alternate_publisher_db* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@alternate_publication=**] **"***alternate_synchronization_partner***"**  
+ [  **@alternate_publication=**] **"**_alternate_synchronization_partner_**"**  
  Имя базы данных публикации на сервере альтернативного участника синхронизации. *alternate_synchronization_partner* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@alternate_distributor=**] **"***alternate_distributor***"**  
+ [  **@alternate_distributor=**] **"**_alternate_distributor_**"**  
  Имя распространителя для альтернативного участника синхронизации. *alternate_distributor* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@friendly_name=**] **"***friendly_name***"**  
+ [  **@friendly_name=**] **"**_friendly_name_**"**  
  Отображаемое имя, по которому можно идентифицировать ассоциацию издателя, публикации и распространителя в качестве альтернативного участника синхронизации. *Аргумент* — **nvarchar(255)**, значение по умолчанию NULL.  
   
- [  **@reserved=**] **"***зарезервированные***"**  
+ [  **@reserved=**] **"**_зарезервированные_**"**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

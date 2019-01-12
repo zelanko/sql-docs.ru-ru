@@ -8,16 +8,17 @@ ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.subscription.synchhistory.f1
+- sql12.rep.monitor.subscription.downlevelsynchhistory.f1
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1cbc00e075279f92922ebc9489743347fa5e5bd9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 38bc4d44b988192be76ed613f52793dc2e8daefc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761236"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124424"
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2005-and-later"></a>Подписка, журнал синхронизации (подписка на публикацию слиянием, SQL Server 2005 и более поздние версии)
   На вкладке **Журнал синхронизации** отображаются подробные сведения об агенте слияния, включая состояние, статистику по статьям, данные журнала, информационные сообщения и все сообщения об ошибках.  
@@ -96,7 +97,7 @@ ms.locfileid: "52761236"
   
 ## <a name="see-also"></a>См. также  
  [Запуск монитора репликации](monitor/start-the-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
+ [Просмотр сведений и выполнение задач с помощью монитора репликации](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Наблюдение за репликацией](monitoring-replication.md)   
  [Replication Agents Overview](agents/replication-agents-overview.md)  
   

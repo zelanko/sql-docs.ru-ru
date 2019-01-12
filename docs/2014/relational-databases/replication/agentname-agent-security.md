@@ -12,12 +12,12 @@ ms.assetid: d34c7ef8-cf77-4ffd-887f-3c4214dfd71e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25dc706689ec136a5423de8051fecd3c6071d5bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d77f8d6acb449bc9aa2298dbcba9782fd7bc07e7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762386"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127448"
 ---
 # <a name="ltagentnamegt-agent-security"></a>Защита агента &lt;Имя_агента&gt;
   На странице **\<Безопасность агента <имя_агента>** можно указать учетные записи, от имени которых выполняется агент распространителя (для репликации транзакций или репликации моментальных снимков) или агент слияния (для репликации слиянием), а также создать подключения к компьютерам в топологии репликации. Сведения о разрешениях, требуемых агентами, и об оптимальных методах защиты репликации см. в статьях [Модель безопасности агента репликации](security/replication-agent-security-model.md) и [Рекомендации по защите репликации](security/replication-security-best-practices.md).  
@@ -54,8 +54,8 @@ ms.locfileid: "52762386"
 ## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств подписки по запросу](view-and-modify-pull-subscription-properties.md)   
  [Просмотр и изменение свойств принудительной подписки](view-and-modify-push-subscription-properties.md)   
- [Управление именами для входа и паролями при репликации](security/manage-logins-and-passwords-in-replication.md)   
- [Модель безопасности агента репликации](security/replication-agent-security-model.md)   
- [Безопасность и защита (репликация)](security/security-and-protection-replication.md)  
+ [Управление именами для входа и паролями при репликации](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
+ [Replication Agent Security Model](security/replication-agent-security-model.md)  (Модель безопасности агента репликации)  
+ [Безопасность репликации SQL Server](security/view-and-modify-replication-security-settings.md)  
   
   

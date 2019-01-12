@@ -16,19 +16,19 @@ ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a26d1f9b1e8ff7cf9ed127dc78a02827952d411
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf8f067cd223bb9064e5e44734b9765cc8b41c79
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772202"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129474"
 ---
 # <a name="affectenum"></a>AffectEnum
 Указывает, какие записи подвержены операции.  
   
 |Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
-|**adAffectAll**|3|Если не [фильтра](../../../ado/reference/ado-api/filter-property.md) применяется к **записей**, влияет на все записи.<br /><br /> Если **фильтра** свойству условий строки (такие как «автор = «Smith»»), то операция затрагивает видимые записи в текущем.<br /><br /> Если **фильтра** свойству членом [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) или массив закладки, то операция будет влиять на все строки **записей**. **Примечание:****adAffectAll** скрыт в обозревателе объектов Visual Basic.  |  
+|**adAffectAll**|3|Если не [фильтра](../../../ado/reference/ado-api/filter-property.md) применяется к **записей**, влияет на все записи.<br /><br /> Если **фильтра** свойству условий строки (такие как «автор = «Smith»»), то операция затрагивает видимые записи в текущем.<br /><br /> Если **фильтра** свойству членом [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) или массив закладки, то операция будет влиять на все строки **записей**. **Примечание: adAffectAll** скрыт в обозревателе объектов Visual Basic.|  
 |**adAffectAllChapters**|4|Влияет на все записи из всех главах того же уровня **записей**, включая те, которые не видны через любые **фильтра** , применяемое в настоящий момент.|  
 |**adAffectCurrent**|1|Затрагивает только текущую запись.|  
 |**adAffectGroup**|2|Затрагивает только те записи, которые удовлетворяют текущего [фильтра](../../../ado/reference/ado-api/filter-property.md) значение свойства. Необходимо задать **фильтра** свойства **FilterGroupEnum** значение или массив **закладки** для использования этого параметра.|  

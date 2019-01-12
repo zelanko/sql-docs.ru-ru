@@ -16,12 +16,12 @@ ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 732e8a03742e6e2ccc66c158c300222a0701e0c0
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 65044543163df928df4041f87112a54319477d67
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591918"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126464"
 ---
 # <a name="spaddarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -218,7 +218,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x100000000**|Используйте этот параметр для репликации атрибута FILESTREAM, если он указан на **varbinary(max)** столбцов. Не указывайте этот параметр, если выполняется репликация таблиц на подписчики [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Репликация таблиц со столбцами FILESTREAM на [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] подписчиков не поддерживается, независимо от того, как задается этот параметр схемы.<br /><br /> См. связанный параметр **0x800000000**.|  
 |**0x200000000**|Преобразует типы данных даты и времени (**даты**, **время**, **datetimeoffset**, и **datetime2**) в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] к данным типы, которые поддерживаются в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**0x400000000**|Проводит репликацию параметра сжатия для данных и индексов. Дополнительные сведения см. в разделе [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
-|**0x800000000**|Задайте этот параметр для сохранения данных атрибута FILESTREAM в его файловой группе на подписчике. Если этот параметр не задан, данные атрибута FILESTREAM сохраняются в файловой группе по умолчанию. Репликация не создает файловые группы, поэтому, если этот параметр задан, необходимо создать файловую группу до применения моментального снимка на подписчике. Дополнительные сведения о том, как создавать объекты, перед применением моментального снимка см. в разделе [выполнение скриптов до и после применения моментального снимка](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).<br /><br /> См. связанный параметр **0x100000000**.|  
+|**0x800000000**|Задайте этот параметр для сохранения данных атрибута FILESTREAM в его файловой группе на подписчике. Если этот параметр не задан, данные атрибута FILESTREAM сохраняются в файловой группе по умолчанию. Репликация не создает файловые группы, поэтому, если этот параметр задан, необходимо создать файловую группу до применения моментального снимка на подписчике. Дополнительные сведения о том, как создавать объекты, перед применением моментального снимка см. в разделе [выполнение скриптов до и после применения моментального снимка](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).<br /><br /> См. связанный параметр **0x100000000**.|  
 |**0x1000000000**|Преобразует среды выполнения (CLR) определяемые пользователем типы (UDT), размер которых превышает 8000 байт для **varbinary(max)** , чтобы столбцы определяемого Пользователем типа могли реплицироваться на подписчики, работающие [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 |**0x2000000000**|Преобразует **hierarchyid** тип данных для **varbinary(max)** таким образом, столбцы типа **hierarchyid** могли реплицироваться на подписчики, работающие [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Дополнительные сведения об использовании **hierarchyid** столбцов в реплицированных таблицах см. в разделе [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 |**0x4000000000**|Проводит репликацию всех фильтруемых индексов для таблицы. Дополнительные сведения об отфильтрованных индексах см. в разделе [Создание отфильтрованных индексов](../../relational-databases/indexes/create-filtered-indexes.md).|  

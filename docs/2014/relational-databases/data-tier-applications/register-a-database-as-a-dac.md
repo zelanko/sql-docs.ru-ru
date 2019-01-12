@@ -20,12 +20,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0411281173339c46eb629dc6aad757337b3c41c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761456"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129422"
 ---
 # <a name="register-a-database-as-a-dac"></a>Регистрация базы данных в качестве приложения уровня данных
   Использовать **зарегистрировать Data-tier Application Wizard** или Windows PowerShell скрипта Создайте определение приложения УРОВНЯ данных, описывающее объекты из существующей базы данных, а затем зарегистрировать определение DAC в `msdb` системной базы данных (**master** в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
@@ -101,7 +101,7 @@ ms.locfileid: "52761456"
  **Отмена** — работа мастера завершается без регистрации DAC.  
   
 ### <a name="validating-objects"></a>Проверка объектов  
- **Проверка**  *SchemaName* **.** *ObjectName* **.** — отображает индикатор выполнения по мере того, как мастер проверяет зависимости полученных объектов и допустимость этих объектов для DAC. *SchemaName ***.*** ObjectName* указывает, для какого объекта в данный момент выполняется проверка.  
+ **Проверка**  _SchemaName_ **.** _ObjectName_ **.** — отображает индикатор выполнения по мере того, как мастер проверяет зависимости полученных объектов и допустимость этих объектов для DAC. _SchemaName_**.**_ObjectName_ указывает, для какого объекта в данный момент выполняется проверка.  
   
  **\< Предыдущий** — возврат на **задание свойств** страницы для изменения записей.  
   

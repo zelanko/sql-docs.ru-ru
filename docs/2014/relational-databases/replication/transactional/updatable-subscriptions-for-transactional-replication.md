@@ -17,12 +17,12 @@ ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8592517c71651b457c660e1d73e683c1c5ed332
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813986"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126434"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52813986"
   
  Включение обновляемых подписок для публикаций транзакций — [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
- Создание обновляемых подписок для публикаций транзакций — [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)  
+ Создание обновляемых подписок для публикаций транзакций — [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 ## <a name="switching-between-update-modes"></a>Переключение режимов обновления  
  При применении обновляемых подписок можно указать, что подписка должна использовать один режим обновления, а затем можно переключиться на другой режим обновления, если это необходимо для приложения. Например, можно указать, что подписка должна использовать немедленное обновление, а затем переключиться на отложенное обновление, если ошибка системы привела к потере сетевого подключения.  
@@ -124,7 +124,7 @@ ms.locfileid: "52813986"
   
 ## <a name="see-also"></a>См. также  
  [Одноранговая репликация транзакций](peer-to-peer-transactional-replication.md)   
- [Типы публикации для репликации транзакций](publication-types-for-transactional-replication.md)   
+ [Репликация транзакций](transactional-replication.md)   
  [Публикация данных и объектов базы данных](../publish/publish-data-and-database-objects.md)   
  [Подписка на публикации](../subscribe-to-publications.md)  
   

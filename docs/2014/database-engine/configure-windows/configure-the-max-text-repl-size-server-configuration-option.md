@@ -12,12 +12,12 @@ ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b5e89ca1fc43c140a4c6fa9aa8f610f5b86d7ef9
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 6958283a8988fd005a491a80f626c1a3d1ef77ba
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640445"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124354"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>Настройка параметра конфигурации сервера max text repl size
   В этом разделе описываются способы настройки параметра конфигурации сервера **max text repl size** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. **Max text repl Size size** параметр указывает максимальный размер (в байтах) `text`, `ntext`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, `xml`, и `image` данные, которые могут добавляться к столбец реплицированных или отслеживаемых столбцов в одной инструкции INSERT, UPDATE, WRITETEXT или UPDATETEXT. Значение по умолчанию — 65 536 байт. Значение -1 означает отсутствие ограничений размера, кроме тех, которые налагаются типом данных.  
@@ -88,7 +88,7 @@ GO
  Параметр вступает в силу немедленно, без перезапуска сервера.  
   
 ## <a name="see-also"></a>См. также  
- [Функции и задачи репликации](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [Репликация SQL Server](../../relational-databases/replication/sql-server-replication.md)   
  [INSERT (Transact-SQL)](/sql/t-sql/statements/insert-transact-sql)   
  [RECONFIGURE (Transact-SQL)](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md)   

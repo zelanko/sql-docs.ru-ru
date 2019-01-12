@@ -12,12 +12,12 @@ ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb3aa18f17219f46bc5ce6f3d25af7d4bd29c4d9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f3612a8b2006978a8098a406a6557d6c9f0f1f7f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753956"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127805"
 ---
 # <a name="secure-the-snapshot-folder"></a>Организация безопасности папки моментальных снимков
   Папка моментальных снимков представляет собой каталог, в котором хранятся файлы моментальных снимков. Рекомендуется выделить папку для хранения моментальных снимков. Предоставьте агенту моментальных снимков разрешение на запись в данную папку и убедитесь, что разрешение на чтение предоставлено только учетной записи Windows, которая используется агентом слияния или агентом распространителя при обращении к данной папке. Чтобы обеспечить доступ к папке моментальных снимков, расположенной на удаленном компьютере, учетная запись Windows, связанная с агентом, должна быть учетной записью домена.  
@@ -54,7 +54,7 @@ ms.locfileid: "52753956"
  [Альтернативные расположения папки моментальных снимков](../alternate-snapshot-folder-locations.md)   
  [Инициализация подписки с помощью моментального снимка](../initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Безопасность и защита (репликация)](security-and-protection-replication.md)   
+ [Безопасность репликации SQL Server](view-and-modify-replication-security-settings.md)   
  [Передача моментальных снимков через FTP](../transfer-snapshots-through-ftp.md)  
   
   

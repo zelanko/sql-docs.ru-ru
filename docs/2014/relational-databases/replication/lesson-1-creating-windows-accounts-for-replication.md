@@ -1,11 +1,10 @@
 ---
-title: Занятие 1. Создание учетных записей Windows для репликации | Документация Майкрософт
+title: Урок 1. Создание Windows учетных записей для репликации | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
@@ -14,14 +13,14 @@ ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 0269a82d4ef11e53c41d7b288797064e0f3abd16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095574"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127464"
 ---
-# <a name="lesson-1-creating-windows-accounts-for-replication"></a>Занятие 1. Создание учетных записей Windows для репликации
+# <a name="lesson-1-creating-windows-accounts-for-replication"></a>Урок 1. Создание учетных записей Windows для репликации
   На этом занятии будут созданы учетные записи Windows для запуска агентов репликации. На локальном сервере будут созданы отдельные учетные записи Windows для следующих агентов:  
   
 |Агент|Местоположение|Имя учетной записи|  
@@ -63,7 +62,7 @@ ms.locfileid: "48095574"
 6.  Щелкните **Закрыть**.  
   
 ## <a name="next-steps"></a>Следующие шаги  
- Создание учетных записей Windows для агентов репликации успешно выполнено. Далее предстоит настроить папку моментальных снимков. См. раздел [Занятие 2. Подготовка папки моментальных снимков](lesson-2-preparing-the-snapshot-folder.md).  
+ Создание учетных записей Windows для агентов репликации успешно выполнено. Далее предстоит настроить папку моментальных снимков. См. в разделе [Урок 2: Подготовка папки моментальных снимков](lesson-2-preparing-the-snapshot-folder.md).  
   
 ## <a name="see-also"></a>См. также  
  [Обзор агентов репликации](agents/replication-agents-overview.md)  

@@ -16,12 +16,12 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 50e6886e9ef69842432a0759095f11335cfbb494
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797666"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129624"
 ---
 # <a name="modify-foreign-key-relationships"></a>Изменение связей по внешнему ключу
   Изменить сторону внешнего ключа связи в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. При изменении внешнего ключа таблицы изменяются столбцы, связанные со столбцами таблицы первичного ключа.  
@@ -139,7 +139,7 @@ ms.locfileid: "52797666"
   
     -   **Присвоить значение по умолчанию.** Задает значение по умолчанию, определенное для данного столбца, если все внешние ключевые столбцы в таблице имеют значения по умолчанию.  
   
-4.  В меню **Файл** выберите пункт **Сохранить***имя_таблицы*.  
+4.  В меню **Файл** выберите пункт **Сохранить**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Изменение внешнего ключа**  

@@ -13,12 +13,12 @@ ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a2f6a8395db11179d78a6f513890fd307acbd82c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8d0337ea25181ab45426353e69a4f37124aa33bc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352056"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126544"
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Пример запросы к схемам как к результатам с помощью параметров XMLDATA и XMLSCHEMA
   В следующем запросе возвращается схема XML-DATA, описывающая структуру документа.  
@@ -52,7 +52,7 @@ GO
 ```  
   
 > [!NOTE]
->  <`Schema`> задается в качестве пространства имен. Во избежание конфликтов пространств имен при запросе нескольких схем XML-Data различными запросами FOR XML идентификатор пространства имен (в этом примере это `Schema1` ) изменяется при каждом выполнении запроса. Идентификатор пространства имен определяется как **Schema*n***, где ***n*** является целым числом.  
+>  <`Schema`> задается в качестве пространства имен. Во избежание конфликтов пространств имен при запросе нескольких схем XML-Data различными запросами FOR XML идентификатор пространства имен (в этом примере это `Schema1` ) изменяется при каждом выполнении запроса. Идентификатор пространства имен состоит из **Schema_n_** где **_n_** должно быть целым числом.  
   
  Задавая параметр `XMLSCHEMA` , можно произвести запрос XSD-схемы документа.  
   

@@ -14,12 +14,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b15344c41bcfe8f43606683dc2e94f848bdb5923
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7c8f75360bb3eb4b304c2a56a150218e8f8c8eff
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780086"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125454"
 ---
 # <a name="secure-the-subscriber"></a>Организация безопасности подписчика
   Агенты слияния и распространителей подключаются к подписчику. Эти подключения могут выполняться в контексте имени входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или имени входа Windows. Важно предоставить для этих агентов соответствующее имя входа, придерживаясь принципа предоставления минимально необходимых прав и обеспечивая защиту хранилища всех паролей. Сведения о разрешениях, необходимых для каждого агента, см. в разделе [Replication Agent Security Model](replication-agent-security-model.md).  
@@ -50,10 +50,10 @@ ms.locfileid: "52780086"
 > [!IMPORTANT]  
 >  Чтобы указать сведения о подключении, используйте хранимую процедуру [sp_link_publication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql). Также можно воспользоваться страницей **Имя входа для обновляемых подписок** в мастере создания подписки, который вызывает хранимую процедуру **sp_link_publication**. При определенных обстоятельствах выполнение этой хранимой процедуры может завершиться ошибкой, если подписчик работает с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] с пакетом обновлений 1, а издатель работает с более ранней версией. Если хранимая процедура завершается ошибкой в этом сценарии, обновите издатель до версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] с пакетом обновлений 1 (SP1) или более поздней версии.  
   
- Дополнительные сведения см. в статьях [Создание обновляемых подписок для публикаций транзакций](../create-updatable-subscription-transactional-publication-transact-sql.md) и [Просмотр и изменение параметров безопасности репликации](view-and-modify-replication-security-settings.md).  
+ Дополнительные сведения см. в статьях [Создание обновляемых подписок для публикаций транзакций](../publish/create-an-updatable-subscription-to-a-transactional-publication.md) и [Просмотр и изменение параметров безопасности репликации](view-and-modify-replication-security-settings.md).  
   
 > [!IMPORTANT]  
->  Учетная запись, заданная для соединения, должна предоставлять только разрешения для вставки, обновления и удаления данных в представлениях, которые репликация создает в базе данных публикации. Она не должна иметь никаких дополнительных разрешений. Предоставьте разрешения на представления, которые имеют имена в виде **syncobj_***\<шестнадцатеричный_номер>*, для учетной записи, настроенной на каждом подписчике.  
+>  Учетная запись, заданная для соединения, должна предоставлять только разрешения для вставки, обновления и удаления данных в представлениях, которые репликация создает в базе данных публикации. Она не должна иметь никаких дополнительных разрешений. Предоставьте разрешения на представления, которые имеют имена в виде **syncobj_**_\<<шестнадцатеричный_номер>_, для учетной записи, настроенной на каждом подписчике.  
   
 ## <a name="queued-updating-subscriptions"></a>Подписки, обновляемые посредством очередей  
  При настройке обновляемых посредством очередей подписок необходимо учитывать два аспекта, касающихся безопасности:  
@@ -76,6 +76,6 @@ ms.locfileid: "52780086"
 ## <a name="see-also"></a>См. также  
  [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Безопасность и защита (репликация)](security-and-protection-replication.md)  
+ [Безопасность репликации SQL Server](view-and-modify-replication-security-settings.md)  
   
   

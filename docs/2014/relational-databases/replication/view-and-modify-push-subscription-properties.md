@@ -17,12 +17,12 @@ ms.assetid: 801d2995-7aa5-4626-906e-c8190758ec71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ff13200783ab81e8402fe4bc97774898c97f85e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5dc55cc688f4e40d188492636c3653556f88b1c6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810936"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127264"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>Просмотр и изменение свойств принудительной подписки
   В данном разделе описывается просмотр и изменение свойств принудительной подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
@@ -140,8 +140,8 @@ ms.locfileid: "52810936"
 7.  Чтобы просмотреть новые значения, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> , который выполняет повторную загрузку свойств для подписки (необязательно).  
   
 ## <a name="see-also"></a>См. также  
- [Просмотр сведений и выполнение задач для подписки (монитор репликации)](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [Рекомендации по защите репликации](security/replication-security-best-practices.md)   
+ [Просмотр сведений и выполнение задач с помощью монитора репликации](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [Подписка на публикации](subscribe-to-publications.md)  
   
   

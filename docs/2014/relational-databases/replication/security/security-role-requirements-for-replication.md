@@ -13,12 +13,12 @@ ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dea87fd8144863d8098c88ee9e038cebda0b0060
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 52eed41a8b44147c13ed8dbc63dbda46ed625f51
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816656"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129814"
 ---
 # <a name="security-role-requirements-for-replication"></a>Security Role Requirements for Replication
   Репликация накладывает ограничения на специфические действия, которые пользователь может выполнить в зависимости от роли, соответствующей имени входа пользователя. Репликация предоставляет определенные разрешения предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** и именам входа в списке доступа к публикации (PAL).  
@@ -51,6 +51,6 @@ ms.locfileid: "52816656"
   
 ## <a name="see-also"></a>См. также  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Безопасность и защита (репликация)](security-and-protection-replication.md)  
+ [Безопасность репликации SQL Server](view-and-modify-replication-security-settings.md)  
   
   

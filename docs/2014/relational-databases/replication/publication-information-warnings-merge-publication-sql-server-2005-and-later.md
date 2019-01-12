@@ -12,12 +12,12 @@ ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3d13debf78da8b028114b6012a24a30b2275dcdd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f849394a4a77091f92ee66857b4d5263875fdea3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762636"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127745"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>Сведения о публикации, предупреждения (публикации слиянием, SQL Server 2005 и более поздние версии)
   Вкладка **Предупреждения** доступна для распространителей, работающих с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздними версиями. Вкладка **Предупреждения** позволяет выполнять следующие задачи для выбранных публикаций:  
@@ -78,7 +78,7 @@ ms.locfileid: "52762636"
   
 ## <a name="see-also"></a>См. также  
  [Запуск монитора репликации](monitor/start-the-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для публикации (монитор репликации)](monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
+ [Просмотр сведений и выполнение задач с помощью монитора репликации](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Наблюдение за производительностью с помощью монитора репликации](monitor/monitor-performance-with-replication-monitor.md)   
  [Наблюдение за репликацией](monitoring-replication.md)   
  [Set Thresholds and Warnings in Replication Monitor](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  

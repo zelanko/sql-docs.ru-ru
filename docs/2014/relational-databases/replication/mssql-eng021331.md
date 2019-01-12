@@ -12,12 +12,12 @@ ms.assetid: 9acd75d9-fda1-44cd-ba17-20295ad53ea0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 26e0f33ef996f47fe4be2b3be034111187033f94
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 63becb9b07114b6e0ae0589664ae80d82f8babb2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753766"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126184"
 ---
 # <a name="mssqleng021331"></a>MSSQL_ENG021331
     
@@ -39,7 +39,7 @@ ms.locfileid: "52753766"
  Проверьте правильность указанного пути к папке моментальных снимков, а также убедитесь, что учетная запись, под которой работает служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, обладает всеми необходимыми разрешениями.  
   
 ## <a name="see-also"></a>См. также  
- [Указание расположения моментальных снимков по умолчанию (SQL Server Management Studio)](specify-the-default-snapshot-location-sql-server-management-studio.md)   
+ [Задайте местоположение моментальных снимков по умолчанию](snapshot-options.md#snapshot-folder-locations)   
  [Справочник по ошибкам и событиям (репликация)](errors-and-events-reference-replication.md)   
  [Инициализация транзакционной подписки без моментального снимка](initialize-a-transactional-subscription-without-a-snapshot.md)  
   

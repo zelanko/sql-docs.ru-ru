@@ -13,12 +13,12 @@ ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2e107acad4bfd844478c47cfc5c19aa947c74bd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8f0eaa3be9d6dbdd27eb52ce66ebc652dd19f7d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104118"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127005"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Репликация и доставка журналов (SQL Server)
   Доставка журналов использует две копии одной базы данных, которые обычно хранится на разных компьютерах. В любой момент только одна копия базы данных доступна клиентам. Эта копия известна как база данных-источник. Обновления, вносимые клиентами в базу данных-источник, распространяются при помощи доставки журналов в другую копию базы данных, которая называется база данных-получатель. Доставка журналов включает применение каждой вставки, обновления или удаления, сделанных в базе данных-источнике, к базе данных-получателю с помощью журнала транзакций.  
@@ -114,8 +114,8 @@ ms.locfileid: "48104118"
      При синхронизации с подписчиком, на котором запущена версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , предшествующая [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], подписка не может быть анонимной. Это должна быть клиентская или серверная подписка (в предыдущих версиях такие подписки называются локальными или глобальными). Дополнительные сведения см. в разделе [Синхронизация данных](../../relational-databases/replication/synchronize-data.md).  
   
 ## <a name="see-also"></a>См. также  
- [Функции и задачи репликации](../../relational-databases/replication/replication-features-and-tasks.md)   
- [Сведения о доставке журналов (SQL Server)](about-log-shipping-sql-server.md)   
+ [Репликация SQL Server](../../relational-databases/replication/sql-server-replication.md)   
+ [О доставке журналов &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
  [Зеркальное отображение и репликация баз данных (SQL Server)](../database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
   

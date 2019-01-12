@@ -1,5 +1,5 @@
 ---
-title: Данные об издателе, вкладка "Публикации" | Документация Майкрософт
+title: Диалоговое окно «Сведения об издателе» репликация SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,14 +12,14 @@ ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8614db7bd44f6ba5de8826215aed8cf123e86488
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 344b899905e844312ee6e5a66455fc2fa14b446f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812176"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128914"
 ---
-# <a name="publisher-information-publications"></a>Данные об издателе, вкладка «Публикации»
+# <a name="sql-server-replication-publisher-information-dialog-box"></a>Диалоговое окно «Сведения об издателе» репликация SQL Server
   Вкладка **Публикации** содержит сводные данные по всем публикациям на издателе, выбранном в левой панели.  
   
 ## <a name="options"></a>Параметры  
@@ -84,7 +84,7 @@ ms.locfileid: "52812176"
   
 ## <a name="see-also"></a>См. также  
  [Запуск монитора репликации](monitor/start-the-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для издателя (монитор репликации)](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [Просмотр сведений и выполнение задач с помощью монитора репликации](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Наблюдение за репликацией](monitoring-replication.md)  
   
   

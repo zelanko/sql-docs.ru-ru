@@ -1,6 +1,6 @@
 ---
-title: Настройка параллельного хранилища данных для удаленной таблицы копий | Документы Microsoft
-description: В этой статье описывается настройка параллельного хранилища данных для использования функции копирования удаленной таблицы копирование таблиц базы данных SMP SQL Server на серверах, отличных от устройства.
+title: Настройка для копий удаленных таблиц Parallel Data Warehouse | Документация Майкрософт
+description: В этой статье описывается настройка Parallel Data Warehouse, в которых будет производиться копирование таблиц базы данных SMP SQL Server на серверах не является специализированным функцией копирования удаленной таблицы.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,41 +9,41 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3f71a0c67639918820bca8f6f8f38b9f354154f3
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: fdac0b6ed211e223c3fad7ba15ac79a282c61303
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539534"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123919"
 ---
-# <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>Настройка для удаленной таблицы копии Parallel Data Warehouse
-Описывает, как настроить SQL Server PDW для использования функции копирования удаленной таблицы копирование таблиц базы данных SMP SQL Server на серверах, отличных от устройства.  
+# <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>Настройка Parallel Data Warehouse для копий удаленных таблиц
+В этой статье описывается настройка PDW SQL Server, в которых будет производиться копирование таблиц базы данных SMP SQL Server на серверах не является специализированным функцией копирования удаленной таблицы.  
   
-В этом разделе описывается один из шагов конфигурации для настройки копирования удаленной таблицы. Список всех шагов см. в разделе [удаленной копии таблицы](remote-table-copy.md).  
+В этом разделе описывает один из шагов конфигурации для настройки копирования удаленной таблицы. Список все действия по настройке, см. в разделе [копирование удаленной таблицы](remote-table-copy.md).  
   
 ## <a name="before-you-begin"></a>Перед началом  
-Чтобы настроить SQL Server PDW использовать копию удаленной таблицы, необходимо выполнить следующее:  
+Чтобы настроить SQL Server PDW использовать копирование удаленных таблиц, необходимо сделать следующее:  
   
--   Учетной записи администратора система платформы аналитики возможность входить непосредственно в ***appliance_domain *-AD01** и ***appliance_domain *-AD02** узлов.  
+-   Иметь учетную запись администратора системы платформы аналитики с возможность входа непосредственно в  <strong>*appliance_domain*-AD01</strong> и  <strong>*appliance_domain*-AD02</strong> узлов.  
   
 -   Знаете имя узла или IP-имя конечного сервера.  
   
-## <a name="HowToPDW"></a>Настройка SQL Server PDW для копирования удаленной таблицы: обновить имена узла в DNS  
-**CREATE REMOTE TABLE** оператор, используемый для копирования удаленной таблицы указывает на целевой сервер с помощью IP-адрес или IP-имя системы SMP Windows. Чтобы использовать IP-имя, необходимо добавить элементы для успешное разрешение имен на DNS-сервер.  
+## <a name="HowToPDW"></a>Настройка SQL Server PDW для копирования удаленной таблицы: Обновление имен узла в DNS  
+**CREATE REMOTE TABLE** оператор, используемый для копий удаленных таблиц, указывает конечный сервер с помощью IP-адрес или IP-имя системы Windows SMP. Чтобы использовать IP-имя, необходимо добавить записи для успешное разрешение имен на DNS-сервер.  
   
-Ниже описывается, как обновить DNS-сервера.  
+Ниже приведены инструкции для обновления DNS-сервера.  
   
-1.  Выполните вход на активный узел AD (обычно ***appliance_domain *-AD01**).  
+1.  Войдите на активный узел AD (обычно  <strong>*appliance_domain*-AD01</strong>).  
   
 2.  Откройте диспетчер DNS. Этот файл находится в разделе **Администрирование** в **запустить** меню.  
   
-3.  Используйте диспетчер DNS для добавления IP-имя.  
+3.  Используйте диспетчер DNS, чтобы добавить IP-имя.  
   
 ## <a name="see-also"></a>См. также  
 <!-- MISSING LINKS 
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->
-[Использовать DNS-сервер пересылки для разрешения имен DNS не является специализированным](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
+[Используйте DNS-сервера пересылки для разрешения имен DNS не является специализированным](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
 <!-- MISSING LINKS 
 [Security - Configure Domain Trusts &#40;SQL Server PDW&#41;](../sqlpdw/security-configure-domain-trusts-sql-server-pdw.md)  
 -->

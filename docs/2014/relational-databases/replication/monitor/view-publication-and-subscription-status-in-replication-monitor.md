@@ -21,12 +21,12 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 95fbb61460c23ca0fedf0baec71aa21acaa50398
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786746"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123934"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Просмотр состояний публикаций и подписок в мониторе репликации
   Монитор репликации[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] отображает сведения о состоянии публикаций и подписок:  
@@ -53,11 +53,8 @@ ms.locfileid: "52786746"
   
  **Просмотр состояния публикации и подписки**  
   
--   Монитор репликации: [Просмотр сведений и выполнение задач для публикации &#40;монитора репликации&#41; ](view-information-and-perform-tasks-for-a-publication-replication-monitor.md) и [Просмотр сведений и выполнение задач для подписки &#40;монитора репликации&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+-   Монитор репликации: [Просмотр сведений и выполнение задач с помощью монитора репликации](view-information-and-perform-tasks-replication-monitor.md).
   
- **Просмотр подробных сведений об агентах**  
-  
--   Монитор репликации: [Просмотр сведений и выполнение задач для агентов, связанных с публикацией &#40;монитора репликации&#41; ](view-information-and-perform-tasks-for-publication-agents.md) и [Просмотр сведений и выполнение задач для агентов, связанных с подпиской &#40;репликации Монитор&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## <a name="publication-status-values"></a>Значения состояния публикации  
  В следующей таблице содержатся значения состояния публикации и соответствующие им значки в порядке приоритета.  

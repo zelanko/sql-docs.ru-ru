@@ -23,12 +23,12 @@ ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9feaa3be20692b89b0d0568f1ccacc49c992667
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 24587f27710381ac787fe8045029df681e401af5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408283"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130194"
 ---
 # <a name="set-index-options"></a>Установка параметров индекса
   В этом разделе описывается процесс изменения свойств индекса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -78,7 +78,7 @@ ms.locfileid: "52408283"
   
 7.  Щелкните **Закрыть**.  
   
-8.  В меню **Файл** выберите пункт **Сохранить***имя_таблицы*.  
+8.  В меню **Файл** выберите пункт **Сохранить**_имя_таблицы_.  
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>Изменение свойств индекса при помощи обозревателя объектов.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "52408283"
   
 7.  Измените значения любого или всех свойств, чтобы внести изменения в индекс.  
   
-8.  Чтобы добавить столбец индекса, удалить или изменить его позицию, выберите в диалоговом окне **Свойства индекса ―**  **имя_индекса** *Общие* . Дополнительные сведения см. в разделе [Index Properties F1 Help](index-properties-f1-help.md).  
+8.  Чтобы добавить столбец индекса, удалить или изменить его позицию, выберите в диалоговом окне **Свойства индекса ―**  **имя_индекса** _Общие_ . Дополнительные сведения см. в разделе [Index Properties F1 Help](index-properties-f1-help.md).  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

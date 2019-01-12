@@ -16,12 +16,12 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 073577731fba32e092307ebd7c86eb5904c38a05
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bfe5d9f7bc5c95055af06b0582f2ddcf88ae7cdf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760237"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125714"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности  
   
- [ **@login** =] **"***входа***"**  
+ [ **@login** =] **"**_входа_**"**  
  Имя учетной записи Windows или имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которое необходимо изменить. *Имя входа* — **nvarchar(257)**, не имеет значения по умолчанию  
   
- [ **@password** =] **"***пароль***"**  
+ [ **@password** =] **"**_пароль_**"**  
  Новый пароль должен быть сохранен для указанного *входа*. *пароль* — **sysname**, не имеет значения по умолчанию.  
   
 > [!NOTE]  
 >  После изменения пароля репликации необходимо остановить и перезапустить каждый агент, пользующийся этим паролем, прежде чем изменение вступит в силу для этого агента.  
   
- [ **@server** =] **"***server***"**  
+ [ **@server** =] **"**_server_**"**  
  Серверное соединение, для которого изменяется сохраненный пароль. *сервер* — **sysname**, и может принимать одно из следующих значений:  
   
 |Значение|Описание|  

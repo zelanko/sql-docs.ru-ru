@@ -16,12 +16,12 @@ ms.assetid: 925df9d3-a041-4046-8e17-c47f40edb86d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30f7ee9e8488fad2311adae55f973bab8a22ec22
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3db4c300cad5f38b46b73b2edc065a5b98ec90f0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770296"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130814"
 ---
 # <a name="spmschangelogreaderagentproperties-transact-sql"></a>sp_MSchange_logreader_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@publisher** =] **"***издателя***"**  
+ [ **@publisher** =] **"**_издателя_**"**  
  Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@publisher_db=** ] **"***publisher_db***"**  
+ [  **@publisher_db=** ] **"**_publisher_db_**"**  
  Имя базы данных публикации. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
   
  [ **@publisher_security_mode**=] *publisher_security_mode*  
@@ -58,19 +58,19 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
  **1** задает проверку подлинности Windows.  
   
- [ **@publisher_login**=] **"***publisher_login***"**  
+ [ **@publisher_login**=] **"**_publisher_login_**"**  
  Имя входа, используемое для соединения с издателем. *publisher_login* — **sysname**, не имеет значения по умолчанию. *publisher_login* должен быть указан, если *publisher_security_mode* — **0**. Если *publisher_login* имеет значение NULL и *publisher_security_mode* — **1**, то учетная запись Windows, указанных в *job_login* будет использоваться При соединении с издателем.  
   
- [ **@publisher_password**=] **"***publisher_password***"**  
+ [ **@publisher_password**=] **"**_publisher_password_**"**  
  Пароль, используемый при соединении с издателем. *publisher_password* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@job_login**=] **"***job_login***"**  
+ [ **@job_login**=] **"**_job_login_**"**  
  Имя входа для учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)**, не имеет значения по умолчанию. *Это единственно возможный отличается от* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *издателя.*  
   
- [ **@job_password**=] **"***job_password***"**  
+ [ **@job_password**=] **"**_job_password_**"**  
  Пароль для учетной записи Windows, под которой запускается агент. *job_password* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@publisher_type**=] **"***publisher_type***"**  
+ [ **@publisher_type**=] **"**_publisher_type_**"**  
  Указывает тип издателя, если издатель не выполняется в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* — **sysname**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  

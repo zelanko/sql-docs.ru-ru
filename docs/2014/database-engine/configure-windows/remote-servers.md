@@ -16,12 +16,12 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7e400c24476df7d9e663f17c71425f11b5155058
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: e8fd1464857b77139ca0bef310eee8be949d77cd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641015"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123954"
 ---
 # <a name="remote-servers"></a>Удаленные серверы
   Удаленные серверы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаются лишь для обратной совместимости. Новые приложения должны использовать вместо них связанные серверы. Дополнительные сведения см. в разделе [Связанные серверы (компонент Database Engine)](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
@@ -57,7 +57,7 @@ ms.locfileid: "52641015"
 >  По возможности используйте аутентификацию Windows.  
   
 ### <a name="remote-server-security-example"></a>Пример системы безопасности удаленного сервера  
- Проверьте следующие установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **serverSend** и **serverReceive**. Метод**serverReceive** настраивается для сопоставления имени входа **serverSend**, поступающего от **serverSend**, с прошедшим проверку в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью **serverReceive**, поступающего от **Alice**. Другое входное имя входа из **serverSend**, с именем **Joe**, сопоставлено с именем входа **Joe**, прошедшим проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в **serverReceive****.  
+ Проверьте следующие установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **serverSend** и **serverReceive**. Метод**serverReceive** настраивается для сопоставления имени входа **serverSend**, поступающего от **serverSend**, с прошедшим проверку в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью **serverReceive**, поступающего от **Alice**. Другое входное имя входа из **serverSend**, с именем **Joe**, сопоставлено с именем входа, прошедшим проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в **serverReceive**_,_ с именем **Joe**.  
   
  В следующем примере кода Transact-SQL `serverSend` настраивается на выполнение вызовов RPC по отношению к `serverReceive`.  
   

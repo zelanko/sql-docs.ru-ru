@@ -16,12 +16,12 @@ ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba242dfc6c457bd94c082f151f162b8f6eb06e29
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 81f6b1ca0ea65068851756dc2a1b91cb84c52227
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819186"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128239"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,16 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher=** ] **"***издателя***"**  
+ [  **@publisher=** ] **"**_издателя_**"**  
  Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@property=** ] **"***свойство***"**  
+ [  **@property=** ] **"**_свойство_**"**  
  Свойство, изменяемое для данного издателя. *Свойство* — **sysname** и может принимать одно из следующих значений.  
   
- [ **@value=** ] **'***value***'**  
+ [ **@value=** ] **"**_значение_**"**  
  Значение для заданного свойства. *значение* — **nvarchar(255)**, значение по умолчанию NULL.  
   
- [  **@storage_connection_string =**] **"***storage_connection_string***"**  
+ [  **@storage_connection_string =**] **"**_storage_connection_string_**"**  
  Является обязательным для базы данных SQL управляемого экземпляра, должно соответствовать ключу доступа для объема хранилища базы данных SQL Azure. 
 
 

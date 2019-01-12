@@ -15,12 +15,12 @@ ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc229e2bef69069ba1fc5f8cb3077e592d959a55
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 77cb69877324b36120b3a277688bb1ad737f5c4d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521933"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129824"
 ---
 # <a name="explicit-data-type-conversion-function"></a>Функция явного преобразования типа данных
 Явного преобразования типов данных указывается с точки зрения определения типов данных SQL.  
@@ -29,7 +29,7 @@ ms.locfileid: "52521933"
   
  Формат **преобразовать** функция:  
   
- **ПРЕОБРАЗОВАНИЕ (** *value_exp*, _data_type_**)**  
+ **ПРЕОБРАЗОВАНИЕ (** _value_exp_, _data_type_**)**  
   
  Функция возвращает значение, заданное параметром *value_exp* преобразовать в указанный *data_type*, где *data_type* является одним из следующих ключевых слов:  
   

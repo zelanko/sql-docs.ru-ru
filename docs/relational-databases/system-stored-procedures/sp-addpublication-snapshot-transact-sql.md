@@ -16,12 +16,12 @@ ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5061423f267445c681a00bf059bcc793816faf71
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: dc55175177aec3db50df14bc27ec425c5eedf97f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205413"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128074"
 ---
 # <a name="spaddpublicationsnapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=**] **"***публикации***"**  
+ [  **@publication=**] **"**_публикации_**"**  
  Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@frequency_type=**] *frequency_type*  
@@ -118,34 +118,34 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  [  **@active_end_time_of_day=**] *active_end_time_of_day*  
  Время плановой остановки агента моментальных снимков в формате ЧЧММСС. *active_end_time_of_day* — **int**, значение по умолчанию 235959, означающее 23:59:59. в 24-часовом формате.  
   
- [  **@snapshot_job_name =** ] **"***snapshot_agent_name***"**  
+ [  **@snapshot_job_name =** ] **"**_snapshot_agent_name_**"**  
  Имя существующего задания агента моментальных снимков, если оно используется. *snapshot_agent_name* — **nvarchar(100)** со значением по умолчанию NULL. Этот параметр предназначен для внутреннего использования и не указывается при создании новой публикации. Если *snapshot_agent_name* указан, то *job_login* и *job_password* должен иметь значение NULL.  
   
  [ **@publisher_security_mode**=] *publisher_security_mode*  
  Режим безопасности, используемый агентом при установке соединения с издателем. *publisher_security_mode* — **smallint**, значение по умолчанию 1. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности, и **1** задает проверку подлинности Windows. Значение **0** должен быть указан для отличных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [ **@publisher_login**=] **"***publisher_login***"**  
+ [ **@publisher_login**=] **"**_publisher_login_**"**  
  Имя входа, используемое для соединения с издателем. *publisher_login* — **sysname**, значение по умолчанию NULL. *publisher_login* должен быть указан, если *publisher_security_mode* — **0**. Если *publisher_login* имеет значение NULL и *publisher_security_mode* — **1**, то учетная запись, указанная в *job_login* будет использоваться при соединения с издателем.  
   
- [ **@publisher_password**=] **"***publisher_password***"**  
+ [ **@publisher_password**=] **"**_publisher_password_**"**  
  Пароль, используемый при соединении с издателем. *publisher_password* — **sysname**, значение по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  Не храните данные проверки подлинности в файлах скриптов. В целях повышения безопасности рекомендуется вводить имена входа и пароли во время выполнения.  
   
- [ **@job_login**=] **"***job_login***"**  
+ [ **@job_login**=] **"**_job_login_**"**  
  — Это имя для учетной записи, под которой запускается агент. Azure SQL управляемом экземпляре базы данных используйте учетную запись SQL Server. *job_login* — **nvarchar(257)**, значение по умолчанию NULL. Для соединений агента с распространителем всегда используется эта учетная запись. Необходимо указывать этот аргумент при создании нового задания агента моментальных снимков.  
   
 > [!NOTE]
 >  Для не - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, это должно быть то же имя входа, указанное в [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
   
- [ **@job_password**=] **"***job_password***"**  
+ [ **@job_password**=] **"**_job_password_**"**  
  Пароль для учетной записи Windows, под которой запускается агент. *job_password* — **sysname**, не имеет значения по умолчанию. Необходимо указывать этот аргумент при создании нового задания агента моментальных снимков.  
   
 > [!IMPORTANT]  
 >  Не храните данные проверки подлинности в файлах скриптов. В целях повышения безопасности рекомендуется вводить имена входа и пароли во время выполнения.  
   
- [ **@publisher**=] **"***издателя***"**  
+ [ **@publisher**=] **"**_издателя_**"**  
  Указывает, отличный от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
@@ -165,7 +165,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>См. также  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [Создание и применение моментального снимка](../../relational-databases/replication/create-and-apply-the-snapshot.md)   
+ [Создание и применение моментального снимка](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
  [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)   
