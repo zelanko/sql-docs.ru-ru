@@ -18,12 +18,12 @@ ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23bc80a73c9a3343e2ee1191a729207e2b8f45b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7385dddea48813615a851979e526af5f03a23332
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193174"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134394"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>Вызов хранимой процедуры (OLE DB)
   Хранимая процедура может иметь ноль и более параметров. Также она может возвращать значение. При использовании [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, параметры для хранимой процедуры могут быть переданы:  
@@ -91,7 +91,7 @@ ms.locfileid: "48193174"
   
  Общий синтаксис для вызова процедуры с помощью escape-последовательности ODBC CALL выглядит следующим образом.  
   
- {[**? =**]**вызов ***имя_процедуры*[**(**[*параметр*] [**,**[*параметр*]]...** )**]}  
+ {[**? =**]**вызвать**_имя_процедуры_[**(**[*параметр*] [**,**[*параметр*]]... **)**]}  
   
  Пример:  
   

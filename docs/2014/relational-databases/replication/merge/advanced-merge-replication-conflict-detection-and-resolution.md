@@ -19,12 +19,12 @@ ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7e8f2f9de721f2e314961a6d2c10cf14c99be53
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786106"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132884"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Advanced Merge Replication Conflict Detection and Resolution
   Когда издатель и подписчик соединяются и происходит синхронизация, агент слияния проверяет наличие конфликтов. При обнаружении конфликтов сопоставитель слияния использует арбитр конфликтов (указанный при добавлении статьи в публикацию), чтобы определить, какие данные являются приемлемыми и распространяются на другие сайты.  
@@ -57,7 +57,7 @@ ms.locfileid: "52786106"
   
  Дополнительные сведения см. в статье [Распознавание и разрешение конфликтов в логических записях](advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
- Чтобы указать уровень отслеживания конфликтов и разрешений, см. раздел [указать уровень разрешения и отслеживания конфликтов для статьи слияния](../publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
+ Чтобы указать уровень отслеживания конфликтов и разрешений, см. раздел [указать уровень разрешения и отслеживания конфликтов для статьи слияния](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
   
 ## <a name="conflict-resolution"></a>Устранение конфликтов  
  После обнаружения конфликта агент слияния запускает выбранный сопоставитель конфликтов и использует его для определения победителя в конфликте. Победившая строка применяется на издателе и подписчике, а данные из проигравшей строки записываются в таблицу конфликтов. Разрешение конфликтов осуществляется немедленно после выполнения сопоставления конфликтов, если не выбран интерактивный режим разрешения конфликтов.  

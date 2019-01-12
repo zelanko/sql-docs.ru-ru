@@ -14,12 +14,12 @@ ms.assetid: 77938da0-2afd-4455-8826-f4a6a9440cb3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 52291313f25453db47b10ecc5da0daa7ad9e1c89
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 657116e00b6905964f8cc65c28dff383c3cc9ad0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781956"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133644"
 ---
 # <a name="queue-reader-agent-security"></a>Безопасность агента чтения очереди
   Диалоговое окно **Безопасность агента чтения очереди** позволяет указать учетную запись [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которой агент чтения очереди запускается и создает локальные соединения с распространителем. Агент устанавливает соединение с издателем, используя учетную запись, указанную в диалоговом окне **Свойства издателя** (доступном из диалогового окна **Свойства распространителя** ). Агент устанавливает соединение с подписчиком, используя тот же контекст, что и агент распространителя для подписки. Дополнительные сведения см. в статье [View and Modify Replication Security Settings](security/view-and-modify-replication-security-settings.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "52781956"
  Введите пароль для учетной записи Windows.  
   
 ## <a name="see-also"></a>См. также  
- [Управление именами для входа и паролями при репликации](security/manage-logins-and-passwords-in-replication.md)   
+ [Управление именами для входа и паролями при репликации](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Replication Agent Security Model](security/replication-agent-security-model.md)  (Модель безопасности агента репликации)  
  [Обзор агентов репликации](agents/replication-agents-overview.md)   
  [Рекомендации по защите репликации](security/replication-security-best-practices.md)  

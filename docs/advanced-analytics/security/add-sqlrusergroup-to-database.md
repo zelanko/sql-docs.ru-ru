@@ -1,6 +1,6 @@
 ---
-title: Добавление SQLRUserGroup в качестве пользователя базы данных - службы машинного обучения SQL Server
-description: Для замыкания соединений с помощью неявной проверки подлинности Добавление SQLRUserGroup в качестве пользователя базы данных, чтобы с рабочей учетной записью можно войти на сервер, для преобразования идентификаторов для вызывающего пользователя.
+title: Добавление SQLRUserGroup в качестве имени входа SQL Server — SQL Server службы машинного обучения
+description: Для замыкания соединений с помощью неявной проверки подлинности Добавление SQLRUserGroup в качестве имени входа SQL Server, чтобы с рабочей учетной записью можно войти на сервер, для преобразования идентификаторов для вызывающего пользователя.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: abd0745126a4f2a23cf559500b93d2fa53fa2cf9
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 0bc84a7a4cfae14ea19491c42e828d0a93cdfba7
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432357"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143424"
 ---
-# <a name="add-sqlrusergroup-as-a-database-user"></a>Добавление SQLRUserGroup в качестве пользователя базы данных
+# <a name="add-sqlrusergroup-as-a-sql-server-login"></a>Добавление SQLRUserGroup в качестве имени входа SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Создайте имя входа базы данных для [SQLRUserGroup](../concepts/security.md#sqlrusergroup) при [цикл замыкается](../../advanced-analytics/concepts/security.md#implied-authentication) в скрипте указывает *доверительное соединение*и идентификатор, который использовался для выполнения объекта содержит код — учетная запись пользователя Windows.
+Создайте имя входа SQL Server для [SQLRUserGroup](../concepts/security.md#sqlrusergroup) при [цикл замыкается](../../advanced-analytics/concepts/security.md#implied-authentication) в скрипте указывает *доверительное соединение*и идентификатор, который использовался для выполнения объекта содержит код — учетная запись пользователя Windows.
 
 Доверенные соединения являются те, которые `Trusted_Connection=True` в строке подключения. Когда SQL Server получает запрос, указав доверительное соединение, он проверяет, имеет ли удостоверение текущего пользователя Windows, имя входа. Для внешних процессов, выполнение с ключевым словом с рабочей учетной записью (например MSSQLSERVER01 из **SQLRUserGroup**), запрос завершится ошибкой, поскольку эти учетные записи не имеют имени входа по умолчанию.
 

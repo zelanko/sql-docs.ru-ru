@@ -13,17 +13,17 @@ ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 51618b0103a168ab72cab676fdf76ec1da8c3a7c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1bb6f278b18381d1b3d3defdb53a7c40a6f673ad
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788606"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135504"
 ---
 # <a name="secure-the-distributor"></a>Организация безопасности распространителя
   К распространителю подключаются следующие агенты репликации: агент чтения журнала, агент моментальных снимков, агент чтения очереди, агент распространителя и агент слияния. Важно обеспечить для каждого из этих агентов соответствующее имя входа, соблюдая при этом принцип предоставления минимальных необходимых прав, а также защищая хранилище всех паролей:  
   
--   Сведения об управлении именами для входа и паролями см. в статье [Управление именами для входа и паролями при репликации](manage-logins-and-passwords-in-replication.md).  
+-   Сведения об управлении именами для входа и паролями см. в статье [Управление именами для входа и паролями при репликации](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  
   
 -   Дополнительные сведения о разрешениях, необходимых каждому агенту, см. в разделе [Replication Agent Security Model](replication-agent-security-model.md).  
   
@@ -48,6 +48,6 @@ ms.locfileid: "52788606"
  [Просмотр и изменение параметров безопасности репликации](view-and-modify-replication-security-settings.md)   
  [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Безопасность и защита (репликация)](security-and-protection-replication.md)  
+ [Безопасность репликации SQL Server](view-and-modify-replication-security-settings.md)  
   
   

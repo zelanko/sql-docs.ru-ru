@@ -23,12 +23,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb5b2558a6dca79d4794b5d12c8e63fd6f002312
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 21756cadbfb924e95edd261942f018fb6aef6a4c
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527496"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226521"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.DM\_db\_настройке\_рекомендации (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -62,6 +62,7 @@ ms.locfileid: "52527496"
  Сведения, возвращаемые функцией `sys.dm_db_tuning_recommendations` обновляется, когда компонент database engine определяет потенциальные снижением производительности запросов и не сохраняется. Рекомендации хранится только до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перезапускается. Если необходимо сохранить их после перезагрузки сервера, администраторы баз данных должны периодически делать резервные копии рекомендации по настройке. 
 
  `currentValue` в поле `state` столбец может иметь следующие значения:
+ 
  | Состояние | Описание |
  |--------|-------------|
  | `Active` | Мы рекомендуем активных и еще не примененные. Пользователь может выполнить скрипт рекомендаций и выполнить его вручную. |
@@ -88,27 +89,95 @@ ms.locfileid: "52527496"
 
  Статистика в столбце сведений больше не показывать статистики плана выполнения (например, текущее время ЦП). Рекомендации более подробно создаются во время обнаружения регрессии и описывают почему [!INCLUDE[ssde_md](../../includes/ssde_md.md)] идентифицировать снижения производительности. Используйте `regressedPlanId` и `recommendedPlanId` запрос [Store запрос представления каталога](../../relational-databases/performance/how-query-store-collects-data.md) найти точное время выполнения плана статистики.
 
-## <a name="using-tuning-recommendations-information"></a>С помощью сведений о рекомендации настройки  
-Можно использовать следующий запрос для получения [!INCLUDE[tsql](../../includes/tsql-md.md)] скрипт, который исправит проблему:  
+## <a name="examples-of-using-tuning-recommendations-information"></a>Примеры использования сведений о рекомендации настройки  
+
+### <a name="example-1"></a>Пример 1
+Получает созданный следующие [!INCLUDE[tsql](../../includes/tsql-md.md)] скрипт, который заставляет основательный план для любого заданного запроса:  
  
 ```sql
 SELECT name, reason, score,
-        JSON_VALUE(details, '$.implementationDetails.script') as script,
-        details.* 
+    JSON_VALUE(details, '$.implementationDetails.script') AS script,
+    details.* 
 FROM sys.dm_db_tuning_recommendations
-    CROSS APPLY OPENJSON(details, '$.planForceDetails')
-                WITH (  query_id int '$.queryId',
-                        regressed_plan_id int '$.regressedPlanId',
-                        last_good_plan_id int '$.recommendedPlanId') as details
-WHERE JSON_VALUE(state, '$.currentValue') = 'Active'
+CROSS APPLY OPENJSON(details, '$.planForceDetails')
+    WITH (  [query_id] int '$.queryId',
+            regressed_plan_id int '$.regressedPlanId',
+            last_good_plan_id int '$.recommendedPlanId') AS details
+WHERE JSON_VALUE(state, '$.currentValue') = 'Active';
 ```
-  
- Дополнительные сведения о функции JSON, которые могут использоваться для запроса значений в представлении рекомендации, см. в разделе [Поддержка JSON](../../relational-databases/json/index.md) в [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
+### <a name="example-2"></a>Пример 2
+Получает созданный следующие [!INCLUDE[tsql](../../includes/tsql-md.md)] скрипт, который заставляет основательный план для любого заданного запроса и Дополнительные сведения о Предполагаемый рост:
+
+```sql
+SELECT reason, score,
+      script = JSON_VALUE(details, '$.implementationDetails.script'),
+      planForceDetails.*,
+      estimated_gain = (regressedPlanExecutionCount + recommendedPlanExecutionCount)
+                  *(regressedPlanCpuTimeAverage - recommendedPlanCpuTimeAverage)/1000000,
+      error_prone = IIF(regressedPlanErrorCount > recommendedPlanErrorCount, 'YES','NO')
+FROM sys.dm_db_tuning_recommendations
+CROSS APPLY OPENJSON (Details, '$.planForceDetails')
+    WITH (  [query_id] int '$.queryId',
+            regressedPlanId int '$.regressedPlanId',
+            recommendedPlanId int '$.recommendedPlanId',
+            regressedPlanErrorCount int,
+            recommendedPlanErrorCount int,
+            regressedPlanExecutionCount int,
+            regressedPlanCpuTimeAverage float,
+            recommendedPlanExecutionCount int,
+            recommendedPlanCpuTimeAverage float
+          ) AS planForceDetails;
+```
+
+### <a name="example-3"></a>Пример 3
+Получает созданный следующие [!INCLUDE[tsql](../../includes/tsql-md.md)] скрипт, который вызывает понижающую для любого заданного запроса и Дополнительные сведения, включающие текст запроса и планы запросов, хранящихся в Query Store:
+
+```sql
+WITH cte_db_tuning_recommendations
+AS (SELECT reason,
+        score,
+        query_id,
+        regressedPlanId,
+        recommendedPlanId,
+        current_state = JSON_VALUE(state, '$.currentValue'),
+        current_state_reason = JSON_VALUE(state, '$.reason'),
+        script = JSON_VALUE(details, '$.implementationDetails.script'),
+        estimated_gain = (regressedPlanExecutionCount + recommendedPlanExecutionCount)
+                * (regressedPlanCpuTimeAverage - recommendedPlanCpuTimeAverage)/1000000,
+        error_prone = IIF(regressedPlanErrorCount > recommendedPlanErrorCount, 'YES','NO')
+    FROM sys.dm_db_tuning_recommendations
+    CROSS APPLY OPENJSON(Details, '$.planForceDetails')
+    WITH ([query_id] int '$.queryId',
+        regressedPlanId int '$.regressedPlanId',
+        recommendedPlanId int '$.recommendedPlanId',
+        regressedPlanErrorCount int,    
+        recommendedPlanErrorCount int,
+        regressedPlanExecutionCount int,
+        regressedPlanCpuTimeAverage float,
+        recommendedPlanExecutionCount int,
+        recommendedPlanCpuTimeAverage float
+        )
+    )
+SELECT qsq.query_id,
+    qsqt.query_sql_text,
+    dtr.*,
+    CAST(rp.query_plan AS XML) AS RegressedPlan,
+    CAST(sp.query_plan AS XML) AS SuggestedPlan
+FROM cte_db_tuning_recommendations AS dtr
+INNER JOIN sys.query_store_plan AS rp ON rp.query_id = dtr.query_id
+    AND rp.plan_id = dtr.regressedPlanId
+INNER JOIN sys.query_store_plan AS sp ON sp.query_id = dtr.query_id
+    AND sp.plan_id = dtr.recommendedPlanId
+INNER JOIN sys.query_store_query AS qsq ON qsq.query_id = rp.query_id
+INNER JOIN sys.query_store_query_text AS qsqt ON qsqt.query_text_id = qsq.query_text_id;
+```
+
+Дополнительные сведения о функции JSON, которые могут использоваться для запроса значений в представлении рекомендации, см. в разделе [Поддержка JSON](../../relational-databases/json/index.md) в [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
   
 ## <a name="permissions"></a>Разрешения  
 
-На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
+Требуется `VIEW SERVER STATE` разрешение в [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].   
+Требуется `VIEW DATABASE STATE` разрешение для базы данных в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 
 ## <a name="see-also"></a>См. также  
  [Автоматическая настройка](../../relational-databases/automatic-tuning/automatic-tuning.md)   

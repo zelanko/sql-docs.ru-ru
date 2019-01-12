@@ -15,12 +15,12 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 828608b5c00cdcf0ed625a302359bb5c271381b4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d9d42017e3dfd6016d8b4a42c6953905e804200f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538528"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136024"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Ограничения модели программирования на основе интеграции со средой CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "52538528"
   
 -   Сборка принадлежит к числу поддерживаемых сборок. Дополнительные сведения см. в разделе [поддерживаемые библиотеки платформы .NET Framework](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
--   При использовании **CREATE ASSEMBLY FROM ***\<расположение >,* и все связанные сборки и их зависимости были доступны в  *\<расположение >*.  
+-   При использовании **Создание сборки из**_\<расположение >,_ и все связанные сборки и их зависимости были доступны в *\<расположение >*.  
   
--   При использовании **CREATE ASSEMBLY FROM ***\<байт... >,* и все ссылки заданы с помощью пространства байтов, разделенных.  
+-   При использовании **Создание сборки из**_\<байт... >,_ и все ссылки заданы с помощью пространства байтов, разделенных.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Все **EXTERNAL_ACCESS** сборки должны удовлетворять следующим условиям:  

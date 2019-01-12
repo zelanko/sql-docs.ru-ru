@@ -16,12 +16,12 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1fc809277151ee85608c9ca286185011cf52552
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6c3341c37998f61cba743c8da8a4cd772c2c73d9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822578"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133764"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,22 +62,22 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=**] **"***публикации***"**  
+ [  **@publication=**] **"**_публикации_**"**  
  Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию. Публикация уже должна существовать.  
   
- [  **@subscriber =**] **"***подписчика***"**  
+ [  **@subscriber =**] **"**_подписчика_**"**  
  Имя подписчика. *подписчик* — **sysname**, значение по умолчанию NULL.  
   
- [  **@subscriber_db=**] **"***subscriber_db***"**  
+ [  **@subscriber_db=**] **"**_subscriber_db_**"**  
  Имя базы данных подписки. *subscriber_db*— **sysname**, значение по умолчанию NULL.  
   
- [  **@subscription_type=**] **"***subscription_type***"**  
+ [  **@subscription_type=**] **"**_subscription_type_**"**  
  Тип подписки. *subscription_type*— **nvarchar(15)**, значение по умолчанию PUSH. Если **принудительной**, добавляется принудительной подписки, и на распространителе добавляется агент слияния. Если **по запросу**, подписки по запросу добавляется без добавления агент слияния на распространителе.  
   
 > [!NOTE]  
 >  Анонимные подписки не нуждаются в использовании этой хранимой процедуры.  
   
- [  **@subscriber_type=**] **"***subscriber_type***"**  
+ [  **@subscriber_type=**] **"**_subscriber_type_**"**  
  Тип подписчика. *subscriber_type*— **nvarchar(15)**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -90,7 +90,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@subscription_priority=**] *subscription_priority*  
  Число, показывающее приоритет подписки. *subscription_priority*— **реальных**, значение по умолчанию NULL. Для локальных и анонимных подписок приоритет равен 0,0. Для глобальных подписок приоритет должен быть меньше чем 100,0.  
   
- [  **@sync_type=**] **"***sync_type***"**  
+ [  **@sync_type=**] **"**_sync_type_**"**  
  Тип синхронизации подписки. *sync_type*— **nvarchar(15)**, значение по умолчанию **автоматического**. Может быть **автоматического** или **none**. Если **автоматического**, схема и начальные данные для опубликованных таблиц передаются подписчику сначала. Если **none**, он считается подписчик уже имеет схему и начальные данные для опубликованных таблиц. Системные таблицы и данные переносятся всегда.  
   
 > [!NOTE]  
@@ -167,13 +167,13 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@active_end_date=**] *active_end_date*  
  Дата плановой остановки агента слияния в формате ГГГГММДД. *active_end_date* — **int**, значение по умолчанию NULL.  
   
- [  **@optional_command_line=**] **"***optional_command_line***"**  
+ [  **@optional_command_line=**] **"**_optional_command_line_**"**  
  Необязательное приглашение к вводу команды. *optional_command_line*— **nvarchar(4000)**, значение по умолчанию NULL. Этот параметр используется для добавления команды, которая захватывает выходной поток и сохраняет его в файл либо для указания файла конфигурации или атрибута.  
   
- [  **@description=**] **"***описание***"**  
+ [  **@description=**] **"**_описание_**"**  
  Короткое описание данной подписки слиянием. *Описание*— **nvarchar(255)**, значение по умолчанию NULL. Это значение отображается в мониторе репликации в **понятное имя** столбец, который может использоваться для сортировки подписок для контролируемой публикации.  
   
- [  **@enabled_for_syncmgr=**] **"***enabled_for_syncmgr***"**  
+ [  **@enabled_for_syncmgr=**] **"**_enabled_for_syncmgr_**"**  
  Указывает, может ли подписка быть синхронизирована с помощью диспетчера синхронизации [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. *enabled_for_syncmgr* — **nvarchar(5)**, значение по умолчанию FALSE. Если **false**, подписка не зарегистрирована диспетчером синхронизации. Если **true**, подписка регистрируется диспетчером синхронизации и может быть синхронизирована без запуска [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  [  **@offloadagent=** ] *remote_agent_activation*  
@@ -182,16 +182,16 @@ sp_addmergesubscription [ @publication= ] 'publication'
 > [!NOTE]  
 >  Этот аргумент является устаревшим и сохраняется только для поддержки обратной совместимости скриптов.  
   
- [  **@offloadserver=** ] **"***remote_agent_server_name***"**  
+ [  **@offloadserver=** ] **"**_remote_agent_server_name_**"**  
  Указывает сетевое имя сервера, используемого для удаленной активации агента. *remote_agent_server_name*— **sysname**, значение по умолчанию NULL.  
   
- [  **@use_interactive_resolver=** ] **"***use_interactive_resolver***"**  
+ [  **@use_interactive_resolver=** ] **"**_use_interactive_resolver_**"**  
  Возможно разрешение конфликтов в интерактивном режиме для всех статей, которые позволяют разрешение конфликтов в интерактивном режиме. *use_interactive_resolver* — **nvarchar(5)**, значение по умолчанию FALSE.  
   
- [  **@merge_job_name=** ] **"***merge_job_name***"**  
+ [  **@merge_job_name=** ] **"**_merge_job_name_**"**  
  *@merge_job_name* Аргумент является устаревшим и не может быть задано. *merge_job_name* — **sysname**, значение по умолчанию NULL.  
   
- [ **@hostname**=] **"***hostname***"**  
+ [ **@hostname**=] **"**_hostname_**"**  
  Переопределяет значение, возвращенное [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) при использовании этой функции в предложении WHERE параметризованного фильтра. *Имя узла* — **sysname**, значение по умолчанию NULL.  
   
 > [!IMPORTANT]  

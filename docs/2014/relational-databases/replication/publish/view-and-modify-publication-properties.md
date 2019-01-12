@@ -18,12 +18,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 439a2009e6cb5e470ef09d3c766c4349d54ecdb8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4af21c912ce5a703cd46f0f9b00b5dd4bda7d2d3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792304"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135834"
 ---
 # <a name="view-and-modify-publication-properties"></a>Просмотр и изменение свойств публикации
   В данном разделе описывается процесс просмотра и изменения свойств публикации в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO.  
@@ -192,8 +192,8 @@ ms.locfileid: "52792304"
  [Изменение свойств публикации и статьи](change-publication-and-article-properties.md)   
  [Внесение изменений в схемы баз данных публикации](make-schema-changes-on-publication-databases.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
- [Add Articles to and Drop Articles from a Publication](add-articles-to-and-drop-articles-from-a-publication.md)  (Добавление и удаление статей в публикации)  
- [Просмотр сведений и выполнение задач для публикации (монитор репликации)](../monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [View and Modify Article Properties](view-and-modify-article-properties.md) (Просмотр и изменение свойств статьи)  
+ [Добавление и удаление статей в публикации](add-articles-to-and-drop-articles-from-a-publication.md)   
+ [Просмотр сведений и выполнение задач с помощью монитора репликации](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [View and Modify Article Properties (Просмотр и изменение свойств статьи)](view-and-modify-article-properties.md)  
   
   

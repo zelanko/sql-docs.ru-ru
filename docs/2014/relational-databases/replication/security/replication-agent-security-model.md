@@ -20,15 +20,15 @@ ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f34b5accc278a55946546c149c00bffd3a02a693
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4b919289d49901f64b26db0aa2d4b71eeb0e132a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812002"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133574"
 ---
 # <a name="replication-agent-security-model"></a>Модель безопасности агента репликации
-  Модель безопасности агента репликации предоставляет возможность точного управления учетными записями, под которыми агенты репликации выполняются и устанавливают соединения: для каждого агента может быть задана своя учетная запись. Дополнительные сведения об определении учетных записей см. в статье [Управление именами входа и паролями в репликации](manage-logins-and-passwords-in-replication.md).  
+  Модель безопасности агента репликации предоставляет возможность точного управления учетными записями, под которыми агенты репликации выполняются и устанавливают соединения: для каждого агента может быть задана своя учетная запись. Дополнительные сведения об определении учетных записей см. в статье [Управление именами входа и паролями в репликации](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  
   
 > [!IMPORTANT]  
 >  Если репликацию настраивает член предопределенной роли сервера **sysadmin** , агенты репликации можно настроить для олицетворения учетной записи агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Это можно сделать, если не задавать имя входа и пароль для агента репликации, однако такой подход не рекомендуется. Вместо этого для обеспечения надежной защиты рекомендуется задать учетную запись для каждого агента с минимальными разрешениями, описанными в подразделе «Разрешения, необходимые для агентов» ниже в этом разделе.  
@@ -92,7 +92,7 @@ ms.locfileid: "52812002"
   
 ## <a name="see-also"></a>См. также  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Безопасность и защита (репликация)](security-and-protection-replication.md)   
- [Организация безопасности папки моментальных снимков](secure-the-snapshot-folder.md)  
+ [Безопасность репликации SQL Server](view-and-modify-replication-security-settings.md)   
+ [Защита папки моментальных снимков](secure-the-snapshot-folder.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50328c814b23f9df33a0524bae1758afecd3f5f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b3bf1b9c7b43a2196f2bc2c09422feb43cbc7c4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091264"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134094"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Репликация, отслеживание изменений, изменение данных и группы доступности AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Репликация, отслеживание измененных данных (CDC) и отслеживание изменений (CT) поддерживаются в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] помогает обеспечивать высокий уровень доступности и дополнительные возможности восстановления баз данных.  
@@ -185,15 +185,15 @@ ms.locfileid: "48091264"
 ##  <a name="Prereqs"></a> Условия, ограничения и вопросы использования репликации  
  В этом разделе описаны вопросы развертывания репликации при помощи [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], в том числе предварительные условия, ограничения и рекомендации.  
   
-### <a name="prerequisites"></a>Предварительные требования  
+### <a name="prerequisites"></a>предварительные требования  
   
 -   При использовании репликации транзакций и базы данных публикации в группе доступности издатель и распространитель должны иметь версию не ниже [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Подписчик может использовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]более низкого уровня.  
   
 -   При использовании репликации слиянием и базы данных публикации в группе доступности:  
   
-    -   Принудительная подписка: и издатель, и распространитель должны иметь версию не ниже [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+    -   Принудительная подписка: И издатель и распространитель должны иметь версию не ниже [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
-    -   Подписка по запросу: базы данных издателя, распространителя и подписчика должны находиться на экземпляре с версией не ниже [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Это связано с тем, что агент слияния на подписчике должен иметь сведения о том, как группа доступности может выполнить отработку отказа на базу данных-получатель.  
+    -   Подписка по запросу: Базы данных издателя, распространителя и подписчика должны находиться в экземпляре с версией не ниже [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Это связано с тем, что агент слияния на подписчике должен иметь сведения о том, как группа доступности может выполнить отработку отказа на базу данных-получатель.  
   
 -   Размещение базы данных распространителя в группе доступности не поддерживается.  
   
@@ -206,7 +206,7 @@ ms.locfileid: "48091264"
 |-|-|-|-|  
 ||**Издатель**|**Распространитель** <sup>3</sup>|**Подписчик**|  
 |**Транзакционная**|Да<sup>1</sup>|Нет|Да<sup>2</sup>|  
-|**P2P**|Нет|Нет|Нет|  
+|**P2P**|Нет|нет|Нет|  
 |**Объединить**|Да|Нет|Да<sup>2</sup>|  
 |**Моментальный снимок**|Да|Нет|Да<sup>2</sup>|  
   
@@ -231,7 +231,7 @@ ms.locfileid: "48091264"
   
 -   [Обслуживание базы данных публикации AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Администрирование (репликация)](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [Администрирование репликации часто задаваемые вопросы](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **Change data capture**  
   
@@ -254,7 +254,7 @@ ms.locfileid: "48091264"
  [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Группы доступности AlwaysOn: Взаимодействие (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [ экземпляры отказоустойчивого кластера AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
- [Об отслеживании измененных данных (SQL Server)](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
+ [О фиксации измененных данных (SQL Server)](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Об отслеживании изменений (SQL Server)](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Репликация SQL Server](../../../relational-databases/replication/sql-server-replication.md)   
  [Отслеживание измененных данных (SQL Server)](../../../relational-databases/track-changes/track-data-changes-sql-server.md)   

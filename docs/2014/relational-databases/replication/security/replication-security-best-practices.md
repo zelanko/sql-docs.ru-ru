@@ -15,12 +15,12 @@ ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18a3bed07be7fd035a5011d16c528525685cdfb6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7db85ce6d63cd6c3eb458434357fa5a2d8127dec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781176"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135934"
 ---
 # <a name="replication-security-best-practices"></a>Рекомендации по защите репликации
   Репликация перемещает данные в распределенных средах, начиная с внутренних сетей в рамках одного домена и заканчивая приложениями, обеспечивающими передачу данных между доменами без доверия, а также через Интернет. Чтобы обеспечить безопасность соединения при репликации, важно выбрать способ, соответствующий конкретным обстоятельствам.  
@@ -37,7 +37,7 @@ ms.locfileid: "52781176"
   
     -   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
   
--   При запуске каждого агента репликации необходимо использовать новую учетную запись Windows, а в отношении всех соединений агента репликации применять проверку подлинности Windows. Дополнительные сведения об указании учетных записей см. в статье [Управление именами для входа и паролями в репликации](manage-logins-and-passwords-in-replication.md).  
+-   При запуске каждого агента репликации необходимо использовать новую учетную запись Windows, а в отношении всех соединений агента репликации применять проверку подлинности Windows. Дополнительные сведения об указании учетных записей см. в статье [Управление именами для входа и паролями в репликации](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  
   
 -   Предоставляйте каждому из агентов только те разрешения, которые необходимы. Дополнительные сведения см. в подразделе «Разрешения, необходимые для агентов» раздела [Replication Agent Security Model](replication-agent-security-model.md).  
   
@@ -73,6 +73,6 @@ ms.locfileid: "52781176"
  [Защита подписчика](secure-the-subscriber.md)   
  [Организация безопасности распространителя](secure-the-distributor.md)   
  [Организация безопасности издателя](secure-the-publisher.md)   
- [Безопасность и защита (репликация)](security-and-protection-replication.md)  
+ [Безопасность репликации SQL Server](view-and-modify-replication-security-settings.md)  
   
   

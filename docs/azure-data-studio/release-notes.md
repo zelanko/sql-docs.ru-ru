@@ -3,7 +3,7 @@ title: Заметки о выпуске и журнал изменений
 titleSuffix: Azure Data Studio
 description: Заметки о выпуске Azure Data Studio
 ms.custom: seodec18
-ms.date: 11/06/2018
+ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,34 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22542b42aff4b6d2d37e4a7342395d154d16dc95
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 63cf17e26ce554b901a3c9cc6db1fcb18162140d
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030348"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143664"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Azure Data Studio последние заметки о выпуске и журнал изменений
 
-**[Скачайте Ноябрьский выпуск!](download.md)**
+**[Скачайте январском выпуске!](download.md)**
+
+
+## <a name="january-2019-january-release"></a>Января 2019 года (января выпуск)
+
+Дата выпуска: 09 января 2019 г.  
+Версия: 1.3.8
+
+- Добавить нового пользователя установщика для Windows. В отличие от существующего установщика системы в новом установщике пользователя не требуются права администратора. Это также позволяет упростить процедуру обновления для не-администраторов.
+- Поддержка проверки подлинности Active Directory Azure.
+- Объявление о выпуске анализ производительности DM компании Idera SQL (Предварительная версия).
+- Поддержка расширения импорта SQL Server Data-Tier Application Wizard.
+- Обновление до [расширение предварительной версии SQL Server 2019 г.](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- Улучшения SQL Server Profiler.
+- Результаты, потоковая передача больших запросов (Предварительная версия).
+- Расширения сообщества: sp_executesql в sql и новой базы данных.
+- Разрешить ["ошибки" и выдает](https://github.com/Microsoft/azuredatastudio/milestone/19?closed=1).
+
+Подробные сведения см. в разделе [журнал изменений](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), и [выпуски](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="november-2018-november-release"></a>Ноябрь 2018 г. (Ноябрьский выпуск)
 
@@ -35,6 +53,7 @@ ms.locfileid: "53030348"
 - Обновления службы средств SQL для.Net Core 2,2 предварительной версии 3 (для поддержки итоговой AAD)
 
 ### <a name="bug-fixes"></a>Исправления ошибок
+
 - Исправить [выдавать #2933](https://github.com/Microsoft/azuredatastudio/issues/2933): Потеряно соединение с базой данных SQL Azure
 - Исправить [выдавать #2914](https://github.com/Microsoft/azuredatastudio/issues/2914): «Недопустимый аргумент» исключение раскрываемого обозревателя Объектов базы данных узла
 - Исправить [выдавать #2935](https://github.com/Microsoft/azuredatastudio/pull/2935): Правильно отображать сообщения несколько строк в результатах запроса
@@ -44,8 +63,6 @@ ms.locfileid: "53030348"
 - Исправить [выдавать #3047](https://github.com/Microsoft/azuredatastudio/pull/3047): Добавить интерфейс командной строки для подключения к SQL Server
 - Исправить [выдавать #3031](https://github.com/Microsoft/azuredatastudio/pull/3031): Добавление поддержки темы плана запроса
 - ...
-
-Подробные сведения см. в разделе [журнал изменений](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), и [выпуски](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="october-2018-october-release"></a>Октября 2018 г. (Октябрьский выпуск)
 
@@ -146,7 +163,7 @@ ms.locfileid: "53030348"
 - Исправить [выдавать #2129](https://github.com/Microsoft/azuredatastudio/pull/2129): Сохраните редактируемую позицию прокрутки данных при переключении вкладок.
 - Исправить [выдавать #2152](https://github.com/Microsoft/azuredatastudio/issues/2152): Индикатор строки сетки результатов отсчитываемый от нуля.
 
-## <a name="known-issues"></a>Известные проблемы
+### <a name="known-issues"></a>Известные проблемы
 
 - [Выдача #2371](https://github.com/Microsoft/azuredatastudio/issues/2371) Сохранить как только сохраняет первую строку данных Excel
 - [Выдача #2150](https://github.com/Microsoft/azuredatastudio/issues/2150): Не удалось подключиться на Ubuntu 16.04 to SQL в контейнере

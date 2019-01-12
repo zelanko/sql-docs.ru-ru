@@ -1,7 +1,7 @@
 ---
 title: SQLSetConnectAttr | Документация Майкрософт
 ms.custom: ''
-ms.date: 12/11/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,14 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7167f88fd1cc3b349df9543080caf6d571322c40
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: 0e27df2328474f4123daa9488af88eb7903832be
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306261"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206380"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -35,7 +36,7 @@ ms.locfileid: "53306261"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] обеспечил поддержку нового атрибута изоляции транзакций, SQL_COPT_SS_TXN_ISOLATION. Задание SQL_COPT_SS_TXN_ISOLATION значения SQL_TXN_SS_SNAPSHOT указывает, что транзакция произойдет на уровне изоляции моментального снимка.  
   
 > [!NOTE]  
->  SQL_ATTR_TXN_ISOLATION можно использовать для установки всех других уровней изоляции за исключением SQL_TXN_SS_SNAPSHOT. При необходимости использовать изоляцию моментальных снимков, следует установить SQL_TXN_SS_SNAPSHOT через SQL_COPT_SS_TXN_ISOLATION. Однако уровень изоляции можно получить с помощью SQL_ATTR_TXN_ISOLATION или SQL_COPT_SS_TXN_ISOLATION.  
+> SQL_ATTR_TXN_ISOLATION можно использовать для установки всех других уровней изоляции за исключением SQL_TXN_SS_SNAPSHOT. При необходимости использовать изоляцию моментальных снимков, следует установить SQL_TXN_SS_SNAPSHOT через SQL_COPT_SS_TXN_ISOLATION. Однако уровень изоляции можно получить с помощью SQL_ATTR_TXN_ISOLATION или SQL_COPT_SS_TXN_ISOLATION.  
   
  Повышение атрибутов инструкций ODBC до атрибутов соединения может привести к непредсказуемым результатам. Атрибуты инструкций, запрашивающие серверные курсоры для обработки результирующего набора, можно повысить до атрибутов соединения. Например, присвоение атрибуту инструкции ODBC SQL_ATTR_CONCURRENCY значения (более ограничивающего, чем SQL_CONCUR_READ_ONLY), принятое по умолчанию, указывает драйверу, что для всех инструкций соединения следует использовать динамические курсоры. Выполнение функции каталога ODBC в инструкции соединения возвращает SQL_SUCCESS_WITH_INFO и диагностическую запись, указывающую, что режим работы курсора изменился на «только чтение». Попытка выполнить инструкцию Transact-SQL SELECT, содержащую предложение COMPUTE, в том же соединении завершится ошибкой.  
   
@@ -193,7 +194,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQL_IS_OFF|По умолчанию. Для проверки идентификатора и пароля для имени входа используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |SQL_IS_ON|Для проверки прав доступа пользователя к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется проверка подлинности Windows.|  
 
-< имя = «sqlcoptssmarsenabled» ></a>
+<a name="sqlcoptssmarsenabled"></a>
 ## <a name="sqlcoptssmarsenabled"></a>SQL_COPT_SS_MARS_ENABLED  
  Этот атрибут включает или отключает режим MARS. По умолчанию режим MARS отключен. Атрибут должен быть установлен до соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После открытия соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] режим MARS останется включенным или отключенным до закрытия соединения.  
   
@@ -315,7 +316,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
  Дополнительные сведения об изоляции моментальных снимков см. в разделе [работа с изоляцией моментального снимка](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
   
-## <a name="sqlcoptssuseprocforprep"></a>SQL_COPT_SS_USE_PROC_FOR_PREP  
+## <a name="sqlcoptssuseprocforprep"></a>SQL_COPT_SS_USE_PROC_FOR_PREP
+
  Этот атрибут больше не поддерживается.  
 
 <a name="sqlcoptssuserdata"></a>
@@ -333,7 +335,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |SQL_WARN_YES|Создание предупреждений при потере данных во время преобразования кодовых страниц.|  
 |SQL_WARN_NO|(По умолчанию) Не формировать предупреждения при потере данных во время преобразования кодовых страниц.|  
   
-## <a name="sqlsetconnectattr-support-for-service-principal-names-spns"></a>Поддержка функции SQLSetConnectAttr применительно к именам участников-служб (SPN)  
+## <a name="sqlsetconnectattr-support-for-service-principal-names-spns"></a>Поддержка функции SQLSetConnectAttr применительно к именам участников-служб (SPN)
+
  SQLSetConnectAttr можно использовать для задания значения новых атрибутов соединения SQL_COPT_SS_SERVER_SPN и SQL_COPT_SS_FAILOVER_PARTNER_SPN. Эти атрибуты нельзя устанавливать при открытом соединении, в противном случае возвращается ошибка HY011 с сообщением «В настоящее время эта операция недопустима». (SQLSetConnectOption может также использоваться для задания этих значений.)  
   
  Дополнительные сведения об именах SPN см. в разделе [имена участников-служб &#40;имена участников-служб&#41; в клиентских соединениях &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
@@ -344,7 +347,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
  Дополнительные сведения об атрибуте SQL_COPT_SS_CONNECTION_DEAD см. в разделе [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) и [подключение к источнику данных &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md).  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a>Пример
+
  В этом примере данные производительности записываются в журнал.  
   
 ```  
@@ -388,7 +392,8 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
 // Continue on...  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
+
  [Функция SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59368)   
  [Сведения о реализации API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [Функции массового копирования](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)   

@@ -12,12 +12,12 @@ ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 17282ecfc0c6adbb1e4d1fc97f470371f90bd3f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9b0ff18a9b3c6ff338a2b827b91ff20bbc7b2ce9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520800"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134924"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Предоставление разрешения для участника
   В данном разделе содержатся инструкции по предоставлению разрешения участнику [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -65,7 +65,7 @@ ms.locfileid: "52520800"
   
 4.  Щелкните правой кнопкой мыши хранимую процедуру и выберите **Свойства**.  
   
-5.  В **свойства хранимой процедуры-*** имя_хранимой_процедуры* диалоговое окно, в разделе выбора страницы выберите **разрешения**. Данная страница используется для добавления пользователей или ролей к хранимым процедурам и для назначения разрешений этим пользователям и ролям.  
+5.  В **свойства хранимой процедуры -**_имя_хранимой_процедуры_ диалоговое окно, в разделе выбора страницы выберите **разрешения**. Данная страница используется для добавления пользователей или ролей к хранимым процедурам и для назначения разрешений этим пользователям и ролям.  
   
 6.  После завершения нажмите кнопку **ОК**.  
   

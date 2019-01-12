@@ -16,12 +16,12 @@ ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ff1ea78afa77211504e6a0b17c8931183dead73
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8225039ece914c461af34f5344350227d6a39cdc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798356"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132434"
 ---
 # <a name="delete-unique-constraints"></a>Удаление ограничений уникальности
   Удалить ограничение уникальности в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Удаление ограничения уникальности приводит к удалению требования уникальности значений, вводимых в столбцы или в сочетание столбцов, указанных в выражении ограничения, а также к удалению соответствующего уникального индекса.  
@@ -65,7 +65,7 @@ ms.locfileid: "52798356"
   
 4.  Щелкните **Удалить**.  
   
-5.  В меню **Файл** выберите пункт **Сохранить** *имя_таблицы*.  
+5.  В меню **Файл** выберите пункт **Сохранить** _имя_таблицы_.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

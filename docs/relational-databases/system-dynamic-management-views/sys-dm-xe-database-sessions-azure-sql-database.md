@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 732d0bc450c23413fb31c7336e93dbf3dc785bec
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7602e03864a736c6011142fd56c3e6129efcb718
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662783"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143274"
 ---
 # <a name="sysdmxedatabasesessions-azure-sql-database"></a>sys.dm_xe_database_sessions (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51662783"
   
 ||  
 |-|  
-|**Применяется к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 12 и любые более поздние версии.|  
+|**Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] До версии 12 и любые более поздние версии.|  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "51662783"
  Необходимо разрешение VIEW DATABASE STATE.  
   
 ### <a name="relationship-cardinalities"></a>Количество элементов связей  
-Начиная с 2015-07-13 «sys.dm_xe_objects» является одним из этих XEvents динамические административные представления, которые не содержат «_database» в имени. Опечатка или ошибка в столбце справа в следующей таблице. Имя будет соответствующим образом в Microsoft SQL Server и базы данных SQL Azure. GeneMi.  
+Начиная с 2015-07-13 «sys.dm_xe_objects» является одним из этих XEvents динамические административные представления, которые не содержат «_database» в имени. Опечатка или ошибка в столбце справа в следующей таблице. Имя будет соответствующим образом в Microsoft SQL Server и базы данных SQL Azure.  
   
 |От|Чтобы|Связь|  
 |--------|------|----------------|  

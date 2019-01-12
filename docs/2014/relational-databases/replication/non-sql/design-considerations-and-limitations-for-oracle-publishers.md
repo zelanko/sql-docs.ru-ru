@@ -12,12 +12,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f9d7183d6e94f5808434090dd8fc998b946ed0f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810896"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136064"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Рассмотрение структуры и ограничений издателей Oracle
   Публикация из баз данных Oracle спроектирована таким образом, чтобы работать идентично публикации из базы данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Однако необходимо знать о следующих ограничениях и проблемах:  
@@ -135,7 +135,7 @@ ms.locfileid: "52810896"
   
 -   Подписчики на публикации Oracle не могут быть повторно автоматически инициализированы из резервной копии.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает два типа проверки данных: двоичную и количества строк. Издатели Oracle поддерживают только проверку количества строк. Дополнительные сведения см. в статье [Проверка реплицированных данных](../validate-replicated-data.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает два типа проверки данных: двоичную и количества строк. Издатели Oracle поддерживают только проверку количества строк. Дополнительные сведения см. в статье [Проверка реплицированных данных](../validate-data-at-the-subscriber.md).  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предусматривает два формата моментальных снимков: собственный режим bcp и символьный режим. Издатели Oracle поддерживают символьный режим моментальных снимков.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "52810896"
   
     -   Параметр **@job_login** невозможно изменить с помощью хранимой процедуры [sp_changepublication_snapshot (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) или [sp_changelogreader_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql), но пароль можно изменить.  
   
- Дополнительные сведения о безопасности репликации см. в статье [Безопасность и защита (репликация)](../security/security-and-protection-replication.md).  
+ Дополнительные сведения о безопасности репликации см. в разделе [безопасность репликации SQL Server](../security/view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a>См. также  
  [Administrative Considerations for Oracle Publishers](administrative-considerations-for-oracle-publishers.md)  (Вопросы управления издателями Oracle)  

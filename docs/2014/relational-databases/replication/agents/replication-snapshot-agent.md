@@ -15,12 +15,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7d98c19c91fe05c2d283192b97d063c0b8d26e3c
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: 12050c8d2e5d440ef8f4d7f6584f6c08c210f4f0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785975"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132284"
 ---
 # <a name="replication-snapshot-agent"></a>Агент моментальных снимков репликации
   Агент моментальных снимков репликации — это исполняемый файл, который подготавливает файлы моментальных снимков, содержащие схему, данные опубликованных таблиц и объекты базы данных, сохраняет их в папке моментальных снимков и регистрирует задания синхронизации в базе данных распространителя.  
@@ -135,7 +135,7 @@ ms.locfileid: "53785975"
  > [!NOTE]  
  >  Допустимый SSL-сертификат задается с полным доменным именем SQL Server. Если параметр -EncryptionLevel имеет значение 2, то для подключения агента создайте псевдоним на локальном сервере SQL Server. Для параметра Alias Name (Имя псевдонима) должно быть указано имя сервера, а для параметра Server (Сервер) — полное доменное имя SQL Server.
   
- Дополнительные сведения см. в статье [Общие сведения о безопасности (репликация)](../security/security-overview-replication.md).  
+ Дополнительные сведения см. в разделе [безопасность репликации SQL Server](../security/view-and-modify-replication-security-settings.md).  
   
  **-FieldDelimiter** _field_delimiter_  
  Символ или последовательность символов, обозначающая конец поля в файле данных массового копирования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . По умолчанию имеет значение \n\<x$3>\n.  

@@ -16,12 +16,12 @@ ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cda4e884608c10e75ab4c33a89fcf23a1919fc0d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b06d348358a141771816230179ca7deae4e4353a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202053"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132865"
 ---
 # <a name="sparticleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sp_articleview [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=**] **"***публикации***"**  
+ [  **@publication=**] **"**_публикации_**"**  
  Имя публикации, которая содержит статью. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@article=**] **"***статье***"**  
+ [  **@article=**] **"**_статье_**"**  
  Имя статьи. *статья* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@view_name=**] **"***view_name***"**  
+ [  **@view_name=**] **"**_view_name_**"**  
  Имя представления, определяющего опубликованную статью. *view_name* — **nvarchar(386)**, значение по умолчанию NULL.  
   
- [  **@filter_clause=**] **"***filter_clause***"**  
+ [  **@filter_clause=**] **"**_filter_clause_**"**  
  Предложение ограничения (WHERE), которое задает горизонтальный фильтр. При вводе предложения ограничения опустите ключевое слово WHERE. *filter_clause* — **ntext**, значение по умолчанию NULL.  
   
  [  **@change_active =** ] *change_active*  
@@ -69,14 +69,14 @@ sp_articleview [ @publication = ] 'publication'
   
  **1** указывает, что изменения статьи может привести к недействительности моментального снимка и если существующие подписки потребуют нового моментального снимка, дается разрешение существующий моментальный снимок помечается как устаревшего и создание нового моментального снимка.  
   
- [  **@force_reinit_subscription =]** *этот*  
+ [  **@force_reinit_subscription =]** _этот_  
  Подтверждает, что действие, выполняемое данной хранимой процедурой, может сделать необходимой повторную инициализацию текущих подписок. *Этот* — **бит** значение по умолчанию **0**.  
   
  **0** указывает, что изменения статьи не вызывают повторной инициализации подписки. Если хранимая процедура определяет, что изменение потребует повторной инициализации подписки, то выдается сообщение об ошибке, и изменения не производится.  
   
  **1** указывает, что изменения статьи вызывает существующую подписку для повторной инициализации и дает разрешение произвести повторную инициализацию подписки.  
   
- [ **@publisher**=] **"***издателя***"**  
+ [ **@publisher**=] **"**_издателя_**"**  
  Указывает, отличный от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  

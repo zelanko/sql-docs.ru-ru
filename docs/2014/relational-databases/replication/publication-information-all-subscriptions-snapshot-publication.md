@@ -12,12 +12,12 @@ ms.assetid: 7ce656c2-6e60-4625-8955-1daff641070c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 30f407c862bdc0b4cc38b225b9ff6842e8fbcce0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3665647e89c03b75230acf58d2f5193fceefe878
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776946"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135734"
 ---
 # <a name="publication-information-all-subscriptions-snapshot-publication"></a>Сведения о публикации, вкладка «Все подписки» (публикация моментальных снимков)
   На вкладке **Все подписки** отображаются сведения обо всех подписках на выбранную публикацию моментальных снимков.  
@@ -69,8 +69,7 @@ ms.locfileid: "52776946"
   
 ## <a name="see-also"></a>См. также  
  [Запуск монитора репликации](monitor/start-the-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для подписки (монитор репликации)](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
+ [Просмотр сведений и выполнение задач с помощью монитора репликации](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Наблюдение за репликацией](monitoring-replication.md)  
   
   

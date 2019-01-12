@@ -16,12 +16,12 @@ ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 05314fe18f555d4d2d3cca161a3b770ec85b4256
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 22e08b5eb0bccc02303201b7fae46b55f1012fd8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532135"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133294"
 ---
 # <a name="create-a-server-role"></a>Создание роли сервера
   В этом разделе описывается создание новой роли сервера в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -69,7 +69,7 @@ ms.locfileid: "52532135"
   
 3.  Щелкните правой кнопкой мыши папку **Роли сервера** и выберите **Создать роль сервера…**.  
   
-4.  В **новая роль сервера-*** server_role_name* диалоговом окне **Общие** введите имя новой роли сервера в **имя роли сервера** поле.  
+4.  В **новая роль сервера -**_server_role_name_ диалоговом окне **Общие** введите имя новой роли сервера в **имя роли сервера**поле.  
   
 5.  В поле **Владелец** введите имя участника на уровне сервера, которому будет принадлежать новая роль. Также можно нажать кнопку с многоточием **(...)**, чтобы открыть диалоговое окно **Выбор имени входа или роли сервера**.  
   

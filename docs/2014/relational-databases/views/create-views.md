@@ -12,12 +12,12 @@ ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5eaa6c702c02a3258ac66ec55081965d25a12a55
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 27748ee6f4c70ebbcb4d1d28738130ddea07232b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541820"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134404"
 ---
 # <a name="create-views"></a>Создание представлений
   Представления можно создать в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Представление можно использовать в следующих целях.  
@@ -70,7 +70,7 @@ ms.locfileid: "52541820"
   
 6.  На **Панели критериев**выберите дополнительные условия сортировки или фильтрации для столбцов.  
   
-7.  В меню **Файл** выберите команду **Сохранить***имя представления*.  
+7.  В меню **Файл** выберите пункт **Сохранить**_view name_.  
   
 8.  В диалоговом окне **Выбор имени** введите имя нового представления и щелкните **ОК**.  
   

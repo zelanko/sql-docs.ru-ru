@@ -16,12 +16,12 @@ ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c07d35024358961b1d438d6a0b53cc764bbc479
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b43cdabb83b8f255b315e16b4bbe0d9af1156c51
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781236"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133634"
 ---
 # <a name="queued-updating-conflict-detection-and-resolution"></a>Queued Updating Conflict Detection and Resolution
   Поскольку подписки, обновляемые посредством очередей, допускают изменения одних и тех же данных в различных местоположениях, при синхронизации данных у издателя могут возникать конфликты. Системой репликации обнаруживаются любые конфликты, возникающие при синхронизации изменений с издателем, которые затем разрешаются с помощью политики разрешения конфликтов, выбранной при создании публикации. Могут возникнуть следующие конфликты.  
@@ -54,7 +54,7 @@ ms.locfileid: "52781236"
   
  **Установка политики устранения конфликтов обновления посредством очередей**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. [Настройка параметров разрешения конфликтов для обновления посредством очередей (среда SQL Server Management Studio)](../publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. [Настройка параметров разрешения конфликтов для обновления посредством очередей (среда SQL Server Management Studio)](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 -   Программирование репликации на Transact-SQL: [Включение обновляемых подписок для публикации транзакций](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
-ms.openlocfilehash: b73e144dd362691ea93b3312f6dc10ce542f1c43
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 02e5e0ba4bd7300d71d95d5e3572ce4e09ac3bd4
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030218"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143334"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Подключение [!INCLUDE[name-sos](../includes/name-sos-short.md)] к серверу SQL Server, использование проверки подлинности Windows — Kerberos 
 
@@ -27,7 +27,7 @@ ms.locfileid: "53030218"
 ## <a name="prerequisites"></a>предварительные требования
 
 - Доступ к домену компьютере Windows для отправки запросов контроллера домена Kerberos.
-- SQL Server должен позволять проводить проверку подлинности Kerberos. Для драйвера клиента под управлением Unix встроенная проверка подлинности поддерживается только с помощью Kerberos. Дополнительные сведения о настройке Sql Server для проверки подлинности с помощью Kerberos можно найти [здесь](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server). Должно быть зарегистрированы для каждого экземпляра Sql Server, вы пытаетесь подключиться к SPN. Подробные сведения о формате имен участников-служб SQL Server указаны [здесь](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
+- SQL Server должен позволять проводить проверку подлинности Kerberos. Для драйвера клиента под управлением Unix встроенная проверка подлинности поддерживается только с помощью Kerberos. Дополнительные сведения о настройке Sql Server для проверки подлинности с помощью Kerberos можно найти [здесь](https://support.microsoft.com/help/319723/how-to-use-kerberos-authentication-in-sql-server). Должно быть зарегистрированы для каждого экземпляра Sql Server, вы пытаетесь подключиться к SPN. Подробные сведения о формате имен участников-служб SQL Server указаны [здесь](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
 
 
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>Проверка наличия установки Kerberos в Sql Server

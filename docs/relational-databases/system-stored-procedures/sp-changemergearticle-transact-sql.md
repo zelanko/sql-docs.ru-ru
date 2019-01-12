@@ -16,12 +16,12 @@ ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04a142b477749c9de20c4bac0d7cb17be243a359
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: af1d0e22b4dab79ac7ac9b8d91c198c349280655
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823148"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134324"
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x100000000**|Используйте этот параметр для репликации атрибута FILESTREAM, если он указан на **varbinary(max)** столбцов. Не указывайте этот параметр, если выполняется репликация таблиц на подписчики [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Репликация таблиц со столбцами FILESTREAM на [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] подписчиков не поддерживается, независимо от того, как задается этот параметр схемы. См. связанный параметр **0x800000000**.|  
 ||**0x200000000**|Преобразует типы данных даты и времени (**даты**, **время**, **datetimeoffset**, и **datetime2**), которые появились в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] для типов данных, которые поддерживаются в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**0x400000000**|Проводит репликацию параметра сжатия для данных и индексов. Дополнительные сведения см. в разделе [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
-||**0x800000000**|Задайте этот параметр для сохранения данных атрибута FILESTREAM в его файловой группе на подписчике. Если этот параметр не задан, данные атрибута FILESTREAM сохраняются в файловой группе по умолчанию. Репликация не создает файловые группы, поэтому, если этот параметр задан, необходимо создать файловую группу до применения моментального снимка на подписчике. Дополнительные сведения о том, как создавать объекты, перед применением моментального снимка см. в разделе [выполнение скриптов до и после применения моментального снимка](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).<br /><br /> См. связанный параметр **0x100000000**.|  
+||**0x800000000**|Задайте этот параметр для сохранения данных атрибута FILESTREAM в его файловой группе на подписчике. Если этот параметр не задан, данные атрибута FILESTREAM сохраняются в файловой группе по умолчанию. Репликация не создает файловые группы, поэтому, если этот параметр задан, необходимо создать файловую группу до применения моментального снимка на подписчике. Дополнительные сведения о том, как создавать объекты, перед применением моментального снимка см. в разделе [выполнение скриптов до и после применения моментального снимка](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).<br /><br /> См. связанный параметр **0x100000000**.|  
 ||**0x1000000000**|Преобразует типами среды CLR (CLR) пользовательских (данных UDT) в **varbinary(max)** , чтобы столбцы определяемого Пользователем типа могли реплицироваться на подписчики, работающие [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||**0x2000000000**|Преобразует **hierarchyid** тип данных для **varbinary(max)** таким образом, столбцы типа **hierarchyid** могли реплицироваться на подписчики, работающие [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Дополнительные сведения об использовании **hierarchyid** столбцов в реплицированных таблицах см. в разделе [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 ||**0x4000000000**|Проводит репликацию всех фильтруемых индексов для таблицы. Дополнительные сведения об отфильтрованных индексах см. в разделе [Создание отфильтрованных индексов](../../relational-databases/indexes/create-filtered-indexes.md).|  
@@ -213,7 +213,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
 -   **logical_record_level_conflict_resolution**  
   
- При указании значения 3 для **partition_options**, метаданные очищаются при каждом запуске агента слияния и действия секционированного снимка истекает быстрее. При использовании этого параметра следует разрешить запрошенный подписчиком секционированный снимок. Дополнительные сведения см. в статье [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ При указании значения 3 для **partition_options**, метаданные очищаются при каждом запуске агента слияния и действия секционированного снимка истекает быстрее. При использовании этого параметра следует разрешить запрошенный подписчиком секционированный снимок. Дополнительные сведения см. в статье [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
  При задании **column_tracking** свойство, если таблица уже опубликована в других публикациях слиянием, отслеживание столбцов должно совпадать с значение используется в существующих статей, основанных на данной таблице. Этот параметр применим только для статей таблиц.  
   

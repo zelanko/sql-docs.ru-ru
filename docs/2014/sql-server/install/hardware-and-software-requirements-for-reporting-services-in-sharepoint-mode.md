@@ -1,7 +1,7 @@
 ---
 title: Оборудованию и программному обеспечению для служб Reporting Services в режиме интеграции с SharePoint | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/09/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -11,14 +11,15 @@ ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6ee2cbd875416e1b981d2dfa6006e42529fcf679
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5b70a6a736d9a7f566eb4aa60a37ed7b5151168e
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362606"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206180"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>Требования к оборудованию и программному обеспечению для служб Reporting Services в режиме интеграции с SharePoint
+
   В этом разделе описываются предварительные требования, требования к оборудованию и рекомендации по установке для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , работающего в режиме интеграции с SharePoint. Поскольку для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint требуется сервер SharePoint, большинство требований основаны на среде SharePoint. Для серверов отчетов, работающих в собственном режиме, оборудование должно соответствовать минимальным требованиям для работы [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения см. в разделе [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
   
 -   [Предварительные требования](#bkmk_prereq)  
@@ -61,11 +62,13 @@ ms.locfileid: "53362606"
   
 -   Экземпляр сервера отчетов не может использовать для своей базы данных выпуск SQL Server Express Edition. Однако экземпляр SQL Server Express Edition, установленный продуктом SharePoint, может существовать параллельно с другими выпусками ядра СУБД.  
   
-##  <a name="bkmk_powerview"></a> [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] Требования  
+##  <a name="bkmk_powerview"></a> [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] Требования
+
  Ознакомьтесь с новейшей [документацией по Power View](http://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) на сайте Office.Microsoft.com. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] входит в состав Microsoft Excel 2013 и является частью надстройки служб Reporting Services [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для выпусков Microsoft SharePoint Server 2010 и 2013 Enterprise.  
   
-##  <a name="bkmk_more_information"></a> Дополнительные сведения  
- Сведения об изменениях SharePoint см. в разделе [изменения с SharePoint 2010 до SharePoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/en-us/library/ff607742(office.15).aspx).  
+##  <a name="bkmk_more_information"></a> Дополнительные сведения
+
+ Сведения об изменениях SharePoint см. в разделе [изменения с SharePoint 2010 до SharePoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/library/ff607742(office.15).aspx).  
   
  [Заметки о выпуске SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   

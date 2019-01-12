@@ -1,7 +1,7 @@
 ---
 title: Задача "Файловая система" для Azure Data Lake Store | Документы Майкрософт
 ms.custom: ''
-ms.date: 08/24/2017
+ms.date: 01/09/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -14,35 +14,38 @@ ms.assetid: 02b9edd7-6ef9-463e-abbf-e1830bcae875
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c6b4c27b0edde310ba3252dd67bf8f51f40f0e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1b3fc1317e4454008a628c03e189e690bfeb21d
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136564"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206280"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Задача "Файловая система" для Azure Data Lake Store
-**Azure Data Lake Store File System Task** дает пользователям возможность выполнять различные операции файловой системы на [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/en-us/services/data-lake-store/).
+
+**Azure Data Lake Store File System Task** дает пользователям возможность выполнять различные операции файловой системы на [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/services/data-lake-store/).
 
 Чтобы добавить в пакет задачу "Файловая система" для Azure Data Lake Store, перетащите ее с панели элементов служб SSIS на панель холста конструктора. Затем дважды щелкните задачу, или щелкните правой кнопкой мыши задачу и выберите **изменить**, чтобы открыть диалоговое окно редактора задач.
 
 Операция файловой системы, которая будет выполнена, задается свойством **Операция**. Поддерживаются следующие операции.
 
-* **CopyToADLS**. Загрузка файлов в ADLS.
-* **CopyFromADLS**. Скачивание файлов из ADLS.
+* **CopyToADLS:** Загрузка файлов в ADLS.
+* **CopyFromADLS:** Скачивание файлов из ADLS.
 
 Для любой операции необходимо указать диспетчер подключений Azure Data Lake.
 
 Ниже приведены описания свойств, относящиеся к каждой операции.
 
 ## <a name="copytoadls"></a>CopyToADLS
-* **LocalDirectory:** указывает исходный каталог, в котором содержатся файлы для загрузки.
-* **FileNamePattern**. Определяет фильтр имен для исходных файлов. Будут отправлены только файлы, имя которого соответствует указанному шаблону. Поддерживаются подстановочные знаки `*` и `?`.
-* **SearchRecursively**. Указывает, следует ли выполнять рекурсивный поиск файлов для загрузки в каталоге источника.
-* **AzureDataLakeDirectory**. Указывает каталог назначения ADLS, в который будут загружены файлы.
+
+* **LocalDirectory:** Указывает исходный каталог, в котором содержатся файлы для загрузки.
+* **FileNamePattern:** Указывает фильтр имен для исходных файлов. Будут отправлены только файлы, имя которого соответствует указанному шаблону. Поддерживаются подстановочные знаки `*` и `?`.
+* **SearchRecursively:** Указывает, следует ли выполнять рекурсивный поиск в исходный каталог для файлов для отправки.
+* **AzureDataLakeDirectory:** Указывает каталог назначения ADLS отправке файлов.
 * **FileExpiry:** Указывает срок действия и время для файлов, загруженных в ADLS, или оставьте это свойство пустым, чтобы указать, что файлы никогда не истекает.
 
 ## <a name="copyfromadls"></a>CopyFromADLS
-* **AzureDataLakeDirectory**. Указывает каталог источника ADLS, в котором содержатся файлы для скачивания.
-* **SearchRecursively**. Указывает, следует ли выполнять рекурсивный поиск файлов для скачивания в каталоге источника.
-* **LocalDirectory**. Указывает каталог назначения, в который будут сохранены скачанные файлы.
+
+* **AzureDataLakeDirectory:** Указывает каталог источника ADLS, которая содержит файлы для загрузки.
+* **SearchRecursively:** Указывает, следует ли выполнять рекурсивный поиск в исходный каталог для файлов для загрузки.
+* **LocalDirectory:** Указывает каталог назначения, чтобы сохранить загруженные файлы.

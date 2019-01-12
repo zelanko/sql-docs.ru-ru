@@ -16,12 +16,12 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d26bb248705ddce8932264701fbb7b9c09f64fcb
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018599"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132404"
 ---
 # <a name="upgrade-replicated-databases"></a>Обновление реплицируемых баз данных
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает обновление реплицируемых баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предыдущих версий, при этом на время обновления узла прекращать работу с другими узлами не требуется. Соблюдайте следующие правила, определяющие допустимые версии объектов репликации.  
@@ -89,9 +89,8 @@ ms.locfileid: "51018599"
  Чтобы обеспечить неизменность параметров репликации при восстановлении реплицированной базы данных, имеющей более раннюю версию, выполните восстановление на сервер и в базу данных, имеющих те же имена, что и у сервера или базы данных, для которых была сделана резервная копия.  
   
 ## <a name="see-also"></a>См. также  
- [Администрирование (репликация)](../../relational-databases/replication/administration/administration-replication.md)   
+ [Администрирование репликации часто задаваемые вопросы](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Обратная совместимость репликации](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
- [Новые возможности (репликация)](../../../2014/relational-databases/replication/what-s-new-replication.md)   
  [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Обновление до SQL Server 2014](upgrade-sql-server.md)  
   

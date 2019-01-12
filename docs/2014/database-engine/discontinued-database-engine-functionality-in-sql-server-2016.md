@@ -33,12 +33,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 27eb70cb687553b11fefae423a7544609836c5c8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357022"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132622"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Неподдерживаемые функции ядра СУБД в SQL Server 2014
   В этом разделе описаны функции компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , которые больше не доступны в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -75,7 +75,7 @@ ms.locfileid: "53357022"
 |Системные таблицы|sys.database_principal_aliases|Использование ролей вместо псевдонимов.|  
 |Transact-SQL|Параметр `RAISERROR`, представленный в формате `RAISERROR integer 'string'`, более не поддерживается.|Перепишите инструкцию с использованием текущего **RAISERROR(...)**  синтаксис.|  
 |синтаксис Transact-SQL|`COMPUTE / COMPUTE BY`|Используйте `ROLLUP`.|  
-|синтаксис Transact-SQL|Использование **\* =** и **=\***|Использование синтаксиса соединения ANSI. Дополнительные сведения см. в разделе [FROM (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|синтаксис Transact-SQL|Использование **\* =** и **=&#42;**|Использование синтаксиса соединения ANSI. Дополнительные сведения см. в разделе [FROM (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
 |XEvents|databases_data_file_size_changed databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Заменены событие database_file_size_change, database_file_size_change<br /><br /> database_file_size_change event<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **Дополнительные изменения XEvent**  

@@ -20,12 +20,12 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3eba894a08df8a491df428cd5f34b4c9850ffae0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 905a0a4189a97b6cd8ef3cc461f805adf0afd727
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205926"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131504"
 ---
 # <a name="parameterized-row-filters"></a>Parameterized Row Filters
   Параметризованные фильтры строк (в предыдущих версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]они назывались динамическими фильтрами) позволяют отсылать разным подписчикам разные секции данных, что исключает необходимость создания множества публикаций. Секция — это подмножество строк таблицы; в зависимости от настроек, выбранных при создании параметризованного фильтра строк, каждая строка в опубликованной таблице может принадлежать только одной секции (что порождает неперекрывающиеся секции) или двум и более секциям (что порождает перекрывающиеся секции).  

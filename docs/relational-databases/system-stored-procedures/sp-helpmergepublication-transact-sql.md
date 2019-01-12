@@ -16,12 +16,12 @@ ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3328facfd0f19d6fa5f5f02a614c45cd22a79f76
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754134"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226651"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @publication **=** ] **"***публикации***"**  
+ [ @publication **=** ] **"**_публикации_**"**  
  Имя публикации. *Публикация*— **sysname**, значение по умолчанию **%**, котором возвращаются сведения обо всех публикациях слиянием в текущей базе данных.  
   
  [ @found **=** ] **"***найти***"** выходных данных  

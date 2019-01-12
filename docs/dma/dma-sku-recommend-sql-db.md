@@ -2,7 +2,7 @@
 title: Определить нужный номер SKU базы данных Azure SQL для вашей локальной базы данных (Data Migration Assistant) | Документация Майкрософт
 description: Узнайте, как использовать помощник по миграции данных для выявления справа номер SKU базы данных SQL Azure для вашей локальной базы данных
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 6e990d8b3320eafccc3da574476fa66cdf52d8d5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 002a9fc587d742c235aedb0f773864296bdf645b
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544107"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226501"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Определить нужный номер SKU базы данных Azure SQL для базы данных на предприятии
 
@@ -30,9 +30,6 @@ ms.locfileid: "52544107"
 
 > [!NOTE] 
 > Эта функция сейчас доступна только через интерфейс командной строки (CLI). Поддержка этой функции через пользовательский интерфейс DMA будут добавляться в предстоящем выпуске.
-
-> [!IMPORTANT]
-> SKU рекомендации для базы данных SQL Azure в настоящее время доступны для миграции из SQL Server 2016 или более поздней версии.
 
 Приведенные ниже инструкции помогут определить рекомендации номер SKU базы данных SQL Azure и подготовка связанных баз данных в Azure, с помощью Data Migration Assistant.
 
@@ -66,7 +63,7 @@ ms.locfileid: "52544107"
     .\SkuRecommendationDataCollectionScript.ps1
      -ComputerName Foobar1
      -OutputFilePath D:\counters2.csv
-     -CollectionTimeInSeconds 10
+     -CollectionTimeInSeconds 2400
      -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
     ```
     

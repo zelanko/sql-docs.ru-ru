@@ -16,12 +16,12 @@ ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ffc40d39df10e83e4f5c68f891b0d7f44223524
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 966b8a03d10bb8e87950e19e3e099954e8aaad8f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784726"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132234"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>Управление именами входа в списке доступа к публикации
   В этом разделе описывается управление именами входа в списке доступа к публикации в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Доступом к публикации управляет список доступа к публикации (PAL). Имена входа и группы можно добавлять в список доступа к публикации и удалять из него.  
@@ -72,7 +72,7 @@ ms.locfileid: "52784726"
   
 ## <a name="see-also"></a>См. также  
  [Replication Agent Security Model](replication-agent-security-model.md)  (Модель безопасности агента репликации)  
- [Защита топологии репликации](secure-a-replication-topology.md)   
+ [Защита топологии репликации](view-and-modify-replication-security-settings.md)   
  [Защита издателя](secure-the-publisher.md)  
   
   

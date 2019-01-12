@@ -12,12 +12,12 @@ ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a50c6e27b57ec24c50f72a1dbea89f429dec19e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7d8b89024d27626516f99a5237c0efcd593bad0f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762529"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135754"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>Сведения о публикации, агенты (публикация моментального снимка)
   Вкладка **Агенты** отображает общие сведения об агенте моментальных снимков для выбранной публикации.  
@@ -47,7 +47,7 @@ ms.locfileid: "52762529"
 -   Завершено  
   
  **Агент**  
- Агент моментальных снимков. Это единственный агент, связанный с публикацией моментальных снимков. Агент распространителя связан с подписками на эту публикацию. Дополнительные сведения см. в статье [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Агент моментальных снимков. Это единственный агент, связанный с публикацией моментальных снимков. Агент распространителя связан с подписками на эту публикацию. Дополнительные сведения см. в разделе [Просмотр сведений и выполнение задач с помощью монитора репликации](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  **Время последнего запуска**  
  Время последнего запуска агента.  
@@ -60,8 +60,7 @@ ms.locfileid: "52762529"
   
 ## <a name="see-also"></a>См. также  
  [Запуск монитора репликации](monitor/start-the-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для публикации (монитор репликации)](monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](monitor/view-information-and-perform-tasks-for-publication-agents.md)   
+ [Просмотр сведений и выполнение задач с помощью монитора репликации](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Наблюдение за репликацией](monitoring-replication.md)  
   
   

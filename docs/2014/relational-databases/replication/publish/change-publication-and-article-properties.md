@@ -16,12 +16,12 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f9f106af7d3464ca1b0f2047fd86e2670389d821
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 207f934a9fba6e60bf1903544b12c88b4924dc23
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822598"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135814"
 ---
 # <a name="change-publication-and-article-properties"></a>Изменение свойств публикации и статьи
   После того как публикация создана, большинство свойств публикаций и статей можно изменить, но для некоторых изменений требуется, повторное создание моментального снимка и/или повторная инициализация подписок. В этом разделе содержатся сведения обо всех свойствах, требуемых для одного или обоих этих действий (если они изменяются).  
@@ -93,7 +93,7 @@ ms.locfileid: "52822598"
 |Изменение владельца целевой таблицы.|**sp_changemergearticle**|**destination_owner**|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
   
 ## <a name="see-also"></a>См. также  
- [Администрирование (репликация)](../administration/administration-replication.md)   
+ [Администрирование репликации часто задаваемые вопросы](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [Создание и применение моментального снимка](../create-and-apply-the-snapshot.md)   
  [Повторная инициализация подписок](../reinitialize-subscriptions.md)   
  [sp_addmergefilter (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)   

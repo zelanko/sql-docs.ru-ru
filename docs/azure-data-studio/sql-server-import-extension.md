@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 8248404353674f8139a26cfc75f37363557136b9
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: acca24570cf1c5052d92378b0dd5aa44d978aab6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030748"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131424"
 ---
 # <a name="sql-server-import-extension-preview"></a>Расширение импорта SQL Server (Предварительная версия)
 
@@ -55,7 +55,7 @@ ms.locfileid: "53030748"
     ![Мастер импорта Open](media/sql-server-import-extension/import-wizard-modify-columns.png)
 3. На этой странице приведены Сводка выбранного действия. Также вы увидите, вставлены ли таблица успешно или нет. 
 
-    Можно щелкнуть **Готово,** **Назад** Если вам нужно внести изменения, или **новый файл импорта** быстро импортировать другой файл.
+    Можно щелкнуть **Готово, Назад** Если вам нужно внести изменения, или **новый файл импорта** быстро импортировать другой файл.
     ![Мастер импорта Open](media/sql-server-import-extension/import-wizard-summary.png)
 1. Проверьте, если таблица успешно импортированы до обновления целевой базы данных или выполнения запроса SELECT на имя таблицы.
 

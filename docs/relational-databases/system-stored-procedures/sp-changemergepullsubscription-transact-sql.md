@@ -16,12 +16,12 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a71f486318c9431e25898b36343c67562da5451e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9b7c8e0bd544815b7a26afaccd308d6898e3bc95
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784687"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136134"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,19 +42,19 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=**] **"***публикации***"**  
+ [  **@publication=**] **"**_публикации_**"**  
  Имя публикации. *Публикация* — **sysname**, значение по умолчанию %.  
   
- [  **@publisher=**] **"***издателя***"**  
+ [  **@publisher=**] **"**_издателя_**"**  
  Имя издателя. *издатель*— **sysname**, значение по умолчанию %.  
   
- [  **@publisher_db=**] **"***publisher_db***"**  
+ [  **@publisher_db=**] **"**_publisher_db_**"**  
  Имя базы данных издателя. *publisher_db*— **sysname**, значение по умолчанию %.  
   
- [  **@property=**] **"***свойство***"**  
+ [  **@property=**] **"**_свойство_**"**  
  Имя свойства, которое необходимо изменить. *Свойство* — **sysname**, и может принимать одно из значений в таблице.  
   
- [  **@value=**] **"***значение***"**  
+ [  **@value=**] **"**_значение_**"**  
  Новое значение для указанного свойства. *значение*— **nvarchar(255)**, и может принимать одно из значений в таблице.  
   
 |Свойство|Значение|Описание|  

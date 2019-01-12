@@ -10,12 +10,12 @@ ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 36be65b9e359d4fe115e2b410db181f049c1eccd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 72ac6ac92da531d0f653e0fc03d88d170b7706e5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766826"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131454"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Изменение целевого времени восстановления базы данных (SQL Server)
   В этом разделе описывается изменение целевого времени восстановления базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. По умолчанию целевое время восстановления — 0, а база данных использует *автоматические контрольные точки* , задаваемые при помощи параметра сервера **интервал восстановления** . Установка значения времени восстановления &gt; 0 ведет к тому, что база данных будет использовать *непрямые контрольные точки* и установит верхнюю границу времени восстановления для этой базы данных.  
@@ -57,7 +57,7 @@ ms.locfileid: "52766826"
   
 2.  Используйте инструкцию [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options)следующим образом:  
   
-     TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
+     TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
   
      *target_recovery_time*  
      Если значение &gt; 0 (0 — значение по умолчанию), то оно указывает значение верхней границы времени восстановления для заданной базы данных в случае сбоя.  

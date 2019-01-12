@@ -14,12 +14,12 @@ ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 47571fcfe6b11945ab910f40feeb35145ab8d2a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: af3d3490957114d6ba7731b49435dc7e90122f90
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765086"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134694"
 ---
 # <a name="merge-agent-security"></a>Безопасность агента слияния
   При помощи диалогового окна **Безопасность агента слияния** можно указать учетную запись Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] , под которой необходимо запускать агент слияния. Агент слияния запускается на распространителе для принудительных подписок и на подписчике для подписок по запросу. На учетную запись Windows можно также ссылаться как на *учетную запись процесса*, потому что процесс агента работает под этой учетной записью. Дополнительные параметры в этом диалоговом окне зависят от метода доступа к нему.  
@@ -82,7 +82,7 @@ ms.locfileid: "52765086"
  Учетная запись Windows или учетная запись [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые используются для соединения с подписчиком, должны по меньшей мере быть членами предопределенной роли базы данных **db_owner** в базе данных подписки.  
   
 ## <a name="see-also"></a>См. также  
- [Управление именами для входа и паролями при репликации](security/manage-logins-and-passwords-in-replication.md)   
+ [Управление именами для входа и паролями при репликации](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Replication Agent Security Model](security/replication-agent-security-model.md)  (Модель безопасности агента репликации)  
  [Обзор агентов репликации](agents/replication-agents-overview.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
