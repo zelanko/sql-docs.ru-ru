@@ -1,19 +1,19 @@
 ---
-title: 'Краткое руководство по «Hello, World!» основные Puyjpm выполнение кода в T-SQL: машинного обучения SQL Server'
+title: 'Краткое руководство по Python основные «Hello, World!» код выполнения в T-SQL: машинного обучения SQL Server'
 description: Краткое руководство по скрипт Python в SQL Server. Основы вызова скрипта Python, с помощью системной хранимой процедуры sp_execute_external_script в упражнении hello world.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/04/2019
+ms.date: 01/11/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 9c5838621086c651d6f8ad25f053ebbe634a1e26
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 0061e96168f16d8a92ed47578c32a3b16bf57306
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046923"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241815"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>Краткое руководство. Скрипт Python «Hello world» в SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

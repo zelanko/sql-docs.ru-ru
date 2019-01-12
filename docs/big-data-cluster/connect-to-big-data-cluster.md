@@ -8,12 +8,13 @@ manager: craigg
 ms.date: 12/10/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 8bccadd8fbce9fe2a8cc6f16db75dbd09f3d1ed0
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.technology: big-data-cluster
+ms.openlocfilehash: 9129b436f33092054a19b858fa5bcdb8aebadec2
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53264366"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241825"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Подключение к кластеру больших данных SQL Server с помощью Azure Data Studio
 
@@ -29,7 +30,7 @@ ms.locfileid: "53264366"
 
 ## <a name="connect-to-the-cluster"></a>Подключитесь к кластеру
 
-При подключении к кластеру больших данных, у вас есть возможность подключения к SQL Server [главного экземпляра](concept-master-instance.md) или к шлюзу HDFS или Spark. Ниже показано, как подключиться к каждому.
+При подключении к кластеру больших данных, у вас есть возможность подключения к основной экземпляр SQL Server или к шлюзу HDFS или Spark. Ниже показано, как подключиться к каждому.
 
 ## <a id="master"></a> Основной экземпляр
 
@@ -79,6 +80,9 @@ ms.locfileid: "53264366"
 1. В Azure данных Studio нажмите клавишу **F1** > **новое подключение**.
 
 1. В **тип подключения**выберите **кластера больших данных в SQL Server**.
+
+   > [!TIP]
+   > Если вы не видите **кластера больших данных в SQL Server** подключения введите, убедитесь, что вы установили [расширение SQL Server 2019](../azure-data-studio/sql-server-2019-extension.md) и перезагрузка студии данных после завершения расширения Установка.
 
 1. Введите IP-адрес кластера больших данных в **имя_сервера** (не указать порт).
 
