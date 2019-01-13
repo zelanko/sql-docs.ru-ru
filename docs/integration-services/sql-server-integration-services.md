@@ -30,13 +30,13 @@ ms.locfileid: "51699655"
 ---
 # <a name="sql-server-integration-services"></a>Службы SQL Server Integration Services
 
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — это платформа для построения решений по интеграции и преобразованию данных уровня предприятия. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] можно использовать при решении сложных бизнес-задач путем копирования и загрузки файлов, загрузки хранилищ данных, очистки и интеллектуального анализа данных, а также управления объектами и данными [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+Microsoft Integration Services — это платформа для построения решений по интеграции и преобразованию данных уровня предприятия. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] можно использовать при решении сложных бизнес-задач путем копирования и загрузки файлов, загрузки хранилищ данных, очистки и интеллектуального анализа данных, а также управления объектами и данными [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] могут извлекать и преобразовывать данные из ряда таких источников, как файлы XML-данных, неструктурированные файлы и источники реляционных данных, и затем загружать эти данные в один или несколько реляционных объектов.
 
-В реализованы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] широкий набор встроенных задач и преобразований, графические средства для создания пакетов, а также служба база данных каталога [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для хранения, выполнения и администрирования пакетов.
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] содержат в себе широкий набор встроенных задач и преобразований, графические средства для создания пакетов, а также базу данных каталога Integration Services для хранения, выполнения и администрирования пакетов.
 
-Вы можете использовать графические средства [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для создания решений без необходимости писать код. Вы также можете настроить подробную объектную модель [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для создания пакетов программным способом, а также написания пользовательских задач и других объектов пакета.
+Вы можете использовать графические средства Integration Services для создания решений без необходимости писать код. Вы также можете настроить подробную объектную модель Integration Services для создания пакетов программным способом, а также написания пользовательских задач и других объектов пакета.
 
 ## <a name="get-sql-server-integration-services"></a>Получение MSSQL Integration Services
 
