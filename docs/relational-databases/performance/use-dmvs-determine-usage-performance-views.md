@@ -2,19 +2,19 @@
 title: Использование динамических административных представлений для определения статистики использования и производительности представлений
 description: Использование динамических административных представлений для определения статистики использования и производительности представлений
 manager: craigg
-author: MashaMSFT
-ms.author: mathoma
+author: julieMSFT
+ms.author: jrasnick
 ms.date: 09/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 4181615840f62b6e4e8a7447f559f4f0c50eb206
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 75563b5dcceead80b5b4d55c07413b37c9d0c278
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586317"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380665"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Использование динамических административных представлений для определения статистики использования и производительности представлений
 В этой статье рассматриваются методы и скрипты, используемые для получения информации о **производительности запросов, которые используют представления**. Цель этих скриптов — предоставить показатели использования и производительности различных представлений, найденных в базе данных. 
@@ -194,10 +194,4 @@ GO
 ```
 
 ## <a name="see-also"></a>См. также раздел
-[Динамические административные представления и функции](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[Динамические административные представления для настройки производительности (видео — SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)   
-[Динамические административные представления для настройки производительности (слайды и демоверсия — SQL Saturday Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)   
-[Видео о настройке SQL Server в форме капсулы (SQL Saturday Parma)](https://vimeo.com/200980883)    
-[Настройка SQL Server в двух словах (слайды и демоверсия — SQL Saturday Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)   
-[Книга о настройке производительности с помощью динамических административных представлений SQL Server](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)   
-[Видео о важнейших типах ожидания в SQL Server 2016](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)   
+[Динамические административные представления и функции](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 

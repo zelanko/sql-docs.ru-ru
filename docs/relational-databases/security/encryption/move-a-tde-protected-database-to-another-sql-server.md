@@ -13,12 +13,12 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 1549c672211d328a723ab8eb056e8f227f1107ca
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ab4adbe1e4233c5e2189c784f71e8897547ebaf
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521114"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590268"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Переместить базу данных, защищаемую прозрачным шифрованием, в другой экземпляр SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -165,7 +165,7 @@ ms.locfileid: "52521114"
      По умолчанию операция отсоединения сохраняет связанные с базой данных полнотекстовые каталоги. Для удаления этих каталогов сбросьте флажок **Сохранять полнотекстовые каталоги** . Этот параметр доступен только при обновлении базы данных с версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
      **Состояние**  
-     Отображает одно из следующих состояний: **Готов** или **Не готов**.  
+     Отображает одно из следующих состояний: **Готово** или **Не готово**.  
   
      **Сообщение**  
      Столбец **Сообщение** может отображать сведения о базе данных следующим образом:  
@@ -233,7 +233,7 @@ ms.locfileid: "52521114"
      **Удалить**  
      Удаляет выбранный файл из сетки **Базы данных для присоединения** .  
   
-     **"** *<database_name>* **" сведения о базе данных**  
+     **"** _<database_name>_ **" сведения о базе данных**  
      Отображаются имена файлов, которые необходимо присоединить. Чтобы проверить или изменить путь к файлу, нажмите кнопку **Обзор** (**...**).  
   
     > [!NOTE]  

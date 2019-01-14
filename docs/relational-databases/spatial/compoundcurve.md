@@ -11,12 +11,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ed40a84fba304dab0d9c11c7c6bbe950f2511e8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2e58734bb3487e86b30f561e4e636bbe4851435e
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511846"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979962"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,14 +31,13 @@ ms.locfileid: "52511846"
   
 2.  Последовательность экземпляров **CircularString** или **LineString** должна быть непрерывной.  
   
- Если объект **CompoundCurve** содержит последовательность из нескольких экземпляров **CircularString** и **LineString** , то конечная точка каждого экземпляра, кроме последнего, должна быть начальной конечной точкой следующего экземпляра в последовательности. Это означает, что, если конечная точка предыдущего экземпляра в последовательности — (4 3 7 2), начальной точкой следующего экземпляра в последовательности также должна быть (4 3 7 2). Обратите внимание, что значения Z (высота) и M (мера) этих точек также должны совпадать. Если такие две точки отличаются друг от друга, формируется исключение `System.FormatException` . Точки в объектах **CircularString** могут не иметь значение Z или M. Если значения Z или M не заданы для конечной точки предыдущего экземпляра, начальная точка следующего экземпляра также не может иметь значения Z или M. Если конечная точка для предыдущей последовательности — (4 3), начальной точкой для следующей последовательности также должна быть (4 3) и не может быть (4 3 7 2). Все точки в экземпляре **CompoundCurve** должны либо не иметь значения Z, либо иметь одинаковые значения Z.  
+Если объект **CompoundCurve** содержит последовательность из нескольких экземпляров **CircularString** и **LineString** , то конечная точка каждого экземпляра, кроме последнего, должна быть начальной конечной точкой следующего экземпляра в последовательности. Это означает, что, если конечная точка предыдущего экземпляра в последовательности — (4 3 7 2), начальной точкой следующего экземпляра в последовательности также должна быть (4 3 7 2). Обратите внимание, что значения Z (высота) и M (мера) этих точек также должны совпадать. Если такие две точки отличаются друг от друга, формируется исключение `System.FormatException` . Точки в объектах **CircularString** могут не иметь значение Z или M. Если значения Z или M не заданы для конечной точки предыдущего экземпляра, начальная точка следующего экземпляра также не может иметь значения Z или M. Если конечная точка для предыдущей последовательности — (4 3), начальной точкой для следующей последовательности также должна быть (4 3) и не может быть (4 3 7 2). Все точки в экземпляре **CompoundCurve** должны либо не иметь значения Z, либо иметь одинаковые значения Z.  
   
 ## <a name="compoundcurve-instances"></a>Экземпляры CompoundCurve  
- На следующей иллюстрации показаны допустимые типы **CompoundCurve** .  
+На следующей иллюстрации показаны допустимые типы **CompoundCurve** .  
   
 ![f278742e-b861-4555-8b51-3d972b7602bf](../../relational-databases/spatial/media/f278742e-b861-4555-8b51-3d972b7602bf.gif)  
  
-  
 ### <a name="accepted-instances"></a>Правильные экземпляры  
  Экземпляр**CompoundCurve** является правильным, если он пустой или удовлетворяет следующим требованиям.  
   
@@ -47,20 +46,20 @@ ms.locfileid: "52511846"
 2.  Все сегменты окружности в экземпляре **CompoundCurve** соединены. Первая точка каждого последующего сегмента совпадает с последней точкой предыдущего сегмента.  
   
     > [!NOTE]  
-    >  Это касается и координат Z и M. То есть все четыре координаты (X, Y, Z и M) должны быть одинаковыми.  
+    > Это касается и координат Z и M. То есть все четыре координаты (X, Y, Z и M) должны быть одинаковыми.  
   
 3.  Ни один из вложенных экземпляров не является пустым.  
   
- В следующем примере показаны принятые экземпляры **CompoundCurve** .  
+В следующем примере показаны принятые экземпляры **CompoundCurve** .  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE EMPTY';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (-1 0, 2 0))';  
 ```  
   
- В следующем примере показаны неправильные экземпляры **CompoundCurve** . Эти экземпляры формируют исключение `System.FormatException`.  
+В следующем примере показаны неправильные экземпляры **CompoundCurve** . Эти экземпляры формируют исключение `System.FormatException`.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE(CIRCULARSTRING EMPTY)';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (1 0, 2 0))';  
 ```  
@@ -72,28 +71,27 @@ DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (1 0, 2 0)
   
 2.  Все экземпляры сегментов окружности, содержащиеся в экземпляре **CompoundCurve** , допустимы.  
   
- В следующем примере показаны допустимые экземпляры **CompoundCurve** .  
+В следующем примере показаны допустимые экземпляры **CompoundCurve** .  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE EMPTY';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (-1 0, 2 0))';  
 DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 1 1, 1 1), (1 1, 3 5, 5 4))';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
-  
 ```  
   
- `@g3` допустим, так как допустим экземпляр **CircularString** . Дополнительные сведения о допустимости экземпляра **CircularString** см. в разделе [CircularString](../../relational-databases/spatial/circularstring.md).  
+`@g3` допустим, так как допустим экземпляр **CircularString** . Дополнительные сведения о допустимости экземпляра **CircularString** см. в разделе [CircularString](../../relational-databases/spatial/circularstring.md).  
   
- В следующем примере показаны недопустимые экземпляры **CompoundCurve** .  
+В следующем примере показаны недопустимые экземпляры **CompoundCurve** .  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 1 1, 1 1), (1 1, 3 5, 5 4, 3 5))';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE((1 1, 1 1))';  
 DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g1` недопустим, поскольку второй экземпляр не является допустимым LineString. `@g2` недопустим, так как недопустим экземпляр **LineString** . `@g3` недопустим, так как недопустим экземпляр **CircularString** . Дополнительные сведения о допустимых экземплярах **CircularString** и **LineString** см. в разделах [CircularString](../../relational-databases/spatial/circularstring.md) и [LineString](../../relational-databases/spatial/linestring.md).  
+`@g1` недопустим, поскольку второй экземпляр не является допустимым LineString. `@g2` недопустим, так как недопустим экземпляр **LineString** . `@g3` недопустим, так как недопустим экземпляр **CircularString** . Дополнительные сведения о допустимых экземплярах **CircularString** и **LineString** см. в разделах [CircularString](../../relational-databases/spatial/circularstring.md) и [LineString](../../relational-databases/spatial/linestring.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -140,7 +138,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
- В результате получается следующий вывод: 12.566370… Это будет эквивалентно 4∏. Экземпляр `CompoundCurve` в этом примере хранит окружность с радиусом 2. В двух предыдущих примерах кода использование экземпляра `CompoundCurve`не требовалось. В первом примере было бы проще использовать экземпляр `LineString` , а во втором было бы проще использовать экземпляр `CircularString` . В следующем примере показано, когда следует использовать экземпляр `CompoundCurve` .  
+В результате получается следующий вывод: `12.5663706143592` Это эквивалентно 4∏. Экземпляр `CompoundCurve` в этом примере хранит окружность с радиусом 2. В двух предыдущих примерах кода использование экземпляра `CompoundCurve`не требовалось. В первом примере было бы проще использовать экземпляр `LineString` , а во втором было бы проще использовать экземпляр `CircularString` . В следующем примере показано, когда следует использовать экземпляр `CompoundCurve` .  
   
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>Е. Использование экземпляра CompoundCurve для хранения полуокружности  
  В следующем примере экземпляр `CompoundCurve` используется для хранения полукруга.  
@@ -179,14 +177,14 @@ SET @g2 = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULAR
 SELECT 'Circle Two', @g2.STLength() AS Perimeter;  -- now we get an accurate amount  
 ```  
   
- Вывод выглядит следующим образом.  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
 Circle One11.940039...  
 Circle Two12.566370...  
 ```  
   
- Периметр окружности 2 равен примерно 4∏и, что является фактическим значением для периметра. Напротив, значение периметра окружности 1 очень неточное. Экземпляр `CompoundCurve` окружности 1 хранит один сегмент окружности (ABC) и два линейных сегмента (CD, DA). Экземпляр `CompoundCurve` должен хранить два сегмента окружности (ABC, CDA), чтобы определять окружности. Экземпляр `LineString` определяет второй набор точек (4 2, 2 4, 0 2) в экземпляре `CompoundCurve` окружности 1. Необходимо явно объявить экземпляр `CircularString` в экземпляре `CompoundCurve`.  
+Периметр окружности 2 равен примерно 4∏и, что является фактическим значением для периметра. Напротив, значение периметра окружности 1 очень неточное. Экземпляр `CompoundCurve` окружности 1 хранит один сегмент окружности (ABC) и два линейных сегмента (CD, DA). Экземпляр `CompoundCurve` должен хранить два сегмента окружности (ABC, CDA), чтобы определять окружности. Экземпляр `LineString` определяет второй набор точек (4 2, 2 4, 0 2) в экземпляре `CompoundCurve` окружности 1. Необходимо явно объявить экземпляр `CircularString` в экземпляре `CompoundCurve`.  
   
 ## <a name="see-also"></a>См. также:  
  [STIsValid (тип данных geometry)](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   

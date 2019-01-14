@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: 7dcb9f3efe8ffcc0e1dc2dbd0ff800f67f82d499
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d85de6deffa9e140bc5f9bf489afd60e0dbbc948
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506343"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213623"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Руководство по оптимизации и проверке после миграции
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "52506343"
 Ниже представлены некоторые типовые сценарии производительности, которые встречаются после миграции на платформу [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], а также способы устранения связанных с ними проблем. К ним относятся сценарии, связанные с миграцией с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (переход на более новые версии), а также с миграцией с внешней платформы (например, Oracle, DB2, MySQL и Sybase) на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 ## <a name="CEUpgrade"></a> Замедление запросов из-за изменения в версии CE
-
+ 
 **Область применения:** миграция с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 При миграции со старых версий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] или более новые версии и при обновлении [уровня совместимости базы данных](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) до последнего доступного выполнение рабочей нагрузки может замедляться.
@@ -48,7 +48,7 @@ ms.locfileid: "52506343"
 
 ## <a name="ParameterSniffing"></a> Чувствительность к пробному сохранению параметров
 
-**Область применения:** внешняя платформа (например, Oracle, DB2, MySQL или Sybase) для миграции [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**Применимо к:** внешняя платформа (например, Oracle, DB2, MySQL или Sybase) для миграции [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > При миграции с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], если подобная проблема имелась в исходном [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], переход на новую версию [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] без изменений будет проходить без учета этого сценария. 
@@ -69,7 +69,7 @@ ms.locfileid: "52506343"
 
 ## <a name="MissingIndexes"></a> Отсутствие индексов
 
-**Область применения:** внешняя платформа (например, Oracle, DB2, MySQL или Sybase) для миграции с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**Применимо к:** внешняя платформа (например, Oracle, DB2, MySQL или Sybase) для миграции с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Неправильные индексы или их отсутствие создают дополнительную нагрузку по вводу-выводу, а значит и лишний расход ресурсов памяти и процессора. Это может быть связано с изменением профиля рабочей нагрузки, например применением других предикатов, нарушающим существующую структуру индекса. Как понять, что стратегия индексации или изменения в профиле рабочей нагрузки неадекватны:
 -   обращайте внимание на повторяющиеся, избыточные, редко применяемые и абсолютно неиспользуемые индексы;
@@ -87,7 +87,7 @@ ms.locfileid: "52506343"
 
 ## <a name="InabilityPredicates"> </a>Невозможность использовать предикаты для фильтрации данных
 
-**Область применения:** внешняя платформа (например, Oracle, DB2, MySQL или Sybase) для миграции с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**Применимо к:** внешняя платформа (например, Oracle, DB2, MySQL или Sybase) для миграции с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > Если при миграции с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] подобная проблема возникнет в источнике [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], миграция на новую версию [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] без изменений будет проходить без учета этого сценария.
@@ -115,7 +115,7 @@ ms.locfileid: "52506343"
 
 ## <a name="TableValuedFunctions"></a> Применение функций, возвращающих табличные значения (многооператорные и встроенные функции)
 
-**Область применения:** внешняя платформа (например, Oracle, DB2, MySQL или Sybase) для миграции с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**Применимо к:** внешняя платформа (например, Oracle, DB2, MySQL или Sybase) для миграции с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > Если при миграции с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] подобная проблема возникнет в источнике [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], миграция на новую версию [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] без изменений будет проходить без учета этого сценария.

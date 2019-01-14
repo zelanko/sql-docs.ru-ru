@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], creating
@@ -15,12 +14,12 @@ ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 933c5a7f4eeae256ce9fafed6d5be53a1236e559
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3597ac503684c84b10b9ce8025b8fddbb26f3947
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702962"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755086"
 ---
 # <a name="create-an-entity-master-data-services"></a>Создание сущности (службы Master Data Services)
 
@@ -54,9 +53,9 @@ ms.locfileid: "47702962"
      Если это поле оставлено пустым, используется имя сущности.  
   
     > [!TIP]  
-    >  Используйте имя модели как часть имени промежуточной таблицы, например *Modelname_Entityname*. Это облегчит поиск таблиц в базе данных. Дополнительные сведения о промежуточных таблицах см. в разделе [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md).
-    > [!TIP]  
-    >  Если для промежуточных таблиц используется схема именования по умолчанию, MDS автоматически добавляет идентификаторы (например, _1, _2) к именам, если сущность с таким же именем есть в другой модели.
+    >  Используйте имя модели как часть имени промежуточной таблицы, например *Modelname_Entityname*. Это облегчит поиск таблиц в базе данных. Дополнительные сведения о промежуточных таблицах см. в статье [Обзор: импорт данных из таблиц &#40;службы Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).
+    > [!TIP]
+    > Если для промежуточных таблиц используется схема именования по умолчанию, MDS автоматически добавляет идентификаторы (например, _1, _2) к именам, если сущность с таким же именем есть в другой модели.
   
 7.  В поле **Тип журнала транзакций** в раскрывающемся списке выберите тип журнала транзакций.  
   

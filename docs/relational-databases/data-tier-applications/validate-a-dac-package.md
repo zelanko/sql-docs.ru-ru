@@ -16,20 +16,20 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29449a8caceb76e6f4b0e5229b05603de2d6a8f3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5e7e22f164ba8da071a93dff1535b777993e76e2
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518669"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590478"
 ---
 # <a name="validate-a-dac-package"></a>Проверка пакета приложения уровня данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Перед развертыванием пакета приложения уровня данных рекомендуется просмотреть его содержимое и проверить действия по обновлению перед обновлением существующего пакета приложения уровня данных. Тем более это истина для развертывания пакетов, которые ранее в организации не развертывались.  
   
-1.  **Перед началом работы выполните следующие действия.**  [Предварительные требования](#Prerequisites)  
+1.  **Перед началом работы**  [Предварительные требования](#Prerequisites)  
   
-2.  **Обновление приложения уровня данных с использованием следующих средств:**  [просмотр содержимого приложения уровня данных](#ViewDACContents), [просмотр изменений базы данных](#ViewDBChanges), [просмотр действий по обновлению](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
+2.  **Обновление приложения уровня данных с использованием:**  [просмотра содержимого приложения уровня данных](#ViewDACContents), [просмотра изменений базы данных](#ViewDBChanges), [просмотра действий по обновлению](#ViewUpgradeActions), [сравнения приложений уровня данных](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> Предварительные требования  
  Рекомендуется не выполнять развертывание пакетов DAC, полученных из неизвестных или ненадежных источников. В этих пакетах может содержаться вредоносный код, вызывающий выполнение непредусмотренных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или появление ошибок из-за изменения схемы. Прежде чем использовать приложение уровня данных, полученное из ненадежного источника, разверните его на изолированном тестовом экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], выполните для базы данных инструкцию [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), а также изучите исходный код в базе данных, например хранимые процедуры и другой определенный пользователем код.  

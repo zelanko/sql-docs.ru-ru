@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], error messages
@@ -14,12 +13,12 @@ ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a47b9b13c5de6368b14b6767ea71d8e888da4c72
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6583bab946104e08e102c422373aa94ff2ee752b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395398"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766136"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Ошибки промежуточного процесса (службы Master Data Services)
 
@@ -38,7 +37,7 @@ ms.locfileid: "52395398"
 |210041|"ROOT" не является допустимым кодом элемента.|Значение **MemberCode** содержит слово "ROOT".|Конечный элемент<br /><br /> Объединены<br /><br /> Связь|  
 |210042|"MDMUNUSED" не является допустимым кодом элемента.|Значение **MemberCode** содержит слово "MDMUNUSED".|Конечный элемент<br /><br /> Объединены<br /><br /> Связь|  
 |210052|Невозможно деактивировать MemberCode, так как это значение атрибута основано на домене.|Если **ImportType** = **3** или **4**, возникает ошибка промежуточного хранения, если элемент используется в качестве значения атрибута для других элементов. Используйте **ImportType5** или **6** , чтобы присвоить значение NULL, либо измените значения перед запуском промежуточного процесса.|Конечный элемент<br /><br /> Объединены|  
-|300002|Недопустимый код элемента.|Связи: код либо родительского элемента, либо дочернего элемента не существует.<br /><br /> Конечный или объединенный: **ImportType** = **3** или **4** , а код элемента не существует.|Конечный элемент<br /><br /> Объединены<br /><br /> Связь|  
+|300002|Недопустимый код элемента.|Связи: код либо родительского элемента, либо дочернего элемента не существует.<br /><br /> Конечный и объединенный: **ImportType** = **3** или **4** и код элемента не существует.|Конечный элемент<br /><br /> Объединены<br /><br /> Связь|  
 |300004|Код элемента уже существует.|**ImportType** = **1** и используется код элемента, который уже существует в сущности.|Конечный элемент<br /><br /> Объединены|  
 |210011|Если **RelationshipType** равен **1**, **ParentCode** не может быть конечным элементом.|Убедитесь, что значение **ParentCode** представляет собой код объединенного элемента.|Связь|  
 |210015|Код элемента встречается несколько раз в промежуточной таблице иерархии и пакета.|Для явной иерархии указано расположение элемента, встречающегося в одном пакете несколько раз.|Связь|  
@@ -49,6 +48,6 @@ ms.locfileid: "52395398"
   
 ## <a name="see-also"></a>См. также:  
  [Просмотр ошибок, возникающих во время помещения на промежуточное хранение (службы Master Data Services)](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
- [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+ [Обзор: импорт данных из таблиц &#40;службы Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
   

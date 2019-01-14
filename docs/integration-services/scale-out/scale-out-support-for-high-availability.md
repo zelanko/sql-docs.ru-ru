@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: f9572368002a0aef7b02d615701baefb0fd6708b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4e3429a52d24b9bb9fbb0de18c1687cfdaa76d30
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638151"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246743"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Поддержка высокого уровня доступности в Scale Out
 
@@ -107,7 +107,7 @@ ms.locfileid: "51638151"
 
 Теперь можно добавить рабочие роли Scale Out с помощью [диспетчера Integration Services Scale Out](integration-services-ssis-scale-out-manager.md). Введите `[SQL Server Availability Group Listener DNS name],[Port]` на странице подключения.
 
-# <a name="upgrade-scale-out-in-high-availability-environment"></a>Обновление Scale Out в среде высокого уровня доступности
+## <a name="upgrade-scale-out-in-high-availability-environment"></a>Обновление Scale Out в среде высокого уровня доступности
 Чтобы обновить Scale Out в среде высокого уровня доступности, выполните [инструкции по обновлению из AlwaysOn для каталога служб SSIS](../catalog/ssis-catalog.md#Upgrade), обновите Scale Out и рабочие роли Scale Out на каждом компьютере, а также повторно создайте роль отказоустойчивого кластера Windows Server в шаге 7 выше с помощью новой версии службы мастера Scale Out.
 
 ## <a name="next-steps"></a>Следующие шаги

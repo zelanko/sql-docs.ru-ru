@@ -1,12 +1,11 @@
 ---
-title: 'Примеры SQL Server: пакеты развертывания моделей (MDS) | Документы Майкрософт'
+title: 'Примеры SQL Server: пакеты развертывания моделей (MDS) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 keywords:
 - службы master data services
@@ -15,12 +14,12 @@ ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b5b07e836d2e1f23f89c6dc992a080b8ab0e85fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db84b03b315d9345056cad9653729415b5dcfccf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843162"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205823"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>Примеры SQL Server: пакеты развертывания моделей (MDS)
 
@@ -30,26 +29,26 @@ ms.locfileid: "47843162"
   
  Инструкции по развертыванию образцов пакетов моделей см. в разделе [Развертывание образцов моделей и данных](../master-data-services/master-data-services-installation-and-configuration.md#deploySample). Вы можете развернуть эти образцы пакетов моделей с помощью [средства MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
-> [!IMPORTANT]  
->  **Обновления примеров в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
->   
+> [!IMPORTANT]
+>  **Примеры обновлений в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
+> 
 >  Образцы пакетов были обновлены для поддержки перечисленных ниже новых возможностей.  
->   
+> 
 >  -   Отображение связей "многие ко многим".  
->   
+> 
 >      Дополнительные сведения см. в разделе [Связь "многие ко многим" в образце модели](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md#M2MSample).  
-
+> 
 > -   Ограничение допустимых значений для атрибутов на основе домена.  
->   
+> 
 >      Дополнительные сведения см. в разделе [Создание атрибута на основе домена (службы Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md).  
 > -   Обязательное утверждение изменений сущности.  
->   
+> 
 >      Дополнительные сведения см. в разделе [Требуется утверждение (службы Master Data Services)](../master-data-services/approval-required-master-data-services.md).  
 > -   Использование операторов Not и Else в бизнес-правилах  
->   
+> 
 >      Дополнительные сведения см. в разделе [Примеры бизнес-правил](../master-data-services/business-rule-examples-master-data-services.md).  
 > -   Реализация пользовательского индекса  
->   
+> 
 >      Дополнительные сведения см. в разделе [Пользовательский индекс (Master Data Services)](../master-data-services/custom-index-master-data-services.md).  
  
 

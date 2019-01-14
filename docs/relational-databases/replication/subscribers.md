@@ -16,20 +16,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16c55f72efc2cd2abe63300fc7cfaecc56776064
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 508abbeac89bb374fbfb68e368e68988218e0e91
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691143"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207400"
 ---
 # <a name="subscribers"></a>Подписчики
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Укажите [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или отличных от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, которые будут получать подписку выбранной публикации.  
+  Укажите подписчики [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или отличные от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчики, которые будут получать подписку на выбранную публикацию.  
   
 ## <a name="options"></a>Параметры  
  **Подписчики**  
- Установите флажок на сетке, чтобы выбрать соответствующие [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или отличные от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источники данных в качестве подписчика публикации, выбранной на странице **Публикация** . Если подписчика нет в списке, выберите пункт **Добавить подписчик** или **Добавить подписчик SQL Server**.  
+ Установите флажок на сетке, чтобы выбрать соответствующий источник данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или отличный от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источник данных в качестве подписчика публикации, выбранной на странице **Публикация**. Если подписчика нет в списке, выберите пункт **Добавить подписчик** или **Добавить подписчик SQL Server**.  
   
  **База данных подписки**  
  Данные и операции в данном столбце зависят от типов подписчиков, перечисленных в столбце **Подписчики** .  

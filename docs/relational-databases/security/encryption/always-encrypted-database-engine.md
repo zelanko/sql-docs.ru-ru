@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 748c341960d8bb50a70f06e6473c2eb613b071aa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 841d38d4a862582a393fba116676908572f39d38
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675133"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203043"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (ядро СУБД)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "51675133"
  У клиента есть клиентское приложение и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , которые работают в локальной среде на предприятии. Клиент хочет нанять внешнего поставщика для администрирования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Чтобы защитить конфиденциальные данные в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], клиент использует постоянное шифрование для разделения обязанностей между администраторами баз данных и администраторами приложений. Клиент сохраняет значения ключей постоянного шифрования в открытом тексте в доверенном хранилище ключей, доступное клиентскому приложению. У администраторов[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] нет доступа к ключам, поэтому они не могут расшифровать конфиденциальные данные в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ### <a name="client-on-premises-with-data-in-azure"></a>Клиент в локальной среде, а данные в Azure  
- У клиента есть локальное клиентское приложение, развернутое на предприятии. Приложение работает с конфиденциальными данными, хранящимися в базе данных, которая размещена в Azure ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] или [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , выполняемом на виртуальной машине в Microsoft Azure). Клиент использует постоянное шифрование и хранит ключи в локальном доверенном хранилище ключей, чтобы у администраторов облака [!INCLUDE[msCoName](../../../includes/msconame-md.md)] не было доступа к конфиденциальным данным.  
+ У клиента есть локальное клиентское приложение, развернутое на предприятии. Приложение работает с конфиденциальными данными, хранящимися в базе данных, которая размещена в Azure ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] или [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в виртуальной машине Microsoft Azure). Клиент использует постоянное шифрование и хранит ключи в локальном доверенном хранилище ключей, чтобы у администраторов облака [!INCLUDE[msCoName](../../../includes/msconame-md.md)] не было доступа к конфиденциальным данным.  
   
 ### <a name="client-and-data-in-azure"></a>Клиент и данные в Azure  
  У клиента есть клиентское приложение, размещенное в Microsoft Azure (например, рабочая роль или веб-роль), которое работает с конфиденциальными данными, хранящимися в базе данных, размещенной в Azure (базе данных SQL или SQL Server в виртуальной машине Microsoft Azure). Несмотря на то что постоянное шифрование не обеспечивает полной изоляции данных от облачных администраторов, поскольку и данные, и ключи доступны администраторам облака на платформе, где размещен клиентский уровень, клиент все равно извлекает преимущества из уменьшения площади поверхности атак на систему безопасности (данные в базе данных всегда зашифрованы).  

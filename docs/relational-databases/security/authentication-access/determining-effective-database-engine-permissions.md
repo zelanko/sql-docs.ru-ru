@@ -15,19 +15,19 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d4a037898aaa022b7db5d6bf55f4a6dfb08988c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5ef89fc257782f7977efbee371a40e188893bc7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734612"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53216063"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Определение действующих разрешений для ядра СУБД
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 В этой статье описывается, как определить, кто имеет разрешения на различные объекты в ядре СУБД SQL Server. SQL Server реализует две системы разрешений для ядра СУБД. Более старая система предопределенных ролей имеет предварительно настроенные разрешения. Начиная с версии SQL Server 2005, доступна более гибкая и точная система. (Сведения в этой статье также относятся к SQL Server начиная с версии 2005. Отдельные типы разрешений недоступны в некоторых версиях SQL Server.)
 
->  [!IMPORTANT] 
+> [!IMPORTANT]
 >  * Действующие разрешения — это совокупность обеих систем разрешений. 
 >  * Отклонение разрешений переопределяет их предоставление. 
 >  * Если пользователь является участником предопределенной роли сервера системного администратора, разрешения не проверяются, поэтому отклонения не применяются. 
@@ -51,24 +51,24 @@ ms.locfileid: "47734612"
 ## <a name="older-fixed-role-permission-system"></a>Более старая система разрешений предопределенной роли
 
 Для предопределенных ролей сервера и предопределенных ролей базы данных предварительно настроены разрешения, которые не могут быть изменены. Чтобы определить, кто является участником предопределенной роли сервера, выполните указанный ниже запрос.    
->  [!NOTE] 
+> [!NOTE]
 >  Не относится к базе данных SQL или хранилищу данных SQL, где разрешение на уровне сервера недоступно. Столбец `is_fixed_role` таблицы `sys.server_principals` был добавлен в SQL Server 2012. Он не требуется для более старых версий SQL Server.  
-```sql
-SELECT SP1.name AS ServerRoleName, 
- isnull (SP2.name, 'No members') AS LoginName   
- FROM sys.server_role_members AS SRM
- RIGHT OUTER JOIN sys.server_principals AS SP1
-   ON SRM.role_principal_id = SP1.principal_id
- LEFT OUTER JOIN sys.server_principals AS SP2
-   ON SRM.member_principal_id = SP2.principal_id
- WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
- ORDER BY SP1.name;
+> ```sql
+> SELECT SP1.name AS ServerRoleName, 
+>  isnull (SP2.name, 'No members') AS LoginName   
+>  FROM sys.server_role_members AS SRM
+>  RIGHT OUTER JOIN sys.server_principals AS SP1
+>    ON SRM.role_principal_id = SP1.principal_id
+>  LEFT OUTER JOIN sys.server_principals AS SP2
+>    ON SRM.member_principal_id = SP2.principal_id
+>  WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
+>  ORDER BY SP1.name;
 ```
->  [!NOTE] 
->  * Все имена входа являются участниками общей роли, и их нельзя удалить. 
->  * Этот запрос проверяет таблицы в базе данных master, но может выполняться в любой базе данных локального продукта. 
+> [!NOTE]
+>  * All logins are members of the public role and cannot be removed. 
+>  * This query checks tables in the master database but it can be executed in any database for the on premises product. 
 
-Чтобы определить, кто является участником предопределенной роли базы данных, выполните следующий запрос в каждой базе данных.
+To determine who is a member of a fixed database role, execute the following query in each database.
 ```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
@@ -106,22 +106,22 @@ SELECT DP1.name AS DatabaseRoleName,
 ### <a name="server-permissions"></a>Разрешения сервера
 
 Следующий запрос возвращает список разрешений, которые были предоставлены или запрещены на уровне сервера. Этот запрос должен быть выполнен в базе данных master.   
->  [!NOTE] 
+> [!NOTE]
 >  Разрешения уровня сервера нельзя предоставлять и запрашивать в базе данных SQL или в хранилище данных SQL.   
-```sql
-SELECT pr.type_desc, pr.name, 
- isnull (pe.state_desc, 'No permission statements') AS state_desc, 
- isnull (pe.permission_name, 'No permission statements') AS permission_name 
- FROM sys.server_principals AS pr
- LEFT OUTER JOIN sys.server_permissions AS pe
-   ON pr.principal_id = pe.grantee_principal_id
- WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
- ORDER BY pr.name, type_desc;
+> ```sql
+> SELECT pr.type_desc, pr.name, 
+>  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
+>  isnull (pe.permission_name, 'No permission statements') AS permission_name 
+>  FROM sys.server_principals AS pr
+>  LEFT OUTER JOIN sys.server_permissions AS pe
+>    ON pr.principal_id = pe.grantee_principal_id
+>  WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
+>  ORDER BY pr.name, type_desc;
 ```
 
-### <a name="database-permissions"></a>Разрешения базы данных
+### Database Permissions
 
-Следующий запрос возвращает список разрешений, которые были предоставлены или отклонены на уровне базы данных. Этот запрос должен быть выполнен в каждой базе данных.   
+The following query returns a list of the permissions that have been granted or denied at the database level. This query should be executed in each database.   
 ```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
@@ -156,6 +156,6 @@ REVERT;
 
 ## <a name="see-also"></a>См. также:
 
-[Приступая к работе с разрешениями ядра СУБД](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
+[Приступая к работе с разрешениями Database Engine](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
 [Руководство по началу работы с ядром СУБД](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
 

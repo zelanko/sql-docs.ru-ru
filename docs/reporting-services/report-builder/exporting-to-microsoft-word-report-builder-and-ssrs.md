@@ -1,23 +1,25 @@
 ---
 title: Экспорт в Microsoft Word (построитель отчетов и службы SSRS) | Документы Майкрософт
-ms.date: 05/30/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
+description: Модуль подготовки отчетов Word подготавливает отчеты с разбиением на страницы в формате  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (DOCX). Используется формат Office Open XML.
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b315779a4e6c16bdea162ebd5d70c4b9c12ec94b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e8bae0c0ef770acf460840abcc0989f8cdf4324e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393341"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202423"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Экспорт в Microsoft Word (построитель отчетов и службы SSRS)
 
-  Модуль подготовки отчетов Word подготавливает отчеты с разбиением на страницы в формате  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (DOCX). Используется формат Office Open XML.  
+  Модуль подготовки отчетов Word подготавливает отчеты с разбиением на страницы в формате Microsoft Word (DOCX). Используется формат Office Open XML.  
   
  Содержимое файлов, создаваемых этим модулем подготовки, имеет тип **application/vnd.openxmlformats-officedocument.wordprocessingml.document** , а файлы имеют расширение DOCX.  
   
@@ -70,9 +72,9 @@ ms.locfileid: "52393341"
   
  Это происходит потому, что модуль подготовки отчетов Word анализирует отчет для определения наличия таких полей, относящихся к разбиению на страницы, как **PageNumber** и **TotalPages** , и обрабатывает только простые ссылки, а не вызовы функций. В данном случае в выражении вызывается функция **ToString** . Следующие два выражения являются эквивалентными, и оба обеспечивают правильную подготовку к просмотру при предварительном просмотре отчета в построителе отчетов или конструкторе отчетов либо при подготовке к просмотру опубликованного отчета на веб-портале [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или в библиотеке SharePoint. Но модуль подготовки отчетов Word успешно выполняет синтаксический анализ только второго выражения и правильно подготавливает к просмотру номера страниц.  
   
--   **Сложное выражение:**  выражением является `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **Сложное выражение**:  выражением является `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Выражение с отрезками текста** : текст **Средний объем продаж**, выражение  `=Avg(Fields!YTDPurchase.Value, "Sales)`, текст **Номер страницы**, выражение `=Globals!PageNumber`  
+-   **Выражение с отрезками текста**: текст **Средний объем продаж**, выражение `=Avg(Fields!YTDPurchase.Value, "Sales)`, текст **Номер страницы**, выражение `=Globals!PageNumber`  
   
  Чтобы избежать этой проблемы, при включении выражений в колонтитулы используйте несколько отрезков текста вместо одного сложного выражения. Следующие два выражения эквивалентны. Первое выражение является сложным, а второй использует отрезки текста. Модуль подготовки отчетов Word успешно выполняет синтаксический анализ только второго выражения.  
   

@@ -1,7 +1,7 @@
 ---
 title: catalog.catalog_properties (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/11/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 456ab997ac599f4525f62a5eb6267600b0767c24
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0fa4d428ad10adf53118e901befcb10cede7f421
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519639"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328924"
 ---
 # <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52519639"
 |**VALIDATION_TIMEOUT**|Срок (в секундах), по истечении которого прекращаются невыполненные проверки.|  
 |**SERVER_CUSTOMIZED_LOGGING_LEVEL**|Настраиваемый уровень ведения журнала по умолчанию для сервера служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Если настраиваемые уровни ведения журнала не созданы, это свойство может не отображаться в представлении.|
 |**SERVER_LOGGING_LEVEL**|Уровень ведения журнала по умолчанию для сервера служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|
-|**SERVER_OPERATION_ENCRYPTION_LEVEL**|Если значение равно 1 (`PER_EXECUTION`), сертификат и симметричный ключ, используемые для защиты важных параметров выполнения и журналов выполнения, создаются для каждого *выполнения*. Если значение равно 2 (`PER_PROJECT`), сертификат и симметричный ключ создаются один раз для каждого *проекта*. Дополнительные сведения об этом свойстве см. в разделе "Примечания" для хранимой процедуры SSIS [catalog.cleanup_server_log](..\system-stored-procedures\catalog-cleanup-server-log.md#remarks).|
+|**SERVER_OPERATION_ENCRYPTION_LEVEL**|Если значение равно 1 (`PER_EXECUTION`), сертификат и симметричный ключ, используемые для защиты важных параметров выполнения и журналов выполнения, создаются для каждого *выполнения*. Если значение равно 2 (`PER_PROJECT`), сертификат и симметричный ключ создаются один раз для каждого *проекта*. Дополнительные сведения об этом свойстве см. в разделе "Примечания" для хранимой процедуры SSIS [catalog.cleanup_server_log](../system-stored-procedures/catalog-cleanup-server-log.md#remarks).|
 |**VERSION_CLEANUP_ENABLED**|Если значение равно `TRUE`, в каталоге будет сохраняться определенное количество версий проекта, равное **MAX_PROJECT_VERSIONS**, а остальные будут удаляться. Если это значение равно **FALSE**, в каталоге будут сохраняться все версии проекта. Примечание. Задание [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет очистку операций.|
 |||
   

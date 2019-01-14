@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd93fef0add8f773a1acac0635c13f59d8bd5cab
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b85685dd15e6eb7dd2350bdeda5befb28959c281
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700972"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202803"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Синтаксические обозначения в Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "51700972"
 |**полужирный**|Имена баз данных, таблиц, столбцов, индексов, хранимых процедур, программ, типов данных и текст должны вводиться в точном соответствии с примером.|  
 |_underline_|Указывает значение по умолчанию, которое применяется, когда в инструкции пропущено предложение, содержащее подчеркнутое значение.|  
 |&#124; (вертикальная черта)|Разделяет элементы синтаксиса внутри квадратных или фигурных скобок. Может быть использован только один из этих элементов.|  
-|`[ ]` (квадратные скобки)|Необязательные элементы синтаксиса. Скобки набирать не следует.|  
+|`[ ]` (квадратные скобки)|Необязательные элементы синтаксиса. Скобки не вводятся.|  
 |{ } (фигурные скобки)|Обязательные элементы синтаксиса. Скобки набирать не следует.|  
 |[**,**...*n*]|Указывает на то, что предшествующий элемент можно повторить *n* раз. Вхождения элемента разделяются запятыми.|  
 |[...*n*]|Указывает на то, что предшествующий элемент можно повторить *n* раз. Отдельные вхождения элемента разделяются пробелами.|  
@@ -113,7 +113,7 @@ _server\_name_
 ## <a name="applies-to-references"></a>Ссылки «Относится к»  
 Ссылка [!INCLUDE[tsql](../../includes/tsql-md.md)] включает статьи, относящиеся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
 
-В верхней части каждого раздела есть глава, где указано, какие продукты поддерживают тему раздела. Если продукт не указан, то компонент, описанный в разделе, для данного продукта недоступен. Например, группы доступности были введены в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. В статье по **CREATE AVAILABILITY GROUP** указано, что эта функция применима к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), так как она неприменима к [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+В верхней части каждого раздела есть глава, где указано, какие продукты поддерживают тему раздела. Если продукт не указан, то компонент, описанный в разделе, для данного продукта недоступен. Например, группы доступности были введены в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. В статье о **CREATE AVAILABILITY GROUP** указано, что эта функция применима к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), так как она неприменима к [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 В некоторых случаях в продукте используется общая тема раздела, но не все аргументы поддерживаются. Например, пользователи автономной базы данных впервые появились в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Инструкция **CREATE USER** может использоваться в любом продукте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], однако синтаксис **WITH PASSWORD** не может использоваться с более ранними версиями. В этом случае дополнительные главы **Область применения** вставляются в описания соответствующих аргументов в разделе.  
   
