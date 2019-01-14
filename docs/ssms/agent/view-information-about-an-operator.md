@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 58abfa4ff4add4415b71a536b0c9aeb1f6a9f472
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0ce920c169e2a3e64be1c6aa02841305b64378ee
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702562"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256399"
 ---
 # <a name="view-information-about-an-operator"></a>Просмотр сведений об операторе
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "51702562"
   
 4.  Щелкните правой кнопкой оператор, который нужно просмотреть, и выберите пункт **Свойства**.  
   
-    Дополнительные сведения о доступных параметрах, содержащихся в диалоговом окне *Свойства***имя_оператора**, см. в разделе:  
+    Дополнительные сведения о доступных параметрах, содержащихся в диалоговом окне _Свойства_**имя_оператора** , см. в разделе:  
   
     -   [Свойства оператора — создание оператора (страница "Общие")](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   

@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1e56b8180caf8beec9a0371e79e847fd4ff2e30d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cbb3f5d659a859e58deb7410e6890b5b39ac2895
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701112"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131134"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "51701112"
 ## <a name="BeforeYouBegin"></a>Перед началом  
   
 ### <a name="Security"></a>безопасность  
-Дополнительные сведения см. в разделе [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Использование среды SQL Server Management Studio  
   
@@ -63,13 +63,13 @@ ms.locfileid: "51701112"
   
 3.  Щелкните правой кнопкой мыши папку **Задания** и выберите пункт **Управление категориями заданий**.  
   
-4.  В диалоговом окне **Управление категориями заданий***имя_сервера* выберите категорию заданий, которую нужно изменить, и нажмите кнопку **Просмотреть задания**.  
+4.  В диалоговом окне **Управление категориями заданий**_имя_сервера_ выберите категорию заданий, которую нужно изменить, и нажмите кнопку **Просмотреть задания**.  
   
 5.  Установите флажок **Отображать все задания** .  
   
 6.  Чтобы добавить задание в категорию, в основной сетке установите флажок в столбце **Выбор** , соответствующий заданию. Чтобы удалить задание из категории, снимите флажок. После завершения нажмите кнопку **ОК**.  
   
-7.  Закройте диалоговое окно **Управление категориями заданий***имя_сервера*.  
+7.  Закройте диалоговое окно **Управление категориями заданий**_имя_сервера_ .  
   
 ## <a name="TSQL"></a>Использование Transact-SQL  
   
