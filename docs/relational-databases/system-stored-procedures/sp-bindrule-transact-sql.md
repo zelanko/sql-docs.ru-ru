@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f06c0b7395ce61a52cae17e9cbc6429cdd6b9eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d08f754022ae28cfce074978bfdd8c3f79ba71a6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728392"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128414"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@rulename=**] **"***правило***"**  
+ [  **@rulename=**] **"**_правило_**"**  
  Имя правила, создаваемого инструкцией CREATE RULE. *правило* — **nvarchar(776)**, не имеет значения по умолчанию.  
   
- [  **@objname=**] **"***object_name***"**  
+ [  **@objname=**] **"**_object_name_**"**  
  Таблица и столбец или тип данных псевдонима, к которым будет привязано правило. Правило не может быть привязано к **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, определяемому пользователем типу CLR или столбцу **timestamp**. Правило не может быть привязано к вычисляемому столбцу.  
   
  *object_name* — **nvarchar(776)** не имеет значения по умолчанию. Если *object_name* — это имя одной части, оно рассматривается как псевдоним типа данных. Если имя двух- или трехкомпонентное, оно рассматривается как таблица и столбец; в случае неудачи разрешения имя рассматривается как псевдоним типа данных. По умолчанию существующие столбцы типа данных псевдонима наследуют *правило* Если правило привязано непосредственно к столбцу.  
@@ -60,7 +60,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 > [!NOTE]  
 >  Правила, созданные на основе выражений, которые используют псевдоним типов данных, могут быть привязаны к столбцам или типам данных псевдонима, но не могут быть скомпилированы, если на них ссылаются. Избегайте использования правил, созданных на основе псевдонима типов данных.  
   
- [  **@futureonly=** ] **"***аргумента futureonly_flag***"**  
+ [  **@futureonly=** ] **"**_аргумента futureonly_flag_**"**  
  Используется только при привязке правила к псевдониму типа данных. *future_only_flag* — **varchar(15)** значение по умолчанию NULL. Этот параметр, если значение **futureonly** предотвращает наследование нового правила существующие столбцы типа данных псевдонима. Если *аргумента futureonly_flag* имеет значение NULL, новое правило привязывается ко всем столбцам с псевдонимом типа данных, который в данный момент не имеет правила или используют существующее правило типа данных псевдонима.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

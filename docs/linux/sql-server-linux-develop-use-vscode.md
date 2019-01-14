@@ -1,128 +1,126 @@
 ---
-title: С помощью расширения mssql Visual Studio Code для SQL Server | Документация Майкрософт
-description: Этом руководстве показано, как с помощью расширения mssql для Visual STUDIO Code. Это расширение позволяет изменять и выполнять скрипты Transact-SQL в VS Code.
+title: С помощью расширения mssql Visual Studio Code для SQL Server в Linux | Документация Майкрософт
+description: Используйте расширение mssql для Visual Studio Code для редактирования и выполнять скрипты Transact-SQL для SQL Server в Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/17/2017
+ms.date: 12/18/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
-ms.openlocfilehash: b1ae9056ecbaf158b275798d69d691ae64e6ef06
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 583c7ac13b49370b333e80568c4b52885b58dcf3
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033631"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100569"
 ---
-# <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Использование Visual Studio Code для создания и выполнения скриптов Transact-SQL для SQL Server
+# <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-on-linux"></a>Использование Visual Studio Code для создания и выполнения скриптов Transact-SQL в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этой статье показано, как использовать **mssql** расширение для Visual Studio Code (VS Code) для разработки баз данных SQL Server.
+В этой статье показано, как использовать *mssql* расширения для Visual Studio Code для разработки баз данных SQL Server в Linux.
 
-Visual Studio Code — графический редактор кода для Linux, macOS и Windows, который поддерживает расширения. [**mssql** расширения VS Code] позволяет подключиться к SQL Server, запрос с помощью Transact-SQL (T-SQL) и просмотреть результаты.
+## <a name="install-and-start-visual-studio-code"></a>Установите и запустите Visual Studio Code
 
-## <a name="install-vs-code"></a>Установка VS Code
-1. Если вы еще не установили VS Code, [Скачайте и установите Visual STUDIO Code] на вашем компьютере.
+Visual Studio Code — графический редактор кода для Linux, macOS и Windows, который поддерживает расширения. 
 
-2. Запустите VS Code.
+1. [Скачайте и установите Visual Studio Code] на вашем компьютере.
+   
+1. Запустите Visual Studio Code.
+   
+   >[!NOTE]
+   >Если Visual Studio Code не запускается, когда вы подключены через сеанс удаленного рабочего стола xrdp, см. в разделе [VS Code, не работает в Ubuntu, при подключении по протоколу XRDP](https://github.com/Microsoft/vscode/issues/3451).
 
 ## <a name="install-the-mssql-extension"></a>Установка расширения mssql
-Следующие шаги описывают установку расширения mssql. 
 
-1. Нажмите клавишу **CTRL + SHIFT + P** (или **F1**) чтобы открыть палитру команд в VS Code. 
+[Расширение mssql для Visual Studio Code] позволяет подключаться к SQL Server, запрос с помощью Transact-SQL (T-SQL) и просмотреть результаты.
 
-2. Выберите **Установка расширения** и тип **mssql**.
-   > [!TIP] 
-   > Для macOS **CMD** ключ равнозначен **CTRL** ключей в Linux и Windows.
-
-2. Щелкните "установить" **mssql**. 
+1. В Visual Studio Code, выберите **представление** > **палитру команд**, или нажмите клавишу **Ctrl**+**Shift** + **P**, или нажмите клавишу **F1** открыть **палитру команд**. 
    
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-extension.png" alt="Install the extension" style="width: 600px;"/>
-
-3. **Mssql** расширения занимает до одной минуты для установки. Ожидание, указывающее, что он успешно установлен.
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-install-success-notification.png" alt="Installation success notification" style="width: 600px;"/>
-
-   > [!NOTE]
-   > Для macOS необходимо установить OpenSSL. Это является необходимым условием для.Net Core, используемый с помощью расширения mssql. Выполните **установите компоненты** шагов в [Инструкции по.Net Core]. Или можно выполнить следующие команды в терминале macOS.
-   >
-   >   ```bash
-   >   brew update
-   >   brew install openssl
-   >   ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
-   >   ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
-   >   ```
+1. В **палитру команд**выберите **расширения: Установка расширений** из раскрывающегося списка. 
    
-   > [!NOTE]
-   > Для Windows 8.1, Windows Server 2012 или более ранние версии, необходимо загрузить и установить [Windows 10 универсальная среда выполнения C]. Скачайте и откройте ZIP-файл. Запустите установщик (MSU-файл), предназначенных для текущей конфигурации операционной системы.
+1. В **расширения** введите *mssql*.
+   
+1. Выберите **SQL Server (mssql)** расширения, а затем выберите **установить**. 
+   
+   ![Установка расширения mssql](./media/sql-server-linux-develop-use-vscode/vscode-extension.png)   
+   
+1. После завершения установки выберите **перезагрузить** включить расширение. 
 
 ## <a name="create-or-open-a-sql-file"></a>Создайте или откройте файл SQL
 
-**Mssql** расширение включает команды mssql и T-SQL IntelliSense в редакторе при языка используется режим **SQL**.
+Расширение mssql включает команды mssql и T-SQL IntelliSense в редакторе кода при языка используется режим **SQL**.
 
-1. Нажмите клавишу **CTRL + N**. Visual Studio Code Откроется новый файл «Обычный текст» по умолчанию. 
+1. Выберите **файл** > **новый файл** или нажмите клавишу **Ctrl**+**N**. Visual Studio Code Откроется новый обычный текстовый файл по умолчанию. 
 
-2. Нажмите клавишу **CTRL + K, M** и измените режим языка для **SQL**. 
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-language-mode.png" alt="SQL language mode" style="width: 500px;" />
-
-3. Кроме того можно откройте существующий файл с расширением .sql. Языковой режим является автоматически **SQL** для файлов с расширением .sql.  
+1. Выберите **обычный текст** в нижней строке состояния, или нажмите клавишу **Ctrl**+**K** > **M**и выберите **SQL** из раскрывающегося списка языков. 
+   
+   ![Языковой режим SQL](./media/sql-server-linux-develop-use-vscode/vscode-language-mode.png)   
+   
+Если открыть существующий файл, имеющий *.sql* расширение файла, языковой режим автоматически присваивается SQL.  
 
 ## <a name="connect-to-sql-server"></a>Подключение к SQL Server
 
-Ниже показано, как подключиться к SQL Server с помощью VS Code.
+Выполните следующие действия, чтобы создать профиль подключения и подключиться к SQL Server.
 
-1. В Visual Studio Code нажмите клавиши **CTRL+SHIFT+P** (или **F1**), чтобы открыть палитру команд.
-
-2. Тип **sql** для отображения команды mssql.
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-commands.png" alt="mssql commands" style="width: 500px;" />
+> [!TIP] 
+> Можно также создавать и изменять профили подключений в файле параметров пользователя (*settings.json*). Чтобы открыть файл параметров, выберите **файл** > **предпочтения** > **параметры**. Дополнительные сведения см. в разделе [Управление профилями подключения].
    
+1. Нажмите клавишу **Ctrl**+**Shift**+**P** или **F1** открыть **палитру команд**. 
+   
+1. Тип *sql* для отображения mssql команд или тип *sqlcon*, а затем выберите **MS SQL: Подключение** из раскрывающегося списка.
+   
+   ![команды MSSQL](./media/sql-server-linux-develop-use-vscode/vscode-commands.png)   
+   
+   >[!NOTE]
+   >Файл SQL, таких как пустой файл SQL, который вы создали, фокус должен быть в редакторе кода перед выполнением команды mssql. 
 
-3. Выберите **MS SQL: подключение** команды. Можно просто ввести **sqlcon** и нажмите клавишу **ввод**.
-
-4. Выберите **создать профиль подключения**. Это создает профиль подключения для экземпляра SQL Server.
-
-5. Следуя указаниям, настройте свойства подключения для нового профиля подключения. После указания каждого значения нажимайте клавишу **ВВОД**, чтобы продолжить. 
-
-   В следующей таблице описаны свойства профиля подключения.
-
-   | Настройка | Описание |
-   |-----|-----|
-   | **Имя сервера** | Имя экземпляра SQL Server. Для этого руководства используйте **localhost** для подключения к локальному экземпляру SQL Server на компьютере. При подключении к удаленному серверу SQL Server, введите имя целевого компьютера SQL Server или его IP-адрес. Если вам нужно указать порт для экземпляра SQL Server, используйте запятую, чтобы отделить его от имени. Например можно ввести для локального сервера, работающего на порт 1401 **localhost, 1401**. |
-   | **[Необязательно] Имя базы данных** | База данных, который вы хотите использовать. Для целей данного учебника, не указать базу данных и нажмите клавишу **ввод** для продолжения. |
-   | **Имя пользователя** | Введите имя пользователя, имеющего доступ к базе данных на сервере. В этом руководстве используйте значение по умолчанию **SA** учетной записи, созданной во время работы программы установки SQL Server. |
-   | **Пароль (имя входа SQL)** | Введите пароль для указанного пользователя. | 
-   | **Сохранить пароль?** | Тип **Да** для сохранения пароля. В противном случае введите **нет** запрашивается пароль каждый раз, используется профиль подключения. |
-   | **[Необязательно] Введите имя для этого профиля** | Имя профиля подключения. Например, можно назвать профиля **профиль localhost**. 
-
-   > [!Tip] 
-   > Можно создавать и изменять профили подключений в файле параметров пользователя (settings.json). Откройте файл параметров, выбрав **предпочтения** и затем **параметры пользователя** в меню Visual STUDIO Code. Дополнительные сведения см. в разделе [Управление профилями подключения].
-
-6. Чтобы закрыть информационное сообщение о том, что профиль создан и подключен, нажмите клавишу **ESC**.
-
+1. Выберите **создать профиль подключения** для создания нового профиля подключения для SQL Server.
+   
+1. Следуйте инструкциям на экране, чтобы задать свойства для нового профиля подключения. После указания каждого значения, нажмите клавишу **ввод** для продолжения. 
+   
+   1. **Имя сервера или строка подключения ADO**: Укажите имя экземпляра SQL Server. Используйте *localhost* для подключения к экземпляру SQL Server на локальном компьютере. Чтобы подключиться к удаленному серверу SQL Server, введите имя целевого SQL Server, или его IP-адрес. Если вам нужно указать порт, используйте запятую, чтобы отделить его от имени. Например, для локального сервера, работающего на порт 1401, введите *localhost, 1401*. 
+      
+      >[!NOTE]
+      >Также можно ввести строку подключения ADO для базы данных, нажмите клавишу **ввод**, при необходимости имя профиля подключения, а затем нажмите клавишу **ввод** еще раз, чтобы подключиться и создать профиль. 
+      
+   1. **Имя базы данных** (необязательно): База данных, который вы хотите использовать. Чтобы создать новую базу данных, не указать базу данных имя и нажмите клавишу **ввод** для продолжения. 
+      
+   1. **Тип проверки подлинности**: Нажмите клавишу **ввод** для выбора **имя входа SQL**. 
+      
+   1. **Имя пользователя**: Введите имя пользователя, имеющего доступ к базе данных на сервере.
+      
+   1. **Пароль**: Введите пароль для указанного пользователя.
+      
+   1. **Сохранить пароль**: Нажмите клавишу **ввод** для выбора **Да** и сохранять пароль. Выберите **нет** запрашивается пароль каждый раз, используется профиль подключения. 
+      
+   1. **Имя профиля** (необязательно): Введите имя для профиля подключения, такие как *профиль localhost*. 
+   
+   После выбора **ввод**, Visual Studio Code создает профиль подключения и подключается к SQL Server. 
+   
    > [!TIP]
-   > Если возникнет ошибка подключения, сначала попробуйте узнать проблему из сообщения об ошибке в **вывода** панели в VS Code (выберите **выходные данные** на **представление** меню). Затем ознакомьтесь с [рекомендациями по устранению неполадок с подключением].
+   > Если подключение отсутствует, попробуйте для диагностики проблемы из сообщения об ошибке в **вывода** панели в Visual Studio Code. Чтобы открыть **выходные данные** панели, выберите **представление** > **вывода**. Кроме того, просмотрите [рекомендации по устранению неполадок подключения].
+   
+1. Проверка подключения в нижней строке состояния.
+   
+  ![Состояние подключения](./media/sql-server-linux-develop-use-vscode/vscode-connection-status.png)   
+   
+## <a name="create-a-sql-database"></a>Создание базы данных SQL
 
-7. Проверьте состояние подключения в строке состояния.
+1. В новый файл SQL, который был запущен ранее, введите *sql* для отображения списка фрагментов кода для редактирования. 
 
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-connection-status.png" alt="Connection status" style="width: 500px;" />
-
-## <a name="create-a-database"></a>Создание базы данных
-
-1. В редакторе, введите **sql** откроется список фрагментов кода для редактирования. 
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-sql-snippets.png" alt="SQL snippets" style="width: 500px;" />
-
-2. Выберите **sqlCreateDatabase**.
-
-3. В приведенном фрагменте введите **TutorialDB** для имени базы данных.
-
+  ![Фрагменты кода SQL](./media/sql-server-linux-develop-use-vscode/vscode-sql-snippets.png)   
+   
+1. Выберите **sqlCreateDatabase**.
+   
+1. В указанном фрагменте кода замените `DatabaseName` с `TutorialDB`:
+   
    ```sql
+   -- Create a new database called 'TutorialDB'
+   -- Connect to the 'master' database to run this snippet
    USE master
    GO
    IF NOT EXISTS (
@@ -134,36 +132,31 @@ Visual Studio Code — графический редактор кода для L
    GO
    ```
    
-4. Нажмите клавишу **CTRL + SHIFT + E** для выполнения команд Transact-SQL. Просмотрите результаты в окне запроса.
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-create-database-messages.png" alt="create database messages" style="width: 500px;" />
-
-   > [!TIP]
-   > Вы можете настроить сочетания клавиш для команды расширения mssql. См. в разделе [Настройка сочетания клавиш].
+1. Нажмите клавишу **Ctrl**+**Shift**+**E** для выполнения команд Transact-SQL. Просмотрите результаты в окне запроса.
+   
+  ![Создание базы данных сообщений](./media/sql-server-linux-develop-use-vscode/vscode-create-database-messages.png)   
+   
+> [!TIP]
+> Вы можете настроить сочетания клавиш для команды mssql. См. в разделе [Настройка сочетания клавиш].
 
 ## <a name="create-a-table"></a>Создание таблицы
 
-1. Удаляет содержимое окна редактора.
-
-2. Нажмите клавишу **F1** чтобы отобразить палитру команд.
-
-3. Тип **sql** в палитре команд для отображения команд SQL или тип **sqluse** для **базы данных SQL: USE MS** команды.
-
-4. Нажмите кнопку **базы данных SQL: USE MS**и выберите **TutorialDB** базы данных. Это изменяет контекст, в новую базу данных, созданные в предыдущем разделе.
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-use-database.png" alt="use database" style="width: 500px;" />
-
-3. В редакторе, введите **sql** для отображения фрагменты кода, а затем выберите **sqlCreateTable** и нажмите клавишу **введите**.
-
-4. В приведенном фрагменте введите **сотрудников** имя таблицы.
-
-5. Нажмите клавишу **вкладке**, а затем введите **dbo** для имени схемы.
-
-   > [!NOTE]
-   > После добавления в фрагменте кода, необходимо ввести имена таблицы и схемы без изменения фокуса из редактора VS Code.
-
-6. Изменить имя столбца в параметре **Column1** для **имя** и **Column2** для **расположение**.
-
+1. Удалите содержимое окна редактора кода.
+   
+1. Нажмите клавишу **Ctrl**+**Shift**+**P** или **F1** открыть **палитру команд**. 
+   
+1. Тип *sql* для отображения mssql команд или тип *sqluse*и выберите **базы данных SQL: USE MS** команды.
+   
+1. Выберите новый **TutorialDB** базы данных. 
+   
+   ![Использование базы данных](./media/sql-server-linux-develop-use-vscode/vscode-use-database.png)   
+   
+1. В редакторе кода введите *sql* для отображения фрагменты кода, выберите **sqlCreateTable**, а затем нажмите клавишу **ввод**.
+   
+1. В приведенном фрагменте введите *сотрудников* имя таблицы и *dbo* для имени схемы.
+   
+1. Создайте столбцы, как показано в следующем коде:
+   
    ```sql
    -- Create a new table called 'Employees' in schema 'dbo'
    -- Drop the table if it already exists
@@ -179,12 +172,12 @@ Visual Studio Code — графический редактор кода для L
    );
    GO
    ```
-
-7. Нажмите клавишу **CTRL + SHIFT + E** для создания таблицы.
+   
+1. Нажмите клавишу **Ctrl**+**Shift**+**E** для создания таблицы.
 
 ## <a name="insert-and-query"></a>Вставка и запрос
 
-1. Добавьте следующие инструкции, чтобы вставить четыре строки в **сотрудников** таблицы. Выберите все строки.
+1. Добавьте следующие инструкции, чтобы вставить четыре строки в **сотрудников** таблицы. 
 
    ```sql
    -- Insert rows into table 'Employees'
@@ -203,68 +196,66 @@ Visual Studio Code — графический редактор кода для L
    FROM dbo.Employees as e
    GO
    ```
-
+   
    > [!TIP]
-   > При вводе, используйте помощи T-SQL IntelliSense.
-   >   <img src="./media/sql-server-linux-develop-use-vscode/vscode-intellisense.png" alt="TSQL IntelliSense" style="width: 500px;" />
-
-2. Нажмите клавишу **CTRL + SHIFT + E** для выполнения команд. Два привести отображения наборов в **результаты** окна. 
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-result-grid.png" alt="Results" style="width: 300px;" />
+   > При вводе, используйте IntelliSense для T-SQL для выполнения инструкций.
+   >![T-SQL IntelliSense](./media/sql-server-linux-develop-use-vscode/vscode-intellisense.png)   
+   
+1. Нажмите клавишу **Ctrl**+**Shift**+**E** для выполнения команд. Два привести отображения наборов в **результаты** окна. 
+   
+   ![Результаты](./media/sql-server-linux-develop-use-vscode/vscode-result-grid.png)   
 
 ## <a name="view-and-save-the-result"></a>Просмотреть и сохранить результаты
-
-1. На **представление** меню, выберите **макета группы Переключить редактор** переключиться на макет вертикальные или горизонтальные разделения.
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-toggle-split.png" alt="Vertical split" style="width: 500px;" />
-
-2. Нажмите кнопку **результатов** и **сообщений** заголовок панели, чтобы сворачивать и разворачивать панели.
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-toggle-messages-pannel.png" alt="Toggle Messages" style="width: 500px;" />
-
+   
+1. Выберите **представление** > **редактор макета** > **перевернуть макета** переключиться на макет вертикальные или горизонтальные разделения.
+   
+1. Выберите **результатов** и **сообщений** панели заголовки для свертывания и развертывания панелей.
+   
+   ![Переключить заголовки](./media/sql-server-linux-develop-use-vscode/vscode-toggle-messages-pannel.png)   
+   
    > [!TIP]
    > Можно настроить поведение по умолчанию расширения mssql. См. в разделе [Настройка параметров расширения].
-
-2. Щелкните значок сетки "Развернуть" на второй таблицы результатов, чтобы увеличить масштаб.
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-maximize-grid.png" alt="Maximize grid" style="width: 500px;" />
-
+   
+1. Выберите значок сетки "Развернуть" на второй таблицы результатов для увеличения изображения на этих результатов.
+   
+   ![Максимально увеличить сетки](./media/sql-server-linux-develop-use-vscode/vscode-maximize-grid.png)   
+   
    > [!NOTE]
-   > Значок "Развернуть" отображает при сценария T-SQL имеет два или более табличной сетки результатов.
+   > Значок "Развернуть" отображается, когда скрипт T-SQL создает табличной сетки результатов в двух или более.
+   
+1. Откройте контекстное меню сетки, щелкните правой кнопкой мыши в сетке. 
+   
+   ![Контекстное меню](./media/sql-server-linux-develop-use-vscode/vscode-grid-context-menu.png)   
+   
+1. Выберите **выбрать все**.
+   
+1. Снова откройте контекстное меню для сетки и выберите **Сохранить как JSON** сохранить результат *.json* файла.
+   
+1. Укажите имя файла для JSON-файла. 
+   
+1. Убедитесь, что JSON-файл сохраняет и открывается в Visual Studio Code.
+   
+   ![сохранить в формате JSON.](./media/sql-server-linux-develop-use-vscode/vscode-save-as-json.png)   
 
-3. Откройте контекстное меню сетке с правой кнопкой мыши по сетке. 
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-grid-context-menu.png" alt="Context menu" style="width: 500px;" />
-
-4. Выберите **выбрать все**.
-
-5. Откройте контекстное меню для сетки и выберите **Сохранить как JSON** сохранение результата в JSON-файл.
-
-6. Укажите имя файла для JSON-файла. Для этого учебника введите **employees.json**.
-
-7. Убедитесь, что JSON-файл сохранен и открыть в VS Code.
-
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-save-as-json.png" alt="Save as Json" style="width: 500px;" />
+Если вам нужно сохранить и последующего выполнения скриптов SQL для администрирования или более крупного проекта разработки Сохранение скриптов с *.sql* расширения.
 
 ## <a name="next-steps"></a>Следующие шаги
 
-В реальной ситуации, можно создать скрипт, который необходимо сохранить и запустить более поздней версии (для администрирования или как часть более крупного проекта разработки). В этом случае можно сохранить скрипт с **.sql** расширения.
+Если вы не знакомы с T-SQL, см. в разделе [Учебник. Написание инструкций Transact-SQL] и [Справочник по Transact-SQL (ядро СУБД)].
 
-Если вы не знакомы с T-SQL, изучите разделы [Учебник. Составление инструкций Transact-SQL] (Руководство: написание инструкций Transact-SQL) и [Справочник по Transact-SQL (ядро СУБД)] (Справочник по Transact-SQL (ядро СУБД)).
+Дополнительные сведения о с помощью или способствовать низкой расширения mssql см. в разделе [вики-сайте проекта расширения mssql].
 
-Дополнительные сведения о с помощью или способствовать низкой расширения mssql см. в разделе [вики-сайте проекта для расширения mssql].
+Дополнительные сведения об использовании Visual Studio Code см. в разделе [документации Visual Studio Code](https://code.visualstudio.com/docs).
 
-Дополнительные сведения об использовании VS Code см. в разделе [документации Visual Studio Code](https://code.visualstudio.com/docs).
-
-[**mssql** расширения VS Code]:https://aka.ms/mssql-marketplace
-[Скачайте и установите Visual STUDIO Code]:https://code.visualstudio.com/Download
-[Инструкции по.Net Core]:https://www.microsoft.com/net/core
+[расширение MSSQL для Visual Studio Code]:https://aka.ms/mssql-marketplace
+[Скачайте и установите Visual Studio Code]:https://code.visualstudio.com/Download
+[.Net Core instructions]:https://www.microsoft.com/net/core
 [Управление профилями подключения]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
-[рекомендациями по устранению неполадок с подключением]:./sql-server-linux-troubleshooting-guide.md#connection
+[рекомендации по устранению неполадок подключения]:./sql-server-linux-troubleshooting-guide.md#connection
 [Настройка сочетания клавиш]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts
-[Учебник. Составление инструкций Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
-[Справочник по Transact-SQL (ядро СУБД)]:https://msdn.microsoft.com/library/bb510741.aspx
+[Учебник. Написание инструкций Transact-SQL]:https://docs.microsoft.com/sql/t-sql/tutorial-writing-transact-sql-statements
+[Справочник по Transact-SQL (ядро СУБД)]:https://docs.microsoft.com/sql/t-sql/language-reference
 [Visual Studio Code documentation]:https://code.visualstudio.com/docs
-[Windows 10 универсальная среда выполнения C]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
+[Windows 10 Universal C Runtime]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
 [Настройка параметров расширения]: https://github.com/Microsoft/vscode-mssql/wiki/customize-options
-[вики-сайте проекта для расширения mssql]: https://github.com/Microsoft/vscode-mssql/wiki
+[вики-сайте проекта расширения MSSQL]: https://github.com/Microsoft/vscode-mssql/wiki
