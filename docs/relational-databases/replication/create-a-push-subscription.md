@@ -17,16 +17,16 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2961e4c8345157df3d8b625ccc7bb45501570793
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 419f8c12e3716d295440dae887591b547af54f32
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675213"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208252"
 ---
 # <a name="create-a-push-subscription"></a>Создание принудительной подписки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  В данном разделе описывается процесс создания принудительной подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO. Дополнительные сведения о создании принудительной подписки для подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в [этой статье](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+  В данном разделе описывается процесс создания принудительной подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO. Сведения о создании принудительной подписки для подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Создание подписки для подписчика, отличного от подписчика SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
  
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -99,7 +99,7 @@ ms.locfileid: "51675213"
   
     -   Учетные данные **@subscriber**, **@subscriber_db**и **@publication** .  
   
-    -   Учетные данные [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которыми будет запускаться агент распространителя на распространителе в параметре **@job_login** и значение **@job_password**.  
+    -   параметры [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которыми будет запускаться агент распространителя на распространителе в параметре **@job_login** и **@job_password**.  
   
         > **Примечание.** Для соединений, производимых с использованием встроенной проверки подлинности Windows, в параметрах **@job_login** и **@job_password**. Агент распространителя всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
   
@@ -133,7 +133,7 @@ ms.locfileid: "51675213"
   
     -   Учетные данные Windows, с которыми будет запускаться агент слияния на распространителе в параметрах **@job_login** и значение **@job_password**.  
   
-        > **Примечание.** Для соединений, производимых с использованием встроенной проверки подлинности Windows, в параметрах **@job_login** и **@job_password**. Агент слияния всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
+        > **Примечание.**  Для соединений, производимых с использованием встроенной проверки подлинности Windows, в параметрах **@job_login** и **@job_password**. Агент слияния всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
   
     -   (необязательно) Значение **0** в **@subscriber_security_mode** и сведения об имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@subscriber_login** и значение **@subscriber_password**. Эти параметры указываются в том случае, если при соединении с подписчиком необходимо использовать проверку подлинности SQL Server.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "51675213"
   
     -   Учетные данные <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и значение <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> или <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> объекта [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Эта учетная запись будет использоваться для создания локальных соединений с распространителем и удаленных с использованием проверки подлинности Windows.  
   
-        > **Примечание**. Указывать свойство <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> необязательно, если подписка создается членом предопределенной роли сервера **sysadmin**, но рекомендуется это сделать. В этом случае агент будет выполнять олицетворение учетную запись агента SQL Server. Дополнительные сведения см. в статье [Модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md).  
+        > **Примечание.** Указывать свойство <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> необязательно, если подписка создается членом предопределенной роли сервера **sysadmin** , однако рекомендуется это сделать. В этом случае агент будет выполнять олицетворение учетную запись агента SQL Server. Дополнительные сведения см. в статье [Модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
     -   (необязательно) Значение **true** в свойстве <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> (задано по умолчанию). Если будет присвоено значение **false**, подписку можно будет синхронизировать только программно.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "51675213"
   
     -   Учетные данные <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и значение <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> или <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> объекта [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Эта учетная запись будет использоваться для создания локальных соединений с распространителем и удаленных с использованием проверки подлинности Windows.  
   
-        > **Примечание**. Указывать свойство <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> необязательно, если подписка создается членом предопределенной роли сервера **sysadmin**, но рекомендуется это сделать. В этом случае агент будет выполнять олицетворение учетную запись агента SQL Server. Дополнительные сведения см. в статье [Модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md).  
+        > **Примечание.** Указывать свойство <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> необязательно, если подписка создается членом предопределенной роли сервера **sysadmin** , однако рекомендуется это сделать. В этом случае агент будет выполнять олицетворение учетную запись агента SQL Server. Дополнительные сведения см. в статье [Модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
     -   (необязательно) Значение **true** в свойстве <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> (задано по умолчанию). Если будет присвоено значение **false**, подписку можно будет синхронизировать только программно.  
   

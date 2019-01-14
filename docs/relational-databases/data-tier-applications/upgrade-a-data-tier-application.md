@@ -23,20 +23,20 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 31b1fb369ee6b5007e79c96ebb7a536d6e2a147e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: da5e69d974f33f7eeb60e185a5a4a67dae6c01a8
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514037"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589698"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Обновление приложения уровня данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Используйте мастер обновления приложений уровня данных или скрипт Windows PowerShell, чтобы изменить схему и свойства приложения уровня данных (DAC), развернутого на данный момент, для соответствия схеме и свойствам, заданным в новой версии приложений уровня данных.  
   
--   **Перед началом работы:**  [выбор параметров обновления DAC](#ChoseDACUpgOptions), [ограничения](#LimitationsRestrictions), [предварительные требования](#Prerequisites), [безопасность](#Security), [разрешения](#Permissions)  
+-   **Перед началом работы**  [Выбор параметров обновления DAC](#ChoseDACUpgOptions), [Ограничения](#LimitationsRestrictions), [Предварительные требования](#Prerequisites), [Безопасность](#Security), [Разрешения](#Permissions)  
   
--   **Обновление приложения уровня данных с использованием следующих средств**  [мастер обновления приложения уровня данных](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **Обновление приложения уровня данных с использованием:**  [мастера обновления приложения уровня данных](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  Обновление приложения уровня данных — это процесс, который выполняется на месте и изменяет схему существующей базы для соответствия схеме, заданной в новой версии приложения уровня данных. Новая версия приложения уровня данных содержится в файле пакета приложения уровня данных. Дополнительные сведения о создании пакета DAC см. в разделе [Приложения уровня данных](../../relational-databases/data-tier-applications/data-tier-applications.md).  

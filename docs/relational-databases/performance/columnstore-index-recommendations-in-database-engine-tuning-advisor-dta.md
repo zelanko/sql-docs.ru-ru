@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor, columnstore index
 - Database Engine Tuning Advisor, columnstore and rowstore indexes
 ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: f0e6c5641983c3528114120feb17c4f93948e926
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ed6d36c68fad62155261181d4134e097f59dd163
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403019"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328774"
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>Рекомендации по индексам сolumnstore в помощнике по настройке ядра СУБД
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,8 +55,8 @@ ms.locfileid: "52403019"
 
 ## <a name="see-also"></a>См. также:
 [Руководство по индексам columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)       
-[помощник по настройке ядра СУБД](../../relational-databases/performance/database-engine-tuning-advisor.md)      
-[Руководство по помощнику по настройке ядра СУБД](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)
+[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)     (Помощник по настройке ядра СУБД)  
+[Учебник. Помощник по настройке ядра СУБД](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)
 
 
 

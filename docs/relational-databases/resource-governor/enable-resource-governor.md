@@ -9,23 +9,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, enabling
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 1d69214acdfc469a9c74afbd1ec9c379acc02689
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c44ea082390f2722bd4544e264cf5f1266e69b7
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617832"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380315"
 ---
 # <a name="enable-resource-governor"></a>Активация регулятора ресурсов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Регулятор ресурсов отключен по умолчанию. Регулятор ресурсов можно включить с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или Transact-SQL.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Перед началом работы**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
   
--   **To enable Resource Governorn, using:**  [Object Explorer](#RGOnObjEx), [Resource Governor Properties](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
+-   **Включение Resource Governor с использованием:**  [обозревателя объектов](#RGOnObjEx), [свойств Resource Governor](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  В результате включения регулятора ресурсов произойдет следующее.  
@@ -36,7 +36,7 @@ ms.locfileid: "47617832"
   
 -   Запросы, которые существовали до включения регулятора ресурсов, будут испытывать воздействие всех изменений конфигурации, которые были внесены, пока регулятор ресурсов был отключен.  
   
-###  <a name="LimitationsRestrictions"></a> ограничения  
+###  <a name="LimitationsRestrictions"></a> Ограничения  
  В ходе пользовательской транзакции нельзя использовать инструкцию **ALTER RESOURCE GOVERNOR** для включения регулятора ресурсов.  
   
 ###  <a name="Permissions"></a> Permissions  
@@ -72,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
+ [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
  [Отключение регулятора ресурсов](../../relational-databases/resource-governor/disable-resource-governor.md)   
  [Пул ресурсов регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [Группа рабочей нагрузки регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

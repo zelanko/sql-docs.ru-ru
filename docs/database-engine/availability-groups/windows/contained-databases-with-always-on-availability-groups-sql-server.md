@@ -1,6 +1,7 @@
 ---
-title: Автономные базы данных с группами доступности AlwaysOn (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Автономные базы данных с группами доступности
+description: Использование автономных баз данных с группами доступности Always On
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: cacce3ae-e940-4566-8298-6607c4268e74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3a1252614ee29436ac15ba3e783e22a834abe0f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91df6ddd18ca1bdd194788da94e3cca761dcbca1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826972"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208893"
 ---
-# <a name="contained-databases-with-always-on-availability-groups-sql-server"></a>Автономные базы данных с группами доступности AlwaysOn (SQL Server)
+# <a name="use-contained-databases-with-always-on-availability-groups"></a>Использование автономных баз данных с группами доступности Always On 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Этот раздел содержит сведения об использовании автономной базы данных с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -41,6 +42,6 @@ ms.locfileid: "47826972"
   
 ## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Contained Databases](../../../relational-databases/databases/contained-databases.md)  
+ [Автономные базы данных](../../../relational-databases/databases/contained-databases.md)  
   
   

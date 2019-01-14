@@ -20,12 +20,12 @@ ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 51073cc28977e0b30ec53a9d7b1165ea09920008
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a0c838252c95eba5704b3a5e6c8c22b449c771e7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398387"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213542"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ CREATE WORKLOAD GROUP group_name
 >  Все стандартные группы рабочей нагрузки и пулы ресурсов используют имена в нижнем регистре, например «default». Это необходимо учитывать при работе с серверами, где параметры сортировки учитывают регистр символов. Серверы, параметры сортировки которых не учитывают регистр (например, SQL_Latin1_General_CP1_CI_AS), будут рассматривать строки «default» и «Default» как одинаковые.  
   
  EXTERNAL external_pool_name | "default"  
- **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  Группа рабочей нагрузки может указывать внешний пул ресурсов. Можно определить группу рабочей нагрузки и связать ее с двумя пулами:  
   
@@ -143,7 +143,7 @@ CREATE WORKLOAD GROUP group_name
 -   внешним пулом ресурсов для внешних процессов. Дополнительные сведения см. в разделе [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
   
 ## <a name="remarks"></a>Remarks  
- REQUEST_MEMORY_GRANT_PERCENT: разрешено создание индексов для использования большего объема памяти рабочей области, чем было предоставлено изначально, в целях повышения быстродействия. Эта специальная обработка поддерживается регулятором ресурсов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Однако изначально предоставленная память и любая дополнительная выделенная память ограничены пулом ресурсов и настройками группы рабочей нагрузки.  
+ REQUEST_MEMORY_GRANT_PERCENT: Разрешено создание индексов для использования большего объема памяти рабочей области, чем было предоставлено изначально, в целях повышения быстродействия. Эта специальная обработка поддерживается регулятором ресурсов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Однако изначально предоставленная память и любая дополнительная выделенная память ограничены пулом ресурсов и настройками группы рабочей нагрузки.  
   
  **Создание индексов для секционированной таблицы**  
   

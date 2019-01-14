@@ -1,6 +1,7 @@
 ---
-title: Присоединение базы данных-получателя к группе доступности (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Присоединение базы данных-получателя к группе доступности
+description: Инструкции по присоединению базы данных-получателя к группе доступности Always On с помощью Transact-SQL (T-SQL), PowerShell или SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -18,14 +19,14 @@ ms.assetid: fd7efe79-c1f9-497d-bfe7-b2a2b2321cf5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0486e6de8b53a416f80ad88eaec57c658984c050
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bcda8c38e842f6799d799c97263c1443ad065ad8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728462"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209494"
 ---
-# <a name="join-a-secondary-database-to-an-availability-group-sql-server"></a>Присоединение базы данных-получателя к группе доступности (SQL Server)
+# <a name="join-a-secondary-database-to-an-always-on-availability-group"></a>Присоединение базы данных-получателя к группе доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описывается присоединение базы данных-получателя к группе доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. После подготовки базы данных-получателя для вторичной реплики необходимо как можно скорее присоединить базу данных к группе доступности. При этом начнется перемещение данных из соответствующей основной базы данных в базу данных-получатель.  
   
@@ -56,7 +57,7 @@ ms.locfileid: "47728462"
   
 -   База данных-получатель должна быть подготовлена заранее. Дополнительные сведения см. в статье [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  

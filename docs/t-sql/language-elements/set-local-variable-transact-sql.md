@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 839ef762a20d413f5e1c61ca45c46ad80a153d99
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b29291d808b643f9ac66491ae200d6169eb5232a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697333"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589638"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **@** *local_variable*  
+ **@** _local_variable_  
  Имя переменной любого типа, за исключением **cursor**, **text**, **ntext**, **image** или **table**. Имена переменных должны начинаться с одного символа (**@**). Имена переменных должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md).  
   
  *property_name*  
@@ -86,10 +86,10 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  { **.** | **::** }  
  Указывает метод пользовательского типа среды CLR. Для метода экземпляра (не статического) используйте точку (**.**). Для статического метода используйте два двоеточия (**::**). Для обращения к методу, свойству или полю определяемого пользователем типа среды CLR необходимо разрешение EXECUTE для этого типа.  
   
- *method_name* **(** *argument* [ **,**... *n* ] **)**  
+ _method_name_ **(** _argument_ [ **,**... *n* ] **)**  
  Метод определяемого пользователем типа, который принимает один или несколько аргументов для изменения состояния экземпляра типа. Статические методы должны быть общими.  
   
- **@** *SQLCLR_local_variable*  
+ **@** _SQLCLR_local_variable_  
  Переменная, тип которой находится в сборке. Дополнительные сведения см. в статье [Основные понятия о программировании интеграции со средой CLR](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
   
  *mutator_method*  
@@ -127,7 +127,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  Указывает, что инструкция SET содержит декларацию курсора.  
   
  SCROLL  
- Указывает, что курсор поддерживает все параметры выборки: FIRST, LAST, NEXT, PRIOR, RELATIVE и ABSOLUTE. Аргумент SCROLL не может быть задан, если задан аргумент FAST_FORWARD.  
+ Указывает, что курсор поддерживает все аргументы выборки: FIRST, LAST, NEXT, PRIOR, RELATIVE и ABSOLUTE. Аргумент SCROLL не может быть задан, если задан аргумент FAST_FORWARD.  
   
  FORWARD_ONLY  
  Указывает, что курсор поддерживает только параметр FETCH NEXT. Курсор может быть извлечен в одном направлении с первой до последней строки. Если аргумент FORWARD_ONLY задан без ключевых слов STATIC, KEYSET или DYNAMIC, создается курсор типа DYNAMIC. Если не указаны ни аргумент FORWARD_ONLY, ни аргумент SCROLL, по умолчанию используется аргумент FORWARD_ONLY, если нет ключевых слов STATIC, KEYSET или DYNAMIC. Для курсоров STATIC, KEYSET и DYNAMIC аргумент SCROLL добавляется по умолчанию.  
@@ -178,7 +178,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  Переменные могут быть использованы только в выражениях, но не вместо имен объектов или ключевых слов. Для создания динамических инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] используйте инструкцию EXECUTE.  
   
- Синтаксические правила для SET **@***cursor_variable* не включают ключевые слова LOCAL и GLOBAL. Если используется синтаксис SET **@***cursor_variable* = CURSOR..., курсор создается как GLOBAL или LOCAL, в зависимости от установок по умолчанию параметра локального курсора базы данных.  
+ Синтаксические правила для SET **@**_cursor_variable_ не включают ключевые слова LOCAL и GLOBAL. Если используется синтаксис SET **@**_cursor_variable_ = CURSOR..., курсор создается как GLOBAL или LOCAL в зависимости от заданного по умолчанию параметра локального курсора базы данных.  
   
  Переменные курсора всегда локальные, даже если ссылаются на глобальный курсор. Если переменная курсора ссылается на глобальный курсор, курсор имеет ссылки как на глобальный, так и на локальный курсоры. Дополнительные сведения см. в примере В.  
   
@@ -189,7 +189,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  Не используйте переменную в инструкции SELECT для сцепления значений (то есть для вычисления статистических значений). Запрос может вернуть непредвиденные результаты. Это связано с тем, что все выражения в списке SELECT (включая назначения) могут быть выполнены не ровно один раз для каждой строки вывода. Дополнительные сведения см. в [этой статье базы знаний](https://support.microsoft.com/kb/287515).  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в роли public. Все пользователи могут использовать SET **@***local_variable*.  
+ Требуется членство в роли public. Все пользователи могут использовать SET **@**_local_variable_.  
   
 ## <a name="examples"></a>Примеры  
   

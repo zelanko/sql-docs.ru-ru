@@ -14,12 +14,12 @@ ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 97aea59dfeecfdad0348c56b69b24260aa1ea505
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: da4308dd95b582d7e2e50c6808fb6d436f73417a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535289"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590128"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Поиск и устранение неисправностей конфигурации групп доступности AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -135,10 +135,10 @@ ms.locfileid: "52535289"
 ||Если...|Действие|Комментарии|Ссылка|  
 |------|---------|------------|--------------|----------|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Текущая первичная реплика|Убедитесь, что прослушиватель группы доступности находится в режиме «в сети».|**Чтобы убедиться, что прослушиватель имеет состояние «в сети», выполните следующие действия.**<br /><br /> `SELECT * FROM sys.dm_tcp_listener_states;`<br /><br /> **Перезапуск прослушивателя с состоянием «вне сети»**<br /><br /> `ALTER AVAILABILITY GROUP myAG RESTART LISTENER 'myAG_Listener';`|[sys.dm_tcp_listener_states (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
-|![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Текущая первичная реплика|Убедитесь, что параметр READ_ONLY_ROUTING_LIST содержит только экземпляры сервера, где размещена вторичная реплика.|**Определение доступных для чтения вторичных реплик:** sys.availability_replicas (столбец**secondary_role_allow_connections_desc** )<br /><br /> **Просмотр списка маршрутизации только для чтения:** sys.availability_read_only_routing_lists<br /><br /> **Изменение списка маршрутизации только для чтения:** ALTER AVAILABILITY GROUP|[sys.availability_replicas (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [sys.availability_read_only_routing_lists (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
+|![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Текущая первичная реплика|Убедитесь, что параметр READ_ONLY_ROUTING_LIST содержит только экземпляры сервера, где размещена вторичная реплика.|**Определение доступных для чтения вторичных реплик:** sys.availability_replicas (столбец**secondary_role_allow_connections_desc** )<br /><br /> **Просмотр списка маршрутизации только для чтения:** sys.availability_read_only_routing_lists<br /><br /> **Изменение списка маршрутизации только для чтения.** ALTER AVAILABILITY GROUP|[sys.availability_replicas (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [sys.availability_read_only_routing_lists (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Каждая реплика в списке read_only_routing_list|Убедитесь, что брандмауэр Windows не блокирует порт READ_ONLY_ROUTING_URL.|-|[Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Каждая реплика в списке read_only_routing_list|В диспетчере конфигурации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] убедитесь в следующем.<br /><br /> Удаленное соединение с SQL Server включено.<br /><br /> TCP/IP включен.<br /><br /> IP-адреса настроены правильно.|-|[Просмотр или изменение свойств сервера (SQL Server)](../../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [Настройка сервера для прослушивания указанного TCP-порта (диспетчер конфигурации SQL Server)](../../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
-|![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Каждая реплика в списке read_only_routing_list|Убедитесь, что параметр READ_ONLY_ROUTING_URL (TCP**://***системный_адрес***:***порт*) содержит правильное полное доменное имя (FQDN) и номер порта.|-|[Вычисление значения read_only_routing_url для AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)<br /><br /> [sys.availability_replicas (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
+|![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Каждая реплика в списке read_only_routing_list|Убедитесь, что параметр READ_ONLY_ROUTING_URL (TCP<strong>://</strong>*system-address*<strong>:</strong>*port*) содержит правильное полное доменное имя (FQDN) и номер порта.|-|[Вычисление значения read_only_routing_url для AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)<br /><br /> [sys.availability_replicas (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Система клиента|Убедитесь, что драйвер клиента поддерживает маршрутизацию только для чтения.|-|[Подключение клиента AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)|  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
@@ -163,7 +163,7 @@ ms.locfileid: "52535289"
   
 -   [Командлет Get-ClusterLog отказоустойчивого кластера](https://technet.microsoft.com/library/ee461045.aspx)  
   
--   [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Блоги команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>См. также:  
  [Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn (SQL Server)](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   

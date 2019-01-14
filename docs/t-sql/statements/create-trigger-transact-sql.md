@@ -29,12 +29,12 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 29bb936325bde06220d982948a1e6c599e9ce784
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 2ee63ff261df82926fd67f5014c09f894160d14e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970515"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213743"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
   
 ## <a name="arguments"></a>Аргументы
 OR ALTER  
- **Применимо к**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1)). 
+ **Область применения**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1)). 
   
  Условно изменяет триггер только в том случае, если он уже существует. 
   
@@ -262,7 +262,7 @@ SELECT * FROM deleted;
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет обновлять столбцы типа **text**, **ntext** или **image** с помощью триггера INSTEAD OF в таблицах или представлениях.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Типы данных **ntext**, **text** и **image** будут исключены в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следует избегать использования этих типов данных при новой разработке и запланировать изменение приложений, использующих их в настоящий момент. Вместо них следует использовать типы данных [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)и [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) . Как триггеры AFTER, так и триггеры INSTEAD OF поддерживают данные типов **varchar(MAX)**, **nvarchar(MAX)** и **varbinary(MAX)** в таблицах inserted и deleted.  
   
  Для триггеров в таблицах, оптимизированных для памяти, единственной инструкцией *sql_statement*, разрешенной на верхнем уровне, является блок ATOMIC. В блоке ATOMIC допускается только T-SQL, разрешенный в процедурах, компилируемых в собственном коде.  

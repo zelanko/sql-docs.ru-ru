@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4bf9ffc5d71e046c32322d20bc9b59c7fb5a25f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63b1c9e8bda9bbabcc94aa7b384b3e7ffef053de
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856172"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590208"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,10 +46,10 @@ ms.locfileid: "47856172"
 |Command|Квалификатор|Тип квалификатора|  
 |-------------|---------------|--------------------|  
 |bcp|-k|Параметр|  
-|BULK INSERT|KEEPNULLS**\***|Аргумент|  
+|BULK INSERT|KEEPNULLS\*|Аргумент|  
 |Инструкции INSERT ... SELECT * FROM OPENROWSET(BULK...).|Недоступно|Недоступно|  
   
-**\*** Для инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md), если значение по умолчанию недоступно, для столбца таблицы должны быть допустимы значения NULL. 
+\* Для инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md), если значения по умолчанию недоступны, для столбца таблицы должны быть допустимы значения NULL. 
   
 > [!NOTE]
 > Эти квалификаторы отключают проверку определений DEFAULT для таблицы командами массового импорта.  Однако для одновременно выполняемых инструкций INSERT определения DEFAULT требуются.
@@ -352,7 +352,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 ## <a name="see-also"></a>См. также:  
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
- [Программа bcp](../../tools/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)  
   

@@ -12,28 +12,28 @@ helpviewer_keywords:
 - workload groups [SQL Server], move
 - Resource Governor, workload group move
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 70b6c928d5df3fe6f36bfa2277899dfee4400385
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c85cbe7f0c29ad9e2e6fb410ae1f3cc30ab0921c
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656342"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380365"
 ---
 # <a name="move-a-workload-group"></a>Перемещение группы рабочей нагрузки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Группу рабочей нагрузки регулятора ресурсов можно переместить в другой пул ресурсов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью Transact-SQL.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Перед началом работы**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
   
--   **To move a workload group, using:**  [SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
+-   **Перемещение группы рабочей нагрузки с использованием:**  [среды SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  Перемещение группы рабочей нагрузки становится невозможным, если имеется ожидающая выполнения операция настройки регулятора ресурсов.  
   
-###  <a name="LimitationsRestrictions"></a> ограничения  
+###  <a name="LimitationsRestrictions"></a> Ограничения  
  Перемещение группы рабочей нагрузки становится невозможным, если имеется ожидающая выполнения операция настройки регулятора ресурсов. Чтобы выяснить, находится ли конфигурация в состоянии ожидания, выполните запрос к динамическому административному представлению [sys.dm_resource_governor_configuration (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md), получив текущее состояние is_configuration_pending.  
   
 ###  <a name="Permissions"></a> Permissions  
@@ -75,7 +75,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
+ [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
  [Активация регулятора ресурсов](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Создание пула ресурсов](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [Создание группы рабочей нагрузки](../../relational-databases/resource-governor/create-a-workload-group.md)   

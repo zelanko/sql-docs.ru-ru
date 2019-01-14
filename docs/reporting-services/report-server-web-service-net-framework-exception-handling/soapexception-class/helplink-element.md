@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bd1990fcb8a8637a120a35e2f8809d7bf48b1ecf
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: aedb060067e35c0281b81057666b96bb71d631c9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812767"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589587"
 ---
 # <a name="helplink-element"></a>Элемент HelpLink
   Элемент **HelpLink** свойства **Detail** представляет строку с URL-адресом, которая создается сервером отчетов. Этот URL-адрес ссылается на веб-страницу, управляемую центром справки и поддержки [!INCLUDE[msCoName](../../../includes/msconame-md.md)], которая предоставляет дополнительную справку и статьи базы значений, посвященные ошибкам, происходящим в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. URL-адрес имеет следующий синтаксис:  
   
- **https://** www.microsoft.com**/** products**/** ee**/** transform.aspx **?EvtSrc**=з*начение***&EvtID**=* значение ***&ProdName**=* значение***&ProdVer**=* значение*  
+ **https://** www.microsoft.com**/** products**/** ee**/** transform.aspx **?EvtSrc**=v_alue_**&EvtID**=_значение_**&ProdName**=_значение_**&ProdVer**=*значение*  
   
  В следующей таблице перечислены аргументы URL-адреса **HelpLink**.  
   

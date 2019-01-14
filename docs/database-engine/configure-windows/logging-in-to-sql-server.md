@@ -22,18 +22,18 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 35366fbbeac73a551546f2778592f03da5c7e1e7
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 230e57dbbe3b3d2ca88bd6f4fd727555b4fa38b2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617674"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214825"
 ---
 # <a name="logging-in-to-sql-server"></a>Вход в систему SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Войти в систему на экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно с использованием любого графического средства администрирования или из командной строки.  
   
- При входе на экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью графического средства администрирования, такого как среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], пользователю предлагается ввести имя сервера, имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и, при необходимости, пароль. Если вход на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] осуществляется с проверкой подлинности Windows, то каждый раз при обращении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]вводить имя входа SQL Server не нужно. Вместо этого в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется учетная запись [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows для автоматического входа в систему. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает в смешанном режиме (проверка подлинности[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows) и пользователь входит в систему с проверкой подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то необходимо указать имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и пароль. По возможности используйте аутентификацию Windows.  
+ При входе на экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью графического средства администрирования, такого как среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], пользователю предлагается ввести имя сервера, имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и, при необходимости, пароль. Если вход на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] осуществляется с проверкой подлинности Windows, то каждый раз при обращении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]вводить имя входа SQL Server не нужно. Вместо этого в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется учетная запись [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows для автоматического входа в систему. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает в смешанном режиме (проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows) и пользователь входит в систему с проверкой подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то необходимо указать имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и пароль. По возможности используйте аутентификацию Windows.  
   
 > [!NOTE]  
 >  Если при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]были выбраны параметры сортировки с учетом регистра, то для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистр также учитывается.  

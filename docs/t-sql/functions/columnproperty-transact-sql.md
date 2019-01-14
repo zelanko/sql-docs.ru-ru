@@ -20,12 +20,12 @@ ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5acd726764c2b672287af418f088963a4a5acef7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 451b92b502a22d8cefc32e8ea82570cd1e0187e1
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711892"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980550"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,15 +53,15 @@ COLUMNPROPERTY ( id , column , property )
 |Значение|Описание|Возвращенное значение|  
 |---|---|---|
 |**AllowsNull**|Разрешение использовать NULL.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
-|**ColumnId**|Значение идентификатора столбца, соответствующего **sys.columns.column_id**.|Идентификатор столбца<br /><br /> **Примечание**. При запросе множества столбцов могут появиться пропуски в последовательности значений идентификаторов столбцов.|  
+|**ColumnId**|Значение идентификатора столбца, соответствующего **sys.columns.column_id**.|Идентификатор столбца<br /><br /> **Примечание.** При запросе множества столбцов могут появиться пропуски в последовательности значений идентификаторов столбца.|  
 |**FullTextTypeColumn**|TYPE COLUMN в таблице, которая содержит информацию о типе документа столбца *column*.|Идентификатор полнотекстового TYPE COLUMN для выражений имен столбцов, переданных вторым параметром этой функции.|  
-|**GeneratedAlwaysType**|Значение столбца создано системой. Соответствует **sys.columns.generated_always_type**|**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: создается не всегда<br /><br /> 1: создается всегда как начало строки<br /><br /> 2: создается всегда как конец строки|  
+|**GeneratedAlwaysType**|Значение столбца создано системой. Соответствует **sys.columns.generated_always_type**|**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: создается не всегда<br /><br /> 1: создается всегда как начало строки<br /><br /> 2. создается всегда как конец строки|  
 |**IsColumnSet**|Столбец представляет собой набор столбцов. Дополнительные сведения см. в статье [Использование наборов столбцов](../../relational-databases/tables/use-column-sets.md).|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
 |**IsComputed**|Столбец является вычисляемым столбцом.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
 |**IsCursorType**|Параметр процедуры имеет тип CURSOR.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
 |**IsDeterministic**|Столбцы являются детерминированными (предсказуемыми). Это свойство применимо только к вычисляемым столбцам и столбцам представлений.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные. Невычисляемый столбец или не столбец представлений.|  
 |**IsFulltextIndexed**|Столбцы зарегистрированы для полнотекстовой индексации.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
-|**IsHidden**|Значение столбца создано системой. Соответствует **sys.columns.is_hidden**|**Применимо к**: с [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: не скрытый<br /><br /> 1: скрытый|  
+|**IsHidden**|Значение столбца создано системой. Соответствует **sys.columns.is_hidden**|**Применимо к**: с [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: не скрытый<br /><br /> 1: Скрытый|  
 |**IsIdentity**|Столбец использует свойство IDENTITY.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
 |**IsIdNotForRepl**|Столбец проверяет настройку IDENTITY_INSERT.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
 |**IsIndexable**|Столбцы не могут быть индексированы.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  

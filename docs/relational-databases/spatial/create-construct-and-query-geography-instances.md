@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 716aa4485030a907c8e816f0daf3036c979e2ae5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 52b121f7b56032856d2c844c230b915069bf69ef
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660734"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980380"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Создание, проектирование и создание запросов к экземплярам типа данных geography
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "51660734"
 ###  <a name="gml"></a> Построение экземпляра географического объекта на основе входных данных в формате GML Text  
  Тип данных **geometry** предоставляет метод, с помощью которого создается экземпляр **geography** на основе GML, XML-представления экземпляров **geography** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает подмножество GML.  
   
- Дополнительные сведения о языке GML см. в спецификации OGC: [Спецификации OGC, географический язык разметки.](https://go.microsoft.com/fwlink/?LinkId=93629)  
+ Дополнительные сведения о языке GML см. в спецификации OGC: [Спецификации OGC, язык GML](https://go.microsoft.com/fwlink/?LinkId=93629).  
   
  **Создание экземпляра географического объекта любого типа на основе входных данных в формате GML**  
  [GeomFromGML (тип данных geography)](../../t-sql/spatial-geography/geomfromgml-geography-data-type.md)  
@@ -232,41 +232,44 @@ ms.locfileid: "51660734"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в **geometry** . Если используются данные системы пространственных ссылок, отличной от WGS 84 (или если значение SRID отличается от 4326), для собственных географических пространственных данных необходимо определить отдельный идентификатор SRID.  
   
 ##  <a name="examples"></a> Примеры  
- В следующих примерах иллюстрируется добавление и запрос географических данных.  
+В следующих примерах иллюстрируется добавление и запрос географических данных.  
   
--   В первом примере создается таблица со столбцом идентификаторов и столбцом `geography` типа `GeogCol1`. Третий столбец обрабатывает столбец `geography` для представления в формате известного текста (WKT) OGC, используя метод `STAsText()` . Затем вставляются две строки: одна строка содержит объект `LineString` типа `geography`, а другая — объект `Polygon` .  
+### <a name="example-a"></a>Пример А. 
+В этом примере создается таблица со столбцом идентификаторов и столбцом `GeogCol1` типа `geography`. Третий столбец обрабатывает столбец `geography` для представления в формате известного текста (WKT) OGC, используя метод `STAsText()` . Затем вставляются две строки: одна строка содержит объект `LineString` типа `geography`, а другая — объект `Polygon` .  
   
-    ```  
-    IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
-        DROP TABLE dbo.SpatialTable;  
-    GO  
+```sql  
+IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
+DROP TABLE dbo.SpatialTable;  
+GO  
   
-    CREATE TABLE SpatialTable   
-        ( id int IDENTITY (1,1),  
-        GeogCol1 geography,   
-        GeogCol2 AS GeogCol1.STAsText() );  
-    GO  
+CREATE TABLE SpatialTable   
+  ( id int IDENTITY (1,1),  
+    GeogCol1 geography,   
+    GeogCol2 AS GeogCol1.STAsText()
+   );  
+GO  
   
-    INSERT INTO SpatialTable (GeogCol1)  
-    VALUES (geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326));  
+INSERT INTO SpatialTable (GeogCol1)  
+VALUES (geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326));  
   
-    INSERT INTO SpatialTable (GeogCol1)  
-    VALUES (geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326));  
-    GO  
-    ```  
+INSERT INTO SpatialTable (GeogCol1)  
+VALUES (geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326));  
+GO  
+```  
   
--   Во втором примере метод `STIntersection()` используется для получения точек, в которых пересекаются два вставленные ранее объекта `geography` .  
+### <a name="example-b"></a>Пример Б.
+В этом примере метод `STIntersection()` используется для получения точек, в которых пересекаются два вставленных ранее объекта `geography`.  
   
-    ```  
-    DECLARE @geog1 geography;  
-    DECLARE @geog2 geography;  
-    DECLARE @result geography;  
+```sql  
+DECLARE @geog1 geography;  
+DECLARE @geog2 geography;  
+DECLARE @result geography;  
   
-    SELECT @geog1 = GeogCol1 FROM SpatialTable WHERE id = 1;  
-    SELECT @geog2 = GeogCol1 FROM SpatialTable WHERE id = 2;  
-    SELECT @result = @geog1.STIntersection(@geog2);  
-    SELECT @result.STAsText();  
-    ```  
+SELECT @geog1 = GeogCol1 FROM SpatialTable WHERE id = 1;  
+SELECT @geog2 = GeogCol1 FROM SpatialTable WHERE id = 2;  
+SELECT @result = @geog1.STIntersection(@geog2);  
+SELECT @result.STAsText();  
+```  
   
 ## <a name="see-also"></a>См. также:  
  [Пространственные данные (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3be0f60c692334b577a7eb59fa25f385ef0af33c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: a2a977be46826859cf286fff1750345d5346e2b9
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43020467"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596825"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Запуск мастера включения растяжения для базы данных
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -178,7 +178,7 @@ ms.locfileid: "43020467"
   
 ##  <a name="KnownIssues"></a> Устранение неполадок в работе мастера  
  **Сбой в работе мастера подготовки базы данных Stretch.**  
- Если на сервере не активировано использование базы данных Stretch и для активации запущен мастер без разрешений системного администратора, мастер завершит работу с ошибкой. Попросите системного администратора активировать использование базы данных Stretch на экземпляре локального сервера, а затем повторно запустите мастер. Дополнительные сведения см. в разделе [Обязательное требование: разрешение на включение базы данных Stretch на сервере](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
+ Если на сервере не активировано использование базы данных Stretch и для активации запущен мастер без разрешений системного администратора, мастер завершит работу с ошибкой. Попросите системного администратора активировать использование базы данных Stretch на экземпляре локального сервера, а затем повторно запустите мастер. Дополнительные сведения см. в разделе [Обязательное требование: разрешение на включение Stretch Database на сервере](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
   
 ## <a name="next-steps"></a>Следующие шаги  
  Включение дополнительных таблиц для базы данных Stretch. Мониторинг миграции данных и управление базами данных и таблицами с поддержкой Stretch.  

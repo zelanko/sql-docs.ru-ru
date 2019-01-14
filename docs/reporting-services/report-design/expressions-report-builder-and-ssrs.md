@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5764d853f70213c0f92b68af28f0647ba6d1a1e5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9790f320fe6f6ebe61eff665de625f9c9cfe77d2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021148"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205023"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Выражения (построитель отчетов и службы SSRS)
   Выражения часто используются в отчетах с разбивкой на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] для получения, вычисления, отображения, группирования, сортировки, параметризации и форматирования данных. 
@@ -54,7 +54,7 @@ ms.locfileid: "50021148"
   
  ![rs_ExpressionSampleValuesFormat](../../reporting-services/report-design/media/rs-expressionsamplevaluesformat.gif "rs_ExpressionSampleValuesFormat")  
   
- Дополнительные сведения см. в разделе [Форматирование текста и заполнителей (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
+ Дополнительные сведения см. в разделе [Форматирование текста и заполнителей &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
 ### <a name="report-model-formulas"></a>Формулы моделей отчетов  
  При создании запроса для получения набора данных, в котором в качестве источника данных используется модель отчета, можно создать *формулы*. Формулы — это вычисления, производимые над значениями в отчете, основанные на данных модели отчета.  
@@ -74,7 +74,7 @@ ms.locfileid: "50021148"
 ##  <a name="References"></a> Написание сложных выражений  
  Выражения могут включать ссылки на функции, операторы, константы, поля, параметры и элементы из встроенных коллекций, а также ссылки на внедренный пользовательский код или пользовательские сборки.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Для разработки сложных выражений или выражений, использующих пользовательский код или пользовательские сборки, рекомендуется использовать конструктор отчетов среды [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Дополнительные сведения см. в разделе [Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов (службы SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
  В следующей таблице перечислены типы ссылок, которые можно включать в выражение.  
