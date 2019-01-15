@@ -14,12 +14,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 029ad55778a1c4239bdb83d587ca9a1f21bcaf20
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 40035d23d7414aa00f44f22411244ca7452ccafd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534437"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124874"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Зеркальное отображение и репликация баз данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ ms.locfileid: "52534437"
 |Режим высокой безопасности без автоматической отработки отказа|Гарантируется, что все зафиксированные транзакции будут записаны на диск зеркального сервера. Однако агент чтения журнала реплицирует только те транзакции, которые записаны на зеркале. Если зеркало недоступно, основной сервер запрещает дальнейшую активность в базе данных. Поэтому агент чтения журнала не имеет транзакций для репликации.|  
   
 ## <a name="see-also"></a>См. также:  
- [Функции и задачи репликации](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [Репликация SQL Server](../../relational-databases/replication/sql-server-replication.md)   
  [Репликация и доставка журналов (SQL Server)](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: 300a3c46-0e48-4334-99c0-9ee690d2ef4f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d1f9af819f6fd877fcc90d4ee2dc6d10f8c1821a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 324f858005e76b2b3abd61c0a2898c6b19c6f3c4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727361"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130734"
 ---
 # <a name="log-reader-agent"></a>Агент чтения журнала.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,8 +66,8 @@ ms.locfileid: "47727361"
   
 ## <a name="see-also"></a>См. также:  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
- [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Обзор агентов репликации](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication.md)   
+ [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

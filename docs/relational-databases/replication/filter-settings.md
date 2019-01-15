@@ -13,12 +13,12 @@ ms.assetid: 1b401d7d-db8a-4ba1-acb1-b8dec14e3311
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0f38fd7a404e991cd6c87fd303cb03658f8b235
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a626e79a33c134a3bdde5880b68f2545c6dea78e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734652"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129644"
 ---
 # <a name="filter-settings"></a>Настройки фильтра
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,6 +38,6 @@ ms.locfileid: "47734652"
  Нажмите эту кнопку для очистки всех ранее определенных фильтров. Для удаления одного фильтра выделите строку фильтра и нажмите клавишу «DELETE».  
   
 ## <a name="see-also"></a>См. также:  
- [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

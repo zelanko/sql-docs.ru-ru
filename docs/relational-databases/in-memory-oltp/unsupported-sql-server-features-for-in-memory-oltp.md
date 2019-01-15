@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51485f1d1bbe120b42371c9d04a9d4576ac8d0d4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba432d722bcd6f9df6c797d361a53e0b6dc6dff9
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391547"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254969"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Неподдерживаемые функции SQL Server для выполняющейся в памяти OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,8 +64,8 @@ ms.locfileid: "52391547"
   
 - Набор ключей и динамические курсоры в запросах, обращающихся к оптимизированным для памяти таблицам. Функциональность этих курсоров понижена, теперь они статические и доступны только для чтения.  
   
-- Не поддерживается использование **MERGE INTO** *target*, где *target* — оптимизированная для памяти таблица.
-    - **MERGE USING** *source* для таблиц, оптимизированных для памяти, поддерживается.  
+- Не поддерживается использование **MERGE INTO** _target_, где *target* — оптимизированная для памяти таблица.
+    - **MERGE USING** _source_ для таблиц, оптимизированных для памяти, поддерживается.  
   
 - Тип данных ROWVERSION (TIMESTAMP) не поддерживается. Дополнительные сведения см. в разделе [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).
   

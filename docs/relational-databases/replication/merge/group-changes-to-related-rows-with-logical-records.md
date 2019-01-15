@@ -15,12 +15,12 @@ ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8c76fe140a6cfd6e8d4cc2f83e3c0f3143a15708
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a4bebb60c7d40ab7d1a98bbb6c8b28ff64ea7b09
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834122"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134274"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Группирование изменений в связанных строках с помощью логических записей
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "47834122"
   
 -   Пользовательское разрешение конфликтов с обработчиками бизнес-логики или пользовательскими сопоставителями конфликтов не поддерживается для статей, входящих в логическую запись.  
   
--   Если логические записи используются в публикации, содержащей параметризованные фильтры, следует инициализировать каждый подписчик с помощью моментального снимка для его секции. Если подписчик инициализируется с помощью другого метода, произойдет сбой агента слияния. Дополнительные сведения см. в статье [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   Если логические записи используются в публикации, содержащей параметризованные фильтры, следует инициализировать каждый подписчик с помощью моментального снимка для его секции. Если подписчик инициализируется с помощью другого метода, произойдет сбой агента слияния. Дополнительные сведения см. в статье [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 -   Конфликты, затрагивающие логические записи, не отображаются в средстве просмотра конфликтов. Для просмотра сведений о таких конфликтах используются хранимые процедуры репликации. Дополнительные сведения см. в статье [Просмотр сведений о конфликтах для публикаций слиянием &#40;программирование репликации на языке Transact-SQL&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
   
@@ -143,6 +143,6 @@ ms.locfileid: "47834122"
  Если используются логические записи, агент слияния должен обрабатывать все изменения для каждой логической записи совместно. Это влияет на время, которое требуется агенту слияния для репликации строк. Кроме того, так как агент открывает отдельную транзакцию для каждой логической записи, потребность в блокировках может увеличиться.  
   
 ## <a name="see-also"></a>См. также:  
- [Параметры статьи для репликации слиянием](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
+ [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
   
   

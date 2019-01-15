@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ec072be872bbee61b00839b70327fa3397f1fe92
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bb2f54dde0e73733a4fd129c2d2a4d081942af52
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506242"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132254"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Служебная программа для запуска пакетов (dtexecui)
   **Программа выполнения пакетов** используется для запуска пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Служебная программа запускает пакеты, которые хранятся в одном из трех расположений: в базе данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , хранилище пакетов [!INCLUDE[ssIS](../../includes/ssis-md.md)] и файловой системе. Этот пользовательский интерфейс, который можно открыть из [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью команды **dtexecui** в командной строке, представляет альтернативу запуску пакетов с использованием программы командной строки **DTExec** .  
@@ -68,7 +68,7 @@ ms.locfileid: "52506242"
 |||  
 |-|-|  
 |Значение|Описание|  
-|**SQL Server**|Выберите этот параметр, если пакет находится на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Укажите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и введите имя пользователя и пароль для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Указание каждого имени пользователя и пароля приводит к добавлению в командную строку параметров **/USER** *имя_пользователя* и **/PASSWORD** *пароль* options to the commи prompt.|  
+|**SQL Server**|Выберите этот параметр, если пакет находится на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Укажите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и введите имя пользователя и пароль для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Указание каждого имени пользователя и пароля приводит к добавлению в командную строку параметров **/USER** _имя_пользователя_ и **/PASSWORD** _пароль_ options to the commи prompt.|  
 |**Файловая система**|Выберите этот параметр, если пакет находится в файловой системе.|  
 |**Хранилище пакетов служб SSIS**|Выберите этот параметр, если пакет находится в хранилище пакетов [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  
   

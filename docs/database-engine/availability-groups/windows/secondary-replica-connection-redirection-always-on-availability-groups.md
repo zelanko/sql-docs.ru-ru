@@ -1,7 +1,7 @@
 ---
 title: Перенаправление подключения с правами на чтение и запись с вторичной реплики SQL Server на первичную (группы доступности AlwaysOn) | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/09/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -18,14 +18,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a811fdb21d6c0c1d702c067f255ece3c2b183b9c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: e64768dcfaf4342c3ea52f1b01c29940fb1c8cf0
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600543"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206310"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Перенаправление подключения с правами на чтение и запись с вторичной на первичную реплику (группы доступности AlwaysOn)
+
 [!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 реализует *перенаправление подключения с правами на чтение и запись с вторичной на первичную реплику* для групп доступности AlwaysOn. Перенаправление подключения с правами на чтение и запись можно использовать на любой платформе операционной системы. Это позволяет направлять подключения клиентских приложений к первичной реплике независимо от целевого сервера, указанного в строке подключения. 
@@ -53,8 +54,8 @@ ms.locfileid: "51600543"
 
 В [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] в спецификацию `<add_replica_option>` был добавлен параметр `READ_WRITE_ROUTING_URL`. См. следующие статьи: 
 
-* [CREATE AVAILABILITY GROUP](../../../t-sql\statements\create-availability-group-transact-sql.md)
-* [ALTER AVAILABILITY GROUP](../../../t-sql\statements\alter-availability-group-transact-sql.md)
+* [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)
+* [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 
 ### <a name="primaryrolereadwriteroutingurl-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) не задан (по умолчанию) 
@@ -156,7 +157,8 @@ GO
 
 Если экземпляр SQL Server, указанный в строке подключения, недоступен (простой), то произойдет сбой подключения, независимо от роли реплики на целевом сервере. Чтобы избежать длительного простоя приложения, в строке подключения нужно настроить альтернативного партнера для отработки отказа (`FailoverPartner`). Приложение должно реализовать логику повторных попыток для охвата первичных и вторичных реплик, не подключенных к сети, во время фактической отработки отказа. Сведения о строках подключения см. в статье о [свойстве SqlConnection.ConnectionString](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx).
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также:
+
 [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  
 [Сведения о доступе клиентского подключения к репликам доступности (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   

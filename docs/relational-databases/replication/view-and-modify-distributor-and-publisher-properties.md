@@ -16,12 +16,12 @@ ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 255e2b9f148956dffa99fc191ae4062b24943a66
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 43830b86ef02a0d9d3edf2db3ee8ebde129963c0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673793"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133395"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Просмотр и изменение свойств издателя и распространителя
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "51673793"
   
 -   Для издателей, которые используют версии, предшествующие [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], пользователь, являющийся членом предопределенной роли сервера **sysadmin** , может зарегистрировать подписчиков на странице **Подписчики** . Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]больше нет необходимости в явной регистрации подписчиков для репликации.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -206,6 +206,6 @@ ms.locfileid: "51673793"
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Distributor and Publisher Information Script](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)  (Скрипт вывода сведений о распространителе и издателе)  
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Просмотр сведений и выполнение задач для издателя (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
+ [Просмотр сведений и выполнение задач для издателя (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)  
   
   

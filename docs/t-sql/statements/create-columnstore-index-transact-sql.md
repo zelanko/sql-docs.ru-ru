@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6c384df7810cce06f3e10003ec85771b2bcea58
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8c25ae621c281e0bafd3c2c7e683a05cfc55746b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215653"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128374"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -192,7 +192,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 #### <a name="on-options"></a>Параметры ON 
    Параметры ON позволяют задавать параметры для хранения данных, такие как схема секционирования, конкретная файловая группа или файловая группа по умолчанию. Если параметр ON не задан, индекс использует параметры секционирования или параметры файловой группы существующей таблицы.  
   
-   *partition_scheme_name* **(** *column_name* **)**  
+   *partition_scheme_name* **(** _column_name_ **)**  
    Задает схему секционирования для таблицы. Эта схема секционирования должна уже существовать в базе данных. Описание создания схемы секционирования см. в разделе [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md).  
  
    *column_name* указывает столбец, по которому будет секционирован индекс. Столбец должен соответствовать по типу данных, длине и точности аргументу функции секционирования, используемой аргументом *partition_scheme_name*.  
@@ -211,7 +211,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 *index_name*  
    Указывает имя индекса. Значение *index_name* должно быть уникальным в пределах таблицы, но необязательно должно быть уникальным в пределах базы данных. Имена индексов должны удовлетворять правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md).  
   
- **(** *column*  [ **,**...*n* ] **)**  
+ **(** _column_  [ **,**...*n* ] **)**  
     Задает столбцы для хранения. Некластеризованный индекс columnstore может включать не более 1024 столбцов.  
    Каждый столбец должен иметь поддерживаемый тип данных для индексов columnstore. В разделе [Ограничения](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) приводится список поддерживаемых типов данных.  
 
@@ -272,7 +272,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 #### <a name="on-options"></a>Параметры ON  
    Эти параметры указывают файловые группы, для которых создается индекс.  
   
-*partition_scheme_name* **(** *column_name* **)**  
+*partition_scheme_name* **(** _column_name_ **)**  
    Задает схему секционирования, определяющую файловые группы, по которым сопоставляются секции секционированного индекса. Схема секционирования должна быть создана в базе данных путем выполнения инструкции [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). 
    *column_name* указывает столбец, по которому будет секционирован индекс. Столбец должен соответствовать по типу данных, длине и точности аргументу функции секционирования, используемой аргументом *partition_scheme_name*. Аргумент *column_name* необязательно должен соответствовать столбцам из определения индекса. При секционировании индекса columnstore компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] добавляет столбец секционирования как столбец индекса, если этого столбца еще нет в списке.  
    Если аргумент *partition_scheme_name* или *filegroup* не задан и таблица секционирована, индекс помещается в ту же схему секционирования и с тем же столбцом секционирования, что и для базовой таблицы.  

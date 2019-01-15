@@ -5,7 +5,7 @@ ms.date: 11/08/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 dev_langs:
 - VB
@@ -21,12 +21,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38ce786d8362f711e238b32059ae3bae4f50006e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6a42f77b21e8b06fc9795caac7064368af436bb4
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672633"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299711"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,19 +38,19 @@ ms.locfileid: "51672633"
  [Настройка распространения](../../../relational-databases/replication/configure-distribution.md)  
  В подразделах этого раздела показано, как использовать объекты RMO для настройки публикации и распределения.  
   
- [Создание, изменение и удаление публикаций и статей (репликация)](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
  В подразделах этого раздела показано, как использовать объекты RMO для создания, удаления и изменения публикаций и статей.  
   
  [Подписка на публикации](../../../relational-databases/replication/subscribe-to-publications.md)  
  В подразделах этого раздела показано, как использовать объекты RMO для создания, удаления и изменения подписок.  
   
- [Secure a Replication Topology](../../../relational-databases/replication/security/secure-a-replication-topology.md) (Защита топологии репликации)  
+ [Secure a Replication Topology](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) (Защита топологии репликации)  
  В подразделах этого раздела показано, как использовать объекты RMO для просмотра и изменения параметров безопасности.  
   
- [Synchronize Subscriptions (Replication)](../../../relational-databases/replication/synchronize-subscriptions-replication.md) (Синхронизация подписок (репликация))  
+ [Synchronize Subscriptions (Replication)](../../../relational-databases/replication/synchronize-data.md) (Синхронизация подписок (репликация))  
  В подразделах этого раздела показано, как синхронизировать подписки.  
   
- [Наблюдение за репликацией](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Наблюдение за репликацией](../../../relational-databases/replication/monitor/monitoring-replication.md)  
  В подразделах этого раздела показано, как программным путем осуществлять наблюдение за топологией репликации.  
   
 ## <a name="introduction-to-rmo-programming"></a>Введение в программирование объектов RMO  

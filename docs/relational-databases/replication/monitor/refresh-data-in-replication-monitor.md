@@ -13,12 +13,12 @@ ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f772f42cc4afd6d187f4d53b0077f4417009f180
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59271c303494cf4e1e3dbb52be204c76ce767271
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855932"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129054"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>Обновление данных в мониторе репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,6 +47,6 @@ ms.locfileid: "47855932"
 2.  В окне сведений **Подписка \<имя_подписки>** щелкните **Действие**, а затем **Автоматическое обновление**. Частота обновления определяется настройкой **Частота обновления** в диалоговом окне **Настройки издателя** .  
   
 ## <a name="see-also"></a>См. также:  
- [Наблюдение за репликацией](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Наблюдение за репликацией](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

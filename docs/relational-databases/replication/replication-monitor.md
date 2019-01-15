@@ -15,12 +15,12 @@ ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 397604c04c71b662a36cb5bf39f7aaa99c600a05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9646f61d6cb8d9a277f08711dc8326f34064c5ad
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799472"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124604"
 ---
 # <a name="replication-monitor"></a>монитор репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,15 +32,7 @@ ms.locfileid: "47799472"
   
 -   [Параметры распространителя](../../relational-databases/replication/distributor-settings.md)  
   
--   [Distributor Information, Publications](../../relational-databases/replication/distributor-information-publications.md) (Сведения о распространителе, вкладка"Публикации")  
-  
--   [Distributor Information, Subscription Watch List (Transactional Publication, SQL Server 2005 and Later)](../../relational-databases/replication/distributor-info-subscription-watch-list-transaction-pub-sql-2005.md) (Сведения о распространителе, вкладка "Список наблюдения за подписками" (публикация транзакций, SQL Server 2005 и более поздние версии))  
-  
--   [Distributor Information, Subscription Watch List (Merge Publication, SQL Server 2005 and Later)](../../relational-databases/replication/distributor-info-subscription-watch-list-merge-pub-sql-2005.md) (Сведения о распространителе, вкладка "Список наблюдения за подписками" (публикация слиянием, SQL Server 2005 и более поздние версии))  
-  
--   [Distributor Information, Subscription Watch List (Snapshot Publication, SQL Server 2005 and Later)](../../relational-databases/replication/distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md) (Сведения о распространителе, вкладка "Список наблюдения за подписками" (публикация моментальных снимков, SQL Server 2005 и более поздние версии))  
-  
--   [Distributor Information, Agents](../../relational-databases/replication/distributor-information-agents.md) (Сведения о распространителе, вкладка "Агенты")  
+-   [Сведения о распространителе, вкладка "Публикации"](../../relational-databases/replication/distributor-information-publications.md)  
   
 -   [Настройки издателя](../../relational-databases/replication/publisher-settings.md)  
   
@@ -68,8 +60,7 @@ ms.locfileid: "47799472"
   
 -   [Publication Information, Agents (Transactional Publication)](../../relational-databases/replication/publication-information-agents-transactional-publication.md) (Сведения о публикации, вкладка "Агенты" (публикация транзакций))  
   
--   [Publication Information, Agents (Merge Publication)](../../relational-databases/replication/publication-information-agents-merge-publication.md) (Сведения о публикации, вкладка "Агенты" (публикация слиянием))  
-  
+-   [Publication Information, Agents (Merge Publication)](../../relational-databases/replication/publication-information-agents-merge-publication.md) (Сведения о публикации, вкладка "Агенты" (публикация слиянием))    
 -   [Publication Information, Agents (Snapshot Publication)](../../relational-databases/replication/publication-information-agents-snapshot-publication.md) (Сведения о публикации, вкладка "Агенты" (публикация моментальных снимков))  
   
 -   [Publication Information, Tracer Tokens (Transactional Publication, SQL Server 2005 and Later)](../../relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md) (Сведения о публикации, вкладка "Трассировочные токены" (публикация транзакций, SQL Server 2005 и более поздние версии))  
@@ -81,8 +72,6 @@ ms.locfileid: "47799472"
 -   [Subscription, Distributor to Subscriber History (Transactional Subscription)](../../relational-databases/replication/subscription-distributor-to-subscriber-history-transactional-subscription.md) (Подписка, вкладка "Журнал операций от распространителя к подписчику" (подписка на публикацию транзакций))  
   
 -   [Subscription, Synchronization History (Merge Subscription, SQL Server 2005 and Later)](../../relational-databases/replication/subscription-synchronization-history.md) (Подписка, вкладка "Журнал синхронизации" (подписка на публикацию слиянием, SQL Server 2005 и более поздние версии))  
-  
--   [Subscription, Synchronization History (Merge Subscription, SQL Server 2000)](../../relational-databases/replication/subscription-synchronization-history-merge-subscription-sql-server-2000.md) (Подписка, вкладка "Журнал синхронизации" (подписка на публикацию слиянием, SQL Server 2000))  
   
 -   [Subscription, Distributor to Subscriber History (Snapshot Subscription)](../../relational-databases/replication/subscription-distributor-to-subscriber-history-snapshot-subscription.md) (Подписка, вкладка "Журнал операций от распространителя к подписчику" (подписка на моментальные снимки))  
   
@@ -98,7 +87,6 @@ ms.locfileid: "47799472"
   
 ## <a name="see-also"></a>См. также:  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Справочник по свойствам (репликация)](../../relational-databases/replication/properties-reference-replication.md)  
+
   
   

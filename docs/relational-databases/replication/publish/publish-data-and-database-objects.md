@@ -42,12 +42,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9d1acf8774331ca5e789d9c8d9c50e05a6a3b1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e0f959c6bc5a34fe2c2a3aec08f87f1e703749cf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523075"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129014"
 ---
 # <a name="publish-data-and-database-objects"></a>Публикация данных и объектов базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,36 +71,22 @@ ms.locfileid: "52523075"
 ## <a name="creating-publications"></a>Создание публикаций  
  Для создания публикации необходимо предоставить следующую информацию.  
   
--   Распространитель.  
-  
--   Расположение файлов моментальных снимков.  
-  
--   База данных публикации.  
-  
--   Тип создаваемой публикации (публикация моментальных снимков, публикация транзакций, публикация транзакций с обновляемыми подписками или публикация слиянием).  
-  
--   Данные и объекты базы данных (статьи) для включения в публикацию.  
-  
--   Статические фильтры строк и фильтры столбцов для всех типов публикаций, параметризованные фильтры строк и фильтры соединения для публикаций слиянием.  
-  
--   Расписание агента моментальных снимков.  
-  
--   Учетные записи, под которыми должны быть запущены следующие агенты: агент моментальных снимков для всех публикаций; агент чтения журнала для всех публикаций транзакций; агент чтения очереди для публикаций транзакций, разрешающих использование обновляемых подписок.  
-  
+-   Распространитель.    
+-   Расположение файлов моментальных снимков.    
+-   База данных публикации.    
+-   Тип создаваемой публикации (публикация моментальных снимков, публикация транзакций, публикация транзакций с обновляемыми подписками или публикация слиянием).    
+-   Данные и объекты базы данных (статьи) для включения в публикацию.   
+-   Статические фильтры строк и фильтры столбцов для всех типов публикаций, параметризованные фильтры строк и фильтры соединения для публикаций слиянием.   
+-   Расписание агента моментальных снимков.    
+-   Учетные записи, под которыми должны быть запущены следующие агенты: агент моментальных снимков для всех публикаций; агент чтения журнала для всех публикаций транзакций; агент чтения очереди для публикаций транзакций, разрешающих использование обновляемых подписок.    
 -   Имя и описание публикации.  
   
- Сведения о работе с публикациями см. в следующих разделах.  
-  
--   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
-  
--   [Определение статьи](../../../relational-databases/replication/publish/define-an-article.md)  
-  
--   [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
-  
--   [View and Modify Article Properties (Просмотр и изменение свойств статьи)](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
-  
--   [Delete a Publication (Удаление публикации)](../../../relational-databases/replication/publish/delete-a-publication.md)  
-  
+ Сведения о работе с публикациями см. в следующих разделах.    
+-   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)    
+-   [Определение статьи](../../../relational-databases/replication/publish/define-an-article.md)    
+-   [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)    
+-   [View and Modify Article Properties (Просмотр и изменение свойств статьи)](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)    
+-   [Delete a Publication (Удаление публикации)](../../../relational-databases/replication/publish/delete-a-publication.md)    
 -   [Delete an Article](../../../relational-databases/replication/publish/delete-an-article.md) (Удаление статьи)  
   
 > [!NOTE]  
@@ -109,12 +95,9 @@ ms.locfileid: "52523075"
 ## <a name="publishing-tables"></a>Публикация таблиц  
  Наиболее часто публикуемым объектом является таблица. Следующие ссылки предоставляют дополнительные сведения по темам, связанным с публикацией таблиц.  
   
--   [Фильтрация опубликованных данных](../../../relational-databases/replication/publish/filter-published-data.md)  
-  
--   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
-  
--   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
-  
+-   [Фильтрация опубликованных данных](../../../relational-databases/replication/publish/filter-published-data.md)    
+-   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)
+-   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
 -   [Репликация столбцов идентификаторов](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
  При публикации таблицы для репликации можно указать, какие объекты схемы должны копироваться на подписчик, например: объявленная ссылочная целостность (ограничения на первичный ключ, ссылочные ограничения, ограничения уникальности), индексы, пользовательские триггеры DML (триггеры DDL не могут быть реплицированы), расширенные свойства и параметры сортировки. Расширенные свойства реплицируются только во время начальной синхронизации между издателем и подписчиком. При добавлении или изменении расширенного свойства после начальной синхронизации эти изменения не реплицируются.  
@@ -199,7 +182,7 @@ ms.locfileid: "52523075"
   
 -   Для статей в публикациях, в которых используются моментальные снимки в текстовом режиме (используются для подписчиков, отличных от подписчиков[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , и подписчиков [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ): по умолчанию владелец не указывается. Владельцем по умолчанию является владелец, указанный в учетной записи, используемой агентом распространителя или агентом слияния для соединения с подписчиком.  
   
- Владельца объекта можно изменить с помощью диалогового окна **Свойства статьи — \<***статья***>** и следующих хранимых процедур: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** и **sp_changemergearticle**. Дополнительные сведения см. в статье [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Определение статьи](../../../relational-databases/replication/publish/define-an-article.md) и [Просмотр и изменение свойств статьи](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ Владельца объекта можно изменить с помощью диалогового окна **Свойства статьи — \<**_cтатья_**>** и следующих хранимых процедур: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** и **sp_changemergearticle**. Дополнительные сведения см. в статье [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Определение статьи](../../../relational-databases/replication/publish/define-an-article.md) и [Просмотр и изменение свойств статьи](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Публикация данных на подписчики, использующие предыдущие версии SQL Server  
   

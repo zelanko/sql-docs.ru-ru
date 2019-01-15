@@ -22,12 +22,12 @@ ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b9d8b702172a66918bd5fe6a101ddf07b05f6484
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7c7c3b925b018ea7f212693b5de02fb43b425bc4
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677893"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256969"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Добавление пространств имен в запросы с WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ FOR XML RAW, ELEMENTS XSINIL
  Результат:  
   
 ```  
-<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
+<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
   <ns1:ProductID>316</ns1:ProductID>  
   <ns1:Name>Blade</ns1:Name>  
   <ns1:Color xsi:nil="true" />  
@@ -181,7 +181,7 @@ FOR XML PATH('sql:root')
 </sql:root>  
 ```  
   
- Только XML-префикс пространства имен может быть использован без явного задания в предложении WITH XMLNAMESPACES, как показано в следующем примере запроса в режиме PATH. Также при объявлении префикса его необходимо привязать к пространству имен https://www.w3.org/XML/1998/namespace. Имена, указанные в предложении SELECT, ссылаются на XML-префикс пространства имен, который не был явно задан с помощью предложения WITH XMLNAMESPACES.  
+ Только XML-префикс пространства имен может быть использован без явного задания в предложении WITH XMLNAMESPACES, как показано в следующем примере запроса в режиме PATH. Также при объявлении префикса его необходимо привязать к пространству имен http://www.w3.org/XML/1998/namespace. Имена, указанные в предложении SELECT, ссылаются на XML-префикс пространства имен, который не был явно задан с помощью предложения WITH XMLNAMESPACES.  
   
 ```  
 SELECT 'en'    as "English/@xml:lang",  

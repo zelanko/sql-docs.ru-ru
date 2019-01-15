@@ -13,12 +13,12 @@ ms.assetid: 9381c07f-6887-4a62-9730-32661f9aa87c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5d2b56355b21043f37e8d5991a453cc038064dce
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a006fdb96464b855a07e14c750ab8380be30a0a7
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674983"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256809"
 ---
 # <a name="columns-that-contain-a-null-value-by-default"></a>Столбцы, по умолчанию содержащие значение NULL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ FOR XML PATH, ELEMENTS XSINIL
  Ниже показан результат. Обратите внимание, что, если ключевое слово XSINIL не указано, элемент <`Middle`> будет отсутствовать.  
   
 ```  
-<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" EmpID="1">  
+<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  
     <Middle xsi:nil="true" />  

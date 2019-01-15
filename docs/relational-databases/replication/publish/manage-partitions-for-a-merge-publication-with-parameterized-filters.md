@@ -15,12 +15,12 @@ ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b15e2f27c58a49643563c5e25f577d6d738b719a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ec0db9af18be44617103b15c8c66c40ef695f3d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638405"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124514"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Управление секциями для публикации слиянием с параметризованными фильтрами
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47638405"
   
 ###  <a name="Recommendations"></a> Рекомендации  
   
--   Если в соответствии с рекомендациями создается скрипт топологии репликации, скрипты публикации содержат вызовы хранимых процедур для создания секций данных. Скрипт содержит справочную информацию для созданных секций и способ воссоздания одной или нескольких секций в случае необходимости. Дополнительные сведения см. в разделе [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
+-   Если в соответствии с рекомендациями создается скрипт топологии репликации, скрипты публикации содержат вызовы хранимых процедур для создания секций данных. Скрипт содержит справочную информацию для созданных секций и способ воссоздания одной или нескольких секций в случае необходимости. Дополнительные сведения см. в статье [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
 -   Если публикация имеет параметризованные фильтры, позволяющие получать подписки с неперекрывающимися секциями, то при необходимости повторного создания подписки в случае ее утраты необходимо удалить секцию, которая была на нее подписана, создать заново подписку, а затем повторно создать секцию. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md). При формировании скрипта публикации репликация формирует скрипты создания для существующих секций подписчика. Дополнительные сведения см. в статье [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
@@ -98,7 +98,7 @@ ms.locfileid: "47638405"
   
 -   Время последнего запуска задания секционированного снимка.  
   
- Если вторая часть снимка, состоящего из двух частей, может быть сформирована по запросу в момент инициализации новой подписки, то приведенные ниже процедуры позволят выполнить предварительное формирование снимка в подходящее время и управлять его формированием. Дополнительные сведения см. в статье [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ Если вторая часть снимка, состоящего из двух частей, может быть сформирована по запросу в момент инициализации новой подписки, то приведенные ниже процедуры позволят выполнить предварительное формирование снимка в подходящее время и управлять его формированием. Дополнительные сведения см. в статье [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 #### <a name="to-view-information-on-existing-partitions"></a>Просмотр информации о существующих секциях  
   
@@ -163,6 +163,6 @@ ms.locfileid: "47638405"
   
 ## <a name="see-also"></a>См. также:  
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
- [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
   
   

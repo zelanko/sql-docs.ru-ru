@@ -10,15 +10,15 @@ ms.assetid: 2131f796-6359-4f9e-9047-da0b3d4dedaf
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: b59552181d7137cfbcccb00b8b9fd0473402acc1
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: eea7817f088215be0a370873824cfaa5467f3cc4
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53327944"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143624"
 ---
 # <a name="attach-query-hints-to-a-plan-guide"></a>Присоединение указаний запросов к структуре плана
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Любые сочетания действительных указаний запроса могут быть использованы в руководстве плана. Когда структура плана совпадает с запросом, предложение OPTION, указанное в предложении указания структуры плана, добавляется к запросу, прежде чем запрос подвергается компиляции и оптимизации. Если в запросе, совпавшем со структурой плана, уже присутствует предложение OPTION, указания запроса, заданные в структуре плана, заменяют рекомендации в запросе. Чтобы структура плана совпала с запросом, уже содержащим предложение OPTION, предложение OPTION запроса необходимо включить при указании текста запроса для сопоставления в инструкции sp_create_plan_guide. Если необходимо, чтобы подсказки, указанные в руководстве плана, были добавлены к подсказкам, которые уже существуют в запросе, вместо того, чтобы заменить их, следует указать и исходные, и дополнительные подсказки в предложении OPTION структуры плана.  
   
 > [!CAUTION]  

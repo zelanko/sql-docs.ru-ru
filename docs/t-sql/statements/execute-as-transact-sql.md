@@ -23,12 +23,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2183c64e1d525e0d0add54317e2af10d0ada311b
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 6a66ee0be27bcc584bd3d01a7b17a1fffbc74a33
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979710"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134344"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "53979710"
 > [!IMPORTANT]  
 >  Пока переключение контекста на пользователя базы данных активно, любая попытка подключиться к ресурсам вне базы данных будет приводить к завершению инструкции с ошибками. Это касается инструкций USE *database*, распределенных запросов, а также запросов, которые ссылаются на другую базу данных, использующую трех- и четырехчастные идентификаторы.  
   
- **'** *name* **'**  
+ **'** _name_ **'**  
  Допустимое имя пользователя или имя входа. Аргумент *name* должен принадлежать предопределенной роли сервера **sysadmin** либо быть субъектом в базе данных [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) или [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) соответственно.  
   
  *name* можно задавать как локальную переменную.  
@@ -85,7 +85,7 @@ ms.locfileid: "53979710"
  COOKIE INTO **@**_varbinary_variable_  
  Указывает, что контекст выполнения можно переключить к предыдущему контексту, если при вызове инструкция REVERT WITH COOKIE содержит правильное значение **@**_varbinary_variable_. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Передает файл cookie для **@**_varbinary_variable_. Параметр **COOKIE INTO** можно использовать только на нерегламентированном уровне.  
   
- **@** *varbinary_variable* — это **varbinary(8000)**.  
+ **@** _varbinary_variable_ — это **varbinary(8000)**.  
   
 > [!NOTE]  
 >  Параметр **OUTPUT** файла cookie в настоящее время описан в документации как **varbinary(8000)**, что верно определяет его максимальную длину. Однако текущая реализация возвращает параметр **varbinary(100)**. Для продолжения правильной работы в случае увеличения размера файлов cookie в последующих версиях в приложении должен быть зарезервирован тип **varbinary(8000)**.  

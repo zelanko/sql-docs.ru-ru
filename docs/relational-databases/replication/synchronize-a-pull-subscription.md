@@ -15,12 +15,12 @@ ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4b23378b5340ea5aca32951cd1b35b3e08f78f05
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5b1b6726985643a16eef3bd5bda84a3220ba9442
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209393"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134154"
 ---
 # <a name="synchronize-a-pull-subscription"></a>Синхронизация подписки по запросу
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "53209393"
 5.  Щелкните **Закрыть**.  
   
 ##  <a name="ReplProg"></a> Replication Agents  
- Подписки по запросу могут синхронизироваться программно и по требованию, с помощью вызова из командной строки нужного исполняемого файла агента репликации. Вызываемый исполняемый файл агента репликации зависит от типа публикации, к которой принадлежит подписка по запросу. Дополнительные сведения см. в разделе [Replication Agents](../../relational-databases/replication/agents/replication-agents.md).  
+ Подписки по запросу могут синхронизироваться программно и по требованию, с помощью вызова из командной строки нужного исполняемого файла агента репликации. Вызываемый исполняемый файл агента репликации зависит от типа публикации, к которой принадлежит подписка по запросу. Дополнительные сведения см. в разделе [Replication Agents](../../relational-databases/replication/agents/replication-agents-overview.md).  
   
 > [!NOTE]  
 >  Агенты репликации подключаются к локальному серверу, используя учетные данные проверки подлинности Windows пользователя, запустившего агент из командной строки. Эти учетные данные Windows также применяются при соединении с удаленными серверами с использованием встроенной проверки подлинности Windows.  

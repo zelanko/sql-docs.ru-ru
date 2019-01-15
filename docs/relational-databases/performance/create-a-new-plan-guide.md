@@ -15,15 +15,15 @@ ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: fdad0764a1ada0bd4e9ae4c3c605bb1afd6515ed
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 0bcd57b8f3a2c9d136968fd2903a7e591cc777e2
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328704"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143524"
 ---
 # <a name="create-a-new-plan-guide"></a>Создание структуры плана
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Структура плана влияет на оптимизацию запросов путем присоединения указаний запросов или фиксированного плана запросов к ним. В структуре плана указывается оператор, который нужно оптимизировать, и либо предложение OPTION, которое содержит указания запросов, которые будут использоваться, либо специальный план запроса, который используется для оптимизации запроса. Когда запрос выполняется, оптимизатор запросов сопоставляет инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] со структурой плана и либо присоединяет условие OPTION к запросу в процессе выполнения, либо использует указанный план запроса.  
 
 Структура плана применяет к запросу фиксированный план запроса и/или указания запросов.

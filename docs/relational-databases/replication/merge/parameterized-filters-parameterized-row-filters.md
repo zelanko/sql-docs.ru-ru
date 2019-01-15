@@ -21,12 +21,12 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 00ef0f5df65f6b472e6c439e097c745d03d86040
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 55de7bcfd14c4a3fde78ac6b62874b75b103e01b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215155"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127714"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Параметризованные фильтры. Параметризованные фильтры строк
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 -   Агент слияния: задайте значение параметра **-Hostname** в командной строке или с помощью профиля агента. Дополнительные сведения об агенте слияния см. в разделе [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md). Дополнительные сведения о профилях агентов см. в разделе [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## <a name="initializing-a-subscription-to-a-publication-with-parameterized-filters"></a>Инициализация подписки на публикацию с параметризованными фильтрами  
- Когда в публикации слиянием применяются параметризованные фильтры строк, репликация инициализирует каждую подписку с помощью моментального снимка, состоящего из двух частей. Дополнительные сведения см. в статье [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ Когда в публикации слиянием применяются параметризованные фильтры строк, репликация инициализирует каждую подписку с помощью моментального снимка, состоящего из двух частей. Дополнительные сведения см. в статье [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="using-the-appropriate-filtering-options"></a>Использование подходящих параметров фильтрации  
  При использовании параметризованных фильтров пользователь управляет двумя ключевыми областями:  
@@ -174,7 +174,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   Статьи могут присутствовать только в одной публикации; статьи не могут переиздаваться.  
   
--   Публикация должна позволять подписчикам инициировать создание моментального снимка. Дополнительные сведения см. в статье [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   Публикация должна позволять подписчикам инициировать создание моментального снимка. Дополнительные сведения см. в статье [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ##### <a name="additional-considerations-for-join-filters"></a>Дополнительные соображения по фильтрам соединения  
   

@@ -18,12 +18,12 @@ ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed6f9122b7f25454266fcb50e6b41b43c17a92f6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: af29563d48e888444cc6f29e45c0d4ebc794213d
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662240"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256019"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Ограничение однозначного соответствия примитивов
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,13 +82,13 @@ ms.locfileid: "51662240"
 ## <a name="finding-more-information"></a>Дополнительные сведения  
  Следующий документ опубликован консорциумом World Wide Web (W3C) и содержит техническое описание ограничения однозначного соответствия примитивов:  
   
- «XML-схема. Часть 1, структуры, второе издание, W3C Proposed Edited Recommendation»:  
+ «Схема XML. Часть 1: структуры, второе издание, W3C Proposed Edited Recommendation»:  
   
--   Раздел 3.8.6. Ограничения компонентов схемы для группы моделей  
+-   Раздел 3.8.6: Ограничения компонентов схемы группы моделей  
   
--   Приложение H. Анализ ограничения однозначного соответствия примитивов (не нормативный)  
+-   Приложение H: Анализ ограничения однозначного соответствия примитивов (не нормативный)  
   
- Чтобы просмотреть документ, перейдите по адресу [https://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881).  
+ Чтобы просмотреть документ, перейдите по адресу [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881).  
   
 ## <a name="see-also"></a>См. также:  
  [Коллекции XML-схем (SQL Server)](../../relational-databases/xml/xml-schema-collections-sql-server.md)  

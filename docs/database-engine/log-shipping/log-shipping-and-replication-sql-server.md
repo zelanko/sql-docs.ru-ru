@@ -13,12 +13,12 @@ ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9970c01b1af46287c9438b2b731af6a1c9e1f44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c92321a8f9e0cb70a1e16a268ef1e84b17946ae
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655952"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130434"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Репликация и доставка журналов (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "47655952"
      При синхронизации с подписчиком, на котором запущена версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , предшествующая [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], подписка не может быть анонимной. Это должна быть клиентская или серверная подписка (в предыдущих версиях такие подписки называются локальными или глобальными). Дополнительные сведения см. в разделе [Синхронизация данных](../../relational-databases/replication/synchronize-data.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Функции и задачи репликации](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [Репликация SQL Server](../../relational-databases/replication/sql-server-replication.md)   
  [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Зеркальное отображение и репликация баз данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   

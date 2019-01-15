@@ -13,12 +13,12 @@ ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eb0117203d290c32c22691f665a7717a68bb5465
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 327257526f48424398a3931ba9270b3752b4b316
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072148"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135774"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>Службы SCM. Подключение к другому компьютеру
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "49072148"
   
 8.  В диалоговом окне **Добавить или удалить оснастку** нажмите кнопку **ОК**.  
   
-9. Разверните узел **Управление компьютером (***\<имя компьютера>***)**, а затем узел **Службы и приложения**.  
+9. Разверните узел **Управление компьютером (**_\<имя компьютера>_**)**, а затем узел **Службы и приложения**.  
   
 10. Щелкните правой кнопкой мыши **Диспетчер конфигурации SQL Server**, затем щелкните **Новое окно отсюда**.  
   

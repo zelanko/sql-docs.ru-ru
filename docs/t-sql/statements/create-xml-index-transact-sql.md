@@ -28,12 +28,12 @@ ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6eaf2a4e5deb782533b945e85209c6ed7f2200db
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cf513a21429d26e9f0cc346b26177f1ea90dbbaf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202613"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130214"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -151,7 +151,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  Параметр PAD_INDEX имеет смысл только в случае, если указан параметр FILLFACTOR, так как использует процентное значение, указанное в нем. Если процент, заданный аргументом FILLFACTOR, недостаточно велик для размещения одной строки, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] внутренне переопределит это значение, чтобы обеспечить минимум. Количество строк на странице индекса промежуточного уровня никогда не бывает менее двух даже при самых малых значениях аргумента *fillfactor*.  
   
- FILLFACTOR **=***коэффициент_заполнения*  
+ FILLFACTOR **=**_fillfactor_  
  Определяет величину в процентах, показывающую, насколько компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен заполнять конечный уровень каждой страницы индекса во время его создания или перестроения. Значение *fillfactor* должно быть целым числом от 1 до 100. Значение по умолчанию равно 0. Если параметр *fillfactor* равен 100 или 0, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] создает индексы с полностью заполненными страницами конечного уровня.  
   
 > [!NOTE]  
@@ -215,7 +215,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  Блокировки страниц не используются.  
   
- MAXDOP **=***max_degree_of_parallelism*  
+ MAXDOP **=**_max_degree_of_parallelism_  
  Переопределяет параметр конфигурации сервера [Максимальная степень параллелизма](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) на время выполнения операции с индексами. MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.  
   
 > [!IMPORTANT]  

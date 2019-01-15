@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca0ff4ec4c0e4e390f152feac3f3e1359061003d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4252f3511baadc5536823323c026811ee53dd201
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799252"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257179"
 ---
 # <a name="typename-transact-sql"></a>TYPE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ TYPE_NAME ( type_id )
 ## <a name="remarks"></a>Remarks  
  Функция TYPE_NAME возвращает значение NULL, если аргумент *type_id* недопустим или у вызывающего объекта недостаточно разрешений для создания ссылки на этот тип.  
   
- Функция TYPE_NAME используется и для системных, и для пользовательских типов данных. Этот тип может содержаться в любой схеме, но неполное имя типа возвращается всегда. Это значит, что у имени отсутствует префикс *schema***.**.  
+ Функция TYPE_NAME используется и для системных, и для пользовательских типов данных. Этот тип может содержаться в любой схеме, но неполное имя типа возвращается всегда. Это значит, что у имени отсутствует префикс _schema_**.** .  
   
  Системные функции можно использовать в списке выбора, в предложении WHERE и в любом месте, где разрешается использование выражений. Дополнительные сведения см. в статьях [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md) и [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md).  
   

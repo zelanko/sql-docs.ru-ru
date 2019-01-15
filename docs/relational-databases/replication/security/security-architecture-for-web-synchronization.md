@@ -13,12 +13,12 @@ ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca169dc94a2f3fcbe6165bbbe1c69de158f9835f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 787e3c18581339de78a5f4fcd653967566f85ece
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719012"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124664"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Архитектура безопасности для веб-синхронизации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "47719012"
 |Проверка подлинности[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] используется, если задано одно из следующих значений:<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: значение **0** для параметра **@distributor_security_mode** хранимой процедуры [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />— Объекты RMO: значение <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> для свойства <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>.<br />Командная строка агента слияния: значение **0** для параметра **-DistributorSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: параметры **@distributor_login** и **@distributor_password** процедуры [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> и <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A><br /><br /> Командная строка агента слияния: **-DistributorLogin** и **-DistributorPassword**.|  
   
 ## <a name="g-connection-to-an-ftp-server"></a>Ж. Соединение с FTP-сервером  
- Пользователь Windows для этого соединения задается, только если файлы моментального снимка загружаются с FTP-сервера (а не из сетевой папки) на сервер IIS перед тем, как применить этот моментальный снимок к подписчику. Дополнительные сведения см. в статье [Передача моментальных снимков через FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+ Пользователь Windows для этого соединения задается, только если файлы моментального снимка загружаются с FTP-сервера (а не из сетевой папки) на сервер IIS перед тем, как применить этот моментальный снимок к подписчику. Дополнительные сведения см. в статье [Передача моментальных снимков через FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md).  
   
 |Тип проверки подлинности|Где задана проверка подлинности|  
 |----------------------------|-------------------------------------------|  

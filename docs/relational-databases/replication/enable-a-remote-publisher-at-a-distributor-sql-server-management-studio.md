@@ -14,12 +14,12 @@ ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 05bbc6f6eaad17fc49f210d20ab78126a68eeb60
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 63b21aec220de42f9bf9fb8cd5fae1f109e501fa
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541976"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129611"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>включить удаленный издатель на распространителе (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52541976"
   
 4.  На странице **Пароль распространителя** в текстовых полях **Пароль** и **Подтверждение пароля** укажите надежный пароль для учетной записи **distributor_admin** , используемой системой репликации, чтобы подключить издателя к распространителю для выполнения административных задач.  
   
-5.  Для просмотра и изменения параметров издателя нажмите кнопку свойств с многоточием (**…**).  
+5.  Для просмотра и изменения параметров издателя нажмите кнопку с многоточием (**…**).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -49,7 +49,7 @@ ms.locfileid: "52541976"
   
 4.  На странице **Издатели** в текстовых полях **Пароль** и **Подтверждение пароля** укажите надежный пароль для учетной записи **distributor_admin** , используемой системой репликации, чтобы подключить издатель к распространителю для выполнения административных задач.  
   
-5.  Для просмотра и изменения параметров издателя нажмите кнопку свойств с многоточием (**…**).  
+5.  Для просмотра и изменения параметров издателя нажмите кнопку с многоточием (**…**).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

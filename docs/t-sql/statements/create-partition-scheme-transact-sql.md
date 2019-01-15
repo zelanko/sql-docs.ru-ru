@@ -29,12 +29,12 @@ ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ee5082535620d05c96b505b1920b8036d92f5e97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83017a49354eb3da8220ae2fa4536961d1fed420
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843107"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124784"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,14 +65,14 @@ AS PARTITION partition_function_name
  ALL  
  Указывает, что все секции сопоставляются с файловой группой, определяемой аргументом *file_group_name*, или с первичной файловой группой, если указывается **[** PRIMARY **]**. Если указывается ALL, то может быть указано только одно значение аргумента *file_group_name*.  
   
- *file_group_name* | **[** PRIMARY **]** [ **,***...n*]  
+ *file_group_name* | **[** PRIMARY **]** [ **,**_...n_]  
  Указывает имена файловых групп, содержащих секции, указываемые аргументом *partition_function_name*. Аргумент *file_group_name* уже должен существовать в базе данных.  
   
- Если указывается **[** PRIMARY **]**, секция сохраняется в первичной файловой группе. Если указывается ALL, то может быть указано только одно значение аргумента *file_group_name*. Секции назначаются файловым группам, начиная с секции 1, в том порядке, в котором файловые группы перечисляются в [**,***...n*]. Одно и то же имя *file_group_name* может быть указано в [**,***...n*] несколько раз. Если значение *n* недостаточно для количества секций, указываемого в аргументе *partition_function_name*, CREATE PARTITION SCHEME завершается с ошибкой.  
+ Если указывается **[** PRIMARY **]**, секция сохраняется в первичной файловой группе. Если указывается ALL, то может быть указано только одно значение аргумента *file_group_name*. Секции назначаются файловым группам, начиная с секции 1, в том порядке, в котором файловые группы перечисляются в [**,**_...n_]. Одно и то же имя *file_group_name* может быть указано в [**,**_...n_] несколько раз. Если значение *n* недостаточно для количества секций, указываемого в аргументе *partition_function_name*, CREATE PARTITION SCHEME завершается с ошибкой.  
   
  Если аргумент *partition_function_name* формирует меньше секций, чем количество файловых групп, первая неназначенная файловая группа отмечается как NEXT USED и информационное сообщение выводит наименование файловой группы NEXT USED. Если указывается параметр ALL, единственный аргумент *file_group_name* сохраняет свое свойство NEXT USED для аргумента *partition_function_name*. Файловая группа NEXT USED получит дополнительную секцию, если такая секция будет создана инструкцией ALTER PARTITION FUNCTION. Чтобы создать дополнительные неназначенные файловые группы, которые должны содержать новые секции, используйте инструкцию ALTER PARTITION SCHEME.  
   
- Когда первичная файловая группа указывается в *file_group_name* [ 1 **,***...n*], аргумент PRIMARY должен отделяться так же, как в **[** PRIMARY**]**, так как это ключевое слово.  
+ Когда первичная файловая группа указывается в *file_group_name* [ 1 **,**_...n_], аргумент PRIMARY должен отделяться так же, как в **[** PRIMARY **]**, так как это ключевое слово.  
   
  Только PRIMARY поддерживается для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. См. пример Д далее. 
   
