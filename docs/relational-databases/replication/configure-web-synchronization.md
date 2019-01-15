@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 36d70b56432fee62d157bb8e6cf192d906e84bc3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 144323deee0c84ac1be404869a0ca71197ffcd32
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519340"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135584"
 ---
 # <a name="configure-web-synchronization"></a>Настроить веб-синхронизацию
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,9 +87,9 @@ ms.locfileid: "52519340"
   
  **Настройка служб IIS для веб-синхронизации**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Настройка сервера IIS для веб-синхронизации](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [Настройка сервера IIS для веб-синхронизации](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Настройка сервера IIS 7 для веб-синхронизации](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [Настройка сервера IIS 7 для веб-синхронизации](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
 ## <a name="creating-a-web-garden"></a>Создание веб-сада  
  Средство прослушивания репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает две параллельные операции синхронизации в каждом потоке. При превышении этого ограничения средство прослушивания репликации может перестать отвечать на запросы. Количество потоков, выделенных replisapi.dll, определяется свойством пула приложения «Максимальное число рабочих процессов». Значением этого свойства по умолчанию является 1.  
@@ -136,7 +136,7 @@ ms.locfileid: "52519340"
   
 -   в случае репликации больших объемов данных может возникнуть необходимость в корректировке размера пакета агента слияния.  
   
- Размер пакета для репликации слиянием измеряется в *поколениях*, которые представляют собой коллекции изменений для статьи. Число поколений в пакете указывается через параметры агента слияния -**DownloadGenerationsPerBatch** и -**UploadGenerationsPerBatch**. Дополнительные сведения см. в статье [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
+ Размер пакета для репликации слиянием измеряется в *поколениях*, которые представляют собой коллекции изменений для статьи. Число поколений в пакете указывается через параметры агента слияния **–DownloadGenerationsPerBatch** и **–UploadGenerationsPerBatch**. Дополнительные сведения см. в статье [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
  При работе с большими объемами данных рекомендуется указывать небольшие значения для этих параметров пакетов. Рекомендуем начинать со значения, равного 10, и затем корректировать его с учетом потребностей приложений, а также производительности. Обычно эти параметры задаются в профиле агента. Дополнительные сведения о профилях см. в разделе [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
@@ -162,7 +162,7 @@ ms.locfileid: "52519340"
   
 -   Учетная запись, под которой запускается средство прослушивания репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Replisapi.dll), также является учетной записью, которая будет использоваться для соединения с издателем и распространителем во время синхронизации. Эта учетная запись должна быть сопоставлена с учетной записью входа SQL на издателе и распространителе. Дополнительные сведения см. в разделе "Установка разрешений для средства прослушивания репликации SQL Server" статьи [Настройка служб IIS для веб-синхронизации](../../relational-databases/replication/configure-iis-for-web-synchronization.md).  
   
--   Для доставки моментального снимка от издателя на компьютер, на котором работают службы IIS, можно использовать протокол FTP. Моментальный снимок всегда доставляется подписчику с компьютера, на котором работают службы IIS, по протоколу HTTPS. Дополнительные сведения см. в статье [Передача моментальных снимков через FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+-   Для доставки моментального снимка от издателя на компьютер, на котором работают службы IIS, можно использовать протокол FTP. Моментальный снимок всегда доставляется подписчику с компьютера, на котором работают службы IIS, по протоколу HTTPS. Дополнительные сведения см. в статье [Передача моментальных снимков через FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
 -   Если серверы топологии репликации защищены брандмауэром, то для использования веб-синхронизации может потребоваться открыть порты брандмауэра.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "52519340"
   
     -   Компьютер, на котором запущены службы IIS, обычно соединяется с издателем или распространителем через порт 1433 (экземпляр по умолчанию). Если издатель или распространитель является именованным экземпляром на сервере с другим экземпляром по умолчанию, для соединения с этим именованным экземпляром обычно используется порт 1500.  
   
-    -   Если компьютер, на котором запущены службы IIS, отделен от распространителя брандмауэром, а для доставки моментального снимка используется протокол FTP, должны быть открыты порты, необходимые для работы этого протокола. Дополнительные сведения см. в статье [Передача моментальных снимков через FTP](../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+    -   Если компьютер, на котором запущены службы IIS, отделен от распространителя брандмауэром, а для доставки моментального снимка используется протокол FTP, должны быть открыты порты, необходимые для работы этого протокола. Дополнительные сведения см. в статье [Передача моментальных снимков через FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
 > [!IMPORTANT]  
 >  Открытие портов на брандмауэре может привести к незащищенности сервера от вредоносных атак. Перед открытием портов убедитесь в том, что знаете принципы работы брандмауэров. Дополнительные сведения см. в разделе [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
