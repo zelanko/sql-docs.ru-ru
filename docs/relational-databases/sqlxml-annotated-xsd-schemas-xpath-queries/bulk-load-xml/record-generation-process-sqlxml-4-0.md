@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0572f9ef57b5d1ba17383cf758f612b0c6eec81f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bfd659028d02c7b37dcf31c36b587ce5f3550661
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677693"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256819"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Процесс создания записей (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "51677693"
  Например, рассмотрим следующий фрагмент схемы XSD:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Customer" sql:relation="Customers" >  
    <xsd:complexType>  
@@ -116,7 +116,7 @@ ms.locfileid: "51677693"
  Теперь рассмотрим представление XML, указанное в следующей схеме XSD с заметками. Использует эту схему  **\<SQL: Relationship >** для указания связи между таблицами Cust и CustOrder.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -221,12 +221,12 @@ ms.locfileid: "51677693"
 ## <a name="exceptions-to-the-record-generation-rule"></a>Исключения из правила создания записей  
  Массовая загрузка XML не формирует запись для узла, когда он входит в область, если этот узел типа IDREF или IDREFS. Необходимо убедиться, что в схеме приведено полное описание записи. **DT: Type = «nmtokens»** заметок пропускаются так же, как пропускается тип IDREFS.  
   
- Например, рассмотрим следующую схему XSD, описывающий  **\<клиента >** и  **\<порядок >** элементов. **\<Клиента >** элемент включает **OrderList** атрибут типа IDREFS. **\<SQL: Relationship >** тег указывает связь «один ко многим» между заказчиком и списком заказов.  
+ Например, рассмотрим следующую схему XSD, описывающий  **\<клиента >** и  **\<порядок >** элементов.  **\<Клиента >** элемент включает **OrderList** атрибут типа IDREFS.  **\<SQL: Relationship >** тег указывает связь «один ко многим» между заказчиком и списком заказов.  
   
  Схема:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -262,7 +262,7 @@ ms.locfileid: "51677693"
 </xsd:schema>  
 ```  
   
- Поскольку Массовая загрузка пропускает узлы типа IDREFS, нет без создания записей при **OrderList** атрибут узел входит в область. Поэтому, если нужно упорядочить записи, добавленные в таблицу Orders, необходимо описать эти заказы в каком-то месте схемы. В этой схеме указав  **\<порядок >** элемент гарантирует, что массовая загрузка XML добавит записи заказов в таблицу Orders. **\<Порядок >** элемент описывает все атрибуты, необходимые, чтобы заполнить запись для таблицы CustOrder.  
+ Поскольку Массовая загрузка пропускает узлы типа IDREFS, нет без создания записей при **OrderList** атрибут узел входит в область. Поэтому, если нужно упорядочить записи, добавленные в таблицу Orders, необходимо описать эти заказы в каком-то месте схемы. В этой схеме указав  **\<порядок >** элемент гарантирует, что массовая загрузка XML добавит записи заказов в таблицу Orders.  **\<Порядок >** элемент описывает все атрибуты, необходимые, чтобы заполнить запись для таблицы CustOrder.  
   
  Необходимо убедиться, что **CustomerID** и **OrderID** значения в  **\<клиента >** элемент соответствуют значениям в  **\<Порядок >** элемент. Программист ответственен за обеспечение ссылочной целостности.  
   

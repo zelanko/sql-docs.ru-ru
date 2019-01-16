@@ -11,12 +11,12 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: b0714fb7e0bcc454bdd9d60b296a017bcdf4e0c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b678ee8bdd709583359fd2c6c9574676fe1c83f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732252"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210043"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Отправка данных в FILESTREAM — ISequentialStream с привязкой к ICommandText
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47732252"
   
  При запуске этого образца необходимо передать имя сервера или сервер\имя_экземпляра, а также значение между 4 МБ (0x400001) и 4 ГБ (0xFFFFFFFF), указывающее количество записываемых данных.  
   
- Четвертый листинг кода ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) удаляет базу данных, созданную в данном образце.  
+ Четвертый листинг кода ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) удаляет базу данных, созданную в этом примере.  
   
 ```  
 // ISSHelper.h: interface for the CISSHelper class.  

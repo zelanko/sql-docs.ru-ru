@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 06915278daf72828f7dd1d1ff9da23f4a01ec783
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 136eade9df87a7d086af27ca0ab6d3075a3b8bd7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710472"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207463"
 ---
 # <a name="protocols-for-mssqlserver-properties-flags-tab"></a>Протоколы для свойств MSSQLSERVER (вкладка «Флаги»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47710472"
   
  Дополнительные сведения о шифровании см.в разделе «Шифрование соединений с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Процесс входа в систему всегда шифруется. Если для свойства **ForceEncryption** установлено значение **Да**, вся передача данных между клиентом и сервером шифруется, а клиент, соединяющийся с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] , должен быть настроен на доверие корневому центру сертификата сервера. Дополнительные сведения см. в статье "Инструкции. Включение зашифрованных соединений с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] (диспетчер конфигурации[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )" электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Процесс входа в систему всегда шифруется. Если для свойства **ForceEncryption** установлено значение **Да**, вся передача данных между клиентом и сервером шифруется, а клиент, соединяющийся с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] , должен быть настроен на доверие корневому центру сертификата сервера. Дополнительные сведения см. в разделе "Как включить зашифрованные соединения с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] (диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])" электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="cluster-servers"></a>Серверы кластера  
  Для использования шифрования в отказоустойчивом кластере необходимо установить сертификат сервера с полным именем DNS виртуального сервера на все узлы отказоустойчивого кластера. Например, для кластера, у которого два узла с именами "test1.*\<ваша компания>*.com" и "test2.*\<ваша компания>*.com", и виртуального сервера virtsql необходимо установить сертификат для "virtsql.*\<ваша компания>*.com" на оба узла. Затем можно установить флажок **ForceEncryption** в окне **Диспетчер конфигурации SQL Server** , чтобы настроить шифрование в отказоустойчивом кластере.  
@@ -44,6 +44,6 @@ ms.locfileid: "47710472"
  **HideInstance**  
  Запрещает службе " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , браузер" показывать этот экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] на компьютерах клиентов, выполняющих поиск экземпляра при помощи кнопки **Обзор** . Для подключения к именованным экземплярам на сервере клиентские приложения должны указывать сведения о конечной точке протокола. Например, номер порта или имя именованного канала, такие как **tcp:server,5000**. Дополнительные сведения см. в статье [Logging In to SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md).  
   
- Дополнительные сведения см. в статье "Инструкции. Включение шифрования соединений с компонентом Database Engine (диспетчер конфигурации SQL Server)" электронной документации.  
+ Дополнительные сведения см. в разделе «Как включить шифрование соединений с компонентом Database Engine (диспетчер конфигурации SQL Server)» электронной документации.  
   
   

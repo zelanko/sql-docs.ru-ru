@@ -11,19 +11,19 @@ ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c36ae89563490257ccc9db78c7386642a71f0ce
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8e2df0607162f5f2cb90ff6b0525fdc530b7be66
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398436"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211824"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Поддержка высокой доступности и аварийного восстановления в драйвере JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  В этом разделе рассматривается поддержка [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] высокой доступности с аварийным восстановлением ― [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]. Дополнительные сведения о [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] см. в электронной документации по [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+  В этом разделе рассматривается поддержка [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] высокой доступности с аварийным восстановлением ― [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]. Дополнительные сведения о среде [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]см. в электронной документации по [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
   
- Начиная с версии 4.0 драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], в свойствах подключения можно указать прослушиватель группы доступности (аварийного восстановления и высокой готовности). Если приложение [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] подключается к базе данных AlwaysOn, которая выполняет отработку отказа, то первоначальное подключение разрывается и приложение должно открыть новое подключение, чтобы продолжить работу после обработки отказа. В версии [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] добавлены следующие [свойства подключения](../../connect/jdbc/setting-the-connection-properties.md):  
+ Начиная с версии 4.0 драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] в свойствах подключения можно указать прослушиватель группы доступности (высокой доступности и аварийного восстановления). Если приложение [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] подключается к базе данных AlwaysOn, которая выполняет отработку отказа, то первоначальное подключение разрывается и приложение должно открыть новое подключение, чтобы продолжить работу после обработки отказа. В версии [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] добавлены следующие [свойства подключения](../../connect/jdbc/setting-the-connection-properties.md):  
   
 -   **multiSubnetFailover**  
   
@@ -40,11 +40,11 @@ ms.locfileid: "52398436"
 * transparentNetworkIPResolution учитывается, если существует более чем 64 IP-адресов
 * Если transparentNetworkIPResolution имеет значение true, первая попытка соединения использует значение времени ожидания 500 миллисекунд. REST попыток соединения выполните ту же логику, как и в функцию multiSubnetFailover. 
 
-> [!NOTE]  
-Если вы используете Microsoft JDBC Driver 4.2 (или уменьшить) для SQL Server и **multiSubnetFailover** имеет значение false, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] пытается подключиться к первый IP-адрес. Если [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] не может установить подключение к первому IP-адресу, то подключение завершается сбоем. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] не будет повторять попытку подключения к другим IP-адресам, связанным с сервером. 
-
-  
-> [!NOTE]  
+> [!NOTE]
+> Если вы используете Microsoft JDBC Driver 4.2 (или уменьшить) для SQL Server и **multiSubnetFailover** имеет значение false, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] пытается подключиться к первый IP-адрес. Если [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] не может установить подключение к первому IP-адресу, то подключение завершается сбоем. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] не будет повторять попытку подключения к другим IP-адресам, связанным с сервером. 
+> 
+> 
+> [!NOTE]
 >  Увеличение времени ожидания соединения и реализация логики повторного соединения позволяют повысить вероятность соединения приложения с группой доступности. Кроме того, в связи с возможностью неудачного подключения при отработке отказа группы доступности следует реализовать логику повторного соединения, обеспечивающую неограниченное число попыток соединения до достижения успеха.  
   
  
@@ -70,7 +70,7 @@ ms.locfileid: "52398436"
   
 -   При установлении соединения с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], настроенным на работу с более чем 64 IP-адресами, будет возникать ошибка соединения.  
   
--   Режим работы приложения, использующего свойство подключения **multiSubnetFailover**, не зависит от типа проверки подлинности — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Kerberos или Windows.  
+-   Поведение приложения, использующего свойство подключения **multiSubnetFailover**, не зависит от типа аутентификации: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Kerberos или Windows.  
   
 -   Значение **loginTimeout** можно увеличить с учетом времени отработки отказа и для уменьшения количества попыток приложения повторно установить подключение.  
   

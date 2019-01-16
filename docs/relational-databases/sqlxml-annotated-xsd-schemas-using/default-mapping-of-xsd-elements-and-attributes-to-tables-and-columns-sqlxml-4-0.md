@@ -28,12 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21b0f28d79f44fd21828475c22748450d8f3628b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5473cca90d26056f82d79a5b3189998d0723269b
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673773"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254429"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Сопоставление элементов и атрибутов XSD с таблицами и столбцами по умолчанию (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ ms.locfileid: "51673773"
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-default-mapping"></a>A. Указание сопоставления по умолчанию  
- В этом примере в схеме XSD не задано никаких заметок. **\<Person.Contact >** элемент имеет сложный тип и, таким образом, по умолчанию сопоставляется с таблицей Person.Contact в базе данных AdventureWorks. Все атрибуты (ContactID, FirstName, LastName)  **\<Person.Contact >** элемента имеют простой тип и по умолчанию сопоставляются столбцы с одинаковыми именами в таблице Person.Contact.  
+ В этом примере в схеме XSD не задано никаких заметок.  **\<Person.Contact >** элемент имеет сложный тип и, таким образом, по умолчанию сопоставляется с таблицей Person.Contact в базе данных AdventureWorks. Все атрибуты (ContactID, FirstName, LastName)  **\<Person.Contact >** элемента имеют простой тип и по умолчанию сопоставляются столбцы с одинаковыми именами в таблице Person.Contact.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact" >  
      <xsd:complexType>  
@@ -94,10 +94,10 @@ ms.locfileid: "51673773"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>Б. Сопоставление XML-элемента со столбцом базы данных  
- Так как не использовано ни одной заметки, в этом примере также имеет место сопоставление по умолчанию. **\<Person.Contact >** элемент имеет сложный тип и сопоставляется с таблицей с тем же именем, в базе данных. Элементы  **\<FirstName >** и  **\<LastName >** и **EmployeeID** атрибут имеют простой тип и, следовательно, сопоставляются столбцы с одинаковыми именами. Единственная разница между этим и предыдущим примером заключается в том, что для сопоставления полей FirstName и LastName используются элементы.  
+ Так как не использовано ни одной заметки, в этом примере также имеет место сопоставление по умолчанию.  **\<Person.Contact >** элемент имеет сложный тип и сопоставляется с таблицей с тем же именем, в базе данных. Элементы  **\<FirstName >** и  **\<LastName >** и **EmployeeID** атрибут имеют простой тип и, следовательно, сопоставляются столбцы с одинаковыми именами. Единственная разница между этим и предыдущим примером заключается в том, что для сопоставления полей FirstName и LastName используются элементы.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact">  
     <xsd:complexType>  
@@ -148,10 +148,10 @@ ms.locfileid: "51673773"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>В. Сопоставление XML-элемента со столбцом типа данных XML  
- Так как не использовано ни одной заметки, в этом примере также имеет место сопоставление по умолчанию. **\<Production.ProductModel >** элемент имеет сложный тип и сопоставляется с таблицей с тем же именем, в базе данных. **ProductModelID** атрибут имеет простой тип и, следовательно, сопоставляются со столбцами с теми же именами. Единственное отличие между этим и предыдущих примерах  **\<инструкции >** элемент сопоставляется столбец, который использует **xml** тип данных с помощью **xsd: anyType** типа.  
+ Так как не использовано ни одной заметки, в этом примере также имеет место сопоставление по умолчанию.  **\<Production.ProductModel >** элемент имеет сложный тип и сопоставляется с таблицей с тем же именем, в базе данных. **ProductModelID** атрибут имеет простой тип и, следовательно, сопоставляются со столбцами с теми же именами. Единственное отличие между этим и предыдущих примерах  **\<инструкции >** элемент сопоставляется столбец, который использует **xml** тип данных с помощью **xsd: anyType** типа.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Production.ProductModel">  
     <xsd:complexType>  

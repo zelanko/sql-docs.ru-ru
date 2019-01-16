@@ -11,12 +11,12 @@ ms.assetid: 8aa867b0-e6f0-49eb-93d3-817ae2ed8f77
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cba6e20e1e2efbd17ca677f06c07ac0a4a27648c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24eef3e97f87d60db624605b19420e5fd562360b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669922"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213783"
 ---
 # <a name="validating-user-input"></a>Проверка введенного пользователем
 
@@ -26,7 +26,7 @@ ms.locfileid: "47669922"
 
 Проверка вводимых пользователем данных в клиентском коде позволяет сократить количество ненужных циклов приема-передачи данных на сервер. Проверка параметров для хранимых процедур на сервере также важна для выявления вводимых данных, недопустимость которых не была обнаружена на стороне клиента.
 
-Дополнительные сведения об атаке путем внедрения кода SQL и о том, как ее избежать, см. в соответствующем разделе электронной документации на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о проверке параметров хранимых процедур см. в разделе "Хранимые процедуры ([!INCLUDE[ssDE](../../includes/ssde_md.md)])" и связанных разделах электронной документации на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Дополнительные сведения об атаке путем внедрения кода SQL и о том, как ее избежать, см. в соответствующем разделе электронной документации на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о проверке параметров хранимых процедур см. в разделе о хранимых процедурах ([!INCLUDE[ssDE](../../includes/ssde_md.md)]) и связанных разделах электронной документации на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ## <a name="see-also"></a>См. также:
 

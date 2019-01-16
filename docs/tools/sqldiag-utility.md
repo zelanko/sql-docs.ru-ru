@@ -30,12 +30,12 @@ ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a20913ac99f7c4cf32ae31c55cdf027f2db360c1
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 05336c1b9a7f6830b3dd2c6e6f0b794984bda061
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292711"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100949"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag, программа
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,16 +86,16 @@ sqldiag
  **/?**  
  Отображает сведения об использовании.  
   
- **/I** *configuration_file*  
+ **/I** _configuration_file_  
  Задает файл конфигурации, используемый программой **SQLdiag** . По умолчанию **/I** задает SQLDiag.Xml.  
   
- **/O** *output_folder_path*  
+ **/O** _output_folder_path_  
  Перенаправляет выходной поток программы **SQLdiag** в указанную папку. Если параметр **/O** не указан, выходной поток **SQLdiag** направляется во вложенную папку с именем SQLDIAG, расположенную в папке запуска **SQLdiag** . Если папки SQLDIAG не существует, программа **SQLdiag** попытается создать ее.  
   
 > [!NOTE]  
 >  Расположение выходной папки задается относительно расположения папки поддержки, которое может быть определено параметром **/P**. Для установки абсолютно другого пути к выходной папке укажите полный путь каталога в параметре **/O**.  
   
- **/P** *support_folder_path*  
+ **/P** _support_folder_path_  
  Устанавливает путь к папке поддержки. По умолчанию параметр **/P** задает папку, в которой находится исполняемый файл **SQLdiag** . Папка поддержки содержит файлы поддержки **SQLdiag** , например XML-файл конфигурации, скрипты Transact-SQL и другие файлы, используемые программой во время сбора диагностических сведений. Если этот параметр будет использован для указания дополнительного пути к файлам поддержки, программа **SQLdiag** автоматически скопирует необходимые файлы поддержки в указанную папку, если их еще не существует.  
   
 > [!NOTE]  
@@ -103,7 +103,7 @@ sqldiag
 >   
 >  **SQLDIAG /P %cd%**  
   
- **/N** *output_folder_management_option*  
+ **/N** _output_folder_management_option_  
  Определяет, должна ли программа **SQLdiag** при запуске перезаписывать или переименовывать выходную папку. Возможные параметры:  
   
  1 = Перезаписывает выходную папку (по умолчанию)  
@@ -113,12 +113,12 @@ sqldiag
 > [!NOTE]  
 >  Программа**SQLdiag** при запуске не добавляет данные в текущую выходную папку. Она может только перезаписать выходную папку по умолчанию (параметр 1) или переименовать папку (параметр 2), после чего производит вывод в новую выходную папку по умолчанию, имеющую имя SQLDIAG.  
   
- **/M** *machine1* [ *machine2 ** machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2* *machineN*] | *@machinelistfile*  
  Переопределяет параметр machines, указанный в файле конфигурации. По умолчанию файлом конфигурации является SQLDiag.Xml либо файл, заданный параметром **/I** . При определении более одного компьютера, разделяйте имена компьютеров пробелами.  
   
  Использование параметра *@machinelistfile* позволяет указать имя файла со списком компьютеров, который необходимо сохранить в файле конфигурации.  
   
- **/C** *file_compression_type*  
+ **/C** _file_compression_type_  
  Устанавливает тип сжатия файлов, используемый в файлах выходной папки программы **SQLdiag** . Возможные параметры:  
   
  0 = без сжатия (по умолчанию)  
@@ -153,7 +153,7 @@ sqldiag
   
  Обратите внимание, что **SQLdiag** использует локальное время компьютера, на котором запущена программа.  
   
- **/A**  *SQLdiag_application_name*  
+ **/A**  _SQLdiag_application_name_  
  Разрешает запуск нескольких экземпляров программы **SQLdiag** для работы с одним экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Каждое значение *SQLdiag_application_name* определяет другой экземпляр **SQLdiag**. Между экземпляром *SQLdiag_application_name* и именем экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] никакой связи не существует.  
@@ -162,11 +162,11 @@ sqldiag
   
  Пример:  
   
- **SQLDIAG START /A**  *SQLdiag_application_name*  
+ **SQLDIAG START /A**  _SQLdiag_application_name_  
   
  Кроме того, он может использоваться с параметром **/R** для регистрации указанного экземпляра **SQLdiag** в качестве службы. Пример:  
   
- **SQLDIAG /R /A** *SQLdiag_application_name*  
+ **SQLDIAG /R /A** _SQLdiag_application_name_  
   
 > [!NOTE]  
 >  Программа**SQLdiag** автоматически добавляет префикс DIAG$ к имени экземпляра, указанному для *SQLdiag_application_name*. Это позволяет получить понятное имя службы при регистрации **SQLdiag** в качестве службы.  
@@ -202,7 +202,7 @@ sqldiag
   
  Также для запуска службы можно использовать команду **net start** :  
   
- **net**  **start SQLDIAG**  
+ **net start SQLDIAG**  
   
  **/U**  
  Отменяет регистрацию программы **SQLdiag** в качестве службы.  
@@ -229,7 +229,7 @@ sqldiag
   
  Только аргумент **/A** , указывающий именованный экземпляр **SQLdiag**, может быть использован вместе со **START**, **STOP**или **STOP_ABORT** для управления определенным экземпляром службы **SQLdiag** . Пример:  
   
- **SQLDIAG START /A** *имя_приложения_SQLdiag*  
+ **SQLDIAG START /A** _имя_приложения_SQLdiag_  
   
 ## <a name="security-requirements"></a>Требования безопасности  
  Кроме случая, когда **SQLdiag** выполняется в обычном режиме (с помощью аргумента командной строки **/G** ), пользователь, запускающий **SQLdiag** , должен быть членом группы **Администраторы** Windows и членом предопределенной роли сервера [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** . По умолчанию программа **SQLdiag** подключается к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , используя проверку подлинности Windows, но поддерживает и проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

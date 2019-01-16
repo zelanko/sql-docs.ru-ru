@@ -11,12 +11,12 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: ffe4c48fe4a7b60ffab669168f0af7af7fe6c705
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaedd5bf7370a4a95f163bca26dbbadd8d49b34b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774912"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212103"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Передача данных в столбец FILESTREAM с использованием интерфейса IRowsetFastUpload (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47774912"
   
  При запуске этого образца необходимо передать имя сервера или сервер\имя_экземпляра, а также значение между 4 МБ (0x400001) и 4 ГБ (0xFFFFFFFF), указывающее количество записываемых данных.  
   
- Четвертый листинг кода ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) удаляет базу данных, созданную в данном образце.  
+ Четвертый листинг кода ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) удаляет базу данных, созданную в этом примере.  
   
 ```  
 // ISSHelper.h: interface for the CISSHelper class.  

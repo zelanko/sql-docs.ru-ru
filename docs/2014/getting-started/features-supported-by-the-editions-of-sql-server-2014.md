@@ -17,19 +17,23 @@ ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bcf2d5924e160f38c9b00b564a8ae94b6f8705c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 23ba1fdda2ce951834c221cdd58d39a034a5b3ff
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358006"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300591"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Возможности, поддерживаемые различными выпусками SQL Server 2014
-  В этом разделе подробно описаны функции, поддерживаемые различными выпусками [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
-  
-> **Примечание:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] доступен в ознакомительной версии в течение 180-дневного пробного периода. Дополнительные сведения см. на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [](https://go.microsoft.com/fwlink/?LinkId=190955).  
+
+  > [!div class="nextstepaction"]
+  > [Поделитесь своим мнением о SQL документация содержания!](https://aka.ms/sqldocsurvey)
+
+  В этом разделе подробно описаны функции, поддерживаемые различными выпусками [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. 
+
+ > **Примечание:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] доступен в ознакомительной версии в течение 180-дневного пробного периода. Дополнительные сведения см. на [веб-сайте пробного программного обеспечения](https://go.microsoft.com/fwlink/?LinkId=190955) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 > 
-> **ПРИМЕЧАНИЕ.** Компоненты, поддерживаемые выпуском SQL Server Developer Edition и ознакомительной версией, описаны в наборе компонентов для выпуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition.  
+> **Примечание.** Компоненты, поддерживаемые выпуском SQL Server Developer Edition и ознакомительной версией, описаны в наборе компонентов для выпуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition.  
   
  Чтобы перейти к таблице, относящейся к технологии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , щелкните ссылку на нее:  
   

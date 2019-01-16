@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51b94ca4b8fcd9aada2b6963a8ee567fb0e12882
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3a0db5aab684503cd59982eb0efd50ef533d4da0
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669583"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257029"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Задание целевого пространства имен с помощью атрибута targetNamespace (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "51669583"
  Следующая схема XSD указывает целевое пространство имен с помощью **xsd: targetNamespace** атрибута. Эта схема также выставляет **elementFormDefault** и **attributeFormDefault** значения для атрибутов **«unqualified»** (значение по умолчанию для этих атрибутов). Это глобальное объявление, влияет на все локальные элементы (**\<порядок >** в схеме) и атрибуты (**CustomerID**, **ContactName**и  **OrderID** в схеме).  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
             xmlns:CO="urn:MyNamespace"   
             targetNamespace="urn:MyNamespace" >  
@@ -80,7 +80,7 @@ ms.locfileid: "51669583"
   
 -   **CustomerType** и **OrderType** объявления типов являются глобальными и поэтому включаются в целевое пространство имен схемы. Таким образом, когда эти ссылки на типы в объявлении  **\<клиента >** элемент и его  **\<порядок >** дочерний элемент, указан префикс, который связан для целевого пространства имен.  
   
--   **\<Клиента >** элемент также включается в целевое пространство имен схемы, так как это глобальный элемент в схеме.  
+-    **\<Клиента >** элемент также включается в целевое пространство имен схемы, так как это глобальный элемент в схеме.  
   
  Выполните следующий XPath-запрос к схеме:  
   

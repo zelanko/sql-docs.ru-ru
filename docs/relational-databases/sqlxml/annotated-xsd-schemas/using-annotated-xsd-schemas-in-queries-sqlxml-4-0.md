@@ -1,7 +1,7 @@
 ---
 title: С помощью аннотированные схемы XSD в запросах (SQLXML 4.0) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,18 +23,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48773fe5b4238f74c88bd8fb91f425ce96fd4359
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7d6fd994c25acae6a27d5c66c18f1c2a7d7b3a77
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665323"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256859"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>Использование схем XSD с заметками в запросах (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Для получения данных из базы данных путем указания запроса XPath в шаблоне к схеме XSD можно задавать запросы к аннотированным схемам.  
   
- **\<Sql:xpath-запрос >** элемент позволяет указать запрос XPath к представлениям XML, который определен в схеме с заметками. Схема с заметками, относительно которой запрос XPath должно быть выполнено определяется с помощью **схемы сопоставления** атрибут  **\<sql:xpath-запрос >** элемент.  
+  **\<Sql:xpath-запрос >** элемент позволяет указать запрос XPath к представлениям XML, который определен в схеме с заметками. Схема с заметками, относительно которой запрос XPath должно быть выполнено определяется с помощью **схемы сопоставления** атрибут  **\<sql:xpath-запрос >** элемент.  
   
  Шаблоны являются допустимыми XML-документами, которые содержат один или несколько запросов. Запросы FOR XML и XPath возвращают фрагмент документа. Шаблоны выполняют функцию контейнеров для фрагментов документов. Таким образом, они обеспечивают возможность указания единственного элемента верхнего уровня.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "51665323"
  В качестве примера рассмотрим следующую аннотированную схему.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact" >  
      <xsd:complexType>  
@@ -76,7 +76,7 @@ ms.locfileid: "51665323"
   
 ```  
 <ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  
-<xsd:schema xmlns:xsd='https://www.w3.org/2001/XMLSchema'  
+<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
         xmlns:ms='urn:schemas-microsoft-com:mapping-schema'  
         id='InLineSchema1' sql:is-mapping-schema='1'>  
   <xsd:element name='Employees' ms:relation='HumanResources.Employee'>  
@@ -89,7 +89,7 @@ ms.locfileid: "51665323"
   </xsd:element>  
 </xsd:schema>  
   
-<xsd:schema xmlns:xsd='https://www.w3.org/2001/XMLSchema'  
+<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
         xmlns:ms='urn:schemas-microsoft-com:mapping-schema'  
         id='InLineSchema2' sql:is-mapping-schema='1'>  
   <xsd:element name='Contacts' ms:relation='Person.Contact'>  

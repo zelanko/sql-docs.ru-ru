@@ -29,19 +29,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 777fb26703b4582662748a15d4ac6ed6e0fdfae0
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: MTE75
+ms.openlocfilehash: d174865431ba6734c1a12f4e8b58ab700864bba8
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712505"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143544"
 ---
 # <a name="bcp-utility"></a>Программа bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > С помощью программы bcp на платформе Linux, см. в разделе [Установка sqlcmd и bcp в Linux](../linux/sql-server-linux-setup-tools.md).
-
- > Подробные сведения об использовании программы bcp с хранилищем данных SQL Azure см. в разделе [загрузка данных с помощью bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
+> С помощью программы bcp на платформе Linux, см. в разделе [Установка sqlcmd и bcp в Linux](../linux/sql-server-linux-setup-tools.md).
+> 
+> Подробные сведения об использовании программы bcp с хранилищем данных SQL Azure см. в разделе [загрузка данных с помощью bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
   Служебная программа "**b**ulk **c**opy **p**rogram" (**bcp**) используется для массового копирования данных между экземпляром [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и файлом данных в указанном пользователем формате. С помощью программы **bcp** можно выполнять импорт большого количества новых строк в таблицы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или экспорт данных из таблиц в файлы данных. За исключением случаев использования параметра **queryout** , применение программы не требует знания языка [!INCLUDE[tsql](../includes/tsql-md.md)]. Чтобы выполнить импорт данных в таблицу, необходимо или использовать файл форматирования, созданный для этой таблицы, либо изучить структуру таблицы и типов данных, допустимых для ее столбцов.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "52712505"
 
 Номер выпуска: 15.0 <br>
 Номер сборки: 15.0.1000.34<br>
-Дата выпуска: 18 октября 2018 г.
+Дата выпуска 18 октября 2018 г.
 
 Новая версия SQLCMD поддерживает аутентификацию Azure AD, включая многофакторную идентификацию (MFA) поддержку функций базы данных SQL, хранилище данных SQL и постоянного шифрования.
 Новый BCP поддерживает аутентификацию Azure AD, включая поддержку многофакторной идентификации (MFA) для базы данных SQL и хранилища данных SQL.
@@ -251,7 +251,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
    Чтобы включить интерактивную проверку подлинности, укажите параметр -G с именем пользователя (-U), без пароля.   
 
-   В следующем примере экспортируется данных с помощью Azure AD интерактивный режим, указывающее имя пользователя, где пользователь представляет учетную запись AAD. Это тот же пример, используемый в предыдущем разделе: *Azure Active Directory, имя пользователя и пароль*.  
+   В следующем примере экспортируется данных с помощью Azure AD интерактивный режим, указывающее имя пользователя, где пользователь представляет учетную запись AAD. Это тот же пример, используемый в предыдущем разделе: *Имя пользователя и пароль Azure Active Directory*  
 
    Интерактивный режим требуется пароль вводиться вручную, или для учетных записей с многофакторной проверкой подлинности включена, выполните настроенный метод проверки подлинности многофакторной проверки Подлинности. 
 
@@ -312,7 +312,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 Указывает, что пустые столбцы во время данной операции должны сохранить значение NULL вместо любых вставляемых значений столбцов по умолчанию. Дополнительные сведения см. в разделе [Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
 **-K** _**намерение\_приложения**_<a name="K"></a>   
-Объявляет тип рабочей нагрузки приложения при соединении с сервером. Единственным возможным значением является **ReadOnly**. Если параметр **-K** не указан, программа bcp не будет поддерживать соединение с вторичной репликой в группе доступности AlwaysOn. Дополнительные сведения см. в разделе [Активные вторичные реплики: доступные только для чтения вторичные реплики (группы доступности AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+Объявляет тип рабочей нагрузки приложения при соединении с сервером. Единственным возможным значением является **ReadOnly**. Если параметр **-K** не указан, программа bcp не будет поддерживать соединение с вторичной репликой в группе доступности AlwaysOn. Дополнительные сведения см. в статье [Активные вторичные реплики: Вторичные реплики для чтения &#40;группы доступности AlwaysOn&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
 **-L** _**последний\_ряд**_<a name="L"></a>  
 Указывает номер последней строки для экспорта из таблицы или импорта из файла данных. Значение параметра должно быть больше (>) 0, но меньше (<) или равно (=) номеру последней строки. Если параметр отсутствует, по умолчанию используется последняя строка файла.  
@@ -573,7 +573,7 @@ bcp -v
 ### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>Б. Копирование строк из таблицы в файл данных (с помощью доверительного соединения)  
 В следующих примерах показано применение параметра **out** к таблице `WideWorldImporters.Warehouse.StockItemTransactions` .
 
-- **Basic**  
+- **Основной**  
 В этом примере создается файл данных с именем `StockItemTransactions_character.bcp` , и в него копируются данные таблицы в **символьном** формате.
 
   В командной строке введите следующую команду:
@@ -596,7 +596,7 @@ bcp -v
   
  В этом примере предполагается, что применяется смешанный режим проверки подлинности. Для указания идентификатора входа необходимо использовать параметр **-U** . Кроме того, за исключением случаев, когда выполняется соединение с экземпляром, не являющимся экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по умолчанию на локальном компьютере, нужно использовать параметр **-S** , чтобы указать системное имя и (при необходимости) имя экземпляра.  
 
-В командной строке введите следующую команду: \(система попросит вас ввести пароль\)
+В командной строке введите следующую команду: \(Система предложит ввести пароль.\)
 ```  
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```  
@@ -709,6 +709,6 @@ bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...
   
 ## <a name="feedback"></a>Отзывы
 
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Форум клиентских средств SQL](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Форум клиентских средств SQL](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

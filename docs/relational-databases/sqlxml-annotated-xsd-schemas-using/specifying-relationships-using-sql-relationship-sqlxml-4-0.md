@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55741ddbf71eaff963e25c8e087c3cff31389409
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7578df8d31dadba739bb2de58a8568f6ba55d7e4
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670502"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256099"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Указание связей при помощи sql:relationship (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ ms.locfileid: "51670502"
   
  Чтобы предоставить имена таблиц и необходимые сведения о соединении, следующие атрибуты указываются в **SQL: Relationship** заметки. Эти атрибуты действительны только с  **\<SQL: Relationship >** элемент:  
   
- **Название**  
+ **Name**  
  Указывает уникальное имя связи.  
   
  **Parent**  
  Задает родительскую связь (таблицу). Это необязательный атрибут. Если он не указан, то имя родительской таблицы будет получено из дочерней иерархии в документе. Если схема указывает две иерархии родители потомки, использующие одну  **\<SQL: Relationship >** , но разные родительские элементы, не задается родительский атрибут в  **\<sql: связь >**. Эти сведения будут получены из иерархии в схеме.  
   
- **родительский раздел**  
+ **parent-key**  
  Указывает родительский ключ для родителя. Если родительский ключ состоит из нескольких столбцов, то они должны быть перечислены через пробелы. Между значениями, заданными для ключа, состоящего из нескольких столбцов, и соответствующего дочернего ключа, существует позиционное сопоставление.  
   
  **Дочерний**  
@@ -79,14 +79,14 @@ ms.locfileid: "51670502"
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. Определение заметки sql:relationship для элемента  
- Включает в себя следующую схему XSD с заметками  **\<клиента >** и  **\<порядок >** элементов. **\<Порядок >** элемент является дочерним элементом элемента  **\<клиента >** элемент.  
+ Включает в себя следующую схему XSD с заметками  **\<клиента >** и  **\<порядок >** элементов.  **\<Порядок >** элемент является дочерним элементом элемента  **\<клиента >** элемент.  
   
  В схеме **SQL: Relationship** задана заметка для  **\<порядок >** дочерний элемент. Сама связь определяется в  **\<xsd: appinfo >** элемент.  
   
- **\<Связь >** элемент определяет CustomerID в таблице Sales.SalesOrderHeader как внешний ключ, ссылающийся на первичный ключ CustomerID в таблице Sales.Customer. Поэтому заказы, принадлежащие заказчику, отображаются как дочерний элемент элемента,  **\<клиента >** элемент.  
+  **\<Связь >** элемент определяет CustomerID в таблице Sales.SalesOrderHeader как внешний ключ, ссылающийся на первичный ключ CustomerID в таблице Sales.Customer. Поэтому заказы, принадлежащие заказчику, отображаются как дочерний элемент элемента,  **\<клиента >** элемент.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -121,7 +121,7 @@ ms.locfileid: "51670502"
  Ниже приведена новый вариант схемы, в которой определена неименованная связь.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   
   <xsd:element name="Customer" sql:relation="Sales.Customer"  type="CustomerType" />  
@@ -201,12 +201,12 @@ ms.locfileid: "51670502"
   
  Для каждого заказа в таблице Sales.SalesOrderHeader в XML-документ имеет один  **\<порядок >** элемент. И каждый  **\<порядок >** элемент имеет список  **\<продукта >** дочерних элементов, по одному для каждого продукта, запрошенного в заказе.  
   
- Чтобы задать схему XSD, которая сформирует такую иерархию, необходимо указать две связи: OrderOD и ODProduct. Связь OrderOD определяет связь типа «родитель-потомок» между таблицами Sales.SalesOrderHeader и Sales.SalesOrderDetail. Связь ODProduct определяет связь между таблицами Sales.SalesOrderDetail и Production.Product.  
+ Чтобы задать схему XSD, которая сформирует такую иерархию, необходимо указать две связи. OrderOD и ODProduct. Связь OrderOD определяет связь типа «родитель-потомок» между таблицами Sales.SalesOrderHeader и Sales.SalesOrderDetail. Связь ODProduct определяет связь между таблицами Sales.SalesOrderDetail и Production.Product.  
   
  В следующей схеме **msdata: Relationship** заметки на  **\<продукта >** элемент указывает два значения: OrderOD и ODProduct. Порядок следования этих значений важен.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -244,7 +244,7 @@ ms.locfileid: "51670502"
  Вместо указания именованной связи можно задать анонимную связь. В этом случае все содержимое  **\<заметки >**...  **\</annotation >**, который описывает две связи, отображаются как дочерний элемент элемента  **\<продукта >**.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
   
   <xsd:element name="Order" msdata:relation="Sales.SalesOrderHeader"   
@@ -323,7 +323,7 @@ ms.locfileid: "51670502"
  Схема в этом примере включает \<клиента > элемент с \<CustomerID > дочерний элемент и атрибут OrderIDList типа IDREFS. \<Клиента > элемент сопоставляется таблице Sales.Customer в базе данных AdventureWorks. По умолчанию область действия этого сопоставления применяется к все дочерние элементы или атрибуты, если только **SQL: Relation** заметка указывается для дочернего элемента или атрибута, в этом случае должны быть соответствующие связи первичный ключ/внешний ключ определена с помощью \<связи > элемента. И дочерний элемент или атрибут, который указывает другую таблицу при помощи **отношения** необходимо также указать заметки, **связь** заметки.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -387,12 +387,12 @@ ms.locfileid: "51670502"
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>Г. Задание sql:relationship для нескольких элементов  
  В этом примере Аннотированная схема XSD содержит  **\<клиента >**,  **\<порядок >**, и  **\<OrderDetail >** элементы.  
   
- **\<Порядок >** элемент является дочерним элементом элемента  **\<клиента >** элемент. **\<SQL: Relationship >** заметка указывается для  **\<порядок >** дочерний атрибут; таким образом, принадлежащие заказчику заказы отображаются как дочерние элементы элемента  **\<клиента >**.  
+  **\<Порядок >** элемент является дочерним элементом элемента  **\<клиента >** элемент. **\<SQL: Relationship >** заметка указывается для  **\<порядок >** дочерний атрибут; таким образом, принадлежащие заказчику заказы отображаются как дочерние элементы элемента  **\<клиента >**.  
   
- **\<Порядок >** элемент включает  **\<OrderDetail >** дочерний элемент. **\<SQL: Relationship >** заметка указывается для  **\<OrderDetail >** дочерний элемент, поэтому подробности заказа отображаются как дочерние элементы элемента, **\<Order >** элемент.  
+  **\<Порядок >** элемент включает  **\<OrderDetail >** дочерний элемент. **\<SQL: Relationship >** заметка указывается для  **\<OrderDetail >** дочерний элемент, поэтому подробности заказа отображаются как дочерние элементы элемента, **\<Order >** элемент.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -496,7 +496,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
  Следующий XML-представлении  **\<Emp1 >** и  **\<Emp2 >** элементов, сопоставление для Sales.Emp1 и Sales.Emp2 таблиц:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

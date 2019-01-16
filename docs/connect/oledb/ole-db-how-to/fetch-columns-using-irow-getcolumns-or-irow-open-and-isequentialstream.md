@@ -15,12 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9fe101f790226f898b69b28d58f57a1166090bc3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 79aa1dcfd924dbe3e63989587afd6d706b1834de
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602804"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213541"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Выбор столбцов с помощью метода IRow::GetColumns (или IRow::Open) и интерфейса ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,11 +51,11 @@ ms.locfileid: "51602804"
   
  Образцу требуется образец базы данных AdventureWorks, который можно загрузить с домашней страницы [Образцы кода и проекты сообщества Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) (возможно, на английском языке).  
   
- Первый листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) создает таблицу, которая используется образцом.  
+ Первый листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) создает таблицу, которая используется в примере.  
   
  Выполните компиляцию с библиотеками ole32.lib и oleaut32.lib, а затем выполните второй листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Чтобы подключиться к именованному экземпляру, измените строку подключения с L"(local)" на L"(local)\\\<имя>", где <имя> — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь в том, что переменная среды INCLUDE включает каталог, содержащий файл msoledbsql.h.  
   
- Третий листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) удаляет таблицу, используемую образцом.  
+ Третий листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) удаляет таблицу, используемую в примере.  
   
 ```  
 USE AdventureWorks  
