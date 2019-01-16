@@ -28,15 +28,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bdea0473176e08c51931f1bb192462c5c45ee514
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
-ms.translationtype: HT
+ms.openlocfilehash: fbbf5a3ad4c3d6a667ae2622e5bf09ea5f39c911
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143694"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300110"
 ---
 # <a name="sqlcmd-utility"></a>Служебная программа sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Поделитесь своим мнением о SQL документация содержания!](https://aka.ms/sqldocsurvey)
 
 > SQL Server 2014 и ниже, см. в разделе [служебная программа sqlcmd](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
 > ).
