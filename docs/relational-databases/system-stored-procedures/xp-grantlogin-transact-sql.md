@@ -18,12 +18,12 @@ ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a6b08e90fafccca3c64b13132b9cf9e248fdee7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17fe4fd7edad9df6bccace9d301516ae7683edf3
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663781"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255669"
 ---
 # <a name="xpgrantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@loginame =** ] **"***входа***"**  
+ [  **@loginame =** ] **"**_входа_**"**  
  Имя добавляемого пользователя или группы Windows. Windows пользователь или группа должны быть дополнены именем домена Windows в виде *домена*\\*пользователя*. *Имя входа* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@logintype =** ] **"***logintype***"**  
+ [  **@logintype =** ] **"**_logintype_**"**  
  Уровень безопасности входного имени, которому предоставляется доступ. *Тип учетных данных* — **varchar(5)**, значение по умолчанию NULL. Только **администратора** можно указать. Если **администратора** указано, *входа* к предоставлен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и добавляется как член **sysadmin** предопределенной роли сервера.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

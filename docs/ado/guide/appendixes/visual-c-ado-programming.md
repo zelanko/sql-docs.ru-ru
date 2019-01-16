@@ -16,12 +16,12 @@ ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1b34c2b88c8e1906438f706143fcf6ec966026d
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997596"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257049"
 ---
 # <a name="visual-c-ado-programming"></a>Программирование объектов ADO с использованием Visual C++
 Справочник по API ADO представлены функции ADO интерфейс программирования (API) с помощью синтаксиса для Microsoft Visual Basic. То, что целевая аудитория всем пользователям, программистам ADO использовать разных языков, например Visual Basic, Visual C++ (с и без **#import** директивы) и Visual J ++ (с пакетом класс ADO и WFC).  
@@ -74,6 +74,7 @@ variable = objectPtr->GetProperty;  // get property value
  Например **команда** объект **ActiveConnection** свойство объявлено с альтернативный синтаксис **получить**_ActiveConnection_и **PutRef**_ActiveConnection_. **PutRef**-синтаксис не подходит, поскольку на практике обычно требуется поместить открытый **подключения** объект (то есть **подключения** указатель на объект) в этом свойство. С другой стороны **записей** объект имеет **получить**-, **поместить**-, и **PutRef**_ActiveConnection_операции, но не альтернативный синтаксис.  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>Коллекции, метод GetItem и свойство элемента  
+
  ADO определяет несколько коллекций, включая **поля**, **параметры**, **свойства**, и **ошибки**. В Visual C++ **GetItem (_индекс_)** методом является членом коллекции. *Индекс* — **Variant**, значение которого является числовой индекс элемента в коллекции, или строка, содержащая имя элемента.  
   
  **__Declspec(property...)**  объявляет директивы компилятора **элемент** свойство как альтернативный синтаксис для каждой коллекции фундаментальные **GetItem() для удаленного элемента** метод. Альтернативный синтаксис используются квадратные скобки и будет выглядеть ссылки на массив. Как правило две формы выглядеть следующим образом:  

@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf061fc552a29730fb25a1fd36fb868efb031953
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 3e742e1b5c8ed1b0149292aeee5a3c0e518d9783
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512809"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300191"
 ---
 # <a name="sql-graph-architecture"></a>Архитектура графа базы данных SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51512809"
  
 ![SQL-graph-architecture](../../relational-databases/graphs/media/sql-graph-architecture.png "архитектуру базы данных Sql graph")   
 
-Рис. 1: Архитектура базы данных SQL Graph
+Рис. 1. Архитектура базы данных SQL Graph
  
 ## <a name="node-table"></a>Таблица узлов
 Узел таблицы представляет сущность в схему графа. Каждый раз узел создается таблица, а также определяемых пользователем столбцах неявным `$node_id` создается столбец, который однозначно идентифицирует определенный узел в базе данных. Значения в `$node_id` создаются автоматически, а представляют собой сочетание `object_id` из этой таблицы узла и значение созданного внутреннего bigint. Тем не менее, если `$node_id` выбран столбец, отображается вычисляемое значение в виде строки JSON. Кроме того `$node_id` представляет собой Псевдостолбец, который сопоставляется с шестнадцатеричная строка в его внутреннее имя. При выборе `$node_id` из таблицы, имя столбца будет отображаться как `$node_id_<hex_string>`. Использование имен псевдо столбцов в запросах является рекомендуемым способом запроса к внутренней `$node_id` следует избегать столбца и использование внутренних имен с помощью шестнадцатеричная строка.
@@ -58,7 +58,7 @@ ms.locfileid: "51512809"
 
 ![пользователь друзей tables](../../relational-databases/graphs/media/person-friends-tables.png "узел Person и друзей периметра таблиц")   
 
-Рис. 2: Представление таблицы узлов и ребер
+Рис. 2. Представление таблицы узлов и ребер
 
 
 
@@ -97,23 +97,25 @@ ms.locfileid: "51512809"
 
 `sys.columns` также хранит сведения о неявных столбцов, созданных в узла или граничной таблицы. Следующие сведения могут быть получены из sys.columns, тем не менее, пользователи не могут выбрать эти столбцы из узлов или граничную таблицу. 
 
-Неявные столбцы в таблицу узлов  
-|Имя столбца    |Тип данных  |is_hidden  |Комментарий  |
-|---  |---|---|---  |
-|graph_id_\<hex_string > |bigint |1  |Внутренняя `graph_id` столбца  |
-|$node_id_\<hex_string > |NVARCHAR   |0  |Внешний узел `node_id` столбца  |
+Неявные столбцы в таблицу узлов
 
-Неявные столбцы в граничную таблицу  
 |Имя столбца    |Тип данных  |is_hidden  |Комментарий  |
 |---  |---|---|---  |
-|graph_id_\<hex_string > |bigint |1  |Внутренняя `graph_id` столбца  |
-|$edge_id_\<hex_string > |NVARCHAR   |0  |внешние `edge_id` столбца  |
+|graph_id_\<hex_string> |bigint |1  |Внутренняя `graph_id` столбца  |
+|$node_id_\<hex_string> |NVARCHAR   |0  |Внешний узел `node_id` столбца  |
+
+Неявные столбцы в граничную таблицу
+
+|Имя столбца    |Тип данных  |is_hidden  |Комментарий  |
+|---  |---|---|---  |
+|graph_id_\<hex_string> |bigint |1  |Внутренняя `graph_id` столбца  |
+|$edge_id_\<hex_string> |NVARCHAR   |0  |внешние `edge_id` столбца  |
 |from_obj_id_\<hex_string>  |INT    |1  |Внутренняя из узла `object_id`  |
 |from_id_\<hex_string>  |bigint |1  |Внутренняя из узла `graph_id`  |
-|$from_id_\<hex_string > |NVARCHAR   |0  |внешние из узла `node_id`  |
+|$from_id_\<hex_string> |NVARCHAR   |0  |внешние из узла `node_id`  |
 |to_obj_id_\<hex_string>    |INT    |1  |внутренний узел `object_id`  |
 |to_id_\<hex_string>    |bigint |1  |внутренний узел `graph_id`  |
-|$to_id_\<hex_string >   |NVARCHAR   |0  |внешний узел `node_id`  |
+|$to_id_\<hex_string>   |NVARCHAR   |0  |внешний узел `node_id`  |
  
 ### <a name="system-functions"></a>Системные функции
 Добавляются следующие встроенные функции. Эти функции помогают пользователям извлекать сведения из создаваемых столбцов. Обратите внимание на то, что эти методы не будет проверять входные данные пользователя. Если пользователь указывает недопустимое `sys.node_id` метод извлечет подходящую часть и вернуть его. Например, займет OBJECT_ID_FROM_NODE_ID `$node_id` качестве входных данных и вернет object_id таблицы, принадлежит данный узел. 

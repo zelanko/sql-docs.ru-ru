@@ -10,12 +10,12 @@ ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 538386a12c2f33038a3688f102140dd5fd4c1845
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cfd65d3335c7eb57c69f4fe6a37042376efc71bf
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375596"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300611"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>Руководство по блокировке и управлению версиями строк транзакций SQL Server
   В любой базе данных неправильная работа с транзакциями часто приводит к проблемам производительности и конфликтам в системах со многими пользователями. По мере роста числа пользователей, обращающихся к данным, повышается актуальность эффективного использования транзакций приложениями. В этом руководстве описываются механизмы блокировки и управления версиями строк, используемые [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для обеспечения физической целостности каждой транзакции, а также представлены сведения о том, как приложения могут эффективно управлять транзакциями.  
@@ -152,7 +152,7 @@ GO
   
  В следующем примере третья инструкция `INSERT` вызывает ошибку повторения первичного ключа во время выполнения. Первые две инструкции `INSERT` выполняются успешно и фиксируются, поэтому остаются после возникновения ошибки времени выполнения.  
   
-```  
+```sql  
 CREATE TABLE TestBatch (Cola INT PRIMARY KEY, Colb CHAR(3));  
 GO  
 INSERT INTO TestBatch VALUES (1, 'aaa');  

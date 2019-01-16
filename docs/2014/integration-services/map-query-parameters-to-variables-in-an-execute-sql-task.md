@@ -18,14 +18,18 @@ ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b0f1add0f2d249922f00fc1b16d5da12bb903faf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6fb2354720b334d69f7d5e05977c82c3807fd109
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524989"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300081"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>Сопоставление параметров запроса с переменными в задаче «Выполнение SQL»
+
+  > [!div class="nextstepaction"]
+  > [Поделитесь своим мнением о SQL документация содержания!](https://aka.ms/sqldocsurvey)
+
   Данный раздел описывает использование параметризованной инструкции SQL в задаче «Выполнение SQL» и создание сопоставлений между переменными и параметрами в инструкции SQL.  
   
  Дополнительные сведения о задаче "Выполнение SQL", маркерах параметров и именах параметров, используемых с различными типами соединений, см. в разделах [Задача "Выполнение SQL"](control-flow/execute-sql-task.md) и [Параметры и коды возврата в задаче "Выполнение SQL"](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  

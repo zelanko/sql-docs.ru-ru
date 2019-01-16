@@ -13,12 +13,12 @@ ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad056a415210fb9202231aee669325318391c70c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c522a8d278080d9249761309d29f465befe217d8
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212563"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255059"
 ---
 # <a name="xslt-transformations"></a>Преобразования XSLT
 XSLT могут применяться в созданный XML-документ для преобразования его в другой формат. Общие сведения о формате XML в ADO помогает в разработке XSLT-шаблоны, которые можно преобразовать в более удобные форму.  
@@ -30,7 +30,7 @@ XSLT могут применяться в созданный XML-докумен�
   
 ```  
 <?xml version="1.0" encoding="ISO-8859-1"?>  
-<html xmlns:xsl="https://www.w3.org/TR/WD-xsl">  
+<html xmlns:xsl="http://www.w3.org/TR/WD-xsl">  
 <body STYLE="font-family:Arial, helvetica, sans-serif; font-size:12pt; background-color:white">  
 <table border="1" style="table-layout:fixed" width="600">  
   <col width="200"></col>  

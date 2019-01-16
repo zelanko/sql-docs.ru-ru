@@ -17,12 +17,12 @@ ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec725dfdcfb7ad0b37c6fc1d3cbff0c56b315a46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 234a0eeba57958063a6f2eedb8510486df8a53a0
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623492"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255507"
 ---
 # <a name="willexecute-event-ado"></a>Событие WillExecute (ADO)
 **WillExecute** событие вызывается непосредственно перед выполняет ожидания выполнения команды для подключения.  
@@ -65,7 +65,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  **WillExecute** позволяет проверять и изменять параметры ожидающих выполнения. Это событие может вернуть запрос отмены ожидания выполнения команды.  
   
 > [!NOTE]
->  Если исходный источник для **команда** является поток, заданный параметром [свойство CommandStream (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) свойство, назначив новую строку к **WillExecute *** источника* параметр изменяет источник **команда**. **CommandStream** свойство очищается и [свойства CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) свойство будет добавлено в новый источник. Исходный поток, заданный параметром **CommandStream** будут выпущены и будет недоступна.  
+>  Если исходный источник для **команда** является поток, заданный параметром [свойство CommandStream (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) свойство, назначив новую строку к **WillExecute** _Источника_ параметр изменяет источник **команда**. **CommandStream** свойство очищается и [свойства CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) свойство будет добавлено в новый источник. Исходный поток, заданный параметром **CommandStream** будут выпущены и будет недоступна.  
   
  Если строки источника, новый диалект отличается от исходного значения [свойство Dialect](../../../ado/reference/ado-api/dialect-property.md) свойство (который предоставивших **CommandStream**), должен быть указан правильный диалект, задав **диалект** свойства объекта команды ссылается *командной*.  
   

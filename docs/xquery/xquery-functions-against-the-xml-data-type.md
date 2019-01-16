@@ -17,19 +17,19 @@ ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4034b34fda65a028516aef396ad4165c8fb535be
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c037cb934666fd5dd8fc19b607cbf3b80dd078d1
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670093"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255969"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>Функции XQuery для типа данных xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  В этом разделе и его подразделах описываются функции, которые можно использовать при указании запроса XQuery к **xml** тип данных. Спецификации W3C см. в разделе [ https://www.w3.org/TR/2004/WD-xpath-functions-20040723 ](https://go.microsoft.com/fwlink/?LinkId=4873).  
+  В этом разделе и его подразделах описываются функции, которые можно использовать при указании запроса XQuery к **xml** тип данных. Спецификации W3C см. в разделе [ http://www.w3.org/TR/2004/WD-xpath-functions-20040723 ](https://go.microsoft.com/fwlink/?LinkId=4873).  
   
- Функции XQuery принадлежат к https://www.w3.org/2004/07/xpath-functions пространства имен. Спецификации W3C используют префикс пространства имен «fn:» для описания этих функций. При использовании функций нет необходимости явно указывать префикс пространства имен «fn:». По этой причине, а также для удобства чтения префиксы пространства имен, как правило, не используются в данной документации.  
+ Функции XQuery принадлежат к http://www.w3.org/2004/07/xpath-functions пространства имен. Спецификации W3C используют префикс пространства имен «fn:» для описания этих функций. При использовании функций нет необходимости явно указывать префикс пространства имен «fn:». По этой причине, а также для удобства чтения префиксы пространства имен, как правило, не используются в данной документации.  
   
  В следующей таблице перечислены функции XQuery, поддерживаемые для **xml**тип данных.  
   

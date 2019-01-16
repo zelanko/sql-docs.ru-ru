@@ -23,14 +23,19 @@ ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f2a600f727de4aa4e23de1ccbf2b668bba4ae0ff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 17e210356aadaa17394abf0b68bf9303461943d2
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370149"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300341"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>Настройка сервера отчетов для работы с электронной почтой (диспетчер конфигурации служб Reporting Services)
+
+  > [!div class="nextstepaction"]
+  > [Поделитесь своим мнением о SQL документация содержания!](https://aka.ms/sqldocsurvey)
+
+
   Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают модуль доставки по электронной почте, позволяющий распространять отчеты с помощью электронной почты. В зависимости от того, каким образом определена электронная подписка, рассылка может включать уведомление, ссылку, вложение или внедренный отчет. Модуль доставки по электронной почте работает с существующими технологиями почтовых серверов. Почтовый сервер должен быть либо SMTP-сервером, либо перенаправителем. Сервер отчетов соединяется с SMTP-сервером через объекты данных совместной работы (библиотека cdosys.dll), предоставляемых операционной системой.  
   
  Модуль доставки электронной почты сервера отчетов не настроен по умолчанию. Для минимальной настройки модуля следует воспользоваться диспетчером настройки служб Reporting Services. Чтобы указать дополнительные свойства, необходимо изменить файл конфигурации `RSReportServer.config` . Если нельзя настроить сервер отчетов на использование этого модуля, то вместо этого можно доставлять отчеты в общую папку. Дополнительные сведения см. в разделе [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).  

@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55b81e7fff73442660ae98f4d6e6fcbfca0906df
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: acac24b36f5eefcc1490e016d43c4ef014fb813d
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675144"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256129"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Задание глубины рекурсивных связей с использованием sql:max-depth
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Чтобы получить этот результат, можно использовать следующую схему XSD и указать запрос XPath к ней. Схема описывает  **\<Emp >** элемент типа EmployeeType, состоящий из  **\<Emp >** дочерний элемент одного типа, EmployeeType. Это рекурсивная связь (элемент и его предок относятся к одному типу). Кроме того, использует схемы  **\<SQL: Relationship >** для описания связи "родители потомки" между начальником и подчиненным. Обратите внимание, что в этом  **\<SQL: Relationship >**, Emp является родительской и дочерней таблицы.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -149,7 +149,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
 5.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон. Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Результат:  
+ Это результат:  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>   
@@ -191,7 +191,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Ниже приведена измененная схема:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -232,7 +232,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ## <a name="sqlmax-depth-annotation"></a>Заметка sql:max-depth  
  В схеме, состоящей из рекурсивных связей, глубина рекурсии должна быть явно указана в схеме. Это необходимо для успешной подготовки соответствующего запроса FOR XML EXPLICIT, который возвращает запрошенные результаты.  
   
- Используйте **SQL: max-depth** заметки в схеме, чтобы указать глубину рекурсии в рекурсивной связи, описанный в схеме. Значение **SQL: max-depth** заметки — положительное целое число (от 1 до 50), указывающее количество рекурсий: значение 1 останавливает рекурсию на элементе, для которого **SQL: max-глубина** заметки задан; значение 2 останавливает рекурсию на следующем уровне от элемента, по которому **SQL: max-depth** задан; и т. д.  
+ Используйте **SQL: max-depth** заметки в схеме, чтобы указать глубину рекурсии в рекурсивной связи, описанный в схеме. Значение **SQL: max-depth** заметки — положительное целое число (от 1 до 50), указывающее количество рекурсий:  Значение 1 останавливает рекурсию на элементе, для которого **SQL: max-глубины** заметки указана, значение 2 останавливает рекурсию на следующем уровне от элемента, по которому **SQL: max-depth** указан ; и т. д.  
   
 > [!NOTE]  
 >  В базовой реализации запрос XPath, заданный для схемы сопоставления, преобразуется в запрос SELECT ... Запрос FOR XML EXPLICIT. Для этого запроса необходимо указать конечную глубину рекурсии. Чем выше значение, указываемое для **SQL: max-depth**, чем запрос FOR XML EXPLICIT, создается. Это может увеличить время выборки.  
@@ -246,10 +246,10 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ### <a name="recursive-elements"></a>Рекурсивные элементы  
  Если **SQL: max-depth** задан как родительский элемент, так и дочерний элемент в рекурсивной связи, **SQL: max-глубина** заметки на родительском элементе имеет более высокий приоритет. Например, в следующей схеме **SQL: max-depth** задана заметка для у родительского и дочернего элемента сотрудников. В этом случае **SQL: max-depth = 4**, определенный на  **\<Emp >** родительского элемента (выполняет роль начальника), имеет приоритет. **SQL: max-depth** указанное на дочернем  **\<Emp >** элементе (выполняет роль подчиненного) учитывается.  
   
-#### <a name="example-b"></a>Пример B-адреса  
+#### <a name="example-b"></a>Пример Б  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -291,7 +291,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 #### <a name="example-c"></a>Пример В  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
     <xsd:appinfo>  
@@ -339,7 +339,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 #### <a name="example-d"></a>Пример Г  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:complexType name="CustomerBaseType">   

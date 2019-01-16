@@ -19,12 +19,12 @@ ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24e9f4aa4cf1ab8694947411f5565250c6544d92
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f7b50d9cf05f1242ae853f7aa24e7e681bdc245f
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659113"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256239"
 ---
 # <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @collector_type_uid =] '*аргумент collector_type_uid*"  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
  Идентификатор GUID типа сборщика. *Аргумент collector_type_uid* — **uniqueidentifier** и если он равен NULL, он будет автоматически создается и возвращается как OUTPUT.  
   
  [ @name =] '*имя*"  
  Имя типа сборщика. *имя* — **sysname** и должен быть указан.  
   
- [ @parameter_schema =] '*parameter_schema*"  
+ [ @parameter_schema = ] '*parameter_schema*'  
  Схема XML для этого типа сборщика. *parameter_schema* — **xml** значение по умолчанию NULL.  
   
- [ @parameter_formatter =] '*parameter_formatter*"  
+ [ @parameter_formatter = ] '*parameter_formatter*'  
  Шаблон, применяемый для преобразования XML с целью его использования на странице свойств набора элементов сбора. *parameter_formatter* — **xml** значение по умолчанию NULL.  
   
  [@collection_package_id =] *collection_package_id*  
@@ -79,7 +79,7 @@ EXEC sp_syscollector_create_collector_type
 @collector_type_uid = '302E93D1-3424-4be7-AA8E-84813ECF2419',  
 @name = 'Generic T-SQL Query Collector Type',  
 @parameter_schema = '<?xml version="1.0" encoding="utf-8"?>  
-  <xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
     <xs:element name="TSQLQueryCollector">  
       <xs:complexType>  
         <xs:sequence>  

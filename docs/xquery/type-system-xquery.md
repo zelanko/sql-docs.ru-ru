@@ -24,21 +24,21 @@ ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e8b4680532843b9f60b6cdab3c0c528aab719dbf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 34680d0af0e8c69bca15e4e93cddbe6b2a3386cb
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668674"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254789"
 ---
 # <a name="type-system-xquery"></a>Система типов (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery является строго типизированным языком для типов схемы и слабо типизированным языком для нетипизированных данных. Ниже приведены стандартные типы данных языка XQuery:  
   
--   Встроенные типы XML-схем в **https://www.w3.org/2001/XMLSchema** пространства имен.  
+-   Встроенные типы XML-схем в **http://www.w3.org/2001/XMLSchema** пространства имен.  
   
--   Типы, определенные в **https://www.w3.org/2004/07/xpath-datatypes** пространства имен.  
+-   Типы, определенные в **http://www.w3.org/2004/07/xpath-datatypes** пространства имен.  
   
  В этом разделе также описано следующее:  
   
@@ -65,7 +65,7 @@ WHERE ProductModelID=7
  Эти типизированные данные предоставляются коллекцией XML-схем, связанной с указанным столбцом.  
   
 ## <a name="types-defined-in-xpath-data-types-namespace"></a>Типы, определенные в пространстве имен типов данных XPath  
- Типы, определенные в **https://www.w3.org/2004/07/xpath-datatypes** пространство имен обязательно стандартным префиксом **xdt**. Эти типы обладают следующими свойствами:  
+ Типы, определенные в **http://www.w3.org/2004/07/xpath-datatypes** пространство имен обязательно стандартным префиксом **xdt**. Эти типы обладают следующими свойствами:  
   
 -   Они не могут использоваться при создании коллекции XML-схем. Эти типы используются в системе типов XQuery и используются для [XQuery и Статическая типизация](../xquery/xquery-and-static-typing.md). Могут быть приведены к атомарным типам, например, **xdt: untypedAtomic**в **xdt** пространства имен.  
   
@@ -110,7 +110,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" type="integer"/>  
 </schema>'  
 GO  
