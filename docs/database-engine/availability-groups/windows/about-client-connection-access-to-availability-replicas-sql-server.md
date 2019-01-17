@@ -1,6 +1,7 @@
 ---
-title: Сведения о доступе клиентского подключения к репликам доступности (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Типы клиентских подключений к репликам в группе доступности
+description: Сведения о различных типах подключений, которые клиенты могут устанавливать к первичной или вторичной реплике группы доступности Always On в SQL Server.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32bde72d793ac8c703c6a57fc4fe36ff5fd30d67
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6c8dbd61179ab89833c96657eb6107ced45c4528
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602674"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206493"
 ---
-# <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Сведения о доступе клиентского подключения к репликам доступности (SQL Server)
+# <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Типы клиентских подключений к репликам в группе доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В группе доступности AlwaysOn можно настроить одну или несколько реплик доступности, подключения к которой могут выполняться в режиме только для чтения, когда они являются вторичными (то есть при работе в качестве вторичной реплики). Каждую реплику доступности можно также настроить так, чтобы она разрешала или исключала соединения только для чтения во время работы под первичной ролью (т. е. во время работы в качестве первичной реплики).  
   
@@ -34,18 +35,6 @@ ms.locfileid: "51602674"
   
 > [!NOTE]  
 >  Сведения о прослушивателе групп доступности, обрабатывающем запросы на клиентские подключения, см. в разделе [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
-  
- **В этом разделе:**  
-  
--   [Типы доступа соединений, поддерживаемые вторичной ролью](#ConnectAccessForSecondary)  
-  
--   [Типы доступа соединений, поддерживаемые первичной ролью](#ConnectAccessForPrimary)  
-  
--   [Влияние конфигурации доступа соединения на клиентское соединение](#HowConnectionAccessAffectsConnectivity)  
-  
--   [Связанные задачи](#RelatedTasks)  
-  
--   [См. также](#RelatedContent)  
   
 ##  <a name="ConnectAccessForSecondary"></a> Типы доступа соединений, поддерживаемые вторичной ролью  
  Вторичная роль поддерживает три альтернативных варианта клиентского соединения, а именно:  
@@ -61,7 +50,7 @@ ms.locfileid: "51602674"
  Разрешить любые соединения только для чтения  
  Для всех баз данных-получателей разрешены соединения доступа только для чтения. Этот вариант разрешает соединения клиентам с более ранними версиями ПО.  
   
- Дополнительные сведения см. в статье [Настройка доступа только для чтения в реплике доступности (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
+ Дополнительные сведения см. в разделе [Настройка доступа только для чтения в реплике доступности (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
 ##  <a name="ConnectAccessForPrimary"></a> Типы доступа соединений, поддерживаемые первичной ролью  
  Первичная роль поддерживает два альтернативных варианта клиентского соединения, а именно:  
@@ -121,7 +110,7 @@ ms.locfileid: "51602674"
   
 -   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Блог команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

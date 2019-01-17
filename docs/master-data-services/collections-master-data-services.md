@@ -5,8 +5,7 @@ ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services]
@@ -15,12 +14,12 @@ ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1fabe62b751b52128913620cc8280a27c9686465
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ac53be7804937985e2bca5f3c453e32468dd8e0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691873"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794036"
 ---
 # <a name="collections-master-data-services"></a>Коллекции (службы основных данных)
 
@@ -41,7 +40,7 @@ ms.locfileid: "47691873"
  Пользователь, создающий коллекцию, автоматически вносится в список ее владельцев. Если вы являетесь администратором, то при необходимости можете создавать другие атрибуты коллекции.  
   
 ## <a name="subscription-views-for-collections"></a>Представления подписки для коллекций  
- Есть два типа представлений подписки, которые отображают коллекции. Формат **Атрибуты коллекций** отображает список коллекций и другие атрибуты, связанные с коллекциями, например описание или владельца. Формат **Коллекции** отображает все элементы во всех коллекциях, а также вес и порядок сортировки каждого элемента. Дополнительные сведения см. в разделе [Обзор. Экспорт данных (службы Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md).  
+ Есть два типа представлений подписки, которые отображают коллекции. Формат **Атрибуты коллекций** отображает список коллекций и другие атрибуты, связанные с коллекциями, например описание или владельца. Формат **Коллекции** отображает все элементы во всех коллекциях, а также вес и порядок сортировки каждого элемента. Дополнительные сведения см. в статье [Обзор: экспорт данных (службы Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)  
   
  Если для определенных элементов в коллекции установлены взвешенные значения, такие значения доступны в связанных представлениях подписки.  
   
@@ -56,6 +55,6 @@ ms.locfileid: "47691873"
   
 -   [Явные иерархии (службы Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [Обзор. Экспорт данных (службы Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)  
+-   [Обзор: экспорт данных (службы Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)  
   
   

@@ -5,17 +5,24 @@ ms.date: 11/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
-ms.topic: conceptual - "query plans [SQL Server]" - "execution plans [SQL Server]" - "query profiling" - "lightweight query profiling" - "lightweight profiling" - "lwp"
+ms.topic: conceptual
+helpviewer_keywords:
+- query plans [SQL Server]
+- execution plans [SQL Server]
+- query profiling
+- lightweight query profiling
+- lightweight profiling
+- lwp
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: e0ee0bc2c99d997d6a44d5ca0e9944e0ae4bfeb3
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 39f3d82d65eb0dd05b8459742febd67d2bc56790
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617254"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732031"
 ---
 # <a name="query-profiling-infrastructure"></a>Инфраструктура профилирования запросов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +59,7 @@ ms.locfileid: "52617254"
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v1"></a>Упрощенная инфраструктура профилирования статистики выполнения запросов версии 1
 
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) по [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). 
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 по [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). 
   
 Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] потребление ресурсов при сборе сведений о планах выполнения было снижено путем введения упрощенного профилирования. В отличие от стандартного, упрощенное профилирование не собирает сведения о ЦП среды выполнения. Однако упрощенное профилирование по-прежнему собирает сведения о количестве строк и сведения об использовании операций ввода-вывода.
 
@@ -82,7 +89,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v2"></a>Упрощенная инфраструктура профилирования статистики выполнения запросов версии 2
 
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) по [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 по [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 включает переработанную версию упрощенного профилирования с минимальным потреблением ресурсов. Упрощенное профилирование можно также включить глобально с помощью [флага трассировки 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) в версиях, указанных выше в поле *Применимо к*. Новая функция динамического управления [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) введена для возвращения плана выполнения запроса для активных запросов.
 
@@ -107,7 +114,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v3"></a>Упрощенная инфраструктура профилирования статистики выполнения запросов версии 3
 
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] включает в себя заново переработанную версию упрощенного профилирования, собирающего данные о количестве строк для всех выполнений. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] упрощенное профилирование включено по умолчанию, и флаг трассировки 7412 не оказывает влияния.
 
@@ -133,4 +140,4 @@ WITH (MAX_MEMORY=4096 KB,
  [Справочник по логическим и физическим операторам Showplan](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [Действительный план выполнения](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [Динамическая статистика запросов](../../relational-databases/performance/live-query-statistics.md)      
- [Выбор разработчика: сведения о ходе выполнения запросов в любое время и в любом месте](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
+ [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Выбор разработчика: ход выполнения запроса — всегда и везде).

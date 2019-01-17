@@ -19,12 +19,12 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6bba3aa9dd92086fa887e92c5c5efc3379f419fd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 51d4b6c9e19f334946657205de6cdc8c6ce593ec
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702959"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980030"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>Справочник по методам типа данных hierarchyid
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

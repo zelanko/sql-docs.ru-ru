@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f77ab925ebfba6ab1d3fd524d7d740eca58fcba6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3c08f8cb48e22ba5ca1546f9fcca63f77868b356
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523480"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208803"
 ---
 # <a name="install-polybase-on-windows"></a>Установка PolyBase на компьютере по управлением Windows
 
@@ -36,18 +36,18 @@ ms.locfileid: "52523480"
    
 - Минимум места на жестком диске: 2 ГБ.
   
-- Рекомендуется как минимум 16 ГБ ОЗУ.
+- Рекомендации как минимум 16 ГБ ОЗУ.
    
 - Для корректной работы PolyBase должен быть включен протокол TCP/IP. TCP/IP включен по умолчанию во всех выпусках SQL Server, кроме Developer и Express. Для корректной работы PolyBase в выпусках Developer и Express нужно включить подключение по TCP/IP. См. раздел [Включение или отключение сетевого протокола сервера](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
 - MSVC++ 2012. 
 
-> [!NOTE]  
-
+> [!NOTE]
+> 
 > PolyBase можно установить только на одном экземпляре SQL Server на компьютере.
-
+> 
 > [!IMPORTANT]
->
+> 
 > Чтобы использовать функцию передачи вычислений в Hadoop, в целевом кластере Hadoop должны быть базовые компоненты HDFS, YARN и MapReduce с включенным сервером журнала заданий. PolyBase отправляет запрос на передачу через MapReduce и получает сведения о состоянии c сервера журнала заданий. Без любого из этих компонентов запрос завершится сбоем.
   
 ## <a name="single-node-or-polybase-scale-out-group"></a>Один узел или масштабируемая группа PolyBase
@@ -108,11 +108,11 @@ ms.locfileid: "52523480"
 |Управление программой установки SQL Server|**Обязательное**<br /><br /> /FEATURES=PolyBase|Выбирает компонент PolyBase.|  
 |Компонент SQL Server PolyBase Engine|**Необязательно**<br /><br /> /PBENGSVCACCOUNT|Задает учетную запись для службы ядра. По умолчанию используется **NT Authority\NETWORK SERVICE**.|  
 |Компонент SQL Server PolyBase Engine|**Необязательно**<br /><br /> /PBENGSVCPASSWORD|Задает пароль для учетной записи службы ядра.|  
-|Компонент SQL Server PolyBase Engine|**Необязательно**<br /><br /> /PBENGSVCSTARTUPTYPE|Задает режим запуска для PolyBase Engine: Automatic (Автоматически, используется по умолчанию), Disabled (Отключена) или Manual (Вручную).|  
+|Компонент SQL Server PolyBase Engine|**Необязательно**<br /><br /> /PBENGSVCSTARTUPTYPE|Задает режим запуска для PolyBase Engine: Automatic (Автоматически, используется по умолчанию), Disabled (Отключено) или Manual (Вручную).|  
 |Перемещение данных SQL Server PolyBase |**Необязательно**<br /><br /> /PBDMSSVCACCOUNT|Задает учетную запись для службы перемещения данных. Значение по умолчанию — **NT Authority\NETWORK SERVICE**.|  
 |Перемещение данных SQL Server PolyBase |**Необязательно**<br /><br /> /PBDMSSVCPASSWORD|Задает пароль для учетной записи службы перемещения данных.|  
-|Перемещение данных SQL Server PolyBase |**Необязательно**<br /><br /> /PBDMSSVCSTARTUPTYPE|Задает режим запуска для службы перемещения данных: Automatic (Автоматически, используется по умолчанию), Disabled (Отключена) или Manual (Вручную).|  
-|PolyBase|**Необязательно**<br /><br /> /PBSCALEOUT|Указывает, используется ли этот экземпляр SQL Server в составе масштабируемой вычислительной группы PolyBase. <br />Поддерживаемые значения: True (Истина), False (Ложь).|  
+|Перемещение данных SQL Server PolyBase |**Необязательно**<br /><br /> /PBDMSSVCSTARTUPTYPE|Задает режим запуска для службы перемещения данных: Automatic (Автоматически, используется по умолчанию), Disabled (Отключено) или Manual (Вручную).|  
+|PolyBase|**Необязательно**<br /><br /> /PBSCALEOUT|Указывает, используется ли этот экземпляр SQL Server в составе масштабируемой вычислительной группы PolyBase. <br />Поддерживаемые значения: True, False.|  
 |PolyBase|**Необязательно**<br /><br /> /PBPORTRANGE|Указывает диапазон портов (не менее шести) для служб PolyBase. Пример<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
 ::: moniker-end
@@ -124,11 +124,11 @@ ms.locfileid: "52523480"
 |Управление программой установки SQL Server|**Обязательно**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore обеспечивает поддержку всех возможностей PolyBase, кроме подключения к Hadoop. PolyBaseJava обеспечивает подключение к Hadoop. PolyBase обеспечивает поддержку всех возможностей. |  
 |Компонент SQL Server PolyBase Engine|**Необязательно**<br /><br /> /PBENGSVCACCOUNT|Задает учетную запись для службы ядра. По умолчанию используется **NT Authority\NETWORK SERVICE**.|  
 |Компонент SQL Server PolyBase Engine|**Необязательно**<br /><br /> /PBENGSVCPASSWORD|Задает пароль для учетной записи службы ядра.|  
-|Компонент SQL Server PolyBase Engine|**Необязательно**<br /><br /> /PBENGSVCSTARTUPTYPE|Задает режим запуска для PolyBase Engine: Automatic (Автоматически, используется по умолчанию), Disabled (Отключена) или Manual (Вручную).|  
+|Компонент SQL Server PolyBase Engine|**Необязательно**<br /><br /> /PBENGSVCSTARTUPTYPE|Задает режим запуска для PolyBase Engine: Automatic (Автоматически, используется по умолчанию), Disabled (Отключено) или Manual (Вручную).|  
 |Перемещение данных SQL Server PolyBase |**Необязательно**<br /><br /> /PBDMSSVCACCOUNT|Задает учетную запись для службы перемещения данных. Значение по умолчанию — **NT Authority\NETWORK SERVICE**.|  
 |Перемещение данных SQL Server PolyBase |**Необязательно**<br /><br /> /PBDMSSVCPASSWORD|Задает пароль для учетной записи службы перемещения данных.|  
-|Перемещение данных SQL Server PolyBase |**Необязательно**<br /><br /> /PBDMSSVCSTARTUPTYPE|Задает режим запуска для службы перемещения данных: Automatic (Автоматически, используется по умолчанию), Disabled (Отключена) или Manual (Вручную).|  
-|PolyBase|**Необязательно**<br /><br /> /PBSCALEOUT|Указывает, используется ли этот экземпляр SQL Server в составе масштабируемой вычислительной группы PolyBase. <br />Поддерживаемые значения: True (Истина), False (Ложь).|  
+|Перемещение данных SQL Server PolyBase |**Необязательно**<br /><br /> /PBDMSSVCSTARTUPTYPE|Задает режим запуска для службы перемещения данных: Automatic (Автоматически, используется по умолчанию), Disabled (Отключено) или Manual (Вручную).|  
+|PolyBase|**Необязательно**<br /><br /> /PBSCALEOUT|Указывает, используется ли этот экземпляр SQL Server в составе масштабируемой вычислительной группы PolyBase. <br />Поддерживаемые значения: True, False.|  
 |PolyBase|**Необязательно**<br /><br /> /PBPORTRANGE|Указывает диапазон портов (не менее шести) для служб PolyBase. Пример<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
 ::: moniker-end

@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 26a4fcb38edaa490fd295b7f781a2062a7671199
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 15dd8854a12f5cfc12a4bca095742f2095c44724
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409051"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209073"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Настройка SQL Server на установке Server Core
 
@@ -40,7 +40,7 @@ ms.locfileid: "52409051"
   
 - [Установка ролей и компонентов в Windows Server 2012 R2 с Server Core](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
   
-- [Управление установкой Server Core: обзор](https://go.microsoft.com/fwlink/?LinkId=245962)  
+- [Управление установкой Server Core. Обзор](https://go.microsoft.com/fwlink/?LinkId=245962)  
   
 - [Администрирование установки Server Core](https://go.microsoft.com/fwlink/?LinkId=245963)
   
@@ -58,7 +58,7 @@ ms.locfileid: "52409051"
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объединяет последние обновления продукта с установкой основного продукта, чтобы он и применимые обновления устанавливались одновременно.  
   
-Когда программа установки обнаруживает последние версии соответствующих обновлений, эти обновления загружаются и интегрируются в текущую процедуру установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Функция обновления продукта может включить в установку пакет обновления, накопительное обновление или и то и другое.  
+Когда программа установки обнаруживает последние версии соответствующих обновлений, эти обновления загружаются и интегрируются в текущую процедуру установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Функция обновления продукта может включить в установку пакет обновления, накопительное обновление или и то и другое.  
   
 Укажите параметры UpdateEnabled и UpdateSource, чтобы ввести последние обновления продукта в установку основного продукта. В следующем примере показано, как выполнить обновления продукта в процессе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -120,7 +120,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine /INSTANCENAME=MSSQLSERVER /SQL
   
 10. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохранит внесенные изменения. После этого необходимо вручную перезапустить службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это позволит выбрать время перезапуска, которое лучше всего подходит под требования вашего предприятия. После перезапуска службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] функция AlwaysOn будет включена, а свойство IsHadrEnabled будет установлено в значение 1.  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   Чтобы подключиться к этому компьютеру, необходимо иметь соответствующие разрешения пользователя или получить полномочия на целевом компьютере от соответствующего источника.  
 > -   Имя управляемого компьютера отображается в скобках рядом с элементом «Управление компьютером» в дереве консоли.  
   
@@ -226,7 +226,7 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> Использование средств устранения неполадок  
  Программа [SQLdiag](../../tools/sqldiag-utility.md) позволяет выполнять сбор журналов и файлов данных с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и других типов серверов, а также мониторинг серверов и устранение определенных неполадок на серверах. SQLdiag предназначена для исследования и упрощения сбора диагностической информации для Microsoft Customer Support Services.  
   
- Служебную программу можно запустить в командной строке администратора в Server Core, используя синтаксис, описанный в статье [Служебная программа SQLdiag](../../tools/sqldiag-utility.md).  
+ Служебную программу можно запустить в командной строке администратора в Server Core, используя синтаксис, описанный в статье [Программа SQLdiag](../../tools/sqldiag-utility.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Установка SQL Server в Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   

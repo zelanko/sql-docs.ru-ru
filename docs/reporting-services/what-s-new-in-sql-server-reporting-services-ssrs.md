@@ -1,18 +1,18 @@
 ---
 title: Новые возможности служб Reporting Services (SSRS) | Документы Майкрософт
-ms.date: 09/06/2018
+ms.date: 12/11/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b72f5bfef28c5f434cff07b2a931519c3fefd295
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 1b6844ad30aa426d1df71727becc6e6cfa3071d5
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712410"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432477"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Новые возможности служб SQL Server Reporting Services (SSRS)
 
@@ -31,7 +31,7 @@ ms.locfileid: "52712410"
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ## <a name="sql-server-2019-preview-reporting-services"></a>Предварительная версия SQL Server 2019 Reporting Services
 
-Службы [!INCLUDE[sql-server-2019]](../includes/sssqlv15-md.md)] Reporting Services недоступны для версии CTP 2.1. Установите текущую версию [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
+Службы [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services недоступны для версии CTP 2.2. Установите текущую версию [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -62,7 +62,7 @@ ms.locfileid: "52712410"
 * Скачайте [построитель отчетов SQL Server](https://go.microsoft.com/fwlink/?LinkId=734968).
 * Скачайте [SQL Server Data Tools — релиз-кандидат](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate).
 
-> **Примечание**. Конструктор запросов для DAX можно использовать только с табличными источниками данных SSAS, встроенными в SQL Server 2016 и более поздних версий.
+> **Примечание.** Конструктор запросов для DAX можно использовать только с табличными источниками данных SSAS, встроенными в SQL Server 2016 и более поздних версий.
 ::: moniker-end
  
 ## <a name="ssrs-2016"></a>SSRS 2016
@@ -124,23 +124,23 @@ ms.locfileid: "52712410"
 
 ### <a name="report-improvements"></a>Усовершенствования в отчетах
 
-**Механизм визуализации HTML 5** : новый механизм визуализации HTML5, ориентированный на современные "полнофункциональные" веб-стандарты и современные браузеры.  Новый механизм визуализации больше не зависит от режима Quirks, используемого в некоторых старых браузерах.
+**Механизм визуализации HTML 5**: новый механизм визуализации HTML5, ориентированный на современные "полнофункциональные" веб-стандарты и современные браузеры.  Новый механизм визуализации больше не зависит от режима Quirks, используемого в некоторых старых браузерах.
   
  Дополнительные сведения о поддержке браузеров см. в разделе [Поддержка браузера для служб Reporting Services и Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
 
-**Современные отчеты с разбиением на страницы:** новые, современные стили для диаграмм, датчиков, карт и других средств визуального представления данных позволяют создавать современные удобные отчеты с разбивкой на страницы.
+**Современные отчеты с разбиением на страницы**: новые, современные стили для диаграмм, датчиков, карт и других средств визуального представления данных позволяют создавать современные удобные отчеты с разбивкой на страницы.
   
 **Диаграммы типа "дерево" и "солнечные лучи"**: улучшайте отчеты с помощью диаграмм "дерево" ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") и диаграмм "солнечные лучи" ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"), которые обеспечивают удобное отображение иерархических данных. Дополнительные сведения см. в разделе [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
-**Внедрение отчетов:** сегодня с помощью iframe, а также параметров URL-адреса мобильные отчеты и отчеты с разбиением по страницам можно внедрять в другие веб-страницы и приложения.  
+**Внедрение отчетов**: сегодня с помощью iframe, а также параметров URL-адреса мобильные отчеты и отчеты с разбиением по страницам можно внедрять в другие веб-страницы и приложения.  
 
-**Закрепление элементов отчета на панели мониторинга Power BI** : при просмотре отчета в [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]можно выбрать элементы отчета и закрепить их на панели мониторинга [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .   Закреплять можно такие элементы, как диаграммы, панели датчиков, карты и изображения. **(1)** Выберите группу, содержащую панель мониторинга, на которой нужно закрепить элемент; **(2)** выберите панель мониторинга, на которой требуется закрепить элемент; и **(3)** выберите частоту обновления плитки на этой панели мониторинга.   ![примечание](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "примечание") Обновлением управляют подписки служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], а после закрепления элемента можно изменить подписку и настроить другое расписание обновления.  
+**Закрепление элементов отчета на панели мониторинга Power BI**: при просмотре отчета в [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] можно выбрать элементы отчета и закрепить их на панели мониторинга [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].   Закреплять можно такие элементы, как диаграммы, панели датчиков, карты и изображения. **(1)** Выберите группу, содержащую панель мониторинга, на которой нужно закрепить элемент; **(2)** выберите панель мониторинга, на которой требуется закрепить элемент; и **(3)** выберите частоту обновления плитки на этой панели мониторинга.   ![примечание](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "примечание") Обновлением управляют подписки служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], а после закрепления элемента можно изменить подписку и настроить другое расписание обновления.  
   
  ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
   
  Дополнительные сведения см. в разделах [Интеграция Сервера отчетов Power BI (диспетчер конфигурации)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) и [Закрепление элементов служб Reporting Services на информационных панелях Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
  
- **Визуализация в PowerPoint и экспорт** : новый модуль подготовки отчетов [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] имеет формат Microsoft PowerPoint (PPTX). Экспортировать отчеты в формате PPTX можно из обычных приложений, построителя отчетов, конструктора отчетов (в SSDT) и [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. Например, на следующем рисунке показано меню экспорта из [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
+ **Визуализация в PowerPoint и экспорт**: новый модуль подготовки отчетов [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] имеет формат Microsoft PowerPoint (PPTX). Экспортировать отчеты в формате PPTX можно из обычных приложений, построителя отчетов, конструктора отчетов (в SSDT) и [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. Например, на следующем рисунке показано меню экспорта из [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
   
  ![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
   
@@ -152,7 +152,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
   
  Дополнительные сведения см. в разделе [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md).  
  
- **PDF заменяет ActiveX для удаленной печати** : функция печати ActiveX на панели инструментов в средстве просмотра отчетов была заменена современной функцией на основе PDF, которая работает в различных поддерживаемых браузерах, включая Microsoft Edge. Никаких дополнительных элементов управления ActiveX загружать не нужно! В зависимости от применяемого браузера, а также установленных приложений и служб просмотра PDF [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] либо будет открывать диалоговое окно для печати отчета, либо предлагать загрузить PDF-файл отчета.  При наличии прав администратора функцию печати на стороне клиента в [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]можно отключить. Дополнительные сведения см. в разделе [Включение и отключение печати на стороне клиента для служб Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
+ **PDF заменяет ActiveX для удаленной печати**: функция печати ActiveX на панели инструментов в средстве просмотра отчетов была заменена современной функцией на основе PDF, которая работает в различных поддерживаемых браузерах, включая Microsoft Edge. Никаких дополнительных элементов управления ActiveX загружать не нужно! В зависимости от применяемого браузера, а также установленных приложений и служб просмотра PDF [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] либо будет открывать диалоговое окно для печати отчета, либо предлагать загрузить PDF-файл отчета.  При наличии прав администратора функцию печати на стороне клиента в [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]можно отключить. Дополнительные сведения см. в разделе [Включение и отключение печати на стороне клиента для служб Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
 
 ![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
 
@@ -170,14 +170,14 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 ### <a name="report-builder-improvements"></a>Усовершенствования построителя отчетов
 
-**Новый пользовательский интерфейс построителя отчетов** : пользовательский интерфейс в [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] теперь имеет современный вид и содержит упрощенные элементы интерфейса.  
+**Новый пользовательский интерфейс построителя отчетов**: пользовательский интерфейс в [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] теперь имеет современный вид и содержит упрощенные элементы интерфейса.  
   
 |||  
 |-|-|  
 |Создать|Previous|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
-**Панель пользовательских параметров** : сейчас можно настраивать панель параметров. С помощью области конструктора в построителе отчетов параметр можно перетащить в конкретный столбец и строку на панели параметров. Для изменения макета панели столбцы можно добавлять и удалять.   Дополнительные сведения см. в разделах [Настройка области параметров в отчете (построитель отчетов)](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
+**Панель пользовательских параметров**: сейчас можно настраивать панель параметров. С помощью области конструктора в построителе отчетов параметр можно перетащить в конкретный столбец и строку на панели параметров. Для изменения макета панели столбцы можно добавлять и удалять.   Дополнительные сведения см. в разделах [Настройка области параметров в отчете (построитель отчетов)](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
   
  ![Список параметров в области "Данные отчета" и в области параметров](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "Список параметров в области \"Данные отчета\" и в области параметров")  
 

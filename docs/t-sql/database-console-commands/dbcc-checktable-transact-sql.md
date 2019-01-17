@@ -27,12 +27,12 @@ ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: dd3481d797bca1822255b1ac6cf30a1123c2e669
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a9d14601c7fad616d4d5e2d5420adcea458b11fb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697200"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206253"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -120,11 +120,11 @@ PHYSICAL_ONLY
 DATA_PURITY  
  Указание значения аргумента приводит к выполнению инструкцией DBCC CHECKTABLE проверки таблицы на недействительность или выход из допустимого диапазона значений столбцов. Например, инструкция DBCC CHECKTABLE обнаруживает столбцы со значениями даты и времени, выходящими за допустимый диапазон значений типа данных **datetime**, либо столбцы типа данных **decimal** или приблизительных числовых типов данных с недопустимыми значениями масштаба или точности.  
  Проверки целостности значений столбцов включены по умолчанию, и для них не требуется указывать параметр DATA_PURITY. Для баз данных, обновляемых с предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], имеется возможность использовать инструкцию DBCC CHECKTABLE WITH DATA_PURITY для нахождения и исправления ошибок для заданной таблицы, однако проверки столбцов-значений таблицы запрещены по умолчанию до тех пор, пока инструкция DBCC CHECKDB WITH DATA_PURITY работает с базой данных без ошибок. После этого инструкции DBCC CHECKDB и DBCC CHECKTABLE проверяют целостность данных в столбцах-значениях по умолчанию.  
- Ошибки проверки, передаваемые при наличии этого параметра, не могут быть устранены с помощью параметров восстановления DBCC. Дополнительные сведения об устранении этих ошибок вручную см. в статье 923247 базы знаний Майкрософт: [Устранение ошибки DBCC 2570 в SQL Server 2005 и более поздних версиях](https://support.microsoft.com/kb/923247).  
+ Ошибки проверки, передаваемые при наличии этого параметра, не могут быть устранены с помощью параметров восстановления DBCC. Дополнительные сведения об устранении этих ошибок вручную см. в статье 923247 базы знаний Майкрософт [Устранение ошибки DBCC 2570 в SQL Server 2005 и более поздних версиях](https://support.microsoft.com/kb/923247).  
  Если указан аргумент PHYSICAL_ONLY, проверка целостности значений в столбцах не выполняется.  
     
 MAXDOP  
- **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
  
  Переопределяет параметр конфигурации, задающий **максимальный уровень параллелизма**, в **sp_configure** для инструкции. Значение MAXDOP может превышать значение, настроенное с помощью sp_configure. Если MAXDOP превышает значение, настроенное с помощью Resource Governor, ядро СУБД использует значение MAXDOP из Resource Governor, как описано в статье "ALTER WORKLOAD GROUP (Transact-SQL)". Все семантические правила, используемые параметром конфигурации max degree of parallelism, применимы при использовании указания запроса MAXDOP. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
     

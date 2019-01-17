@@ -1,6 +1,7 @@
 ---
-title: Подключение к странице существующих вторичных реплик | Документы Майкрософт
-ms.custom: ''
+title: Страница "Подключение существующих вторичных реплик" для групп доступности
+description: Описание различных параметров на странице "Подключение существующих вторичных реплик" мастера группы доступности в SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f2feb2d658f6d333fbe1b1762ea8483562b79db5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee9e77356304670fa884c4ba8cf70667e040f940
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753982"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211233"
 ---
-# <a name="connect-to-existing-secondary-replicas-page"></a>Подключение к странице существующих вторичных реплик
+# <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>Страница "Подключение существующих вторичных реплик" для групп доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описываются параметры на странице **Подключение к существующим вторичным репликам** . Этот раздел используется в [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] и [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] из [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   

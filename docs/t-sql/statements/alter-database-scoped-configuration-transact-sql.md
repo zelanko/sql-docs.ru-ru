@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 744895bc3e2a60d8eb3edad4554f08bc1aaf6a95
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 972cd8bf1acc8a7abcf428c3bfd553e878248fde
+ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641505"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069790"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -168,7 +168,7 @@ XTP_QUERY_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
 Статистика выполнения на уровне инструкций для скомпилированных в собственном коде модулей T-SQL собирается либо при значении ON этого параметра, либо если сбор статистики включен с помощью [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).
 
-Дополнительные сведения о мониторинге производительности скомпилированных в собственном коде модулей T-SQL см. в статье [Отслеживание производительности скомпилированных в собственном коде хранимых процедур](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md).
+Дополнительные сведения о мониторинге производительности скомпилированных в собственном коде модулей [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Отслеживание производительности скомпилированных в собственном коде хранимых процедур](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md).
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
@@ -210,20 +210,20 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
 Настройка функции автоматического удаления [глобальных временных таблиц](create-table-transact-sql.md). По умолчанию имеет значение ON, то есть глобальные временные таблицы автоматически удаляются, когда не используются ни одним сеансом. Если задано значение OFF, глобальные временные таблицы следует удалять явным образом с помощью инструкции DROP TABLE, или они будут автоматически удалены при перезапуске сервера.
 
-- В логическом сервере Базы данных SQL Azure этот параметр можно задать для отдельных баз данных пользователей логического сервера.
-- В SQL Server и Управляемом экземпляре Базы данных SQL Azure этот параметр задается в `TEMPDB` и не учитывается на уровне отдельных пользовательских баз.
+- В логическом сервере [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] этот параметр можно задать для отдельных баз данных пользователей логического сервера.
+- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и управляемом экземпляре [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] этот параметр задается в `TempDB` и не учитывается на уровне отдельных пользовательских баз.
 
 DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 
 **Применимо к**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Позволяет включить или отключить выполнение с чередованием для функций с табличным значением и множеством инструкций в области базы данных или инструкции, сохранив уровень совместимости базы данных 140 или выше. Выполнение с чередованием — одна из возможностей адаптивной обработки запросов в базах данных SQL. Дополнительные сведения: [Адаптивная обработка запросов](../../relational-databases/performance/adaptive-query-processing.md)
+Позволяет включить или отключить выполнение с чередованием для функций с табличным значением и множеством инструкций в области базы данных или инструкции, сохранив уровень совместимости базы данных 140 или выше. Выполнение с чередованием — одна из возможностей адаптивной обработки запросов в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Дополнительные сведения: [Адаптивная обработка запросов](../../relational-databases/performance/adaptive-query-processing.md)
 
 DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
 
 **Применимо к**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Позволяет включить или отключить адаптивные соединения в области базы данных или инструкции, сохранив уровень совместимости базы данных 140 или выше. Адаптивные соединения — одна из возможностей [адаптивной обработки запросов](../../relational-databases/performance/adaptive-query-processing.md), представленная в SQL Server 2017.
+Позволяет включить или отключить адаптивные соединения в области базы данных или инструкции, сохранив уровень совместимости базы данных 140 или выше. Адаптивные соединения — одна из возможностей [адаптивной обработки запросов](../../relational-databases/performance/adaptive-query-processing.md), представленная в [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
@@ -233,66 +233,62 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 ## <a name="Permissions"></a> Permissions
 
-Требует в базе данных разрешения ALTER ANY DATABASE SCOPE CONFIGURATION. Это разрешение может быть предоставлено пользователем, имеющим разрешение CONTROL для базы данных.
+Необходимо разрешение `ALTER ANY DATABASE SCOPE CONFIGURATION` для базы данных. Это разрешение может быть предоставлено пользователем, имеющим разрешение CONTROL для базы данных.
 
 ## <a name="general-remarks"></a>Общие замечания
-
 Можно настроить базы данных-получатели с отличающимися по уровню от сервера-источника параметрами конфигурации, все базы данных-получатели используют одну и ту же конфигурацию. Невозможно настроить разные параметры для разных баз данных-получателей.
 
 При выполнении этой инструкции очищается кэш процедур в текущей базе данных; это означает, что нужно перекомпилировать все запросы.
 
 Что касается трехчастных запросов имен, для запроса соблюдаются параметры текущего подключения базы данных. Это не относится к модулям SQL (процедуры, функции и триггеры), которые компилируются в контексте текущей базы данных и применяют параметры базы данных, в которой они находятся.
 
-Событие ALTER_DATABASE_SCOPED_CONFIGURATION добавляется дочерним элементом в группу триггеров ALTER_DATABASE_EVENTS в качестве события DDL, с помощью которого можно инициировать триггер DDL.
+Событие `ALTER_DATABASE_SCOPED_CONFIGURATION` добавляется дочерним элементом в группу триггеров `ALTER_DATABASE_EVENTS` в качестве события DDL, с помощью которого можно инициировать триггер DDL.
 
 Параметры конфигурации уровня базы данных будут перенесены вместе с базой данных, то есть при восстановлении или подключении любой базы данных сохранятся ее текущие параметры конфигурации.
 
 ## <a name="limitations-and-restrictions"></a>Ограничения
 
 ### <a name="maxdop"></a>MAXDOP
-
 Детализированные параметры могут переопределять глобальные, а регулятор ресурсов может ограничивать все остальные параметры MAXDOP. Логика параметра MAXDOP выглядит следующим образом:
 
-- Указание запроса переопределяет процедуру sp_configure и параметр уровня базы данных. Если для группы рабочей нагрузки задана группа ресурсов MAXDOP:
+- Указание запроса переопределяет процедуру `sp_configure` и параметр уровня базы данных. Если для группы рабочей нагрузки задана группа ресурсов MAXDOP:
 
-  - Если указание запроса имеет значение 0, оно переопределяется параметром регулятора ресурсов.
+  - Если указание запроса имеет нулевое значение (0), оно переопределяется параметром Resource Governor.
 
-  - Если указание запроса имеет значение, отличное от 0, оно ограничивается параметром регулятора ресурсов.
+  - Если указание запроса имеет значение, отличное от нулевого (0), оно ограничивается параметром Resource Governor.
 
-- Параметр уровня БД (если он отличен от 0) переопределяет параметр процедуры sp_configure кроме случаев, когда имеется указание запроса и оно ограничено параметром регулятора ресурсов.
+- Параметр уровня БД (если он отличен от нуля) переопределяет параметр процедуры `sp_configure`, кроме случаев, когда имеется указание запроса и оно ограничено параметром Resource Governor.
 
-- Параметр процедуры sp_configure переопределяется параметром регулятора ресурсов.
+- Параметр процедуры `sp_configure` переопределяется параметром Resource Governor.
 
 ### <a name="queryoptimizerhotfixes"></a>QUERY_OPTIMIZER_HOTFIXES
 
-Указание QUERYTRACEON используется для включения оптимизатора устаревших запросов или исправлений оптимизатора запроса; между указанием запроса и параметром конфигурации уровня базы данных используется условие ИЛИ, что означает, что если хотя бы одна из этих сущностей включена, параметры будут применены.
+Указание `QUERYTRACEON` используется для включения оптимизатора запросов по умолчанию для версий от SQL Server 7.0 до [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или исправлений оптимизатора запросов; между указанием запроса и параметром конфигурации уровня базы данных используется условие ИЛИ, что означает, что если хотя бы одна из этих сущностей включена, параметры уровня базы данных применяются.
 
-### <a name="geodr"></a>GeoDR
+### <a name="geo-dr"></a>Аварийное восстановление посредством георепликации
 
-Доступные для чтения базы данных-получатели (группы доступности AlwaysOn и геореплицируемые базы данных в службе "База данных SQL") используют значение базы данных-получателя, проверяя состояние базы данных. Несмотря на то что при отработке отказа не происходит компиляция и технически на новом сервере-источнике существуют запросы, использующие параметры базы данных-получателя, суть в том, что параметр между источником и получателем меняется только в том случае, если рабочая нагрузка различается. Следовательно, кэшированные запросы используют оптимальные параметры, а новые запросы выбирают подходящие для них новые параметры.
+Доступные для чтения базы данных-получатели (группы доступности Always On и геореплицируемые базы данных в службе [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]) используют значение базы данных-получателя, проверяя состояние базы данных. Несмотря на то что при отработке отказа не происходит компиляция и технически на новом сервере-источнике существуют запросы, использующие параметры базы данных-получателя, суть в том, что параметр между источником и получателем меняется только в том случае, если рабочая нагрузка различается. Следовательно, кэшированные запросы используют оптимальные параметры, а новые запросы выбирают подходящие для них новые параметры.
 
 ### <a name="dacfx"></a>DacFx
 
-Так как ALTER DATABASE SCOPED CONFIGURATION — это новая функция в Базе данных SQL Azure и SQL Server, начиная с SQL Server 2016, которая влияет на схему базы данных, экспорты схемы (с данными или без них) невозможно импортировать в более старую версию SQL Server, например [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. Например, экспорт в [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) или [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) из базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], использовавшей эту новую функцию, невозможно будет импортировать на сервер нижнего уровня.
+Так как инструкция `ALTER DATABASE SCOPED CONFIGURATION` — это новая функция в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]), которая влияет на схему базы данных, экспорт схемы (с данными или без них) невозможно импортировать в более старую версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. Например, экспорт в [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) или [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) из базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], использовавшей эту новую функцию, невозможно будет импортировать на сервер нижнего уровня.
 
 ### <a name="elevateonline"></a>ELEVATE_ONLINE
 
-Этот параметр применяется только к инструкциям DDL, поддерживающим синтаксис WITH(ONLINE=). Не затрагивает индексы XML.
+Этот параметр применяется только к инструкциям DDL, поддерживающим синтаксис `WITH (ONLINE = <syntax>)`. Не затрагивает индексы XML.
 
 ### <a name="elevateresumable"></a>ELEVATE_RESUMABLE
 
-Этот параметр применяется только к инструкциям DDL, поддерживающим синтаксис WITH(RESUMABLE= syntax). Не затрагивает индексы XML.
+Этот параметр применяется только к инструкциям DDL, поддерживающим синтаксис `WITH (RESUMABLE = <syntax>)`. Не затрагивает индексы XML.
 
 ## <a name="metadata"></a>Метаданные
 
 Системное представление [sys.database_scoped_configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) предоставляет информацию о конфигурациях ограниченной области применения в базах данных. Параметры конфигурации уровня БД отображаются только в sys.database_scoped_configurations, поскольку являются переопределениями параметров по умолчанию для всего сервера. В системном представлении [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) отображаются только параметры для всего сервера.
 
 ## <a name="examples"></a>Примеры
-
 Эти примеры демонстрируют использование инструкции ALTER DATABASE SCOPED CONFIGURATION
 
 ### <a name="a-grant-permission"></a>A. Предоставление разрешений
-
 В этом примере пользователю [Joe] предоставляется разрешение, необходимое для выполнения инструкции ALTER DATABASE SCOPED CONFIGURATION.
 
 ```sql
@@ -300,7 +296,6 @@ GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 ```
 
 ### <a name="b-set-maxdop"></a>Б. Задание параметра MAXDOP
-
 В этом примере задается MAXDOP = 1 для базы данных-источника и MAXDOP = 4 для базы данных-получателя в сценарии георепликации.
 
 ```sql
@@ -315,7 +310,6 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 ```
 
 ### <a name="c-set-legacycardinalityestimation"></a>В. Задание параметра LEGACY_CARDINALITY_ESTIMATION
-
 В этом примере для параметра LEGACY_CARDINALITY_ESTIMATION задается значение ON для базы данных-получателя в сценарии георепликации.
 
 ```sql
@@ -329,7 +323,6 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 ```
 
 ### <a name="d-set-parametersniffing"></a>Г. Задание параметра PARAMETER_SNIFFING
-
 В этом примере параметру PARAMETER_SNIFFING присваивается значение OFF для базы данных-источника в сценарии георепликации.
 
 ```sql
@@ -349,7 +342,6 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY
 ```
 
 ### <a name="e-set-queryoptimizerhotfixes"></a>Д. Задание параметра QUERY_OPTIMIZER_HOTFIXES
-
 Задайте для параметра QUERY_OPTIMIZER_HOTFIXES значение ON для базы данных-источника в сценарии георепликации.
 
 ```sql
@@ -357,7 +349,6 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;
 ```
 
 ### <a name="f-clear-procedure-cache"></a>Е. Очистка кэша процедур
-
 В этом примере очищается кэш процедур (возможно только для базы данных-источника).
 
 ```sql
@@ -365,8 +356,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 ```
 
 ### <a name="g-set-identitycache"></a>Ж. Задание параметра IDENTITY_CACHE
-
-**Применимо к**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (компонент в общедоступной предварительной версии)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (функция на этапе общедоступной предварительной версии)
 
 В этом примере отключается кэш идентификаторов.
 
@@ -375,8 +365,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 ```
 
 ### <a name="h-set-optimizeforadhocworkloads"></a>З. Задание параметра OPTIMIZE_FOR_AD_HOC_WORKLOADS
-
-**Область применения**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+**Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 В этом примере включается заглушка скомпилированного плана для сохранения в кэше при первой компиляции пакета.
 
@@ -385,7 +374,6 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
 ### <a name="i-set-elevateonline"></a>И. Задание ELEVATE_ONLINE
-
 **Область применения**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] и как общедоступная предварительная версия функции
 
 В этом примере параметру ELEVATE_ONLINE присваивается значение FAIL_UNSUPPORTED.
@@ -395,8 +383,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
 ```
 
 ### <a name="j-set-elevateresumable"></a>К. Задание ELEVATE_RESUMABLE
-
-**Область применения**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] в общедоступной предварительной версии.
+**Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] в общедоступной предварительной версии.
 
 В этом примере параметру ELEVEATE_RESUMABLE присваивается значение WHEN_SUPPORTED.
 

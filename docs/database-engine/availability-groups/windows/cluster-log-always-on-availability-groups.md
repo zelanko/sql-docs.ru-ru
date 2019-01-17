@@ -1,6 +1,7 @@
 ---
-title: CLUSTER.LOG (группы доступности AlwaysOn) (SQL Server) | Документы Майкрософт
-ms.custom: ag-guide
+title: Создание и анализ журнала CLUSTER.LOG для группы доступности
+description: 'Описывается создание и анализ журнала кластера для группы доступности Always On. '
+ms.custom: ag-guide, seodec18
 ms.date: 06/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 77ea53441472625fe419a322054eb5300a78e4c6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bfb0b56bba45d5e4622076f1d38bec2f4aca97a3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531497"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211733"
 ---
-# <a name="clusterlog-always-on-availability-groups"></a>CLUSTER.LOG (группы доступности AlwaysOn)
+# <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Создание и анализ журнала CLUSTER.LOG для группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В качестве ресурса отказоустойчивого кластера существуют внешние взаимодействия между SQL Server, службой отказоустойчивого кластера Windows Server (WSFC) и библиотекой SQL Server (hadrres.dll), которые невозможно отслеживать внутри SQL Server. Журнал WSFC — CLUSTER.LOG — позволяет диагностировать проблемы в кластере WSFC или в библиотеке ресурсов SQL Server.  
   
@@ -71,7 +72,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
  Чтобы изолировать группу доступности от других библиотек ресурсов кластера, включая другие группы доступности, сделайте следующее для запуска hadrres.dll внутри отдельного процесса rhs.exe:  
   
-1.  Откройте **редактора реестра** и перейдите к следующему разделу: HKEY_LOCAL_MACHINE\Cluster\Resources. Этот раздел содержит ключи для всех ресурсов, каждый из которых имеет собственный GUID.  
+1.  Откройте **редактор реестра** и перейдите к следующему разделу: HKEY_LOCAL_MACHINE\Cluster\Resources. Этот раздел содержит ключи для всех ресурсов, каждый из которых имеет собственный GUID.  
   
 2.  Найдите ключ ресурса, содержащий значение **Name**, совпадающее с именем группы доступности.  
   

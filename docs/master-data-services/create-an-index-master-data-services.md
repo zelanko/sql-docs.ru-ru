@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 20fad19ffa9d5d82c83321f63236b066e3e1c781
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0dc4612ff2d77558a04062704df61e1f93b58ec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849842"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774106"
 ---
 # <a name="create-an-index-master-data-services"></a>Создание индекса (Master Data Services)
 
@@ -61,13 +60,13 @@ ms.locfileid: "47849842"
   
  Если щелкнуть индекс, отображается следующая информация.  
   
--   **Кем создан**— имя пользователя, создавшего индекс.  
+-   **Кем создано**: имя пользователя, создавшего индекс.  
   
--   **Когда создан**— дата и время создания индекса.  
+-   **Когда создано**: дата и время создания индекса.  
   
--   **Кем обновлено**— имя пользователя, выполнившего последнее обновление индекса.  
+-   **Кем обновлено**: имя пользователя, выполнившего последнее обновление индекса.  
   
--   **Когда обновлено**— дата и время последнего обновления индекса.  
+-   **Когда обновлено**: дата и время последнего обновления индекса.  
   
 ## <a name="next-steps"></a>Next Steps  
  [Изменение и удаление индекса (Master Data Services)](../master-data-services/edit-and-delete-an-index-master-data-services.md)  

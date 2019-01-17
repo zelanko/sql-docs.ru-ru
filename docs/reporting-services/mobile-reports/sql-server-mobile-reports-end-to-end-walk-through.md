@@ -1,21 +1,23 @@
 ---
-title: 'Мобильные отчеты SQL Server: руководство по использованию | Документы Майкрософт'
-ms.date: 11/07/2017
+title: 'Мобильный отчет SQL Server: подробные пошаговые инструкции'
+description: Используйте пошаговые инструкции по созданию мобильных отчетов для экрана любого размера с помощью издателя мобильных отчетов SQL Server на портале Reporting Services и по просмотру отчетов в мобильных приложениях Power BI.
+ms.date: 12/07/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7db1fd9af6a36f0804819c389b06778ae04d2ebf
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: db6f8c664dff6f7234e43a3e3f11f6cc01e2eac4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813767"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209713"
 ---
-# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Мобильные отчеты SQL Server: руководство по использованию
+# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Мобильный отчет SQL Server: подробные пошаговые инструкции
 Используйте пошаговые инструкции по созданию мобильных отчетов для экрана любого размера с помощью [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] и по просмотру отчетов в мобильных приложениях Power BI.
 
 Мобильные отчеты можно создавать в области конструктора с настраиваемыми строками и столбцами сетки, а также гибкими элементами мобильных отчетов. Подключайтесь к различным локальным источникам данных или передавайте книги Excel для создания мобильных отчетов. Затем сохраняйте отчеты на веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] и просматривайте их в браузере или мобильных приложениях Power BI.  
@@ -30,14 +32,14 @@ ms.locfileid: "51813767"
 ## <a name="before-we-start"></a>Действия перед началом работы  
 Для начала вам потребуются такие продукты:  
   
-* Для создания источников данных и ключевых показателей эффективности, а также для публикации наборов данных и мобильных отчетов нужен доступ к [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
-* [Создание общих наборов данных](../install-windows/install-report-builder.md).  
+* Для создания источников данных и ключевых показателей эффективности, а также для публикации наборов данных и мобильных отчетов нужен доступ к [серверу отчетов Reporting Services в собственном режиме](../install-windows/install-reporting-services-native-mode-report-server.md).  
+* Для создания общих наборов данных нужно [установить построитель отчетов](../install-windows/install-report-builder.md).  
 * Для создания мобильных отчетов [установите издатель мобильных отчетов для Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766).  
 * [Образцы баз данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
-*  ИЛИ образец базы данных World Wide Importers, доступный на странице [Образцы Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
+*  или Образец базы данных World Wide Importers, доступный на странице [Образцы Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Для просмотра результата: 
   *   [зарегистрируйтесь в службе Power BI](https://go.microsoft.com/fwlink/?LinkID=513879) и
-  *  [скачайте мобильное приложение Power BI](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) на устройство под управлением iOS, Windows 10 или телефон с Android.  
+  *  [скачайте мобильное приложение Power BI](https://docs.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) на устройство под управлением iOS, Windows 10 или телефон с Android.  
 
   
 ## <a name="create-a-shared-data-source"></a>Создание общего источника данных  
@@ -281,7 +283,9 @@ ms.locfileid: "51813767"
   
     ![PBI_iPad_SSMRP_LeftNavBiggr](../../reporting-services/mobile-reports/media/pbi-ipad-ssmrp-leftnavbiggr.png)  
       
->**Совет**. Коснитесь значка параметров ![PBI_iPad_OptionsIcon](../../reporting-services/mobile-reports/media/pbi-ipad-optionsicon.png) в любое время для перехода между мобильными отчетами служб Reporting Services на веб-портале служб Reporting Services и панелями мониторинга в службе Power BI.   
+> [!TIP]
+> Коснитесь значка параметров ![PBI_iPad_OptionsIcon](../../reporting-services/mobile-reports/media/pbi-ipad-optionsicon.png) в любое время для перехода между мобильными отчетами служб Reporting Services на веб-портале служб Reporting Services и панелями мониторинга в службе Power BI.  
+
   
 ## <a name="view-kpis-and-mobile-reports-in-the-power-bi-app"></a>Просмотр ключевых показателей эффективности (КПЭ) и мобильных отчетов в приложении Power BI  
   
@@ -297,12 +301,10 @@ ms.locfileid: "51813767"
   
 Ключевые показатели эффективности и мобильные отчеты отображаются в тех же папках,в которых они хранятся на веб-портале служб Reporting Services.   
   
-### <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также раздел  
  
--  См. статью [Просмотр мобильных отчетов и ключевых показателей эффективности Reporting Services в приложении для iPad](https://powerbi.microsoft.com/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI для iOS).  
--  См. статью [Просмотр мобильных отчетов и ключевых показателей эффективности Reporting Services в приложении для iPhone](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI для iOS).  
--  См. статью [Просмотр мобильных отчетов и ключевых показателей эффективности Reporting Services в приложении Android для Power BI](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports).
--  См. статью [Просмотр ключевых показателей эффективности и мобильных отчетов Reporting Services в мобильном приложении Power BI для Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/).    
+-  Просмотр [локальных отчетов мобильных отчетов и ключевых показателей эффективности в мобильном приложении Power BI](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-app-ssrs-kpis-mobile-on-premises-reports) для устройств с iOS и Android
+-  Просмотр [локальных отчетов мобильных отчетов и ключевых показателей эффективности в мобильном приложении Power BI для устройств с Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   
    
 

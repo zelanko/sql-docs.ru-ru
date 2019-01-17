@@ -1,6 +1,7 @@
 ---
-title: Журнал диагностики работоспособности для групп доступности AlwaysOn (SQL Server) | Документы Майкрософт
-ms.custom: ag-guide
+title: Журналы диагностики работоспособности библиотеки ресурсов SQL Server для групп доступности
+description: Описывает, как библиотека ресурсов SQL Server наблюдает за работоспособностью группы доступности Always On.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: c1862d8a-5f82-4647-a280-3e588b82a6dc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c9a41540e9617f9eb9543677c9982b8bbb5985c3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a1703e24458e21bf267c4b33ce458e7fedbead1d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405016"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207763"
 ---
-# <a name="always-on-availability-groups-health-diagnostics-log"></a>Журнал диагностики работоспособности для групп доступности AlwaysOn
+# <a name="sql-server-resource-dll-health-diagnostic-logs-for-availability-groups"></a>Журналы диагностики работоспособности библиотеки ресурсов SQL Server для групп доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Для наблюдения за работоспособностью первичной реплики доступности библиотека ресурсов SQL Server, выполняемая в кластере отказоустойчивой кластеризации Windows Server (WSFC), использует хранимую процедуру в экземпляре SQL Server [sp_server_diagnostics](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md).  
   
@@ -25,7 +26,7 @@ ms.locfileid: "52405016"
   
  **Использование журналов диагностики отказоустойчивого кластера SQL Server**
  
- Все диагностические сведения о работоспособности, получаемые библиотекой ресурсов SQL Server от процедуры sp_server_diagnostics, автоматически сохраняются в каталоге журнала по умолчанию для экземпляра SQL Server (%PROGRAMFILES%\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Log). Эти журналы называются SQLDIAG и сохраняются в формате XEL (расширенные события). Эти файлы в каталоге журнала SQL Server имеют следующий формат: \<имя_узла>_\<тия_экземпляра>_SQLDIAG_X_XXXXXXXXX.xel. Просмотрев журналы SQLDIAG, можно определить первопричину неисправности ресурсов группы доступности сбоя или события перехода на другой ресурс.  
+ Все диагностические сведения о работоспособности, получаемые библиотекой ресурсов SQL Server от процедуры sp_server_diagnostics, автоматически сохраняются в каталоге журнала по умолчанию для экземпляра SQL Server (%PROGRAMFILES%\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Log). Эти журналы называются SQLDIAG и сохраняются в формате XEL (расширенные события). Эти файлы в каталоге журнала SQL Server имеют следующий формат: \<HOSTNAME>_\<INSTANCENAME>_SQLDIAG_X_XXXXXXXXX.xel. Просмотрев журналы SQLDIAG, можно определить первопричину неисправности ресурсов группы доступности сбоя или события перехода на другой ресурс.  
   
  Чтобы просмотреть журнал SQLDIAG, перетащите XEL-файл в SQL Server Management Studio.  
   

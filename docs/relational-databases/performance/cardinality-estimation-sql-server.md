@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27ef6862a5fcfb6e63ffcbdd89fb1e000c2065f2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4f827b1de0a9cba06a17fc2b84724277e9daab22
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667033"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328858"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Оценка количества элементов (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "51667033"
 
 Последующие обновления выпущены вместе с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с уровнем совместимости 120 и выше. Обновления CE для уровней 120 и выше включают обновленные допущения и алгоритмы, которые хорошо сочетаются с современными хранилищами данных и рабочими нагрузками OLTP. Из допущений CE 70 были изменены следующие допущения моделей, начиная с CE 120:
 
--  **Независимость** стала **корреляцией**: комбинация разных значений столбцов, которые не обязательно будут независимы. Это может напоминать более реальные запросы данных.
+-  **Независимость** стала **корреляцией**: комбинация разных значений столбцов, которые необязательно будут независимы. Это может напоминать более реальные запросы данных.
 -  **Простая автономность** стала **базовой автономностью**: пользователи могут запрашивать несуществующие данные. Например, в случае соединения по равенству между двумя таблицами используются гистограммы базовых таблиц для оценки избирательности соединений, а затем учитывается избирательность предикатов.
   
-**Уровень совместимости**: чтобы убедиться, что база данных находится на определенном уровне, используйте следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] для [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+**Уровень совместимости**: чтобы убедиться в том, что база данных находится на определенном уровне, используйте следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] для [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 ```sql  
 SELECT ServerProperty('ProductVersion');  
@@ -68,7 +68,7 @@ GO
   
 В базах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с уровнем совместимости 120 или выше при активации [флага трассировки 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) система принудительно использует CE версии 70.  
   
-**Устаревшая CE**: для базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с уровнем совместимости 120 или выше CE версии 70 может быть активирована на уровне базы данных с помощью инструкции [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+**Устаревшая CE**: для базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с уровнем совместимости 120 или выше CE версии 70 можно активировать на уровне базы данных с помощью инструкции [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
 ```sql  
 ALTER DATABASE SCOPED CONFIGURATION 

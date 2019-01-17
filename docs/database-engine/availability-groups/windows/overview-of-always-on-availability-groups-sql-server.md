@@ -1,6 +1,7 @@
 ---
-title: Обзор групп доступности AlwaysOn (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Обзор групп доступности AlwaysOn
+description: Здесь вводятся концепции, которые имеют центральное значение для настройки и управления группой доступности Always On.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +17,12 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec3ca3bc16f7967128efc617844717dcf5e57270
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5ab315e41607d528a1d34be6e61a6344350eb240
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509279"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215261"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Обзор групп доступности AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "52509279"
  *Группа доступности* поддерживает реплицированную среду для дискретного набора пользовательских баз данных, известных как *базы данных доступности*. Можно создать группу доступности для обеспечения высокой доступности (HA) или для чтения и масштабирования. Группа доступности HA — это группа баз данных, для которых отработка отказа выполняется одновременно. Группа доступности для чтения и масштабирования — это группа баз данных, которые копируются на другие экземпляры SQL Server для рабочей нагрузки только для чтения. Группа доступности поддерживает один набор баз данных-источников и до восьми наборов соответствующих баз данных-получателей. Базы данных-получатели *не являются* резервными копиями. Продолжайте регулярно создавать резервные копии баз данных и их журналов транзакций.  
   
 > [!TIP]  
->  Можно создать резервную копию базы данных-источника любого типа. Кроме того, также можно создавать резервные копии журналов и полные резервные копии баз данных-получателей. Дополнительные сведения см. в разделе [Активные вторичные реплики: резервное копирование во вторичных репликах (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).   
+>  Можно создать резервную копию базы данных-источника любого типа. Кроме того, также можно создавать резервные копии журналов и полные резервные копии баз данных-получателей. Дополнительные сведения см. в статье [Активные вторичные реплики: резервное копирование во вторичных репликах (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).   
 
  Каждый набор баз данных доступности размещается с помощью *реплики доступности*. Существует два типа реплик доступности: одна *первичная реплика*, которая размещает основные базы данных, и до восьми *вторичных реплик*, каждая из которых размещает набор вторичных баз данных и серверов как потенциальных объектов отказа для группы доступности. Группа доступности выполняет переход на другой ресурс на уровне реплики доступности. Реплика доступности обеспечивает избыточность только на уровне базы данных: для набора баз данных из одной группы доступности. Отработка отказа не вызывается проблемами баз данных, например обозначением базы данных как подозрительной в связи с потерей файла данных или повреждением журнала транзакций.  
   
@@ -124,11 +125,11 @@ ms.locfileid: "52509279"
   
 -   **Проведение операций резервного копирования со вторичными репликами.**  
   
-     Вторичные реплики поддерживают создание резервных копий журнала и резервных копий [только для копирования](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) всей базы данных, файлов и файловых групп. Можно настроить группу доступности, указав предпочтение, где следует выполнять резервное копирование. Важно понимать, что приоритет не определяется в SQL Server, поэтому не влияет на выполнение нерегламентированного резервного копирования. Интерпретация данного приоритета зависит от логики, при ее наличии, которая внесена в задания резервного копирования для каждой из баз данных в указанной группе доступности. Для отдельной реплики доступности можно указать приоритет выполнения резервного копирования на данной реплике по отношению к другим репликам из той же группы доступности. Дополнительные сведения см. в статье [Активные вторичные реплики, резервное копирование во вторичных репликах (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Вторичные реплики поддерживают создание резервных копий журнала и резервных копий [только для копирования](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) всей базы данных, файлов и файловых групп. Можно настроить группу доступности, указав предпочтение, где следует выполнять резервное копирование. Важно понимать, что приоритет не определяется в SQL Server, поэтому не влияет на выполнение нерегламентированного резервного копирования. Интерпретация данного приоритета зависит от логики, при ее наличии, которая внесена в задания резервного копирования для каждой из баз данных в указанной группе доступности. Для отдельной реплики доступности можно указать приоритет выполнения резервного копирования на данной реплике по отношению к другим репликам из той же группы доступности. Дополнительные сведения см. в статье [Активные вторичные реплики: резервное копирование во вторичных репликах (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Доступ только для чтения к одной или нескольким вторичным репликам (доступные для чтения вторичные реплики)**  
   
-     Любая реплика доступности может быть настроена на получение доступа только для чтения ко своим локальным базам данных (при выполнении вторичной роли), хотя некоторые операции поддерживаются не полностью. Кроме того, если требуется предотвратить выполнение на первичной реплике рабочих нагрузок в режиме только чтения, то при выполнении реплик в первичной роли для них можно настроить доступ только на чтение и запись. Дополнительные сведения см. в разделе [Активные вторичные реплики: доступные только для чтения вторичные реплики (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+     Любая реплика доступности может быть настроена на получение доступа только для чтения ко своим локальным базам данных (при выполнении вторичной роли), хотя некоторые операции поддерживаются не полностью. Кроме того, если требуется предотвратить выполнение на первичной реплике рабочих нагрузок в режиме только чтения, то при выполнении реплик в первичной роли для них можно настроить доступ только на чтение и запись. Дополнительные сведения см. в статье [Активные вторичные реплики: вторичные реплики для чтения (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
      Если в группе доступности имеется прослушиватель группы доступности и одна или несколько доступных для чтения вторичных реплик, то [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может направлять запросы на установку соединения (с целью считывания данных) к одной из них (*маршрутизация только для чтения*). Дополнительные сведения см. в разделе [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
@@ -155,17 +156,17 @@ ms.locfileid: "52509279"
   
 -   **Блоги**  
   
-     [Обучающая серия AlwaysOn — HADRON: использование рабочего пула для баз данных с поддержкой HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Обучающая серия Always ON — HADRON. Использование рабочего пула для баз данных с HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [Блоги команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Видеоролики**  
   
-     [Microsoft SQL Server с рабочим названием Denali AlwaysOn, часть 1. Вводные сведения о решении следующего поколения по обеспечению высокого уровня доступности](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server с рабочим названием Denali Always On, часть 1: вводные сведения о решении следующего поколения по обеспечению высокого уровня доступности](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server с рабочим названием Denali AlwaysOn, часть 2. Создание критически важного решения по обеспечению высокого уровня доступности с использованием AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server с рабочим названием Denali Always On, часть 2: создание критически важного решения по обеспечению высокого уровня доступности с использованием Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Технические документы**  
   
@@ -183,8 +184,8 @@ ms.locfileid: "52509279"
  [Поддержка высокого уровня доступности в базах данных OLTP в памяти](../../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)   
  [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Создание и настройка групп доступности (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
- [Активные вторичные реплики. Доступ только для чтения к вторичным репликам (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [Активные вторичные реплики: резервное копирование во вторичных репликах (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
+ [Активные вторичные реплики: вторичные реплики для чтения (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [Активные вторичные реплики: резервное копирование во вторичных репликах (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
    

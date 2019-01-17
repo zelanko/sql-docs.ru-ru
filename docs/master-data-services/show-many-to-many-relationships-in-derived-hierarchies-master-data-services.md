@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d05fc6068b221bfd21ffdfd0e6f8fff850bab179
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6da7d5b12dcd8e998a32403bc9f98ae3ceee121b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755572"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797136"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Отображение связей "многие-ко-многим" в производных иерархиях (Master Data Services)
 
@@ -44,7 +43,7 @@ ms.locfileid: "47755572"
   
  Обратите внимание, что на приведенном выше снимке экрана сущность **Employee** отображается в среднем разделе **Текущие уровни** как единственный уровень. В разделе **Предварительный просмотр** справа выведен список всех элементов сущности **Employee** . В разделе **Доступные уровни** слева отображаются уровни, которые можно добавить выше текущего верхнего уровня (**Сотрудник**). Большинство из них являются атрибутами на основе домена в сущности **Сотрудник** , включая атрибут на основе домена **Отдел** .  
   
- Начиная с [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]существует новый тип уровня, который моделирует связи "многие ко многим", например **Class (сопоставленный через ClassRegistration.Student)**. Имя уровня является более подробным по сравнению с другими именами. Это необходимо для предоставления дополнительных сведений для однозначного описания связи сопоставления. Перетащите этот уровень на уровень **Employee** в разделе **Текущие уровни** .  
+ Начиная с [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] существует новый тип уровня, который моделирует связи "многие ко многим", например **Class (сопоставленный через ClassRegistration.Student)**. Имя уровня является более подробным по сравнению с другими именами. Это необходимо для предоставления дополнительных сведений для однозначного описания связи сопоставления. Перетащите этот уровень на уровень **Employee** в разделе **Текущие уровни** .  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
@@ -84,7 +83,7 @@ ms.locfileid: "47755572"
 Инструкции по развертыванию образца модели Customer и других образцов моделей, входящих в состав [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], см. в разделе [Развертывание образцов моделей и данных](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md).   
   
 ## <a name="one-many-relationship"></a>Связь "один-ко-многим"  
- Элемент производной иерархии может быть родителем нескольких дочерних элементов, однако обычно у него не может быть больше одного родительского элемента (исключения см. в разделе [Безопасность элементов](#bkmk_member_security)). Предположим, что имеются две сущности — Employee и Department — и каждый сотрудник принадлежит одному отделу. Эта связь моделируется путем добавления в сущность Employee атрибута DBA, который ссылается на сущность Department.  
+ Элемент производной иерархии может быть родителем нескольких дочерних элементов, однако обычно у него не может быть больше одного родительского элемента (исключения см. в разделе [Безопасность элементов](#bkmk_member_security)). Предположим, что имеются две сущности — Employee и Department — и каждый сотрудник принадлежит одному отделу. Эта связь моделируется путем добавления в сущность Employee атрибута DBA, который ссылается на сущность Department.  
   
  ![mds_hierarchies_onetomany](../master-data-services/media/mds-hierarchies-onetomany.png "mds_hierarchies_onetomany")  
   

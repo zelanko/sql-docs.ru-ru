@@ -1,6 +1,7 @@
 ---
-title: Запланированный переход на другой ресурс вручную для группы доступности (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Выполнение запланированного перехода на другой ресурс вручную для группы доступности
+description: В этом разделе описывается выполнение планового перехода на другой ресурс вручную для группы доступности Always On.
+ms.custom: seodec18
 ms.date: 10/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -15,14 +16,14 @@ ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5b19d83a07e083598689595120b30857eea127ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d632a45f81658612c7c6f37e4de6dc535551fee4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854062"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212163"
 ---
-# <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>Запланированный переход на другой ресурс вручную для группы доступности (SQL Server)
+# <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Выполнение планового перехода на другой ресурс вручную для группы доступности Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 В этом разделе описывается выполнение перехода на другой ресурс вручную без потери данных (*запланированный переход на другой ресурс вручную*) в группе доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Группа доступности выполняет переход на другой ресурс на уровне реплики доступности. Запланированный переход на другой ресурс вручную, как и любая другая отработка отказа для группы доступности AlwaysOn, переводит вторичную реплику на основную роль. При этом бывшая первичная реплика принимает роль вторичной.  
   
@@ -53,7 +54,7 @@ ms.locfileid: "47854062"
     >  Чтобы определить готовность вторичной реплики к отработке отказа, запросите столбец **is_failover_ready** в динамическом административном представлении [sys.dm_hadr_database_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md). Либо проверьте значение столбца **Готовность к отработке отказа** в [панели мониторинга группы AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md). 
 -   Эта задача поддерживается только в целевой вторичной реплике. Необходимо подключиться к экземпляру сервера, на котором размещается целевая вторичная реплика. 
   
-###  <a name="Security"></a> безопасность 
+###  <a name="Security"></a> Безопасность 
   
 ####  <a name="Permissions"></a> Permissions 
  Группе доступности необходимо предоставить разрешение ALTER AVAILABILITY GROUP. Также необходимо разрешение CONTROL AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER. 
@@ -107,7 +108,7 @@ ms.locfileid: "47854062"
     -   [Поставщик SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
     -   [Получение справки по SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
 
-##  <a name="FollowUp"></a> Дальнейшие действия: после отработки отказа группы доступности вручную 
+##  <a name="FollowUp"></a> Дальнейшие действия. После отработки отказа группы доступности вручную 
  Если отработка отказа была выполнена на ресурс, не входящий в [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] группы доступности, перенастройте голоса кворума узлов отказоустойчивой кластеризации Windows Server, чтобы отразить новую конфигурацию группы доступности. Дополнительные сведения: [Отказоустойчивая кластеризация Windows Server &#40;WSFC&#41; с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md). 
 
 <a name = "ReadScaleOutOnly"><a/>

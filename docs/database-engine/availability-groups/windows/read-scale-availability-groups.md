@@ -1,6 +1,7 @@
 ---
-title: Группы доступности для чтения и масштабирования | Microsoft Docs
-ms.custom: ''
+title: Группы доступности для чтения и масштабирования
+description: 'Описание способов достижения чтения и масштабирования при использовании групп доступности Always On. '
+ms.custom: seodec18
 ms.date: 10/24/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee043206e4525f8c549f9bf6e90c2655bff0c6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b9556e7cecf64d0cd3d2abfe0aecdf3c5aa7cc8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622412"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203843"
 ---
-# <a name="read-scale-availability-groups"></a>Группы доступности для чтения и масштабирования
+# <a name="use-read-scale-with-always-on-availability-groups"></a>Группы доступности Always On для чтения и масштабирования
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Группа доступности — это комплексное решение, которое позволяет использовать функции высокой доступности в SQL Server и включает встроенные решения масштабирования. В стандартном приложении базы данных множество клиентов выполняют разные типы рабочих нагрузок. Иногда из-за ограничений ресурсов могут возникать "узкие места". Вы можете освободить ресурсы и повысить пропускную способность для рабочей нагрузки OLTP. Кроме того, вы можете увеличить производительность и масштаб рабочих нагрузок, выполняющих только чтение. Воспользуйтесь самой быстрой технологией репликации для SQL Server и создайте группу реплицируемых баз данных, чтобы перенести рабочие нагрузки отчетности и аналитики на реплики только для чтения, освободив другие ресурсы.

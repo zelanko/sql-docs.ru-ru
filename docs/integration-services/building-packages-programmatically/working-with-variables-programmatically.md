@@ -23,12 +23,12 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73eed98ef8b7d6c8f842431d5ebc5f1ea846e8c0
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b163dd722797a7d3c4ec3fdec0551350005507ee
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642211"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203963"
 ---
 # <a name="working-with-variables-programmatically"></a>Программная работа с переменными
   С помощью переменных можно динамически задавать значения и управлять процессами в пакетах, контейнерах, задачах и обработчиках событий. Переменные могут также использоваться элементами управления очередностью для управления направлением потока данных к различным задачам. С помощью переменных можно:  

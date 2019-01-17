@@ -1,6 +1,7 @@
 ---
-title: Активные вторичные реплики. Доступ только для чтения к вторичным репликам (группы доступности AlwaysOn) | Документы Майкрософт
-ms.custom: ''
+title: Перенос нагрузки только для чтения на вторичную реплику в группе доступности
+description: Дополнительные сведения о переносе запросов только для чтения и отчетов на вторичную реплику группы доступности Always On в SQL Server.
+ms.custom: seodec18
 ms.date: 06/06/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0c7c2b420adedaff0a67ff0f10c14d581f13f94
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 653171f45dff58afe617f1d70380e4ce9f3ee600
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604722"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206273"
 ---
-# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Активные вторичные реплики. Доступ только для чтения к вторичным репликам (группы доступности AlwaysOn)
+# <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Перенос нагрузки только для чтения на вторичную реплику в группе доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Возможности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] по активному доступу к вторичным репликам включают поддержку доступа только для чтения к одной или нескольким вторичным репликам (*доступным для чтения вторичным репликам*). Доступная для чтения вторичная реплика может находиться в режиме доступности как с синхронной, так и с асинхронной фиксацией. Доступная для чтения вторичная реплика разрешает доступ только для чтения ко всем своим базам данных-получателям. Однако доступные для чтения базы данных-получатели не переводятся в режим доступа только для чтения. Они являются динамическими. Определенная база данных-получатель изменяется по мере того, как к ней применяются изменения, вносимые в данные базы данных-источника. Для большинства вторичных реплик данные, в том числе оптимизированные для памяти устойчивые таблицы, вносятся во вторичную базу данных почти в реальном времени. Более того, полнотекстовые индексы синхронизируются с базами данных-получателями. Во многих случаях задержка данных между базой данных-источником и соответствующей базой данных-получателем находится в пределах нескольких секунд.  
@@ -35,22 +36,6 @@ ms.locfileid: "51604722"
 >  Хотя в базы данных-получатели нельзя записывать данные, их можно записывать в базы данных, предназначенные для чтения и записи на экземпляре сервера, содержащем вторичную реплику, в том числе в пользовательские и системные базы данных, например в базу данных **tempdb**.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] также поддерживает маршрутизацию запросов соединения с намерением чтения к доступной для чтения вторичной реплике (*маршрутизация только для чтения*). Дополнительные сведения см. в статье [Соединение с помощью прослушивателя со вторичной репликой только для чтения (маршрутизация только для чтения)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary).  
-  
- **В этом разделе.**  
-  
--   [Преимущества](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Benefits)  
-  
--   [Предварительные условия для использования группы доступности](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Prerequisites)  
-  
--   [Ограничения](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_LimitationsRestrictions)  
-  
--   [Вопросы производительности](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Performance)  
-  
--   [Рекомендации по планированию загрузки](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_CapacityPlanning)  
-  
--   [Связанные задачи](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_RelatedTasks)  
-  
--   [См. также](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#RelatedContent)  
   
 ##  <a name="bkmk_Benefits"></a> Преимущества  
  Направление подключений «только для чтения» к доступным для чтения вторичным репликам обладает следующими преимуществами:  
@@ -252,7 +237,7 @@ GO
   
 ##  <a name="RelatedContent"></a> См. также  
   
--   [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Блог команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

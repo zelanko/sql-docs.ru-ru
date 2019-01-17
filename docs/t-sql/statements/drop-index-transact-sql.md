@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 833775d4ab032724eb76f80ed51b2548d29bd875
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fdb2e2dc081bce539bf2671e14993281d2415b98
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701760"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206233"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "51701760"
   
  Инструкция DROP INDEX неприменима к индексам, созданным при указании ограничений параметров PRIMARY KEY и UNIQUE. Для удаления ограничения и соответствующего индекса используется инструкция [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) с предложением DROP CONSTRAINT.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Синтаксис, определяемый в `<drop_backward_compatible_index>`, не будет поддерживаться в будущих версиях [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого синтаксиса в новых разработках и учитывайте необходимость изменения в будущем приложений, использующих эти функции сейчас. Используйте синтаксис, описанный в `<drop_relational_or_xml_index>`. XML-индексы нельзя удалить с использованием обратно совместимого синтаксиса.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -202,7 +202,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  **"** default **"**  
  Указывает размещение по умолчанию для результирующей таблицы.  
   
-> [!NOTE]  
+> [!NOTE]
 >  В этом контексте default не является ключевым словом. Это идентификатор файловой группы по умолчанию, и поэтому он должен быть заключен в разделители, например: MOVE TO **"** default **"** или MOVE TO **[** default **]**. Если указывается параметр **"** default **"**, то параметр QUOTED_IDENTIFIER для текущего сеанса должен иметь значение ON. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **"** default **"** }  
@@ -221,7 +221,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  **"** default **"**  
  Указывает расположение по умолчанию для данных FILESTREAM.  
   
-> [!NOTE]  
+> [!NOTE]
 >  В этом контексте default не является ключевым словом. Это идентификатор файловой группы по умолчанию, и поэтому он должен быть заключен в разделители, например: MOVE TO **"** default **"** или MOVE TO **[** default **]**. Если указано значение "default" (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 ## <a name="remarks"></a>Remarks  

@@ -1,6 +1,7 @@
 ---
-title: Смена контекста кластера HADR экземпляра сервера (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Изменение кластера, который управляет метаданными для реплик в группе доступности
+description: При миграции между кластерами вы можете изменить кластер, который управляет метаданными для реплик доступности в группе доступности Always On, изменив контекст кластера HADR для экземпляра SQL Server.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 940fc70407c6a4131719818bbbc87049c93fab6b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: def5873f53093abfc13ed0968229671a012af839
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605706"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202133"
 ---
-# <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>Смена контекста кластера HADR экземпляра сервера (SQL Server)
+# <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>Изменение кластера, который управляет метаданными для реплик в группе доступности Always On
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -39,7 +40,7 @@ ms.locfileid: "51605706"
   
      [безопасность](#Security)  
   
--   **Переключение контекста кластера реплики доступности с помощью:**  [Transact-SQL](#TsqlProcedure)  
+-   **Переключение контекста кластера реплики доступности с помощью**:  [Transact-SQL](#TsqlProcedure)  
   
 -   **Дальнейшие действия.**  [После переключения контекста кластера реплики доступности](#FollowUp)  
   
@@ -87,7 +88,7 @@ ms.locfileid: "51605706"
     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com'  
     ```  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
   
@@ -168,7 +169,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [Технические статьи по SQL Server 2012](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Блог команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>См. также:  
  [Группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   

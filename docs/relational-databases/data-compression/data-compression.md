@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bba6cc9159ac3cfc9cc45f882a916dcad3365e4e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2370c428d063958079e749c792a60de3b7379ee3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533551"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210533"
 ---
 # <a name="data-compression"></a>Сжатие данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "52533551"
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>Использование Columnstore и архивного сжатия Columnstore  
   
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)].  
   
 ### <a name="basics"></a>Основы  
  Таблицы и индексы Columnstore всегда сохраняются со сжатием columnstore. Можно еще более уменьшить размер данных columnstore, настроив дополнительное сжатие, именуемое архивным сжатием.  Чтобы выполнить архивное сжатие, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] применяет к данным алгоритм сжатия XPress корпорации Майкрософт. Добавьте или удалите архивное сжатие, используя следующие типы сжатия данных.  
@@ -169,7 +169,7 @@ REBUILD PARTITION = ALL WITH (
      Удаление кластеризованного индекса в режиме вне сети происходит очень быстро, поскольку удаляются только верхние уровни кластеризованных индексов. При удалении кластеризованного индекса в режиме в сети [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен перестроить кучу два раза — один для первого шага, один для второго.  
   
 ## <a name="how-compression-affects-replication"></a>Влияние сжатия на репликацию 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).   
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).   
 При использовании сжатия данных с репликацией следует учитывать следующее.  
 -   Если агент моментальных снимков формирует первичный скрипт схемы, в новой схеме для таблицы и ее индексов будет использован один и тот же режим сжатия. Сжатие нельзя включить только для таблицы, но не для индекса.  
 -   При репликации транзакций параметр схемы статьи определяет, какие из зависимых объектов или свойств должны быть добавлены в сценарий. Дополнительные сведения см. в разделе [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
@@ -187,7 +187,7 @@ REBUILD PARTITION = ALL WITH (
 |Выполнить сжатие таблицы на подписчике при условии, что на издателе были сжаты все секции, но не выполнять репликацию схемы секционирования.|False|True|Проверить, что для всех секций включено сжатие.<br /><br /> Создать скрипт сжатия на уровне таблицы.|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>Влияние сжатия на другие компоненты SQL Server 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
    
  Сжатие происходит в подсистеме хранилища, и данные предоставляются большинству других компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в распакованном состоянии. Это ограничивает влияние сжатия на другие компоненты следующим.  
 -   Операции массового импорта и экспорта  

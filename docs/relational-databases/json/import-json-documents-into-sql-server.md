@@ -11,12 +11,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22365cc7a483b285f583268856a979a694eeabab
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7b77ef114e1af3ec0d8c7a7268ae5f9b892196fe
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537270"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886929"
 ---
 # <a name="import-json-documents-into-sql-server"></a>Импорт документов JSON на SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -121,8 +121,6 @@ FROM 'data/product.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
-Дополнительные сведения и пример использования функции OPENROWSET см. в статье [Загрузка файлов из хранилища BLOB-объектов Azure в базу данных SQL Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/).
-
 ## <a name="parse-json-documents-into-rows-and-columns"></a>Синтаксический анализ документов JSON с преобразованием в строки и столбцы
 Вместо того чтобы считывать весь файл JSON как отдельное значение, вы можете выполнить его синтаксический анализ и вернуть содержимое файла и свойства этого содержимого в строках и столбцах. В следующем примере используется JSON-файл с [этого сайта](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json), содержащий список документации.
 
@@ -162,7 +160,7 @@ SELECT book.*
 |---|---|---|---|---|
 978-0641723445|The Lightning Thief|12.5|384|Рик Риордан (Rick Riordan)| 
 978-1423103349|The Sea of Monsters|6.49|304|Рик Риордан (Rick Riordan)| 
-978-1857995879|Sophie's World : The Greek Philosophers|3.07|64|Юстейн Гордер (Jostein Gaarder)| 
+978-1857995879|Sophie's World: The Greek Philosophers|3.07|64|Юстейн Гордер (Jostein Gaarder)| 
 978-1933988177|Lucene in Action, Second Edition|30.5|475|Майкл Маккэндлесс (Michael McCandless)|
 ||||||
 
@@ -170,10 +168,6 @@ SELECT book.*
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Дополнительные сведения о JSON в SQL Server и базе данных SQL Azure  
   
-### <a name="microsoft-blog-posts"></a>Публикации блога Майкрософт  
-  
-Конкретные решения, варианты использования и рекомендации см. в [записях блога](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) о встроенной поддержке JSON в SQL Server и базе данных SQL Azure.  
-
 ### <a name="microsoft-videos"></a>Видео Майкрософт
 
 Наглядные инструкции по встроенной поддержке JSON в SQL Server и базе данных SQL Azure см. в следующих видео.

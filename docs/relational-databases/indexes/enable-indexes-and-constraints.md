@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61b9d5633439ee9092246c0b4ce605b2523c2358
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2b1666c57bf13b8eba0f76c717ae585ddc0ae110
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535523"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979630"
 ---
 # <a name="enable-indexes-and-constraints"></a>Включение индексов и ограничений
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "52535523"
 
 -   При перестроении отключенных сжатых некластеризованных индексов параметр data_compression по умолчанию имеет значение none. Это означает, что индексы не будут сжиматься. Связано это с тем, что при отключении некластеризованных индексов метаданные параметров сжатия теряются. Чтобы обойти эту проблему, необходимо явно настроить сжатие данных в инструкции перестроения.
 
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER для таблицы или представления. При использовании инструкции DBCC DBREINDEX пользователь должен быть владельцем таблицы, членом предопределенной роли сервера **sysadmin** либо предопределенной роли базы данных **db_ddladmin** или **db_owner**.  

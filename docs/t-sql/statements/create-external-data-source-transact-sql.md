@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3375af07fc7231321c96c2aa03d95dbbdc6709f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 51e75f21dbaa518e344ec8c43fc8c9a087cea959
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506415"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980010"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -152,13 +152,13 @@ LOCATION = \<location_path> **HADOOP**
 Для HADOOP: указывает универсальный код ресурса (URI) для кластера Hadoop.  
 `LOCATION = 'hdfs:\/\/*NameNode\_URI*\[:*port*\]'`  
 NameNode_URI: имя компьютера или IP-адрес кластера Hadoop Namenode.  
-порт: порт IPC Namenode. Это указывается в параметре конфигурации fs.default.name в Hadoop. Если значение не указано, по умолчанию будет использоваться 8020.  
+port: порт IPC Namenode. Это указывается в параметре конфигурации fs.default.name в Hadoop. Если значение не указано, по умолчанию будет использоваться 8020.  
 Пример: `LOCATION = 'hdfs://10.10.10.10:8020'`
 
 Для хранилища BLOB-объектов Azure с Hadoop задает URI для подключения к хранилищу BLOB-объектов Azure.  
 `LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'`  
-wasb[s]: задает протокол для хранилища BLOB-объектов Azure. Знак [s] является необязательным и указывает на безопасное подключение SSL: данные, отправляемые с SQL Server, надежно зашифрованы с помощью протокола SSL. Настоятельно рекомендуется использовать wasbs вместо wasb. Обратите внимание, что расположение может использовать asv[s] вместо wasb[s]. Синтаксис asv[s] является устаревшим и будет упразднен в следующем выпуске.  
-container: задает имя контейнера хранилища BLOB-объектов Azure. Чтобы указать корневой контейнер учетной записи хранения домена, используйте имя домена, а не имя контейнера. Корневые контейнеры доступны только для чтения, записать данные в контейнер невозможно.  
+wasb[s]: задает протокол для хранилища больших двоичных объектов Azure. Знак [s] является необязательным и указывает на безопасное подключение SSL: данные, отправляемые с SQL Server, надежно зашифрованы с помощью протокола SSL. Настоятельно рекомендуется использовать wasbs вместо wasb. Обратите внимание, что расположение может использовать asv[s] вместо wasb[s]. Синтаксис asv[s] является устаревшим и будет упразднен в следующем выпуске.  
+container: задает имя контейнера хранилища больших двоичных объектов Azure. Чтобы указать корневой контейнер учетной записи хранения домена, используйте имя домена, а не имя контейнера. Корневые контейнеры доступны только для чтения, записать данные в контейнер невозможно.  
 account_name: полное доменное имя (FQDN) учетной записи хранения Azure.  
 Пример: `LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
 
@@ -208,7 +208,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 Пошаговое руководство по RDBMS см. в разделе [Начало работы с запросами между базами данных (вертикальное секционирование)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/).  
 
 **BLOB_STORAGE**   
-Этот тип используется только для массовых операций: `LOCATION` должно быть действительным URL-адресом хранилища и контейнера BLOB-объектов Azure. Не помещайте **/**, имя файла или параметры подписи общего доступа в конце URL-адреса `LOCATION`. `CREADENTIAL` является обязательным, если большой двоичный объект не является общим. Пример: 
+Этот тип используется только для массовых операций: `LOCATION` должно быть действительным URL-адресом хранилища и контейнера BLOB-объектов Azure. Не помещайте **/**, имя файла или параметры подписи общего доступа в конце URL-адреса `LOCATION`. `CREDENTIAL` является обязательным, если большой двоичный объект не является общим. Пример: 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH (  TYPE = BLOB_STORAGE, 
@@ -329,7 +329,7 @@ CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential
 ## <a name="locking"></a>Блокировка  
  Принимает совмещенную блокировку на объекте EXTERNAL DATA SOURCE.  
   
-##  <a name="examples"></a> Примеры: SQL Server 2016  
+##  <a name="examples"></a> Примеры: SQL Server 2016  
   
 ### <a name="a-create-external-data-source-to-reference-hadoop"></a>A. Создание внешнего источника данных для ссылки на Hadoop  
 Чтобы создать внешний источник данных для ссылки на кластер Hadoop Hortonworks или Cloudera Hadoop, укажите имя компьютера или IP-адрес узла имен и порта Hadoop.  
@@ -401,7 +401,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 );
 ```
 
-## <a name="examples-azure-sql-database"></a>Примеры: база данных SQL Azure
+## <a name="examples-azure-sql-database"></a>Примеры: База данных SQL Azure
 
 ### <a name="e-create-a-shard-map-manager-external-data-source"></a>Д. Создание внешнего источника данных для диспетчера карт сегментов
 Чтобы создать внешний источник данных, ссылающийся на SHARD_MAP_MANAGER, укажите имя логического сервера, на котором размещен диспетчер карт сегментов в базе данных SQL Azure, или базу данных SQL Server на виртуальной машине Azure.
@@ -442,10 +442,10 @@ WITH (
 );
 ```
 
-## <a name="examples-azure-sql-data-warehouse"></a>Примеры: хранилище данных SQL Azure
+## <a name="examples-azure-sql-data-warehouse"></a>Примеры: Хранилище данных SQL Azure
 
 ### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>Ж. Создание внешнего источника данных для ссылки на хранилище озера данных Azure
-Для подключения хранилища озера данных Azure используется URI ADLS и принцип обслуживания приложения в Azure Active Directory. Документация по созданию этого приложения доступна в разделе [Аутентификация хранилища озера данных с помощью Active Directory](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
+Для подключения Azure Data Lake Store используется универсальный код ресурса (URI) ADLS и субъект-служба приложения в Azure Active Directory. Документация по созданию этого приложения доступна в разделе [Аутентификация хранилища озера данных с помощью Active Directory](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -465,7 +465,7 @@ WITH (TYPE = HADOOP,
 
 
 
-## <a name="examples-parallel-data-warehouse"></a>Примеры: параллельное хранилище данных
+## <a name="examples-parallel-data-warehouse"></a>Примеры: Параллельное хранилище данных
 
 ### <a name="h-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>З. Создание внешнего источника данных для ссылки на Hadoop с включенной отправкой
 Укажите параметр JOB_TRACKER_LOCATION, чтобы включить принудительную передачу вычислений в Hadoop для запросов PolyBase. После включения этой функции PolyBase принимает решение на основе стоимости ресурсов, чтобы определить, нужно ли отправлять вычисления запроса в Hadoop или для обработки запроса в SQL Server нужно перенести все данные. 

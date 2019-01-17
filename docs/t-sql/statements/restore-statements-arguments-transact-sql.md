@@ -16,17 +16,17 @@ ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2d80647230c13b31ca9e5ae540798609fc93f527
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78dfe43617d9a519b479e53abbabcf311d726b1d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527403"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980520"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Аргументы инструкций RESTORE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-В этом разделе описаны аргументы, указанные в разделах "Синтаксис" для инструкции RESTORE {DATABASE|LOG} и связанных с ней вспомогательных инструкций: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY и RESTORE VERIFYONLY. Большинство аргументов поддерживается только вложенными наборами этих шести инструкций. Поддержка каждого аргумента указана в его описании.  
+В этом разделе документированы аргументы, описанные в разделах «Синтаксис» инструкции RESTORE {DATABASE|LOG} и связанного с ней набора вспомогательных инструкций: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY и RESTORE VERIFYONLY. Большинство аргументов поддерживается только вложенными наборами этих шести инструкций. Поддержка каждого аргумента указана в его описании.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,14 +47,14 @@ ms.locfileid: "52527403"
   
 ## <a name="arguments"></a>Аргументы  
  DATABASE  
- **Поддерживается инструкцией:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Указывает целевую базу данных. Если указан список файлов и файловых групп, то восстанавливаются только эти файлы и файловые группы.  
   
  Для базы данных, использующей модель полного восстановления или модель восстановления с неполным протоколированием, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в большинстве случаев требует, чтобы перед восстановлением базы данных была создана резервная копия конца журнала. Восстановление базы данных без создания резервной копии заключительного фрагмента журнала приведет к ошибке, если инструкция RESTORE DATABASE не содержит предложение WITH REPLACE или WITH STOPAT, в котором должно указываться время или транзакция, выполняемая после завершения резервного копирования данных. Дополнительные сведения о резервных копиях заключительного фрагмента журнала см. в разделе [Резервные копии заключительного фрагмента журнала (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
  LOG  
- **Поддерживается инструкцией:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Указывает, что резервная копия журналов транзакций должна быть применена к базе данных. Журналы транзакций должны применяться в последовательном порядке. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверяет резервные копии журнала транзакций, чтобы гарантировать, что транзакции загружаются в нужную базу данных и в верной последовательности. Для применения нескольких журналов транзакций следует использовать параметр NORECOVERY во всех операциях восстановления, кроме последней.  
   
@@ -64,12 +64,12 @@ ms.locfileid: "52527403"
  Дополнительные сведения см. в разделе [Применение резервных копий журналов транзакций (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
  { _database\_name_ | **@**_database\_name\_var_}  
- **Поддерживается инструкцией:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  База данных, в которую восстанавливается журнал или полная база данных. Если аргумент задается в виде переменной (**@**_database\_name\_var_), имя может быть указано как строковая константа (**@**_database\_name\_var_ = *database*\_*name*) или как переменная любого строкового типа данных, за исключением типов данных **ntext** или **text**.  
   
  \<file_or_filegroup_or_page> [ **,**...*n* ]  
- **Поддерживается инструкцией:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Указывает имя логического файла или файловой группы или страницы, которая входит в инструкцию RESTORE DATABASE или RESTORE LOG. Можно указать список файлов или файловых групп.  
   
@@ -123,7 +123,7 @@ FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } Обычно о�
   
  \<backup_device> [ **,**...*n* ] Логическое или физическое устройство резервного копирования, которое используется для операции восстановления.  
   
- **Поддерживается инструкциями:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  \<устройство_резервного_копирования>::= указывает логическое или физическое устройство резервного копирования, используемое для создания резервной копии, следующим образом:  
   
@@ -131,7 +131,7 @@ FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } Обычно о�
  Логическое имя устройства или устройств резервного копирования, созданных процедурой **sp_addumpdevice**, из которых восстанавливается база данных, должно соответствовать правилам для идентификаторов. Если аргумент задается в виде переменной (**@**_logical\_backup\_device\_name\_var_), имя устройства резервного копирования можно указать как строковую константу (**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) или как переменную любого строкового типа данных, за исключением типов данных **ntext** или **text**.  
   
  {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
- Разрешает сохранение резервных копий с названного диска или ленточного устройства хранения данных. Для дисковых и магнитных устройств необходимо указать фактическое имя устройства (например, полный путь и имя файла): `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` или `TAPE ='\\\\.\TAPE0'`. Если аргумент задается в виде переменной (**@**_physical\_backup\_device\_name\_var_), имя устройства можно указать как строковую константу (**@**_physical\_backup\_device\_name\_var_ = '*physcial_backup_device_name*') или как другую переменную любого строкового типа данных, за исключением типов данных **ntext** или **text**.  
+ Разрешает сохранение резервных копий с названного диска или ленточного устройства хранения данных. Для дисковых и магнитных устройств необходимо указать фактическое имя устройства (например, полный путь и имя файла): `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` или `TAPE ='\\\\.\TAPE0'`. Если аргумент задается в виде переменной (**@**_physical\_backup\_device\_name\_var_), имя устройства можно указать как строковую константу (**@**_physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*') или как другую переменную строкового типа данных, за исключением типов данных **ntext** или **text**.  
   
  Укажите тип дискового устройства с помощью сетевого сервера с именем UNC (которое должно содержать имя компьютера). Дополнительные сведения об использовании имен UNC см. в разделе [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -152,7 +152,7 @@ FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } Обычно о�
 >  Проводя восстановление из копии с зеркального набора носителей, можно указать по одному зеркалу для каждого семейства носителей. Но в случае ошибок наличие других зеркальных носителей позволяет быстро устранить некоторые проблемы восстановления. Поврежденный том носителя можно заменить соответствующим томом с другого зеркала. Учтите, что при восстановлении вне сети можно использовать меньше устройств, чем семейств носителей, но каждое семейство обрабатывается только один раз.  
   
 \<database_snapshot>::=  
-**Поддерживается инструкцией:** [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)  
+**Поддерживается:**  [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
 DATABASE_SNAPSHOT **=**_database\_snapshot\_name_  
  Возвращает базу данных к моментальному снимку базы данных, определяемому *именем_моментального_снимка_базы_данных*. Аргумент DATABASE_SNAPSHOT доступен только для полного восстановления базы данных. При выполнении операции возврата к предшествующему состоянию моментальный снимок базы данных занимает место полной резервной копии базы данных.  
@@ -166,7 +166,7 @@ DATABASE_SNAPSHOT **=**_database\_snapshot\_name_
 >  Параметры WITH указаны в том же порядке, что и в подразделе "Синтаксис" раздела [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md).  
   
  PARTIAL  
- **Поддерживается инструкцией:** [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Поддерживается:**  [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Указывает операцию частичного восстановления, которая восстанавливает первичную файловую группу и любые указанные вторичные файловые группы. Параметр PARTIAL неявно выбирает первичную файловую группу; указывать FILEGROUP = 'PRIMARY' не требуется. Чтобы восстановить вторичную файловую группу, необходимо явно задать ее с помощью параметра FILE или FILEGROUP.  
   
@@ -175,7 +175,7 @@ DATABASE_SNAPSHOT **=**_database\_snapshot\_name_
  Параметр PARTIAL запускает начальный этап поэтапного восстановления, которое позволяет восстановить оставшиеся файловые группы позднее. Дополнительные сведения см. в разделе [Поэтапное восстановление (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   
  [ **RECOVERY** | NORECOVERY | STANDBY ]  
- **Поддерживается инструкцией:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  **RECOVERY**  
  Настраивает операцию восстановления на откат любых незавершенных транзакций. После процедуры восстановления база данных готова к использованию. Если не указан ни один из параметров NORECOVERY, RECOVERY и STANDBY, RECOVERY является параметром по умолчанию.  
@@ -215,7 +215,7 @@ STANDBY **=**_standby\_file\_name_
  Сравнение параметров RECOVERY и NORECOVERY приведено в подразделе "Замечания" раздела [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 LOADHISTORY  
- **Поддерживается инструкцией:**  [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
+ **Поддерживается:**  [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  Указывает, что операция восстановления загружает данные в таблицы журнала **msdb**. Параметр LOADHISTORY загружает сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]резервных копиях, которые хранятся на наборе носителей, в таблицы журналов резервного копирования и восстановления в базе данных **msdb** для единственного проверяемого резервного набора данных. Дополнительные сведения о таблицах журналов см. в разделе [Системные таблицы (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md).  
   
@@ -226,7 +226,7 @@ LOADHISTORY
  Эти параметры влияют на поведение операции восстановления.  
   
 MOVE **'**_logical\_file\_name\_in\_backup_**'** TO **'**_operating\_system\_file\_name_**'** [ ...*n* ]  
- **Поддерживается инструкциями:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  Указывает, что файл данных или журнала, логическое имя которого указано в параметре *логическое_имя_файла_в_резервной_копии*, следует переместить, восстановив его в расположение, указанное в параметре *имя_файла_в_операционной_системе*. Логическое имя файла данных или журнала в резервном наборе данных соответствует его логическому имени в базе данных на момент создания резервного набора данных.  
   
@@ -246,9 +246,9 @@ MOVE **'**_logical\_file\_name\_in\_backup_**'** TO **'**_operating\_system\_fil
  Дополнительные сведения см. в статье [Копирование баз данных путем создания и восстановления резервных копий](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
 CREDENTIAL  
- **Поддерживается инструкциями:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
-**Применимо к:** с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) и накопительным обновлением 2 (CU2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) и накопительным обновлением 2 (CU2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Используется только при восстановлении резервной копии с помощью службы хранилища BLOB-объектов Azure.  
   
@@ -256,7 +256,7 @@ CREDENTIAL
 >  Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) и накопительным обновлением 2 (CU2) по [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] восстановление с URL-адреса можно выполнять только с одного устройства. Чтобы выполнить восстановление с URL-адреса с нескольких устройств, необходимо использовать версию с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [текущую версию](https://go.microsoft.com/fwlink/p/?LinkId=299658) и маркеры подписанных URL-адресов (SAS). Дополнительные сведения см. в разделах [Включение управляемого резервного копирования SQL Server в Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) и [Упрощение создания учетных данных SQL с помощью маркеров подписанных URL-адресов (SAS) в службе хранилища Azure с PowerShell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
  REPLACE  
- **Поддерживается инструкцией:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Указывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен создать указанную базу данных и связанные с ней файлы, даже если уже существует другая база данных с таким именем. В этом случае существующая база данных будет удалена. Если параметр REPLACE не указан, выполняется проверка безопасности. Это предотвращает перезапись другой базы данных по ошибке. Проверка безопасности гарантирует, что инструкция RESTORE DATABASE не восстанавливает базу данных на текущем сервере, если выполнены два следующих условия:  
   
@@ -271,12 +271,12 @@ CREDENTIAL
  Дополнительные сведения об использовании параметра REPLACE см. в разделе [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 RESTART  
- **Поддерживается инструкцией:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Указывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен перезапустить прерванную операцию восстановления. Инструкция RESTART перезапускает операцию восстановления с точки прерывания.  
   
 RESTRICTED_USER  
- **Поддерживается инструкцией:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md).  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md).  
   
  Ограничивает доступ к вновь созданной базе данных для членов ролей **db_owner**, **dbcreator** и **sysadmin**.  Параметр RESTRICTED_USER заменяет параметр DBO_ONLY. Параметр DBO_ONLY в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] не поддерживается.  
   
@@ -286,7 +286,7 @@ RESTRICTED_USER
  Эти параметры оперируют с резервным набором данных, содержащим резервную копию для восстановления.  
   
 FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }  
- **Поддерживается инструкциями:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Идентифицирует резервный набор данных для восстановления. Например, аргумент *номер_файла_резервного_набора* , равный **1** , указывает первый резервный набор данных на носителе данных резервных копий, а аргумент *номер_файла_резервного_набора* , равный **2** , указывает второй резервный набор данных. Значение *номер_файла_резервного_набора* резервного набора данных можно получить с помощью инструкции [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) .  
   
@@ -296,7 +296,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
 >  Этот параметр FILE не связан с параметром FILE для указания файла базы данных, FILE **=** { *logical_file_name_in_backup* | **@**_logical\_file\_name\_in\_backup\_var_ }.  
   
  PASSWORD  **=** { *password* | **@**_password\_variable_ }  
- **Поддерживается инструкциями:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Предоставляет пароль резервного набора данных. Пароль набора резервных копий является символьной строкой.  
   
@@ -312,7 +312,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  Эти параметры влияют на весь набор носителей.  
   
  MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_}  
- **Поддерживается инструкциями:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Задает имя данного носителя. Если имя носителя указано, оно должно соответствовать имени резервных томов; в противном случае операция восстановления прекращается. Если имя носителя в инструкции RESTORE не указано, то поиск совпадающего имени носителя на резервных томах не выполняется.  
   
@@ -320,7 +320,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
 >  Соответствие имен носителей в операциях восстановления и резервного копирования обеспечивает дополнительную проверку носителя, выбранного для операции восстановления.  
   
  MEDIAPASSWORD **=** { *mediapassword* | **@**_mediapassword\_variable_ }  
- **Поддерживается инструкциями:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Предоставляет пароль набора носителей. Пароль набора носителей является символьной строкой.  
   
@@ -333,7 +333,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
 >  Этот пароль обеспечивает слабую защиту для набора носителей. Дополнительные сведения см. в разделе «Разрешения» для соответствующей инструкции.  
   
  BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }  
- **Поддерживается инструкцией:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Указывает размер физического блока в байтах. Поддерживаются размеры 512, 1024, 2048, 4096, 8192, 16 384, 32 768 и 65 536 байт (64 КБ). Значение по умолчанию равно 65 536 для ленточных устройств и 512 для других устройств. Обычно в этом параметре нет необходимости, так как инструкция RESTORE автоматически выбирает размер блока, соответствующий устройству. Явная установка размера блока переопределяет автоматический выбор размера блока.  
   
@@ -346,14 +346,14 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  Эти параметры позволяют оптимизировать передачу данных с устройства резервного копирования.  
   
  BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }  
- **Поддерживается инструкцией:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Указывает общее число буферов ввода-вывода, которые будут использоваться для операции восстановления. Можно указать любое целое положительное значение, однако большое число буферов может вызвать ошибку нехватки памяти из-за чрезмерного виртуального адресного пространства в процессе Sqlservr.exe.  
   
  Общее используемое буферами пространство определяется по следующей формуле: _число_буферов_**\**_максимальный_размер_передаваемых_данных_.  
   
  MAXTRANSFERSIZE **=** { _maxtransfersize_ | **@**_maxtransfersize\_variable_ }  
- **Поддерживается инструкцией:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Указывает наибольший объем пакета данных в байтах для обмена между носителем резервного набора и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Поддерживаются значения, кратные 65 536 байтам (64 КБ), вплоть до 4 194 304 байт (4 МБ).  
 > [!NOTE]  
@@ -363,7 +363,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  Эти параметры позволяют определить, разрешены ли контрольные суммы резервных копий в операции восстановления и останавливается ли операция при обнаружении ошибки.    
   
  { CHECKSUM | NO_CHECKSUM }  
- **Поддерживается инструкциями:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Поведение по умолчанию обозначает проверку контрольных сумм, если они существуют, и продолжать без проверки, если они отсутствуют.  
   
@@ -381,7 +381,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  Явно отменяет проверку контрольных сумм операцией восстановления.  
   
  { **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR }  
- **Поддерживается инструкциями:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  STOP_ON_ERROR  
  Указывает, что операция восстановления прекращается после обнаружения первой ошибки. Это поведение по умолчанию для инструкций RESTORE, за исключением инструкции RESTORE VERIFYONLY, для которой по умолчанию действует режим CONTINUE_AFTER_ERROR.  
@@ -393,7 +393,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
   
 ##### <a name="filestream-options"></a>Параметры FILESTREAM  
  FILESTREAM ( DIRECTORY_NAME =*имя_каталога* )  
- **Поддерживается инструкциями:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
 **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
@@ -403,7 +403,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  Эти параметры позволяют наблюдать за передачей данных с устройства резервного копирования.  
   
  STATS [ **=** *percentage* ]  
- **Поддерживается инструкциями:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  Отображает сообщение каждый раз, когда завершается очередной процент задания, и используется для отслеживания хода выполнения. Если *процент* не указан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выводит сообщение после завершения каждых 10 процентов (приблизительно).  
   
@@ -416,12 +416,12 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  Эти параметры используются только для ленточных устройств. При использовании другого устройства они пропускаются.  
   
  REWIND  
- **Поддерживается инструкциями:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Указывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен освободить и перемотать ленту. REWIND — значение по умолчанию.  
   
  NOREWIND  
- **Поддерживается инструкциями:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  Использование NOREWIND в любой другой инструкции восстановления приводит к ошибке.  
   
@@ -433,7 +433,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
 >  При использовании параметра NOREWIND экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] продолжает владеть накопителем на магнитной ленте до тех пор, пока инструкция BACKUP или RESTORE, работающая в этом же процессе, не использует параметр REWIND или UNLOAD, или пока не закончит работу экземпляр сервера. Поскольку лента остается открытой, другие процессы не могут получить доступа к ленте. Дополнительные сведения об отображении списка открытых лент и закрытии открытой ленты см. в разделе [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
  { **UNLOAD** | NOUNLOAD }  
- **Поддерживается инструкциями:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Эти параметры используются только для ленточных устройств. При использовании другого устройства они пропускаются.  
   
@@ -450,7 +450,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  Этот параметр имеет значение, только если во время создания резервной копии проводилась репликация базы данных.  
   
  KEEP_REPLICATION  
- **Поддерживается инструкцией:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
 Аргумент KEEP_REPLICATION следует использовать при настройке репликации с доставкой журналов. Это предотвращает удаление параметров репликации, если резервная копия базы данных или резервная копия журналов восстанавливается на сервере «горячего» резервирования и база данных воссоздается. Не разрешается указывать этот параметр при восстановлении резервной копии с параметром NORECOVERY. Для обеспечения функций репликации после восстановления:  
   
@@ -462,7 +462,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  Этот параметр имеет значение, только если при создании резервной копии в базе данных была включена система отслеживания измененных данных.  
   
  KEEP_CDC  
- **Поддерживается инструкцией:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Ключевое слово KEEP_CDC следует использовать для предотвращения удаления настроек системы отслеживания измененных данных при восстановлении резервной копии базы данных или журнала на другом сервере и восстановлении базы данных. Не разрешается указывать этот параметр при восстановлении резервной копии с параметром NORECOVERY.  
   
@@ -474,7 +474,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  Включает или выключает доставку сообщений компонентом [!INCLUDE[ssSB](../../includes/sssb-md.md)] либо задает новый идентификатор компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Этот параметр имеет значение, только если при создании резервной копии в базе данных был включен компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
  { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
- **Поддерживается инструкцией:** [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Поддерживается:**  [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  ENABLE_BROKER  
  Указывает, что доставка сообщений компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] включена по завершении восстановления, поэтому сообщения можно отправлять немедленно. По умолчанию при восстановлении доставка сообщений компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] отключена. Существующий идентификатор компонента Service Broker сохраняется в базе данных.  
@@ -486,7 +486,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  Указывает, что базе данных назначен новый идентификатор компонента Service Broker. Поскольку база данных предполагает наличие нового компонента Service Broker, все существующие сеансы связи в базе данных будут немедленно удалены, не выдавая диалоговых сообщений о завершении. Все маршруты, ссылающиеся на прежний идентификатор компонента Service Broker, должны быть повторно созданы с использованием нового идентификатора.  
   
 #### <a name="pointintimewithoptions"></a>\<point_in_time_WITH_options>  
- **Поддерживается инструкцией:**  [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) только для модели полного восстановления и для модели восстановления с неполным протоколированием.  
+ **Поддерживается:**  [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) только для модели полного восстановления и модели восстановления с неполным протоколированием.  
   
  Можно восстановить базу данных на определенный момент времени или к определенной транзакции, указав целевую точку восстановления в предложении STOPAT, STOPATMARK или STOPBEFOREMARK. Восстановление на определенный момент времени или к определенной транзакции всегда выполняется из резервной копии журнала. В каждой инструкции RESTORE LOG из последовательности восстановления необходимо указывать целевое время или целевую транзакцию в одинаковых предложениях STOPAT, STOPATMARK или STOPBEFOREMARK.  
   
@@ -577,7 +577,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
 >  Параметр FILE для указания резервного набора данных не связан с параметром FILE для указания файла базы данных, FILE **=** { *logical_file_name_in_backup* | **@**_logical\_file\_name\_in\_backup\_var_ }.  
   
 ## <a name="summary-of-support-for-with-options"></a>Сводка совместимости с параметрами инструкции WITH  
- Следующие параметры WITH поддерживаются только инструкцией RESTORE: BLOCKSIZE, BUFFERCOUNT, MAXTRANSFERSIZE, PARTIAL, KEEP_REPLICATION, { RECOVERY | NORECOVERY | STANDBY }, REPLACE, RESTART, RESTRICTED_USER и { STOPAT | STOPATMARK | STOPBEFOREMARK }  
+ Следующие параметры инструкции WITH совместимы только с инструкцией RESTORE: BLOCKSIZE, BUFFERCOUNT, MAXTRANSFERSIZE, PARTIAL, KEEP_REPLICATION, { RECOVERY | NORECOVERY | STANDBY }, REPLACE, RESTART, RESTRICTED_USER и { STOPAT | STOPATMARK | STOPBEFOREMARK }  
   
 > [!NOTE]  
 >  Параметр PARTIAL поддерживается только инструкцией RESTORE DATABASE.  

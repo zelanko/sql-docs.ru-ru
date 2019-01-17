@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61a876ec35e7cd11b8ac127606bb2e4e7c2c6e2c
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 16fa50a7e3dc6b6b2ee86dfcd79f0aa311d9071d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018219"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978881"
 ---
 # <a name="point"></a>Точка
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,21 +32,24 @@ ms.locfileid: "51018219"
  Тип элемента для геометрических типов данных представляет собой единое место, где *X* представляет координату x создаваемого экземпляра Point, а *Y* — координату Y создаваемого экземпляра Point. *SRID* представляет идентификатор пространственной ссылки экземпляра **geometry** , который необходимо вернуть.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере показано создание экземпляра `geometry Point`, представляющего точку (3, 4) со значением SRID, равным 0.  
+### <a name="example-a"></a>Пример А.
+В следующем примере показано создание экземпляра `geometry Point`, представляющего точку (3, 4) со значением SRID, равным 0.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POINT (3 4)', 0);  
 ```  
   
- В следующем примере показано создание экземпляра `geometry``Point` , представляющего точку (3, 4) со значениями Z (уровень) и M (мера), равными соответственно 7 и 2,5, и значением SRID по умолчанию, равным 0.  
+### <a name="example-b"></a>Пример Б.
+В приведенном ниже примере показано создание экземпляра `geometry``Point`, представляющего точку (3, 4) со значениями Z (уровень) и M (мера), равными соответственно 7 и 2,5, и значением SRID по умолчанию, равным 0.  
   
 ```  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('POINT(3 4 7 2.5)');  
 ```  
   
- В последнем примере возвращаются значения X, Y, Z и M для экземпляра `geometry``Point` .  
+### <a name="example-c"></a>Пример В.
+В приведенном ниже примере возвращаются значения X, Y, Z и M для экземпляра `geometry``Point`.  
   
 ```  
 SELECT @g.STX;  
@@ -55,7 +58,8 @@ SELECT @g.Z;
 SELECT @g.M;  
 ```  
   
- Для Z и M может быть явно указано значение NULL, как показано в следующем примере.  
+### <a name="example-d"></a>Пример Г.
+Для Z и M может быть явно указано значение NULL, как показано в следующем примере.  
   
 ```  
 DECLARE @g geometry;  

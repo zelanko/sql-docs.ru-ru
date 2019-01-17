@@ -23,12 +23,12 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: cbede7141154147bbb714d00d794d4b8af7cf8e0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0fc010c3b02bfbe5e2c5fabb1f8e6313144d7efa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696413"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979381"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -87,13 +87,13 @@ ADD SENSITIVITY CLASSIFICATION TO
 ## <a name="remarks"></a>Remarks  
 
 - К одному объекту можно добавить только одну классификацию. Если вы попытаетесь добавить классификацию к объекту, который уже имеет другую классификацию, прежняя классификация будет удалена.
-- Вы можете классифицировать сразу несколько объектов с помощью одной инструкции `ADD SENSITIVITY CLASSIFICTION`.
+- Вы можете классифицировать сразу несколько объектов с помощью одной инструкции `ADD SENSITIVITY CLASSIFICATION`.
 - Системное представление [sys.sensitivity_classifications](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md) позволяет получать информацию о классификации конфиденциальности для базы данных.
 
 
 ## <a name="permissions"></a>Разрешения
 
-Требуется разрешение ALTER ANY SENSITIVITY CLASSIFICATION. ALTER ANY SENSITIVITY CLASSIFACTION подразумевается в разрешении ALTER для базы данных или CONTROL SERVER для сервера.
+Требуется разрешение ALTER ANY SENSITIVITY CLASSIFICATION. ALTER ANY SENSITIVITY CLASSIFICATION подразумевается в разрешении ALTER для базы данных или CONTROL SERVER для сервера.
 
 
 ## <a name="examples"></a>Примеры  
@@ -119,7 +119,7 @@ ADD SENSITIVITY CLASSIFICATION TO
 
 ## <a name="see-also"></a>См. также:  
 
-[DROP SENSITIVITY CLASSIFICTION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+[DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 [sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
 

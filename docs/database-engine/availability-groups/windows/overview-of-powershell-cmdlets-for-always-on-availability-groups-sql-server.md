@@ -1,6 +1,7 @@
 ---
-title: Обзор командлетов PowerShell для групп доступности AlwaysOn (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Обзор командлетов PowerShell для групп доступности
+description: 'Справочник по различным командлетам PowerShell, доступным для управления группами доступности Always On. '
+ms.custom: seodec18
 ms.date: 08/30/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4491943f13e515bda4d46285b1a1e0dd52dfd9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4f60098f7410b847e2a420ef899e4abc8b2ef94
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597873"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203773"
 ---
-# <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server"></a>Обзор командлетов PowerShell для групп доступности AlwaysOn (SQL Server)
+# <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups"></a>Обзор командлетов PowerShell для групп доступности AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell ― это оболочка командной строки для задач и язык скриптов, разработанный специально для администрирования систем. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] содержит набор командлетов PowerShell для [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , которые позволяют развертывать, управлять и отслеживать группы доступности, реплики доступности и базы данных доступности.  

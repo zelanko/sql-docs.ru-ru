@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 52149ae289f0cea89ff31a501acaaf8d0c7cbd3e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 352cd03017b33247c66f7eb0090cd79d0d5cd532
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545624"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980100"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ SQLDUMPEREDUMPFLAGS
  Максимальное время создания дампа программой SQLDumper в случае сбоя SQL Server (в миллисекундах). Значение по умолчанию равно 0, то есть время создания дампа неограниченно. Для получения дополнительных сведений см. [статью базы знаний о служебной программе Dumper сервера SQL Server](https://go.microsoft.com/fwlink/?LinkId=206173).  
   
  FAILURECONDITIONLEVEL = { 'failure_condition_level' | DEFAULT }  
- Условия, при которых должно произойти переключение при сбое или перезапуск экземпляра отказоустойчивого кластера SQL Server. Значение по умолчанию, равное 3, означает, что ресурс SQL Server будет переключаться на резервный ресурс или перезапускаться в случае критической ошибки сервера. Дополнительные сведения об этом и других уровнях условий ошибки см. в разделе [Настройка параметров свойства FailureConditionLevel](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  
+ Условия, при которых должно произойти переключение при сбое или перезапуск экземпляра отказоустойчивого кластера SQL Server. Значение по умолчанию, равное 3, означает, что ресурс SQL Server будет переключаться на резервный ресурс или перезапускаться в случае критической ошибки сервера. Дополнительные сведения об этом и других уровнях условий ошибки см. в разделе [Настройка параметров свойства FailureConditionLevel](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  
   
  HEALTHCHECKTIMEOUT = { 'health_check_time-out' | DEFAULT }  
  Время, в течение которого библиотека ресурсов компонента SQL Server Database Engine будет ждать сведений о состоянии сервера, прежде чем сервер переводится в категорию неотвечающих. Время ожидания указывается в миллисекундах. Значение по умолчанию равно 60 000 миллисекунд (60 секунд).  
@@ -196,7 +196,7 @@ SQLDUMPEREDUMPFLAGS
  Для определения целевого кластера укажите одно из следующих значений:  
   
  *кластер_windows*  
- Имя netwirj кластера WSFC. Вы можете указать короткое имя или полное имя домена. Для поиска целевого IP-адреса короткого имени ALTER SERVER CONFIGURATION использует разрешение DNS. В некоторых ситуациях краткое имя может вызвать затруднения, и DNS может вернуть неправильный IP-адрес. Таким образом, рекомендуется указывать полное имя домена.  
+ Сетевое имя кластера WSFC. Вы можете указать короткое имя или полное имя домена. Для поиска целевого IP-адреса короткого имени ALTER SERVER CONFIGURATION использует разрешение DNS. В некоторых ситуациях краткое имя может вызвать затруднения, и DNS может вернуть неправильный IP-адрес. Таким образом, рекомендуется указывать полное имя домена.  
   
   > [!NOTE] 
   > Миграция между кластерами с помощью этого параметра больше не поддерживается. Для переноса между кластерами, используйте распределенную группу доступности или другой способ, например доставку журналов. 
@@ -237,14 +237,14 @@ SQLDUMPEREDUMPFLAGS
  OFF  
  Отключает автоматическое секционирование для разбиения крупных аппаратных узлов NUMA на более мелкие узлы NUMA. При изменении текущего значения потребуется перезапустить ядро СУБД.  
 
-> [!WARNING]  
+> [!WARNING]
 > Существуют известные проблемы с работой инструкции ALTER SERVER CONFIGURATION с параметром SOFT NUMA и агентом SQL Server.  Ниже приведена рекомендуемая последовательность операций.  
 > 1) Остановите экземпляр агента SQL Server.  
 > 2) Выполнение инструкции ALTER SERVER CONFIGURATION с параметром SOFT NUMA.  
 > 3) Повторно запустите экземпляр SQL Server.  
 > 4) Запустите экземпляр агента SQL Server.  
   
-**Дополнительные сведения.** Если инструкция ALTER SERVER CONFIGURATION с параметром SET SOFTNUMA выполняется до перезапуска службы SQL Server, то при остановке службы агента SQL Server будет выполнена команда T-SQL RECONFIGURE, которая вернет для параметра SOFTNUMA значение, заданное до выполнения ALTER SERVER CONFIGURATION. 
+**Дополнительные сведения:** Если инструкция ALTER SERVER CONFIGURATION с параметром SET SOFTNUMA выполняется до перезапуска службы SQL Server, то при остановке службы агента SQL Server будет выполнена команда T-SQL RECONFIGURE, которая вернет для параметра SOFTNUMA значение, заданное до выполнения ALTER SERVER CONFIGURATION. 
   
 ## <a name="general-remarks"></a>Общие замечания  
  Для этой инструкции не требуется перезапуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если явно не указано обратное. Для экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перезапуск ресурса кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не требуется.  

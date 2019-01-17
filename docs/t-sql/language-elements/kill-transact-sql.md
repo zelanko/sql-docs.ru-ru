@@ -35,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2eec14db312bb6fb2a8fb65bb51e396a4c1be3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be0bccac59c011fc36e8481029d9951cd36cad99
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837006"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205403"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +79,7 @@ JOIN sys.dm_exec_connections AS conn
 ```  
   
 *UOW*  
-**Применимо к**: (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**Применимо к**: (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Задает идентификатор единицы работы (UOW) распределенных транзакций. *UOW* представляет собой идентификатор GUID, который можно получить из столбца request_owner_guid динамического административного представления sys.dm_tran_locks. *UOW* также может быть получен из журнала ошибок или из монитора транзакций MS DTC. Дополнительные сведения о наблюдении за распределенными транзакциями см. в руководстве пользователя MS DTC.  
   
@@ -122,7 +122,7 @@ JOIN sys.dm_exec_connections AS conn
  Аналогичный отчет о состоянии может быть получен при повторном выполнении инструкции KILL *session ID*|*UOW* без использования параметра WITH STATUSONLY, однако делать это не рекомендуется. Повторный вызов инструкции KILL *session ID* может вызвать завершение нового процесса в случае, если процесс отката был завершен, а значение идентификатора сеанса было присвоено другой задаче до запуска новой инструкции KILL. Указание параметра WITH STATUSONLY предотвращает указанные последствия.  
   
 ## <a name="permissions"></a>Разрешения  
- **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** необходимо разрешение ALTER ANY CONNECTION. Разрешение ALTER ANY CONNECTION включено с членством в предопределенных ролях сервера sysadmin или processadmin.  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Необходимо разрешение ALTER ANY CONNECTION. Разрешение ALTER ANY CONNECTION включено с членством в предопределенных ролях сервера sysadmin или processadmin.  
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** необходимо разрешение KILL DATABASE CONNECTION. Имя входа субъекта серверного уровня имеет разрешение KILL DATABASE CONNECTION.  
   

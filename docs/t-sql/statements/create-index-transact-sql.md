@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 679eb8412f4633af845efc7c5520c351f9749822
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 55f5056f65daa3c9f52809087f4cf6773d708910
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518326"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980510"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -301,9 +301,12 @@ ON *partition_scheme_name* **( *column_name* )**
  ON **"** default **"**  
  **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssCurrent](../../includes/sssdsfull-md.md)].  
   
- Создает заданный индекс в файловой группе, используемой по умолчанию.  
+ Создает указанный индекс для той же файловой группы или схемы секционирования, к которой относится таблица или представление.  
   
- Слово "default" в этом контексте не является ключевым. Это идентификатор установленной по умолчанию файловой группы, который должен иметь разделители, как в выражениях ON **"** default **"** или ON **[** default **]**. Если указано значение "default" (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+ Слово "default" в этом контексте не является ключевым. Это идентификатор установленной по умолчанию файловой группы, который должен иметь разделители, как в выражениях ON **"** default **"** или ON **[** default **]**. Если указано значение "default" (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+ 
+> [!NOTE]  
+> "default" не указывает файловую группу по умолчанию для базы данных в контексте CREATE INDEX. В случае с инструкцией CREATE TABLE поведение иное: значение "default" указывает расположение таблицы в файловой группе по умолчанию для базы данных.
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
  **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -452,7 +455,7 @@ DROP_EXISTING = { ON | **OFF** }
 ONLINE = { ON | **OFF** }  
 Определяет, будут ли базовые таблицы и связанные индексы доступны для запросов и изменения данных во время операций с индексами. Значение по умолчанию — OFF.  
   
-> [!NOTE]  
+> [!NOTE]
 > Операции с индексами в режиме "в сети" доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ON  
@@ -533,7 +536,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  Дополнительные сведения см. в статье [Настройка параллельных операций с индексами](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
-> [!NOTE]  
+> [!NOTE]
 > Параллельные операции с индексами доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статьях [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) и [Возможности, поддерживаемые различными выпусками SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  DATA_COMPRESSION  
@@ -557,11 +560,11 @@ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**...*n* 
   
  \<partition_number_expression> можно указать одним из следующих способов.  
   
--   Указать номер секции, например ON PARTITIONS (2).  
--   Указать номера нескольких секций через запятые, например ON PARTITIONS (1, 5).  
--   Указать диапазоны и отдельные секции, например: ON PARTITIONS (2, 4, 6 TO 8).  
+-   Указав номер секции, например ON PARTITIONS (2).  
+-   Указав номера нескольких секций, разделив их запятыми, например ON PARTITIONS (1, 5).  
+-   Указав диапазоны секций и отдельные секции, например ON PARTITIONS (2, 4, 6 TO 8).  
   
- \<range> можно указать как номера секций, разделенные ключевым словом TO, например: ON PARTITIONS (6 TO 8).  
+ \<range> можно указать номерами секций, разделенными ключевым словом TO, например: ON PARTITIONS (6 TO 8).  
   
  Чтобы для разных секций задать разные типы сжатия данных, укажите параметр DATA_COMPRESSION несколько раз, например следующим образом.  
  
@@ -792,7 +795,7 @@ INSERT INTO t1 VALUES (1, 0);
 ## <a name="version-notes"></a>Заметки о версии  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] не поддерживает параметры файловой группы и файлового потока.  
   
-## <a name="examples-all-versions-uses-the-adventureworks-database"></a>Примеры: все версии. Используется база данных AdventureWorks.  
+## <a name="examples-all-versions-uses-the-adventureworks-database"></a>Примеры: все версии Используется база данных AdventureWorks.  
   
 ### <a name="a-create-a-simple-nonclustered-rowstore-index"></a>A. Создание простого некластеризованного индекса rowstore  
  В следующем примере создается некластеризованный индекс для столбца `VendorID` таблицы `Purchasing.ProductVendor`.  
@@ -828,7 +831,7 @@ CREATE INDEX IX_FF ON dbo.FactFinance ( FinanceKey, DateKey, OrganizationKey DES
 WITH ( DROP_EXISTING = ON );  
  ```  
   
-## <a name="examples-sql-server-azure-sql-database"></a>Примеры: SQL Server, база данных SQL Azure  
+## <a name="examples-sql-server-azure-sql-database"></a>Примеры: SQL Server, база данных SQL Azure  
   
 ### <a name="e-create-a-unique-nonclustered-index"></a>Д. Создание уникального некластеризованного индекса  
  В следующем примере создается уникальный некластеризованный индекс в столбце `Name` таблицы `Production.UnitMeasure` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Индекс требует уникальности данных, вставляемых в столбец `Name`.  
@@ -1049,7 +1052,7 @@ CREATE  INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABL
 
 -- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
 
--- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumable index create operation is paused.
 CREATE INDEX test_idx2 on test_table (col2) WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
 
 -- Pause a running resumable online index creation 
@@ -1078,7 +1081,7 @@ CREATE  INDEX test_idx on test_table WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)
 
 -- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
 
--- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumable index create operation is paused.
 CREATE INDEX test_idx on test_table  WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
 
 -- Pause a running resumable online index creation 

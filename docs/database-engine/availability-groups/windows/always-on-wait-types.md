@@ -1,6 +1,7 @@
 ---
-title: Типы ожидания для групп доступности AlwaysOn (SQL Server) | Документы Майкрософт
-ms.custom: ag-guide
+title: Идентификация задержек, связанных с группами доступности
+description: Идентификация задержек, связанных с группами доступности Always On, с помощью Transact-SQL (T-SQL) и расширенных событий.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5ee819aefcac1dc21fdf56d6b8ec93d4d1297f83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 841da77e4aa71247e8b65b1a8534bca75ff25272
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675722"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201853"
 ---
-# <a name="always-on-availability-groups-wait-types"></a>Типы ожидания для групп доступности AlwaysOn
+# <a name="identify-waits-associated-with-availability-groups"></a>Идентификация задержек, связанных с группами доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   При устранении неполадок с задержкой для групп доступности AlwaysOn можно отслеживать накапливаемую статистику ожидания с помощью зависящих от групп доступности типов ожидания в динамическом административном представлении [sys.dm_os_wait_stats (Transact-SQL)](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  
   

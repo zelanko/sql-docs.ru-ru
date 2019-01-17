@@ -1,6 +1,7 @@
 ---
-title: Настройка группы доступности SQL Server для чтения и масштабирования в Windows | Документы Майкрософт
-description: ''
+title: Настройка группы доступности для чтения и масштабирования
+description: Группу доступности Always On можно настроить для рабочих нагрузок чтения и масштабирования в Windows.
+ms.custom: seodec18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -9,14 +10,14 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 334b594e6ad83af65f6b6536dd8157d421767b52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4338f5fc90012fd5fb0882575032eb375c206c1d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757104"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207733"
 ---
-# <a name="configure-a-sql-server-availability-group-for-read-scale-on-windows"></a>Настройка группы доступности SQL Server для чтения и масштабирования в Windows
+# <a name="configure-read-scale-for-an-always-on-availability-group"></a>Настройка группы доступности Always On для чтения и масштабирования
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 

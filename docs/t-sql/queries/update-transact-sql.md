@@ -39,12 +39,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ab6a40f49ce64e4e157c4eacccb59b6135ed4ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b5e69a2ebd97a554620914ffba5ea20c6a08aa21
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520847"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980330"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -327,7 +327,7 @@ GO
   
  Если инструкция UPDATE могла обновить несколько строк при обновлении как ключа кластеризации, так и одного или нескольких столбцов типа **text**, **ntext** или **image**, то частичное обновление этих столбцов выполняется как полная замена значений.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Типы данных **ntext**, **text** и **image** будут исключены в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следует избегать использования этих типов данных при новой разработке и запланировать изменение приложений, использующих их в настоящий момент. Вместо них следует использовать типы данных [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)и [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
   
 ### <a name="updating-large-value-data-types"></a>Обновление типов данных большого объема  
@@ -546,7 +546,7 @@ GO
 ```  
   
 #### <a name="e-using-the-with-commontableexpression-clause"></a>Д. Использование предложения WITH обобщенное_табличное_выражение  
- В следующем примере обновляется значение `PerAssemnblyQty` для всех частей и компонентов, прямо или косвенно используемых для создания `ProductAssemblyID 800`. Обобщенное табличное выражение возвращает иерархический список частей, которые непосредственно используются для сборки `ProductAssemblyID 800`, и частей, которые используются для сборки этих компонентов, и т. д. Изменяются только строки, возвращенные обобщенным табличным выражением.  
+ В следующем примере обновляется значение `PerAssemblyQty` для всех частей и компонентов, прямо или косвенно используемых для создания `ProductAssemblyID 800`. Обобщенное табличное выражение возвращает иерархический список частей, которые непосредственно используются для сборки `ProductAssemblyID 800`, и частей, которые используются для сборки этих компонентов, и т. д. Изменяются только строки, возвращенные обобщенным табличным выражением.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -762,7 +762,7 @@ GO
  В примерах в этом разделе описаны способы обновления строк в удаленной целевой таблице с использованием в качестве ссылки на удаленную таблицу [связанного сервера](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) или [функции, возвращающей набор строк](../../t-sql/functions/rowset-functions-transact-sql.md).  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>П. Обновление данных в удаленной таблице с использованием связанного сервера  
- В следующем примере обновляется таблица на удаленном сервере. Этот пример начинается с создания ссылки на удаленный источник данных с помощью хранимой процедуры [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Затем имя связанного сервера `MyLinkServer` указывается в качестве одного из четырех компонентов имени объекта в формате сервер.каталог.схема.объект. Обратите внимание, что необходимо указать действительное имя сервера для `@datasrc`.  
+ В следующем примере обновляется таблица на удаленном сервере. Этот пример начинается с создания ссылки на удаленный источник данных с помощью хранимой процедуры [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Затем имя связанного сервера `MyLinkedServer` указывается в качестве одного из четырех компонентов имени объекта в формате сервер.каталог.схема.объект. Обратите внимание, что необходимо указать действительное имя сервера для `@datasrc`.  
   
 ```sql  
 USE master;  
@@ -770,7 +770,7 @@ GO
 -- Create a link to the remote data source.   
 -- Specify a valid server name for @datasrc as 'server_name' or 'server_nameinstance_name'.  
   
-EXEC sp_addlinkedserver @server = N'MyLinkServer',  
+EXEC sp_addlinkedserver @server = N'MyLinkedServer',  
     @srvproduct = N' ',  
     @provider = N'SQLNCLI10',   
     @datasrc = N'<server name>',  
@@ -781,7 +781,7 @@ GO
 -- Specify the remote data source using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
-UPDATE MyLinkServer.AdventureWorks2012.HumanResources.Department  
+UPDATE MyLinkedServer.AdventureWorks2012.HumanResources.Department  
 SET GroupName = N'Public Relations'  
 WHERE DepartmentID = 4;  
 ```  
@@ -790,18 +790,18 @@ WHERE DepartmentID = 4;
  В следующем примере выполняется обновление строки в удаленной таблице с помощью вызова функции [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md), возвращающей набор строк. В этом примере используется имя связанного сервера, созданного в предыдущем примере.  
   
 ```sql  
-UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
+UPDATE OPENQUERY (MyLinkedServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
 SET GroupName = 'Sales and Marketing';  
 ```  
   
 #### <a name="q-updating-data-in-a-remote-table-by-using-the-opendatasource-function"></a>У. Обновление данных в удаленной таблице с помощью функции OPENDATASOURCE  
- В следующем примере выполняется вставка строки в удаленную таблицу с помощью вызова функции [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md), возвращающей набор строк. Определите допустимое имя сервера для источника данных, используя формат *server_name* или *server_name\instance_name*. Возможно, потребуется настроить у экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметр Ad Hoc Distributed Queries. Дополнительные сведения см. в статье [Параметр конфигурации сервера "ad hoc distributed queries"](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).  
-  
-```sql  
-UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
-SET GroupName = 'Sales and Marketing';  
-```  
-  
+ В следующем примере выполняется обновление строки в удаленной таблице с помощью вызова функции [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md), возвращающей набор строк. Определите допустимое имя сервера для источника данных, используя формат *server_name* или *server_name\instance_name*. Возможно, потребуется настроить у экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметр Ad Hoc Distributed Queries. Дополнительные сведения см. в статье [Параметр конфигурации сервера "ad hoc distributed queries"](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).  
+
+```sql
+UPDATE OPENDATASOURCE('SQLNCLI', 'Data Source=<server name>;Integrated Security=SSPI').AdventureWorks2012.HumanResources.Department
+SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;  
+```
+
 ###  <a name="LOBValues"></a> Обновление типов данных больших объектов  
  В примерах в этом разделе описываются методы обновления значений в столбцах, определенных с типами данных больших объектов (LOB).  
   

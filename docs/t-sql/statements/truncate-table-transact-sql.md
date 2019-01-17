@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed7f25c6151a135ffba2add1c0f9873dabb84198
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 277df440e315035be6cb019a30fd11cd3e94c674
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698502"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215314"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,7 +77,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
  Имя таблицы, которая должна быть усечена, или таблицы, из которой удаляются все строки. *table_name* должно быть литералом. *table_name* не может быть функцией **OBJECT_ID()** или переменной.  
   
  WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )  
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
  Указывает секции для усечения или секции, из которых удаляются все строки. Если таблица не секционирована, аргумент **WITH PARTITIONS** приведет к ошибке. Если предложение **WITH PARTITIONS** не указано, будет усечена вся таблица.  
   
@@ -157,7 +157,7 @@ GO
   
 ### <a name="b-truncate-table-partitions"></a>Б. Усечение секций таблицы  
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
  В следующем примере выполняется усечение указанных секций секционированной таблицы. Синтаксис `WITH (PARTITIONS (2, 4, 6 TO 8))` задает усечение секций с номерами 2, 4, 6, 7 и 8.  
   

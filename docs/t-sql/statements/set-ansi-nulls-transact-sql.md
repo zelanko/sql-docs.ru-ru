@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c82f0b10a692f4f1d146a6916657186d17632a15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2d84c426bddf4a896a3be1f79ea85e3b718fd4e
+ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597473"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069770"
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -58,13 +58,13 @@ SET ANSI_NULLS ON
 ```
 
 ## <a name="remarks"></a>Remarks  
- Если параметру SET ANSI_NULLS установлено значение ON, любая инструкция SELECT, использующая предложение WHERE *column_name* = **NULL**, не вернет ни одной строки, даже если в столбце *column_name* есть значения NULL. Инструкция SELECT, использующая предложение WHERE *column_name* <> **NULL**, не вернет ни одной строки, даже если в столбце *column_name* есть значения, отличные от NULL.  
+Если параметру ANSI_NULLS присвоено значение ON, инструкция SELECT, использующая предложение WHERE *имя_столбца* = **NULL**, не вернет ни одной строки, даже если в столбце *имя_столбца* есть значения NULL. Инструкция SELECT, использующая предложение WHERE *column_name* <> **NULL**, не вернет ни одной строки, даже если в столбце *column_name* есть значения, отличные от NULL.  
   
- Если SET ANSI_NULLS установлено в OFF, операторы «равно» (=) и «не равно» (<>) не следуют стандарту ISO. Инструкция SELECT, использующая предложение WHERE *column_name* = **NULL**, вернет строки, имеющие значения NULL, в столбце *column_name*. Инструкция SELECT, использующая предложение WHERE *column_name* <> **NULL**, вернет строки, имеющие значения, отличные от NULL, в столбце. Также любая инструкция SELECT, использующая предложение WHERE *column_name* <> *XYZ_value*, возвращает все строки со значениями, не равными *XYZ_value* и не равными NULL.  
+Если параметр ANSI_NULLS имеет значение OFF, операторы "равно" (=) и "не равно" (<>) не следуют стандарту ISO. Инструкция SELECT, использующая предложение WHERE *column_name* = **NULL**, вернет строки, имеющие значения NULL, в столбце *column_name*. Инструкция SELECT, использующая предложение WHERE *column_name* <> **NULL**, вернет строки, имеющие значения, отличные от NULL, в столбце. Также любая инструкция SELECT, использующая предложение WHERE *column_name* <> *XYZ_value*, возвращает все строки со значениями, не равными *XYZ_value* и не равными NULL.  
   
- Если SET ANSI_NULLS равняется ON, все сравнения со значением NULL возвращают значение UNKNOWN. Когда SET ANSI_NULLS равняется OFF, сравнение любых значений с NULL вернет TRUE только в том случае, если сравниваемое значение тоже NULL. Если параметр SET ANSI_NULLS не указан, применяется значение параметра ANSI_NULLS текущей базы данных. Дополнительные сведения о параметре базы данных ANSI_NULLS см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
+Если параметр ANSI_NULLS равен ON, все сравнения со значением NULL возвращают значение UNKNOWN. Когда SET ANSI_NULLS равняется OFF, сравнение любых значений с NULL вернет TRUE только в том случае, если сравниваемое значение тоже NULL. Если параметр SET ANSI_NULLS не указан, применяется значение параметра ANSI_NULLS текущей базы данных. Дополнительные сведения о параметре базы данных ANSI_NULLS см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
 
- В следующей таблице показано влияние значения параметра ANSI_NULLS на результаты нескольких логических выражений с использованием значений NULL и значений, отличных от NULL.  
+В следующей таблице показано влияние значения параметра ANSI_NULLS на результаты нескольких логических выражений с использованием значений NULL и значений, отличных от NULL.  
   
 |Логическое выражение|SET ANSI_NULLS ON|SET ANSI_NULLS OFF|  
 |---------------|---------------|------------|  
@@ -79,16 +79,16 @@ SET ANSI_NULLS ON
 |NULL IS NOT NULL|FALSE|FALSE|  
 |1 IS NOT NULL|TRUE|TRUE|  
 
- Директива SET ANSI_NULLS ON влияет только на сравнения, в которых в качестве одного из операндов используется NULL в виде переменной или литеральной константы. Если оба операнда представляют собой столбцы или составные выражения, эта настройка не влияет на результат сравнения.  
+Директива SET ANSI_NULLS ON влияет только на сравнения, в которых в качестве одного из операндов используется NULL в виде переменной или литеральной константы. Если оба операнда представляют собой столбцы или составные выражения, эта настройка не влияет на результат сравнения.  
   
- Чтобы скрипт работал в соответствии с первоначальным замыслом, вне зависимости от параметра базы данных ANSI NULLS или настроек SET ANSI_NULLS, в сравнениях, которые могут содержать значения NULL, следует использовать выражения IS NULL и IS NOT NULL.  
+Чтобы скрипт работал в соответствии с первоначальным замыслом, вне зависимости от параметра базы данных ANSI NULLS или настроек SET ANSI_NULLS, в сравнениях, которые могут содержать значения NULL, следует использовать выражения IS NULL и IS NOT NULL.  
   
- Значение SET ANSI_NULLS должно быть равно ON при выполнении распределенных запросов.  
+Значение SET ANSI_NULLS должно быть равно ON при выполнении распределенных запросов.  
   
- Значение SET ANSI_NULLS также должно быть ON при создании или изменении индексов вычисляемых столбцов или индексированных представлений. Если SET ANSI_NULLS равно OFF, то при работе с таблицами, содержащими индексы вычисляемых столбцов, а также при работе с индексированными представлениями инструкции CREATE, UPDATE, INSERT и DELETE завершатся неудачно. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сообщение об ошибке с перечислением всех недопустимых аргументов инструкции SET. Также при вызове инструкции SELECT в случае, если значение SET ANSI_NULLS равно OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не обрабатывает значения индексов вычисляемых столбцов или представлений и произведет выборку, словно этих индексов не существовало.  
+Значение SET ANSI_NULLS также должно быть ON при создании или изменении индексов вычисляемых столбцов или индексированных представлений. Если SET ANSI_NULLS равно OFF, то при работе с таблицами, содержащими индексы вычисляемых столбцов, а также при работе с индексированными представлениями инструкции CREATE, UPDATE, INSERT и DELETE завершатся неудачно. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сообщение об ошибке с перечислением всех недопустимых аргументов инструкции SET. Также при вызове инструкции SELECT в случае, если значение SET ANSI_NULLS равно OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не обрабатывает значения индексов вычисляемых столбцов или представлений и произведет выборку, словно этих индексов не существовало.  
   
 > [!NOTE]  
->  ANSI_NULLS является одним из семи параметров директивы SET, которые должны быть установлены определенным образом при работе с вычисляемыми столбцами или индексированными представлениями. Параметры ANSI_PADDING, ANSI_WARNINGS, ARITHABORT, QUOTED_IDENTIFIER и CONCAT_NULL_YIELDS_NULL должны иметь значение ON, а параметр NUMERIC_ROUNDABORT — значение OFF.  
+> ANSI_NULLS является одним из семи параметров директивы SET, которые должны быть установлены определенным образом при работе с вычисляемыми столбцами или индексированными представлениями. Параметрам `ANSI_PADDING`, `ANSI_WARNINGS`, `ARITHABORT`, `QUOTED_IDENTIFIER` и `CONCAT_NULL_YIELDS_NULL` также должно быть присвоено значение ON, а параметру `NUMERIC_ROUNDABORT` — значение OFF.  
   
  При соединении с драйвером ODBC для Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или поставщика OLE DB для Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметру ANSI_NULLS автоматически задается значение ON. Этот параметр может быть настроен в источниках данных ODBC, в атрибутах соединения ODBC или свойствах соединения OLE DB, установленных в приложении перед подключением к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию значение SET ANSI_NULLS равно OFF.  
   
@@ -98,11 +98,10 @@ SET ANSI_NULLS ON
   
  Чтобы просмотреть текущее значение для этого параметра, выполните следующий запрос:
   
-```  
+```sql  
 DECLARE @ANSI_NULLS VARCHAR(3) = 'OFF';  
 IF ( (32 & @@OPTIONS) = 32 ) SET @ANSI_NULLS = 'ON';  
-SELECT @ANSI_NULLS AS ANSI_NULLS;  
-  
+SELECT @ANSI_NULLS AS ANSI_NULLS;   
 ```  
   
 ## <a name="permissions"></a>Разрешения  
@@ -111,7 +110,7 @@ SELECT @ANSI_NULLS AS ANSI_NULLS;
 ## <a name="examples"></a>Примеры  
  Следующий пример иллюстрирует использование операторов «равно» (`=`) и «не равно» (`<>`) для сравнения со значениями `NULL` и не NULL в таблице. Этот пример также демонстрирует, что использование конструкции `IS NULL` не зависит от значения параметра `SET ANSI_NULLS`.  
   
-```  
+```sql  
 -- Create table t1 and insert values.  
 CREATE TABLE dbo.t1 (a INT NULL);  
 INSERT INTO dbo.t1 values (NULL),(0),(1);  
@@ -176,7 +175,6 @@ GO
   
 -- Drop table t1.  
 DROP TABLE dbo.t1;  
-  
 ```  
   
 ## <a name="see-also"></a>См. также:  
@@ -189,5 +187,4 @@ DROP TABLE dbo.t1;
  [SET ANSI_DEFAULTS (Transact-SQL)](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
  [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)   
  [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)  
-  
   

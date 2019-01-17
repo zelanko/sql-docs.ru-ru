@@ -14,20 +14,20 @@ ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e1e2119358dc374dec7f2f70cf455c39d17d0870
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87991a1f0fe12cfcc10df7e7bc3c542075bd050d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765688"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215703"
 ---
 # <a name="azure-data-lake-store-destination"></a>Цель Azure Data Lake Store
-  Компонент **Цель Azure Data Lake Store** позволяет пакету служб SSIS записывать данные в Azure Data Lake Store. Поддерживаются следующие форматы файлов: текст, AVRO и ORC. 
+  Компонент **Цель Azure Data Lake Store** позволяет пакету служб SSIS записывать данные в Azure Data Lake Store. Поддерживаемые форматы файлов: текстовые, Avro и ORC. 
   
  Компонент **Цель Azure Data Lake Store** входит в состав [пакета дополнительных компонентов SQL Server Integration Services (SSIS) для Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
  
- >   [!NOTE]
- > Чтобы диспетчер подключений Azure Data Lake Store и компоненты, которые его используют (т. е. источник и цель Azure Data Lake Store), могли подключаться к службам, убедитесь, что вы скачали последнюю версию пакета дополнительных компонентов Azure [здесь](https://www.microsoft.com/download/details.aspx?id=49492). 
+> [!NOTE]
+> Чтобы диспетчер подключений Azure Data Lake Store и компоненты, которые его используют (т. е. источник и цель Azure Data Lake Store), могли подключаться к службам, убедитесь, что вы скачали последнюю версию пакета дополнительных компонентов Azure [здесь](https://www.microsoft.com/download/details.aspx?id=49492). 
 
 ## <a name="configure-the-azure-data-lake-store-destination"></a>Настройка цели Azure Data Lake Store  
 1. Перетащите компонент **Цель Azure Data Lake Store** в конструктор потока данных и дважды щелкните его, чтобы открыть редактор.  

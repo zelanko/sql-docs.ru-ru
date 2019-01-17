@@ -15,15 +15,15 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72595a95c08d89bec7db4a9b4252fe8873b12195
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ba71da1f77d0fed61908b6d7aab953505a33e511
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525723"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591478"
 ---
 # <a name="data-tier-applications"></a>Приложения уровня данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Приложение уровня данных (DAC) является логической сущностью управления базой данных, которая определяет все объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например таблицы, представления и объекты экземпляров, в том числе имена для входа, связанные с базой данных пользователя. Приложение уровня данных — это автономная единица развертывания базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая позволяет разработчикам уровня данных и администраторам базы данных группировать объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в переносимый артефакт, называемый пакетом приложения уровня данных или пакетом DAC.  
   
  Пакет BAC — это связанный артефакт, который инкапсулирует схему базы данных и данные, хранящиеся в базе данных.  
@@ -109,7 +109,7 @@ ms.locfileid: "52525723"
   
 -   **ИМПОРТ** — пользователь может импортировать схему и данные в новую базу данных на основном сервере.  
   
- Обе эти возможности поддерживаются средствами управления базами данных: средой SQL Server Management Studio, порталом Azure и API DACFx.  
+ Обе эти возможности поддерживаются средствами управления базами данных: средой SQL Server Management Studio, порталом Azure и API-интерфейсом DACFx.  
   
 ## <a name="permissions"></a>Разрешения  
  Для создания базы данных, в том числе с помощью развертывания пакета DAC, пользователь должен быть членом роли **dbmanager** или иметь разрешения **CREATE DATABASE**. Для удаления базы данных пользователь должен быть членом роли **dbmanager** или иметь разрешения **DROP DATABASE**.  

@@ -1,5 +1,5 @@
 ---
-title: Занятие 2. Подключение к другому компьютеру | Документация Майкрософт
+title: Занятие 2. Соединение с другого компьютера | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2016
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 675379c6c182ad72ecdeefe09423fe981cf67b41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d08fe92b865076a330f0272f8b3fde81f17a8854
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520524"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589238"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Занятие 2. Соединение с другого компьютера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "52520524"
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-2.  В **диспетчер конфигурации SQL Server**разверните раздел **Сетевая конфигурация SQL Server**и щелкните элемент **Протоколы для** *<InstanceName>*.  
+2.  В **диспетчер конфигурации SQL Server**разверните раздел **Сетевая конфигурация SQL Server**и щелкните элемент **Протоколы для** _<InstanceName>_.  
   
     Экземпляр по умолчанию (неименованный экземпляр) указан в списке под именем **MSSQLSERVER**. Если был установлен именованный экземпляр, то в списке будет приведено заданное ему имя. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] устанавливается как **SQLEXPRESS**, если это имя не было изменено при установке.  
   
@@ -139,6 +139,6 @@ ms.locfileid: "52520524"
 На этом краткий учебник по базовым возможностям подключения связи заканчивается.  
   
 ## <a name="return-to-tutorials-portal"></a>Возвращение к порталу учебников  
-[Учебник. Приступая к работе с компонентом Database Engine](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
+[Учебник. Начало работы с ядром СУБД](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
 

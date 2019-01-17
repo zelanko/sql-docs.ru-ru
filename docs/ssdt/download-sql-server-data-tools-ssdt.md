@@ -14,18 +14,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3067b05783d7a83118e87dc8db4cdc6a83d40a1c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d2769749327f01af9548ad608a42e6d030fd3842
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516001"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300627"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Скачивание и установка SQL Server Data Tools (SSDT) для Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!div class="nextstepaction"]
-> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Поделитесь своим мнением о содержании документации по SQL!](https://aka.ms/sqldocsurvey)
 
 **SQL Server Data Tools** — это современное средство разработки, позволяющее создавать реляционные базы данных SQL Server, базы данных SQL Azure, модели данных Analysis Services (AS), пакеты Integration Services (IS) и отчеты Reporting Services (RS). С помощью SSDT вы можете проектировать и развертывать любые типы содержимого SQL Server так же просто, как разрабатывать приложения в Visual Studio.
 
@@ -61,7 +61,7 @@ ms.locfileid: "52516001"
   
 Номер выпуска: 15.8.2  
 Номер сборки: 14.0.16182.0  
-Дата выпуска: 5 ноября 2018 г.  
+Дата выпуска: 5 ноября 2018 г.  
 
 Полный список изменений доступен в [журнале изменений](changelog-for-sql-server-data-tools-ssdt.md).
 
@@ -109,16 +109,19 @@ SSDT для Visual Studio 2017 имеет те же [требования к с
 
 Для отображения доступных параметров запустите `SSDT-Setup-ENU.exe /help`
 
+> [!NOTE]
+> При использовании полной версии Visual Studio 2017 создайте автономную папку только для SSDT и запустите `SSDT-Setup-ENU.exe` из нее (не добавляйте SSDT в другой автономный макет Visual Studio 2017). При добавлении макета SSDT в существующий автономный макет Visual Studio необходимые компоненты времени выполнения (.exe) не создаются.
+
 ## <a name="supported-sql-versions"></a>Поддерживаемые версии SQL
   
 |Шаблоны проектов|Поддерживаемые платформы SQL|  
 |-------------------|--------------------|  
 реляционные базы данных|  SQL Server 2005 * — SQL Server 2017<br> (используйте SSDT 17.x или SSDT for Visual Studio 2017 для подключения к [SQL Server на Linux](../linux/sql-server-linux-overview.md))<br /><br />База данных SQL Azure<br /><br />Хранилище данных SQL Azure (поддерживает только запросы, но пока не поддерживает проекты базы данных)<br /><br />  * Версия SQL Server 2005 не поддерживается,<br /><br /> перейдите к официально поддерживаемой версии SQL.|
   |Модели служб Analysis Services<br /><br />Reporting Services, отчеты служб | SQL Server 2008 — SQL Server 2017|
-  |пакеты служб Integration Services| SQL Server 2012 — SQL Server 2017    |
+  |пакеты служб Integration Services| SQL Server 2014 — SQL Server 2017    |
   
 ## <a name="dacfx"></a>DacFx
-SSDT для Visual Studio 2015 и SSDT для Visual Studio 2017 используют DacFx 17.4.1: [скачайте Data-Tier Application Framework (DacFx) 17.4.1](https://www.microsoft.com/download/details.aspx?id=56508).
+SSDT для Visual Studio 2015 и SSDT для Visual Studio 2017 используют DacFx 17.4.1: [Скачать Data-Tier Application Framework (DacFx) 17.4.1](https://www.microsoft.com/download/details.aspx?id=56508).
 
 ## <a name="previous-versions"></a>Предыдущие версии
 
@@ -130,7 +133,7 @@ SSDT для Visual Studio 2015 и SSDT для Visual Studio 2017 исполь�
 После установки SSDT ознакомьтесь с этими руководствами, чтобы узнать, как создать базы данных, пакеты, модели данных и отчеты в SSDT:  
 
 - [Разработка базы данных вне сети с учетом проекта](project-oriented-offline-database-development.md)  
-- [Руководство по службам SSIS. Создание простого ETL-пакета](../integration-services/ssis-how-to-create-an-etl-package.md)  
+- [Учебник по службам SSIS. Создание простого ETL-пакета](../integration-services/ssis-how-to-create-an-etl-package.md)  
 - [Руководства по службам Analysis Services](../analysis-services/analysis-services-tutorials-ssas.md)  
 - [Создание простого табличного отчета (учебник по службам SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 

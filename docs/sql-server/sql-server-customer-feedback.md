@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 47d911c6a05af96d042211f98b5365230dd57084
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d89d70b7aae73acd965f053a993432c62878351f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525205"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979650"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Настройка SQL Server для отправки отзывов в корпорацию Майкрософт
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ AND instance_name = '_Total'
     
     Имя записи = CustomerFeedback
     
-    тип записи DWORD: 0 — не участвовать; 1 — участвовать.
+    Тип записи DWORD: 0 — не участвовать; 1 — участвовать
     
     {InstanceID} указывает тип экземпляра и сам экземпляр, как показано в следующих примерах:
 
@@ -91,18 +91,18 @@ AND instance_name = '_Total'
     
     Имя записи = CustomerFeedback
     
-    тип записи DWORD: 0 — не участвовать; 1 — участвовать.
+    Тип записи DWORD: 0 — не участвовать; 1 — участвовать
 
 > [!NOTE]
 > {Major Version} обозначает основную версию SQL Server, например 140 для SQL Server 2017.
 
-- Для среды SQL Server Management Studio:
+- Для среды SQL Server Management Studio 17:
   
-    Подраздел = HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\140;
+    Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\14.0
 
-    Имя записи = CustomerFeedback
+    Имя RegEntry = UserFeedbackOptIn
 
-    тип записи DWORD: 0 — не участвовать; 1 — участвовать.
+    Тип записи DWORD: 0 — не участвовать; 1 — участвовать
 
     Кроме того, среда SSMS 17.x основана на оболочке Visual Studio 2015, а в экземпляре Visual Studio функция сбора отзывов пользователей включена по умолчанию.  
 
@@ -114,6 +114,13 @@ AND instance_name = '_Total'
 
     Групповая политика на базе реестра с этими подразделами будет соблюдаться системой сбора данных об использовании SQL Server 2017.
 
+- Для среды SQL Server Management Studio 18:
+    
+    Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\18.0_IsoShell
+
+    Имя RegEntry = UserFeedbackOptIn
+
+    Тип записи DWORD: 0 — не участвовать; 1 — участвовать
 ## <a name="set-registry-subkeys-for-crash-dump-collection"></a>Настройка подразделов реестра для сбора аварийных дампов
 
 Как и в более ранней версии SQL Server, корпоративные клиенты SQL Server 2017 могут настроить параметры групповой политики на сервере, чтобы участвовать или не участвовать в сборе аварийных дампов. Для этого нужно создать политику на основе реестра. Ниже приведены соответствующие подразделы и параметры реестра: 
@@ -124,7 +131,7 @@ AND instance_name = '_Total'
 
     имя RegEntry = EnableErrorReporting;
 
-    тип записи DWORD: 0 — не участвовать; 1 — участвовать.
+    Тип записи DWORD: 0 — не участвовать; 1 — участвовать
  
     {InstanceID} указывает тип экземпляра и сам экземпляр, как показано в следующих примерах: 
 
@@ -139,7 +146,7 @@ AND instance_name = '_Total'
 
     имя RegEntry = EnableErrorReporting;
 
-    тип записи DWORD: 0 — не участвовать; 1 — участвовать.
+    Тип записи DWORD: 0 — не участвовать; 1 — участвовать
 
 > [!NOTE]
 > {Major Version} обозначает основную версию SQL Server. Например, 140 соответствует версии SQL Server 2017.

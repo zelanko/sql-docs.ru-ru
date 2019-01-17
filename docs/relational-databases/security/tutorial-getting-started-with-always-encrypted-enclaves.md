@@ -1,5 +1,5 @@
 ---
-title: Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS | Документы Майкрософт
+title: Учебник. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/04/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90a9b797862db65187d991bb6961cdfd0bda8959
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a4d833d132a0b4928d021beaa4cd9fcdd695d6c6
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523550"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046584"
 ---
-# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS
+# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Учебник. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 В этом руководстве показывается, как приступить к работе с [Always Encrypted с безопасными анклавами](encryption/always-encrypted-enclaves.md). Буду рассмотрены следующие темы.
@@ -87,7 +87,7 @@ ms.locfileid: "52523550"
 >[!NOTE]
 >Если же вы хотите ссылаться на этот компьютер HGS по DNS-имени, можно настроить сервер пересылки из корпоративных DNS-серверов на новый контроллер домена HGS.  
 
-## <a name="step-2-configure-the-sql-server-computer-as-a-guarded-host"></a>Шаг 2. Настройка компьютера SQL Server как защищенного узла
+## <a name="step-2-configure-the-sql-server-computer-as-a-guarded-host"></a>Этап 2. Настройка компьютера SQL Server как защищенного узла
 На этом шаге выполняется настройка компьютера SQL Server как защищенного узла, зарегистрированного в HGS с помощью аттестации ключа узла.
 >[!NOTE]
 >Рекомендуется использовать аттестацию ключа узла только в тестовых средах. Для рабочих сред следует использовать аттестацию доверенного платформенного модуля (TPM).
@@ -122,7 +122,8 @@ ms.locfileid: "52523550"
 7. На компьютере SQL Server в консоли Windows PowerShell с повышенными привилегиями выполните следующую команду, чтобы сообщить компьютеру SQL Server, где должна выполняться аттестация. Убедитесь, что указали IP-адрес или DNS-имя своего компьютера HGS. 
 
    ```powershell
-   Set-HgsClientConfiguration -AttestationServerUrl https://<IP address or DNS name>/Attestation -KeyProtectionServerUrl https://<IP address or DNS name>/KeyProtection/  
+   # use http, and not https
+   Set-HgsClientConfiguration -AttestationServerUrl http://<IP address or DNS name>/Attestation -KeyProtectionServerUrl http://<IP address or DNS name>/KeyProtection/  
    ```
 
 Результат приведенной выше команды должен показывать, что аттестация пройдена (AttestationStatus = Passed).
@@ -133,7 +134,7 @@ ms.locfileid: "52523550"
 
 Если все эти действия не помогают, запустите командлет Clear-HgsClientHostKey и повторите шаги 4–7.
 
-## <a name="step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server"></a>Шаг 3. Настройка Always Encrypted с безопасными анклавами в SQL Server
+## <a name="step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server"></a>Шаг 3. Настройка Always Encrypted с безопасными анклавами в SQL Server
 
 На этом шаге выполняется включение функции Always Encrypted с использованием анклавов в экземпляре SQL Server.
 
@@ -167,7 +168,7 @@ ms.locfileid: "52523550"
    ```
 
     > [!NOTE]
-    > Полнофункциональные вычисления в [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] по умолчанию отключены. Их необходимо включать с помощью вышеуказанной инструкции после каждой перезагрузки экземпляра SQL Server.
+    > Полнофункциональные вычисления в [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] по умолчанию отключены. Их необходимо включить с помощью вышеуказанной инструкции после каждой перезагрузки экземпляра SQL Server.
 
 ## <a name="step-4-create-a-sample-database"></a>Шаг 4. Создание образца базы данных
 На этом шаге создается база данных с демонстрационными данными, которые далее будут шифроваться.

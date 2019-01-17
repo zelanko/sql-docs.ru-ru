@@ -22,12 +22,12 @@ ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98a5cdb6b02cda84424cb305a4ecc63e38056bdc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 602c8f5d1cded1c5d19c520087ceac1b9c9124d5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797273"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591898"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];  
   
--   запустив команду **net stop mssqlserver** из командной строки для экземпляра по умолчанию или запустив команду **net stop mssql$***instancename* из командной строки для именованного экземпляра;  
+-   запустив команду **net stop mssqlserver** из командной строки для экземпляра по умолчанию или запустив команду **net stop mssql$**_instancename_ из командной строки для именованного экземпляра;  
   
 -   с помощью служб на панели управления.  
   
@@ -82,6 +82,6 @@ SHUTDOWN [ WITH NOWAIT ]
  [sp_lock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [Приложение sqlservr](../../tools/sqlservr-application.md)   
- [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
+ [Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
   

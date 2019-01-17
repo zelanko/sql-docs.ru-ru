@@ -23,12 +23,12 @@ ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0ba43b04bc5c77d060fd2f8edda25d8a925a2856
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1e6db73f4acea3654e8cffe8699df08f3f8d2c7
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602292"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980090"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>Инструкции RESTORE — REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ FROM <backup_device> [ ,...n ]
  Логическое имя устройства резервного копирования, из которого восстанавливается база данных. Это имя создается с помощью процедуры **sp_addumpdevice** и должно соответствовать правилам наименования идентификаторов. Если аргумент задается в виде переменной (**@**_logical\_backup\_device\_name\_var_), имя устройства резервного копирования можно указать как строковую константу (**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) или как переменную любого строкового типа данных, за исключением типов данных **ntext** или **text**.  
   
  {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
- Разрешает сохранение резервных копий с названного диска или ленточного устройства хранения данных. Типы дисковых и ленточных устройств должны быть заданы с реальным именем устройства (например, полный путь и имя файла): DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' или TAPE = '\\\\.\TAPE0'. Если аргумент задается в виде переменной (**@**_physical\_backup\_device\_name\_var_), имя устройства можно указать как строковую константу (**@**_physical\_backup\_device\_name\_var_ = '*physcial_backup_device_name*') или как другую переменную любого строкового типа данных, за исключением типов данных **ntext** или **text**.  
+ Разрешает сохранение резервных копий с названного диска или ленточного устройства хранения данных. Типы дисковых и магнитных устройств должны быть заданы с реальным именем устройства (например полный путь и имя файла): DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' or TAPE = '\\\\.\TAPE0'. Если аргумент задается в виде переменной (**@**_physical\_backup\_device\_name\_var_), имя устройства можно указать как строковую константу (**@**_physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*') или как другую переменную строкового типа данных, за исключением типов данных **ntext** или **text**.  
   
  Укажите тип дискового устройства с помощью сетевого сервера с именем UNC (которое должно содержать имя компьютера). Дополнительные сведения об именах UNC см. в разделе [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   

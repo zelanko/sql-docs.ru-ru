@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e89d2803fda21563b69bb2ba658df2f9a8f0bef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7a06414a9ca09ecfd02438827cbee6645ca381ae
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545454"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215390"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL) 
 
@@ -510,7 +510,7 @@ EMERGENCY
 База данных помечена как READ_ONLY, ведение журнала отключено и доступ возможен только элементам предопределенной роли сервера sysadmin. EMERGENCY используется в основном для диагностики. Например, база данных, помеченная как подозрительная из-за поврежденного файла журнала, может быть переведена в состояние EMERGENCY. Таким образом, системный администратор может получить доступ к базе данных только для чтения. Только члены предопределенной роли сервера sysadmin могут перевести базу данных в состояние EMERGENCY.  
   
 > [!NOTE]  
-> **Разрешения.** Разрешение ALTER DATABASE на базу данных необходимо для изменения режима базы данных с режима "вне сети" на режим "аварийный". Разрешение ALTER ANY DATABASE на уровне сервера требуется, чтобы перевести базу данных из режима "вне сети"в режим "в сети".  
+> **Разрешения**: Разрешение ALTER DATABASE на базу данных необходимо для изменения режима базы данных с режима «вне сети» на режим «аварийный». Разрешение ALTER ANY DATABASE на уровне сервера требуется, чтобы перевести базу данных из режима "вне сети"в режим "в сети".  
   
 Состояние этого параметра можно определить с помощью проверки значений столбцов state и state_desc в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) или свойства Status функции [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md). Дополнительные сведения см. в разделе [Состояния базы данных](../../relational-databases/databases/database-states.md).  
   
@@ -695,7 +695,7 @@ FORCED
   
 **\<query_store_options> ::=**  
   
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ON | OFF | CLEAR [ ALL ]  
 Указывает, включено ли хранилище запросов в этой базе данных, а также управляет удалением содержимого хранилища запросов. Дополнительные сведения: [Сценарии использования хранилища запросов](../../relational-databases/performance/query-store-usage-scenarios.md). 
@@ -1242,7 +1242,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### <a name="e-enabling-the-query-store"></a>Д. Включение хранилища запросов  
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 Следующий пример включает хранилище запросов и настраивает его параметры.  
   

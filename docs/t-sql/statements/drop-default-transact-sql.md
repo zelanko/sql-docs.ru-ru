@@ -19,19 +19,19 @@ ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1872a3a1cdcdbe112ead08b4bef1fc680ef90338
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 72accd7718280b4994c3339531c8e5d0fef067c1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703732"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210794"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Удаляет одно или несколько пользовательских значений по умолчанию из текущей базы данных.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Инструкция DROP DEFAULT в следующей версии сервера [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет удалена. Не используйте инструкции DROP DEFAULT в новых разработках и запланируйте модификацию приложений, использующих эту инструкцию в настоящее время. Вместо этого используйте определения по умолчанию, которые могут создаваться при помощи ключевого слова DEFAULT инструкций [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) и [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

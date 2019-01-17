@@ -1,6 +1,7 @@
 ---
-title: Динамические административные представления и представления системного каталога (группы доступности AlwaysOn — SQL Server) | Документы Майкрософт
-ms.custom: ag-guide
+title: Динамические административные представления и представления системного каталога для групп доступности
+description: Коллекция динамических административных представлений и представлений каталога, помогающих отслеживать и диагностировать работоспособность группы доступности Always On.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.assetid: 4320a4a4-6183-462b-8bda-e7424e7cb706
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 79318dcd39a91eb8e3b9f570425f73838a1e53a3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8126cd6d7dba1f8cfab856d4e7b76288581e7f87
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417023"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209313"
 ---
 # <a name="dynamic-management-views-and-system-catalog-views-always-on-availability-groups"></a>Динамические административные представления и представления системного каталога (группы доступности AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

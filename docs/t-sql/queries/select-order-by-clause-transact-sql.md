@@ -1,7 +1,7 @@
 ---
 title: Предложение ORDER BY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 12/13/2017
+ms.date: 12/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -40,12 +40,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f7279def5a168f46a86db05be1c41b28bbfa9db
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8babb966273c05524a373a14c6a084e5c74cfc7b
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530226"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980280"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT — предложение ORDER BY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,7 +98,14 @@ ORDER BY order_by_expression
   
  Можно указать несколько столбцов сортировки. Имена столбцов должны быть уникальными. Последовательность столбцов сортировки в предложении ORDER BY определяет организацию упорядоченного результирующего набора. Иными словами, результирующий набор сортируется по первому столбцу, затем упорядоченный список сортируется по второму и т. д.  
   
- Имена столбцов, на которые содержатся ссылки в предложении ORDER BY, должны однозначно соответствовать столбцу в списке выбора или столбцу, определенному в таблице, указанной в предложении FROM.  
+ Имена столбцов, на которые содержатся ссылки в предложении ORDER BY, должны однозначно соответствовать столбцу или псевдониму столбца в списке выбора либо столбцу, определенному в таблице, указанной в предложении FROM. Если предложение ORDER BY ссылается на псевдоним столбца в списке выбора, псевдоним должен использоваться отдельно, а не как часть выражения в предложении ORDER BY, например:
+ 
+```sql
+SELECT SCHEMA_NAME(schema_id) AS SchemaName FROM sys.objects 
+ORDER BY SchemaName; -- correct 
+SELECT SCHEMA_NAME(schema_id) AS SchemaName FROM sys.objects 
+ORDER BY SchemaName + ''; -- wrong
+```
   
  COLLATE *collation_name*  
  Указывает, что операция ORDER BY должна выполняться в соответствии с параметрами сортировки, указанными в аргументе *collation_name*, но не в соответствии с параметрами сортировки столбца, определенными в таблице или представлении. Аргументом *collation_name* может быть либо имя параметров сортировки Windows, либо имя параметров сортировки SQL. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). Аргумент COLLATE применяется только к столбцам типа **char**, **varchar**, **nchar** и **nvarchar**.  
@@ -188,7 +195,7 @@ ORDER BY order_by_expression
   
  См. пример «Выполнение нескольких запросов в одной транзакции» в подразделе «Примеры» ниже в этом разделе.  
   
- Если согласованность планов выполнения важна для решения разбиения на страницы, подумайте над использованием указания запросов OPTIMIZE FOR для параметров OFFSET и FETCH. См. пункт «Указание выражений для значений OFFSET и FETCH» в подразделе «Примеры» ниже в этом разделе. Дополнительные сведения об OPTIMZE FOR см. в разделе [Указания запросов (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
+ Если согласованность планов выполнения важна для решения разбиения на страницы, подумайте над использованием указания запросов OPTIMIZE FOR для параметров OFFSET и FETCH. См. пункт «Указание выражений для значений OFFSET и FETCH» в подразделе «Примеры» ниже в этом разделе. Дополнительные сведения об OPTIMZE FOR см. в статье [Указания запросов (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="examples"></a>Примеры  
   

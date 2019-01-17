@@ -1,18 +1,19 @@
 ---
 title: Фирменная символика на веб-портале | Документы Майкрософт
-ms.date: 11/17/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
+description: В этой статье вы узнаете об изменении внешнего вида веб-портала при помощи элементов фирменного стиля вашего бизнеса в пакетах фирменной символики. Для работы с пакетами фирменной символики углубленное знание каскадных таблиц стилей (CSS) не требуется.
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 01c93f13a94533c6562516ca398d76034564beb7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6e3761e7bc91a219562d46cc33f0c5bbd4ca6aa3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397712"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201044"
 ---
 # <a name="branding-the-web-portal"></a>Фирменная символика на веб-портале
 
@@ -239,5 +240,7 @@ ms.locfileid: "52397712"
             "altTableAccent":"#fdc336"  
         }  
     }  
+
+## <a name="next-steps"></a>Следующие шаги
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

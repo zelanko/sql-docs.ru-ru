@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 68b932ead9b251e18402ac01a132febf627e4a47
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 10219134a46b2b4368d5f3862cd63a6a442f3dd0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701078"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589818"
 ---
 # <a name="handle-multiple-job-steps"></a>Обработка множественных шагов задания
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51701078"
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Если в задании содержится более одного шага, необходимо указать порядок выполнения шагов задания. Это называется *управлением потоком***. Добавить новые шаги задания и реорганизовать поток шагов задания можно в любое время; изменения вступают в силу при следующем выполнении задания. На этой иллюстрации показано управление потоком для задания резервного копирования базы данных.  
+Если в задании содержится более одного шага, необходимо указать порядок выполнения шагов задания. Это называется *управлением потоком*. Добавить новые шаги задания и реорганизовать поток шагов задания можно в любое время; изменения вступают в силу при следующем выполнении задания. На этой иллюстрации показано управление потоком для задания резервного копирования базы данных.  
   
 ![Управление потоком шагов заданий агента SQL Server](../../ssms/agent/media/dbflow01.gif "Управление потоком шагов заданий агента SQL Server")  
   

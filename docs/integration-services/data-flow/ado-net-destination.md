@@ -19,12 +19,12 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 38175416fdd47ee50f9bb3aa94b7318b8926317b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a462e54379a5a916d6b302f99ef6f44d2148399a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640034"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209093"
 ---
 # <a name="ado-net-destination"></a>Назначение «ADO.NET»
   Назначение ADO NET загружает данные в различные базы данных, совместимые с [!INCLUDE[vstecado](../../includes/vstecado-md.md)], которые используют таблицу или представление базы данных. Можно загрузить эти данные в существующую таблицу или представление либо создать новую таблицу и загрузить в нее данные.  
@@ -96,14 +96,14 @@ ms.locfileid: "51640034"
   
  Если был выбран параметр **По возможности использовать массовую вставку**, а для параметра **Ошибка** задано значение **Перенаправить строку**, то в пакет данных, перенаправляемый объектом назначения в вывод ошибок, могут попасть и строки, не содержащие ошибок. Дополнительные сведения об обработке ошибок в массовых операциях см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md). Дополнительные сведения о параметре **Ошибка** см. в разделе [Редактор назначения ADO.NET (страница "Вывод ошибок")](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Если исходная таблица SQL Server или Sybase включает столбец идентификаторов, то необходимо использовать задачи "Выполнение SQL" для включения инструкции IDENTITY_INSERT до доступа к назначению "ADO.NET" и ее отключение после доступа. (Это свойство столбца идентификаторов указывает значение приращения для столбца. Инструкция SET IDENTITY_INSERT позволяет вставлять явные значения из таблицы источника в столбец идентификаторов таблицы назначения.)  
->   
+> 
 >   Чтобы выполнить инструкции SET IDENTITY_INSERT и успешно загрузить данные, необходимо сделать следующее.  
 >       1. Используйте один и тот же диспетчер соединений ADO.NET для задач "Выполнение SQL" и назначения "ADO NET".  
 >       2. В диспетчере соединений присвойте свойствам **RetainSameConnection** и **MultipleActiveResultSets** значение True.  
 >       3. В назначении "ADO.NET" присвойте свойству **UseBulkInsertWhenPossible** значение False.   
->
+> 
 >  Дополнительные сведения см. в разделе [SET IDENTITY_INSERT (Transact-SQL)](../../t-sql/statements/set-identity-insert-transact-sql.md) и [IDENTITY (свойство) (Transact-SQL)](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
 ## <a name="external-resources"></a>Внешние ресурсы  

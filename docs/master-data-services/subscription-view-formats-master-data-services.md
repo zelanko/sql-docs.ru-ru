@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8211d8e996d30d880cfc39f1e47e1141432c0e95
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1031a8f30ff65a00dafeff90e5ce0b5efa1155f7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395484"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766648"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Форматы представления подписки (Master Data Services)
 
@@ -45,7 +44,7 @@ ms.locfileid: "52395484"
 |**Производные уровни (представление производных иерархий)**|Содержит структуру производных иерархий в уровневом формате.|  
   
 ## <a name="see-also"></a>См. также:  
- [Обзор. Экспорт данных (службы Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)   
+ [Обзор: экспорт данных (службы Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)   
  [Создание представления подписки для экспорта данных (службы Master Data Services)](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   
   

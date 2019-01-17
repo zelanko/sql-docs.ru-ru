@@ -1,6 +1,7 @@
 ---
-title: Мастер добавления базы данных в группу доступности | Документы Майкрософт
-ms.custom: ''
+title: Добавление базы данных в группу доступности с помощью мастера создания групп доступности
+description: Добавление базы данных в группу доступности Always On с помощью мастера создания групп доступности в SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,34 +16,26 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25bea0c614d55774207692ab275917d7ecdcab2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32a8945392df4d45dd6904a3921d2cbc770a4674
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724252"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211573"
 ---
-# <a name="availability-group---add-database-to-group-wizard"></a>Мастер добавления базы данных в группу доступности
+# <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>Добавление базы данных в группу доступности Always On с помощью мастера создания групп доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Используйте мастер добавления базы данных в группу доступности для добавления одной или нескольких баз данных в существующую группу доступности AlwaysOn.  
   
 > [!NOTE]  
 >  Сведения об использовании [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell для добавления базы данных см. в разделе [Добавление базы данных в группу доступности (SQL Server)](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md).  
   
- **В этом разделе:**  
-  
--   **Перед началом работы**  
-  
-     [Требования и ограничения](#Prerequisites)  
-  
-     [безопасность](#Security)  
-  
--   **Чтобы добавить базу данных, воспользуйтесь инструкциями из раздела:**  [Мастер добавления базы данных в группу доступности (среда SQL Server Management Studio)](#SSMSProcedure)  
+
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  Если вам еще не приходилось добавлять базу данных в группу доступности, ознакомьтесь с разделом "Базы данных доступности" статьи [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Prerequisites"></a> Предварительные условия, ограничения и рекомендации  
+##  <a name="Prerequisites"></a> Предварительные условия, ограничения и рекомендации  
   
 -   Необходимо подключиться к экземпляру сервера, на котором размещена текущая первичная реплика.  
   
@@ -54,15 +47,13 @@ ms.locfileid: "47724252"
   
     -   Чтобы при помощи мастера можно было создавать резервные копии и обращаться к ним, необходимо будет указать общую сетевую папку. Для каждой первичной реплики учетная запись, используемая для запуска [!INCLUDE[ssDE](../../../includes/ssde-md.md)] , должна иметь разрешения в файловой системе на чтение и запись в общей сетевой папке. Для вторичных реплик учетная запись должна иметь разрешение на чтение в сетевой папке.  
   
-     Если нет возможности воспользоваться мастером для выполнения полной первоначальной синхронизации данных, то базы данных-получатели нужно подготовить вручную. Это можно сделать до или после запуска мастера. Дополнительные сведения см. в разделе [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
+     Если нет возможности воспользоваться мастером для выполнения полной первоначальной синхронизации данных, то базы данных-получатели нужно подготовить вручную. Это можно сделать до или после запуска мастера. Дополнительные сведения см. в статье [Ручная подготовка базы данных-получателя для присоединения к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Использование мастера добавления базы данных в группу доступности (среда SQL Server Management Studio)  
- **Использование мастера добавления базы данных в группу доступности**  
+##  <a name="use-the-new-availability-group-wizard"></a>Использование мастера создания групп доступности
   
 1.  В обозревателе объектов подключитесь к экземпляру сервера, на котором размещена первичная реплика группы доступности, и разверните дерево сервера.  
   

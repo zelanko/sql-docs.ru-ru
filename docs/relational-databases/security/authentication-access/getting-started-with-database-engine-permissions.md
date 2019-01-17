@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00d28b0750ba599e4bc73fa2ec6586271b683545
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 23ed71d50fc84c743f5574a3e3e96852b2e9bd21
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410861"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202663"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Приступая к работе с разрешениями Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -203,7 +203,7 @@ JOIN sys.objects AS obj
     ON perms.major_id = obj.object_id;  
 ```  
   
- Чтобы получить список членов ролей сервера (только[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), выполните приведенную ниже инструкцию.  
+ Чтобы получить список членов ролей сервера (только [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]), выполните приведенную ниже инструкцию.  
   
 ```sql  
 SELECT sRole.name AS [Server Role Name] , sPrinc.name AS [Members]  
@@ -231,7 +231,7 @@ JOIN sys.database_principals AS dRole
   
 -   [Учебник. Приступая к работе с компонентом Database Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Создание базы данных (учебник)](../../../t-sql/lesson-1-creating-database-objects.md#)  
   
--   [Руководство: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
+-   [Учебник. SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
 -   [Учебник. Составление инструкций Transact-SQL](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   

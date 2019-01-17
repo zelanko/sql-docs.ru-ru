@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 89a7be267cfe6f4e60961e6d9a6610897cb5718d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 743c12fe1ec749c597655f249c1ba6fbfe1b0b4e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542523"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591888"
 ---
 # <a name="query-processing-architecture-guide"></a>Руководство по архитектуре обработки запросов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -386,7 +386,7 @@ GO
 * План выполнения часто используется, поэтому его стоимость никогда не принимает значение ноль. Этот план остается в кэше планов и не удаляется, пока имеется достаточный объем памяти, а его текущая стоимость не равна нулю.
 * Нерегламентированный план выполнения вставляется и не используется до возникновения нехватки памяти. Так как нерегламентированные планы выполнения инициализируются с текущей стоимостью, равной нулю, то [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] при проверке планов выполнения обнаруживает план выполнения с нулевой стоимостью и удаляет его из кэша планов. Нерегламентированный план выполнения с нулевой текущей стоимостью остается в кэше планов при наличии достаточного объема памяти.
 
-Чтобы вручную удалить отдельный план выполнения или все планы, используйте команду [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md).
+Чтобы вручную удалить отдельный план выполнения или все планы, используйте команду [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md). Начиная с версии [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], для очистки кэша процедур (планов) для базы данных в области действия служит инструкция `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE`.
 
 ### <a name="recompiling-execution-plans"></a>Перекомпиляция планов выполнения
 

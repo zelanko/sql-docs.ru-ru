@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 18a447d64711fb59aaa73183357acf39d90fd3ec
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 453b31328c732833756a39a56389aa7640346817
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030773"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215643"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Регистрация стандартного поставщика данных .NET Framework (службы SSRS)
   Чтобы набор данных отчета служб [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] получал данные с помощью поставщика данных [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сторонней разработки, необходимо развернуть и зарегистрировать сборку поставщика данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] в двух местах: на клиенте, используемом для разработки отчета, и на сервере отчетов. На клиенте поставщик данных должен быть зарегистрирован в качестве типа источника данных и связан с конструктором запросов. После этого этот поставщик может быть выбран в качестве типа источника данных при создании набора данных для отчета. При этом откроется связанный конструктор запросов, помогающий создавать запросы для этого типа источников данных. На сервере отчетов поставщик данных необходимо зарегистрировать в качестве типа источника данных. После этого может производиться обработка опубликованных отчетов, которые в качестве источника данных используют этот поставщик.  
   
- Поставщикам данных сторонней разработки не обязательно обеспечивать все функции, реализуемые модулями обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md). Дополнительные сведения о расширении функций поставщика данных платформы[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в разделе [Реализация модуля обработки данных](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md).  
+ Поставщикам данных сторонней разработки не обязательно обеспечивать все функции, реализуемые модулями обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md). Дополнительные сведения о расширении функций поставщика данных платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в разделе [Реализация модуля обработки данных](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md).  
   
  Для установки и регистрации поставщиков данных необходимы учетные данные администратора.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "50030773"
     |**Название**|Уникальное имя поставщика данных, например **MyNETDataProvider**. Длина атрибута **Name** не должна превышать 255 символов. Имя должно быть уникальным среди всех элементов, вложенных в элемент **Extension** файла конфигурации. Указанное здесь значение отображается в раскрывающемся списке типов источников данных при создании нового источника данных.|  
     |**Тип**|Список с разделителями-запятыми, включающий полное имя пространства имен для класса, реализующего интерфейс <xref:System.Data.IDbConnection> , а затем имя сборки поставщика [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (без расширения DLL).|  
   
-     Например, для DLL-файла, развертываемого в каталоге PrivateAssemblies [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], новый элемент может выглядеть следующим образом.  
+     Например, для DLL-файла, развертываемого в каталоге PrivateAssemblies [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , новый элемент может выглядеть следующим образом.  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   

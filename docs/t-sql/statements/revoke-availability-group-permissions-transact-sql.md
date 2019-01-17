@@ -18,12 +18,12 @@ ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 42d3976cabcfc231079f5b3b0c8cf9cbd1dcde94
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: daaaa615a778314556f9684800bdc2a56cd7a5ef
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524328"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980150"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>REVOKE (отзыв) разрешений группы доступности (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Указывает разрешение, которое может быть отменено для группы доступности. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- ON AVAILABILITY GROUP **::***availability_group_name*  
+ ON AVAILABILITY GROUP **::**_availability_group_name_  
  Указывает группу доступности, для которой отменяется разрешение. Квалификатор области (**::**) является обязательным.  
   
  { FROM | TO } \<server_principal> Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], у которого отменяется разрешение.  
@@ -101,7 +101,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
 ## <a name="permissions"></a>Разрешения  
- Требует разрешения CONTROL для группы доступности или разрешения ALTER ANY AVAILABILTIY GROUP для сервера.  
+ Требует разрешения CONTROL для группы доступности или разрешения ALTER ANY AVAILABILITY GROUP для сервера.  
   
 ## <a name="examples"></a>Примеры  
   

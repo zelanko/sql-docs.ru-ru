@@ -1,6 +1,7 @@
 ---
-title: Страница "Указание параметров группы доступности" (мастер создания группы доступности/мастер добавления базы данных) | Документы Майкрософт
-ms.custom: ''
+title: Страница "Указание параметров группы доступности" (мастер группы доступности) — SQL Server | Документация Майкрософт
+ms.description: Describes the options found on the 'Specify Availability Group Name' page of the Availability Group Wizard within SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c68b1d85be8dd4e5533a1aca16348fd1ee66bf8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec4f98310707922abfe32a1fbd771d71da777907
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699971"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203563"
 ---
-# <a name="specify-availability-group-options-page"></a>Страница "Указание параметров группы доступности"
+# <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Страница "Указание параметров группы доступности" группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описываются параметры страницы **Указание имени группы доступности** . Эта тема относится как к [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] , так и к [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   

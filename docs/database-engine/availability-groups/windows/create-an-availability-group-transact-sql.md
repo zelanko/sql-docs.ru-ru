@@ -1,6 +1,7 @@
 ---
-title: Создание группы доступности (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
+title: Создание группы доступности с помощью Transact-SQL (T-SQL)
+description: 'Шаги для создания группы доступности Always On с помощью Transact-SQL (T-SQL). '
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0460c654e9403b2d607197580462186e1ae1b805
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 44944c4dcc4c3f4b8cc45ee6f3ba57863316b9de
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512505"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213023"
 ---
-# <a name="create-an-availability-group-transact-sql"></a>Создание группы доступности (Transact-SQL)
+# <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Создание группы доступности Always On с помощью Transact-SQL (T-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В данном разделе описывается использование [!INCLUDE[tsql](../../../includes/tsql-md.md)] для создания и настройки группы доступности на основе экземпляров [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , на которых включена функция [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, и набор партнеров по обеспечению отработки отказа, называемых *репликами доступности*и поддерживающих отработку отказа.  
   
@@ -34,7 +35,7 @@ ms.locfileid: "52512505"
   
      [Сводка задач и соответствующих инструкций Transact-SQL](#SummaryTsqlStatements)  
   
--   **Создание и настройка группы доступности с помощью:**  [Transact-SQL](#TsqlProcedure)  
+-   **Создание и настройка группы доступности с использованием:**  [Transact-SQL](#TsqlProcedure)  
   
 -   **Пример.**  [Настройка группы доступности, использующей проверку подлинности Windows](#ExampleConfigAGWinAuth)  
   
@@ -73,7 +74,7 @@ ms.locfileid: "52512505"
 ##  <a name="TsqlProcedure"></a> Создание и настройка группы доступности с помощью Transact-SQL  
   
 > [!NOTE]  
->  Пример настройки с образцами кода для каждой из этих инструкций [!INCLUDE[tsql](../../../includes/tsql-md.md)] см. в статье [Пример. Настройка группы доступности, использующей проверку подлинности Windows](#ExampleConfigAGWinAuth).  
+>  Примеры процедуры настройки с примерами кода всех этих инструкций [!INCLUDE[tsql](../../../includes/tsql-md.md)] см. в разделе [Пример: Настройка группы доступности, использующей проверку подлинности Windows](#ExampleConfigAGWinAuth)  
   
 1.  Подключитесь к экземпляру сервера, на котором должна быть размещена первичная реплика.  
   
@@ -81,7 +82,7 @@ ms.locfileid: "52512505"
   
 3.  Присоедините новую вторичную реплику к группе доступности. Дополнительные сведения см. в разделе [Присоединение вторичной реплики к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-4.  Для каждой базы данных в группе доступности создайте базу данных-получатель путем восстановления последней резервной копии базы данных-источника с помощью инструкции RESTORE WITH NORECOVERY. Дополнительные сведения см. в разделе [Пример. Настройка группы доступности с использованием проверки подлинности Windows (Transact-SQL)](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md), начиная с шага восстановления резервной копии базы данных.  
+4.  Для каждой базы данных в группе доступности создайте базу данных-получатель путем восстановления последней резервной копии базы данных-источника с помощью инструкции RESTORE WITH NORECOVERY. Дополнительные сведения см. в примере [: Настройка группы доступности с использованием проверки подлинности Windows (Transact-SQL)](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md), начиная с шага восстановления резервной копии базы данных.  
   
 5.  Присоедините каждую новую базу данных-получатель к группе доступности. Дополнительные сведения см. в разделе [Присоединение вторичной реплики к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
@@ -527,17 +528,17 @@ GO
   
 -   **Блоги**  
   
-     [Обучающая серия AlwaysOn — HADRON: использование рабочего пула для баз данных с поддержкой HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Обучающая серия Always ON — HADRON. Использование рабочего пула для баз данных с HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [Блоги команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Видеоролики**  
   
-     [Microsoft SQL Server с рабочим названием Denali AlwaysOn, часть 1. Вводные сведения о решении следующего поколения по обеспечению высокого уровня доступности](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server с рабочим названием Denali Always On, часть 1: вводные сведения о решении следующего поколения по обеспечению высокого уровня доступности](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server с рабочим названием Denali AlwaysOn, часть 2. Создание критически важного решения по обеспечению высокого уровня доступности с использованием AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server с рабочим названием Denali Always On, часть 2: создание критически важного решения по обеспечению высокого уровня доступности с использованием Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Технические документы**  
   

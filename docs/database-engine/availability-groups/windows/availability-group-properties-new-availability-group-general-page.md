@@ -1,6 +1,8 @@
 ---
-title: 'Свойства группы доступности: создание группы доступности (страница "Общие") | Документы Майкрософт'
-ms.custom: ''
+title: 'Свойства группы доступности: Создание группы доступности (страница "Общие")'
+titleSuffix: SQL Server
+description: Описание различных свойств на странице "Общие", доступной со страницы "Создание группы доступности" в SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +14,14 @@ ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 098bc8bf6746acdec41aecc9533b21bc0b49e095
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1acbcb925b2b98cdc81bf3f745ebaa9b79edbf55
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690002"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208523"
 ---
-# <a name="availability-group-properties-new-availability-group-general-page"></a>Свойства группы доступности: создание группы доступности (страница "Общие")
+# <a name="availability-group-properties-new-availability-group-general-page"></a>Свойства группы доступности: Создание группы доступности (страница "Общие")
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Приведенные в этом разделе сведения относятся к вкладке **Общие** диалоговых окон **Создание группы доступности** и **Свойства группы доступности** .  Диалоговое окно **Создание группы доступности** позволяет создать новую группу доступности, не прибегая к использованию [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. Диалоговое окно **Свойства группы доступности** позволяет просматривать и изменять конфигурацию существующей группы доступности.  
   
@@ -34,7 +36,7 @@ ms.locfileid: "47690002"
  Имя группы доступности. Определяемое пользователем имя, которое должно быть уникальным в отказоустойчивом кластере Windows Server (WSFC).  
   
 ## <a name="availability-databases"></a>Базы данных доступности  
- **Database Name**  
+ **Имя базы данных**  
  Имя базы данных, добавленной к группе доступности.  
   
  **Добавить**  

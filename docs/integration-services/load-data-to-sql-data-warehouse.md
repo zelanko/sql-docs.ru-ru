@@ -5,19 +5,18 @@ documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
-ms.devlang: NA
 ms.topic: conceptual
 ms.custom: loading
 ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 2ae5eb35be423a7b0dedc85d9c7cd589f75c781e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e7a2ecb3d432579fdbffee9a5cec0d776d4f4596
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395567"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732091"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Загрузка данных в Хранилище данных SQL Azure с помощью SQL Server Integration Services (SSIS)
 
@@ -96,7 +95,7 @@ Visual Studio открывает и создает проект служб Integ
 
 1. Используйте задачу передачи BLOB-объектов Azure для размещения данных в хранилище BLOB-объектов Azure. Чтобы получить задачу отправки BLOB-объектов Azure, скачайте [Пакет дополнительных компонентов Microsoft SQL Server Integration Services для Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure].
 
-2. После этого используйте задачу "Выполнить SQL" служб SSIS, чтобы запустить скрипт PolyBase, который загружает данные в хранилище данных SQL. Пример, который загружает данные из хранилища BLOB-объектов Azure в Хранилище данных SQL (но без использования SSIS), см. в [Руководстве по загрузке данных в Хранилище данных SQL Azure](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
+2. После этого используйте задачу "Выполнить SQL" служб SSIS, чтобы запустить скрипт PolyBase, который загружает данные в хранилище данных SQL. Пример, который загружает данные из хранилища BLOB-объектов Azure в хранилище данных SQL (но без использования SSIS), см. в разделе [Учебник. Загрузка данных в хранилище данных SQL Azure](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
 
 ## <a name="option-2---use-a-source-and-destination"></a>Вариант 2. Использование источника и получателя
 
@@ -213,9 +212,9 @@ Visual Studio открывает и создает проект служб Integ
 
 ## <a name="next-steps"></a>Следующие шаги
 
-- Сведения об отладке пакетов и устранении их неполадок прямо в среде разработки. Вы можете начать отсюда: [Инструменты устранения неполадок при разработке пакета][Troubleshooting Tools for Package Development].
+- Сведения об отладке пакетов и устранении их неполадок прямо в среде разработки. Начните здесь: [Инструменты устранения неполадок при разработке пакета][Troubleshooting Tools for Package Development].
 
-- Сведения о развертывании пакетов и проектов служб SSIS на сервере служб Integration Services или в другом хранилище. Вы можете начать отсюда: [Развертывание проектов и пакетов][Deployment of Projects and Packages].
+- Сведения о развертывании пакетов и проектов служб SSIS на сервере служб Integration Services или в другом хранилище. Начните здесь: [Развертывание проектов и пакетов][Deployment of Projects and Packages].
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-data-warehouse/ssis-designer-01.png

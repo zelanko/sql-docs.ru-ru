@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f7b2bcac47cc24f5de6f58d712708082eb17010
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e8dd7bd746704b2913ef6d88951080451741ab38
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676333"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886949"
 ---
 # <a name="json-path-expressions-sql-server"></a>Выражения пути JSON (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51676333"
   
 -   При вызове **JSON_QUERY** для извлечения объекта JSON или массива. Дополнительные сведения см. в разделе [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md).  
   
--   При вызове **JSON_MODIFY** для обновления значения свойства в строке JSON. Дополнительные сведения см. в разделе [JSON_MODIFY &#40;Transact-SQL&#41;](../../t-sql/functions/json-modify-transact-sql.md).  
+-   При вызове **JSON_MODIFY** для обновления значения свойства в строке JSON. Дополнительные сведения см. в разделе [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md).  
 
 ## <a name="parts-of-a-path-expression"></a>Элементы выражения пути
  Выражение пути состоит из двух компонентов.  
@@ -93,7 +93,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
 |Выражение пути|Значение|  
 |---------------------|-----------|  
 |$.people[0].name|Джон|  
-|$.people[1]|{ "name": "Jane", "surname": null, "active": true }|  
+|$.people[1]|{ "name": "Jane",  "surname": null, "active": true }|  
 |$.people[1].surname|null|  
 |$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
   
@@ -110,10 +110,6 @@ FROM OPENJSON(@json,'$.person.info')
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Дополнительные сведения о JSON в SQL Server и базе данных SQL Azure  
   
-### <a name="microsoft-blog-posts"></a>Публикации блога Майкрософт  
-  
-Конкретные решения, варианты использования и рекомендации см. в [записях блога](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) о встроенной поддержке JSON в SQL Server и базе данных SQL Azure.  
-
 ### <a name="microsoft-videos"></a>Видео Майкрософт
 
 Наглядные инструкции по встроенной поддержке JSON в SQL Server и базе данных SQL Azure см. в следующих видео.

@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 12/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d15863bfeb814d88d3971b0cb3a957abee947c47
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 75c1bb4f7c236f45b94e534ceec2655fc24808df
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516092"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980440"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -88,11 +88,11 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 *login_name*  
 Указывает имя пользователя для создаваемого имени входа. Существует четыре типа имен входа: имена входа SQL Server, имена входа Windows, имена входа, сопоставленные с помощью сертификата, а также имена входа, сопоставленные с помощью асимметричного ключа. При создании имен входа, сопоставленных с учетной записью домена Windows, необходимо использовать имя входа версии, более ранней, чем Windows 2000, с форматом [\<domainName>\\<login_name>]. Нельзя использовать имя участника-пользователя в формате login_name@DomainName. См. приведенный ниже пример Г. Имена входа проверки подлинности имеют тип **sysname**, должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md) и не могут содержать символ "**\\**". Имена входа Windows могут содержать символы «**\\**». Имена входа, основанные на пользователях Active Directory, могут иметь не более 21 символа в длину. 
 
-PASSWORD **='**_password_**'* Применяется только к именам входа SQL Server. Задает пароль для создаваемого имени входа. Следует использовать надежные пароли. Дополнительные сведения см. в статьях [Надежные пароли](../../relational-databases/security/strong-passwords.md) и [Политика паролей](../../relational-databases/security/password-policy.md). Начиная с SQL Server 2012 (11.x) сохраненные сведения о пароле вычисляются с помощью SHA-512 соленого пароля. 
+PASSWORD **=**'*password*' Применяется только к именам входа SQL Server. Задает пароль для создаваемого имени входа. Выбирайте надежные пароли. Дополнительные сведения см. в статьях [Надежные пароли](../../relational-databases/security/strong-passwords.md) и [Политика паролей](../../relational-databases/security/password-policy.md). Начиная с SQL Server 2012 (11.x) сохраненные сведения о пароле вычисляются с помощью SHA-512 соленого пароля. 
   
-В паролях учитывается регистр символов. Пароли всегда должны содержать не менее 8 символов и не могут содержать более 128 символов. Пароли могут содержать символы a-z, A-Z, 0-9 и большинство неалфавитных символов. Пароли не могут содержать одиночные кавычки или *login_name*. 
+В паролях учитывается регистр символов. Пароли всегда должны содержать не менее восьми символов и не могут содержать более 128 символов. Пароли могут содержать символы a-z, A-Z, 0-9 и большинство неалфавитных символов. Пароли не могут содержать одиночные кавычки или *login_name*. 
   
-PASSWORD **=**_hashed\_password_  
+PASSWORD **=** *хэш\_пароля*  
 Применимо только к ключевому слову HASHED. Указывает хэшированное значение пароля для создаваемого имени входа. 
   
 HASHED Применяется только к именам входа SQL Server. Указывает, что пароль, введенный после аргумента PASSWORD, уже хэширован. Если этот параметр не выбран, то строка, введенная в качестве пароля, хэшируется перед сохранением в базе данных. Данный параметр может быть применен только для миграции баз данных с одного сервера на другой. Не используйте параметр HASHED для создания новых имен входа. Параметр HASHED нельзя использовать с хэшами, созданными в SQL 7 или более ранних версиях.
@@ -285,9 +285,9 @@ CREATE LOGIN login_name
 Указывает имя пользователя для создаваемого имени входа. Логический сервер базы данных SQL Azure поддерживает только имена входа SQL. 
 
 PASSWORD **='** password**'*  
-Указывает пароль для создаваемого имени входа SQL. Следует использовать надежные пароли. Дополнительные сведения см. в статьях [Надежные пароли](../../relational-databases/security/strong-passwords.md) и [Политика паролей](../../relational-databases/security/password-policy.md). Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] сохраненные сведения о пароле вычисляются с помощью SHA-512 соленого пароля. 
+Указывает пароль для создаваемого имени входа SQL. Выбирайте надежные пароли. Дополнительные сведения см. в статьях [Надежные пароли](../../relational-databases/security/strong-passwords.md) и [Политика паролей](../../relational-databases/security/password-policy.md). Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] сохраненные сведения о пароле вычисляются с помощью SHA-512 соленого пароля. 
   
-В паролях учитывается регистр символов. Пароли всегда должны содержать не менее 8 символов и не могут содержать более 128 символов. Пароли могут содержать символы a-z, A-Z, 0-9 и большинство неалфавитных символов. Пароли не могут содержать одиночные кавычки или *login_name*. 
+В паролях учитывается регистр символов. Пароли всегда должны содержать не менее восьми символов и не могут содержать более 128 символов. Пароли могут содержать символы a-z, A-Z, 0-9 и большинство неалфавитных символов. Пароли не могут содержать одиночные кавычки или *login_name*. 
 
 SID = *sid*  
 Используется для повторного создания имени входа. Применяется только к именам входа проверки подлинности SQL Server, но не относится к именам входа проверки подлинности Windows. Указывает идентификатор SID нового имени входа проверки подлинности SQL Server. Если этот параметр не используется, SQL Server назначает идентификатор SID автоматически. Структура идентификатора SID зависит от версии SQL Server. Для базы данных SQL это 32-байтовый (**binary(32)**) литерал, состоящий из `0x01060000000000640000000000000000` плюс 16 байт, представляющих GUID. Например, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`. 
@@ -316,7 +316,7 @@ SID = *sid*
  
 ## <a name="permissions"></a>Разрешения
 
-Создавать имена входа могут только имена входа участника уровня сервера (созданного процессом подготовки) или члены роли базы данных `loginmanager` в базе данных master. Дополнительные сведения см. в разделах [Роли уровня сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) и [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
+Создавать имена входа могут только имена входа участника уровня сервера (созданного процессом подготовки) или члены роли базы данных `loginmanager` в базе данных master. Дополнительные сведения см. в разделах [Роли уровня сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) и [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>.
 
 ## <a name="logins"></a>Имена входа
 - Требуется разрешение **ALTER ANY LOGIN** на сервере или членство в предопределенной роли сервера **securityadmin**. Выполнять эту команду может только учетная запись Azure Active Directory (Azure AD) с разрешением **ALTER ANY LOGIN** на сервере или членством в разрешении securityadmin.
@@ -384,102 +384,157 @@ GO
 
 ## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
 
-## <a name="overview"></a>Обзор
-
 ## <a name="syntax"></a>Синтаксис 
   
 ```sql
--- Syntax for Azure SQL Database  
-CREATE LOGIN login_name  
- { WITH <option_list> }  
+-- Syntax for Azure SQL Database Managed Instance
+CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
   
-<option_list> ::=   
-    PASSWORD = { 'password' }  
-    [ , SID = sid ]  
+<option_list> ::=
+    PASSWORD = {'password'}
+    | SID = sid
+    | DEFAULT_DATABASE = database
+    | DEFAULT_LANGUAGE = language  
 ```  
 
-## <a name="arguments"></a>Аргументы  
+> [!IMPORTANT]
+> Учетные данные Azure AD для управляемого экземпляра базы данных SQL находятся в **общедоступной предварительной версии**. Синтаксически эта функция оформляется с помощью предложения **FROM EXTERNAL PROVIDER**.
+
+## <a name="arguments"></a>Аргументы
 *login_name*  
-Указывает имя пользователя для создаваемого имени входа. Управляемый экземпляр базы данных SQL Azure поддерживает только имена входа SQL. 
+При использовании предложения **FROM EXTERNAL PROVIDER** учетные данные указывают субъект Azure Active Directory (AD), которым могут быть пользователь, группа или приложение Azure AD. В противном случае оно представляет созданное имя входа SQL.
 
-PASSWORD **='** password**'*  
-Указывает пароль для создаваемого имени входа SQL. Следует использовать надежные пароли. Дополнительные сведения см. в статьях [Надежные пароли](../../relational-databases/security/strong-passwords.md) и [Политика паролей](../../relational-databases/security/password-policy.md). Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] сохраненные сведения о пароле вычисляются с помощью SHA-512 соленого пароля. 
-  
-В паролях учитывается регистр символов. Пароли всегда должны содержать не менее 8 символов и не могут содержать более 128 символов. Пароли могут содержать символы a-z, A-Z, 0-9 и большинство неалфавитных символов. Пароли не могут содержать одиночные кавычки или *login_name*. 
+FROM EXTERNAL PROVIDER </br>
+Указывает, что имя входа предназначено для проверки подлинности Azure AD.
 
-SID = *sid*  
-Используется для повторного создания имени входа. Применяется только к именам входа проверки подлинности SQL Server, но не относится к именам входа проверки подлинности Windows. Указывает идентификатор SID нового имени входа проверки подлинности SQL Server. Если этот параметр не используется, SQL Server назначает идентификатор SID автоматически. Структура идентификатора SID зависит от версии SQL Server. Для базы данных SQL это 32-байтовый (**binary(32)**) литерал, состоящий из `0x01060000000000640000000000000000` плюс 16 байт, представляющих GUID. Например, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`. 
+PASSWORD **=** '*password*'  
+Указывает пароль для создаваемого имени входа SQL. Выбирайте надежные пароли. Дополнительные сведения см. в статьях [Надежные пароли](../../relational-databases/security/strong-passwords.md) и [Политика паролей](../../relational-databases/security/password-policy.md). Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] сохраненные сведения о пароле вычисляются с помощью SHA-512 соленого пароля. 
   
-## <a name="remarks"></a>Remarks  
+В паролях учитывается регистр символов. Пароли всегда должны содержать не менее восьми символов и не могут содержать более 128 символов. Пароли могут содержать символы a-z, A-Z, 0-9 и большинство неалфавитных символов. Пароли не могут содержать одиночные кавычки или *login_name*.
+
+SID **=** *sid*  
+Используется для повторного создания имени входа. Применяется только для имен входа с проверкой подлинности SQL Server. Указывает идентификатор SID нового имени входа проверки подлинности SQL Server. Если этот параметр не используется, SQL Server назначает идентификатор SID автоматически. Структура идентификатора SID зависит от версии SQL Server. Для базы данных SQL это 32-байтовый (**binary(32)**) литерал, состоящий из `0x01060000000000640000000000000000` плюс 16 байт, представляющих GUID. Например, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`. 
+
+## <a name="remarks"></a>Remarks
+
 - В паролях учитывается регистр символов.
+- Появился новый синтаксис для создания субъектов уровня сервера, сопоставленных с учетными записями Azure AD (**FROM EXTERNAL PROVIDER**)
+- Когда указывается **FROM EXTERNAL PROVIDER**:
+    - значение login_name должно представлять существующую учетную запись Azure AD (пользователя, группу или приложение), доступную в Azure AD для текущего управляемого экземпляра SQL Azure.
+    - Этот параметр невозможно использовать совместно с параметром **PASSWORD**.
+    - Сейчас первое имя входа Azure AD должно создаваться стандартной учетной записью SQL Server (не относящейся к Azure AD), то есть `sysadmin`, используя приведенный выше синтаксис.
+        - При создании имени входа Azure AD с участием администратора Azure AD для управляемого экземпляра базы данных SQL возникает следующая ошибка:</br>
+        `Msg 15247, Level 16, State 1, Line 1
+        User does not have permission to perform this action.`
+        - Это известное ограничение **общедоступной предварительной версии**, которая будет исправлена в будущем.
+    - Создав первое имя входа Azure AD, можно создать с его помощью другие имена входа Azure AD, предоставив ему необходимые разрешения.
+- По умолчанию, когда предложение **FROM EXTERNAL PROVIDER** опущено, создается регулярное имя входа SQL.
+- Имена для входа Azure AD отображаются в sys.server_principals со значением столбца типа, равным **E**, и type_desc, равным **EXTERNAL_LOGIN** для имен входа, сопоставленных пользователям Azure AD, или значением столбца типа **X** и значением type_desc **EXTERNAL_GROUP** для имен входа, которые сопоставляются с группами Azure AD.
 - Скрипт для передачи имен входа см. в разделе [Способы передачи имен входа и паролей между экземплярами SQL Server 2005 и SQL Server 2008](https://support.microsoft.com/kb/918992).
-- При создании имени входа оно автоматически включается, и ему предоставляется разрешение **CONNECT SQL** уровня сервера. 
-- Для разрешения доступа [режим проверки подлинности](../../relational-databases/security/choose-an-authentication-mode.md) сервера должен соответствовать типу имени входа.
-    - Сведения о проектировании системы разрешений см. в статье [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
+- При создании имени входа оно автоматически включается, и ему предоставляется разрешение **CONNECT SQL** уровня сервера.
   
-## <a name="login"></a>Имя входа
+## <a name="logins-and-permissions"></a>Имена входа и разрешения
 
-### <a name="sql-database-logins"></a>Имена входа базы данных SQL
-Инструкция **CREATE LOGIN** должна быть единственной инструкцией в пакете. 
-  
-В некоторых методах подключения к базе данных SQL, например **sqlcmd**, необходимо добавить имя сервера базы данных SQL к имени входа в строке подключения с помощью нотации *\<login>*@*\<server>*. Например, если имя входа — `login1`, а полное имя сервера базы данных SQL —`servername.database.windows.net`, то параметр *username* в строке подключения должен иметь вид `login1@servername`. Так как общая длина параметра *username* составляет 128 символов, длина имени *login_name* ограничена до 127 символов минус длина имени сервера. В примере `login_name` может иметь длину не более 117 символов, поскольку `servername` имеет длину 10 символов. 
-  
-В базе данных SQL для создания имени входа необходимо подключение к базе данных master. 
-  
- Правила SQL Server позволяют создать имя входа для проверки подлинности SQL Server в формате \<loginname>@\<servername>. Если сервер [!INCLUDE[ssSDS](../../includes/sssds-md.md)] — **myazureserver**, а имя входа —**myemail@live.com**, то необходимо указать имя входа в виде **myemail@live.com@myazureserver**. 
-  
-В базе данных SQL данные имени входа необходимы для проверки подлинности подключения, и правила брандмауэра на уровне сервера временно кэшируются в каждой базе данных. Этот кэш периодически обновляется. Чтобы принудительно обновить кэш проверки подлинности и убедиться в том, что база данных имеет последнюю версию таблицы имен входа, выполните инструкцию [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md). 
-  
- Дополнительные сведения об именах входа базы данных SQL см. в статье [Управление базами данных и именами входа в базу данных SQL Microsoft Azure](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins). 
- 
-## <a name="permissions"></a>Разрешения
+Создавать имена входа могут только имена входа участника уровня сервера (созданного процессом подготовки) или члены роли базы данных `securityadmin` или `sysadmin` в базе данных master. Дополнительные сведения см. в разделах [Роли уровня сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) и [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 
-Создавать имена входа могут только имена входа участника уровня сервера (созданного процессом подготовки) или члены роли базы данных `loginmanager` в базе данных master. Дополнительные сведения см. в разделах [Роли уровня сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) и [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
+Стандартные разрешения, предоставляемые по умолчанию только что созданному имени входа Azure AD в базе данных master:
+- **CONNECT SQL** и **VIEW ANY DATABASE**.
 
-## <a name="logins"></a>Имена входа
-- Требуется разрешение **ALTER ANY LOGIN** на сервере или членство в предопределенной роли сервера **securityadmin**. Выполнять эту команду может только учетная запись Azure Active Directory (Azure AD) с разрешением **ALTER ANY LOGIN** на сервере или членством в разрешении securityadmin.
-- Требуется членство в Azure AD в том же каталоге, который используется для логического сервера Azure SQL.
-  
+### <a name="sql-database-managed-instance-logins"></a>Имена входа управляемого экземпляра базы данных SQL
+
+- Требуется разрешение **ALTER ANY LOGIN** на сервере или членство в предопределенной роли сервера `securityadmin` или `sysadmin`. Выполнять команду создания может только учетная запись Azure Active Directory (Azure AD) с разрешением **ALTER ANY LOGIN** на сервере или членством в одной из этих ролей.
+- Если имя входа является субъектом SQL, только имена входа, которые относятся к роли `sysadmin`, могут использовать команду создания, чтобы создавать имена входа для учетной записи Azure AD.
+- Требуется членство в Azure AD в том же каталоге, который используется для управляемого экземпляра Azure SQL.
+
 ## <a name="after-creating-a-login"></a>После создания имени входа  
-Созданное имя входа может подключаться к базе данных SQL, но имеет разрешения только для роли **public**. Попробуйте выполнить некоторые из приведенных ниже действий. 
+Созданное имя входа может подключаться к управляемому экземпляру базы данных SQL, но имеет разрешения только для роли **public**. Попробуйте выполнить некоторые из приведенных ниже действий. 
   
-- Чтобы подключиться к базе данных, создайте в этой базе данных пользователя для имени входа. Дополнительные сведения см. в статье об инструкции [CREATE USER](../../t-sql/statements/create-user-transact-sql.md). 
+- Чтобы создать пользователя Azure AD по имени входа Azure AD, см. раздел [CREATE USER](../../t-sql/statements/create-user-transact-sql.md). 
 - Чтобы предоставить разрешения пользователю базы данных, используйте инструкцию **ALTER SERVER ROLE** ... **ADD MEMBER** для добавления пользователя в одну из встроенных ролей базы данных или пользовательскую роль либо напрямую предоставьте пользователю разрешения с помощью инструкции [GRANT](../../t-sql/statements/grant-transact-sql.md). Дополнительные сведения см. в разделах [Пользователи без прав администратора](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles и [GRANT](grant-transact-sql.md).
 - Чтобы предоставить разрешения уровня сервера, создайте пользователя базы данных в базе данных master и с помощью инструкции **ALTER SERVER ROLE** ... **ADD MEMBER** добавьте пользователя в одну из административных ролей сервера. Дополнительные сведения см. в разделах [Роли уровня сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) и [Роли сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
+    - Используйте следующую команду, чтобы добавить роль `sysadmin` для имени входа Azure AD: `ALTER SERVER ROLE sysadmin ADD MEMBER [AzureAD_Login_name]`
 - Воспользуйтесь инструкцией **GRANT**, чтобы предоставить разрешения уровня сервера новому имени входа или роли, содержащей это имя входа. Дополнительные сведения см. в статье [GRANT](../../t-sql/statements/grant-transact-sql.md).
+
+## <a name="limitations"></a>Ограничения
+
+- Сопоставление имени входа Azure AD с группой Azure AD в качестве владельца базы данных не поддерживается.
+- Олицетворение участников уровня сервера Azure AD с помощью других субъектов Azure AD поддерживается, например с помощью предложения [EXECUTE AS](execute-as-transact-sql.md).
+- Только субъекты уровня сервера SQL (имена входа), которые относятся к роли `sysadmin`, могут выполнять следующие операции, предназначенные для субъектов Azure AD:
+  - EXECUTE AS USER
+  - EXECUTE AS LOGIN
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-creating-a-login-with-a-password"></a>A. Создание имени входа с паролем  
- В следующем примере создается имя входа для конкретного пользователя и назначается пароль. 
-  
-```sql  
-CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';  
-GO  
-```  
-  
-### <a name="b-creating-a-login-from-a-sid"></a>Б. Создание имени входа на основе SID  
- В следующем примере создается имя входа с проверкой подлинности SQL Server и определяется его SID. 
-  
-```sql  
-CREATE LOGIN TestLogin WITH PASSWORD = 'SuperSecret52&&';  
-  
-SELECT name, sid FROM sys.sql_logins WHERE name = 'TestLogin';  
-GO  
-```  
-  
+ В следующем примере создается имя входа для конкретного пользователя и назначается пароль.
+
+ ```sql
+ CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';  
+ GO  
+ ```
+
+### <a name="b-creating-a-login-from-a-sid"></a>Б. Создание имени входа на основе SID
+ В следующем примере создается имя входа с проверкой подлинности SQL Server и определяется его SID.
+
+ ```sql
+ CREATE LOGIN TestLogin WITH PASSWORD = 'SuperSecret52&&';  
+
+ SELECT name, sid FROM sys.sql_logins WHERE name = 'TestLogin';  
+ GO  
+ ```  
+
  Наш запрос возвращает идентификатор SID 0x241C11948AEEB749B0D22646DB1A19F2. Ваш запрос вернет другое значение. Следующие выражения удаляют имя входа, а затем повторно создают имя входа. Используйте SID из предыдущего запроса. 
-  
-```sql  
-DROP LOGIN TestLogin;  
-GO  
-  
-CREATE LOGIN TestLogin   
-WITH PASSWORD = 'SuperSecret52&&', SID = 0x241C11948AEEB749B0D22646DB1A19F2;  
-  
-SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';  
-GO  
-```  
+
+ ```sql
+ DROP LOGIN TestLogin;  
+ GO  
+
+ CREATE LOGIN TestLogin
+ WITH PASSWORD = 'SuperSecret52&&', SID = 0x241C11948AEEB749B0D22646DB1A19F2;  
+
+ SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';  
+ GO  
+ ```
+
+### <a name="c-creating-a-login-for-a-local-azure-ad-account"></a>В. Создание имени входа для локальной учетной записи Azure AD
+ В следующем примере создается имя входа для учетной записи Azure AD joe@myaad.onmicrosoft.com, существующей в Azure AD *myaad*.
+
+```sql
+CREATE LOGIN [joe@myaad.onmicrosoft.com] FROM EXTERNAL PROVIDER
+GO
+```
+
+### <a name="d-creating-a-login-for-a-federated-azure-ad-account"></a>Г. Создание имени входа для федеративной учетной записи Azure AD
+ В следующем примере создается имя входа для федеративной учетной записи Azure AD bob@contoso.com, существующей в Azure AD *contoso*. Пользователь Боб также может быть гостем.
+
+```sql
+CREATE LOGIN [bob@contoso.com] FROM EXTERNAL PROVIDER
+GO
+```
+
+### <a name="e-creating-a-login-for-an-azure-ad-group"></a>Д. Создание имени входа для группы Azure AD
+ В следующем примере создается имя входа для группы Azure AD *mygroup*, существующей в Azure AD *myaad*.
+
+```sql
+CREATE LOGIN [mygroup] FROM EXTERNAL PROVIDER
+GO
+```
+
+### <a name="f-creating-a-login-for-an-azure-ad-application"></a>Е. Создание имени входа для приложения Azure AD
+ В следующем примере создается имя входа для приложения Azure AD *myapp*, существующего в Azure AD *myaad*.
+
+```sql
+CREATE LOGIN [myapp] FROM EXTERNAL PROVIDER
+```
+
+### <a name="g-check-newly-added-logins"></a>Ж. Проверка новых имен входа
+ Чтобы проверить вновь добавленное имя входа, выполните следующую команду T-SQL:
+
+```sql
+SELECT *   
+FROM sys.server_principals;
+GO
+```
   
 ## <a name="see-also"></a>См. также:  
  [Приступая к работе с разрешениями Database Engine](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)   
@@ -498,7 +553,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — логический сервер](create-login-transact-sql.md?view=azuresqldb-current)|[База данных SQL<br /> — управляемый экземпляр]()|**_\* Хранилище данных<br />SQL \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — логический сервер](create-login-transact-sql.md?view=azuresqldb-current)|[База данных SQL<br /> — управляемый экземпляр](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* Хранилище данных<br />SQL \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -521,9 +576,9 @@ CREATE LOGIN login_name
 Указывает имя пользователя для создаваемого имени входа. База данных SQL Azure поддерживает только имена входа SQL. 
 
 PASSWORD **='** password**'*  
-Указывает пароль для создаваемого имени входа SQL. Следует использовать надежные пароли. Дополнительные сведения см. в статьях [Надежные пароли](../../relational-databases/security/strong-passwords.md) и [Политика паролей](../../relational-databases/security/password-policy.md). Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] сохраненные сведения о пароле вычисляются с помощью SHA-512 соленого пароля. 
+Указывает пароль для создаваемого имени входа SQL. Выбирайте надежные пароли. Дополнительные сведения см. в статьях [Надежные пароли](../../relational-databases/security/strong-passwords.md) и [Политика паролей](../../relational-databases/security/password-policy.md). Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] сохраненные сведения о пароле вычисляются с помощью SHA-512 соленого пароля. 
   
-В паролях учитывается регистр символов. Пароли всегда должны содержать не менее 8 символов и не могут содержать более 128 символов. Пароли могут содержать символы a-z, A-Z, 0-9 и большинство неалфавитных символов. Пароли не могут содержать одиночные кавычки или *login_name*. 
+В паролях учитывается регистр символов. Пароли всегда должны содержать не менее восьми символов и не могут содержать более 128 символов. Пароли могут содержать символы a-z, A-Z, 0-9 и большинство неалфавитных символов. Пароли не могут содержать одиночные кавычки или *login_name*. 
 
  SID = *sid*  
  Используется для повторного создания имени входа. Применяется только к именам входа проверки подлинности SQL Server, но не относится к именам входа проверки подлинности Windows. Указывает идентификатор SID нового имени входа проверки подлинности SQL Server. Если этот параметр не используется, SQL Server назначает идентификатор SID автоматически. Структура идентификатора SID зависит от версии SQL Server. Для хранилища данных SQL это 32-байтовый (**binary(32)**) литерал, состоящий из `0x01060000000000640000000000000000` плюс 16 байт, представляющих GUID. Например, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`. 
@@ -551,7 +606,7 @@ PASSWORD **='** password**'*
  
 ## <a name="permissions"></a>Разрешения
 
-Создавать имена входа могут только имена входа участника уровня сервера (созданного процессом подготовки) или члены роли базы данных `loginmanager` в базе данных master. Дополнительные сведения см. в разделах [Роли уровня сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) и [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
+Создавать имена входа могут только имена входа участника уровня сервера (созданного процессом подготовки) или члены роли базы данных `loginmanager` в базе данных master. Дополнительные сведения см. в разделах [Роли уровня сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) и [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>.
 
 ## <a name="after-creating-a-login"></a>После создания имени входа  
 Созданное имя входа может подключаться к хранилищу данных SQL, но имеет разрешения только для роли **public**. Попробуйте выполнить некоторые из приведенных ниже действий. 
@@ -610,7 +665,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — логический сервер](create-login-transact-sql.md?view=azuresqldb-current)|[База данных SQL<br /> — управляемый экземпляр]()|[Хранилище данных<br />SQL](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Параллельное<br />хранилище данных \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — логический сервер](create-login-transact-sql.md?view=azuresqldb-current)|[База данных SQL<br /> — управляемый экземпляр](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Параллельное<br />хранилище данных \*_**
 
 &nbsp;
 
@@ -636,9 +691,9 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 *login_name*  
 Указывает имя пользователя для создаваемого имени входа. Существует четыре типа имен входа: имена входа SQL Server, имена входа Windows, имена входа, сопоставленные с помощью сертификата, а также имена входа, сопоставленные с помощью асимметричного ключа. При создании имен входа, сопоставленных с учетной записью домена Windows, необходимо использовать имя входа версии, более ранней, чем Windows 2000, с форматом [\<domainName>\\<login_name>]. Нельзя использовать имя участника-пользователя в формате login_name@DomainName. См. приведенный ниже пример Г. Имена входа проверки подлинности имеют тип **sysname**, должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md) и не могут содержать символ "**\\**". Имена входа Windows могут содержать символы «**\\**». Имена входа, основанные на пользователях Active Directory, могут иметь не более 21 символа в длину. 
 
-PASSWORD **='**_password_**'* Применяется только к именам входа SQL Server. Задает пароль для создаваемого имени входа. Следует использовать надежные пароли. Дополнительные сведения см. в статьях [Надежные пароли](../../relational-databases/security/strong-passwords.md) и [Политика паролей](../../relational-databases/security/password-policy.md). Начиная с SQL Server 2012 (11.x) сохраненные сведения о пароле вычисляются с помощью SHA-512 соленого пароля. 
+PASSWORD **='**_password_' Применяется только к именам входа SQL Server. Задает пароль для создаваемого имени входа. Выбирайте надежные пароли. Дополнительные сведения см. в статьях [Надежные пароли](../../relational-databases/security/strong-passwords.md) и [Политика паролей](../../relational-databases/security/password-policy.md). Начиная с SQL Server 2012 (11.x) сохраненные сведения о пароле вычисляются с помощью SHA-512 соленого пароля. 
   
-В паролях учитывается регистр символов. Пароли всегда должны содержать не менее 8 символов и не могут содержать более 128 символов. Пароли могут содержать символы a-z, A-Z, 0-9 и большинство неалфавитных символов. Пароли не могут содержать одиночные кавычки или *login_name*. 
+В паролях учитывается регистр символов. Пароли всегда должны содержать не менее восьми символов и не могут содержать более 128 символов. Пароли могут содержать символы a-z, A-Z, 0-9 и большинство неалфавитных символов. Пароли не могут содержать одиночные кавычки или *login_name*. 
   
 MUST_CHANGE применяется только к именам входа SQL Server. Если этот параметр задан, то при первом использовании нового имени входа SQL Server запрашивает новый пароль. 
   
@@ -672,7 +727,7 @@ WINDOWS
 - Сведения о проектировании системы разрешений см. в статье [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 
 ## <a name="permissions"></a>Разрешения  
-Создавать имена входа могут только пользователи с разрешением **ALTER ANY LOGIN** на сервере или имеющие членство в предопределенной роли сервера **securityadmin**. Дополнительные сведения см. в разделах [Роли уровня сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) и [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
+Создавать имена входа могут только пользователи с разрешением **ALTER ANY LOGIN** на сервере или имеющие членство в предопределенной роли сервера **securityadmin**. Дополнительные сведения см. в разделах [Роли уровня сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) и [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>.
   
 ## <a name="after-creating-a-login"></a>После создания имени входа  
 Созданное имя входа может подключаться к хранилищу данных SQL, но имеет разрешения только для роли **public**. Попробуйте выполнить некоторые из приведенных ниже действий. 

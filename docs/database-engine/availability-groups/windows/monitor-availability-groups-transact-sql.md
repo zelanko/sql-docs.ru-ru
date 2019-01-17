@@ -1,6 +1,7 @@
 ---
-title: Отслеживание групп доступности (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
+title: Отслеживание групп доступности с помощью Transact-SQL (T-SQL)
+description: Описание мониторинг групп доступности Always On с помощью Transact-SQL (T-SQL).
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +18,12 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 51b67b193847ea554052d26ac55c8e9b7919478f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d14cb0b60074ce7cd2c11c80817ec5f0043651a0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832362"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209433"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Отслеживание групп доступности (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "47832362"
  Функция[SERVERPROPERTY](../../../t-sql/functions/serverproperty-transact-sql.md)  
  Возвращает сведения о свойствах сервера о том, включен ли [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , а также (если включен) был ли он запущен на экземпляре сервера.  
   
- **Имена столбцов:** IsHadrEnabled, HadrManagerStatus  
+ **Имена столбцов**: IsHadrEnabled, HadrManagerStatus  
   
 ##  <a name="WSFC"></a> Мониторинг групп доступности на кластере WSFC  
  Для мониторинга отказоустойчивой кластеризации Windows Server (WSFC), на котором размещается локальный экземпляр сервера с поддержкой [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], используются следующие представления:  
@@ -188,7 +189,7 @@ ms.locfileid: "47832362"
 >  Расположение первичной реплики — авторитетный источник для группы доступности.  
   
 > [!NOTE]  
->  Сведения о счетчиках производительности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] для баз данных доступности (объект производительности **SQLServer:Database Replica** ) см. в разделе [SQL Server, реплика базы данных](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Кроме того, для отслеживания активности журнала транзакций с базами данных доступности используйте следующие счетчики объекта производительности **SQLServer:Databases** : **Время записи очистки журнала (мс)**, **Очисток журнала/с**, **Пропусков кэша в пуле журналов/с**, **Чтений с диска пула журналов/с**и **Запросов пула журналов/с**. Дополнительные сведения см. в статье [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
+>  Сведения о счетчиках производительности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] для баз данных доступности (объект производительности **SQLServer:Database Replica** ) см. в разделе [SQL Server, реплика базы данных](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Для мониторинга активности журнала транзакций для баз данных доступности пользуйтесь следующими счетчиками объекта производительности **SQLServer:Databases**: **Время записи журнала на диск (мс)**, **Записей журнала на диск/с**, **Неудачных обращений к кэшу пула журнала/с**, **Операций чтения диска пула журнала/с** и **Запросов пула журнала/с**. Дополнительные сведения см. в статье [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
 ##  <a name="AGlisteners"></a> Мониторинг прослушивателей группы доступности  
  Для мониторинга прослушивателей группы доступности в подсети кластера WSFC используйте следующие представления:  

@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c82a2400020baf0d97cda595c630c2b7b55a9b1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 22a4907e0eec995839648371a14022a3f9c94d78
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504514"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266085"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Новые возможности в ядре СУБД SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -323,7 +323,7 @@ ms.locfileid: "52504514"
 - Ограничение на ввод в 8000 байт для функции [HASHBYTES (Transact-SQL)](../t-sql/functions/hashbytes-transact-sql.md) снято.
 - Добавлены новые строковые функции [STRING_SPLIT (Transact-SQL)](../t-sql/functions/string-split-transact-sql.md) и [STRING_ESCAPE (Transact-SQL)](../t-sql/functions/string-escape-transact-sql.md).
 - Параметры автоматического увеличения: флаг трассировки 1117 заменен параметрами AUTOGROW_SINGLE_FILE и AUTOGROW_ALL_FILES инструкции ALTER DATABASE, при этом флаг трассировки 1117 не оказывает никакого влияния. Дополнительные сведения см. в разделе [Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) и в описании нового столбца is_autogrow_all_files представления [sys.filegroups (Transact-SQL)](../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md).
-- Выделение смешанных экстентов: для пользовательских баз данных выделение первых 8 страниц объекта по умолчанию изменится с использования смешанных экстентов страниц на использование однородных экстентов. Флаг трассировки 1118 заменяется параметром ЗАДАТЬ инструкции MIXED_PAGE_ALLOCATION ALTER DATABASE, при этом флаг трассировки 1118 не оказывает никакого влияния. Дополнительные сведения см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md), и в описании нового столбца `is_mixed_page_allocation_on` представления [sys.databases (Transact-SQL)](../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
+- Выделение смешанных экстентов: для пользовательских баз данных выделение первых 8 страниц объекта по умолчанию изменится с использования смешанных экстентов страниц на использование однородных экстентов. Флаг трассировки 1118 заменяется параметром ЗАДАТЬ инструкции MIXED_PAGE_ALLOCATION ALTER DATABASE, при этом флаг трассировки 1118 не оказывает никакого влияния. Дополнительные сведения см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md), и в описании нового столбца `is_mixed_page_allocation_on` представления [sys.databases (Transact-SQL)](../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 ### <a name="transact-sql-improvements-for-natively-compiled-modules"></a>Улучшения Transact-SQL для модулей, скомпилированных в собственном коде
 
@@ -438,10 +438,8 @@ AlwaysOn теперь поддерживает зашифрованные баз
 Скачайте последнюю версию [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] поддерживает библиотеку проверки подлинности Active Directory (ADAL), которая находится в стадии разработки для подключения к Microsoft Azure. Она заменяет проверку подлинности на основе сертификатов, используемую в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
-- Для установки [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] требуется платформа .NET 4.6. Платформа .NET 4.6 устанавливается автоматически, если устанавливается компонент [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] .
 - Новый параметр сетки результатов запроса поддерживает сохранение возврата каретки и перевода строки (символов новой строки) при копировании и сохранении текста из сетки результатов. Это можно настроить в меню "Сервис — Параметры".
 - Средства управления SQL Server больше не устанавливаются из дерева основных компонентов. Дополнительные сведения см. в разделе [Установка средств управления SQL Server со средой SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381).
-- Для установки [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] требуется платформа .NET 4.6.1. Платформа .NET 4.6.1 устанавливается автоматически, если устанавливается компонент [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
 
 ### <a name="upgrade-advisor"></a>Советник по переходу
 SQL Server 2016 Upgrade Advisor Preview — это автономное средство, которое позволяет пользователям предыдущих версий применять набор правил обновления для базы данных SQL Server, чтобы выявить сбои, изменения поведения и нерекомендуемые функции, а также получить справку по внедрению новых функций, таких как Stretch Database.

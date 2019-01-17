@@ -14,19 +14,19 @@ ms.assetid: f9c3311f-7316-48d6-bf10-d810e70b4304
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2b36adb786bc346f426cc28aeb9960158003cafd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5ec780327f12a4d81063c155aa5d3666b004ea6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856462"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210153"
 ---
 # <a name="azure-data-lake-store-source"></a>Источник Azure Data Lake Store
-  Компонент **Источник Azure Data Lake Store** позволяет пакету служб SSIS считывать данные из Azure Data Lake Store. Поддерживаются следующие форматы файлов: текст и AVRO.
+  Компонент **Источник Azure Data Lake Store** позволяет пакету служб SSIS считывать данные из Azure Data Lake Store. Поддерживаемые форматы файлов: текстовые и Avro.
   
  Компонент **Источник Azure Data Lake Store** входит в состав [пакета дополнительных компонентов SQL Server Integration Services (SSIS) для Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   
->   [!NOTE]
+> [!NOTE]
 > Чтобы диспетчер подключений Azure Data Lake Store и компоненты, которые его используют (т. е. источник и цель Azure Data Lake Store), могли подключаться к службам, убедитесь, что вы скачали последнюю версию пакета дополнительных компонентов Azure [здесь](https://www.microsoft.com/download/details.aspx?id=49492). 
   
 ## <a name="configure-the-azure-data-lake-store-source"></a>Настройка источника Azure Data Lake Store

@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 43fe7c85f87c0022db14cb7553d4771385017096
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1b904d0040645beb3abc625ab9c9ccb46cc7d80b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699073"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211593"
 ---
 # <a name="manage-job-steps"></a>Управление шагами задания
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "51699073"
   
 ## <a name="activex-scripting-job-steps"></a>Шаги задания скрипта ActiveX  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Шаг задания скрипта ActiveX будет удален из агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в следующей версии [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.  
   
 При создании шага задания скрипта ActiveX необходимо:  

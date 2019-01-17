@@ -1,6 +1,7 @@
 ---
-title: Время ожидания проверки работоспособности для аренды группы доступности SQL Server | Документы Майкрософт
-ms.custom: ''
+title: Механика измерения времени ожидания проверки работоспособности для аренды группы доступности
+description: Механика и рекомендации для аренды, кластера, а также времени проверки работоспособности для групп доступности Always On.
+ms.custom: seodec18
 ms.date: 05/02/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25728b2c12d31d53f9638d08c952d75ae929bf9c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c1c337e4a43082cef846623073054ae75513dc31
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393987"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209083"
 ---
-# <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts"></a>Механизмы и правила определения времени ожидания аренды, кластера и проверки работоспособности 
+# <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Механика и рекомендации для аренды, кластера, а также времени ожидания проверки работоспособности для групп доступности Always On 
 
 Различия в оборудовании, программном обеспечении и конфигурации кластеров, а также различные требования ко времени бесперебойной работы и производительности приложений обуславливают различные значения времени ожидания для аренды, кластера и проверки работоспособности. Для определенных приложений и рабочих нагрузок требуется более интенсивный мониторинг с целью снижения времени простоя после серьезных сбоев. Другие приложения и рабочие нагрузки менее чувствительны ко временным неполадкам в сети и простоям из-за интенсивного использования ресурсов, и для них приемлем более медленный переход на другой ресурс. 
 
@@ -77,10 +78,10 @@ ms.locfileid: "52393987"
 | Level | Условие, при котором экземпляр считается неработоспособным
 |:---|---
 | 1: OnServerDown | Проверка работоспособности не предпринимает никаких действий при возникновении сбоя в других ресурсах за исключением группы доступности. Данные группы доступности не были получены в течение 5 интервалов или 5/3 \* HealthCheckTimeout
-| 2: OnServerUnresponsive | Данные от `sp_server_diagnostics` не были получены в течение HealthCheckTimeout
-| 3: OnCriticalServerError | Компонент системы сообщает об ошибке (по умолчанию)
-| 4: OnModerateServerError | Компонент ресурса сообщает об ошибке 
-| 5: OnAnyQualifiedFailureConitions |  Компонент обработки запроса сообщает об ошибке
+| 2. OnServerUnresponsive | Данные от `sp_server_diagnostics` не были получены в течение HealthCheckTimeout
+| 3. OnCriticalServerError | Компонент системы сообщает об ошибке (по умолчанию)
+| 4. OnModerateServerError | Компонент ресурса сообщает об ошибке 
+| 5.  OnAnyQualifiedFailureConitions |  Компонент обработки запроса сообщает об ошибке
 
 ## <a name="updating-cluster-and-always-on-timeout-values"></a>Обновление параметров времени ожидания кластера и Always On 
 
@@ -128,7 +129,7 @@ ms.locfileid: "52393987"
    
 ### <a name="health-check-values"></a>Параметры проверки работоспособности 
 
-Проверку работоспособности AlwaysOn определяют два параметра: FailureConditionLevel и HealthCheckTimeout. FailureConditionLevel указывает на уровень устойчивости к определенным условиям ошибок, о которых сообщает `sp_server_diagnostics`, а параметр HealthCheckTimeout задает время, в течение которого библиотека ресурсов может работать без получения обновлений от `sp_server_diagnostics`. Интервал обновления `sp_server_diagnostics` всегда равен HealthCheckTimeout / 3. 
+Два значения элемента управляют проверкой работоспособности Always On: FailureConditionLevel и HealthCheckTimeout. FailureConditionLevel указывает на уровень устойчивости к определенным условиям ошибок, о которых сообщает `sp_server_diagnostics`, а параметр HealthCheckTimeout задает время, в течение которого библиотека ресурсов может работать без получения обновлений от `sp_server_diagnostics`. Интервал обновления `sp_server_diagnostics` всегда равен HealthCheckTimeout / 3. 
 
 Чтобы настроить уровень состояния для перехода на другой ресурс, используйте параметр `FAILURE_CONDITION_LEVEL = <n>` инструкции `CREATE` или `ALTER` `AVAILABILITY GROUP`, где `<n>` является целым числом от 1 до 5. Следующая команда устанавливает уровень состояния ошибки в 1 для группы доступности AG1: 
 
@@ -155,7 +156,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
 ## <a name="see-also"></a>См. также:    
 
-[Активные вторичные реплики: резервное копирование во вторичных репликах (группы доступности AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)
+[Активные вторичные реплики: резервное копирование во вторичных репликах (группы доступности Always On)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).
 
 [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)         
 

@@ -19,12 +19,12 @@ ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4222a9175e9c5ae1b813d87d67fcc8a34170249a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13cb528700007174c20c5c6881b64a9c4282f036
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714442"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589419"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT, предоставление разрешений на полнотекстовые объекты (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,10 +54,10 @@ GRANT permission [ ,...n ] ON
  *permission*  
  Имя разрешения. Допустимые сопоставления разрешений на защищаемые объекты описаны далее в подразделе «Примечания».  
   
- ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ ON FULLTEXT CATALOG **::**_full-text_catalog_name_  
  Указывает полнотекстовый каталог, на который предоставляется разрешение. Квалификатор области **::** является обязательным.  
   
- ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
+ ON FULLTEXT STOPLIST **::**_full-text_stoplist_name_  
  Указывает список полнотекстовых стоп-слов, на который предоставляется разрешение. Квалификатор области **::** является обязательным.  
   
  *database_principal*  
@@ -125,7 +125,7 @@ AS *granting_principal*
 |пользователь базы данных, сопоставленный с асимметричным ключом;|Членство в предопределенной роли базы данных db_securityadmin, членство в предопределенной роли базы данных db_owner или членство в предопределенной роли сервера sysadmin.|  
 |Пользователь базы данных, не сопоставленный ни с одним участником на уровне сервера|Разрешение IMPERSONATE для пользователя, членство в предопределенной роли базы данных db_securityadmin, членство в предопределенной роли базы данных db_owner или членство в предопределенной роли сервера sysadmin.|  
 |роль базы данных;|Разрешение ALTER на роль, членство в предопределенной роли базы данных db_securityadmin, предопределенной роли базы данных db_owner или предопределенной роли сервера sysadmin.|  
-|роль приложения;|Разрешение ALTER на роль, членство в предопределенной роли базы данных db_securityadmin, предопределенной роли базы данных db_owner или предопределенной роли сервера sysadmin.|  
+|Роль приложения|Разрешение ALTER на роль, членство в предопределенной роли базы данных db_securityadmin, предопределенной роли базы данных db_owner или предопределенной роли сервера sysadmin.|  
   
  Владельцы объектов могут предоставлять разрешения на объекты, которыми они владеют. Участники, имеющие разрешение CONTROL на защищаемый объект, могут предоставлять разрешение на этот защищаемый объект.  
   
@@ -153,7 +153,7 @@ GRANT VIEW DEFINITION
   
 ## <a name="see-also"></a>См. также:  
  [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
- [CREATE ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [CREATE FULLTEXT STOPLIST (Transact-SQL)](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   

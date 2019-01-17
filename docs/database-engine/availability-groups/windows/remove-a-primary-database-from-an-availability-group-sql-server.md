@@ -1,6 +1,7 @@
 ---
-title: Удаление базы данных-источника из группы доступности (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Удаление базы данных-источника из группы доступности
+description: Инструкции по удалению базы данных-источника из группы доступности Always On с помощью Transact-SQL (T-SQL), PowerShell или SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae9f27f97cc49192c1398a75528d66239649df70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5fb0b24d51c383466cf91e6e691717170c290f4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700382"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202003"
 ---
-# <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>Удаление базы данных-источника из группы доступности (SQL Server)
+# <a name="remove-a-primary-database-from-an-always-on-availability-group"></a>Удаление базы данных-источника из группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описывается удаление базы данных-источника и соответствующих баз данных-получателей из группы доступности AlwaysOn с использованием среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
@@ -42,7 +43,7 @@ ms.locfileid: "47700382"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Дальнейшие действия**  [После удаления базы данных доступности из группы доступности](#FollowUp)  
+-   **Дальнейшие действия.**  [После удаления базы данных доступности из группы доступности](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   

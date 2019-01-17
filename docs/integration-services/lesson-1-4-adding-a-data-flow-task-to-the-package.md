@@ -1,5 +1,5 @@
 ---
-title: Шаг 4. Добавление задачи потока данных в пакет | Документы Майкрософт
+title: Шаг 4. Добавление задачи потока данных в пакет | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b5e73f8578c9ee9be1b30bd95722d9acd0a0e4ca
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27e18408d3e96c6b03814beae37238bf52c5c192
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410561"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205903"
 ---
 # <a name="lesson-1-4---adding-a-data-flow-task-to-the-package"></a>Занятие 1–4. Добавление задачи потока данных в пакет
 После того как были созданы диспетчеры соединений для исходных и целевых данных, предстоит добавить в пакет задачу потока данных. Задача потока данных включает в себя подсистему обработки потока данных, которая осуществляет передачу данных между источниками и назначениями, а также преобразует, очищает и изменяет данные при их перемещении. В задаче потока данных сосредоточена большая часть работы в процессе извлечения, преобразования и загрузки.  
   
-> [!NOTE]  
+> [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] поток данных и поток управления разделены.  
   
 ### <a name="to-add-a-data-flow-task"></a>Добавление задачи потока данных  

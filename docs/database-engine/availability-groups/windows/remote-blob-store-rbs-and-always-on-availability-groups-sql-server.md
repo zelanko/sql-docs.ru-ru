@@ -1,6 +1,7 @@
 ---
-title: Удаленное хранилище больших двоичных объектов (RBS) и группы доступности AlwaysOn (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Использование удаленного хранилища больших двоичных объектов (RBS) и групп доступности
+description: 'Описание использования хранилища удаленных больших двоичных объектов (RBS) с базами данных, которые являются частью группы доступности Always On. '
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6567636ce516d5ceeba6646c717acadeb504fe01
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 67d29091ddae26f40dcbea17ef50da7c3b7ae8f8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602554"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210883"
 ---
-# <a name="remote-blob-store-rbs-and-always-on-availability-groups-sql-server"></a>Удаленное хранилище больших двоичных объектов (RBS) и группы доступности AlwaysOn (SQL Server)
+# <a name="use-remote-blob-store-rbs-with-always-on-availability-groups"></a>Использование удаленного хранилища больших двоичных объектов (RBS) и групп доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] может обеспечить решение высокой доступности и аварийного восстановления для BLOB-объектов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][удаленного хранилища больших двоичных объектов (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) . [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] защищает все метаданные и схемы удаленного хранилища больших двоичных объектов, хранящиеся в базе данных доступности, копируя их на вторичные реплики. Эта база данных содержимого SharePoint. В целом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] хранит метаданные этого удаленного хранилища больших двоичных объектов независимо от больших двоичных объектов.  

@@ -1,6 +1,7 @@
 ---
-title: Добавление базы данных в группу доступности (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Добавление базы данных в группу доступности
+description: 'Добавление базы данных в группу доступности Always On с помощью Transact-SQL (T-SQL), PowerShell или SQL Server Management Studio. '
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,46 +15,41 @@ ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8e63b4561c56f5d930856758afa464f85a9ab40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e31c26430433b26eb858b967f54df4e61b103b2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857136"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214665"
 ---
-# <a name="availability-group---add-a-database"></a>Добавление базы данных в группу доступности
+# <a name="add-a-database-to-an-always-on-availability-group"></a>Добавление базы данных в группу доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описывается добавление базы данных в группу доступности AlwaysOn с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в среде [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 -   **Перед началом работы**  
   
-     [Требования и ограничения](#Prerequisites)  
-  
-     [Разрешения](#Permissions)  
-  
+     [Требования и ограничения](#Prerequisites)    
+     [Разрешения](#Permissions)    
 -   **Добавление базы данных в группу доступности с помощью:**  
   
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
+     [SQL Server Management Studio](#SSMSProcedure)    
+     [Transact-SQL](#TsqlProcedure)    
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Требования и ограничения  
+## <a name="prerequisites-and-restrictions"></a>Требования и ограничения  
   
 -   Необходимо подключиться к экземпляру сервера, на котором размещена первичная реплика.  
   
 -   База данных должна находиться на экземпляре сервера, на котором размещена первичная реплика, и должна соответствовать предварительным условиям и требованиям к базам данных доступности. Дополнительные сведения см. в разделе [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> безопасность  
+##  <a name="Security"></a> безопасность  
   
-###  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- **Добавление базы данных в группу доступности**  
+
   
 1.  В обозревателе объектов подключитесь к экземпляру сервера, на котором размещена первичная реплика, и разверните дерево сервера.  
   
@@ -74,10 +70,9 @@ ms.locfileid: "47857136"
          После добавления базы данных в группу доступности с помощью диалогового окна **Свойства группы доступности** необходимо настроить соответствующую базу данных-получатель на каждом из экземпляров сервера, на которых размещена вторичная реплика. Дополнительные сведения см. в статье [Запуск перемещения данных для базы данных-получателя AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
- **Добавление базы данных в группу доступности**  
+
   
-1.  Подключитесь к экземпляру сервера, на котором размещен экземпляр сервера с первичной репликой доступности.  
-  
+1.  Подключитесь к экземпляру сервера, на котором размещен экземпляр сервера с первичной репликой доступности.    
 2.  Инструкция [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) используется следующим образом:  
   
      ALTER AVAILABILITY GROUP *group_name* ADD DATABASE *database_name* [,...*n*]  
@@ -96,7 +91,7 @@ ms.locfileid: "47857136"
 3.  После добавления базы данных в группу доступности необходимо настроить соответствующую базу данных-получатель на каждом из экземпляров сервера, на которых размещена вторичная реплика. Дополнительные сведения см. в статье [Запуск перемещения данных для базы данных-получателя AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 ##  <a name="PowerShellProcedure"></a> Использование PowerShell  
- **Добавление базы данных в группу доступности**  
+
   
 1.  Перейдите в каталог (**cd**) экземпляра сервера, в котором находится первичная реплика.  
   

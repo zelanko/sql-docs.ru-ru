@@ -1,7 +1,7 @@
 ---
 title: Руководство по архитектуре управления памятью | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/08/2018
+ms.date: 12/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dadd28224a7f360ee90767861025b0bdebc7cbe5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 924b347e5fa8907fa1f2b9cb9b820a63808cbc3b
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669403"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328984"
 ---
 # <a name="memory-management-architecture-guide"></a>руководство по архитектуре управления памятью
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "51669403"
 | |32-разрядная версия <sup>1</sup> |64-разрядная версия|
 |-------|-------|-------| 
 |Обычная память |Все выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . до достижения предела обработки виртуального адресного пространства — <br>— 2 ГБ<br>— 3 ГБ с параметром загрузки /3gb <sup>2</sup> <br>— 4 ГБ на WOW64 <sup>3</sup> |Все выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . до достижения предела обработки виртуального адресного пространства — <br>— 7 ТБ с архитектурой IA64 (IA64 не поддерживается в версии [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] и более поздней)<br>— Максимум, поддерживаемый операционной системой при использовании архитектуры x64 <sup>4</sup>
-|Механизм AWE (позволяет [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выходить за пределы обработки виртуального адресного пространства на 32-разрядной платформе). |Выпуски[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise и Developer — буферный пул, достаточный для доступа к 64 ГБ памяти.|Неприменимо <sup>5</sup> |
-|Привилегия операционной системы на блокировку страниц в памяти (позволяет блокировать физическую память, препятствует вытеснению блокированной памяти). <sup>6</sup> |Выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise и Developer — для процесса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] необходимо использовать механизм AWE. Память, распределенная с использованием механизма AWE, не может быть выгружена. <br> Предоставление данного разрешения без включения AWE не оказывает влияния на сервер. | Используется, только если это необходимо, то есть при наличии признаков того, что процесс sqlservr вытесняется из памяти. В этом случае в журнале ошибок появится ошибка 17890, как в следующем примере: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
+|Механизм AWE (позволяет [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выходить за пределы обработки виртуального адресного пространства на 32-разрядной платформе). |Выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise и Developer: буферный пул, достаточный для доступа к 64 ГБ памяти.|Неприменимо <sup>5</sup> |
+|Привилегия операционной системы на блокировку страниц в памяти (позволяет блокировать физическую память, препятствует вытеснению блокированной памяти). <sup>6</sup> |Выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise и Developer: требуется для процесса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для использования механизма AWE. Память, распределенная с использованием механизма AWE, не может быть выгружена. <br> Предоставление данного разрешения без включения AWE не оказывает влияния на сервер. | Используется, только если это необходимо, то есть при наличии признаков того, что процесс sqlservr вытесняется из памяти. В этом случае в журнале ошибок появится ошибка 17890, как в следующем примере: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> 32-разрядные версии недоступны, начиная с [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
 <sup>2</sup> /3gb — это параметр загрузки операционной системы. Дополнительные сведения см. в библиотеке MSDN.  
@@ -103,8 +103,9 @@ ms.locfileid: "51669403"
 -  Архивация, которая требует крупных буферов памяти.
 -  Операции трассировки, которые должны хранить параметры ввода большого объема.
 
+<a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>Изменения memory_to_reserve, начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
-В более ранних версиях SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) диспетчер памяти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] отводил часть виртуального адресного пространства процесса для использования **многостраничным распределителем (MPA)**, **распределителем CLR**, выделением памяти для **стеков потоков** в процессе SQL Server и **прямым выделением Windows (DWA)**. Эта часть виртуального адресного пространства также называется регионом оставляемой памяти или буферным пулом.
+В более ранних версиях SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) диспетчер памяти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] отводил часть виртуального адресного пространства процесса для использования **многостраничным распределителем (MPA)**, **распределителем CLR**, выделением памяти для **стеков потоков** в процессе SQL Server и **прямым выделением Windows (DWA)**. Эта часть виртуального адресного пространства также называется регионом оставляемой памяти или буферным пулом.
 
 Виртуальное адресное пространство, зарезервированное для этих выделений, определяется параметром конфигурации _**memory\_to\_reserve**_. Значение по умолчанию, которое использует [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], — 256 МБ. Чтобы переопределить значение по умолчанию, используйте параметр запуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Сведения о параметре запуска *-g* см. на странице документации [Параметры запуска службы ядра СУБД](../database-engine/configure-windows/database-engine-service-startup-options.md).
 
@@ -182,8 +183,8 @@ FROM sys.dm_os_process_memory;
 ## <a name="memory-used-by-sql-server-objects-specifications"></a>Требования к объему памяти для хранения объектов SQL Server
 Следующий список содержит обобщенные сведения об объеме памяти, потребляемой разными объектами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Эти значения являются оценочными и могут отличаться в зависимости от среды и способов создания объектов.
 
-* Блокировка (поддерживается диспетчером блокировки): 64 байта + 32 байта на владельца   
-* Подключение пользователя: приблизительно (3 \* размер_сетевого_пакета + 94 КБ)    
+* Блокировка (поддерживается диспетчером блокировки): 64 байта + 32 байта на владельца   
+* Подключение пользователя: приблизительно (3 \* размер_сетевого_пакета + 94 КБ)    
 
 **Размер сетевого пакета** — это размер пакетов схемы табличных данных, которые используются для обмена данными между приложениями и ядром СУБД [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. По умолчанию размер пакета равен 4 КБ, а его настройка осуществляется с помощью параметра конфигурации network packet size.
 
@@ -313,12 +314,12 @@ FROM sys.dm_os_process_memory;
 > Значение TORN_PAGE_DETECTION использует меньше ресурсов, но обеспечивает минимальный вариант защиты CHECKSUM.
 
 ## <a name="understanding-non-uniform-memory-access"></a>Основные сведения о неоднородном доступе к памяти
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] совместим с архитектурой неоднородного доступа к памяти (NUMA) и хорошо работает на оборудовании NUMA без дополнительной настройки. С ростом тактовой частоты и количества процессоров становится труднее сократить время задержки памяти, необходимой для использования дополнительной производительности системы. Для устранения этого недостатка поставщики оборудования применяют большие кэши третьего уровня, но это является всего лишь полумерой. Архитектура NUMA обеспечивает масштабируемое решение для этой проблемы. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] позволяет использовать преимущество компьютеров на основе NUMA без необходимости изменять что-либо в приложении. Дополнительные сведения см. в статье [Как настроить сервер SQL Server на использование программной архитектуры NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] совместим с архитектурой неоднородного доступа к памяти (NUMA) и хорошо работает на оборудовании NUMA без дополнительной настройки. С ростом тактовой частоты и количества процессоров становится труднее сократить время задержки памяти, необходимой для использования дополнительной производительности системы. Для устранения этого недостатка поставщики оборудования применяют большие кэши третьего уровня, но это является всего лишь полумерой. Архитектура NUMA обеспечивает масштабируемое решение для этой проблемы. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] позволяет использовать преимущество компьютеров на основе NUMA без необходимости изменять что-либо в приложении. Дополнительные сведения см. в разделе [Как настроить SQL Server для использования программной архитектуры NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
 
 ## <a name="see-also"></a>См. также:
 [Параметры конфигурации сервера «Server Memory»](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
 [Считывание страниц](../relational-databases/reading-pages.md)   
 [Запись страниц](../relational-databases/writing-pages.md)   
-[Практическое руководство: настройка SQL Server для использования программной архитектуры NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)   
+[Как настроить SQL Server для использования программной архитектуры NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)   
 [Требования к использованию оптимизированных для памяти таблиц](../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)   
 [Устранение проблем нехватки памяти с помощью оптимизированных для памяти таблиц](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)

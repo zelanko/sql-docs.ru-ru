@@ -1,6 +1,7 @@
 ---
-title: Свойства реплики доступности (страница "Общие") | Документы Майкрософт
-ms.custom: ''
+title: Свойства реплики доступности (страница "Общие") для групп доступности
+description: Описание различных свойств на странице "Общие", доступной со страницы "Свойства реплики доступности" в SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54105086ff43e11f703df1da6da6c8dba75f0dad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a114666df21424bda445ac852f14752c6372e6d3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611129"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205323"
 ---
-# <a name="availability-replica-properties-general-page"></a>Свойства реплики доступности (страница «Общие»)
+# <a name="availability-replica-properties-general-page-for-always-on-availability-groups"></a>Свойства реплики доступности (страница "Общие") для групп доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Используйте это диалоговое окно для просмотра свойств реплики доступности.  
   
@@ -88,7 +89,7 @@ ms.locfileid: "47611129"
  **Да**  
  Для баз данных-получателей этой реплики разрешены все соединения, но только с доступом для чтения. Для всех баз данных-получателей разрешен доступ для чтения.  
   
- Дополнительные сведения см. в разделе [Активные вторичные реплики: доступные только для чтения вторичные реплики (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Дополнительные сведения см. в статье [Активные вторичные реплики: вторичные реплики для чтения (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **Время ожидания сеанса (секунды)**  
  Интервал времени ожидания в секундах. Интервал времени ожидания — это максимальное время, в течение которого реплика ожидает получения сообщения от другой реплики перед тем, как соединение между первичной и вторичной репликой будет признано несостоявшимся. Время ожидания сеанса определяет, связаны ли вторичные реплики с первичной. При обнаружении ошибки соединения с вторичной репликой первичная реплика признает вторичную как NOT_SYNCHRONIZED. При обнаружении ошибки соединения с первичной репликой вторичная реплика просто пытается установить соединение повторно.  

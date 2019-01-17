@@ -1,6 +1,7 @@
 ---
-title: Предварительные условия для миграции доставки журналов в группы доступности AlwaysOn | Документы Майкрософт
-ms.custom: ''
+title: Необходимые условия для преобразования доставки журналов в группы доступности
+description: Описание необходимых условий для преобразования доставки журналов в группу доступности Always On.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c246912b7e12690427bc296d3db277481eddc42f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f5dc6b48ece6318cdd1ab15e6bccd86401b05e2a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606924"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214725"
 ---
-# <a name="prereqs-migrating-log-shipping-to-always-on-availability-groups"></a>Предварительные условия для миграции доставки журналов в группы доступности AlwaysOn
+# <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>Необходимые условия для преобразования доставки журналов в группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описаны предварительные условия для преобразования базы данных-источника доставки журналов вместе с одной или несколькими базами данных-получателями в базу данных-источник и базы данных-получатели AlwaysOn.  
@@ -99,13 +100,13 @@ ms.locfileid: "51606924"
   
      [Добавление базы данных-источника доставки журналов и баз данных-получателей к существующей группе доступности](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/01/add-a-log-shipping-primary-database-and-secondary-databases-to-an-existing-availability-group/)  
   
-     [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [Блоги команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Технические документы**  
   
-     [Руководство по миграции. Переход на группы доступности AlwaysOn с предыдущих развертываний, сочетающих зеркальное отображение базы данных и доставку журналов](https://msdn.microsoft.com/library/jj635217)  
+     [Руководство по миграции. Переход на группы доступности Always On с предыдущих развертываний, сочетающих зеркальное отображение базы данных и доставку журналов](https://msdn.microsoft.com/library/jj635217)  
   
      [Технические документы Майкрософт Microsoft по SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   

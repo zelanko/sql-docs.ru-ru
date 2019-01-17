@@ -1,6 +1,7 @@
 ---
-title: 'Устранение неполадок: изменения в первичной реплике не отражены во вторичной (группы доступности AlwaysOn — SQL Server) | Документы Майкрософт'
-ms.custom: ag-guide
+title: Определение причин, по которым изменения не отображаются во вторичной реплике группы доступности, — SQL Server
+ms.description: Troubleshoot to determine why changes occurring on a primary replica are not reflected on the secondary replica for an Always On availability group.
+ms.custom: ag-guide,seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3604871a67e4d5f642015eab07ca11e301ae286c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: feed1ad23a72ef00d264994373e0ef23f4d1c8bd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803092"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203483"
 ---
-# <a name="troubleshoot-changes-on-the-primary-replica-are-not-reflected-on-the-secondary-replica"></a>Устранение неполадок: изменения в первичной реплике не отражены во вторичной
+# <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>Определение причин, по которым изменения в первичной реплике не отражаются во вторичной реплике группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Клиентское приложение успешно изменяет первичную реплику, но запрос вторичной реплики показывает, что это изменение не отражено. В данном случае предполагается, что доступность имеет работоспособное состояние синхронизации. В большинстве случаев такое поведение самоустраняется через несколько минут.  
   

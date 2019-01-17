@@ -14,12 +14,12 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f99cba0597faad9da7250097f1ca8e866bd00e21
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 7d04286e2b8703e7d06a9913b421f69a94234b25
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560431"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591058"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Восстановление базы данных до состояния, сохраненного в моментальном снимке
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51560431"
   
      [безопасность](#Security)  
   
--   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
+-   **Восстановление базы данных из моментального снимка с помощью**:  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -80,7 +80,7 @@ ms.locfileid: "51560431"
   
 -   Удалите все прочие моментальные снимки, существующие в базе данных. Дополнительные сведения см. в разделе [Удаление моментального снимка базы данных (Transact-SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
  Возвратить базу данных-источник к состоянию на момент создания моментального снимка базы данных может любой пользователь с разрешением RESTORE DATABASE.  
@@ -101,7 +101,7 @@ ms.locfileid: "51560431"
   
      Чтобы выполнить операцию восстановления базы данных-источника, необходимо обладать разрешением RESTORE DATABASE. Чтобы восстановить базу данных, необходимо ввести следующую инструкцию Transact-SQL.  
   
-     RESTORE DATABASE *имя_базы_данных* FROM DATABASE_SNAPSHOT **=***имя_моментального_снимка_базы_данных*  
+     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=**_database_snapshot_name_  
   
      где *database_name* — это база данных-источник, а *database_snapshot_name* — имя моментального снимка, к состоянию на момент создания которого необходимо восстановить базу данных. Обратите внимание, что в данной инструкции необходимо задавать имя моментального снимка, а не устройство резервного копирования.  
   

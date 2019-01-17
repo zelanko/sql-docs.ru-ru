@@ -3,27 +3,27 @@ title: Включаемые файлы документации по SQL Server 
 ms.custom: ''
 ms.date: 08/15/2018
 ms.prod: sql
-ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: database-engine
+ms.technology: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
+ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 06d710e269ff4575bf7edb1c074de9421dad5c2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61cee54e6f49ffaf7e996cf593388ad22e8a7b44
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614762"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53731961"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>Включаемые файлы SQL Server для управления версиями и области применения
 
-Ссылки в документации можно легко изменить, не изменяя фактический текст отдельных статей. Для этого используются включаемые файлы в разметке Markdown. Для содержимого SQL используются три типа включаемых файлов: файлы версии SQL, файлы области применения и файлы ссылочного текста. **Включаемые файлы версии SQL** используются для указания обсуждаемой версии SQL, например SQL Server 2016 или 2017. **Включаемые файлы области применения** указывают, к каким продуктам и службам SQL относится документ, например SQL Server в Linux или базе данных SQL Azure. **Включаемые файлы ссылочного текста** не принадлежат к двум предыдущим категориям. Например, включаемый файл для получения справки — это список ссылок, с помощью которых пользователь может получить справку по SQL.
+Ссылки в документации можно легко изменить, не изменяя фактический текст отдельных статей. Для этого используются включаемые файлы в разметке Markdown. Для содержимого SQL используются три типа включаемых файлов: файлы версии SQL, файлы области применения и файлы ссылочного текста. Включаемые файлы **версии SQL Server** используются для указания обсуждаемой версии SQL, например SQL Server 2016 или 2017. Включаемые файлы **области применения** указывают, к каким продуктам и службам SQL относится документ, например SQL Server в Linux или базе данных SQL Azure. Включаемые файлы **ссылочного текста** не принадлежат к двум предыдущим категориям. Например, включаемый файл для получения справки — это список ссылок, с помощью которых пользователь может получить справку по SQL Server.
 
 Эта статья предназначена для справки только по двум первым типам включаемых файлов. Полный список включаемых файлов можно просмотреть в [репозитории sql-docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes).
 
-## <a name="sql-server-version-includes"></a>Включаемые файлы версии SQL Server
+## <a name="sql-server-version-include-files"></a>Включаемые файлы версии SQL Server
 
 Авторам содержимого SQL часто нужно указывать имя продукта и версию SQL Server. Если в имя вносятся изменения, можно не обновлять значения в каждой статье вручную. Вместо этого вы можете обновить включаемый файл. Такие включаемые файлы используются в качестве заполнителей для названий продуктов. Но они применяются не во всей документации по SQL. SQL Server vNext относится к будущему выпуску SQL, которому еще не присвоен номер версии, и является исключением.  
 
@@ -41,9 +41,9 @@ ms.locfileid: "47614762"
 | SQL vNext | sssqlv15-md.md | `[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]` | SQL Server vNext |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="sql-server-non-version-specific"></a>SQL Server (без конкретной версии)
+## <a name="sql-server-applies-to-non-version-specific"></a>Файлы области применения для выпуска SQL Server (без номера версии)
 
-Эти включаемые файлы области применения не указывают версии SQL Server.
+Эти включаемые файлы области применения не указывают версии SQL Server.
 
 | Имя файла| Пример разметки Markdown |image|
 | :-------------| :----------| :-------------------|
@@ -63,7 +63,7 @@ ms.locfileid: "47614762"
 | appliesto-xx-xxxx-asdw-xxx-md.md | `[!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)]` | [!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
  
-## <a name="sql-server-version-specific"></a>SQL Server (с указанием версии)
+## <a name="sql-server-applies-to-version-specific"></a>Файлы области применения для SQL Server (конкретных версий)
 
 В этих файлах области применения указывается, к каким версиям SQL относится документация.
 
@@ -107,7 +107,7 @@ ms.locfileid: "47614762"
 | tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md | `[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]` | [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="analysis-services"></a>Службы Analysis Services
+## <a name="analysis-services-applies-to"></a>Файлы области применения для Analysis Services
 
 Эти включаемые файлы области применения используются в документации по службам Analysis Services.
 
@@ -124,7 +124,7 @@ ms.locfileid: "47614762"
 | ssas-appliesto-sqlas-all-aas.md | `[!INCLUDE[ssas-appliesto-sqlas-all-aas.md](../includes/ssas-appliesto-sqlas-all-aas.md)]` | [!INCLUDE[ssas-appliesto-sqlas-all-aas.md](../includes/ssas-appliesto-sqlas-all-aas.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="reporting-services"></a>Службы Reporting Services
+## <a name="reporting-services-applies-to"></a>Файлы области применения для Reporting Services
 
 Эти включаемые файлы области применения используются в документации по службам Reporting Services.
 

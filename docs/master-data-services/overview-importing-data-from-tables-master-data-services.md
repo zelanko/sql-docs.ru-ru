@@ -1,12 +1,11 @@
 ---
-title: 'Обзор: импорт данных из таблиц (службы Master Data Services) | Документы Майкрософт'
+title: Общие сведения Импорт данных из таблиц (службы Master Data Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], about staging process
@@ -16,14 +15,14 @@ ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 806868f2ee57fc4c89ac9f90a13981d97e125fbe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d4703d6a5e8438404ba282b09b6af6edf40ea71
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788642"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215426"
 ---
-# <a name="overview-importing-data-from-tables-master-data-services"></a>Обзор: импорт данных из таблиц (службы Master Data Services)
+# <a name="overview-importing-data-from-tables-master-data-services"></a>Общие сведения Импорт данных из таблиц (службы Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -31,8 +30,8 @@ ms.locfileid: "47788642"
   
  Дополнительные сведения о добавлении и изменении данных см. в разделе [Импорт данных из таблиц (службы Master Data Services)](../master-data-services/import-data-from-tables-master-data-services.md).  
   
-> [!NOTE]  
->  Также можно использовать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]для добавления данных в репозиторий MDS (база данных[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ) из Excel. Дополнительные сведения см. в разделе [Обзор импорта данных из Excel (надстройка MDS для Excel)](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
+> [!NOTE]
+>  Также можно использовать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]для добавления данных в репозиторий MDS (база данных[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]) из Excel. Дополнительные сведения см. в статье [Обзор: импорт данных из Excel (надстройка MDS для Excel)](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
   
  При добавлении или изменении данных можно выполнять следующие действия.  
   

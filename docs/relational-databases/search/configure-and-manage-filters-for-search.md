@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87b18963f7b512d2fa395d53406528a2d813b364
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba65abd869322574cd2047be5066aad4b1c30767
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739702"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53552956"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Настройка поисковых фильтров и управление ими
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,12 +40,16 @@ ms.locfileid: "47739702"
 
 ## <a name="installed-filters"></a>Установленные фильтры 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливаются собственные фильтры XML и HTML. Кроме того, любые фильтры для собственных форматов [!INCLUDE[msCoName](../../includes/msconame-md.md)] (DOC, XDOC, PPT и т. д.), которые уже установлены в операционной системе, также загружаются средствами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы определить, какие фильтры загружены в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в данный момент, используйте хранимую процедуру [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) следующим образом:  
-  
+
 ```sql
 EXEC sp_help_fulltext_system_components 'filter';   
 ```  
+
+> [!NOTE]
+> Даже при использовании последней версии пакета фильтра Office, включающей поддержку файлов XLSX, SQL Server не поддерживает электронные таблицы в строгом формате Open XML.  Ошибка не возвращается. SQL Server просто не удается проиндексировать содержимое электронных таблиц в строгом формате Open XML.
+
 ## <a name="non-microsoft-filters"></a>Фильтры сторонних разработчиков
-Прежде чем использовать фильтры для форматов, не принадлежащих [!INCLUDE[msCoName](../../includes/msconame-md.md)], их необходимо вручную загрузить на экземпляр сервера. Сведения об установке дополнительных фильтров см. в статье [Просмотр или изменение зарегистрированных фильтров и разделителей слов](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
+Прежде чем использовать фильтры для форматов, не принадлежащих [!INCLUDE[msCoName](../../includes/msconame-md.md)], их необходимо вручную загрузить в экземпляр сервера. Сведения об установке дополнительных фильтров см. в статье [Просмотр или изменение зарегистрированных фильтров и разделителей слов](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
   
 ## <a name="see-also"></a>См. также:  

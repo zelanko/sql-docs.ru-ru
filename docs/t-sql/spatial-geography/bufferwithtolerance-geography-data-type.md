@@ -18,12 +18,12 @@ ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f83a4174fb599170e466a28ab06eb0d2772fd604
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b73851cdfdf180f3acffc8892d757b0f46abe99d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391359"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980302"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,9 +60,9 @@ ms.locfileid: "52391359"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Тип возвращаемых данных CLR: **SqlGeography**  
+ Возвращаемый тип CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Этот метод вызывает исключение **ArgumentException**, если *distance* не является числом (NAN) или если *distance* равно плюс/минус бесконечности.  Этот метод также вызывает исключение **ArgumentException**, если *tolerance* равно нулю (0), не является числом (NAN), отрицательным или равно плюс/минус бесконечности.  
   
  `STBuffer()` возвращает экземпляр **FullGlobe** в определенных случаях; например, `STBuffer()` возвращает экземпляр **FullGlobe** для двух полюсов, если буферное расстояние больше, чем расстояние от экватора до полюса.  

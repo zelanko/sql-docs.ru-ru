@@ -1,6 +1,7 @@
 ---
-title: Группы доступности AlwaysOn (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: 'Группы доступности: решение для обеспечения высокой доступности и аварийного восстановления'
+description: Группы доступности Always On — это решение SQL Server для высокой доступности и аварийного восстановления, являющееся более полнофункциональной альтернативой зеркальному отображению баз данных на уровне предприятия. Изучите основные сведения и функциональные возможности этой функции.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,14 +17,14 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3d7c6025066140354278d0f67f6a6a3c6898ab17
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a55c61cff17e0cf583ba86296b12061d75389240
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606634"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202403"
 ---
-# <a name="always-on-availability-groups-sql-server"></a>Группы доступности AlwaysOn (SQL Server)
+# <a name="always-on-availability-groups-a-high-availability-and-disaster-recovery-solution"></a>Группы доступности Always On: решение для обеспечения высокой доступности и аварийного восстановления
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Функция [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] — это решение высокой доступности и аварийного восстановления, являющееся альтернативой зеркальному отображению баз данных на уровне предприятия. Поддержка [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], добавленная с версии [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , позволяет максимально увеличить доступность набора пользовательских баз данных для предприятия. *Группа доступности* поддерживает среду отработки отказа для дискретного набора пользовательских баз данных, известных как *базы данных доступности*, которые совместно выполняют переход на другой ресурс. Группа доступности поддерживает набор первичных баз данных чтения и записи и от одного до четырех наборов соответствующих вторичных баз данных. Кроме того, базы данных-получатели можно сделать доступными только для чтения или для некоторых операций резервного копирования.  
@@ -53,9 +54,9 @@ ms.locfileid: "51606634"
   
 -   Позволяет настроить данную реплику доступности для поддержки одной или обеих возможностей активных вторичных реплик.  
   
-    -   Доступ с подключением только для чтения, который позволяет использовать подключения только для чтения для доступа и чтения баз данных во время работы в качестве вторичной реплики. Дополнительные сведения см. в разделе [Активные вторичные реплики: доступные только для чтения вторичные реплики (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+    -   Доступ с подключением только для чтения, который позволяет использовать подключения только для чтения для доступа и чтения баз данных во время работы в качестве вторичной реплики. Дополнительные сведения см. в статье [Активные вторичные реплики: вторичные реплики для чтения (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
-    -   Выполнение операций резервного копирования для своих баз данных во время работы в качестве вторичной реплики. Дополнительные сведения см. в статье [Активные вторичные реплики, резервное копирование во вторичных репликах (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+    -   Выполнение операций резервного копирования для своих баз данных во время работы в качестве вторичной реплики. Дополнительные сведения см. в статье [Активные вторичные реплики: резервное копирование во вторичных репликах (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
      Использование возможностей активных вторичных реплик позволяет улучшить эффективность использования информационных технологий и снизить стоимость за счет более рационального использования ресурсов вторичного аппаратного обеспечения. Кроме того, перевод приложений с намерением чтения и заданий резервного копирования на вторичные реплики позволяет повысить производительность работы основной реплики.  
   
@@ -63,7 +64,7 @@ ms.locfileid: "51606634"
   
 -   Поддерживает гибкую политику отработки отказа для обеспечения большего контроля над отработкой отказа группы доступности. Дополнительные сведения см. в статье [Отработка отказа и режимы отработки отказа (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
--   Поддерживает автоматическое восстановление страниц для защиты от повреждения. Дополнительные сведения см. в подразделе [Автоматическое восстановление страниц (группы доступности: зеркальное отображение баз данных)](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
+-   Поддерживает автоматическое восстановление страниц для защиты от повреждения. Дополнительные сведения см. в статье [Автоматическое восстановление страниц (группы доступности: зеркальное отображение баз данных)](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
   
 -   Поддерживает шифрование и сжатие, обеспечивающие безопасный, высокопроизводительный транспорт.  
   
@@ -145,7 +146,7 @@ ms.locfileid: "51606634"
 -   [службы Reporting Services](../../../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
->  Дополнительные сведения об ограничениях на использование других компонентов с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в статье [Группы доступности AlwaysOn: взаимодействие (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md).  
+>  Дополнительные сведения об ограничениях на использование других компонентов с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в статье [Группы доступности Always On: взаимодействие (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
@@ -155,15 +156,15 @@ ms.locfileid: "51606634"
   
 -   **Блоги**  
   
-     [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [Блоги команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Видеоролики**  
   
-     [Microsoft SQL Server с рабочим названием Denali AlwaysOn, часть 1. Вводные сведения о решении следующего поколения по обеспечению высокого уровня доступности](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server с рабочим названием Denali Always On, часть 1: вводные сведения о решении следующего поколения по обеспечению высокого уровня доступности](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server с рабочим названием Denali AlwaysOn, часть 2. Создание критически важного решения по обеспечению высокого уровня доступности с использованием AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server с рабочим названием Denali Always On, часть 2: создание критически важного решения по обеспечению высокого уровня доступности с использованием Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Технические документы**  
   

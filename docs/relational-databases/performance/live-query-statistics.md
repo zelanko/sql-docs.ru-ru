@@ -15,15 +15,15 @@ helpviewer_keywords:
 - lightweight query profiling
 - lightweight profiling
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 42c1612916ec1de69e02ce50febd6a2820cd9684
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5b60d4190ad25dd57098ef4cd107f1838886a767
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412611"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368416"
 ---
 # <a name="live-query-statistics"></a>Динамическая статистика запросов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52412611"
 > [!NOTE]
 > На внутреннем уровне динамическая статистика запросов использует динамическое административное представление [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).
   
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 > [!WARNING]  
 > Эта функция предназначена в основном для диагностики. Ее использование может значительно снизить общую производительность запроса, особенно в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Дополнительные сведения см. в разделе [Инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).  

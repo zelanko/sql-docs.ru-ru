@@ -1,20 +1,21 @@
 ---
 title: Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server | Документы Майкрософт
 description: Ознакомьтесь со сведениями о мобильных отчетах служб Reporting Services для мобильных устройств, подключенных к локальным данным и содержащих различные визуализации данных.
-ms.date: 03/30/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a57b58490f6a2bfd8f0d5e8880402f1e136abd7e
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 51708fc41bb154fcf67ac3a21bd6680c69e2f2c2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710865"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213063"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server
 Ознакомьтесь со сведениями о мобильных отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , оптимизированных для мобильных устройств, подключенных к локальным данным и содержащих различные визуализации данных. 
@@ -35,10 +36,10 @@ ms.locfileid: "52710865"
 Эти статьи помогут вам приступить к работе.
 -  Загрузить [издатель мобильных отчетов SQL Server](https://go.microsoft.com/fwlink/?LinkID=733527)  
 -  [Создание мобильных отчетов Reporting Services](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
--  [Пошаговое руководство. Создание мобильных отчетов и определение ключевых показателей эффективности в SQL Server Reporting Services](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (Статья блога Кристофера Финлана (Christopher Finlan))  
-- [Design first, or data first](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md)(Проектирование отчетов на основе смоделированных или собственных данных). Вы можете выбрать, на основе каких данных будет спроектирован ваш отчет: смоделированных или собственных.  
-- [Data for Reporting Services mobile reports](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)(Данные для мобильных отчетов служб Reporting Services). Используйте данные из общих наборов данных или подготавливайте данные из книг Excel для включения в мобильные отчеты.
-- [How data refresh works in mobile reports and KPIs in Reporting Services](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (Как происходит обновление данных мобильных отчетов и ключевых показателей эффективности в службах Reporting Services). Запись блога Кристофера Финлана (Christopher Finlan).
+-  [Пошаговое руководство. Создание мобильных отчетов и определение ключевых показателей эффективности в SQL Server Reporting Services](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (статья в блоге Кристофера Финлана (Christopher Finlan))  
+- [Использование подхода "сначала конструирование" или "сначала данные"](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md): Вы можете выбрать, на основе каких данных будет спроектирован ваш отчет: смоделированных или собственных.  
+- [Данные для мобильных отчетов Reporting Services](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md). Используйте данные из общих наборов данных или подготавливайте данные из книг Excel для включения в мобильные отчеты.
+- [How data refresh works in mobile reports and KPIs in Reporting Services](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (Как происходит обновление данных мобильных отчетов и ключевых показателей эффективности в службах Reporting Services) (статья в блоге Кристофера Финлана (Christopher Finlan)): читайте о настройке кэширования для общих наборов данных, а также о том, как указать, как часто данные обновляются, и повысить производительность отчетов.
 - [Добавление визуализаций в мобильные отчеты](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 - [Датчики в мобильных отчетах](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 - [Карты в мобильных отчетах](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
@@ -46,9 +47,8 @@ ms.locfileid: "52710865"
   
 ## <a name="ssrs-mobile-reports-in-the-power-bi-mobile-apps"></a>Мобильные отчеты SSRS в мобильных приложениях Power BI
 
--  См. статью [Просмотр ключевых показателей эффективности и мобильных отчетов Reporting Services в мобильных приложениях iOS](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports).
--  См. статью [Просмотр ключевых показателей эффективности и мобильных отчетов Reporting Services в приложении Power BI для устройств Android](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports).
--  См. статью [Просмотр ключевых показателей эффективности и мобильных отчетов Reporting Services в мобильном приложении Power BI для Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/).    
+-  См. статью [Просмотр ключевых показателей эффективности и мобильных отчетов Reporting Services в мобильном приложении Power BI для устройств с iOS и Android](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports).
+-  См. статью [Просмотр ключевых показателей эффективности и мобильных отчетов Reporting Services в мобильном приложении Power BI для Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/).   
 
 ## <a name="see-also"></a>См. также:  
   

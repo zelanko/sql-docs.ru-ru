@@ -1,6 +1,7 @@
 ---
-title: Основные группы доступности (группы доступности AlwaysOn) | Документы Майкрософт
-ms.custom: ''
+title: Базовые группы доступности для отдельной базы данных
+description: 'Описываются различия между обычной и базовой группой доступности Always On, а также настройка базовой группы доступности. '
+ms.custom: seodec18
 ms.date: 02/01/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d20e1ce1c3a951e47861b68a819844528c104cbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d95ef944f0ff4712a117b8c76f83116276aae184
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771432"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210713"
 ---
-# <a name="basic-availability-groups-always-on-availability-groups"></a>Базовые группы доступности (группы доступности AlwaysOn)
+# <a name="basic-always-on-availability-groups-for-a-single-database"></a>Базовые группы доступности Always On для отдельной базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Базовые группы доступности AlwaysOn предоставляют решение высокой доступности для SQL Server 2016 и SQL Server 2017 Standard. Основная группа доступности обеспечивает функционирование среды отработки отказа для одной базы данных. Базовые группы создаются и управляются так же, как обычные (расширенные) [группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) в выпуске Enterprise Edition. В этом документе описаны отличия и ограничения основных групп доступности.  

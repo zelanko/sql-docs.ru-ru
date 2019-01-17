@@ -1,6 +1,7 @@
 ---
-title: Настройка репликации для групп доступности AlwaysOn (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Настройка репликации в группах доступности
+description: Настройка репликации для группы доступности Always On.
+ms.custom: seodec18
 ms.date: 07/09/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1242b8b3e9f29cabdb840b405df8dba9f96fd959
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b790bcd89f4ad22a78b6a0da43b4d86642e518c0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687202"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208493"
 ---
-# <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>Настройка репликации для групп доступности AlwaysOn (SQL Server)
+# <a name="configure-replication-with-always-on-availability-groups"></a>Настройка репликации в группах доступности Always On
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -201,7 +202,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 >   
 >  Сообщение 21899, уровень 11, состояние 1, процедура **sp_hadr_verify_subscribers_at_publisher**, строка 109  
 >   
->  Запрос на перенаправленном издателе «MyReplicaHostName» для определения того, имеются ли записи sysserver для подписчиков исходного издателя «MyOriginalPublisher» , завершился с ошибкой «976»; сообщение об ошибке: «Ошибка 976, уровень 14, состояние 1, сообщение: Целевая база данных «MyPublishedDB» участвует в группе доступности и в настоящее время недоступна для запросов. Либо перемещение данных приостанавливается, либо реплика доступности не разрешена для чтения. Чтобы разрешить доступ только для чтения к этой и другим базам данных в группе доступности, задайте доступ для чтения одной или нескольким вторичным репликам доступности в группе.  Дополнительные сведения см. в описании инструкции **ALTER AVAILABILITY GROUP** в электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+>  Запрос на перенаправленном издателе «MyReplicaHostName» для определения того, были ли там записи sysserver для подписчиков оригинального издателя «MyOriginalPublisher», завершился с ошибкой «976», сообщение об ошибке «Ошибка 976, уровень 14, состояние 1, сообщение: Целевая база данных «MyPublishedDB» участвует в группе доступности и в настоящее время недоступна для запросов. Либо перемещение данных приостанавливается, либо реплика доступности не разрешена для чтения. Чтобы разрешить доступ только для чтения к этой и другим базам данных в группе доступности, задайте доступ для чтения одной или нескольким вторичным репликам доступности в группе.  Дополнительные сведения см. в описании инструкции **ALTER AVAILABILITY GROUP** в электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
 >   
 >  Произошла одна или несколько ошибок проверки издателя для узла реплики «MyReplicaHostName».  
   
@@ -244,7 +245,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 ## <a name="see-also"></a>См. также:  
  [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Группы доступности AlwaysOn: взаимодействие (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Группы доступности Always On: взаимодействие (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Репликация SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: Добавление вторичной реплики к группе доступности (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Добавление вторичной реплики к группе доступности
+description: Инструкции по удалению вторичной реплики в группе доступности Always On с помощью Transact-SQL (T-SQL), PowerShell или мастера групп доступности в SQL Server Management Studio (SSMS).
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,35 +14,17 @@ ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 834e84ea62e9cfa7b6398d67e2b59ba011d21979
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ffebb3bc39d15f52aeda8e2deed54c49e011df4e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512333"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213013"
 ---
-# <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>Добавление вторичной реплики к группе доступности (SQL Server)
+# <a name="add-a-secondary-replica-to-an-always-on-availability-group"></a>Добавление вторичной реплики к группе доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описывается, как добавить вторичную реплику в существующую группу доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
-  
--   **Перед началом работы**  
-  
-     [Требования и ограничения](#PrerequisitesRestrictions)  
-  
-     [безопасность](#Security)  
-  
--   **Добавление реплики с помощью**  
-  
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Дальнейшие действия**  [После добавления вторичной реплики](#FollowUp)  
-  
-## <a name="before-you-begin"></a>Перед началом  
- Настоятельно рекомендуется прочитать этот раздел, прежде чем пытаться настроить свою первую группу доступности.  
+
   
 ##  <a name="PrerequisitesRestrictions"></a> Требования и ограничения  
   

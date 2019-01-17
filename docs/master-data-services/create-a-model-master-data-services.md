@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], creating models
@@ -15,12 +14,12 @@ ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f21bdeceed35e7eb680d5dd1c2b74863e3a29dbb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f08318c5dbd42137b7c818e5bb4b0a3d1e34fae8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398795"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748836"
 ---
 # <a name="create-a-model-master-data-services"></a>Создание модели (службы Master Data Services)
 
@@ -59,15 +58,15 @@ ms.locfileid: "52398795"
   
 -   **Состояние**: состояние модели. При нажатии кнопки **Сохранить модель** появляется изображение ![Обновляется](../master-data-services/media/mds-model-status-updating.png "Обновляется"), которое указывает, что модель обновляется. При наличии ошибок во время создания или изменения модели появляется изображение ![Ошибка](../master-data-services/media/mds-model-status-error.png "Ошибка"). В противном случае отображается состояние "ОК" и появляется изображение ![ОК](../master-data-services/media/mds-model-status-ok.png "ОК") .  
   
--   **Имя**: имя модели.  
+-   **Имя**: Имя модели.  
   
--   **Описание**: описание модели.  
+-   **Описание**: Описание модели.  
   
 -   **Хранение журнала в днях**: количество дней, в течение которого хранится журнал для модели.  
   
--   **Автор**: имя пользователя, создавшего модель.  
+-   **Кем создано**: имя пользователя, создавшего модель.  
   
--   **Дата и время создания**: дата и время создания модели.  
+-   **Дата и время создания**: дата и время, когда была создана модель.  
   
 -   **Кем обновлено**: имя последнего пользователя, обновившего модель.  
   

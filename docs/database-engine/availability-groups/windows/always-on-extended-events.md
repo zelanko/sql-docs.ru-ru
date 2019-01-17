@@ -1,6 +1,7 @@
 ---
-title: Расширенные события для групп доступности AlwaysOn (SQL Server) | Документы Майкрософт
-ms.custom: ag-guide
+title: Настройка расширенных событий для групп доступности
+description: SQL Server определяет расширенные события, характерные для групп доступности Always On. Вы можете отслеживать расширенные события для диагностирования первопричин при устранении неполадок для группы доступности.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,16 +11,16 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b33f51b741d9bb97882fb2662111833bb4937a0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: fa8c74ec8bb9c80350b537142ce27cb61354c52f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413201"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207573"
 ---
-# <a name="always-on-availability-groups-extended-events"></a>Расширенные события для групп доступности AlwaysOn
+# <a name="configure-extended-events-for-always-on-availability-groups"></a>Настройка расширенных событий для групп доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  SQL Server определяет расширенные события, характерные для групп доступности AlwaysOn. Вы можете отслеживать расширенные события для диагностирования первопричин при устранении неполадок для группы доступности. Просмотреть расширенные события группы доступности можно с помощью следующего запроса:  
+  SQL Server определяет расширенные события, характерные для групп доступности Always On. Вы можете отслеживать расширенные события для диагностирования первопричин при устранении неполадок для группы доступности. Просмотреть расширенные события группы доступности можно с помощью следующего запроса:  
   
 ```sql  
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
@@ -80,7 +81,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
  [availability_replica_manager_state](#BKMK_availability_replica_manager_state)  
   
- [error_reported (1480): роль реплики базы данных изменена](#BKMK_error_reported_1480)  
+ [error_reported (1480): изменилась роль реплики базы данных](#BKMK_error_reported_1480)  
   
 ###  <a name="BKMK_availability_replica_state_change "></a> availability_replica_state_change  
  Возникает при изменении состояния реплики доступности. Создание группы доступности или присоединение к реплике доступности может вызывать это событие. Это удобно при диагностике сбоя автоматического перехода на другой ресурс. Его также можно использовать для трассировки шагов перехода на другой ресурс.  
@@ -302,7 +303,7 @@ GO
 |availability_group_id|Guid|Идентификатор группы доступности.|  
 |availability_group_name|unicode_string|Имя группы доступности.|  
 |ddl_action|alwayson_ddl_action|Указывает тип действия DDL: CREATE, ALTER или DROP.|  
-|ddl_phase|ddl_opcode|Указывает стадию выполнения операции DDL: BEGIN, COMMIT или ROLLBACK.|  
+|ddl_phase|ddl_opcode|Указывает фазу операции DDL: BEGIN, COMMIT или ROLLBACK.|  
 |.|unicode_string|Текст выполненной инструкции.|  
   
 #### <a name="alwaysonhealth-session-definition"></a>Определение сеанса alwayson_health  
@@ -348,7 +349,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_error_reported_1480"></a> error_reported (1480): роль реплики базы данных изменена  
+###  <a name="BKMK_error_reported_1480"></a> error_reported (1480): изменилась роль реплики базы данных  
  Это отфильтрованное событие error_reported возникает асинхронно после изменения роли реплики доступности. Оно указывает, какой базе данных доступности не удается изменить свою ожидаемую роль во время перехода на другой ресурс.  
   
 #### <a name="event-information"></a>Сведения о событии  

@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQLServer:Databases
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 554e582d23afa6ef62b8bc1fd5ab7c8f0c704f4c
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 668fe6a825be365aa605febaaea7aafdd71ddf7d
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158921"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997576"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, объект Databases
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52158921"
 |**Пропускная способность резервного копирования и восстановления/с**|Пропускная способность операций чтения и записи при резервном копировании или восстановлении базы данных, в секунду. Например, можно оценить изменение скорости выполнения резервного копирования при добавлении параллельно используемых устройств резервного копирования или при переходе на более быстрые устройства. Сведения о пропускной способности операций резервного копирования и восстановления баз данных позволяет определить скорость и состояние выполняемых операций резервного копирования и восстановления.|  
 |**Массовое копирование строк/с**|Количество строк, скопированных за секунду при выполнении операции массового копирования.|  
 |**Пропускная способность массового копирования/с**|Объем данных, скопированных при операции массового копирования в секунду (в килобайтах).|  
-|**Записи таблицы фиксации**|Размер находящейся в памяти части таблицы фиксации для базы данных. Дополнительные сведения см. в разделе [sys.dm_tran_commit_table (Transact-SQL)](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  
+|**Записи таблицы фиксации**|Размер (число) строк находящейся в памяти части таблицы фиксации для базы данных. Дополнительные сведения см. в разделе [sys.dm_tran_commit_table (Transact-SQL)](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md).|  
 |**Размер файлов данных (КБ)**|Совокупный размер (в килобайтах) всех файлов данных базы данных, включая любое автоматическое увеличение размера файлов данных. Отслеживание этого счетчика может быть полезно для определения верного размера **tempdb**.|  
 |**Логический просмотр DBCC, байт/с**|Количество байтов, считанных за секунду операциями логического просмотра при выполнении команд консоли базы данных (DBCC).|  
 |**Время фиксации группы (сек)**|Время приостановки группы (мс) в секунду.|

@@ -1,6 +1,7 @@
 ---
-title: Удаление базы данных-получателя из группы доступности (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Удаление базы данных-получателя из группы доступности
+description: Инструкции по удалению базы данных-получателя из группы доступности Always On с помощью Transact-SQL (T-SQL), PowerShell или SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +17,12 @@ ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 40f08d9b924f8bfd223490694de0f6160f5f9962
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 637c4a984876ad401fb2a757ac4d76ea833a5222
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632682"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213553"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>Удаление базы данных-получателя из группы доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "47632682"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Дальнейшие действия**  [После удаления базы данных-получателя из группы доступности](#FollowUp)  
+-   **Дальнейшие действия.**  [После удаления базы данных-получателя из группы доступности](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -50,7 +51,7 @@ ms.locfileid: "47632682"
   
 -   Эта задача поддерживается только на вторичных репликах. Необходимо подключиться к экземпляру сервера, размещающему вторичную реплику, из которой удаляется база данных.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER на базу данных.  

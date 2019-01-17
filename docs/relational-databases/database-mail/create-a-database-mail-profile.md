@@ -15,22 +15,22 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0280e8039b5288186e910289eeb7c7566fdb0ae0
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: ae292a384a26c050976d4557793f6060ac3fe1b7
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558731"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980450"
 ---
 # <a name="create-a-database-mail-profile"></a>Создание профиля компонента Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Открытые и закрытые профили компонента Database Mail можно создать с помощью **мастера настройки компонента Database Mail** или [!INCLUDE[tsql](../../includes/tsql-md.md)] . Дополнительные сведения о профилях электронной почты см. в разделе [Профиль компонента Database Mail](database-mail-configuration-objects.md).
   
--   **Перед началом работы** [необходимые компоненты](#Prerequisites), [безопасность](#Security)  
+-   **Перед началом работы:** [Обязательные условия](#Prerequisites), [Безопасность](#Security)  
   
--   **Создание частного профиля Database Mail с помощью следующих средств:** [мастер настройки компонента Database Mail](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
+-   **Создание закрытого профиля компонента Database Mail с использованием:**  [мастера настройки компонента Database Mail](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
   
--   **Создание общего профиля Database Mail с помощью следующих средств:** [мастер настройки компонента Database Mail](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
+-   **Создание открытого профиля компонента Database Mail с использованием:**  [мастера настройки компонента Database Mail](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -56,7 +56,7 @@ ms.locfileid: "51558731"
   
 -   На странице **Управление профилями и учетными записями** выберите команду **Создать новый профиль** и нажмите кнопку **Далее**.  
   
--   На странице **Создать профиль** задайте имя профиля и описание, а также добавьте учетные записи, которые будут включены в профиль, затем нажмите кнопку **Далее**.  
+-   На странице **Создать профиль** задайте имя профиля и описание, а также добавьте учетные записи, которые будут включены в профиль, после чего нажмите кнопку **Далее**.  
   
 -   На странице **Завершение работы мастера** просмотрите действия, которые будут выполнены, и нажмите кнопку **Готово** , чтобы завершить создание нового профиля.  
   

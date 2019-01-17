@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2466e5b1cff9efb055d348a7e72729fa5208156
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5225b335cc028397f63cb930b07e8781ce0d8454
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661333"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213713"
 ---
 # <a name="server-level-roles"></a>Роли уровня сервера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "51661333"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет девять предопределенных ролей сервера. Разрешения, назначенные предопределенным ролям сервера (кроме роли **public**), не могут быть изменены. Начиная с [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], можно создавать пользовательские роли сервера и добавлять разрешения на уровне сервера таким пользовательским ролям.  
   
- В роли уровня сервера можно добавлять субъекты уровня сервера (имена входа, учетные записи Windows и группы Windows[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ). Каждый член предопределенной роли сервера может добавлять другие имена входа к той же роли. Члены пользовательских ролей сервера не могут добавлять других участников на уровне сервера в роль.  
->  [!NOTE]
+ В роли уровня сервера можно добавлять субъекты уровня сервера (имена входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], учетные записи Windows и группы Windows). Каждый член предопределенной роли сервера может добавлять другие имена входа к той же роли. Члены пользовательских ролей сервера не могут добавлять других участников на уровне сервера в роль.  
+> [!NOTE]
 >  Разрешения уровня сервера недоступны в базе данных SQL или хранилище данных SQL. Дополнительные сведения о базе данных SQL см. в статье [Предоставление доступа к базе данных и управление им](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
   
 ## <a name="fixed-server-level-roles"></a>Предопределенные роли уровня сервера  

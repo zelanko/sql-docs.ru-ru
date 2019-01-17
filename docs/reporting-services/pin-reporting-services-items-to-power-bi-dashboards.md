@@ -1,9 +1,10 @@
 ---
-title: Закрепление элементов служб Reporting Services на информационных панелях Power BI | Документы Майкрософт
-ms.date: 09/16/2016
+title: Закрепление элементов отчетов с разбивкой на страницы на панелях мониторинга Power BI | Документация Майкрософт
+ms.date: 12/05/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
+description: Вы можете закреплять элементы отчетов локальных служб Reporting Services с разбивкой на страницы на панели мониторинга в службе Power BI как новые плитки.
 ms.topic: conceptual
 helpviewer_keywords:
 - pbi
@@ -14,50 +15,44 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d0a87e49956227a168bb77059ae9311d8c775c4e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 0df8dab5bb48afbade1526a7ab02f4b5a30258d2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813237"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210993"
 ---
-# <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Закрепление элементов служб Reporting Services на информационных панелях Power BI
-  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] позволяют пользователям закрепить элементы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] из панели инструментов средства просмотра отчетов на информационной панели [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] в качестве новой плитки.   Для этого администратор должен сначала интегрировать сервер отчетов с Azure Active Directory и [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
-  
- ![rs_powerbi_icon](../reporting-services/media/ssrs-powerbi-icon.png "rs_powerbi_icon")  
-  
- [!INCLUDE[applies](../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в основном режиме
+# <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Закрепление элементов отчетов Reporting Services с разбивкой на страницы на панелях мониторинга Power BI
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
+
+Вы можете закреплять элементы отчетов локальных служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] с разбивкой на страницы на панели мониторинга в службе [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] как новые плитки.   Для этого администратор должен сначала интегрировать сервер отчетов с Azure Active Directory и [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
 ##  <a name="bkmk_requirements_to_pin"></a> Требования для закрепления  
   
--   Сервер отчетов настроен для интеграции с [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] . Дополнительные сведения см. в разделе [Power BI Report Server Integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md). Если сервер отчетов не настроен, вы не увидите кнопку **Закрепить на информационной панели Power BI** на панели инструментов.  
+-   Сервер отчетов настроен для интеграции с [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] . Дополнительные сведения см. в разделе [Интеграция сервера отчетов с Power BI (диспетчер конфигурации)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md). Если сервер отчетов не настроен, вы не увидите кнопку **Закрепить на информационной панели Power BI** на панели инструментов средства просмотра отчетов.  
   
-     ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
+     ![Панель инструментов средства просмотра отчетов](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   Элемент закрепляется из средства просмотра отчетов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], например `https://myserver/Reports`.  Невозможно закрепить элемент из [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], из конструктора отчетов в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]или с URL-адреса сервера отчетов.  Например: `https://myserver/ReportServer`.  
+-   Элемент закрепляется из средства просмотра отчетов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], например `https://myserver/Reports`.  Невозможно закрепить элемент из [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], из конструктора отчетов в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] или с URL-адреса сервера отчетов.  Например, `https://myserver/ReportServer`.  
   
 -   В браузере необходимо разрешить всплывающие окна на сайте сервера отчетов.  
   
--   Отчеты следует настроить для использования хранимых учетных данных, если вы хотите, чтобы закрепленный элемент обновлялся.  При закреплении элемента подписка [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] создается автоматически для управления обновлением данных элемента на информационной панели.  Если в отчете не используются сохраненные учетные данные, при запуске подписки появится сообщение, похожее на следующее сообщение на странице **Мои подписки** .  
+-   Отчеты следует настроить так, чтобы они использовали хранимые учетные данные, если вы хотите, чтобы закрепленный элемент обновлялся.  При закреплении элемента подписка [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] создается автоматически для управления обновлением данных элемента на информационной панели.  Если в отчете не используются сохраненные учетные данные, при запуске подписки появится сообщение, похожее на следующее сообщение на странице **Мои подписки**.  
   
-        PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential.
+    Ошибка доставки PowerBI: Анализ расходов ИТ-отдела — пример, визуальный элемент: Chart2, ошибка: Не удается закончить текущее действие. Учетные данные источника данных пользователя не соответствуют требованиям для выполнения этого отчета или общего набора данных. Введите учетные данные источника данных пользователя".
  
     См. раздел "Настройка сохраненных учетных данных для источника данных, связанного с отчетами (собственный режим)" статьи [Сохраненные учетные данные в источнике данных Reporting Services](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).  
   
 ##  <a name="bkmk_supported_items"></a> Элементы, которые вы можете закрепить  
- Следующие элементы отчета можно закрепить на информационной панели [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .  Вложенные в область данных элементы закрепить невозможно. Например, невозможно закрепить элемент, который вложен в таблицу или список [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
+ Следующие элементы отчета можно закрепить на информационной панели [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .  Вложенные в область данных элементы закрепить невозможно. Например, невозможно закрепить элемент, который вложен в таблицу или список [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 -   Диаграммы  
-  
 -   Панели датчиков  
-  
 -   Карты  
-  
 -   Изображения  
-  
--   Элементы должны быть в тексте отчета.  Невозможно закрепить элементы в колонтитулах страницы.  
-  
--   Вы можете закрепить отдельные элементы, расположенные в прямоугольнике верхнего уровня, но невозможно закрепить их все как одну группу.  
+-   Элементы должны быть в тексте отчета.  Невозможно закреплять элементы в колонтитулах страницы.  
+-   Вы можете закреплять отдельные элементы, расположенные в прямоугольнике верхнего уровня, но невозможно закрепить их все как одну группу.  
   
 ##  <a name="bkmk_to_pin"></a> Закрепление элемента отчета  
   
@@ -95,36 +90,36 @@ ms.locfileid: "51813237"
 
 **(3)** Подзаголовок плитки основан на дате и времени закрепления плитки или дате последнего обновления из [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Расписание обновления управляется подпиской [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , которая была автоматически создана при закреплении элемента отчета.
 
-**(4)** Если щелкнуть саму плитку, [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] использует **(3) настраиваемую ссылку** для перехода на страницу [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] зарегистрированного сервера отчетов. Ссылка была создана при закреплении элемента из [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Если сервер отчетов не подключен к Интернету, вы увидите ошибку в браузере.  
+**(5)** Если щелкнуть саму плитку, [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] использует **(4) настраиваемую ссылку** для перехода на страницу [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] зарегистрированного сервера отчетов. Ссылка была создана при закреплении элемента из [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Если сервер отчетов не подключен к Интернету, вы увидите ошибку в браузере.  
 
 ![ssrs_pinned_tile_details](../reporting-services/media/ssrs-pinned-tile-details.png "ssrs_pinned_tile_details")  
   
 ##  <a name="bkmk-troubleshoot"></a> Устранение неполадок  
   
--   **Нет кнопки [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] на панели инструментов средства просмотра отчетов:** это означает, что сервер отчетов не был интегрирован с [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Дополнительные сведения см. в разделе [Интеграция сервера отчетов с Power BI (диспетчер конфигурации)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
+-   **Нет кнопки [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] на панели инструментов средства просмотра отчетов:**  Это сообщение указывает, что сервер отчетов не интегрирован с [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Дополнительные сведения см. в разделе [Интеграция сервера отчетов с Power BI (диспетчер конфигурации)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
-- **Не удается закрепить элемент**: при попытке закрепления элемента отображается следующее сообщение об ошибке. См. раздел [Элементы, которые вы можете закрепить](#bkmk_supported_items).  
+- **Не удается закрепить элемент**: при попытке закрепления элемента отображается следующее сообщение об ошибке: См. раздел [Элементы, которые можно закрепить](#bkmk_supported_items).  
   
       Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
--   **Закрепленные элементы отображают устаревшие данные** на панели мониторинга [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , и какое-то время они обновлялись.  Истек срок действия маркера учетных данных пользователя, и вам необходимо снова выполнить вход.  Регистрация учетных данных пользователя в Azure и [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] действует 90 дней. В[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]щелкните **Мои параметры**. Дополнительные сведения см. в разделе [Страница "Мои параметры", используемая для интеграции с Power BI (диспетчер отчетов)](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
+-   **Закрепленные элементы отображают устаревшие данные** на панели мониторинга [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , и какое-то время они обновлялись.  Истек срок действия маркера учетных данных пользователя, и вам необходимо снова выполнить вход.  Регистрация учетных данных пользователя в Azure и [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] действует 90 дней. В [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] щелкните **Мои параметры**. Дополнительные сведения см. в разделе [Страница "Мои параметры", используемая для интеграции с Power BI (диспетчер отчетов)](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
   
 -   **Закрепленные элементы отображают устаревшие данные** на информационной панели [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , и они ни разу не обновлялись.  Проблема состоит в том, что отчет не настроен на использование сохраненных учетных данных. Отчет должен использовать сохраненные учетные данные, так как во время закрепления элемента отчета создается подписка [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для управления расписанием обновления плиток. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] требуются сохраненные учетные данные. При просмотре страницы **Мои подписки** отображается сообщение об ошибке следующего вида:  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
+        PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action can't be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
   
--   **Истек срок действия учетных данных Power BI:**  при попытке закрепления элемента появляется следующее сообщение об ошибке. В [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]щелкните **Мои параметры** и на странице "Мои параметры" щелкните **Войти**. Дополнительные сведения см. в статье  [Страница "Мои параметры", используемая для интеграции с Power BI (диспетчер отчетов)](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5) .  
+-   **Устаревшие учетные данные Power BI**:  при попытке закрепления элемента отображается следующее сообщение об ошибке. В [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]щелкните **Мои параметры** и на странице "Мои параметры" щелкните **Войти**. См. дополнительные сведения о [странице "Мои параметры", используемой для интеграции с Power BI на веб-портале](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
   
-        Cannot Pin : Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
+        Cannot Pin: Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
   
--   **Невозможно закрепить**. Если вы попытаетесь закрепить элемент на панели мониторинга, которая доступна только для чтения, появится следующее сообщение об ошибке:  
+-   **Не удается закрепить элемент**: если вы попытаетесь закрепить элемент на панели мониторинга, которая доступна только для чтения, появится следующее сообщение об ошибке:  
   
-        Server Error : The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' cannot be found. (rsItemNotFound)  
+        Server Error: The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' can't be found. (rsItemNotFound)  
   
 ##  <a name="bkmk_subscription_management"></a> Управление подпиской  
- В дополнение к проблемам, связанным с подписками, описанными в разделе об устранении неполадок, следующие сведения помогут вам поддерживать подписки, связанные с [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .
+ В дополнение к проблемам, связанным с подписками, описанными в разделе об устранении неполадок, следующие сведения помогут вам поддерживать подписки, связанные с [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].
   
--   **Имя элемента изменено.** Если закрепленный элемент отчета переименован или удален, плитка [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] не будет обновляться и вы увидите следующее сообщение об ошибке.  Если изменить имя элемента на исходное, подписка снова начнет работать, а плитка будет обновляться по расписанию подписок.  
+-   **Имя элемента изменено**: если закрепленный элемент отчета переименован или удален, плитка [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] не будет обновляться и вы увидите следующее сообщение об ошибке.  Если изменить имя элемента на исходное, подписка снова начнет работать, а плитка будет обновляться по расписанию подписок.  
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image1, error: Error: Report item 'Image1' cannot be found.  
   

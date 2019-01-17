@@ -18,12 +18,12 @@ ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 418fdf1db1dfb6db58ee80b709b267338d2591d8
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: e365ef2eed7dcd3f20dd5a9ad9a94627191c4df9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558231"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204923"
 ---
 # <a name="database-file-initialization"></a>Инициализация файлов базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "51558231"
 ## <a name="instant-file-initialization-ifi"></a>Мгновенная инициализация файлов (IFI)  
 В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файлы данных могут инициализироваться мгновенно во избежание операций обнуления. Мгновенная инициализация файлов позволяет быстро выполнять упомянутые ранее файловые операции. Мгновенная инициализация файлов освобождает место на диске, не заполняя пространство нулями. Вместо этого содержимое диска перезаписывается, поскольку в файлы записываются новые данные. Файлы журналов не могут быть инициализированы мгновенно.  
   
-> [!NOTE]  
+> [!NOTE]
 > Мгновенная инициализация файлов доступна только в [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] , [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] или более поздних версиях.  
-
+> 
 > [!IMPORTANT]
 > Мгновенная инициализация файлов доступна только для файлов данных. Файлы журналов всегда будут обнуляться при создании или увеличении размера.
   

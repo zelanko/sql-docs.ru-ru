@@ -18,12 +18,12 @@ ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7a09c5653fe89528c49ade19e044066acfb34cd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 55316e61b2690e56949e7fff3fe209e9b02fa0aa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403709"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979310"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "52403709"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Тип возвращаемых данных CLR: **SqlGeography**  
+ Возвращаемый тип CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  Метод STBuffer() вычисляет буфер аналогично методам [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md), задавая аргументы *tolerance* = abs(distance) \* 0,001 и *relative* = **false**.  
@@ -63,7 +63,7 @@ ms.locfileid: "52403709"
   
  Ограничение максимального расстояние позволяет конструкции буфера быть как можно более гибкой.  
   
- Ошибкой между теоретическим и вычисляемым буфером является max(tolerance, extents * 1.E-7), где tolerance = distance \* 0,001. Дополнительные сведения об экстентах см. в разделе [Справочник по методам типа данных geography](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
+ Ошибкой между теоретическим и вычисляемым буфером является max(tolerance, extents * 1.E-7), где tolerance = distance \* 0,001. Дополнительные сведения об экстентах см. в разделе [Справочник по методам типа данных geography](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается экземпляр `LineString``geography`. Затем используется метод `STBuffer()`, чтобы возвратить область в пределах 1 метра от экземпляра.  

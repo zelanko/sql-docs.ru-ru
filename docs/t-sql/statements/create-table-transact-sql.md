@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a74cdb7827351c6616a7d37ad3deb80a068a375c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 60938c31712e8bb6b08579cab099baaaf99bb0aa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394534"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980390"
 ---
 # <a name="create-table-transact-sql"></a>Инструкция CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -390,10 +390,10 @@ column_name <data_type>
   
  Параметр ON {*partition_scheme* | *filegroup* | **"** default **"**} может также указываться в ограничении PRIMARY KEY или UNIQUE. С помощью этих ограничений создаются индексы. Если указан аргумент *filegroup*, индекс сохраняется в файловой группе с таким именем. Если указано значение **"** default **"** или параметр ON не определен вообще, индекс сохраняется в той же файловой группе, что и таблица. Если ограничение PRIMARY KEY или UNIQUE создает кластеризованный индекс, страницы данных таблицы сохраняются в той же файловой группе, что и индекс. Если ограничение создает кластеризованный индекс (с помощью параметра CLUSTERED или другим способом), а указанный аргумент *partition_scheme* отличается от аргументов *partition_scheme* и *filegroup* из определения таблицы, либо, наоборот, принимается во внимание только определение ограничения, а все остальное не учитывается.  
   
-> [!NOTE]  
+> [!NOTE]
 >  В этом контексте default не является ключевым словом. Это идентификатор установленной по умолчанию файловой группы, который должен иметь разделители, как в выражениях ON **"** default **"** или ON **[** default **]**. Если указано значение **"** default **"**, то параметру QUOTED_IDENTIFIER для текущего сеанса должно быть присвоено значение ON. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  После создания секционированной таблицы рассмотрите возможность присвоить параметру LOCK_ESCALATION для таблицы значения AUTO. При этом можно усовершенствовать параллелизм, разрешив укрупнение блокировок до уровня секции (HoBT) вместо таблицы. Дополнительные сведения см. в разделе [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md).  
   
  TEXTIMAGE_ON { *filegroup*| **"** default **"** }  
@@ -401,12 +401,12 @@ column_name <data_type>
   
  Параметр TEXTIMAGE_ON недопустим, если в таблице нет столбцов с большими значениями. Нельзя указывать параметр TEXTIMAGE_ON одновременно с параметром *partition_scheme*. Если указано значение **"** default **"** или параметр TEXTIMAGE_ON не определен вообще, столбцы с большими значениями сохраняются в файловой группе по умолчанию. Способ хранения любых данных столбцов с большими значениями, определенный инструкцией CREATE TABLE, изменить в дальнейшем невозможно.  
 
-> [!NOTE]  
+> [!NOTE]
 > Varchar(max), nvarchar(max), varbinary(max), xml и большие значения UDT хранятся прямо в строке данных, до предельного размера в 8000 байт и пока значение умещается в записи. Если значение не умещается в записи, то указатель хранится в строке, а все остальное хранится вне строки в области хранения объектов LOB. Значение по умолчанию — 0.
-Параметр TEXTIMAGE_ON изменяет только расположение "пространства хранения объектов LOB", но не влияет на данные, хранящиеся в строке. Используйте параметр LARGE VALUE TYPES OUT OF ROW в sp_tableoption, чтобы хранить все значения LOB за пределами строки. 
-
-
-> [!NOTE]  
+> Параметр TEXTIMAGE_ON изменяет только расположение "пространства хранения объектов LOB", но не влияет на данные, хранящиеся в строке. Используйте параметр LARGE VALUE TYPES OUT OF ROW в sp_tableoption, чтобы хранить все значения LOB за пределами строки. 
+> 
+> 
+> [!NOTE]
 >  В этом контексте default не является ключевым словом. Это идентификатор файловой группы по умолчанию, который должен иметь разделители, как в выражениях TEXTIMAGE_ON **"** default **"** или TEXTIMAGE_ON **[** default **]**. Если указано значение **"** default **"**, то параметру QUOTED_IDENTIFIER для текущего сеанса должно быть присвоено значение ON. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  FILESTREAM_ON { *имя_схемы_секции* | filegroup | **"** default **"** } 
@@ -706,7 +706,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  Действия ON UPDATE CASCADE, SET NULL и SET DEFAULT не могут быть определены, если в изменяемой таблице уже существует триггер INSTEAD OF для условия ON UPDATE.  
   
- Например, база данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] содержит таблицу **ProductVendor**, которая имеет ссылочную связь с таблицей **Vendor**: внешний ключ **ProductVendor.BusinessEntity** ссылается на первичный ключ **Vendor.BusinessEntityID**.  
+ Например, в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] таблица **ProductVendor** имеет ссылочную связь с таблицей **Vendor**. Внешний ключ **ProductVendor.BusinessEntity** ссылается на первичный ключ **Vendor.BusinessEntityID**.  
   
  Если при выполнении инструкции UPDATE для строки в таблице **Vendor** указано ON UPDATE CASCADE для столбца **ProductVendor.BusinessEntityID**, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] проверяет зависимые строи в таблице **ProductVendor**. Если такие существуют, то кроме строки в таблице **Vendor** будут обновлены также и все зависимые строки из таблицы **ProductVendor**.  
   
@@ -793,13 +793,13 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  *partition_number_expression* можно указать одним из следующих способов:  
   
--   Указать номер секции, например: ON PARTITIONS (2).  
+-   Указав номер секции, например ON PARTITIONS (2).  
   
--   Указать номера нескольких секций через запятые, например ON PARTITIONS (1, 5).  
+-   Указав номера нескольких секций, разделив их запятыми, например ON PARTITIONS (1, 5).  
   
--   Указать диапазоны и отдельные секции, например: ON PARTITIONS (2, 4, 6 TO 8).  
+-   Указав диапазоны секций и отдельные секции, например ON PARTITIONS (2, 4, 6 TO 8).  
   
- `<range>` можно указать как номера секций, разделенные ключевым словом TO, например: ON PARTITIONS (6 TO 8).  
+ `<range>` можно указать номерами секций, разделенными ключевым словом TO, например: ON PARTITIONS (6 TO 8).  
   
  Чтобы для разных секций задать разные типы сжатия данных, укажите параметр DATA_COMPRESSION несколько раз, например следующим образом.  
   
@@ -928,9 +928,9 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MEMORY_OPTIMIZED  
    
-**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Управляемый экземпляр Базы данных SQL не поддерживает оптимизированные для памяти таблицы. 
+**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Управляемый экземпляр базы данных SQL не поддерживает оптимизированные для памяти таблицы. 
   
- Значение ON указывает, что таблица оптимизирована для памяти. Таблицы, оптимизированные для памяти, входят в функцию выполняющейся в памяти OLTP, которая используется для оптимизации производительности обработки транзакций. Дополнительные сведения о выполняющейся в памяти OLTP см. в разделе [Краткое руководство 1. Технологии выполнения OLTP в памяти для повышения производительности службы Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Дополнительные сведения об оптимизированных для памяти таблицах см. в разделе [Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Значение ON указывает, что таблица оптимизирована для памяти. Таблицы, оптимизированные для памяти, входят в функцию выполняющейся в памяти OLTP, которая используется для оптимизации производительности обработки транзакций. Чтобы приступить к работе с OLTP в памяти, см. раздел [Краткое руководство 1. Технологии выполнения OLTP в памяти для повышения производительности службы Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Дополнительные сведения об оптимизированных для памяти таблицах см. в разделе [Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Значение по умолчанию OFF указывает, что таблица основана на диске.  
   
@@ -957,7 +957,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
    
 **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
-Индексы столбцов и таблиц необходимо указывать в составе инструкции CREATE TABLE. Дополнительные сведения о добавлении и удалении индексов в таблицах, оптимизированных для памяти, см. в разделе: [Изменение таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
+Индексы столбцов и таблиц необходимо указывать в составе инструкции CREATE TABLE. Дополнительные сведения о добавлении и удалении индексов в таблицах, оптимизированных для памяти, см. в следующей статье: [Изменение таблиц с оптимизацией для памяти](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
   
  HASH  
    
@@ -1217,7 +1217,7 @@ SELECT * FROM tempdb.sys.database_files
  Получить отчет о таблице и ее столбцах можно с помощью процедуры **sp_help** или **sp_helpconstraint**. Для переименования таблицы используется процедура **sp_rename**. Чтобы получить сведения о представлениях и хранимых процедурах, зависящих от таблицы, используйте функции [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) и [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
   
 ## <a name="nullability-rules-within-a-table-definition"></a>Правила допустимости значения NULL в рамках определения таблицы  
- Допустимость значения NULL для столбца зависит от того, разрешено ли значение NULL в качестве допустимого значения данных этого столбца. Значение NULL не является нулем или пустым значением: NULL указывает, что запись не была произведена или было явно указано значение NULL; обычно оно означает, что значение неизвестно или неприменимо.  
+ Допустимость значения NULL для столбца зависит от того, разрешено ли значение NULL в качестве допустимого значения данных этого столбца. Значение NULL не равнозначно нулю или пустой строке: значение NULL указывает, что запись не была произведена или было явно указано значение NULL; обычно оно означает, что значение неизвестно либо неприменимо.  
   
  При создании или изменении таблицы с помощью инструкции CREATE TABLE или ALTER TABLE настройки базы данных и сеанса влияют на возможность типа данных, указанного в определении столбца, принимать значение NULL и могут переопределять ее. Рекомендуется всегда явно определять столбец как NULL или NOT NULL для невычисляемых столбцов или, если используется пользовательский тип данных, разрешать, чтобы для столбца применялась возможность, установленная для этого типа по умолчанию. Для разреженных столбцов всегда должно быть разрешено значение NULL.  
   
@@ -1229,7 +1229,7 @@ SELECT * FROM tempdb.sys.database_files
 |CLR, определяемый пользователем тип данных|Допустимость значения NULL определяется в соответствии с определением столбца.|  
 |Системный тип данных|Если для системного типа данных предусмотрен только один вариант, он и применяется. Для столбцов типа **timestamp** должен быть указан параметр NOT NULL. Если любые параметры сеанса с помощью инструкции SET установлены в ON:<br />**ANSI_NULL_DFLT_ON** = ON — применяется NULL.  <br />**ANSI_NULL_DFLT_OFF** = ON — применяется NOT NULL.<br /><br /> Если настроены какие-либо параметры базы данных с помощью инструкции ALTER DATABASE:<br />**ANSI_NULL_DEFAULT_ON** = ON — применяется NULL.  <br />**ANSI_NULL_DEFAULT_OFF** = ON — применяется NOT NULL.<br /><br /> Просмотреть параметр базы данных ANSI_NULL_DEFAULT можно в представлении каталога **sys.databases**|  
   
- Если для сеанса не установлен ни один из параметров ANSI_NULL_DFLT, а база данных настроена по умолчанию (ANSI_NULL_DEFAULT = OFF), применяется установленное по умолчанию значение NOT NULL.  
+ Если для сеанса не установлен ни один из параметров ANSI_NULL_DFLT, а база данных настроена по умолчанию (ANSI_NULL_DEFAULT = OFF), применяется установленное по умолчанию значение NOT NULL.  
   
  Если столбец является вычисляемым, допустимость значения NULL для него всегда определяется компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] автоматически. Определить допустимость значения NULL для этого типа столбцов можно с помощью функции COLUMNPROPERTY со свойством **AllowsNull**.  
   
@@ -1438,7 +1438,7 @@ CREATE TABLE dbo.mylogintable
 ```sql  
 CREATE TABLE dbo.EmployeePhoto  
     (  
-    EmployeeId int NOT NULL PRIMARY KEY,  
+     EmployeeId int NOT NULL PRIMARY KEY  
     ,Photo varbinary(max) FILESTREAM NULL  
     ,MyRowGuidColumn uniqueidentifier NOT NULL ROWGUIDCOL  
         UNIQUE DEFAULT NEWID()  

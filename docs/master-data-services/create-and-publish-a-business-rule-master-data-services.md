@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], creating
@@ -15,12 +14,12 @@ ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8ed7c2329742cea3b7fb0fbd43b33233bb846a98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 401dc7a80db0a1499943802671866ebef0eef901
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628642"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777346"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Создание и публикация бизнес-правила (службы Master Data Services)
 
@@ -109,7 +108,7 @@ ms.locfileid: "47628642"
 |Состояние|После нажатия кнопки **Сохранить** появится следующее изображение, которое указывает на то, что бизнес-правило обновляется.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> При наличии ошибок во время создания или изменения бизнес-правила появляется следующее изображение.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> Если ее состояние нормальное, появится следующее изображение.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
 |Имя|Имя бизнес-правила.|  
 |Описание|Описание бизнес-правила.|  
-|Состояние бизнес-правила|Одно из следующих состояний бизнес-правила: правило не определено, активно, исключено, ожидающие изменения, ожидающие исключения и ожидается удаление.|  
+|Состояние бизнес-правила|Одно из следующих состояний бизнес-правила: правило не определено, активно, исключено, ожидаются изменения, ожидаются исключения и ожидается удаление.|  
 |Исключена.|Указывает, исключено ли бизнес-правило.|  
 |Уведомление|Указывает выбранного пользователя или группу, которым необходимо отправлять уведомление.|  
   

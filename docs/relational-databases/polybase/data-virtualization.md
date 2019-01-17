@@ -1,22 +1,22 @@
 ---
 title: Виртуализация внешних данных в SQL Server 2019 CTP 2.0 | Документация Майкрософт
-description: ''
+description: Эта страница описывает шаги по использованию мастера создания внешней таблицы для реляционных источников данных
 author: Abiola
 ms.author: aboke
 manager: craigg
-ms.date: 09/24/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f09da2ec6d40f45bfe756fcfe648fd54fd5db6fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a8f5f55dfa0a569ec88542f819e30d21889997e3
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416875"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596675"
 ---
-# <a name="use-the-data-external-table-wizard-with-external-tables"></a>Использование мастера внешних таблиц данных
+# <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Используйте мастер создания внешней таблицы с реляционными источниками данных
 
 Один из основных сценариев для SQL Server 2019 CTP 2.0 — это возможность выполнять виртуализацию данных. Такой процесс позволяет сохранить данные в исходном расположении. Вы можете *виртуализировать* данные в экземпляре SQL Server и запрашивать их так же, как любую другую таблицу в SQL Server. Это уменьшает необходимость в процессах извлечения, преобразования и загрузки. Реализовать это можно с помощью соединителей PolyBase. Дополнительные сведения о виртуализации данных: [Начало работы с PolyBase](polybase-guide.md).
 

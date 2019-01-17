@@ -1,6 +1,7 @@
 ---
-title: Режимы доступности (группы доступности AlwaysOn) | Документы Майкрософт
-ms.custom: ''
+title: Различия между режимами доступности для группы доступности
+description: Описание различных режимов доступности для группы доступности Always On.
+ms.custom: seodec18
 ms.date: 10/16/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2dfe969dff2f9058af9391293dd1b3aabfdfdc5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2e35d2acfca7bf226f5b6e4ffde3a2843d08024f
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544038"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53206373"
 ---
-# <a name="availability-modes-always-on-availability-groups"></a>Режимы доступности (группы доступности AlwaysOn)
+# <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Различия между режимами доступности для группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] *режим доступности* — это свойство реплики, которое определяет, способна ли данная реплика доступности работать в режиме синхронной фиксации. Для каждой реплики доступности режим доступности необходимо настроить на режим синхронной или асинхронной фиксации либо только на режим конфигурации.  Если первичная реплика настроена на *режим асинхронной фиксации*, она не ждет, что какая-либо вторичная реплика зафиксирует входящие записи журнала транзакций на диск (для *фиксации журнала*). Если данная вторичная реплика доступности настроена на режим асинхронной фиксации, первичная реплика не ждет, что эта вторичная реплика зафиксирует журнал. Если и первичная, и вторичная реплика настроены на использование *режима синхронной фиксации*, то первичная реплика ожидает от вторичной реплики подтверждения фиксации журнала (за исключением случая, если вторичная реплика окажется неспособной проверить связь с первичной репликой в течение *времени ожидания сеанса*первичной реплики). 
@@ -32,18 +33,6 @@ ms.locfileid: "52544038"
 
 > [!NOTE]  
 >  Если вторичная реплика превышает время ожидания сеанса первичной реплики, то последняя реплика временно переходит в режим асинхронной фиксации по отношению к этой вторичной реплике. Когда вторичная реплика восстанавливает соединение с первичной репликой, они снова начинают работать в режиме синхронной фиксации.  
-  
- **В этом разделе.**  
-  
--   [Поддерживаемые режимы доступности](#SupportedAvModes)  
-  
--   [Asynchronous-Commit Availability Mode](#AsyncCommitAvMode)  
-  
--   [Synchronous-Commit Availability Mode](#SyncCommitAvMode)  
-  
--   [Связанные задачи](#RelatedTasks)  
-  
--   [См. также](#RelatedContent)  
   
 ##  <a name="SupportedAvModes"></a> Поддерживаемые режимы доступности  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] поддерживает три режима доступности: режим асинхронной фиксации, режим синхронной фиксации, а также режим "только конфигурация".  
@@ -185,7 +174,7 @@ ms.locfileid: "52544038"
   
 -   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Блог команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

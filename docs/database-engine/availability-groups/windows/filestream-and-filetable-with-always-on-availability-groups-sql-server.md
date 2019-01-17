@@ -1,6 +1,7 @@
 ---
-title: FILESTREAM и FileTable с группами доступности AlwaysOn (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Использование FILESTREAM и FileTable с группами доступности
+description: Указания по использованию FILESTREAM или FileTable с базами данных, участвующими в группе доступности Always On.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 51d808592db74aff5144f4fe453fe36a2bd4beb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f27403dcce14e657915abe3d8a98f886dd7cc9a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613502"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214865"
 ---
-# <a name="filestream-and-filetable-with-always-on-availability-groups-sql-server"></a>FILESTREAM и FileTable с группами доступности AlwaysOn (SQL Server)
+# <a name="use-filestream-and-filetable-with-always-on-availability-groups"></a>Использование FILESTREAM и FileTable с группами доступности Always On
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

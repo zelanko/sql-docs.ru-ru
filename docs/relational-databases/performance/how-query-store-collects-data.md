@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, data collection
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5d262b72fec278e037c99662d1d5aecd93190cf
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: c2e84a286cb4fa59c25426e9b1e8e8506fb51d91
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711076"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370546"
 ---
 # <a name="how-query-store-collects-data"></a>Сбор данных в хранилище запросов
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52711076"
 |**sys.query_store_query**|Записи запросов, которые отслеживаются и принудительно выполняются отдельно в хранилище запросов. Текст одного запроса может создать несколько записей, если он выполняется при других контекстных параметрах или вне одних модулей [!INCLUDE[tsql](../../includes/tsql-md.md)] и внутри других (хранимые процедуры, триггеры и т. д.).|  
 |**sys.query_store_plan**|Показывает предполагаемый план запроса со статистикой времени компиляции. Хранимый план эквивалентен плану, получаемому при использовании `SET SHOWPLAN_XML ON`.|  
 |**sys.query_store_runtime_stats_interval**|Хранилище запросов делит время на автоматически создаваемые интервалы времени и сохраняет сводные статистические данные в таких интервалах для каждого выполненного плана. Размер интервала регулируется параметром конфигурации "Интервал сбора статистики" (в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) или параметром `INTERVAL_LENGTH_MINUTES` с помощью [параметров ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
-|**sys.query_store_runtime_stats**|Сводная статистика времени выполнения для выполненных планов. Все собранные показатели выражаются в виде четырех статистических функций: среднее, минимальное, максимальное и стандартное отклонение.|  
+|**sys.query_store_runtime_stats**|Сводная статистика времени выполнения для выполненных планов. Все собранные показатели выражаются в виде четырех статистических функций: Average (среднее), Maximum (максимум), Minimum (минимум), Standard Deviation (стандартное отклонение).|  
   
  Дополнительные сведения о представлениях хранилища запросов см. в разделе **Связанные представления, функции и процедуры** статьи [Мониторинг производительности с использованием хранилища запросов](monitoring-performance-by-using-the-query-store.md).  
   

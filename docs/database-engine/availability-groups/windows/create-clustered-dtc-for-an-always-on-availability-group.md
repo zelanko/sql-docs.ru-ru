@@ -1,6 +1,7 @@
 ---
-title: Создание кластеризованного DTC для группы доступности AlwaysOn | Документы Майкрософт
-ms.custom: ''
+title: Создание кластеризованного ресурса DTC для группы доступности
+description: В этом разделе рассматривается полная конфигурация кластеризованного ресурса DTC для группы доступности AlwaysOn SQL Server.
+ms.custom: seodec18
 ms.date: 08/30/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,14 +12,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ce78afa02f0a0f5acdb061e21a1311ac20f844d8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2182b11c9416c487d3d583308d07ae1ad5f3f72f
+ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396926"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069780"
 ---
-# <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Создание кластеризованного DTC для группы доступности AlwaysOn
+# <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Создание кластеризованного ресурса DTC для группы доступности Always On
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -42,7 +43,7 @@ ms.locfileid: "52396926"
   - Имя: `Cluster`
   - Сетевое имя: `Cluster Network 1`
   - Узлы: `SQLNODE1, SQLNODE2`
-  - Общее хранилище: `Cluster Disk 3` (принадлежит `SQLNODE1`)
+  - Общее хранилище: `Cluster Disk 3` (во владении `SQLNODE1`)
 - Сведения о кластере (создаваемый):
   - Ресурс сетевого имени: `DTCnet1`
   - Ресурс сетевого имени DTC: `DTC1`
@@ -320,21 +321,21 @@ GO
 ```
 
 > [!IMPORTANT]
-Вы не можете включить DTC для существующей [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] примет следующий синтаксис для существующей группы доступности:  
->
+> Вы не можете включить DTC для существующей [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] примет следующий синтаксис для существующей группы доступности:  
+> 
 > USE master;    
 > ALTER AVAILABILITY GROUP \<группа_доступности\>  
-SET (DTC_Support = Per_DB)  
->
->Тем не менее реальное изменение конфигурации не производится.  Можно подтвердить конфигурацию **dtc_support** следующим запросом T-SQL:  
->
->SELECT name, dtc_support FROM sys.availability_groups  
->
->Единственный способ включить поддержку DTC для группы доступности заключается в создании группы доступности с помощью Transact-SQL.
+> SET (DTC_Support = Per_DB)  
+> 
+> Тем не менее реальное изменение конфигурации не производится.  Можно подтвердить конфигурацию **dtc_support** следующим запросом T-SQL:  
+> 
+> SELECT name, dtc_support FROM sys.availability_groups  
+> 
+> Единственный способ включить поддержку DTC для группы доступности заключается в создании группы доступности с помощью Transact-SQL.
  
 ## <a name="ClusterDTC"></a>8.  Подготовка ресурсов кластера
 
-Этот скрипт подготовит зависимые ресурсы DTC: диск и IP-адрес.  Общее хранилище будет добавлено в кластер Windows.  Будут созданы сетевые ресурсы, после чего будет создан DTC, предоставляемый группе доступности в виде ресурса.  Выполните приведенный ниже скрипт PowerShell в `SQLNODE1`.
+Этот скрипт подготовит зависимые ресурсы DTC: диск и IP-адрес.  Общее хранилище будет добавлено в кластер Windows.  Будут созданы сетевые ресурсы, после чего будет создан DTC, предоставляемый группе доступности в виде ресурса.  Выполните приведенный ниже скрипт PowerShell в `SQLNODE1`. Еще раз благодарим [Аллана Херта](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) за этот скрипт!
 
 ```powershell  
 # Create a clustered Microsoft Distributed Transaction Coordinator properly in the resource group with SQL Server
@@ -587,4 +588,4 @@ GO
 ```
 
 > [!IMPORTANT]
-> Требуется выполнить инструкцию `USE AG1` , чтобы убедиться, что контекст базы данных имеет значение `AG1`.  В противном случае выводится следующее сообщение об ошибке: "Контекст транзакции используется другим сеансом".
+> Требуется выполнить инструкцию `USE AG1` , чтобы убедиться, что контекст базы данных имеет значение `AG1`.  В противном случае появится следующее сообщение об ошибке: "Контекст транзакции используется другим сеансом".

@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f4494b91315c8d2cd155e2ac80d6b5005685ff32
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4097e4c4a56e34f95282a400fb07ac454a3660dd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503416"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207318"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Адаптивная обработка запросов в базах данных SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 | Нет: точное предоставление | Если не выполняется временная запись на диск и в инструкции используется не менее 50 % объема предоставленной памяти, обратная связь с временно предоставляемым буфером памяти не активируется. |
 | Нет: обратная связь отключена | Если обратная связь с временно предоставляемым буфером памяти непрерывно активируется и сопровождается постоянным увеличением и уменьшением объема памяти, мы отключим обратную связь с временно предоставляемым буфером памяти для этой инструкции. |
 | Да: настройка | Обратная связь с временно предоставляемым буфером памяти применена, и ее можно дополнительно настроить для следующего выполнения. |
-| Да: стабильный объем | Обратная связь с временно предоставляемым буфером памяти применена, и объем памяти теперь стабилен. Это означает, что предоставленный для предыдущего выполнения объем эквивалентен предоставленному для текущего выполнения. |
+| Да: Stable | Обратная связь с временно предоставляемым буфером памяти применена, и объем памяти теперь стабилен. Это означает, что предоставленный для предыдущего выполнения объем эквивалентен предоставленному для текущего выполнения. |
 
 > [!NOTE]
 > Атрибуты плана обратной связи с временно предоставляемым буфером памяти отображаются в графических планах выполнения запросов в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 17.9 и более поздних версий. 
@@ -171,7 +171,7 @@ OPTION (USE HINT ('DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'));
 SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 360;
 ```
 
@@ -190,7 +190,7 @@ WHERE [fo].[Quantity] = 360;
 SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 361;
 ```
 Запрос возвращает одну строку. Включив статистику активных запросов, мы видим следующий план:

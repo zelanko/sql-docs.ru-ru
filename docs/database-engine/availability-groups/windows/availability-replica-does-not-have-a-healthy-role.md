@@ -1,6 +1,7 @@
 ---
-title: Реплика доступности не в рабочем состоянии | Документы Майкрософт
-ms.custom: ''
+title: Реплике доступности не назначена допустимая роль для группы доступности
+description: Определение возможных причин, по которым реплике доступности может быть не назначена допустимая роль для группы доступности Always On.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aec1a0cc2b6a5f12dce1d8c49c7d2c1b26771e00
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9d072fc8664163e5b2a0a175a90cb0c13fe3495e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602824"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204273"
 ---
-# <a name="availability-replica-does-not-have-a-healthy-role"></a>Доступность репликации не имеет исправной роли
+# <a name="availability-replica-does-not-have-a-healthy-role-for-an-always-on-availability-group"></a>Реплике доступности не назначена допустимая роль для группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>Введение  

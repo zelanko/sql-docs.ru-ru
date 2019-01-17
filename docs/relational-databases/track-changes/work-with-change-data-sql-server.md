@@ -1,6 +1,6 @@
 ---
 title: Работа с информацией об изменениях (SQL Server) | Документация Майкрософт
-ms.date: 03/03/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 62c705432367b8d2ad7b5de7de30c840be368aac
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c55ff97602a2c56a54523c68b5ef76a832888676
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405239"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991897"
 ---
 # <a name="work-with-change-data-sql-server"></a>Работа с информацией об изменениях (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   Информация об изменениях сделана доступной для клиентов системы отслеживания измененных данных через функции с табличным значением. Всем запросам этих функций требуются два параметра для определения диапазона регистрационных номеров транзакций в журнале, которые нужно учитывать при разработке возвращаемого результирующего набора. Необходимо рассмотреть как верхнее, так и нижнее значения номеров LSN, ограничивающие этот интервал.  
   
  Для помощи в определении соответствующих значений LSN имеется несколько функций, которые можно использовать в запросах с возвращающими табличное значение функциями. Функция [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) возвращает наименьший номер LSN, связанный с периодом действия экземпляра системы отслеживания. Периодом действия является интервал времени, в течение которого информация об изменениях остается доступной для экземпляров системы отслеживания. Функция [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) возвращает наибольший номер LSN для периода действия. Функции [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) и [sys.fn_cdc_map_lsn_to_time](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) помогают расположить значения номеров LSN на стандартной временной шкале. Поскольку система отслеживания измененных данных использует закрытые интервалы запроса, иногда требуется создать следующий номер LSN, чтобы убедиться, что изменения не повторяются в последовательных окнах запроса. Функции [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) и [sys.fn_cdc_decrement_lsn](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md) используются, если значению номера LSN необходима добавочная корректировка.  

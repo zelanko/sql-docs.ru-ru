@@ -21,12 +21,12 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d08609edc596006290d5e0bb062701c5f212ff8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c51655426d892c4d6e233bc72b7388d200bbce8a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514696"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589399"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Диагностическое соединение для администраторов баз данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "52514696"
   
  Порт выделенных административных соединений присваивается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] динамически во время запуска. При соединении с экземпляром по умолчанию DAC стремится не использовать запрос протокола разрешения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSRP) к службе обозревателя SQL Server. Сначала выполняется попытка подключиться через TCP-порт 1434. В случае ошибки следует вызов SSRP на получение порта. Если браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не ожидает запросов SSRP, запрос на подключение возвращает ошибку. Обратитесь к журналу ошибок, чтобы найти номер порта, на котором ожидается выделенное административное соединение. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для приема удаленных административных подключений, выделенное административное соединение должно быть инициировано с явно указанным номером порта:  
   
- **sqlcmd -S tcp:***\<сервер>,\<порт>*  
+ **sqlcmd -S tcp:**_\<сервер>,\<порт>_  
   
  Журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] приводит номер порта для выделенного административного соединения; по умолчанию он равен 1434. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для приема только локальных выделенных административных соединений, подключайтесь через адаптер замыкания на себя с использованием следующей команды:  
   

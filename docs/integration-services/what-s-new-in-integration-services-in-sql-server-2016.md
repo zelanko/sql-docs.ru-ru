@@ -15,12 +15,12 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 93504e52da01f99536fd04581ef9af29c06afcc9
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 7d5a8b82d60dcd4c2fae13af02310767e10700cd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640201"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205843"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Новые возможности служб Integration Services в SQL Server 2016
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -180,7 +180,7 @@ ms.locfileid: "51640201"
   
 -   API объектной модели управления (MOM)  
   
- Дополнительные сведения см. в разделе [Развертывание проектов и пакетов служб Integration Services (SSIS)](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
+ Дополнительные сведения см. в разделе [Развертывание проектов и пакетов служб Integration Services (SSIS)](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
 
 ####  <a name="encrypted"></a> Поддержка Always Encrypted в каталоге служб SSIS  
  Службы SSIS уже поддерживают функцию постоянного шифрования в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения см. в следующих записях блога:  
@@ -213,7 +213,7 @@ ms.locfileid: "51640201"
   
 -   В компоненте скрипта или пользовательского потока данных вызовите новый метод <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> интерфейса IDTSComponentMetadata100.  
   
- Дополнительные сведения об этом улучшении см. в следующей записи блога от разработчика служб SSIS Бо Фэна (Bo Fan): [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)(Улучшения столбцов с ошибками для потока данных SSIS).  
+ Дополнительные сведения об этом улучшении см. в следующей записи блога от разработчика служб SSIS Бо Фэна (Bo Fan): [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx) (Улучшения столбцов с ошибками для потока данных SSIS).  
   
 > [!NOTE]  
 >  (Эта поддержка была расширена в последующих выпусках. Дополнительные сведения см. в разделе [Расширенная поддержка для имена столбцов ошибок](#getidstring) и [Новый интерфейс IDTSComponentMetaData130 в API](#CMD130).)  
@@ -326,7 +326,7 @@ ms.locfileid: "51640201"
    
  ![Свойство TargetServerVersion в диалоговом окне свойств проекта](../integration-services/media/targetserverversion2.png "Свойство TargetServerVersion в диалоговом окне свойств проекта")  
 
->   [!IMPORTANT]
+> [!IMPORTANT]
 > При разработке пользовательских расширений для служб SSIS см. разделы [Поддержка нескольких версий в настраиваемых компонентах](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) и [Получение пользовательских расширений служб SSIS, поддерживаемых несколькими версиями SSDT 2015 для SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/).  
 
 ### <a name="better-management-experience-in-sql-server-management-studio"></a>Улучшение функций управления в SQL Server Management Studio

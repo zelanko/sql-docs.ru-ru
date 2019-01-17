@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eadf8d4512e3dd5e119dd92e9e2039e0af9dc0ce
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: a72ef38b960e00a88c7d4e1e0038e32a897a46d9
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617443"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980120"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,8 @@ TRANSLATE ( inputString, characters, translations)
 
 `TRANSLATE` возвращает ошибку, если выражения *characters* и *translations* имеют разную длину. `TRANSLATE` возвращает значение NULL, если любой из аргументов имеет значение NULL.  
 
-Поведение функции `TRANSLATE` эквивалентно использованию нескольких функций [REPLACE](../../t-sql/functions/replace-transact-sql.md).
+Поведение функции `TRANSLATE` аналогично использованию нескольких функций [REPLACE](../../t-sql/functions/replace-transact-sql.md). `TRANSLATE`, однако, не заменяет символы более одного раза. Это отличает ее от нескольких функций `REPLACE`, так как каждая из них пытается заменить все соответствующие символы. 
+
 
 `TRANSLATE` всегда учитывает параметры сортировки SC.
 
@@ -110,6 +111,20 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 |Точка  |Координаты |  
 ---------|--------- |
 (137.4 72.3) |[137.4,72.3] |
+
+
+### <a name="c-use-the-translate-function"></a>В. Используйте функцию TRANSLATE
+
+```sql
+SELECT TRANSLATE('abcdef','abc','bcd') AS Translated,
+       REPLACE(REPLACE(REPLACE('abcdef','a','b'),'b','c'),'c','d') AS Replaced;
+```
+
+Результаты:
+
+| Переведенный текст | Замененный текст |  
+| ---------|--------- |
+| bcddef | ddddef |
 
 
 ## <a name="see-also"></a>См. также:

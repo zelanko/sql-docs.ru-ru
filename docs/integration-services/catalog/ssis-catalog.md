@@ -15,12 +15,12 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41ed2ef9899e4c0df7cb6aa3aa8f00ac62d6ffb2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eaae67a3d08fd899a9a73e4e853b1dbc97dba9ee
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535537"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553216"
 ---
 # <a name="ssis-catalog"></a>Каталог служб SSIS
   Каталог **SSISDB** служит центральным пунктом для работы с проектами служб [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS), развернутыми на сервере служб [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Например, можно задавать параметры проектов и пакетов, настраивать среды для указания значений времени выполнения для пакетов, выполнять пакеты и проводить устранение неполадок, а также управлять операциями на сервере служб [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
@@ -412,7 +412,7 @@ ms.locfileid: "52535537"
   
     ```  
   
-3.  Выполните резервное копирование базы данных SSISDB с помощью диалогового окна **Создание резервной копии базы данных** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Как создать резервную копию базы данных (среда SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Выполните резервное копирование базы данных SSISDB с помощью диалогового окна **Создание резервной копии базы данных** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Как создать резервную копию базы данных (среда SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
   
 4.  Создайте скрипт CREATE LOGIN для ## MS_SSISServerCleanupJobLogin ##, выполнив следующие действия. Дополнительные сведения см. в разделе [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md).  
   
@@ -436,7 +436,7 @@ ms.locfileid: "52535537"
   
 ### <a name="to-restore-the-ssis-database"></a>Восстановление базы данных служб SSIS  
   
-1.  Если база данных SSISDB восстанавливается из копии в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], где каталог SSISDB никогда не создавался, включите среду CLR с помощью хранимой процедуры sp_configure. Дополнительные сведения см. в разделах [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) и [Параметр clr enabled](https://go.microsoft.com/fwlink/?LinkId=231855).  
+1.  Если база данных SSISDB восстанавливается из копии в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], где каталог SSISDB никогда не создавался, включите среду CLR с помощью хранимой процедуры `sp_configure`. Дополнительные сведения см. в разделах [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) и [Параметр clr enabled](https://go.microsoft.com/fwlink/?LinkId=231855).  
   
     ```  
     use master   
@@ -541,10 +541,10 @@ ms.locfileid: "52535537"
   
 2.  В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]разверните локальный сервер, а затем — **Каталоги служб Integration Services**.  
   
-3.  Щелкните правой кнопкой мыши **SSISDB**, а затем выберите **Обновление базы данных** , чтобы запустить мастер обновления SSISDB.  
+3.  Щелкните правой кнопкой мыши **SSISDB**, а затем выберите **Обновление базы данных** , чтобы запустить мастер обновления SSISDB. Либо запустите мастер обновления SSISDB, запустив файл `C:\Program Files\Microsoft SQL Server\140\DTS\Binn\ISDBUpgradeWizard.exe` с повышенными привилегиями на локальном сервере.
   
-     ![Запустите мастер обновления SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png "Launch the SSISDB upgrade wizard")  
-  
+     ![Запуск мастера обновления SSISDB](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png)
+
 4.  На странице **Выбор экземпляра** выберите экземпляр SQL Server на локальном сервере.  
   
     > [!IMPORTANT]  
@@ -587,20 +587,20 @@ ms.locfileid: "52535537"
   
 ###  <a name="Firsttime"></a> Настройка поддержки служб SSIS для AlwaysOn  
   
--   [Шаг 1. Создание каталога служб Integration Services](#Step1)  
+-   [Шаг 1. Создание каталога служб Integration Services](#Step1)  
   
--   [Шаг 2. Добавление SSISDB в группу доступности AlwaysOn](#Step2)  
+-   [Шаг 2. Добавление SSISDB в группу доступности Always On](#Step2)  
   
--   [Шаг 3. Включение поддержки служб SSIS для AlwaysOn](#Step3)  
+-   [Шаг 3. Включение поддержки служб SSIS для Always On](#Step3)  
   
 > [!IMPORTANT]  
 > -   Эти действия необходимо выполнить на **основном узле** группы доступности.
 > -   *После* добавления SSISDB в группу доступности AlwaysOn необходимо включить **поддержку SSIS для AlwaysOn**.  
 
 > [!NOTE]
-> Сведения об этой процедуре см. в следующем пошаговом руководстве с дополнительными снимками экрана, которое подготовлено экспертом по платформе данных со статусом MVP Маркосом Фреччиа (Marcos Freccia): [Добавление SSISDB в группу доступности для SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
+> Дополнительные сведения об этой процедуре см. в следующем пошаговом руководстве с дополнительными снимками экрана, которое подготовлено экспертом по платформе данных со статусом MVP Маркосом Фреччиа (Marcos Freccia): [Добавление SSISDB в группу доступности для SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
 
-####  <a name="Step1"></a> Шаг 1. Создание каталога служб Integration Services  
+####  <a name="Step1"></a> Шаг 1. Создание каталога служб Integration Services  
   
 1.  Запустите **SQL Server Management Studio** и подключитесь к экземпляру SQL Server в кластере, который нужно задать в качестве **основного узла** группы высокой доступности AlwaysOn для SSISDB.  
   
@@ -612,14 +612,14 @@ ms.locfileid: "52535537"
   
 5.  Введите **пароль**и нажмите кнопку **ОК**. Этот пароль защищает главный ключ базы данных, используемый для шифрования данных каталога. Сохраните пароль в надежном месте. Рекомендуется также создать резервную копию главного ключа базы данных. Дополнительные сведения см. в статье [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md).  
   
-####  <a name="Step2"></a> Шаг 2. Добавление SSISDB в группу доступности AlwaysOn  
+####  <a name="Step2"></a> Шаг 2. Добавление SSISDB в группу доступности Always On  
 Процедура добавления базы данных SSISDB в группу доступности AlwaysOn практически не отличается от добавления другой базы данных пользователей в группу доступности. См. раздел [Использование мастера групп доступности](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md).  
   
 Введите пароль, указанный при создании каталога служб SSIS на странице **Выбор баз данных** мастера **создания групп доступности**.
 
 ![создания групп доступности](../../integration-services/service/media/ssis-newavailabilitygroup.png "создания групп доступности")  
   
-####  <a name="Step3"></a> Шаг 3. Включение поддержки служб SSIS для AlwaysOn  
+####  <a name="Step3"></a> Шаг 3. Включение поддержки служб SSIS для Always On  
  После создания каталога служб Integration Service щелкните правой кнопкой мыши узел **Каталоги служб Integration Service** и выберите команду **Включить поддержку AlwaysOn**. Вы должны увидеть следующие диалоговое окно **Включение поддержки AlwaysOn** . Если этот пункт меню неактивен, убедитесь, что установлены все необходимые компоненты, и нажмите кнопку **Обновить**.  
   
  ![Включение поддержки AlwaysOn](../../integration-services/service/media/ssis-enablesupportforalwayson.png)  
@@ -655,9 +655,9 @@ ms.locfileid: "52535537"
   
 3.  Обновите базу данных SSISDB на **основном узле**. В**обозревателе объектов** в SQL Server Management Studio разверните **Каталоги служб Integration Services**, щелкните правой кнопкой мыши **SSISDB**, а затем выберите команду **Обновить базу данных**. Следуйте инструкциям в **мастере обновления SSISDB** по обновлению базы данных. **Мастер обновления SSIDB** необходимо запустить локально на **основном узле**.  
   
-4.  Следуйте инструкциям по добавлению SSISDB обратно в группу доступности, приведенным в пункте [Шаг 2. Добавление SSISDB в группу доступности AlwaysOn](#Step2) .  
+4.  Следуйте инструкциям по добавлению SSISDB обратно в группу доступности в разделе [Шаг 2. Добавление SSISDB в группу доступности Always On](#Step2).  
   
-5.  Следуйте инструкциям в пункте [Шаг 3. Включение поддержки служб SSIS для AlwaysOn](#Step3).  
+5.  Следуйте инструкциям в разделе [Шаг 3. Включение поддержки служб SSIS для Always On](#Step3).  
   
 ##  <a name="RelatedContent"></a> См. также  
   

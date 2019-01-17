@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - subscription views [Master Data Services], creating
@@ -15,12 +14,12 @@ ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 23e50b94464d252431d153c9d68247cbff410b7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9619bca36ec488fdd5e25b5b9eb9a82370d7049
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597053"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754676"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Создание представления подписки для экспорта данных (службы Master Data Services)
 
@@ -82,16 +81,16 @@ ms.locfileid: "47597053"
   
  Если щелкнуть представление, отобразятся следующие сведения.  
   
--   **Создано**— имя пользователя, создавшего представление.  
+-   **Кем создано**: имя пользователя, создавшего представление.  
   
--   **Когда создано**— дата и время создания представления.  
+-   **Когда создано**: дата и время создания представления.  
   
--   **Обновлено**— имя пользователя, выполнившего последнее обновление представления.  
+-   **Кем обновлено**: имя пользователя, выполнившего последнее обновление представления.  
   
--   **Когда обновлено**— дата и время последнего обновления представления.  
+-   **Когда обновлено**: дата и время последнего обновления представления.  
   
 ## <a name="see-also"></a>См. также:  
- [Обзор. Экспорт данных (службы Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)   
+ [Обзор: экспорт данных (службы Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)   
  [Удаление представления подписки (службы Master Data Services)](../master-data-services/delete-a-subscription-view-master-data-services.md)   
  [Создание флага версии (службы Master Data Services)](../master-data-services/create-a-version-flag-master-data-services.md)  
   

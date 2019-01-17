@@ -1,5 +1,5 @@
 ---
-title: Шаг 1. Создание нового проекта служб Integration Services | Документы Майкрософт
+title: Шаг 1. Создание нового проекта служб Integration Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18dbf43f2305e9991d6fe37615f572e1dc464fda
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: edf6642557510b61b19766766250ee2869bf512f
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529520"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553016"
 ---
 # <a name="lesson-1-1---creating-a-new-integration-services-project"></a>Занятие 1–1. Создание проекта служб Integration Services
 Первым шагом создания пакета в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] будет создание проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Этот проект содержит шаблоны для объектов (источников данных, представлений источников данных и пакетов), которые используются в решении преобразования данных.  
@@ -26,7 +26,7 @@ ms.locfileid: "52529520"
 > [!NOTE]  
 > Для выполнения упражнений этого учебника требуется Microsoft SQL Server Data Tools.  
 >   
-> Дополнительные сведения об установке SQL Server Data Tools см. в разделе [Загрузка SQL Server Data Tools](https://msdn.microsoft.com/data/hh297027).  
+> Дополнительные сведения об установке SQL Server Data Tools см. в разделе [Загрузка SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017).  
   
 ### <a name="to-create-a-new-integration-services-project"></a>Создание нового проекта служб Integration Services  
   

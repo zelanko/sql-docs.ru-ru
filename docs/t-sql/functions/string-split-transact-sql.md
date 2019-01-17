@@ -18,15 +18,15 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5fb13510e4894e3f2bc77293a1f4aac0b186f1f0
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 93386da795d7e993c0d23c70625290cc8901d8bc
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586257"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589978"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 > [!div class="nextstepaction"]
 > [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
@@ -126,6 +126,9 @@ FROM Product
 |2|LL Headset|bike|  
 |3|HL Mountain Frame|bike|  
 |3|HL Mountain Frame|mountain|  
+
+  >[!NOTE]
+  > Порядок вывода может меняться и _не_ обязательно совпадает с порядком подстрок во входной строке.
   
 ### <a name="c-aggregation-by-values"></a>В. Объединение по значениям  
 Пользователю необходимо создать отчет, в котором приводится число продуктов по каждому тегу, причем теги упорядочены по числу продуктов, и отфильтрованы теги с более чем двумя продуктами.  
@@ -153,12 +156,11 @@ WHERE 'clothing' IN (SELECT value FROM STRING_SPLIT(Tags, ','));
 Поиск продуктов с двумя тегами (clothing и road):  
   
 ```sql  
-  
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE EXISTS (SELECT *  
     FROM STRING_SPLIT(Tags, ',')  
-    WHERE value IN ('clothing', 'road');  
+    WHERE value IN ('clothing', 'road'));  
 ```  
   
 ### <a name="e-find-rows-by-list-of-values"></a>Д. Поиск строк по списку значений  

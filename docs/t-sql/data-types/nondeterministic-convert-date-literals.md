@@ -13,12 +13,12 @@ ms.author: mikeray
 ms.reviewer: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7412b6ee9ad3b551fb91200c7d3f45f3287f6780
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 4ca2837780145af3c7f4428c446215ed3510bc50
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52255660"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783366"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Недетерминированное преобразование строк дат литералов в значения DATE
 
@@ -28,7 +28,7 @@ ms.locfileid: "52255660"
 
 
 
-## <a name="set-language-example-month-name-in-polish"></a>Пример SET LANGUAGE: название месяца на польском языке
+## <a name="set-language-example-month-name-in-polish"></a>Пример SET LANGUAGE: название месяца на польском.
 
 - `SET LANGUAGE Polish;`
 
@@ -75,7 +75,7 @@ SL_Croatian
 
 А если указан формат **ГМД**, то неизвестно, какими будут выходные данные. Числовое значение "2018" слишком велико, чтобы быть днем.
 <!--
-The preceding claim of "no guarantee" might be incorrect, in the minds of the SQL query engine Developer team??
+The preceding claim of "no guarantee" might be incorrect, in the minds of the SQL query engine Developer team?
 -->
 
 #### <a name="specific-countries"></a>Определенные страны
@@ -124,8 +124,8 @@ YMD-Interpretation--?--NotGuaranteed
 
 В нашей документации по CAST и CONVERT приводятся явные коды, которые можно использовать с функцией CONVERT для _детерминированного_ управления преобразованиями даты. Каждый месяц эта статья имеет наибольшее количество просмотров.
 
-- [CAST и CONVERT (Transact-SQL): стили даты и времени](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
-- [CAST и CONVERT (Transact-SQL): некоторые преобразования типа данных даты и времени являются недетерминированными](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
+- [Функции CAST и CONVERT (Transact-SQL): стили даты и времени](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
+- [Функции CAST и CONVERT (Transact-SQL): некоторые преобразования типа данных даты и времени являются недетерминированными](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
 
 
 
@@ -137,7 +137,7 @@ YMD-Interpretation--?--NotGuaranteed
 
 #### <a name="unicode"></a>Юникод
 
-<!-- The next live sentence needs an explanatory example!  N'??'.
+<!-- The next live sentence needs an explanatory example!  N'somethingHere?'.
 -->
 Преобразование символьных данных между различными параметрами сортировки не в Юникоде также считается недетерминированным.
 

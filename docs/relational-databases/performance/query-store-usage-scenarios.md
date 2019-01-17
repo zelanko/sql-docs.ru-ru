@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, usage scenarios
 ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c28419488adc2f0d8123c9052466659fb9fdfd9
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 3b9b0e74eebe3a1cf86af9e3bf8a9a8d4e58495b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711205"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372486"
 ---
 # <a name="query-store-usage-scenarios"></a>Сценарии использования хранилища запросов
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -45,12 +45,12 @@ ms.locfileid: "52711205"
   
  ![query-store-usage-1](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
   
- Подробное описание сценария см. в блоге [Хранилище запросов: "черный ящик" вашей базы данных](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) .  
+ Подробное описание сценария см. в блоге [Хранилище запросов: черный ящик для вашей базы данных](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
 ## <a name="identify-and-tune-top-resource-consuming-queries"></a>Выявление и настройка запросов, потребляющих больше всего ресурсов  
  Несмотря на то что рабочая нагрузка может создавать тысячи запросов, обычно небольшая их часть фактически задействует большинство ресурсов системы, а значит, требует внимания. В число запросов, потребляющих больше всего ресурсов, обычно входят регрессивные запросы или запросы, которые могут быть улучшены при дополнительной настройке.  
   
- Простейший способ начать исследование — это открыть раздел **Top Resource Consuming Queries** (Запросы, потребляющие больше всего ресурсов) в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Пользовательский интерфейс разделен на три области: гистограмму, показывающую, какие запросы задействуют больше всего ресурсов (слева), сводку планов для выбранного запроса (справа) и визуальный план для выбранного запроса (внизу). Нажмите кнопку **Configure** (Настройка), чтобы задать число запросов для анализа и указать период времени. Кроме того, можно выбрать различные аспекты использования ресурсов (длительность, ЦПУ, память, операции ввода-вывода, число выполнений) и базовый уровень (среднее, максимум, минимум, итог, стандартное отклонение).  
+ Простейший способ начать исследование — это открыть раздел **Top Resource Consuming Queries** (Запросы, потребляющие больше всего ресурсов) в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Пользовательский интерфейс разделяется на три области: гистограмму, показывающую, какие запросы задействуют больше всего ресурсов (слева), сводку планов для выбранного запроса (справа) и визуальный план для выбранного запроса (внизу). Нажмите кнопку **Configure** (Настройка), чтобы задать число запросов для анализа и указать период времени. Кроме того, можно выбрать различные аспекты использования ресурсов (длительность, ЦПУ, память, операции ввода-вывода, число выполнений) и базовый уровень (среднее, максимум, минимум, итог, стандартное отклонение).  
   
  ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   

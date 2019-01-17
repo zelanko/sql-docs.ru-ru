@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], effective permissions
@@ -16,12 +15,12 @@ ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 461695fdc44da3fc5767ced716b5de2d8be98d7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36c502308d7e8864e197eb875a1afaf89d0c5a8d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836092"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796346"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Перекрытие разрешений моделей и элементов (службы основных данных)
 
@@ -50,7 +49,7 @@ ms.locfileid: "47836092"
   
  На вкладке **Элементы иерархии** узлу подкатегории Mountain Bikes в производной иерархии назначено разрешение **Обновление** .  
   
- Результат: в **обозревателе**пользователь имеет разрешение **Обновление** для всех значений атрибутов всех элементов узла Mountain Bikes. Все остальные элементы и их атрибуты скрыты.  
+ Результат: В **обозревателе** пользователь имеет разрешение **Обновление** для всех значений атрибутов всех элементов узла Mountain Bikes. Все остальные элементы и их атрибуты скрыты.  
   
  ![mds_conc_overlap_model_example_1](../master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
@@ -61,7 +60,7 @@ ms.locfileid: "47836092"
   
  На вкладке **Элементы иерархии** узлу подкатегории Mountain Bikes в производной иерархии явно назначено разрешение **Чтение** .  
   
- Результат: в **обозревателе**пользователь имеет разрешение **Чтение** для значений атрибута Subcategory всех элементов узла Mountain Bikes. Все остальные элементы и их атрибуты скрыты.  
+ Результат: в **обозревателе** пользователь имеет разрешение **Чтение** для значений атрибута Subcategory всех элементов узла Mountain Bikes. Все остальные элементы и их атрибуты скрыты.  
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
@@ -72,7 +71,7 @@ ms.locfileid: "47836092"
   
  На вкладке **Элементы иерархии** узлу подкатегории Mountain Bikes в порожденной иерархии явно назначено разрешение **Обновление** .  
   
- Результат: в **обозревателе**пользователь имеет разрешение **Чтение** для значений атрибутов. Все остальные элементы и их атрибуты скрыты.  
+ Результат: в **обозревателе** пользователь имеет разрешение **Чтение** для значений атрибутов. Все остальные элементы и их атрибуты скрыты.  
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   

@@ -1,6 +1,7 @@
 ---
-title: Кластеризация DTC для групп доступности SQL Server 2016 | Документы Майкрософт
-ms.custom: ''
+title: Кластеризация службы DTC для группы доступности
+description: 'Описываются требования и шаги для кластеризации службы координатора распределенных транзакций (DTC) (Майкрософт) для группы доступности Always On. '
+ms.custom: seodec18
 ms.date: 08/30/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,26 +12,26 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bd433b33fcf62afd16b27f368507fc2794768fae
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0bcbbd26ed97fd0df20abfb997495105fe2f726a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601384"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203313"
 ---
-# <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>Кластеризация DTC для групп доступности SQL Server 2016
+# <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Кластеризация службы DTC для группы доступности Always On
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом разделе описываются требования и шаги для кластеризации службы координатора распределенных транзакций (DTC) (Майкрософт) для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Дополнительные сведения о распределенных транзакциях и [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]см. в разделе [Транзакции между базами данных и распределенные транзакции для групп доступности AlwaysOn и зеркального отображения базы данных (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
 
- ## <a name="checklist-preliminary-requirements"></a>Контрольный список: предварительные требования
+ ## <a name="checklist-preliminary-requirements"></a>Контрольный список. Предварительные требования
 ||Задача|Справочник|  
 |------|-----------------|----------|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Убедитесь, что все узлы, службы и группа доступности были настроены правильно.|[Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)|
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Убедитесь, что выполнены требования для DTC группы доступности.|[Транзакции между базами данных и распределенные транзакции для групп доступности AlwaysOn и зеркального отображения базы данных (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 
-## <a name="checklist-clustered-dtc-resource-dependencies"></a>Контрольный список: зависимости кластеризованных ресурсов DTC
+## <a name="checklist-clustered-dtc-resource-dependencies"></a>Контрольный список. Зависимости кластеризованных ресурсов DTC
 ||Задача|Справочник|  
 |------|-----------------|----------|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Диск общего хранилища.|[Настройка диска общего хранилища](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx). Рекомендуется использовать букву диска **M**.|
@@ -41,7 +42,7 @@ ms.locfileid: "51601384"
 После создания ресурса группы доступности ресурса следует создать кластеризованный ресурс DTC и добавить его в группу доступности.  Пример скрипа можно найти в разделе [Создание кластеризованного DTC для группы доступности AlwaysOn](../../../database-engine/availability-groups/windows/create-clustered-dtc-for-an-always-on-availability-group.md).
 
 
-## <a name="checklist-post-clustered-dtc-resource-configurations"></a>Контрольный список: публикация конфигураций кластеризованного ресурса DTC
+## <a name="checklist-post-clustered-dtc-resource-configurations"></a>Контрольный список. Публикация конфигураций кластеризованного ресурса DTC
 ||Задача|Справочник|  
 |------|-----------------|----------|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Включение безопасного сетевого доступа для кластеризованного ресурса DTC.|[Включение безопасного сетевого доступа для MS DTC](https://technet.microsoft.com/library/cc753620(v=ws.10).aspx)|
@@ -66,4 +67,4 @@ ms.locfileid: "51601384"
 
 [SQL Server 2016 DTC Support in Availability Groups](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) (Поддержка DTC для SQL Server 2016 в группах доступности) 
 
-[Внешняя ссылка: Configure DTC for a clustered instance of SQL Server with Windows Server 2008 R2](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) (Настройка DTC для кластеризованного экземпляра SQL Server с Windows Server 2008 R2)
+[Внешняя ссылка: Configure DTC for a clustered instance of SQL Server with Windows Server 2008 R2](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) (Настройка DTC для кластеризованного экземпляра SQL Server с Windows Server 2008 R2)

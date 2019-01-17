@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc42802f6263e7e7609ef6c11aa6dda4114cee97
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 56dff4af5345359e5da37e4aae355f5c56b8228a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503656"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980490"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -511,7 +511,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
  Применяется только к типам данных **varchar**, **nvarchar** и **varbinary** для хранения 2^31-1 байт символьных, двоичных данных и данных в Юникоде.  
   
  *xml_schema_collection*  
- **Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Применяется только к данным типа **xml** для связывания схемы XML с этим типом. Перед вводом столбца **xml** в коллекцию схемы необходимо создать коллекцию схемы в базе данных с помощью [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).  
   
@@ -547,7 +547,7 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
 > Если в инструкции ALTER COLUMN указано значение NULL или NOT NULL, то необходимо также указать параметры *new_data_type* [(*precision* [, *scale* ])]. Если тип данных, точность или масштаб не изменялись, укажите текущие значения столбца.  
   
  [ {ADD | DROP} ROWGUIDCOL ]  
- **Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Указывает свойство ROWGUIDCOL, добавленное к указанному столбцу или удаленное из него. Свойство ROWGUIDCOL указывает, что данный столбец является столбцом идентификатора GUID строки. Только один столбец **uniqueidentifier** в каждой таблице можно назначить в качестве столбца ROWGUIDCOL, и только одному столбцу **uniqueidentifier** можно назначить свойство ROWGUIDCOL. Нельзя присваивать свойство ROWGUIDCOL столбцу определяемого пользователем типа данных.  
   
@@ -559,7 +559,7 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
 Любой вычисляемый столбец, используемый как столбец секционирования секционированной таблицы, должен быть явно помечен PERSISTED.  
   
 DROP NOT FOR REPLICATION  
-**Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 Указывает, что значения в столбцах идентификаторов увеличиваются при выполнении агентами репликации операций по вставке строк. Это предложение может быть указано, только если *column_name* является столбцом идентификаторов.  
   
@@ -567,7 +567,7 @@ SPARSE
 Указывает, что столбец является разреженным столбцом. Хранилище разреженных столбцов оптимизируется для значений NULL. Для разреженных столбцов нельзя указать параметр NOT NULL. При преобразовании столбцов из разреженных в неразреженные или из неразреженных в разреженные таблица блокируется на протяжении выполнения команды. Возможно, потребуется использование предложения REBUILD для освобождения пространства. Дополнительные ограничения и сведения о разреженных столбцах см. в разделе [Разреженные столбцы](../../relational-databases/tables/use-sparse-columns.md).  
   
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
-**Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 Указывает маску для динамического маскирования данных. *mask_function* — это имя функции маскирования с соответствующими параметрами. Доступны три функции:  
   
@@ -579,7 +579,7 @@ ADD MASKED WITH ( FUNCTION = ' *mask_function* ')
 Чтобы удалить маску, используйте `DROP MASKED`. Параметры функции см. в разделе [Динамическое маскирование данных](../../relational-databases/security/dynamic-data-masking.md).  
   
 WITH ( ONLINE = ON | OFF) \<применительно к изменению столбца>  
-**Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 Позволяет выполнять многие действия по изменению столбцов с сохранением доступности таблицы. По умолчанию — OFF. В интерактивном режиме могут выполняться изменения столбца, связанные с типом данных, длиной или точностью столбца, допустимостью значений NULL, разреженностью и параметрами сортировки.  
   
@@ -682,7 +682,7 @@ COLUMN *column_name*
 > При удалении столбца место на диске не освобождается. В том случае, если размер строк таблицы приближается к пределу или превышает его, возможен возврат места, занятого на диске удаленным столбцом. Возврат пространства осуществляется путем создания кластеризованного индекса в таблице или перестроения существующего кластеризованного индекса при помощи инструкции [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). Дополнительные сведения о последствиях удаления типов данных больших двоичных объектов см. в этой [записи в блоге CSS](https://blogs.msdn.com/b/psssql/archive/2012/12/03/how-it-works-gotcha-varchar-max-caused-my-queries-to-be-slower.aspx).  
   
 PERIOD FOR SYSTEM_TIME  
-**Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 Удаляет спецификацию для столбцов, которые будут использоваться для системного управления версиями.  
   
@@ -690,7 +690,7 @@ WITH \<drop_clustered_constraint_option>
 Указывает, что установлен один или несколько параметров удаления кластеризованного ограничения.  
   
 MAXDOP = *max_degree_of_parallelism*  
-**Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 Переопределяет параметр конфигурации **max degree of parallelism** только на время выполнения операции. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
@@ -729,11 +729,11 @@ OFF
 > Операции с индексами в сети доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделах [Выпуски и поддерживаемые функции SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) и [Выпуски и поддерживаемые функции SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ 1 **,** ...*n*] **)** | *filegroup* | **"** default **"** }  
- **Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Указывает местоположение для перемещения строк данных, находящихся в настоящее время на конечном уровне кластеризованного индекса. Таблица перемещается на новое место. Этот параметр применяется только ограничениям, образующим кластеризованный индекс.  
   
-> [!NOTE]  
+> [!NOTE]
 >  В этом контексте default не является ключевым словом. Это идентификатор файловой группы по умолчанию, и поэтому он должен быть заключен в разделители, например: MOVE TO **"** default **"** или MOVE TO **[** default **]**. Если указано значение **"** default **"**, то параметру QUOTED_IDENTIFIER для текущего сеанса должно быть присвоено значение ON. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 { CHECK | NOCHECK } CONSTRAINT  
@@ -752,7 +752,7 @@ OFF
  Указывает имя триггера, подлежащего включению или отключению.  
   
  { ENABLE | DISABLE } CHANGE_TRACKING  
- **Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Указывает, разрешено или запрещено отслеживание изменений для этой таблицы. По умолчанию отслеживание изменений запрещено.  
   
@@ -761,12 +761,12 @@ OFF
 Чтобы разрешить отслеживание изменений, в таблице должен содержаться первичный ключ.  
   
 WITH **(** TRACK_COLUMNS_UPDATED **=** { ON | **OFF** } **)**  
- **Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 Указывает, производит ли компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] отслеживание обновлений столбцов. Значение по умолчанию — OFF.  
   
 SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
-**Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Переключает блок данных одним из следующих способов.  
   
@@ -791,7 +791,7 @@ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.
 Некластеризованные индексы columnstore, созданные для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 и для базы данных SQL до версии V12, поддерживали формат только для чтения. Перед выполнением операций PARTITION некластеризованные индексы columnstore необходимо перестроить в текущий формат (который поддерживает обновление).  
   
 SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |         **"** default **"** | **"** NULL **"** }**)**  
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не поддерживает `FILESTREAM`.  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не поддерживает `FILESTREAM`.  
   
 Указывает местоположения хранения данных FILESTREAM.  
   
@@ -806,7 +806,7 @@ SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name
 **"** NULL **"** указывает на удаление всех ссылок на файловые группы FILESTREAM для таблицы. Сначала должны быть удалены все столбцы FILESTREAM. Необходимо использовать инструкцию SET FILESTREAM_ON **="** NULL **"** для удаления всех данных FILESTREAM, связанных с таблицей.  
   
 SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ]  ) ] } **)**  
- **Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 Отключает или включает системное управление версиями в таблице. Чтобы включить системное управление версиями в таблице, система проверяет соблюдение требований к типам данных, ограничениям допустимости значений NULL и ограничениям первичного ключа. Если аргумент HISTORY_TABLE не используется, система создает новую таблицу журнала, соответствующую схеме текущей таблицы. Между двумя таблицами создается ссылка, и система записывает историю каждой записи текущей таблицы в таблице журнала. Таблица журнала будет называться `MSSQL_TemporalHistoryFor<primary_table_object_id>`. Если используется аргумент HISTORY_TABLE для создания ссылки и применения существующей таблицы журнала, ссылка создается между текущей таблицей и указанной таблицей. При создании ссылки на существующую таблицу журнала вы можете указать необходимость проверки согласованности данных. Проверка согласованности данных гарантирует, что существующие записи не будут перекрываться. Проверка согласованности данных является проверкой по умолчанию. Дополнительные сведения см. в разделе [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
   
@@ -815,7 +815,7 @@ HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK |  WEEKS |
 Указывает ограниченное или неограниченное про срокам хранение данных журнала в темпоральной таблице. Если не указано, подразумевается неограниченный срок хранения.
   
  SET **(** LOCK_ESCALATION = { AUTO | TABLE | DISABLE } **)**  
- **Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Указывает разрешенные методы укрупнения блокировки для таблицы.  
   
@@ -837,7 +837,7 @@ REBUILD
 Используйте синтаксис REBUILD PARTITION для перестроения одной секции в секционированной таблице.  
   
 PARTITION = ALL  
-**Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 Перестраивает все секции при изменении настройки сжатия секций.  
   
@@ -849,7 +849,7 @@ REBUILD WITH ( \<rebuild_option> )
  Полное описание этих параметров перестроения см. в разделе [index_option (Transact-SQL)](../../t-sql/statements/alter-table-index-option-transact-sql.md).  
   
  DATA_COMPRESSION  
- **Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Задает режим сжатия данных для указанной таблицы, номера секции или диапазона секций. Существуют следующие варианты выбора.  
   
@@ -863,12 +863,12 @@ REBUILD WITH ( \<rebuild_option> )
  Таблицы или указанные секции сжимаются, используя сжатие страниц. Это не относится к таблицам columnstore.  
   
  COLUMNSTORE  
- **Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Применяется только к таблицам columnstore. COLUMNSTORE указывает, что должна быть распакована секция, которая была упакована с помощью параметра COLUMNSTORE_ARCHIVE. При восстановлении данных сжатие будет продолжаться с применением сжатия columnstore, предусмотренного для всех таблиц columnstore.  
   
  COLUMNSTORE_ARCHIVE  
- **Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Применяется только к таблицам columnstore, представляющим собой таблицы, которые хранятся с кластеризованным индексом columnstore. Параметр COLUMNSTORE_ARCHIVE обеспечивает дальнейшее сжатие указанной секции до еще меньшего размера. Это может использоваться для архивации или в других ситуациях, где требуется уменьшение объема пространства и допускается увеличение затрат времени на хранение и извлечение.  
   
@@ -887,17 +887,17 @@ REBUILD WITH ( \<rebuild_option> )
  Блокировки таблиц применяются во время выполнения операций с индексами. Это предотвращает доступ к базовой таблице всех пользователей во время операции.  
   
  *column_set_name* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS  
- **Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Имя набора столбцов. Набор столбцов представляет собой нетипизированное XML-представление, в котором все разреженные столбцы таблицы объединены в структурированные выходные данные. Набор столбцов не может быть добавлен в таблицу, если в ней содержатся разреженные столбцы. Дополнительные сведения о наборах столбцов см. в разделе [Использование наборов столбцов](../../relational-databases/tables/use-column-sets.md).  
   
  { ENABLE | DISABLE } FILETABLE_NAMESPACE  
- **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  Включает или выключает ограничения для таблицы FileTable, заданные системой. Может использоваться только для таблицы FileTable.  
   
  SET ( FILETABLE_DIRECTORY = *directory_name* )  
- **Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не поддерживает `FILETABLE`.  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не поддерживает `FILETABLE`.  
   
  Указывает имя каталога таблицы FileTable, совместимое с Windows. Это имя должно быть уникальным среди всех имен каталогов FileTable в базе данных. Проверка уникальности не учитывает регистр символов независимо от параметров сортировки SQL. Может использоваться только для таблицы FileTable.  
 ```    
@@ -971,17 +971,17 @@ ALTER TABLE \<table_name>
 -   Укажите `PAUSED` для приостановки миграции данных. Дополнительные сведения см. в разделе [Приостановка и возобновление переноса данных (Stretch Database)](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
   
 WAIT_AT_LOW_PRIORITY  
- **Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Перестроение индекса в режиме «в сети» должно ожидать операции блокировки в этой таблице. **WAIT_AT_LOW_PRIORITY** указывает, что операция перестроения индекса в режиме "в сети" будет ожидать блокировки с низким приоритетом, позволяя выполняться другим операциям, пока операция перестроения индекса в режиме "в сети" находится в состоянии ожидания. Пропуск параметра **WAIT AT LOW PRIORITY** эквивалентен `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.  
   
  MAX_DURATION = *time* [**MINUTES** ]  
- **Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Время ожидания (целочисленное значение, указанное в минутах) в течение которого **SWITCH** или блокировки для операции перестроения индекса в режиме "в сети" будут ожидать с низким приоритетом при выполнении команды DDL. Если операция будет заблокирована на время **MAX_DURATION**, будет выполнено одно из действий **ABORT_AFTER_WAIT**. Время **MAX_DURATION** всегда указывается в минутах, и слово **MINUTES** можно опустить.  
   
  ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
- **Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  None  
  Продолжить ожидание блокировки с обычным приоритетом.  
@@ -995,7 +995,7 @@ WAIT_AT_LOW_PRIORITY
  Необходимо разрешение **ALTER ANY CONNECTION**.  
   
 IF EXISTS  
-**Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 Условное удаление столбца или ограничения только в том случае, если оно уже существует.  
   
@@ -1966,7 +1966,7 @@ WITH
   
  Несмотря на то, что столбцы и имена столбцов должны быть одинаковыми, границы секций не обязательно должны совпадать. В этом примере таблица `OrdersHistory` содержит следующие две секции, которые пусты:  
   
--   Секция 1 (не содержит данных): OrderDate < '2004-01-01'  
+-   Секция 1 (не содержит данные): OrderDate < '2004-01-01'  
 -   Секция 2 (пустая): '2004-01-01' <= OrderDate  
   
 Для предыдущих двух таблиц следующая команда перемещает все строки с `OrderDate < '2004-01-01'` из таблицы `Orders` в таблицу `OrdersHistory`.  

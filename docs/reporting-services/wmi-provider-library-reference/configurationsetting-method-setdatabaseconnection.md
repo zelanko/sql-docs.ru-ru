@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 701ba6cbdcc95895d55bd7db0fcc4468089f665f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f897c935cdd4c267440ccd5393e48dd718461c15
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538096"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206013"
 ---
 # <a name="configurationsetting-method---setdatabaseconnection"></a>Метод ConfigurationSetting — SetDatabaseConnection
   Задает подключение к определенной базе данных сервера отчетов.  
@@ -70,7 +70,7 @@ public void BackupEncryptionKey(string Server,
 ## <a name="remarks"></a>Remarks  
  Если параметр *CredentialsType* имеет значение 0 (Windows), необходимо указать значения параметров *UserName* и *Password* . Параметр *UserName* должен иметь вид "домен\имя_пользователя", значение должно представлять действующие данные для входа в Windows.  
   
- Если параметр *CredentialsType* имеет значение 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), то значение, передаваемое в параметре *UserName* , должно соответствовать требованиям, предъявляемым к имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Если параметр *CredentialsType* имеет значение 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), то значение, передаваемое в параметре *UserName*, должно соответствовать требованиям, предъявляемым к имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Если параметр *CredentialsType* имеет значение 2 (служба Windows), сервер отчетов использует встроенную безопасность для соединения с базой данных сервера отчетов, а параметры *UserName* и *Password* не учитываются. Для доступа к базе данных сервера отчетов веб-служба сервера отчетов использует либо учетную запись [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)], либо учетную запись пула приложений и учетную запись службы Windows.  
   

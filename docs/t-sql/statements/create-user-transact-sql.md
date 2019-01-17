@@ -1,7 +1,7 @@
 ---
 title: CREATE USER (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/28/2017
+ms.date: 12/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -30,25 +30,25 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 533622016967deef4f1fbcb4ead0c17975910899
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a06f59cc72fef384ad68833a3729c862eaa679ea
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618092"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202570"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Добавляет нового пользователя в текущую базу данных. Ниже перечислены одиннадцать типов пользователей с примером базового синтаксиса:  
+  Добавляет нового пользователя в текущую базу данных. Ниже перечислены 12 типов пользователей с примером базового синтаксиса.  
   
-**Пользователи с именем входа в базе данных master.** Это самый распространенный тип пользователей.  
+**Пользователи с именем входа в базе данных master**. Это самый распространенный тип пользователей.  
   
 -   Пользователь с именем входа, задаваемым по учетной записи Windows Active Directory. `CREATE USER [Contoso\Fritz];`     
 -   Пользователь с именем входа, задаваемым по группе Windows. `CREATE USER [Contoso\Sales];`   
 -   Пользователь с именем входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. `CREATE USER Mary;`  
   
-**Пользователи, проходящие проверку подлинности в базе данных.** Рекомендуется для повышения переносимости базы данных.  
+**Пользователи, проходящие проверку подлинности в базе данных**. Рекомендуется для повышения переносимости базы данных.  
  Всегда разрешается в [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Разрешается только в автономной базе данных в [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  
   
 -   Пользователь, соответствующий пользователю Windows без имени входа. `CREATE USER [Contoso\Fritz];`    
@@ -63,7 +63,7 @@ ms.locfileid: "47618092"
   
 -   Пользователь, соответствующий группе Windows, которая не имеет имени входа, но может подключаться к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] за счет членства в другой роли Windows. `CREATE USER [Contoso\Fritz];`  
   
-**Пользователи, которые не могут проходить проверку подлинности.** Такие пользователи не могут входить в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Пользователи, которые не могут проходить проверку подлинности**. Такие пользователи не могут входить в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 -   Пользователь без имени входа. Не может выполнить вход, но ему можно предоставлять разрешения. `CREATE USER CustomApp WITHOUT LOGIN;`    
 -   Пользователь, связанный с сертификатом. Не может выполнить вход, но может предоставлять разрешения и подписывать модули. `CREATE USER TestProcess FOR CERTIFICATE CarnationProduction50;`  
@@ -74,7 +74,7 @@ ms.locfileid: "47618092"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
+-- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database Managed Instance
   
 -- Syntax Users based on logins in master  
 CREATE USER user_name   
@@ -84,7 +84,7 @@ CREATE USER user_name
     [ WITH <limited_options_list> [ ,... ] ]   
 [ ; ]  
   
---Users that authenticate at the database  
+-- Users that authenticate at the database  
 CREATE USER   
     {  
       windows_principal [ WITH <options_list> [ ,... ] ]  
@@ -95,7 +95,7 @@ CREATE USER
   
  [ ; ]  
   
---Users based on Windows principals that connect through Windows group logins  
+-- Users based on Windows principals that connect through Windows group logins  
 CREATE USER   
     {   
           windows_principal [ { FOR | FROM } LOGIN windows_principal ]  
@@ -104,7 +104,7 @@ CREATE USER
     [ WITH <limited_options_list> [ ,... ] ]   
 [ ; ]  
   
---Users that cannot authenticate   
+-- Users that cannot authenticate   
 CREATE USER user_name   
     {  
          WITHOUT LOGIN [ WITH <limited_options_list> [ ,... ] ]  
@@ -125,8 +125,23 @@ CREATE USER user_name
   
 -- SQL Database syntax when connected to a federation member  
 CREATE USER user_name  
-[;]  
-```  
+[;]
+
+-- Syntax for users based on Azure AD logins for Azure SQL Database Managed Instance
+CREATE USER user_name   
+    [   { FOR | FROM } LOGIN login_name  ]  
+    | FROM EXTERNAL PROVIDER
+    [ WITH <limited_options_list> [ ,... ] ]   
+[ ; ]  
+
+<limited_options_list> ::=  
+      DEFAULT_SCHEMA = schema_name 
+    | DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }   
+    | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ] ] 
+```
+
+> [!IMPORTANT]
+> Учетные данные Azure AD для управляемого экземпляра базы данных SQL находятся в **общедоступной предварительной версии**.
 
 ```  
 -- Syntax for Azure SQL Data Warehouse  
@@ -162,7 +177,7 @@ CREATE USER user_name
  Указывает имя, по которому пользователь идентифицируется в этой базе данных. *user_name* — это **sysname**. Он может иметь длину до 128 символов. Когда создается пользователь, соответствующий участнику Windows, именем пользователя становится имя участника Windows, если не указано другое имя.  
   
  LOGIN *login_name*  
- Указывает имя входа, для которого создается пользователь базы данных. *login_name* должен быть допустимым именем входа на сервере. Может быть именем входа, соответствующим участнику Windows (пользователю или группе) или именем входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Когда это имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входит в базу данных, оно получает имя и идентификатор создаваемого пользователя базы данных. При создании имени входа, сопоставленного с субъектом Windows, используйте формат **[**_\<domainName\>_**\\**_\<loginName\>_**]**. Примеры см. в разделе [Сводка синтаксиса](#SyntaxSummary).  
+ Указывает имя входа, для которого создается пользователь базы данных. *login_name* должен быть допустимым именем входа на сервере. Может быть именем входа, соответствующим участнику Windows (пользователю или группе) или именем входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Когда это имя входа SQL Server входит в базу данных, оно получает имя и идентификатор создаваемого пользователя базы данных. При создании имени входа, сопоставленного с субъектом Windows, используйте формат **[**_\<domainName\>_**\\**_\<loginName\>_**]**. Примеры см. в разделе [Сводка синтаксиса](#SyntaxSummary).  
   
  Если инструкция CREATE USER — единственная инструкция в пакете SQL, то база данных SQL Windows Azure поддерживает предложение WITH LOGIN. Если инструкция CREATE USER не единственная в пакете SQL или выполняется в динамическом коде SQL, предложение WITH LOGIN не поддерживается.  
   
@@ -170,12 +185,12 @@ CREATE USER user_name
  Указывает первую схему, которую найдет сервер, после того, как он получит имена объектов для пользователя данной базы данных.  
   
  '*windows_principal*'  
- Указывает участника Windows, для которого создается пользователь базы данных. *windows_principal* может быть пользователем Windows или группой Windows. Пользователь будет создаваться даже в случае, если для *windows_principal* отсутствует имя входа. Если при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для *windows_principal* отсутствует имя входа,то субъект Windows должен пройти проверку подлинности в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)] за счет членства в группе Windows, имеющей имя входа, либо в строке подключения в качестве исходного каталога должна указываться автономная база данных. При создании пользователя из субъекта Windows используйте формат **[**_\<domainName\>_**\\**_\<loginName\>_**]**. Примеры см. в разделе [Сводка синтаксиса](#SyntaxSummary). Имя пользователя, основанного на пользователях Active Directory, может иметь не более 21 символа в длину.    
+ Указывает участника Windows, для которого создается пользователь базы данных. *windows_principal* может быть пользователем Windows или группой Windows. Пользователь будет создаваться даже в случае, если для *windows_principal* отсутствует имя входа. Если при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для *windows_principal* отсутствует имя входа,то субъект Windows должен пройти проверку подлинности в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)] за счет членства в группе Windows, имеющей имя входа, либо в строке подключения в качестве исходного каталога должна указываться автономная база данных. При создании пользователя из субъекта Windows используйте формат **[**_\<domainName\>_**\\**_\<loginName\>_**]**. Примеры см. в разделе [Сводка синтаксиса](#SyntaxSummary). Имена пользователей, основанные на пользователях Active Directory, могут иметь не более 21 символа в длину.
   
  '*Azure_Active_Directory_principal*'  
  **Применимо к**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
   
- Указывает субъект Azure Active Directory, для которого создается пользователь базы данных. *Azure_Active_Directory_principal* может быть пользователем Azure Active Directory или группой Azure Active Directory. (Пользователи Azure Active Directory не могут иметь имена входа для проверки подлинности Windows [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; только пользователи базы данных.) В строке подключения необходимо указать автономную базу данных в качестве исходного каталога. 
+ Указывает субъект Azure Active Directory, для которого создается пользователь базы данных. *Azure_Active_Directory_principal* может быть пользователем Azure Active Directory, группой Azure Active Directory или приложением Azure Active Directory. (Пользователи Azure Active Directory не могут иметь имена входа для проверки подлинности Windows [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; только пользователи базы данных.) В строке подключения необходимо указать автономную базу данных в качестве исходного каталога.
 
  Для пользователей используйте полный псевдоним их субъекта домена.   
  
@@ -218,9 +233,9 @@ DEFAULT_LANGUAGE = *{ NONE | \<lcid> | \<language name> | \<language alias> }*
 SID = *sid*  
  **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Применимо только для пользователей с паролями (проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) в автономной базе данных. Указывает идентификатор SID нового пользователя базы данных. Если этот параметр не выбран, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначает идентификатор SID автоматически. Используйте параметр идентификатора SID для создания пользователей в нескольких базах данных с одинаковыми идентификаторами SID. Это удобно при создании пользователей в нескольких базах данных для подготовки обработки отказа AlwaysOn. Чтобы определить идентификатор SID пользователя, выполните запрос sys.database_principals.  
+ Применимо только для пользователей с паролями (проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) в автономной базе данных. Указывает идентификатор SID нового пользователя базы данных. Если этот параметр не выбран, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначает идентификатор SID автоматически. Используйте параметр идентификатора SID для создания пользователей в нескольких базах данных с одинаковыми идентификаторами SID. Это удобно при создании пользователей в нескольких базах данных для подготовки обработки отказа AlwaysOn. Чтобы определить идентификатор SID пользователя, выполните запрос sys.database_principals.  
   
-ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] ]  
+ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
  **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Отключает проверки шифрованных метаданных на сервере в операциях массового копирования. Это позволяет пользователю массово копировать зашифрованные данные между таблицами или базами данных без расшифровки данных. Значение по умолчанию — OFF.  
@@ -243,7 +258,7 @@ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] ]
   
  Предложение WITHOUT LOGIN создает пользователя, который не сопоставляется с именем входа SQL Server. Такой пользователь может подключиться к базе данных как guest. Этому пользователю без имени входа можно назначать разрешения, и когда контекст безопасности меняется на пользователя без имени входа, то исходные пользователи получают его разрешения. См. пример [Г. Создание и использование пользователя без имени входа](#withoutLogin).  
   
- Символ обратной косой черты (**\\**) может содержаться только в именах пользователей, сопоставленных с субъектами Windows.  
+ Символ обратной косой черты (**\\**) может содержаться только в именах пользователей, сопоставленных с субъектами Windows.
   
  С помощью инструкции CREATE USER нельзя создать пользователя guest, потому что пользователь guest уже существует в каждой базе данных. Активировать пользователя guest можно, предоставив ему разрешение CONNECT, как показано далее:  
   
@@ -252,7 +267,15 @@ GRANT CONNECT TO guest;
 GO  
 ```  
   
- Данные о пользователях базы данных отображаются в представлении каталога [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
+ Данные о пользователях базы данных отображаются в представлении каталога [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).
+
+Для создания имен входа Azure AD на уровне сервера в управляемом экземпляре базы данных SQL доступно новое расширение синтаксиса **FROM EXTERNAL PROVIDER**. Имена входа Azure AD позволяют сопоставлять субъекты Azure AD на уровне базы данных с именами входа Azure AD на уровне сервера. Чтобы создать пользователя Azure AD по имени входа Azure AD, используйте следующий синтаксис:
+
+`CREATE USER [AAD_principal] FROM LOGIN [Azure AD login]`
+
+При создании пользователя в управляемом экземпляре базы данных SQL значение login_name должно соответствовать существующему имени входа Azure AD. В противном случае в результате использования предложения **FROM EXTERNAL PROVIDER** будет создан только пользователь Azure AD без имени входа в базе данных master. Например, следующая команда создает автономного пользователя:
+
+`CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
 ##  <a name="SyntaxSummary"></a> Сводка синтаксиса  
  **Пользователи, соответствующие именам входа в базе данных master**  
@@ -325,7 +348,7 @@ GO
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-creating-a-database-user-based-on-a-sql-server-login"></a>A. Создание пользователя базы данных, соответствующего имени входа SQL Server  
- В следующем примере сначала создается имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `AbolrousHazem`, а затем создается соответствующий пользователь `AbolrousHazem` в базе данных `AdventureWorks2012`.  
+ В следующем примере сначала создается имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`AbolrousHazem`, а затем создается соответствующий пользователь `AbolrousHazem` в базе данных `AdventureWorks2012`.  
   
 ```  
 CREATE LOGIN AbolrousHazem   
@@ -439,8 +462,44 @@ CREATE USER [Chin]
 WITH   
       DEFAULT_SCHEMA = dbo  
     , ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON ;  
-```  
-  
+```
+
+### <a name="i-create-an-azure-ad-user-from-an-azure-ad-login-in-sql-database-managed-instance"></a>И. Создание пользователя Azure AD по имени входа Azure AD в управляемом экземпляре базы данных SQL
+
+ Чтобы создать пользователя Azure AD по имени входа Azure AD, используйте приведенный ниже синтаксис.
+
+ Войдите в управляемый экземпляр, используя имя входа Azure AD с ролью `sysadmin`. Приведенная ниже инструкция создает пользователя Azure AD bob@contoso.com по имени входа bob@contoso.com. Это имя входа было создано в примере [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account).
+
+```sql
+CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
+GO
+```
+
+> [!IMPORTANT]
+> При создании **пользователя** по имени входа Azure AD указываемое значение *user_name* должно совпадать со значением *login_name* **имени входа**.
+
+Создание пользователя Azure AD в качестве группы на основе имени входа Azure AD, являющегося группой, не поддерживается.
+
+```sql
+CREATE USER [AAD group] FROM LOGIN [AAD group];
+GO
+```
+
+Вы можете создать пользователя Azure AD по имени входа Azure AD, являющемуся группой.
+
+```sql
+CREATE USER [bob@contoso.com] FROM LOGIN [AAD group];
+GO
+```
+
+### <a name="j-create-an-azure-ad-user-without-an-aad-login-for-the-database"></a>К. Создание пользователя Azure AD без имени входа AAD для базы данных
+
+Чтобы создать пользователя Azure AD bob@contoso.com (автономного) в управляемом экземпляре базы данных SQL, используйте следующий синтаксис:
+
+```sql
+CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;
+GO
+```
 
 ## <a name="next-steps"></a>Следующие шаги  
 После создания пользователя вы можете добавить пользователя к роли базы данных с помощью инструкции [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md).  

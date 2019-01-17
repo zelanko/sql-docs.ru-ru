@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 09651f097f0ae07b41c1c38866b862f73c529486
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2049dc558264b2b231a7d6a12109b833cccaddfe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601935"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208836"
 ---
 # <a name="upgrade-data-quality-services"></a>Обновление служб Data Quality Services
 
@@ -24,7 +24,7 @@ ms.locfileid: "51601935"
 
 Эта статья содержит сведения о том, как обновить существующую установку служб [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Services (DQS). В процессе обновления сервера служб DQS в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] необходимо обновить схему базы данных служб DQS.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   Необходимо создать резервную копию баз данных DQS, прежде чем обновлять DQS, чтобы предотвратить любую случайную потерю данных при обновлении схемы. Дополнительные сведения о создании резервной копии баз данных DQS см. в разделе [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
 > -   Для выполнения задач по обеспечению качества данных вы можете подключиться к серверу DQS [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], используя текущую или более раннюю версию клиента DQS или [преобразование "Очистка DQS"](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) в службах Integration Services.  
 > -   После обновления служб Data Quality Services и Master Data Services более ранние версии надстройки служб Master Data Services для Excel больше не будут работать. Можно скачать надстройку служб Master Data Services для Excel версии [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] по [этой ссылке](https://go.microsoft.com/fwlink/?LinkID=506665).  
@@ -92,7 +92,7 @@ ms.locfileid: "51601935"
   
 3.  Выводится запись для каждой операции обновления, а также дата создания обновления. Максимальное VERSION_ID и ASSEMBLY_VERSION на самой последней даты текущую версию. Значение 2 в столбце STATUS означает успешное выполнение процедуры. Если возникла ошибка, то ОШИБКА перечисляются в столбец. Образец вывода:  
   
-    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|Ошибка|  
+    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|ошибка|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<Домен\имя_пользователя>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<Домен\имя_пользователя>|2||  

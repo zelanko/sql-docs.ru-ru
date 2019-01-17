@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Master Data Services, system settings
@@ -15,12 +14,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f58c276968fd88b64ef5c48995eafbc553e14987
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fabd4b6da2a6c7016d00e503918062f86f6ce147
+ms.sourcegitcommit: 7ea015dc8527de14e7bd4401f5c74c8402fab3d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507286"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53738120"
 ---
 # <a name="system-settings-master-data-services"></a>Системные параметры (службы Master Data Services)
 
@@ -78,7 +77,7 @@ ms.locfileid: "52507286"
 |**Регистрация всех промежуточных транзакций в журнале**|**StagingTransactionLogging**|Применимо только к SQL Server 2008 R2. Определяет, будет ли вестись запись в журнал транзакций при загрузке промежуточных данных в базу данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Значение по умолчанию — **Выключено** или **2**. Измените значение на **Включено** или **1** , чтобы включить ведение журнала.|  
 |**Интервал промежуточного хранения пакетов**|**StagingBatchInterval**|В функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Integration Management** functional area, the number of seconds after you select **Start Batches** that your batch is processed. Значение по умолчанию — **60** секунд (1 минута).|  
   
- Дополнительные сведения см. в разделе [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+ Дополнительные сведения см. в статье [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
 ##  <a name="Explorer"></a> Параметры обозревателя  
   
@@ -113,7 +112,7 @@ ms.locfileid: "52507286"
 |**URL-адрес диспетчера основных данных для уведомлений**|**MDMRootURL**|URL-адрес для веб-приложения [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], используемый в ссылке в уведомлениях, передаваемых по электронной почте, например `https://constoso/mds`.|  
 |**Интервал передачи уведомлений по электронной почте**|**NotificationInterval**|Частота отправки уведомлений по электронной почте в секундах. Значение по умолчанию — **120** секунд (2 минуты).|  
 |**Число уведомлений в одном сообщении электронной почты**|**NotificationsPerEmail**|Максимальное число ошибок проверки, которые могут быть перечислены в одном уведомлении по электронной почте. Остальные ошибки, если они есть, не будут включены в сообщение электронной почты, но с ними можно ознакомиться в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
-|**Формат сообщений электронной почты по умолчанию**|**EmailFormat**|Формат для всех уведомлений по электронной почте. Значение по умолчанию — **HTML** или **1**. Значение **2** этого параметра базы данных означает **Текст**.<br /><br /> Примечание. Этот формат можно переопределить для отдельного пользователя в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], изменив и сохранив **Формат электронной почты** на вкладке **Общие** пользователя.|  
+|**Формат сообщений электронной почты по умолчанию**|**EmailFormat**|Формат для всех уведомлений по электронной почте. Значение по умолчанию — **HTML** или **1**. Значение **2** этого параметра базы данных означает **Текст**.<br /><br /> Примечание. Этот формат можно переопределить для отдельного пользователя в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], изменив и сохранив **Формат сообщений электронной почты** на вкладке **Общие** пользователя.|  
 |**Регулярное выражение для адреса электронной почты**|**EmailRegExPattern**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the regular expression used to validate the email address entered on a user's **General** tab. Дополнительные сведения о регулярных выражениях см. в разделе [Элементы языка регулярных выражений](https://go.microsoft.com/fwlink/?LinkId=164401) библиотеки MSDN.|  
 |**Учетная запись компонента Database Mail**|**EmailProfilePrincipalAccount**|Отображает учетную запись компонента Database Mail, которая используется при отправке уведомлений по электронной почте. Профиль по умолчанию — **mds_email_user**.|  
 |**Профиль компонента Database Mail**|**DatabaseMailProfile**|Профиль компонента Database Mail, который используется при отправке уведомлений по электронной почте. Значение по умолчанию — пусто.|  
@@ -129,6 +128,11 @@ ms.locfileid: "52507286"
 |Параметр диспетчера конфигурации|Системный параметр|Описание|  
 |-----------------------------------|--------------------|-----------------|  
 ||**SecurityMemberProcessInterval**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the frequency, in seconds, that user and group permissions set on the **Hierarchy Members** tab are applied. Значение по умолчанию — **3600** секунд (60 минут).|  
+
+##  <a name="Performance"></a> Параметры производительности  
+|Параметр диспетчера конфигурации|Системный параметр|Описание|  
+|-----------------------------------|--------------------|-----------------|  
+|**Включение параметра повышения производительности**|**PerformanceImprovementEnable**|По умолчанию этот параметр включен (**значение 1**), благодаря чему повышается производительность при загрузке страницы, связанной с разрешениями. Однако при этом снижается производительность создания и изменения сущностей, атрибутов, пользователей или групп. Чтобы избежать этого, данный параметр можно отключить (**значение 0**). После изменения этого параметра необходимо выполнить команду "**EXEC [mdm].[udpPerformanceToggleSwitch];**", чтобы обеспечить правильность представления и данных.|  
   
  Дополнительные сведения см. в разделе [Срочное применение разрешений для элемента (службы Master Data Services)](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   

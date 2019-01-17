@@ -1,6 +1,7 @@
 ---
-title: Состояние синхронизации данных базы данных доступности не в рабочем состоянии | Документы Майкрософт
-ms.custom: ''
+title: Состояние синхронизации данных баз данных доступности не является исправным
+description: Определите возможные причины, по которым состояние синхронизации данных у баз данных в группе доступности Always On — "неработоспособны".
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 4fd003e7-808e-4b0e-b28a-47d9f2616f06
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 5b2e45fd29967a89bb468eae32bcb393fff07b24
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2ea871bce7c35f9b6f5341a281d066087c33519b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603424"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203393"
 ---
-# <a name="data-synchronization-state-of-availability-database-is-not-healthy"></a>Состояние синхронизации данных баз данных доступности не является исправным
+# <a name="data-synchronization-state-of-availability-database-is-not-healthy-for-an-always-on-availability-group"></a>Состояние синхронизации данных базы данных доступности для группы доступности Always On не в рабочем состоянии
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>Введение  

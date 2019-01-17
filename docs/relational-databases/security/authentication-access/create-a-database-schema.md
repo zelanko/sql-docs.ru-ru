@@ -19,30 +19,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c4bf49266f87dcc569ca6bca52c5a8d82119bb7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1cdaa903f8d81c2c4878965bc085f594f0313704
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510860"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626271"
 ---
 # <a name="create-a-database-schema"></a>Создание схемы базы данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   В этом разделе описывается создание схемы в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
-  
- **В этом разделе**  
-  
--   **Перед началом работы**  
-  
-     [Ограничения](#Restrictions)  
-  
-     [безопасность](#Security)  
-  
--   **Создание схемы с помощью следующих средств**  
-  
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -75,9 +61,12 @@ ms.locfileid: "52510860"
 5.  В поле **Владелец схемы** введите имя пользователя или роли базы данных, которые будут владельцем схемы. Также можно нажать кнопку **Поиск** , чтобы открыть диалоговое окно **Поиск ролей и пользователей** .  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+
+> [!NOTE]
+> Диалоговое окно не будет отображаться, если вы создаете схему с помощью SSMS для **базы данных SQL Azure** или **хранилища данных SQL Azure**. Потребуется создать схему шаблона T-SQL.
   
 ### <a name="additional-options"></a>Дополнительные параметры  
- Диалоговое окно **Схема — создание** также содержит параметры на двух дополнительных страницах: **Разрешения** и **Расширенные свойства**.  
+ Диалоговое окно **Схема — создать** также содержит параметры на двух дополнительных страницах: **Разрешения** и **Расширенные свойства**.  
   
 -   На странице **Разрешения** перечислены все возможные защищаемые объекты и разрешения на эти объекты, которые могут быть предоставлены для имени входа.  
   

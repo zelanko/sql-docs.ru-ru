@@ -1,6 +1,7 @@
 ---
-title: Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn | Документы Майкрософт
-ms.custom: ''
+title: Управление проблемами в работе на основе политик с использованием групп доступности
+description: Модель работоспособности групп доступности Always On вычисляет набор стандартных (PBM) политик управления на основе политик. Их можно использовать для просмотра исправности группы доступности, а также реплик и баз данных в SQL Server.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,31 +14,18 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 330a9169fb1177686ffc95a530b5e068ed98e4e5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6d9d780473346a446811595d850aafd4da9d5930
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601686"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214173"
 ---
-# <a name="always-on-policies-for-operational-issues---always-on-availability"></a>Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn
+# <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Управление проблемами в работе на основе политик с использованием групп доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Модель правил определения исправности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] вычисляет набор стандартных (PBM) политик управления на основе политик. Их можно использовать для просмотра исправности группы доступности и реплики доступности и базы данных в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+  Модель работоспособности групп доступности Always On вычисляет набор стандартных (PBM) политик управления на основе политик. Их можно использовать для просмотра исправности группы доступности, а также реплик доступности и баз данных в SQL Server.  
   
- **В этом разделе.**  
-  
--   [Термины и определения](#TermsAndDefinitions)  
-  
--   [Стандартные политики и проблемы](#Always OnPBM)  
-  
--   [Панель мониторинга AlwaysOn](#Dashboard)  
-  
--   [Расширение модели исправности AlwaysOn](#ExtendHealthModel)  
-  
--   [Связанные задачи](#RelatedTasks)  
-  
--   [См. также](#RelatedContent)  
   
 ##  <a name="TermsAndDefinitions"></a> Термины и определения  
  Стандартные политики AlwaysOn  
@@ -78,7 +66,7 @@ ms.locfileid: "51601686"
 |Состояние присоединения базы данных доступности|[База данных-получатель не присоединена](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md).|Предупреждение|База данных доступности|  
 |Состояние синхронизации базы данных доступности|[Состояние синхронизации данных баз данных доступности не является исправным](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md).|Предупреждение|База данных доступности|  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  **\*** При работе с политиками AlwaysOn имена категорий используются в качестве идентификаторов. При изменении имени категории AlwaysOn ее функция оценки работоспособности будет нарушена. Поэтому не следует изменять имена категорий AlwaysOn.  
   
 ##  <a name="Dashboard"></a> Панель мониторинга AlwaysOn  
@@ -99,7 +87,7 @@ ms.locfileid: "51601686"
 ##  <a name="ExtendHealthModel"></a> Расширение модели исправности AlwaysOn  
  Расширение модели исправности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] — это просто создание собственных пользовательских политик и их размещение в категориях по типам наблюдаемых объектов.  После изменения некоторых параметров панель мониторинга AlwaysOn автоматически вычисляет собственные, определяемые пользователем политики, а также стандартные политики AlwaysOn.  
   
- Определяемая пользователем политика может использовать доступные аспекты управления на основе политик, включая те из них, которые применяются в стандартных политиках AlwaysOn (см. подраздел [Стандартные политики и проблемы](#Always OnPBM)выше в этом разделе). Аспект сервера содержит следующие свойства для мониторинга работоспособности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] : (**IsHadrEnabled** и **HadrManagerStatus**). Аспект сервера содержит также следующие свойства политики для мониторинга конфигурации кластера WSFC: **ClusterQuorumType**и **ClusterQuorumState**.  
+ Определяемая пользователем политика может использовать доступные аспекты управления на основе политик, включая те из них, которые применяются в стандартных политиках AlwaysOn (см. подраздел [Стандартные политики и проблемы](#Always OnPBM)выше в этом разделе). Аспект сервера содержит следующие свойства для наблюдения за исправностью [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]: (**IsHadrEnabled** и **HadrManagerStatus**). Аспект сервера содержит также следующие свойства политики для наблюдения за конфигурацией кластера WSFC. **ClusterQuorumType** и **ClusterQuorumState**.  
   
  Дополнительные сведения см. в записи [Модель исправности AlwaysOn, часть 2. Расширение модели исправности](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/) (в блоге SQL Server AlwaysOn Team; на английском языке).  
   

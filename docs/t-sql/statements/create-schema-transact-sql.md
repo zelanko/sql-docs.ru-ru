@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2348a0ba8aa1fa0c3c01a1d59867a14abb4579f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9b2fad9fc09736a335e8fc5797cda836f907191
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808012"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210973"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -123,8 +123,8 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  Данное поведение необходимо, чтобы позволить пользователям, базирующимся в группах Windows, создавать и обладать объектами. Однако это может привести к неумышленному созданию схем и пользователей. Во избежание неявного создания пользователей и схем каждый раз, при возможности, явно создавайте субъекты базы данных и назначайте схему по умолчанию. Или явно выражайте существующую схему при создании объектов в базе данных, используя двух- или трехчастные имена объектов.  
 
->  [!NOTE]
->  Неявное создание пользователя Azure Active Directory невозможно в [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Поскольку при создании пользователя Azure AD из внешнего поставщика необходимо проверить состояние пользователей в AAD, создание пользователя завершится ошибкой 2760: **Указанное имя схемы "\<user_name@domain>" не существует или у вас нет разрешения для его использования.** А затем выводится ошибка 2759: **Выполнение CREATE SCHEMA завершилось неудачно из-за предыдущих ошибок.** Чтобы устранить эти ошибки, сначала создайте пользователя Azure AD из внешнего поставщика, а затем повторно запустите инструкцию для создания объекта.
+> [!NOTE]
+>  Неявное создание пользователя Azure Active Directory невозможно в [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Так как при создании пользователя Azure AD из внешнего поставщика необходимо проверить состояние пользователей в AAD, создание пользователя завершится ошибкой 2760: **Указанное имя схемы "\<user_name@domain>" не существует, или у вас нет разрешения для его использования.** Затем выводится ошибка 2759: **Выполнение CREATE SCHEMA завершилось неудачно из-за предыдущих ошибок.** Чтобы устранить эти ошибки, сначала создайте пользователя Azure AD из внешнего поставщика, а затем повторно запустите инструкцию для создания объекта.
  
   
 ## <a name="deprecation-notice"></a>Уведомление об устаревании  

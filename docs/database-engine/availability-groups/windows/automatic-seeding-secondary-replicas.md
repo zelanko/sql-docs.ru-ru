@@ -1,8 +1,8 @@
 ---
-title: Автоматическое заполнение для вторичных реплик | Документы Майкрософт
-description: Использование автоматического заполнения для инициализации вторичных реплик.
+title: Инициализация вторичной реплики группы доступности с помощью автоматического заполнения
+description: Используйте автоматическое заполнение для инициализации вторичных реплик в составе группы доступности Always On в SQL 2016 и далее.
 services: data-lake-analytics
-ms.custom: ''
+ms.custom: seodec18
 ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +14,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6a8359fede2b688292fa47e59a64d5ef43d424d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b903c4e55940f4c941564f4f0d180f4f94d1ad58
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506692"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306171"
 ---
-# <a name="automatic-seeding-for-secondary-replicas"></a>Автоматическое заполнение для вторичных реплик
+# <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Инициализация вторичной реплики группы доступности Always On с помощью автоматического заполнения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В SQL Server 2012 и 2014 единственным способом инициализации вторичной реплики в группе доступности SQL Server Always On является использование операций резервного копирования, копирования и восстановления. В SQL Server 2016 появилась новая функция для инициализации вторичной реплики — *автоматическое заполнение*. Автоматическое заполнение использует транспортный поток журнала для потокового резервного копирования с помощью VDI на вторичную реплику для каждой базы данных группы доступности, применяющую настроенные конечные точки. Эту новую функцию можно использовать во время первоначального создания группы доступности или при добавлении базы данных в группу доступности. Автоматическое заполнение доступно во всех выпусках SQL Server, поддерживающих группы доступности AlwaysOn, и может использоваться как с традиционными группами доступности, так и с [распределенными группами доступности](distributed-availability-groups.md).
@@ -207,7 +207,7 @@ GO
 Например, следующий скрипт создает сеанс расширенных событий, который фиксирует события, связанные с автоматическим заполнением.
 
 ```sql
-CREATE EVENT SESSION [AG_autoseed] ON SERVER 
+CREATE EVENT SESSION [AlwaysOn_autoseed] ON SERVER 
     ADD EVENT sqlserver.hadr_automatic_seeding_state_transition,
     ADD EVENT sqlserver.hadr_automatic_seeding_timeout,
     ADD EVENT sqlserver.hadr_db_manager_seeding_request_msg,

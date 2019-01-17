@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine Tuning Advisor, Query Store
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 5ebd403911b6247964c5f512e45ce64e72290578
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: 439967d45e74b0069d3064af64393151f9efc735
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302437"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376606"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Настройка базы данных с помощью рабочей нагрузки из хранилища запросов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "52302437"
 В командной строке (dta.exe) выберите параметр **-iq**, чтобы использовать рабочую нагрузку из хранилища запросов. 
 
 В командной строке, позволяющей настраивать поведение DTA при выборе рабочей нагрузки из хранилища запросов, можно использовать два дополнительных параметра. Эти параметры недоступны в графическом пользовательском интерфейсе.
-  1. **Number of workload events to tune** (Число настраиваемых событий рабочей нагрузки). Этот параметр задается с помощью аргумента командной строки **-n**. Он позволяет управлять количеством настраиваемых событий из хранилища запросов. По умолчанию для этого параметра DTA использует значение 1000. DTA всегда выбирает самые ресурсоемкие события по общей продолжительности. 
+  1. **Число настраиваемых событий рабочей нагрузки**. Этот параметр задается с помощью аргумента командной строки **-n**. Он позволяет управлять количеством настраиваемых событий из хранилища запросов. По умолчанию для этого параметра DTA использует значение 1000. DTA всегда выбирает самые ресурсоемкие события по общей продолжительности. 
   
-  2. **Time windows of events to tune** (Временные окна настраиваемых событий). Так как хранилище запросов может содержать запросы, выполненные очень давно, этот параметр позволяет пользователю указать прошедшее временное окно (в часах) для запросов, которые будет настраивать DTA. Этот параметр задается с помощью аргумента командной строки **-I**. 
+  2. **Временные окна настраиваемых событий**. Так как хранилище запросов может содержать запросы, выполненные очень давно, этот параметр позволяет пользователю указать прошедшее временное окно (в часах) для запросов, которые будет настраивать DTA. Этот параметр задается с помощью аргумента командной строки **-I**. 
 
 Дополнительные сведения см. в статье [dta Utility](../../tools/dta/dta-utility.md).
 
@@ -47,6 +47,6 @@ ms.locfileid: "52302437"
 
 ## <a name="see-also"></a>См. также:  
 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)    (Помощник по настройке ядра СУБД)  
-[Руководство по помощнику по настройке ядра СУБД](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)     
+[Учебник. Помощник по настройке ядра СУБД](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)     
 [Сбор данных в хранилище запросов](../../relational-databases/performance/how-query-store-collects-data.md)     
 [Query Store Best Practices](../../relational-databases/performance/best-practice-with-the-query-store.md) (Рекомендации по использованию хранилища запросов)

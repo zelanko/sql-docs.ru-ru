@@ -7,27 +7,24 @@ ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.newproject
-- vs.addnewproject
 helpviewer_keywords:
 - projects [SQL Server Management Studio], creating
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cd6c508700e22a7ef999e3511610093230e7b613
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46a65938bdac731d9922c1ccdb5f95eb8a05f700
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849902"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328004"
 ---
 # <a name="create-a-project"></a>Создание проекта
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 В существующем решении можно создать один или несколько проектов.  
   
-### <a name="to-create-a-new-project-and-add-it-to-a-solution"></a>Создание нового проекта и добавление его к решению  
+## <a name="create-a-new-project-and-add-it-to-a-solution"></a>Создание нового проекта и добавление его к решению  
   
 1.  Выберите решение в обозревателе решений.  
   
@@ -96,9 +93,10 @@ ms.locfileid: "47849902"
   
 4.  Нажмите кнопку **ОК**.  
   
-Проекту скрипта можно назначить имя, но имена папок задаются средой [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и не могут быть изменены. Можно определить букву диска и путь для общего набора папок, используя диалоговое окно **Добавить новый проект** . Щелкните правой кнопкой мыши значок решения в **обозревателе решений**, а затем щелкните **Добавить**. По умолчанию папка проекта скриптов размещена по пути: "C:\Documents and Settings\\*имя_пользователя*\My Documents\SQL Server Management Studio\Projects\\\".  
+Проекту скрипта можно назначить имя, но имена папок задаются средой [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и не могут быть изменены. Можно определить букву диска и путь для общего набора папок, используя диалоговое окно **Добавить новый проект** . Щелкните правой кнопкой мыши значок решения в **обозревателе решений**, а затем щелкните **Добавить**. По умолчанию папка проекта скриптов размещена по пути: C:\Documents and Settings\\*имя пользователя*\My Documents\SQL Server Management Studio\Projects\\.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также:
+
 [обозревателе решений](../../ssms/solution/solution-explorer.md)  
 [Добавление к решению существующий проект](../../ssms/solution/add-an-existing-project-to-a-solution.md)  
 [Добавление новых элементов в проект](../../ssms/solution/add-new-items-to-a-project.md)  
@@ -106,4 +104,3 @@ ms.locfileid: "47849902"
 [Изменение местоположения проектов по умолчанию](../../ssms/solution/change-the-default-location-for-projects.md)  
 [Перемещение или удаление элемента или проекта](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
 [Удаление решения](../../ssms/solution/delete-a-solution.md)  
-  

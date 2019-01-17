@@ -13,12 +13,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 92aa4b83697bd424d4e6940f3c46b96033d5ecf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1a0b583c66355245790004a8612afa0ace72999
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847013"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213133"
 ---
 # <a name="publication-properties-subscription-options"></a>Свойства публикации, параметры подписки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47847013"
  Только для версии[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, разрешить ли использование файлов резервных копий для инициализации подписок. Дополнительные сведения см. в статье [Инициализация подписки на публикацию транзакций без моментального снимка](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  **Разрешать подписчиков, отличных от подписчиков SQL Server**  
- Только для версии[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, поддерживает ли публикация подписчиков, отличных от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Установка данного параметра равным **True** определяет другие свойства публикации для поддержки подписчиков, отличных от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При наличии подписок этот параметр доступен только для чтения; его нельзя установить равным **True** , если параметры **Разрешать немедленное обновление подписок**, **Разрешить обновляемые посредством очередей подписки**или **Разрешать одноранговые подписки** установлены равными **True**. Дополнительные сведения см. в разделе [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+ Только для версии[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, поддерживает ли публикация подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Установка данного параметра равным **True** определяет другие свойства публикации для поддержки подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При наличии подписок этот параметр доступен только для чтения; его нельзя установить равным **True** , если параметры **Разрешать немедленное обновление подписок**, **Разрешить обновляемые посредством очередей подписки**или **Разрешать одноранговые подписки** установлены равными **True**. Дополнительные сведения см. в разделе [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 ### <a name="data-transformation"></a>Преобразование данных  
  **Разрешать преобразования данных**  
@@ -117,7 +117,7 @@ ms.locfileid: "47847013"
  Только для версии[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, оптимизировать ли синхронизацию путем предварительного расчета принадлежности строк данных секциям. По умолчанию, эта настройка равна **True** , если публикация соответствует критериям для предварительно вычисляемых секций. Дополнительные сведения см. в статье [Оптимизация производительности параметризованного фильтра с помощью предварительно вычисляемых секций](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
  **Оптимизировать синхронизацию**  
- Определяет, оптимизировать ли процесс слияния, сохраняя дополнительные метаданные на каждом подписчике. Данная оптимизация не используется для предварительно вычисляемых секций; параметр **Оптимизировать синхронизацию** действителен, только если параметр **Предварительное вычисление секций** установлен равным **False**. Дополнительные сведения см. в статье [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Определяет, оптимизировать ли процесс слияния, сохраняя дополнительные метаданные на каждом подписчике. Данная оптимизация не используется для предварительно вычисляемых секций; параметр **Оптимизировать синхронизацию** действителен, только если параметр **Предварительное вычисление секций** установлен равным **False**. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 ### <a name="merge-processes"></a>Процессы слияния  
  **Ограничивать количество параллельных процессов**  

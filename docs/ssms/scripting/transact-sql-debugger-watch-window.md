@@ -6,8 +6,6 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.watch
 helpviewer_keywords:
 - Watch Window [Transact-SQL]
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
@@ -15,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a80ab78dc6a061abd5b975cc1f4afb0836f95b3d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f579b0846c30b72b1bf65d26cf06136932b2dd8f
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643779"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328514"
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Отладчик Transact-SQL, окно контрольных значений
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  В окне **Контрольные значения** отображается информация о выбранных выражениях. Может быть открыто четыре окна контрольных значений: **Контрольные значения 1**, **Контрольные значения 2, Контрольные значения 3**и **Контрольные значения 4**. Выражения вычисляются в области текущего кадра стека вызова, который выбран в окне **Стек вызовов** . Чтобы иметь возможность контролировать значения переменных и выражений, необходимо находиться в режиме отладки.  
+  В окне **Контрольные значения** отображается информация о выбранных выражениях. Может быть открыто четыре окна контрольных значений: **Контрольные значения 1**, **Контрольные значения 2, Контрольные значения 3** и **Контрольные значения 4**. Выражения вычисляются в области текущего кадра стека вызова, который выбран в окне **Стек вызовов** . Чтобы иметь возможность контролировать значения переменных и выражений, необходимо находиться в режиме отладки.  
   
 ## <a name="task-list"></a>Список задач  
  **Доступ к окнам «Контрольные значения»**  
@@ -47,9 +45,9 @@ ms.locfileid: "51643779"
   
 -   Выражения, построенные путем применения операторов к одной или нескольким переменным, параметрам или системным функциям, например @IntegerCounter+1 или FirstName+LastName.  
   
--   Инструкции Transact-SQL, возвращающие единственное значение, например SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
+-   Инструкции Transact-SQL, возвращающие только одно значение, например: SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
   
- **Value**  
+ **Значение**  
  Отображается значение, возвращаемое после оценки отладчиком [!INCLUDE[tsql](../../includes/tsql-md.md)] выражения, указанного в поле **Имя**.  
   
  Если длина выражения больше ширины столбца **Значение** , полное значение отображается в подсказке при перемещении указателя на ячейку **Значение** для этого выражения.  
@@ -66,5 +64,3 @@ ms.locfileid: "51643779"
  [Окно стека вызовов](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
  [Диалоговое окно «Быстрая проверка»](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
  [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
-  
-  

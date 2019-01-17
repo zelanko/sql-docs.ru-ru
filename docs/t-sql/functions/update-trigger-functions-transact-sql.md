@@ -26,12 +26,12 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d971857a0d46ff2ed0bd54588558ac74ab5eb549
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 9677ef3717fb83bdaf6ea108279b98a6598adced
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119632"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980350"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>Функции триггера — UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ UPDATE ( column )
  IF UPDATE возвращает значение TRUE по действиям оператора INSERT, так как столбцы содержат либо явные вставленные значения, либо неявные вставленные значения (NULL).  
   
 > [!NOTE]  
->  Функции предложения IF UPDATE(*colum*n) аналогичны предложениям IF, IF...ELSE или WHILE и могут использовать блок BEGIN...END. Дополнительные сведения см. в разделе [Язык управления потоком (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md).  
+>  Функции предложения IF UPDATE(*column*) аналогичны предложениям IF, IF...ELSE или WHILE и могут использовать блок BEGIN...END. Дополнительные сведения см. в разделе [Язык управления потоком (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md).  
   
  UPDATE(*column*) может применяться в любой части текста триггера [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

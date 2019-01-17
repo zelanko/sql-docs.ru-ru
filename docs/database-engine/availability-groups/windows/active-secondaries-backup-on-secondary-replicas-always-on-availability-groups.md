@@ -1,6 +1,7 @@
 ---
-title: 'Активные вторичные реплики: резервное копирование во вторичных репликах (группы доступности AlwaysOn) | Документы Майкрософт'
-ms.custom: ''
+title: Перенос поддерживаемых резервных копий во вторичные реплики группы доступности
+description: Сведения о типах резервных копий, поддерживающих перенос во вторичную реплику группы доступности Always On.
+ms.custom: seodec18
 ms.date: 09/01/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,14 +19,14 @@ ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7243fe3bece2241e1b6bb48e911b4952bc93c823
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40fa3d6f3464c92a16e27a2a8bdddbf664909504
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834462"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209443"
 ---
-# <a name="active-secondaries-backup-on-secondary-replicas-always-on-availability-groups"></a>Активные вторичные реплики, резервное копирование во вторичных репликах (группы доступности AlwaysOn)
+# <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>Перенос поддерживаемых резервных копий во вторичные реплики группы доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Функции [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] по поддержке вторичных реплик обеспечивают выполнение операций резервного копирования для вторичных реплик. Операции резервного копирования могут оказывать значительную нагрузку на систему ввода-вывода и ЦП (при использовании сжатия резервных копий). Перенос резервного копирования в синхронизированную или синхронизирующуюся вторичную реплику позволяет использовать ресурсы на экземпляре сервера, где размещается первичная реплика, для рабочей нагрузки первого уровня.  
@@ -58,7 +59,7 @@ ms.locfileid: "47834462"
   
 1.  Настройте группу доступности, чтобы указать, на каких репликах доступности предпочтительно проведение резервного копирования. Дополнительные сведения см. в описании параметров *AUTOMATED_BACKUP_PREFERENCE* и *BACKUP_PRIORITY* в разделе [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md) или [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
-2.  Создайте скрипты заданий резервного копирования для каждой из баз данных доступности на каждом экземпляре сервера, на котором размещается реплика доступности, потенциально используемая для выполнения резервного копирования. Дополнительные сведения см. в подразделе "Дальнейшие действия. После настройки резервного копирования во вторичных репликах" раздела [Настройка резервного копирования в репликах доступности (SQL Server)](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
+2.  Создайте скрипты заданий резервного копирования для каждой из баз данных доступности на каждом экземпляре сервера, на котором размещается реплика доступности, потенциально используемая для выполнения резервного копирования. Дополнительные сведения см. в подразделе «Дальнейшие действия. После настройки резервного копирования во вторичных репликах" статьи [Настройка резервного копирования в репликах доступности (SQL Server)](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
  **Настройка резервного копирования во вторичных репликах**  

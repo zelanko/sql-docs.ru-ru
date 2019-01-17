@@ -1,9 +1,9 @@
 ---
 title: Установка и изменение параметров сортировки для сервера| Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/03/2017
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: carlrab
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,47 +13,61 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a251cfbd29cde861409e4f4e04d1dc0cd95bd37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 231cc69c164e9ac4d91477710f959b073420c08e
+ms.sourcegitcommit: 4df7db58095384152195039d91a01d2bee6bd07d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664902"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52954398"
 ---
 # <a name="set-or-change-the-server-collation"></a>Задание или изменение параметров сортировки сервера
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Параметры сортировки сервера применяются по умолчанию для всех установленных системных баз данных с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также для новых пользовательских баз данных. Параметры сортировки сервера задаются во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+  Параметры сортировки сервера применяются по умолчанию для всех установленных системных баз данных с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также для новых пользовательских баз данных. Необходимо тщательно выбрать параметры сортировки уровня сервера, так как они влияют на следующее.
+ - Правила сортировки и сравнения в `=`, `JOIN`, `ORDER BY` и другие операторы сравнения текстовых данных.
+ - Параметры сортировки столбцов `CHAR`, `VARCHAR`, `NCHAR` и `NVARCHAR` системных представлений, системных функций и объектов в базе данных TempDB (например, темпоральных таблиц).
+ - Имена переменных, курсоров и меток `GOTO`. Переменные @pi и @PI считаются различными, если параметры сортировки уровня сервера заданы с учетом регистра, и одной и той же переменной, если параметры сортировки уровня сервера заданы без учета регистра.
   
-## <a name="changing-the-server-collation"></a>Изменение параметров сортировки сервера  
+## <a name="setting-the-server-collation-in-sql-server"></a>Настройка параметров сортировки сервера в SQL Server
+
+  Параметры сортировки сервера задаются во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Параметры сортировки по умолчанию — **SQL_Latin1_General_CP1_CI_AS**. Параметры сортировки только для Юникода не могут быть заданы как параметры сортировки уровня сервера. Дополнительные сведения см. в разделе [Настройка сервера — параметры сортировки](/sql/sql-server/install/server-configuration-collation.md).
+  
+## <a name="changing-the-server-collation-in-sql-server"></a>Изменение параметров сортировки сервера в SQL Server
+
  Чтобы изменить параметры сортировки по умолчанию для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (эта операция может оказаться сложной), выполните следующие шаги:  
   
--   Проверьте наличие данных и скриптов, необходимых для повторного создания пользовательской базы данных и всех ее объектов.  
+- Проверьте наличие данных и скриптов, необходимых для повторного создания пользовательской базы данных и всех ее объектов.  
   
--   Экспортируйте все данные с помощью такого средства, как [bcp Utility](../../tools/bcp-utility.md). Дополнительные сведения см. в разделе [Массовый импорт и экспорт данных (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+- Экспортируйте все данные с помощью такого средства, как [bcp Utility](../../tools/bcp-utility.md). Дополнительные сведения см. в разделе [Массовый импорт и экспорт данных (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   
--   Удалите все пользовательские базы данных.  
+- Удалите все пользовательские базы данных.  
   
--   Перестройте базу данных master, указав новые параметры сортировки в свойстве SQLCOLLATION команды **setup** . Пример:  
+- Перестройте базу данных master, указав новые параметры сортировки в свойстве SQLCOLLATION команды **setup** . Пример:  
   
-    ```  
-    Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName   
-    /SQLSYSADMINACCOUNTS=accounts /[ SAPWD= StrongPassword ]   
+    ```sql  
+    Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName
+    /SQLSYSADMINACCOUNTS=accounts /[ SAPWD= StrongPassword ]
     /SQLCOLLATION=CollationName  
     ```  
   
      Дополнительные сведения см. в статье [Перестроение системных баз данных](../../relational-databases/databases/rebuild-system-databases.md).  
   
--   Создайте все базы данных и все их объекты.  
+- Создайте все базы данных и все их объекты.  
   
--   Импортируйте все данные.  
+- Импортируйте все данные.  
   
 > [!NOTE]  
->  Вместо изменения параметров сортировки по умолчанию для всего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно указывать параметры сортировки по умолчанию для каждой новой базы данных.  
+> Вместо изменения параметров сортировки по умолчанию для всего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно указывать параметры сортировки по умолчанию для каждой новой базы данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="setting-the-server-collation-in-managed-instance"></a>Задание параметров сортировки сервера в управляемом экземпляре
+
+Параметры сортировки сервера в управляемом экземпляре SQL Azure (предварительная версия) можно указать при создании экземпляра (пока только с помощью PowerShell). Параметры сортировки по умолчанию — **SQL_Latin1_General_CP1_CI_AS**. Параметры сортировки только для Юникода и новые параметры сортировки UTF-8 не могут быть заданы как параметры сортировки уровня сервера.
+Шаблон скрипта, в котором показано, как задать параметры сортировки уровня сервера в управляемом экземпляре базы данных SQL Azure, см. в разделе [Задание параметров сортировки управляемого экземпляра с помощью шаблона Resource Manager](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template). При миграции баз данных SQL Server на управляемый экземпляр проверьте параметры сортировки сервера в исходном SQL Server с помощью функции `SERVERPROPERTY(N'Collation')` и создайте управляемый экземпляр, который соответствует параметрам сортировки SQL Server. Миграция базы данных из SQL Server в управляемый экземпляр с несоответствующими параметрами сортировки на уровне сервера может приводить к нескольким непредвиденным ошибкам в запросах. Изменить параметры сортировки уровня сервера у существующего управляемого экземпляра невозможно.
+
+## <a name="see-also"></a>См. также:
+
  [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)   
  [Установка и изменение параметров сортировки базы данных](../../relational-databases/collations/set-or-change-the-database-collation.md)   
  [Задание или изменение параметров сортировки столбца](../../relational-databases/collations/set-or-change-the-column-collation.md)   
  [Перестроение системных баз данных](../../relational-databases/databases/rebuild-system-databases.md)  
-  
-  
+ 

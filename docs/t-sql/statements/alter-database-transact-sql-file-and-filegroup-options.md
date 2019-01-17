@@ -1,7 +1,7 @@
 ---
 title: Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 12/11/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -43,12 +43,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1191ae28c9683a89d06830c942a22941fccfb943
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5a91f7bf27dea953cde7186262c8b28b2cd0cf7e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403561"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53329022"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL) 
 
@@ -144,8 +144,8 @@ REMOVE FILE *logical_file_name*
 *logical_file_name*  
 Логическое имя, используемое в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при обращении к файлу.  
   
-> [!WARNING]  
-> Удаление файла базы данных, имеющего связанные с ним резервные копии `FILE_SNAPSHOT`, выполнится успешно, однако связанные моментальные снимки не будут удалены во избежание объявления недействительными резервных копий, ссылающихся на файл базы данных. Файл усекается, но физически не удаляется, чтобы сохранить резервные копии FILE_SNAPSHOT без изменений. Дополнительные сведения см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+> [!WARNING]
+> Удаление файла базы данных, имеющего связанные с ним резервные копии `FILE_SNAPSHOT`, выполнится успешно, однако связанные моментальные снимки не будут удалены во избежание объявления недействительными резервных копий, ссылающихся на файл базы данных. Файл усекается, но физически не удаляется, чтобы сохранить резервные копии FILE_SNAPSHOT без изменений. Дополнительные сведения см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 MODIFY FILE  
 Указывает файл, который должен быть изменен. Одновременно может быть изменено только одно свойство \<filespec>. Предложение NAME всегда должно быть указано в \<filespec>, чтобы определить, какой файл будет изменен. Если указано предложение SIZE, новый размер файла должен быть больше, чем текущий.  
@@ -341,15 +341,15 @@ READ_ONLY | READONLY
 - сжатие базы данных невозможно;  
 - в базах данных, находящихся в состоянии только для чтения, невозможны блокировки. Это может привести к более быстрому выполнению запросов.  
   
-> [!NOTE]  
+> [!NOTE]
 > Ключевое слово `READONLY` будет удалено в будущей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте применять `READONLY` в новых разработках и запланируйте внесение изменений в приложения, использующие `READONLY` в настоящее время. Вместо этого используйте `READ_ONLY` .  
   
 READ_WRITE | READWRITE  
 Определяет, что файловая группа находится в состоянии READ_WRITE. Разрешено изменять объекты в файловой группе. Чтобы изменить это состояние, необходимо обладать монопольным доступом к базе данных. Дополнительные сведения см. в описании предложения SINGLE_USER.  
   
-> [!NOTE]  
+> [!NOTE]
 > Ключевое слово `READWRITE` будет удалено в будущей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте применять `READWRITE` в новых разработках и запланируйте изменить приложения, использующие в настоящее время `READWRITE`, на использование `READ_WRITE`.  
-  
+> 
 > [!TIP]
 > Состояние этих параметров может быть определено с помощью проверки значения столбца **is_read_only** в представлении каталога **sys.databases** или свойства **Updateability** функции `DATABASEPROPERTYEX`.  
   
@@ -887,13 +887,13 @@ READ_ONLY | READONLY
 - сжатие базы данных невозможно;  
 - в базах данных, находящихся в состоянии только для чтения, невозможны блокировки. Это может привести к более быстрому выполнению запросов.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Ключевое слово READONLY будет удалено в будущей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования ключевого слова READONLY в новых разработках и запланируйте изменение приложений, которые сейчас его используют. Вместо него используйте READ_ONLY.  
   
 READ_WRITE | READWRITE  
 Определяет, что файловая группа находится в состоянии READ_WRITE. Разрешено изменять объекты в файловой группе. Чтобы изменить это состояние, необходимо обладать монопольным доступом к базе данных. Дополнительные сведения см. в описании предложения SINGLE_USER.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Ключевое слово `READWRITE` будет удалено в будущей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте применять `READWRITE` в новых разработках и запланируйте изменить приложения, использующие в настоящее время `READWRITE`, на использование `READ_WRITE`.  
   
 Состояние этих параметров может быть определено с помощью проверки значения столбца **is_read_only** в представлении каталога **sys.databases** или свойства **Updateability** функции `DATABASEPROPERTYEX`.  
@@ -1092,5 +1092,6 @@ GO
 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
-[Оптимизированная для памяти файловая группа](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) 
+[Оптимизированная для памяти файловая группа](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)
 
+::: moniker-end

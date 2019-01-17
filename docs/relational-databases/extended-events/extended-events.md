@@ -1,7 +1,7 @@
 ---
-title: Расширенные события | Документация Майкрософт
+title: Расширенные события — SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 10/23/2016
+ms.date: 12/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,24 +15,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 972e420f75db790321bc8c8eee595f1932e4f451
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 441d0535e75663150d12e5ff6c05a7b1067f3e6d
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662430"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531050"
 ---
 # <a name="extended-events"></a>Расширенные события
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Расширенная подсистема событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет чрезвычайно масштабируемую и легко настраиваемую архитектуру, которая позволяет пользователям собирать именно такое количество информации, которое необходимо для устранения нарушения в работе или выявления проблемы производительности.  
 
-Дополнительные сведения о расширенных событиях см. в следующих источниках:
+Дополнительные сведения о расширенных событиях см. в следующих источниках: [Быстрое начало. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
-- [Краткое руководство. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
-- Блоги. [Расширенные события SQL Server](https://blogs.msdn.com/b/extended_events/)
 
-  
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>Преимущества системы расширенных событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Расширенные события — это упрощенная система мониторинга производительности, в которой применяется очень небольшой объем ресурсов. Система расширенных событий имеет два графических пользовательских интерфейса (**Мастер новых сеансов** или **Создание сеанса**), которые позволяют создавать, изменять, выводить и анализировать данные сеанса.  
   

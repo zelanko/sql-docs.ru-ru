@@ -1,6 +1,7 @@
 ---
-title: Группы доступности, независимые от домена (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Создание группы доступности, независимой от домена
+description: Инструкции по созданию группы доступности, использующей кластер рабочей группы. Позволяет SQL Server 2016 (и более поздних версий) развернуть группу доступности Always On в отказоустойчивом кластере Windows Server, которому не требуются доменные службы Active Directory, вследствие чего не нужно, чтобы каждый сервер входил в один и тот же домен.
+ms.custom: seodec18
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0024663d9d16d191338abfa2604e6c969f0d58e5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c70aba3f6dc1648b70c9bc9a524052a7ba591793
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415081"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211913"
 ---
-# <a name="domain-independent-availability-groups"></a>Группы доступности, независимые от домена
+# <a name="create-a-domain-independent-availability-group"></a>Создание группы доступности, независимой от домена
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Группы доступности AlwaysOn должны находиться в отказоустойчивом кластере Windows Server (WSFC). Развертывание WSFC с помощью Windows Server 2012 R2 всегда требует, чтобы серверы, участвующие в WSFC (также называются узлами), были присоединены к одному и тому же домену. Дополнительные сведения о доменных службах Active Directory (AD DS) см. [здесь](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).

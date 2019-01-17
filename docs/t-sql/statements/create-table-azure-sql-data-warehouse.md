@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d647102d72b9ec3dc03e0887dbc1b9abe60a3308
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7dae0b33b2b3a9100aada7505e61f3e75f8bf66c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703822"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980487"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (хранилище данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "51703822"
  
 Сведения о таблицах и об использовании таблиц см. в разделе [Таблицы в хранилище данных SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-overview/).
 
-ПРИМЕЧАНИЕ. Обсуждение хранилища данных SQL в этой статье применяется как к хранилищу данных SQL, так и к Parallel Data Warehouse, если не указано иное. 
+Примечание. Обсуждение хранилища данных SQL в этой статье применяется как к хранилищу данных SQL, так и к Parallel Data Warehouse, если не указано иное. 
  
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -484,18 +484,18 @@ WITH
  В этом примере данные будут отсортированы в следующих секциях:  
   
 -   Секция 1: столбцы до 10-го включительно   
--   Секция 2: столбцы с 11-го по 20-й   
--   Секция 3: столбцы с 21-го по 30-й   
--   Секция 4: столбцы с 31-го по 40-й   
--   Секция 5: столбцы с 41-го и далее  
+-   Секция 2: столбцы с 11-го по 20-й   
+-   Секция 3: столбцы с 21-го по 30-й   
+-   Секция 4: столбцы с 31-го по 40-й   
+-   Секция 5: столбцы с 41-го и далее  
   
  Если эта же таблица была секционирована с использованием RANGE RIGHT вместо RANGE LEFT (по умолчанию), данные будут отсортированы в следующих секциях:  
   
 -   Секция 1: столбцы до 10-го  
--   Секция 2: столбцы с 11-го по 19-й   
--   Секция 3: столбцы с 20-го по 29-й    
--   Секция 4: столбцы с 30-го по 39-й   
--   Секция 5: столбцы с 40-го и далее  
+-   Секция 2: столбцы с 10-го по 19-й   
+-   Секция 3: столбцы с 20-го по 29-й    
+-   Секция 4: столбцы с 30-го по 39-й   
+-   Секция 5: столбцы с 40-го и далее  
   
 ### <a name="OnePartition"></a> I. Создание секционированной таблицы с одной секцией  
  В следующем примере создается секционированная таблица с одной секцией. В нем не указаны граничные значения, поэтому создается одна секция.  

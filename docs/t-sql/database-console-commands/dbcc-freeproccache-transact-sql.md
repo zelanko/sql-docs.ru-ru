@@ -26,12 +26,12 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad662f209361dbffd8096bd7605cb5ad0e01a9d5
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 8c8a970d96475d2682bc58246aa2383bf19e8365
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072048"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979740"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -113,7 +113,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 -   user options  
   
 ## <a name="result-sets"></a>Результирующие наборы  
-Если предложение WITH NO_INFOMSGS не указано, инструкция DBCC FREEPROCCACHE возвращает: "Выполнение DBCC завершено. Если инструкция DBCC выдает сообщения об ошибках, обратитесь к системному администратору».
+Если предложение WITH NO_INFOMSGS не указано, инструкция DBCC FREEPROCCACHE возвращает: «Выполнение инструкции DBCC завершено. Если инструкция DBCC выдает сообщения об ошибках, обратитесь к системному администратору».
   
 ## <a name="permissions"></a>Разрешения  
 Применимо к: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
@@ -131,7 +131,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
   
 ## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ограничения для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Команда DBCC FREEPROCCACHE не может выполняться в рамках транзакции.
-Команда DBCC FREEPROCCAHCE не поддерживается в инструкции EXPLAIN.
+Команда DBCC FREEPROCCACHE не поддерживается в инструкции EXPLAIN.
   
 ## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Метаданные для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 При выполнении команды DBCC FREEPROCCACHE в системное представление sys.pdw_exec_requests добавляется новая строка.

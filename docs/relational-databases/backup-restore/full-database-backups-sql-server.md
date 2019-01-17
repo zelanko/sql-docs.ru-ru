@@ -20,12 +20,12 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f20b2f1b29c6ba175237e2e4f47cb5cf6fa0a610
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 066bd086fcbe9b69cc49821651302cd2102cd671
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771834"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214093"
 ---
 # <a name="full-database-backups-sql-server"></a>Полные резервные копии баз данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47771834"
   
  ![Демонстрирует риск потери результатов работы в промежутках между созданием резервных копий базы данных](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "Демонстрирует риск потери результатов работы в промежутках между созданием резервных копий базы данных")  
   
-### <a name="example-includetsqlincludestsql-mdmd"></a>Пример ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>Пример ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
  В следующем примере показано, как создать полную резервную копию базы данных с помощью предложения WITH FORMAT, чтобы перезаписать все существующие резервные копии и создать новый набор носителей.  
   
 ```  
@@ -70,7 +70,7 @@ GO
   
  Сведения о том, как создавать резервные копии журналов, см. в разделе [Резервные копии журналов транзакций (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
-### <a name="example-includetsqlincludestsql-mdmd"></a>Пример ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>Пример ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
  В следующем примере показано, как создать полную резервную копию базы данных с помощью предложения WITH FORMAT, чтобы перезаписать все существующие резервные копии и создать новый набор носителей. Затем в примере производится резервное копирование журнала транзакций. В реальной ситуации, возможно, придется создать ряд обычных резервных копий журнала. В этом примере образец базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] должен быть переключен на модель полного восстановления.  
   
 ```  

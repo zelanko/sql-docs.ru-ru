@@ -20,12 +20,12 @@ ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 98cdf238c4e88e6121e96fec911ad86ba1a7db7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cf815386b00ca70ceacbb549b9dbccd50c9a482
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852352"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206353"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Подробнее о репликации слиянием — обнаружение и разрешение конфликтов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,9 +96,9 @@ ms.locfileid: "47852352"
   
  Указание типа подписки на публикацию слиянием и приоритета устранения конфликтов см. в разделе  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Указание типа подписки слиянием и приоритета устранения конфликтов (SQL Server Management Studio)](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. [Указание типа подписки слиянием и приоритета устранения конфликтов (SQL Server Management Studio)](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Программирование репликации с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)] и объектов RMO: [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md) и [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)  
+-   Программирование репликации с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)] и объектов RMO: [Создание подписки по запросу](../../../relational-databases/replication/create-a-pull-subscription.md) и [Создание принудительной подписки](../../../relational-databases/replication/create-a-push-subscription.md).  
   
 ### <a name="interactive-resolver"></a>Интерактивный сопоставитель  
  Репликация предоставляет пользовательский интерфейс интерактивного сопоставителя, который может использоваться совместно либо с сопоставителем конфликтов на основе приоритетов (по умолчанию), либо с сопоставителем статей. При выполнении синхронизации по требованию с помощью диспетчера синхронизации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows интерактивный сопоставитель отображает конфликтные данные во время выполнения, позволяя выбрать методы разрешения конфликтов. Дополнительные сведения о том, как включить интерактивное устранение конфликтов и запуск интерактивного сопоставителя, см. в разделе [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
@@ -129,9 +129,9 @@ ms.locfileid: "47852352"
   
  **Просмотр конфликтов**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Просмотр и разрешение конфликтов данных для публикации слиянием (SQL Server Management Studio)](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. [Просмотр и разрешение конфликтов данных для публикации слиянием (SQL Server Management Studio)](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   Репликация [!INCLUDE[tsql](../../../includes/tsql-md.md)] Программирование: [Просмотр сведений о конфликтах для публикаций слиянием (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+-   Программирование репликации на языке [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [View Conflict Information for Merge Publications](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md) (Просмотр сведений о конфликтах для публикаций слиянием)  
   
 ## <a name="see-also"></a>См. также:  
  [Синхронизация данных](../../../relational-databases/replication/synchronize-data.md)  

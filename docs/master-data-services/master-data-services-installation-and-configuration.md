@@ -5,19 +5,18 @@ ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b79bb79750d7f4696581dab86c95cf71abf02375
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ce92fb9c6bead52848ad5de1b70092b8168f292
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526951"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205613"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Установка и настройка Master Data Services
 
@@ -36,12 +35,12 @@ ms.locfileid: "52526951"
 Ссылки на видео и другие обучающие ресурсы, которые помогут ознакомиться с [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], см. в разделе [Изучение служб Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
 > **Загрузить**  
->-   Чтобы скачать [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
->-   Есть учетная запись Azure?  Тогда перейдите **[сюда](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** , чтобы запустить виртуальную машину с уже установленным SQL Server.  
- 
+> -   Чтобы скачать [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
+> -   Есть учетная запись Azure?  Тогда перейдите **[сюда](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** , чтобы запустить виртуальную машину с уже установленным SQL Server.  
+> 
 > **Не удается создать веб-сайт MDS?**
->>Инструкции по решению этой проблемы см. в этой статье службы поддержки Майкрософт.
-[Не удается создать веб-сайт MDS с помощью учетной записи с ограниченными правами доступа в SQL Server 2016](https://aka.ms/mdssupport) 
+> >Инструкции по решению этой проблемы см. в этой статье службы поддержки Майкрософт.
+> [Не удается создать веб-сайт MDS с помощью учетной записи с ограниченными правами доступа в SQL Server 2016](https://aka.ms/mdssupport) 
 
 ## <a name="internet-explorer-and-silverlight"></a>Internet Explorer и Silverlight
 - При установке [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] на компьютер под управлением ОС Windows Server 2012 может понадобиться настроить улучшенную безопасность в Internet Explorer, чтобы разрешить использование скриптов на сайте веб-приложения. Без этого просмотр сайта на серверном компьютере работать не будет.
@@ -119,11 +118,11 @@ ms.locfileid: "52526951"
  **Настройка базы данных и веб-сайта с помощью [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]**  
 
  
-> [!WARNING]  
-    >  Необходимо [установить службы IIS](#InstallIIS) перед запуском [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager. В противном случае Configuration Manager выведет ошибку служб IIS и вы не сможете создать веб-приложение [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].  
-    
+> [!WARNING]
+>  Необходимо [установить службы IIS](#InstallIIS) перед запуском [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager. В противном случае Configuration Manager выведет ошибку служб IIS и вы не сможете создать веб-приложение [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].  
+> 
 > **Требование браузера**
->>Веб-приложение [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] работает только в Internet Explorer (IE) 9 или более поздней версии. Internet Explorer 8 и более ранние версии, а также Microsoft Edge и Chrome не поддерживаются.    
+> >Веб-приложение [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] работает только в Internet Explorer (IE) 9 или более поздней версии. Internet Explorer 8 и более ранние версии, а также Microsoft Edge и Chrome не поддерживаются.    
   
 1.  Запустите [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]и щелкните **Настройка базы данных** в области слева.  
   

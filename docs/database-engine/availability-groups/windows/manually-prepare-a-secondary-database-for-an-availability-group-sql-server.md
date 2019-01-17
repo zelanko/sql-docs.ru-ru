@@ -1,6 +1,7 @@
 ---
-title: Ручная подготовка базы данных-получателя для присоединения к группе доступности (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Подготовка базы данных-получателя для присоединения к группе доступности
+description: Описание способа ручной подготовки базы данных-получателя для присоединения к группе доступности Always On.
+ms.custom: seodec18
 ms.date: 07/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,14 +19,14 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8422db4a4888cf217c674954588c04acad675d9f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 63af3d34937b221a50f7c6217ae9c73c41d1cbb6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529935"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209303"
 ---
-# <a name="manually-prepare-a-database-for-an-availability-group-sql-server"></a>Ручная подготовка базы данных-получателя для присоединения к группе доступности (SQL Server)
+# <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Подготовка базы данных-получателя для присоединения к группе доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 В этом разделе описывается подготовка базы данных для группы доступности AlwaysOn в [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell. Подготовка базы данных выполняется в два этапа: 
 
@@ -55,7 +56,7 @@ ms.locfileid: "52529935"
   
 -   Перед подготовкой баз данных-получателей настоятельно рекомендуется приостановить резервное копирование журнала по расписанию для всех баз данных в группе доступности до завершения инициализации вторичных реплик.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
  При резервном копировании базы данных [свойство базы данных TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md) принимает значение OFF. Поэтому свойство TRUSTWORTHY всегда имеет значение OFF во всех только что восстановленных базах данных.  
   
 ####  <a name="Permissions"></a> Permissions  

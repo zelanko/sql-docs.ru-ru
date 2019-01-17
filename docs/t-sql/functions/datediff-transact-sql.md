@@ -1,7 +1,7 @@
 ---
 title: DATEDIFF (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/29/2017
+ms.date: 12/13/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -32,12 +32,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40e1027474bc84f3e30862ee43a61b3d199e8549
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 9af12ecd407504e4f04327260ccb446d395c7c9f
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970465"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432707"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -96,9 +96,9 @@ DATEDIFF ( datepart , startdate , enddate )
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
--   Каждый конкретный аргумент *datepart* и сокращения для этого аргумента *datepart* будут возвращать одно и то же значение.  
+Каждый конкретный аргумент *datepart* и сокращения для этого аргумента *datepart* будут возвращать одно и то же значение.  
   
-В качестве возвращаемого значения вне диапазона для **int** (от –2 147 483 648 до 2 147 483 647) `DATEDIFF` возвращает сообщение об ошибке.  Для **миллисекунды** максимальная разница между *startdate* и *enddate* составляет 24 дня 20 часов 31 минута и 23 647 секунд. Для **секунды** максимальная разница составляет 68 лет.
+В качестве возвращаемого значения вне диапазона для **int** (от –2 147 483 648 до 2 147 483 647) `DATEDIFF` возвращает сообщение об ошибке.  Для **миллисекунды** максимальная разница между *startdate* и *enddate* составляет 24 дня 20 часов 31 минута и 23 647 секунд. Для **секунды** максимальная разница составляет 68 лет, 19 дней, 3 часа, 14 минут и 7 секунд.
   
 Если обоим аргументам, *startdate* и *enddate*, присвоено только значение времени, а аргумент *datepart* не содержит значения времени *datepart*, то `DATEDIFF` возвращает значение 0.
   
@@ -106,12 +106,12 @@ DATEDIFF ( datepart , startdate , enddate )
   
 Так как значение типа [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) имеет точность до минуты, то при использовании в аргументах *startdate* и *enddate* значений типа **smalldatetime** секунды и миллисекунды у возвращаемых значений всегда равны 0.
   
-Если переменной типа данных date присвоено только значение времени, в качестве недостающей части даты `DATEDIFF` задает значение по умолчанию: 1900-01-01. Если переменной типа данных time или date присвоено только значение даты, в качестве недостающей части времени `DATEDIFF` задает значение по умолчанию: 00:00:00. Если в одном из аргументов *startdate* или *enddate* указано только время, а в другом только дата, в качестве недостающей информации `DATEDIFF` задает значения по умолчанию.
+Если переменной типа данных date присвоено только значение времени, в качестве недостающей части даты `DATEDIFF` задает значение по умолчанию: `1900-01-01`. Если переменной типа данных time или date присвоено только значение даты, в качестве недостающей части времени `DATEDIFF` задает значение по умолчанию: `00:00:00`. Если в одном из аргументов *startdate* или *enddate* указано только время, а в другом только дата, в качестве недостающей информации `DATEDIFF` задает значения по умолчанию.
   
 Если аргументы *startdate* и *enddate* имеют разные типы данных даты, но при этом один из них имеет больше частей времени или обладает более высокой точностью, `DATEDIFF` присваивает значения 0 недостающим частям другого аргумента.
   
 ## <a name="datepart-boundaries"></a>Границы, задаваемые аргументом datepart  
-Приведенные ниже инструкции имеют одинаковые значения аргументов *startdate* и *enddate*. Указанные даты являются соседними, а временная разница между ними составляет 0,0000001 секунды. Разница между аргументами *startdate* и *enddate* в каждой инструкции пересекает одну календарную или временную границу аргумента *datepart*. Каждое выражение возвращает значение 1. Если аргументы *startdate* и *enddate* имеют разные значения года, но одинаковые значения календарной недели, `DATEDIFF` вернет 0 для части **week** аргумента *datepart*.
+Приведенные ниже инструкции имеют одинаковые значения аргументов *startdate* и *enddate*. Указанные даты являются соседними, а временная разница между ними составляет одну микросекунду (0,0000001 секунды). Разница между аргументами *startdate* и *enddate* в каждой инструкции пересекает одну календарную или временную границу аргумента *datepart*. Каждое выражение возвращает значение 1. Если аргументы *startdate* и *enddate* имеют разные значения года, но одинаковые значения календарной недели, `DATEDIFF` вернет 0 для части **week** аргумента *datepart*.
   
 ```sql
 SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -127,11 +127,13 @@ SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 ```
   
 ## <a name="remarks"></a>Remarks  
-Функция `DATEDIFF` может использоваться в предложениях SELECT, <list>WHERE, HAVING, GROUP BY и ORDER BY.
+Используйте `DATEDIFF` в предложениях `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` и `ORDER BY`.
   
 Функция `DATEDIFF` неявно приводит строковые литералы к типу **datetime2**. Это означает, что `DATEDIFF` не поддерживает формат ГЧМ (год, число, месяц) при передаче даты в виде строки. Для использования формата ГЧМ (год, число, месяц) необходимо явно привести строку к типу **datetime** или **smalldatetime**.
   
-Указание SET DATEFIRST не влияет на `DATEDIFF`. `DATEDIFF` всегда считает воскресенье первым днем недели, чтобы обеспечить детерминизм работы функции.
+Указание `SET DATEFIRST` не влияет на `DATEDIFF`. `DATEDIFF` всегда считает воскресенье первым днем недели, чтобы обеспечить детерминизм работы функции.
+
+`DATEDIFF` может переполняться с точностью до **минуты** или более низкой точностью, если разница между *enddate* и *startdate* представляет собой значение, выходящее за пределы диапазона, допустимого для **int**.
   
 ## <a name="examples"></a>Примеры  
 В этих примерах выражения различного типа используются в качестве аргументов для параметров *startdate* и *enddate*.
@@ -237,11 +239,71 @@ FROM Sales.SalesOrderDetail sod
 WHERE soh.SalesOrderID IN(43659, 58918);  
 GO  
 ```  
+
+### <a name="i-finding-difference-between-startdate-and-enddate-as-date-parts-strings"></a>И. Определение разницы между startdate и enddate в виде строковых компонентов даты
+
+```sql
+DECLARE @date1 DATETIME, @date2 DATETIME, @result VARCHAR(100)
+DECLARE @years INT, @months INT, @days INT, @hours INT, @minutes INT, @seconds INT, @milliseconds INT
+
+SET @date1 = '1900-01-01 00:00:00.000'
+SET @date2 = '2018-12-12 07:08:01.123'
+
+SELECT @years = DATEDIFF(yy, @date1, @date2)
+IF DATEADD(yy, -@years, @date2) < @date1 
+SELECT @years = @years-1
+SET @date2 = DATEADD(yy, -@years, @date2)
+
+SELECT @months = DATEDIFF(mm, @date1, @date2)
+IF DATEADD(mm, -@months, @date2) < @date1 
+SELECT @months=@months-1
+SET @date2= DATEADD(mm, -@months, @date2)
+
+SELECT @days=DATEDIFF(dd, @date1, @date2)
+IF DATEADD(dd, -@days, @date2) < @date1 
+SELECT @days=@days-1
+SET @date2= DATEADD(dd, -@days, @date2)
+
+SELECT @hours=DATEDIFF(hh, @date1, @date2)
+IF DATEADD(hh, -@hours, @date2) < @date1 
+SELECT @hours=@hours-1
+SET @date2= DATEADD(hh, -@hours, @date2)
+
+SELECT @minutes=DATEDIFF(mi, @date1, @date2)
+IF DATEADD(mi, -@minutes, @date2) < @date1 
+SELECT @minutes=@minutes-1
+SET @date2= DATEADD(mi, -@minutes, @date2)
+
+SELECT @seconds=DATEDIFF(s, @date1, @date2)
+IF DATEADD(s, -@seconds, @date2) < @date1 
+SELECT @seconds=@seconds-1
+SET @date2= DATEADD(s, -@seconds, @date2)
+
+SELECT @milliseconds=DATEDIFF(ms, @date1, @date2)
+
+SELECT @result= ISNULL(CAST(NULLIF(@years,0) AS VARCHAR(10)) + ' years,','')
+     + ISNULL(' ' + CAST(NULLIF(@months,0) AS VARCHAR(10)) + ' months,','')    
+     + ISNULL(' ' + CAST(NULLIF(@days,0) AS VARCHAR(10)) + ' days,','')
+     + ISNULL(' ' + CAST(NULLIF(@hours,0) AS VARCHAR(10)) + ' hours,','')
+     + ISNULL(' ' + CAST(@minutes AS VARCHAR(10)) + ' minutes and','')
+     + ISNULL(' ' + CAST(@seconds AS VARCHAR(10)) 
+          + CASE WHEN @milliseconds > 0 THEN '.' + CAST(@milliseconds AS VARCHAR(10)) 
+               ELSE '' END 
+          + ' seconds','')
+
+SELECT @result
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)] 
+
+```
+118 years, 11 months, 11 days, 7 hours, 8 minutes and 1.123 seconds
+```
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 В этих примерах выражения различного типа используются в качестве аргументов для параметров *startdate* и *enddate*.
   
-### <a name="i-specifying-columns-for-startdate-and-enddate"></a>И. Указание столбцов в качестве начальной и конечной даты  
+### <a name="j-specifying-columns-for-startdate-and-enddate"></a>К. Указание столбцов в качестве начальной и конечной даты  
 В этом примере подсчитывается количество границ дней, пересекаемых между датами в двух столбцах таблицы.
   
 ```sql
@@ -256,7 +318,7 @@ SELECT TOP(1) DATEDIFF(day, startDate, endDate) AS Duration
 -- Returns: 1  
 ```  
   
-### <a name="j-specifying-scalar-subqueries-and-scalar-functions-for-startdate-and-enddate"></a>К. Указание скалярных вложенных запросов и скалярных функций в качестве начальной и конечной даты  
+### <a name="k-specifying-scalar-subqueries-and-scalar-functions-for-startdate-and-enddate"></a>Л. Указание скалярных вложенных запросов и скалярных функций в качестве начальной и конечной даты  
 В этом примере в качестве аргументов *startdate* и *enddate* выступают скалярные вложенные запросы.
   
 ```sql
@@ -268,7 +330,7 @@ FROM dbo.DimEmployee;
   
 ```  
   
-### <a name="k-specifying-constants-for-startdate-and-enddate"></a>Л. Указание констант в качестве начальной и конечной даты  
+### <a name="l-specifying-constants-for-startdate-and-enddate"></a>М. Указание констант в качестве начальной и конечной даты  
 В этом примере в качестве аргументов *startdate* и *enddate* используются символьные константы.
   
 ```sql
@@ -279,7 +341,7 @@ SELECT TOP(1) DATEDIFF(day,
     '2007-05-08 09:53:01.0376635') FROM DimCustomer;  
 ```  
   
-### <a name="l-specifying-ranking-functions-for-startdate"></a>М. Указание ранжирующих функций в качестве начальной даты  
+### <a name="m-specifying-ranking-functions-for-startdate"></a>Н. Указание ранжирующих функций в качестве начальной даты  
 В этом примере в качестве аргумента *startdate*. используется ранжирующая функция.
   
 ```sql
@@ -291,7 +353,7 @@ SELECT FirstName, LastName,
 FROM dbo.DimEmployee;  
 ```  
   
-### <a name="m-specifying-an-aggregate-window-function-for-startdate"></a>Н. Указание агрегатной оконной функции в качестве начальной даты  
+### <a name="n-specifying-an-aggregate-window-function-for-startdate"></a>О. Указание агрегатной оконной функции в качестве начальной даты  
 В этом примере в качестве аргумента *startdate* используется агрегатная оконная функция.
   
 ```sql
@@ -307,6 +369,3 @@ FROM dbo.DimEmployee
 [DATEDIFF_BIG (Transact-SQL)](../../t-sql/functions/datediff-big-transact-sql.md)  
 [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
-  
-
-
