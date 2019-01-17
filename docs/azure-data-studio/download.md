@@ -3,7 +3,7 @@ title: Загрузите и установите
 titleSuffix: Azure Data Studio
 description: Загрузка и установка Azure данных Studio для Windows, macOS или Linux
 ms.custom: seodec18
-ms.date: 01/10/2019
+ms.date: 01/17/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d7e9cd2130487a0ac50d6aa55a8a2e0f9cf9e80c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 09e459b61350a100a64a788e0c7746d9a2ae623e
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298721"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361624"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Скачайте и установите Studio данных Azure
 
@@ -26,16 +26,18 @@ ms.locfileid: "54298721"
 [!INCLUDE[name-sos](../includes/name-sos.md)] выполняется в Windows, macOS и Linux.
 
 
-Скачайте и установите последний выпуск *выпуска января*:
+Скачайте и установите последний выпуск *выпуска исправлений января*:
+
+Версия 1.3.9 устраняет некоторые проблемы, обнаруженные в 1.3.8. Дополнительные сведения см. в разделе [январском выпуске исправления](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1).
 
 > [!NOTE]
 > Если вы выполняете обновление с SQL Operations Studio и хотите сохранить ваши параметры, сочетания клавиш или фрагменты кода, см. в разделе [перемещение параметров пользователя](#move-user-settings).
 
 |Платформа|Загрузить|Дата выпуска| Версия |
 |:---|:---|:---|:---|
-|Windows|[Установщик для пользователя (рекомендуется)](https://go.microsoft.com/fwlink/?linkid=2049972)<br>[Установщик системы](https://go.microsoft.com/fwlink/?linkid=2049975)<br>[ZIP](https://go.microsoft.com/fwlink/?linkid=2050146)|09 января 2019 г. |1.3.8|
-|macOS|[ZIP](https://go.microsoft.com/fwlink/?linkid=2049981)|09 января 2019 г. |1.3.8|
-|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=2050157)<br>[.RPM](https://go.microsoft.com/fwlink/?linkid=2049989)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)|09 января 2019 г. |1.3.8|
+|Windows|[Установщик для пользователя (рекомендуется)](https://go.microsoft.com/fwlink/?linkid=2049972)<br>[Установщик системы](https://go.microsoft.com/fwlink/?linkid=2049975)<br>[ZIP](https://go.microsoft.com/fwlink/?linkid=2050146)|16 января 2019 г. |1.3.9|
+|macOS|[ZIP](https://go.microsoft.com/fwlink/?linkid=2049981)|16 января 2019 г. |1.3.9|
+|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=2050157)<br>[.RPM](https://go.microsoft.com/fwlink/?linkid=2049989)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)|16 января 2019 г. |1.3.9|
 
 Дополнительные сведения о последнем выпуске см. в разделе [заметки о выпуске](release-notes.md).
 
