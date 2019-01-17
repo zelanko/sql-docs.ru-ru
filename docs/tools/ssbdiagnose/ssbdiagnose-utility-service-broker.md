@@ -26,12 +26,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23985f7a9c78993e154babdcbdd9980334f0fc36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cc67193013c0ea546f69aaa87fb1fb0aa0ad7cac
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541325"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590548"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Программа ssbdiagnose (компонент Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ ssbdiagnose
   
  Значение по умолчанию — **WARNING**.  
   
- **-IGNORE** *error_id*  
+ **-IGNORE** _error_id_  
  Указывает, что ошибки и сообщения, имеющие заданное значение *error_id* , не будут включены в отчет. Параметр **-IGNORE** можно указать несколько раз, чтобы запретить вывод сообщений с различными идентификаторами.  
   
  **\<baseconnectionoptions >**  
@@ -124,13 +124,13 @@ ssbdiagnose
  **CONFIGURATION**  
  Запрашивает вывод отчета об ошибках конфигурации для одной службы или для пары служб компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
   
- **FROM SERVICE** *service_name*  
+ **FROM SERVICE** _service_name_  
  Указывает службу, которая является инициатором диалога.  
   
  **\<fromconnectionoptions >**  
  Задает сведения, необходимые для соединения с базой данных, в которой находится вызывающая служба. Если параметры **fromconnectionoptions** не указаны, то **ssbdiagnose** использует для подключения к базе данных инициатора сведения о соединении из **baseconnectionoptions** . Если параметры **fromconnectionoptions** задаются, то в них должна быть указана база данных, содержащая службу инициатора. Если параметры **fromconnectionoptions** не указываются, в **baseconnectionoptions** необходимо указать базу данных инициатора.  
   
- **TO SERVICE** *service_name*[, *broker_id* ]  
+ **TO SERVICE** _service_name_[, *broker_id* ]  
  Указывает целевую службу для диалогов.  
   
  *service_name*: задает имя целевой службы.  
@@ -152,7 +152,7 @@ WHERE database_id = DB_ID();
  **\<mirrorconnectionoptions >**  
  Позволяет задать сведения, необходимые для соединения с зеркальной базой данных. Если параметры **mirrorconnectionoptions** не указаны, то **ssbdiagnose** использует для подключения к зеркальной базе данных сведения о соединении из **baseconnectionoptions** .  
   
- **ON CONTRACT** *contract_name*  
+ **ON CONTRACT** _contract_name_  
  Требует, чтобы программа **ssbdiagnose** проверила только те конфигурации, в которых используется указанный контракт. Если параметр ON CONTRACT не указан, то программа **ssbdiagnose** работает с контрактом DEFAULT.  
   
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
@@ -201,7 +201,7 @@ WHERE database_id = DB_ID();
   
  Идентификаторы диалогов отображаются в столбце **conversation_id** представления каталога **sys.conversation_endpoints** .  
   
- **-TIMEOUT** *timeout_interval*  
+ **-TIMEOUT** _timeout_interval_  
  Задает время выполнения отчета **RUNTIME** в секундах. Если параметр **-TIMEOUT** не задан, то отчет может выполняться бесконечно долго. Параметр **-TIMEOUT** используется только для отчетов **RUNTIME**, а не для отчетов **CONFIGURATION**. Работу программы **ssbdiagnose** можно завершить нажатием клавиш CTRL+C, если параметр **-TIMEOUT** не указан, а также если нужно завершить отчет до истечения времени ожидания. Параметр*timeout_interval* должен быть числом от 1 до 2 147 483 647.  
   
  **\<runtimeconnectionoptions >**  
@@ -216,14 +216,14 @@ WHERE database_id = DB_ID();
   
  Если параметр **-E** используется в сочетании с параметром **-U** или **-P** , выдается сообщение об ошибке.  
   
- **-U** *идентификатор_входа*  
+ **-U** _идентификатор_входа_  
  Откройте соединение, использующее проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , с помощью указанного идентификатора входа. Имя входа должно быть членом предопределенной роли сервера **sysadmin** .  
   
  Если не указан ни параметр **-E** , ни параметр **-U** , то программа **ssbdiagnose** использует значение из переменной среды SQLCMDUSER. Если переменная SQLCMDUSER также не задана, то программа **ssbdiagnose** пытается установить соединение в режиме проверки подлинности Windows на основании учетных данных Windows пользователя, запустившего программу **ssbdiagnose**.  
   
  Если параметр **-U** указан одновременно с параметром **-E** , то выдается сообщение об ошибке. Если после параметра **-U** указано более одного аргумента, выдается сообщение об ошибке и программа завершает работу.  
   
- **-P** *пароль*  
+ **-P** _пароль_  
  Указывает пароль для идентификатора имени входа **-U** . Пароли учитывают регистр. Если параметр **-U** указан, а параметр **-P** не указан, то программа **ssbdiagnose** использует значение из переменной среды SQLCMDPASSWORD. Если переменная SQLCMDPASSWORD также не задана, то программа **ssbdiagnose** запросит пароль у пользователя.  
   
 > [!IMPORTANT]  
@@ -242,15 +242,15 @@ WHERE database_id = DB_ID();
   
  Если после параметра **-P** указано более одного аргумента, то выдается сообщение об ошибке.  
   
- **baseconnetionoptions** *server_name*[\\*instance_name*]  
+ **baseconnetionoptions** _server_name_[\\*instance_name*]  
  Задает экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , где размещаются службы компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] для анализа.  
   
  Укажите значение *server_name* , чтобы подключиться к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] по умолчанию на этом сервере. Укажите _server\_name_**\\**_instance\_name_, чтобы подключиться к именованному экземпляру [!INCLUDE[ssDE](../../includes/ssde-md.md)] на этом сервере. Если параметр **-S** не указан, то программа **ssbdiagnose** использует значение переменной среды SQLCMDSERVER. Если переменная SQLCMDSERVER также не задана, то программа **ssbdiagnose** соединяется с экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] по умолчанию на локальном компьютере.  
   
- **-S** *database_name*  
+ **-S** _database_name_  
  Задает базу данных, где размещаются службы компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] для анализа. Если такой базы данных не существует, то выдается ошибка. Если параметр **-d** не задан, то по умолчанию используется база данных, указанная в свойстве default-database текущего имени входа.  
   
- **-l** *login_timeout*  
+ **-l** _login_timeout_  
  Указывает время ожидания соединения с сервером (в секундах). Если параметр **-l** не задан, то программа **ssbdiagnose** использует значение из переменной среды SQLCMDLOGINTIMEOUT. Если переменная SQLCMDLOGINTIMEOUT также не задана, то время ожидания по умолчанию составляет тридцать секунд. Время ожидания входа должно быть числом в диапазоне от 0 до 65 534. Если указанное значение не является числом или выходит за пределы указанного диапазона, то программа **ssbdiagnose** выдаст сообщение об ошибке. Значение 0 задает неограниченное время ожидания.  
   
  **-?**  
