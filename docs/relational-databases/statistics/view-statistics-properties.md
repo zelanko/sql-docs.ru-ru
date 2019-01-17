@@ -16,12 +16,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f710a7ef79f5532cd8a58921cb8b07d350c1305
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: d3a20135a3063e5316f133e2f6483eb40e17d035
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380892"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256639"
 ---
 # <a name="view-statistics-properties"></a>Просмотр свойств статистики
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,9 +60,9 @@ ms.locfileid: "53380892"
   
 5.  Щелкните правой кнопкой мыши объект статистики, для которого нужно просмотреть свойства, и выберите команду **Свойства**.  
   
-6.  В диалоговом окне **Свойства статистики —** *имя_статистики* на панели **Выбор страницы** выберите **Сведения**.  
+6.  В диалоговом окне **Свойства статистики —** _имя_статистики_ на панели **Выбор страницы** выберите **Сведения**.  
   
-     На странице **Сведения** в диалоговом окне **Свойства статистики —***имя_статистики* отображаются следующие свойства.  
+     На странице **Сведения** в диалоговом окне **Свойства статистики —**_имя_статистики_ отображаются следующие свойства.  
   
      **Имя таблицы**  
      Отображает имя таблицы, которую описывает данная статистика.  

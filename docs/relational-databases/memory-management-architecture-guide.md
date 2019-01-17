@@ -1,7 +1,7 @@
 ---
 title: Руководство по архитектуре управления памятью | Документация Майкрософт
 ms.custom: ''
-ms.date: 12/11/2018
+ms.date: 01/09/2019"
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,14 +15,15 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 924b347e5fa8907fa1f2b9cb9b820a63808cbc3b
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 31ebb5ef9994c3c853b8163f4f2ba58e8cbe7d3b
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328984"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206450"
 ---
 # <a name="memory-management-architecture-guide"></a>руководство по архитектуре управления памятью
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 ## <a name="windows-virtual-memory-manager"></a>Диспетчер виртуальной памяти Windows  
@@ -70,7 +71,10 @@ ms.locfileid: "53328984"
 > [!NOTE]
 > Более старые версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] можно запустить в 32-разрядной операционной системе. Чтобы охватить свыше 4 ГБ памяти в 32-разрядной операционной системе, требуется использовать расширения AWE для управления памятью. Это необязательно, если [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выполняется в 64-разрядных операционных системах. Дополнительные сведения о расширениях AWE см. в документации [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]: [Адресное пространство процесса](https://msdn.microsoft.com/library/ms189334.aspx) и [Управление памятью для больших баз данных](https://msdn.microsoft.com/library/ms191481.aspx).   
 
+<a name="changes-to-memory-management-starting-2012-11x-gm"></a>
+
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Изменения управления памятью, начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+
 В более ранних версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) память выделялась с помощью пяти разных механизмов.
 -  **Одностраничный распределитель (SPA)**, к которому относится только выделение памяти объемом не больше 8 КБ в процессе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Пределы физической памяти, используемой SPA, определяют параметры конфигурации *Макс. памяти сервера (МБ)* и *Мин. памяти сервера (МБ)*. Буферный пул был одновременно механизмом для SPA и самым крупным потребителем одностраничных выделений.
 -  **Многостраничный распределитель (MPA)** для выделения памяти в объемах больше 8 КБ.
