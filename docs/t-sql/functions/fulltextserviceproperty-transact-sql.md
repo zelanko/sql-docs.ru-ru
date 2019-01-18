@@ -21,12 +21,12 @@ ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c56e70fc866c3666107677338feb3285cabb38b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fbdc84168ea3c0878924033347ca0c0fff3e514
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812182"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206163"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ FULLTEXTSERVICEPROPERTY ('property')
  *property*  
  Выражение, содержащее имя свойства уровня полнотекстовой службы. В таблице перечислены свойства и описания возвращаемых сведений.  
   
-> [!NOTE]  
->  Следующие свойства будут удалены в последующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **ConnectTimeout**, **DataTimeout** и **ResourceUsage**. Избегайте использовать эти свойства в новых разработках и запланируйте изменение приложений, где они используются в настоящий момент.  
+> [!NOTE]
+>  Следующие свойства будут удалены в будущей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **ConnectTimeout**, **DataTimeout** и **ResourceUsage**. Избегайте использовать эти свойства в новых разработках и запланируйте изменение приложений, где они используются в настоящий момент.  
   
 |Свойство|Значение|  
 |--------------|-----------|  
