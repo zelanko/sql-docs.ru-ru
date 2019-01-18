@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5723f60855952e9e14e7cdff07ac312d10e38732
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d8f51a507ff3dc2ee317b2b347c4c7b56b043694
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526607"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202883"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Развертывание проектов и пакетов служб Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] поддерживают две модели развертывания: модель развертывания проектов и устаревшую модель развертывания пакетов. Модель развертывания проектов позволяет развертывать проекты на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -76,7 +76,7 @@ ms.locfileid: "52526607"
 
 Если вы сменили установленную по умолчанию учетную запись службы SSIS, вам может потребоваться предоставить новой учетной записи дополнительные разрешения, необходимые для успешного развертывания пакетов. Если у новой учетной записи отсутствуют необходимые разрешения, может отображаться следующее сообщение об ошибке.
 
-*Произошла ошибка .NET Framework во время выполнения определяемой пользователем подпрограммы или статистической функции "deploy_project_internal": System.ComponentModel.Win32Exception. Клиент не обладает требуемыми правами.*
+*Произошла ошибка .NET Framework во время выполнения определяемой пользователем подпрограммы или статистической функции "deploy_project_internal": System.ComponentModel.Win32Exception: Клиент не располагает требуемыми правами доступа*.
 
 Как правило, эта ошибка связана с отсутствием разрешений DCOM. Чтобы устранить ее, выполните следующие действия.
 
@@ -90,7 +90,7 @@ ms.locfileid: "52526607"
 8.  Дважды нажмите кнопку **ОК**, после чего закройте консоль **Службы компонентов**.
 
 Дополнительные сведения об этой ошибке и разрешениях, необходимых для учетной записи службы SSIS, см. в следующей записи блога.  
-[Ошибка "System.ComponentModel.Win32Exception. Клиент не обладает требуемыми правами" во время развертывания проекта служб SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+[System.ComponentModel.Win32Exception: Клиент не обладает требуемыми правами во время развертывания проекта служб SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   В текущей версии служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]вы можете развертывать проекты на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Сервер служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] позволяет управлять пакетами, выполнять пакеты и настраивать значения времени выполнения для пакетов с помощью сред.  
@@ -102,7 +102,7 @@ ms.locfileid: "52526607"
   
 1.  Создайте каталог SSISDB, если он еще не создан. Дополнительные сведения см. в разделе [Каталог служб SSIS](../../integration-services/catalog/ssis-catalog.md).  
   
-2.  **Мастер преобразования проекта служб Integration Services** преобразует проект в модель развертывания проекта. Дополнительные сведения см. в инструкциях ниже: [Преобразование проекта в модель развертывания проекта](#convert)  
+2.  **Мастер преобразования проекта служб Integration Services** преобразует проект в модель развертывания проекта. Дополнительные сведения см. в инструкциях ниже. [Преобразование проекта в модель развертывания проекта](#convert)  
   
     -   При создании проекта в службах [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] или более поздней версии по умолчанию используется модель развертывания проекта.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "52526607"
   
      Дополнительные сведения об обновлении пакетов см. в разделах [Обновление пакетов служб Integration Services](../../integration-services/install-windows/upgrade-integration-services-packages.md) и [Обновление пакетов служб Integration Services с помощью мастера обновления пакетов служб SSIS](../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-3.  Разверните проект на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в инструкциях ниже: [Развертывание проекта на сервере служб Integration Services](#deploy).  
+3.  Разверните проект на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в инструкциях ниже. [Развертывание проекта на сервере служб Integration Services](#deploy)  
   
 4.  (Необязательно.) Создайте среду для развернутого проекта. 
   
@@ -273,7 +273,7 @@ static void Main()
   
 2.  Если проект и все пакеты прошли испытание на совместимость, нажмите кнопку **ОК** для преобразования пакета.  
   
-> **ПРИМЕЧАНИЕ.** Для преобразования проекта в модель развертывания проектов воспользуйтесь **мастером преобразования проекта служб Integration Services**. Дополнительные сведения см. в статье [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md).  
+> **ПРИМЕЧАНИЕ.** Для преобразования проекта в модель развертывания проектов воспользуйтесь **Мастером преобразования проекта служб Integration Services**. Дополнительные сведения см. в статье [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md).  
 
 ## <a name="integration-services-deployment-wizard"></a>Мастер развертывания служб Integration Services
   **Мастер развертывания служб Integration Services** поддерживает две модели развертывания:
@@ -293,7 +293,7 @@ static void Main()
 
 **OR**
 
- - Найдите исполняемый файл **ISDeploymentWizard.exe** в папке установки SQL Server, например C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn. 
+ - Найдите исполняемый файл **ISDeploymentWizard.exe** в папке установки SQL Server, например "C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn". 
  
  > **ПРИМЕЧАНИЕ.** Если отобразилась страница **Введение** , нажмите кнопку **Далее** , чтобы перейти на страницу **Выбор источника** . 
  
@@ -409,13 +409,13 @@ static void Main()
   
  Для развертывания и выполнения пакетов также можно использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Дополнительные сведения см. в разделе **См. также** .  
   
-> [!TIP]  
+> [!TIP]
 >  Не составит труда создать инструкции Transact-SQL для хранимых процедур, перечисленных в следующей процедуре, за исключением catalog.deploy_project, выполнив следующие действия.  
->   
+> 
 >  1.  В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]разверните узел **Каталоги служб Integration Services** в обозревателе объектов и перейдите к пакету, который нужно выполнить.  
 > 2.  Щелкните правой кнопкой мыши пакет и выберите команду **Выполнить**.  
 > 3.  При необходимости задайте значения параметров, свойства диспетчера соединений и параметры на вкладке **Дополнительно** , например уровень ведения журнала.  
->   
+> 
 >      Дополнительные сведения об уровнях ведения журнала см. в разделе [Включение ведения журналов при выполнении пакета на сервере служб SSIS](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
 > 4.  Перед нажатием кнопки **ОК** для выполнения пакета выберите пункт **Скрипт**. Код Transact-SQL откроется в окне редактора запросов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

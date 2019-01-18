@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: db0fbc2125ca748f0426eea95c4c1a059e5b67f5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7cbf93440d9b164adef0f87c5af88da02d0f9b50
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509964"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531099"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -114,13 +114,13 @@ OPENROWSET
  Дополнительные сведения об использовании параметра BULK см. в подразделе «Примечания» далее в этом разделе. Дополнительные сведения о разрешениях, необходимых параметру BULK, см. в подразделе «Разрешения» далее в этом разделе.  
   
 > [!NOTE]  
->  Функция OPENROWSET (BULK ...) не оптимизирует ведение журнала при использовании ее для импорта данных с моделью полного восстановления.  
+> Функция OPENROWSET (BULK ...) не оптимизирует ведение журнала при использовании ее для импорта данных с моделью полного восстановления.  
   
  Сведения о подготовке данных к массовому импорту см. в разделе [Подготовка данных к массовому экспорту или импорту (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
   
  '*data_file*'  
  Полный путь к файлу данных, данные из которого копируются в целевую таблицу.   
- **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+ **Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 аргумент data_file может находиться в хранилище BLOB-объектов Azure. Примеры см. в статье [Примеры массового доступа к данным в хранилище BLOB-объектов Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 > [!IMPORTANT]
@@ -136,24 +136,24 @@ OPENROWSET
 > Параметр CODEPAGE не поддерживается в Linux.
 
 > [!NOTE]  
->  Рекомендуется указывать имя параметра сортировки для каждого столбца в файле форматирования, кроме случаев, когда параметр 65001 должен иметь приоритет над спецификацией параметров сортировки или кодовой страницы.  
+> Рекомендуется указывать имя параметра сортировки для каждого столбца в файле форматирования, кроме случаев, когда параметр 65001 должен иметь приоритет над спецификацией параметров сортировки или кодовой страницы.  
   
 |Значение аргумента CODEPAGE|Описание|  
 |--------------------|-----------------|  
 |ACP|Столбцы типа **char**, **varchar** или **text** преобразуются из кодовой страницы ANSI или [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (ISO 1252) в кодовую страницу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |OEM (по умолчанию)|Столбцы типа **char**, **varchar** или **text** преобразуются из системной кодовой страницы OEM в кодовую страницу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |RAW|Преобразование из одной кодовой страницы в другую не выполняется. Это наиболее быстрый параметр.|  
-|*code_page*|Показывает исходную кодовую страницу, в которой представлены символы в файле данных, например 850.<br /><br />  ****Важно! **** Версии до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] не поддерживают кодовую страницу 65001 (кодировка UTF-8).|  
+|*code_page*|Показывает исходную кодовую страницу, в которой представлены символы в файле данных, например 850.<br /><br /> ****Важно! **** Версии до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] не поддерживают кодовую страницу 65001 (кодировка UTF-8).|  
   
  ERRORFILE ='*file_name*'  
  Указывает файл, используемый для сбора строк, которые имеют ошибки форматирования и не могут быть преобразованы в набор строк OLE DB. Эти строки без изменений копируются из файла данных в файл ошибок.  
   
  Файл ошибок создается в начале выполнения команды. Если он уже существует, возникнет ошибка. Дополнительно создается управляющий файл с расширением ERROR.txt. Этот файл ссылается на каждую строку в файле ошибок и позволяет провести их диагностику. После исправления ошибок данные могут быть загружены.  
-**Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], аргумент `error_file_path`может находиться в хранилище больших двоичных объектов Azure. 
 
 'errorfile_data_source_name'   
-**Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Именованный внешний источник данных, указывающий на расположение файла ошибки в хранилище больших двоичных объектов Azure, в котором будут содержаться ошибки, обнаруженные во время импорта. Внешний источник данных должен быть создан с помощью параметра `TYPE = BLOB_STORAGE`, который доступен в [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP-версии 1.1. Дополнительные сведения см. в разделе [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
   
  FIRSTROW =*first_row*  
@@ -168,7 +168,7 @@ OPENROWSET
  Значение по умолчанию для *maximum_errors* — 10.  
   
 > [!NOTE]  
->  Аргумент MAX_ERRORS не применяет ограничения CHECK или преобразования типов **money** и **bigint**.  
+> Аргумент MAX_ERRORS не применяет ограничения CHECK или преобразования типов **money** и **bigint**.  
   
  ROWS_PER_BATCH =*rows_per_batch*  
  Указывает примерное количество строк данных в файле данных. Значение должно быть того же порядка, что и реальное количество строк.  
@@ -198,7 +198,7 @@ OPENROWSET
  Возвращает содержимое файла *data_file* в виде набора строк с одной строкой и одним столбцом типа **varbinary(max)**.  
   
 > [!IMPORTANT]  
->  XML-данные рекомендуется импортировать с помощью параметра SINGLE_BLOB, а не SINGLE_CLOB или SINGLE_NCLOB, потому что только параметр SINGLE_BLOB поддерживает все возможные преобразования кодировок в Windows.  
+> XML-данные рекомендуется импортировать с помощью параметра SINGLE_BLOB, а не SINGLE_CLOB или SINGLE_NCLOB, потому что только параметр SINGLE_BLOB поддерживает все возможные преобразования кодировок в Windows.  
   
  SINGLE_CLOB  
  Считывает файл *data_file* как ASCII-файл, возвращая содержимое в виде набора строк с одной строкой и одним столбцом типа **varchar(max)** и используя параметры сортировки текущей базы данных.  
@@ -209,21 +209,21 @@ OPENROWSET
 ### <a name="input-file-format-options"></a>Параметры формата входного файла
   
 FORMAT **=** 'CSV'   
-**Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Указывает файл данных с разделителями-запятыми, соответствующий стандарту [RFC 4180](https://tools.ietf.org/html/rfc4180).
 
  FORMATFILE ='*format_file_path*'  
- Указывает полный путь к файлу форматирования. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает два типа файлов форматирования: XML и отличные от XML.  
+ Указывает полный путь к файлу форматирования. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает два типа файлов форматирования: XML и отличный от XML.  
   
  Файл форматирования необходим для определения типов столбцов в результирующем наборе. Единственное исключение — случай, когда указаны аргументы SINGLE_CLOB, SINGLE_BLOB или SINGLE_NCLOB, при которых файл форматирования не обязателен.  
   
  Сведения о файлах форматирования см. в разделе [Использование файла форматирования для массового импорта данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
 
-**Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP-версии 1.1, аргумент format_file_path может находиться в хранилище больших двоичных объектов Azure. Примеры см. в статье [Примеры массового доступа к данным в хранилище BLOB-объектов Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 FIELDQUOTE **=** 'field_quote'   
-**Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Определяет символ, который будет использоваться в качестве символа кавычки в CSV-файле. Если этот символ не задан, в качестве символа кавычки будет использоваться символ (") согласно стандарту [RFC 4180](https://tools.ietf.org/html/rfc4180).
 
   
@@ -248,10 +248,10 @@ FIELDQUOTE **=** 'field_quote'
      `FROM OPENROWSET(BULK...) AS table_alias`  
   
      `FROM OPENROWSET(BULK...) AS table_alias(column_alias,...n)`  
->    [!IMPORTANT]  
->    Сбой при добавлении `AS <table_alias>` приведет к ошибке:    
->    сообщение 491, уровень 16, состояние 1, строка 20    
->    Корреляционное имя должно быть указано для группового набора строк в предложении FROM.    
+> [!IMPORTANT]  
+> Сбой при добавлении `AS <table_alias>` приведет к ошибке:    
+> сообщение 491, уровень 16, состояние 1, строка 20    
+> Корреляционное имя должно быть указано для группового набора строк в предложении FROM.    
   
 -   Инструкция `SELECT...FROM OPENROWSET(BULK...)` запрашивает данные в файле напрямую, не импортируя их в таблицу. Кроме того, инструкции `SELECT...FROM OPENROWSET(BULK...)` могут перечислять псевдонимы массовых столбцов, используя файл форматирования для указания имен столбцов и типов данных.  
   
@@ -262,13 +262,13 @@ FIELDQUOTE **=** 'field_quote'
  Сведения об использовании инструкций `INSERT...SELECT * FROM OPENROWSET(BULK...)` см. в статье [Массовый импорт и экспорт данных (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md). Сведения о том, когда в журнале транзакций регистрируются операции вставки строк, выполняемые при массовом импорте, см. в разделе [Предварительные условия для минимального протоколирования массового импорта данных](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 > [!NOTE]  
->  При использовании функции `OPENROWSET` важно понимать, как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обрабатывает олицетворение. Сведения о вопросах безопасности см. в статье [Массовый импорт данных при помощи инструкции BULK INSERT или OPENROWSET(BULK...) (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+> При использовании функции `OPENROWSET` важно понимать, как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обрабатывает олицетворение. Сведения о вопросах безопасности см. в статье [Массовый импорт данных при помощи инструкции BULK INSERT или OPENROWSET(BULK...) (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### <a name="bulk-importing-sqlchar-sqlnchar-or-sqlbinary-data"></a>Массовый импорт данных SQLCHAR, SQLNCHAR или SQLBINARY  
  Функция OPENROWSET(BULK...) предполагает, что максимальная длина данных SQLCHAR, SQLNCHAR или SQLBINARY не превышает 8 000 байт (если не указано иное). Если импортируемые данные находятся в поле данных LOB, которое содержит любые объекты **varchar(max)**, **nvarchar(max)** или **varbinary(max)**, превышающие 8000 байт, необходимо использовать XML-файл форматирования, определяющий максимальную длину для поля данных. Чтобы указать максимальную длину, измените файл форматирования и объявите атрибут MAX_LENGTH.  
   
 > [!NOTE]  
->  Автоматически сформированный файл форматирования не задает длину или максимальную длину для поля LOB. Однако можно изменить файл форматирования и указать длину или максимальную длину вручную.  
+> Автоматически сформированный файл форматирования не задает длину или максимальную длину для поля LOB. Однако можно изменить файл форматирования и указать длину или максимальную длину вручную.  
   
 ### <a name="bulk-exporting-or-importing-sqlxml-documents"></a>Массовый экспорт или импорт документов SQLXML  
  Чтобы выполнить массовый экспорт или импорт SQLXML-данных используйте один из следующих типов данных в файле форматирования:  
@@ -299,7 +299,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
  В приведенном ниже примере для доступа к таблице `Customers` в базе данных `Northwind` [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access используется поставщик OLE DB для Jet ([!INCLUDE[msCoName](../../includes/msconame-md.md)]).  
   
 > [!NOTE]  
->  В этом примере предполагается, что Access установлен. Для запуска данного примера необходимо установить базу данных Northwind.  
+> В этом примере предполагается, что Access установлен. Для запуска данного примера необходимо установить базу данных Northwind.  
   
 ```sql  
 SELECT CustomerID, CompanyName  
@@ -315,7 +315,7 @@ GO
  В приведенном ниже примере производится выборка всех данных из таблицы `Customers` в локальном экземпляре базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Northwind` и из таблицы `Orders` в базе данных Access `Northwind`, хранящейся на том же компьютере.  
   
 > [!NOTE]  
->  В этом примере предполагается, что Access установлен. Для запуска данного примера необходимо установить базу данных Northwind.  
+> В этом примере предполагается, что Access установлен. Для запуска данного примера необходимо установить базу данных Northwind.  
   
 ```sql  
 USE Northwind  ;  
@@ -392,7 +392,7 @@ OPENROWSET (BULK N'D:\data.csv', FORMATFILE =
     'D:\format_no_collation.txt', CODEPAGE = '65001') AS a;  
 ```  
 ### <a name="g-accessing-data-from-a-csv-file-with-a-format-file"></a>Ж. Доступ к данным из CSV-файла с помощью файла форматирования  
-**Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 ```sql
 SELECT *
 FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
@@ -418,7 +418,7 @@ SELECT * FROM OPENROWSET(
 
 
 ### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>И. Доступ к данным из файла, который находится в хранилище BLOB-объектов Azure   
-**Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 В приведенном ниже примере используется внешний источник данных, указывающий на контейнер в учетной записи хранения Azure и учетные данные уровня базы данных, созданные для подписанного URL-адреса.     
 
 ```sql
