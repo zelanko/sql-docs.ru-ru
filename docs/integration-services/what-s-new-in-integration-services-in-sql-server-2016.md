@@ -115,7 +115,7 @@ ms.locfileid: "53205843"
   
     -   Улучшенная процедура установки  
   
-        -   [Блокировка обновления, когда база данных SSISDB относится к группе доступности](#Upgrade)  
+        -   [Блокировка обновления, когда база данных SSISDB состоит в группе доступности ](#Upgrade)  
   
     -   Улучшенная процедура разработки  
   
@@ -285,10 +285,10 @@ ms.locfileid: "53205843"
  Диспетчер подключений, источник и назначение Excel теперь явным образом поддерживают источники данных Excel 2016.  
 
 ####  <a name="SAPBW"></a> Выпуск соединителя для SAP BW для SQL Server 2016  
- Соединитель Microsoft® для SAP BW для Microsoft SQL Server® 2016 выпущен в составе пакета дополнительных компонентов SQL Server 2016. Чтобы скачать компоненты пакета дополнительных компонентов, см. страницу [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)(Пакет дополнительных компонентов Microsoft® SQL Server® 2016).
+ Соединитель с SAP BW (Microsoft®) для Microsoft SQL Server® 2016 выпущен в составе пакета дополнительных компонентов SQL Server 2016. Скачать эти компоненты можно здесь: [Пакет дополнительных компонентов для Microsoft® SQL Server® 2016](https://go.microsoft.com/fwlink/?LinkID=746297).
  
 #### <a name="oracleteradata"></a> Выпуск соединителей версии 4.0 для Oracle и Teradata
-Были выпущены соединители Майкрософт версии&4;.0 для Oracle и Teradata. Чтобы скачать соединители, см. в разделе [соединители Microsoft версии 4.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
+Были выпущены соединители Майкрософт версии&4;.0 для Oracle и Teradata. Скачать их можно здесь: [соединители Microsoft версии 4.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
 
 ### <a name="pdwau5"></a> Выпуск соединителей для системы платформы аналитики (PDW) с обновлением 5
 Были выпущены адаптеры назначения для загрузки данных в PDW с AU5. Сведения о скачивании адаптеров см. в разделе [Analytics платформы System Appliance Update 5 Documentation и клиентские средства](https://www.microsoft.com/download/details.aspx?id=51610).
@@ -314,8 +314,8 @@ ms.locfileid: "53205843"
  
 ### <a name="better-install-experience"></a>Улучшенная процедура установки
 
-####  <a name="Upgrade"></a> Блокировка обновления, когда база данных SSISDB относится к группе доступности  
- Если база данных каталога служб SSIS (SSISDB) относится к группе доступности AlwaysOn, необходимо удалить SSISDB из группы доступности обновить SQL Server, а затем добавить SSISDB обратно в группу. Дополнительные сведения см. в разделе [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade).  
+####  <a name="Upgrade"></a> Блокировка обновления, когда база данных SSISDB состоит в группе доступности   
+ Если база данных каталога служб SSIS (SSISDB) состоит в группе доступности AlwaysOn, для обновления SQL Server необходимо сначала удалить SSISDB из группы доступности, произвести обновление, а затем добавить SSISDB обратно в группу. Дополнительные сведения: [Обновление SSISDB в группе доступности](../integration-services/catalog/ssis-catalog.md#Upgrade).   
 
 ### <a name="better-design-experience"></a>Улучшенная процедура разработки
 
