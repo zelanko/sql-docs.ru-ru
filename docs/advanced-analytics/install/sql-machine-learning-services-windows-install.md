@@ -3,19 +3,20 @@ title: Установка SQL Server служб машинного обучен�
 description: R в SQL Server или Python на действия по установке SQL Server для служб SQL Server 2017 машинного обучения на Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 01/17/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9118edd1ab25cf13cbb6d10212b50f7e7428fe9f
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 2f323ac135ed41ff15c1d41a17407d03138e4807
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645353"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372697"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Установка SQL Server службы машинного обучения на Windows
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Начиная с SQL Server 2017, R и Python предусмотрена поддержка для аналитики в базе данных в **службы машинного обучения SQL Server**, пришедшее на смену [служб R SQL Server](../r/sql-server-r-services.md) появился в SQL Server 2016. Библиотеки функций в R и Python и запуск от имени внешних скриптов на экземпляр ядра СУБД. 
@@ -201,6 +202,13 @@ ms.locfileid: "53645353"
     | hello |
     |----|
     | 1|
+
+
+<!--  The preceding 'hello' table is NOT rendering properly on live Docs.
+Instead, the RAW markdown for the table is being displayed.  Probable bug in this markdown source,
+due to stricter rules imposed by 'markdig' engine (replaced 'DFM').
+I will inform HeidiSteen  [GeneMi, 2019/01/17]
+-->
 
 
 > [!NOTE]
