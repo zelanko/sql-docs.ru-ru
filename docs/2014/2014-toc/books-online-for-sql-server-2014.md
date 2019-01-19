@@ -19,20 +19,22 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 6b54c44c88c384b28f9966ad9c7e3888fd038aa3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eae4ddb70dceccaa4956322dbf74cd84df3a83cc
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353914"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397563"
 ---
 # <a name="books-online-for-sql-server-2014"></a>Электронная документация по SQL Server 2014
+
   Добро пожаловать на страницу электронной документации [!INCLUDE[msCoName](../includes/msconame-md.md)]® для [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. В электронной документации приведено описание задач, а также справочная документация, где описано управление данными и работа бизнес-аналитики с помощью [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Попробуйте продукт:**  
  ![Маленький значок виртуальной машины Azure](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Есть ли учетная запись Azure?  Затем перейдите **[здесь](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** запустить виртуальную машину с SQL Server 2014 с пакетом обновления 1 (SP1) уже установлен. Дополнительные сведения о SQL Server 2014 (SP1), см. в разделе [сведения о выпуске пакета обновления 1 для SQL Server 2014 ](https://support.microsoft.com/en-us/kb/3058865). 
   
 ## <a name="sql-server-technologies"></a>Технологии SQL Server  
+
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] включает несколько технологий управления данными и анализа данных. В следующей таблице приведены ссылки на компоненты, задачи и справочную документацию по каждой технологии.  
   
 |||  
@@ -46,6 +48,7 @@ ms.locfileid: "53353914"
 |![Значок служб отчетов](media/reportingservices.gif "значок служб Reporting Services")|[службы Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> Службы Reporting Services предлагают средства создания корпоративных отчетов с поддержкой веб-интерфейса, которые позволяют включать в отчеты данные из различных источников, публиковать отчеты в разнообразных форматах, а также централизованно управлять безопасностью и подписками.|  
   
 ## <a name="sql-server-information-on-the-web"></a>Сведения о SQL Server в Интернете  
+
  [!INCLUDE[msCoName](../includes/msconame-md.md)] публикует дополнительные сведения о [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на нескольких веб-сайтах.  
   
  **Веб-сайты SQL Server**  
@@ -54,7 +57,7 @@ ms.locfileid: "53353914"
   
 -   [Центр ресурсов SQL Server](https://go.microsoft.com/fwlink/?linkid=218841)  
   
--   [Технический центр SQL Server](https://go.microsoft.com/fwlink/?linkid=28107)  
+-   [SQL Server TechCenter](https://go.microsoft.com/fwlink/?linkid=28107)  
   
 -   [Центр разработчиков SQL Server](https://go.microsoft.com/fwlink/?LinkId=42457)  
   
@@ -63,6 +66,7 @@ ms.locfileid: "53353914"
 -   [Центр разработчиков XML](https://go.microsoft.com/fwlink/?LinkId=42458)  
   
 ## <a name="see-also"></a>См. также  
+
  [Справка диспетчера конфигурации SQL Server](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   

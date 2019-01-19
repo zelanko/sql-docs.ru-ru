@@ -4,18 +4,18 @@ description: В этой статье описывается установка 
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 12/07/2018
+ms.date: 01/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 15a1a411672303fc8556927bcaf218052758744d
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 7e140a4eeb8fe6481b52be378c6ad9569160e9e3
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553256"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397663"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>Установка SQL Server 2019 службы машинного обучения (R, Python, Java) на платформе Linux
 
@@ -77,7 +77,7 @@ ls /opt/microsoft/mssql/bin
 
 ## <a name="prerequisites"></a>предварительные требования
 
-+ Требуется версия Linux [поддерживается SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), работающей в локальной среде или в контейнере Docker. Поддерживаемые версии:
++ Версии Linux должны быть [поддерживается в SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), но не включает подсистему Docker. Поддерживаемые версии:
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
 
@@ -167,17 +167,17 @@ zypper update
 
 | Имя пакета | Применяется к | Описание |
 |--------------|----------|-------------|
-|MSSQL-server расширяемость  | All | Инфраструктура расширяемости, используемые для запуска кода R, Python или Java. |
+|mssql-server-extensibility  | All | Инфраструктура расширяемости, используемые для запуска кода R, Python или Java. |
 |MSSQL-server расширяемости java | Java | Расширение Java для загрузки среда выполнения Java. Отсутствуют дополнительные библиотеки или пакеты для Java. |
 | Microsoft openmpi  | Python, R | Интерфейс, используемый библиотеками Revo * для параллелизации на платформе Linux передачи сообщений. |
-| MSSQL-mlservices-python | Python | Распределение открытым исходным кодом Anaconda и Python. |
-|MSSQL-mlservices-mlm-py  | Python | *Полная установка*. Предоставляет revoscalepy, microsoftml, предварительно обученных моделей для анализа тональности образа Добавление признаков и текст.| 
-|MSSQL-mlservices пакеты py  | Python | *Минимальная установка*. Предоставляет revoscalepy и microsoftml. <br/>Исключает предварительно обученных моделей. | 
+| mssql-mlservices-python | Python | Распределение открытым исходным кодом Anaconda и Python. |
+|mssql-mlservices-mlm-py  | Python | *Полная установка*. Предоставляет revoscalepy, microsoftml, предварительно обученных моделей для анализа тональности образа Добавление признаков и текст.| 
+|mssql-mlservices-packages-py  | Python | *Минимальная установка*. Предоставляет revoscalepy и microsoftml. <br/>Исключает предварительно обученных моделей. | 
 | [Microsoft-r-открытым *](#mro) | Чтение | Открытый дистрибутив R, состоящий из трех пакетов. |
-|MSSQL-mlservices-mlm-r  | Чтение | *Полная установка*. Предоставляет RevoScaleR, MicrosoftML, sqlRUtils, olapR, предварительно обученных моделей для анализа тональности образа Добавление признаков и текст.| 
-|MSSQL-mlservices пакеты r  | Чтение | *Минимальная установка*. Предоставляет RevoScaleR, sqlRUtils, MicrosoftML, olapR. <br/>Исключает предварительно обученных моделей. | 
-|MSSQL-mlservices-mml-py  | Только CTP 2.0 — 2.1 | Устарело в CTP-версии 2.2, из-за консолидации пакета Python в mssql-mslservices-python. Предоставляет revoscalepy. Исключает предварительно обученных моделей и microsoftml.| 
-|MSSQL-mlservices-mml-r  | Только CTP 2.0 — 2.1 | Устарело в CTP-версии 2.2, из-за консолидации пакета R в mssql-mslservices-python. Предоставляет RevoScaleR, sqlRUtils, olapR. Исключает предварительно обученных моделей и MicrosoftML.  |
+|mssql-mlservices-mlm-r  | Чтение | *Полная установка*. Предоставляет RevoScaleR, MicrosoftML, sqlRUtils, olapR, предварительно обученных моделей для анализа тональности образа Добавление признаков и текст.| 
+|mssql-mlservices-packages-r  | Чтение | *Минимальная установка*. Предоставляет RevoScaleR, sqlRUtils, MicrosoftML, olapR. <br/>Исключает предварительно обученных моделей. | 
+|mssql-mlservices-mml-py  | Только CTP 2.0 — 2.1 | Устарело в CTP-версии 2.2, из-за консолидации пакета Python в mssql-mslservices-python. Предоставляет revoscalepy. Исключает предварительно обученных моделей и microsoftml.| 
+|mssql-mlservices-mml-r  | Только CTP 2.0 — 2.1 | Устарело в CTP-версии 2.2, из-за консолидации пакета R в mssql-mslservices-python. Предоставляет RevoScaleR, sqlRUtils, olapR. Исключает предварительно обученных моделей и MicrosoftML.  |
 
 <a name="RHEL"></a>
 

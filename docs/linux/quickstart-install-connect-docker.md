@@ -13,12 +13,12 @@ ms.custom: sql-linux, seodec18
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: f4e6298cb1165f75dcd9a6aa6c77a1628650c0f6
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: f7c9612bac16463c1ea82d9e5a83bbad9f371700
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206320"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397633"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Краткое руководство. Запускать образы контейнера SQL Server с помощью Docker
 
@@ -98,7 +98,7 @@ any changes to one section should be duplicated in the other-->
    | Параметр | Описание |
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  Присвойте переменной **ACCEPT_EULA** любое значение, чтобы подтвердить свое согласие с [лицензионным соглашением](https://go.microsoft.com/fwlink/?LinkId=746388). Обязательный параметр для образа SQL Server. |
-   | **-e "SA_PASSWORD =\<YourStrong! Passw0rd\>"** | Укажите свой надежный пароль длиной не меньше восьми символов, соответствующий [требованиям к паролям в SQL Server](../relational-databases/security/password-policy.md). Обязательный параметр для образа SQL Server. |
+   | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | Укажите свой надежный пароль длиной не меньше восьми символов, соответствующий [требованиям к паролям в SQL Server](../relational-databases/security/password-policy.md). Обязательный параметр для образа SQL Server. |
    | **-p 1433:1433** | Сопоставление TCP-порта среды узла (первое значение) с TCP-портом в контейнере (второе значение). В этом примере SQL Server прослушивает TCP 1433 в контейнере, и он предоставляется к порту 1433 на узле. |
    | **--name sql1** | Укажите свое имя для контейнера вместо сгенерированного случайным образом. При запуске нескольких контейнеров использовать одинаковые имена запрещено. |
    | **mcr.Microsoft.com/MSSQL/Server:2017-Latest** | Контейнер образа Linux с SQL Server 2017. |
@@ -180,10 +180,10 @@ SELECT @@SERVERNAME,
    | Параметр | Описание |
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  Присвойте переменной **ACCEPT_EULA** любое значение, чтобы подтвердить свое согласие с [лицензионным соглашением](https://go.microsoft.com/fwlink/?LinkId=746388). Обязательный параметр для образа SQL Server. |
-   | **-e "SA_PASSWORD =\<YourStrong! Passw0rd\>"** | Укажите свой надежный пароль длиной не меньше восьми символов, соответствующий [требованиям к паролям в SQL Server](../relational-databases/security/password-policy.md). Обязательный параметр для образа SQL Server. |
+   | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | Укажите свой надежный пароль длиной не меньше восьми символов, соответствующий [требованиям к паролям в SQL Server](../relational-databases/security/password-policy.md). Обязательный параметр для образа SQL Server. |
    | **-p 1433:1433** | Сопоставление TCP-порта среды узла (первое значение) с TCP-портом в контейнере (второе значение). В этом примере SQL Server прослушивает TCP 1433 в контейнере, и он предоставляется к порту 1433 на узле. |
    | **--name sql1** | Укажите свое имя для контейнера вместо сгенерированного случайным образом. При запуске нескольких контейнеров использовать одинаковые имена запрещено. |
-   | **mcr.Microsoft.com/MSSQL/Server:2019-CTP2.2-Ubuntu** | Образ контейнера SQL Server 2019 CTP-версии 2.2 Linux. |
+   | **mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu** | Образ контейнера SQL Server 2019 CTP-версии 2.2 Linux. |
 
 3. Для просмотра ваших контейнеров Docker используйте команду `docker ps`.
 
@@ -348,7 +348,7 @@ SELECT @@SERVERNAME,
 
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md);
 - [SQL Server Management Studio (SSMS) в Windows](sql-server-linux-manage-ssms.md);
-- [Studio данных Azure (Предварительная версия)](../azure-data-studio/what-is.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
 - [mssql-cli (предварительная версия)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/).
 
 ## <a name="remove-your-container"></a>Удаление контейнера

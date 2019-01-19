@@ -9,15 +9,16 @@ ms.assetid: 2b0b5ab7-4e08-431a-bd59-360177c4565c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d3b7652cf67fff68b1a9e6d87e02c2776317af19
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 64a1423295b8117640de555a7132a44af98b87c0
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365243"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397573"
 ---
 # <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>Конкретный пример: Создание экосистемы для предприятия с помощью Microsoft Dynamics ERP и репликации SQL Server 2014 для обеспечения масштабируемости и производительности
-  **Сводка.** В этом документе рассматриваются следующие сценарии:  
+
+  **Сводка** В этом документе рассматриваются следующие сценарии:  
 Как использовать репликацию транзакций в SQL Server 2014 для распространения транзакций от клиентов Dynamics AX между несколькими узлами. Поскольку данные сохраняются на узлы в режиме реального времени, репликация транзакций обеспечивает избыточность данных, что повышает доступность данных и позволяет более эффективно анализировать доступные данные с целью установления показателей производительности.  
 Как понять конкретику, связанную с репликацией транзакций, используя ее при этом для создания высокомасштабируемых экосистем для предприятий с Microsoft Dynamics ERP. Обеспечение высокой производительности и масштабируемости без настройки готовых возможностей AX.  
   

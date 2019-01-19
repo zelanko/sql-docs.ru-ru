@@ -5,17 +5,17 @@ description: Этом руководстве показано, как Загру
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 01/17/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a89b1bec266f590d6e96365436fe5339b9152f92
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 207d2d01278d96456bcec44814efe76fdae70fdf
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241485"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397513"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>Учебник. Загрузка образца данных в кластере SQL Server 2019 больших данных
 
@@ -62,11 +62,11 @@ ms.locfileid: "54241485"
 
    | Параметр | Описание |
    |---|---|
-   | &LT; CLUSTER_NAMESPACE &GT; | Имя присвоенное кластеру больших данных. |
-   | &LT; SQL_MASTER_IP &GT; | IP-адрес главного экземпляра. |
-   | &LT; SQL_MASTER_SA_PASSWORD &GT; | Пароль системного Администратора для главного экземпляра. |
-   | &LT; KNOX_IP &GT; | IP-адрес шлюза HDFS или Spark. |
-   | &LT; KNOX_PASSWORD &GT; | Пароль для шлюза HDFS или Spark. |
+   | <CLUSTER_NAMESPACE> | Имя присвоенное кластеру больших данных. |
+   | <SQL_MASTER_IP> | IP-адрес главного экземпляра. |
+   | <SQL_MASTER_SA_PASSWORD> | Пароль системного Администратора для главного экземпляра. |
+   | <KNOX_IP> | IP-адрес шлюза HDFS или Spark. |
+   | <KNOX_PASSWORD> | Пароль для шлюза HDFS или Spark. |
 
    > [!TIP]
    > Используйте [kubectl](cluster-troubleshooting-commands.md) найти IP-адреса для главного экземпляра SQL Server и Knox. Запустите `kubectl get svc -n <your-cluster-name>` и посмотрите на внешний IP-адреса основной экземпляр (**конечной точки master-pool**) и Knox (**службы безопасности балансировки нагрузки** или **nodeport службы безопасности**).
@@ -98,11 +98,11 @@ ms.locfileid: "54241485"
 
    | Параметр | Описание |
    |---|---|
-   | &LT; CLUSTER_NAMESPACE &GT; | Имя присвоенное кластеру больших данных. |
-   | &LT; SQL_MASTER_IP &GT; | IP-адрес главного экземпляра. |
-   | &LT; SQL_MASTER_SA_PASSWORD &GT; | Пароль системного Администратора для главного экземпляра. |
-   | &LT; KNOX_IP &GT; | IP-адрес шлюза HDFS или Spark. |
-   | &LT; KNOX_PASSWORD &GT; | Пароль для шлюза HDFS или Spark. |
+   | <CLUSTER_NAMESPACE> | Имя присвоенное кластеру больших данных. |
+   | <SQL_MASTER_IP> | IP-адрес главного экземпляра. |
+   | <SQL_MASTER_SA_PASSWORD> | Пароль системного Администратора для главного экземпляра. |
+   | <KNOX_IP> | IP-адрес шлюза HDFS или Spark. |
+   | <KNOX_PASSWORD> | Пароль для шлюза HDFS или Spark. |
 
    > [!TIP]
    > Используйте [kubectl](cluster-troubleshooting-commands.md) найти IP-адреса для главного экземпляра SQL Server и Knox. Запустите `kubectl get svc -n <your-cluster-name>` и посмотрите на внешний IP-адреса основной экземпляр (**конечной точки master-pool**) и Knox (**службы безопасности балансировки нагрузки** или **nodeport службы безопасности**).
@@ -110,7 +110,7 @@ ms.locfileid: "54241485"
 1. Скрипт начальной загрузки.
 
    ```bash
-   ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   sudo env "PATH=$PATH" ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
    ```
 
 ## <a name="next-steps"></a>Следующие шаги
