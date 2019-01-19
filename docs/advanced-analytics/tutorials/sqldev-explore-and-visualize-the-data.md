@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 36a904eeb4c7cde7d3a5356aff2029698e91f059
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 76e3fdca639ed576b6b0664042aea5df2b5a9f74
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645503"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405784"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Урок 1. Анализ и визуализация данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "53645503"
 
 Эта хранимая процедура возвращает изображение в виде потока данных varbinary, которые, очевидно, нельзя просмотреть напрямую. Однако вы можете использовать служебную программу **bcp** для получения данных varbinary и сохранения их в виде файла изображения на клиентском компьютере.
   
-1.  В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]выполните следующую инструкцию:
+1. В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]выполните следующую инструкцию:
   
     ```sql
     EXEC [dbo].[RxPlotHistogram]
@@ -114,25 +114,24 @@ ms.locfileid: "53645503"
   
     **Результаты**
     
-    *График*
-    *0xFFD8FFE000104A4649...*
+    *График* *0xFFD8FFE000104A4649...*
   
-2.  Откройте командную строку PowerShell и выполните следующую команду, указав соответствующее имя экземпляра, имя базы данных, имя пользователя и учетные данные в качестве аргументов. Для тех, с помощью удостоверений Windows, можно заменить **- U** и **-P** с **-T**.
+2. Откройте командную строку PowerShell и выполните следующую команду, указав соответствующее имя экземпляра, имя базы данных, имя пользователя и учетные данные в качестве аргументов. Для тех, с помощью удостоверений Windows, можно заменить **- U** и **-P** с **-T**.
   
-     ```powershell
-     bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
-     ```
+    ```powershell
+    bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
+    ```
 
     > [!NOTE]
     > Ключи для bcp учитывается регистр.
   
-3.  Если подключение успешно установлено, появится запрос на ввод дополнительных сведений о формате графического файла. 
+3. Если подключение успешно установлено, появится запрос на ввод дополнительных сведений о формате графического файла. 
 
    Нажимайте клавишу ВВОД, чтобы принять значения по умолчанию, за исключением указанных ниже изменений.
     
-    -   Для **длины префикса диаграммы поля**введите значение 0.
+   + Для **длины префикса диаграммы поля**введите значение 0.
   
-    -   Введите **Y** , если необходимо сохранить выходные параметры для повторного использования в будущем.
+   + Введите **Y** , если необходимо сохранить выходные параметры для повторного использования в будущем.
   
     ```powershell
     Enter the file storage type of field plot [varbinary(max)]: 

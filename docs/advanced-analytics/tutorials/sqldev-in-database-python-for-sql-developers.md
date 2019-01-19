@@ -8,19 +8,21 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: be4ac6b7f7c156ebeda843e8aa987ab45ef4057d
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: ab28dafe062d7a8d492e702aa5570881ef77f1e0
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596685"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405624"
 ---
-# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>Учебник. Python в базе данных аналитики для разработчиков SQL
+# <a name="tutorial-python-data-analytics-for-sql-developers"></a>Учебник. Анализ данных Python для разработчиков SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этом руководстве для программистов SQL, Дополнительные сведения о Python интеграции путем создания и развертывания на базе Python машинного обучения с помощью решения [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) базы данных на сервере SQL Server. 
+В этом руководстве для программистов SQL, Дополнительные сведения о Python интеграции путем создания и развертывания на базе Python машинного обучения с помощью решения [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) базы данных на сервере SQL Server. Вы будете использовать T-SQL, SQL Server Management Studio и экземпляр ядра СУБД с [служб машинного обучения](../install/sql-machine-learning-services-windows-install.md) и поддержка языка Python.
 
-В этом руководстве описываются функции Python, которые используются в рабочий процесс моделирования данных. Шаги включают Просмотр данных, построения и обучения модели двоичной классификации и развертыванию модели. Вы будете использовать пример данных такси Нью-Йорке и Limosine комиссии, и модель, которую вы создадите прогнозирует ли поездку, вероятнее всего приведет к tip, на основе времени дня, пройденное расстояние и место посадки. Весь код Python, используемый в этом руководстве упаковывается в хранимых процедурах, создания и выполнения в среде Management Studio.
+В этом руководстве описываются функции Python, которые используются в рабочий процесс моделирования данных. Шаги включают Просмотр данных, построения и обучения модели двоичной классификации и развертыванию модели. Вы будете использовать пример данных такси Нью-Йорке и Limosine комиссии, и модель, которую вы создадите прогнозирует ли поездку, вероятнее всего приведет к tip, на основе времени дня, пройденное расстояние и место посадки. 
+
+Весь код Python, используемый в этом руководстве упаковывается в хранимых процедурах, создания и выполнения в среде Management Studio.
 
 > [!NOTE]
 > Это руководство доступно в R и Python. В версии R, см. в разделе [в базе данных аналитики для разработчиков R](sqldev-in-database-r-for-sql-developers.md).
@@ -42,7 +44,7 @@ ms.locfileid: "53596685"
 
 + [Занятие 2. Создание функций данных с помощью пользовательских функций SQL](sqldev-py4-create-data-features-using-t-sql.md)
 
-+ [Занятие 3. Обучение и сохранение модели Python с помощью T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
++ [Занятие 3. Обучение и сохранение модели Python с помощью T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 + [Занятие 4. Предсказания возможных результатов, с помощью модели Python в хранимой процедуре](sqldev-py6-operationalize-the-model.md)
 

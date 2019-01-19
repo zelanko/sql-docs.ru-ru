@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 12ec074501e93af586a5d495bd7984ad62f3fd88
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 900bd5fea075e304dae73a20168da952433f20be
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242145"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405824"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Развертывание кластеров больших данных SQL Server в Kubernetes
 
@@ -85,7 +85,7 @@ kubectl config view
 | Переменная среды | Обязательно | Значение по умолчанию | Описание |
 |---|---|---|---|
 | **ACCEPT_EULA** | Да | Н/Д | Примите лицензионное соглашение SQL Server (например, «Y»).  |
-| **ИМЯ_КЛАСТЕРА** | Да | Н/Д | Имя пространства имен Kubernetes для развертывания кластера больших данных в SQLServer. |
+| **CLUSTER_NAME** | Да | Н/Д | Имя пространства имен Kubernetes для развертывания кластера больших данных в SQLServer. |
 | **CLUSTER_PLATFORM** | Да | Н/Д | Платформы, на которой развернут кластер Kubernetes. Может быть `aks`, `minikube`, `kubernetes`|
 | **CLUSTER_COMPUTE_POOL_REPLICAS** | Нет | 1 | Число реплик пула вычислений, чтобы выстроить. В CTP-версии 2.2 только табличные значения допускается-1. |
 | **CLUSTER_DATA_POOL_REPLICAS** | Нет | 2 | Количество данных пула реплик, чтобы выстроить. |
@@ -248,7 +248,7 @@ kubectl get svc -n <your-cluster-name>
 
 В настоящее время единственный способ обновления до нового выпуска кластерам больших данных — вручную удаления и повторного создания кластера. Каждый выпуск содержит уникальной версии **mssqlctl** , не совместим с предыдущей версией. Кроме того Если кластер старых нужно было загрузить изображения на новый узел, последний образ может оказаться несовместимым с старые образы в кластере. Чтобы обновить до последней версии, следуйте инструкциям ниже:
 
-1. Перед удалением старого кластера, резервное копирование данных на экземпляре SQL Server master и в HDFS. Для главного экземпляра SQL Server, можно использовать [Архивация и восстановление SQL Server](data-ingestion-restore-databse.md). Для HDFS вы [можно скопировать данные с **curl**](data-ingestion-curl.md).
+1. Перед удалением старого кластера, резервное копирование данных на экземпляре SQL Server master и в HDFS. Для главного экземпляра SQL Server, можно использовать [Архивация и восстановление SQL Server](data-ingestion-restore-database.md). Для HDFS вы [можно скопировать данные с **curl**](data-ingestion-curl.md).
 
 1. Удалите старый кластер с `mssqlctl delete cluster` команды.
 
@@ -310,10 +310,10 @@ kubectl get svc -n <your-cluster-name>
 
    | Служба | Описание |
    |---|---|
-   | **Конечная точка master-pool** | Предоставляет доступ к основной экземпляр.<br/>(**EXTERNAL-IP, 31433** и **SA** пользователя) |
-   | **Служба mssql контроллер lb**<br/>**Служба mssql контроллер nodeport** | Поддержка средств и клиентов, управления кластером. |
-   | **Служба прокси-сервер балансировки нагрузки.**<br/>**службы, прокси-сервера, nodeport** | Предоставляет доступ к [портал администрирования кластера](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**: 30777: портал)|
-   | **службы безопасности балансировки нагрузки.**<br/>**службы безопасности nodeport** | Предоставляет доступ к шлюзу HDFS или Spark.<br/>(**EXTERNAL-IP** и **корневой** пользователя) |
+   | **endpoint-master-pool** | Предоставляет доступ к основной экземпляр.<br/>(**EXTERNAL-IP, 31433** и **SA** пользователя) |
+   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | Поддержка средств и клиентов, управления кластером. |
+   | **service-proxy-lb**<br/>**service-proxy-nodeport** | Предоставляет доступ к [портал администрирования кластера](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**: 30777: портал)|
+   | **service-security-lb**<br/>**service-security-nodeport** | Предоставляет доступ к шлюзу HDFS или Spark.<br/>(**EXTERNAL-IP** и **корневой** пользователя) |
 
    > [!NOTE]
    > Имена служб, зависит от среды Kubernetes. При развертывании в службе Azure Kubernetes (AKS), имена служб заканчиваться **-lb**. Для сред с minikube и kubeadm имена служб заканчиваться **- nodeport**.

@@ -13,12 +13,12 @@ ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fe732d1647acbfdf70dacaddfc4eea3eca479d8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd519c9cafb1358f21af30d2c9ea0522e47768b7
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094804"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405744"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>Создание и управление секциями в базе данных рабочей области (табличные службы SSAS)
   Секции разделяют таблицу на логические части. Все секции можно обработать (обновить) независимо или параллельно с другими секциями. Использование секций позволяет улучшить масштабируемость и управление базами данных большого размера. По умолчанию все таблицы содержат одну секцию, включающую все столбцы. Задачи в этом разделе демонстрируют создание секций и управление ими в базе данных рабочей области модели с помощью диалогового окна **Диспетчер секций** в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
@@ -70,7 +70,7 @@ ms.locfileid: "48094804"
 2.  В списке **Секции** выберите секцию, которую необходимо удалить, и нажмите кнопку **Удалить**.  
   
 ## <a name="see-also"></a>См. также  
- [Секции &#40;табличные службы SSAS&#41;](partitions-ssas-tabular.md)   
- [Обработка секций в базе данных рабочей области &#40;табличные службы SSAS&#41;](process-partitions-in-the-workspace-databse-ssas-tabular.md)  
+ [Секции (табличные службы SSAS)](partitions-ssas-tabular.md)   
+ [Обработка секций в базе данных рабочей области &#40;табличные службы SSAS&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)  
   
   

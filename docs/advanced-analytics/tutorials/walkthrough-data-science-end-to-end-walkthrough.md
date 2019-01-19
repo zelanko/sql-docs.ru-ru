@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7fbed76272903fb7a9b6eee037a070677411a0f5
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 4b3beca0f9e9a8c714e60bde7a2e7ff067e2265e
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596425"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405734"
 ---
-# <a name="tutorial-in-database-analytics-for-data-scientists-using-r"></a>Учебник. Аналитика в базе данных для специалистов по анализу данных с помощью языка R
+# <a name="tutorial-sql-development-for-r-data-scientists"></a>Учебник. Разработка для специалистов по анализу данных R для SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом учебнике по обработке и анализу данных сведения о создании решений end-to-end для прогнозирующего моделирования, в зависимости о поддержке компонентов R в SQL Server 2016 или SQL Server 2017. В этом руководстве используется [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) базы данных на сервере SQL Server. 
@@ -43,7 +43,7 @@ ms.locfileid: "53596425"
 Кроме того, вы может работать с пошаговым руководством на компьютере, в котором содержатся оба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и среду разработки R, но мы не рекомендуем этой конфигурации для рабочей среды. Если вам нужно поместить клиента и сервера на одном компьютере, не забудьте установить второй набор библиотек Microsoft R для отправки скрипта R из «клиента». Не используйте библиотеки R, установленных в программные файлы экземпляра SQL Server. В частности Если вы используете один компьютер, необходимо библиотеки RevoScaleR в оба эти места для поддержки клиентских и серверных операций.
 
 + C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
-+ C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library\RevoScaleR
++ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
 <a name="add-packages"></a>
 

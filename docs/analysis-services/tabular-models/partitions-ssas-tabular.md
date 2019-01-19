@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6dfcebd520cd0efdecf2549a685595fe7a60deec
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 5d26b1b1558ca546fb47660488b15dc777c5ad87
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071821"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405854"
 ---
 # <a name="partitions"></a>Секции
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "53071821"
 |Раздел|Описание|  
 |-----------|-----------------|  
 |[Создание секций и управление ими в базе данных рабочей области](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)|Описывает создание и управление секциями в базе данных рабочей области модели с помощью диспетчера секций в SSDT.|  
-|[Обработка секций в базе данных рабочей области](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)|Описывает, как обрабатывать (обновлять) секции в базе данных рабочей области модели.|  
+|[Обработка секций в базе данных рабочей области](../../analysis-services/tabular-models/process-partitions-in-the-workspace-database-ssas-tabular.md)|Описывает, как обрабатывать (обновлять) секции в базе данных рабочей области модели.|  
   
 ## <a name="see-also"></a>См. также  
  [Режим DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   

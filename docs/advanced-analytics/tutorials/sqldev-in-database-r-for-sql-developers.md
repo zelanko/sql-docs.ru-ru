@@ -8,19 +8,21 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8e5b0bc8633e956817e778a1d5a2d75a86df8588
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 8d3235c585d3ea56a64776fde841ccc6d71b1a4d
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596350"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405604"
 ---
-# <a name="tutorial-in-database-analytics-for-sql-developers-using-r"></a>Учебник. Аналитика в базе данных для разработчиков SQL, с помощью языка R
+# <a name="tutorial-r-data-analytics-for-sql-developers"></a>Учебник. Анализ данных R для разработчиков SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этом руководстве для программистов SQL, узнайте об интеграции R путем создания и развертывания на основе R в машинном обучении решения с помощью [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) базы данных на сервере SQL Server. 
+В этом руководстве для программистов SQL, узнайте об интеграции R путем создания и развертывания на основе R в машинном обучении решения с помощью [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) базы данных на сервере SQL Server. Вы будете использовать T-SQL, SQL Server Management Studio и экземпляр ядра СУБД с [служб машинного обучения] ([служб машинного обучения](../install/sql-machine-learning-services-windows-install.md) и поддержка языка R
 
-В этом руководстве описываются функций R, используемых в данных, моделирование рабочего процесса. Шаги включают Просмотр данных, построения и обучения модели двоичной классификации и развертыванию модели. Модель, которую вы создадите прогнозирует, является ли поездку может привести tip, на основе времени дня, пройденное расстояние и место посадки. Весь код R, используемый в этом руководстве упаковывается в хранимых процедурах, создания и выполнения в среде Management Studio.
+В этом руководстве описываются функций R, используемых в данных, моделирование рабочего процесса. Шаги включают Просмотр данных, построения и обучения модели двоичной классификации и развертыванию модели. Модель, которую вы создадите прогнозирует, является ли поездку может привести tip, на основе времени дня, пройденное расстояние и место посадки. 
+
+Весь код R, используемый в этом руководстве упаковывается в хранимых процедурах, создания и выполнения в среде Management Studio.
 
 ## <a name="background-for-sql-developers"></a>Фон для разработчиков SQL
 
@@ -39,7 +41,7 @@ ms.locfileid: "53596350"
 
 - [Занятие 2. Создание функций данных с помощью языка R в T-SQL функции](sqldev-create-data-features-using-t-sql.md)
   
-- [Занятие 3. Обучение и сохранение модели R с помощью функций и хранимых процедур](sqldev-train-and-save-a-model-using-t-sql.md)
+- [Занятие 3. Обучение и сохранение модели R с помощью функций и хранимых процедур](sqldev-train-and-save-a-model-using-t-sql.md)
   
 - [Занятие 4. Предсказания возможных результатов, с помощью модели R в хранимой процедуре](../tutorials/sqldev-operationalize-the-model.md)
 
