@@ -8,12 +8,12 @@ ms.author: barbkess
 ms.topic: hub-page
 ms.technology:
 - database-engine
-ms.openlocfilehash: 4ca8da11fa8a1ab393e739e4cd917df7f00d91e2
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: a30902faa8da861b41ec9a5c9f912986bd4e77a0
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046524"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397553"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -314,7 +314,7 @@ ms.locfileid: "54046524"
                                                           <li><a class="barLink" href="/sql/relational-databases/database-features/">Основные понятия реляционной базы данных</a></li>
                                                             <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming/">Подключение к клиентским приложениям в локальной среде</a></li>
                                                             <li><a class="barLink" href="/azure/sql-database/sql-database-libraries">Библиотеки подключений базы данных SQL Azure</a></li>
-                                                            <li><a class="barLink" href="/sql/relational-databases/sql-database-develop-overview/">Приложения базы данных SQL Azure</a></li>
+                                                            <li><a class="barLink" href="https://docs.microsoft.com/azure/sql-database/sql-database-develop-overview">Приложения базы данных SQL Azure</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
