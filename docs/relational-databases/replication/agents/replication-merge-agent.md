@@ -16,12 +16,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3ce470350556e035453e68c8e84e6cff1ae1ee14
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: c7262d2ed909729d03563ca0f5aa17f8781ab843
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590228"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125904"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ replmerg [-?]
 [-InternetLogin internet_login]  
 [-InternetPassword internet_password]  
 [-InternetProxyLogin internet_proxy_login]  
-[-InternetProxyPassword internet_proxy_password]  
+[–InternetProxyPassword internet_proxy_password]  
 [-InternetProxyServer internet_proxy_server]  
 [-InternetSecurityMode [0|1]]  
 [-InternetTimeout internet_timeout]  
@@ -176,7 +176,7 @@ replmerg [-?]
  > [!NOTE]  
  >  Допустимый SSL-сертификат задается с полным доменным именем SQL Server. Если параметр -EncryptionLevel имеет значение 2, то для подключения агента создайте псевдоним на локальном сервере SQL Server. Для параметра Alias Name (Имя псевдонима) должно быть указано имя сервера, а для параметра Server (Сервер) — полное доменное имя SQL Server.
 
- Дополнительные сведения см. в статье [Общие сведения о безопасности (репликация)](../../../relational-databases/replication/security/security-overview-replication.md).  
+ Дополнительные сведения см. в статье [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
  **-ExchangeType** [ **1**| **2**| **3**]  
 > [!WARNING]
@@ -246,7 +246,7 @@ replmerg [-?]
  **-InternetProxyLogin**  *internet_proxy_login*  
  Указывает имя входа, используемое при соединении с заданным в параметре *internet_proxy_server*прокси-сервером, который требует проверки подлинности.  
   
- **-InternetProxyPassword**  *internet_proxy_password*  
+ **–InternetProxyPassword**  *internet_proxy_password*  
  Указывает пароль, используемый при соединении с заданным в параметре *internet_proxy_server*прокси-сервером, который требует проверки подлинности.  
   
  **-InternetProxyServer**  *internet_proxy_server*  
@@ -383,7 +383,7 @@ replmerg [-?]
 |**3**|Проверка достоверности по количеству строк и двоичной контрольной сумме.|  
   
 > [!NOTE]  
->  Проверка с использованием двоичной контрольной суммы может неверно сообщить об отказе, если типы данных на подписчике и издателе отличаются. Дополнительные сведения см. в разделе "Аспекты проверки данных" статьи [Проверка реплицированных данных](../../../relational-databases/replication/validate-replicated-data.md).  
+>  Проверка с использованием двоичной контрольной суммы может неверно сообщить об отказе, если типы данных на подписчике и издателе отличаются. Дополнительные сведения см. в разделе "Аспекты проверки данных" статьи [Проверка реплицированных данных](../../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
  **-ValidateInterval** _validate_interval_  
  Указывает частоту (в минутах) проверки подписки в непрерывном режиме. Значение по умолчанию равно **60** минут.  

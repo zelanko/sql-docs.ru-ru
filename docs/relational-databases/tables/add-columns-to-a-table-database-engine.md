@@ -16,15 +16,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae8ce2b79d49a7754a7049e005c34d4837a0d313
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: d8cb50c87778f3ab5255482213305cd974e4e64a
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384159"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300211"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>Добавление столбцов в таблицу (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
 
   В данном разделе содержатся инструкции по добавлению новых столбцов в таблицу в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
@@ -33,7 +36,7 @@ ms.locfileid: "49384159"
 ###  <a name="Restrictions"></a> Ограничения  
  Использование инструкции ALTER TABLE для добавления столбцов в таблицу приводит к автоматическому добавлению этих столбцов в конец таблицы. Если требуется, чтобы столбцы располагались в таблице в определенном порядке, воспользуйтесь [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Однако помните, что это не рекомендуемый метод конструирования баз данных. Рекомендуется указывать порядок, в котором возвращаются столбцы, на уровне приложения и запроса. Не следует предполагать, что SELECT * будет возвращать все столбцы в ожидаемом порядке, основанном на порядке их определения в таблице. Всегда указывайте столбцы в запросах и приложениях по именам в том порядке, в котором они должны следовать.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
  Требуется разрешение ALTER на таблицу.  
@@ -58,7 +61,7 @@ ms.locfileid: "49384159"
     > [!NOTE]  
     >  При создании нового столбца для свойств столбца устанавливаются значения по умолчанию, но их можно изменить на вкладке **Свойства столбца** .  
   
-6.  По окончании добавления столбцов из меню **Файл** выберите пункт **Сохранить**  *имя таблицы*.  
+6.  По окончании добавления столбцов из меню **Файл** выберите пункт **Сохранить**  _имя таблицы_.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

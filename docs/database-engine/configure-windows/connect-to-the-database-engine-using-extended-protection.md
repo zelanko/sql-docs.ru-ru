@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f820161dcf242a06054e3f64198aad1f827ed3dd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3d911c26eee5893d6817fe98b7a982e2ce25316f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395357"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133214"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Соединение с компонентом Database Engine с использованием расширенной защиты
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "52395357"
   
 1.  В меню **Пуск** выберите последовательно **Все программы**, **Microsoft SQL Server** и **Диспетчер конфигурации SQL Server**.  
   
-2.  Разверните узел **Конфигурация сети SQL Server**, щелкните правой кнопкой мыши **Протоколы для** *\<* Имя_экземпляра*>*, а затем выберите пункт **Свойства**.  
+2.  Разверните узел **Конфигурация сети SQL Server**, щелкните правой кнопкой мыши элемент **Протоколы для** _\<_Имя_экземпляра*>*, а затем выберите пункт **Свойства**.  
   
 3.  Для привязки каналов и служб на вкладке **Дополнительно** установите значение **Расширенная защита** для соответствующих параметров.  
   

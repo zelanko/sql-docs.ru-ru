@@ -13,12 +13,12 @@ ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d4622234e579d055635594f5dbfbd097f8943339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 793420d352b25d969c5cd618861c9b355dea8491
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675982"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131984"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>Подписка, журнал издателя для распространителя (подписка на публикацию транзакций)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,8 +64,8 @@ ms.locfileid: "47675982"
   
 ## <a name="see-also"></a>См. также:  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
- [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Обзор агентов репликации](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Просмотр сведений и выполнение задач с помощью монитора репликации](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication.md)   
+ [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

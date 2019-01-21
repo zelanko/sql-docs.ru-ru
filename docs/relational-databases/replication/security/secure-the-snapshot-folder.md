@@ -13,12 +13,12 @@ ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 831d1b43f54e64dd52226f3bc9504e622ce7b99e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a73ae886682890c68c34ac90af33438d7f7b9644
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617782"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124184"
 ---
 # <a name="secure-the-snapshot-folder"></a>Организация безопасности папки моментальных снимков
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47617782"
 > [!NOTE]  
 >  Средство «Контроль учетных записей» (UAC) помогает администраторам управлять своими повышенными пользовательскими разрешениями (иногда называемыми *правами доступа*). В операционной системе с включенным контроль учетных записей, администраторы не пользуются своими административными правами, Вместо этого они выполняют большинство операций от имени обычных пользователей (не администраторов) и используют административные права только по необходимости. С помощью средства «Управление учетными записями пользователя» можно запретить административный доступ к хранилищу моментального снимка. Поэтому необходимо явно предоставить разрешения на доступ к хранилищу моментального снимка учетным записям Windows, которые используются агентом моментальных снимков, агентом распространителя и агентом слияния. Это необходимо делать даже в том случае, если эти учетные записи Windows являются членами группы «Администраторы».  
   
- Когда вы настраиваете распространитель с помощью мастера настройки распространителя или мастера создания публикаций, папке моментального снимка по умолчанию назначается следующий локальный путь: X:\Program Files\Microsoft SQL Server\\\*\<экземпляр>* \MSSQL\ReplData. Если вы используете удаленный распространитель или подписки по запросу, необходимо указывать не локальный путь, а путь к общей сетевой папке в формате UNC (например, \\\\<*имя_компьютера>* \snapshot).  
+ При настройке распространителя с помощью мастера настройки распространителя или мастера создания публикаций папке моментального снимка назначается по умолчанию следующее местоположение: X:\Program Files\Microsoft SQL Server\\*\<экземпляр>* \MSSQL\ReplData. Если вы используете удаленный распространитель или подписки по запросу, необходимо указывать не локальный путь, а путь к общей сетевой папке в формате UNC (например, \\\\<*имя_компьютера>* \snapshot).  
   
  Предоставлять разрешения на доступ к папке моментальных снимков необходимо в соответствии со способом доступа к данной папке. В [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 2003 используются следующие вкладки диалогового окна:  
   
@@ -53,10 +53,10 @@ ms.locfileid: "47617782"
  Сведения о задании и изменении пароля для доступа к моментальным снимкам по FTP см. в подразделе «Доставка моментальных снимков по FTP» раздела [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Альтернативные расположения папки моментальных снимков](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+ [Изменение параметров моментального снимка](../../../relational-databases/replication/snapshot-options.md)   
  [Инициализация подписки с помощью моментального снимка](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Безопасность и защита (репликация)](../../../relational-databases/replication/security/security-and-protection-replication.md)   
- [Передача моментальных снимков через FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)  
+ [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+ [Передача моментальных снимков через FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)  
   
   

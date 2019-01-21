@@ -19,12 +19,12 @@ ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd7cf407f3634824f18137ec4539c56d930221c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6818a3ea8879b0fe49743e83261e120894cc359
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800202"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130754"
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>DENY, запрет разрешений на полнотекстовые объекты (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ DENY permission [ ,...n ] ON
  *permission*  
  Имя разрешения. Допустимые сопоставления разрешений на защищаемые объекты описаны далее в подразделе «Примечания».  
   
- ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ ON FULLTEXT CATALOG **::**_full-text_catalog_name_  
  Указывает полнотекстовый каталог, для которого запрещается разрешение. Квалификатор области **::** является обязательным.  
   
- ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
+ ON FULLTEXT STOPLIST **::**_full-text_stoplist_name_  
  Указывает список полнотекстовых стоп-слов, для которого запрещается разрешение. Квалификатор области **::** является обязательным.  
   
  *database_principal*  
@@ -127,7 +127,7 @@ DENY permission [ ,...n ] ON
   
 ## <a name="see-also"></a>См. также:  
  [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
- [CREATE ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [CREATE FULLTEXT STOPLIST (Transact-SQL)](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   

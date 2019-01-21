@@ -17,12 +17,12 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52f86e1750858ec7fabcb8fab30dcd23b4306ace
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ab81a9e76ea17a683062431da678fa679ceffdee
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509434"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226641"
 ---
 # <a name="ftp-task"></a>Задача «FTP»
   Задача «FTP» производит загрузку и передачу файлов данных, а также управляет каталогами на серверах. Например, пакет может загрузить файлы данных с удаленного сервера или из Интернета в качестве части рабочего процесса пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Можно использовать задачу «FTP» для следующих целей:  
@@ -40,7 +40,7 @@ ms.locfileid: "52509434"
   
  При доступе к локальному файлу или локальному каталогу, задача «FTP» использует диспетчер подключения файлов или сведения о пути, хранимые в переменной. При доступе к удаленному файлу или удаленному каталогу, задача «FTP» использует явно указанный путь удаленного сервера, который указан в диспетчере FTP-соединений, или сведения о пути, хранимые в переменной. Дополнительные сведения см. в разделах [Диспетчер соединения файлов](../../integration-services/connection-manager/file-connection-manager.md) и [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md).  
   
- Это значит, что задача «FTP» может получать несколько файлов и удалять несколько удаленных файлов, однако задача может посылать только один файл и удалять только один локальный файл, если она использует диспетчер подключения, т.к. диспетчер подключения файлов может обращаться только к одному файлу. Для обращения к нескольким локальным файлам, задача «FTP» должна использовать переменную для предоставления сведений о пути. Например, переменная, содержащая "C:\Test\\*.txt", предоставляет путь, который поддерживает удаление или отправку всех файлов каталога Test, которые имеют расширение TXT.  
+ Это значит, что задача «FTP» может получать несколько файлов и удалять несколько удаленных файлов, однако задача может посылать только один файл и удалять только один локальный файл, если она использует диспетчер подключения, т.к. диспетчер подключения файлов может обращаться только к одному файлу. Для обращения к нескольким локальным файлам, задача «FTP» должна использовать переменную для предоставления сведений о пути. Например, переменная, содержащая "C:\Test\&#42;.txt", предоставляет путь, который поддерживает удаление или отправку всех файлов каталога Test, которые имеют расширение TXT.  
   
  Для отправки нескольких файлов и для доступа к нескольким локальным файлам или каталогам, также можно выполнить задачу «FTP» несколько раз, включив ее в контейнер «цикл по каждому элементу». Контейнер «цикл по каждому элементу» может произвести перечисление файлов каталога, используя перечислитель For Each File. Дополнительные сведения см. в статье [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md).  
   
@@ -87,7 +87,7 @@ ms.locfileid: "52509434"
 > [!IMPORTANT]  
 >  Диспетчер FTP-соединений поддерживает только анонимную проверку подлинности и обычную проверку подлинности. Проверка подлинности Windows не поддерживается.  
   
- **См. также**: [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **См. также**: [Диспетчер FTP-сеансов](../../integration-services/connection-manager/ftp-connection-manager.md), [Редактор диспетчера FTP-сеансов](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
  **StopOnFailure**  
  Укажите, следует ли завершить задачу «FTP» в случае ошибки операции с FTP.  
@@ -147,13 +147,13 @@ ms.locfileid: "52509434"
  **RemoteVariable**  
  Выберите существующую пользовательскую переменную или щелкните \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), Добавление переменной  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), "Добавление переменной"  
   
 #### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
  Выберите существующий диспетчер подключений FTP или щелкните \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также:** [Диспетчер FTP-соединений](../../integration-services/connection-manager/ftp-connection-manager.md), [Редактор диспетчера FTP-сеансов](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **См. также:** [Диспетчер FTP-сеансов](../../integration-services/connection-manager/ftp-connection-manager.md), [Редактор диспетчера FTP-сеансов](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
 ### <a name="islocalpathvariable-dynamic-options"></a>Динамические параметры IsLocalPathVariable  
   
@@ -161,13 +161,13 @@ ms.locfileid: "52509434"
  **LocalVariable**  
  Выберите существующую пользовательскую переменную или щелкните \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), Добавление переменной  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), "Добавление переменной"  
   
 #### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
  Выберите существующий диспетчер подключений файлов или щелкните \<**Создать подключение...**>, чтобы создать его.  
   
- **См. также:** [Диспетчер соединений с неструктурированными файлами](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+ **См. также**: [Диспетчер подключений неструктурированных файлов](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   

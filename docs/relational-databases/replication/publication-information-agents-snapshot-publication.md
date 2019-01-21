@@ -13,12 +13,12 @@ ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5af3b74dd06eb8d5b5f8081d4a8fea7b02fe0b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a33b0ba1498f31fbddda58c3eedca976fe09344c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793662"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133374"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>Сведения о публикации, агенты (публикация моментального снимка)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "47793662"
 ## <a name="options"></a>Параметры  
  Для получения более подробных сведений и задач, относящихся к агенту моментальных снимков, щелкните правой кнопкой мыши строку этого агента и выберите параметр в контекстном меню. Чтобы изменить способ отображения данных в сетке, щелкните правой кнопкой мыши сетку, а затем один из следующих параметров.  
   
--   **Сортировать**: сортировка по одному или нескольким столбцам в диалоговом окне **Сортировка столбцов** .  
+-   **Сортировать**: сортировка по одному или нескольким столбцам в диалоговом окне **Сортировка столбцов**.  
   
--   **Выберите столбцы для отображения**: выбор столбцов для отображения и порядка их отображения в диалоговом окне **Выбор столбцов** .  
+-   **Выберите столбцы для отображения**: выбор столбцов для отображения и порядка их отображения в диалоговом окне **Выбор столбцов**.  
   
--   **Фильтр**: фильтрация строк в сетке на основании значений столбцов в диалоговом окне **Параметры фильтра** .  
+-   **Фильтр**: фильтрация строк в сетке на основании значений столбцов в диалоговом окне **Параметры фильтра**.  
   
--   **Очистить фильтр**: удаление всех параметров фильтра для сетки.  
+-   **Очистить фильтр**: удалить все настройки фильтра для сетки.  
   
  Настройки фильтра уникальны для каждой сетки. Выбор и сортировка столбцов применяются ко всем сеткам одного типа, как, например, сетка публикаций для каждого издателя.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47793662"
 -   Завершен  
   
  **Агент**  
- Агент моментальных снимков. Это единственный агент, связанный с публикацией моментальных снимков. Агент распространителя связан с подписками на эту публикацию. Дополнительные сведения см. в статье [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Агент моментальных снимков. Это единственный агент, связанный с публикацией моментальных снимков. Агент распространителя связан с подписками на эту публикацию. Дополнительные сведения см. в статье [Просмотр сведений и выполнение задач с помощью монитора репликации](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  **Время последнего запуска**  
  Время последнего запуска агента.  
@@ -62,8 +62,7 @@ ms.locfileid: "47793662"
   
 ## <a name="see-also"></a>См. также:  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для публикации (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
- [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Просмотр сведений и выполнение задач с помощью монитора репликации](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

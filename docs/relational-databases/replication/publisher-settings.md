@@ -1,5 +1,5 @@
 ---
-title: Настройки издателя | Документация Майкрософт
+title: 'Репликация SQL Server: диалоговое окно "Настройки издателя" | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9bfb4b85bddf33ee4631f2fa2f1799fa8cb593cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24def3d19d38356bb48886a64a0566254aeb1aec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827362"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132564"
 ---
-# <a name="publisher-settings"></a>Настройки издателя
+# <a name="sql-server-replication-publisher-settings-dialog-box"></a>Репликация SQL Server: диалоговое окно "Настройки издателя"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Диалоговое окно **Настройки издателя** позволяет изменить настройки издателей, добавленных к левой панели монитора репликации.  
   
@@ -50,6 +50,6 @@ ms.locfileid: "47827362"
   
 ## <a name="see-also"></a>См. также:  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

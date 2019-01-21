@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 658de328868d08e808ee4f5cafd0b903aa7c717f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af30fd34d42b296e9b83bbd537dcff411cd42608
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704264"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143254"
 ---
 # <a name="set-ansiwarnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,46 +59,44 @@ SET ANSI_WARNINGS ON
   
 -   Если задано значение ON, то для инструкции, выполнение которой привело к ошибке деления на ноль или арифметического переполнения, будет выполнен откат и сформировано сообщение об ошибке. Если установлено значение OFF, то ошибки деления на ноль и арифметического переполнения приведут к возврату значений NULL. Ошибки деления на нуль и арифметического переполнения приводят к возврату значений NULL, если инструкции INSERT или UPDATE применяются к столбцу типа **character**, Unicode или **binary** и длина нового значения превышает максимальный размер для этого столбца. Если значение SET ANSI_WARNINGS установлено в ON, то выполнение инструкции INSERT или UPDATE прекращается в соответствии со стандартом ISO. Конечные пробелы игнорируются для символьных столбцов, а конечные значения NULL игнорируются для бинарных столбцов. Если указано значение OFF, то данные усекаются до размера столбца, и инструкция успешно завершается.  
   
-    > [!NOTE]  
-    >  Если усечение возникает во время преобразования в тип данных **binary** или **varbinary** или из этих типов данных, то не возникает ошибок или предупреждений, несмотря на значения параметров SET.  
+> [!NOTE]  
+> Если усечение возникает во время преобразования в тип данных **binary** или **varbinary** или из этих типов данных, то не возникает ошибок или предупреждений, несмотря на значения параметров SET.  
   
-    > [!NOTE]  
-    >  Значение ANSI_WARNINGS игнорируется при передаче аргументов хранимой процедуре или пользовательской функции, а также при объявлении и настройке переменных в инструкции пакетных заданий. Например, если объявить переменную как **char(3)**, а затем присвоить ей значение длиннее трех символов, данные будут усечены до размера переменной, а инструкция INSERT или UPDATE завершится без ошибок.  
+> [!NOTE]  
+> Значение ANSI_WARNINGS игнорируется при передаче аргументов хранимой процедуре или пользовательской функции, а также при объявлении и настройке переменных в инструкции пакетных заданий. Например, если объявить переменную как **char(3)**, а затем присвоить ей значение длиннее трех символов, данные будут усечены до размера переменной, а инструкция INSERT или UPDATE завершится без ошибок.  
   
- Можно использовать параметр user options процедуры sp_configure для установки параметра ANSI_WARNINGS в значение по умолчанию для всех соединений с сервером. Дополнительные сведения см. в подразделе [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+Можно использовать параметр user options процедуры sp_configure для установки параметра ANSI_WARNINGS в значение по умолчанию для всех соединений с сервером. Дополнительные сведения см. в подразделе [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
- Параметр SET ANSI_WARNINGS должен иметь значение ON при создании или изменении индексов, основанных на вычисляемых столбцах или индексированных представлениях. Если параметр SET ANSI_WARNINGS установлен в значение OFF, то выполнение инструкций CREATE, UPDATE, INSERT и DELETE на таблицах с индексами, основанными на вычисляемых столбцах или на индексированных представлениях, будет завершаться ошибкой. Дополнительные сведения о настройке параметров SET с индексированными представлениями и индексами на вычисляемых столбцах см. в подразделе "Рекомендации по использованию инструкций SET" раздела [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md).  
+Параметр ANSI_WARNINGS должен иметь значение ON при создании или изменении индексов, основанных на вычисляемых столбцах или индексированных представлениях. Если параметр SET ANSI_WARNINGS установлен в значение OFF, то выполнение инструкций CREATE, UPDATE, INSERT и DELETE на таблицах с индексами, основанными на вычисляемых столбцах или на индексированных представлениях, будет завершаться ошибкой. Дополнительные сведения о настройке параметров SET с индексированными представлениями и индексами на вычисляемых столбцах см. в подразделе "Рекомендации по использованию инструкций SET" раздела [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md).  
   
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] существует параметр базы данных ANSI_WARNINGS. Он эквивалентен параметру SET ANSI_WARNINGS. Если параметр SET ANSI_WARNINGS установлен в ON, то ошибки или предупреждения возникают при делении на ноль, в слишком больших строках для столбца базы данных и других подобных ошибках. Если SET ANSI_WARNINGS установлено в OFF, то эти ошибки и предупреждения не возникают. Значение по умолчанию в базе данных model для параметра SET ANSI_WARNINGS равно OFF. Если параметр не указан, то применяется значение параметра ANSI_WARNINGS. Если параметр SET ANSI_WARNINGS имеет значение OFF, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует значение столбца is_ansi_null_default_on в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
+В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] существует параметр базы данных ANSI_WARNINGS. Он эквивалентен параметру SET ANSI_WARNINGS. Если параметр SET ANSI_WARNINGS установлен в ON, то ошибки или предупреждения возникают при делении на ноль, в слишком больших строках для столбца базы данных и других подобных ошибках. Если SET ANSI_WARNINGS установлено в OFF, то эти ошибки и предупреждения не возникают. Значение по умолчанию в базе данных model для параметра SET ANSI_WARNINGS равно OFF. Если параметр не указан, то применяется значение параметра ANSI_WARNINGS. Если параметр SET ANSI_WARNINGS имеет значение OFF, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует значение столбца is_ansi_null_default_on в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
- Параметр ANSI_WARNINGS должен быть установлен в ON для выполнения распределенных запросов.  
+> [!IMPORTANT]
+> Параметр ANSI_WARNINGS должен быть установлен в ON для выполнения распределенных запросов.  
   
  Драйвер ODBC для Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и поставщик OLE DB для Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при соединении автоматически устанавливают параметр ANSI_WARNINGS в значение ON. Его можно настроить в источниках данных ODBC, в атрибутах соединения ODBC или в приложении перед сеансом связи. Для соединений от приложений DB-Library значение по умолчанию для параметра SET ANSI_WARNINGS равно значению OFF.  
   
- Если параметр SET ANSI_DEFAULTS установлен в ON, параметр SET ANSI_WARNINGS включен.  
+Если параметр ANSI_DEFAULTS установлен в значение ON, параметр SET ANSI_WARNINGS включен.  
   
- Параметр SET ANSI_WARNINGS устанавливается во время выполнения, а не во время синтаксического анализа.  
+Параметр ANSI_WARNINGS устанавливается во время выполнения, а не во время синтаксического анализа.  
   
- Если один из параметров SET ARITHABORT или SET ARITHIGNORE установлен в значение OFF, а параметр SET ANSI_WARNINGS — в значение ON, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сообщение об ошибке при обнаружении ошибок деления на ноль или переполнения.  
+Если один из параметров SET ARITHABORT или SET ARITHIGNORE установлен в значение OFF, а параметр SET ANSI_WARNINGS — в значение ON, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сообщение об ошибке при обнаружении ошибок деления на ноль или переполнения.  
   
- Чтобы просмотреть текущее значение для этого параметра, выполните следующий запрос.  
+Чтобы просмотреть текущее значение для этого параметра, выполните следующий запрос.  
   
-```  
+```sql  
 DECLARE @ANSI_WARN VARCHAR(3) = 'OFF';  
 IF ( (8 & @@OPTIONS) = 8 ) SET @ANSI_WARN = 'ON';  
 SELECT @ANSI_WARN AS ANSI_WARNINGS;  
 ```  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в роли public.  
+Необходимо быть членом роли **public**.  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример демонстрирует три рассмотренные ситуации со значениями ON и OFF для параметра SET ANSI_WARNINGS.  
+Следующий пример демонстрирует три рассмотренные ситуации со значениями ON и OFF для параметра SET ANSI_WARNINGS.  
   
-```  
-USE AdventureWorks2012;  
-GO  
-  
+```sql  
 CREATE TABLE T1   
 (  
    a int,   
@@ -117,7 +115,11 @@ VALUES (1, NULL, '')
   
 SET NOCOUNT OFF;  
 GO  
-  
+```
+
+Теперь установите параметр ANSI_WARNINGS в значение ON и выполните тестирование.
+
+```sql
 PRINT '**** Setting ANSI_WARNINGS ON';  
 GO  
   
@@ -142,7 +144,11 @@ GO
 SELECT a / b AS ab   
 FROM T1;  
 GO  
-  
+```
+
+Теперь установите параметр ANSI_WARNINGS в значение OFF и выполните тестирование.
+
+```sql
 PRINT '**** Setting ANSI_WARNINGS OFF';  
 GO  
 SET ANSI_WARNINGS OFF;  
@@ -171,7 +177,7 @@ SELECT a / b AS ab
 FROM T1;  
 GO  
   
-DROP TABLE T1  
+DROP TABLE T1;  
 ```  
   
 ## <a name="see-also"></a>См. также:  

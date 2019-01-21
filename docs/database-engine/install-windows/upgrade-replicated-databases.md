@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 4256efa5952870ede608d96fa2659ce9d88f35da
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 279a5c55ddc305d62e3e09f1f8073057b4ff226b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668423"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124614"
 ---
 # <a name="upgrade-replicated-databases"></a>Обновление реплицируемых баз данных
 
@@ -38,7 +38,7 @@ ms.locfileid: "51668423"
  
 Путь обновления SQL Server зависит от схемы развертывания. Для SQL Server, как правило, предлагается два пути обновления:
 - Параллельное использование. Развертывание параллельной среды и перемещение баз данных вместе со связанными объектами уровня экземпляров, такими как учетные данные и задания, в новую среду. 
-- Обновление на месте. Установочный носитель SQL Server может обновить существующую установку SQL Server, заменив элементы SQL Server и обновив объекты баз данных. В средах с группами доступности Always On или экземплярами отказоустойчивых кластеров обновление на месте сочетается с [последовательным обновлением](choose-a-database-engine-upgrade-method.md#rolling-upgrade) для минимизации простоя. 
+- Обновление на месте. Установочный носитель SQL Server может обновить существующую установку SQL Server, заменив элементы SQL Server и обновив объекты баз данных. В средах с группами доступности Always On или экземплярами отказоустойчивых кластеров обновление на месте сочетается с [последовательным обновлением](choose-a-database-engine-upgrade-method.md#rolling-upgrade) для минимизации простоя. 
 
 Общий подход, который используется для обновления топологий репликации в параллельном режиме, подразумевает перемещение пар "издатель-подписчик" в новую параллельную среду по частям вместо перемещения всей топологии. Этот поэтапный подход помогает контролировать время простоя и до определенной степени минимизировать вмешательство в зависимую от репликации бизнес-деятельность.  
 
@@ -132,9 +132,9 @@ ms.locfileid: "51668423"
  Чтобы обеспечить неизменность параметров репликации при восстановлении реплицированной базы данных, имеющей более раннюю версию, выполните восстановление на сервер и в базу данных, имеющих те же имена, что и у сервера или базы данных, для которых была сделана резервная копия.  
   
 ## <a name="see-also"></a>См. также:  
- [Администрирование (репликация)](../../relational-databases/replication/administration/administration-replication.md)   
+ [Репликация SQL Server](../../relational-databases/replication/sql-server-replication.md)  
+ [Вопросы и ответы об администрировании репликации](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Обратная совместимость репликации](../../relational-databases/replication/replication-backward-compatibility.md)   
- [Новые возможности (репликация)](../../relational-databases/replication/what-s-new-replication.md)   
  [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Обновление SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
  [Обновление топологии репликации до SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)

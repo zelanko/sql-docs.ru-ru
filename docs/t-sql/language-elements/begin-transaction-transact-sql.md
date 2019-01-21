@@ -31,15 +31,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edcf0a919c0bcf5dbcbd1490b016c49ab7e46d8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 326b2dd3eed9db3f6ca71cc276fc68314092c181
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698102"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299231"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
 
   Отмечает начальную точку явной локальной транзакции. Явные транзакции начинаются с инструкции BEGIN TRANSACTION и заканчиваются инструкцией COMMIT или ROLLBACK.  
 
@@ -67,17 +70,17 @@ BEGIN { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>Аргументы  
  *transaction_name*  
- **ПРИМЕНИМО К**: SQL Server (начиная с версии 2008), база данных SQL Azure
+ **ПРИМЕНИМО К:** SQL Server (начиная с версии 2008), база данных SQL Azure
  
  Имя, присвоенное транзакции. Аргумент *transaction_name* должен соответствовать правилам для идентификаторов, однако не допускаются идентификаторы длиннее 32 символов. Имена транзакций используются только для самых внешних вложенных инструкций BEGIN...COMMIT или BEGIN...ROLLBACK. Аргумент *transaction_name* всегда учитывает регистр, даже если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистр не учитывает.  
   
  @*tran_name_variable*  
- **ПРИМЕНИМО К**: SQL Server (начиная с версии 2008), база данных SQL Azure
+ **ПРИМЕНИМО К:** SQL Server (начиная с версии 2008), база данных SQL Azure
  
  Имя определенной пользователем переменной, содержащей допустимое имя транзакции. Переменная должна быть объявлена с типом данных **char**, **varchar**, **nchar** или **nvarchar**. Если переменной передается больше 32 символов, используются только 32 первых символа, а остальные усекаются.  
   
  WITH MARK [ '*description*' ]  
-**ПРИМЕНИМО К**: SQL Server (начиная с версии 2008), база данных SQL Azure
+**ПРИМЕНИМО К:** SQL Server (начиная с версии 2008), база данных SQL Azure
 
 Указывает, что транзакция отмечается в журнале. Значение аргумента *description* — это строка, описывающая отметку. Значения аргумента *description* длиннее 128 символов усекаются до 128 символов перед сохранением в таблице msdb.dbo.logmarkhistory.  
   
@@ -134,7 +137,7 @@ COMMIT TRAN T1;
   
  BEGIN TRAN M2 WITH MARK ...;  
   
- "Сервер: сообщение 3920, уровень 16, состояние 1, строка 3"  
+ «Сервер: сообщение 3920, уровень 16, состояние 2, строка 1»  
   
  «Параметр WITH MARK применяется только к первой инструкции BEGIN TRAN WITH MARK.»  
   
@@ -146,7 +149,7 @@ COMMIT TRAN T1;
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-an-explicit-transaction"></a>A. Использование явной транзакции
-**ПРИМЕНИМО К**: SQL Server (начиная с версии 2008), база данных SQL Azure, хранилище данных SQL Azure, Parallel Data Warehouse
+**ПРИМЕНИМО К:** SQL Server (начиная с версии 2008), база данных SQL Azure, хранилище данных SQL Azure, Parallel Data Warehouse
 
 В примере используется база данных AdventureWorks. 
 
@@ -158,7 +161,7 @@ COMMIT;
 ```
 
 ### <a name="b-rolling-back-a-transaction"></a>Б. Откат транзакции
-**ПРИМЕНИМО К**: SQL Server (начиная с версии 2008), база данных SQL Azure, хранилище данных SQL Azure, Parallel Data Warehouse
+**ПРИМЕНИМО К:** SQL Server (начиная с версии 2008), база данных SQL Azure, хранилище данных SQL Azure, Parallel Data Warehouse
 
 В приведенном ниже примере демонстрируется результат отката транзакции. В этом примере инструкция ROLLBACK приведет к откату инструкции INSERT, но созданная таблица будет по-прежнему существовать.
 
@@ -173,7 +176,7 @@ ROLLBACK;
 ```
 
 ### <a name="c-naming-a-transaction"></a>В. Присвоение транзакции имени 
-**ПРИМЕНИМО К**: SQL Server (начиная с версии 2008), база данных SQL Azure
+**ПРИМЕНИМО К:** SQL Server (начиная с версии 2008), база данных SQL Azure
 
 В следующем примере показано, как присвоить транзакции имя.  
   
@@ -191,7 +194,7 @@ GO
 ```  
   
 ### <a name="d-marking-a-transaction"></a>Г. Пометка транзакции  
-**ПРИМЕНИМО К**: SQL Server (начиная с версии 2008), база данных SQL Azure
+**ПРИМЕНИМО К:** SQL Server (начиная с версии 2008), база данных SQL Azure
 
 В следующем примере показано, как пометить транзакцию. Транзакция `CandidateDelete` помечена.  
   

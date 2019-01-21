@@ -11,23 +11,23 @@ ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4e9112840f6329bd846c62bd7f8dbb8b5d99340
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 128e1feeb3b344a21dbb682d4d41d402060ab1ff
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520951"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256949"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Использование MSDeploy с поставщиком dbSqlPackage
 **DbSqlPackage** — это поставщик **MSDeploy**, который обеспечивает взаимодействие с базами данных SQL Server и SQL Azure. **DbSqlPackage** поддерживает следующие действия:  
   
--   **Извлечение** — создает файл моментального снимка базы данных (DACPAC) из активной базы данных SQL Server или SQL Azure.  
+-   **Extract**: создает файл моментального снимка базы данных (DACPAC) из активной базы данных SQL Server или SQL Azure.  
   
 -   **Publish**: выполняет добавочное обновление схемы базы данных в соответствии со схемой исходного DACPAC-файла.  
   
 -   **DeployReport**: создает XML-отчет по изменениям, которые должны быть внесены в результате публикации.  
   
--   **Скрипт** — создает скрипт Transact\-SQL, эквивалентный скрипту, который выполняется действием публикации.  
+-   **Script**: создает скрипт Transact\-SQL, эквивалентный скрипту, который выполняется действием публикации.  
   
 Дополнительные сведения о DACFx можно найти в разделе документации по управляемому API DACFx по адресу [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) или описании средства командной строки DACFx [SqlPackage.exe](../tools/sqlpackage.md).  
   
@@ -47,8 +47,8 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
   
 |Команда|Описание|  
 |--------|---------------|  
-|дамп|Предоставляет сведения, включая имя, номер версии и описание базы данных-источника, содержащиеся в DACPAC-файле. Укажите базу данных-источник, используя следующий формат командной строки:<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="***.dacpac-file-path***"**|  
-|sync|Задает действия dbSqlPackage, используя следующий формат командной строки:<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />Допустимые параметры источника и назначения для команды синхронизации см. в следующих разделах.|  
+|дамп|Предоставляет сведения, включая имя, номер версии и описание базы данных-источника, содержащиеся в DACPAC-файле. Укажите базу данных-источник, используя следующий формат командной строки:<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="**_.dacpac-file-path_**"**|  
+|sync|Задает действия dbSqlPackage, используя следующий формат командной строки:<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_**dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />Допустимые параметры источника и назначения для команды синхронизации см. в следующих разделах.|  
   
 ## <a name="dbsqlpackage-source"></a>База данных-источник dbSqlPackage  
 Поставщик **dbSqlPackage** принимает в качестве входных данных вход допустимую строку подключения SQL Server/SQL Azure или путь к DACPAC-файлу на диске.  Синтаксис задания входного источника для поставщика:  

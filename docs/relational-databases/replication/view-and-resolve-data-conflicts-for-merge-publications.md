@@ -1,7 +1,7 @@
 ---
 title: Просмотр и разрешение конфликтов данных для публикации слиянием | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,14 +15,14 @@ ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 787e034767e419cd5f3b41b07364c6a11d908244
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0b9a3f872a87695da3e6c57ad90012cfe1307109
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543921"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129384"
 ---
-# <a name="view-and-resolve-data-conflicts-for-merge-publications"></a>Просмотр и разрешение конфликтов данных для публикаций слиянием
+# <a name="conflict-resolution-for-merge-replication"></a>Разрешение конфликтов при репликации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В репликации слиянием конфликты разрешаются на основе сопоставителя, указанного для каждой статьи. По умолчанию для разрешения конфликтов не требуется вмешательство пользователя. Однако просмотреть конфликты и изменить результат разрешения конфликта можно в средстве просмотра конфликтов репликации [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -32,19 +32,16 @@ ms.locfileid: "52543921"
   
 -   Задайте значение **conflict_retention** для параметра **@property** и значение срока хранения для параметра **@value** хранимой процедуры [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md).  
   
- По умолчанию сведения о конфликтах сохраняются:  
-  
--   На издателе и подписчике, если уровень совместимости публикации 90RTM или выше.  
-  
--   На издателе, если уровень совместимости публикации ниже, чем 80RTM.  
-  
+ По умолчанию сведения о конфликтах сохраняются:    
+-   На издателе и подписчике, если уровень совместимости публикации 90RTM или выше.   
+-   На издателе, если уровень совместимости публикации ниже, чем 80RTM.   
 -   На издателе, если подписчики используют [!INCLUDE[ssEW](../../includes/ssew-md.md)]. Данные о конфликтах не могут храниться на подписчиках, использующих [!INCLUDE[ssEW](../../includes/ssew-md.md)] .  
   
  Хранение информации о конфликте управляется с помощью свойства публикации **conflict_logging** . Дополнительные сведения см. в статьях [sp_addmergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) и [sp_changemergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md).  
   
  Возможно также разрешение конфликтов в интерактивном режиме во время синхронизации с помощью интерактивного сопоставителя [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Интерактивный сопоставитель доступен через диспетчер синхронизации [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Дополнительные сведения см. в статье [Синхронизация подписки с помощью диспетчера синхронизации Windows (диспетчер синхронизации Windows)](../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
-### <a name="to-view-and-resolve-conflicts-for-merge-publications"></a>Просмотр и разрешение конфликтов для публикаций слиянием  
+## <a name="resolve-conflicts"></a>Устранение конфликтов  
   
 1.  Подключитесь к издателю (или подписчику, если это уместно) в среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], а затем раскройте узел сервера.  
   
@@ -65,7 +62,7 @@ ms.locfileid: "52543921"
   
     -   Выберите одну или более строк в верхней сетке, щелкните **Удалить**, что эквивалентно нажатию кнопки **Отправить выигравший** (без внесения каких-либо изменений в данные).  
   
-    -   Нажать кнопку свойств (**...**) для просмотра дополнительной информации о столбце, вовлеченном в конфликт.  
+    -   Нажать кнопку свойств **…**) для просмотра дополнительной информации о столбце, вовлеченном в конфликт.  
   
     -   Измените данные в столбце **Выигравший вариант** или **Проигравший вариант** до отправки данных (данные доступны только для чтения, если столбец окрашен в серый цвет).  
   
@@ -76,6 +73,55 @@ ms.locfileid: "52543921"
     -   Выбрать **Записать подробности этого конфликта** , чтобы записать данные конфликта в файл. Для указания размещения файла наведите указатель на меню **Просмотр** и щелкните **Параметры**. Введите значение или нажмите кнопку обзора (**...**), а затем перейдите к необходимому файлу. Нажмите кнопку **ОК** для выхода из диалогового окна **Параметры** .  
   
 6.  Закройте средство просмотра конфликтов репликации.  
+
+
+  
+## <a name="view-conflict-information"></a>Просмотр сведений о конфликтах
+Если конфликт разрешается в репликации слиянием, данные из проигравшей строки записываются в таблицу конфликтов. Эти данные конфликта можно просмотреть программно с помощью хранимых процедур репликации. Дополнительные сведения см. в разделе [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+  
+1.  Выполните процедуру [sp_helpmergepublication](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)на издателе в базе данных публикации. Запомните значения следующих столбцов в результирующем наборе.  
+  
+    -   **centralized_conflicts** — значение 1 показывает, что конфликтующие строки хранятся на издателе, а значение 0 показывает, что на издателе не хранятся конфликтующие строки.  
+  
+    -   **decentralized_conflicts** — значение 1 показывает, что конфликтующие строки хранятся на подписчике, а значение 0 показывает, что на подписчике не хранятся конфликтующие строки.  
+  
+        > [!NOTE]  
+        >  Способ регистрации конфликта в публикации слиянием устанавливается с помощью параметра **@conflict_logging** хранимой процедуры [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Использование параметра **@centralized_conflicts** является устаревшей возможностью.  
+  
+     В следующей таблице приводятся значения этих столбцов в зависимости от значений, указанных в параметре **@conflict_logging**.  
+  
+    |Значение @conflict_logging|centralized_conflicts|decentralized_conflicts|  
+    |------------------------------|----------------------------|------------------------------|  
+    |**издатель**|1|0|  
+    |**подписчик**|0|1|  
+    |**оба**|1|1|  
+  
+2.  Выполните процедуру [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md)на издателе в базе данных публикации или на подписчике в базе данных подписки. Укажите значение в параметре **@publication** , чтобы возвратить только сведения о конфликте статей, принадлежащих конкретной публикации. Таким образом будут получены сведения о конфликтах для статей, содержащих конфликты. Запомните значение **conflict_table** для всех интересующих статей. Если параметр **conflict_table** для статьи имеет значение NULL, удалите только конфликты, которые возникли в этой статье.  
+  
+3.  (Необязательно) Просмотрите строки конфликта для интересующих статей. В зависимости от значений параметров **centralized_conflicts** и **decentralized_conflicts** , полученных на шаге 1, выполните одно из следующих действий.  
+  
+    -   На издателе в базе данных публикации выполните хранимую процедуру [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md). Укажите таблицу конфликтов для статьи (из шага 1) в параметре **@conflict_table**. Задайте значение **@publication** , чтобы ограничить возвращаемые сведения о конфликтах до конфликтов выбранной публикацией (необязательно). В результате будут возвращены данные для потерянной строки и другие сведения.  
+  
+    -   На подписчике в базе данных подписки выполните хранимую процедуру [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md). Укажите таблицу конфликтов для статьи (из шага 1) в параметре **@conflict_table**. В результате будут возвращены данные для потерянной строки и другие сведения.  
+  
+## <a name="conflict-where-delete-failed"></a>Конфликт со сбоем удаления   
+  
+1.  Выполните процедуру [sp_helpmergepublication](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)на издателе в базе данных публикации. Запомните значения следующих столбцов в результирующем наборе.  
+  
+    -   **centralized_conflicts** — значение 1 показывает, что конфликтующие строки хранятся на издателе, а значение 0 показывает, что на издателе не хранятся конфликтующие строки.  
+  
+    -   **decentralized_conflicts** — значение 1 показывает, что конфликтующие строки хранятся на подписчике, а значение 0 показывает, что на подписчике не хранятся конфликтующие строки.  
+  
+        > [!NOTE]  
+        >  Способ регистрации конфликта в публикации слиянием устанавливается с помощью параметра **@conflict_logging** хранимой процедуры [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Использование параметра **@centralized_conflicts** является устаревшей возможностью.  
+  
+2.  Выполните процедуру [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md)на издателе в базе данных публикации или на подписчике в базе данных подписки. Укажите значение в параметре **@publication** , чтобы возвратить только сведения о таблице конфликтов для статей, принадлежащих конкретной публикации. Таким образом будут получены сведения о конфликтах для статей, содержащих конфликты. Запомните значение **source_object** для всех интересующих статей. Если параметр **conflict_table** для статьи имеет значение NULL, удалите только конфликты, которые возникли в этой статье.  
+  
+3.  (Необязательно) Просмотрите информацию о конфликтах удаления. В зависимости от значений параметров **centralized_conflicts** и **decentralized_conflicts** , полученных на шаге 1, выполните одно из следующих действий.  
+  
+    -   На издателе в базе данных публикации выполните хранимую процедуру [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Укажите в параметре **@source_object**. Задайте значение **@publication** , чтобы ограничить возвращаемые сведения о конфликтах до конфликтов выбранной публикацией (необязательно). Таким образом возвращаются сведения о конфликте операций удаления, хранящиеся на издателе.  
+  
+    -   На подписчике в базе данных подписки выполните хранимую процедуру [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Укажите в параметре **@source_object**. Задайте значение **@publication** , чтобы ограничить возвращаемые сведения о конфликтах до конфликтов выбранной публикацией (необязательно). Таким образом возвращаются сведения о конфликте операций удаления, сохраненные на подписчике.  
   
 ## <a name="see-also"></a>См. также:  
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   

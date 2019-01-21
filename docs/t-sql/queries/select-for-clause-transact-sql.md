@@ -1,7 +1,7 @@
 ---
 title: Предложение FOR (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 01/08/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,30 +22,30 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0db7176da41eec27cfffc4db5a9cbcc0835196a9
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: a8f1ce1c1c5a572874b301f326a711bbcfbda8a1
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906274"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143554"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR, предложение (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Предложение FOR используется для указания одного из следующих параметров для результатов запроса.  
+Предложение FOR используется для указания одного из следующих параметров для результатов запроса.
   
 -   Разрешение обновлений при просмотре результатов запроса в курсоре режима просмотра с помощью **FOR BROWSE**.  
   
 -   Форматирование результатов запроса в формате XML с помощью **FOR XML**.  
   
 -   Форматирование результатов запроса в формате JSON с помощью **FOR JSON**.  
-  
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```
 [ FOR { BROWSE | <XML> | <JSON>} ]  
   
 <XML> ::=  
@@ -84,20 +84,21 @@ JSON
         [ , WITHOUT_ARRAY_WRAPPER ]  
     ]  
   
-}  
-```  
+}
+```
   
-## <a name="for-browse"></a>FOR BROWSE  
+## <a name="for-browse"></a>FOR BROWSE
+
  BROWSE  
  Активирует возможность обновления данных во время их просмотра с помощью курсора в режиме обзора DB-Library. Таблицу можно просмотреть внутри приложения, если в таблице содержится столбец **timestamp**, таблице присвоен уникальный индекс или в конце инструкции SELECT, отсылаемой экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], имеется параметр FOR BROWSE.  
   
-> [!NOTE]  
->  Нельзя использовать синтаксис \<lock_hint> HOLDLOCK для инструкции SELECT, включающей в себя параметр FOR BROWSE.
+> [!NOTE]
+> Нельзя использовать синтаксис \<lock_hint> HOLDLOCK для инструкции SELECT, включающей в себя параметр FOR BROWSE.
   
  Параметр FOR BROWSE не может быть использован в инструкциях SELECT, соединенных оператором UNION.  
   
-> [!NOTE]  
->  Если ключевые столбцы уникального индекса таблицы могут принимать неопределенные значения, а таблица находится внутри внешнего соединения, индексы в режиме обзора не поддерживаются.  
+> [!NOTE]
+> Если ключевые столбцы уникального индекса таблицы могут принимать неопределенные значения, а таблица находится внутри внешнего соединения, индексы в режиме обзора не поддерживаются.  
   
  Режим просмотра позволяет просматривать строки в таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и обновлять данные в таблице по одной строке одновременно. Чтобы получить доступ к таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в приложении в режиме просмотра, необходимо использовать один из следующих вариантов.  
   
@@ -155,8 +156,7 @@ JSON
     FROM tleft   
     RIGHT JOIN tright   
     ON tleft.c1 = tright.c1   
-    WHERE tright.c1 <> 2 ;  
-  
+    WHERE tright.c1 <> 2 ;
     ```  
   
      Обратите внимание на следующие выходные данные на панели «Результаты»:  
@@ -171,14 +171,15 @@ JSON
   
  После выполнения запроса SELECT для получения доступа к таблицам в режиме просмотра результирующий набор запроса SELECT содержит два значения NULL для столбца c1 в таблице tleft, поскольку таково определение инструкции правого внешнего соединения. Поэтому в результирующем наборе невозможно различить значения NULL, полученные из таблицы, и значения NULL, добавленные инструкцией правого внешнего соединения. Могут быть получены неверные результаты, если необходимо пропустить значения NULL из результирующего набора.  
   
-> [!NOTE]  
->  Если столбцы, которые включены в уникальный индекс, не допускают значения NULL, это значит, что все значения NULL в результирующем наборе были добавлены инструкцией правого внешнего соединения.  
+> [!NOTE]
+> Если столбцы, которые включены в уникальный индекс, не допускают значения NULL, это значит, что все значения NULL в результирующем наборе были добавлены инструкцией правого внешнего соединения.  
   
-## <a name="for-xml"></a>FOR XML  
+## <a name="for-xml"></a>FOR XML
+
  XML  
  Задает возврат результатов запроса в виде XML-документа. Должен быть задан один из следующих режимов XML: RAW, AUTO, EXPLICIT. Дополнительные сведения о данных XML и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md).  
   
- RAW [ **('***ElementName***')** ]  
+ RAW [ **('**_имя_элемента_**')** ]  
  Получает результат запроса и преобразует каждую строку результирующего набора в элемент XML, для которого в качестве тега используется общий идентификатор \<row />. Дополнительно можно задать имя для элемента строки. Полученный в результате выходной XML-файл будет использовать указанное имя *ElementName* в качестве элемента, сформированного для каждой строки. Дополнительные сведения см. в статье [Использование с RAW Mode для FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).
   
  AUTO  
@@ -190,10 +191,26 @@ JSON
  XMLDATA  
  Возвращает встроенную XDR-схему, не добавляя корневой элемент к результату. При задании параметра XMLDATA XDR-схема добавляется к документу.  
   
-> [!IMPORTANT]  
->  Директива XMLDATA не рекомендуется к использованию. В режимах RAW и AUTO следует использовать создание XSD-схем. В режиме EXPLICIT для директивы XMLDATA замены нет. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
-  
- XMLSCHEMA [ **('***TargetNameSpaceURI***')** ]  
+> [!IMPORTANT]
+> Директива XMLDATA **не рекомендуется к использованию**. В режимах RAW и AUTO следует использовать создание XSD-схем. В режиме EXPLICIT для директивы XMLDATA замены нет. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+
+_Подавление нежелательных разрывов строки:_ вы можете использовать SQL Server Management Studio (SSMS) для выдачи запроса, использующего предложение FOR XML. Иногда большой объем кода XML возвращается и отображается в одной ячейке. Длина этой строки XML может превышать максимальную длину одной строки в ячейке сетки SSMS. В этих случаях SSMS может вставить символы разрыва строки между длинными сегментами одной строки XML. Такие разрывы строки могут возникнуть в середине подстроки, которую недопустимо разбивать между двумя строками. Вы можете запретить эти разрывы строки с помощью приведения AS XMLDATA. Это решение также можно применять при использовании FOR JSON PATH. Эта методика описана на форму Stack Overflow и приведена в следующем примере инструкции SELECT на языке Transact-SQL:
+
+- [Using SQL Server FOR XML: Convert Result Datatype to Text/varchar/string whatever?](https://stackoverflow.com/questions/5655332/using-sql-server-for-xml-convert-result-datatype-to-text-varchar-string-whate/5658758#5658758) (Использование SQL Server FOR XML: преобразование типа данных результата в текст/varchar/строку и т. п.)
+
+    ```sql
+    SELECT CAST(
+        (SELECT column1, column2
+            FROM my_table
+            FOR XML PATH('')
+        )
+            AS VARCHAR(MAX)
+    ) AS XMLDATA ;
+    ```
+
+<!-- The preceding Stack Overflow example is per MicrosoftDocs/sql-docs Issue 1501.  2019-01-06 -->
+
+ XMLSCHEMA [ **('**_URI_целевого_пространства_имен_**')** ]  
  Возвращает встроенную XSD-схему. При задании указанной директивы, возвращающей заданное пространство имен схемы, дополнительно можно задать URI целевого пространства имен. Дополнительные сведения см. в разделе [Создание встроенных схем XSD](../../relational-databases/xml/generate-an-inline-xsd-schema.md).  
   
  ELEMENTS  
@@ -205,7 +222,7 @@ JSON
  ABSENT  
  Указывает, что соответствующие XML-элементы для столбцов со значениями NULL к XML-результату не добавляются. Указывайте данный параметр только с директивой ELEMENTS.  
   
- PATH [ **('***ElementName***')** ]  
+ PATH [ **('**_имя_элемента_**')** ]  
  Создает упаковщик элементов \<row> для каждой строки в результирующем наборе. Для упаковщика элементов \<row> можно дополнительно задать имя элемента. При задании пустой строки, например FOR XML PATH (**''**) ), упаковщик элементов не создается. Использование директивы PATH дает более простой способ написания запросов, чем написание запросов с помощью директивы EXPLICIT. Дополнительные сведения см. в статье [Использование с PATH Mode для FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md).  
   
  BINARY BASE64  
@@ -214,7 +231,7 @@ JSON
  TYPE  
  Задает следующий формат выдаваемых запросом данных: тип **xml**. Дополнительные сведения см. в статье [TYPE Directive in FOR XML Queries](../../relational-databases/xml/type-directive-in-for-xml-queries.md).  
   
- ROOT [ **('***RootName***')** ]  
+ ROOT [ **('**_имя_корневого_элемента_**')** ]  
  Задает добавление единичного элемента высшего уровня к результирующему XML-документу. Дополнительно можно указать имя корневого элемента, который необходимо сформировать. Если имя корневого элемента не задано, то добавляется элемент \<root> по умолчанию.  
   
  Дополнительные сведения см. в разделе [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md).  
@@ -234,9 +251,10 @@ ORDER BY LastName, FirstName
 FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;  
 ```  
   
-## <a name="for-json"></a>FOR JSON  
+## <a name="for-json"></a>FOR JSON
+
  JSON  
- Укажите FOR JSON, чтобы вернуть результаты запроса в формате текста JSON. Также необходимо указать один из следующих режимов JSON: AUTO или PATH. Дополнительные сведения о предложении **FOR JSON** см. в разделе [Форматирование результатов запроса как JSON с помощью предложения FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
+ Укажите FOR JSON, чтобы вернуть результаты запроса в формате текста JSON. Также нужно указать один из следующих режимов JSON: AUTO или PATH. Дополнительные сведения о предложении **FOR JSON** см. в разделе [Форматирование результатов запроса как JSON с помощью предложения FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
   
  AUTO  
  Форматируйте выходные данные JSON автоматически на основе структуры инструкции **SELECT**,  
@@ -249,7 +267,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
  INCLUDE_NULL_VALUES  
  Включайте значения NULL в выходные данные JSON, указав параметр **INCLUDE_NULL_VALUES** для предложения **FOR JSON**. Если не указать этот параметр, в выходные данные не будут включены свойства JSON для значений NULL в результатах запроса. Дополнительные сведения и примеры см. в статье [Использование параметра INCLUDE_NULL_VALUES для включения значений NULL в выходные данные JSON (SQL Server)](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md).  
   
- ROOT [ **('***RootName***')** ]  
+ ROOT [ **('**_имя_корневого_элемента_**')** ]  
  Добавьте один элемент верхнего уровня к выходным данным JSON, указав параметр **ROOT** с предложение **FOR JSON**. Если не указать параметр **ROOT** , выходные данные JSON не будут содержать корневой элемент. Дополнительные сведения и примеры см. в разделе [Добавление корневого узла в выходные данные JSON с параметром ROOT (SQL Server)](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md).  
   
  WITHOUT_ARRAY_WRAPPER  
@@ -257,7 +275,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
   
  Дополнительные сведения см. в разделе [Форматирование результатов запроса как JSON с помощью предложения FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
   
-## <a name="see-also"></a>См. также:  
- [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>См. также:
+
+ [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)
+

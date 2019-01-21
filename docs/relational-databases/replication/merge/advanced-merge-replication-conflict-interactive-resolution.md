@@ -16,12 +16,12 @@ ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c701e9fb98bbabe013632a3fd93f91d368ec2784
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20c748e6dea95ae06c2f0c8364b8720ca0d7a36a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849232"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132754"
 ---
 # <a name="advanced-merge-replication-conflict---interactive-resolution"></a>Конфликт расширенной репликации слиянием: интерактивное разрешение
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47849232"
   
  Чтобы использовать интерактивный сопоставитель, необходимо активировать его для каждой статьи и подписки, которая в нем нуждается. После активации для одной или нескольких статей и подписок интерактивный сопоставитель используется при обнаружении конфликта во время синхронизации слиянием.  
   
- Чтобы использовать интерактивный сопоставитель, изучите статьи [Указание интерактивного устранения конфликтов для статей публикации слиянием](../../../relational-databases/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md) и [Синхронизация подписки с помощью диспетчера синхронизации Windows (диспетчер синхронизации Windows)](../../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md).  
+ Чтобы использовать интерактивный сопоставитель, изучите статьи [Указание параметров репликации слиянием](../../../relational-databases/replication/merge/specify-merge-replication-properties.md) и [Синхронизация подписки с помощью диспетчера синхронизации Windows (диспетчер синхронизации Windows)](../../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  

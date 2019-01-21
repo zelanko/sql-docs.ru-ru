@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c77e32b019f9b801daaa58e480d4825725f15e8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d1f2c1cc7c40e3992f2cd28a777b48e0f927cf87
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697267"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135854"
 ---
 # <a name="database-engine-scripting"></a>Работа со сценариями компонента Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "51697267"
   
 -   Чтобы открыть файл в новом окне редактора запросов компонента [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **, воспользуйтесь меню**/**/** Открыть [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
--   Чтобы запустить файл с помощью служебной программы **sqlcmd**, укажите параметр **-i***входной_файл*.  
+-   Чтобы запустить файл с помощью программы **sqlcmd**_, укажите параметр_ -i **input_file** .  
   
 -   Чтобы запустить файл с помощью командлета **Invoke-Sqlcmd** в скриптах **PowerShell, укажите параметр** -QueryFromFile [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -80,7 +80,7 @@ ms.locfileid: "51697267"
 |Описывает порядок использования мастера **формирования и публикации скриптов** для создания скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые повторно создают один или несколько объектов из базы данных.|[Формирование скриптов (среда SQL Server Management Studio)](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>См. также:  
- [Программа sqlcmd](../../tools/sqlcmd-utility.md)   
- [Учебник. Составление инструкций Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
+ [Руководство Составление инструкций Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

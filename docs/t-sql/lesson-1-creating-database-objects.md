@@ -1,5 +1,5 @@
 ---
-title: Учебник T-SQL. Создание объектов базы данных и отправка запросов к ним | Документация Майкрософт
+title: Учебник по T-SQL. Создание объектов базы данных и отправка запросов к ним | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/30/2018
 ms.prod: sql
@@ -11,15 +11,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6eb8e352e18331142adf23a76371d49d8403a4cd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7887e63dbe7879a17433dce0bd35c346c860097e
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696822"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299291"
 ---
-# <a name="lesson-1-create-and-query-database-objects"></a>Урок 1. Создание объектов базы данных и отправка запросов к ним
+# <a name="lesson-1-create-and-query-database-objects"></a>Урок 1. Создание объектов базы данных и отправка запросов к ним
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
+
 На этом занятии вы узнаете, как создать базу данных, создать таблицу в базе данных и получить доступ к данным таблицы и изменить их. Поскольку это занятие является введением к использованию языка [!INCLUDE[tsql](../includes/tsql-md.md)], в нем не используются и не описываются многие параметры, доступные для этих инструкций.  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] могут быть написаны и пересланы компоненту [!INCLUDE[ssDE](../includes/ssde-md.md)] следующими способами:  
@@ -40,7 +44,7 @@ ms.locfileid: "51696822"
 - Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Если у вас нет доступа к экземпляру SQL Server, выберите свою платформу в следующих ссылках. При выборе проверки подлинности SQL используйте учетные данные SQL Server.
-- **Windows**: [скачать выпуск SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **Windows**: [Скачать выпуск SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
 - **macOS**: [скачать SQL Server 2017 для Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 ## <a name="create-a-database"></a>Создание базы данных

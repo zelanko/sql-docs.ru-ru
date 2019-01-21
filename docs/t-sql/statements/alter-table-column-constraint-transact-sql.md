@@ -21,12 +21,12 @@ ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5c0f827bf39e691df424bbd3fbe01ec004df0c7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3e52f4b35dd1375b9df910f2020c2e5536c5764
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855892"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132844"
 ---
 # <a name="alter-table-columnconstraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -86,14 +86,13 @@ ms.locfileid: "47855892"
   
  Столбцы с типами данных **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** или **image** нельзя указать в качестве столбцов для индекса.  
   
- WITH FILLFACTOR **=***fillfactor*  
+ WITH FILLFACTOR **=**_fillfactor_  
  Указывает, насколько полно компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен заполнять каждую страницу индекса, используемую для хранения индексных данных. Определяемые пользователем значения коэффициента заполнения могут находиться в диапазоне от 1 до 100. Если значение не задано, по умолчанию принимается значение 0.  
   
 > [!IMPORTANT]  
 >  Описание выражения WITH FILLFACTOR = *fillfactor* как единственного параметра индекса, применимого к ограничениям PRIMARY KEY или UNIQUE, сохранено для обеспечения обратной совместимости, но в будущих выпусках это выражение документировано не будет. Другие параметры индекса можно указать в предложении [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) инструкции ALTER TABLE.  
   
- ON { *partition_scheme_name ***(*** partition_column_name***)** | *filegroup* | **"** default **"** }  
- **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ ON { _partition_scheme_name_**(**_partition_column_name_**)** | *filegroup* | **"** default **"** } **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает место хранения индекса, созданного для ограничения. Если определен аргумент *partition_scheme_name*, индекс разделяется на секции, которые сопоставляются с файловыми группами, определенными аргументом *partition_scheme_name*. Если указан аргумент *filegroup*, индекс создается в файловой группе с таким именем. Если указан аргумент **"** default **"** или предложение ON не определено вообще, индекс создается в той же файловой группе, что и таблица. Если при добавлении кластеризованного индекса для ограничений PRIMARY KEY или UNIQUE указано предложение ON, то вся таблица перемещается в указанную файловую группу в момент создания этого индекса.  
   

@@ -13,12 +13,12 @@ ms.assetid: 5f423b9f-a6c4-41a7-9d8d-8f4926ce1fb4
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 162b0f18759253ac5c842a88eb0027926a4c458b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 30043f330755981b2aef93d7aacabe284f35cd9f
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521187"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256919"
 ---
 # <a name="view-the-policy-based-management-facets-on-a-sql-server-object"></a>Просмотр аспектов управления на основе политик в объекте SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "52521187"
   
 1.  В обозревателе объектов щелкните правой кнопкой мыши экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], объект экземпляра, базу данных или объект базы данных и выберите команду **Аспекты**.  
   
-2.  В диалоговом окне **Просмотр аспектов —***имя_объекта* в списке **Аспект** выберите аспект, чтобы просмотреть его свойства. Дополнительные сведения о доступных параметрах данного диалогового окна см. в разделе [View Facets Dialog Box](../../relational-databases/policy-based-management/view-facets-dialog-box.md).  
+2.  В диалоговом окне **Просмотр аспектов —**_имя_объекта_ в списке **Аспект** выберите аспект, чтобы просмотреть его свойства. Дополнительные сведения о доступных параметрах данного диалогового окна см. в разделе [View Facets Dialog Box](../../relational-databases/policy-based-management/view-facets-dialog-box.md).  
   
 3.  После завершения нажмите кнопку **ОК**.  
   

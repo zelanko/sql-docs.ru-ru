@@ -13,21 +13,23 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 8c6b1e4aeeb8a7969c663c42a50035cf0a521274
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 1fafc2c94e92f2aeb878e8b1ecf6d9e6f86387d2
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599992"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300131"
 ---
 # <a name="upgrade-sql-server"></a>Обновление SQL Server
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  > [!div class="nextstepaction"]
+  > [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
  
  Экземпляры [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или [!INCLUDE[ss2016](../../includes/sssql15-md.md)] можно обновить до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Перед запуском программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]просмотрите следующие статьи, относящиеся к процессу обновления, и связанные заметки о выпуске.  
   
    - Сведения об обновлении [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]см. в статье [Вы выполняете обновление с версии SQL Server 2005?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)  
-   - [Заметки о выпуске SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md) 
+   - [Заметки о выпуске для SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md) 
    - [Заметки о выпуске SQL Server 2017](../../sql-server/sql-server-2017-release-notes.md) 
   
 ## <a name="in-this-section"></a>в этом разделе  

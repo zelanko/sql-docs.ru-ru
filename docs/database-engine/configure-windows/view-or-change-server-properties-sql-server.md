@@ -19,12 +19,12 @@ ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 42b9955b4bae6549e26cefd3739d7a8f624f2ab5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c4f4c40711fad6d32d8fcc0aa859507e266fdd7
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825182"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255379"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Просмотр или изменение свойств сервера (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47825182"
   
      [Диспетчер конфигурации SQL Server](#PowerShellProcedure)  
   
--   **Дальнейшие действия**  [После изменения свойств сервера](#FollowUp)  
+-   **Дальнейшие действия.**  [После изменения свойств сервера](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47825182"
   
 -   Некоторые страницы со свойствами предоставляют сведения, полученные через инструментарий управления Windows (WMI). Для отображения этих страниц на компьютере, где работает среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], должен быть установлен инструментарий WMI.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
  Дополнительные сведения см. в разделе [Роли уровня сервера](../../relational-databases/security/authentication-access/server-level-roles.md).  
@@ -155,9 +155,9 @@ GO
   
 2.  В **диспетчере конфигурации SQL Server**выберите **Службы SQL Server**.  
   
-3.  В области сведений щелкните **SQL Server (\<***имя_экземпляра>***>)** правой кнопкой мыши и выберите пункт **Свойства**.  
+3.  На панели подробных сведений правой кнопкой мыши щелкните **SQL Server (\<**_имя_экземпляра_**>)** и выберите пункт **Свойства**.  
   
-4.  В диалоговом окне **Свойства SQL Server (\<***имя_экземпляра***>)** измените свойства сервера на вкладке **Служба** или **Дополнительно** и нажмите кнопку **ОК**.  
+4.  В диалоговом окне **Свойства SQL Server (\<**_имя_экземпляра_**>)**  измените свойства сервера на вкладке **Служба** или **Дополнительно** и нажмите кнопку **ОК**.  
   
 ##  <a name="FollowUp"></a> Дальнейшие действия. После изменения свойств сервера  
  Для некоторых свойств необходимо перезапустить сервер, чтобы изменения вступили в силу.  

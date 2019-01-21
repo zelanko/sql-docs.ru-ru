@@ -13,12 +13,12 @@ ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d8b64219089caf290046b5f499b235defea19c39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc5fb9ba2354c8ceb77066b5730a99949edc5ca6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736462"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136154"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>Сведения о публикации, все подписки (публикация слиянием)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "47736462"
 ## <a name="options"></a>Параметры  
  Для получения дополнительных сведений о подписке и о связанных с ней задачах щелкните правой кнопкой мыши на строке с этой подпиской, а затем выберите соответствующий параметр в контекстном меню. Чтобы изменить способ отображения данных в сетке, щелкните правой кнопкой мыши сетку, а затем один из следующих параметров.  
   
--   **Сортировать**: сортировка по одному или нескольким столбцам в диалоговом окне **Сортировка столбцов** .  
+-   **Сортировать**: сортировка по одному или нескольким столбцам в диалоговом окне **Сортировка столбцов**.  
   
--   **Выберите столбцы для отображения**: выбор столбцов для отображения и порядка их отображения в диалоговом окне **Выбор столбцов** .  
+-   **Выберите столбцы для отображения**: выбор столбцов для отображения и порядка их отображения в диалоговом окне **Выбор столбцов**.  
   
--   **Фильтр**: фильтрация строк в сетке на основании значений столбцов в диалоговом окне **Параметры фильтра** .  
+-   **Фильтр**: фильтрация строк в сетке на основании значений столбцов в диалоговом окне **Параметры фильтра**.  
   
--   **Очистить фильтр**: удаление всех параметров фильтра для сетки.  
+-   **Очистить фильтр**: удалить все настройки фильтра для сетки.  
   
  Настройки фильтра уникальны для каждой сетки. Выбор и сортировка столбцов применяются ко всем сеткам одного типа, как, например, сетка публикаций для каждого издателя.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "47736462"
  Значения состояния **Срок действия скоро истекает или истек** и **Продолжительное слияние** могут отображаться только, если установлены пороги. Значение состояния **Критическое для производительности** может быть отображено только после произведения пяти синхронизаций подписок с одним типом соединения (коммутируемого или по локальной сети). Сведения по измерению производительности и установке пороговых значений см. в статьях [Наблюдение за производительностью с помощью монитора репликации](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md) и [Настройка пороговых значений и предупреждений в мониторе репликации](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
  **Подписка**  
- Имя каждой подписки в виде:*имя_подписчика: имя_базы_данных_подписки*.  
+ Имя каждой подписки в виде: *SubscriberName: ИмяБазыДанныхПодписки*.  
   
  **Понятное имя**  
  Только для версии[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Описание каждой подписки. Описание вводится в диалоговое окно **Свойства подписки** или указывается с помощью параметра **@description** процедуры [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) или [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Пользователи часто используют описание как «понятное имя» или псевдоним для подписки.  
@@ -105,9 +105,8 @@ ms.locfileid: "47736462"
   
 ## <a name="see-also"></a>См. также:  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для подписки (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
- [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Веб-синхронизация для репликации слиянием](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
+ [Просмотр сведений и выполнение задач с помощью монитора репликации](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication.md)   
+ [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

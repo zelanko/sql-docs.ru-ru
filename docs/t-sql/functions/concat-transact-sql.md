@@ -19,18 +19,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 428fae933e960c30ff876ffbe2a8a5674ec52773
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 6a1c1624965ad311bb7df039957da8fd25a3321c
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970445"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299021"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
 
 Эта функция возвращает строку, возникающую в результате объединения двух или более строковых значений в сквозной форме. (Сведения о добавлении разделяющего значения во время объединения см. в описании функции [CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md).)
   

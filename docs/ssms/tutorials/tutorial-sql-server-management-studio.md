@@ -1,5 +1,5 @@
 ---
-title: 'Учебник: SQL Server Management Studio (SSMS) | Microsoft Docs'
+title: Учебник. SQL Server Management Studio (SSMS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/30/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5deb2b29c70187bb0222e21df7193f300f7eb7b0
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: f8b1560ef694885ae0debbf06f2d61d23c5d0f66
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970545"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299401"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Учебники по SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!div class="nextstepaction"]
-> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
 
 Учебник по SQL Server Management Studio (SSMS) познакомит вас с этой интегрированной средой для управления инфраструктурой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] представляет собой графический интерфейс для настройки экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], наблюдения за ними и управления ими. Среда также позволяет развертывать, отслеживать и обновлять компоненты уровня данных, используемые приложениями, например базами данных. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] также предоставляет редакторы [!INCLUDE[tsql](../../includes/tsql-md.md)], языка многомерных выражений, расширений интеллектуального анализа данных и XML для изменения и отладки скриптов.  
   
@@ -47,24 +47,24 @@ ms.locfileid: "50970545"
 В учебниках рассматриваются следующие темы: 
 
   
-- [Учебник. Подключение и отправка запроса к SQL Server с помощью SQL Server Management Studio](connect-query-sql-server.md)
+- [Руководство Подключение и отправка запроса к SQL Server с помощью SQL Server Management Studio](connect-query-sql-server.md)
 
     Из этого учебника вы узнаете, как подключиться к экземпляру SQL Server. Вы также ознакомитесь с некоторыми основными командами Transact-SQL (T-SQL) для создания базы данных и выполнения запросов к ней. 
 
-- [Учебник. Написание скриптов для объектов в SSMS](scripting-ssms.md)
+- [Руководство Написание скриптов для объектов в SSMS](scripting-ssms.md)
 
     Из этого учебника вы узнаете, как создавать скрипты для различных объектов в среде SSMS, включая базы данных и запросы. 
 
-- [Учебник. Использование шаблонов в SSMS](templates-ssms.md)
+- [Руководство Использование шаблонов в SSMS](templates-ssms.md)
    
     Из этого учебника вы узнаете, как работать с готовыми шаблонами в среде SSMS. Шаблоны — это малоизвестный компонент, в котором хранится ряд фрагментов кода Transact-SQL для разных задач администрирования баз данных. 
 
-- [Учебник. Конфигурация SSMS](ssms-configuration.md)
+- [Руководство Конфигурация SSMS](ssms-configuration.md)
 
     Из этого учебника вы узнаете основы настройки среды SSMS, например изменение структуры среды. В нем также описываются разные компоненты SSMS. 
   
 
-- [Учебник: дополнительные советы и рекомендации по использованию SSMS](ssms-tricks.md)
+- [Руководство Дополнительные советы и рекомендации по использованию SSMS](ssms-tricks.md)
 
     Из этого учебника вы получите дополнительные советы и рекомендации по использованию среды SSMS. Учебник включает следующее:
     - закомментирование и раскомментирование текста;

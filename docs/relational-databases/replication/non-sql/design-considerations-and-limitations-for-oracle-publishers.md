@@ -13,12 +13,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8fbef18dc28786fc6455af68e09c788a3f0e2db1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7488391716a4ebc094bd6e783b591252bd24590f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748752"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125860"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Рассмотрение структуры и ограничений издателей Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "47748752"
   
  Рассмотрите также следующие вопросы:  
   
--   Oracle и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обрабатывают значение NULL по-разному: Oracle допускает наличие нескольких строк со значениями NULL для столбцов, которые могут содержать значения NULL и включаются в ограничения уникальности или индексы. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обеспечивает уникальность, разрешая наличие только одной строки со значением NULL для одного и того же столбца. Нельзя опубликовать уникальное ограничение или индекс, разрешающий значение NULL, поскольку в этом случае произошло бы нарушение ограничения на подписчике, если публикуемая таблица содержит несколько строк со значениями NULL для любого из столбцов, включенных в индекс или ограничение.  
+-   Oracle и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обрабатывают значение NULL по-разному: Oracle допускает наличие нескольких строк со значениями NULL для столбцов, которые могут содержать значения NULL и включаются в уникальные ограничения или индексы. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обеспечивает уникальность, разрешая наличие только одной строки со значением NULL для одного и того же столбца. Нельзя опубликовать уникальное ограничение или индекс, разрешающий значение NULL, поскольку в этом случае произошло бы нарушение ограничения на подписчике, если публикуемая таблица содержит несколько строк со значениями NULL для любого из столбцов, включенных в индекс или ограничение.  
   
 -   При проверке на уникальность конечные пробелы в поле игнорируются [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , а в Oracle — учитываются.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "47748752"
   
 -   Подписчики на публикации Oracle не могут быть повторно автоматически инициализированы из резервной копии.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает два типа проверки данных: двоичную и количества строк. Издатели Oracle поддерживают только проверку количества строк. Дополнительные сведения см. в статье [Проверка реплицированных данных](../../../relational-databases/replication/validate-replicated-data.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает два типа проверки данных: двоичную и количества строк. Издатели Oracle поддерживают только проверку количества строк. Дополнительные сведения см. в статье [Проверка реплицированных данных](../../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предусматривает два формата моментальных снимков: собственный режим bcp и символьный режим. Издатели Oracle поддерживают символьный режим моментальных снимков.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "47748752"
   
     -   Параметр **@job_login** невозможно изменить с помощью хранимой процедуры [sp_changepublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) или [sp_changelogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), но пароль можно изменить.  
   
- Дополнительные сведения о безопасности репликации см. в статье [Безопасность и защита (репликация)](../../../relational-databases/replication/security/security-and-protection-replication.md).  
+ Дополнительные сведения о безопасности репликации см. в статье [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Administrative Considerations for Oracle Publishers](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)  (Вопросы управления издателями Oracle)  

@@ -16,12 +16,12 @@ ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9705b867d8f12c83b0c3e3c0d1ec6a8461e7a2dd
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: dd24314a8948e5893e4e4625c695485c7611c5bb
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559931"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130284"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Создание задания агента SQL Server по архивации сообщений компонента Database Mail и журналов событий базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "51559931"
   
 -   **Перед началом работы:**  , [Необходимые компоненты](#Prerequisites), [Рекомендации](#Recommendations), [Разрешения](#Permissions)  
   
--   **Архивация сообщений и журналов компонента Database Mail с использованием**  [агента SQL Server](#Process_Overview)  
+-   **Для архивации сообщений и журналов компонента Database Mail рекомендуется использовать:**  [агент SQL Server](#Process_Overview)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -48,11 +48,11 @@ ms.locfileid: "51559931"
   
 -   Первая процедура, которая создает задание с именем «Archive Database Mail», состоит из следующих действий.  
   
-    1.  Скопируйте все сообщения из таблиц компонента Database Mail в новую таблицу с именем прошлого месяца в формате **DBMailArchive_***<год_месяц>*.  
+    1.  Скопируйте все сообщения из таблиц компонента Database Mail в новую таблицу с именем прошлого месяца в формате **DBMailArchive_**_<год_месяц>_.  
   
-    2.  Скопируйте вложения, прикрепленные к сообщениям, скопированным на первом шаге из таблиц компонента Database Mail, в новую таблицу с именем прошлого месяца в формате **DBMailArchive_Attachments_***<год_месяц>*.  
+    2.  Скопируйте вложения, прикрепленные к сообщениям, скопированным на первом шаге из таблиц компонента Database Mail, в новую таблицу с именем прошлого месяца в формате **DBMailArchive_Attachments_**_<год_месяц>_.  
   
-    3.  Скопируйте из журналов событий компонента Database Mail события, имеющие отношение к сообщениям, скопированным на первом шаге, из таблиц компонента Database Mail в новую таблицу с именем прошлого месяца в формате **DBMailArchive_Log_***<год_месяц>*.  
+    3.  Скопируйте из журналов событий компонента Database Mail события, имеющие отношение к сообщениям, скопированным на первом шаге, из таблиц компонента Database Mail в новую таблицу с именем прошлого месяца в формате **DBMailArchive_Log_**_<год_месяц>_.  
   
     4.  Удаление всех скопированных элементов из таблиц компонента Database Mail.  
   

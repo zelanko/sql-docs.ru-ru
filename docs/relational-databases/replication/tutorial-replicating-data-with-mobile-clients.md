@@ -1,5 +1,5 @@
 ---
-title: Учебник. Настройка репликации между сервером и мобильными клиентами (репликация слиянием) | Документы Майкрософт
+title: Учебник. Настройка репликации между сервером и мобильными клиентами (репликация слиянием) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/03/2018
 ms.prod: sql
@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc09bcca6e70d80e256cba8cd8a1ad6a477a4742
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9f967453ff629a7827d47b25085edd4aa304b1aa
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545541"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130724"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Учебник. Настройка репликации между сервером и мобильными клиентами (репликация слиянием)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52545541"
 > * Синхронизация подписки на публикацию слиянием.
   
 ## <a name="prerequisites"></a>предварительные требования  
-Этот учебник предназначен для пользователей, знакомых с основными операциями с базами данных, но имеющих ограниченный опыт работы с репликацией. Перед тем как приступить к работе с этим учебником, необходимо освоить [Учебник. Подготовка SQL Server к репликации](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
+Этот учебник предназначен для пользователей, знакомых с основными операциями с базами данных, но имеющих ограниченный опыт работы с репликацией. Перед тем как приступить к работе с этим учебником, необходимо освоить [Учебник. Подготовка SQL Server к репликации](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 Для работы с этим учебником требуется SQL Server, среда SQL Server Management Studio (SSMS) и база данных AdventureWorks. 
   
@@ -58,7 +58,7 @@ ms.locfileid: "52545541"
 > - В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] необходимо подключиться к издателю и подписчику с помощью имени входа, которое является членом предопределенной роли сервера **sysadmin**. Дополнительные сведения о роли см. в статье [Роли уровня сервера](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
   
   
-**Предполагаемое время выполнения заданий этого учебника: 60 минут**  
+**Предполагаемое время для выполнения заданий данного учебника: 60 минут**  
   
 ## <a name="configure-a-publisher-for-merge-replication"></a>Настройка издателя для репликации слиянием
 В этом разделе с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] создается публикация слиянием с целью публикации подмножества таблиц **Employee**, **SalesOrderHeader** и **SalesOrderDetail** в образце базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Эти таблицы фильтруются с помощью параметризованных фильтров строк, так что каждая подписка содержит уникальную секцию данных. Также в список доступа к публикации добавляется имя для входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используемое агентом слияния.  
@@ -205,7 +205,7 @@ ms.locfileid: "52545541"
 
    ![Выбранные элементы для добавления базы данных на подписчик](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
   
-8. На странице **Безопасность агента слияния** выберите кнопку с многоточием (**...**). Введите <*имя_компьютера_подписчика*>**\repl_merge** в поле **Учетная запись процесса** и укажите пароль для учетной записи. Нажмите кнопку **ОК**, кнопку **Далее**, а затем — снова **Далее**.  
+8. На странице **Безопасность агента слияния** выберите кнопку с многоточием (**…**). Введите <*имя_компьютера_подписчика*>**\repl_merge** в поле **Учетная запись процесса** и укажите пароль для учетной записи. Нажмите кнопку **ОК**, кнопку **Далее**, а затем — снова **Далее**.  
 
    ![Выбранные элементы для безопасности агента слияния](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 
@@ -251,7 +251,7 @@ ms.locfileid: "52545541"
 Дополнительные сведения см. в разделе:  
 - [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)  
 - [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md)  
-- [Моментальные снимки для публикаций слиянием с параметризованными фильтрами](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+- [Моментальные снимки для публикаций слиянием с параметризованными фильтрами](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
 
 ## <a name="synchronize-the-subscription-to-the-merge-publication"></a>Синхронизация подписки на публикацию слиянием
 

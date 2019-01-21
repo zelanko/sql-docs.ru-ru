@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 841d38d4a862582a393fba116676908572f39d38
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2ac5ce3e74713da1b1560d4fd0e1cb86bb4593be
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203043"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185030"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (ядро СУБД)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -124,7 +124,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 >  Видео, в котором демонстрируется использование мастера, см. на странице [Начало работы с постоянным шифрованием с помощью SSMS](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS).
 
 1.  Подключитесь к существующей базе данных, которая содержит таблицы со столбцами, которые требуется зашифровать, с помощью **обозревателя объектов** в составе Management Studio или создайте новую базу данных, одну или несколько таблиц со столбцами, которые необходимо зашифровать, и подключитесь к ней.
-2.  Щелкните правой кнопкой мыши базу данных, наведите курсор на пункт **Задачи**, а затем щелкните **Зашифровать столбцы**, чтобы открыть **Мастер постоянного шифрования**.
+2.  Щелкните правой кнопкой мыши базу данных, наведите курсор на пункт **Задачи**, а затем щелкните **Зашифровать столбцы**, чтобы открыть **мастер Always Encrypted**.
 3.  Прочитайте страницу **Введение** , а затем нажмите кнопку **Далее**.
 4.  На странице **Выбор столбцов** разверните таблицы и выберите столбцы, которые необходимо зашифровать.
 5.  В каждом шифруемом столбце для параметра **Тип шифрования** выберите значение *Детерминированное* или *Случайное*.

@@ -17,12 +17,12 @@ ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f11bd1d26e363628a80ed2cd673e4acda7476526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afa70f42c2ea5602bf549a4d5596bff2c8bbff66
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852852"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123884"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>Кэширование, обновление и производительность монитора репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "47852852"
   
  Обновление кэша обрабатывается заданием агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] — **Обновитель монитора репликации для распространения**. Задание выполняется постоянно, однако расписание обновления кэша основано на определенном времени ожидания после предыдущего обновления:  
   
--   Если с момента последнего создания кэша происходили изменения в истории агента, время ожидания устанавливается по меньшему из следующих периодов: 4 секунды или длительность создания предыдущей версии кэша.  
+-   Если с момента последнего создания кэша происходили изменения предыстории агента, время ожидания равно меньшему из следующих времен: 4 секунды или время, затраченное на создание предыдущего кэша.  
   
--   Если с момента последнего создания кэша не было изменений в истории агента (допускаются другие изменения), время ожидания устанавливается по большему из следующих периодов: 30 секунд или длительность создания предыдущей версии кэша.  
+-   Если с момента последнего создания кэша не происходило никаких изменений предыстории агента (могли быть другие изменения), время ожидания равно большему из следующих времен: 30 секунд или время, затраченное на создание предыдущего кэша.  
   
 ## <a name="refreshing-the-replication-monitor-user-interface"></a>Обновление пользовательского интерфейса монитора репликации  
  Пользовательский интерфейс монитора репликации может обновляться следующими способами:  
@@ -56,6 +56,6 @@ ms.locfileid: "47852852"
   
 ## <a name="see-also"></a>См. также:  
  [Запуск задания по обслуживанию репликаций (среда SQL Server Management Studio)](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
- [Наблюдение за репликацией](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Наблюдение за репликацией](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

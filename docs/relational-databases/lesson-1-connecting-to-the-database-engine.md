@@ -1,5 +1,5 @@
 ---
-title: Занятие 1. Подключение к ядру СУБД | Документация Майкрософт
+title: Урок 1. Подключение к ядру СУБД | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/05/2018
 ms.prod: sql
@@ -11,15 +11,18 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9414215e82a6828152e1ab84265a5b70b6a2171
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: ee35edcce1e72ebea42b429811b558aa61d06296
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302688"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300291"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Соединение с компонентом Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
 
 Набор средств, устанавливаемых с компонентом [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], зависит от выпуска и от параметров, заданных при установке. На этом уроке рассматриваются важнейшие средства, а также показываются способы подключения и выполнения одной из базовых функций (разрешение входа дополнительным пользователям).  
 
@@ -110,5 +113,5 @@ ms.locfileid: "52302688"
 > Это базовые сведения, позволяющие начать работу. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] предоставляет безопасную среду; безопасность безусловно важна при выполнении операций с базой данных.  
 
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 2. Соединение с другого компьютера](../relational-databases/lesson-2-connecting-from-another-computer.md)    
+[Занятие 2. Подключение с другого компьютера](../relational-databases/lesson-2-connecting-from-another-computer.md)    
   

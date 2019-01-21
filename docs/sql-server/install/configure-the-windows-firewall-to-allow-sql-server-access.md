@@ -23,18 +23,18 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f82ce2b0d3ec19dea48f99634a5c5c9936f25ef9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 483696e8ecc717e0ead5c7be16a627c046cb47ca
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408471"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300071"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 > [!div class="nextstepaction"]
-> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
 
 Системы брандмауэров предотвращают несанкционированный доступ к ресурсам компьютера. Если брандмауэр включен, но настроен неправильно, попытка соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может оказаться заблокированной.  
   
@@ -313,6 +313,6 @@ ms.locfileid: "52408471"
   
 ## <a name="see-also"></a>См. также:  
  [Общие сведения о службе и требования к сетевым портам в системе Windows Server](https://support.microsoft.com/kb/832017)   
- [Руководство. Настройка параметров брандмауэра (база данных SQL Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
+ [Как Настройка параметров брандмауэра (база данных SQL Microsoft Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   

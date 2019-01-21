@@ -17,15 +17,15 @@ helpviewer_keywords:
 - file restores [SQL Server], simple recovery model
 - file restores [SQL Server], Transact-SQL restore sequence
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5a3b7faea7ae15a1927309bcb0463a10efe74bd1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 489f5637aea2bc97dfcbb009d45747606b1ad9ae
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534629"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241965"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Восстановления файлов (простая модель восстановления)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "52534629"
      Сведения о поддержке оперативного восстановления страниц и файлов см. в статье [Функции и задачи ядра СУБД](https://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34). Дополнительные сведения об оперативном восстановлении см. в разделе [Оперативное восстановление (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md).  
   
     > [!TIP]  
-    >  Если желательно, чтобы база данных находилась в режиме "вне сети" при восстановлении файлов, переведите ее в режим "вне сети" перед запуском последовательности восстановления, выполнив следующую инструкцию [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) : ALTER DATABASE *имя_базы_данных* SET OFFLINE.  
+    >  Если желательно, чтобы база данных находилась в режиме "вне сети" для восстановления файлов, переведите ее в этот режим перед запуском последовательности восстановления, выполнив следующую инструкцию [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md): ALTER DATABASE *имя_базы_данных* SET OFFLINE.  
   
  **В этом разделе.**  
   
@@ -83,9 +83,9 @@ ms.locfileid: "52534629"
   
 ### <a name="examples"></a>Примеры  
   
--   [Пример. Оперативное восстановление доступного только для чтения файла (простая модель восстановления)](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [Пример. Оперативное восстановление доступного только для чтения файла &#40;простая модель восстановления&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [Пример. Автономное восстановление основной и еще одной файловой группы (модель полного восстановления)](../../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [Пример. Автономное восстановление основной и еще одной файловой группы &#40;модель полного восстановления&#41;](../../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
  **Восстановление файлов и файловых групп**  
@@ -99,7 +99,7 @@ ms.locfileid: "52534629"
 -   [Метод Restore.SqlRestore (сервер) (SMO)](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.restore.sqlrestore.aspx)   
   
 ## <a name="see-also"></a>См. также:  
- [Резервное копирование и восстановление: взаимодействие и сосуществование (SQL Server)](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Резервное копирование и восстановление: взаимодействие и совместимость &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Разностные резервные копии (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [Полные резервные копии файлов (SQL Server)](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   
  [Общие сведения о резервном копировании (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   

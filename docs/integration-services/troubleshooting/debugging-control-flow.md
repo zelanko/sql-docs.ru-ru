@@ -20,12 +20,12 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fcc1dd9aa113c53071363beefc5d9ad238144e28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef4d7e038c9c8ed4d22bbc49e0139f2408ca8afe
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796142"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134934"
 ---
 # <a name="debugging-control-flow"></a>Отладка потока управления
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features и службы tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -53,7 +53,7 @@ ms.locfileid: "47796142"
 |Задача или контейнер получает событие **OnTaskFailed** .|Вызывается сервером задач при возникновении ошибки.|  
 |Задача или контейнер получает событие **OnProgress** .|Вызывается для обновления информации о ходе выполнения задачи.|  
 |Задача или контейнер получает событие **OnQueryCancel** .|Вызывается в любой момент обработки задачи, когда необходимо отменить ее выполнение.|  
-|Задача или контейнер получает событие **OnVariableValueChanged** .|Вызывается средой во время выполнения служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , когда изменяется значение переменной. Чтобы вызвать данное событие, для свойства RaiseChangeEvent переменной необходимо установить значение **true** .<br /><br /> **\*\* Предупреждение. \*\*** Переменная, связанная с этой точкой останова, должна быть определена в области **контейнера** . Если переменная определена в области пакета, точка останова не достигается.|  
+|Задача или контейнер получает событие **OnVariableValueChanged** .|Вызывается средой во время выполнения служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , когда изменяется значение переменной. Чтобы вызвать данное событие, для свойства RaiseChangeEvent переменной необходимо установить значение **true** .<br /><br /> **&#42;&#42; Предупреждение. &#42;&#42;** Переменная, связанная с этой точкой останова, должна быть определена в области **контейнера**. Если переменная определена в области пакета, точка останова не достигается.|  
 |Задача или контейнер получает событие **OnCustomEvent** .|Вызывается задачей для вызова пользовательского события, определенного для данной задачи.|  
   
  В дополнение к условиям останова, доступным для всех задач и контейнеров, некоторые задачи и контейнеры имеют дополнительные условия останова для установки точек останова. Например, можно активировать условия останова в контейнере «цикл по элементам», который задает точку останова, приостанавливающую выполнение в начале каждой итерации цикла.  

@@ -15,16 +15,19 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c58fcf00f0feb3f6dc78f1df095a5934edfde6f3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 89bb096f92bfd2ae5cc4da46ba99fb4ae41929d0
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600894"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300371"
 ---
 # <a name="install-sql-server"></a>Установка SQL Server
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  > [!div class="nextstepaction"]
+  > [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
+
  
  Начиная с [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] доступен только в виде 64-разрядного приложения. Ниже приведены важные подробности о том, как получить и установить SQL Server.
 
@@ -32,9 +35,9 @@ ms.locfileid: "51600894"
   
 *  **Варианты**. Установка может производиться через мастер установки, из командной строки или с помощью SysPrep.
  
-*  **Требования**. Перед установкой ознакомьтесь с требованиями к установке, проверками конфигурации системы и рекомендациями по безопасности в статье [Планирование установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md) 
+*  **Требования**. Перед установкой ознакомьтесь с требованиями к установке, проверками конфигурации системы и рекомендациями по безопасности в статье [Планирование установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md). 
 
-* **Процесс**. Полные инструкции по процедуре установки см. в статье [Установка SQL Server](../../database-engine/install-windows/installation-for-sql-server-2016.md) .
+* **Процесс**. Полные инструкции по процедуре установки см. в статье [Установка SQL Server](../../database-engine/install-windows/installation-for-sql-server-2016.md).
 
 * **Образцы баз данных и примеры кода**: 
     * Они не устанавливаются по умолчанию в ходе установки SQL Server. 
@@ -80,7 +83,7 @@ ms.locfileid: "51600894"
 |-----------|-----------------|  
 |[Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|В этой статье приведены общие сведения о конфигурации брандмауэра и описан процесс настройки брандмауэра Windows.|  
 |[Настройка многосетевого компьютера для доступа к SQL Server](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|В этой статье описываются настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и брандмауэра Windows в режиме повышенной безопасности для предоставления сетевого подключения к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в многосетевой среде.|  
-|[Настройка брандмауэра Windows для разрешения доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|Выполнив действия, описанные в этой статье, можно настроить порт и брандмауэр, чтобы разрешить доступ к [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint.|  
+|[Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|Выполнив действия, описанные в этой статье, можно настроить порт и брандмауэр, чтобы разрешить доступ к [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint.|  
   
 ## <a name="related-sections"></a>См. также  
 [Возможности, поддерживаемые различными выпусками [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)  

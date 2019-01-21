@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8738e882455cfdb05630754e94f349d2e5f0204a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3a40d8209fd01c6f5e3c4ec2c3d4344d2b62ee35
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512110"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125954"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Репликация, отслеживание изменений, изменение данных в группах доступности AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -196,9 +196,9 @@ ms.locfileid: "52512110"
   
 -   При использовании репликации слиянием и базы данных публикации в группе доступности:  
   
-    -   Принудительная подписка: и издатель, и распространитель должны иметь версию не ниже [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+    -   Принудительная подписка: И издатель и распространитель должны иметь версию не ниже [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
-    -   Подписка по запросу: базы данных издателя, распространителя и подписчика должны находиться на экземпляре с версией не ниже [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Это связано с тем, что агент слияния на подписчике должен иметь сведения о том, как группа доступности может выполнить отработку отказа на базу данных-получатель.  
+    -   Подписка по запросу: Базы данных издателя, распространителя и подписчика должны находиться в экземпляре с версией не ниже [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Это связано с тем, что агент слияния на подписчике должен иметь сведения о том, как группа доступности может выполнить отработку отказа на базу данных-получатель.  
   
 -   Экземпляры издателя должны удовлетворять всем предварительным условиям, необходимым для участия в группе доступности AlwaysOn. Дополнительные сведения см. в разделе [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
@@ -208,7 +208,7 @@ ms.locfileid: "52512110"
 |||||  
 |-|-|-|-|  
 ||**Издатель**|**Распространитель**|**Подписчик**|  
-|**Транзакционная**|Да<br /><br /> Примечание. Не включает поддержку двунаправленной и возвратной репликации транзакций.|Да|Да| 
+|**Транзакционная**|Да<br /><br /> Примечание. Не включает поддержку двунаправленной и возвратно-поступательной репликации транзакций.|Да|Да| 
 |**P2P**|нет|нет|нет|  
 |**Объединить**|Да|нет|нет|  
 |**Моментальный снимок**|Да|нет|Да|
@@ -230,7 +230,7 @@ ms.locfileid: "52512110"
   
 -   [Обслуживание базы данных публикации AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Администрирование (репликация)](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [Вопросы и ответы об администрировании репликации](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **Change data capture**  
   

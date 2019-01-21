@@ -1,7 +1,7 @@
 ---
 title: Прозрачное шифрование данных (TDE) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 01/08/2019
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -19,12 +19,12 @@ ms.author: aliceku
 ms.reviewer: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2fda42994bb86d1087f22024205f8a521ec530d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: bb61a9c18c8e0f2b164c8df01a8b84cebd5c8ab8
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210583"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185130"
 ---
 # <a name="transparent-data-encryption-tde"></a>Прозрачное шифрование данных (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "53210583"
   
  **Сведения, применимые к [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**  
   
- При использовании прозрачного шифрования данных с [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] версии 12 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]автоматически создает для вас сертификат на уровне сервера, хранящийся в базе данных master. Чтобы переместить базу данных TDE в [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] , вам необходимо расшифровать ее, переместить, а затем повторно включить TDE в целевой [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Пошаговые инструкции по прозрачному шифрованию данных в [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]можно найти в разделе [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).  
+ При использовании прозрачного шифрования данных с [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] версии 12 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] автоматически создает для вас сертификат на уровне сервера, хранящийся в базе данных master. Чтобы переместить базу данных TDE в [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], расшифровывать ее не нужно. Дополнительные сведения об использовании прозрачного шифрования данных с [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] см. в статье [Прозрачное шифрование данных в базе данных SQL Azure](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).  
   
  **Сведения, применимые к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   

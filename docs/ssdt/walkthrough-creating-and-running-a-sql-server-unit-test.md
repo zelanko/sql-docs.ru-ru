@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Создание и запуск модульного теста SQL Server | Документация Майкрософт
+title: Пошаговое руководство. Создание и запуск модульного теста SQL Server | Документация Майкрософт
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 71be318c40c5776440bf427cad57ed3fb903e55a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a8eb48a0c3147b61eb57b6a8035765ed73850efa
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540935"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143594"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Пошаговое руководство. Создание и запуск модульного теста SQL Server
 С помощью этого пошагового руководства вы создадите модульный тест создать, который проверяет работу нескольких хранимых процедур. Модульные тесты SQL Server создаются для выявления ошибок кода, которые могут вызвать неверную работу приложения. Модульные тесты SQL Server и тесты приложений можно запускать в одном автоматизированном наборе тестов.  
@@ -274,7 +274,7 @@ ms.locfileid: "52540935"
   
 2.  Щелкните одну из хранимых процедур правой кнопкой мыши и выберите команду **Создать модульные тесты**, чтобы открыть диалоговое окно **Создание модульных тестов**.  
   
-3.  Установите флажки для всех пяти хранимых процедур: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder**и **Sales.uspShowOrderDetails**.  
+3.  Установите флажки для всех пяти хранимых процедур: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder** и **Sales.uspShowOrderDetails**.  
   
 4.  В раскрывающемся списке **Проект** выберите **Создать тестовый проект Visual C#**.  
   
@@ -723,7 +723,7 @@ ms.locfileid: "52540935"
     |--------|-------------------|  
     |Sales_uspPlaceNewOrderTest|Успех|  
     |Sales_uspShowOrderDetailsTest|Успех|  
-    |Sales_uspFillOrderTest|Не пройден со следующей ошибкой: «Ошибка условия ScalarValueCondition (scalarValueCondition2): ResultSet 1 Row 1 Column 1: значения не совпадают, фактическое значение -100, ожидаемое 100». Эта ошибка возникает, потому что определение хранимой процедуры содержит незначительную ошибку.|  
+    |Sales_uspFillOrderTest|Сбой со следующей ошибкой: «Сбой условия ScalarValueCondition (scalarValueCondition2): Результирующий набор 1 Строка 1 Столбец 1: значения не соответствуют, действительное значение: "–100", ожидаемое значение: "100".» Эта ошибка возникает, потому что определение хранимой процедуры содержит незначительную ошибку.|  
   
     На следующем этапе ошибка будет исправлена и тест будет выполнен повторно.  
   
@@ -950,7 +950,7 @@ ms.locfileid: "52540935"
   
     Тест завершается следующей ошибкой.  
   
-    **Тестовый метод TestProject1.SqlServerUnitTests1.Sales_uspCancelOrderTest вызвал исключение "System.Data.SqlClient.SqlException: вы можете отменить только открытые заказы".**  
+    **Метод теста TestProject1.SqlServerUnitTests1.Sales_uspCancelOrderTest вызвал исключение: System.Data.SqlClient.SqlException: вы можете отменить только открытые заказы.**  
   
     Далее необходимо изменить код и указать, что исключение является ожидаемым.  
   
@@ -968,7 +968,7 @@ ms.locfileid: "52540935"
     Необходимо указать, что ожидается определенное исключение. Можно дополнительно указать номер ошибки. Если не добавить этот атрибут, модульный тест завершится ошибкой и в окне «Результаты теста» появится сообщение.  
   
     > [!IMPORTANT]  
-    > Сейчас Visual Studio 2012 не поддерживает атрибут ExpectedSqlException. Сведения о том, как обойти это ограничение, см. в разделе [Невозможно выполнить модульный тест базы данных типа «Ожидаемый сбой»](https://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
+    > Сейчас Visual Studio 2012 не поддерживает атрибут ExpectedSqlException. Сведения о том, как обойти это ограничение, см. в разделе [Невозможно выполнить модульный тест базы данных типа «Ожидаемый сбой»](https://social.msdn.microsoft.com/Forums/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
   
 3.  В меню «Файл» выберите команду «Сохранить SqlServerUnitTests1.cs».  
   
@@ -990,6 +990,6 @@ ms.locfileid: "52540935"
 ## <a name="see-also"></a>См. также:  
 [Создание и определение модульных тестов SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Проверка кода базы данных с помощью модульных тестов SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-[Практическое руководство. Создание пустого модульного теста SQL Server](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
-[Практическое руководство. Настройка запуска модульного теста SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
+[Как Создание пустого модульного теста SQL Server](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
+[Как Настройка запуска модульного теста SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
   

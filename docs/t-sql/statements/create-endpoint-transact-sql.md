@@ -32,12 +32,12 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c3920cdf30575d5b51948fe7789d568a1dacc961
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41b6c0009c2cfc3c83a4326875c13083875166b3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596223"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124584"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47596223"
   
      В этой части определяется, какие полезные данные будут поддерживаться конечной точкой. Полезные данные могут иметь один из нескольких поддерживаемых типов: [!INCLUDE[tsql](../../includes/tsql-md.md)], компонент Service Broker, зеркальное отображение базы данных. В эту часть также включаются сведения, зависящие от выбранного типа.  
   
-> **Примечание.** Собственные XML-веб-службы (конечные точки SOAP/HTTP) удалены, начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+> **Примечание.** Собственные  XML-веб-службы (конечные точки SOAP/HTTP) удалены, начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -145,10 +145,10 @@ FOR DATABASE_MIRRORING (
   
  Следующие аргументы относятся только к протоколу TCP.  
   
- LISTENER_PORT **=***listenerPort*  
+ LISTENER_PORT **=**_порт_прослушивателя_  
  Указывает номер порта протокола TCP/IP, прослушиваемого компонентом Service Broker на предмет соединений. По соглашению используется порт 4022, но допустим любой порт от 1024 до 32767.  
   
- LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "* ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(**_4-part-ip_ **)** | **(** "*ip_address_v6*" **)**  
  Указывает IP-адрес, с которым конечная точка будет ожидать соединения. По умолчанию значение установлено в ALL. Это значит, что средство прослушивания примет соединение с любым верным IP-адресом.  
   
  Если зеркальное отображение базы данных настраивается с использованием IP-адреса, а не полного имени домена (`ALTER DATABASE SET PARTNER = partner_IP_address` или `ALTER DATABASE SET WITNESS = witness_IP_address`), необходимо указать `LISTENER_IP =IP_address` вместо `LISTENER_IP=ALL` при создании конечных точек зеркального отображения.  
@@ -230,7 +230,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  Удаляет сообщения, предназначенные для служб, расположенных в других местах. Это значение по умолчанию.  
   
- MESSAGE_FORWARD_SIZE **=***forward_size*  
+ MESSAGE_FORWARD_SIZE **=**_forward_size_  
  Указывает максимальный объем хранилища в мегабайтах для размещения в нем сообщений конечной точки, предназначенных для перенаправления.  
   
  **Параметры DATABASE_MIRRORING**  

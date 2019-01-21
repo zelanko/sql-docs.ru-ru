@@ -16,18 +16,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8d57d294ffe2fe70a4bbfcf805d4eeb350771f2
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cb85ebe35b50d143f4887cba91eda08a930666a0
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697343"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299011"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Справочник по Transact-SQL (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
 
 В этом разделе приводится общее описание поиска и использования разделов справки по Microsoft Transact-SQL (T-SQL). T-SQL является ключом к использованию продуктов и служб Microsoft SQL. Все средства и приложения, которые взаимодействуют с базами данных SQL, делают это путем отправки команд T-SQL.  
 
@@ -91,7 +91,7 @@ ms.locfileid: "51697343"
 
 Теперь, когда вы знаете, как найти справочные разделы T-SQL, можно:
 
-- пройти краткий учебник по разработке на T-SQL в разделе [Учебник: написание инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md). 
+- пройти краткий учебник по разработке на T-SQL в разделе [Учебник. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md). 
 - См. раздел [Синтаксические обозначения в Transact-SQL &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
 
   

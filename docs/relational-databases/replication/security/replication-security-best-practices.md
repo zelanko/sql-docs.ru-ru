@@ -16,12 +16,12 @@ ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 41346b81aa56f9ed4d83494092834535611cb905
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbda6137d9b844b13485c63488fad9efa85366c7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794542"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131564"
 ---
 # <a name="replication-security-best-practices"></a>Рекомендации по защите репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47794542"
   
     -   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
--   При запуске каждого агента репликации необходимо использовать новую учетную запись Windows, а в отношении всех соединений агента репликации применять проверку подлинности Windows. Дополнительные сведения об указании учетных записей см. в статье [Управление именами для входа и паролями в репликации](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
+-   При запуске каждого агента репликации необходимо использовать новую учетную запись Windows, а в отношении всех соединений агента репликации применять проверку подлинности Windows. Дополнительные сведения об указании учетных записей см. в статье [Идентификатор и управление доступом для репликации](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
   
 -   Предоставляйте каждому из агентов только те разрешения, которые необходимы. Дополнительные сведения см. в подразделе «Разрешения, необходимые для агентов» раздела [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
@@ -67,7 +67,7 @@ ms.locfileid: "47794542"
   
     -   Убедитесь, что такой агент, например агент распространителя для подписки, устанавливает соединения под одной и той же учетной записью на каждом компьютере.  
   
-    -   В ситуациях, требующих проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , часто не предоставляется доступ к хранилищу моментального снимка UNC (например, доступ может быть заблокирован брандмауэром). В таком случае моментальный снимок может быть передан подписчикам при помощи протокола передачи данных (FTP). Дополнительные сведения см. в статье [Передача моментальных снимков через FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+    -   В ситуациях, требующих проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , часто не предоставляется доступ к хранилищу моментального снимка UNC (например, доступ может быть заблокирован брандмауэром). В таком случае моментальный снимок может быть передан подписчикам при помощи протокола передачи данных (FTP). Дополнительные сведения см. в статье [Передача моментальных снимков через FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
@@ -75,6 +75,6 @@ ms.locfileid: "47794542"
  [Защита подписчика](../../../relational-databases/replication/security/secure-the-subscriber.md)   
  [Организация безопасности распространителя](../../../relational-databases/replication/security/secure-the-distributor.md)   
  [Организация безопасности издателя](../../../relational-databases/replication/security/secure-the-publisher.md)   
- [Безопасность и защита (репликация)](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
   

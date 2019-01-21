@@ -15,12 +15,12 @@ ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a326feef177287953982c94412d9619c716e2e22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c7299efbcdca72a100b13d2474f218357605a85
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692952"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125544"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Оптимизация производительности репликации слиянием с помощью отслеживания условного удаления
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47692952"
   
  **Указание того, что удаления не должны отслеживаться**  
   
--   Программирование репликации в [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Отключение отслеживания операций удаления для статей публикации слиянием (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
+-   Программирование репликации на языке [!INCLUDE[tsql](../../../includes/tsql-md.md)]. [Указание свойств репликации слиянием](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Параметры статьи для репликации слиянием](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   

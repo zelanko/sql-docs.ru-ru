@@ -1,7 +1,7 @@
 ---
 title: XML-файлы форматирования (SQL Server) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2cbf1dfaef9b5985cff5764f3855d23029fd29f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a8c29bf1705343972bf8921bad1523f2ad5b19a8
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659363"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256119"
 ---
 # <a name="xml-format-files-sql-server"></a>XML-файлы форматирования (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -278,7 +278,7 @@ ms.locfileid: "51659363"
 |Строка символов|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**и **SQLNVARCHAR**|Нет.|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
->  Для массового экспорта или импорта данных SQLXML используйте один из следующих типов данных в файле форматирования: SQLCHAR или SQLVARYCHAR (данные отправляются в кодовой странице клиента или в кодовой странице, предполагаемой параметрами сортировки), SQLNCHAR или SQLNVARCHAR (данные отправляются в формате Юникод) и SQLBINARY или SQLVARYBIN (данные отправляются без преобразования).  
+>  Для массового экспорта или импорта данных SQLXML используется один из следующих типов данных в файле форматирования. SQLCHAR или SQLVARYCHAR (данные посылаются в кодовой странице клиента или в кодовой странице, предполагаемой параметрами сортировки), SQLNCHAR или SQLNVARCHAR (данные посылаются в формате Юникод) и SQLBINARY или SQLVARYBIN (данные посылаются без преобразования).  
   
  Дополнительные сведения о типах значений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).  
   
@@ -319,7 +319,7 @@ XmlNodeList ColumnList = myDoc.GetElementsByTagName("COLUMN");
 for(int i=0;i<ColumnList.Count;i++)  
 {  
    Console.Write("COLUMN: xsi:type=" +ColumnList[i].Attributes["type",  
-      "https://www.w3.org/2001/XMLSchema-instance"].Value+"\n");  
+      "http://www.w3.org/2001/XMLSchema-instance"].Value+"\n");  
 }  
 ```  
   
@@ -365,7 +365,7 @@ for(int i=0;i<ColumnList.Count;i++)
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
       MAX_LENGTH="12"/>   
@@ -391,7 +391,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
   
  **Таблица (строка):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
- **Файл данных (запись):** Age\<tab>Lastname\<tab>Firstname\<return>  
+ **Файл данных** (запись): Age\<tab>Lastname\<tab>Firstname\<return>  
   
  В элементе `<RECORD>` файл форматирования представляет значения во всех трех полях в символьном виде.  
   
@@ -401,7 +401,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
       MAX_LENGTH="12"/>  
@@ -436,7 +436,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 <?xml version = "1.0"?>  
 <BCPFORMAT   
 xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
       MAX_LENGTH="12"/>  
@@ -468,7 +468,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 <?xml version = "1.0"?>  
 <BCPFORMAT  
 xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-   xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
    <RECORD>  
       <FIELD xsi:type="CharTerm" ID="C1" TERMINATOR="\t"   
             MAX_LENGTH="4"/>  
@@ -510,7 +510,7 @@ CREATE TABLE t_xml (c1 int, c2 xml)
 ```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativePrefix" PREFIX_LENGTH="1"/>  
   <FIELD ID="2" xsi:type="NCharPrefix" PREFIX_LENGTH="8"/>  
@@ -529,7 +529,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 <?xml version="1.0"?>  
 <BCPFORMAT  
        xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
-       xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharFixed" LENGTH="10"/>  
     <FIELD ID="2" xsi:type="CharFixed" LENGTH="6"/>  

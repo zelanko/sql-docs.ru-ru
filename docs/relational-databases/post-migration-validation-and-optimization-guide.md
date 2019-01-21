@@ -1,6 +1,6 @@
 ---
 title: Руководство по оптимизации и проверке после миграции | Документация Microsoft
-ms.date: 5/03/2017
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,23 +13,25 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: d85de6deffa9e140bc5f9bf489afd60e0dbbc948
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7e9e96ee56895c38a8c242d3cd48804884f581d1
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213623"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206370"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Руководство по оптимизации и проверке после миграции
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Проверка [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] после миграции — очень важный шаг, позволяющий добиться точности и полноты данных, а также выявить проблемы с производительностью рабочей нагрузки.
 
-# <a name="common-performance-scenarios"></a>Типовые сценарии производительности 
+## <a name="common-performance-scenarios"></a>Типовые сценарии производительности
+
 Ниже представлены некоторые типовые сценарии производительности, которые встречаются после миграции на платформу [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], а также способы устранения связанных с ними проблем. К ним относятся сценарии, связанные с миграцией с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (переход на более новые версии), а также с миграцией с внешней платформы (например, Oracle, DB2, MySQL и Sybase) на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 ## <a name="CEUpgrade"></a> Замедление запросов из-за изменения в версии CE
- 
+
 **Область применения:** миграция с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 При миграции со старых версий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] или более новые версии и при обновлении [уровня совместимости базы данных](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) до последнего доступного выполнение рабочей нагрузки может замедляться.
@@ -126,6 +128,7 @@ ms.locfileid: "53213623"
 > Поскольку во время компиляции таблица результатов многооператорных функций, возвращающих табличные значения, не создается, оптимизатор запросов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] при подсчете строк обращается к эвристическим правилам, а не к фактической статистике. Не помогает даже добавление индексов в базовую таблицу (или таблицы). Для многооператорных функций, возвращающих табличные значения, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует в качестве количества строк, которое должна возвращать такая функция, фиксированное значение 1 (начиная с [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], фиксированное значение составляет 100 строк).
 
 ### <a name="steps-to-resolve"></a>Действия по устранению
+
 1.  Если многооператорной функцией, возвращающей табличное значение, является только одна инструкция, преобразуйте ее во встроенную функцию.
 
     ```sql
@@ -142,7 +145,8 @@ ms.locfileid: "53213623"
     RETURN
     END
     ```
-    Чтобы 
+
+    Далее приведен пример встроенного формата.
 
     ```sql
     CREATE FUNCTION dbo.tfnGetRecentAddress_inline(@ID int)
@@ -158,7 +162,8 @@ ms.locfileid: "53213623"
 
 2.  Для более сложных вариантов можно использовать промежуточные результаты, которые хранятся в таблицах, оптимизированных для памяти, или во временных таблицах.
 
-##  <a name="Additional_Reading"></a> Дополнительные материалы  
+##  <a name="Additional_Reading"></a> Дополнительные материалы
+
  [Рекомендации по хранилищу запросов](../relational-databases/performance/best-practice-with-the-query-store.md)  
 [Таблицы, оптимизированные для памяти](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
 [Определяемые пользователем функции](../relational-databases/user-defined-functions/user-defined-functions.md)  

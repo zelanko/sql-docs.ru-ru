@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd1a43b50d0d36efacfe3c5a93a9bf0a169c4ede
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed0dd384b3ca1a90b1a40bbb23d63feabf2ae85d
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760342"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143294"
 ---
 # <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ SET ANSI_PADDING ON
  Этот параметр влияет только на определение новых столбцов. После создания столбца [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохраняет значения, исходя из значения параметра на время создания столбца. Более поздние изменения этого параметра не влияют на существующие столбцы.  
   
 > [!NOTE]  
->  Мы рекомендуем всегда устанавливать для параметра ANSI_PADDING значение ON.  
+> Для параметра ANSI_PADDING следует всегда устанавливать значение ON.  
   
  В таблице показаны результаты влияния, оказываемого параметром SET ANSI_PADDING, когда значения вставляются в столбцы с типами данных **char**, **varchar**, **binary** и **varbinary**.  
   
@@ -69,34 +69,35 @@ SET ANSI_PADDING ON
 |OFF|Заполнение исходного значения (с замыкающими пробелами для столбцов **char** и с замыкающими нулями для столбцов **binary**) до длины столбца.|Следует тем же правилам, что и для **varchar** или **varbinary**, когда для параметра SET ANSI_PADDING установлено значение OFF.|Замыкающие пробелы в символьных значениях, вставляемых в столбец **varchar**, усекаются. Замыкающие нули в двоичных значениях, вставляемых в столбец **varbinary**, усекаются.|  
   
 > [!NOTE]  
->  При заполнении столбцы **char** заполняются пробелами, а столбцы **binary** заполняются нулями. При усечении в столбцах **char** усекаются замыкающие пробелы, а в столбцах **binary** усекаются замыкающие нули.  
+> При заполнении столбцы **char** заполняются пробелами, а столбцы **binary** заполняются нулями. При усечении в столбцах **char** усекаются замыкающие пробелы, а в столбцах **binary** усекаются замыкающие нули.  
   
- Инструкция SET ANSI_PADDING должна быть выполнена со значением параметра ON при создании или изменении индексов по вычисляемым столбцам или индексированным представлениям. Дополнительные сведения о настройке параметров SET с индексированными представлениями и индексами на вычисляемых столбцах см. в подразделе "Рекомендации по использованию инструкций SET" раздела [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md).  
+Параметр ANSI_PADDING должен иметь значение ON при создании или изменении индексов по вычисляемым столбцам или индексированным представлениям. Дополнительные сведения о настройке параметров SET с индексированными представлениями и индексами на вычисляемых столбцах см. в подразделе "Рекомендации по использованию инструкций SET" раздела [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md).  
   
- По умолчанию значение параметра SET ANSI_PADDING равно ON. Драйвер ODBC для Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и поставщик OLE DB для Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически устанавливает параметр ANSI_PADDING в значение ON при соединении. Это может быть настроено в источниках данных ODBC, в атрибутах соединения ODBC или свойствах соединения OLE DB, определенных в приложении перед установкой соединения. Значением по умолчанию для параметра инструкции SET ANSI_PADDING является OFF при соединениях из приложений DB-Library.  
+По умолчанию значение параметра SET ANSI_PADDING равно ON. Драйвер ODBC для Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и поставщик OLE DB для Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически устанавливает параметр ANSI_PADDING в значение ON при соединении. Это может быть настроено в источниках данных ODBC, в атрибутах соединения ODBC или свойствах соединения OLE DB, определенных в приложении перед установкой соединения. Значением по умолчанию для параметра инструкции SET ANSI_PADDING является OFF при соединениях из приложений DB-Library.  
   
  Параметр SET ANSI_PADDING не влияет на типы данных **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)**, **varchar(max)** и **nvarchar(max)**. Они всегда демонстрируют поведение, соответствующее установленному для параметра инструкции SET ANSI_PADDING значению ON. Это означает, что конечные пробелы и нули не вырезаются.  
   
- Когда для SET ANSI_DEFAULTS установлено значение ON, параметр SET ANSI_PADDING включен.  
+Когда для ANSI_DEFAULTS установлено значение ON, параметр ANSI_PADDING включен.  
   
- Значение параметра SET ANSI_PADDING устанавливается во время выполнения или запуска, а не во время синтаксического анализа.  
+Параметр ANSI_PADDING устанавливается во время выполнения, а не во время синтаксического анализа.  
   
- Чтобы просмотреть текущее значение для этого параметра, выполните следующий запрос.  
+Чтобы просмотреть текущее значение для этого параметра, выполните следующий запрос.  
   
-```  
+```sql  
 DECLARE @ANSI_PADDING VARCHAR(3) = 'OFF';  
 IF ( (16 & @@OPTIONS) = 16 ) SET @ANSI_PADDING = 'ON';  
 SELECT @ANSI_PADDING AS ANSI_PADDING;  
-  
 ```  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в роли public.  
+Необходимо быть членом роли **public**.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере показано, как значение этого параметра влияет на каждый из типов данных.  
-  
-```  
+В следующем примере показано, как значение этого параметра влияет на каждый из типов данных.  
+
+Установите для параметра ANSI_PADDING значение ON и выполните тестирование.
+
+```sql  
 PRINT 'Testing with ANSI_PADDING ON'  
 SET ANSI_PADDING ON;  
 GO  
@@ -114,7 +115,11 @@ SELECT 'CHAR' = '>' + charcol + '\<', 'VARCHAR'='>' + varcharcol + '\<',
    varbinarycol  
 FROM t1;  
 GO  
-  
+```
+
+Теперь установите для параметра ANSI_PADDING значение OFF и выполните тестирование.
+
+```sql
 PRINT 'Testing with ANSI_PADDING OFF';  
 SET ANSI_PADDING OFF;  
 GO  

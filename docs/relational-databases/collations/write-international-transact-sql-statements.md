@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ab973f34d0bcfb94d3df97e10efcbba69655f8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fece5fabc394ff01175273378a2fb7c23ef483cf
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724742"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256569"
 ---
 # <a name="write-international-transact-sql-statements"></a>Написание инструкций Transact-SQL, адаптированных к международному использованию
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "47724742"
   
     -   В приложениях ADO, OLE DB и ODBC следует использовать принятые в ODBC форматы отметок времени, даты и времени:  
   
-         **{ ts'** yyyy**-**_mm_**-_** dd**hh_**:**_mm_**:**_ss_[**.**_fff_] **'}** such as: **{ ts'** 1998**-**09**-**24 10**:**02**:**20**' }**  
+         **{ ts'** _гггг_ **-** _мм_ **-** _дд_ _чч_ **:** _мм_ **:** _сс_ [**.**_fff_] **'}**, например: **{ ts'1998-09-24 10:02:20'}**  
   
-         **{ d'** *гггг* **-** *мм* **-** *дд* **'}** , например: **{ d'** 1998**-** 09**-** 24 **'}**  
+         **{ d'** _гггг_ **-** _мм_ **-** _дд_ **'}**, например: **{ d'1998-09-24'}**
   
-         **{ t'** *чч* **:** *мм* **:** *сс* **'}** , например: **{ t'** 10:02:20 **'}**  
+         **{ t'** _чч_ **:** _мм_ **:** _сс_ **'}**, например: **{ t'10:02:20'}**  
   
     -   В приложениях с использованием других прикладных программных API-интерфейсов, а также в скриптах языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , хранимых процедурах и триггерах следует использовать числовые строки без разделителей. Например, *yyyymmdd* в виде 19980924.  
   

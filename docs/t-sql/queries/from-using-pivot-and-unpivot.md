@@ -25,15 +25,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d07dc597f293414c2c4fae2704085ac4449038cf
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b8781f155f96fa9e80270eaf6f75f2438eae4549
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905775"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299481"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM — использование PIVOT и UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
 
   Реляционные операторы `PIVOT` и `UNPIVOT` можно использовать для изменения возвращающего табличное значение выражения в другой таблице. `PIVOT` изменяет возвращающее табличное значение выражение, преобразуя уникальные значения одного столбца выражения в несколько выходных столбцов, а также, в случае необходимости, объединяет оставшиеся повторяющиеся значения столбца и отображает их в выходных данных. `UNPIVOT` производит действия, обратные PIVOT, преобразуя столбцы возвращающего табличное значение выражения в значения столбца.  
   

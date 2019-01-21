@@ -21,18 +21,18 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6da677a558c2af47d49fa7c8f957604ab7fc1b78
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 3ed5059f50c45e3bcac5d3e17ce1fd09d2fb4fa8
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698843"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300461"
 ---
 # <a name="sql-server-documentation"></a>Документация по SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
 
 ::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
 SQL Server является центральной частью платформы обработки данных Майкрософт. SQL Server — это ведущее отраслевое решение среди систем управления рабочими базами данных (ODBMS). Приведенные в этой документации сведения будут полезны при установке, настройке и использовании SQL Server в Windows и Linux. Материалы включают в себя комплексные примеры, примеры кода и видеоролики. Разделы о языке SQL Server см. в [справочнике по языку](../t-sql/language-reference.md).
@@ -51,7 +51,7 @@ SQL Server является центральной частью платформ
 |---------|---------|
 |[Новые возможности в SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)     | [Заметки о выпуске SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md)        |
 |[Новые возможности в SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [Заметки о выпуске SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)        |
-|[Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Заметки о выпуске SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
+|[Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Заметки о выпуске для SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
 
 ![info_tip](../sql-server/media/info-tip.png) Документация по SQL Server **2014** доступна [здесь](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014).
 ::: moniker-end
@@ -74,7 +74,7 @@ SQL Server является центральной частью платформ
 ::: moniker range="=sql-server-2016"
 |новые возможности  | Заметки о выпуске  |
 |---------|---------|
-|[Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Заметки о выпуске SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
+|[Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Заметки о выпуске для SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
 ::: moniker-end
 
 ::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"

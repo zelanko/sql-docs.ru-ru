@@ -18,12 +18,12 @@ ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35f53ef33d1cf9316fcb7225ab5baf67a3b33383
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b8b74629bcaea743026c453614f2c69e268b6bc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804063"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130934"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>выполнить отладку обработчика бизнес-логики (программирование репликации)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47804063"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>Отладка обработчика бизнес-логики на локальном компьютере  
   
-1.  Настройте публикацию и распространение, создайте новую публикацию, а затем подписку на нее. Дополнительные сведения см. в статьях [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md) и [Создание, изменение и удаление публикаций и статей (репликация)](../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md).  
+1.  Настройте публикацию и распространение, создайте новую публикацию, а затем подписку на нее. Дополнительные сведения см. в статьях [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md) и [Создание публикации](../../relational-databases/replication/publish/create-a-publication.md).  
   
 2.  Создайте и зарегистрируйте обработчик бизнес-логики. Дополнительные сведения см. в статье [Реализация обработчика бизнес-логики для статьи публикации слиянием](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   

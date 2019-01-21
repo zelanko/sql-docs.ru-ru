@@ -18,12 +18,12 @@ ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 47a13686f1e4938886d11df7b2ee104553d3a684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8d607e528164e71d1e771d497ff7660cb7ecf66
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756942"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132994"
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>Обновляемые подписки для репликации транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -126,8 +126,8 @@ ms.locfileid: "47756942"
     -   Если ожидаются конфликты: не следует применять ограничения внешних ключей на издателе или подписчике, если используется политика разрешения конфликтов с приоритетом подписчика; не следует применять ограничения внешних ключей на подписчике, если используется политика разрешения конфликтов с приоритетом издателя.  
   
 ## <a name="see-also"></a>См. также:  
- [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
- [Типы публикации для репликации транзакций](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)   
+ [Одноранговая репликация транзакций](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Репликация транзакций](../../../relational-databases/replication/transactional/transactional-replication.md)   
  [Публикация данных и объектов базы данных](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Подписка на публикации](../../../relational-databases/replication/subscribe-to-publications.md)  
   

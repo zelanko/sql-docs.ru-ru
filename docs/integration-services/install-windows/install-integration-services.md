@@ -20,14 +20,18 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d612ad390500bd7e279d90872ed2b08c6afe2428
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d1ef66f97683b24014661fb6a1e633ce6ce06ce
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677202"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299921"
 ---
 # <a name="install-integration-services"></a>Установка служб Integration Services
+
+  > [!div class="nextstepaction"]
+  > [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет единую программу установки для всех компонентов, включая службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. С помощью этой программы установите [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на один компьютер, включая или не включая другие компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
     
  В этой статье рассматриваются важные моменты, которые следует знать перед началом установки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Сведения в этой статье помогут правильно подобрать параметры установки, сделать правильный выбор и успешно осуществить установку.    

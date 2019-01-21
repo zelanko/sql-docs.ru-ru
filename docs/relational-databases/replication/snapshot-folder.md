@@ -13,12 +13,12 @@ ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2ad52310599d178fd5bf52bab0edd08c2886f2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f8e3050afe889fd1c7f7de489b7ed6d22d3a50f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714852"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133204"
 ---
 # <a name="snapshot-folder"></a>Папка моментальных снимков
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47714852"
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует настроить совместно используемую сетевую папку в качестве местоположения папки моментальных снимков. Локальные пути (начинающиеся с буквы диска, например C:\\) недоступны агентам с других компьютеров.  
   
 ## <a name="see-also"></a>См. также:  
- [Альтернативные расположения папки моментальных снимков](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+ [Изменение параметров моментального снимка](../../relational-databases/replication/snapshot-options.md)   
  [Настройка распространения](../../relational-databases/replication/configure-distribution.md)   
  [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Просмотр и изменение свойств издателя и распространителя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

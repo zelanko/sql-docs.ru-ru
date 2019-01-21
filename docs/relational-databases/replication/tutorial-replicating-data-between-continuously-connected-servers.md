@@ -1,5 +1,5 @@
 ---
-title: Руководство. Настройка репликации между двумя полностью подключенными серверами (репликация транзакций) | Документация Майкрософт
+title: Учебник. Настройка репликации между двумя полностью подключенными серверами (репликация транзакций) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f477276ef55689b6d79244f4493246f99aa9d34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cc911c9a5a3d02e097945ebfe4a74b8ddd9ee285
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514204"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128354"
 ---
-# <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Руководство. Настройка репликации между двумя полностью подключенными серверами (репликация транзакций)
+# <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Учебник. Настройка репликации между двумя полностью подключенными серверами (репликация транзакций)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Репликация транзакций — это хорошее решение для перемещения данных между постоянно подключенными серверами. С помощью мастера репликации можно легко настроить и администрировать топологию репликации. 
 
@@ -39,7 +39,7 @@ ms.locfileid: "52514204"
   
   
 ## <a name="prerequisites"></a>предварительные требования  
-Это руководство для пользователей, которые умеют выполнять основные операции с базами данных и которые имеют ограниченный опыт репликации. Прежде чем приступить к работе с этим руководством, ознакомьтесь с [руководством по подготовке SQL Server к репликации](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
+Это руководство для пользователей, которые умеют выполнять основные операции с базами данных и которые имеют ограниченный опыт репликации. Перед тем как приступить к работе с этим учебником, необходимо освоить [Учебник. Подготовка SQL Server к репликации](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 Для работы с этим учебником требуется SQL Server, среда SQL Server Management Studio (SSMS) и база данных AdventureWorks.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52514204"
 > - В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] необходимо подключиться к издателю и подписчику с помощью имени входа, которое является членом предопределенной роли сервера **sysadmin**. Дополнительные сведения о роли см. в статье [Роли уровня сервера](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
   
   
-**Предполагаемое время выполнения задач этого руководства: 60 минут.**  
+**Предполагаемое время для выполнения заданий данного учебника: 60 минут**  
   
 ## <a name="configure-the-publisher-for-transactional-replication"></a>Настройка издателя для репликации транзакций
 В этом разделе с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] создается публикация транзакций для публикации фильтрованного подмножества таблицы **Продукт** из примера базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Также в список доступа к публикации (PAL) добавляется имя входа SQL Server, используемое агентом распространителя.
@@ -226,7 +226,7 @@ ms.locfileid: "52514204"
   
    A. Откройте вкладку **Трассировочные токены**.  
    Б. Выберите команду **Вставить трассировочный токен**.    
-   в. Просмотрите затраченное время для трассировочного маркера в следующих столбцах: **От издателя к распространителю**, **От распространителя к подписчику**, **Общая задержка**. Значение **Ожидание** указывает на то, что маркер еще не достиг указанной точки.
+   в. Просмотрите затраченное время для трассировочного токена в следующих столбцах: **От издателя к распространителю**, **От распространителя к подписчику**, **Общая задержка**. Значение **Ожидание** указывает на то, что маркер еще не достиг указанной точки.
 
    ![Сведения для трассировочного маркера](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)
 
@@ -242,4 +242,4 @@ ms.locfileid: "52514204"
 В следующей статье будет описана настройка репликации слиянием:  
 
 > [!div class="nextstepaction"]
-> [Руководство. Настройка репликации между сервером и мобильными клиентами (репликация слиянием)](tutorial-replicating-data-with-mobile-clients.md)
+> [Руководство Настройка репликации между сервером и мобильными клиентами (репликация слиянием)](tutorial-replicating-data-with-mobile-clients.md)

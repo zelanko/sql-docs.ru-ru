@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7130114f33159290dd6917db87638140838ee8c2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a32e66e87d3e2cdcf9c8f0498ec845c2b8921825
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538068"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255019"
 ---
 # <a name="create-a-format-file-sql-server"></a>Создание файла форматирования (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52538068"
 ## <a name="creating-a-non-xml-format-file"></a>Создание файла форматирования в формате, отличном от XML  
  Чтобы создать файл форматирования с помощью служебной программы **bcp** , укажите аргумент **format** , а вместо пути файла данных задайте значение **nul** . Параметр **format** также требует наличия параметра **-f** , например:  
   
- **bcp** *table_or_view* **format** nul **-f***format_file_name*  
+ **bcp** _таблица_или_представление_ **format** nul **-f**_имя_файла_формата_  
   
 > [!NOTE]  
 >  Для файлов форматирования в формате, отличном от XML рекомендуется использовать расширение FMT, например MyTable.fmt.  
@@ -66,7 +66,7 @@ ms.locfileid: "52538068"
   
 |Квалификаторы|Описание|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file*|Задает файл форматирования в формате, отличном от XML.|  
+|**formatnul-f** _format_file_|Задает файл форматирования в формате, отличном от XML.|  
 |**-n**|Указывает собственные типы данных.|  
 |**-T**|Указывает, что программа **bcp** устанавливает доверительное соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием встроенной безопасности. Если параметр **-T** не указан, для входа необходимо указать параметры **-U** и **-P** .|  
   
@@ -96,7 +96,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
 |Квалификаторы|Описание|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file*|Задает файл форматирования в формате, отличном от XML.|  
+|**formatnul-f** _format_file_|Задает файл форматирования в формате, отличном от XML.|  
 |**-c**|Задает символьные данные.|  
 |**-T**|Указывает, что программа **bcp** устанавливает доверительное соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием встроенной безопасности. Если параметр **-T** не указан, для входа необходимо указать параметры **-U** и **-P** .|  
   
@@ -169,7 +169,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 ## <a name="creating-an-xml-format-file"></a>Создание XML-файла форматирования  
  Чтобы создать файл форматирования с помощью служебной программы **bcp** , укажите аргумент **format** , а вместо пути файла данных задайте значение **nul** . Параметр **format** всегда требует наличия параметра **-f** , а чтобы создать XML-файл форматирования, необходимо задать параметр **-x** , например:  
   
- **bcp** *таблица_или_представление* **format nul-f** *имя_файла_формата* **-x**  
+ **bcp** _таблица_или_представление_ **format nul-f** _имя_файла_формата_ **-x**  
   
 > [!NOTE]  
 >  Для XML-файлов форматирования рекомендуется использовать расширение XML, например MyTable.xml.  
@@ -195,9 +195,9 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
 |Квалификаторы|Описание|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file* **-x**|Задает XML-файл форматирования.|  
+|**formatnul-f** _format_file_ **-x**|Задает XML-файл форматирования.|  
 |**-c**|Задает символьные данные.|  
-|**-t** `,`|Задает запятую (**,**) в качестве признака конца поля.<br /><br /> Примечание. Если в файле данных используется признак конца поля по умолчанию (`\t`), то аргумент **-t** не нужен.|  
+|**-t** `,`|Задает запятую (**,**) в качестве признака конца поля.<br /><br /> Примечание. Если в файле данных используется признак конца поля по умолчанию (`\t`), то параметр **-t** не нужен.|  
 |**-T**|Указывает, что программа **bcp** устанавливает доверительное соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием встроенной безопасности. Если параметр **-T** не указан, для входа необходимо указать параметры **-U** и **-P** .|  
   
  В командной строке Windows введите следующую команду `bcp` :  
@@ -210,7 +210,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
 ```xml
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>  
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -235,7 +235,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
 |Квалификаторы|Описание|  
 |----------------|-----------------|  
-|**formatnul-f** *format_file* **-x**|Задает XML-файл форматирования.|  
+|**formatnul-f** _format_file_ **-x**|Задает XML-файл форматирования.|  
 |**-n**|Указывает собственные типы данных.|  
 |**-T**|Указывает, что программа **bcp** устанавливает доверительное соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием встроенной безопасности. Если параметр **-T** не указан, для входа необходимо указать параметры **-U** и **-P** .|  
   
@@ -249,7 +249,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
   
 ```xml
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativeFixed" LENGTH="2"/>  
   <FIELD ID="2" xsi:type="NCharPrefix" PREFIX_LENGTH="2" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  

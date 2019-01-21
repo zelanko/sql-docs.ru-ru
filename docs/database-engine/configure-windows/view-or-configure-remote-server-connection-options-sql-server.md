@@ -15,12 +15,12 @@ ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 82f01b505cd534b795efb8b80baeb21764414882
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 58d6ca34183b63054b851cf3ef15ca32f7ed7a80
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760522"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255561"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>Просмотр и настройка параметров соединения с удаленным сервером (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47760522"
   
 1.  В обозревателе объектов щелкните правой кнопкой мыши сервер и выберите пункт **Свойства**.  
   
-2.  В диалоговом окне **Свойства SQL Server — \<***имя_сервера***>** щелкните элемент **Соединения**.  
+2.  В диалоговом окне **Свойства SQL Server — \<**_имя_сервера_**>** щелкните элемент **Соединения**.  
   
 3.  На странице **Соединения** просмотрите параметры **Соединения с удаленными серверами** и измените их при необходимости.  
   

@@ -1,5 +1,5 @@
 ---
-title: Пример. Указание директивы ELEMENTXSINIL | Документация Майкрософт
+title: Пример Указание директивы ELEMENTXSINIL | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d8a45b8142a9788ea1aae5bc81193c8a7a3120f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 050681b0b215d8dc8625bf6a4480d47c50c89b55
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660323"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256589"
 ---
-# <a name="example-specifying-the-elementxsinil-directive"></a>Пример. Задание директивы ELEMENTXSINIL
+# <a name="example-specifying-the-elementxsinil-directive"></a>Пример Задание директивы ELEMENTXSINIL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   При указании директивы ELEMENT для извлечения элементного XML, если столбец имеет значение NULL, соответствующий элемент не будет сформирован при режиме EXPLICIT. Можно указать директиву ELEMENTXSINIL, чтобы создать элементы со значениями NULL для элементов, у которых атрибут **xsi:nil** установлен в значение TRUE.  
   
@@ -61,7 +61,7 @@ FOR XML EXPLICIT;
   
  Частичный результат:  
   
- `<Employee xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"`  
+ `<Employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"`  
   
  `EmpID="1" AddressID="249">`  
   

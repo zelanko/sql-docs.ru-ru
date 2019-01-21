@@ -13,19 +13,19 @@ ms.assetid: 09f591a1-cfae-4a08-b04d-50bd02e7b71a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c2970b44a58dc8594d0512aff7ba19daca57250
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd638d9cb81cee86b35cc497725a34a420942625
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599542"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125794"
 ---
 # <a name="security-considerations-for-sql-server-compact-replication"></a>Рекомендации по безопасности для репликации баз данных выпуска SQL Server Compact
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Для обеспечения безопасности соединения между экземпляром компонента [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Engine и [!INCLUDE[ssEW](../../../includes/ssew-md.md)] необходимо правильно настроить параметры безопасности как для служб Microsoft Internet Information Services (IIS), так и для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также:  
- [Безопасность и защита (репликация)](../../../relational-databases/replication/security/security-and-protection-replication.md)   
+ [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Рекомендации по защите репликации](../../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

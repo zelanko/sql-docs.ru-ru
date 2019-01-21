@@ -18,18 +18,18 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9616a482a220c1c15813fc548ad959dccf46e10
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 64341fd261cb1c1e419b925049cf86403a64ab3e
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703102"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299602"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
 
 
 Возвращает значение, указанное в формате, языке и региональных параметрах (необязательно) в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Для выполнения форматирования значения даты, времени и чисел с учетом локали в виде строк используется функция FORMAT. Для общих преобразований типов данных продолжайте использовать CAST и CONVERT.  
@@ -76,14 +76,14 @@ FORMAT ( value, format [, culture ] )
   
 |Категория|Тип|Тип .NET|  
 |--------------|----------|---------------|  
-|Числовой|bigint|Int64|  
+|Числовой|BIGINT|Int64|  
 |Числовой|ssNoversion|Int32|  
-|Числовой|SMALLINT|Int16|  
+|Числовой|smallint|Int16|  
 |Числовой|TINYINT|Byte|  
-|Числовой|decimal|SqlDecimal|  
+|Числовой|Decimal|SqlDecimal|  
 |Числовой|NUMERIC|SqlDecimal|  
 |Числовой|FLOAT|Double|  
-|Числовой|REAL|Single|  
+|Числовой|REAL|Один|  
 |Числовой|SMALLMONEY|Decimal|  
 |Числовой|money|Decimal|  
 |Дата и время|Дата|DateTime|  

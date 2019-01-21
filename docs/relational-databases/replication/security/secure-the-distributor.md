@@ -14,18 +14,18 @@ ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 80a39418149e6bb8767f0b4422c476c223733cb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4466c75a8d0e873f2e82954dfff42f00669c1da
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801182"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135654"
 ---
 # <a name="secure-the-distributor"></a>Организация безопасности распространителя
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   К распространителю подключаются следующие агенты репликации: агент чтения журнала, агент моментальных снимков, агент чтения очереди, агент распространителя и агент слияния. Важно обеспечить для каждого из этих агентов соответствующее имя входа, соблюдая при этом принцип предоставления минимальных необходимых прав, а также защищая хранилище всех паролей:  
   
--   Сведения об управлении именами для входа и паролями см. в статье [Управление именами для входа и паролями при репликации](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
+-   Сведения об управлении именами для входа и паролями см. в статье [Управление именами для входа и паролями при репликации](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
   
 -   Дополнительные сведения о разрешениях, необходимых каждому агенту, см. в разделе [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
@@ -50,6 +50,6 @@ ms.locfileid: "47801182"
  [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Безопасность и защита (репликация)](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
   

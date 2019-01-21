@@ -21,18 +21,18 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d52233102f5ebe9a812e8071556afa4aff0316f4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b95da5f74481fed0053f31cde326fe271e79abc9
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511714"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299221"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>Типы данных и функции даты и времени (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
 
 В разделах этой статьи представлен обзор всех типов данных и функций даты и времени [!INCLUDE[tsql](../../includes/tsql-md.md)].
 -   [Типы данных даты и времени](#DateandTimeDataTypes)  
@@ -99,11 +99,11 @@ ms.locfileid: "52511714"
 |Компонент|Синтаксис|Возвращаемое значение|Тип возвращаемых данных|Детерминизм|  
 |---|---|---|---|---|
 |[DATEFROMPARTS](../../t-sql/functions/datefromparts-transact-sql.md)|DATEFROMPARTS  ( *year*, *month*, *day* )|Возвращает значение **date**, соответствующее указанному числу, месяцу и году.|**date**|Детерминированное|  
-|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision*)|Возвращает значение **datetime2**, соответствующее указанной дате и времени с заданной точностью.|**datetime2(** *precision* **)**|Детерминированное|  
+|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision*)|Возвращает значение **datetime2**, соответствующее указанной дате и времени с заданной точностью.|**datetime2(** _precision_ **)**|Детерминированное|  
 |[DATETIMEFROMPARTS](../../t-sql/functions/datetimefromparts-transact-sql.md)|DATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *milliseconds*)|Возвращает значение **datetime**, соответствующее указанной дате и времени.|**datetime**|Детерминированное|  
-|[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *hour_offset*, *minute_offset*, *precision*)|Возвращает значение **datetimeoffset** для указанных даты и времени с указанными смещением и точностью.|**datetimeoffset(** *precision* **)**|Детерминированное|  
+|[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *hour_offset*, *minute_offset*, *precision*)|Возвращает значение **datetimeoffset** для указанных даты и времени с указанными смещением и точностью.|**datetimeoffset(** _precision_ **)**|Детерминированное|  
 |[SMALLDATETIMEFROMPARTS](../../t-sql/functions/smalldatetimefromparts-transact-sql.md)|SMALLDATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute* )|Возвращает значение **smalldatetime**, соответствующее указанной дате и времени.|**smalldatetime**|Детерминированное|  
-|[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( *hour*, *minute*, *seconds*, *fractions*, *precision* )|Возвращает значение **time**, соответствующее указанному времени с заданной точностью.|**time(** *precision* **)**|Детерминированное|  
+|[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( *hour*, *minute*, *seconds*, *fractions*, *precision* )|Возвращает значение **time**, соответствующее указанному времени с заданной точностью.|**time(** _precision_ **)**|Детерминированное|  
   
 ###  <a name="GetDateandTimeDifference"></a> Функции, возвращающие значения разности даты и времени
   
@@ -127,10 +127,10 @@ ms.locfileid: "52511714"
 |---|---|---|---|---|
 |[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|Возвращает текущее значение параметра SET DATEFIRST для сеанса.|**tinyint**|Недетерминированная|  
 |[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *number* &#124; **@***number_var* }|Устанавливает первый день недели в виде числа от 1 до 7.|Неприменимо|Неприменимо|  
-|[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@***format_var* }|Задает порядок составляющих даты (месяц/день/год) для ввода данных типа **datetime** или **smalldatetime**.|Неприменимо|Неприменимо|  
+|[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@**_format_var_ }|Задает порядок составляющих даты (месяц/день/год) для ввода данных типа **datetime** или **smalldatetime**.|Неприменимо|Неприменимо|  
 |[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|Возвращает название использующегося в настоящий момент языка. Функция @@LANGUAGE не является функцией даты или времени. Однако на данные, выводимые функциями даты, могут повлиять настройки языка.|Неприменимо|Неприменимо|  
-|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'***language***'** &#124; **@***language_var* }|Устанавливает языковую среду сеанса и системных сообщений. SET LANGUAGE не является функцией даты или времени. Однако на данные, выводимые функциями даты, влияет параметр языка.|Неприменимо|Неприменимо|  
-|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'***language***'** ]|Возвращает сведения о формате даты всех поддерживаемых языков. **sp_helplanguage** не является хранимой процедурой даты или времени. Однако на данные, выводимые функциями даты, влияет параметр языка.|Неприменимо|Неприменимо|  
+|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'**_language_**'** &#124; **@***language_var* }|Устанавливает языковую среду сеанса и системных сообщений. SET LANGUAGE не является функцией даты или времени. Однако на данные, выводимые функциями даты, влияет параметр языка.|Неприменимо|Неприменимо|  
+|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'**_language_**'** ]|Возвращает сведения о формате даты всех поддерживаемых языков. **sp_helplanguage** не является хранимой процедурой даты или времени. Однако на данные, выводимые функциями даты, влияет параметр языка.|Неприменимо|Неприменимо|  
   
 ###  <a name="ValidateDateandTimeValues"></a> Функции, проверяющие значения даты и времени
   

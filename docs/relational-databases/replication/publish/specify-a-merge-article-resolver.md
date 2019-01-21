@@ -15,32 +15,19 @@ ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef65d698db19d1ada3c9c5260f19fa39c4140e95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 216387f82df57f8f3485ba95566fecf36c0ca897
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821942"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136004"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Определение сопоставителя статей публикации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описывается определение арбитра статей публикации слиянием в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+
   
- **В этом разделе**  
-  
--   **Перед началом работы**  
-  
-     [Рекомендации](#Recommendations)  
-  
--   **Для определения арбитра статей публикации слиянием используется:**  
-  
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Перед началом  
-  
-###  <a name="Recommendations"></a> Рекомендации  
+##  <a name="recommendations"></a>Рекомендации  
   
 -   Репликация слиянием допускает следующие типы сопоставителей статей:  
   
@@ -112,7 +99,7 @@ ms.locfileid: "47821942"
     > [!NOTE]  
     >  Местом установки по умолчанию исполняемого файла агента слияния является [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM.  
   
-#### <a name="to-specify-a-custom-resolver-when-defining-a-merge-article"></a>Указание пользовательского сопоставителя при определении статьи публикации слиянием  
+## <a name="specify-a-custom-resolver-when-defining-a-merge-article"></a>Указание пользовательского сопоставителя при определении статьи публикации слиянием  
   
 1.  Если планируется использовать собственный пользовательский сопоставитель конфликтов, создайте и зарегистрируйте сопоставитель с помощью описанной выше процедуры.  
   
@@ -120,7 +107,7 @@ ms.locfileid: "47821942"
   
 3.  В базе данных публикации на издателе выполните процедуру [sp_addmergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Укажите имя арбитра из шага 2 в параметре **@article_resolver** и любые нужные входные данные для пользовательского арбитра с помощью параметра **@resolver_info** . Для нестандартных сопоставителей, основанных на хранимых процедурах, в параметре **@resolver_info** указывается имя хранимой процедуры. Дополнительные сведения о необходимых входных данных для сопоставителей, предоставляемых [!INCLUDE[msCoName](../../../includes/msconame-md.md)], см. в статье о [сопоставителях на базе технологии Microsoft COM](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
-#### <a name="to-specify-or-change-a-custom-resolver-for-an-existing-merge-article"></a>Указание или изменение пользовательского сопоставителя для существующей статьи публикации слиянием  
+## <a name="specify-or-change-a-custom-resolver-for-an-existing-merge-article"></a>Указание или изменение пользовательского сопоставителя для существующей статьи публикации слиянием  
   
 1.  Чтобы выяснить, был ли пользовательский сопоставитель определен для статьи, или чтобы получить имя арбитра, выполните хранимую процедуру [sp_helpmergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md). Если для статьи был определен пользовательский сопоставитель, его имя отобразится в поле **article_resolver** . Любые входные данные, переданные сопоставителю, будут отображены в поле **resolver_info** результирующего набора.  
   
@@ -130,7 +117,7 @@ ms.locfileid: "47821942"
   
 4.  Чтобы изменить какие-либо необходимые входные данные для пользовательского сопоставителя, выполните хранимую процедуру [sp_changemergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) еще раз. Укажите значение для **resolver_info** в параметре **@property** и любые необходимые входные данные для пользовательского сопоставителя в параметре **@value**. Для нестандартных сопоставителей, основанных на хранимых процедурах, в параметре **@resolver_info** указывается имя хранимой процедуры. Дополнительные сведения о необходимых входных данных см. в статье о [сопоставителях на базе технологии Microsoft COM](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
-#### <a name="to-unregister-a-custom-conflict-resolver"></a>Отмена регистрации пользовательского сопоставителя конфликтов  
+## <a name="unregister-a-custom-conflict-resolver"></a>Отмена регистрации пользовательского сопоставителя конфликтов  
   
 1.  На издателе выполните хранимую процедуру [sp_enumcustomresolvers (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) и запомните имя пользовательского сопоставителя, которое нужно удалить, в поле **value** результирующего набора.  
   

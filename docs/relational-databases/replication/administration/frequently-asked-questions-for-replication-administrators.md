@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 04e138f38923745d0095344959bc5876fc213b00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5f6d488b46f576ed5c5d97358ec8674a64be46bd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507441"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135364"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Вопросы, часто задаваемые администраторам репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "52507441"
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>Когда доступна подписка? Когда можно использовать базу данных подписки?  
  Подписка доступна после применения моментального снимка в базе данных подписки. Несмотря на то, что база данных подписки доступна и до этого, эту базу данных не следует использовать до тех пор, пока не применен моментальный снимок. Для проверки состояния создания и применения моментального снимка нужно использовать монитор репликации.  
   
--   Моментальный снимок создается агентом моментальных снимков. Просмотреть состояние процесса создания моментального снимка для публикации можно на вкладке **Агенты** в мониторе репликации. Дополнительные сведения см. в статье [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+-   Моментальный снимок создается агентом моментальных снимков. Просмотреть состояние процесса создания моментального снимка для публикации можно на вкладке **Агенты** в мониторе репликации. Дополнительные сведения см. в статье [Просмотр сведений и выполнение задач с помощью монитора репликации](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
--   Моментальный снимок применяется агентом распространителя или агентом слияния. Просмотреть состояние применения моментального снимка можно на странице **Агент распространителя** или **Агент слияния** монитора репликации. Дополнительные сведения см. в статье [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+-   Моментальный снимок применяется агентом распространителя или агентом слияния. Просмотреть состояние применения моментального снимка можно на странице **Агент распространителя** или **Агент слияния** монитора репликации. Дополнительные сведения см. в статье [Просмотр сведений и выполнение задач с помощью монитора репликации](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ### <a name="what-happens-if-the-snapshot-agent-has-not-completed-when-the-distribution-or-merge-agent-starts"></a>Что происходит, если выполнение агента моментальных снимков не завершено в момент запуска агента распространителя или агента слияния?  
  Если агент распространителя или агент слияния запускается одновременно с агентом моментальных снимков, то это не приведет к ошибке. Однако необходимо помнить о следующем:  
@@ -96,7 +96,7 @@ ms.locfileid: "52507441"
  Эти сведения можно получить в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]и через вызов некоторых хранимых процедур репликации. Дополнительные сведения см. в статье [Distributor and Publisher Information Script](../../../relational-databases/replication/administration/distributor-and-publisher-information-script.md).  
   
 ### <a name="does-replication-encrypt-data"></a>Шифруются ли данные при репликации?  
- Нет. При репликации данные, которые хранятся в базе данных или передаются по сети, не шифруются. Дополнительные сведения см. в разделе "Шифрование" статьи [Security Overview (Replication)](../../../relational-databases/replication/security/security-overview-replication.md) (Общие сведения о безопасности (репликация)).  
+ Нет. При репликации данные, которые хранятся в базе данных или передаются по сети, не шифруются. Дополнительные сведения см. в разделе "Шифрование" статьи [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 ### <a name="how-do-i-replicate-data-over-the-internet"></a>Как реплицировать данные через Интернет?  
  Репликация данных через Интернет:  
@@ -142,8 +142,9 @@ ms.locfileid: "52507441"
   
 -   Непосредственно выполнить инструкции GRANT в базе данных подписки.  
   
--   Использовать скрипт, выполняемый после моментального снимка, для выполнения этих инструкций. Дополнительные сведения см. в статье [Выполнение скриптов до и после применения моментального снимка](../../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).  
-  
+-   Использовать скрипт, выполняемый после моментального снимка, для выполнения этих инструкций. Дополнительные сведения см. в статье [Выполнение скриптов до и после применения моментального снимка](../../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).  
+
+ 
 -   Хранимая процедура [sp_addscriptexec](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md) используется для запуска инструкций.  
   
 ### <a name="what-happens-to-permissions-granted-in-a-subscription-database-if-a-subscription-is-reinitialized"></a>Что происходит с разрешениями, предоставленными в базе данных подписки при повторной инициализации подписки?  
@@ -169,7 +170,7 @@ ms.locfileid: "52507441"
  Да. Существует несколько специальных факторов, которые необходимо принимать во внимание для баз данных, участвующих в репликации. Дополнительные сведения см. в разделе [Резервное копирование и восстановление реплицируемых баз данных](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
 ### <a name="does-replication-affect-the-size-of-the-transaction-log"></a>Влияет ли репликация на размер журнала транзакций?  
- Репликация слиянием и репликация моментальных снимков не влияют на размер журнала транзакций, в отличие от репликации транзакций. Если база данных содержит одну или несколько публикаций транзакций, журнал не может быть усечен, пока все транзакции, относящиеся к публикациям, не будут доставлены в базу данных распространителя. Если журнал транзакций становится слишком большим, а агент чтения журнала запускается по расписанию, необходимо рассмотреть возможность сокращения интервала между его запусками. Либо переведите его в непрерывный режим. Если он установлен в непрерывном режиме (по умолчанию), необходимо убедиться в том, что он работает. Дополнительные сведения о проверке состояния агента чтения журнала см. в статье [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+ Репликация слиянием и репликация моментальных снимков не влияют на размер журнала транзакций, в отличие от репликации транзакций. Если база данных содержит одну или несколько публикаций транзакций, журнал не может быть усечен, пока все транзакции, относящиеся к публикациям, не будут доставлены в базу данных распространителя. Если журнал транзакций становится слишком большим, а агент чтения журнала запускается по расписанию, необходимо рассмотреть возможность сокращения интервала между его запусками. Либо переведите его в непрерывный режим. Если он установлен в непрерывном режиме (по умолчанию), необходимо убедиться в том, что он работает. Дополнительные сведения о проверке состояния агента чтения журнала см. в статье [Просмотр сведений и выполнение задач с помощью монитора репликации](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Кроме этого, если в базе данных публикации или распространителя установлен параметр «sync with backup», то журнал транзакций не усекается до тех пор, пока не будет осуществлено резервное копирование всех транзакций. Если журнал транзакций становится слишком большим и этот параметр установлен, то необходимо рассмотреть сокращение интервалов резервного копирования журнала транзакций. Дополнительные сведения об архивации и восстановлении баз данных, участвующих в репликации транзакций, см. в статье [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md) (Стратегии архивации и восстановления из копии репликации моментальных снимков и репликации транзакций).  
   
@@ -186,12 +187,12 @@ ms.locfileid: "52507441"
  Вначале удалите статью из публикации с помощью хранимых процедур [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) или диалогового окна **Свойства публикации — \<публикация>**, а затем удалите ее из базы данных с помощью инструкции `DROP <Object>`. После добавления подписок невозможно удалить статьи из моментального снимка или публикаций транзакций; вначале следует удалить подписки. Дополнительные сведения см. в статье [Добавление и удаление статей в существующих публикациях](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>Как добавить или удалить столбцы в публикуемой таблице?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает разнообразные изменения схем для публикуемых объектов, включая добавление и удаление столбцов. Например, при выполнении инструкции ALTER TABLE ... DROP COLUMN на издателе эта инструкция будет реплицирована на подписчиках, а затем выполнена для удаления столбца. Подписчики, использующие версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , предшествующие [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , поддерживают добавление и удаление столбцов с помощью хранимых процедур [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) и [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает разнообразные изменения схем для публикуемых объектов, включая добавление и удаление столбцов. Например, при выполнении инструкции ALTER TABLE … DROP COLUMN на издателе эта инструкция будет реплицирована на подписчиках, а затем выполнена для удаления столбца. Подписчики, использующие версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , предшествующие [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , поддерживают добавление и удаление столбцов с помощью хранимых процедур [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) и [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="replication-maintenance"></a>Обслуживание репликации  
   
 ### <a name="how-do-i-determine-if-the-data-at-subscribers-is-synchronized-with-data-at-the-publisher"></a>Как определить, синхронизированы ли данные на подписчиках с данными на издателе?  
- Используйте проверку. Проверка сообщает, синхронизирован ли заданный подписчик с издателем. Дополнительные сведения см. в статье [Проверка реплицированных данных](../../../relational-databases/replication/validate-replicated-data.md). Проверка не предоставляет сведений о конкретных строках, которые не были правильно синхронизированы (если таковые имеются), но [программа tablediff](../../../tools/tablediff-utility.md) предоставляет такие сведения.  
+ Используйте проверку. Проверка сообщает, синхронизирован ли заданный подписчик с издателем. Дополнительные сведения см. в статье [Проверка реплицированных данных](../../../relational-databases/replication/validate-data-at-the-subscriber.md). Проверка не предоставляет сведений о конкретных строках, которые не были правильно синхронизированы (если таковые имеются), но [программа tablediff](../../../tools/tablediff-utility.md) предоставляет такие сведения.  
   
 ### <a name="how-do-i-add-a-table-to-an-existing-publication"></a>Как добавить таблицу к существующей публикации?  
  Для добавления таблицы (или другого объекта) к базе данных публикации или подписки не обязательно останавливать операции в ней. Добавьте таблицу в публикацию в диалоговом окне **Свойства публикации — \<публикация>** или с помощью хранимых процедур [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) и [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Дополнительные сведения см. в статье [Добавление и удаление статей в существующих публикациях](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
@@ -209,7 +210,7 @@ ms.locfileid: "52507441"
  Действия, необходимые для удаления репликации из базы данных, зависят от того, служила ли база данных в качестве базы данных публикации, базы данных подписки или в качестве обеих баз данных.  
   
 ### <a name="how-do-i-determine-whether-there-are-transactions-or-rows-to-be-replicated"></a>Как определить наличие транзакций или строк, подлежащих репликации?  
- Для репликации транзакций используйте хранимые процедуры или вкладку **Нераспределенные команды** в мониторе репликации. Дополнительные сведения см. в статьях [Просмотр реплицированных команд и другой информации в базе данных распространителя (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) и [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Для репликации транзакций используйте хранимые процедуры или вкладку **Нераспределенные команды** в мониторе репликации. Дополнительные сведения см. в статьях [Просмотр реплицированных команд и другой информации в базе данных распространителя (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) и [Просмотр сведений и выполнение задач с помощью монитора репликации](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Для репликации слиянием используйте хранимую процедуру **sp_showpendingchanges**. Дополнительные сведения см. в статье [sp_showpendingchanges (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md).  
   
@@ -220,7 +221,7 @@ ms.locfileid: "52507441"
   
 -   Примерное количество времени, необходимое для доставки команд на подписчик. Если это значение превышает количество времени, требуемое для создания и применения моментального снимка на подписчике, рассмотрите возможность повторной инициализации подписчика. Дополнительные сведения см. в статье [Повторная инициализация подписок](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
- Дополнительные сведения см. в статьях [sp_replmonitorsubscriptionpendingcmds (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md) и [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Дополнительные сведения см. в статьях [sp_replmonitorsubscriptionpendingcmds &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md) и [Просмотр сведений и выполнение задач с помощью монитора репликации](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="replication-and-other-database-features"></a>Репликация и другие возможности базы данных  
   
@@ -231,7 +232,7 @@ ms.locfileid: "52507441"
  Да. Никаких особых действий предпринимать не нужно, поскольку все данные хранятся на одном наборе дисков в кластере.  
   
 ## <a name="see-also"></a>См. также:  
- [Администрирование (репликация)](../../../relational-databases/replication/administration/administration-replication.md)   
+ [Вопросы и ответы об администрировании репликации](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   
   

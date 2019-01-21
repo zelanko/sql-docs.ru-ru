@@ -15,12 +15,12 @@ ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c5cf17437f97aa649ee81f2fb0f71061df04fec8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5ed0acd238ebc934c6adf5061eafe3f15ce44bef
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400397"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143464"
 ---
 # <a name="import-into-a-database-project"></a>Импорт в проект базы данных
 Функцию импорта можно использовать для заполнения проекта новыми объектами из активной базы данных или файла DACPAC либо для обновления имеющихся объектов в проекте новым определением из скрипта. Следует отметить некоторые приведенные ниже различия в поведении между этими тремя действиями.  
@@ -59,8 +59,7 @@ ms.locfileid: "52400397"
   
 Процесс «Импорт из скрипта» не обрабатывает сценарии, выполняемые до или после развертывания, переменные SQLCMD и файлы журналов рефакторинга. Эти и другие неподдерживаемые конструкции, обнаруженные во время импорта, будут помещены в файл **ScriptsIgnoredOnImport.sql** в папке **Скрипты** проекта.  
   
-Дополнительные сведения см. на форуме SSDT по адресу [https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads](https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads).  
-  
+ 
 ## <a name="bkmk_import_encrypted"></a>Импорт зашифрованных объектов  
 При импорте зашифрованных объектов в проект базы данных полный текст определения объекта не всегда может быть получен с сервера. Таким образом, поведение при импорте может быть различным при работе с данным классом объектов.  
   

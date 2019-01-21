@@ -22,12 +22,12 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 851431754767545977c43c19b44880c54543872d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b11a1206e691e834c3ed44d7ab83c73ffc002ec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613443"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127740"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Просмотр состояний публикаций и подписок в мониторе репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +55,11 @@ ms.locfileid: "47613443"
   
  **Просмотр состояния публикации и подписки**  
   
--   Монитор репликации: [Просмотр сведений и выполнение задач для публикации (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) и [Просмотр сведений и выполнение задач для подписки (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
+-   Монитор репликации: [Просмотр сведений и выполнение задач с помощью монитора репликации](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md) 
   
  **Просмотр подробных сведений об агентах**  
   
--   Монитор репликации: [Просмотр сведений и выполнение задач для агентов, ассоциированных с публикацией (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md) и [Просмотр сведений и выполнение задач для агентов, ассоциированных с подпиской (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+-   Монитор репликации: [Просмотр сведений и выполнение задач с помощью монитора репликации](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).
   
 ## <a name="publication-status-values"></a>Значения состояния публикации  
  В следующей таблице содержатся значения состояния публикации и соответствующие им значки в порядке приоритета.  
@@ -113,6 +113,6 @@ ms.locfileid: "47613443"
 |Не синхронизируется|![Значок интерфейса пользователя: остановка агента репликации](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Значок интерфейса пользователя: остановка агента репликации")|  
   
 ## <a name="see-also"></a>См. также:  
- [Наблюдение за репликацией](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Наблюдение за репликацией](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

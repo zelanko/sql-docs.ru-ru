@@ -17,12 +17,12 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8b57bcb42bfc48563e73b783bd7b04a9905a5e43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d0e5b67288e9cc9d0491f30dc98b3edf9c01c0f1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717842"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135724"
 ---
 # <a name="change-publication-and-article-properties"></a>Изменение свойств публикации и статьи
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,8 +95,8 @@ ms.locfileid: "47717842"
 |Изменение владельца целевой таблицы.|**sp_changemergearticle**|**destination_owner**|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
   
 ## <a name="see-also"></a>См. также:  
- [Администрирование (репликация)](../../../relational-databases/replication/administration/administration-replication.md)   
- [Создание и применение моментального снимка](../../../relational-databases/replication/create-and-apply-the-snapshot.md)   
+ [Вопросы и ответы об администрировании репликации](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Создание и применение моментального снимка](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [Повторная инициализация подписок](../../../relational-databases/replication/reinitialize-subscriptions.md)   
  [sp_addmergefilter (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_articlecolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   

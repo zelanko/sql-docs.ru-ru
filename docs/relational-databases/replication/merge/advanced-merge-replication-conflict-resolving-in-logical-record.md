@@ -14,18 +14,18 @@ ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e196af0c5c2e71eb544426183300959be3bedab8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4aee8234b48fca2919f75a1cbf999e0dfb3c49c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776142"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128904"
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>Подробнее о конфликтах при репликации слиянием — разрешение в логической записи
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В разделе рассматриваются различные комбинации подходов к распознаванию конфликтов и устранению конфликтов, возможные при использовании логических записей. В репликации слиянием возникает конфликт, когда изменение одних и тех же данных производится более чем одним узлом, или же в репликации слиянием возникают определенные типы ошибок, такие как нарушение ограничений, когда изменяется репликация. Дополнительные сведения о распознавании и разрешении конфликтов см. в разделе [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
- Чтобы указать уровень отслеживания конфликтов и разрешений, см. раздел [Указание уровня отслеживания и разрешения конфликтов для статей публикации слиянием](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
+ Чтобы указать уровень отслеживания и разрешения конфликтов для статьи, см. раздел [Указание параметров репликации слиянием](../../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 ## <a name="conflict-detection"></a>Обнаружение конфликтов  
  Способ обнаружения конфликтов в логических записях определяется двумя свойствами статьи: **column_tracking** и **logical_record_level_conflict_detection**. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздние версии также поддерживают обнаружение на уровне логической записи.  

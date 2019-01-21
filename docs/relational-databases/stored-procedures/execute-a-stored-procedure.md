@@ -20,18 +20,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7077b950a6039a9c123cc991c00f5f28e23ff6ca
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: fa49ba8dc98e9d39866bd148b2daa0e15bfd4d40
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970315"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299762"
 ---
 # <a name="execute-a-stored-procedure"></a>Выполнение хранимой процедуры
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!div class="nextstepaction"]
-> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
 
 В этом разделе описывается, как выполнить хранимую процедуру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -125,7 +125,7 @@ ms.locfileid: "50970315"
   
     2.  отменить выполнение процедуры при запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
  Дополнительные сведения см. в статьях [EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-transact-sql.md) и [EXECUTE AS Clause (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
 ####  <a name="Permissions"></a> Permissions  
@@ -155,7 +155,7 @@ ms.locfileid: "50970315"
      **Передать значение NULL**  
      Передать значение NULL в качестве значения параметра.  
   
-     **Value**  
+     **Значение**  
      Введите значение параметра, передаваемое ему при вызове процедуры.  
   
 5.  Чтобы выполнить хранимую процедуру, нажмите кнопку **ОК**.  

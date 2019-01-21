@@ -14,12 +14,12 @@ ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 341137371f4a8bc26177963bb4e6475aaecd08c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 959e31e6e895f91117e90c83a8fa9375c881e141
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760453"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129164"
 ---
 # <a name="article-options-for-merge-replication"></a>Параметры статьи для репликации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,11 +31,11 @@ ms.locfileid: "47760453"
   
 -   Указать, что удаления одной или нескольких статей не должны отслеживаться триггерами репликации и системными таблицами. Этот параметр может оказаться полезным во многих сценариях приложений. В том числе в сценариях, использующих операции пакетного удаления, которые не нужно реплицировать. Дополнительные сведения см. в статье [Оптимизация производительности репликации слиянием с помощью отслеживания условного удаления](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md).  
   
--   Укажите порядок обработки статей, чтобы обеспечить обработку статей в порядке, необходимом приложению. Дополнительные сведения см. в статье [Определение порядка обработки для статей публикации слиянием](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
+-   Укажите порядок обработки статей, чтобы обеспечить обработку статей в порядке, необходимом приложению. Дополнительные сведения см. в разделе [Указание параметров репликации слиянием](../../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 -   Указать, что набор взаимосвязанных записей должен обрабатываться в виде блока (по умолчанию репликация слиянием обрабатывает изменения в таблицах построчно). Дополнительные сведения см. в статье [Группирование изменений в связанных строках с помощью логических записей](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
--   Использовать обнаружение и разрешение конфликтов для случаев, когда одни и те же данные могут быть изменены в нескольких узлах топологии. Дополнительные сведения см. в статье [Detect and Resolve Merge Replication Conflicts](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+-   Использовать обнаружение и разрешение конфликтов для случаев, когда одни и те же данные могут быть изменены в нескольких узлах топологии. Дополнительные сведения см. в статье [Detect and Resolve Merge Replication Conflicts](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 -   Укажите параметры схемы, например копируются ли ограничения и триггеры на подписчик. Дополнительные сведения см. в разделе [Указание параметров схемы](../../../relational-databases/replication/publish/specify-schema-options.md).  
   

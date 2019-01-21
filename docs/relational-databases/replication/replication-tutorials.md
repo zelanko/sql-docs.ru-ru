@@ -15,12 +15,12 @@ ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e6b91d754c477efe14ee0d47192beff5c735138
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d13a0da50bc9a19728ecd4af6034ffc52849164
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784422"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124074"
 ---
 # <a name="replication-tutorials"></a>Учебники по репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,21 +34,21 @@ ms.locfileid: "47784422"
 > Большинство задач, представленных в этих учебниках, могут выполняться программным способом. Дополнительные сведения см. в разделе [Документация для разработчика репликации](../../relational-databases/replication/concepts/replication-developer-documentation.md).  
   
 ## <a name="replication-tutorials"></a>Учебники по репликации  
-[Учебник. Подготовка SQL Server к репликации (издатель, распространитель, подписчик)](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md) 
+[Руководство Подготовка SQL Server к репликации (издатель, распространитель, подписчик)](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md) 
  
 Изучите как подготавливать серверы, чтобы репликация могла быть выполнена с минимумом прав доступа. Прежде чем перейти к другим учебникам по репликации, необходимо закончить выполнение данного учебника.  
   
-[Учебник. Настройка репликации между двумя полностью подключенными серверами (репликация транзакций)](../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md)
+[Руководство Настройка репликации между двумя полностью подключенными серверами (репликация транзакций)](../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md)
 
 Вы узнаете, как настраивать репликацию транзакций для репликации данных между полностью подключенными серверами. В этом учебнике также описываются основные методы устранения неполадок. 
 
   
-[Руководство. Настройка репликации между сервером и мобильными клиентами (репликация слиянием)](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)
+[Руководство Настройка репликации между сервером и мобильными клиентами (репликация слиянием)](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)
 
 Вы узнаете, как настраивать репликацию слиянием для обмена данными между сервером и одним клиентом, который подключается периодически, или несколькими.  
   
 ## <a name="see-also"></a>См. также раздел  
-[Безопасность и защита при репликации](../../relational-databases/replication/security/security-and-protection-replication.md) 
+[Просмотр и изменение параметров безопасности репликации](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) 
 
 [Обзор репликации транзакций](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication) 
 

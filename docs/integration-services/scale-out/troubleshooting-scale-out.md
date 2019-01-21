@@ -2,7 +2,7 @@
 title: Устранение неполадок в работе SQL Server Integration Services (SSIS) Scale Out | Документы Майкрософт
 description: В этой статье описывается устранение распространенных неполадок в SSIS Scale Out.
 ms.custom: performance
-ms.date: 05/09/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 20473c4555a0f0a98484bd66ef93ce659d51a2a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1afc1a2fbb8777df0c4bf5a488cde951fd4e32c
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732498"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206330"
 ---
 # <a name="troubleshoot-scale-out"></a>Устранение неполадок Scale Out
 
@@ -38,7 +38,7 @@ ms.locfileid: "47732498"
 
     В SQL Server Management Studio в обозревателе объектов щелкните правой кнопкой мыши узел **SSISDB** и установите флажок **Scale Out разрешен**.
 
-    ![Включен ли режим Scale Out](media\isenabled.PNG)
+    ![Включен ли режим Scale Out](media/isenabled.PNG)
 
     Если это свойство имеет значение False, включите Scale Out, вызвав хранимую процедуру `[catalog].[enable_scaleout]`.
 
@@ -62,7 +62,7 @@ ms.locfileid: "47732498"
 
 ### <a name="symptoms"></a>Симптомы
 
-*"System.ServiceModel.EndpointNotFoundException. Прослушивание на https://*[имя_компьютера]:[порт]*/ClusterManagement/ не выполняла ни одна конечная точка, которая могла бы принять сообщение."*
+*"System.ServiceModel.EndpointNotFoundException: Прослушивание на https://*[имя_компьютера]:[порт]*/ClusterManagement/ не выполняла ни одна конечная точка, которая могла бы принять сообщение".*
 
 ### <a name="solution"></a>Решение
 
@@ -77,11 +77,11 @@ ms.locfileid: "47732498"
 ## <a name="could-not-establish-trust-relationship"></a>Не удалось установить доверительные отношения
 
 ### <a name="symptoms"></a>Симптомы
-*"System.ServiceModel.Security.SecurityNegotiationException. Не удалось установить доверительные отношения для защищенного канала SSL/TLS с полномочиями "[имя_компьютера]:[порт]"."*
+*"System.ServiceModel.Security.SecurityNegotiationException. Не удалось установить отношения доверия для защищенного канала SSL/TLS с полномочиями "[имя_компьютера]:[порт]"".*
 
-*"System.Net.WebException. Базовое соединение закрыто. Не удалось установить доверительные отношения для защищенного канала SSL/TLS."*
+*"System.Net.WebException. Базовое соединение закрыто: Не удалось установить доверительные отношения для защищенного канала SSL/TLS".*
 
-*"System.Security.Authentication.AuthenticationException. Удаленный сертификат недействителен согласно результатам проверки подлинности."*
+*"System.Security.Authentication.AuthenticationException. Удаленный сертификат недопустим согласно процедуре проверки".*
 
 ### <a name="solution"></a>Решение
 1.  Установите сертификат мастера Scale Out в корневое хранилище сертификатов локального компьютера в узле рабочей роли Scale Out (если он не установлен) и перезапустите службу рабочей роли Scale Out.
@@ -97,9 +97,9 @@ ms.locfileid: "47732498"
 
 ### <a name="symptoms"></a>Симптомы
 
-*"System.ServiceModel.Security.SecurityNegotiationException. Не удалось установить безопасный канал для SSL/TLS с полномочиями "[имя_компьютера]:[порт]"."*
+*"System.ServiceModel.Security.SecurityNegotiationException. Не удалось установить безопасный канал для SSL/TLS с полномочиями "[имя_компьютера]:[порт]"".*
 
-*"System.Net.WebException. Запрос был прерван. Не удалось создать защищенный канал SSL/TLS."*
+*"System.Net.WebException. Запрос был прерван: не удалось создать защищенный канал SSL/TLS".*
 
 ### <a name="solution"></a>Решение
 С помощью приведенной ниже команды убедитесь в том, что ученая запись, с которой выполняется служба рабочей роли Scale Out, имеет доступ к сертификату рабочей роли Scale Out.
@@ -118,9 +118,9 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 ### <a name="symptoms"></a>Симптомы
 
-*"System.ServiceModel.Security.MessageSecurityException. Запрос HTTP запрещен для схемы проверки подлинности клиентов "Анонимно"."*
+*"System.ServiceModel.Security.MessageSecurityException. Запрос HTTP запрещен для схемы проверки подлинности клиентов "Анонимно"".*
 
-*"System.Net.WebException. Удаленный сервер возвратил ошибку: (403) Запрещено."*
+*"System.Net.WebException. Удаленный сервер вернул ошибку: (403) Запрещено".*
 
 ### <a name="solution"></a>Решение
 1.  Установите сертификат рабочей роли Scale Out в корневое хранилище сертификатов локального компьютера в узле мастера Scale Out (если он не установлен) и перезапустите службу рабочей роли Scale Out.
@@ -224,4 +224,4 @@ WHERE executions.execution_id = *Your Execution Id* AND tasks.JobId = executions
 ## <a name="next-steps"></a>Следующие шаги
 Дополнительные сведения см. в следующих статьях, посвященных установке и настройке SSIS Scale Out:
 -   [Начало работы с SSIS Scale Out на одном компьютере](get-started-with-ssis-scale-out-onebox.md)
--   [Пошаговое руководство. Настройка Integration Services (SSIS) Scale Out](walkthrough-set-up-integration-services-scale-out.md)
+-   [Пошаговое руководство. Настройка Integration Services Scale Out](walkthrough-set-up-integration-services-scale-out.md)

@@ -21,12 +21,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 881cb75b8f58bb20c8418fe18aaab6499b58e442
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 148fdfd642c18a2cc4e583edab73778cffa5c71e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612582"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125274"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Стратегии резервного копирования и восстановления из копии репликации моментальных снимков и репликации транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "47612582"
   
  **Установка параметра «sync with backup»**  
   
--   Программирование репликации на языке [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Включение скоординированного резервного копирования для репликации транзакций](../../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).  
+-   Программирование репликации на языке [!INCLUDE[tsql](../../../includes/tsql-md.md)]. [Enable Coordinated Backups for Transactional Replication](../../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md) (Включение скоординированной архивации для репликации транзакций)  
   
 ## <a name="restoring-databases-involved-in-replication"></a>Восстановление баз данных, участвующих в репликации  
  Если имеются последние резервные копии и выполнены соответствующие шаги, можно восстановить все базы данных в топологии репликации. Действия по восстановлению базы данных публикации зависят от типа репликации и от используемых параметров, однако действия по восстановлению всех других баз данных не зависят от типа репликации и параметров.  
@@ -93,7 +93,7 @@ ms.locfileid: "47612582"
   
  Восстановление баз данных **msdb** и **master** , о котором также рассказывается в этом разделе, одинаково для всех четырех типов репликации.  
   
-#### <a name="publication-database-snapshot-replication"></a>База данных публикации: репликация моментальных снимков  
+#### <a name="publication-database-snapshot-replication"></a>База данных публикации: Репликация моментальных снимков  
   
 1.  Восстановите последнюю резервную копию базы данных публикации. Перейдите к шагу 2.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "47612582"
   
          Дополнительные сведения о запуске агента распространителя см. в статьях [Запуск и остановка агента репликации (среда SQL Server Management Studio)](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) и [Основные понятия исполняемых файлов агента репликации](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-         Дополнительные сведения о проверке команд см. в статьях [Просмотр реплицированных команд и другой информации в базе данных распространителя (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) и [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+         Дополнительные сведения о проверке команд см. в статьях [Просмотр реплицированных команд и другой информации в базе данных распространителя (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) и [Просмотр сведений и выполнение задач с помощью монитора репликации](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Удалите конфигурацию репликации с издателя, распространителя и подписчиков, затем создайте конфигурацию заново. При повторном создании подписок укажите, что подписчик уже содержит данные. Восстановление завершено.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "47612582"
   
          Дополнительные сведения о запуске агента распространителя см. в статьях [Запуск и остановка агента репликации (среда SQL Server Management Studio)](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) и [Основные понятия исполняемых файлов агента репликации](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-         Дополнительные сведения о проверке команд см. в статьях [Просмотр реплицированных команд и другой информации в базе данных распространителя (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) и [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+         Дополнительные сведения о проверке команд см. в статьях [Просмотр реплицированных команд и другой информации в базе данных распространителя (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) и [Просмотр сведений и выполнение задач с помощью монитора репликации](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Для ручной синхронизации издателя с подписчиками используется [программа tablediff](../../../tools/tablediff-utility.md) или другое средство. Это позволяет восстанавливать данные из базы данных подписчика, которая не содержалась в резервной копии базы данных публикации. Перейдите к шагу c.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "47612582"
   
          Дополнительные сведения о том, как указать, что у подписчика уже есть данные, см. в разделе [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>База данных публикации: репликация транзакций с обновлением подписок  
+#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>База данных публикации: репликация транзакций с обновляемыми подписками  
   
 1.  Восстановите последнюю резервную копию базы данных публикации. Перейдите к шагу 2.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "47612582"
   
      Дополнительные сведения о запуске агента распространителя см. в статьях [Запуск и остановка агента репликации (среда SQL Server Management Studio)](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) и [Основные понятия исполняемых файлов агента репликации](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-     Дополнительные сведения о проверке команд см. в статьях [Просмотр реплицированных команд и другой информации в базе данных распространителя (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) и [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Дополнительные сведения о проверке команд см. в статьях [Просмотр реплицированных команд и другой информации в базе данных распространителя (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) и [Просмотр сведений и выполнение задач с помощью монитора репликации](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 3.  Если используются обновляемые посредством очередей подписки, подключитесь к каждому подписчику и удалите все строки из таблицы [MSreplication_queue (Transact-SQL)](../../../relational-databases/system-tables/msreplication-queue-transact-sql.md) в базе данных подписки. Перейдите к шагу 4.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "47612582"
   
          Дополнительные сведения о том, как указать, что у подписчика уже есть данные, см. в разделе [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-peer-to-peer-transactional-replication"></a>База данных публикации: одноранговая репликация транзакций  
+#### <a name="publication-database-peer-to-peer-transactional-replication"></a>База данных публикации: Peer-to-Peer Transactional Replication  
  В следующих шагах базы данных публикаций **A**, **B**и **C** находятся в топологии одноранговой репликации транзакций. Базы данных **A** и **C** находятся в режиме  «в сети» и функционируют правильно; база данных **B** — восстанавливаемая база данных. Описанные здесь действия, особенно шаги 7, 10 и 11, очень похожи на процесс добавления узла к одноранговой топологии. Самый простой путь выполнения этих шагов — использование мастера настройки одноранговой топологии, однако можно использовать и хранимые процедуры.  
   
 1.  Запустите агент распространителя для синхронизации подписок в базах данных **A** и **C**. Перейдите к шагу 2.  
@@ -287,7 +287,7 @@ ms.locfileid: "47612582"
   
     2.  Отметьте все публикации для проверки. Повторно инициализируйте все подписки, не прошедшие проверку. Восстановление завершено.  
   
-         Дополнительные сведения о проверке см. в разделе [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md). Дополнительные сведения о повторной инициализации см. в статье [Повторная инициализация подписок](../../../relational-databases/replication/reinitialize-subscriptions.md).  
+         Дополнительные сведения о проверке см. в разделе [Validate Replicated Data](../../../relational-databases/replication/validate-data-at-the-subscriber.md). Дополнительные сведения о повторной инициализации см. в статье [Повторная инициализация подписок](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
 #### <a name="msdb-database-distributor"></a>База данных msdb (Распространитель)  
   
@@ -303,7 +303,7 @@ ms.locfileid: "47612582"
   
 4.  Отметьте все публикации для проверки. Повторно инициализируйте все подписки, не прошедшие проверку. Восстановление завершено.  
   
-     Дополнительные сведения о проверке см. в разделе [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md). Дополнительные сведения о повторной инициализации см. в статье [Повторная инициализация подписок](../../../relational-databases/replication/reinitialize-subscriptions.md).  
+     Дополнительные сведения о проверке см. в разделе [Validate Replicated Data](../../../relational-databases/replication/validate-data-at-the-subscriber.md). Дополнительные сведения о повторной инициализации см. в статье [Повторная инициализация подписок](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
 #### <a name="master-database-distributor"></a>База данных master (Распространитель)  
   
@@ -323,7 +323,7 @@ ms.locfileid: "47612582"
   
 2.  Восстановите последнюю резервную копию базы данных подписки. Перейдите к шагу 3.  
   
-3.  Если база данных подписки содержит только принудительные подписки, перейдите к шагу 4. Если база данных подписки содержит какие-либо подписки по запросу, задайте следующие вопросы. Актуальны ли сведения о подписке? Включает ли база данных все таблицы и параметры, которые были установлены на момент сбоя. Если да, перейдите к шагу 4. Если нет, выполните повторную инициализацию подписки. Восстановление завершено.  
+3.  Если база данных подписки содержит только принудительные подписки, перейдите к шагу 4. Если база данных подписки содержит любые подписки по запросу, задайте следующие вопросы. Являются ли сведения о подписке текущими? Включает ли база данных все таблицы и параметры, которые были установлены на момент сбоя. Если да, перейдите к шагу 4. Если нет, выполните повторную инициализацию подписки. Восстановление завершено.  
   
 4.  Для синхронизации подписчика запустите агент распространителя. Восстановление завершено.  
   
@@ -349,7 +349,7 @@ ms.locfileid: "47612582"
   
 ## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление баз данных SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Создание резервных копий реплицируемых баз данных и восстановление из них](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
+ [Создание резервной копии и восстановление из копий реплицируемых баз данных](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [Настройка распространения](../../../relational-databases/replication/configure-distribution.md)   
  [Публикация данных и объектов базы данных](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   

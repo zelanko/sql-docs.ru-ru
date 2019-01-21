@@ -22,15 +22,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63c65bb6348afa4d095971b5833f26e8e33dd5a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 111d7cb0790bd0cbdb9c9bb17a6ebcb78ac3b04a
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666778"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298611"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
 
 Вычисляет аргументы по порядку и возвращает текущее значение первого выражения, изначально не вычисленного как `NULL`. Например, `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` возвращает третье значение, так как это первое значение, не равное NULL. 
   

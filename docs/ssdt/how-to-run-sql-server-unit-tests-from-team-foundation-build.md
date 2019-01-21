@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Запуск модульных тестов SQL Server из сборки Team Foundation | Документация Майкрософт
+title: Как Запуск модульных тестов SQL Server из сборки Team Foundation | Документация Майкрософт
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -11,19 +11,19 @@ ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1857f503abe300127d92c26ba5591407b863ebc0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8faabc4655cd3aff4d6f15790a4f0e03dd60b8e8
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527923"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226541"
 ---
-# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Практическое руководство. Запуск модульных тестов SQL Server из построения Team Foundation
+# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Как Запуск модульных тестов SQL Server из сборки Team Foundation
 Сборку Team Foundation можно использовать для запуска модульных тестов SQL Server в составе теста проверки сборки. Модульные тесты можно настроить так, чтобы сначала выполнялось развертывание базы данных, формировались тестовые данные, а затем запускались выбранные тесты. Если вы раньше не работали с построением Team Foundation Build, то перед выполнением процедур данного раздела ознакомьтесь со следующими сведениями.  
   
 -   [Создание и определение модульных тестов SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [Практическое руководство. Настройка и запуск запланированных тестов после построения приложения](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [Как Настройка и запуск запланированных тестов после сборки приложения](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
   
 -   [Создание базового определения построения](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
   
@@ -262,7 +262,7 @@ ms.locfileid: "52527923"
   
 9. Нажмите кнопку **ОК**.  
   
-10. В группе **Базовые** раздела **Автоматизированные тесты** укажите тесты, которые нужно выполнить. По умолчанию будут выполнены тесты из файлов решения с именем *test\*.dll.  
+10. В группе **Базовые** раздела **Автоматизированные тесты** укажите тесты, которые нужно выполнить. По умолчанию будут выполнены тесты из файлов решения с именем \*test\*.dll.  
   
 11. В меню **Файл** выберите команду **Сохранить** *имя_проекта*.  
   

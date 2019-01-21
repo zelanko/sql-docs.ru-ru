@@ -13,18 +13,21 @@ ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7157a60410fcf2d0b75dce7e73edb0814d042e97
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 107bbfa29c7118252bbad06d2f81829e3d9dedf0
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699892"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299211"
 ---
 # <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
+
+
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) — это интегрированная среда для управления любой инфраструктурой SQL. Используйте SSMS для доступа, настройки, администрирования и разработки всех компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], базы данных SQL Azure и хранилища данных SQL, а также управления ими. Среда SSMS предоставляет единую полнофункциональную служебную программу, которая сочетает в себе обширную группу графических инструментов с рядом отличных редакторов сценариев для доступа к службе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для разработчиков и администраторов баз данных всех профессиональных уровней.
-
-
 
  
  - [**Скачивание SQL Server Management Studio (SSMS)**](download-sql-server-management-studio-ssms.md) 
@@ -48,8 +51,8 @@ ms.locfileid: "51699892"
 - Дополнительные сведения см. в разделе [Политика современного жизненного цикла: вопросы и ответы](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
 
 ## <a name="next-steps"></a>Следующие шаги  
-[Руководство: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)  
-[Учебник. Составление инструкций Transact-SQL](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)  
+[Руководство SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)  
+[Руководство Составление инструкций Transact-SQL](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)  
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 

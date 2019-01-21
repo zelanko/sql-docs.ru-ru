@@ -15,12 +15,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0d99aac35afb4d5e4cc9fc4c56c497a95641300e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5ab0b82002024a819ef1e6794b6c99bb238fa18e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210813"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135894"
 ---
 # <a name="configure-publishing-and-distribution"></a>Настройка публикации и распространения
 [!INCLUDE[appliesto-ss-asdbmi-asdbmi-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "53210813"
 ##  <a name="BeforeYouBegin"></a> Перед началом 
 
 ###  <a name="Security"></a> Безопасность 
-Дополнительные сведения см. в разделе [Безопасное развертывание (репликация)](../../relational-databases/replication/security/secure-deployment-replication.md).
+Дополнительные сведения см. в статье [Просмотр и изменение параметров безопасности репликации](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).
 
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio 
 Настройте распространение с помощью мастера создания публикаций или мастера настройки распространителя. После настройки распространителя просмотрите и измените его свойства в диалоговом окне **Свойства распространителя — \<распространитель>**. Используйте мастер настройки распространителя, если необходимо настроить распространитель так, чтобы члены предопределенных ролей базы данных `db_owner` могли создавать публикации, или если необходимо настроить удаленный распространитель, который не является издателем.

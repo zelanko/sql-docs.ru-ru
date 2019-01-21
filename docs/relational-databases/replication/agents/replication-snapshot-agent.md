@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 93125f56a67d492581dbe68696156e3e95658a02
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: cc33bb52ec613d8e31cd8f61525dc7012ad01d48
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785875"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129794"
 ---
 # <a name="replication-snapshot-agent"></a>Агент моментальных снимков репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ snapshot [ -?]
  > [!NOTE]  
  >  Допустимый SSL-сертификат задается с полным доменным именем SQL Server. Если параметр -EncryptionLevel имеет значение 2, то для подключения агента создайте псевдоним на локальном сервере SQL Server. Для параметра Alias Name (Имя псевдонима) должно быть указано имя сервера, а для параметра Server (Сервер) — полное доменное имя SQL Server.
   
- Дополнительные сведения см. в статье [Общие сведения о безопасности (репликация)](../../../relational-databases/replication/security/security-overview-replication.md).  
+ Дополнительные сведения см. в статье [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
  **-FieldDelimiter** _field_delimiter_  
  Символ или последовательность символов, обозначающая конец поля в файле данных массового копирования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . По умолчанию имеет значение \n\<x$3>\n.  

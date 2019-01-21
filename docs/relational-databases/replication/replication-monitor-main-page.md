@@ -13,18 +13,18 @@ ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7eb5a872b713571c544a03039010aa3dbdc4aa1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: adbece38622571eecc0e3bcb00c8f69f022919b6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639952"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135604"
 ---
 # <a name="replication-monitor-main-page"></a>Монитор репликации, страница «Общие»
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   С помощью монитора репликации можно отслеживать состояние и производительность публикаций и подписок в топологии репликации. Более подробные сведения приведены в следующих разделах.  
   
--   Обзор монитора репликации вы найдете в [этой статье](../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
+-   Обзор монитора репликации вы найдете в [этой статье](../../relational-databases/replication/monitor/monitoring-replication.md).  
   
 -   В левой панели монитора репликации осуществляется работа с издателями и группами издателей. Для просмотра сведений о публикации и подписке добавьте один или несколько издателей в монитор репликации. Дополнительные сведения см. в статье [Добавление и удаление издателей в мониторе репликации](../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md).  
   
@@ -32,15 +32,7 @@ ms.locfileid: "47639952"
   
     -   [Обновление данных в мониторе репликации](../../relational-databases/replication/monitor/refresh-data-in-replication-monitor.md)  
   
-    -   [Просмотр сведений и выполнение задач для издателя (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
-  
-    -   [Просмотр сведений и выполнение задач для публикации (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
-  
-    -   [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)  
-  
-    -   [Просмотр сведений и выполнение задач для подписки (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
-  
-    -   [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)  
+    -   [Просмотр сведений и выполнение задач с помощью монитора репликации](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)    
   
     -   [Измерение задержки и проверка правильности соединений для репликации транзакций](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
@@ -50,6 +42,6 @@ ms.locfileid: "47639952"
   
 ## <a name="see-also"></a>См. также:  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

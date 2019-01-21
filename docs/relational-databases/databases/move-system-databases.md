@@ -28,12 +28,12 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb3ae1a8437ddf73b371f317d6a9c85f200cff8c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0995346ac3c740efb6779f69e29003abf625a81e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531481"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136124"
 ---
 # <a name="move-system-databases"></a>Перемещение системных баз данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "52531481"
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-2.  Остановите работу экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или выключите систему для проведения работ по обслуживанию дисков. Дополнительные сведения см. в статье [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+2.  Остановите работу экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или выключите систему для проведения работ по обслуживанию дисков. Дополнительные сведения см. в статье [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Переместите файл или файлы в новое расположение.  
 
@@ -149,7 +149,7 @@ ms.locfileid: "52531481"
   
 2.  Находясь в узле **Службы SQL Server** , щелкните правой кнопкой мыши экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , например **SQL Server (MSSQLSERVER)**, и выберите пункт **Свойства**.  
   
-3.  В диалоговом окне **Свойства SQL Server (***имя_экземпляра***)** перейдите на вкладку **Параметры запуска**.  
+3.  В диалоговом окне **Свойства SQL Server (**_имя_экземпляра_**)** перейдите на вкладку **Параметры запуска** .  
   
 4.  В поле **Существующие параметры** выберите параметр -d, чтобы переместить файл данных master. Нажмите **Обновить** для сохранения изменений.  
   
@@ -192,7 +192,7 @@ ms.locfileid: "52531481"
 ##  <a name="Resource"></a> Перемещение базы данных Resource  
  База данных Resource находится в каталоге \<*диск*>:\Program Files\Microsoft SQL Server\MSSQL\<версия.\<*имя_экземпляра*>\MSSQL\Binn\\. Эту базу данных нельзя переместить.  
   
-##  <a name="Follow"></a> Продолжение: после перемещения всех системных баз данных  
+##  <a name="Follow"></a> Дальнейшие действия. После перемещения всех системных баз данных  
  Если все системные базы данных перемещаются на новый диск или том либо на другой сервер с другой буквой диска, выполните следующие обновления.  
   
 -   Измените путь к журналу агента SQL Server. Если этого не сделать, то агент SQL Server не сможет запуститься.  

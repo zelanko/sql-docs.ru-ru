@@ -15,12 +15,12 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35fbe2c739ac8dafcedf18a4873bc7235469648b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d33dc0d7103e821eaf2796630cada56f199eebd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857130"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133934"
 ---
 # <a name="article-properties---ltarticlegt"></a>Свойства статьи — &lt;Статья&gt;
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "47857130"
   
 ### <a name="resolver-tab"></a>Вкладка «Сопоставитель»  
  **Использовать сопоставитель по умолчанию**  
- Если будет выбран сопоставитель по умолчанию, то конфликты будут разрешаться в соответствии с приоритетами, выданными каждому подписчику, либо на основе первого изменения, записанного на издатель, в зависимости от типа используемых подписок. Дополнительные сведения см. в статье [Обнаружение и разрешение конфликтов репликации слиянием](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+ Если будет выбран сопоставитель по умолчанию, то конфликты будут разрешаться в соответствии с приоритетами, выданными каждому подписчику, либо на основе первого изменения, записанного на издатель, в зависимости от типа используемых подписок. Дополнительные сведения см. в статье [Обнаружение и разрешение конфликтов репликации слиянием](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  **Использовать пользовательский сопоставитель (зарегистрированный на распространителе)**  
  Если будет выбрано использование арбитра статей (предоставленного [!INCLUDE[msCoName](../../includes/msconame-md.md)] или написанного самостоятельно), то необходимо выбрать механизм разрешения конфликтов в списке. Дополнительные сведения см. в статье [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  

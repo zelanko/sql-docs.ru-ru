@@ -15,12 +15,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d410a838083aeb52c090dee0f9878a8baa52cca3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0b91a574a9b239e2e9f7bca83151fd50d37b08c9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504048"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131654"
 ---
 # <a name="secure-the-subscriber"></a>Организация безопасности подписчика
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "52504048"
 > [!IMPORTANT]  
 >  Чтобы указать сведения о подключении, используйте хранимую процедуру [sp_link_publication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Также можно воспользоваться страницей **Имя входа для обновляемых подписок** в мастере создания подписки, который вызывает хранимую процедуру **sp_link_publication**. При определенных обстоятельствах выполнение этой хранимой процедуры может завершиться ошибкой, если подписчик работает с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] с пакетом обновлений 1, а издатель работает с более ранней версией. Если хранимая процедура завершается ошибкой в этом сценарии, обновите издатель до версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] с пакетом обновлений 1 (SP1) или более поздней версии.  
   
- Дополнительные сведения см. в статьях [Создание обновляемых подписок для публикаций транзакций](../../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md) и [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
+ Дополнительные сведения см. в статьях [Создание обновляемых подписок для публикаций транзакций](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md) и [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 > [!IMPORTANT]  
->  Учетная запись, заданная для соединения, должна предоставлять только разрешения для вставки, обновления и удаления данных в представлениях, которые репликация создает в базе данных публикации. Она не должна иметь никаких дополнительных разрешений. Предоставьте разрешения на представления, которые имеют имена в виде **syncobj_**_\<<шестнадцатеричный_номер>_, для учетной записи, настроенной на каждом подписчике.  
+>  Учетная запись, заданная для соединения, должна предоставлять только разрешения для вставки, обновления и удаления данных в представлениях, которые репликация создает в базе данных публикации. Она не должна иметь никаких дополнительных разрешений. Предоставьте разрешения на представления, которые имеют имена в виде **syncobj_***\<шестнадцатеричный_номер>*, для учетной записи, настроенной на каждом подписчике.  
   
 ## <a name="queued-updating-subscriptions"></a>Подписки, обновляемые посредством очередей  
  При настройке обновляемых посредством очередей подписок необходимо учитывать два аспекта, касающихся безопасности:  
@@ -73,11 +73,11 @@ ms.locfileid: "52504048"
     > [!IMPORTANT]  
     >  Используйте проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для подключений к подписчикам, и задавайте разные учетные записи для подключения к каждому подписчику. При использовании подписки по запросу репликация всегда устанавливает соединение для использования проверки подлинности Windows (для подписок по запросу репликация не может обратиться к метаданным на подписчике, необходимым для использования проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ). В этом случае измените соединение таким образом, чтобы использовать проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] после настройки подписки.  
   
-     Дополнительные сведения см. в статьях "Инструкции. Создание обновляемых подписок для публикаций транзакций (среда SQL Server Management Studio)" и [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
+     Дополнительные сведения см. в разделе Как Создание обновляемых подписок для публикаций транзакций (среда SQL Server Management Studio)" и [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Безопасность и защита (репликация)](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [Безопасность и защита (репликация)](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
   

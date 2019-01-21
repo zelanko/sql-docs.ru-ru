@@ -1,6 +1,6 @@
 ---
 title: Новые возможности в SQL Server 2019 | Документация Майкрософт
-ms.date: 12/07/2018
+ms.date: 01/09/2019
 ms.prod: sql-server-2018
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,16 +9,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0d36e43d4015d0edf2271ee86ea0d2f7a761ce8d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e0a5dab4eeccc5c4e31a151ec9611d7ed8367a78
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207783"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300181"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Новые возможности в SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+  > [!div class="nextstepaction"]
+  > [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] основывается на предыдущих выпусках для расширения SQL Server как платформы, которая поддерживает ряд языков разработки, типов данных, операционных систем, а также работает в локальной и облачной средах. В этой статье перечислены новые возможности SQL Server 2019. Дополнительные сведения и известные проблемы см. в статье с [заметками о выпуске предварительной версии SQL Server 2019](sql-server-ver15-release-notes.md).
 
@@ -29,7 +32,7 @@ ms.locfileid: "53207783"
 
 ## <a name="ctp-22"></a>CTP 2.2
 
-Ознакомительная версия для сообщества (CTP) 2.2 является последним общедоступным выпуском [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Этот выпуск включает усовершенствования предыдущих выпусков CTP для исправления ошибок, повышения безопасности и оптимизации производительности. Кроме того, в [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] версии CTP 2.2 добавлены или улучшены следующие функции.
+Ознакомительная версия для сообщества (CTP) 2.2 является последним общедоступным выпуском [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Этот выпуск включает усовершенствования предыдущих выпусков CTP для исправления ошибок, повышения безопасности и оптимизации производительности. Кроме того, в [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] версии CTP 2.2 добавлены или улучшены следующие функции.
 
 - [Кластеры больших данных](#bigdatacluster)
   - Использование SparkR из Azure Data Studio в кластерах больших данных
@@ -39,7 +42,7 @@ ms.locfileid: "53207783"
 
 ## <a name="previous-ctps"></a>Предыдущие выпуски CTP
 
-В предыдущих выпусках CTP добавлены или улучшены следующие функции для [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
+В предыдущих выпусках CTP добавлены или улучшены следующие функции для [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 - [Кластеры больших данных](#bigdatacluster) 
   - Развертывание кластера больших данных с использованием контейнеров SQL и Spark на платформе Linux в Kubernetes (CTP 2.0)
@@ -62,7 +65,7 @@ ms.locfileid: "53207783"
   - Классификация и обнаружение данных — функции, встроенные в SQL Server (CTP 2.0)
   - Расширенная поддержка устройств с постоянной памятью (CTP 2.0)
   - Поддержка статистики columnstore в `DBCC CLONEDATABASE` (CTP 2.0)
-  - Новые возможности, добавленные в `sp_estimate_data_compression_savings` (CTP 2.0)
+  - Новые возможности, добавленные в `sp_estimate_data_compression_savings` (CTP 2.0)
   - Отказоустойчивые кластеры Служб машинного обучения SQL Server (CTP 2.0)
   - Упрощенная инфраструктура профилирования запросов включена по умолчанию (CTP 2.0)
   - Новые соединители PolyBase (CTP 2.0)
@@ -83,7 +86,7 @@ ms.locfileid: "53207783"
   - Машинное обучение в Linux (CTP 2.0)
   - Новый реестр контейнеров (CTP 2.0)
   - Новые образы контейнеров на основе RHEL (CTP 2.0)
-  - Уведомление о нехватке памяти (CTP 2.0)
+  - Уведомление о нехватке памяти (CTP 2.0)
 
 - [Службы Master Data Services](#mds)
   - Заменены элементы управления Silverlight (CTP 2.0)
@@ -102,7 +105,7 @@ ms.locfileid: "53207783"
 
 [Кластеры больших данных](../big-data-cluster/big-data-cluster-overview.md) ([!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]) позволяют реализовать новые сценарии, включая следующие:
 
-- Использование SparkR из Azure Data Studio в кластерах больших данных. (CTP 2.2)
+- Использование SparkR из Azure Data Studio в кластерах больших данных. (CTP 2.2)
 - [Развертывание приложений Python и R](../big-data-cluster/big-data-cluster-create-apps.md). (CTP 2.1)
 - Развертывание кластера больших данных с контейнерами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и Spark на базе Linux в Kubernetes (CTP 2.0)
 - Доступ к большим данным из HDFS (CTP 2.0)
@@ -323,7 +326,7 @@ ms.locfileid: "53207783"
 
 ### <a id="ml"></a>Отказоустойчивые кластеры Служб машинного обучения SQL Server и моделирование на основе разделов (CTP 2.0)
 
-- **Моделирование на основе разделов**: Обработка внешних сценариев на каждый раздел данных с использованием новых параметров, добавленных в `sp_execute_external_script`. Эта функция поддерживает обучение нескольких небольших моделей (одна модель на раздел данных) вместо одной большой.
+- **Моделирование на основе разделов**. Обработка внешних сценариев на каждый раздел данных с использованием новых параметров, добавленных в `sp_execute_external_script`. Эта функция поддерживает обучение нескольких небольших моделей (одна модель на раздел данных) вместо одной большой.
 
 - **Отказоустойчивый кластер Windows Server**: Настройка высокого уровня доступности для Служб машинного обучения в отказоустойчивом кластере Windows Server.
 
@@ -370,7 +373,7 @@ FROM sys.dm_exec_requests AS d
 
 - **Поддержка OpenLDAP для сторонних поставщиков AD (CTP 2.0)**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] в Linux поддерживает OpenLDAP, что позволяет сторонним поставщикам использовать Active Directory.
 
-- **Машинное обучение в Linux (CTP 2.0)**: Теперь Службы машинного обучения SQL Server 2019 (в базе данных) поддерживаются в Linux. Предусмотрена также поддержка хранимой процедуры `sp_execute_external_script`. Инструкции по установке Служб машинного обучения на платформе Linux см. в статье [Install SQL Server 2019 Machine Learning Services (R, Python, Java) on Linux](../linux/sql-server-linux-setup-machine-learning.md) (Установка Служб машинного обучения (R, Python и Java) с SQL Server 2019 на платформе Linux).
+- **Машинное обучение в Linux (CTP 2.0)**. Теперь Службы машинного обучения SQL Server 2019 (в базе данных) поддерживаются в Linux. Предусмотрена также поддержка хранимой процедуры `sp_execute_external_script`. Инструкции по установке Служб машинного обучения на платформе Linux см. в статье [Install SQL Server 2019 Machine Learning Services (R, Python, Java) on Linux](../linux/sql-server-linux-setup-machine-learning.md) (Установка Служб машинного обучения (R, Python и Java) с SQL Server 2019 на платформе Linux).
 
 - **Новый реестр контейнеров (CTP 2.1)**: Все образы контейнеров для [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], а также [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] теперь находятся в реестре контейнеров Майкрософт. Реестр контейнеров Майкрософт — это официальный реестр контейнеров для распределения контейнеров продукта корпорации Майкрософт. Кроме того, теперь опубликованы сертифицированные образы на основе Red Hat Enterprise Linux (RHEL).
 
@@ -427,7 +430,7 @@ FROM sys.dm_exec_requests AS d
 
 - [Заметки о выпуске SQL Server 2019](sql-server-ver15-release-notes.md)
 
-- [Microsoft SQL Server 2019: Технический документ](https://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Опубликовано в сентябре 2018 г. Применяется к Microsoft SQL Server 2019 CTP-версии 2.0 для контейнеров Windows, Linux и Docker.
+- [Microsoft SQL Server 2019. Технический документ](https://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Опубликовано в сентябре 2018 г. Применяется к Microsoft SQL Server 2019 CTP-версии 2.0 для контейнеров Windows, Linux и Docker.
 
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

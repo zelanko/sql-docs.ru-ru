@@ -1,7 +1,7 @@
 ---
 title: Настройка Always Encrypted с безопасными анклавами | Документация Майкрософт
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,14 +11,15 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 246fa155a8de930cd81d65df633d3f47bed9f56e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0cfe8b4bf09b545a5141a2896eb757254265e092
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534774"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206410"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Настройка Always Encrypted с безопасными анклавами
+
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [Always Encrypted с безопасными анклавами](always-encrypted-enclaves.md) расширяет существующую функцию [Always Encrypted](always-encrypted-database-engine.md), чтобы обеспечить расширенные функции защиты конфиденциальных данных.
@@ -26,14 +27,14 @@ ms.locfileid: "52534774"
 Чтобы настроить функцию Always Encrypted с безопасными анклавами, используйте следующий рабочий процесс:
 
 1. Настройте аттестацию службы защиты узла (HGS).
-2. Установите [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] на компьютере SQL Server.
+2. Установите [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] на компьютере SQL Server.
 3. Установите инструменты на клиентском компьютере или компьютере разработки.
 4. Настройте тип анклава в экземпляре SQL Server.
 5. Подготовьте ключи с поддержкой анклава.
 6. Зашифруйте столбцы, содержащие конфиденциальные данные.
 
->[!NOTE]
->Пошаговое руководство о том, как настроить тестовую среду и протестировать функциональные возможности Always Encrypted с безопасными анклавами в SSMS, см. в статье [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md) (Руководство по началу работы с Always Encrypted с безопасными анклавами в SSMS).
+> [!NOTE]
+> Пошаговое руководство о том, как настроить тестовую среду и протестировать функциональные возможности Always Encrypted с безопасными анклавами в SSMS, см. в статье [Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
 
 ## <a name="configure-your-environment"></a>Настройка среды
 
@@ -45,7 +46,7 @@ ms.locfileid: "52534774"
 
 *SQL Server*:
 
-- [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] или более поздней версии.
+- [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] или более поздней версии
 
 *Windows*:
 
@@ -134,7 +135,7 @@ ms.locfileid: "52534774"
    ```
 
     > [!NOTE]
-    > Полнофункциональные вычисления по умолчанию отключены в [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)]. Их необходимо включить с помощью вышеуказанной инструкции после каждой перезагрузки экземпляра SQL Server.
+    > Полнофункциональные вычисления в [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] по умолчанию отключены. Их необходимо включить с помощью вышеуказанной инструкции после каждой перезагрузки экземпляра SQL Server.
 
 ## <a name="provision-enclave-enabled-keys"></a>Подготовка ключей с поддержкой анклава
 
@@ -502,7 +503,7 @@ GO
 
 Ниже приведены три способа реализации поддержки анклавов для существующих столбцов.
 
-#### <a name="option-1-rotate-the-column-master-key-to-replace-it-with-an-enclave-enabled-column-master-key"></a>Способ 1. Замените главный ключ столбца на главный ключ столбца с поддержкой анклава.
+#### <a name="option-1-rotate-the-column-master-key-to-replace-it-with-an-enclave-enabled-column-master-key"></a>Вариант 1. Замените главный ключ столбца на главный ключ столбца с поддержкой анклава.
   
 - Преимущества.
   - Не требуется повторное шифрование данных, поэтому, как правило, это самый быстрый подход. Это рекомендуемый подход для столбцов, содержащих большие объемы данных, при условии, что все столбцы, для которых нужно включить полнофункциональные вычисления, уже используют детерминированное шифрование, и поэтому их не нужно шифровать повторно.
@@ -514,7 +515,7 @@ GO
   - Вводит накладные расходы на управление ключами — необходимо создать новый главный ключ столбца и сделать его доступным для приложений, которые запрашивают затрагиваемые столбцы.  
 
 
-#### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>Способ 2. Этот подход включает в себя два шага: 1) замену главного ключа столбца (как в варианте 1) и 2) повторное шифрование подмножества детерминировано зашифрованных столбцов с использованием случайного шифрования, чтобы обеспечить полнофункциональные вычисления для этих столбцов.
+#### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>Вариант 2. Этот подход включает в себя два шага: 1) замену главного ключа столбца (как в варианте 1) и 2) повторное шифрование подмножества детерминировано зашифрованных столбцов с использованием случайного шифрования, чтобы обеспечить полнофункциональные вычисления для этих столбцов.
   
 - Преимущества.
   - Повторно шифрует данные на месте, поэтому рекомендуется использовать полнофункциональные запросы для детерминировано зашифрованных столбцов, содержащих большие объемы данных. Обратите внимание, что шаг 1 разблокирует шифрование на месте для столбцов, использующих детерминированное шифрование, поэтому шаг 2 можно выполнить на месте.
@@ -860,7 +861,7 @@ GO;
 Дополнительные сведения о разработке приложений .NET Framework с использованием Always Encrypted см. в следующих статьях:
 
 - [Разработка с использованием постоянного шифрования с поставщиком данных .NET Framework](develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [Always Encrypted: защита конфиденциальных данных в Базе данных SQL и хранение ключей шифрования в хранилище сертификатов Windows](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
+- [Always Encrypted: защита конфиденциальных данных в Базе данных SQL и хранение ключей шифрования в Azure Key Vault](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
 
 #### <a name="example"></a>Пример
 

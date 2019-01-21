@@ -14,12 +14,12 @@ ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2deb67c8fff00cc2780fc28e4a04e938db41c4a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c6df1fe4c6954539afe8043ffb36c89e5f428fc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764652"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128554"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Обзор интерфейса монитора репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "47764652"
   
      На этой вкладке отображаются подробные сведения об агентах и заданиях, используемых всеми типами репликации. Эта вкладка также позволяет запускать и останавливать агенты и задания.  
   
- Дополнительные сведения см. в статье [Просмотр сведений и выполнение задач в издателе (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
+ Дополнительные сведения см. в статье [Просмотр сведений и выполнение задач в издателе (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Монитор репликации также предоставляет контекстное меню для узла издателя. Щелкните правой кнопкой мыши издатель в левой панели окна, чтобы:  
   
@@ -179,7 +179,7 @@ ms.locfileid: "47764652"
   
          Выводимые сообщения об ошибках содержат подробную информацию о том, почему агент не запущен, и предоставляют отправную точку для устранения проблем с агентами, связанных с публикацией.  
   
- Дополнительные сведения см. в статьях [Просмотр сведений и выполнение задач для агентов, ассоциированных с публикацией (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) и [Просмотр сведений и выполнение задач для агентов, ассоциированных с публикацией (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+ Дополнительные сведения см. в статье [Просмотр сведений и выполнение задач с помощью монитора репликации](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Монитор репликации также предоставляет контекстное меню для узла публикаций. Щелкните правой кнопкой мыши публикацию в левой панели окна, чтобы:  
   
@@ -218,7 +218,7 @@ ms.locfileid: "47764652"
   
          На данной вкладке отображается подробная статистика для каждой статьи, обработанной во время синхронизации, включая продолжительность каждой фазы обработки (передача изменений, загрузка изменений и т. п.). Данная вкладка может помочь определить конкретные таблицы, которые приводят к замедлению, и является наилучшим местом для устранения неполадок, связанных с производительностью подписок на публикацию слиянием.  
   
- Дополнительные сведения см. в статьях [Просмотр сведений и выполнение задач для агентов, ассоциированных с подпиской (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md) и [Просмотр сведений и выполнение задач для агентов, ассоциированных с подпиской (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ Дополнительные сведения см. в статье [Просмотр сведений и выполнение задач с помощью монитора репликации](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).
   
 ## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>Просмотр информации и выполнение задач, относящихся к профилям агентов  
  Монитор репликации содержит несколько диалоговых окон для управления профилями агентов. Профили агентов представляют собой наборы параметров для агента, определяющих его функционирование. Дополнительные сведения см. в разделе [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md). Эти диалоговые окна включают:  
@@ -236,6 +236,6 @@ ms.locfileid: "47764652"
      Данное диалоговое окно позволяет создать новый профиль с возможностью включения значений из существующего профиля.  
   
 ## <a name="see-also"></a>См. также:  
- [Наблюдение за репликацией](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Наблюдение за репликацией](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   
