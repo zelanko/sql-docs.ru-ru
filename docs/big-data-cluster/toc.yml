@@ -53,7 +53,7 @@ items:
         href: deploy-on-aks.md
       - name: Развертывание с помощью Kubeadm
         href: deploy-with-kubeadm.md
-    - name: Установка инструментов
+    - name: Средства установки
       items:
       - name: Установка инструментов для больших данных
         href: deploy-big-data-tools.md
@@ -70,7 +70,7 @@ items:
     - name: Загрузка данных с помощью cURL
       href: data-ingestion-curl.md
     - name: Восстановление базы данных
-      href: data-ingestion-restore-databse.md
+      href: data-ingestion-restore-database.md
   - name: Большие данные и машинное обучение
     items:
     - name: Первичная обработка данных с помощью ускорителя кода PROSE
@@ -109,9 +109,9 @@ items:
     href: ../relational-databases/polybase/polybase-guide.md
   - name: Запрос доступа к кластерам больших данных
     href: https://aka.ms/eapsignup
-ms.openlocfilehash: 3580372dfac82485e6c64bbb3d5b517ee34ede4a
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 0878ec62a789072b9796c928aad8e7c0b6af6e65
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53595805"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405564"
