@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2d84c426bddf4a896a3be1f79ea85e3b718fd4e
-ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
+ms.openlocfilehash: 798a31bacecc45a22510a121847e9e20423d4b3d
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069770"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143394"
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "54069770"
   Задает совместимое со стандартом ISO поведение операторов сравнения «равно» (=) и «не равно» (<>) при их использовании со значениями NULL в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 > [!IMPORTANT]  
->  В будущей версии параметр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ANSI_NULLS будет иметь значение ON, а приложения, явно присваивающие ему значение OFF, будут вызывать ошибку. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.
+> В будущей версии параметр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ANSI_NULLS будет иметь значение ON, а приложения, явно присваивающие ему значение OFF, будут вызывать ошибку. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -83,20 +83,20 @@ SET ANSI_NULLS ON
   
 Чтобы скрипт работал в соответствии с первоначальным замыслом, вне зависимости от параметра базы данных ANSI NULLS или настроек SET ANSI_NULLS, в сравнениях, которые могут содержать значения NULL, следует использовать выражения IS NULL и IS NOT NULL.  
   
-Значение SET ANSI_NULLS должно быть равно ON при выполнении распределенных запросов.  
+Параметр ANSI_NULLS должен иметь значение ON для выполнения распределенных запросов.  
   
-Значение SET ANSI_NULLS также должно быть ON при создании или изменении индексов вычисляемых столбцов или индексированных представлений. Если SET ANSI_NULLS равно OFF, то при работе с таблицами, содержащими индексы вычисляемых столбцов, а также при работе с индексированными представлениями инструкции CREATE, UPDATE, INSERT и DELETE завершатся неудачно. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сообщение об ошибке с перечислением всех недопустимых аргументов инструкции SET. Также при вызове инструкции SELECT в случае, если значение SET ANSI_NULLS равно OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не обрабатывает значения индексов вычисляемых столбцов или представлений и произведет выборку, словно этих индексов не существовало.  
+Также параметр ANSI_NULLS должен иметь значение ON при создании или изменении индексов вычисляемых столбцов или индексированных представлений. Если SET ANSI_NULLS равно OFF, то при работе с таблицами, содержащими индексы вычисляемых столбцов, а также при работе с индексированными представлениями инструкции CREATE, UPDATE, INSERT и DELETE завершатся неудачно. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сообщение об ошибке с перечислением всех недопустимых аргументов инструкции SET. Также при вызове инструкции SELECT в случае, если значение SET ANSI_NULLS равно OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не обрабатывает значения индексов вычисляемых столбцов или представлений и произведет выборку, словно этих индексов не существовало.  
   
 > [!NOTE]  
 > ANSI_NULLS является одним из семи параметров директивы SET, которые должны быть установлены определенным образом при работе с вычисляемыми столбцами или индексированными представлениями. Параметрам `ANSI_PADDING`, `ANSI_WARNINGS`, `ARITHABORT`, `QUOTED_IDENTIFIER` и `CONCAT_NULL_YIELDS_NULL` также должно быть присвоено значение ON, а параметру `NUMERIC_ROUNDABORT` — значение OFF.  
   
  При соединении с драйвером ODBC для Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или поставщика OLE DB для Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметру ANSI_NULLS автоматически задается значение ON. Этот параметр может быть настроен в источниках данных ODBC, в атрибутах соединения ODBC или свойствах соединения OLE DB, установленных в приложении перед подключением к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию значение SET ANSI_NULLS равно OFF.  
   
- Когда параметр SET ANSI_DEFAULTS имеет значение ON, режим SET ANSI_NULLS включен.  
+Если параметр ANSI_DEFAULTS установлен в значение ON, параметр ANSI_NULLS также включается.  
   
- Установка значения SET ANSI_NULLS происходит во время запуска или выполнения, но не во время синтаксического анализа.  
+Значение ANSI_NULLS определяется во время выполнения, а не во время синтаксического анализа.  
   
- Чтобы просмотреть текущее значение для этого параметра, выполните следующий запрос:
+Чтобы просмотреть текущее значение для этого параметра, выполните следующий запрос:
   
 ```sql  
 DECLARE @ANSI_NULLS VARCHAR(3) = 'OFF';  
@@ -105,10 +105,10 @@ SELECT @ANSI_NULLS AS ANSI_NULLS;
 ```  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в роли public.  
+ Необходимо быть членом роли **public**.  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример иллюстрирует использование операторов «равно» (`=`) и «не равно» (`<>`) для сравнения со значениями `NULL` и не NULL в таблице. Этот пример также демонстрирует, что использование конструкции `IS NULL` не зависит от значения параметра `SET ANSI_NULLS`.  
+ В следующем примере операторы сравнения Equals (`=`) Not Equal To (`<>`) используются для сравнения со значениями в таблице, которые равны или не равны `NULL`. Этот пример также демонстрирует, что использование конструкции `IS NULL` не зависит от значения параметра `SET ANSI_NULLS`.  
   
 ```sql  
 -- Create table t1 and insert values.  
@@ -132,9 +132,12 @@ WHERE a <> @varname;
 SELECT a   
 FROM t1   
 WHERE a IS NULL;  
-GO  
-  
--- SET ANSI_NULLS to ON and test.  
+GO 
+```
+
+Теперь установите параметр ANSI_NULLS в значение ON и выполните тестирование.
+
+```sql
 PRINT 'Testing ANSI_NULLS ON';  
 SET ANSI_NULLS ON;  
 GO  
@@ -153,8 +156,11 @@ SELECT a
 FROM t1   
 WHERE a IS NULL;  
 GO  
-  
--- SET ANSI_NULLS to OFF and test.  
+```
+
+Теперь установите параметр ANSI_NULLS в значение OFF и выполните тестирование.  
+
+```sql
 PRINT 'Testing SET ANSI_NULLS OFF';  
 SET ANSI_NULLS OFF;  
 GO  

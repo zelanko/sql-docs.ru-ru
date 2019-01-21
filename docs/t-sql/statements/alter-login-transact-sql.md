@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd062ba7ea48de6cce202b964dea9d80754b75f9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 757d06003da83e2506e2912f0f5e7cd6a03a3e52
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215593"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211115"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -209,22 +209,29 @@ ALTER LOGIN Mary5 ENABLE;
 ```sql  
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
+
+### <a name="c-changing-the-password-of-a-login-when-logged-in-as-the-login"></a>В. Изменение пароля для того имени, с которым выполнен вход в систему 
+ Если вам нужно изменить пароль для того имени входа, с которым вы вошли в систему, но у вас нет разрешения `ALTER ANY LOGIN`, необходимо указать параметр `OLD_PASSWORD`.    
   
-### <a name="c-changing-the-name-of-a-login"></a>В. Изменение имени входа  
+```sql  
+ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>' OLD_PASSWORD = '<oldWeakPasswordHere>';  
+```  
+
+### <a name="d-changing-the-name-of-a-login"></a>Г. Изменение имени входа  
  Следующий пример изменяет имя входа `Mary5` на `John2`.  
   
 ```sql  
 ALTER LOGIN Mary5 WITH NAME = John2;  
 ```  
   
-### <a name="d-mapping-a-login-to-a-credential"></a>Г. Сопоставление имени входа с учетными данными  
+### <a name="e-mapping-a-login-to-a-credential"></a>Д. Сопоставление имени входа с учетными данными  
  Следующий пример сопоставляет имя входа `John2` с учетными данными `Custodian04`.  
   
 ```sql  
 ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;  
 ```  
   
-### <a name="e-mapping-a-login-to-an-extensible-key-management-credential"></a>Д. Сопоставление имени входа с учетными данными расширенного управления ключами  
+### <a name="f-mapping-a-login-to-an-extensible-key-management-credential"></a>Е. Сопоставление имени входа с учетными данными расширенного управления ключами  
  В следующем примере имя входа `Mary5` сопоставляется с учетными данными `EKMProvider1`.  
   
   

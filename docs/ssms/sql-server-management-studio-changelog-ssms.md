@@ -11,16 +11,19 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e9dd7920f18ab6a04b6993f8398204a9425e5ffa
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: c854d2e332d38443646de560a906826c419705b7
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591908"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300551"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
-
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [Поделитесь своим мнением о содержании документации по SQL!](https://aka.ms/sqldocsurvey)
+
 В этой статье приводятся подробные сведения об обновлениях, улучшениях и исправлениях ошибок в текущей и предыдущих версиях SQL Server Management Studio. Скачайте [предыдущие версии SSMS](#previous-ssms-releases).
 
 
@@ -406,7 +409,7 @@ ms.locfileid: "53591908"
 
 
 > [!NOTE]
-> При установке на следующие платформы для использования неанглоязычных локализованных выпусков SSMS 17.x требуется [обновление для системы безопасности KB 2862966](https://support.microsoft.com/kb/2862966): Windows 8, Windows 7, Windows Server 2012 и Windows Server 2008 R2.
+> При установке на следующие платформы для использования неанглоязычных локализованных выпусков SSMS 17.x требуется [обновление для системы безопасности KB 2862966](https://support.microsoft.com/kb/2862966): Windows 8, Windows 7, Windows Server 2012 и Windows Server 2008 R2.
 
 [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
@@ -425,7 +428,7 @@ ms.locfileid: "53591908"
 Дата выпуска: 04 сентября 2018 г.
 
 > [!NOTE]
-> При установке на следующие платформы для использования неанглоязычных локализованных выпусков SSMS 17.x требуется [обновление для системы безопасности KB 2862966](https://support.microsoft.com/kb/2862966): Windows 8, Windows 7, Windows Server 2012 и Windows Server 2008 R2.
+> При установке на следующие платформы для использования неанглоязычных локализованных выпусков SSMS 17.x требуется [обновление для системы безопасности KB 2862966](https://support.microsoft.com/kb/2862966): Windows 8, Windows 7, Windows Server 2012 и Windows Server 2008 R2.
 
 [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
 

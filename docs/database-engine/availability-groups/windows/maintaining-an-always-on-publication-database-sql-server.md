@@ -14,12 +14,12 @@ ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1c8c674eb0e86d0b78348f07fb95259327582cc
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 00de66d272688a7b61b4847e38a41f4738457d92
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208733"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300151"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>Управление реплицированной базой данных издателя в рамках группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "53208733"
     > [!NOTE]  
     >  Если удаляется группа доступности, содержащая опубликованные базы данных, или если опубликованная база данных удаляется из группы доступности, все копии опубликованных баз данных остаются в состоянии восстановления. После восстановления каждая база данных становится опубликованной. Только одна копия может быть сохранена с метаданными публикации. Чтобы отключить репликацию для копии опубликованной базы данных, сначала удалите все подписки и публикации из базы данных.  
   
-     Выполните процедуру **sp_dropsubscription** , чтобы удалить подписки на публикацию. Убедитесь в том, что для параметра *@ignore_distributributor* задано значение 1, чтобы метаданные сохранялись для активной базы данных публикации на уровне распространителя.  
+     Выполните процедуру **sp_dropsubscription** , чтобы удалить подписки на публикацию. Убедитесь в том, что для параметра *@ignore_distributor* задано значение 1, чтобы метаданные сохранялись для активной базы данных публикации на уровне распространителя.  
   
     ```  
     USE MyDBName;  
@@ -115,7 +115,7 @@ ms.locfileid: "53208733"
   
 -   [Репликация, отслеживание изменений, изменение данных и группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
--   [Администрирование (репликация)](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [Вопросы и ответы об администрировании репликации](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
 -   [Подписчики репликации и группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   

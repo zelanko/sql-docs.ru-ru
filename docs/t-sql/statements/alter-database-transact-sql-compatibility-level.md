@@ -1,7 +1,7 @@
 ---
 title: Уровень совместимости инструкции ALTER DATABASE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/16/2018
+ms.date: 01/08/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f01c19b7afd63402abc5729404d73e52429722be
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 55d919cefd20ef4b139dbf30a053bbda568f6e38
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980080"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242165"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -168,9 +168,9 @@ SELECT name, compatibility_level FROM sys.databases;
 ## <a name="differences-between-compatibility-level-140-and-level-150"></a>Различия между уровнями совместимости 140 и 150  
 В этом разделе описываются новые возможности, обусловленные появлением уровня совместимости 150.
 
-Уровень совместимости базы данных 150 сейчас предоставляется в режиме закрытой предварительной версии для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Этот уровень совместимости базы данных будет связан с новым поколением улучшений обработки запросов наряду с улучшениями, реализованными в уровне совместимости 140.     
+Уровень совместимости базы данных 150 сейчас предоставляется для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] в режиме общедоступной предварительной версии. Этот уровень совместимости базы данных будет связан с новым поколением улучшений обработки запросов наряду с улучшениями, реализованными в уровне совместимости 140.     
 
-Дополнительные сведения о функциях обработки запросов, доступных на уровне 150 совместимости базы данных, см. в статье [Новые возможности в SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md).     
+Дополнительные сведения о функциях обработки запросов, доступных на уровне 150 совместимости базы данных, см. в статьях [Новые возможности в SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md) и [Интеллектуальная обработка запросов в базах данных SQL](https://docs.microsoft.com/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017).
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>Различия между уровнями совместимости 130 и 140  
 В этом разделе описываются новые особенности поведения, обусловленные появлением уровня совместимости 140.

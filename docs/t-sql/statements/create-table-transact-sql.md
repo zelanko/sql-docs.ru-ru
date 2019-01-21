@@ -47,18 +47,18 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 60938c31712e8bb6b08579cab099baaaf99bb0aa
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 4cb25fff7ac946808ecad9cb4d0e8594f32ad5a2
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980390"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300571"
 ---
 # <a name="create-table-transact-sql"></a>Инструкция CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Поделитесь своим мнением о содержании документации по SQL!](https://aka.ms/sqldocsurvey)
 
 Создает новую таблицу в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -990,6 +990,8 @@ INSERT INTO #MyTempTable VALUES (1);
 ```  
   
  Если в пределах одной хранимой процедуры или пакета создается более одной временной таблицы, им должны быть присвоены разные имена.  
+ 
+ Параметр *schema_name* игнорируется при создании или временной таблице или обращении к ней.  Все временные таблицы создаются в схеме dbo.
   
  Если локальная временная таблица создается хранимой процедурой или приложением, которые одновременно могут выполняться несколькими пользователями, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен иметь возможность различать таблицы, созданные разными пользователями. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] делает это путем внутреннего присоединения числового суффикса к имени каждой локальной временной таблицы. Полное имя временной таблицы, хранящееся в таблице **sysobjects** базы данных **tempdb**, состоит из имени таблицы, заданного инструкцией CREATE TABLE, и сформированного системой числового суффикса. Для обеспечения возможности добавления суффикса значение параметра *table_name*, определенного как имя локальной временной таблицы, не должно содержать более 116 символов.  
   

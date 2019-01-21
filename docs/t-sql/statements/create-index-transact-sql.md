@@ -55,18 +55,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55f5056f65daa3c9f52809087f4cf6773d708910
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 8a77956d457e70566cbebef0e92d952b0b1158d9
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980510"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300511"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [Помогите улучшить документацию по SQL Server!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [Поделитесь своим мнением о содержании документации по SQL!](https://aka.ms/sqldocsurvey)
 
 Создает реляционный индекс для таблицы или представления. Он также называется индексом rowstore, так как является кластеризованным или некластеризованным индексом сбалансированного дерева. Индекс rowstore можно создать до заполнения таблицы данными. Индекс rowstore позволяет повысить производительность запросов, особенно в том случае, если запросы выбирают определенные столбцы или им требуются значения, которые должны быть отсортированы в определенном порядке.  
   
@@ -278,7 +278,7 @@ CLUSTERED
   
  Отфильтрованные индексы не применяются к XML-индексам и полнотекстовым индексам. Для индексов UNIQUE только выбранные строки должны иметь уникальные значения индексов. Отфильтрованные индексы не поддерживают параметр IGNORE_DUP_KEY.  
   
-ON *partition_scheme_name* **( *column_name* )**  
+ON _partition_scheme_name_ **( *column_name* )**  
 **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Задает схему секционирования, которая определяет файловые группы, соответствующие секциям секционированного индекса. Схема секционирования должна быть создана в базе данных путем выполнения инструкции [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) или [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* указывает столбец, по которому будет секционирован индекс. Столбец должен соответствовать по типу данных, длине и точности аргументу функции секционирования, используемой аргументом *partition_scheme_name*. Аргумент *column_name* необязательно должен соответствовать столбцам из определения индекса. Можно указать любой столбец базовой таблицы, за исключением случая секционирования индекса UNIQUE, когда аргумент *column_name* должен быть выбран из используемых в качестве уникального ключа. Это ограничение дает возможность компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] проверять уникальность значений ключа только в одной секции.  
@@ -476,7 +476,7 @@ RESUMABLE **=** { ON | **OFF**}
 
  Операция OFF с индексами является невозобновляемой.
 
-MAX_DURATION **=** *time* [**MINUTES**] используется с **RESUMABLE = ON** (требуется **ONLINE = ON**).
+MAX_DURATION **=** _time_ [**MINUTES**] используется с **RESUMABLE = ON** (требуется **ONLINE = ON**).
  
 **Область применения**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] в общедоступной предварительной версии.
 
@@ -696,7 +696,7 @@ INSERT INTO t1 VALUES (1, 0);
   
 -   Новые параметры индекса могут быть заданы только с помощью аргумента WITH (**_option\_name_ = ON | OFF**).  
 -   Нельзя задавать параметры с помощью нового синтаксиса и совместимого старого в одной и той же инструкции. Например, инструкция с WITH (**DROP_EXISTING, ONLINE = ON**) вызовет ошибку.  
--   При создании XML-индекса параметры должны указываться с помощью аргумента WITH (***option_name*= ON | OFF**).  
+-   При создании XML-индекса параметры должны указываться с помощью аргумента WITH (**_option_name_= ON | OFF**).  
   
 ## <a name="dropexisting-clause"></a>Предложение DROP_EXISTING  
  Предложение DROP_EXISTING может использоваться для перестроения индекса, добавления или удаления столбцов, изменения параметров, изменения порядка сортировки столбцов, а также изменения схемы секционирования или файловой группы.  
