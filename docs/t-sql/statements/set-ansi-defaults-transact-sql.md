@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 36902b633219f60d8f76a45e7d8e2fd2ccfdb129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 871d79c805451e1710dbc400914d2dace01c7eea
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804242"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143444"
 ---
 # <a name="set-ansidefaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -51,9 +51,9 @@ SET ANSI_DEFAULTS ON
 ```
 
 ## <a name="remarks"></a>Remarks  
- SET ANSI_DEFAULTS является серверной настройкой, которая не изменяется клиентом. Клиент управляет собственными настройками. По умолчанию эти настройки противоположны настройкам сервера. Пользователи не могут изменять этот серверный параметр. Чтобы изменить поведение клиента, пользователи должны использовать SQL_COPT_SS_PRESERVE_CURSORS. Дополнительные сведения см. в разделе [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
+ANSI_DEFAULTS является серверным параметром, который не изменяется клиентом. Клиент управляет собственными настройками. По умолчанию эти настройки противоположны настройкам сервера. Пользователи не могут изменять этот серверный параметр. Чтобы изменить поведение клиента, пользователи должны использовать SQL_COPT_SS_PRESERVE_CURSORS. Дополнительные сведения см. в разделе [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
   
- При включении (ON) этого параметра включаются следующие параметры ISO.  
+При включении (ON) этого параметра включаются следующие параметры ISO.  
   
 |||  
 |-|-|  
@@ -62,13 +62,13 @@ SET ANSI_DEFAULTS ON
 |SET ANSI_PADDING|SET QUOTED_IDENTIFIER|  
 |SET ANSI_WARNINGS||  
   
- В совокупности перечисленные параметры SET стандарта ISO определяют среду обработки запросов на все время сеанса пользователя, выполнения триггера или хранимой процедуры. Однако эти параметры SET не охватывают всех настроек, необходимых для полного соответствия стандарту ISO.  
+В совокупности перечисленные параметры SET стандарта ISO определяют среду обработки запросов на все время сеанса пользователя, выполнения триггера или хранимой процедуры. Однако эти параметры SET не охватывают всех настроек, необходимых для полного соответствия стандарту ISO.  
   
- При работе с индексами для вычисляемых столбцов и индексированных представлений в значение ON должны быть установлены следующие четыре значения по умолчанию: ANSI_NULLS, ANSI_PADDING, ANSI_WARNINGS и QUOTED_IDENTIFIER. Кроме них при создании и изменении индексов для вычисляемых столбцов и индексированных представлений должны быть установлены следующие параметры SET:  ARITHABORT (ON), CONCAT_NULL_YIELDS_NULL (ON) и NUMERIC_ROUNDABORT (OFF). Дополнительные сведения о настройке параметров SET с индексированными представлениями и индексами на вычисляемых столбцах см. в подразделе "Рекомендации по использованию инструкций SET" раздела [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md).  
+При работе с индексами для вычисляемых столбцов и индексированных представлений в значение ON должны быть установлены следующие четыре значения по умолчанию: ANSI_NULLS, ANSI_PADDING, ANSI_WARNINGS и QUOTED_IDENTIFIER. Кроме них при создании и изменении индексов для вычисляемых столбцов и индексированных представлений должны быть установлены следующие параметры SET:  ARITHABORT (ON), CONCAT_NULL_YIELDS_NULL (ON) и NUMERIC_ROUNDABORT (OFF). Дополнительные сведения о необходимых установках параметров SET для индексированных представлений и индексов вычисляемых столбцов см. в разделе [Анализ использования инструкций SET](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements).  
   
- При соединении с драйвером ODBC для Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или поставщика OLE DB для Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметр ANSI_DEFAULTS автоматически устанавливается в значение ON. а CURSOR_CLOSE_ON_COMMIT и IMPLICIT_TRANSACTIONS значение OFF. Значение OFF для параметров SET CURSOR_CLOSE_ON_COMMIT и SET IMPLICIT_TRANSACTIONS можно указать в источнике данных ODBC, в атрибутах соединения ODBC или в свойствах соединения OLE DB, которые присваиваются в приложении перед подключением к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. SET ANSI_DEFAULTS при соединении из приложений DB-Library имеет значение по умолчанию OFF.  
+При соединении с драйвером ODBC для Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или поставщика OLE DB для Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметр ANSI_DEFAULTS автоматически устанавливается в значение ON. а CURSOR_CLOSE_ON_COMMIT и IMPLICIT_TRANSACTIONS значение OFF. Значение OFF для параметров CURSOR_CLOSE_ON_COMMIT и IMPLICIT_TRANSACTIONS можно указать в источнике данных ODBC, в атрибутах соединения ODBC или в свойствах соединения OLE DB, которые присваиваются в приложении перед подключением к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. ANSI_DEFAULTS при соединении из приложений DB-Library имеет значение по умолчанию OFF.  
   
- При выполнении инструкции SET ANSI_DEFAULTS параметр SET QUOTED_IDENTIFIER устанавливается на стадии синтаксического анализа, а на стадии выполнения устанавливаются следующие параметры:  
+При выполнении инструкции SET ANSI_DEFAULTS параметр QUOTED_IDENTIFIER устанавливается на стадии синтаксического анализа, а на стадии выполнения устанавливаются следующие параметры:  
   
 |||  
 |-|-|  
@@ -77,18 +77,20 @@ SET ANSI_DEFAULTS ON
 |SET ANSI_PADDING|SET IMPLICIT_TRANSACTIONS|  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо быть членом роли **public**.  
+Необходимо быть членом роли **public**.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере устанавливается `SET ANSI_DEFAULTS ON` и выполняется инструкция `DBCC USEROPTIONS` для просмотра изменившихся параметров.  
+В следующем примере для ANSI_DEFAULTS устанавливается значение ON и выполняется инструкция `DBCC USEROPTIONS` для просмотра затронутых параметров.  
   
-```  
+```sql  
 -- SET ANSI_DEFAULTS ON.  
 SET ANSI_DEFAULTS ON;  
 GO  
+
 -- Display the current settings.  
 DBCC USEROPTIONS;  
-GO  
+GO 
+
 -- SET ANSI_DEFAULTS OFF.  
 SET ANSI_DEFAULTS OFF;  
 GO  

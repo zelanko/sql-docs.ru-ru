@@ -13,12 +13,12 @@ ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 849fc7c55957fa0f404f2886b983b548282fa7a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2067c4c267cf1b010a2a72a92b402d3f02034a7e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811012"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126634"
 ---
 # <a name="mssqleng020554"></a>MSSQL_ENG020554
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,17 +52,13 @@ ms.locfileid: "47811012"
   
 -   Во всех случаях возникновения данной ошибки:  
   
-     Следует проверить подробные сведения об ошибке в мониторе репликации и перезапустить агент, если он был остановлен. В подробных сведениях об ошибке может содержаться дополнительная информация о причинах неверного поведения агента. Если агент до сих пор работает, останавливать и перезапускать его не следует, поскольку это может ухудшить проблему. Сведения о просмотре состояния агента и подробных сведений об ошибке в мониторе репликации см. в следующих разделах:  
-  
-    -   Дополнительные сведения об агенте моментальных снимков, агенте чтения журнала и агенте чтения очереди вы найдете в статье [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
-  
-    -   Дополнительные сведения об агенте распределения и агенте слияния вы найдете в статье [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     Следует проверить подробные сведения об ошибке в мониторе репликации и перезапустить агент, если он был остановлен. В подробных сведениях об ошибке может содержаться дополнительная информация о причинах неверного поведения агента. Если агент до сих пор работает, останавливать и перезапускать его не следует, поскольку это может ухудшить проблему. Сведения о просмотре состояния агента и сведений об ошибках в мониторе репликации см. в статье [Просмотр сведений и выполнение задач с помощью монитора репликации](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).    
   
 -   В случае частого возникновения данной ошибки из-за занятости агента:  
   
      Может потребоваться перепроектирование приложения таким образом, чтобы агенту требовалось меньше времени на обработку.  
   
-     С помощью диалогового окна **Свойства задания** можно увеличить интервал проверки состояния агента. Сведения о доступе к этому диалоговому окну для заданий репликации см. в статье [Просмотр сведений и выполнение задач для издателя (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md).  
+     С помощью диалогового окна **Свойства задания** можно увеличить интервал проверки состояния агента. Сведения о доступе к этому диалоговому окну для заданий репликации см. в статье [Просмотр сведений и выполнение задач с помощью монитора репликации](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Агент не может вести записи в журнал на одном из компьютеров в данной топологии.  
   
@@ -81,6 +77,6 @@ ms.locfileid: "47811012"
  [Агент чтения журнала репликации](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [Агент слияния репликации](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [Агент чтения очереди репликации](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [Агент моментальных снимков репликации](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   
