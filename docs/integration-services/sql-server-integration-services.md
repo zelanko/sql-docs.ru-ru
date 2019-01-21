@@ -1,4 +1,4 @@
----
+﻿---
 title: Службы SQL Server Integration Services | Документы Майкрософт
 description: Сведения об MSSQL Integration Services, платформе от Майкрософт для создания решений по интеграции и преобразованию данных на уровне предприятия
 ms.custom: ''
