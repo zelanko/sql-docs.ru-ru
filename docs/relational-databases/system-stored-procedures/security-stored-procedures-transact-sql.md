@@ -1,7 +1,7 @@
 ---
 title: Системные хранимые процедуры (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/17/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,21 +18,22 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ae83ce706d58e627f52fb06120d297c3ae26a82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8761bf7f14e662ce8a0944c0d4f8b2c6d3605e08
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624122"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419989"
 ---
 # <a name="security-stored-procedures-transact-sql"></a>Хранимые процедуры безопасности (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает следующие системные хранимые процедуры, которые используются для управления безопасностью. Некоторые из этих хранимых процедур являются устаревшими, но остаются доступными для поддержки обратной совместимости. Разделы для устаревших процедур содержат их замену.  
 
 |||  
 |-|-|  
-[sys.sp_add_trusted_assembly]( sys-sp-add-trusted-assembly-transact-sql.md) |[sp_addapprole](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md) (устаревшая версия)|
+|[sys.sp_add_trusted_assembly]( sys-sp-add-trusted-assembly-transact-sql.md) |[sp_addapprole](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md) (устаревшая версия)|
 |[sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)|[sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)
 |[sp_addlogin](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md) (устаревшая версия) |[sp_addremotelogin](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md) (устаревшая версия)
 |[sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md) (устаревшая версия) |[Хранимая процедура sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) (устаревшая версия)

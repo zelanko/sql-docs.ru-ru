@@ -1,7 +1,7 @@
 ---
 title: TRANSLATE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 12/16/2016
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -17,19 +17,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a72ef38b960e00a88c7d4e1e0038e32a897a46d9
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 591d2dcbb8a14cff7e4595bdeeab93787f51c5cf
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980120"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419879"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Возвращает строку, предоставленную в качестве первого аргумента, после преобразования символов, указанных во втором аргументе, в конечный набор символов, указанный в третьем аргументе.
 
-## <a name="syntax"></a>Синтаксис   
+## <a name="syntax"></a>Синтаксис
+
 ```
 TRANSLATE ( inputString, characters, translations) 
 ```
@@ -45,7 +47,8 @@ TRANSLATE ( inputString, characters, translations)
 *translations*   
  Строковое [выражение](../../t-sql/language-elements/expressions-transact-sql.md), содержащее заменяющие символы. *translations* должен иметь один и тот же тип данных и длину, что и *characters*.
 
-## <a name="return-types"></a>Типы возвращаемых данных   
+## <a name="return-types"></a>Типы возвращаемых данных
+
 Возвращает символьное выражение того же типа даты, что и `inputString`, в котором символы из второго аргумента заменены соответствующими символами из третьего аргумента.
 
 ## <a name="remarks"></a>Remarks   
@@ -57,15 +60,19 @@ TRANSLATE ( inputString, characters, translations)
 
 `TRANSLATE` всегда учитывает параметры сортировки SC.
 
-## <a name="examples"></a>Примеры   
+## <a name="examples"></a>Примеры
 
-### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. Замена квадратных и фигурных скобок обычными    
+### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. Замена квадратных и фигурных скобок обычными
+
 Следующий запрос заменяет квадратные и фигурные скобки во входной строке на круглые:
-```
+
+```sql
 SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 ```
+
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
-```
+
+```plain_text
 2*(3+4)/(7-2)
 ```
 
@@ -98,8 +105,10 @@ REPLACE
 );
 ```
 
-###  <a name="b-convert-geojson-points-into-wkt"></a>Б. Преобразование точек GeoJSON в WKT    
-GeoJSON — это формат для кодирования различных структур географических данных. С помощью функции `TRANSLATE` разработчики могут легко преобразовывать точки GeoJSON в формат WKT, и наоборот. Следующий запрос заменяет квадратные и фигурные скобки во входной строке на обычные:   
+###  <a name="b-convert-geojson-points-into-wkt"></a>Б. Преобразование точек GeoJSON в WKT
+
+GeoJSON — это формат для кодирования различных структур географических данных. С помощью функции `TRANSLATE` разработчики могут легко преобразовывать точки GeoJSON в формат WKT, и наоборот. Следующий запрос заменяет квадратные и фигурные скобки во входной строке на обычные:
+
 ```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
@@ -107,11 +116,9 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
 
-
 |Точка  |Координаты |  
----------|--------- |
-(137.4 72.3) |[137.4,72.3] |
-
+|---------|--------- |
+|(137.4 72.3) |[137.4,72.3] |
 
 ### <a name="c-use-the-translate-function"></a>В. Используйте функцию TRANSLATE
 
@@ -128,6 +135,7 @@ SELECT TRANSLATE('abcdef','abc','bcd') AS Translated,
 
 
 ## <a name="see-also"></a>См. также:
+
  [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)  

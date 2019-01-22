@@ -1,7 +1,7 @@
 ---
 title: Программа bcp | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/27/2018
+ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -29,18 +29,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 375a20488c8f887a89538ee640e059a96da72a99
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
-ms.translationtype: HT
+ms.openlocfilehash: b5198ed4dda2efc350d3ef956a1dda0e3766ca15
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300581"
+ms.locfileid: "54317834"
 ---
 # <a name="bcp-utility"></a>Программа bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   > [!div class="nextstepaction"]
-  > [Поделитесь своим мнением о SQL документация содержания!](https://aka.ms/sqldocsurvey)
+  > [Поделитесь своим мнением о содержании документации по SQL!](https://aka.ms/sqldocsurvey)
 
 > С помощью программы bcp на платформе Linux, см. в разделе [Установка sqlcmd и bcp в Linux](../linux/sql-server-linux-setup-tools.md).
 > 
@@ -64,7 +64,7 @@ ms.locfileid: "54300581"
 
 Номер выпуска: 15.0 <br>
 Номер сборки: 15.0.1000.34<br>
-Дата выпуска 18 октября 2018 г.
+Дата выпуска: 18 октября 2018 г.
 
 Новая версия SQLCMD поддерживает аутентификацию Azure AD, включая многофакторную идентификацию (MFA) поддержку функций базы данных SQL, хранилище данных SQL и постоянного шифрования.
 Новый BCP поддерживает аутентификацию Azure AD, включая поддержку многофакторной идентификации (MFA) для базы данных SQL и хранилища данных SQL.
@@ -110,8 +110,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#w">-w</a>]
     [<a href="#x">-x</a>]
 </pre></td></tr></table>  
-  
-## <a name="arguments"></a>Аргументы  
+
+## <a name="arguments"></a>Аргументы
+
  _**файл\_данных**_<a name="data_file"></a>  
  Полный путь файла данных. После выполнения массового импорта данных в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]файл данных содержит данные, которые будут скопированы в указанную таблицу или представление. После выполнения массового экспорта данных из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]файл данных содержит данные, скопированные из таблицы или представления. Путь может содержать от 1 до 255 символов. Файл данных может содержать максимум 2^63 – 1 строк.  
   
@@ -428,8 +429,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **-x**<a name="x"></a>  
  При использовании вместе с параметрами **format** и **-f** *format_file* приводит к созданию файла форматирования на основе XML. По умолчанию создается файл форматирования в формате, отличном от XML. Параметр **-x** не работает при импорте или экспорте данных. Применение этого параметра без параметров **format** и **-f** *format_file* приведет к ошибке.  
-  
+
 ## Примечания<a name="remarks"></a>
+
  Программа **bcp** 13.0 устанавливается при установке средств [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Если установлены средства как [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , так и более ранней версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], то в зависимости от значения переменной среды PATH вместо **bcp** 13.0 необходимо использовать более раннюю версию клиента **bcp** . Переменная среды определяет набор каталогов, используемых Windows для поиска исполняемых файлов. Чтобы определить используемую версию, запустите в командной строке Windows команду **bcp /v** . Сведения о настройке пути для команды в переменной среды PATH см. в справке Windows.  
  
 Служебную программу bcp можно скачать отдельно от [пакета дополнительных компонентов Microsoft SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52676).  Выберите `ENU\x64\MsSqlCmdLnUtils.msi` или `ENU\x86\MsSqlCmdLnUtils.msi`.
@@ -442,16 +444,19 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  Дополнительные сведения о подготовке данных к массовому импорту или экспорту см. в разделе [Подготовка данных к массовому экспорту или импорту (SQL Server)](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
   
  Сведения о том, когда в журнале транзакций регистрируются операции вставки строк, выполняемые при массовом импорте, см. в разделе [Предварительные условия для минимального протоколирования массового импорта данных](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
-  
-## <a name="native-data-file-support"></a>Поддержка собственного формата файлов данных  
+
+## <a name="native-data-file-support"></a>Поддержка собственного формата файлов данных
+
  В [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]программа **bcp** поддерживает только собственные файлы данных, совместимые с [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]и [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
-  
-## <a name="computed-columns-and-timestamp-columns"></a>Вычисляемые столбцы и столбцы типа timestamp  
+
+## <a name="computed-columns-and-timestamp-columns"></a>Вычисляемые столбцы и столбцы типа timestamp
+
  При выполнении импорта значений в файле данных для вычисляемых столбцов и столбцов типа **timestamp** столбцы пропускаются, и [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] присваивает значения автоматически. Если файл данных не содержит значений для вычисляемых столбцов или столбцов типа **timestamp** в таблице, следует использовать файл форматирования, в котором будет указано, что вычисляемые столбцы или столбцы типа **timestamp** в таблице должны быть пропущены при импорте данных. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] автоматически присвоит значения для столбца.  
   
  При массовом копировании вычисляемые столбцы и столбцы типа **timestamp** копируются из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в файл данных обычным способом.  
-  
-## <a name="specifying-identifiers-that-contain-spaces-or-quotation-marks"></a>Указание идентификаторов, содержащих пробелы или кавычки  
+
+## <a name="specifying-identifiers-that-contain-spaces-or-quotation-marks"></a>Указание идентификаторов, содержащих пробелы или кавычки
+
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] могут содержать такие символы, как внедренные пробелы и кавычки. Такие идентификаторы должны обрабатываться следующим образом.  
   
 -   Если идентификатор или имя файла содержит пробел или кавычку в командной строке, заключите идентификатор в двойные кавычки ("").  
@@ -469,8 +474,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     -   указать параметр **-q** ; или  
   
     -   заключить имя владельца, таблицы или представления в квадратные скобки ([]) внутри кавычек.  
-  
-## <a name="data-validation"></a>Проверка данных  
+
+## <a name="data-validation"></a>Проверка данных
+
  Теперь программа**bcp** производит проверку данных, которые могут привести к ошибкам в работе существующих скриптов, если файлы данных будут содержать недопустимые данные. Например, программа **bcp** проверяет, что:  
   
 -   собственные представления типов данных **float** или **real** являются допустимыми;  
@@ -478,8 +484,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 -   Данные в Юникоде имеют четную длину.  
   
  Возможно, те недопустимые данные, импорт которых мог выполняться операцией массового импорта в предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , теперь не удастся загрузить, тогда как в предыдущих версиях ошибка возникала только при попытке клиента подключиться к недопустимым данным. Добавленная проверка снижает вероятность непредвиденных ситуаций во время запроса данных после массовой загрузки.  
-  
-## <a name="bulk-exporting-or-importing-sqlxml-documents"></a>Массовый экспорт или импорт документов SQLXML  
+
+## <a name="bulk-exporting-or-importing-sqlxml-documents"></a>Массовый экспорт или импорт документов SQLXML
+
  Чтобы выполнить массовый экспорт или импорт SQLXML-данных используйте один из следующих типов данных в файле форматирования:  
   
 |Тип данных|Действие|  
@@ -487,8 +494,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |SQLCHAR или SQLVARYCHAR|Данные отправляются в кодовой странице клиента или кодовой странице, определенной параметрами сортировки. Результат тот же, что и при указании параметра **-c** без указания файла форматирования.|  
 |SQLNCHAR или SQLNVARCHAR|Данные отправляются в Юникоде. Результат тот же, что и при указании параметра **-w** без указания файла форматирования.|  
 |SQLBINARY или SQLVARYBIN|Данные отправляются без преобразования.|  
-  
-## <a name="permissions"></a>Разрешения  
+
+## <a name="permissions"></a>Разрешения
+
  Для операции **bcp out** необходимо разрешение SELECT на исходную таблицу.  
   
  Для операции **bcp in** необходимы как минимум разрешения SELECT/INSERT на целевую таблицу. Кроме того, разрешение ALTER TABLE необходимо в следующих случаях.  
@@ -507,8 +515,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
 > [!NOTE]
 > Необходимость наличия разрешения ALTER TABLE на целевую таблицу было новой особенностью [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. Если у учетной записи пользователя нет разрешений ALTER на целевую таблицу, это новое требование может привести к ошибке скриптов **bcp** , не применяющих принудительно триггеры и проверку ограничений.
-  
-## <a name="character-mode--c-and-native-mode--n-best-practices"></a>Рекомендации для символьного режима (-c) и собственного режима (-n)  
+
+## <a name="character-mode--c-and-native-mode--n-best-practices"></a>Рекомендации для символьного режима (-c) и собственного режима (-n)
+
  Этот раздел содержит рекомендации для символьного режима (-c) и собственного режима (-n).  
   
 -   (Администратор/пользователь) Если возможно, используйте собственный формат (-n) во избежание проблем с разделением. Используйте собственный формат для экспорта и импорта с помощью [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Экспортируйте данные из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью параметра - c или -w, если данные планируется импортировать в базу данных, отличную от[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -516,8 +525,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 -   (Администратор) Проверьте данные при использовании BCP OUT. Например, при использовании BCP OUT, BCP IN, а затем BCP OUT убедитесь, что данные экспортируются правильно и значения признака конца не используются как часть какого-либо значения данных. Попробуйте переопределить признаки конца по умолчанию (с помощью параметров -t и - r) на случайные шестнадцатеричные значения, чтобы избежать конфликта между значениями признака конца и значениями данных.  
   
 -   (Пользователь) Используйте длинные и уникальные признаки конца (любая последовательность байт или символов), чтобы свести к минимуму возможность конфликта с фактическим строковым значением. Это можно выполнить с помощью параметров -t и -r.  
-  
-## <a name="examples"></a>Примеры  
+
+## <a name="examples"></a>Примеры
+
  Этот раздел содержит следующие примеры.  
  
 -   A. Определение версии служебной программы **bcp**
@@ -540,6 +550,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 
 ### <a name="example-test-conditions"></a>**Пример условий теста**
+
 В примерах ниже используется образец базы данных `WideWorldImporters` для SQL Server (начиная с 2016) и База данных SQL Azure.  `WideWorldImporters` можно загрузить из [ https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0 ](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0).  Синтаксис для восстановления образца базы данных см. в разделе [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) .  Если не указано иное, в этом примере предполагается, что используется проверка подлинности Windows и существует доверительное подключение к экземпляру сервера, на котором запускается команда **bcp** .  Каталог с именем `D:\BCP` будет использоваться во многих примерах.
 
 Приведенный ниже скрипт создает пустую копию таблицы `WideWorldImporters.Warehouse.StockItemTransactions`, а затем добавляет ограничение первичного ключа.  Запустите следующий скрипт T-SQL в SQL Server Management Studio (SSMS):
@@ -694,22 +705,23 @@ bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
 ```  
 bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...  
 ```  
-  
-## <a name="additional-examples"></a>Дополнительные примеры  
+
+## <a name="additional-examples"></a>Дополнительные примеры
+
 |Следующие разделы содержат примеры использования программы bcp: |
 |---|
-|Форматы данных для массового экспорта или импорта (SQL Server)<br />&emsp;&#9679;&emsp;[Использование собственного формата для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Использование символьного формата для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Использование собственного формата Юникода для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Использование символьного формата Юникода для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[Определение признаков конца поля и строки (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[Сохранение значений идентификаторов при массовом импорте данных (SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />Файлы форматирования для импорта или экспорта данных (SQL Server)<br />&emsp;&#9679;&emsp;[Создание файла форматирования (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[Использование файла форматирования для массового импорта данных (SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Использование файла форматирования для пропуска столбца таблицы (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[Использование файла форматирования для пропуска поля данных (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[Примеры массового импорта и экспорта XML-документов (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>                                                                                                                                                                                                                  </p>|
+|Форматы данных для массового экспорта или импорта (SQL Server)<br />&emsp;&#9679;&emsp;[Использование собственного формата для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Использование символьного формата для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Использование собственного формата Юникода для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Использование символьного формата Юникода для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[Определение признаков конца поля и строки (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[Сохранение значений идентификаторов при массовом импорте данных (SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />Файлы форматирования для импорта или экспорта данных (SQL Server)<br />&emsp;&#9679;&emsp;[Создание файла форматирования (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[Использование файла форматирования для массового импорта данных (SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Использование файла форматирования для пропуска столбца таблицы (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[Использование файла форматирования для пропуска поля данных (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[Примеры массового импорта и экспорта XML-документов (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>  </p>|
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также:
+
  [Подготовка данных к массовому экспорту или импорту (SQL Server)](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
  [BULK INSERT (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../t-sql/functions/openrowset-transact-sql.md)   
  [SET QUOTED_IDENTIFIER (Transact-SQL)](../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sp_tableoption (Transact-SQL)](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
- [Файлы форматирования для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
-  
-  
+ [Файлы форматирования для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
+
 ## <a name="feedback"></a>Отзывы
 
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Форум клиентских средств SQL](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)

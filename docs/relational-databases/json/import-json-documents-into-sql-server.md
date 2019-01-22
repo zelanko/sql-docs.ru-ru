@@ -1,7 +1,7 @@
 ---
 title: Импорт документов JSON на SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: douglasl
 ms.technology: ''
@@ -11,26 +11,28 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7b77ef114e1af3ec0d8c7a7268ae5f9b892196fe
-ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
+ms.openlocfilehash: 7e208541a49b654874b815c8bf9b4d214db69717
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52886929"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419839"
 ---
 # <a name="import-json-documents-into-sql-server"></a>Импорт документов JSON на SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Здесь описывается импорт файлов JSON на SQL Server. Сейчас многие документы JSON хранятся в файлах. Приложения записывают сведения в файлы JSON, в файлах JSON хранятся сведения, созданные датчиками, и т. д. Важно иметь возможность считывать данные JSON, хранящиеся в файлах, загружать эти данные на SQL Server и анализировать их.
 
 ## <a name="import-a-json-document-into-a-single-column"></a>Импорт документа JSON в единый столбец
+
 **OPENROWSET(BULK)** представляет собой функцию с табличным значением, с помощью которой можно считывать данные из любого файла на локальном диске или в локальной сети при условии, что у SQL Server есть доступ на чтение в этом расположении. Эта функция возвращает таблицу с одним столбцом, включающим содержимое файла. Функцию OPENROWSET(BULK) можно использовать с различными параметрами, например с разделителями. В самом простом случае вы можете просто загрузить все содержимое файла как текстовое значение. (Это единое большое значение известно как единый большой символьный объект или SINGLE_CLOB.) 
 
 Ниже приведен пример функции **OPENROWSET(BULK)**, с помощью которой содержимое файла JSON сначала считывается, а затем возвращается к пользователю в виде отдельного значения.
 
 ```sql
 SELECT BulkColumn
- FROM OPENROWSET (BULK 'C:\JSON\Books\book.json', SINGLE_CLOB) as j
+ FROM OPENROWSET (BULK 'C:\JSON\Books\book.json', SINGLE_CLOB) as j;
 ```
 
 OPENJSON(BULK) считывает содержимое файла и возвращает его в `BulkColumn`.
@@ -51,6 +53,7 @@ SELECT BulkColumn
 После загрузки содержимого JSON-файла текст JSON можно сохранить в таблицу.
 
 ## <a name="import-multiple-json-documents"></a>Импорт нескольких документов JSON
+
 Таким же образом можно одновременно загрузить сразу несколько JSON-файлов из файловой системы в локальные переменные. Предположим, у вас есть файлы с именем `book<index>.json`.
   
 ```sql
@@ -68,7 +71,9 @@ END
 ```
 
 ## <a name="import-json-documents-from-azure-file-storage"></a>Импорт документов JSON из хранилища файлов Azure
+
 Используя функцию OPENROWSET(BULK) описанным выше образом, можно также прочитать JSON-файлы из других расположений файлов, к которым у SQL Server есть доступ. Предположим, что хранилище файлов Azure поддерживает протокол SMB. В результате вы можете сопоставить локальный виртуальный диск с общей папкой хранилища файлов Azure с помощью следующей процедуры:
+
 1.  Создайте учетную запись хранилища файлов (например, `mystorage`), общую папку (например, `sharejson`), а также папку в хранилище файлов Azure с помощью портала Azure или Azure PowerShell.
 2.  Отправьте несколько файлов JSON в общую папку хранилища файлов.
 3.  Создайте исходящее правило брандмауэра в брандмауэре Windows на компьютере, где разрешен доступ к порту 445. Имейте в виду, что ваш поставщик услуг Интернета может заблокировать этот порт. Если вы получите уведомление об ошибке DNS (ошибка 53), выполняя последующие действия, это значит, что порт 445 закрыт или блокируется поставщиком.
@@ -122,9 +127,11 @@ WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
 ## <a name="parse-json-documents-into-rows-and-columns"></a>Синтаксический анализ документов JSON с преобразованием в строки и столбцы
+
 Вместо того чтобы считывать весь файл JSON как отдельное значение, вы можете выполнить его синтаксический анализ и вернуть содержимое файла и свойства этого содержимого в строках и столбцах. В следующем примере используется JSON-файл с [этого сайта](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json), содержащий список документации.
 
 ### <a name="example-1"></a>Пример 1
+
 В самом простом случае вы можете просто загрузить весь список из файла. 
 
 ```sql
@@ -134,6 +141,7 @@ SELECT value
 ```
 
 ### <a name="example-2"></a>Пример 2
+
 OPENROWSET считывает отдельное текстовое значение из файла, возвращает его как BulkColumn и передает функции OPENJSON. OPENJSON перебирает массив объектов JSON в массиве BulkColumn и возвращает по одной книге на строку в формате JSON:
 
 ```json
@@ -144,6 +152,7 @@ OPENROWSET считывает отдельное текстовое значен
 ```
 
 ### <a name="example-3"></a>Пример 3
+
 С помощью функции OPENJSON можно выполнять синтаксический анализ содержимого JSON и преобразовывать его в таблицу или результирующий набор. В примере ниже показана загрузка содержимого, синтаксический анализ загруженного содержимого JSON и возвращение пяти полей в качестве столбцов.
 
 ```sql
@@ -156,12 +165,12 @@ SELECT book.*
 
 В этом примере функция OPENROWSET(BULK) считывает содержимое файла и передает его функции OPENJSON с помощью определенной схемы вывода. OPENJSON сопоставляет свойства в объектах JSON с помощью имен столбцов. Например, свойство `price` возвращается как столбец `price` и преобразовывается в тип данных float. Результаты приведены ниже.
 
-|Идентификатор|Имя|price|pages_i|Автор
+|Идентификатор|Имя|price|pages_i|Автор|
 |---|---|---|---|---|
-978-0641723445|The Lightning Thief|12.5|384|Рик Риордан (Rick Riordan)| 
-978-1423103349|The Sea of Monsters|6.49|304|Рик Риордан (Rick Riordan)| 
-978-1857995879|Sophie's World: The Greek Philosophers|3.07|64|Юстейн Гордер (Jostein Gaarder)| 
-978-1933988177|Lucene in Action, Second Edition|30.5|475|Майкл Маккэндлесс (Michael McCandless)|
+|978-0641723445|The Lightning Thief|12.5|384|Рик Риордан (Rick Riordan)| 
+|978-1423103349|The Sea of Monsters|6.49|304|Рик Риордан (Rick Riordan)| 
+|978-1857995879|Sophie's World: The Greek Philosophers|3.07|64|Юстейн Гордер (Jostein Gaarder)| 
+|978-1933988177|Lucene in Action, Second Edition|30.5|475|Майкл Маккэндлесс (Michael McCandless)|
 ||||||
 
 Теперь вы можете вернуть эту таблицу пользователю или загрузить данные в другую таблицу.
@@ -179,5 +188,6 @@ SELECT book.*
 -   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds) (JSON как мост между NoSQL и реляционными решениями)
   
 ## <a name="see-also"></a>См. также:
+
 [Преобразование данных JSON в строки и столбцы с помощью функции OPENJSON (SQL Server)](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)
 

@@ -1,7 +1,7 @@
 ---
 title: Функция SQLGetDiagField | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -20,14 +20,15 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 386b2352db8912c0af4a1571cbfc2d7e7f5384c6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f975b15d07bf837c0f5fe5d2649cc78b341d23c6
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203983"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420169"
 ---
 # <a name="sqlgetdiagfield-function"></a>Функция SQLGetDiagField
+
 **Соответствие стандартам**  
  Представленные версии: ODBC 3.0 стандартов соответствия: ISO-92  
   
@@ -36,8 +37,7 @@ ms.locfileid: "53203983"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```cpp
 SQLRETURN SQLGetDiagField(  
      SQLSMALLINT     HandleType,  
      SQLHANDLE       Handle,  
@@ -60,7 +60,7 @@ SQLRETURN SQLGetDiagField(
   
 -   SQL_HANDLE_ENV  
   
--   ЗНАЧЕНИЕ SQL_HANDLE_STMT  
+-   SQL_HANDLE_STMT  
   
  Дескриптор SQL_HANDLE_DBC_INFO_TOKEN используется только для диспетчера драйверов и драйверов. Приложения не должны использовать этот тип дескриптора. Дополнительные сведения о SQL_HANDLE_DBC_INFO_TOKEN, см. в разделе [драйвера ODBC с поддержкой пула подключений разработка](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
   
@@ -118,7 +118,7 @@ SQLRETURN SQLGetDiagField(
   
     -   Если вы используете асинхронное уведомление, асинхронные операции для дескриптора не завершена.  
   
--   ЗНАЧЕНИЕ SQL_NO_DATA: *RecNumber* поданных единиц превысил количество диагностических записей, которые существовали для дескриптор, указанный в *обработки.* Функция также возвращает значение SQL_NO_DATA для любой положительных *RecNumber* Если нет диагностических записей для *обрабатывать*.  
+-   SQL_NO_DATA: *RecNumber* поданных единиц превысил количество диагностических записей, которые существовали для дескриптор, указанный в *обработки.* Функция также возвращает значение SQL_NO_DATA для любой положительных *RecNumber* Если нет диагностических записей для *обрабатывать*.  
   
 ## <a name="comments"></a>Комментарии  
  Приложение обычно вызывает **SQLGetDiagField** для выполнения одной из трех целей:  
@@ -192,26 +192,26 @@ SQLRETURN SQLGetDiagField(
 |*домена инструкции ALTER*|«ALTER ДОМЕН»|SQL_DIAG_ALTER_DOMAIN|  
 |*Таблица инструкции ALTER*|«ALTER TABLE»|SQL_DIAG_ALTER_TABLE|  
 |*Определение утверждения*|«СОЗДАНИЕ УТВЕРЖДЕНИЕ»|SQL_DIAG_CREATE_ASSERTION|  
-|*определения для набора символов*|«СОЗДАТЬ НАБОР СИМВОЛОВ»|SQL_DIAG_CREATE_CHARACTER_SET|  
+|*character-set-definition*|«СОЗДАТЬ НАБОР СИМВОЛОВ»|SQL_DIAG_CREATE_CHARACTER_SET|  
 |*Определение параметров сортировки*|«СОЗДАНИЕ ПАРАМЕТРОВ СОРТИРОВКИ»|SQL_DIAG_CREATE_COLLATION|  
-|*Индекс инструкция CREATE*|«СОЗДАНИЕ ИНДЕКСА»|SQL_DIAG_CREATE_INDEX|  
+|*Определение domainn*|«СОЗДАНИЕ ДОМЕНА»|SQL_DIAG_CREATE_DOMAIN|
+|*create-index-statement*|«СОЗДАНИЕ ИНДЕКСА»|SQL_DIAG_CREATE_INDEX|  
 |*— Инструкция CREATE table*|«СОЗДАНИЕ ТАБЛИЦЫ»|SQL_DIAG_CREATE_TABLE|  
 |*представление инструкция CREATE*|«СОЗДАНИЕ ПРЕДСТАВЛЕНИЯ»|SQL_DIAG_CREATE_VIEW|  
 |*спецификацией курсора.*|«SELECT КУРСОРА»|SQL_DIAG_SELECT_CURSOR|  
 |*положение инструкции DELETE*|«DELETE ДИНАМИЧЕСКИЙ КУРСОР»|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
-|*Поиск DELETE оператор*|«УДАЛИТЬ WHERE»|SQL_DIAG_DELETE_WHERE|  
-n-определение *|«СОЗДАНИЕ ДОМЕНА»|SQL_DIAG_CREATE_DOMAIN|  
-|*инструкцию DROP утверждения*|«DROP УТВЕРЖДЕНИЕ»|SQL_DIAG_DROP_ASSERTION|  
-|*DROP символ set-stmt*|«СИМВОЛ DROP SET»|SQL_DIAG_DROP_CHARACTER_SET|  
-|*инструкцию DROP — параметры сортировки*|«СБРОСА ПАРАМЕТРОВ СОРТИРОВКИ»|SQL_DIAG_DROP_COLLATION|  
+|*delete-statement-searched*|«УДАЛИТЬ WHERE»|SQL_DIAG_DELETE_WHERE|  
+|*drop-assertion-statement*|«DROP УТВЕРЖДЕНИЕ»|SQL_DIAG_DROP_ASSERTION|  
+|*drop-character-set-stmt*|«СИМВОЛ DROP SET»|SQL_DIAG_DROP_CHARACTER_SET|  
+|*drop-collation-statement*|«СБРОСА ПАРАМЕТРОВ СОРТИРОВКИ»|SQL_DIAG_DROP_COLLATION|  
 |*инструкцию DROP домена*|«DROP ДОМЕН»|SQL_DIAG_DROP_DOMAIN|  
-|*инструкцию DROP индекс*|«DROP INDEX»|SQL_DIAG_DROP_INDEX|  
-|*инструкцию DROP схемы*|«DROP SCHEMA»|SQL_DIAG_DROP_SCHEMA|  
+|*drop-index-statement*|«DROP INDEX»|SQL_DIAG_DROP_INDEX|  
+|*drop-schema-statement*|«DROP SCHEMA»|SQL_DIAG_DROP_SCHEMA|  
 |*инструкцию DROP таблица*|«DROP TABLE»|SQL_DIAG_DROP_TABLE|  
-|*инструкцию DROP перевода*|«DROP ПЕРЕВОДА»|SQL_DIAG_DROP_TRANSLATION|  
+|*drop-translation-statement*|«DROP ПЕРЕВОДА»|SQL_DIAG_DROP_TRANSLATION|  
 |*инструкцию DROP представление*|«DROP VIEW»|SQL_DIAG_DROP_VIEW|  
--оператор *|«ПРЕДОСТАВЛЕНИЕ»|SQL_DIAG_GRANT|  
-|*инструкции INSERT*|«ВСТАВИТЬ»|SQL_DIAG_INSERT|  
+|*grantstatement*|«ПРЕДОСТАВЛЕНИЕ»|SQL_DIAG_GRANT|
+|*insert-statement*|«ВСТАВИТЬ»|SQL_DIAG_INSERT|  
 |*ODBC-процедуры extension*|«CALL»|ВЫЗОВ SQL_DIAG_|  
 |*Инструкция REVOKE*|«ОТОЗВАТЬ»|SQL_DIAG_REVOKE|  
 |*Определение схемы*|«СОЗДАТЬ СХЕМУ»|SQL_DIAG_CREATE_SCHEMA|  
@@ -219,8 +219,29 @@ n-определение *|«СОЗДАНИЕ ДОМЕНА»|SQL_DIAG_CREATE_DOM
 |*позиционировано инструкции Update*|«ДИНАМИЧЕСКОЕ ОБНОВЛЕНИЕ КУРСОРА»|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
 |*Поиск обновления оператор*|«ИЗМЕНЕНИЕ МЕСТА, ГДЕ»|SQL_DIAG_UPDATE_WHERE|  
 |Неизвестно|*пустая строка*|SQL_DIAG_UNKNOWN_STATEMENT|  
-  
-## <a name="sequence-of-status-records"></a>Последовательность записей состояния  
+
+<!--
+These two malformed table rows were fixed by educated GUESS only.
+Each pair starts with the original flawed row.
+Flawed because treated as only two cells by HTML render,
+and because missing info anyway.
+Also, these flawed rows lacked '|' as their first nonWhitespace character (although markdown technically allows this omission, unfortunately).
+Arguably the following SQL.H file shows the sequence of the flawed rows in the table was suboptimal also.
+
+ftp://www.fpc.org/fpc32/VS6Disk1/VC98/INCLUDE/SQL.H
+
+GeneMi , 2019/01/19
+- - - - - - - - - - - - - -
+
+n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|  
+|*domain-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
+
+-statement*|"GRANT"|SQL_DIAG_GRANT|  
+|*grant-statement*|"GRANT"|SQL_DIAG_GRANT|
+-->
+
+## <a name="sequence-of-status-records"></a>Последовательность записей состояния
+
  Состояние записи располагаются в последовательности на основе номера строки и тип диагностики. Диспетчер драйверов определяет конечного порядка, в которую будет возвращен записи состояния, которые она создает. Драйвер определяет конечного порядка, в которую будет возвращен записи состояния, которые она создает.  
   
  Если диагностические записи учитываются, диспетчер драйверов и драйвер, диспетчер драйверов несет ответственность за их упорядочивание.  
@@ -254,7 +275,7 @@ n-определение *|«СОЗДАНИЕ ДОМЕНА»|SQL_DIAG_CREATE_DOM
   
 |Сведения о|См.|  
 |---------------------------|---------|  
-|Получение нескольких полей структуры диагностических данных|[Функция SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|  
+|Получение нескольких полей структуры диагностических данных|[Функция SQLGetDiagRec](sqlgetdiagrec-function.md)|  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

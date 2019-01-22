@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60b9137e52b34b79fa4faddbef7b9e4da8734142
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: ea7c955718dbe6d2437b44b915057fc095151dc4
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397613"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419799"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "54397613"
   Содержит сведения о каждом плане выполнения, связанного с запросом.  
   
 |Имя столбца|Тип данных|Описание|  
-|-----------------|---------------|-----------------|  
+|-----------------|---------------|-----------------|
 |**plan_id**|**bigint**|Первичный ключ.|  
 |**query_id**|**bigint**|Внешний ключ. Присоединяет к [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md).|  
 |**plan_group_id**|**bigint**|Идентификатор группы плана. Запросы с курсорами обычно требуется несколько (заполнения и выборки) планы. Заполнения и выборки планы, которые компилируются вместе находятся в той же группе.<br /><br /> 0 означает, что план не находится в группе.|  
@@ -57,13 +57,8 @@ ms.locfileid: "54397613"
 |**last_execution_time**|**datetimeoffset**|Время последнего выполнения относится к последней время окончания/плана запроса.|  
 |**avg_compile_duration**|**float**|Планирование статистики компиляции.|  
 |**last_compile_duration**|**bigint**|Планирование статистики компиляции.|  
-|**plan_forcing_type**|**int**|Тип принудительного применения плана.<br /><br />
-0: None<br /><br />
-1: MANUAL<br /><br />
-2. AUTO| |**plan_forcing_type_desc**|**nvarchar(60)**|Text description of plan_forcing_type.<br /><br />
-НЕТ: Форсирование планов не<br /><br />
-ВРУЧНУЮ: План, принудительно задается пользователем<br /><br />
-АВТО: Принудительно с помощью автоматической настройки плана |
+|**plan_forcing_type**|**int**|Тип принудительного применения плана.<br /><br />0: None<br /><br />1: MANUAL<br /><br />2. AUTO|  
+|**plan_forcing_type_desc**|**nvarchar(60)**|Text description of plan_forcing_type.<br /><br />НЕТ: Форсирование планов не<br /><br />ВРУЧНУЮ: План, принудительно задается пользователем<br /><br />АВТО: Принудительно используемый план автоматической настройкой|  
 
 ## <a name="plan-forcing-limitations"></a>Ограничения принудительного использования планов
 Хранилище запросов имеет механизм, позволяющий оптимизатору запросов принудительно применить определенный план выполнения. Но существуют некоторые ограничения, которые могут препятствовать применению плана. 

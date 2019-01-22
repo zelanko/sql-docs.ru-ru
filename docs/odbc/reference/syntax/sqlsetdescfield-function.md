@@ -1,7 +1,7 @@
 ---
 title: Функция SQLSetDescField | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -20,14 +20,15 @@ ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8704d28fb8ae39cf7d8f6bb595c884b70a6721a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: fb6061adf707a58737fd34d7cb7bbe33b2e9579a
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204163"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420239"
 ---
 # <a name="sqlsetdescfield-function"></a>Функция SQLSetDescField
+
 **Соответствие стандартам**  
  Представленные версии: ODBC 3.0 стандартов соответствия: ISO-92  
   
@@ -36,8 +37,7 @@ ms.locfileid: "53204163"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```cpp  
 SQLRETURN SQLSetDescField(  
      SQLHDESC      DescriptorHandle,  
      SQLSMALLINT   RecNumber,  
@@ -146,7 +146,7 @@ SQLRETURN SQLSetDescField(
 |SQL_DESC_ARRAY_SIZE|SQLULEN|ОТМЕНИТЬ: R/W APD: R/W IRD: Неиспользуемые IPD: Не используется|ОТМЕНИТЬ: APD [1]: [1] IRD: Неиспользуемые IPD: Не используется|  
 |SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT *|ОТМЕНИТЬ: R/W APD: R/W IRD: IPD R/W: Чтение-запись|ОТМЕНИТЬ: NULL ptr APD: NULL ptr IRD: NULL ptr IPD: NULL ptr|  
 |SQL_DESC_BIND_OFFSET_PTR|SQLLEN *|ОТМЕНИТЬ: R/W APD: R/W IRD: Неиспользуемые IPD: Не используется|ОТМЕНИТЬ: NULL ptr APD: NULL ptr IRD: Неиспользуемые IPD: Не используется|  
-|SQL_DESC_BIND_TYPE|SQLINTEGER|ОТМЕНИТЬ: R/W APD: R/W IRD: Неиспользуемые IPD: Не используется|ОТМЕНИТЬ: ЗНАЧЕНИЕ SQL_BIND_BIND_BY_COLUMN<br /><br /> APD: ЗНАЧЕНИЕ SQL_BIND_BIND_BY_COLUMN<br /><br /> IRD: Не используется<br /><br /> IPD: Не используется|  
+|SQL_DESC_BIND_TYPE|SQLINTEGER|ОТМЕНИТЬ: R/W APD: R/W IRD: Неиспользуемые IPD: Не используется|ОТМЕНИТЬ: SQL_BIND_BY_COLUMN<br /><br /> APD: SQL_BIND_BY_COLUMN<br /><br /> IRD: Не используется<br /><br /> IPD: Не используется|  
 SQL_DESC_COUNT|SQLSMALLINT|ОТМЕНИТЬ: R/W APD: R/W IRD: R IPD: Чтение-запись|ОТМЕНИТЬ: 0 APD: 0 IRD: D IPD: 0|  
 |SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN *|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: IPD R/W: Чтение-запись|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: NULL ptr IPD: NULL ptr|  
   
@@ -165,7 +165,7 @@ SQL_DESC_COUNT|SQLSMALLINT|ОТМЕНИТЬ: R/W APD: R/W IRD: R IPD: Чтени
 |SQL_DESC_DATA_PTR|УКАЗАТЕЛЬ SQLPOINTER|ОТМЕНИТЬ: R/W APD: R/W IRD: Неиспользуемые IPD: Не используется|ОТМЕНИТЬ: NULL ptr APD: NULL ptr IRD: Неиспользуемые IPD: [2] не используется|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|SQLSMALLINT|ОТМЕНИТЬ: R/W APD: R/W IRD: R IPD: Чтение-запись|ОТМЕНИТЬ: ND APD: ND IRD: D IPD: ND|  
 |SQL_DESC_DATETIME_INTERVAL_PRECISION|SQLINTEGER|ОТМЕНИТЬ: R/W APD: R/W IRD: R IPD: Чтение-запись|ОТМЕНИТЬ: ND APD: ND IRD: D IPD: ND|  
-SQL_DESC_DISPLAY_SIZE|SQLLEN|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: R IPD: Не используется|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: D IPD: Не используется|  
+|SQL_DESC_DISPLAY_SIZE|SQLLEN|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: R IPD: Не используется|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: D IPD: Не используется|  
 |SQL_DESC_FIXED_PREC_SCALE|SQLSMALLINT|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: R IPD: Чтение|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: D IPD: D [1]|  
 |SQL_DESC_INDICATOR_PTR|SQLLEN *|ОТМЕНИТЬ: R/W APD: R/W IRD: Неиспользуемые IPD: Не используется|ОТМЕНИТЬ: NULL ptr APD: NULL ptr IRD: Неиспользуемые IPD: Не используется|  
 |SQL_DESC_LABEL|SQLCHAR *|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: R IPD: Не используется|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: D IPD: Не используется|  
@@ -176,7 +176,7 @@ SQL_DESC_DISPLAY_SIZE|SQLLEN|ОТМЕНИТЬ: Неиспользуемые APD:
 |SQL_DESC_NAME|SQLCHAR *|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: R IPD: Чтение-запись|ОТМЕНИТЬ: ND APD: ND IRD: D IPD: ND|  
 |SQL_DESC_NULLABLE|SQLSMALLINT|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: R IPD: Чтение|ОТМЕНИТЬ: ND APD: ND IRD: D IPD: ND|  
 |SQL_DESC_NUM_PREC_RADIX|SQLINTEGER|ОТМЕНИТЬ: R/W APD: R/W IRD: R IPD: Чтение-запись|ОТМЕНИТЬ: ND APD: ND IRD: D IPD: ND|  
-SQL_DESC_OCTET_LENGTH|SQLLEN|ОТМЕНИТЬ: R/W APD: R/W IRD: R IPD: Чтение-запись|ОТМЕНИТЬ: ND APD: ND IRD: D IPD: ND|  
+|SQL_DESC_OCTET_LENGTH|SQLLEN|ОТМЕНИТЬ: R/W APD: R/W IRD: R IPD: Чтение-запись|ОТМЕНИТЬ: ND APD: ND IRD: D IPD: ND|  
 |SQL_DESC_OCTET_LENGTH_PTR|SQLLEN *|ОТМЕНИТЬ: R/W APD: R/W IRD: Неиспользуемые IPD: Не используется|ОТМЕНИТЬ: NULL ptr APD: NULL ptr IRD: Неиспользуемые IPD: Не используется|  
 |SQL_DESC_PARAMETER_TYPE|SQLSMALLINT|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: Неиспользуемые IPD: Чтение-запись|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: Неиспользуемые IPD: D = SQL_PARAM_INPUT|  
 |SQL_DESC_PRECISION|SQLSMALLINT|ОТМЕНИТЬ: R/W APD: R/W IRD: R IPD: Чтение-запись|ОТМЕНИТЬ: ND APD: ND IRD: D IPD: ND|  
@@ -186,7 +186,7 @@ SQL_DESC_OCTET_LENGTH|SQLLEN|ОТМЕНИТЬ: R/W APD: R/W IRD: R IPD: Чтен
 |SQL_DESC_SEARCHABLE|SQLSMALLINT|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: R IPD: Не используется|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: D IPD: Не используется|  
 |SQL_DESC_TABLE_NAME|SQLCHAR *|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: R IPD: Не используется|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: D IPD: Не используется|  
 |SQL_DESC_TYPE|SQLSMALLINT|ОТМЕНИТЬ: R/W APD: R/W IRD: R IPD: Чтение-запись|ОТМЕНИТЬ: SQL_C_DEFAULT APD: SQL_C_DEFAULT IRD: D IPD: ND|  
-SQL_DESC_TYPE_NAME|SQLCHAR *|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: R IPD: Чтение|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: D IPD: D [1]|  
+|SQL_DESC_TYPE_NAME|SQLCHAR *|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: R IPD: Чтение|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: D IPD: D [1]|  
 |SQL_DESC_UNNAMED|SQLSMALLINT|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: R IPD: Чтение-запись|ОТМЕНИТЬ: ND APD: ND IRD: D IPD: ND|  
 |SQL_DESC_UNSIGNED|SQLSMALLINT|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: R IPD: Чтение|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: D IPD: D [1]|  
 |SQL_DESC_UPDATABLE|SQLSMALLINT|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: R IPD: Не используется|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: D IPD: Не используется|  
@@ -213,7 +213,7 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|ОТМЕНИТЬ: Неиспользуемые APD:
   
  Это поле в Отменить можно также задать, вызвав **SQLSetStmtAttr** с помощью атрибута SQL_ATTR_ROW_ARRAY_SIZE. Это поле в дескрипторе параметра приложения можно также задать, вызвав **SQLSetStmtAttr** с атрибутом SQL_ATTR_PARAMSET_SIZE.  
   
- **SQL_DESC_ARRAY_STATUS_PTR [все]**  
+ **SQL_DESC_ARRAY_STATUS_PTR [All]**  
  Для каждого дескриптора типа, этот SQLUSMALLINT * заголовок указывается массив полей SQLUSMALLINT значений. Такие массивы имеют следующие имена: строка, массив состояний (IRD), массив состояний параметров (IPD), массива операций строк (Отменить) и массив параметров операции (APD).  
   
  В IRD, это поле заголовка указывает на массив статусов строк, содержащий значения состояния после вызова **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, или **SQLSetPos**. Массив имеет столько элементов, сколько строк в наборе строк. Приложение должно выделить память для массива SQLUSMALLINTs и задайте в этом поле, чтобы он указывал на массив. Поле по умолчанию присваивается указатель null. Драйвер будет заполнять массива -, если поле SQL_DESC_ARRAY_STATUS_PTR имеет значение является пустым указателем, в этом случае создаются без значения состояния и массива не заполняется.  
@@ -231,7 +231,7 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|ОТМЕНИТЬ: Неиспользуемые APD:
   
 -   SQL_ROW_UPDATED: Строка была успешно сделана выборка и изменился со времени последней загрузки. Если строка выбирается заново, его состояние будет SQL_ROW_SUCCESS.  
   
--   ЗНАЧЕНИЕ SQL_ROW_DELETED: Строка была удалена с момента последней загрузки.  
+-   SQL_ROW_DELETED: Строка была удалена с момента последней загрузки.  
   
 -   SQL_ROW_ADDED: Строка была вставлена **SQLBulkOperations**. Если строка выбирается заново, его состояние будет SQL_ROW_SUCCESS.  
   
@@ -376,17 +376,17 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|ОТМЕНИТЬ: Неиспользуемые APD:
 |-------------------|------------------------------|  
 |SQL_INTERVAL_DAY / SQL_C_INTERVAL_DAY|SQL_CODE_DAY|  
 |SQL_INTERVAL_DAY_TO_HOUR / SQL_C_INTERVAL_DAY_TO_HOUR|SQL_CODE_DAY_TO_HOUR|  
-|SQL_INTERVAL_DAY_TO_MINUTE / SQL_C_INTERVAL_DAY_TO_MINUTE|SQL_CODE_DAY_TO_MINUTE|  
+|SQL_INTERVAL_DAY_TO_MINUTE/ SQL_C_INTERVAL_DAY_TO_MINUTE|SQL_CODE_DAY_TO_MINUTE|  
 |SQL_INTERVAL_DAY_TO_SECOND / SQL_C_INTERVAL_DAY_TO_SECOND|SQL_CODE_DAY_TO_SECOND|  
 |SQL_INTERVAL_HOUR / SQL_C_INTERVAL_HOUR|SQL_CODE_HOUR|  
-QL_INTERVAL_HOUR_TO_MINUTE / SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_CODE_HOUR_TO_MINUTE|  
+|SQL_INTERVAL_HOUR_TO_MINUTE/ SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_CODE_HOUR_TO_MINUTE|  
 |SQL_INTERVAL_HOUR_TO_SECOND / SQL_C_INTERVAL_HOUR_TO_SECOND|SQL_CODE_HOUR_TO_SECOND|  
-|SQL_INTERVAL_MINUTE / SQL_C_INTERVAL_MINUTE|SQL_CODE_MINUTE|  
-|SQL_INTERVAL_MINUTE_TO_SECOND / SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_CODE_MINUTE_TO_SECOND|  
-|SQL_INTERVAL_MONTH / SQL_C_INTERVAL_MONTH|SQL_CODE_MONTH|  
-QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|  
-|SQL_INTERVAL_YEAR / SQL_C_INTERVAL_YEAR|SQL_CODE_YEAR|  
-|SQL_INTERVAL_YEAR_TO_MONTH / SQL_C_INTERVAL_YEAR_TO_MONTH|SQL_CODE_YEAR_TO_MONTH|  
+|SQL_INTERVAL_MINUTE/ SQL_C_INTERVAL_MINUTE|SQL_CODE_MINUTE|  
+|SQL_INTERVAL_MINUTE_TO_SECOND/ SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_CODE_MINUTE_TO_SECOND|  
+|SQL_INTERVAL_MONTH/ SQL_C_INTERVAL_MONTH|SQL_CODE_MONTH|  
+|SQL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|  
+|SQL_INTERVAL_YEAR/ SQL_C_INTERVAL_YEAR|SQL_CODE_YEAR|  
+|SQL_INTERVAL_YEAR_TO_MONTH/ SQL_C_INTERVAL_YEAR_TO_MONTH|SQL_CODE_YEAR_TO_MONTH|  
   
  Дополнительные сведения о интервалы данных, а это поле, см. в разделе [данных идентификаторы и дескрипторы типов](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md).  
   
@@ -439,7 +439,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
   
  В поставщики IDP это поле всегда присваивается SQL_NULLABLE так, как динамические параметры всегда допускают значение NULL и не может быть приложением.  
   
- **SQL_DESC_NUM_PREC_RADIX [все]**  
+ **SQL_DESC_NUM_PREC_RADIX [All]**  
  Это поле SQLINTEGER содержит значение 2, если тип данных в поле SQL_DESC_TYPE имеет тип приблизительных числовых данных, так как поле SQL_DESC_PRECISION содержит количество битов. Это поле содержит значение 10, если тип данных в поле SQL_DESC_TYPE имеет тип точных числовых данных, так как поле SQL_DESC_PRECISION содержит количество цифр дробной части. Это поле имеет значение 0 для всех типов нечисловые данные.  
   
  **SQL_DESC_OCTET_LENGTH [все]**  
@@ -506,8 +506,8 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
 |------------------------------|---------------------------------|  
 |SQL_CHAR, SQL_VARCHAR, SQL_C_CHAR, SQL_C_VARCHAR|SQL_DESC_LENGTH имеет значение 1. SQL_DESC_PRECISION имеет значение 0.|  
 |SQL_DATETIME|Если имеет значение SQL_DESC_DATETIME_INTERVAL_CODE SQL_CODE_DATE или SQL_CODE_TIME, SQL_DESC_PRECISION имеет значение 0. Если он имеет значение SQL_DESC_TIMESTAMP, SQL_DESC_PRECISION равна 6.|  
-|SQL_C_NUMERIC SQL_DECIMAL SQL_NUMERIC,|SQL_DESC_SCALE имеет значение 0. SQL_DESC_PRECISION присваивается определенное реализацией точность для типа данных.<br /><br /> См. в разделе [SQL в C: Числовые](../../../odbc/reference/appendixes/sql-to-c-numeric.md) сведения о том, как вручную привязать значение SQL_C_NUMERIC.|  
-|SQL_FLOAT SQL_C_FLOAT|Имеет значение SQL_DESC_PRECISION точность по умолчанию, определяемое реализацией для SQL_FLOAT.|  
+|SQL_DECIMAL, SQL_NUMERIC, SQL_C_NUMERIC|SQL_DESC_SCALE имеет значение 0. SQL_DESC_PRECISION присваивается определенное реализацией точность для типа данных.<br /><br /> См. в разделе [SQL в C: Числовые](../../../odbc/reference/appendixes/sql-to-c-numeric.md) сведения о том, как вручную привязать значение SQL_C_NUMERIC.|  
+|SQL_FLOAT, SQL_C_FLOAT|Имеет значение SQL_DESC_PRECISION точность по умолчанию, определяемое реализацией для SQL_FLOAT.|  
 |SQL_INTERVAL|Если к типу данных interval имеет значение SQL_DESC_DATETIME_INTERVAL_CODE, SQL_DESC_DATETIME_INTERVAL_PRECISION имеет значение 2 (точность по умолчанию интервал начальные). Если интервал компонента секунд, SQL_DESC_PRECISION имеет значение 6 (точность секунд интервал по умолчанию).|  
   
  Если приложение вызывает **SQLSetDescField** задать поля дескриптора, вместо вызова метода **SQLSetDescRec**, приложение сначала необходимо объявить тип данных. Когда это происходит, неявно задаются другие поля, отмеченные в предыдущей таблице. Если какие-либо значения неявно набора неприемлемы, приложение может затем вызвать **SQLSetDescField** или **SQLSetDescRec** явным образом задать недопустимые значения.  

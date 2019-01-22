@@ -18,16 +18,16 @@ helpviewer_keywords:
 - identity columns [SQL Server], IDENTITY property
 - autonumbers, identity numbers
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09422e46babcb966fdc4c86153e91439a5e46c88
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: af536ef3867d3f74ce04a8a8fef8b93e224f09c0
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507394"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326645"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (Свойство)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -78,7 +78,7 @@ IDENTITY [ (seed , increment) ]
   
  Для каждой таблицы можно создать только один столбец идентификаторов.  
   
- В таблицах, оптимизированных для памяти, в качестве начального значения и значения приращения должно быть задано 1,1. Установка для параметров seed или increment значения, отличного от 1, приводит к следующей ошибке: "Использование для параметров seed и increment значений, отличных от 1, не поддерживается в таблицах, оптимизированных для памяти".  
+ В таблицах, оптимизированных для памяти, в качестве начального значения и значения приращения должно быть задано 1,1. Указание для начального значения или значения приращения числа, отличного от 1, приведет к следующей ошибке. Использование начального значения и значения приращения, отличного от 1, не поддерживается в оптимизированных для памяти таблицах.  
   
 ## <a name="examples"></a>Примеры  
   

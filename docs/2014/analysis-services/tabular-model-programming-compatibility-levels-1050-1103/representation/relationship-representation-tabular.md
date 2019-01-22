@@ -1,7 +1,7 @@
 ---
 title: Представление связи (табличное) | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -12,17 +12,17 @@ ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c62af4be43978f36f46594757964a9fcdae58ce5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d11d0b6a1e1be93cb3c521bb32782dcb127e822
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058904"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420159"
 ---
 # <a name="relationship-representation-tabular"></a>Представление связи (табличное)
   Связь — это соединение между двумя таблицами данных. Связь определяет, как должны соотноситься данные в двух таблицах.  
   
- См. в разделе [Relationship Representation (Tabular)](relationship-representation-tabular.md) Дополнительные сведения о способах создания и управления им представления связи.  
+ См. раздел [Relationship Representation (Tabular)](relationship-representation-tabular.md) с подробным объяснением создания представления связи и управления им.  
   
 ## <a name="relationship-representation"></a>Представление связи  
  В табличных моделях между двумя таблицами можно определить несколько связей. Если между двумя таблицами определено несколько связей, то в качестве связи по умолчанию для модели можно определить только одну из них. Она называется активной связью, а все остальные — неактивными.  
@@ -32,8 +32,7 @@ ms.locfileid: "48058904"
   
  В следующих фрагментах кода показано, как создавать связи в табличных моделях, как активировать связи и как определять первичный ключ в таблице (за исключением RowNumber). Чтобы создать активную связь, необходимо определить первичный ключ в таблице первичного ключа PKTableName (одна из сторон связи). В представленном образце создается первичный ключ на столбце PKColumnName, если в нем не определен первичный ключ. Неактивные связи можно создавать без первичного ключа в столбце первичного ключа.  
   
-```  
-  
+```cs
 private Boolean createRelationship(string PKTableName, string PKColumnName, string MVTableName, string MVColumnName, AMO.Database tabularDb, string cubeName, Boolean forceActive)  
 {  
     //verify input parameters  

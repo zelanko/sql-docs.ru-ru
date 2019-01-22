@@ -16,15 +16,15 @@ helpviewer_keywords:
 - REVOKE statement, users
 - application roles [SQL Server], permissions
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 54f2add3bd85250d94e82d13e9e1b3ddcef61a43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afb12785dd744ddfd938fd2ddfd02e058f2e4034
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629182"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327405"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE, отмена разрешений на участника базы данных (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>A. Отмена разрешения CONTROL на пользователя у другого пользователя  
- В следующем примере у пользователя `CONTROL` отменяется разрешение `Wanida` на пользователя `RolandX` базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ В следующем примере у пользователя `CONTROL` отменяется разрешение [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на пользователя `Wanida` базы данных `RolandX`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -169,7 +169,7 @@ GO
 ```  
   
 ### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>Б. Отмена разрешения VIEW DEFINITION на роль у пользователя, которому оно было предоставлено с параметром WITH GRANT OPTION  
- В следующем примере у пользователя `VIEW DEFINITION` отменяется разрешение `SammamishParking` на роль `JinghaoLiu` базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Параметр `CASCADE` указан, поскольку пользователю `JinghaoLiu` было предоставлено разрешение `VIEW DEFINITION` с параметром `WITH GRANT OPTION`.  
+ В следующем примере у пользователя `VIEW DEFINITION` отменяется разрешение [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на роль `SammamishParking` базы данных `JinghaoLiu`. Параметр `CASCADE` указан, поскольку пользователю `JinghaoLiu` было предоставлено разрешение `VIEW DEFINITION` с параметром `WITH GRANT OPTION`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -179,7 +179,7 @@ GO
 ```  
   
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>В. Отмена разрешения IMPERSONATE на пользователя у роли приложения  
- В следующем примере у роли приложения `IMPERSONATE` отменяется разрешение `HamithaL` на пользователя `AccountsPayable17` базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ В следующем примере у роли приложения `IMPERSONATE` отменяется разрешение `HamithaL` на пользователя [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базы данных `AccountsPayable17`.  
   
 **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   

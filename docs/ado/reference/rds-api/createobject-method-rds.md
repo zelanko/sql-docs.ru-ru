@@ -14,12 +14,12 @@ ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed2d80793d70418e02d22bf104d21b6d3bec6c4d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d220a9abc0e2dc72d7ab65306b514a9925b4fc43
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599536"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419929"
 ---
 # <a name="createobject-method-rds"></a>Метод CreateObject (служба удаленных рабочих столов)
 Создает прокси для целевого бизнес-объекта и возвращает указатель на него. Прокси-сервера пакетов и выполняет маршалинг данные заглушки на стороне сервера для обмена данными с бизнес-объект для отправки запросов и данных через Интернет. Для объектов в процессе компонент прокси-серверы не используются, предоставляется только указатель на объект.  
@@ -28,14 +28,14 @@ ms.locfileid: "51599536"
 >  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ, больше не включаются в операционной системе Windows (см. в разделе Windows 8 и [настольная книга по совместимости Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будет поддерживаться в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ, следует перевести [WCF-сервиса данных](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Синтаксис  
- Служба Remote Data Service поддерживает следующие протоколы: HTTP, HTTPS (HTTP через Secure Socket Layer), DCOM и внутри процесса.  
+ Служба Remote Data Service поддерживает следующие протоколы: HTTP, HTTPS (HTTP через протокол SSL), DCOM и внутри процесса.  
   
 |Протокол|Синтаксис|  
 |--------------|------------|  
-|HTTP|Объект набора = DataSpace.CreateObject ("ProgId", "https://awebsrvr")|  
-|HTTPS|Объект набора = DataSpace.CreateObject ("ProgId", "https://awebsrvr")|  
-|DCOM|Объект набора = DataSpace.CreateObject ("ProgId", "имя_компьютера")|  
-|В процессе|Объект набора = DataSpace.CreateObject ("ProgId", "")|  
+|HTTP|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
+|HTTPS|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
+|DCOM|Set object = DataSpace.CreateObject("ProgId", "computername")|  
+|В процессе|Set object = DataSpace.CreateObject("ProgId", "")|  
   
 ## <a name="parameters"></a>Параметры  
  *Объект*  

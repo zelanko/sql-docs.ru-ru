@@ -3,17 +3,17 @@ title: Пакет R и Python библиотеки - службы машинно
 description: Пакетов R и Python, SQL Server для служб машинного обучения для служб R, R Server (в базе данных) и сервер машинного обучения (автономный)
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 01/19/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0a8c4c0f14a099dd4b6d8e6c48b8d84e209f6024
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 907932911ef522383678774f596772904f687dc2
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432337"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419859"
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>По умолчанию R и Python пакетов в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "53432337"
 
 Пакеты R устанавливаются вместе с [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) и [службы машинного обучения SQL Server 2017](../install/sql-machine-learning-services-windows-install.md) при выборе компонента R во время установки. 
 
-Пакеты         | 2016 | 2017 | Описание |
+|Пакеты         | 2016 | 2017 | Описание |
 |----------------|--------------|--------------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | 9.2 | Используется для удаленных контекстов вычислений, потоковой передачи, параллельное выполнение функций rx для импорта данных и преобразования, моделирования, визуализации и анализа. |
 | [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | 9.2 |Используется для включения сценария R в хранимые процедуры. |
@@ -89,8 +89,8 @@ SQL Server 2017 машинного обучения — это первая ве
 
 |Версия и язык  | Путь по умолчанию|
 |----------------------|------------|
-| SQL Server 2016 |C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\library|
-| SQL Server 2017 с помощью R|C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library |
+| SQL Server 2016 |C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library|
+| SQL Server 2017 с помощью R|C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
 | SQL Server 2017 с помощью Python |C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Lib\site пакетов |
 
 
