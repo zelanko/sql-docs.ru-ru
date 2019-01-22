@@ -11,12 +11,12 @@ ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1605b608550446ecb31a79e6074a7e8cfa7ea916
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 66f659f5fbb2daa0b0a9969c3e7cde75dccc53d0
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420707"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361674"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>Справочник по API Always Encrypted для драйвера JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -42,6 +42,7 @@ ms.locfileid: "52420707"
 |`public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)`|Изменяет свойства sendTimeAsDatetime соединения.|
 
  **Класс SQLServerConnectionPoolProxy**
+ 
 |Имя|Описание|  
 |----------|-----------------|  
 |`public final boolean getSendTimeAsDatetime()` | Возвращает значение свойства соединения sendTimeAsDatetime.|
@@ -74,8 +75,8 @@ ms.locfileid: "52420707"
   
 |Имя|Описание|  
 |----------|-----------------|  
-|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|Расшифровывает указанное зашифрованное значение ключа шифрования столбца. Зашифрованное значение должно быть зашифровано с помощью сертификата по указанному пути ключа и с помощью указанного алгоритма.<br /><br /> **Путь ключа должен иметь один из следующих форматов.**<br /><br /> Отпечаток: <отпечаток_сертификата><br /><br /> Псевдоним: <псевдоним_сертификата><br /><br /> (Переопределяет SQLServerColumnEncryptionKeyStoreProvider. метода decryptColumnEncryptionKey (строка, String, Byte[]).) программы|  
-|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|Шифрует ключ шифрования столбца с помощью сертификата по указанному пути ключа и с помощью указанного алгоритма.<br /><br /> **Путь ключа должен иметь один из следующих форматов.**<br /><br /> Отпечаток: <отпечаток_сертификата><br /><br /> Псевдоним: <псевдоним_сертификата><br /><br /> (Переопределяет SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey (строка, String, Byte[]).) программы|  
+|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|Расшифровывает указанное зашифрованное значение ключа шифрования столбца. Зашифрованное значение должно быть зашифровано с помощью сертификата по указанному пути ключа и с помощью указанного алгоритма.<br /><br /> **Путь ключа должен иметь один из следующих форматов.**<br /><br /> Отпечаток: <отпечаток_сертификата><br /><br /> Псевдоним: <псевдоним_сертификата><br /><br /> (Переопределяет SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
+|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|Шифрует ключ шифрования столбца с помощью сертификата по указанному пути ключа и с помощью указанного алгоритма.<br /><br /> **Путь ключа должен иметь один из следующих форматов.**<br /><br /> Отпечаток: <отпечаток_сертификата><br /><br /> Псевдоним: <псевдоним_сертификата><br /><br /> (Переопределяет SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
 |`public void setName (String name)`|Задает имя поставщика хранилища ключей.|
 |`public String getName ()`|Получает имя поставщика хранилища ключей.|
   
@@ -93,8 +94,8 @@ ms.locfileid: "52420707"
   
 |Имя|Описание|  
 |----------|-----------------|  
-| `public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)` | Decryptes ключ шифрования зашифрованного столбца (CEK). Этот расшифровки выполняется алгоритм шифрования RSA, который использует асимметричный ключ, указанный путь к главному ключу.<br />(Переопределяет SQLServerColumnEncryptionKeyStoreProvider. метода decryptColumnEncryptionKey (строка, String, Byte[]).) программы |  
-| `public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)` | Шифрует ключ шифрования столбца, передав главный ключ столбца, указанного для указанного алгоритма.<br />(Переопределяет SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey (строка, String, Byte[]).) программы |  
+| `public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)` | Decryptes ключ шифрования зашифрованного столбца (CEK). Этот расшифровки выполняется алгоритм шифрования RSA, который использует асимметричный ключ, указанный путь к главному ключу.<br />(Переопределяет SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).) |  
+| `public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)` | Шифрует ключ шифрования столбца, передав главный ключ столбца, указанного для указанного алгоритма.<br />(Переопределяет SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).) |  
 |`public void setName (String name)`|Задает имя поставщика хранилища ключей.|
 |`public String getName ()`|Получает имя поставщика хранилища ключей.|  
   
@@ -152,6 +153,7 @@ ms.locfileid: "52420707"
 
   
 Новые типы в **microsoft.sql.Types** класса
+
 |Имя|Описание|  
 |----------|-----------------|  
 |DATETIME, SMALLDATETIME, MONEY, SMALLMONEY, GUID|Использовать эти типы в качестве целевых типов SQL, при отправке значения параметра **зашифрованных** datetime, smalldatetime, money, smallmoney, столбцы uniqueidentifier с помощью `setObject()/updateObject()` методов API.|  

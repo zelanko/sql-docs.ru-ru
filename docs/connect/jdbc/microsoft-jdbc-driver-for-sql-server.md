@@ -11,12 +11,12 @@ ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19e8cf2e5c4aeaa2eab8c49d61a05a0eaa434e3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f28175eab5219a6181bf241fc60fec576a6ef50
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611042"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405724"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Драйвер Microsoft JDBC для SQL Server
 
@@ -27,27 +27,32 @@ ms.locfileid: "47611042"
 Драйвер Microsoft JDBC Driver for SQL Server протестирован с основными серверами приложений, такими как IBM WebSphere и SAP NetWeaver.
   
 ## <a name="getting-started"></a>Приступая к работе  
-* [Шаг 1. Настройка среды разработки для разработки на Java](step-1-configure-development-environment-for-java-development.md)  
-* [Шаг 2. Создание базы данных для разработки на Java](step-2-create-a-sql-database-for-java-development.md)  
-* [Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью Java](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
+
+* [Шаг 1. Настройка среды разработки для разработки на Java](step-1-configure-development-environment-for-java-development.md)  
+* [Шаг 2. Создание базы данных для разработки на Java](step-2-create-a-sql-database-for-java-development.md)  
+* [Шаг 3. Подтверждение концепции: подключение к SQL с помощью Java](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>Документация  
+
 * [Приступая к работе](getting-started-with-the-jdbc-driver.md)
 * [Обзор](overview-of-the-jdbc-driver.md)  
 * [Руководство по программированию](programming-guide-for-jdbc-sql-driver.md)
 * [безопасность](securing-jdbc-driver-applications.md)  
 * [Повышение производительности и надежности с помощью драйвера JDBC](improving-performance-and-reliability-with-the-jdbc-driver.md)  
 * [Устранение неполадок](diagnosing-problems-with-the-jdbc-driver.md)
-* [Примеры кода](sample-jdbc-driver-applications.md) 
+* [Примеры кода](sample-jdbc-driver-applications.md)
 * [Соответствие требованиям и юридические аспекты](compliance-and-legal-for-the-jdbc-sql-driver.md)  
   
 ## <a name="community"></a>Сообщество
+
 [Поиск дополнительных сведений о драйвере JDBC](finding-additional-jdbc-driver-information.md)  
   
 ## <a name="download"></a>Загрузить
+
 [Скачайте Microsoft JDBC Driver для SQL Server](download-microsoft-jdbc-driver-for-sql-server.md) -имеющим дополнительную информацию о проектах и многое другое.
   
 ## <a name="samples"></a>Примеры  
+
 * [Пример приложений драйвера JDBC](sample-jdbc-driver-applications.md)  
 * [Приступая к работе с Java в Windows](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
 * [Начало работы с Java в macOS](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
