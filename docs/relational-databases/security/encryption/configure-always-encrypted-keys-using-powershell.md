@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48596269a6e87f28127a5749ff662d1b401608a9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 889df15caaba289e5f0fed43727d9358bab3a2e1
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532757"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327475"
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>Настройка ключей постоянного шифрования с помощью PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52532757"
 Шаг 4.  Создание объекта *SqlColumnMasterKeySettings* , содержащего сведения о расположении главного ключа столбца. SqlColumnMasterKeySettings — это объект, который существует в памяти (PowerShell). Используйте командлет, поддерживаемый хранилищем ключей.   |     [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)        |   нет      | нет         
 Шаг 5.  Создание метаданных о главном ключе столбца в базе данных.      |    [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**Примечание.** На самом деле для создания метаданных ключа командлет выполняет инструкцию [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) .|    нет     |    Да
 Шаг 6.  Проверка подлинности в Azure, если главный ключ столбца хранится в хранилище ключей Azure. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |  Да   | нет         
-Шаг 7.  Создание ключа шифрования столбца, его шифрование с помощью главного ключа столбца и создание метаданных ключа шифрования столбца в базе данных.     |    [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**Примечание.** Используйте разновидность командлета, который внутренним образом создает и шифрует ключ шифрования столбца.<br><br>**Примечание.** На самом деле для создания метаданных ключа командлет выполняет инструкцию [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) .  | Да | Да
+Шаг 7.  Создание ключа шифрования столбца, его шифрование с помощью главного ключа столбца и создание метаданных ключа шифрования столбца в базе данных.     |    [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**Примечание.** Используйте командлет, который внутренним образом создает и шифрует ключ шифрования столбца.<br><br>**Примечание.** На самом деле для создания метаданных ключа командлет выполняет инструкцию [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md).  | Да | Да
   
 
 ## <a name="windows-certificate-store-without-role-separation-example"></a>Хранилище сертификатов Windows без разделения ролей (пример)
@@ -88,16 +88,16 @@ New-SqlColumnEncryptionKey -Name $cekName  -InputObject $database -ColumnMasterK
 
 ```
 # Create a column master key in Azure Key Vault.
-Login-AzureRmAccount
+Connect-AzAccount
 $SubscriptionId = "<Azure SubscriptionId>"
 $resourceGroup = "<resource group name>"
 $azureLocation = "<datacenter location>"
 $akvName = "<key vault name>"
 $akvKeyName = "<key name>"
-$azureCtx = Set-AzureRMConteXt -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
-New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
-New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation # Creates a new key vault - skip if your vault already exists.
-Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
+$azureCtx = Set-AzConteXt -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
+New-AzResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
+New-AzKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation # Creates a new key vault - skip if your vault already exists.
+Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
 
 # Import the SqlServer module.
@@ -209,7 +209,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 Шаг 3.  Соединение с сервером и базой данных. | [Соединение с базой данных](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | нет | Да
 Шаг 4.  Создание объекта SqlColumnMasterKeySettings, содержащего сведения о расположении главного ключа столбца. SqlColumnMasterKeySettings — это объект, который существует в памяти. | New-SqlColumnMasterKeySettings | нет | нет
 Шаг 5. Создание метаданных о главном ключе столбца в базе данных. | [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br>**Примечание.** На самом деле для создания метаданных главного ключа столбца командлет выполняет инструкцию [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) . | нет | Да
-Шаг 6. Создание метаданных ключа шифрования столбца в базе данных. | New-SqlColumnEncryptionKey<br>**Примечание.** Администраторы баз данных используют разновидность командлета, который создает только метаданные ключа шифрования столбца.<br>На самом деле для создания метаданных ключа шифрования столбца командлет выполняет инструкцию [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) . | нет | Да
+Шаг 6. Создание метаданных ключа шифрования столбца в базе данных. | New-SqlColumnEncryptionKey<br>**Примечание.** Администраторы баз данных используют командлет, который создает только метаданные ключа шифрования столбца.<br>На самом деле для создания метаданных ключа шифрования столбца командлет выполняет инструкцию [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) . | нет | Да
   
 ## <a name="windows-certificate-store-with-role-separation-example"></a>Хранилище сертификатов Windows с разделением ролей (пример)
 

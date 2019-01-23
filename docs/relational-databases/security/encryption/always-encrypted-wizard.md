@@ -17,23 +17,23 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38077378d0980d351c4c65ca25b1574b7a7d7bc2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: db55b4763dc0a5956d419fd45ced58073e2affbb
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673583"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327875"
 ---
 # <a name="always-encrypted-wizard"></a>Мастер постоянного шифрования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Используйте **мастер постоянного шифрования** для защиты конфиденциальных данных, хранящихся в базе данных SQL Server. Функция Always Encrypted позволяет клиентам шифровать конфиденциальные данные в клиентских приложениях, не раскрывая ключи шифрования для SQL Server. Таким образом, постоянное шифрование позволяет разделить пользователей на тех, кто владеет данными (или имеет право их просматривать) и тех, кто управляет данными (но не должен иметь к ним доступа).  Полное описание функции см. в разделе [Постоянное шифрование (компонент Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
  
- - Пошаговое руководство по настройке функции постоянного шифрования с помощью мастера и ее использованию в клиентском приложении см. в документе [Учебник по базе данных SQL. Защита конфиденциальных данных с помощью функции постоянного шифрования](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).  
+ - Дополнительные сведения о настройке постоянного шифрования с помощью мастера и его использованию в клиентском приложении см. в руководстве по [защите конфиденциальных данных в Базе данных SQL с помощью Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).  
  
  - Видео, в котором демонстрируется использование мастера, можно просмотреть на странице [Keeping Sensitive Data Secure with Always Encrypted (Безопасное хранение конфиденциальных данных с помощью постоянного шифрования)](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted). Кроме того, в блоге группы безопасности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] есть запись [Мастер шифрования SSMS — несколько простых шагов для включения постоянного шифрования](https://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx).  
  
- - **Разрешения:** чтобы запросить зашифрованные столбцы и выбрать ключи с использованием этого мастера, необходимо иметь разрешения `VIEW ANY COLUMN MASTER KEY DEFINITION` и `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` . Чтобы создать новые ключи, необходимо также иметь разрешения `ALTER ANY COLUMN MASTER KEY` и `ALTER ANY COLUMN ENCRYPTION KEY` .  
+ - **Разрешения**: Чтобы запросить зашифрованные столбцы и выбрать ключи с использованием этого мастера, необходимо иметь разрешения `VIEW ANY COLUMN MASTER KEY DEFINITION` и `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION`. Чтобы создать новые ключи, необходимо также иметь разрешения `ALTER ANY COLUMN MASTER KEY` и `ALTER ANY COLUMN ENCRYPTION KEY` .  
  
  #### <a name="to-open-the-always-encrypted-wizard"></a>Как запустить мастер постоянного шифрования  
  
@@ -57,7 +57,7 @@ ms.locfileid: "51673583"
  
    - **Хранение главного ключа в AKV** : дополнительные сведения см. в статье [Приступая к работе с хранилищем ключей Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).  
  
- - Чтобы создать главный ключ столбца в хранилище ключей Azure, у пользователя должны быть разрешения **WrapKey**, **UnwrapKey**, **Verify**и **Sign** для хранилища ключей. Также могут потребоваться разрешения **Get**, **List**, **Create**, **Delete**, **Update**, **Import**, **Backup**и **Restore** . Дополнительные сведения см. в статье [Что такое хранилище ключей Azure?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) и   [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx).  
+ - Чтобы создать главный ключ столбца в хранилище ключей Azure, у пользователя должны быть разрешения **WrapKey**, **UnwrapKey**, **Verify**и **Sign** для хранилища ключей. Также могут потребоваться разрешения **Get**, **List**, **Create**, **Delete**, **Update**, **Import**, **Backup**и **Restore** . См. дополнительные сведения об [Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) и [Set-AzKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx).  
  
  - Мастер поддерживает только два варианта. Аппаратные модули безопасности и клиентские хранилища должны быть настроены с помощью инструкции [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)].  
  

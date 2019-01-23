@@ -2,7 +2,7 @@
 title: Мастер SQL Server Integration Services (SSIS) Scale Out | Документы Майкрософт
 description: В этой статье описывается компонент "Мастер Scale Out" в SSIS Scale Out.
 ms.custom: performance
-ms.date: 12/19/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,56 +11,61 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 343a06ea9ed68b77ebad6bb09b7b01d6989257c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35a3e6612516750e360e1e223e8e323d068daef1
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854662"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420089"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Главная роль масштабного развертывания служб Integration Services (SSIS)
+
 Мастер Scale Out управляет системой Scale Out посредством каталога SSISDB и службы мастера Scale Out. 
 
-Каталог SSISDB хранит все данные для рабочих ролей Scale Out, пакетов и выполнений. Он обеспечивает интерфейс для использования рабочей роли и выполнения пакетов в масштабном развертывании. Дополнительные сведения см. в статьях [Пошаговое руководство. Настройка масштабного развертывания Integration Services](walkthrough-set-up-integration-services-scale-out.md) и [Выполнение пакетов в службах Integration Services](run-packages-in-integration-services-ssis-scale-out.md).
+Каталог SSISDB хранит все данные для рабочих ролей Scale Out, пакетов и выполнений. Он обеспечивает интерфейс для использования рабочей роли и выполнения пакетов в масштабном развертывании. См. дополнительные сведения в руководствах по [ настройке масштабного развертывания Integration Services](walkthrough-set-up-integration-services-scale-out.md) и [выполнению пакетов в службах Integration Services](run-packages-in-integration-services-ssis-scale-out.md).
 
 Служба мастера Scale Out — это служба Windows, отвечающая за взаимодействие с рабочими ролями Scale Out. Она возвращает состояние выполнения пакетов рабочими ролями Scale Out по протоколу HTTPS и обрабатывает данные в SSISDB. 
 
 ## <a name="scale-out-views-and-stored-procedures-in-ssisdb"></a>Хранимые процедуры и представления Scale Out в SSISDB
 
-### <a name="views"></a>Представления:
--   [[catalog].[master_properties]](../../integration-services/system-views/catalog-master-properties-ssisdb-database.md)
--   [[catalog].[worker_agents]](../../integration-services/system-views/catalog-worker-agents-ssisdb-database.md).
+### <a name="views"></a>Представления
+
+- [[catalog].[master_properties]](../../integration-services/system-views/catalog-master-properties-ssisdb-database.md)
+- [[catalog].[worker_agents]](../../integration-services/system-views/catalog-worker-agents-ssisdb-database.md)
 
 ### <a name="stored-procedures"></a>Хранимые процедуры
 
--   Для управления рабочими ролями Scale Out:  
-    -   [[catalog].[disable_worker_agent]](../../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md)
-    -   [[catalog].[enable_worker_agent]](../../integration-services/system-stored-procedures/catalog-enable-worker-agent-ssisdb-database.md).
+- Для управления рабочими ролями Scale Out:
+    - [[catalog].[disable_worker_agent]](../../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md)
+    - [[catalog].[enable_worker_agent]](../../integration-services/system-stored-procedures/catalog-enable-worker-agent-ssisdb-database.md)
 
-- Для выполнения пакетов в Scale Out:   
-    -   [[catalog].[create_execution]](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)
-    -   [[catalog].[add_execution_worker]](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)
-    -   [[catalog].[start_execution]](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md).   
+- Для выполнения пакетов в Scale Out:
+    - [[catalog].[create_execution]](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)
+    - [[catalog].[add_execution_worker]](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)
+    - [[catalog].[start_execution]](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)
 
 ## <a name="configure-the-scale-out-master-service"></a>Настройка службы мастера Scale Out
-Служба мастера Scale Out настраивается с помощью файла `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`. После изменения файла конфигурации следует перезапустить службу.
+
+Служба мастера Scale Out настраивается с помощью файла `<drive>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`. После изменения файла конфигурации следует перезапустить службу.
 
 
-Конфигурация  |Описание  |Значение по умолчанию  
----------|---------|---------
-PortNumber|Номер сетевого порта, используемый для взаимодействия с рабочей ролью масштабного развертывания.|8391         
-SSLCertThumbprint|Отпечаток SSL-сертификата, используемый для защиты взаимодействия с рабочей ролью масштабного развертывания.|Отпечаток SSL-сертификата, указанный во время установки главной роли масштабного развертывания         
-SqlServerName|Имя [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], содержащего каталог SSISDB. Пример: ServerName\\\\InstanceName.|Имя SQL Server, устанавливаемого вместе с мастером Scale Out.         
-CleanupCompletedJobsIntervalInMs|Интервал очистки завершенных заданий выполнения в миллисекундах.|43200000         
-DealWithExpiredTasksIntervalInMs|Интервал обработки завершенных заданий выполнения в миллисекундах.|300000
-MasterHeartbeatIntervalInMs|Интервал для пульса главной роли масштабного развертывания в миллисекундах. Это свойство указывает интервал, с которым мастер Scale Out обновляет свое состояние в каталоге SSISDB.|30 000
-SqlConnectionTimeoutInSecs|Время ожидания соединения SQL в секундах при подключении к SSISDB.|15    
+|Конфигурация  |Описание  |Значение по умолчанию  |
+|---------|---------|---------|
+|PortNumber|Номер сетевого порта, используемый для взаимодействия с рабочей ролью масштабного развертывания.|8391|
+|SSLCertThumbprint|Отпечаток SSL-сертификата, используемый для защиты взаимодействия с рабочей ролью масштабного развертывания.|Отпечаток SSL-сертификата, указанный во время установки главной роли масштабного развертывания|
+|SqlServerName|Имя [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], содержащего каталог SSISDB. Например, ServerName\\InstanceName.|Имя SQL Server, устанавливаемого вместе с мастером Scale Out.|
+|CleanupCompletedJobsIntervalInMs|Интервал очистки завершенных заданий выполнения в миллисекундах.|43200000|
+|DealWithExpiredTasksIntervalInMs|Интервал обработки завершенных заданий выполнения в миллисекундах.|300000|
+|MasterHeartbeatIntervalInMs|Интервал для пульса главной роли масштабного развертывания в миллисекундах. Это свойство указывает интервал, с которым мастер Scale Out обновляет свое состояние в каталоге SSISDB.|30 000|
+|SqlConnectionTimeoutInSecs|Время ожидания соединения SQL в секундах при подключении к SSISDB.|15|
 ||||    
 
 ## <a name="view-the-scale-out-master-service-log"></a>Просмотр журнала службы мастера Scale Out
-Файл журнала для службы мастера Scale Out находится в папке `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Master`. 
+
+Файл журнала для службы мастера Scale Out находится в папке `<drive>:\Users\[account]\AppData\Local\SSIS\ScaleOut\Master`. 
 
 Параметр *[account]* соответствует учетной записи, с помощью которой выполняется служба мастера Scale Out. По умолчанию это учетная запись `SSISScaleOutMaster140`.
 
 ## <a name="next-steps"></a>Следующие шаги
+
 [Рабочая роль масштабного развертывания служб Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)

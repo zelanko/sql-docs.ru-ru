@@ -1,7 +1,7 @@
 ---
 title: Параметр определения уровня работоспособности базы данных | Документы Майкрософт
 ms.custom: ''
-ms.date: 04/28/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -16,12 +16,12 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 04f1834ebc282044164b2e1d2b77e784b3260973
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7bb2a0c9582fcf5e0092ef23009b9270a7b0d010
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525112"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419969"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Параметр определения уровня работоспособности базы данных группы доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "52525112"
 
 Например, если параметр определения уровня работоспособности базы данных включен и SQL Server не удалось выполнить запись в файл журнала транзакций для одной из баз данных, состояние этой базы данных изменится и будет указывать на сбой. Вскоре произойдет отработка отказа группы доступности, после чего приложение сможет повторно подключиться и продолжить работу с минимальным нарушением после перехода баз данных в сетевой режим.
 
-<a name="enabling-database-level-health-detection"></a>Включение определения уровня работоспособности базы данных
-----
+### <a name="enabling-database-level-health-detection"></a>Включение определения уровня работоспособности базы данных
+
 Несмотря на то, что это обычно рекомендуется сделать, параметр определения работоспособности базы данных **отключен по умолчанию** с целью обеспечения обратной совместимости с параметрами по умолчанию в предыдущих версиях.
 
 Существует несколько простых способов включения параметра определения уровня работоспособности базы данных.
@@ -52,7 +52,7 @@ ms.locfileid: "52525112"
 
 3. Синтаксис Transact-SQL для **CREATE AVAILABILITY GROUP**. Параметр DB_FAILOVER принимает значения ON или OFF.
 
-   ```Transact-SQL
+   ```sql
    CREATE AVAILABILITY GROUP [Contoso-ag]
    WITH (DB_FAILOVER=ON)
    FOR DATABASE [AutoHa-Sample]
@@ -65,7 +65,7 @@ ms.locfileid: "52525112"
 
 4. Синтаксис Transact-SQL для **ALTER AVAILABILITY GROUP**. Параметр DB_FAILOVER принимает значения ON или OFF.
 
-   ```Transact-SQL
+   ```sql
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = ON);
 
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = OFF);
@@ -89,40 +89,40 @@ ms.locfileid: "52525112"
 
 В системном DMV sys.availability_groups отображается столбец db_failover, который указывает, отключен (0) или включен (1) параметр определения уровня работоспособности базы данных.
 
-```Transact-SQL
+```sql
 select name, db_failover from sys.availability_groups
 ```
 
 
 Пример выходных данных DMV:
 
-name  |  db_failover
----------|---------
-| Contoso-ag |  1  |
+|name  |  db_failover|
+|---------|---------|
+| Contoso-ag | 1  |
 
 ### <a name="errorlog"></a>ErrorLog
 В журнале ошибок SQL Server (или тексте из sp_readerrorlog) будет отображаться сообщение об ошибке 41653 в случае отработки отказа группы доступности в результате проверок определения уровня работоспособности базы данных.
 
 Например, в этом фрагменте журнала ошибок показано, что произошел сбой записи в журнал транзакций из-за проблем с диском и впоследствии была завершена работа базы данных с именем AutoHa Sample, в результате чего определение уровня работоспособности базы данных запустило отработку отказа группы доступности.
 
->2016-04-25 12:20:21.08 spid1s      Ошибка: 17053, Серьезность: 16, Состояние: 1.
+>2016-04-25 12:20:21.08 spid1s      Error: 17053, Severity: 16, состояние: 1.
 >
->2016-04-25 12:20:21.08 spid1s      SQLServerLogMgr::LogWriter: Обнаружена ошибка операционной системы 21 (устройство не готово).
+>2016-04-25 12:20:21.08 spid1s      SQLServerLogMgr::LogWriter: Operating system error 21(The device is not ready.) encountered.
 >2016-04-25 12:20:21.08 spid1s      Ошибка записи во время сброса журнала.
 >
->2016-04-25 12:20:21.08 spid79      Ошибка: 9001, Серьезность: 21, Состояние: 4.
+>2016-04-25 12:20:21.08 spid79      Error: 9001, Severity: 21, State: 4.
 >
 >2016-04-25 12:20:21.08 spid79      Журнал для базы данных "AutoHa-Sample" недоступен. Проверьте журнал событий на наличие сообщений о связанных ошибках. Устраните все ошибки и заново запустите базу данных.
 >
->**2016-04-25 12:20:21.15 spid79      Ошибка: 41653, Серьезность: 21, Состояние: 1.**
+>**2016-04-25 12:20:21.15 spid79      Error: 41653, Severity: 21, State: 1.**
 >
->**2016-04-25 12:20:21.15 spid79      База данных "AutoHa-Sample" обнаружила ошибку (тип ошибки: 2 "DB_SHUTDOWN"), которая привела к сбою группы доступности "Contoso-ag".  Дополнительные сведения об обнаруженных ошибках см. в журнале ошибок SQL Server.  Если эта проблема сохраняется, обратитесь к системному администратору.**
+>**2016-04-25 12:20:21.15 spid79      Database 'AutoHa-Sample' encountered an error (error type: 2 'DB_SHUTDOWN') causing failure of the availability group 'Contoso-ag'.  Дополнительные сведения об обнаруженных ошибках см. в журнале ошибок SQL Server.  Если эта проблема сохраняется, обратитесь к системному администратору.**
 >
->2016-04-25 12:20:21.17 spid79      Сведения о состоянии для базы данных "AutoHa-Sample" — зафиксированный номер LSN: "(34:664:1)"    Номер LSN фиксации: "(34:656:1)"    Время фиксации: "Apr 25 2016 12:19PM"
+>2016-04-25 12:20:21.17 spid79      State information for database 'AutoHa-Sample' - Hardened Lsn: '(34:664:1)'    Commit LSN: '(34:656:1)'    Commit Time: 'Apr 25 2016 12:19PM'
 >
 >2016-04-25 12:20:21.19 spid15s     Подключение групп доступности AlwaysOn к базе данных-получателю завершено для базы данных-источника "AutoHa-Sample" в реплике доступности "SQLServer-0" с ИД реплики: {c4ad5ea4-8a99-41fa-893e-189154c24b49}. Это информационное сообщение. Вмешательство пользователя не требуется.
 >
->2016-04-25 12:20:21.21 spid75 Always On: локальная реплика группы доступности "Contoso-ag" готовится к переходу к роли разрешения в ответ на запрос от кластера WSFC. Это информационное сообщение. Вмешательство пользователя не требуется.
+>2016-04-25 12:20:21.21 spid75      Always On: The local replica of availability group 'Contoso-ag' is preparing to transition to the resolving role in response to a request from the Windows Server Failover Clustering (WSFC) cluster. Это информационное сообщение. Вмешательство пользователя не требуется.
 >
 >2016-04-25 12:20:21.21 spid75      Состояние локальной реплики доступности в группе доступности "ag" было изменено с "PRIMARY_NORMAL" на "RESOLVING_NORMAL".  Состояние изменено, так как группа доступности переходит в режим "вне сети".  Реплика переходит в автономный режим, поскольку связанная группа доступности была удалена или пользователь перевел связанную группу доступности в режим "вне сети" на консоли управления сервером отказоустойчивой кластеризации Windows (WSFC), или группа доступности переходит на другой экземпляр SQL Server.  Дополнительные сведения см. в журнале ошибок SQL Server, консоли управления отказоустойчивой кластеризации Windows Server (WSFC) или журнале WSFC.
 
@@ -135,7 +135,8 @@ name  |  db_failover
 Ниже приведен пример создания сеанса XEvent, который записывает это событие. Так как путь не указан, выходной файл XEvent должен находиться в пути к журналу ошибок SQL Server по умолчанию. В первичной реплике группы доступности выполните следующий скрипт:
 
 Пример скрипта сеанса расширенных событий
-```
+
+```sql
 CREATE EVENT SESSION [AlwaysOn_dbfault] ON SERVER
 ADD EVENT sqlserver.availability_replica_database_fault_reporting
 ADD TARGET package0.event_file(SET filename=N'dbfault.xel',max_file_size=(5),max_rollover_files=(4))
@@ -151,32 +152,32 @@ GO
 
 Описание полей:
 
-|Столбец данных    | Описание
-|---------|---------
-|availability_group_id  |Идентификатор группы доступности.
-|availability_group_name    |Имя группы доступности.
-|availability_replica_id    |Идентификатор реплики доступности.
-|availability_replica_name  |Имя реплики доступности.
-|database_name  |Имя базы данных, сообщившей о сбое.
-|database_replica_id    |Идентификатор реплики базы данных доступности.
-|failover_ready_replicas    |Количество синхронизируемых вторичных реплик файлов для автоматического перехода в случае сбоя.
-|fault_type     | Идентификатор сообщенного сбоя. Возможные значения:  <br/> 0 — отсутствует <br/>1 — неизвестно<br/>2 — завершение работы
-|is_critical    | Это значение всегда должно возвращать true для XEvent, начиная с SQL Server 2016.
+|Столбец данных | Описание|
+|---------|---------|
+|availability_group_id |Идентификатор группы доступности.|
+|availability_group_name |Имя группы доступности.|
+|availability_replica_id |Идентификатор реплики доступности.|
+|availability_replica_name |Имя реплики доступности.|
+|database_name |Имя базы данных, сообщившей о сбое.|
+|database_replica_id |Идентификатор реплики базы данных доступности.|
+|failover_ready_replicas |Количество синхронизируемых вторичных реплик файлов для автоматического перехода в случае сбоя.|
+|fault_type  | Идентификатор сообщенного сбоя. Возможные значения:  <br/> 0 — отсутствует <br/>1 — неизвестно<br/>2 — завершение работы|
+|is_critical | Это значение всегда должно возвращать true для XEvent, начиная с SQL Server 2016.|
 
 
 В выходных данных этого примера fault_type показывает, что в группе доступности "Contoso-ag" в реплике "SQLSERVER-1" произошло критическое событие из-за имени базы данных "AutoHa-Sample2" с типом сбоя "2 — завершение работы".
 
-|Поле  | Значение
-|---------|---------
-|availability_group_id |    24E6FE58-5EE8-4C4E-9746-491CFBB208C1
-|availability_group_name |  Contoso-ag
-|availability_replica_id    | 3EAE74D1-A22F-4D9F-8E9A-DEFF99B1F4D1
-|availability_replica_name |    SQLSERVER-1
-|database_name |    AutoHa-Sample2
-|database_replica_id | 39971379-8161-4607-82E7-098590E5AE00
-|failover_ready_replicas |  1
-|fault_type |   2
-|is_critical    | True
+|Поле  | Значение|
+|---------|---------|
+|availability_group_id | 24E6FE58-5EE8-4C4E-9746-491CFBB208C1|
+|availability_group_name | Contoso-ag|
+|availability_replica_id | 3EAE74D1-A22F-4D9F-8E9A-DEFF99B1F4D1|
+|availability_replica_name | SQLSERVER-1|
+|database_name | AutoHa-Sample2|
+|database_replica_id | 39971379-8161-4607-82E7-098590E5AE00|
+|failover_ready_replicas | 1|
+|fault_type | 2|
+|is_critical | True|
 
 
 ### <a name="related-references"></a>Связанные справочники

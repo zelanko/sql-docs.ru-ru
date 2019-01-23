@@ -23,12 +23,12 @@ ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca04967d4230ce6693736b53c99a21bbfd07eae6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cd5f5aac2f12cd20b5459f4b1f725b975b4dd1e7
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125694"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419829"
 ---
 # <a name="replication-agent-administration"></a>Администрирование агента репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "54125694"
   
     -   Агент чтения очереди.  
   
-     Получить доступ к сведениям и задачам, связанным с этими агентами, можно на вкладке **Агенты** . Дополнительные сведения см. в разделе "Просмотр сведений и выполнение задач с помощью монитора репликации](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)".  
+     Получить доступ к сведениям и задачам, связанным с этими агентами, можно на вкладке **Агенты** . См. дополнительные сведения о просмотре сведений и выполнении задач с помощью [монитора репликации](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   С подписками в мониторе репликации связаны следующие агенты:  
   

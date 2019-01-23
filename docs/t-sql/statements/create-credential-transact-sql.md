@@ -21,16 +21,16 @@ helpviewer_keywords:
 - CREATE CREDENTIAL statement
 - credentials [SQL Server], CREATE CREDENTIAL statement
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e0481611eb666b893395581805c923cf03921ad9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 91cc75f835320b6cf15c20cbb7d72101dc2868df
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509381"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327785"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ WITH IDENTITY = 'identity_name'
  SECRET **='**_secret_**'**  
  Указывает секретный код, необходимый для исходящей проверки подлинности.  
   
- При использовании учетных данных для доступа к хранилищу Azure Key Vault в аргументе **SECRET** инструкции **CREATE CREDENTIAL** требуется указать *\<идентификатор клиента>* (без дефисов) и *\<секрет>* **субъекта-службы** в Azure Active Directory без пробела между ними. См. пример В далее. Если в учетных данных используется подписанный URL-адрес, **SECRET** — это токен подписанного URL-адреса. См. пример Г ниже.  Сведения о создании хранимой политики доступа и подписанного URL-адреса в контейнере Azure см. в разделе [Занятие 1. Создание хранимой политики доступа и подписанного URL-адреса для контейнера Azure](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
+ При использовании учетных данных для доступа к хранилищу Azure Key Vault в аргументе **SECRET** инструкции **CREATE CREDENTIAL** требуется указать *\<идентификатор клиента>* (без дефисов) и *\<секрет>* **субъекта-службы** в Azure Active Directory без пробела между ними. См. пример В далее. Если в учетных данных используется подписанный URL-адрес, **SECRET** — это токен подписанного URL-адреса. См. пример Г ниже.  Для получения дополнительных сведений см. [Занятие 1. Создание хранимой политики доступа и подписанного URL-адреса для контейнера Azure.](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
   
  FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name*  
  Указывает имя, на которое ссылается *поставщик расширенного управления ключами (EKM)*. Дополнительные сведения об управлении ключами см. в статье [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
@@ -146,7 +146,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>Г. Создание учетных данных с помощью токена SAS  
  **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
- В приведенном ниже примере создаются учетные данные с подписанным URL-адресом с использованием токена SAS.  Руководство по созданию хранимой политики доступа и подписанного URL-адреса в контейнере Azure с последующим созданием учетных данных с помощью подписанного URL-адреса см. в разделе [Учебник. Использование службы хранилища BLOB-объектов Microsoft Azure с базами данных SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+ В приведенном ниже примере создаются учетные данные с подписанным URL-адресом с использованием токена SAS.  См. дополнительные сведения о создании хранимой политики доступа и подписанного URL-адреса в контейнере Azure с последующим созданием учетных данных с помощью подписанного URL-адреса в [руководстве по использованию службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 >  Аргумент **CREDENTIAL NAME** требует, чтобы имя соответствовало пути к контейнеру, начиналось с префикса https и не содержало завершающей косой черты. Для аргумента **IDENTITY** требуется имя *SHARED ACCESS SIGNATURE*. Для аргумента **SECRET** требуется токен подписанного URL-адреса.  
@@ -167,7 +167,7 @@ GO
  [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER LOGIN (Transact-SQL)](../../t-sql/statements/alter-login-transact-sql.md)   
  [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
- [Занятие 2. Создание учетных данных SQL Server с помощью подписанного URL-адреса](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
+ [Занятие 2. Создание учетных данных SQL Server с помощью подписанного URL-адреса](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
  [Подписанные URL-адреса](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
   
   

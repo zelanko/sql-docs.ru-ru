@@ -35,12 +35,12 @@ ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8480a8b8f3889a1686d29bcd3858ee3921383cd
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a73e8c25d891350f26bfff0ce62a2835fc5355d0
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559479"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405844"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Управление метаданными при предоставлении доступа к базе данных на другом сервере
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "51559479"
   
   
 ##  <a name="cross_database_queries"></a> Cross-Database Queries  
- Параметры базы данных DB_CHAINING и TRUSTWORTHY по умолчанию принимают значение OFF. Если в исходной базе данных какой-либо из этих параметров имеет значение ON, то может потребоваться его включение в целевом экземпляре сервера. Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
+ Параметры базы данных DB_CHAINING и TRUSTWORTHY по умолчанию принимают значение OFF. Если в исходной базе данных какой-либо из этих параметров имеет значение ON, то может потребоваться его включение в целевом экземпляре сервера. Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  Операции присоединения и отсоединения приводят к отмене межбазовых цепочек владения для базы данных. Сведения о том, как включить цепочки владения, см. в разделе [Параметр конфигурации сервера "cross db ownership chaining"](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   
@@ -131,7 +131,7 @@ ms.locfileid: "51559479"
   
  Чтобы разрешить автоматическое шифрование главного ключа базы данных на экземпляре сервера, копия этого ключа зашифровывается с использованием главного ключа службы. Эта зашифрованная копия хранится как в рабочей базе данных, так и в базе данных **master**. Как правило, копия, которая хранится в базе данных **master** , обновляется без взаимодействия с пользователем при каждом изменении главного ключа. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сначала пытается расшифровать главный ключ базы данных с использованием главного ключа службы экземпляра. Если расшифровка заканчивается неудачей, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет в хранилище учетных данных поиск учетных данных главного ключа, имеющих идентификатор GUID того же семейства, что и у базы данных, для которой нужен главный ключ. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается расшифровать главный ключ базы данных с помощью всех подходящих учетных данных, пока не удастся расшифровать ключ или пока не кончатся учетные данные. Главный ключ, который не зашифрован с помощью главного ключа службы, следует открывать с помощью инструкции OPEN MASTER KEY и пароля.  
   
- При копировании, восстановлении или присоединении зашифрованного ключа базы данных на новом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в базе данных **master** целевого сервера не содержится копия главного ключа базы данных, зашифрованного с использованием главного ключа службы. На целевом экземпляре сервера необходимо открыть главный ключ базы данных. Для открытия главного ключа выполните следующую инструкцию: OPEN MASTER KEY DECRYPTION BY PASSWORD **='**_пароль_**'**. После этого рекомендуется включить автоматическую расшифровку главного ключа базы данных, выполнив следующую инструкцию: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Эта инструкция передает экземпляру сервера копию главного ключа базы данных, зашифрованного с использованием главного ключа службы. Дополнительные сведения см. в разделах [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) и [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md).  
+ При копировании, восстановлении или присоединении зашифрованного ключа базы данных на новом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в базе данных **master** целевого сервера не содержится копия главного ключа базы данных, зашифрованного с использованием главного ключа службы. На целевом экземпляре сервера необходимо открыть главный ключ базы данных. Сделать это можно, выполнив следующую инструкцию: OPEN MASTER KEY DECRYPTION BY PASSWORD **='**_password_**'**. После этого рекомендуется выполнить следующую инструкцию, чтобы включить автоматическое дешифрование главного ключа: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Эта инструкция передает экземпляру сервера копию главного ключа базы данных, зашифрованного с использованием главного ключа службы. Дополнительные сведения см. в разделах [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) и [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
  Сведения о включении автоматической расшифровки главного ключа базы данных в зеркальной базе данных см. в разделе [Настройка зашифрованной зеркальной базы данных](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
@@ -263,7 +263,7 @@ ms.locfileid: "51559479"
   
  Для создания скрипта для нескольких или всех объектов исходной копии базы данных можно воспользоваться мастером создания скриптов и в диалоговом окне **Выбор параметров скрипта** установить значение **TRUE** для параметра **Внести в скрипт имена входа**.  
   
-> **ПРИМЕЧАНИЕ.** Сведения о настройке имен входа для зеркально отображаемой базы данных см. в разделах [Настройка учетных записей входа для зеркального отображения баз данных или групп доступности AlwaysOn (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) и [Управление именами входа и заданиями после переключения ролей &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
+> **ПРИМЕЧАНИЕ.** См. дополнительные сведения о [настройке учетных записей входа для зеркального отображения баз данных или групп доступности AlwaysOn (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) и [управлении именами входа и заданиями после переключения ролей (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
   
 ##  <a name="permissions"></a> Permissions  

@@ -13,12 +13,12 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 84238231c3a36e4c29e8fead452feb201ab0f36e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14bdacd3cf156e2902d8fac54b08ec939da640e7
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851042"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54317794"
 ---
 # <a name="enable-and-configure-filestream"></a>Включение и настройка FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "47851042"
 |Уровень RAID|Производительность записи|Производительность чтения|Отказоустойчивость|Remarks|  
 |RAID 5|Нормальный|Нормальный|Высокая|Производительность лучше, чем у диска или JBOD, но хуже, чем у RAID 0 или RAID 5 с чередованием.|  
 |RAID 0|Высокая|Высокая|None||  
-|RAID 5 + чередование|Высокая|Высокая|Высокая|Самый дорогостоящий вариант.|  
+|RAID 5 + чередование|Высокая|Высокая|Высокая|Самый дорогостоящий вариант.|  
   
   
 ###  <a name="database"></a> Физическая структура базы данных  

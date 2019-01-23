@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: b7bf2dcebf6b9b453a0f5ff839b9eb627698899e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 48db6ede27c4ca7565ca4de1b0eab798c1eb2ef7
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520692"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327845"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Обслуживание соединителя SQL Server и устранение неполадок
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,14 +37,14 @@ ms.locfileid: "52520692"
   
  При прозрачном шифровании данных это можно сделать следующим образом.  
   
--   **В PowerShell:** создайте в хранилище ключей асимметричный ключ (его имя должно отличаться от текущего асимметричного ключа прозрачного шифрования данных).  
+-   **С помощью PowerShell**. Создайте в Key Vault асимметричный ключ (его имя должно отличаться от текущего асимметричного ключа прозрачного шифрования данных).  
   
     ```powershell  
-    Add-AzureRmKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
+    Add-AzKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
       -Name 'Key2' -Destination 'Software'  
     ```  
   
--   **С помощью [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] или sqlcmd.exe:** используйте следующие инструкции, как показано в этапе 3 раздела 3.  
+-   **С помощью [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] или sqlcmd.exe**. Используйте следующие инструкции, как показано на шаге 3 в разделе 3.  
   
      Импортируйте новый асимметричный ключ.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "52520692"
 * Предоставить разрешения субъекту-службе SQL Server на использование этого нового хранилища.  
 * Изменить учетные данные SQL Server, используемые ядром СУБД, чтобы отразить новое имя хранилища (при необходимости).  
   
-Резервные копии ключей можно восстанавливать в разных регионах Azure при условии, что они остаются в одной географической области или одном национальном облаке: в США, Канаде, Японии, Австралии, Индии, Азиатско-Тихоокеанском регионе, Европе, Бразилии, Китае, правительстве США или Германии.  
+Резервные копии ключей можно восстанавливать в разных регионах Azure при условии, что они остаются в одной географической области или одном национальном облаке: в США, Канаде, Японии, Австралии, Индии, Азиатско-Тихоокеанском регионе, Европе, Бразилии, Китае, Германии или регионе US Gov.  
   
   
 ##  <a name="AppendixB"></a> Б. Часто задаваемые вопросы  

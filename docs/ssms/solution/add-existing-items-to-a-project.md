@@ -14,16 +14,16 @@ ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c383707f9dd7dcef2cb6bf5516092025a4cc18a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: db4a09177a9af1afa73fadfbf585f5b9e0f0b8ab
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697382"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397523"
 ---
 # <a name="add-existing-items-to-a-project"></a>Добавление существующих элементов в проект
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Для расширения возможностей приложения в проект можно добавлять новые элементы. Существующий элемент может быть запросом или произвольным файлом. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] имеет два типа проектов: проект скрипта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и проект скрипта служб Analysis Services. Тип проекта определяет типы файлов запросов, которые могут быть добавлены в проект. Например, запрос [!INCLUDE[tsql](../../includes/tsql-md.md)] (SQL-файл) можно добавить в проект скрипта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но нельзя добавить в проект скрипта служб Analysis Services. О том, как связать расширения файлов с типами проектов, см. в разделе [Практическое руководство. Связывание расширения файла с редактором кода](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
+Для расширения возможностей приложения в проект можно добавлять новые элементы. Существующий элемент может быть запросом или произвольным файлом. Среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] имеет два типа проектов: проект скрипта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и проект скрипта служб Analysis Services. Тип проекта определяет типы файлов запросов, которые могут быть добавлены в проект. Например, запрос [!INCLUDE[tsql](../../includes/tsql-md.md)] (SQL-файл) можно добавить в проект скрипта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но нельзя добавить в проект скрипта служб Analysis Services. См. дополнительные сведения о [связывании расширений файла с редактором кода](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
   
 ### <a name="to-add-an-existing-query-or-a-miscellaneous-file-to-a-project"></a>Добавление существующего запроса или произвольного файла в проект  
   
@@ -47,7 +47,7 @@ ms.locfileid: "51697382"
     Используйте этот параметр для фильтрации отображаемых файлов и папок. Введите полное или частичное имя файла для фильтра. Используйте знак звездочки (`*`) в шаблоне имени.  
   
     > [!NOTE]  
-    > Просмотрите сетевые и веб-узлы, вводя сетевой путь или URL-адрес в поле **Имя файла** . Например, при вводе **https://mywebsite** отобразятся файлы, доступные на веб-сайте mywebsite, а при вводе **\\\myserver\myshare** — файлы, расположенные в папке myshare на сервере myserver.  
+    > Просмотрите сетевые и веб-узлы, вводя сетевой путь или URL-адрес в поле **Имя файла** . Например, при вводе **`https://mywebsite`** отобразятся файлы, доступные на веб-сайте mywebsite, а при вводе **\\\myserver\myshare** — файлы, расположенные в папке myshare на сервере myserver.  
   
     **Тип файлов**  
     Используйте этот параметра для фильтрации файлов по расширению. Предлагается список из наиболее употребляемых типов файлов.  

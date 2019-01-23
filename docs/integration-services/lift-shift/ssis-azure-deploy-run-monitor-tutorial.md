@@ -11,14 +11,14 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: fc9923cdc27594c37e8f89390f0cb4906f3478f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11a429ef4dec41fa316831ae38a76e4a7998d558
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758952"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326135"
 ---
-# <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Учебник. Развертывание и выполнение пакета служб SQL Server Integration Services (SSIS) в Azure
+# <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Учебник. Развертывание и выполнение пакета служб SQL Server Integration Services (SSI) в Azure
 В этом учебнике рассказывается, как развернуть проект служб SQL Server Integration Services (SSIS) в каталоге SSISDB, расположенном в базе данных SQL Azure, запустить пакет в среде Azure-SSIS Integration Runtime и отслеживать его выполнение.
 
 ## <a name="prerequisites"></a>предварительные требования
@@ -206,13 +206,13 @@ Write-Host "All done."
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>Получение метаданных о среде Integration Runtime для Azure-SSIS
 
 ```powershell
-Get-AzureRmDataFactoryV2IntegrationRuntime -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
+Get-AzDataFactoryV2IntegrationRuntime -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
 ```
 
 ### <a name="get-the-status-of-the-azure-ssis-integration-runtime"></a>Получение сведений о состоянии среды Integration Runtime для Azure-SSIS
 
 ```powershell
-Get-AzureRmDataFactoryV2IntegrationRuntime -Status -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
+Get-AzDataFactoryV2IntegrationRuntime -Status -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
 ```
 
 ## <a name="next-steps"></a>Следующие шаги

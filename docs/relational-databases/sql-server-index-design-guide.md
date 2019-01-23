@@ -1,7 +1,7 @@
 ---
 title: Руководство по архитектуре и разработке индексов SQL Server | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/06/2018
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 217fe5bc510d5f25eaddfad69fa08ad4dd760c8f
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: e294759588beeb5d79f4613848ca49634d8e40cf
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712705"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420189"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Руководство по архитектуре и разработке индексов SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -218,7 +218,7 @@ ON Purchasing.PurchaseOrderDetail
 |-|-|
 |[sys.indexes (Transact-SQL)](../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|[sys.index_columns (Transact-SQL)](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|  
 |[sys.partitions (Transact-SQL)](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|
-[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
+|[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
 |[sys.column_store_segments (Transact-SQL)](../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
 |[sys.column_store_row_groups (Transact-SQL)](../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|
 |[sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
@@ -824,7 +824,7 @@ HASH (Column2) WITH (BUCKET_COUNT = 64);
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>Архитектура некластеризованного индекса в памяти
 
-Некластеризованные индексы в памяти реализуются с помощью структуры данных, которая называется BW-деревом. Она была изобретена и описана подразделением Microsoft Research в 2011 году. BW-дерево является разновидностью сбалансированного дерева без блокировок и кратковременных блокировок. Более подробные сведения см. в документе [BW-дерево: сбалансированное дерево для новых аппаратных платформ](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/). 
+Некластеризованные индексы в памяти реализуются с помощью структуры данных, которая называется BW-деревом. Она была изобретена и описана подразделением Microsoft Research в 2011 году. BW-дерево является разновидностью сбалансированного дерева без блокировок и кратковременных блокировок. См. дополнительные сведения о [сбалансированном дереве для новых аппаратных платформ](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/). 
 
 В самой общей форме BW-дерево состоит из карты страниц, упорядоченных по идентификаторам (PidMap), средства для выделения и повторного использования идентификаторов страниц (PidAlloc) и набора страниц, связанных с картой страниц и друг с другом. Эти три основных компонента образуют базовую внутреннюю структуру BW-дерева.
 
@@ -856,7 +856,7 @@ HASH (Column2) WITH (BUCKET_COUNT = 64);
 
 ![hekaton_tables_23f](../relational-databases/in-memory-oltp/media/HKNCI_Split.gif "Разделение страниц")
 
-**Шаг 1**. Выделяются две новые страницы (P1 и P2), и строки со старой страницы P1, включая вставляемую строку, разделяются по этим новым страницам. Для хранения физического адреса страницы P2 используется новый слот в таблице сопоставления страниц. Страницы P1 и P2 пока не доступны для параллельных операций. Кроме того, задается логический указатель со страницы P1 на P2. Затем в рамках одного этапа указатель со старой страницы P1 в таблице сопоставления страниц меняется на указатель с новой страницы P1. 
+**Шаг 1**. Выделяются две новые страницы (P1 и P2), и строки со старой страницы P1, включая вставляемую строку, разделяются между этими новыми страницами. Для хранения физического адреса страницы P2 используется новый слот в таблице сопоставления страниц. Страницы P1 и P2 пока не доступны для параллельных операций. Кроме того, задается логический указатель со страницы P1 на P2. Затем в рамках одного этапа указатель со старой страницы P1 в таблице сопоставления страниц меняется на указатель с новой страницы P1. 
 
 **Шаг 2**. Неконечная страница указывает на P1, но прямого указателя с неконечной страницы на P2 нет. Страница P2 доступна только через P1. Чтобы создать указатель с неконечной страницы на P2, выделите новую неконечную страницу (внутреннюю страницу индекса), скопируйте все строки со старой неконечной страницы и добавьте новую строку, указывающую на P2. После этого в рамках одного этапа указатель со старой неконечной страницы в таблице сопоставления страниц меняется на указатель с новой неконечной страницы.
 
@@ -871,9 +871,9 @@ HASH (Column2) WITH (BUCKET_COUNT = 64);
 
 **Шаг 1**. Создается разностная страница, представляющая значение ключа 10 (синий треугольник), а указатель этого значения на неконечной странице Pp1 устанавливается на новую разностную страницу. Кроме того, создается специальная разностная страница слияния (зеленый треугольник), которая связывается с разностной страницей. На этом этапе обе страницы (разностная страница и разностная страница слияния) недоступны для параллельных транзакций. В рамках этого же этапа указатель на страницу конечного уровня P1 в таблице сопоставления страниц обновляется так, чтобы теперь он указывал на разностную страницу слияния. После этого этапа запись значения ключа 10 на странице Pp1 будет указывать на разностную страницу слияния. 
 
-**Этап 2**. Необходимо удалить строку, представляющую значение ключа 7 на неконечной странице Pp1, и обновить запись для значения ключа 10 так, чтобы она указывала на страницу P1. Для этого выделяется новая неконечная страница Pp2 и копируются все строки со страницы Pp1, кроме строки, представляющей значение ключа 7. Затем строка значения ключа 10 обновляется так, чтобы теперь она указывала на страницу P1. После этого в рамках того же этапа запись, указывающая на Pp1, в таблице сопоставления страниц обновляется так, чтобы теперь она указывала на Pp2. Страница Pp1 больше не доступна. 
+**Шаг 2**. Необходимо удалить строку, представляющую значение ключа 10 на неконечной странице Pp1, и обновить запись для значения ключа 10 так, чтобы она указывала на страницу P1. Для этого выделяется новая неконечная страница Pp2 и копируются все строки со страницы Pp1, кроме строки, представляющей значение ключа 7. Затем строка значения ключа 10 обновляется так, чтобы теперь она указывала на страницу P1. После этого в рамках того же этапа запись, указывающая на Pp1, в таблице сопоставления страниц обновляется так, чтобы теперь она указывала на Pp2. Страница Pp1 больше не доступна. 
 
-**Шаг 3**. Страницы конечного уровня P2 и P1 сливаются, а разностные страницы удаляются. Для этого выделяется новая страница P3, сливаются строки со страниц P2 и P1, а изменения разностной страницы включаются в новую страницу P3. После этого в рамках того же этапа запись, указывающая на P1, в таблице сопоставления страниц обновляется так, чтобы теперь она указывала на страницу P3. 
+**Шаг 3**. Страницы конечного уровня P2 и P1 сливаются, а разностные страницы удаляются. Для этого выделяется новая страница P3, сливаются строки со страниц P2 и P1, а изменения разностной страницы включаются в новую страницу P3. После этого в рамках того же этапа запись, указывающая на P1, в таблице сопоставления страниц обновляется так, чтобы теперь она указывала на страницу P3. 
 
 ### <a name="performance-considerations"></a>Вопросы производительности
 

@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33faa406912e2f80d6911e9e4f94b27397e89cef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3893672f6d253bf3f428198dd58d63e3cac30baa
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534762"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326425"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Создание и хранение главных ключей столбцов (постоянное шифрование)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -120,16 +120,16 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 
 ```
 # Create a column master key in Azure Key Vault.
-Login-AzureRmAccount
+Connect-AzAccount
 $SubscriptionId = "<Azure subscription ID>"
 $resourceGroup = "<resource group name>"
 $azureLocation = "<key vault location>"
 $akvName = "<key vault name>"
 $akvKeyName = "<column master key name>"
-$azureCtx = Set-AzureRMContext -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
-New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
-New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
-Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
+$azureCtx = Set-AzContext -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
+New-AzResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
+New-AzKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
+Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
 ```
 
@@ -145,7 +145,7 @@ $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destinatio
 
 #### <a name="using-powershell"></a>Использование PowerShell
 
-Чтобы предоставить пользователям и приложениям доступ к фактическим ключам в хранилище ключей Azure, необходимо задать политику доступа к хранилищу ([Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx)).
+Чтобы предоставить пользователям и приложениям доступ к фактическим ключам в Azure Key Vault, необходимо задать политику доступа к хранилищу ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)).
 
 ```
 $vaultName = "<vault name>"
@@ -154,9 +154,9 @@ $userPrincipalName = "<user to grant access to>"
 $clientId = "<client Id>"
 
 # grant users permissions to the keys:
-Set-AzureRmKeyVaultAccessPolicy -VaultName $vaultName -ResourceGroupName $resourceGroupName -PermissionsToKeys create,get,wrapKey,unwrapKey,sign,verify,list -UserPrincipalName $userPrincipalName
+Set-AzKeyVaultAccessPolicy -VaultName $vaultName -ResourceGroupName $resourceGroupName -PermissionsToKeys create,get,wrapKey,unwrapKey,sign,verify,list -UserPrincipalName $userPrincipalName
 # grant applications permissions to the keys:
-Set-AzureRmKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $resourceGroupName -ServicePrincipalName $clientId -PermissionsToKeys get,wrapKey,unwrapKey,sign,verify,list
+Set-AzKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $resourceGroupName -ServicePrincipalName $clientId -PermissionsToKeys get,wrapKey,unwrapKey,sign,verify,list
 ```
 
 ## <a name="creating-column-master-keys-in-hardware-security-modules-using-cng"></a>Создание главных ключей столбцов в аппаратных модулях безопасности с помощью CNG
@@ -207,11 +207,11 @@ $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyNa
 
 Главный ключ столбца для постоянного шифрования может храниться в хранилище ключей, реализующем API криптографии (CAPI). Как правило, такое хранилище представляет собой аппаратный модуль безопасности (HSM) — физическое устройство, которое защищает цифровые ключи и управляет ими, а также обеспечивает обработку шифрования. Аппаратные модули безопасности традиционно имеют вид подключаемой платы или внешнего устройства, напрямую подключаемого к компьютеру (локальный HSM) или сетевому серверу.
 
-Чтобы модуль HSM был доступен для приложений на данном компьютере, на компьютере должен быть установлен и настроен поставщик служб шифрования (CSP), реализующий CAPI. Клиентский драйвер с постоянным шифрованием (поставщик хранилища главных ключей столбцов в драйвере) использует CSP для шифрования и расшифровки ключей шифрования столбцов, защищенных главным ключом столбца, который хранится в хранилище ключей. Примечание. CAPI — это устаревший API, который не рекомендуется использовать. Если для вашего модуля HSM доступен поставщик KSP, следует использовать именно его, а не CSP или CAPI.
+Чтобы модуль HSM был доступен для приложений на данном компьютере, на компьютере должен быть установлен и настроен поставщик служб шифрования (CSP), реализующий CAPI. Клиентский драйвер с постоянным шифрованием (поставщик хранилища главных ключей столбцов в драйвере) использует CSP для шифрования и расшифровки ключей шифрования столбцов, защищенных главным ключом столбца, который хранится в хранилище ключей. Примечание. CAPI — это устаревший API, который не рекомендуется использовать. Если для вашего модуля HSM доступен поставщик KSP, следует использовать именно его, а не CSP или CAPI.
 
 CSP должен поддерживать алгоритм RSA, используемый с постоянным шифрованием.
 
-В состав Windows входят следующие программные (не поддерживаемые модулем HSM) поставщики CSP, которые поддерживают RSA и могут использоваться в целях тестирования: Microsoft Enhanced RSA и AES Cryptographic Provider.
+В состав Windows входят следующие программные (не поддерживаемые модулем HSM) поставщики CSP, которые поддерживают RSA и могут использоваться для тестирования: Microsoft Enhanced RSA и AES Cryptographic Provider.
 
 ### <a name="creating-column-master-keys-in-a-key-store-using-capicsp"></a>Создание главных ключей столбцов в хранилище ключей с помощью CAPI или CSP
 

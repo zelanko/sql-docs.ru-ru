@@ -1,7 +1,7 @@
 ---
 title: Роли уровня базы данных | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/29/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -39,14 +39,15 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f90a0ac06ed8852410874ffc2fb4a26b04ebf3c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8d205e184f31e628cf9629b702e21e43c200e38
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780832"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420099"
 ---
 # <a name="database-level-roles"></a>Роли уровня базы данных
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Для удобства управления разрешениями в базах данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет несколько *ролей* , которые являются субъектами безопасности, группирующими других участников. Они подобны ***группам*** в операционной системе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Разрешения ролей уровня базы данных распространяются на всю базу данных.  
@@ -92,11 +93,11 @@ ms.locfileid: "47780832"
 
 |Имя роли|Описание|  
 |--------------------|-----------------|
-**dbmanager** | Может создавать и удалять базы данных. Член роли dbmanager, который создает базу данных, становится ее владельцем, что позволяет ему подключиться к этой базе данных в качестве пользователя dbo. Пользователь dbo имеет все разрешения в этой базе данных. Члены роли dbmanager необязательно обладают разрешениями для доступа к базам данных, которые им не принадлежат.
-**loginmanager** | Может создать и удалять имена входа в виртуальной базе данных master.  
+|**dbmanager** | Может создавать и удалять базы данных. Член роли dbmanager, который создает базу данных, становится ее владельцем, что позволяет ему подключиться к этой базе данных в качестве пользователя dbo. Пользователь dbo имеет все разрешения в этой базе данных. Члены роли dbmanager необязательно обладают разрешениями для доступа к базам данных, которые им не принадлежат.|
+|**loginmanager** | Может создать и удалять имена входа в виртуальной базе данных master.|
 
 > [!NOTE]
-> Субъект на уровне сервера и администратор Azure Active Directory (если настроено) имеют все разрешения в [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] без необходимости участия в каких-либо ролях. Дополнительные сведения см. в разделе [SQL Database Authentication and Authorization: Granting Access](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)(Проверка подлинности и авторизация базы данных SQL: предоставление доступа). 
+> Субъект на уровне сервера и администратор Azure Active Directory (если настроено) имеют все разрешения в [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] без необходимости участия в каких-либо ролях. См. дополнительные сведения об [аутентификации и авторизация базы данных SQL, включая предоставление доступа](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
   
 ## <a name="msdb-roles"></a>Роли базы данных msdb  
  База данных msdb содержит специальные роли, показанные в следующей таблице.  
@@ -114,7 +115,7 @@ ms.locfileid: "47780832"
 
 ## <a name="working-with-r-services"></a>Работа со службами R Services  
 
-**Область применения:** SQL Server, начиная с [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
+**Применимо к:** SQL Server, начиная с [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
 
 При установке служб R Services доступны дополнительные роли базы данных для управления пакетами. Дополнительные сведения см. в разделе [Управление пакетами R для SQL Server](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
 

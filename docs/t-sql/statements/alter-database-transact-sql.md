@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9eb95a89fa8539eede53a154f7e7087a3f31f71b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 64c4819bd307afe3b7e4b310949148deabb8c938
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135324"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327816"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -82,7 +82,7 @@ ALTER DATABASE
 Синтаксис параметров SET инструкции ALTER DATABASE, имеющих отношение к уровням совместимости базы данных, и дополнительная информация об этом.  
   
 ## <a name="syntax"></a>Синтаксис  
-  
+
 ```
 -- SQL Server Syntax  
 ALTER DATABASE { database_name  | CURRENT }  
@@ -124,14 +124,15 @@ ALTER DATABASE { database_name  | CURRENT }
  
 <compatibility_level>
    { 140 | 130 | 120 | 110 | 100 | 90 }   
-```  
-  
+```
+
 ## <a name="arguments"></a>Аргументы  
+
 *database_name*  
 Имя изменяемой базы данных.  
   
-> [!NOTE]  
->  Этот параметр недоступен в автономной базе данных.  
+> [!NOTE]
+> Этот параметр недоступен в автономной базе данных.
   
 CURRENT  
 **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -159,7 +160,8 @@ COLLATE *collation_name*
 **\<file_and_filegroup_options>::=**  
 Дополнительные сведения см. в статье [Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
 Чтобы удалить базу данных, используйте инструкцию [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).  
   
 Чтобы уменьшить размер базы данных, используйте предложение [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
@@ -191,7 +193,8 @@ COLLATE *collation_name*
 - Восстановление резервной копии базы данных.  
 - Отсоединение базы данных.  
   
-## <a name="changing-the-database-collation"></a>Изменение параметров сортировки в базе данных  
+## <a name="changing-the-database-collation"></a>Изменение параметров сортировки в базе данных
+
 Прежде чем применить другие параметры сортировки к базе данных, убедитесь, что соблюдены следующие условия.  
   
 - Вы являетесь единственным пользователем базы данных в настоящее время.  
@@ -221,31 +224,35 @@ COLLATE *collation_name*
   
 Повторяющиеся имена, полученные с помощью новых параметров сортировки, могут быть причиной сбоя операции изменения, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвратит сообщение об ошибке, указывающее пространство имен, в котором был найден дубликат.  
   
-## <a name="viewing-database-information"></a>Просмотр сведений о базе данных  
+## <a name="viewing-database-information"></a>Просмотр сведений о базе данных
+
 Для возврата сведений о базах данных, файлах и файловых группах можно использовать представления каталогов, системные функции и системные хранимые процедуры.  
   
-## <a name="permissions"></a>Разрешения  
+## <a name="permissions"></a>Разрешения
+
 Необходимо разрешение ALTER на базу данных.  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-changing-the-name-of-a-database"></a>A. Изменение имени базы данных  
+### <a name="a-changing-the-name-of-a-database"></a>A. Изменение имени базы данных
+
 В следующем примере имя базы данных `AdventureWorks2012` изменяется на `Northwind`.  
-  
-```sql  
+
+```sql
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
 Modify Name = Northwind ;  
 GO  
-```  
-  
-### <a name="b-changing-the-collation-of-a-database"></a>Б. Изменение параметров сортировки базы данных  
+```
+
+### <a name="b-changing-the-collation-of-a-database"></a>Б. Изменение параметров сортировки базы данных
+
 В следующем примере создается база данных `testdb`, параметры сортировки которой имеют значение `SQL_Latin1_General_CP1_CI_A`. Затем имя базы данных `testdb` изменяется на `COLLATE French_CI_AI`.  
   
 **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
-```sql  
+
+```sql
 USE master;  
 GO  
   
@@ -256,9 +263,10 @@ GO
 ALTER DATABASE testDB  
 COLLATE French_CI_AI ;  
 GO  
-```  
-  
-## <a name="see-also"></a>См. также:  
+```
+
+## <a name="see-also"></a>См. также:
+
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)   
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)   
@@ -367,8 +375,8 @@ ALTER DATABASE { database_name | CURRENT }
   | <temporal_history_retention>  
 }  
 ```
-  
-## <a name="arguments"></a>Аргументы  
+
+## <a name="arguments"></a>Аргументы
 
 *database_name*  
 
@@ -392,11 +400,11 @@ MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'Bus
 Изменяет уровень службы базы данных. 
 
 В следующем примере выпуск изменяется на `premium`.
-  
-```sql  
+
+```sql
 ALTER DATABASE current 
     MODIFY (EDITION = 'premium');
-``` 
+```
 
 Смена значения параметра EDITION завершается неудачей, если для свойства MAXSIZE базы данных задано значение вне допустимого диапазона, поддерживаемого этим выпуском.  
 
@@ -440,22 +448,25 @@ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB)
 **Модель на основе виртуальных ядер**
 
 **Уровень обслуживания общего назначения — вычислительная платформа поколения 4**
+
 |MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_4|GP_Gen4_8|GP_Gen4_16|GP4_24|
 |:--- | --: |--: |--: |--: |--: |--:|
 |Максимальный размер данных (ГБ)|1024|1024|1536|3072|4096|4096|
 
 **Уровень обслуживания общего назначения — вычислительная платформа поколения 5**
+
 |MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_48|GP_Gen5_80|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |Максимальный размер данных (ГБ)|1024|1024|1536|3072|4096|4096|4096|4096|
 
-
 **Уровень обслуживания "Критически важный для бизнеса" — вычислительная платформа поколения 4**
+
 |Уровень производительности|BC_Gen4_1|BC_Gen4_2|BC_Gen4_4|BC_Gen4_8|BC_Gen4_16|
 |:--- | --: |--: |--: |--: |--: |--: |
 |Максимальный размер данных (ГБ)|1024|1024|1024|1024|1024|1024|
 
 **Уровень обслуживания "Критически важный для бизнеса" — вычислительная платформа поколения 5**
+
 |MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_8|BC_Gen5_16|BC_Gen5_24|BC_Gen5_32|BC_Gen5_48|BC_Gen5_80|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |Максимальный размер данных (ГБ)|1024|1024|1024|1024|2048|4096|4096|4096|
@@ -471,13 +482,13 @@ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB)
 MODIFY (SERVICE_OBJECTIVE = \<service-objective>)  
 
 Определяет уровень производительности. В следующем примере изменяется цель службы базы данных уровня Premium на `P6`:
- 
-```sql  
+
+```sql
 ALTER DATABASE current 
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
 
-Определяет уровень производительности. Доступные значения для целевого уровня cлужб:  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`,    `GP_Gen5_8`,    `GP_Gen5_16`,   `GP_Gen5_24`,   `GP_Gen5_32`,   `GP_Gen5_48`,   `GP_Gen5_80`, `BC_Gen5_2`,  `BC_Gen5_4`,    `BC_Gen5_8`,    `BC_Gen5_16`,   `BC_Gen5_24`,   `BC_Gen5_32`,   `BC_Gen5_48`,   `BC_Gen5_80`, `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`,  `HS_Gen5_4`,    `HS_Gen5_8`,    `HS_Gen5_16`,   `HS_Gen5_24`,   `HS_Gen5_32`,   `HS_Gen5_48`,   `HS_Gen5_80`.  
+Определяет уровень производительности. Доступные значения для целевого обслуживания: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_4`, `BC_GEN4_8`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_8`, `BC_Gen5_16`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_48`, `BC_Gen5_80`, `HS_GEN4_1`, `HS_GEN4_2`, `HS_GEN4_4`, `HS_GEN4_8`, `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`.  
 
 Описания целей служб и дополнительные сведения о сочетаниях размеров, выпусков и целей служб см. в разделах [Уровни служб и уровни производительности баз данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [Пределы для ресурсов на основе DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) и [Пределы для ресурсов на основе виртуальных ядер](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits). Поддержка целей служб PRS была удалена. При возникновении вопросов пишите на следующий адрес premium-rs@microsoft.com. 
   
@@ -499,7 +510,7 @@ WITH ALLOW_CONNECTIONS { **ALL** | NO }
 
 Если параметр ALLOW_CONNECTIONS не указан, ему по умолчанию присваивается значение ALL. Если указано значение ALL, это база данных только для чтения, позволяющая подключаться всем именам входа с соответствующими разрешениями.  
   
-WITH SERVICE_OBJECTIVE { `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_8`, `BC_Gen5_16`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_48`, `BC_Gen5_80` }  
+WITH SERVICE_OBJECTIVE { `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_4`, `BC_GEN4_8`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_8`, `BC_Gen5_16`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_48`, `BC_Gen5_80` }  
 
 Если параметр SERVICE_OBJECTIVE не указан, база данных-получатель создается на том же уровне службы, что и база данных-источник. Если параметр SERVICE_OBJECTIVE указан, база данных-получатель создается на указанном уровне. Этот параметр поддерживает создание геореплицированных объектов-получателей с менее дорогими уровнями обслуживания. Указанный параметр SERVICE_OBJECTIVE должен находиться в том же выпуске, что и источник. Например, если используется выпуск Premium, параметр S0 указать невозможно.  
   
@@ -796,9 +807,10 @@ ALTER DATABASE database_name
           | 'DW2500c' | 'DW3000c' | 'DW5000c' | 'DW6000c' | 'DW7500c' 
           | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }  
-```  
-  
-## <a name="arguments"></a>Аргументы  
+```
+
+## <a name="arguments"></a>Аргументы
+
 *database_name*  
 Задает имя изменяемой базы данных.  
 
@@ -819,7 +831,8 @@ MAXSIZE
 SERVICE_OBJECTIVE  
 Определяет уровень производительности. Дополнительные сведения о целевых уровнях служб для [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] см. на странице [Уровни производительности](https://azure.microsoft.com/documentation/articles/performance-tiers/).  
   
-## <a name="permissions"></a>Разрешения  
+## <a name="permissions"></a>Разрешения
+
 Требуются следующие разрешения:  
   
 - имя входа субъекта серверного уровня, созданное процессом подготовки, или  
@@ -827,14 +840,16 @@ SERVICE_OBJECTIVE
   
 Владелец базы данных не может изменять базу данных, если он не является членом роли `dbmanager`.  
   
-## <a name="general-remarks"></a>Общие замечания  
+## <a name="general-remarks"></a>Общие замечания
+
 Текущая база данных должна отличаться от изменяемой, поэтому **инструкцию ALTER следует выполнять при подключении к базе данных master**.  
   
 Для хранилища данных SQL задано значение COMPATIBILITY_LEVEL 130, изменить которое невозможно. Дополнительные сведения: [Улучшение производительности запросов с уровнем совместимости 130 в базе данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
   
 Чтобы уменьшить размер базы данных, используйте предложение [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
   
-## <a name="limitations-and-restrictions"></a>Ограничения  
+## <a name="limitations-and-restrictions"></a>Ограничения
+
 Для выполнения инструкции ALTER DATABASE база данных должна находиться в сети и не может быть в приостановленном состоянии.  
   
 Инструкция ALTER DATABASE должна выполняться в режиме автофиксации, который является режимом управления транзакциями по умолчанию. Он задается в параметрах подключения.  
@@ -843,7 +858,8 @@ SERVICE_OBJECTIVE
 
 Изменить параметры сортировки базы данных невозможно.  
   
-## <a name="examples"></a>Примеры  
+## <a name="examples"></a>Примеры
+
 Перед выполнением этих примеров убедитесь в том, что изменяемая база данных не является текущей базой данных. Текущая база данных должна отличаться от изменяемой, поэтому **инструкцию ALTER следует выполнять при подключении к базе данных master**.  
 
 ### <a name="a-change-the-name-of-the-database"></a>A. Изменение имени базы данных  
@@ -871,7 +887,8 @@ ALTER DATABASE dw1 MODIFY ( SERVICE_OBJECTIVE= 'DW1200' );
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также:
+
 [CREATE DATABASE (хранилище данных SQL Azure)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldw.md)
 [Список справочных статей по Хранилищу данных SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/) 
  
@@ -914,7 +931,8 @@ ALTER DATABASE database_name
     ENCRYPTION { ON | OFF }  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+## <a name="arguments"></a>Аргументы
+
 *database_name*  
 Имя изменяемой базы данных. Чтобы получить список баз данных на устройстве, используйте представление [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
@@ -952,32 +970,39 @@ SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } Параметр AUTO_UPDATE_STATI
 
 Дополнительные сведения о статистике см. в статье [Статистика](/sql/relational-databases/statistics/statistics).
 
-## <a name="permissions"></a>Разрешения  
+## <a name="permissions"></a>Разрешения
+
 Необходимо разрешение ALTER для базы данных.  
   
 ## <a name="error-messages"></a>сообщения об ошибках
+
 Если автоматическая статистика отключена, при попытке изменить параметры статистики в PDW выводится сообщение об ошибке: "Этот параметр не поддерживается в PDW". Системный администратор может включить автоматическую статистику, включив переключатель [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md).
 
-## <a name="general-remarks"></a>Общие замечания  
+## <a name="general-remarks"></a>Общие замечания
+
 Значения параметров REPLICATED_SIZE, DISTRIBUTED_SIZE и LOG_SIZE могут быть больше, равны или меньше текущих значений для базы данных.  
   
-## <a name="limitations-and-restrictions"></a>Ограничения  
+## <a name="limitations-and-restrictions"></a>Ограничения
+
 Операции увеличения и уменьшения размера являются приблизительными. Полученные фактические размеры могут отличаться от значений параметров.  
   
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] выполняет инструкцию ALTER DATABASE не как атомарную операцию. Если выполнение инструкции прерывается, уже внесенные изменения сохраняются.  
 
 Параметры статистики работают, только если администратор включил автоматическую статистику.  Для включения или отключения автоматической статистики служит переключатель [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md). 
   
-## <a name="locking-behavior"></a>Режим блокировки  
+## <a name="locking-behavior"></a>Режим блокировки
+
 Принимает совмещаемую блокировку для объекта DATABASE. Изменить базу данных, в которой другой пользователь в настоящее время производит операции чтения или записи, невозможно. Это относится и к сеансам, в рамках которых была выполнена инструкция [USE](../language-elements/use-transact-sql.md) для базы данных.  
   
-## <a name="performance"></a>Производительность  
+## <a name="performance"></a>Производительность
+
 Для сжатия базы данных может требоваться много времени и системных ресурсов в зависимости от фактического размера данных в ней и степени фрагментации на диске. Например, сжатие базы данных может длиться несколько часов.  
   
-## <a name="determining-encryption-progress"></a>Определение хода выполнения шифрования  
+## <a name="determining-encryption-progress"></a>Определение хода выполнения шифрования
+
 Чтобы определить ход выполнения прозрачного шифрования данных в базе данных в процентах, используйте следующий запрос:  
   
-```sql  
+```sql
 WITH  
 database_dek AS (  
     SELECT ISNULL(db_map.database_id, dek.database_id) AS database_id,  
@@ -1023,7 +1048,8 @@ WHERE type = 'CONTROL';
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-altering-the-autogrow-setting"></a>A. Изменение параметра AUTOGROW  
+### <a name="a-altering-the-autogrow-setting"></a>A. Изменение параметра AUTOGROW
+
 Присвойте параметру AUTOGROW значение ON для базы данных `CustomerSales`.  
   
 ```sql  
@@ -1031,7 +1057,8 @@ ALTER DATABASE CustomerSales
     SET ( AUTOGROW = ON );  
 ```  
   
-### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>Б. Изменение максимального пространства для хранения реплицированных таблиц  
+### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>Б. Изменение максимального пространства для хранения реплицированных таблиц
+
 В приведенном ниже примере для базы данных `CustomerSales` задается максимальный размер хранилища для реплицированных таблиц, равный 1 ГБ. Это размер хранилища для вычислительного узла.  
   
 ```sql  
@@ -1039,7 +1066,8 @@ ALTER DATABASE CustomerSales
     SET ( REPLICATED_SIZE = 1 GB );  
 ```  
   
-### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>В. Изменение максимального пространства для хранения распределенных таблиц  
+### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>В. Изменение максимального пространства для хранения распределенных таблиц
+
  В приведенном ниже примере для базы данных `CustomerSales` задается максимальный размер хранилища для распределенных таблиц, равный 1000 ГБ (один терабайт). Это совокупный размер хранилища для всех вычислительных узлов на устройстве, а не для отдельных вычислительных узлов.  
   
 ```sql  
@@ -1047,7 +1075,8 @@ ALTER DATABASE CustomerSales
     SET ( DISTRIBUTED_SIZE = 1000 GB );  
 ```  
   
-### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>Г. Изменение максимального пространства для хранения журнала транзакций  
+### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>Г. Изменение максимального пространства для хранения журнала транзакций
+
  В приведенном ниже примере для базы данных `CustomerSales` на устройстве задается максимальный размер журнала транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], равный 10 ГБ.  
   
 ```sql  
@@ -1067,6 +1096,7 @@ SELECT NAME,
 FROM sys.databases;
 ```
 ### <a name="f-enable-auto-create-and-auto-update-stats-for-a-database"></a>Е. Включение автоматического создания и автоматического обновление статистики для базы данных
+
 Используйте следующую инструкцию, чтобы включить автоматическое и асинхронное создание и обновление статистики для базы данных CustomerSales.  В результате по мере необходимости создается и обновляется статистика по отдельным столбцам для формирования высококачественных планов запросов.
 
 ```sql
@@ -1074,11 +1104,12 @@ ALTER DATABASE CustomerSales
     SET AUTO_CREATE_STATISTICS ON;
 ALTER DATABASE CustomerSales
     SET AUTO_UPDATE_STATISTICS ON; 
-ALTER DATABASE CustomerSales
+ALTER DATABASE 
     SET AUTO_UPDATE_STATISTICS_ASYNC ON;
 ```
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также:
+
  [CREATE DATABASE (Parallel Data Warehouse)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlpdw)   
  [DROP DATABASE (Transact-SQL)](../../t-sql/statements/drop-database-transact-sql.md)  
 

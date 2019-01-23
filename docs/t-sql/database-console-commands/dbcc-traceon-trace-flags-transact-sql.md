@@ -1,7 +1,7 @@
 ---
 title: Флаги трассировки (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 01/09/2019
+ms.date: 01/15/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 90f27a36b455b4c0b497b43d5b302684a1a7a9ba
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: f57bd4ef770d4958c09bd54fb19718e8e8c641df
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206470"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361694"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON — флаги трассировки (Transact-SQL)
 
@@ -145,6 +145,7 @@ ms.locfileid: "54206470"
 |**9488**|<a name="9488"></a>Устанавливает для фиксированной оценки функций с табличным значением значение по умолчанию 1 (соответствующее значению по умолчанию в модели оценки кратности оптимизатора запросов в [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] и более ранних версиях) при использовании модели оценки кратности оптимизатора запросов версий с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />**Область**: глобальная, сеанс или запрос|
 |**9495**|Отключает параллелизм во время вставки для операций INSERT...SELECT и применяется к пользовательским и временным таблицам. Дополнительные сведения см. в этой [статье службы поддержки Майкрософт](https://support.microsoft.com/kb/3180087)<br /><br />**Область**: глобальная или сеанс| 
 |**9567**|Включает сжатие потока данных для групп доступности AlwaysOn во время автоматического заполнения. Во время автоматического заполнения сжатие может значительно сократить время передачи и увеличит загрузку ЦП. Дополнительные сведения см. в разделах [Автоматическая инициализация группы доступности AlwaysOn](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md) и [Настройка сжатия для группы доступности](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Область**: глобальная или сеанс|
+|**9571**|Отключает автоматическое первоначальное заполнение пути базы данных по умолчанию для групп доступности. См. дополнительные сведения о [разметке диска](../../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md).<br /><br />**Область**: глобальная или сеанс| 
 |**9591**|Отключает сжатие блока журнала в группах доступности AlwaysOn. Сжатие блока журнала является реакцией по умолчанию, используемой с синхронными и асинхронными репликами в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] сжатие используется только с асинхронной репликой. <br /><br />**Область**: глобальная или сеанс|
 |**9592**|Включает сжатие потока журналов для синхронных групп доступности. В синхронных группах доступности эта функция отключена по умолчанию, поскольку сжатие приводит к увеличению задержки. Дополнительные сведения см. в разделе [Tune compression for availability group](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)(Настройка сжатия для группы доступности).<br /><br />**Область**: глобальная или сеанс| 
 |**9929**|Сокращает файлы контрольных точек в памяти до 1 МБ для каждого файла. Дополнительные сведения см. в этой [статье службы поддержки Майкрософт](https://support.microsoft.com/kb/3147012).<br /><br />**Область**: только глобальная|  

@@ -23,12 +23,12 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 483696e8ecc717e0ead5c7be16a627c046cb47ca
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 96c6292c4c14f97ce0cf0dda17f107a5d5e1bb15
+ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300071"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54395422"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -102,6 +102,8 @@ ms.locfileid: "54300071"
     -   [Использование контекста netsh advfirewall firewall вместо контекста netsh firewall для управления работой брандмауэра Windows в операционной системе Windows Server 2008 или Windows Vista](https://support.microsoft.com/kb/947709)  
   
     -   [Команда «netsh firewall» с параметром «profile=all» не настраивает открытый профиль на компьютере под управлением Windows Vista](https://support.microsoft.com/kb/947213)  
+    
+- **Для Linux**. В Linux необходимо также открыть порты, связанные со службами, к которым вам нужен доступ. Различные дистрибутивы Linux и брандмауэры имеют свои процедуры. Примеры см. в руководствах по использованию SQL Server в [Red Hat](https://review.docs.microsoft.com/sql/linux/quickstart-install-connect-red-hat?view=sqlallproducts-allversions) и [SUSE](https://review.docs.microsoft.com/sql/linux/quickstart-install-connect-suse?view=sqlallproducts-allversions). 
   
 ## <a name="ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Порты, используемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Следующие таблицы помогут выяснить, какие порты использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
