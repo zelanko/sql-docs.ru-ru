@@ -1,7 +1,7 @@
 ---
 title: sys.database_query_store_options (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 01/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,19 +22,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cef670e97387c2eb4b9493fc1303e36a742f89bc
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: ca46886ab9648142bb79863dad0818033c2ce0a1
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53265932"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838111"
 ---
 # <a name="sysdatabasequerystoreoptions-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Возвращает параметры Store запроса для этой базы данных.  
   
-**Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "53265932"
 |**readonly_reason**|**int**|Когда **desired_state_desc** находится в режиме READ_WRITE и **actual_state_desc** находится в режиме READ_ONLY, **readonly_reason** возвращает немного карты необходимо указать причину Store запроса находится в режим только для чтения.<br /><br /> 1 — база данных находится в режиме только для чтения<br /><br /> 2 - база данных находится в однопользовательском режиме<br /><br /> 4 - база данных находится в аварийном режиме<br /><br /> 8 - база данных является вторичной репликой (применяется к Always On и Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] георепликации). Это значение можно было эффективно контролировать только через **для чтения** вторичных реплик<br /><br /> 65536 Store запрос был достигнут предельный размер, установленное параметром MAX_STORAGE_SIZE_MB.<br /><br /> 131072 — число различных инструкций в Store запросов достигнут предел внутренней памяти. Рекомендуется удалить запросы, которые не требуется или обновлении до более высокого уровня службы, передачу Store запросов в режим чтения и записи.<br />Относится только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> 262144 - размер элементов в памяти, ожидающих сохраняются на диске был достигнут предел внутренней памяти. Query Store будет находиться в режиме только для чтения, временно, пока не элементы в памяти сохраняются на диске. <br />Относится только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br />524288 - базы данных был достигнут предельный размер диска. Query Store является частью пользовательской базы данных, поэтому если больше нет свободного места для базы данных, которое означает, что Store запроса не может продолжать увеличиваться больше.<br />Относится только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. <br /> <br /> Для переключения операции Query Store обратно режим чтения и записи, см. в разделе **непрерывность сбора данных запросов является проверка запроса Store** раздел [оптимальным образом с помощью Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md).|  
 |**current_storage_size_mb**|**bigint**|Размер запроса Store на диске в мегабайтах.|  
 |**flush_interval_seconds**|**bigint**|Определяет период для регулярного записью Store запроса данных на диск. Значение по умолчанию — 900 (15 минут).<br /><br /> Изменение с помощью `ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)` инструкции.|  
-|**interval_length_minutes**|**bigint**|Статистика интервала статистической обработки. Произвольные значения не допускаются. Используйте один из следующих: 1, 5, 10, 15, 30, 60 и 1440 минут. Значение по умолчанию — 60 минут.|  
+|**interval_length_minutes**|**bigint**|Статистика интервала статистической обработки. Произвольные значения не допускаются. Используйте одно из следующих значений: 1, 5, 10, 15, 30, 60 и 1440 минут. Значение по умолчанию — 60 минут.|  
 |**max_storage_size_mb**|**bigint**|Максимальный размер диска для запроса Store. Значение по умолчанию — 100 МБ.<br />Для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition значение по умолчанию — 1 ГБ, а для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition — 10 МБ.<br /><br /> Изменение с помощью `ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)` инструкции.|  
 |**stale_query_threshold_days**|**bigint**|Количество дней, запросы при отсутствии параметров политики, хранятся в Store запроса. Значение по умолчанию — 30. Чтобы отключить политику хранения необходимо присвоить значение 0.<br />Для выпуска [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition значение по умолчанию — семь дней.<br /><br /> Изменение с помощью `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` инструкции.|  
 |**max_plans_per_query**|**bigint**|Ограничивает максимальное количество хранимых планов. Значение по умолчанию — 200. После достижения максимального значения Store запросов прекращает запись новых планов для этого запроса. Параметр 0 Удаляет ограничение в зависимости от того, количество записанных планов.<br /><br /> Изменение с помощью `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` инструкции.|  
