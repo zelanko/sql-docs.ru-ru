@@ -20,18 +20,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2018d96233a1dea6f4b2d7cfa612f19df878610f
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 50841053266c475a140f056826ac40ca0e70906c
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300031"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880507"
 ---
 # <a name="spexecutesql-transact-sql"></a>Хранимая процедура sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   > [!div class="nextstepaction"]
-  > [Поделитесь своим мнением о SQL документация содержания!](https://aka.ms/sqldocsurvey)
+  > [Поделитесь своим мнением о содержании документации по SQL!](https://aka.ms/sqldocsurvey)
 
   Выполняет инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] или пакет инструкций, которые могут выполняться много раз или создаваться динамически. Инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] или пакет инструкций могут содержать параметры.  
   
@@ -62,7 +62,7 @@ sp_executesql [ @stmt = ] statement
  Каждый параметр, включенный в \@stmt должен иметь соответствующую запись в \@список определений параметров params, а параметр списка значений.  
   
  [ \@params =] N'\@*parameter_name ** data_type* [,... *n* ] "  
- Строка, содержащая определения всех параметров, внедренных в \@stmt. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* — заполнитель, указывающий Дополнительные определения параметра. Каждый параметр, указанный в \@stmtmust определяться в \@params. Если [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция или пакет в \@stmt не содержит параметров, \@params не является обязательным. Этот аргумент по умолчанию принимает значение NULL.  
+ Строка, содержащая определения всех параметров, внедренных в \@stmt. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* — заполнитель, указывающий Дополнительные определения параметра. Каждый параметр, указанный в \@stmt должен быть определен в \@params. Если [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция или пакет в \@stmt не содержит параметров, \@params не является обязательным. Этот аргумент по умолчанию принимает значение NULL.  
   
  [ \@param1 =] '*значение1*"  
  Значение для первого параметра, определенного в строке параметров. Это значение может быть константой или переменной в Юникоде. Должно быть значение параметра, предоставленные каждому параметру в \@stmt. Значения не являются обязательными при [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция или пакет в \@stmt не имеет параметров.  

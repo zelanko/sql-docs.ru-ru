@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8e6e91836b3daf0392da082df1f4ec806e9faf94
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a5dcc1c2726eaf234056fc77979df4d21a0dea17
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241245"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898929"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>Настройка службы Azure Kubernetes для развертывания кластера (Предварительная версия) SQL Server 2019 больших данных
 
@@ -26,7 +26,7 @@ AKS позволяет легко создавать, настраивать и 
 В этой статье описаны шаги по развертыванию Kubernetes в AKS с помощью Azure CLI. Если у вас нет подписки Azure, создайте бесплатную учетную запись перед началом работы.
 
 > [!TIP] 
-> Пример скрипта python, выполняющий развертывание больших данных кластера AKS и SQL Server, см. в разделе [развертывание SQL Server, большие данные кластера в службе Azure Kubernetes (AKS)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
+> Пример скрипта python, выполняющий развертывание больших данных кластера AKS и SQL Server, см. в разделе [краткое руководство: Развертывание SQL Server, большие данные кластера в службе Azure Kubernetes (AKS)](quickstart-big-data-cluster-deploy.md).
 
 ## <a name="prerequisites"></a>предварительные требования
 
@@ -106,6 +106,6 @@ AKS позволяет легко создавать, настраивать и 
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Действия, описанные в этой статье настроить кластер Kubernetes в AKS. Следующим шагом является развертывание SQL Server 2019 больших данных в кластере.
+Действия, описанные в этой статье настроить кластер Kubernetes в AKS. Следующим шагом является развертывание SQL Server 2019 больших данных в кластере. Дополнительные сведения о том, как развернуть кластеры большие данные см. следующую статью:
 
-[Краткое руководство. Развертывание кластера больших данных SQL Server в службе Azure Kubernetes (AKS)](quickstart-big-data-cluster-deploy.md)
+[Развертывание кластеров больших данных SQL Server в Kubernetes](deployment-guidance.md)

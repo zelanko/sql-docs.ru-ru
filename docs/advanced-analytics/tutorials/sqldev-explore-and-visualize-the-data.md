@@ -8,19 +8,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 76e3fdca639ed576b6b0664042aea5df2b5a9f74
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: b6822892547b8fa4ff3ad4dced02908d10cd39ec
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405784"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898999"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Урок 1. Анализ и визуализация данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Эта статья входит руководства для разработчиков SQL по использованию R в SQL Server.
 
-На этом занятии будет изучите образец данных, а затем создадите ряд диаграмм с помощью [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) из [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) и универсальный [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) функции в базовый R. Эти функции R уже включены в [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
+На этом шаге вы будете изучите образец данных, а затем создать ряд диаграмм с помощью [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) из [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) и универсальный [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) функции в базовый R. Эти функции R уже включены в [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
 
 Ключевой целью этой задачи отображается способ вызова функций R из [!INCLUDE[tsql](../../includes/tsql-md.md)] в хранимых процедурах и сохранить результаты в форматах файлов приложения:
 
