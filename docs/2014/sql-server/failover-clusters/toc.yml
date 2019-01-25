@@ -1,67 +1,74 @@
+items:
 - name: Обзор
   href: windows/windows-server-failover-clustering-wsfc-with-sql-server.md
   items:
-    - name: Экземпляры отказоустойчивого кластера AlwaysOn
-      href: windows/always-on-failover-cluster-instances-sql-server.md
+  - name: Экземпляры отказоустойчивого кластера AlwaysOn
+    href: windows/always-on-failover-cluster-instances-sql-server.md
 - name: Практическое руководство
   items:
-    - name: Развертывание
+  - name: Развертывание
+    items:
+    - name: Перед началом установки
+      href: install/before-installing-failover-clustering.md
+    - name: Установка
+      href: install/sql-server-failover-cluster-installation.md
+    - name: Создание кластера
+      href: install/create-a-new-sql-server-failover-cluster-setup.md
+    - name: Установка клиентских средств
+      href: install/install-client-tools-on-a-sql-server-failover-cluster.md
+    - name: Добавление или удаление узлов отказоустойчивого кластера SQL Server
+      href: install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md
+    - name: Удаление экземпляра отказоустойчивого кластера SQL Server
+      href: install/remove-a-sql-server-failover-cluster-instance-setup.md
+    - name: Обновление экземпляра отказоустойчивого кластера
+      href: windows/upgrade-a-sql-server-failover-cluster-instance.md
       items:
-        - name: Перед началом установки
-          href: install/before-installing-failover-clustering.md
-        - name: Установка
-          href: install/sql-server-failover-cluster-installation.md
-        - name: Создание кластера
-          href: install/create-a-new-sql-server-failover-cluster-setup.md
-        - name: Установка клиентских средств
-          href: install/install-client-tools-on-a-sql-server-failover-cluster.md
-        - name: Добавление или удаление узлов отказоустойчивого кластера SQL Server
-          href: install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md
-        - name: Удаление экземпляра отказоустойчивого кластера SQL Server
-          href: install/remove-a-sql-server-failover-cluster-instance-setup.md
-        - name: Обновление экземпляра отказоустойчивого кластера
-          href: windows/upgrade-a-sql-server-failover-cluster-instance.md
-          items:
-            - name: Обновление экземпляра отказоустойчивого кластера SQL Server
-              href: windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
-    - name: Конфигурация
-      items:
-        - name: Переименование экземпляра отказоустойчивого кластера
-          href: install/rename-a-sql-server-failover-cluster-instance.md
-        - name: добавить зависимости к ресурсу SQL Server
-          href: windows/add-dependencies-to-a-sql-server-resource.md
-        - name: Настройка параметров NodeWeight кворума кластера
-          href: windows/configure-cluster-quorum-nodeweight-settings.md
-        - name: Изменение IP-адреса экземпляра отказоустойчивого кластера
-          href: windows/change-the-ip-address-of-a-failover-cluster-instance.md
-        - name: Настройка параметров свойства FailureConditionLevel
-          href: windows/configure-failureconditionlevel-property-settings.md
-        - name: Просмотр и чтение журнала диагностики экземпляра отказоустойчивого кластера
-          href: windows/view-and-read-failover-cluster-instance-diagnostics-log.md
-    - name: Администрирование
-      items:
-        - name: Просмотр параметров NodeWeight кворума кластера
-          href: windows/view-cluster-quorum-nodeweight-settings.md
-        - name: Аварийное восстановление WSFC через принудительный кворум
-          href: windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md
-        - name: Принудительный запуск кластера WSFC без кворума
-          href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
-        - name: Принудительный запуск кластера WSFC без кворума
-          href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
-        - name: 'Диагностика пользователей, утративших связь с учетной записью'
-          href: troubleshoot-orphaned-users-sql-server.md
+      - name: Обновление экземпляра отказоустойчивого кластера SQL Server
+        href: windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
+  - name: Конфигурация
+    items:
+    - name: Переименование экземпляра отказоустойчивого кластера
+      href: install/rename-a-sql-server-failover-cluster-instance.md
+    - name: добавить зависимости к ресурсу SQL Server
+      href: windows/add-dependencies-to-a-sql-server-resource.md
+    - name: Настройка параметров NodeWeight кворума кластера
+      href: windows/configure-cluster-quorum-nodeweight-settings.md
+    - name: Изменение IP-адреса экземпляра отказоустойчивого кластера
+      href: windows/change-the-ip-address-of-a-failover-cluster-instance.md
+    - name: Настройка параметров свойства FailureConditionLevel
+      href: windows/configure-failureconditionlevel-property-settings.md
+    - name: Просмотр и чтение журнала диагностики экземпляра отказоустойчивого кластера
+      href: windows/view-and-read-failover-cluster-instance-diagnostics-log.md
+  - name: Администрирование
+    items:
+    - name: Просмотр параметров NodeWeight кворума кластера
+      href: windows/view-cluster-quorum-nodeweight-settings.md
+    - name: Аварийное восстановление WSFC через принудительный кворум
+      href: windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md
+    - name: Принудительный запуск кластера WSFC без кворума
+      href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
+    - name: Принудительный запуск кластера WSFC без кворума
+      href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
+    - name: Диагностика пользователей, утративших связь с учетной записью
+      href: troubleshoot-orphaned-users-sql-server.md
 - name: Основные понятия
   items:
-    - name: Конфигурация
-      items:
-        - name: Режим кворума и участвующая в голосовании конфигурация WSFC
-          href: windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
-        - name: Кластеры SQL Server с несколькими подсетями.
-          href: windows/sql-server-multi-subnet-clustering-sql-server.md
-    - name: Администрирование
-      href: windows/failover-cluster-instance-administration-and-maintenance.md
-      items:
-        - name: Автоматическое восстановление страниц (для групп доступности и зеркального отображения баз данных)
-          href: automatic-page-repair-availability-groups-database-mirroring.md
-        - name: Управление именами входа и заданиями после переключения ролей
-          href: management-of-logins-and-jobs-after-role-switching-sql-server.md
+  - name: Конфигурация
+    items:
+    - name: Режим кворума и участвующая в голосовании конфигурация WSFC
+      href: windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
+    - name: Кластеры SQL Server с несколькими подсетями.
+      href: windows/sql-server-multi-subnet-clustering-sql-server.md
+  - name: Администрирование
+    href: windows/failover-cluster-instance-administration-and-maintenance.md
+    items:
+    - name: Автоматическое восстановление страниц (для групп доступности и зеркального отображения баз данных)
+      href: automatic-page-repair-availability-groups-database-mirroring.md
+    - name: Управление именами входа и заданиями после переключения ролей
+      href: management-of-logins-and-jobs-after-role-switching-sql-server.md
+ms.openlocfilehash: 7ab9ae4e45983d34d420fedb6b52f8c827f06f5e
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457527"

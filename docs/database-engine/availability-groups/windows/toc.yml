@@ -1,321 +1,328 @@
+items:
 - name: Обзор
   href: overview-of-always-on-availability-groups-sql-server.md
   items:
-    - name: Режимы доступности
-      href: availability-modes-always-on-availability-groups.md
-    - name: Технологии и возможности
-      href: always-on-availability-groups-sql-server.md
-    - name: 'Предварительные условия, ограничения и рекомендации'
-      href: prereqs-restrictions-recommendations-always-on-availability.md
+  - name: Режимы доступности
+    href: availability-modes-always-on-availability-groups.md
+  - name: Технологии и возможности
+    href: always-on-availability-groups-sql-server.md
+  - name: Предварительные условия, ограничения и рекомендации
+    href: prereqs-restrictions-recommendations-always-on-availability.md
 - name: Краткое руководство
   items:
-    - name: Начало работы
-      href: getting-started-with-always-on-availability-groups-sql-server.md
-    - name: Создание и настройка
-      href: creation-and-configuration-of-availability-groups-sql-server.md
-      items:
-        - name: Мастер
-          href: use-the-availability-group-wizard-sql-server-management-studio.md
-        - name: Диалог
-          href: use-the-new-availability-group-dialog-box-sql-server-management-studio.md
-        - name: Transact-SQL
-          href: create-an-availability-group-transact-sql.md
-        - name: PowerShell
-          href: create-an-availability-group-sql-server-powershell.md
-        - name: Виртуальные машины Azure
-          href: 'https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview'
+  - name: Начало работы
+    href: getting-started-with-always-on-availability-groups-sql-server.md
+  - name: Создание и настройка
+    href: creation-and-configuration-of-availability-groups-sql-server.md
+    items:
+    - name: Мастер
+      href: use-the-availability-group-wizard-sql-server-management-studio.md
+    - name: Диалог
+      href: use-the-new-availability-group-dialog-box-sql-server-management-studio.md
+    - name: Transact-SQL
+      href: create-an-availability-group-transact-sql.md
+    - name: PowerShell
+      href: create-an-availability-group-sql-server-powershell.md
+    - name: Виртуальные машины Azure
+      href: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview
 - name: Практическое руководство
-  items:
-    - name: Настройка группы доступности
-      items:
-        - name: Изменение доступности реплики
-          href: change-the-availability-mode-of-an-availability-replica-sql-server.md
-        - name: Изменение режима отработки отказа реплики
-          href: change-the-failover-mode-of-an-availability-replica-sql-server.md
-        - name: Настройка автоматического заполнения
-          href: automatically-initialize-always-on-availability-group.md
-        - name: Настройка резервного копирования в репликах
-          href: configure-backup-on-availability-replicas-sql-server.md
-        - name: Настройка гибкой политики отработки отказа
-          href: configure-flexible-automatic-failover-policy.md
-        - name: Настройка резервного копирования в репликах
-          href: configure-backup-on-availability-replicas-sql-server.md
-        - name: Настройка распределенных групп доступности
-          href: configure-distributed-availability-groups.md
-        - name: Настройка распределенных транзакций
-          href: configure-availability-group-for-distributed-transactions.md
-        - name: Настройка группы доступности для чтения и масштабирования
-          href: configure-read-scale-availability-groups.md
-        - name: Настройка реплики с доступом только для чтения
-          href: configure-read-only-access-on-an-availability-replica-sql-server.md
-        - name: настройка маршрутизации только для чтения
-          href: configure-read-only-routing-for-an-availability-group-sql-server.md
-        - name: Удаление прослушивателя
-          href: remove-an-availability-group-listener-sql-server.md
-        - name: Присоединение базы данных-получателя
-          href: join-a-secondary-database-to-an-availability-group-sql-server.md
-        - name: Запуск перемещения данных
-          href: start-data-movement-on-an-always-on-secondary-database-sql-server.md
-        - name: Подготовка базы данных-получателя вручную
-          href: manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md
-        - name: Указание URL-адреса конечной точки при добавлении или изменении реплики
-          href: specify-endpoint-url-adding-or-modifying-availability-replica.md
-        - name: Присоединение вторичной реплики
-          href: join-a-secondary-replica-to-an-availability-group-sql-server.md
-        - name: Настройка сжатия
-          href: tune-compression-for-availability-group.md
-        - name: Устранение неполадок с конфигурацией
-          href: troubleshoot-always-on-availability-groups-configuration-sql-server.md
-    - name: Настройка экземпляра
-      href: configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md
-      items:
-        - name: Включение и отключение
-          href: enable-and-disable-always-on-availability-groups-sql-server.md
-        - name: Создание конечной точки зеркального отображения базы данных (PowerShell)
-          href: database-mirroring-always-on-availability-groups-powershell.md
-        - name: Создание кластеризованного DTC
-          href: create-clustered-dtc-for-an-always-on-availability-group.md
-    - name: Наблюдение
-      href: monitoring-of-availability-groups-sql-server.md
-      items:
-        - name: Transact-SQL
-          href: monitor-availability-groups-transact-sql.md
-        - name: SQL Server Management Studio
-          href: use-object-explorer-details-to-monitor-availability-groups.md
-        - name: Просмотр свойств группы доступности
-          href: view-availability-group-properties-sql-server.md
-        - name: Просмотр свойств реплики
-          href: view-availability-replica-properties-sql-server.md
-        - name: Просмотр свойств прослушивателя
-          href: view-availability-group-listener-properties-sql-server.md
-    - name: Операция
-      items:
-        - name: Добавление базы данных
-          items:
-            - name: Диалог
-              href: availability-group-add-a-database.md
-            - name: Мастер
-              href: availability-group-add-database-to-group-wizard.md
-        - name: Мастер добавления реплики
-          href: use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md
-        - name: Добавление вторичной реплики
-          href: add-a-secondary-replica-to-an-availability-group-sql-server.md
-        - name: Использование мастера добавления реплики Azure (SQL Server)
-          href: use-the-add-azure-replica-wizard-sql-server.md
-        - name: Изменение периода времени ожидания сеанса
-          href: change-the-session-timeout-period-for-an-availability-replica-sql-server.md
-        - name: Смена контекста кластера HADR
-          href: change-the-hadr-cluster-context-of-server-instance-sql-server.md
-        - name: Мастер отработки отказа
-          href: use-the-fail-over-availability-group-wizard-sql-server-management-studio.md
-        - name: Принудительный переход на другой ресурс вручную
-          href: perform-a-forced-manual-failover-of-an-availability-group-sql-server.md
-        - name: Запланированная отработка отказа вручную
-          href: perform-a-planned-manual-failover-of-an-availability-group-sql-server.md
-        - name: Удаление группы доступности
-          href: remove-an-availability-group-sql-server.md
-        - name: Удаление базы данных-источника
-          href: remove-a-primary-database-from-an-availability-group-sql-server.md
-        - name: Удаление реплики
-          href: remove-a-secondary-replica-from-an-availability-group-sql-server.md
-        - name: Удаление базы данных-получателя
-          href: remove-a-secondary-database-from-an-availability-group-sql-server.md
-        - name: Возобновление базы данных доступности
-          href: resume-an-availability-database-sql-server.md
-        - name: Приостановка базы данных доступности
-          href: suspend-an-availability-database-sql-server.md
-        - name: Перевод группы доступности в режим "не в сети"
-          href: take-an-availability-group-offline-sql-server.md
-        - name: Устранение неполадок с неудачным добавлением файла
-          href: troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md
-        - name: Обновление экземпляров реплики
-          href: upgrading-always-on-availability-group-replica-instances.md
-        - name: Просмотр состояния работоспособности с помощью политик
-          href: use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
   href: administration-of-an-availability-group-sql-server.md
+  items:
+  - name: Настройка группы доступности
+    items:
+    - name: Изменение доступности реплики
+      href: change-the-availability-mode-of-an-availability-replica-sql-server.md
+    - name: Изменение режима отработки отказа реплики
+      href: change-the-failover-mode-of-an-availability-replica-sql-server.md
+    - name: Настройка автоматического заполнения
+      href: automatically-initialize-always-on-availability-group.md
+    - name: Настройка резервного копирования в репликах
+      href: configure-backup-on-availability-replicas-sql-server.md
+    - name: Настройка гибкой политики отработки отказа
+      href: configure-flexible-automatic-failover-policy.md
+    - name: Настройка резервного копирования в репликах
+      href: configure-backup-on-availability-replicas-sql-server.md
+    - name: Настройка распределенных групп доступности
+      href: configure-distributed-availability-groups.md
+    - name: Настройка распределенных транзакций
+      href: configure-availability-group-for-distributed-transactions.md
+    - name: Настройка группы доступности для чтения и масштабирования
+      href: configure-read-scale-availability-groups.md
+    - name: Настройка реплики с доступом только для чтения
+      href: configure-read-only-access-on-an-availability-replica-sql-server.md
+    - name: настройка маршрутизации только для чтения
+      href: configure-read-only-routing-for-an-availability-group-sql-server.md
+    - name: Удаление прослушивателя
+      href: remove-an-availability-group-listener-sql-server.md
+    - name: Присоединение базы данных-получателя
+      href: join-a-secondary-database-to-an-availability-group-sql-server.md
+    - name: Запуск перемещения данных
+      href: start-data-movement-on-an-always-on-secondary-database-sql-server.md
+    - name: Подготовка базы данных-получателя вручную
+      href: manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md
+    - name: Указание URL-адреса конечной точки при добавлении или изменении реплики
+      href: specify-endpoint-url-adding-or-modifying-availability-replica.md
+    - name: Присоединение вторичной реплики
+      href: join-a-secondary-replica-to-an-availability-group-sql-server.md
+    - name: Настройка сжатия
+      href: tune-compression-for-availability-group.md
+    - name: Устранение неполадок с конфигурацией
+      href: troubleshoot-always-on-availability-groups-configuration-sql-server.md
+  - name: Настройка экземпляра
+    href: configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md
+    items:
+    - name: Включение и отключение
+      href: enable-and-disable-always-on-availability-groups-sql-server.md
+    - name: Создание конечной точки зеркального отображения базы данных (PowerShell)
+      href: database-mirroring-always-on-availability-groups-powershell.md
+    - name: Создание кластеризованного DTC
+      href: create-clustered-dtc-for-an-always-on-availability-group.md
+  - name: Наблюдение
+    href: monitoring-of-availability-groups-sql-server.md
+    items:
+    - name: Transact-SQL
+      href: monitor-availability-groups-transact-sql.md
+    - name: SQL Server Management Studio
+      href: use-object-explorer-details-to-monitor-availability-groups.md
+    - name: Просмотр свойств группы доступности
+      href: view-availability-group-properties-sql-server.md
+    - name: Просмотр свойств реплики
+      href: view-availability-replica-properties-sql-server.md
+    - name: Просмотр свойств прослушивателя
+      href: view-availability-group-listener-properties-sql-server.md
+  - name: Операция
+    items:
+    - name: Добавление базы данных
+      items:
+      - name: Диалог
+        href: availability-group-add-a-database.md
+      - name: Мастер
+        href: availability-group-add-database-to-group-wizard.md
+    - name: Мастер добавления реплики
+      href: use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md
+    - name: Добавление вторичной реплики
+      href: add-a-secondary-replica-to-an-availability-group-sql-server.md
+    - name: Использование мастера добавления реплики Azure (SQL Server)
+      href: use-the-add-azure-replica-wizard-sql-server.md
+    - name: Изменение периода времени ожидания сеанса
+      href: change-the-session-timeout-period-for-an-availability-replica-sql-server.md
+    - name: Смена контекста кластера HADR
+      href: change-the-hadr-cluster-context-of-server-instance-sql-server.md
+    - name: Мастер отработки отказа
+      href: use-the-fail-over-availability-group-wizard-sql-server-management-studio.md
+    - name: Принудительный переход на другой ресурс вручную
+      href: perform-a-forced-manual-failover-of-an-availability-group-sql-server.md
+    - name: Запланированная отработка отказа вручную
+      href: perform-a-planned-manual-failover-of-an-availability-group-sql-server.md
+    - name: Удаление группы доступности
+      href: remove-an-availability-group-sql-server.md
+    - name: Удаление базы данных-источника
+      href: remove-a-primary-database-from-an-availability-group-sql-server.md
+    - name: Удаление реплики
+      href: remove-a-secondary-replica-from-an-availability-group-sql-server.md
+    - name: Удаление базы данных-получателя
+      href: remove-a-secondary-database-from-an-availability-group-sql-server.md
+    - name: Возобновление базы данных доступности
+      href: resume-an-availability-database-sql-server.md
+    - name: Приостановка базы данных доступности
+      href: suspend-an-availability-database-sql-server.md
+    - name: Перевод группы доступности в режим "не в сети"
+      href: take-an-availability-group-offline-sql-server.md
+    - name: Устранение неполадок с неудачным добавлением файла
+      href: troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md
+    - name: Обновление экземпляров реплики
+      href: upgrading-always-on-availability-group-replica-instances.md
+    - name: Просмотр состояния работоспособности с помощью политик
+      href: use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
 - name: Основные понятия
   items:
-    - name: Конфигурация
+  - name: Конфигурация
+    items:
+    - name: Автоматическое заполнение для вторичных реплик
+      href: automatic-seeding-secondary-replicas.md
+    - name: Основные группы доступности
+      href: basic-availability-groups-always-on-availability-groups.md
+    - name: Распределенные группы доступности
+      href: distributed-availability-groups.md
+    - name: Группы доступности, независимые от домена
+      href: domain-independent-availability-groups.md
+    - name: Отказоустойчивая кластеризация и группы доступности
+      href: failover-clustering-and-always-on-availability-groups-sql-server.md
+    - name: Отработка отказа и режимы отработки отказа
+      href: failover-and-failover-modes-always-on-availability-groups.md
+    - name: Гибкая политика отработки отказа для автоматического перехода на другой ресурс
+      href: flexible-automatic-failover-policy-availability-group.md
+    - name: Только чтение и масштабирование
+      href: read-scale-availability-groups.md
+  - name: Администрирование
+    items:
+    - name: Резервное копирование на вторичных репликах
+      href: active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md
+    - name: Вторичные реплики для чтения
+      href: active-secondaries-readable-secondary-replicas-always-on-availability-groups.md
+    - name: Улучшенная отработка отказа базы данных
+      href: enhanced-database-failover.md
+    - name: Определение работоспособности баз данных
+      href: sql-server-always-on-database-health-detection-failover-option.md
+    - name: Значения времени ожидания проверки работоспособности, аренды и кластера
+      href: availability-group-lease-healthcheck-timeout.md
+    - name: Имена для входа и задания
+      href: logins-and-jobs-for-availability-group-databases.md
+    - name: Возможные сбои во время сеансов между репликами
+      href: possible-failures-during-sessions-between-availability-replicas-sql-server.md
+  - name: Соединение
+    items:
+    - name: Клиентское подключение
+      href: about-client-connection-access-to-availability-replicas-sql-server.md
+    - name: Подключение клиента
+      href: always-on-client-connectivity-sql-server.md
+    - name: Прослушиватели, клиенты и отработка отказа
+      href: listeners-client-connectivity-application-failover.md
+  - name: Взаимодействие с другими компонентами
+    items:
+    - name: Репликация, CT и CDC
+      href: replicate-track-change-data-capture-always-on-availability.md
       items:
-        - name: Автоматическое заполнение для вторичных реплик
-          href: automatic-seeding-secondary-replicas.md
-        - name: Основные группы доступности
-          href: basic-availability-groups-always-on-availability-groups.md
-        - name: Распределенные группы доступности
-          href: distributed-availability-groups.md
-        - name: 'Группы доступности, независимые от домена'
-          href: domain-independent-availability-groups.md
-        - name: Отказоустойчивая кластеризация и группы доступности
-          href: failover-clustering-and-always-on-availability-groups-sql-server.md
-        - name: Отработка отказа и режимы отработки отказа
-          href: failover-and-failover-modes-always-on-availability-groups.md
-        - name: Гибкая политика отработки отказа для автоматического перехода на другой ресурс
-          href: flexible-automatic-failover-policy-availability-group.md
-        - name: Только чтение и масштабирование
-          href: read-scale-availability-groups.md
-    - name: Администрирование
+      - name: Настройка репликации
+        href: configure-replication-for-always-on-availability-groups-sql-server.md
+      - name: Базы данных публикации
+        href: maintaining-an-always-on-publication-database-sql-server.md
+      - name: Подписчики
+        href: replication-subscribers-and-always-on-availability-groups-sql-server.md
+    - name: Автономные базы данных
+      href: contained-databases-with-always-on-availability-groups-sql-server.md
+    - name: Моментальные снимки базы данных
+      href: database-snapshots-with-always-on-availability-groups-sql-server.md
+    - name: Распределенные транзакции
+      href: transactions-always-on-availability-and-database-mirroring.md
       items:
-        - name: Резервное копирование на вторичных репликах
-          href: active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md
-        - name: Вторичные реплики для чтения
-          href: active-secondaries-readable-secondary-replicas-always-on-availability-groups.md
-        - name: Улучшенная отработка отказа базы данных
-          href: enhanced-database-failover.md
-        - name: Определение работоспособности баз данных
-          href: sql-server-always-on-database-health-detection-failover-option.md
-        - name: 'Значения времени ожидания проверки работоспособности, аренды и кластера'
-          href: availability-group-lease-healthcheck-timeout.md
-        - name: Имена для входа и задания
-          href: logins-and-jobs-for-availability-group-databases.md
-        - name: Возможные сбои во время сеансов между репликами
-          href: possible-failures-during-sessions-between-availability-replicas-sql-server.md
-    - name: Соединение
-      items:
-        - name: Клиентское подключение
-          href: about-client-connection-access-to-availability-replicas-sql-server.md
-        - name: Подключение клиента
-          href: always-on-client-connectivity-sql-server.md
-        - name: 'Прослушиватели, клиенты и отработка отказа'
-          href: listeners-client-connectivity-application-failover.md
-    - name: Взаимодействие с другими компонентами
-      items:
-        - name: 'Репликация, CT и CDC'
-          href: replicate-track-change-data-capture-always-on-availability.md
-          items:
-            - name: Настройка репликации
-              href: configure-replication-for-always-on-availability-groups-sql-server.md
-            - name: Базы данных публикации
-              href: maintaining-an-always-on-publication-database-sql-server.md
-            - name: Подписчики
-              href: replication-subscribers-and-always-on-availability-groups-sql-server.md
-        - name: Автономные базы данных
-          href: contained-databases-with-always-on-availability-groups-sql-server.md
-        - name: Моментальные снимки базы данных
-          href: database-snapshots-with-always-on-availability-groups-sql-server.md
-        - name: Распределенные транзакции
-          href: transactions-always-on-availability-and-database-mirroring.md
-          items:
-            - name: DTC кластера
-              href: cluster-dtc-for-sql-server-2016-availability-groups.md
-        - name: Зашифрованные базы данных
-          href: encrypted-databases-with-always-on-availability-groups-sql-server.md
-        - name: Экземпляры отказоустойчивого кластера
-          href: analysis-services-with-always-on-availability-groups.md
-        - name: FILESTREAM и FileTable
-          href: filestream-and-filetable-with-always-on-availability-groups-sql-server.md
-        - name: Миграция из доставки журналов
-          href: prereqs-migrating-log-shipping-to-always-on-availability-groups.md
-        - name: Удаленное хранилище больших двоичных объектов (RBS)
-          href: remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md
-        - name: Службы Reporting Services
-          href: reporting-services-with-always-on-availability-groups-sql-server.md
-        - name: Компонент Service Broker
-          href: service-broker-with-always-on-availability-groups-sql-server.md
+      - name: DTC кластера
+        href: cluster-dtc-for-sql-server-2016-availability-groups.md
+    - name: Зашифрованные базы данных
+      href: encrypted-databases-with-always-on-availability-groups-sql-server.md
+    - name: Экземпляры отказоустойчивого кластера
+      href: analysis-services-with-always-on-availability-groups.md
+    - name: FILESTREAM и FileTable
+      href: filestream-and-filetable-with-always-on-availability-groups-sql-server.md
+    - name: Миграция из доставки журналов
+      href: prereqs-migrating-log-shipping-to-always-on-availability-groups.md
+    - name: Удаленное хранилище больших двоичных объектов (RBS)
+      href: remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md
+    - name: Службы Reporting Services
+      href: reporting-services-with-always-on-availability-groups-sql-server.md
+    - name: Компонент Service Broker
+      href: service-broker-with-always-on-availability-groups-sql-server.md
 - name: Справочник
   items:
-    - name: Командлеты PowerShell
-      href: overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md
-    - name: Transact-SQL
-      href: transact-sql-statements-for-always-on-availability-groups.md
-    - name: Диалоговые окна и мастеры
+  - name: Командлеты PowerShell
+    href: overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md
+  - name: Transact-SQL
+    href: transact-sql-statements-for-always-on-availability-groups.md
+  - name: Диалоговые окна и мастеры
+    items:
+    - name: Диалоговое окно «Добавление IP-адреса»
+      href: add-ip-address-dialog-box-sql-server-management-studio.md
+    - name: Настройка маршрутизации только для чтения в группе доступности
+      href: configure-read-only-routing-for-an-availability-group-sql-server.md
+    - name: Удаление прослушивателя группы доступности
+      href: remove-an-availability-group-listener-sql-server.md
+    - name: Страница "Указание параметров группы доступности" (мастер создания группы доступности и мастер добавления базы данных)
+      href: specify-availability-group-name-page.md
+    - name: Select Databases Page (New Availability Group Wizard and Add Database Wizard)
+      href: select-databases-page-new-availability-group-wizard-and-add-database-wizard.md
+    - name: 'Страница "Указание реплик" (мастер создания группы доступности: мастер добавления реплики)'
+      href: specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md
+    - name: Страница ввода паролей (мастер добавления реплики)
+      href: enter-passwords-page-add-replica-wizard.md
+    - name: Выбор страницы начальной синхронизации данных (мастера группы доступности AlwaysOn)
+      href: select-initial-data-synchronization-page-always-on-availability-group-wizards.md
+    - name: Страница проверки (мастера групп доступности AlwaysOn)
+      href: validation-page-always-on-availability-group-wizards.md
+    - name: Страница "Сводка" (мастера групп доступности AlwaysOn)
+      href: summary-page-always-on-availability-group-wizards.md
+    - name: Страница "Выполнение" (мастеры групп доступности AlwaysOn)
+      href: progress-page-always-on-availability-group-wizards.md
+    - name: Страница результатов (мастера групп доступности AlwaysOn)
+      href: results-page-always-on-availability-group-wizards.md
+    - name: Группа доступности — страница "Подключение существующих вторичных реплик"
+      href: connect-to-existing-secondary-replicas-page.md
+  - name: Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)
+    href: use-the-always-on-dashboard-sql-server-management-studio.md
+    items:
+    - name: Параметры (страница панели мониторинга SQL Server AlwaysOn)
+      href: options-sql-server-always-on-dashboard-page.md
+    - name: Результат оценки политики (AlwaysOn)
+      href: policy-evaluation-result-always-on.md
+    - name: Свойства реплики доступности (страница «Общие»)
+      href: availability-replica-properties-general-page.md
+    - name: 'Свойства группы доступности: Создание группы доступности (страница "Общие")'
+      href: availability-group-properties-new-availability-group-general-page.md
+    - name: 'Свойства группы доступности: создание группы доступности (страница настроек резервного копирования)'
+      href: availability-group-properties-new-availability-group-backup-preferences-page.md
+  - name: Политики
+    href: always-on-policies-for-operational-issues-always-on-availability.md
+    items:
+    - name: База данных доступности приостановлена
+      href: availability-database-is-suspended.md
+    - name: Группа доступности в режиме вне сети
+      href: availability-group-is-offline.md
+    - name: Группа доступности не готова для автоматического перехода на другой ресурс
+      href: availability-group-is-not-ready-for-automatic-failover.md
+    - name: Доступность репликации не имеет исправной роли
+      href: availability-replica-does-not-have-a-healthy-role.md
+    - name: Реплика доступности отключена
+      href: availability-replica-is-disconnected.md
+    - name: Реплика доступности не присоединена
+      href: availability-replica-is-not-joined.md
+    - name: Состояние синхронизации данных баз данных доступности не является исправным
+      href: data-synchronization-state-of-availability-database-is-not-healthy.md
+    - name: Состояние синхронизации данных некоторых баз данных доступности не является исправным
+      href: data-synchronization-state-of-some-availability-database-is-not-healthy.md
+    - name: База данных-получатель не подключена
+      href: secondary-database-is-not-joined.md
+    - name: Некоторые реплики доступности отключены
+      href: some-availability-replicas-are-disconnected.md
+    - name: Некоторые реплики доступности не выполняют синхронизацию данных
+      href: some-availability-replicas-are-not-synchronizing-data.md
+    - name: Некоторые реплики доступности не имеют исправной роли
+      href: some-availability-replicas-do-not-have-a-healthy-role.md
+    - name: Некоторые синхронные реплики не синхронизированы
+      href: some-synchronous-replicas-are-not-synchronized.md
+    - name: WSFC служба кластеров работает в режиме вне сети
+      href: wsfc-cluster-service-is-offline.md
+  - name: Руководство по устранению неполадок и мониторингу
+    href: always-on-availability-groups-troubleshooting-and-monitoring-guide.md
+    items:
+    - name: Мониторинг производительности для групп доступности
+      href: monitor-performance-for-always-on-availability-groups.md
+    - name: 'Устранение неполадок: превышение RPO в группе доступности'
+      href: troubleshoot-availability-group-exceeded-rpo.md
+    - name: 'Устранение неполадок: превышение RTO в группе доступности'
+      href: troubleshoot-availability-group-exceeded-rto.md
+    - name: 'Устранение неполадок: изменения в первичной реплике не отражены во вторичной'
+      href: troubleshoot-primary-changes-not-reflected-on-secondary.md
+    - name: Полезные инструменты для устранения неполадок
+      href: useful-tools-for-troubleshooting.md
       items:
-        - name: Диалоговое окно «Добавление IP-адреса»
-          href: add-ip-address-dialog-box-sql-server-management-studio.md
-        - name: Настройка маршрутизации только для чтения в группе доступности
-          href: configure-read-only-routing-for-an-availability-group-sql-server.md
-        - name: Удаление прослушивателя группы доступности
-          href: remove-an-availability-group-listener-sql-server.md
-        - name: Страница "Указание параметров группы доступности" (мастер создания группы доступности и мастер добавления базы данных)
-          href: specify-availability-group-name-page.md
-        - name: Select Databases Page (New Availability Group Wizard and Add Database Wizard)
-          href: select-databases-page-new-availability-group-wizard-and-add-database-wizard.md
-        - name: 'Страница "Указание реплик" (мастер создания группы доступности: мастер добавления реплики)'
-          href: specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md
-        - name: Страница ввода паролей (мастер добавления реплики)
-          href: enter-passwords-page-add-replica-wizard.md
-        - name: Выбор страницы начальной синхронизации данных (мастера группы доступности AlwaysOn)
-          href: select-initial-data-synchronization-page-always-on-availability-group-wizards.md
-        - name: Страница проверки (мастера групп доступности AlwaysOn)
-          href: validation-page-always-on-availability-group-wizards.md
-        - name: Страница "Сводка" (мастера групп доступности AlwaysOn)
-          href: summary-page-always-on-availability-group-wizards.md
-        - name: Страница "Выполнение" (мастеры групп доступности AlwaysOn)
-          href: progress-page-always-on-availability-group-wizards.md
-        - name: Страница результатов (мастера групп доступности AlwaysOn)
-          href: results-page-always-on-availability-group-wizards.md
-        - name: "Группа доступности\_— страница \"Подключение существующих вторичных реплик\""
-          href: connect-to-existing-secondary-replicas-page.md
-    - name: Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)
-      href: use-the-always-on-dashboard-sql-server-management-studio.md
-      items:
-        - name: Параметры (страница панели мониторинга SQL Server AlwaysOn)
-          href: options-sql-server-always-on-dashboard-page.md
-        - name: Результат оценки политики (AlwaysOn)
-          href: policy-evaluation-result-always-on.md
-        - name: Свойства реплики доступности (страница «Общие»)
-          href: availability-replica-properties-general-page.md
-        - name: 'Свойства группы доступности: Создание группы доступности (страница "Общие")'
-          href: availability-group-properties-new-availability-group-general-page.md
-        - name: 'Свойства группы доступности: создание группы доступности (страница настроек резервного копирования)'
-          href: availability-group-properties-new-availability-group-backup-preferences-page.md
-    - name: Политики
-      href: always-on-policies-for-operational-issues-always-on-availability.md
-      items:
-        - name: База данных доступности приостановлена
-          href: availability-database-is-suspended.md
-        - name: Группа доступности в режиме вне сети
-          href: availability-group-is-offline.md
-        - name: Группа доступности не готова для автоматического перехода на другой ресурс
-          href: availability-group-is-not-ready-for-automatic-failover.md
-        - name: Доступность репликации не имеет исправной роли
-          href: availability-replica-does-not-have-a-healthy-role.md
-        - name: Реплика доступности отключена
-          href: availability-replica-is-disconnected.md
-        - name: Реплика доступности не присоединена
-          href: availability-replica-is-not-joined.md
-        - name: Состояние синхронизации данных баз данных доступности не является исправным
-          href: data-synchronization-state-of-availability-database-is-not-healthy.md
-        - name: Состояние синхронизации данных некоторых баз данных доступности не является исправным
-          href: data-synchronization-state-of-some-availability-database-is-not-healthy.md
-        - name: База данных-получатель не подключена
-          href: secondary-database-is-not-joined.md
-        - name: Некоторые реплики доступности отключены
-          href: some-availability-replicas-are-disconnected.md
-        - name: Некоторые реплики доступности не выполняют синхронизацию данных
-          href: some-availability-replicas-are-not-synchronizing-data.md
-        - name: Некоторые реплики доступности не имеют исправной роли
-          href: some-availability-replicas-do-not-have-a-healthy-role.md
-        - name: Некоторые синхронные реплики не синхронизированы
-          href: some-synchronous-replicas-are-not-synchronized.md
-        - name: WSFC служба кластеров работает в режиме вне сети
-          href: wsfc-cluster-service-is-offline.md
-    - name: Руководство по устранению неполадок и мониторингу
-      href: always-on-availability-groups-troubleshooting-and-monitoring-guide.md
-      items:
-        - name: Мониторинг производительности для групп доступности
-          href: monitor-performance-for-always-on-availability-groups.md
-        - name: 'Устранение неполадок: превышение RPO в группе доступности'
-          href: troubleshoot-availability-group-exceeded-rpo.md
-        - name: 'Устранение неполадок: превышение RTO в группе доступности'
-          href: troubleshoot-availability-group-exceeded-rto.md
-        - name: 'Устранение неполадок: изменения в первичной реплике не отражены во вторичной'
-          href: troubleshoot-primary-changes-not-reflected-on-secondary.md
-        - name: Полезные инструменты для устранения неполадок
-          href: useful-tools-for-troubleshooting.md
-          items:
-            - name: Расширенные события
-              href: always-on-extended-events.md
-            - name: Журнал диагностики работоспособности
-              href: always-on-health-diagnostics-log.md
-            - name: Политики
-              href: always-on-policies.md
-            - name: Кольцевые буферы
-              href: always-on-ring-buffers.md
-            - name: Типы ожидания
-              href: always-on-wait-types.md
-            - name: CLUSTER.LOG
-              href: cluster-log-always-on-availability-groups.md
-            - name: Динамические административные представления и представления системного каталога
-              href: dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md
-            - name: журнал ошибок SQL Server
-              href: sql-server-error-log-always-on-availability-groups.md
+      - name: Расширенные события
+        href: always-on-extended-events.md
+      - name: Журнал диагностики работоспособности
+        href: always-on-health-diagnostics-log.md
+      - name: Политики
+        href: always-on-policies.md
+      - name: Кольцевые буферы
+        href: always-on-ring-buffers.md
+      - name: Типы ожидания
+        href: always-on-wait-types.md
+      - name: CLUSTER.LOG
+        href: cluster-log-always-on-availability-groups.md
+      - name: Динамические административные представления и представления системного каталога
+        href: dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md
+      - name: журнал ошибок SQL Server
+        href: sql-server-error-log-always-on-availability-groups.md
+ms.openlocfilehash: 1ee589d88b4fbc0142ef2adb233ab3208637fb34
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457547"

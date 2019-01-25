@@ -1,156 +1,163 @@
+items:
 - name: Компонент Database Engine
   href: sql-server-database-engine-overview.md
   items:
-    - name: Новые возможности (компонент Database Engine)
-      href: whats-new-in-sql-server-2016.md
-    - name: Обратная совместимость компонента SQL Server Database Engine
-      href: sql-server-database-engine-backward-compatibility.md
+  - name: Новые возможности (компонент Database Engine)
+    href: whats-new-in-sql-server-2016.md
+  - name: Обратная совместимость компонента SQL Server Database Engine
+    href: sql-server-database-engine-backward-compatibility.md
+    items:
+    - name: Устаревшие функции компонента Database Engine в SQL Server 2014
+      href: deprecated-database-engine-features-in-sql-server-2016.md
+    - name: Неподдерживаемые функции ядра СУБД в SQL Server 2014
+      href: discontinued-database-engine-functionality-in-sql-server-2016.md
+    - name: Критические изменения в функциях компонента ядра СУБД в SQL Server 2014
+      href: breaking-changes-to-database-engine-features-in-sql-server-2016.md
+    - name: Изменения в работе функций компонента Database Engine в SQL Server 2014
+      href: behavior-changes-to-database-engine-features-in-sql-server-2014.md
+    - name: Обратная совместимость компонента Full-Text Search
+      href: full-text-search-backward-compatibility.md
       items:
-        - name: Устаревшие функции компонента Database Engine в SQL Server 2014
-          href: deprecated-database-engine-features-in-sql-server-2016.md
-        - name: Неподдерживаемые функции ядра СУБД в SQL Server 2014
-          href: discontinued-database-engine-functionality-in-sql-server-2016.md
-        - name: Критические изменения в функциях компонента ядра СУБД в SQL Server 2014
-          href: breaking-changes-to-database-engine-features-in-sql-server-2016.md
-        - name: Изменения в работе функций компонента Database Engine в SQL Server 2014
-          href: behavior-changes-to-database-engine-features-in-sql-server-2014.md
-        - name: Обратная совместимость компонента Full-Text Search
-          href: full-text-search-backward-compatibility.md
-          items:
-            - name: Неподдерживаемые функции полнотекстового поиска в SQL Server 2014
-              href: discontinued-full-text-search-features-in-sql-server-2014.md
-            - name: Критические изменения в полнотекстовом поиске
-              href: breaking-changes-to-full-text-search.md
-            - name: Изменения в функциях полнотекстового поиска
-              href: behavior-changes-to-full-text-search.md
-    - name: Обратная совместимость средств управления SQL Server
-      href: sql-server-management-tools-backward-compatibility.md
-      items:
-        - name: Устаревшие возможности средств управления в SQL Server 2014
-          href: deprecated-management-tools-features-in-sql-server-2014.md
-        - name: Неподдерживаемые возможности средств управления в SQL Server 2014
-          href: discontinued-management-tools-features-in-sql-server-2014.md
-        - name: Критические изменения в функциях средств управления в SQL Server 2014
-          href: breaking-changes-to-management-tools-features-in-sql-server-2014.md
-        - name: Изменения в работе функций средств управления в SQL Server 2014
-          href: behavior-changes-to-management-tools-features-in-sql-server-2014.md
+      - name: Неподдерживаемые функции полнотекстового поиска в SQL Server 2014
+        href: discontinued-full-text-search-features-in-sql-server-2014.md
+      - name: Критические изменения в полнотекстовом поиске
+        href: breaking-changes-to-full-text-search.md
+      - name: Изменения в функциях полнотекстового поиска
+        href: behavior-changes-to-full-text-search.md
+  - name: Обратная совместимость средств управления SQL Server
+    href: sql-server-management-tools-backward-compatibility.md
+    items:
+    - name: Устаревшие возможности средств управления в SQL Server 2014
+      href: deprecated-management-tools-features-in-sql-server-2014.md
+    - name: Неподдерживаемые возможности средств управления в SQL Server 2014
+      href: discontinued-management-tools-features-in-sql-server-2014.md
+    - name: Критические изменения в функциях средств управления в SQL Server 2014
+      href: breaking-changes-to-management-tools-features-in-sql-server-2014.md
+    - name: Изменения в работе функций средств управления в SQL Server 2014
+      href: behavior-changes-to-management-tools-features-in-sql-server-2014.md
 - name: Непрерывность бизнес-процессов
   href: ../sql-server/failover-clusters/high-availability-solutions-sql-server.md
   items:
-    - name: Группы доступности AlwaysOn
-      href: availability-groups/windows/toc.yml
-    - name: Экземпляр отказоустойчивого кластера
-      href: ../sql-server/failover-clusters/toc.yml
-    - name: Зеркальное отображение базы данных
-      href: database-mirroring/toc.yml
-    - name: "Доставка журналов\_+"
-      href: log-shipping/toc.yml
+  - name: Группы доступности AlwaysOn
+    href: availability-groups/windows/toc.yml
+  - name: Экземпляр отказоустойчивого кластера
+    href: ../sql-server/failover-clusters/toc.yml
+  - name: Зеркальное отображение базы данных
+    href: database-mirroring/toc.yml
+  - name: Доставка журналов +
+    href: log-shipping/toc.yml
 - name: Функции и задачи компонента Database Engine
   href: database-engine-features-and-tasks.md
 - name: Экземпляры компонента Database Engine (SQL Server)
   href: configure-windows/database-engine-instances-sql-server.md
   items:
-    - name: Настройка экземпляров ядра СУБД +
-      href: configure-windows/toc.yml
-    - name: Поддержка параметров сортировки и Юникода +
-      href: ../relational-databases/collations/collation-and-unicode-support.md
-    - name: Связанные серверы (компонент Database Engine)
-      href: ../relational-databases/linked-servers/linked-servers-database-engine.md
-      items:
-        - name: Создание связанных серверов (компонент SQL Server Database Engine)
-          href: ../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md
-    - name: Триггеры входа
-      href: ../relational-databases/triggers/logon-triggers.md
-      items:
-        - name: Захват данных событий триггера входа
-          href: ../relational-databases/triggers/capture-logon-trigger-event-data.md
-    - name: Управление службами ядра СУБД +
-      href: configure-windows/manage-the-database-engine-services.md
-    - name: Сетевая конфигурация сервера +
-      href: configure-windows/server-network-configuration.md
-    - name: Конфигурация клиентской сети +
-      href: configure-windows/client-network-configuration.md
-    - name: Сценарии ядра СУБД +
-      href: ../relational-databases/scripting/database-engine-scripting.md
-    - name: Планы обслуживания +
-      href: ../relational-databases/maintenance-plans/maintenance-plans.md
-    - name: Resource Governor +
-      href: ../relational-databases/resource-governor/resource-governor.md
-    - name: Database Mail +
-      href: ../relational-databases/database-mail/database-mail.md
-    - name: Расширенные события +
-      href: ../relational-databases/extended-events/extended-events.md
-    - name: Трассировка SQL +
-      href: ../relational-databases/sql-trace/sql-trace.md
-    - name: Приложение SQL Server Profiler +
-      href: ../tools/sql-server-profiler/sql-server-profiler.md
-    - name: Отслеживание изменений данных +
-      href: ../relational-databases/track-changes/track-data-changes-sql-server.md
-    - name: Средство просмотра файлов журнала +
-      href: ../relational-databases/logs/log-file-viewer.md
-    - name: Помощник по настройке ядра СУБД +
-      href: ../relational-databases/performance/database-engine-tuning-advisor.md
-    - name: Диагностическое соединение для администраторов баз данных
-      href: configure-windows/diagnostic-connection-for-database-administrators.md
-    - name: Адаптер для облака для SQL Server
-      href: cloud-adapter-for-sql-server.md
-    - name: SQL Server 2014 Express LocalDB
-      href: configure-windows/sql-server-2016-express-localdb.md
-    - name: Удаленные серверы
-      href: configure-windows/remote-servers.md
-    - name: Обзор монитора SQL Server
-      href: configure-windows/sql-server-monitor-overview.md
-    - name: Компонент Service Broker
-      href: configure-windows/sql-server-service-broker.md
-    - name: Buffer Pool Extension
-      href: configure-windows/buffer-pool-extension.md
+  - name: Настройка экземпляров ядра СУБД +
+    href: configure-windows/toc.yml
+  - name: Поддержка параметров сортировки и Юникода +
+    href: ../relational-databases/collations/collation-and-unicode-support.md
+  - name: Связанные серверы (компонент Database Engine)
+    href: ../relational-databases/linked-servers/linked-servers-database-engine.md
+    items:
+    - name: Создание связанных серверов (компонент SQL Server Database Engine)
+      href: ../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md
+  - name: Триггеры входа
+    href: ../relational-databases/triggers/logon-triggers.md
+    items:
+    - name: Захват данных событий триггера входа
+      href: ../relational-databases/triggers/capture-logon-trigger-event-data.md
+  - name: Управление службами ядра СУБД +
+    href: configure-windows/manage-the-database-engine-services.md
+  - name: Сетевая конфигурация сервера +
+    href: configure-windows/server-network-configuration.md
+  - name: Конфигурация клиентской сети +
+    href: configure-windows/client-network-configuration.md
+  - name: Сценарии ядра СУБД +
+    href: ../relational-databases/scripting/database-engine-scripting.md
+  - name: Планы обслуживания +
+    href: ../relational-databases/maintenance-plans/maintenance-plans.md
+  - name: Resource Governor +
+    href: ../relational-databases/resource-governor/resource-governor.md
+  - name: Database Mail +
+    href: ../relational-databases/database-mail/database-mail.md
+  - name: Расширенные события +
+    href: ../relational-databases/extended-events/extended-events.md
+  - name: Трассировка SQL +
+    href: ../relational-databases/sql-trace/sql-trace.md
+  - name: Приложение SQL Server Profiler +
+    href: ../tools/sql-server-profiler/sql-server-profiler.md
+  - name: Отслеживание изменений данных +
+    href: ../relational-databases/track-changes/track-data-changes-sql-server.md
+  - name: Средство просмотра файлов журнала +
+    href: ../relational-databases/logs/log-file-viewer.md
+  - name: Помощник по настройке ядра СУБД +
+    href: ../relational-databases/performance/database-engine-tuning-advisor.md
+  - name: Диагностическое соединение для администраторов баз данных
+    href: configure-windows/diagnostic-connection-for-database-administrators.md
+  - name: Адаптер для облака для SQL Server
+    href: cloud-adapter-for-sql-server.md
+  - name: SQL Server 2014 Express LocalDB
+    href: configure-windows/sql-server-2016-express-localdb.md
+  - name: Удаленные серверы
+    href: configure-windows/remote-servers.md
+  - name: Обзор монитора SQL Server
+    href: configure-windows/sql-server-monitor-overview.md
+  - name: Компонент Service Broker
+    href: configure-windows/sql-server-service-broker.md
+  - name: Buffer Pool Extension
+    href: configure-windows/buffer-pool-extension.md
 - name: Функции базы данных +
   href: ../relational-databases/database-features.md
 - name: Возможности перекрестного экземпляра компонента Database Engine
   href: database-engine-cross-instance-features.md
   items:
-    - name: SQL Server Management Studio +
-      href: ../ssms/sql-server-management-studio-ssms.md
-    - name: Управление жизненным циклом базы данных
-      href: ../relational-databases/database-lifecycle-management.md
-    - name: Функции и задачи служебной программы SQL Server +
-      href: ../relational-databases/manage/sql-server-utility-features-and-tasks.md
-    - name: Администрирование серверов с помощью управления на основе политик +
-      href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
-    - name: Регистрация серверов +
-      href: ../ssms/register-servers/register-servers.md
-    - name: Распределенное воспроизведение SQL Server +
-      href: ../tools/distributed-replay/sql-server-distributed-replay.md
-    - name: Сбор данных +
-      href: ../relational-databases/data-collection/data-collection.md
-    - name: Наблюдение за использованием ресурсов (системный монитор) +
-      href: ../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md
-    - name: Администрирование нескольких серверов с использованием центральных серверов управления
-      href: ../relational-databases/administer-multiple-servers-using-central-management-servers.md
-    - name: Диспетчер конфигурации SQL Server
-      href: ../relational-databases/sql-server-configuration-manager.md
-    - name: Монитор активности
-      href: ../relational-databases/performance-monitor/activity-monitor.md
-      items:
-        - name: Открытие монитора активности (среда SQL Server Management Studio)
-          href: ../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md
+  - name: SQL Server Management Studio +
+    href: ../ssms/sql-server-management-studio-ssms.md
+  - name: Управление жизненным циклом базы данных
+    href: ../relational-databases/database-lifecycle-management.md
+  - name: Функции и задачи служебной программы SQL Server +
+    href: ../relational-databases/manage/sql-server-utility-features-and-tasks.md
+  - name: Администрирование серверов с помощью управления на основе политик +
+    href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
+  - name: Регистрация серверов +
+    href: ../ssms/register-servers/register-servers.md
+  - name: Распределенное воспроизведение SQL Server +
+    href: ../tools/distributed-replay/sql-server-distributed-replay.md
+  - name: Сбор данных +
+    href: ../relational-databases/data-collection/data-collection.md
+  - name: Наблюдение за использованием ресурсов (системный монитор) +
+    href: ../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md
+  - name: Администрирование нескольких серверов с использованием центральных серверов управления
+    href: ../relational-databases/administer-multiple-servers-using-central-management-servers.md
+  - name: Диспетчер конфигурации SQL Server
+    href: ../relational-databases/sql-server-configuration-manager.md
+  - name: Монитор активности
+    href: ../relational-databases/performance-monitor/activity-monitor.md
+    items:
+    - name: Открытие монитора активности (среда SQL Server Management Studio)
+      href: ../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md
 - name: Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine +
   href: ../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md
 - name: Технический справочник
   href: technical-reference-database-engine.md
   items:
-    - name: Справочник по функциям
-      href: feature-reference-database-engine.md
-    - name: Справка программы командной строки (ядро СУБД) +
-      href: ../tools/command-prompt-utility-reference-database-engine.md
-    - name: Справочник по PowerShell для ядра СУБД
-      href: database-engine-powershell-reference.md
-      items:
-        - name: 'Invoke-PolicyEvaluation, командлет'
-          href: invoke-policyevaluation-cmdlet.md
-        - name: 'Invoke-Sqlcmd, командлет'
-          href: invoke-sqlcmd-cmdlet.md
-        - name: Выражения запросов и универсальные имена ресурсов
-          href: ../powershell/query-expressions-and-uniform-resource-names.md
+  - name: Справочник по функциям
+    href: feature-reference-database-engine.md
+  - name: Справка программы командной строки (ядро СУБД) +
+    href: ../tools/command-prompt-utility-reference-database-engine.md
+  - name: Справочник по PowerShell для ядра СУБД
+    href: database-engine-powershell-reference.md
+    items:
+    - name: Invoke-PolicyEvaluation, командлет
+      href: invoke-policyevaluation-cmdlet.md
+    - name: Invoke-Sqlcmd, командлет
+      href: invoke-sqlcmd-cmdlet.md
+    - name: Выражения запросов и универсальные имена ресурсов
+      href: ../powershell/query-expressions-and-uniform-resource-names.md
 - name: Справочник по ошибкам и событиям +
   href: ../relational-databases/errors-events/errors-and-events-reference-database-engine.md
+ms.openlocfilehash: 35bd2872a1bcb806825bf8fbff08ae35f73d3222
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457597"
