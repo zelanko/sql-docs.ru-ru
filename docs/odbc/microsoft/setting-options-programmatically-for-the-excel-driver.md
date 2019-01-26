@@ -16,14 +16,15 @@ ms.assetid: b5ee3636-4591-427a-a65a-a2d5926fcc1a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c62503611e88435b139a00b180d3e087769b7fda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 271f61247b6083abd31657fe319bce234bc16f50
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786592"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044341"
 ---
 # <a name="setting-options-programmatically-for-the-excel-driver"></a>Программная настройка параметров драйвера для Excel
+
 |Параметр|Описание|Метод|  
 |------------|-----------------|------------|  
 |Имя источника данных|Имя, определяющее источник данных, таких как расчет заработной платы или сотрудникам.|Чтобы задать этот параметр динамически, используйте **DSN** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  

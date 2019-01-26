@@ -14,14 +14,15 @@ ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 696685a4c1550ab503b7847ae676ee7c41c679c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f24ffa490ac8ae5b88809b89eed8a188b86fabb
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611502"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044679"
 ---
 # <a name="ado-properties"></a>Свойства ADO
+
 |||  
 |-|-|  
 |[Примеры AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|Указывает, на какой странице находится текущей записи.|  
@@ -41,14 +42,14 @@ ms.locfileid: "47611502"
 |[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)|Указывает тип **команда** объекта.|  
 |[Свойство ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)|Указывает сведения, используемые для подключения к источнику данных.|  
 |[Значение ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)|Указывает время ожидания при установлении соединения перед завершается и генерируется ошибка.|  
-|[число](../../../ado/reference/ado-api/count-property-ado.md)|Указывает количество объектов в коллекции.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Указывает количество объектов в коллекции.|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|Указывает расположение службы курсора.|  
 |[Примеры CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Указывает тип курсора, используемого в **записей** объекта.|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|Указывает имя элемента данных, которые будут извлечены из объекта, который ссылается **DataSource** свойство.|  
-|[Источник данных](../../../ado/reference/ado-api/datasource-property-ado.md)|Указывает объект, содержащий данные для представления в виде **записей** объекта.|  
+|[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)|Указывает объект, содержащий данные для представления в виде **записей** объекта.|  
 |[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)|Указывает базу данных по умолчанию для **подключения** объекта.|  
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|Показывает объем данных **поле** объекта.|  
-|[Description](../../../ado/reference/ado-api/description-property.md)|Описывает **ошибка** объекта.|  
+|[Описание](../../../ado/reference/ado-api/description-property.md)|Описывает **ошибка** объекта.|  
 |[диалект](../../../ado/reference/ado-api/dialect-property.md)|Указывает, синтаксис и общие правила, которые поставщик будет использовать для синтаксического анализа **CommandText** или **CommandStream** свойства.|  
 |[Направление](../../../ado/reference/ado-api/direction-property.md)|Указывает ли **параметр** представляет входным, выходным или оба, или если параметр является возвращаемым значением из хранимой процедуры.|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|Указывает состояние редактирования текущей записи.|  
@@ -63,7 +64,7 @@ ms.locfileid: "47611502"
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|Указывает, какие записи должны маршалироваться обратно к серверу.|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|Указывает максимальное число записей, чтобы вернуться к **записей** из запроса.|  
 |[Режим](../../../ado/reference/ado-api/mode-property-ado.md)|Указывает доступные разрешения для изменения данных в **подключения**, **записи**, или **Stream** объекта.|  
-|[Название](../../../ado/reference/ado-api/name-property-ado.md)|Указывает имя объекта.|  
+|[Name](../../../ado/reference/ado-api/name-property-ado.md)|Указывает имя объекта.|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|Указывает код ошибки поставщика для какого-либо **ошибка** объекта.|  
 |[номер](../../../ado/reference/ado-api/number-property-ado.md)|Указывает число, которое однозначно определяет **ошибка** объекта.|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|Указывает масштаб числовых значений в **параметр** или **поле** объекта.|  
@@ -93,7 +94,7 @@ ms.locfileid: "47611502"
 |[Тип](../../../ado/reference/ado-api/type-property-ado.md)|Тип рабочей типа или данных **параметр**, **поле**, или **свойство** объекта.|  
 |[Тип (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)|Указывает тип данных, содержащихся в **Stream** (двоичные или текстовые).|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|Указывает текущее значение в базе данных для **поле** объекта.|  
-|[Value](../../../ado/reference/ado-api/value-property-ado.md)|Указывает значение, присваиваемое **поле**, **параметр**, или **свойство** объекта.|  
+|[Значение](../../../ado/reference/ado-api/value-property-ado.md)|Указывает значение, присваиваемое **поле**, **параметр**, или **свойство** объекта.|  
 |[Версия](../../../ado/reference/ado-api/version-property-ado.md)|Указывает номер версии ADO.|  
   
 ## <a name="see-also"></a>См. также  
@@ -101,7 +102,7 @@ ms.locfileid: "47611502"
  [Коллекции ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Перечисляемые константы ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Приложение б. ошибки объектов ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Приложение б. Ошибки ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [События ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Методы ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Объектная модель ADO](../../../ado/reference/ado-api/ado-object-model.md)   

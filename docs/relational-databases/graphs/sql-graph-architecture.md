@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e742e1b5c8ed1b0149292aeee5a3c0e518d9783
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: e4c7c5bae386f142dff45be8a1b1371f104cfab3
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300191"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044550"
 ---
 # <a name="sql-graph-architecture"></a>Архитектура графа базы данных SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -135,6 +135,7 @@ ms.locfileid: "54300191"
 Узнайте, [!INCLUDE[tsql-md](../../includes/tsql-md.md)] расширения, появившиеся в SQL Server и базы данных SQL Azure, обеспечивают создания и выполнения запросов к объектам графа. Расширения языка запросов помогают запроса и просмотрим граф, используя синтаксис ASCII-арта.
  
 ### <a name="data-definition-language-ddl-statements"></a>Данные инструкции языка определения (DDL)
+
 |Задача   |Связанные статьи  |Примечания
 |---  |---  |---  |
 |CREATE TABLE |[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` Теперь расширена для поддержки создания таблицы AS УЗЛОВ или ГРАНИЧНУЮ AS. Обратите внимание, что краевую таблицу может иметь или не иметь какие-либо пользовательские атрибуты.  |
@@ -145,6 +146,7 @@ ms.locfileid: "54300191"
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>Инструкции языка обработки (DML) данных
+
 |Задача   |Связанные статьи  |Примечания
 |---  |---  |---  |
 |INSERT |[INSERT (Transact-SQL)](../../t-sql/statements/insert-sql-graph.md)|Вставка в таблицу узлов ничем не отличается от вставки в реляционной таблице. Значения для `$node_id` столбец создается автоматически. При попытке вставки значения в `$node_id` или `$edge_id` столбца приведет к ошибке. Пользователи должны указать значения для `$from_id` и `$to_id` столбцов при вставке в граничную таблицу. `$from_id` и `$to_id` являются `$node_id` значения, заданного граница соединяет узлов.  |
@@ -154,6 +156,7 @@ ms.locfileid: "54300191"
 
 
 ### <a name="query-statements"></a>Инструкции запросов
+
 |Задача   |Связанные статьи  |Примечания
 |---  |---  |---  |
 |SELECT |[SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)|Узлы и ребра хранятся в виде таблицы внутренне, поэтому большинство операций, которые поддерживаются для таблиц в SQL Server или базы данных SQL Azure поддерживаются для таблиц узлов и ребер  |

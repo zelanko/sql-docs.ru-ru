@@ -15,12 +15,12 @@ ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5177c51603a9a58f5fc6c85db26827b2fd0b9dc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3984ebdd3c0f5fbfc9b97dc30a62c0b045374ddf
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782492"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044897"
 ---
 # <a name="database-related-dynamic-management-views-transact-sql"></a>Динамические административные представления базы данных (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,6 +38,7 @@ ms.locfileid: "47782492"
 
 
 Динамическое административное Представление уникальные для базы данных SQL или хранилище данных SQL.   
+
 | | | 
 |-|-|  
 |[sys.dm_db_wait_stats &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)|[sys.dm_database_copies &#40;база данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)|  

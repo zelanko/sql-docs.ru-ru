@@ -20,12 +20,12 @@ ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb6061adf707a58737fd34d7cb7bbe33b2e9579a
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: ce80e7b9c6e8cfcf15c0810986c1a34e8d881ade
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420239"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044361"
 ---
 # <a name="sqlsetdescfield-function"></a>Функция SQLSetDescField
 
@@ -147,7 +147,7 @@ SQLRETURN SQLSetDescField(
 |SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT *|ОТМЕНИТЬ: R/W APD: R/W IRD: IPD R/W: Чтение-запись|ОТМЕНИТЬ: NULL ptr APD: NULL ptr IRD: NULL ptr IPD: NULL ptr|  
 |SQL_DESC_BIND_OFFSET_PTR|SQLLEN *|ОТМЕНИТЬ: R/W APD: R/W IRD: Неиспользуемые IPD: Не используется|ОТМЕНИТЬ: NULL ptr APD: NULL ptr IRD: Неиспользуемые IPD: Не используется|  
 |SQL_DESC_BIND_TYPE|SQLINTEGER|ОТМЕНИТЬ: R/W APD: R/W IRD: Неиспользуемые IPD: Не используется|ОТМЕНИТЬ: SQL_BIND_BY_COLUMN<br /><br /> APD: SQL_BIND_BY_COLUMN<br /><br /> IRD: Не используется<br /><br /> IPD: Не используется|  
-SQL_DESC_COUNT|SQLSMALLINT|ОТМЕНИТЬ: R/W APD: R/W IRD: R IPD: Чтение-запись|ОТМЕНИТЬ: 0 APD: 0 IRD: D IPD: 0|  
+|SQL_DESC_COUNT|SQLSMALLINT|ОТМЕНИТЬ: R/W APD: R/W IRD: R IPD: Чтение-запись|ОТМЕНИТЬ: 0 APD: 0 IRD: D IPD: 0|  
 |SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN *|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: IPD R/W: Чтение-запись|ОТМЕНИТЬ: Неиспользуемые APD: Неиспользуемые IRD: NULL ptr IPD: NULL ptr|  
   
  [1] Эти поля определены только в том случае, если IPD заполняется автоматически с помощью драйвера. Если это не так, они будут неопределенными. Если приложение пытается установить эти поля SQLSTATE HY091 (недопустимый идентификатор поля дескриптора) будет возвращено.  

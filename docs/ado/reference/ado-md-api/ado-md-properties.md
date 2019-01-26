@@ -14,23 +14,24 @@ ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d37b1a07566943038bd73b0d79eb2dcd4655fda6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 522c563a113bab599481821dbb5d79422126a901
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696933"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044776"
 ---
 # <a name="ado-md-properties"></a>Свойства многомерных объектов ADO
+
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|Указывает, к какой ADO **подключения** объекта текущего набора ячеек или каталога в настоящее время принадлежит.|  
 |[Заголовок](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Указывает заголовок текста, используемый при отображении **уровень** или **член** объекта.|  
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|Указывает количество элементов, для которого текущий **член** объект является родительской в иерархии.|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|Возвращает коллекцию **члены** для которого текущий **член** является родителем в иерархии.|  
-|[число](../../../ado/reference/ado-api/count-property-ado.md)|Указывает количество объектов в коллекции.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Указывает количество объектов в коллекции.|  
 |[Глубина](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Указывает количество уровней между **уровень** и корневой уровень иерархии.|  
-|[Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Возвращает текстовое описание текущего объекта.|  
+|[Описание](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Возвращает текстовое описание текущего объекта.|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|Указывает число измерений на оси.|  
 |[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)|Указывает, следуют ли какие-либо потомки непосредственно за элементом на оси.|  
 |[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)|Указывает сведения о фильтрах для текущего набора ячеек.|  
@@ -39,7 +40,7 @@ ms.locfileid: "47696933"
 |[FormattedValue](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)|Указывает, отображать форматированное значение ячейки.|  
 |[LevelDepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)|Указывает количество уровней между корень иерархии и член.|  
 |[LevelName](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)|Указывает имя уровня элемента.|  
-|[Название](../../../ado/reference/ado-md-api/name-property-ado-md.md)|Указывает имя объекта.|  
+|[Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)|Указывает имя объекта.|  
 |[Порядковый номер (ячейка)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)|Уникальным образом определяет ячейку по его положению в наборе ячеек.|  
 |[Порядковый номер (положение)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)|Однозначно определяет положение вдоль оси.|  
 |[Parent](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|Указывает элемент, который является родительским для текущего элемента в иерархии.|  
@@ -48,7 +49,7 @@ ms.locfileid: "47696933"
 |[Состояние](../../../ado/reference/ado-md-api/state-property-ado-md.md)|Указывает текущее состояние набора ячеек.|  
 |[Тип](../../../ado/reference/ado-md-api/type-property-ado-md.md)|Указывает тип текущего члена.|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|Указывает имя однозначный для текущего объекта.|  
-|[Value](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Указывает значение текущей ячейки.|  
+|[Значение](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Указывает значение текущей ячейки.|  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по API ADO MD](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   

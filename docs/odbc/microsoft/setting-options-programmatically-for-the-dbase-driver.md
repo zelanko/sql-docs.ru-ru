@@ -16,14 +16,15 @@ ms.assetid: 336d0fd4-5448-4d8c-b7d9-49e857228e36
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd5ebd223c3b4a15193f6ce5f9f8aa8bf03170f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a268e72262f9f8252ea89774876f3d04008fe4c4
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745892"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044440"
 ---
 # <a name="setting-options-programmatically-for-the-dbase-driver"></a>Программная настройка параметров драйвера для dBASE
+
 |Параметр|Описание|Метод|  
 |------------|-----------------|------------|  
 |Приблизительное число строк|Определяет, округляются ли статистика размеров для таблицы. Этот параметр применяется ко всем источникам данных, использующие драйвер ODBC.|Чтобы задать этот параметр динамически, используйте **СТАТИСТИКИ** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  

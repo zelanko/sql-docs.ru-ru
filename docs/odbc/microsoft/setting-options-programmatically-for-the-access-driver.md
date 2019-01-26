@@ -16,14 +16,15 @@ ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5227985c56d5e2fd4730c86fe9182c8b16b2cb02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57bc9dd31299a70c5c8a2272dd49b577f58b7bb0
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804462"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044470"
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>Программная настройка параметров драйвера для Access
+
 |Параметр|Описание|Метод|  
 |------------|-----------------|------------|  
 |Размер буфера|Размер внутреннего буфера, в килобайтах, который используется в Microsoft Access для передачи данных и с диска. Размер буфера по умолчанию — 2048 КБ, (отображается как 2048). Можно ввести любое целочисленное значение, кратным 256.|Чтобы задать этот параметр динамически, используйте ключевое слово MAXBUFFERSIZE в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  

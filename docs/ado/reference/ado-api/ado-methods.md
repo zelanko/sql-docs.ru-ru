@@ -14,14 +14,15 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12b78faed3c45a92c1b20796ade5ce0a6844a84e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 494de627d6e76ba59f1bfb0684c31afe4bf07e68
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530245"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044760"
 ---
 # <a name="ado-methods"></a>Методы ADO
+
 |||  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Создает новую запись для обновляемый **записей** объекта.|  
@@ -78,7 +79,7 @@ ms.locfileid: "52530245"
 |[Update](../../../ado/reference/ado-api/update-method.md)|Сохраняет любые изменения, вносимые в текущей строке **записей** объекта, или **поля** коллекцию **записи** объекта.|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Записывает все ожидающие пакетных обновлений на диск.|  
 |[записи](../../../ado/reference/ado-api/write-method.md)|Записывает двоичные данные в **Stream** объекта.|  
-|[Инструкция WriteText](../../../ado/reference/ado-api/writetext-method.md)|Записывает указанную текстовую строку для **Stream** объекта.|  
+|[WriteText](../../../ado/reference/ado-api/writetext-method.md)|Записывает указанную текстовую строку для **Stream** объекта.|  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
