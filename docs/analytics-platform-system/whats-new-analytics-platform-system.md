@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5467362b32733e6ef10036bf9b45d38fe3150a1e
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 44ed335524d21cd4931722a20be4eb0da5681603
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626358"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044711"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Новые возможности в Analytics Platform System, хранилища данных MPP горизонтального масштабирования
 См. в разделе, новые возможности в последние обновления устройства для Microsoft Analytics Platform System (APS). APS является горизонтальное масштабирование локальное устройство, на котором размещена MPP SQL Server Parallel Data Warehouse. 
@@ -24,13 +24,14 @@ ms.locfileid: "53626358"
 ## <a name="aps-cu73"></a>APS CU7.3
 Дата выпуска - декабря 2018 г.
 
-### <a name="common-subexpression-elimination"></a>Исключение общей части выражения
+### <a name="common-subexpression-elimination"></a>Исключение общих частей выражений
 APS CU7.3 повышает производительность запросов с исключение общей части выражения в оптимизатор запросов SQL. Улучшение улучшает запросы двумя способами. Первый преимущество заключается в возможности определения и устранения такие выражения помогают сократить время компиляции SQL. Вторым и более важным преимущество в том, что операции перемещения данных для этих избыточных частей выражения исключаются таким образом времени выполнения для запросов становится быстрее. Подробное описание этой функции можно найти [здесь](common-sub-expression-elimination.md).
 
 ### <a name="aps-informatica-connector-for-informatica-1020-published"></a>Соединитель APS Informatica для Informatica 10.2.0 публикации
 Корпорация Майкрософт выпустила новую версию соединителей Informatica ТД, который работает с Informatica версии 10.2.0. Новые соединители можно загрузить из [сайт загрузки](https://www.microsoft.com/download/details.aspx?id=57472).
 
 #### <a name="supported-versions"></a>Поддерживаемые версии
+
 | Версия APS | Informatica PowerCenter | Драйвер |
 |:---|:---|:---|
 | APS 2016 | 9.6.1 | Собственный клиент SQL Server 11.x |
