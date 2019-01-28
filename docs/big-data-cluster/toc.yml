@@ -5,10 +5,28 @@ items:
     href: big-data-cluster-overview.md
   - name: Заметки о выпуске
     href: big-data-cluster-release-notes.md
-- name: Краткие руководства
+- name: Установить
   items:
-  - name: Развертывание кластера больших данных SQL Server
-    href: quickstart-big-data-cluster-deploy.md
+  - name: Установка инструментов
+    items:
+    - name: Установка инструментов для больших данных
+      href: deploy-big-data-tools.md
+    - name: Установка mssqlctl
+      href: deploy-install-mssqlctl.md
+  - name: Скрипты развертывания
+    items:
+    - name: Служба Azure Kubernetes
+      href: quickstart-big-data-cluster-deploy.md
+  - name: Руководства по развертыванию
+    items:
+    - name: Руководства по развертыванию
+      href: deployment-guidance.md
+    - name: Служба Azure Kubernetes
+      href: deploy-on-aks.md
+    - name: Kubeadm
+      href: deploy-with-kubeadm.md
+    - name: Minikube
+      href: deploy-on-minikube.md
 - name: Учебники
   items:
   - name: 1_Загрузка примера данных
@@ -41,24 +59,6 @@ items:
     href: concept-security.md
 - name: Практические руководства
   items:
-  - name: Установить
-    items:
-    - name: Развертывание кластеров больших данных
-      items:
-      - name: Руководства по развертыванию
-        href: deployment-guidance.md
-      - name: Развертывание в Minikube
-        href: deploy-on-minikube.md
-      - name: Развертывание в AKS
-        href: deploy-on-aks.md
-      - name: Развертывание с помощью Kubeadm
-        href: deploy-with-kubeadm.md
-    - name: Средства установки
-      items:
-      - name: Установка инструментов для больших данных
-        href: deploy-big-data-tools.md
-      - name: Установка mssqlctl
-        href: deploy-install-mssqlctl.md
   - name: Виртуализация данных
     items:
     - name: Виртуализация реляционных данных
@@ -109,9 +109,9 @@ items:
     href: ../relational-databases/polybase/polybase-guide.md
   - name: Запрос доступа к кластерам больших данных
     href: https://aka.ms/eapsignup
-ms.openlocfilehash: 0878ec62a789072b9796c928aad8e7c0b6af6e65
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: d9229242d1c56e36c854ef8f7ecdd94145398b87
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405564"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898919"
