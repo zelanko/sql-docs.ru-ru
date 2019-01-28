@@ -10,22 +10,24 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 72dc0b6cd9b5cf5f5818e0f447901fcce8c17def
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c47021ce06d51b833ede6ee75f1e575e4b078314
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416240"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044907"
 ---
 # <a name="sql-server-development-partners"></a>Партнеры по разработке SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 В отрасли доступно множество передовых средств для разработки решений баз данных SQL Server.  В этой статье указаны партнеры корпорации Майкрософт, которые предлагают решения по разработке для Microsoft SQL Server.
 
 ## <a name="our-development-partners"></a>Наши партнеры по разработке
+
 | Партнер | Описание | Ссылки |
 | --- | --- | --- |
 |![idera][1] |**IDERA**<br>Rapid SQL — это интеллектуальная интегрированная среда разработки SQL, позволяющая разработчикам и администраторам баз данных создавать высокопроизводительный код SQL на всех ключевых платформах баз данных (включая SQL Server) с помощью единого интерфейса.<br><br>[Требования к системе][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Веб-сайт][idera_website]<br>[Twitter][idera_twitter]<br>[Видео][idera_youtube] |
 |![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc. предоставляет сообществу разработчиков гибкие возможности выбора языков программирования, платформ и служб с помощью правильного набора инструментов. С помощью набора инструментов Click2Cloud разработчики могут создавать контейнеры SQL в Linux и подключать их к приложению, обеспечивая надежную и мультитенантную архитектуру. Контейнеры можно разворачивать независимо друг от друга на любой облачной платформе для контейнеров.|[Marketplace][click2cloud_marketplace]<br>[Веб-сайт][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[Видео][click2cloud_youtube] |
+
 ## <a name="next-steps"></a>Следующие шаги
 Дополнительные сведения о некоторых других партнерах см. в разделах, посвященных [партнерам по высокой доступности и аварийному восстановлению][hadr_partners], [партнерам по управлению][management_partners] и [партнерам по мониторингу][monitor_partners].
 

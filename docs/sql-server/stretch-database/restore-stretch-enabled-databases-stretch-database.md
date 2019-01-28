@@ -9,12 +9,12 @@ ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 46cbbaa2654e18f0aef5d5a3b904f41ce5a88219
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: f9ee612238f9e8208de48b6d52256141d1ed638d
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596585"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457637"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Восстановление баз данных с поддержкой Stretch (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "53596585"
   Дополнительные сведения о создании резервной копии см. в статье [Резервное копирование баз данных с поддержкой Stretch](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md).
 
 > [!TIP]
-> Резервная копия — только часть комплексного решения обеспечения высокой доступности и бесперебойной работы. Дополнительные сведения о высокой доступности см. в статье [Решения высокого уровня доступности](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).
+> Резервная копия — только часть комплексного решения обеспечения высокой доступности и бесперебойной работы. Дополнительные сведения о высокой доступности см. в статье [Решения высокого уровня доступности](../../database-engine/sql-server-business-continuity-dr.md).
 
 ## <a name="restore-your-sql-server-data"></a>Восстановление данных SQL Server
 После сбоя или повреждения оборудования базу данных SQL Server можно восстановить из резервной копии. Для этого можно использовать привычные методы восстановления SQL Server. Дополнительные сведения см. в статье [Обзор процессов восстановления](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).

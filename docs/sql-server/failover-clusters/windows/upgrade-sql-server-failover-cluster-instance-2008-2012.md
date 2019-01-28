@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a63d6e347f83e63f7f99a2e06e1122b1c93934b0
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 6c669932929f690a1d3f01968bbaaa482aa4d568
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257059"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044560"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Обновление экземпляров SQL Server, работающих в кластерах Windows Server 2008, Windows Server 2008 R2 или Windows Server 2012
 
@@ -49,6 +49,7 @@ ms.locfileid: "54257059"
 | **_Группы доступности? (да или нет)_**                  | **_Да_**                              | **_Нет_**                                                            | **_Да_**    | **_Нет_**    |
 | **Кластер использует только экземпляр отказоустойчивого кластера SQL**         | [Сценарий 3](#scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups)                           | [Сценарий 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag)                                                        | [Сценарий 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Сценарий 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag) |
 | **Кластер использует автономные экземпляры** | [Сценарий 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [Сценарий 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [Сценарий 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Сценарий 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
+
 \* Исключая имена прослушивателей группы доступности
 
 ## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>Сценарий 1. Кластер Windows с группами доступности SQL Server и без экземпляров отказоустойчивого кластера
