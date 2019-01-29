@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1ac0f94b7f12cdba6237b2694114580f56dc6597
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 39cc5a22165d07aafce29e4216548c4e8d226892
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540460"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087633"
 ---
 # <a name="monitoring-overview"></a>Общие сведения о мониторинге
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-Analysis Services имеется несколько различных средств, помогающих отслеживать и и настройки производительности ваших серверов. Выбор средств зависит от типа контроля или настройки, а также от конкретных отслеживаемых событий.
+Службы Analysis Services имеет несколько различных средств для отслеживания и настройки производительности ваших серверов. Выбор средств зависит от типа контроля или настройки, а также от конкретных отслеживаемых событий.
 
 Дополнительные сведения о мониторинге SQL Server Analysis Services, см. в разделе [руководстве SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=225539).  
   

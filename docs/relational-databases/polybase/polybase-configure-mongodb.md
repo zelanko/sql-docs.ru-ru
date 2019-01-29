@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 68fb5c69d30e9ba30f27bcd23347ed5543c7e792
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.openlocfilehash: 6c4ccf371cdcac99d50c3142ec42641380623501
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947589"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044500"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Настройка PolyBase для доступа к внешним данным в MongoDB
 
@@ -95,7 +95,7 @@ ms.locfileid: "51947589"
      );
      ```
 
-1. **Необязательно.** Создайте статистику для внешней таблицы.
+1. **Необязательно**. Создайте статистику внешней таблицы.
 
     Чтобы обеспечить оптимальную производительность запросов, мы советуем создать статистику столбцов внешней таблицы, особенно тех, которые используются для объединения, применения фильтров и статистических выражений.
 
@@ -142,6 +142,7 @@ ms.locfileid: "51947589"
 * вложенное поле restaurant.address.zipcode преобразуется в restaurant.address_zipcode.
 
 Массив оценок будет преобразован в плоскую структуру, как показано ниже:
+
 | grades_date | grades_grade  | games_score | 
 | ------------- | ------------------------- | -------------- |
 |1393804800000 |Объект |2|

@@ -11,12 +11,12 @@ ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9a2172bdefebdbfd327d8d253e32cd63c254d8e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cf132a6cd6e15002b36ba7ecdced512e3686e433
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419877"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087715"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>Панель мониторинга управления PowerPivot и данные об использовании
   Панель мониторинга управления PowerPivot представляет собой набор стандартных отчетов и веб-частей в центре администрирования SharePoint, предназначенный для администрирования развертывания SQL Server PowerPivot для SharePoint. Панель мониторинга управления предоставляет сведения о работоспособности серверов, действиях с книгой и обновлении данных. Панель мониторинга управления использует данные, полученные в процессе сбора данных об использовании SharePoint.  
@@ -67,7 +67,7 @@ ms.locfileid: "52419877"
 ### <a name="change-the-current-service-application"></a>Измените текущее приложение службы.  
  Изменение текущего приложения службы PowerPivot на панели мониторинга управления:  
   
-1.  Найдите имя текущего приложения службы в верхней части панели мониторинга управления PowerPivot, например **Приложение службы PowerPivot по умолчанию**.  
+1.  В верхней части панели управления PowerPivot, запомните имя текущего приложения службы, например **приложение службы PowerPivot по умолчанию**.  
   
 2.  В разделе **Действия** панели мониторинга щелкните **Список приложений службы**.  
   

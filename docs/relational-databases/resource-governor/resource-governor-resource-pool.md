@@ -14,12 +14,12 @@ ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 37d6a896057085353d81e8c9acbd161a25014d51
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 891e3e41bab9be82145bfeb905e9243b7bf31340
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380955"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044351"
 ---
 # <a name="resource-governor-resource-pool"></a>Пул ресурсов регулятора ресурсов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,6 +61,7 @@ ms.locfileid: "53380955"
 |значение по умолчанию|0|100|30|30|Эффективное значение MAX вычисляется следующим образом: min(100,100-(20+50)) = 30. Вычисляемый общий процентный показатель — это фактическое значение MAX - MIN = 30.|  
 |Пул 1|20|100|50|30|Эффективное значение MAX вычисляется так: min(100,100-50)=50. Вычисляемый общий процентный показатель — это фактическое значение MAX - MIN = 30.|  
 |Пул 2|50|70|70|20|Эффективное значение MAX вычисляется так: min(70,100-20)=70. Вычисляемый общий процентный показатель — это эффективное значение MAX-MIN=20.|  
+
 Приведенные ниже формулы используются для вычисления фактического значения MAX% и общего процентного показателя в таблице выше.  
   
 -   Min(X,Y) — это наименьшие значения X и Y.  

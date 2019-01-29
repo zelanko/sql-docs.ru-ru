@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: f91ba6d5e7120f26c4ce4f8572eea779cdddebfc
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 72ff999a4b88bff5d8b78f8e8b936da18b8a4e16
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226691"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044951"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Использование функции Always Encrypted с драйвером ODBC для SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -417,6 +417,7 @@ DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 ```
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
+
 | Аргумент | Описание |
 |:---|:---|
 |`ConnectionHandle`|[Вход] Дескриптор соединения. Должен быть дескриптором допустимое соединение, но загружаются через одно подключение дескриптор поставщиков доступны из любой другой, в том же процессе.|
@@ -451,6 +452,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
+
 | Аргумент | Описание |
 |:---|:---|
 |`ConnectionHandle`|[Вход] Дескриптор соединения. Должен быть дескриптором допустимое соединение, но загружаются через одно подключение дескриптор поставщиков доступны из любой другой, в том же процессе.|
@@ -477,6 +479,7 @@ unsigned int dataSize;
 char data[];
 } CEKEYSTOREDATA;
 ```
+
 | Аргумент | Описание |
 |:---|:---|
 |`name`|[Вход] После набора, имя поставщика для отправки данных. Учитывается при Get. Строка расширенных символов, завершающаяся символом NULL.|
@@ -489,6 +492,7 @@ char data[];
 ```
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
+
 | Аргумент | Описание |
 |:---|:---|
 |`ConnectionHandle`| [Вход] Дескриптор соединения. Должен быть дескриптором допустимое соединение, но загружаются через одно подключение дескриптор поставщиков доступны из любой другой, в том же процессе.|
@@ -508,6 +512,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
+
 | Аргумент | Описание |
 |:---|:---|
 |`ConnectionHandle`|[Вход] Дескриптор соединения. Должен быть дескриптором допустимое соединение, но загружаются через одно подключение дескриптор поставщиков доступны из любой другой, в том же процессе.|

@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db55b4763dc0a5956d419fd45ced58073e2affbb
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 696d3bfc454e396f8cc590d3178f8ae54b89128a
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805720"
 ---
 # <a name="always-encrypted-wizard"></a>Мастер постоянного шифрования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "54327875"
  
  - **Разрешения**: Чтобы запросить зашифрованные столбцы и выбрать ключи с использованием этого мастера, необходимо иметь разрешения `VIEW ANY COLUMN MASTER KEY DEFINITION` и `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION`. Чтобы создать новые ключи, необходимо также иметь разрешения `ALTER ANY COLUMN MASTER KEY` и `ALTER ANY COLUMN ENCRYPTION KEY` .  
  
- #### <a name="to-open-the-always-encrypted-wizard"></a>Как запустить мастер постоянного шифрования  
+ #### <a name="to-open-the-always-encrypted-wizard"></a>Как запустить мастер постоянного шифрования
  
  1.  Подключитесь к своему серверу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью обозревателя объектов [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
    
  2.  Щелкните правой кнопкой мыши вашу базу данных, укажите на пункт **Задачи**и щелкните **Зашифровать столбцы**.  
    
- ## <a name="column-selection-page"></a>Страница выбора столбцов  
+ ## <a name="column-selection-page"></a>Страница выбора столбцов
  - Найдите нужную таблицу и столбец, а затем выберите тип шифрования (детерминированное или случайное) и ключ шифрования для выбранных столбцов. Чтобы расшифровать зашифрованный столбец, выберите вариант **Открытый текст**. Чтобы сменить ключ шифрования столбца, выберите новый ключ шифрования. Мастер выполнит расшифровку столбца, а затем повторно зашифрует его с помощью нового ключа. ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает шифрование темпоральных таблиц и таблиц в памяти, но его невозможно настроить с помощью этого мастера.)  
  
 ## <a name="master-key-configuration-page"></a>Страница конфигурации главного ключа  

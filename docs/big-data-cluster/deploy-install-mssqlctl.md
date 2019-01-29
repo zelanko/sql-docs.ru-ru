@@ -9,12 +9,12 @@ ms.date: 01/15/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aec8f030a996e5dd86c44a5a655e98d4926988ed
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: d3ee1a0d2b6f3ec2c395b2c318aaf4b151497562
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361414"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087613"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>Установка mssqlctl для управления кластерами SQL Server 2019 больших данных
 
@@ -34,9 +34,15 @@ ms.locfileid: "54361414"
 
 1. Откройте новый сеанс Windows PowerShell, чтобы он возвращает последнюю путь с Python в нем.
 
-2. Установка **mssqlctl** , выполнив следующую команду:
+1. Если у вас есть все предыдущие выпуски **mssqlctl** установлен, очень важно удалить **mssqlctl** перед установкой последней версии.
 
-   ```bash
+   ```powershell
+   pip3 uninstall mssqlctl
+   ```
+
+1. Установка **mssqlctl** , выполнив следующую команду:
+
+   ```powershell
    pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
    ```
 
@@ -57,16 +63,22 @@ ms.locfileid: "54361414"
    ```bash
    sudo -H pip3 install --upgrade pip
    ```
-   
+
+1. Если у вас есть все предыдущие выпуски **mssqlctl** установлен, очень важно удалить **mssqlctl** перед установкой последней версии.
+
+   ```bash
+   pip3 uninstall mssqlctl
+   ```
+
 1. Установка **mssqlctl** , выполнив следующую команду:
 
    ```bash
    pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
    ```
-   
+
    > [!NOTE]
    > `--user` Служит для установки mssqlctl в каталог установки Python пользователя. Обычно это `~/.local/bin` в Linux. Добавьте этот каталог в путь, перейдите в каталог установки пользователя и выполняться `./mssqlctl` оттуда.
-   
+
 ## <a name="next-steps"></a>Следующие шаги
 
 Дополнительные сведения о кластерах большие данные см. в разделе [Каковы кластеров SQL Server 2019 больших данных?](big-data-cluster-overview.md).

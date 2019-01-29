@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7158c0c441c11f87c4cc4989ca66061318a60df4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f53c8835da14fc3ee41eb9598303f80c062a0e82
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419705"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087753"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Информационная панель управления PowerPivot и данные об использовании
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52419705"
 ### <a name="change-the-current-service-application"></a>Измените текущее приложение службы.  
  Чтобы изменить текущее приложение службы [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] на информационной панели управления, сделайте следующее.  
   
-1.  Найдите имя текущего приложения службы в верхней части панели мониторинга управления [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)], например **Приложение службы [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] по умолчанию**.  
+1.  В верхней части [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] мониторинга для управления найдите имя текущего приложения службы, например **по умолчанию [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] приложение службы**.  
   
 2.  В разделе **Действия** панели мониторинга щелкните **Список приложений службы**.  
   

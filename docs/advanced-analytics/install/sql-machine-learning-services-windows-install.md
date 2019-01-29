@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2f323ac135ed41ff15c1d41a17407d03138e4807
-ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
+ms.openlocfilehash: 6fd14582fdae0d76463b8d8739d214882b78f999
+ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54372697"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55147012"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Установка SQL Server службы машинного обучения на Windows
 
@@ -29,7 +29,9 @@ ms.locfileid: "54372697"
 
 + Экземпляр ядра СУБД является обязательным. Невозможно установить только R или Python компоненты, несмотря на то, что их можно добавить постепенно в существующий экземпляр.
 
-- Установка служб машинного обучения — *не поддерживается* на отказоустойчивый кластер SQL Server 2017. Тем не менее он *поддерживается* с SQL Server 2019. 
++ Для обеспечения непрерывности бизнеса [доступности группы AlwaysOn](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) поддерживаются для служб машинного обучения. Необходимо установить службы машинного обучения и Настройка пакетов, на каждом узле.
+
++ Установка служб машинного обучения — *не поддерживается* на отказоустойчивый кластер SQL Server 2017. Тем не менее он *поддерживается* с SQL Server 2019. 
  
 + Не устанавливайте службы машинного обучения на контроллере домена. Службы машинного обучения часть установки завершится ошибкой.
 

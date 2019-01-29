@@ -26,12 +26,12 @@ ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a4a31e52cbaa9e91219c2e67341de968d5c7e2c
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: e0c9cf64fa8e2b4304e2ba25536a298edbd306ac
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626334"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044331"
 ---
 # <a name="database-engine-service-startup-options"></a>Параметры запуска службы Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,6 +49,7 @@ ms.locfileid: "53626334"
   
 ## <a name="list-of-startup-options"></a>Список параметров запуска  
 ### <a name="default-startup-options"></a>Параметры запуска по умолчанию  
+
 |Параметры|Описание|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|Полный путь к файлу базы данных master (обычно это "C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\Master.mdf"). Если этот параметр не задан, используются параметры из реестра.|  
@@ -56,6 +57,7 @@ ms.locfileid: "53626334"
 |**-l**  *master_log_path*|Полный путь к файлу журнала базы данных master (обычно это "C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\mastlog.ldf"). Если данный параметр не указан, будут использованы параметры из реестра.|  
   
 ### <a name="other-startup-options"></a>Дополнительные параметры запуска   
+
 |Параметры |Описание|   
 |---------------------------|-----------------|  
 |**-c**|Ускоряет запуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из командной строки. Обычно компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] запускается в виде службы путем вызова диспетчера управления службами. Так как [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] не запускается как служба при запуске из командной строки, используйте параметр **-c** , чтобы пропустить этот шаг.|  

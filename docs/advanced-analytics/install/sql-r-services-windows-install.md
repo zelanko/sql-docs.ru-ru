@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 69b3b9a57b2a4f6120c88552ca3100b288968b69
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 0cfe6b67217521f829f7b4745d42283e70a411fe
+ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645323"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55147032"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Установка служб SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,6 +27,8 @@ ms.locfileid: "53645323"
 ## <a name="pre-install-checklist"></a>Контрольный список перед установкой
 
 + Экземпляр ядра СУБД является обязательным. Невозможно установить только R, несмотря на то, что постепенно добавить его к существующему экземпляру.
+
++ Для обеспечения непрерывности бизнеса [доступности группы AlwaysOn](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) поддерживается для служб R. Необходимо установить службы R и Настройка пакетов, на каждом узле.
 
 + Не устанавливайте службы R в отказоустойчивом кластере. Механизм безопасности, используемый для изолирования процессов R несовместим с среде отказоустойчивого кластера Windows Server.
 

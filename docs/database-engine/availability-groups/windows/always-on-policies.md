@@ -11,12 +11,12 @@ ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b409c3d4811bd713478fa9b83c4904c6fb4bd789
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d049d012c9447eeb79cd2d64435d37223540adb5
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212073"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044610"
 ---
 # <a name="evaluate-health-of-the-always-on-availability-group-using-group-policies"></a>Определение работоспособности группы доступности Always On с помощью групповых политик
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,6 +34,6 @@ ms.locfileid: "53212073"
 3.  Чтобы просмотреть все системные политики групп доступности, в области **Выбор страницы** щелкните элемент **Выбор политики**.  
   
 ## <a name="next-steps"></a>Следующие шаги  
- [Модель работоспособности Always On, часть 2. Расширение модели работоспособности](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).  
+ [Модель работоспособности Always On, часть 2. Расширение модели работоспособности](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).   
   
   

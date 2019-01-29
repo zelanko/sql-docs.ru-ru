@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ee8f8c4a222b2949f49c8be019b6e4f6724cfa04
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: d46ff8318543d4e2a4b4dc547c9f19640d463f49
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785965"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087873"
 ---
 # <a name="thread-pool-properties"></a>Свойства пула потоков
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -173,13 +173,13 @@ ms.locfileid: "53785965"
   
  Узлы NUMA не учитываются. Будет присутствовать только один пул потоков IOProcess, и все потоки в этом пуле будут привязаны ко всем логическим процессорам. Это значение будет использоваться по умолчанию (при PerNumaNode=-1), если компьютер имеет менее 4 узлов NUMA.  
   
- ![NUMA, процессора и пула ошибке отправки корреспонденции](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa, процессора и пула ошибке отправки корреспонденции")  
+ ![NUMA, процессора и пула соответствие](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa, процессора и пула соответствие")  
   
  **Задание PerNumaNode=1**  
   
  Пулы потоков IOProcess создаются для каждого узла NUMA. Наличие отдельных пулов потоков способствует улучшению координируемого доступа к локальным ресурсам, например к локальному кэшу на узле NUMA.  
   
- ![NUMA, процессора и пула ошибке отправки корреспонденции](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa, процессора и пула ошибке отправки корреспонденции")  
+ ![NUMA, процессора и пула соответствие](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa, процессора и пула соответствие")  
   
  **Задание PerNumaNode=2**  
   
@@ -187,7 +187,7 @@ ms.locfileid: "53785965"
   
  В следующем примере в системе с 4 узлами NUMA и 32 логическими процессорами задание параметру **PerNumaNode** значения 2 приведет к созданию 32 пулов потоков IOProcess. Потоки в первых 8 пулах будут привязаны ко всем логическим процессорам в узле 0, но идеальный процессор будет назначен для 0, 1, 2... до 7. Следующие 8 пулов потоков будут привязаны ко всем логическим процессорам в узле 1 NUMA, идеальный процессор будет назначен для 8, 9, 10... до 15 и т. д.  
   
- ![NUMA, процессора и пула ошибке отправки корреспонденции](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa, процессора и пула ошибке отправки корреспонденции")  
+ ![NUMA, процессора и пула соответствие](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa, процессора и пула соответствие")  
   
  На этом уровне соответствия планировщик всегда сначала пытается использовать идеально подходящий логический процессор в предпочитаемом узле NUMA. Если логический процессор недоступен, то планировщик выбирает один процессор в том же узле или в той же группе процессоров, если другие потоки недоступны. Дополнительные сведения и примеры см. в статье [Параметры конфигурации служб Analysis Services 2012 (блог Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387).  
   

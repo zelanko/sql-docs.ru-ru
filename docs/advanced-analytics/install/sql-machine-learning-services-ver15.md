@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d0b91668141b73b8ce5e4708cb403b7cc09b4ce9
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 8ef383a0f2c85525e408607c22513065dd5bcb50
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432837"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087743"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>Различия в установке служб машинного обучения SQL Server в SQL Server 2019  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "53432837"
 
 ## <a name="symbolic-link-created-by-setup"></a>Символьную ссылку, созданный программой установки
 
-Для текущего значения по умолчанию создается символьную ссылку **R_SERVICES** и **PYTHON_SERIVCES** как часть установки SQL Server. Если вы не хотите создать эту ссылку, альтернативой является предоставить разрешение на чтение «все пакеты приложений» в иерархию, что приводит к папке.
+Для текущего значения по умолчанию создается символьную ссылку **R_SERVICES** и **PYTHON_SERVICES** как часть установки SQL Server. Если вы не хотите создать эту ссылку, альтернативой является предоставить разрешение на чтение «все пакеты приложений» в иерархию, что приводит к папке.
 
 
 ## <a name="see-also"></a>См. также

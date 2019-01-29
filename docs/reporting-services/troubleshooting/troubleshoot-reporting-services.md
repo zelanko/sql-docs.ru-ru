@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6eeed553-512d-4603-9b14-0492a9d052b5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 40f54f79c918f580d758dec342508dec96ae5b45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13a85c169421f4ab794ed95f8696d32e5215f6c9
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686132"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087933"
 ---
 # <a name="troubleshoot-reporting-services"></a>Устранение неполадок со службами Reporting Services
   Разделы этой статьи содержат сведения о том, как выявить и устранить проблемы с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -30,9 +30,9 @@ ms.locfileid: "47686132"
 
 +  [Устранение неполадок с подготовкой отчетов служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-report-rendering-issues.md)  
 
-+  [Устранение неполадок с публикацией и просмотром отчетов на сервере отчетов, работающем в основном режиме](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
++  [Устранение неполадок с публикацией и просмотром отчетов на сервере отчетов, работающем в собственном режиме](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
 
-+  [Устранение неполадок при подключении к серверу и базе данных (службы Reporting Serivces)](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
++  [Устранение неполадок с подключением к серверу и базе данных в Reporting Services](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
 
  ![Маленький значок папки](../../reporting-services/troubleshooting/media/filefolder-small.png)   **Справочник по ошибкам и событиям**  
  + [Справочник по ошибкам и событиям (службы Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
