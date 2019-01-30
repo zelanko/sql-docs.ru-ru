@@ -1,14 +1,15 @@
+items:
 - name: Обзор
   href: data-flow.md
 - name: Данные потоков данных
   href: data-in-data-flows.md
   items:
-    - name: Типы данных служб Integration Services
-      href: integration-services-data-types.md
-    - name: Анализ данных
-      href: parsing-data.md
-    - name: сравнение строковых данных
-      href: comparing-string-data.md
+  - name: Типы данных служб Integration Services
+    href: integration-services-data-types.md
+  - name: Анализ данных
+    href: parsing-data.md
+  - name: сравнение строковых данных
+    href: comparing-string-data.md
 - name: Добавление или удаление компонента в потоке данных
   href: add-or-delete-a-component-in-a-data-flow.md
 - name: Установление свойств компонента потока данных
@@ -46,39 +47,39 @@
 - name: Компоненты потока CDC
   href: cdc-flow-components.md
   items:
-    - name: CDC-источник
-      href: cdc-source.md
-      items:
-        - name: Пользовательские свойства источника «CDC»
-          href: cdc-source-custom-properties.md
-        - name: Извлечение информации об изменениях данных с помощью источника CDC
-          href: extract-change-data-using-the-cdc-source.md
-    - name: Разделитель CDC
-      href: cdc-splitter.md
-    - name: Выбор направления потока CDC в соответствии с типом изменения
-      href: direct-the-cdc-stream-according-to-the-type-of-change.md
-    - name: Определение переменной состояния
-      href: define-a-state-variable.md
+  - name: CDC-источник
+    href: cdc-source.md
+    items:
+    - name: Пользовательские свойства источника «CDC»
+      href: cdc-source-custom-properties.md
+    - name: Извлечение информации об изменениях данных с помощью источника CDC
+      href: extract-change-data-using-the-cdc-source.md
+  - name: Разделитель CDC
+    href: cdc-splitter.md
+  - name: Выбор направления потока CDC в соответствии с типом изменения
+    href: direct-the-cdc-stream-according-to-the-type-of-change.md
+  - name: Определение переменной состояния
+    href: define-a-state-variable.md
 - name: целевой объект «Обучение модели интеллектуального анализа данных»
   href: data-mining-model-training-destination.md
   items:
-    - name: Пользовательские свойства назначения «Обучение модели интеллектуального анализа данных»
-      href: data-mining-model-training-destination-custom-properties.md
+  - name: Пользовательские свойства назначения «Обучение модели интеллектуального анализа данных»
+    href: data-mining-model-training-destination-custom-properties.md
 - name: Назначение потоковой передачи данных
   href: data-streaming-destination.md
   items:
-    - name: Пошаговое руководство. Публикация пакета служб SSIS в представлении SQL
-      href: walkthrough-publish-an-ssis-package-as-a-sql-view.md
+  - name: Пошаговое руководство. Публикация пакета служб SSIS в качестве представления SQL
+    href: walkthrough-publish-an-ssis-package-as-a-sql-view.md
 - name: назначение DataReader
   href: datareader-destination.md
   items:
-    - name: Пользовательские свойства назначения «Модуль чтения данных»
-      href: datareader-destination-custom-properties.md
+  - name: Пользовательские свойства назначения «Модуль чтения данных»
+    href: datareader-destination-custom-properties.md
 - name: назначение «Обработка измерений»
   href: dimension-processing-destination.md
   items:
-    - name: Пользовательские свойства назначения «Обработка измерений»
-      href: dimension-processing-destination-custom-properies.md
+  - name: Пользовательские свойства назначения «Обработка измерений»
+    href: dimension-processing-destination-custom-properies.md
 - name: Источник Excel
   href: excel-source.md
 - name: Назначение Excel
@@ -98,48 +99,50 @@
 - name: Источник OData
   href: odata-source.md
   items:
-    - name: Учебник. Использование источника OData
-      href: tutorial-using-the-odata-source.md
-    - name: Указание запроса источника OData во время выполнения
-      href: modify-odata-source-query-at-runtime.md
-    - name: Свойства источника OData
-      href: odata-source-properties.md
+  - name: Учебник. Использование источника OData
+    href: tutorial-using-the-odata-source.md
+  - name: Указание запроса источника OData во время выполнения
+    href: modify-odata-source-query-at-runtime.md
+  - name: Свойства источника OData
+    href: odata-source-properties.md
 - name: Компоненты потока ODBC
   href: odbc-flow-components.md
   items:
-    - name: Назначение ODBC
-      href: odbc-destination.md
-      items:
-        - name: Загрузка данных с помощью назначения ODBС
-          href: load-data-by-using-the-odbc-destination.md
-        - name: Пользовательские свойства назначений ODBC
-          href: odbc-destination-custom-properties.md
-    - name: ODBC-источник
-      href: odbc-source.md
-      items:
-        - name: Извлечение данных с помощью источника ODBC
-          href: extract-data-by-using-the-odbc-source.md
-        - name: Пользовательские свойства источника «ODBC»
-          href: odbc-source-custom-properties.md
+  - name: Назначение ODBC
+    href: odbc-destination.md
+    items:
+    - name: Загрузка данных с помощью назначения ODBС
+      href: load-data-by-using-the-odbc-destination.md
+    - name: Пользовательские свойства назначений ODBC
+      href: odbc-destination-custom-properties.md
+  - name: ODBC-источник
+    href: odbc-source.md
+    items:
+    - name: Извлечение данных с помощью источника ODBC
+      href: extract-data-by-using-the-odbc-source.md
+    - name: Пользовательские свойства источника «ODBC»
+      href: odbc-source-custom-properties.md
 - name: Источник OLE DB
   href: ole-db-source.md
   items:
-    - name: Сопоставления параметров запросов с переменными в компонентах потока данных
-      href: map-query-parameters-to-variables-in-a-data-flow-component.md
-    - name: Извлечение данных с помощью источника OLE DB
-      href: extract-data-by-using-the-ole-db-source.md
+  - name: Сопоставления параметров запросов с переменными в компонентах потока данных
+    href: map-query-parameters-to-variables-in-a-data-flow-component.md
+  - name: Извлечение данных с помощью источника OLE DB
+    href: extract-data-by-using-the-ole-db-source.md
 - name: Назначение «OLE DB»
   href: ole-db-destination.md
   items:
-    - name: Загрузка данных с помощью назначения «OLE DB»
-      href: load-data-by-using-the-ole-db-destination.md
+  - name: Загрузка данных с помощью назначения «OLE DB»
+    href: load-data-by-using-the-ole-db-destination.md
 - name: Пользовательские свойства OLE DB
   href: ole-db-custom-properties.md
 - name: Назначение обработки секции
   href: partition-processing-destination.md
   items:
-    - name: Пользовательские свойства назначения «Обработка секций»
-      href: partition-processing-destination-custom-properties.md
+  - name: Пользовательские свойства назначения «Обработка секций»
+    href: partition-processing-destination-custom-properties.md
+- name: Источник Power Query
+  href: power-query-source.md
 - name: источник «Необработанный файл»
   href: raw-file-source.md
 - name: назначение «Необработанный файл»
@@ -149,74 +152,80 @@
 - name: назначение «Набор записей»
   href: recordset-destination.md
   items:
-    - name: использовать назначение «Набор записей»
-      href: use-a-recordset-destination.md
-    - name: Пользовательские свойства назначения «Набор записей»
-      href: recordset-destination-custom-properties.md
+  - name: использовать назначение «Набор записей»
+    href: use-a-recordset-destination.md
+  - name: Пользовательские свойства назначения «Набор записей»
+    href: recordset-destination-custom-properties.md
 - name: Источник SAP BW
   href: sap-bw-source.md
   items:
-    - name: Редактор источников SAP BW (страница «Диспетчер соединений»)
-      href: sap-bw-source-editor-connection-manager-page.md
-    - name: Редактор источников SAP BW (страница «Столбцы»)
-      href: sap-bw-source-editor-columns-page.md
-    - name: Редактор источников SAP BW (страница «Вывод ошибок»)
-      href: sap-bw-source-editor-error-output-page.md
-    - name: Редактор источников SAP BW (страница «Дополнительно»)
-      href: sap-bw-source-editor-advanced-page.md
-    - name: Поиск назначения RFC
-      href: look-up-rfc-destination.md
-    - name: Поиск цепочки процессов
-      href: look-up-process-chain.md
-    - name: Журнал запросов
-      href: request-log.md
-    - name: Предварительный просмотр
-      href: preview.md
+  - name: Редактор источников SAP BW (страница «Диспетчер соединений»)
+    href: sap-bw-source-editor-connection-manager-page.md
+  - name: Редактор источников SAP BW (страница «Столбцы»)
+    href: sap-bw-source-editor-columns-page.md
+  - name: Редактор источников SAP BW (страница «Вывод ошибок»)
+    href: sap-bw-source-editor-error-output-page.md
+  - name: Редактор источников SAP BW (страница «Дополнительно»)
+    href: sap-bw-source-editor-advanced-page.md
+  - name: Поиск назначения RFC
+    href: look-up-rfc-destination.md
+  - name: Поиск цепочки процессов
+    href: look-up-process-chain.md
+  - name: Журнал запросов
+    href: request-log.md
+  - name: Предварительный просмотр
+    href: preview.md
 - name: Назначение SAP BW
   href: sap-bw-destination.md
   items:
-    - name: Редактор назначений SAP BW (страница «Диспетчер соединений»)
-      href: sap-bw-destination-editor-connection-manager-page.md
-    - name: Редактор назначений SAP BW (страница «Сопоставления»)
-      href: sap-bw-destination-editor-mappings-page.md
-    - name: Редактор назначений SAP BW (страница «Вывод ошибок»)
-      href: sap-bw-destination-editor-error-output-page.md
-    - name: Редактор назначений SAP BW (страница «Дополнительно»)
-      href: sap-bw-destination-editor-advanced-page.md
-    - name: Поиск InfoPackage
-      href: look-up-infopackage.md
-    - name: Создание InfoObject
-      href: create-new-infoobject.md
-    - name: Создание InfoCube для данных транзакции
-      href: create-infocube-for-transaction-data.md
-    - name: Поиск InfoObject
-      href: look-up-infoobject.md
-    - name: Создание InfoSource
-      href: create-infosource.md
-    - name: Создание InfoSource для данных транзакции
-      href: create-infosource-for-transaction-data.md
-    - name: Создание InfoSource для основных данных
-      href: create-infosource-for-master-data.md
-    - name: Создать InfoPackage
-      href: create-infopackage.md
+  - name: Редактор назначений SAP BW (страница «Диспетчер соединений»)
+    href: sap-bw-destination-editor-connection-manager-page.md
+  - name: Редактор назначений SAP BW (страница «Сопоставления»)
+    href: sap-bw-destination-editor-mappings-page.md
+  - name: Редактор назначений SAP BW (страница «Вывод ошибок»)
+    href: sap-bw-destination-editor-error-output-page.md
+  - name: Редактор назначений SAP BW (страница «Дополнительно»)
+    href: sap-bw-destination-editor-advanced-page.md
+  - name: Поиск InfoPackage
+    href: look-up-infopackage.md
+  - name: Создание InfoObject
+    href: create-new-infoobject.md
+  - name: Создание InfoCube для данных транзакции
+    href: create-infocube-for-transaction-data.md
+  - name: Поиск InfoObject
+    href: look-up-infoobject.md
+  - name: Создание InfoSource
+    href: create-infosource.md
+  - name: Создание InfoSource для данных транзакции
+    href: create-infosource-for-transaction-data.md
+  - name: Создание InfoSource для основных данных
+    href: create-infosource-for-master-data.md
+  - name: Создать InfoPackage
+    href: create-infopackage.md
 - name: Назначение «SQL Server Compact Edition»
   href: sql-server-compact-edition-destination.md
   items:
-    - name: Пользовательские свойства назначения «SQL Server Compact Edition»
-      href: sql-server-compact-edition-destination-custom-properties.md
+  - name: Пользовательские свойства назначения «SQL Server Compact Edition»
+    href: sql-server-compact-edition-destination-custom-properties.md
 - name: назначение «SQL Server»
   href: sql-server-destination.md
   items:
-    - name: Выполнение массовой загрузки данных с помощью назначения «SQL Server»
-      href: bulk-load-data-by-using-the-sql-server-destination.md
-    - name: Пользовательские свойства назначения «SQL Server»
-      href: sql-server-destination-custom-properties.md
+  - name: Выполнение массовой загрузки данных с помощью назначения «SQL Server»
+    href: bulk-load-data-by-using-the-sql-server-destination.md
+  - name: Пользовательские свойства назначения «SQL Server»
+    href: sql-server-destination-custom-properties.md
 - name: Преобразования
   href: ../../integration-services/data-flow/transformations/integration-services-transformations.md
 - name: XML-источник
   href: xml-source.md
   items:
-    - name: Извлечение данных с помощью XML-источника
-      href: extract-data-by-using-the-xml-source.md
-    - name: Пользовательские свойства источника «XML»
-      href: xml-source-custom-properties.md
+  - name: Извлечение данных с помощью XML-источника
+    href: extract-data-by-using-the-xml-source.md
+  - name: Пользовательские свойства источника «XML»
+    href: xml-source-custom-properties.md
+ms.openlocfilehash: e7c500c6534b746589fda6889c7c8a4561918a89
+ms.sourcegitcommit: 3a1e0b92cbe53ccf3b233faf8629d16bbf673b30
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55229055"
