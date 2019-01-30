@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a5dcc1c2726eaf234056fc77979df4d21a0dea17
-ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
+ms.openlocfilehash: 5e4ec4e6f0de497e3ec5d35293ad142696a19a46
+ms.sourcegitcommit: 3a1e0b92cbe53ccf3b233faf8629d16bbf673b30
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898929"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55229035"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>Настройка службы Azure Kubernetes для развертывания кластера (Предварительная версия) SQL Server 2019 больших данных
 
@@ -81,7 +81,7 @@ AKS позволяет легко создавать, настраивать и 
     --generate-ssh-keys \
     --node-vm-size Standard_L4s \
     --node-count 3 \
-    --kubernetes-version 1.10.8
+    --kubernetes-version 1.10.9
     ```
 
    Можно увеличить или уменьшить количество узлов агентов Kubernetes, изменив `--node-count <n>` где `<n>` — количество узлов агентов, которые вы хотите использовать. Сюда не входят главном узле Kubernetes, который управляется в фоновом AKS. Поэтому в примере выше, существуют **3** виртуальных машин размера **Standard_L4s** используемые для узлов агента из кластера AKS.
