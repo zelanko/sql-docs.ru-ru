@@ -11,12 +11,12 @@ ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7459e99e64bddaa0e971666edb8bb9c7c67c009
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dc50fb96c6ff5e88119186ec81f9608f25f42c3
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727492"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044837"
 ---
 # <a name="connection-options"></a>Параметры соединения
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,13 +24,14 @@ ms.locfileid: "47727492"
 Этот раздел содержит перечень параметров, которые допускаются в ассоциативном массиве (при использовании [sqlsrv_connect](../../connect/php/sqlsrv-connect.md) в драйвере SQLSRV), и ключевых слов, которые допускаются в имени источника данных (dsn, при использовании [PDO::__construct](../../connect/php/pdo-construct.md) в драйвере PDO_SQLSRV).  
 
 ## <a name="table-of-connection-options"></a>Таблица параметров подключения
+
 |Key|Значение|Описание|По умолчанию|  
 |-------|---------|---------------|-----------|  
 |APP|String|Указывает имя приложения, используемое для трассировки.|Значение не задано.|  
 |ApplicationIntent|String|Объявляет тип рабочей нагрузки приложения при соединении с сервером. Возможными значениями являются ReadOnly и ReadWrite.<br /><br />Дополнительные сведения о [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] поддержка [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], см. в разделе [Поддержка высокой доступности и аварийного восстановления](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|ReadWrite|  
 |AttachDBFileName|String|Указывает, какой файл базы данных сервер должен присоединить.|Значение не задано.|  
 |Проверка подлинности|Одна из следующих строк:<br /><br />"SqlPassword"<br /><br />"ActiveDirectoryPassword"|Указывает режим проверки подлинности.|Не задано.|  
-|CharacterSet<br /><br />(не поддерживается в драйвере PDO_SQLSRV)|String|Задает кодировку, используемую для отправки данных на сервер.<br /><br />Возможными значениями являются SQLSRV_ENC_CHAR и UTF-8. Дополнительные сведения см. в статье [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
+|CharacterSet<br /><br />(не поддерживается в драйвере PDO_SQLSRV)|String|Задает кодировку, используемую для отправки данных на сервер.<br /><br />Возможными значениями являются SQLSRV_ENC_CHAR и UTF-8. Дополнительные сведения см. в разделе [Как Отправка и извлечение данных UTF-8 с помощью встроенной поддержки UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
 |ColumnEncryption|**Enabled** (Включено) или **Disabled** (Отключено)|Указывает, включена ли функция Always Encrypted, или нет. |Выключено|  
 |ConnectionPooling|1 или **true** для включения организации пулов соединений.<br /><br />0 или **false** для отключения организации пулов соединений.|Указывает, назначено ли соединение из пула соединений (1 или **true**) или нет (0 или **false**) <sup>1</sup>.|**true** (1)|  
 |ConnectRetryCount|Целое число от 0 до 255 (включительно)|Максимальное количество попыток восстановления прерванного разорванное соединение перед прекращением. По умолчанию единый предпринимается попытка восстановить подключение, если нечитаемым. Значение 0 означает, что будет выполняться без повторного подключения.|1|  
@@ -43,11 +44,11 @@ ms.locfileid: "47727492"
 |KeyStorePrincipalId|String|Идентификатор учетной записи требуется доступ к хранилищу ключей Azure. <br /><br />Если KeyStoreAuthentication **KeyVaultPassword**, это должно быть имя пользователя Azure Active Directory. <br /><br />Если KeyStoreAuthentication **KeyVaultClientSecret**, это должен быть идентификатор клиента приложения.|Не задано.|
 |keyStoreSecret|String|Секретные учетные данные для учетной записи требуется доступ к хранилищу ключей Azure. <br /><br />Если KeyStoreAuthentication **KeyVaultPassword**, это должен быть пароль с Azure Active Directory. <br /><br />Если KeyStoreAuthentication **KeyVaultClientSecret**, это должен быть секрет клиента приложения.|Не задано.|
 |LoginTimeout|Целое число (драйвер SQLSRV)<br /><br />Строка (драйвер PDO_SQLSRV)|Указывает количество секунд ожидания перед неудачным завершением соединения.|Время ожидания отсутствует.|  
-|MultipleActiveResultSets|1 или **true** для использования множественных активных результирующих наборов.<br /><br />0 или **false** для отключения множественных активных результирующих наборов.|Отключает или явным образом включает поддержку множественных активных результирующих наборов (MARS).<br /><br />Дополнительные сведения см. в статье [Практическое руководство. Отключение множественных активных результирующих наборов &#40;функция MARS&#41;](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md).|true (1)|  
+|MultipleActiveResultSets|1 или **true** для использования множественных активных результирующих наборов.<br /><br />0 или **false** для отключения множественных активных результирующих наборов.|Отключает или явным образом включает поддержку множественных активных результирующих наборов (MARS).<br /><br />Дополнительные сведения см. в разделе [Как Отключение множественных активных результирующих наборов &#40;MARS&#41;](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md).|true (1)|  
 |MultiSubnetFailover|String|Всегда задавайте **multiSubnetFailover=Yes** при подключении к прослушивателю группы доступности [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или экземпляру отказоустойчивого кластера [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. **multiSubnetFailover=yes** настраивает [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] на более быстрое обнаружение активного (в данный момент) сервера и подключение к нему. Возможными значениями являются Yes и No.<br /><br />Дополнительные сведения о [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] поддержка [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], см. в разделе [Поддержка высокой доступности и аварийного восстановления](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|нет|  
 |PWD<br /><br />(не поддерживается в драйвере PDO_SQLSRV)|String|Указывает пароль, связанный с идентификатором пользователя, применяемый при подключении с использованием проверки подлинности SQL Server <sup>4</sup>.|Значение не задано.|  
 |QuotedId|1 или **true** для использования правил SQL-92.<br /><br />0 или **false** для использования устаревших правил.|Указывает, следует ли использовать правила SQL-92 для нестандартных идентификаторов (1 или **true**) или устаревшие правила Transact-SQL (0 или **false**).|**true** (1)|  
-|ReturnDatesAsStrings<br /><br />(не поддерживается в драйвере PDO_SQLSRV)|1 или **true** для возврата типов даты и времени в виде строк.<br /><br />0 или **false** для возврата типов даты и времени в виде типов **DateTime** PHP.|Извлекает типы даты и времени (datetime, date, time, datetime2 и datetimeoffset) в виде строк или типов PHP. При использовании драйвера PDO_SQLSRV даты возвращается в виде строк. Драйвер PDO_SQLSRV не включает тип **datetime**.<br /><br />Дополнительные сведения см. в статье [Практическое руководство. Получение типа даты и времени в виде строк с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).|**false**|  
+|ReturnDatesAsStrings<br /><br />(не поддерживается в драйвере PDO_SQLSRV)|1 или **true** для возврата типов даты и времени в виде строк.<br /><br />0 или **false** для возврата типов даты и времени в виде типов **DateTime** PHP.|Извлекает типы даты и времени (datetime, date, time, datetime2 и datetimeoffset) в виде строк или типов PHP. При использовании драйвера PDO_SQLSRV даты возвращается в виде строк. Драйвер PDO_SQLSRV не включает тип **datetime**.<br /><br />Дополнительные сведения см. в разделе [Как Получение типа даты и времени в виде строк с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).|**false**|  
 |Прокручиваемые курсоры|String|"Буферизовано" означает, что требуется клиентский (буферизированный) курсор, который позволяет кэшировать весь результирующий набор в памяти. Дополнительные сведения см. в статье [Типы курсоров &#40;драйвер SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).|Курсор последовательного доступа|  
 |Сервер<br /><br />(не поддерживается в драйвере SQLSRV)|String|Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для соединения.<br /><br />Вы также можете указать имя виртуальной сети для подключения к группе доступности AlwaysOn. Дополнительные сведения о [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] поддержка [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], см. в разделе [Поддержка высокой доступности и аварийного восстановления](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|Server является обязательным ключевым словом (хотя оно не обязательно должно стоять на первом месте в строке подключения). Если имя сервера не передается в ключевое слово, предпринимается попытка подключиться к локальному экземпляру.<br /><br />Значением, передаваемым в Server, может быть имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или IP-адрес экземпляра. Вы можете дополнительно указать номер порта (например, `sqlsrv:server=(local),1033`).<br /><br />Начиная с версии 3.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] , можно также указать экземпляр LocalDB с `server=(localdb)\instancename`. Дополнительные сведения см. в разделе [поддержка LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).|  
 |TraceFile|String|Указывает путь для файла, используемый для трассировки данных.|Значение не задано.|  
@@ -64,9 +65,9 @@ ms.locfileid: "47727492"
 
 3. Включение *Encryption* может негативно повлиять на производительность некоторых приложений из-за необходимости выполнять дополнительные вычисления для шифрования данных.  
 
-4. Атрибуты *UID* и *PWD* должны быть заданы при соединении с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+4. Экземпляр *UID* и *PWD* должны быть заданы при соединении с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
-Многие поддерживаемые ключи являются атрибутами строк подключения ODBC. Дополнительные сведения о строках подключения ODBC см. в статье [Использование ключевых слов строки подключения с SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).
+Многие поддерживаемые ключи являются атрибутами строк подключения ODBC. Дополнительные сведения о строках подключения ODBC см. в статье [Использование ключевых слов строки подключения с SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).
 
 ## <a name="see-also"></a>См. также:  
 [Подключение к серверу](../../connect/php/connecting-to-the-server.md)  
