@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 746150438e87746c6fefc81fa7c0bff354147ed6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3a24215479af1aca6e1e742d5c62ba8995aaa4a8
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205333"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087673"
 ---
 # <a name="sql-server-help-and-feedback"></a>Справка и отзывы по SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,6 +28,9 @@ ms.locfileid: "53205333"
 
 ## <a name="i-want-to-make-a-suggestion-about-sql-server-management-studio"></a>Я хочу внести предложение по SQL Server Management Studio
 Группа SQL Server Management Studio (SSMS) также следит за [User Voice](https://feedback.azure.com/forums/908035-sql-server) по SQL Server User Voice. Это лучший вариант сообщить о проблемах или внести предложения. 
+
+## <a name="i-want-to-make-a-suggestion-about-azure-data-studio"></a>Я хочу внести предложение по Azure Data Studio
+Команда Azure Data Studio внимательно следит за сообщениями о неполадках и запросами функций в [Github](https://github.com/microsoft/azuredatastudio/issues). Отправьте здесь сообщение о неполадке или запрос функции, и вы увидите, когда будет устранена неполадка или добавлена функция.
 
 ## <a name="i-want-to-access-the-sql-server-technical-documentation-offline"></a>Мне нужен доступ к технической документации по SQL Server без подключения к сети
 Если вам требуется просматривать документацию по SQL Server в системе, не подключенной к сети, это можно сделать двумя способами. Можно создать PDF-файл нужного раздела технической документации по SQL Server или скачать автономное содержимое с помощью [автономного средства просмотра справки SQL Server](sql-server-help-installation.md). 
@@ -68,20 +71,21 @@ ms.locfileid: "53205333"
 - [Службы SQL Server Analysis Services (SSAS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlanalysisservices&filter=alltypes&sort=lastpostdesc)
 - [Хранилище данных SQL Server](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldatawarehousing&filter=alltypes&sort=lastpostdesc)
 
-### <a name="developer-communities"></a>Сообщества разработчиков
-Кроме того, есть несколько сообществ разработчиков, которые помогут вам решить проблемы с SQL Server. 
+### <a name="social-media-and-communities"></a>Социальные сети и сообщества
+Есть несколько сообществ, которые помогут вам решить проблемы с SQL Server. 
 
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/sql-server)
 - [Stack Exchange DBA](https://dba.stackexchange.com/questions/tagged/sql-server)
-
-### <a name="social-media"></a>Социальные сети
-Есть несколько точек в социальных сетях для связи с командой SQL. 
-
 - [Reddit](https://www.reddit.com/r/SQLServer/)
+- [Получение помощи от сообщества путем добавления хэштега #sqlhelp в Twitter](https://twitter.com/hashtag/sqlhelp?src=hash) 
+
+### <a name="updates-via-twitter"></a>Новости в Twitter
+В Twitter есть несколько учетных записей, в которых публикуются новости об SQL Server. 
+
 - [Twitter, документация по SQL](https://twitter.com/sqldocs);
 - [Twitter SQL Tiger Team](https://twitter.com/mssqltiger);
 - [Twitter MashaMSFT](https://twitter.com/mashamsft);
-- [Twitter MikeRayMSFT](https://twitter.com/mncray).
+
 
 ## <a name="i-want-to-contribute-to-sql-server-documentation"></a>Я хочу принять участие в работе над документацией по SQL Server
 

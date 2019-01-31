@@ -1,7 +1,7 @@
 ---
-title: Занятие 5. Добавление конфигураций пакетов SSIS в модель развертывания пакетов | Документы Майкрософт
+title: Занятие 5. Добавление конфигураций пакетов SQL Server Integration Services в модель развертывания пакета | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/08/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,15 +11,16 @@ ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 424ec0d1cc37cab9791497ce9dede701ccdc3451
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: 9a64bb5654b610247861e75149244c3e0a5aa288
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302427"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880467"
 ---
-# <a name="lesson-5-add-ssis-package-configurations-for-the-package-deployment-model"></a>Занятие 5. Добавление конфигураций пакетов SSIS в модель развертывания пакетов
-С помощью конфигураций пакета можно задавать исполняемые свойства и переменные вне среды разработки. Конфигурации дают возможность разрабатывать пакеты, обладающие гибкостью и простотой распространения и развертывания. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предусмотрены следующие типы конфигурации:  
+# <a name="lesson-5-add-ssis-package-configurations-for-the-package-deployment-model"></a>Занятие 5. Добавление конфигураций пакетов SQL Server Integration Services в модель развертывания пакета
+
+С помощью конфигураций пакетов можно задавать свойства и переменные времени выполнения вне среды разработки. Конфигурации дают возможность разрабатывать пакеты, обладающие гибкостью и простотой распространения и развертывания. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предусмотрены следующие типы конфигурации:  
   
 -   XML-файл конфигурации  
   
@@ -29,27 +30,29 @@ ms.locfileid: "52302427"
   
 -   Переменная родительского пакета  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table  
+-   Таблица [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
-На этом занятии требуется изменить простой пакет [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , созданный на [занятии 4: добавление перенаправления потока ошибок с помощью служб SSIS](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md) , чтобы использовать модель развертывания пакетов и воспользоваться преимуществами конфигураций пакетов. Также можно скопировать пакет из завершенного урока 4, который включен в учебник. В мастере настройки пакета предстоит создать XML-конфигурацию, которая обновляет свойство **Directory** контейнера "цикл по каждому элементу" с помощью переменной уровня пакета, сопоставленной со свойством Directory. После создания файла конфигурации следует изменить значение переменной вне среды разработки и создать в измененном свойстве ссылку на новую папку с образцами данных. При повторном выполнении пакета файл конфигурации заполняет значение переменной, которая, в свою очередь, обновляет свойство **Directory** . В итоге пакет последовательно проходит все файлы в новой, а не исходной папке данных, жестко закодированной в пакете.  
+На этом занятии пакет [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], созданный на [занятии 4: добавление перенаправления потока ошибок с помощью служб SSIS](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md), будет изменен для использования модели развертывания пакета, что позволит получить преимущества конфигураций пакетов. Вы также можете скопировать готовый пакет занятия 4, который включен в учебник. 
+
+В мастере настройки пакета предстоит создать XML-конфигурацию, которая обновляет свойство **Каталог** контейнера "Цикл ForEach". Будет использоваться переменная уровня пакета, сопоставленная со свойством **Каталог**. После создания файла конфигурации следует изменить значение переменной вне среды разработки на путь к новой папке с образцами данных. При повторном выполнении пакета файл конфигурации заполняет значение переменной, которая, в свою очередь, обновляет свойство **Directory** . Затем пакет перебирает все файлы в новой, а не исходной, жестко заданной папке данных.  
   
-> [!IMPORTANT]  
-> Для выполнения упражнений этого учебника потребуется образец базы данных **AdventureWorksDW2012** . Дополнительные сведения об установке и развертывании **AdventureWorksDW2012**см. в разделе [Проект образцов продуктов службы Reporting Services на сайте CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910).  
+> [!NOTE]
+> Ознакомьтесь с [предварительными требованиями для урока 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites), если вы еще не сделали этого.
   
 ## <a name="lesson-tasks"></a>Задачи занятия  
 Это занятие содержит следующие задачи.  
   
--   [Шаг 1. Копирование пакета занятия 4](../integration-services/lesson-5-1-copying-the-lesson-4-package.md)  
+-   [Шаг 1. Копирование пакета занятия 4](../integration-services/lesson-5-1-copying-the-lesson-4-package.md)  
   
--   [Шаг 2. Активация и настройка конфигурации пакетов](../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md)  
+-   [Шаг 2. Активация и настройка конфигураций пакетов](../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
--   [Шаг 3. Изменение значения конфигурации свойства Directory](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+-   [Шаг 3. Изменение значения конфигурации свойства "Каталог"](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
--   [Шаг 4. Проверка учебного пакета, созданного на занятии 5](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
+-   [Шаг 4. Тестирование пакета занятия 5](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Начало занятия  
   
--   [Шаг 1. Копирование пакета занятия 4](../integration-services/lesson-5-1-copying-the-lesson-4-package.md)  
+-   [Шаг 1. Копирование пакета занятия 4](../integration-services/lesson-5-1-copying-the-lesson-4-package.md)  
   
   
   

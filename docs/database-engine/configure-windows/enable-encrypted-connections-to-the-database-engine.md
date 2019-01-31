@@ -21,12 +21,12 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 316becea16562fda0e1ba05623f09018367254af
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 6fd3c164b539c8c6fc2dcce24f8ea1ad479ddee6
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589298"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087693"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Включение зашифрованных соединений для ядра СУБД
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,6 +48,9 @@ ms.locfileid: "53589298"
   
  
 ##  <a name="Provision"></a> Назначение (установка) сертификата на сервер  
+
+>[!NOTE]
+>Сведения о добавлении сертификата на одном сервере см. в статье [Управление сертификатами (диспетчер конфигурации SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates.md).
   
 1.  В меню **Пуск** выберите команду **Выполнить**, в окне **Открыть** введите **MMC** и нажмите кнопку **ОК**.  
   
@@ -69,6 +72,10 @@ ms.locfileid: "53589298"
   
 10. Чтобы добавить сертификат на компьютер, выполните **Мастер импорта сертификатов**и закройте консоль MMC. Дополнительные сведения о добавлении сертификатов на компьютер см. в документации по Windows.  
   
+## <a name="to-provision-install-a-certificate-across-multiple-servers"></a>Подготовка (установка) сертификата на нескольких серверах
+
+Сведения о добавлении сертификата на нескольких серверах см. в статье [Управление сертификатами (диспетчер конфигурации SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates.md).
+
 ##  <a name="Export"></a> Экспорт сертификата сервера  
   
 1.  В оснастке **Сертификаты** найдите сертификат в папке **Сертификаты** / **Личное** , правой кнопкой мыши щелкните **Сертификат**, выберите **Все задачи**и нажмите **Экспорт**.  
@@ -89,15 +96,15 @@ ms.locfileid: "53589298"
 > [!NOTE]
 > Чтобы обеспечить безопасный обмен данными между клиентом и сервером, настройте клиент так, чтобы он запрашивал зашифрованные соединения. Дополнительные сведения приводятся [далее в этой статье](#client-request-encrypt-connect-23h).
 
-
-
 ### <a name="wildcard-certificates"></a>Групповые сертификаты  
 Начиная с версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client поддерживают групповые сертификаты. Другие клиенты могут их не поддерживать. Дополнительные сведения см. в документации клиента. Групповые сертификаты не выбираются с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Чтобы использовать групповой сертификат, нужно изменить раздел реестра `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` и ввести отпечаток сертификата без пробелов в качестве значения **Сертификат**.  
+
 > [!WARNING]  
 > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
-<a name="client-request-encrypt-connect-23h"/>
-##  <a name="ConfigureClientConnections"></a> Настройка клиента на прием зашифрованных соединений  
+<a name="client-request-encrypt-connect-23h"/></a>
+
+## <a name="ConfigureClientConnections"></a> Настройка клиента на прием зашифрованных соединений  
   
 1.  Скопируйте на компьютер клиента исходный сертификат или экспортированный файл сертификата.  
   
@@ -107,7 +114,7 @@ ms.locfileid: "53589298"
   
 4.  На странице **Флаги** в диалоговом окне **Принудительное шифрование протокола** выберите **Да**.  
   
-##  <a name="EncryptConnection"></a> Шифрование соединения из среды SQL Server Management Studio  
+## <a name="EncryptConnection"></a> Шифрование соединения из среды SQL Server Management Studio  
   
 1.  На панели инструментов обозревателя объектов нажмите кнопку **Соединить**и выберите **Компонент Database Engine**.  
   

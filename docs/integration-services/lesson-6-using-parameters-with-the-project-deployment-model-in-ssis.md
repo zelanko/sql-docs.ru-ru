@@ -1,7 +1,7 @@
 ---
-title: Занятие 6. Использование параметров в модели развертывания проекта в службах SSIS | Документы Майкрософт
+title: Урок 6. Использование параметров в модели развертывания проекта в службах SQL Server Integration Services | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,36 +11,37 @@ ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 51e6bc7f3bb1a1326245a4e7cfee67402d816a8e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: dba1354e7bbd61db29330503aa28fdfe0cae8860
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638112"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880407"
 ---
-# <a name="lesson-6-using-parameters-with-the-project-deployment-model-in-ssis"></a>Занятие 6. Использование параметров в модели развертывания проекта в службах SSIS
-В SQL Server 2012 была добавлена новая модель развертывания, позволяющая развертывать проекты на сервере служб Integration Services. Сервер служб Integration Services позволяет управлять пакетами, запускать пакеты, а также настраивать значения времени выполнения для пакетов.  
+# <a name="lesson-6-use-parameters-with-the-project-deployment-model-in-ssis"></a>Урок 6. Использование параметров в модели развертывания проекта в службах SQL Server Integration Services
+
+В SQL Server 2012 была добавлена новая модель развертывания, позволяющая развертывать проекты на сервере служб Integration Services. Сервер служб Integration Services позволяет управлять пакетами, запускать пакеты, а также настраивать значения времени выполнения для пакетов.  
   
-На этом занятии требуется изменить пакет, созданный на [занятии 5: добавление конфигураций пакетов SSIS в модель развертывания пакетов](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md) , чтобы использовать модель развертывания пакетов. Значение конфигурации будет заменено на параметр, чтобы указать местоположение образцов данных. Также можно скопировать пакет завершенного урока 5, который включен в учебник.  
+На этом занятии пакет, созданный на [занятии 5: добавление конфигураций пакетов SSIS в модель развертывания пакетов](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md), будет изменен для использования модели развертывания пакета. Значение конфигурации будет заменено на параметр, чтобы указать местоположение образцов данных. Также можно скопировать пакет завершенного урока 5, который включен в учебник.  
   
-С использованием мастера настройки проекта служб Integration Services будет выполнено преобразование проекта для использования модели развертывания проектов, а также использования параметра, а не значения конфигурации для задания свойства каталога. На этом занятии частично рассматриваются шаги, необходимые для преобразования существующих пакетов служб SSIS в новую модель развертывания проекта.  
+С помощью мастера настройки проекта служб Integration Services проект преобразуется в модель развертывания проекта. Эта модель использует параметр, а не значение конфигурации для задания свойства "Каталог". На этом занятии частично рассматриваются шаги, необходимые для преобразования существующих пакетов служб SSIS в новую модель развертывания проекта.  
   
-При повторном выполнении пакета служба Integration Services использует параметр для заполнения значения переменной, а переменная в свою очередь обновит свойство "Каталог". В итоге пакет последовательно проходит все файлы в новой папке данных, определенной значением параметра, а не в папке, заданной в файле конфигурации пакета.  
+При повторном выполнении пакета сервер [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] использует параметр для заполнения значения переменной. Переменная в свою очередь обновляет свойство "Каталог". Пакет перебирает все файлы в папке данных, определенной новым параметром.  
   
-> [!IMPORTANT]  
-> Для выполнения упражнений этого учебника потребуется образец базы данных **AdventureWorksDW2012** . Дополнительные сведения об установке и развертывании образца базы данных **AdventureWorksDW2012** см. в разделе [Вопросы установки образцов кода и образцов баз данных SQL Server](https://technet.microsoft.com/library/ms161556%28v=sql.105%29).  
-  
+> [!NOTE]
+> Ознакомьтесь с [предварительными требованиями для урока 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites), если вы еще не сделали этого.
+    
 ## <a name="lesson-tasks"></a>Задачи занятия  
 Это занятие содержит следующие задачи.  
   
-1.  [Шаг 1. Копирование пакета занятия 5](../integration-services/lesson-6-1-copying-the-lesson-5-package.md)  
+1.  [Шаг 1. Копирование пакета занятия 5](../integration-services/lesson-6-1-copying-the-lesson-5-package.md)  
   
 2.  [Шаг 2. Преобразование проекта в модель развертывания проекта](../integration-services/lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
-3.  [Шаг 3. Проверка пакета, созданного на занятии 6](../integration-services/lesson-6-3-testing-the-lesson-6-package.md)  
+3.  [Шаг 3. Тестирование пакета занятия 6](../integration-services/lesson-6-3-testing-the-lesson-6-package.md)  
   
-4.  [Шаг 4. Развертывание пакета, созданного на занятии 6](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
+4.  [Шаг 4. Развертывание пакета занятия 6](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
   
 ## <a name="start-the-lesson"></a>Начало занятия  
-[Шаг 1. Копирование пакета занятия 5](../integration-services/lesson-6-1-copying-the-lesson-5-package.md)  
+[Шаг 1. Копирование пакета занятия 5](../integration-services/lesson-6-1-copying-the-lesson-5-package.md)  
   

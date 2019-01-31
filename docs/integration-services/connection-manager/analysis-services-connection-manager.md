@@ -1,7 +1,7 @@
 ---
 title: Диспетчер соединений служб Analysis Services | Документы Майкрософт
 ms.custom: ''
-ms.date: 10/31/2018
+ms.date: 1/25/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 38addbd487a0d3e5f348d59028c85e16bca1dd5c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 5251e9b5842f7b5aa4dde71866c1c625faa81d5e
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639171"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044480"
 ---
 # <a name="analysis-services-connection-manager"></a>диспетчер соединений служб Analysis Services
   Диспетчер соединений служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] позволяет пакету подключиться к серверу, на котором запущена база данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , или к проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , который предоставляет доступ к данным куба и измерения. При разработке пакетов в среде [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно подключиться только к проекту служб [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Во время выполнения пакеты подключаются к серверу и базе данных, где был развернут проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -41,7 +41,7 @@ ms.locfileid: "51639171"
 -   При подключении к экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]указать метод проверки подлинности.  
 
 > [!NOTE]    
->  Если вы используете SSIS в Фабрике данных Azure (ADF) и хотите подключиться к экземпляру служб Azure Analysis Services (AAS), нужно использовать субъект-службу, а не учетную запись с многофакторной проверкой подлинности (MFA). Руководство по его созданию см. [здесь](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal). Выберите **Использовать указанные имя пользователя и пароль** для входа на сервер в диспетчере подключений, а затем в качестве имени пользователя и пароля введите идентификатор и ключ приложения. Наконец, нужно также установить требуемые клиентские библиотеки в Azure-SSIS Integration Runtime (IR) через выборочную установку. См. пример для **AAS** в разделе [Настройка SSIS IR](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
+>  Если вы используете SSIS в Фабрике данных Azure (ADF) и хотите подключиться к экземпляру служб Azure Analysis Services (AAS), нужно использовать не учетную запись с многофакторной идентификацией (MFA), а субъект-службу или учетную запись, которая не требует взаимодействия или MFA. Инструкции по созданию такой учетной записи и назначению ей роли администратора сервера см. [здесь](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal). Затем выберите **Использовать указанные имя пользователя и пароль** для входа на сервер в диспетчере подключений и, наконец, введите `User name: app:YourApplicationID` и `Password: YourAuthorizationKey`.
   
 -   Обозначает, будет ли соединение, созданное из диспетчера соединений, сохранено во время выполнения.  
   

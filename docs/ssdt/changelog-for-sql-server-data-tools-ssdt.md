@@ -12,18 +12,43 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 53a3a9b85b0f125e2c0ceb4cf882bbb86a962619
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 53a852b5293cfc013c170723f0e031cc3800e27c
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213453"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087893"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Журнал изменений для SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Это журнал изменений для [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Подробные сведения о новых и измененных возможностях см. в [блоге группы разработчиков SSDT](https://blogs.msdn.microsoft.com/ssdt/).
+
+
+## <a name="ssdt-for-visual-studio-2017-1590"></a>SSDT для Visual Studio 2017 (15.9.0)
+Номер сборки: 14.0.16186.0  
+Дата выпуска: 28 января 2019 г.
+
+### <a name="whats-new"></a>Новые возможности
+**SSIS**
+1. Добавление источника Power Query (предварительная версия) для служб SQL Server Integration Services 2017.
+2. Возвращена поддержка служб SQL Server Integration Services 2012.
+3. Добавлены источник и назначение Oracle для служб SQL Server Integration Services 2019.
+4. Устранена проблема с загрузкой задачи или компонента скрипта при миграции с предыдущих версий служб SQL Server Integration Services.
+5. Устранена проблема, из-за которой средство просмотра данных не работало в Windows 7 с пакетом обновления 1 (SP1) и Windows 8.1.
+6. Устранена проблема, из-за которой в некоторых случаях сохранение пакета вызывало аварийное завершение работы Visual Studio. 
+7. Устранена проблема, из-за которой в некоторых случаях пакет не удавалось выполнить при уровне защиты EncryptSensitiveWithPassword и целевой версии сервера ниже SQL Server 2017.
+8. Устранена проблема, из-за которой заметки со шрифтом по умолчанию не отображались в SSDT.
+9. ISDeploymentWizard поддерживает проверку подлинности SQL, встроенную проверку подлинности Azure Active Directory и проверку пароля Azure Active Directory в режиме командной строки.
+
+### <a name="known-issues"></a>Известные проблемы:
+
+- Задача запуска пакетов в службах SSIS не поддерживает отладку, если параметр ExecuteOutOfProcess имеет значение True. Эта проблема относится только к отладке. Она не влияет на сохранение, развертывание и запуск с использованием DTExec.exe или каталога SSIS.
+- SSDT для Visual Studio 2017 версии позднее 15.8 не поддерживает разработку пакетов, содержащих источники или назначения Teradata. Использование SSDT для Visual Studio 2017 (15.8).
+- Источник Power Query может не поддерживать протокол OData версии 4, если службы SQL Server Integration Services и SQL Server Analysis Services установлены в одном экземпляре Visual Studio.
+- Источник Power Query может не поддерживать подключение к Oracle с помощью ODBC, если службы SQL Server Integration Services и SQL Server Analysis Services установлены в одном экземпляре Visual Studio.
+- Источник Power Query Source не локализован.
 
 
 ## <a name="ssdt-for-visual-studio-2017-1582"></a>SSDT для Visual Studio 2017 (15.8.2)

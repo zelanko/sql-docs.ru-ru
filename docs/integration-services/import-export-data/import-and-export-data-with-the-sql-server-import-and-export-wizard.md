@@ -24,12 +24,12 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 60d4bf5487a2d6e851103d6cfd71bfc69af9036f
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 2ad46c5419bd3fcea3741c69fab8c2fa9eec7862
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383779"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087763"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Импорт и экспорт данных с помощью мастера импорта и экспорта SQL Server
 
@@ -40,7 +40,7 @@ ms.locfileid: "49383779"
 
 ## <a name="what-happens-when-i-run-the-wizard"></a>Что происходит при запуске мастера?
 -    **См. список шагов.** Описание шагов, выполняемых в мастере, см. в разделе [Шаги в мастере импорта и экспорта SQL Server](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). Каждой странице мастера соответствует отдельная страница документации.  
-    \- или \-
+    \- либо \-
 -   **См. пример.** Чтобы кратко ознакомиться с некоторыми экранами, которые отображаются в ходе обычного сеанса мастера, просмотрите простой одностраничный пример в разделе [Приступая к работе с простым примером мастера импорта и экспорта](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).  
 
 ##  <a name="wizardSources"></a> Какие источники и назначения можно использовать?  

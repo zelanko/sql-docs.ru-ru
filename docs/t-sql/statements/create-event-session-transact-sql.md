@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a87156a7987b3386f452944c49076d47fdaffa59
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c2335efbd97872975fd6779081e7a5a693266e02
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401329"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457677"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ ON SERVER
  WITH ( \<event_session_options> [ ,...*n*] ) Задает параметры, используемые с сеансом событий.  
   
  MAX_MEMORY =*size* [ KB | **MB** ]  
- Задает максимальный объем памяти, выделенной в сеансе для буферов событий. Значение по умолчанию — 4 МБ. *size* — целое значение, которое может быть представлено значением в килобайтах (КБ) или мегабайтах (МБ).  
+ Задает максимальный объем памяти, выделенной в сеансе для буферов событий. Значение по умолчанию — 4 МБ. *size* — целое значение, которое может быть представлено значением в килобайтах (КБ) или мегабайтах (МБ). Максимальный объем не может превышать 2 ГБ (2048 МБ). Однако использовать значения размера памяти в гигабайтном диапазоне не рекомендуется.
   
  EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** | ALLOW_MULTIPLE_EVENT_LOSS | NO_EVENT_LOSS }  
  Задает режим хранения событий, используемый для обработки потери события.  

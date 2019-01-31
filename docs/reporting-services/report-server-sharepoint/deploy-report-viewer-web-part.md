@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e9b2d920b55e412f3b9fa119db0a7cf893659fca
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8c5e406cdab8f4950a897cc66556e54a1faa53f1
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502820"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805730"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Развертывание веб-части "Средство просмотра отчетов" служб SQL Server Reporting Services на сайте SharePoint
 
@@ -20,7 +20,7 @@ ms.locfileid: "52502820"
 
 Веб-часть "Средство просмотра отчетов" — это настраиваемая веб-часть, которую можно использовать для просмотра отчетов служб SQL Server Reporting Services в собственном режиме на сайте SharePoint. Эту веб-часть можно использовать для просмотра, печати и экспорта отчетов на сервере отчетов, а также перемещения по ним. Веб-часть "Средство просмотра отчетов" связана с файлами определения отчетов (RDL), которые обрабатываются сервером отчетов служб SQL Server Reporting Services или Сервером отчетов Power BI. Эту веб-часть нельзя использовать с отчетами Power BI, размещенными на Сервере отчетов Power BI.
 
-Используйте приведенные ниже инструкции, чтобы вручную развернуть пакет решений, который добавляет веб-часть "Средство просмотра отчетов" в среду SharePoint Server 2013 или SharePoint Server 2016. Развертывание решения — необходимый этап настройки веб-части.
+Используйте приведенные ниже инструкции, чтобы вручную развернуть пакет решений, который добавляет веб-часть "Средство просмотра отчетов" в среду SharePoint Server 2013, SharePoint Server 2016 или SharePoint Server 2019. Развертывание решения — необходимый этап настройки веб-части.
 
 **Веб-часть "Средство просмотра отчетов" представляет собой отдельный пакет решения и не связана с режимом интеграции с SharePoint для служб SQL Server Reporting Services.**
 
@@ -32,6 +32,7 @@ ms.locfileid: "52502820"
 >
 
 **Поддерживаемые версии SharePoint Server:**
+* SharePoint Server 2019
 * SharePoint Server 2016
 * SharePoint Server 2013
 
@@ -67,7 +68,7 @@ ms.locfileid: "52502820"
     Install-SPSolution -Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
     ```
 
-    **SharePoint 2016**
+    **SharePoint Server 2016 и 2019**
 
     ```
     Install-SPSolution -Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}
