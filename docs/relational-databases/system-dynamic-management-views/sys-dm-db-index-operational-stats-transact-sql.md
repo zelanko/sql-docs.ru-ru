@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8827614f494702d4e738d336e96cd96b92f949d1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514306"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428661"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,9 +85,9 @@ sys.dm_db_index_operational_stats (
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|Идентификатор базы данных.|    
 |**object_id**|**int**|Идентификатор таблицы или представления.|    
-|**index_id**|**int**|Идентификатор индекса или кучи.<br /><br /> 0 = куча;|    
-|**hobt_id**|**bigint**|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Идентификатор кучи данных или сбалансированного дерева строк, который отслеживает внутренние данные для индекса columnstore.<br /><br /> NULL — это не является внутренней columnstore набором строк.<br /><br /> Дополнительные сведения см. в разделе [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
-|**partition_number**|**int**|Номер секции внутри индекса или кучи (нумерация начинается с 1).|    
+|**index_id**|**int**|Идентификатор индекса или кучи.<br /><br /> 0 = куча;| 
+|**partition_number**|**int**|Номер секции внутри индекса или кучи (нумерация начинается с 1).| 
+|**hobt_id**|**bigint**|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Идентификатор кучи данных или сбалансированного дерева строк, который отслеживает внутренние данные для индекса columnstore.<br /><br /> NULL — это не является внутренней columnstore набором строк.<br /><br /> Дополнительные сведения см. в разделе [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|Совокупное количество вставок конечного уровня.|    
 |**leaf_delete_count**|**bigint**|Совокупное количество удалений конечного уровня. leaf_delete_count увеличивается только удаленные записи, которые не помечены как фантомную. сначала. Для удаленных записей, которые являются синхронизирован. во-первых **leaf_ghost_count** вместо увеличивается.|    
 |**leaf_update_count**|**bigint**|Совокупное количество обновлений конечного уровня.|    
