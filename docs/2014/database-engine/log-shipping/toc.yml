@@ -1,25 +1,35 @@
-- name: Сведения о доставке журналов
+items:
+- name: Обзор
   href: about-log-shipping-sql-server.md
+- name: Практическое руководство
   items:
-    - name: Обновление доставки журналов до SQL Server 2014 (Transact-SQL)
-      href: upgrading-log-shipping-to-sql-server-2016-transact-sql.md
-    - name: Настройка доставки журналов
-      href: configure-log-shipping-sql-server.md
-    - name: Добавление базы данных-получателя в конфигурацию доставки журналов
-      href: add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
-    - name: Удаление базы данных-получателя из конфигурации доставки журналов
-      href: remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
-    - name: Удаление доставки журналов
-      href: remove-log-shipping-sql-server.md
-    - name: просмотреть отчет доставки журналов (среда SQL Server Management Studio)
-      href: view-the-log-shipping-report-sql-server-management-studio.md
-    - name: Наблюдение за доставкой журналов (Transact-SQL)
-      href: monitor-log-shipping-transact-sql.md
-    - name: Переход на вторичный сервер доставки журналов
-      href: fail-over-to-a-log-shipping-secondary-sql-server.md
-    - name: Обмен ролями между сервером-источником и сервером-получателем доставки журналов
-      href: change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md
-    - name: Репликация и доставка журналов
-      href: log-shipping-and-replication-sql-server.md
-    - name: Log Shipping Tables and Stored Procedures
-      href: log-shipping-tables-and-stored-procedures.md
+  - name: Обновление доставки журналов до SQL Server 2014
+    href: upgrading-log-shipping-to-sql-server-2016-transact-sql.md
+  - name: Настройка доставки журналов
+    href: configure-log-shipping-sql-server.md
+  - name: Добавление базы данных-получателя
+    href: add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
+  - name: Удаление базы данных-получателя
+    href: remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
+  - name: Удаление доставки журналов
+    href: remove-log-shipping-sql-server.md
+  - name: Просмотр отчета о доставке журналов
+    href: view-the-log-shipping-report-sql-server-management-studio.md
+  - name: Мониторинг доставки журналов
+    href: monitor-log-shipping-transact-sql.md
+  - name: Отработка отказа в базе данных-получателе
+    href: fail-over-to-a-log-shipping-secondary-sql-server.md
+  - name: Обмен ролями между сервером-источником и сервером-получателем
+    href: change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md
+- name: Основные понятия
+  items:
+  - name: Репликация и доставка журналов
+    href: log-shipping-and-replication-sql-server.md
+  - name: Log Shipping Tables and Stored Procedures
+    href: log-shipping-tables-and-stored-procedures.md
+ms.openlocfilehash: 951323a40f1adbd3b02e3016da2835f989bd7cec
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513824"
