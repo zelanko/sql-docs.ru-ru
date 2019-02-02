@@ -1,7 +1,7 @@
 ---
 title: sys.dm_hadr_cluster_members (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/23/2017
+ms.date: 01/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71493b066385840d065ff51e1f202c547686f774
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e19451a24d35e63fa84a17d409d19b5c9b02ccc3
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857116"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570727"
 ---
 # <a name="sysdmhadrclustermembers-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,11 +49,11 @@ ms.locfileid: "47857116"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**member_name**|**nvarchar(128)**|Имя элемента, которое может быть именем компьютера, буквой диска или путем к общей папке.|  
-|**member_type**|**tinyint**|Тип элемента. Одно из следующих значений:<br /><br /> 0 = узел WSFC<br /><br /> 1 = следящий диск<br /><br /> 2 = следящая общая папка|  
-|**member_type_desc**|**nvarchar(50)**|Описание **member_type**, используя один из:<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS|  
+|**member_type**|**tinyint**|Тип элемента. Одно из следующих значений:<br /><br /> 0 = узел WSFC<br /><br /> 1 = следящий диск<br /><br /> 2 = следящая общая папка<br /><br /> 3 = облака-свидетеля|  
+|**member_type_desc**|**nvarchar(50)**|Описание **member_type**, используя один из:<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS<br /><br /> CLOUD_WITNESS|  
 |**member_state**|**tinyint**|Состояние элемента, одно из следующих значений:<br /><br /> 0 = вне сети<br /><br /> 1 = в сети|  
 |**member_state_desc**|**nvarchar(60)**|Описание **member_state**, используя один из:<br /><br /> UP<br /><br /> ВНИЗ|  
-|**number_of_quorum_votes**|**tinyint**|Число голосов, принадлежащих этому члену кворума. Отсутствие большинства — Только дисковых, это значение по умолчанию 0. Для других типов кворума это значение по умолчанию равно 1.|  
+|**number_of_quorum_votes**|**tinyint**|Число голосов, принадлежащих этому члену кворума. Для кворумов без большинства (только дисковых) это значение по умолчанию равно 0. Для других типов кворума это значение по умолчанию равно 1.|  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
