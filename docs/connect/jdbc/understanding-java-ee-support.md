@@ -1,7 +1,7 @@
 ---
 title: Основные сведения о поддержке Java EE | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76032ffa6737e39556a9047e91b0d2666ddea39b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da575f8c0fecd03e21bc2d24800cde05105a5a3c
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702142"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736934"
 ---
 # <a name="understanding-java-ee-support"></a>Основные сведения о поддержке Java EE
 
@@ -35,6 +35,8 @@ ms.locfileid: "47702142"
 Для JDBC Driver 6.4 драйвер содержится в **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar**, или **mssql-jdbc-6.4.0.jre9.jar**.
 
 Для 7.0 драйвера JDBC, драйвер содержится в **mssql-jdbc-7.0.0.jre8.jar**, или **mssql-jdbc-7.0.0.jre10.jar**.
+
+Для 7.2 драйвера JDBC, драйвер содержится в **mssql-jdbc-7.2.0.jre8.jar**, или **mssql-jdbc-7.2.0.jre11.jar**.
   
 Имя класса используется каждый раз при загрузке драйвера с классом JDBC DriverManager. Оно также используется всегда, когда нужно указать имя класса драйвера в любой конфигурации драйвера. Например, имя класса драйвера может потребоваться для настройки источника данных на сервере приложений Java EE.  
   

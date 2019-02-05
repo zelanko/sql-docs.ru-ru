@@ -1,7 +1,7 @@
 ---
 title: С помощью драйвера JDBC | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19e1d9d72cef09c12bb00a6cdcfd2db9b9818a93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e0f803b68f2ab9f62c3df27c6930da8e3a8a4a0
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845332"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737095"
 ---
 # <a name="using-the-jdbc-driver"></a>Использование драйвера JDBC
 
@@ -27,6 +27,8 @@ ms.locfileid: "47845332"
 ## <a name="choosing-the-right-jar-file"></a>Выбор нужного JAR-файла
 
 Microsoft JDBC Driver предоставляет различные JAR-файлы для использования в результате переписки с предпочтительные параметры среды выполнения Java (JRE), как в разделе:
+
+7.2 драйвера Microsoft JDBC для SQL Server предоставляет **mssql-jdbc-7.2.0.jre8.jar**, и **mssql-jdbc-7.2.0.jre11.jar** файлы библиотек классов.
 
 Microsoft 7.0 драйвера JDBC для SQL Server предоставляет **mssql-jdbc-7.0.0.jre8.jar**, и **mssql-jdbc-7.0.0.jre10.jar** файлы библиотек классов.
 
@@ -52,7 +54,29 @@ Microsoft JDBC Driver 4.1 для SQL Server предоставляет **sqljdbc
 
 Если с помощью 7.0 драйвера JDBC, в пути к классу **mssql-jdbc-7.0.0.jre8.jar** или **mssql-jdbc-7.0.0.jre10.jar**.
 
+Если с помощью 7.2 драйвера JDBC, в пути к классу **mssql-jdbc-7.2.0.jre8.jar** или **mssql-jdbc-7.2.0.jre11.jar**.
+
 Если переменной classpath будет отсутствовать запись для правого файла JAR-файл, приложение выдаст распространенные `Class not found` исключение.  
+
+### <a name="for-microsoft-jdbc-driver-72"></a>Для драйвера Microsoft JDBC 7.2
+
+**Mssql-jdbc-7.2.0.jre8.jar** или **mssql-jdbc-7.2.0.jre11.jar** файлы устанавливаются в следующих расположениях:
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.0.jre8.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.0.jre11.jar
+```
+
+В следующем фрагменте кода дан пример инструкции CLASSPATH, используемой для приложения Windows:
+
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 7.2 for SQL Server\sqljdbc_7.2\enu\mssql-jdbc-7.2.0.jre11.jar`
+
+В следующем фрагменте кода дан пример инструкции CLASSPATH, используемой для приложения Unix/Linux:
+
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.2/enu/mssql-jdbc-7.2.0.jre11.jar`
+
+Убедитесь, что инструкция CLASSPATH содержит только одну [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], например либо **mssql-jdbc-7.2.0.jre8.jar** или **mssql-jdbc-7.2.0.jre11.jar**.
   
 ### <a name="for-microsoft-jdbc-driver-70"></a>Для драйвера Microsoft JDBC 7.0
 

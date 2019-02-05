@@ -1,7 +1,7 @@
 ---
 title: Подключение с SSL-шифрование | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78cdeb64cbd0bc76109c7bd3db784c2262ae80ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14f33ac9e6ab8d17954039f4ae0fca1f11e46af5
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812192"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737135"
 ---
 # <a name="connecting-with-ssl-encryption"></a>Соединение с помощью SSL-шифрования
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -64,8 +64,7 @@ String connectionUrl =
 > [!NOTE]  
 >  Кроме того, можно задать значение свойству подключения с помощью соответствующих методов **задания**, предоставляемых классом [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
- Если свойство **encrypt** установлено в значение **true**, свойство **trustServerCertificate** — в значение **false**, а имя сервера в строке подключения не соответствует имени сервера в SSL-сертификате [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то будет выдана следующая ошибка: "Драйверу не удалось установить защищенное соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по протоколу SSL". Ошибка «java.security.cert.CertificateException: не удалось проверить имя сервера в сертификате при инициализации SSL».  
-  
+ Если **шифрования** свойству **true** и **trustServerCertificate** свойству **false** и если имя сервера в Строка подключения не соответствует имени сервера в SSL-сертификат, выдается следующая ошибка: `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`. Начиная с версии 7.2 драйвер поддерживает шаблон подстановочного знака, сопоставление в крайним левым имя сервера в SSL-сертификат.
 ## <a name="see-also"></a>См. также:  
  [Использование SSL-шифрования](../../connect/jdbc/using-ssl-encryption.md)   
  [Защита приложений драйвера JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
