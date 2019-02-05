@@ -14,15 +14,15 @@ ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 891e3e41bab9be82145bfeb905e9243b7bf31340
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 7132cacb79266243aab94e0b71e18b4a8cdcbb0f
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044351"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689927"
 ---
 # <a name="resource-governor-resource-pool"></a>Пул ресурсов регулятора ресурсов
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   В регуляторе ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пул ресурсов представляет подмножество физических ресурсов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Регулятор ресурсов позволяет задать ограничения на загрузку ЦП, физических средств ввода-вывода и использование памяти, которые доступны для входящих запросов приложений в пуле ресурсов. Каждый пул ресурсов может содержать одну или несколько групп рабочей нагрузки. После запуска сеанса классификатор регулятора ресурсов назначает этот сеанс группе рабочей нагрузки и этот сеанс должен функционировать с ресурсами, назначенными этой группе рабочей нагрузки.  
   

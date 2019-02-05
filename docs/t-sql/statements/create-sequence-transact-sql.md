@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9bfeddd0aad93427a3f65c44364d3749981ccbae
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: a44c62bfa8c85999112887dcacd54bfd176dfaa1
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226531"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428651"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ INCREMENT BY \<constant>
   
 3.  Вычисленное значение возвращается к вызывающей инструкции.  
   
- **Параметр CACHE при пустом кэше**  
+**Параметр CACHE при пустом кэше**  
   
  Следующая процедура выполняется каждый раз, когда в объекте последовательности запрашивается создание следующего значения для параметра **CACHE**, если кэш пуст.  
   
@@ -139,7 +139,7 @@ INCREMENT BY \<constant>
   
 3.  Строка системной таблицы для объекта последовательности блокируется, а значение, вычисленное на шаге 2 (последнее значение), записывается в системную таблицу. Создается событие Xevent cache-exhausted, чтобы сообщить пользователю о новом сохраненном значении.  
   
- **Параметр NO CACHE**  
+**Параметр NO CACHE**  
   
  Следующая процедура выполняется каждый раз, когда в объекте последовательности запрашивается создание следующего значения для параметра **NO CACHE**.  
   
