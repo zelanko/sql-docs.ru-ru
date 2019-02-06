@@ -11,12 +11,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 9e25008836b72ac8860953c5a1f98c13d7540d92
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 4dfe47c44a6bc5e706db3123d167802bfd74dddc
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143454"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759987"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Краткое руководство. Подключение и запрос SQL Server с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 В этом кратком руководстве показано, как использовать [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения к SQL Server, а затем с помощью инструкций Transact-SQL (T-SQL) для создания *TutorialDB* используется в [!INCLUDE[name-sos](../includes/name-sos-short.md)] учебники.
@@ -69,10 +69,10 @@ ms.locfileid: "54143454"
       FROM sys.databases
       WHERE name = N'TutorialDB'
    )
-   CREATE DATABASE [TutorialDB]
+      CREATE DATABASE [TutorialDB];
    GO
-
-   ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
+   IF SERVERPROPERTY('ProductVersion') > '12'
+       ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON;
    GO
    ```
 1. Чтобы выполнить запрос, нажмите **запуска** .
@@ -99,15 +99,15 @@ ms.locfileid: "54143454"
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
    IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
-   DROP TABLE dbo.Customers
+      DROP TABLE dbo.Customers;
    GO
    -- Create the table in the specified schema
    CREATE TABLE dbo.Customers
    (
-      CustomerId        INT    NOT NULL   PRIMARY KEY, -- primary key column
-      Name      [NVARCHAR](50)  NOT NULL,
-      Location  [NVARCHAR](50)  NOT NULL,
-      Email     [NVARCHAR](50)  NOT NULL
+       CustomerId  int NOT NULL PRIMARY KEY, -- primary key column
+       Name        nvarchar(50) NOT NULL,
+       Location    nvarchar(50) NOT NULL,
+       Email       nvarchar(50) NOT NULL
    );
    GO
    ```
@@ -121,7 +121,7 @@ ms.locfileid: "54143454"
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
-      ([CustomerId],[Name],[Location],[Email])
+      ([CustomerId], [Name], [Location], [Email])
    VALUES
       ( 1, N'Orlando', N'Australia', N''),
       ( 2, N'Keith', N'India', N'keith0@adventure-works.com'),

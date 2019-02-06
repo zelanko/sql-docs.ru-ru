@@ -10,12 +10,12 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2895a40dbff1215f5f6b2b2d873069f41b1d315
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5de90c3be35ca5989498872e4c86f4303d17ffc0
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747966"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760077"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Этап 2. Активация и настройка конфигурации пакетов
   В этой задаче вы преобразуете проект в модель развертывания пакета и включите конфигурации пакетов с помощью мастера настройки пакета. Этот мастер будет использован для создания файла конфигурации в формате XML, который содержит параметры конфигурации для свойства `Directory` контейнера «цикл по каждому элементу». Значение свойства Directory содержится в новой переменной уровня пакета, обновление которой можно осуществлять в процессе выполнения. Кроме того, будет заполнена новая папка с образцами данных для использования при проверке.  
@@ -43,7 +43,7 @@ ms.locfileid: "52747966"
   
 9. В **редактор выражений свойств**, щелкните в **свойство** и выберите `Directory`.  
   
-10. В поле **Выражение** нажмите кнопку с многоточием **(…)**.  
+10. В **выражение** нажмите кнопку с многоточием **(...)** .  
   
 11. В окне **Построитель выражений**раскройте папку "Переменные" и перетащите переменную **User::varFolderName** в поле **Выражение** .  
   
@@ -87,13 +87,13 @@ ms.locfileid: "52747966"
   
 16. Щелкните **Закрыть**.  
   
-17. Мастер создаст файл конфигурации с именем SSISTutorial.dtsConfig, в котором содержатся настройки конфигурации значения переменной `alue`, задающей свойство перечислителя `Directory`.  
+17. Мастер создает файл конфигурации с именем SSISTutorial.dtsConfig, в котором содержатся параметры конфигурации для `value` переменной, которая в свою очередь задает `Directory` свойство перечислителя.  
   
     > [!NOTE]  
     >  Файл конфигурации обычно содержит множество данных о свойствах пакета, но в этом учебнике будут использованы только следующие сведения о конфигурации.  
     > <Configuration ConfiguredType="Property"  
-    > Path="\Package.Variables[user::varFolderName]. Свойства [значение]» ValueType = «String»\>  
-    >  \<ConfiguredValue >\</ConfiguredValue >  
+    > Path="\Package.Variables[User::varFolderName].Properties[Value]" ValueType="String"\>  
+    >  \<ConfiguredValue>\</ConfiguredValue>  
     > \</ Configuration >.  
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>Создание и заполнение новой папки с образцами данных  
