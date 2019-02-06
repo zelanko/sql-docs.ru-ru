@@ -16,89 +16,89 @@ items:
       href: sql-data-discovery-and-classification.md
     - name: Устранение неполадок соединителя SQL Server
       href: encryption/sql-server-connector-maintenance-troubleshooting.md
-    - name: Проверка подлинности и доступ
+  - name: Проверка подлинности и доступ
+    items:
+    - name: Определение действующих разрешений
+      href: authentication-access/determining-effective-database-engine-permissions.md
+    - name: Создает вход
+      href: authentication-access/create-a-login.md
+    - name: Создание пользователя базы данных
+      href: authentication-access/create-a-database-user.md
+    - name: Создание схемы базы данных
+      href: authentication-access/create-a-database-schema.md
+    - name: Присоединение к роли
+      href: authentication-access/join-a-role.md
+    - name: Предоставление разрешения для участника
+      href: authentication-access/grant-a-permission-to-a-principal.md
+    - name: Создание роли сервера
+      href: authentication-access/create-a-server-role.md
+    - name: Создание роли приложения
+      href: authentication-access/create-an-application-role.md
+    - name: Создание учетных данных
+      href: authentication-access/create-a-credential.md
+  - name: Шифрование
+    items:
+    - name: Выбор алгоритма
+      href: encryption/choose-an-encryption-algorithm.md
+    - name: Настройка Always Encrypted с безопасными анклавами
+      href: encryption/configure-always-encrypted-enclaves.md
       items:
-      - name: Определение действующих разрешений
-        href: authentication-access/determining-effective-database-engine-permissions.md
-      - name: Создает вход
-        href: authentication-access/create-a-login.md
-      - name: Создание пользователя базы данных
-        href: authentication-access/create-a-database-user.md
-      - name: Создание схемы базы данных
-        href: authentication-access/create-a-database-schema.md
-      - name: Присоединение к роли
-        href: authentication-access/join-a-role.md
-      - name: Предоставление разрешения для участника
-        href: authentication-access/grant-a-permission-to-a-principal.md
-      - name: Создание роли сервера
-        href: authentication-access/create-a-server-role.md
-      - name: Создание роли приложения
-        href: authentication-access/create-an-application-role.md
-      - name: Создание учетных данных
-        href: authentication-access/create-a-credential.md
-    - name: Шифрование
-      items:
-      - name: Выбор алгоритма
-        href: encryption/choose-an-encryption-algorithm.md
-      - name: Настройка Always Encrypted с безопасными анклавами
-        href: encryption/configure-always-encrypted-enclaves.md
-        items:
-        - name: Настройка с помощью SQL Server Management Studio
-          href: encryption/configure-always-encrypted-using-sql-server-management-studio.md
-        - name: Настройка с помощью PowerShell
-          href: encryption/configure-always-encrypted-using-powershell.md
-        - name: Создание и хранение главных ключей столбцов
-          href: encryption/create-and-store-column-master-keys-always-encrypted.md
-        - name: Настройка ключей с помощью PowerShell
-          href: encryption/configure-always-encrypted-keys-using-powershell.md
-        - name: Смена ключей с помощью PowerShell
-          href: encryption/rotate-always-encrypted-keys-using-powershell.md
-        - name: Настройка шифрования столбцов с помощью PowerShell
-          href: encryption/configure-column-encryption-using-powershell.md
-        - name: Миграция конфиденциальных данных
-          href: encryption/migrate-sensitive-data-protected-by-always-encrypted.md
-        - name: Разработка приложений с помощью .NET Framework
-          href: encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
-      - name: Перемещение базы данных, защищаемой прозрачным шифрованием
-        href: encryption/move-a-tde-protected-database-to-another-sql-server.md
-      - name: Включение прозрачного шифрования с расширенным управлением ключами
-        href: encryption/enable-tde-on-sql-server-using-ekm.md
-      - name: Создание резервной копии главного ключа службы
-        href: encryption/back-up-the-service-master-key.md
-      - name: Восстановление главного ключа службы
-        href: encryption/restore-the-service-master-key.md
-      - name: Создание главного ключа базы данных
-        href: encryption/create-a-database-master-key.md
-      - name: Создание резервной копии главного ключа базы данных
-        href: encryption/back-up-a-database-master-key.md
-      - name: Восстановление главного ключа базы данных
-        href: encryption/restore-a-database-master-key.md
-      - name: Создание идентичных симметричных ключей на двух серверах
-        href: encryption/create-identical-symmetric-keys-on-two-servers.md
-      - name: Шифрование столбца данных
-        href: encryption/encrypt-a-column-of-data.md
-    - name: Защита базы данных SQL Azure
-      items:
-      - name: Соединитель SQL Server с шифрованием
-        href: encryption/use-sql-server-connector-with-sql-encryption-features.md
-      - name: Создание собственных ключей
-        href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?toc=/docs/relational-databases/security/encryption/toc.json
-      - name: Смена ключей BYOK TDE
-        href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation?toc=/docs/relational-databases/security/encryption/toc.json
-      - name: Удаление предохранителя TDE
-        href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector?toc=/docs/relational-databases/security/encryption/toc.json
-      - name: Расширенное управление ключами с Azure Key Vault
-        href: encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
-    - name: Аудит
-      items:
-      - name: Создание спецификации аудита сервера
-        href: auditing/create-a-server-audit-and-server-audit-specification.md
-      - name: Создание спецификации аудита базы данных
-        href: auditing/create-a-server-audit-and-database-audit-specification.md
-      - name: Просмотр журнала аудита
-        href: auditing/view-a-sql-server-audit-log.md
-      - name: Запись событий аудита в журнал Windows
-        href: auditing/write-sql-server-audit-events-to-the-security-log.md
+      - name: Настройка с помощью SQL Server Management Studio
+        href: encryption/configure-always-encrypted-using-sql-server-management-studio.md
+      - name: Настройка с помощью PowerShell
+        href: encryption/configure-always-encrypted-using-powershell.md
+      - name: Создание и хранение главных ключей столбцов
+        href: encryption/create-and-store-column-master-keys-always-encrypted.md
+      - name: Настройка ключей с помощью PowerShell
+        href: encryption/configure-always-encrypted-keys-using-powershell.md
+      - name: Смена ключей с помощью PowerShell
+        href: encryption/rotate-always-encrypted-keys-using-powershell.md
+      - name: Настройка шифрования столбцов с помощью PowerShell
+        href: encryption/configure-column-encryption-using-powershell.md
+      - name: Миграция конфиденциальных данных
+        href: encryption/migrate-sensitive-data-protected-by-always-encrypted.md
+      - name: Разработка приложений с помощью .NET Framework
+        href: encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
+    - name: Перемещение базы данных, защищаемой прозрачным шифрованием
+      href: encryption/move-a-tde-protected-database-to-another-sql-server.md
+    - name: Включение прозрачного шифрования с расширенным управлением ключами
+      href: encryption/enable-tde-on-sql-server-using-ekm.md
+    - name: Создание резервной копии главного ключа службы
+      href: encryption/back-up-the-service-master-key.md
+    - name: Восстановление главного ключа службы
+      href: encryption/restore-the-service-master-key.md
+    - name: Создание главного ключа базы данных
+      href: encryption/create-a-database-master-key.md
+    - name: Создание резервной копии главного ключа базы данных
+      href: encryption/back-up-a-database-master-key.md
+    - name: Восстановление главного ключа базы данных
+      href: encryption/restore-a-database-master-key.md
+    - name: Создание идентичных симметричных ключей на двух серверах
+      href: encryption/create-identical-symmetric-keys-on-two-servers.md
+    - name: Шифрование столбца данных
+      href: encryption/encrypt-a-column-of-data.md
+  - name: Защита базы данных SQL Azure
+    items:
+    - name: Соединитель SQL Server с шифрованием
+      href: encryption/use-sql-server-connector-with-sql-encryption-features.md
+    - name: Создание собственных ключей
+      href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?toc=/docs/relational-databases/security/encryption/toc.json
+    - name: Смена ключей BYOK TDE
+      href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation?toc=/docs/relational-databases/security/encryption/toc.json
+    - name: Удаление предохранителя TDE
+      href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector?toc=/docs/relational-databases/security/encryption/toc.json
+    - name: Расширенное управление ключами с Azure Key Vault
+      href: encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
+  - name: Аудит
+    items:
+    - name: Создание спецификации аудита сервера
+      href: auditing/create-a-server-audit-and-server-audit-specification.md
+    - name: Создание спецификации аудита базы данных
+      href: auditing/create-a-server-audit-and-database-audit-specification.md
+    - name: Просмотр журнала аудита
+      href: auditing/view-a-sql-server-audit-log.md
+    - name: Запись событий аудита в журнал Windows
+      href: auditing/write-sql-server-audit-events-to-the-security-log.md
 - name: Основные понятия
   items:
   - name: Защита интеллектуальной собственности SQL Server
@@ -175,13 +175,13 @@ items:
         href: encryption/extensible-key-management-ekm.md
       - name: Расширенное управление ключами с Azure Key Vault
         href: encryption/extensible-key-management-using-azure-key-vault-sql-server.md
-    - name: Аудит
-      href: auditing/sql-server-audit-database-engine.md
-      items:
-      - name: Группы действий и действия
-        href: auditing/sql-server-audit-action-groups-and-actions.md
-      - name: Записи аудита
-        href: auditing/sql-server-audit-records.md
+  - name: Аудит
+    href: auditing/sql-server-audit-database-engine.md
+    items:
+    - name: Действия и группы действий
+      href: auditing/sql-server-audit-action-groups-and-actions.md
+    - name: Записи аудита
+      href: auditing/sql-server-audit-records.md
 - name: Учебники
   items:
   - name: Always Encrypted с безопасными анклавами в SSMS
@@ -192,9 +192,9 @@ items:
     href: permissions-or-securables-page.md
   - name: Мастер постоянного шифрования
     href: encryption/always-encrypted-wizard.md
-ms.openlocfilehash: 07f901c76f2f1c1e0570df85bf066e084390688b
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 774564c5eed9bf7c531ef1ed0c49f73c95f490cf
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513894"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689917"
