@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 40bd2140ba28307cca30befb7cdad8b180cc856a
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 527f88ed14adc0140cbca179177e85670f72cafd
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645143"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55890015"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>Создание функций данных с помощью R и SQL Server (Пошаговое руководство)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "53645143"
 
 1. С помощью функции SQL с именем *fnCalculateDistance*. Функция должна уже существовать в базе данных NYCTaxi_Sample. В обозревателе объектов убедитесь, что функция существует, перейдя по этому пути: Базы данных > NYCTaxi_Sample > программирования > функции > скалярные функции > dbo.fnCalculateDistance.
 
-  Если функция не существует, используйте SQL Server Management Studio, создайте функцию в базе данных NYCTaxi_Sample.
+    Если функция не существует, используйте SQL Server Management Studio, создайте функцию в базе данных NYCTaxi_Sample.
 
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
