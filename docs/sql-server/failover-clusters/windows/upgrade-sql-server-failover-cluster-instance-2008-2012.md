@@ -1,6 +1,6 @@
 ---
 title: Обновление экземпляров SQL Server, работающих в кластерах Windows Server 2008, Windows Server 2008 R2 или Windows Server 2012 | Документы Майкрософт
-ms.date: 1/25/2018
+ms.date: 01/25/2018
 ms.prod: sql
 ms.technology: high-availability
 ms.topic: conceptual
@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c669932929f690a1d3f01968bbaaa482aa4d568
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: a7534e39be1973861ab827e7f5e2dab6adf941e0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044560"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017005"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Обновление экземпляров SQL Server, работающих в кластерах Windows Server 2008, Windows Server 2008 R2 или Windows Server 2012
 

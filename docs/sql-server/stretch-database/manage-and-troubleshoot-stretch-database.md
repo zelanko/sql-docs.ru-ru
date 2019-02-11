@@ -3,6 +3,7 @@ title: Управление Stretch Database и устранение связа�
 ms.custom: ''
 ms.date: 06/27/2016
 ms.prod: sql
+ms.technology: ''
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +12,15 @@ helpviewer_keywords:
 - managing Stretch Database
 - troubleshooting Stretch Database
 ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a25d4931d1be987c69ca2fc80445ea0aa1edd1ac
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 3d359563ed96b9a22b9e1237c627caf4aa77215c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596965"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024935"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Управление Stretch Database и устранение связанных с ней неполадок
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
