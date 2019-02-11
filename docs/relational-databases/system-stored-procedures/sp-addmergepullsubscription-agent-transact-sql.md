@@ -343,7 +343,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="remarks"></a>Примечания  
  **sp_addmergepullsubscription_agent** используется в репликации слиянием и располагает функциональностью, аналогичной [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
   
- Пример правильного указания настроек безопасности при выполнении **sp_addmergepullsubscription_agent**, см. в разделе [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
+ Пример правильного указания настроек безопасности при выполнении **sp_addmergepullsubscription_agent**, см. в разделе [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md).  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_1_1.sql)]  
@@ -352,8 +352,8 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_addmergepullsubscription_agent**.  
   
 ## <a name="see-also"></a>См. также  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
  [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
