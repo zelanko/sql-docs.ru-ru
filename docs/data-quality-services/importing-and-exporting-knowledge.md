@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: f5d961931ca85eae1eead3a51eadbecd467bfff3
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: d90cf40ff410f9e79c0d37450b5e50ff48fb4d0d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616614"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016295"
 ---
 # <a name="importing-and-exporting-knowledge"></a>Импорт и экспорт набора знаний
 
@@ -35,7 +35,7 @@ ms.locfileid: "52616614"
 |Экспорт домена из базы знаний в файл данных .dqs.|[Экспорт домена в файл DQS](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
 |Импорт домена из файла данных .dqs в существующую базу знаний.|[Импорт домена из файла DQS](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  
 |Экспорт всей базы знаний в файл данных .dqs.|[Экспорт базы знаний в файл DQS](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
-|Импорт всей базы знаний в файл данных .dqs.|[Импорт базы знаний из файла DQS](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
+|Импорт всей базы знаний в файл данных .dqs.|[Импорт базы знаний из файла .dqs](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
 |Импорт значений в домен из файла Excel|[Импорт значений в домен из файла Excel](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
 |Импорт доменов из файла Excel в базу знаний|[Импорт доменов из файла Excel при обнаружении набора знаний](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
 |Импорт знаний, полученных во время очистки, в базу знаний.|[Импорт значений проекта очистки в домен](../data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
