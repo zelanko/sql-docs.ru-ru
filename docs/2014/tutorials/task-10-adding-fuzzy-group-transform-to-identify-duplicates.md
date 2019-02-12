@@ -1,24 +1,21 @@
 ---
-title: 'Задача 10: Добавление преобразования «Нечеткое группирование» для обнаружения повторений | Документация Майкрософт'
+title: Задача 10. Добавление преобразования «Нечеткое группирование» для обнаружения повторений | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 90b2b323-babd-464a-8914-9dc5e66aca74
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: d11487c2bfbcda4c18904c77d029c91440ca8410
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e5e6478bc1b424a8744a17f2e67d2bd74b9e70d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211611"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026995"
 ---
 # <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>Задача 10. Добавление преобразования «Нечеткое группирование» для обнаружения повторений
   В этой задаче вы добавляете в поток данных преобразование «Нечеткое группирование». Преобразование «Нечеткое группирование» помогает выявить повторения в исходных данных. См. в разделе [преобразованию "Нечеткое группирование"](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) для получения дополнительных сведений.  
@@ -58,6 +55,6 @@ ms.locfileid: "48211611"
 15. Нажмите кнопку **ОК** закрыть **редакторе преобразования Нечеткий группу**.  
   
 ## <a name="next-step"></a>Следующий шаг  
- [Задача 11. Добавление преобразования "Условное разбиение" для фильтрации повторений](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
+ [Задача 11. Добавление преобразования «Условное разбиение» для фильтрации повторений](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
   
   

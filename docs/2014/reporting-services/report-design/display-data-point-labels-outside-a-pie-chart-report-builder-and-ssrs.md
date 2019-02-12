@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 959b7574-cf43-470b-b592-4944d8a9948f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3c788f0ec625e072aefbc7637f209ee7197e80d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 49ea3e0e87d9594ff16b3512533597ea9a9ea37c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149754"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037909"
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>Отображение меток точек данных за пределами круговой диаграммы (построитель отчетов и службы SSRS)
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]присваивание меток круговой диаграммы оптимизируется для отображения меток только для некоторых срезов данных. Метки могут перекрываться, если круговая диаграмма содержит слишком много срезов. Решением проблемы является отображение меток за пределами круговой диаграммы, что создает больше пространства для нанесения дальнейших меток данных. Если метки все еще перекрывают друг друга, можно создать для них больше места путем включения объемных эффектов. Это снижает диаметр круговой диаграммы, создавая больше пространства вокруг диаграммы.  
@@ -55,7 +55,7 @@ ms.locfileid: "48149754"
 4.  Если необходимо предоставить большее пространство для меток в диаграмме, при этом оставив ее двухмерной, то в поле **Вращение** и **Наклон** установите свойства на значение **0**.  
   
 ## <a name="see-also"></a>См. также  
- [Круговые диаграммы &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Круговые диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
  [Сбор мелких срезов на круговой диаграмме (построитель отчетов и службы SSRS)](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Отображение процентных значений на круговой диаграмме (построитель отчетов и службы SSRS)](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
   

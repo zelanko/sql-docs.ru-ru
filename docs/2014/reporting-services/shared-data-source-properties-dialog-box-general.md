@@ -11,20 +11,20 @@ f1_keywords:
 - sql12.rtp.rptdesigner.shareddatasource.general.f1
 ms.assetid: 8dc51d5a-39e0-4870-8874-9e3d1626e16d
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c92df0a13d3257535316e65d8da0cff74192c38b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e743eac09bc3a39899c6cc6a86674b428f369717
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070156"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041235"
 ---
 # <a name="shared-data-source-properties-dialog-box-general"></a>Диалоговое окно «Свойства общего источника данных» — «Общие»
   С помощью диалогового окна **Свойства общего источника данных** можно просмотреть или изменить сведения о соединении для общего источника данных в отчете.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **Name**  
  Введите имя источника данных. Имя источника данных должно быть уникальным в пределах отчета. По умолчанию источнику данных присваивается стандартное имя, например ИсточникДанных1 или ИсточникДанных2.  
   
  **Тип**  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 24804b6233e701ef0c27f113a294987156b6174c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 1be357ab864a0d7249a2f9d4529591813b4a01ed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363376"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028015"
 ---
 # <a name="xml-connection-type-ssrs"></a>Тип соединения XML (службы SSRS)
   Чтобы включить данные из источника XML-данных в отчет, необходим набор данных, основанный на источнике данных отчета типа XML. Этот встроенный тип источника данных основан на модуле обработки данных XML. Используйте этот тип источника данных для подключения и получения данных из внедренных в запрос XML-документов, веб-служб и данных XML.  
@@ -110,7 +110,7 @@ ms.locfileid: "53363376"
   
  Дополнительные сведения о синтаксисе запроса см. в разделе [Синтаксис запроса XML для XML-данных отчета (службы SSRS)](report-data-ssrs.md) документации к службам [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
   
- Примеры, см. в разделе [служб Reporting Services: С помощью XML и источников данных веб-служб](https://go.microsoft.com/fwlink/?LinkId=81654).  
+ Примеры можно найти в разделах [Службы Reporting Services: использование источников XML-данных и источников данных веб-служб](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Требования для получения XML-данных веб-службы  
  Модуль обработки XML-данных не обнаруживает схему самостоятельно. Поэтому необходимо определить, какой метод SOAP будет получать нужные данные. Необходимо также представлять себе схему адресации или пространство имен, которые веб-служба использует для своих данных.  

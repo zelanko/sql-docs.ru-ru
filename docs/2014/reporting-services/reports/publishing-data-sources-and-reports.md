@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bb0768e479c9a308121d99202fea7ea497acd1e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4966841751b7eaf0382cc02d19fd2dac99462386
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182184"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034085"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Публикация источников данных и отчетов
   До публикации отчета его следует просмотреть, чтобы проверить его внешний вид. Макет отчета можно изменять, пока не будут достигнуты нужные результаты.  
@@ -36,7 +36,7 @@ ms.locfileid: "48182184"
  [Публикация отчетов на сервере отчетов](publishing-reports-to-a-report-server.md)  
  Описывает процесс публикации отчета на сервере отчетов.  
   
- [Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме интеграции с SharePoint &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
+ [Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме SharePoint (службы SSRS)](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
  Описывает процесс публикации отчета на сайте SharePoint.  
   
 ## <a name="see-also"></a>См. также  

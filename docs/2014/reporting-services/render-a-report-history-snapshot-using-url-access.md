@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f8b857d0aab5cc64255e3d041d58fdc7ab398358
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cc661c1241ce6d265fc949d7324ed4c54a5793f5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216624"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029505"
 ---
 # <a name="render-a-report-history-snapshot-using-url-access"></a>Обработка моментального снимка журнала отчета с использованием доступа по URL-адресу
   Подготовить отчет к просмотру можно с помощью моментального снимка журнала отчета. Для этого необходимо указать параметр *rs:Snapshot* и присвоить ему значение допустимого идентификатора моментального снимка. Значение параметра должно указываться в формате ГГГГ-ММ-ДДТЧЧ:ММ:СС согласно стандарту Международной организации по стандартизации (ISO) 8601.  
@@ -37,7 +37,7 @@ http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07
 ```  
   
 ## <a name="see-also"></a>См. также  
- [URL-адресов &#40;SSRS&#41;](url-access-ssrs.md)   
+ [Доступ по URL-адресу (службы SSRS)](url-access-ssrs.md)   
  [Ссылка на параметр доступа по URL-адресу](url-access-parameter-reference.md)  
   
   

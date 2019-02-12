@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b6019413-aebd-4ff7-831a-644572ad88b1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9c99945ad1e1d8c5027f7dfc63dcb725b0f0dac7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4987e3497b7d52ff11f8f52bc403105340f7f508
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204384"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035415"
 ---
 # <a name="modifying-and-processing-the-market-basket-model-intermediate-data-mining-tutorial"></a>Изменение и обработка модели потребительской корзины (учебник по интеллектуальному анализу данных — средний уровень)
-  Прежде чем приступить к обработке созданной модели интеллектуального анализа взаимосвязей, необходимо изменить значения по умолчанию для двух параметров: *поддержки* и *вероятность*.  
+  Прежде чем приступить к обработке созданной модели интеллектуального анализа взаимосвязей, необходимо изменить значения по умолчанию двух параметров: *Поддержка* и *вероятность*.  
   
 -   *Поддержка* определяет процент вариантов, в которых должно существовать определенное правило, прежде чем она считается допустимым. Необходимо указать, что правило должно содержаться по крайней мере в 1 проценте случаев.  
   
@@ -63,6 +62,6 @@ ms.locfileid: "48204384"
  [Изучение модели Потребительская &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/exploring-the-market-basket-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>См. также  
- [Требования к обработке и рекомендации по &#40;интеллектуального анализа данных&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Требования к обработке и связанные замечания (интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

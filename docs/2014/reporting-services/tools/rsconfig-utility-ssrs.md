@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cd0335165c27487433b0130f5e40ecb1846fe7ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: cebdfdbccf21ca3370cf2670d97d6cea6e4c7836
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505407"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036885"
 ---
 # <a name="rsconfig-utility-ssrs"></a>Программа rsconfig (SSRS)
   Программа **rsconfig.exe** шифрует значения подключения и учетной записи и сохраняет их в файле RSReportServer.config. Зашифрованные значения включают сведения о подключении к базе данных сервера отчетов и значения учетной записи, используемые для автоматической обработки отчетов.  

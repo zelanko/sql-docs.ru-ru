@@ -1,25 +1,24 @@
 ---
-title: 'Занятие 4: Создание прогнозов временных рядов, с помощью расширений интеллектуального анализа данных | Документация Майкрософт'
+title: Урок 4. Создание прогнозов временных рядов, с помощью расширений интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 6b883e43-209d-489a-8dc3-9349f88acae8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 83aa949e71977971b69f93f0e04b0c74ff99a226
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 772e5f5f71ca82dd18fec48730522c80e907414f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143894"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024885"
 ---
 # <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>Урок 4. Создание прогнозов временных рядов с использованием расширений интеллектуального анализа данных
-  В этом занятии и следующем уроке, расширений интеллектуального анализа данных (DMX) будет использовать для создания различных типов прогнозов, основанных на моделях временных рядов, созданные в [занятии 1: Создание модели интеллектуального анализа данных временных рядов и структуры интеллектуального анализа данных](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)и [Урок 2: добавление моделей интеллектуального анализа данных для структуры интеллектуального анализа данных временных рядов](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md).  
+  В этом занятии и следующем уроке, расширений интеллектуального анализа данных (DMX) будет использовать для создания различных типов прогнозов, основанных на моделях временных рядов, созданные в [занятии 1: Создание модели интеллектуального анализа данных и структура интеллектуального анализа данных временных рядов](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md) и [Урок 2: Добавление моделей интеллектуального анализа данных для структуры интеллектуального анализа данных временных рядов](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md).  
   
  Использование модели временных рядов дает много возможностей для выполнения прогнозирования.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48143894"
  REPLACE_MODEL_CASES  
  Используйте [PredictTimeSeries &#40;расширений интеллектуального анализа данных&#41; ](/sql/dmx/predicttimeseries-dmx) с аргументом REPLACE_MODEL_CASES, чтобы заменить исходные данные новыми рядами данных, а затем создать прогнозы, основанные на применении закономерностей в модели интеллектуального анализа данных для новых данных последовательность.  
   
- Пример использования аргумента REPLACE_MODEL_CASES, см. в разделе [занятии 2: построение сценария прогнозирования &#40;данных учебник по интеллектуальному анализу&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+ Пример использования аргумента REPLACE_MODEL_CASES, см. в разделе [занятии 2: Построение сценария прогнозирования &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
 ## <a name="lesson-tasks"></a>Задачи занятия  
  На этом занятии будут выполнены следующие задачи.  
@@ -70,7 +69,7 @@ WHERE [<criteria>]
   
 #### <a name="to-create-a-simple-time-series-prediction-query"></a>Создание простого запроса прогнозирования временного ряда  
   
-1.  В **обозревателя объектов**, щелкните правой кнопкой мыши экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], пункты **новый запрос**, а затем нажмите кнопку **расширений интеллектуального анализа данных**.  
+1.  В окне **Обозреватель объектов**щелкните правой кнопкой мыши экземпляр служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], укажите **Создать запрос**, а затем выберите пункт **Расширения интеллектуального анализа данных**.  
   
      Откроется редактор запросов, содержащий новый, пустой запрос.  
   
@@ -145,12 +144,12 @@ WHERE [<criteria>]
  На следующем занятии будет создан запрос, предоставляющий модели новые данные, и будет выполнено сравнение результатов этого прогноза с результатами только что созданного прогноза.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Урок 5. Расширение модели временных рядов](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
+ [Занятие 5. Расширение временных рядов модели](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
   
 ## <a name="see-also"></a>См. также  
  [PredictTimeSeries &#40;расширений интеллектуального анализа данных&#41;](/sql/dmx/predicttimeseries-dmx)   
  [Lag &#40;расширений интеллектуального анализа данных&#41;](/sql/dmx/lag-dmx)   
  [Примеры запросов моделей временных рядов](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [Занятие 2: Построение сценария прогнозирования &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Занятие 2. Построение сценария прогнозирования &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
   

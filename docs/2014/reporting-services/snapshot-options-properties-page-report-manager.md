@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4342504d0d62f2c611c680c58fcdeae1f046f29b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 458a04b87bf8aedd0d772e18ceb9cbc669fe6ba4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078104"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042355"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>Страница «Свойства параметров моментального снимка» (диспетчер отчетов)
   На странице свойств «Параметры моментального снимка» можно составить расписание добавления моментальных снимков отчетов в журнал отчетов и установить предел количества снимков отчетов, хранимых в журнале отчетов.  
@@ -62,9 +62,9 @@ ms.locfileid: "48078104"
  Щелкните, чтобы сохранить изменения.  
   
 ## <a name="see-also"></a>См. также  
- [Добавление моментального снимка к журналу отчета &#40;диспетчера отчетов&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Создание, изменение и удаление моментальных снимков в журнале отчета](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
+ [Добавление моментального снимка к журналу отчета (диспетчер отчетов)](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Создание, изменение и удаление моментальных снимков в журнале отчетов](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

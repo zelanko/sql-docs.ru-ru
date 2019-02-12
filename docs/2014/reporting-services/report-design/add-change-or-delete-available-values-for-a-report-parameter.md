@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 120390e99a8eb94a24bb2cd56253debd9450ac52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e0807838468e00ea9d6a323ac5ab1542ac1e06d6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098770"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036685"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter-report-builder-and-ssrs"></a>Добавление, изменение и удаление допустимых значений параметра отчета (построитель отчетов и службы SSRS)
   После создания параметра отчета можно указать список допустимых значений, которые будут выведены для пользователя. Список допустимых значений ограничивает значения, которые может выбрать пользователь, набором допустимых значений.  
@@ -32,7 +32,7 @@ ms.locfileid: "48098770"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- После публикации отчета можно изменить доступные значения, определяемые в отчете с помощью средства разработки отчетов, задавая значения свойств параметров на сервере отчетов. Дополнительные сведения см. в разделе [Report Parameters &#40;Report Builder and Report Designer&#41;](report-parameters-report-builder-and-report-designer.md).  
+ После публикации отчета можно изменить доступные значения, определяемые в отчете с помощью средства разработки отчетов, задавая значения свойств параметров на сервере отчетов. Дополнительные сведения см. в разделе [Параметры отчета (построитель отчетов и конструктор отчетов)](report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="to-add-or-change-the-available-values-for-a-report-parameter"></a>Добавление или изменение допустимых значений параметра отчета  
   
@@ -77,12 +77,12 @@ ms.locfileid: "48098770"
      При предварительном просмотре отчета можно увидеть, что для данного параметра раскрывающийся список допустимых значений больше не появляется.  
   
 ## <a name="see-also"></a>См. также  
- [Изменение порядка параметров отчета &#40;построитель отчетов и службы SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
- [Добавление, изменение или удаление параметра отчета &#40;построитель отчетов и службы SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [Добавление каскадных параметров в отчет &#40;построитель отчетов и службы SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [Изменение порядка параметров отчета (построитель отчетов и службы SSRS)](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [Добавление, изменение или удаление параметра отчета (построитель отчетов и службы SSRS)](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [Добавление каскадных параметров в отчет (построитель отчетов и службы SSRS)](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Добавление, изменение или удаление значения по умолчанию для параметра отчета (построитель отчетов и службы SSRS)](add-change-or-delete-default-values-for-a-report-parameter.md)   
  [Ссылки на коллекцию параметров (построитель отчетов и службы SSRS)](built-in-collections-parameters-collection-references-report-builder.md)   
- [Учебник. Добавление параметра к отчету (построитель отчетов)](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Учебник. Добавление параметра к отчету &#40;построитель отчетов&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Выражения (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)  
   
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 08c490fd6643d8d440444d46d9ac19673d847938
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 02c15c6336171bb324f610b42c97559bcfb0d44b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518631"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026625"
 ---
 # <a name="setdatabaseconnection-method-wmi-msreportserverconfigurationsetting"></a>Метод SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting)
   Задает подключение к определенной базе данных сервера отчетов.  
@@ -82,7 +82,7 @@ public void BackupEncryptionKey(string Server,
   
  Метод SetDatabaseConnection не проверяет, может ли сервер отчетов соединиться с базой данных сервера отчетов с помощью указанных данных.  
   
- Если задано значение в первый раз, ConnectionPoolSize, свойство имеет значение на основе количества процессоров: ConnectionPoolSize = #Processors * 75.  
+ В первый раз свойство ConnectionPoolSize устанавливается в зависимости от количества процессоров: ConnectionPoolSize = число процессоров * 75.  
   
  Метод SetDatabaseConnection не предоставляет разрешения указанным учетным записям. Следует вызвать метод [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) для каждой учетной записи, которой требуется доступ к базе данных сервера отчетов, и запустить получившийся скрипт.  
   

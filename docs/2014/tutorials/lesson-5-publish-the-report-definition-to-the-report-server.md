@@ -1,22 +1,21 @@
 ---
-title: 'Занятие 5: Публикация определения отчета на сервере отчетов | Документация Майкрософт'
+title: Занятие 5. Публикация определения отчета на сервере отчетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 57fab70f-4a72-4413-a0ad-d0525caca3f7
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3430994f0c5cb2b4c09c47a4a8bebaa7da3eba3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c9c561657767c1b1e593fa9dcd9702b72193004d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163374"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033625"
 ---
 # <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>Занятие 5. Публикация определения отчета на сервере отчетов
   Последним шагом обновления определения отчета является его публикация на сервере отчетов.  
@@ -78,7 +77,7 @@ ms.locfileid: "48163374"
     ```  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- В следующем занятии будет скомпилировать и запустить `SampleRDLSchema` приложения. См. в разделе [Урок 6: выполнение приложения схемы языка определения Отчетов &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
+ В следующем занятии будет скомпилировать и запустить `SampleRDLSchema` приложения. См. в разделе [Урок 6: Выполнение приложения схемы языка определения Отчетов &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
   
 ## <a name="see-also"></a>См. также  
  [Обновление отчетов с помощью классов, созданных из RDL-схемы &#40;учебник по службам SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

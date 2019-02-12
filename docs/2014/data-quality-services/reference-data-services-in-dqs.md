@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: c9d1af9671765908fad41a7c558c9cef3cce4794
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4b1a5d1aa7c35455e83361e2c04a686a75713574
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349769"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038355"
 ---
 # <a name="reference-data-services-in-dqs"></a>Службы эталонных данных в DQS
   Эталонными данными называется точный и полный набор взаимосвязанных или категорированных глобальных данных (выходящих за пределы предприятия), доступных в доверенных общедоступных доменах или у поставщиков дополнительного коммерческого содержания.  

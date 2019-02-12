@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: 3af42de3-67ef-41c2-bc8a-7045baec6f63
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3cd097e0a59a51529ae3fa373ad1e7e8b84b6b9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7d0ec49168e4a23a019eb91fc708e286bf0e1ac4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095904"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037045"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>Связывание отчета с моделью в качестве отчета с дополнительной информацией
-  Вместо использования применяемых по умолчанию шаблонов отчетов с дополнительной информацией можно создать отчет в построителе отчетов, а затем установить его связь с конкретной сущностью в модели отчета. Когда пользователь, просматривающий отчет, щелкает мышью интерактивные данные в основном отчете, отчет отображается как отчет с дополнительной информацией. Чтобы скомпоновать отчет к сущности, используйте [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] диспетчера отчетов.  
+  Вместо использования применяемых по умолчанию шаблонов отчетов с дополнительной информацией можно создать отчет в построителе отчетов, а затем установить его связь с конкретной сущностью в модели отчета. Когда пользователь, просматривающий отчет, щелкает мышью интерактивные данные в основном отчете, отчет отображается как отчет с дополнительной информацией. Для установления связи между отчетом и сущностью используется диспетчер отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  Первичной, или базовой сущностью, используемой в отчете, должна быть та, с которой отчет связан.  
   
 ### <a name="to-start-report-manager-from-a-browser"></a>Запуск диспетчера отчетов из браузера  
   
-1.  Откройте [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 6.0 или более поздней версии.  
+1.  Откройте браузер [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer версии 6.0 или выше.  
   
 2.  В адресной строке веб-браузера введите URL-адрес диспетчера отчетов. По умолчанию URL-адрес — http://\<*ComputerName*> / reports.  
   

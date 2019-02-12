@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 37d858e465e67bfba98da5d4ad9a0c44fbf1e46b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 09c16397bae867309fce5d47cc5f0397825d7953
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102844"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027199"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Функция Union (построитель отчетов и службы SSRS)
   Возвращает объединение всех числовых значений, отличных от NULL, заданных выражением, вычисляемым для данной области.  
@@ -33,7 +33,7 @@ Union(expression, scope, recursive)
   
 #### <a name="parameters"></a>Параметры  
  *expression*  
- (`SqlGeometry` или `SqlGeography`) выражение, к которому статистическая обработка.  
+ (`SqlGeometry` или `SqlGeography`) Выражение, к которому применяется статистическая обработка.  
   
  *область*  
  (`String`) Необязательно. Имя набора данных, группы или области данных, содержащих элементы отчета, к которым применяется агрегатная функция. Если аргумент *scope* не задан, используется текущая область.  
@@ -64,7 +64,7 @@ Union(expression, scope, recursive)
  Дополнительные сведения о рекурсивных агрегатах см. в разделе [Создание групп рекурсивной иерархии (построитель отчетов и службы SSRS)](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
 ## <a name="example"></a>Пример  
- Ниже приведены примеры `SqlGeometry` выражения и `Union` результирующего выражения в формате WKT (Well Known Text) для пространственных данных.  
+ Следующая таблица содержит примеры выражений `SqlGeometry` и результирующих выражений `Union` в формате WKT (Well Known Text) для пространственных данных.  
   
 |Поле с пространственными данными|Пример|Результат Union|  
 |-----------------------------|-------------|------------------|  
@@ -79,9 +79,9 @@ Union(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Использование выражений в отчетах &#40;построитель отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Использование выражений в отчетах (построитель отчетов и службы SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   
- [Область выражения для суммирования, агрегатов и встроенных коллекций &#40;построитель отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

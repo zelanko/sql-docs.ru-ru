@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 671f574f81bdceb35c1ee235f8ae545b5ae60296
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 6b50d6757c4ea635da35e881219dd63871dc0967
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372836"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039315"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Тип соединения с параллельным хранилищем данных SQL Server (SSRS)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] является виртуальным устройством масштабируемого хранилища данных, которое обеспечивает производительность и масштабируемость посредством расширенной параллельной обработки. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] использует базы данных [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] для распределенной обработки и хранения данных.  

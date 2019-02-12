@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: eea6bfe9-3130-4272-b3c2-c334349a7afd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6d88725e0392d07784be7b558dc6cd18f03e458d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 800358195b5c9d76485626cd3d4b6ca981a2de2e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158364"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038565"
 ---
 # <a name="version-property-wmi-msreportserverinstance"></a>Version Property (WMI MSReportServer_Instance)
   Возвращает версию сервера отчетов в формате Основной_номер.Дополнительный_номер.Номер_сборки.Номер_редакции. Только для чтения.  
@@ -34,7 +34,7 @@ public string Version;
 ```  
   
 ## <a name="property-value"></a>Значение свойства  
- Объект `string` , содержащее версию сервера отчетов.  
+ Строка `string`, содержащая версию сервера отчетов.  
   
 ## <a name="example-code"></a>Пример кода  
  [Класс MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  

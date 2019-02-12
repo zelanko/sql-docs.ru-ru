@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.shareddatasource.credentials.f1
 ms.assetid: c08d1a5f-206b-4d53-ab1a-368b651ee5bb
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a6546a9b38c8f12e493ea9fa47741fa56c9fab79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 9e230a20e369cf8354d3740f966d01a0930916f7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171084"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035055"
 ---
 # <a name="shared-data-source-properties-dialog-box-credentials"></a>Диалоговое окно «Свойства общего источника данных» — «Учетные данные»
   Выберите вкладку **Учетные данные** в диалоговом окне **Свойства общего источника данных** для отображения и изменения учетных данных, используемых для подключения к общему источнику данных в отчете. Предоставленные учетные данные используются для доступа к источнику данных и кэширования копии данных для предварительного просмотра отчета. Дополнительные сведения о кэшировании данных для предварительного просмотра см. в разделе [Предварительный просмотр отчетов](reports/previewing-reports.md). Дополнительные сведения об учетных данных см. в разделе [Указание учетных данных и сведений о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  

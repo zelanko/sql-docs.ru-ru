@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5aa5aca2f152a66d838fd49662c937932586338a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d0933593220b73b8d57d76645ebea05d733e5661
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181174"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043115"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>Прямоугольники и линии (построитель отчетов и службы SSRS)
   Для создания визуальных эффектов в отчете можно использовать прямоугольники и линии. Свойства отображения этих элементов отчета можно задать в разделе «Граница» вкладки «Главная», а другие свойства — с помощью панели «Свойства». Для прямоугольника можно добавлять такие характеристики, как цвет фона, изображение, подсказка или закладка.  
@@ -47,13 +47,13 @@ ms.locfileid: "48181174"
 
   
 ##  <a name="HowTo"></a> Инструкции  
- [Добавить границу к отчету &#40;построитель отчетов и службы SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)  
+ [Добавление границы в отчет (построитель отчетов и службы SSRS)](add-a-border-to-a-report-report-builder-and-ssrs.md)  
   
- [Добавление прямоугольника или контейнера &#40;построитель отчетов и службы SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
+ [Добавление прямоугольника или контейнера (построитель отчетов и службы SSRS)](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
- [Добавление и изменение линии &#40;построитель отчетов и службы SSRS&#41;](add-and-modify-a-line-report-builder-and-ssrs.md)  
+ [Добавление и изменение линии (построитель отчетов и службы SSRS)](add-and-modify-a-line-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>См. также  
- [Добавление прямоугольника или контейнера &#40;построитель отчетов и службы SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
+ [Добавление прямоугольника или контейнера (построитель отчетов и службы SSRS)](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
   

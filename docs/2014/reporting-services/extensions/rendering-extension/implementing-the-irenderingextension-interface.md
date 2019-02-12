@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 458cca2d14d1dc012742286a04bd2ca90453277c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f7e331f7b7617e85ec8b577ac8c922ba41e4075
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227274"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040045"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>Реализация интерфейса IRenderingExtension
   Модуль подготовки отчетов извлекает результаты из определения отчета, объединенного с реальными данными, и преобразует результирующие данные в формат, готовый к применению. Преобразование объединенных данных и форматирование осуществляется при помощи класса среды CLR, который реализует интерфейс <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>. Модель объекта преобразуется в формат вывода, который предназначен для средства просмотра, принтера или другого приложения вывода.  
@@ -51,7 +51,7 @@ ms.locfileid: "48227274"
 -   Параметр *createAndRegisterStream* — это функция-делегат, которую можно вызвать для получения потока, в который будет осуществляться отрисовка.  
   
 ### <a name="deviceinfo-parameter"></a>Параметр deviceInfo  
- Параметр *deviceInfo* содержит параметры отрисовки, а не параметры отчета. Данные параметры передаются модулю подготовки отчетов. Значения *deviceInfo* преобразуются сервером отчетов в объект <xref:System.Collections.Specialized.NameValueCollection>. Элементы в параметре *deviceInfo* рассматриваются как значения без учета регистра. Если запрос на отрисовку поступил в результате доступа по URL-адресу, то параметры URL-адреса в формате `rc:key=value` преобразовываются в пары "ключ-значение" в объекте словаря *deviceInfo*. Код обнаружения браузера также предоставляет следующие элементы в словаре *clientCapabilities*: EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, Type и AcceptLanguage. Любая пара "имя-значение" в параметре *deviceInfo*, которую не удается распознать модулю подготовки отчетов, не учитывается. В следующем образце кода показывается образец метода <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A>, возвращающего значки:  
+ Параметр *deviceInfo* содержит параметры отрисовки, а не параметры отчета. Данные параметры передаются модулю подготовки отчетов. Значения *deviceInfo* преобразуются сервером отчетов в объект <xref:System.Collections.Specialized.NameValueCollection>. Элементы в параметре *deviceInfo* рассматриваются как значения без учета регистра. Если запрос на отрисовку поступил в результате доступа по URL-адресу, то параметры URL-адреса в формате `rc:key=value` преобразовываются в пары "ключ-значение" в объекте словаря *deviceInfo*. Код обнаружения браузера также поставляет следующие элементы в *clientCapabilities* словаря: EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, Type и AcceptLanguage. Любая пара "имя-значение" в параметре *deviceInfo*, которую не удается распознать модулю подготовки отчетов, не учитывается. В следующем образце кода показывается образец метода <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A>, возвращающего значки:  
   
 ```csharp  
 public void GetRenderingResource (CreateStream createStreamCallback, NameValueCollection deviceInfo)  

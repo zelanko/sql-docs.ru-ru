@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e83d32be1dbb93a75c1d46f3edf7f46d8a0f8a7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ff32fcd498d7998f79b480369d90a07f974f6dc6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209504"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035085"
 ---
 # <a name="preload-the-cache-report-manager"></a>выполнить предварительную загрузку кэша (диспетчер отчетов)
   Можно предварительно загрузить кэш для общего набора данных путем создания плана обновления кэша для общего набора данных.  
@@ -40,7 +40,7 @@ ms.locfileid: "48209504"
   
 ### <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>Предварительная загрузка кэша путем создания плана обновления кэша  
   
-1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](../report-manager-ssrs-native-mode.md).  
+1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md).  
   
 2.  В диспетчере отчетов перейдите на страницу **Содержимое** , а затем к элементу, который необходимо кэшировать.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48209504"
   
 ### <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>Предварительная загрузка в кэш отчета для конкретного пользователя с использованием управляемой данными подписки  
   
-1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](../report-manager-ssrs-native-mode.md).  
+1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md).  
   
 2.  В диспетчере отчетов перейдите на страницу **Содержимое** , а затем перейдите к отчету, для которого необходимо создать подписку.  
   
@@ -121,10 +121,10 @@ ms.locfileid: "48209504"
 18. Нажмите кнопку **Применить**.  
   
 ## <a name="see-also"></a>См. также  
- [Управляемые данными подписки](../subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../subscriptions/data-driven-subscriptions.md)   
  [Создание управляемой данными подписки (учебник по службам SSRS)](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Производительность, моментальные снимки, кэширование (службы Reporting Services)](performance-snapshots-caching-reporting-services.md)   
  [Установка свойств обработки отчетов](set-report-processing-properties.md)   
- [Кэширование отчетов &#40;SSRS&#41;](caching-reports-ssrs.md)  
+ [Кэширование отчетов (службы SSRS)](caching-reports-ssrs.md)  
   
   

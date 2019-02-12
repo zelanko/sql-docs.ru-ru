@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4bd25e15-9d9e-4528-b7bc-ccb856643aec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3d83e8034885d83056ea6258ede86072239f6e74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224484"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031685"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>Настройка и обработка модели прогнозирования (учебник по интеллектуальному анализу данных — средний уровень)
   Алгоритм временных рядов ([!INCLUDE[msCoName](../includes/msconame-md.md)]) предоставляет параметры, которые влияют на способ создания модели и методы анализа временных данных. С помощью этих свойств можно существенно повлиять на прогнозы, сделанные моделью интеллектуального анализа данных.  
@@ -25,7 +24,7 @@ ms.locfileid: "48224484"
   
 1.  Вы будет настроить так, модель обработки временных рядов, добавив новое значение для *PERIODICITY_HINT* параметра.  
   
-2.  Вы узнаете о двух других важных параметрах алгоритма временных рядов: FORECAST_METHOD, который позволяет управлять методом прогнозирования, и параметре PREDICTION_SMOOTHING, который позволяет задать сочетание долгосрочных и краткосрочных прогнозы.  
+2.  Узнаете о двух других важных параметрах алгоритма временных рядов (Майкрософт): параметре FORECAST_METHOD, который позволяет управлять методом прогнозирования, и параметре PREDICTION_SMOOTHING, который позволяет задать сочетание долгосрочных и краткосрочных прогнозов.  
   
 3.  При необходимости можно указать алгоритму, как вычислять отсутствующие значения.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48224484"
 ## <a name="handling-missing-data-optional"></a>Обработка отсутствующих данных (необязательно)  
  Во многих случаях данные продаж могут иметь пробелы, заполненные нулями, или магазин может не выполнить отчет к сроку, в результате чего в конце ряда останется пустая ячейка. В таких случаях службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] не будут обрабатывать модель и выдадут следующую ошибку.  
   
- «Ошибка (интеллектуальный анализ данных): временные метки не синхронизированы начиная с последовательностей \<имя ряда >, модели интеллектуального анализа данных, \<имя модели >. Все временные ряды должны завершаться в одной временной метке и не могут иметь произвольно отсутствующие точки данных. Задание в качестве значения параметра MISSING_VALUE_SUBSTITUTION "PREVIOUS" или числовой константы автоматически исправляет отсутствующие точки данных, где это возможно».  
+ «Ошибка (интеллектуальный анализ данных): Временные метки не синхронизированы начиная с последовательностей \<имя ряда >, модели интеллектуального анализа данных, \<имя модели >. Все временные ряды должны завершаться в одной временной метке и не могут иметь произвольно отсутствующие точки данных. Задание в качестве значения параметра MISSING_VALUE_SUBSTITUTION "PREVIOUS" или числовой константы автоматически исправляет отсутствующие точки данных, где это возможно».  
   
  Чтобы избежать этой ошибки, можно указать, что службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] должны автоматически предоставлять новые значения для заполнения промежутков с помощью одного из следующих методов.  
   
@@ -89,7 +88,7 @@ ms.locfileid: "48224484"
   
 #### <a name="to-process-the-forecasting-model"></a>Обработка модели прогнозирования  
   
-1.  На **модель интеллектуального анализа данных** меню [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите **обработать структуру интеллектуального анализа данных и все модели**.  
+1.  В меню **Модель интеллектуального анализа данных** среды [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите команду **Обработать структуру интеллектуального анализа данных и все модели**.  
   
 2.  В окне предупреждения с вопросом о том, нужно ли выполнить построение и развертывание проекта, нажмите кнопку **Да**.  
   
@@ -105,8 +104,8 @@ ms.locfileid: "48224484"
  [Изучение модели прогнозирования &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/exploring-the-forecasting-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>См. также  
- [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Алгоритм временных рядов](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Требования к обработке и рекомендации по &#40;интеллектуального анализа данных&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Технический справочник по алгоритму временных рядов (Майкрософт)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Алгоритм временных рядов (Майкрософт)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
+ [Требования к обработке и связанные замечания (интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

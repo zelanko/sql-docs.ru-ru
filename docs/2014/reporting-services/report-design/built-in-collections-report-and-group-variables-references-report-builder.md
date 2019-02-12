@@ -19,13 +19,13 @@ f1_keywords:
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 49bcb746b5f6b1312609ead4dedadba44a180855
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4733ba204671ec3ed691e77626fb08861b7e6763
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139622"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043395"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>Ссылки на коллекции переменных отчета и группы (построитель отчетов и службы SSRS)
   При сложном вычислении, которое используется несколько раз в выражениях отчета, может потребоваться создание переменной. Можно создать переменную отчета или переменную группы. В отчете имена переменных должны быть уникальными.  
@@ -53,7 +53,7 @@ ms.locfileid: "48139622"
     > [!NOTE]  
     >  Нельзя управлять инициализацией переменной или вычислением выражения, которое обновляет значение переменной, в обработчике отчетов. Порядок выполнения при инициализации переменной не определен.  
   
- Дополнительные сведения о сеансах см. в разделе [Предварительный просмотр отчетов в построителе отчетов](../report-builder/previewing-reports-in-report-builder.md).  
+ Дополнительные сведения о сеансах см. в разделе [Previewing Reports in Report Builder](../report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="group-variables"></a>Групповые переменные  
  Групповые переменные используются для однократного вычисления сложного выражения в области группы. Групповая переменная действительна только в области группы и ее дочерних групп.  
@@ -74,7 +74,7 @@ ms.locfileid: "48139622"
   
 ## <a name="see-also"></a>См. также  
  [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Встроенные коллекции в выражениях &#40;построитель отчетов и службы SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
+ [Встроенные коллекции в выражениях (построитель отчетов и службы SSRS)](built-in-collections-in-expressions-report-builder.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)  
   
   

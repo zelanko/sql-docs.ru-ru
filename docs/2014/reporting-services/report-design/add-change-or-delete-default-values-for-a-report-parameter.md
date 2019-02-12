@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 294940b2ffdeab57d3cde8f7a1fe8a8b61d6532a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ef88ca9dc7870ad277640b40a02838c78b8dddce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221884"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032276"
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter-report-builder-and-ssrs"></a>Добавление, изменение или удаление значения по умолчанию для параметра отчета (построитель отчетов и службы SSRS)
   После создания параметров отчета можно предоставить список значений по умолчанию. Если все параметры имеют допустимые значения по умолчанию, отчет запускается автоматически при первом просмотре.  
@@ -30,7 +30,7 @@ ms.locfileid: "48221884"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- После публикации отчета можно изменить значения по умолчанию, определяемые в отчете с помощью средства разработки отчетов, задавая значения свойств параметров на сервере отчетов. Для параметра можно также предоставить несколько наборов значений по умолчанию, создав связанные отчеты. Дополнительные сведения см. в разделе [параметры отчета &#40;построитель отчетов и конструктор отчетов&#41;](report-parameters-report-builder-and-report-designer.md)  
+ После публикации отчета можно изменить значения по умолчанию, определяемые в отчете с помощью средства разработки отчетов, задавая значения свойств параметров на сервере отчетов. Для параметра можно также предоставить несколько наборов значений по умолчанию, создав связанные отчеты. Дополнительные сведения см. в разделе  [Параметры отчета (построитель отчетов и конструктор отчетов)](report-parameters-report-builder-and-report-designer.md)  
   
 ### <a name="to-add-or-change-the-default-values-for-a-report-parameter"></a>Добавление или изменение значений по умолчанию для параметра отчета  
   
@@ -65,12 +65,12 @@ ms.locfileid: "48221884"
   
 ## <a name="see-also"></a>См. также  
  [Параметры отчета (построитель отчетов и конструктор отчетов)](report-parameters-report-builder-and-report-designer.md)   
- [Добавление каскадных параметров в отчет &#40;построитель отчетов и службы SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [Учебник. Добавление параметра к отчету (построитель отчетов)](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Добавление каскадных параметров в отчет (построитель отчетов и службы SSRS)](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [Учебник. Добавление параметра к отчету &#40;построитель отчетов&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Ссылки на коллекцию параметров (построитель отчетов и службы SSRS)](built-in-collections-parameters-collection-references-report-builder.md)   
- [Изменение порядка параметров отчета &#40;построитель отчетов и службы SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
- [Добавление, изменение или удаление параметра отчета &#40;построитель отчетов и службы SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [Изменение порядка параметров отчета (построитель отчетов и службы SSRS)](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [Добавление, изменение или удаление параметра отчета (построитель отчетов и службы SSRS)](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [Выражения (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)  
   
   

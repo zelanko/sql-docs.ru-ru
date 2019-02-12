@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f068d4db-2d56-41b1-bed2-0cffa3ca411d
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: d7406f0f39afb0323ff6564b4b0ea427515f0f69
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 92261bc69590bcc338bf18aa9d406964bfe42fcd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375816"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026639"
 ---
 # <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>Занятие 5. Автоматизация очистки данных и сопоставления с помощью служб SSIS
   На занятии 1, вы создали базы знаний Suppliers и использовать его для очистки данных в занятии 2 и сопоставления данных в занятии 3, используя средство **клиента DQS**. В реальной ситуации, может потребоваться извлечь данные из источника, который не поддерживается DQS или для автоматизации очистки и процесс сопоставления без использования **клиента DQS** средство. Службы SQL Server Integration Services (SSIS) состоит из компонентов, которые можно использовать для интеграции данных из различных разнородных источников и **[преобразование очистки DQS](https://msdn.microsoft.com/library/ee677619.aspx)** компонента для вызова очистки функциональные возможности, предоставляемые DQS. В настоящее время службы DQS не предоставляют функцию сопоставления для служб SSIS для использования, но можно использовать **[преобразование Нечеткое группирование](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** для поиска повторений в данных.  

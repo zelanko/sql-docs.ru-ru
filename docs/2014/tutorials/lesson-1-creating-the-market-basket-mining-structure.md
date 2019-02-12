@@ -1,24 +1,23 @@
 ---
-title: 'Урок 1: Создание структуры интеллектуального анализа данных потребительской корзины | Документация Майкрософт'
+title: Урок 1. Создание структуры интеллектуального анализа данных потребительской корзины | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a817c8d1-aff4-42b4-b194-ad9cc1c60f35
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: be8768c5d638904240cc1499a594b0d2c8a97aa7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a6a6e123e525512a72d70bcc8ca2eba549d1347e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128884"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033635"
 ---
-# <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Урок 1. Создание структуры интеллектуального анализа "Потребительская корзина"
+# <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Урок 1. Создание структуры интеллектуального анализа «Потребительская корзина»
   На этом занятии требуется создать структуру интеллектуального анализа, позволяющуюй делать прогнозы относительно товаров [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], которые клиент обычно покупает одновременно. Если вы не знакомы со структурами интеллектуального анализа данных и их роли в интеллектуальном анализе данных, см. в разделе [структур интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
  Структуре интеллектуального анализа взаимосвязей, который вы создадите в этом занятии, поддерживает добавление моделей интеллектуального анализа данных, на основе [Microsoft Association Algorithm](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md). На следующих занятиях с помощью этих моделей интеллектуального анализа будет сформирован прогноз относительно типов товара, покупаемых клиентом одновременно, называемый анализом потребительской корзины.  Например, можно обнаружить, что обычно клиенты покупают одновременно горные велосипеды, шины для велосипедов и шлемы.  
@@ -101,7 +100,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
   
 2.  В **соединение с сервером** диалоговом окне для **тип сервера**выберите **служб Analysis Services**. В **имя_сервера**, тип `LocalHost`, или имя экземпляра [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , требуется подключение к для этого занятия. Нажмите кнопку **Соединить**.  
   
-3.  В **обозревателя объектов**, щелкните правой кнопкой мыши экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], пункты **новый запрос**, а затем нажмите кнопку **расширений интеллектуального анализа данных**.  
+3.  В окне **Обозреватель объектов**щелкните правой кнопкой мыши экземпляр служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], укажите **Создать запрос**, а затем выберите пункт **Расширения интеллектуального анализа данных**.  
   
      Откроется редактор запросов, содержащий новый, пустой запрос.  
   
@@ -188,6 +187,6 @@ CREATE MINING STRUCTURE [Mining Structure Name]
  На следующем занятии к созданной структуре интеллектуального анализа «Потребительская корзина» будет добавлена модель интеллектуального анализа.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 2. Добавление моделей интеллектуального анализа данных к структуре интеллектуального анализа данных "Потребительская корзина"](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [Занятие 2. Добавление моделей интеллектуального анализа данных к структуре интеллектуального анализа данных потребительской корзины](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
   
   

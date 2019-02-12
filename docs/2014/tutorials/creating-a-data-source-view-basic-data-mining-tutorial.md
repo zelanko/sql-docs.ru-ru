@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c1e68a88-0f82-415d-becc-78d180d4f845
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9ca2338983aae168dce33bd0cd21b37ccac6e9fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b11844e6b184099a9c6146d290a0dc081429f5d0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051346"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042772"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>Создание представления источников данных (учебник по интеллектуальному анализу данных — начальный уровень)
   Представление источника данных основано на источнике данных, и в нем определяется подмножество данных, которые затем можно использовать в структурах интеллектуального анализа данных. Представление источника данных также можно использовать для добавления столбцов, создания вычисляемых столбцов и статистических выражений и добавления именованных представлений. Используя представления источников данных, можно выбирать данные, которые относятся к конкретному проекту, устанавливать связи между таблицами и менять структуру данных без изменения исходного источника данных. Дополнительные сведения см. в разделе [Представления источников данных в многомерных моделях](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
@@ -48,9 +47,9 @@ ms.locfileid: "48051346"
  [Создание источника данных &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 2: Построение структуры прямой почтовой рассылки &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [Занятие 2. Построение структуры прямой почтовой рассылки &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>См. также  
- [Определение данных представление источника &#40;служб Analysis Services&#41;](../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
+ [Определение представления источников данных (службы Analysis Services)](../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
   
   

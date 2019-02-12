@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6fc3ab4ce541e194f9768cc710993db0119eaefd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: a38f52a4d5031e2b70f11263cd73d2015abbee73
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410191"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037885"
 ---
 # <a name="create-modify-and-delete-a-data-driven-subscription"></a>Create, Modify, and Delete a Data-Driven Subscription
   Управляемая данными подписка — это подписка на основе запроса, которая получает необходимые данные во время выполнения. При запуске такой подписки обрабатывается запрос на получение обновленной информации о получателях, параметрах доставки отчета, форматах подготовки и установки параметров. Результаты запроса объединены с определением подписки для создания динамической подписки, использующей данные, которые уже введены в базу данных служащего, клиента или любую другую базу данных, содержащую информацию, которая может использоваться как данные подписчика.  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9a5d1b52-d505-4e6f-8a89-569329c094e2
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 75529b9880183a644abdbdce1f6174c375245ba2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cf0a02e973d046f3dff2b2df95327cf38e88443c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355847"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027975"
 ---
 # <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Задача 14. Добавление задачи «Выполнение SQL» в поток управления для выполнения хранимых процедур для MDS
   После загрузки данных в промежуточные таблицы служб MDS вы выполняете хранимую процедуру, связанную с этой таблицей, для загрузки данных из промежуточных таблиц в соответствующие таблицы в базе данных MDS. Данной хранимой процедуре необходимо передать два обязательных параметра: LogFlag и VersionName. Параметр LogFlag определяет, записываются ли транзакции в журнал в ходе промежуточного процесса, а параметр VersionName представляет версию модели. См. в разделе [промежуточная хранимая процедура](https://msdn.microsoft.com/library/hh231028.aspx) Дополнительные сведения.  

@@ -24,21 +24,21 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], creating
 ms.assetid: 44cb1e6f-a6b8-498a-8e8b-ca28e7ab1007
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: e73924828fcae11908e83f2383e63dd68670071e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b0f5f3d9c3dc788a4b55932e8a28b43a6b4135bc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117894"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031395"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>Просмотр или удаление журнала отчета (диспетчер отчетов)
   Журнал отчета хранится вместе с отчетом, на основе которого он создан. Журнал отчета может просмотреть любой пользователь, имеющий соответствующие разрешения.  
   
 ### <a name="to-view-a-history-snapshot"></a>Просмотр моментального снимка журнала  
   
-1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md).  
+1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md).  
   
 2.  В диспетчере отчетов перейдите на страницу **Содержимое** . Перейдите к нужному отчету и откройте его.  
   
@@ -55,10 +55,10 @@ ms.locfileid: "48117894"
 3.  Установите флажок рядом с моментального снимка журнала, вы хотите удалить и нажмите кнопку **удалить**.  
   
 ## <a name="see-also"></a>См. также  
- [Добавление моментального снимка к журналу отчета &#40;диспетчера отчетов&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Добавление моментального снимка к журналу отчета (диспетчер отчетов)](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Страница журнала отчета &#40;диспетчера отчетов&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
  [Установка свойств обработки отчетов](report-server/set-report-processing-properties.md)   
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Создание, изменение и удаление моментальных снимков в журнале отчетов](report-server/create-modify-and-delete-snapshots-in-report-history.md)  
   
   

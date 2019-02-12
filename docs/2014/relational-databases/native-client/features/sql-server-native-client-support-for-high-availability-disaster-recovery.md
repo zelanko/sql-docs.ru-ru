@@ -1,7 +1,7 @@
 ---
 title: Поддержка собственного клиента SQL Server для обеспечения высокой доступности, аварийного восстановления | Документация Майкрософт
 ms.custom: ''
-ms.date: 2016-08-31
+ms.date: 08/31/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: native-client
@@ -10,12 +10,12 @@ ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 267d39335cd0bf74134030f3bb2af4a11e652319
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4bd73d32a58e156a3ae8577d41bbdd4725f85656
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391068"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040235"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Поддержка высокого уровня доступности и аварийного восстановления собственного клиента SQL Server
   В этом разделе описывается поддержка Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (начиная с версии [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Дополнительные сведения о [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], см. в разделе [прослушиватели группы доступности, возможность подключения клиентов и отработка отказа приложений &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md), [Создание и Настройка групп доступности &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [отказоустойчивая кластеризация и группы доступности AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), и [активные вторичные реплики: Вторичные реплики для чтения (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  

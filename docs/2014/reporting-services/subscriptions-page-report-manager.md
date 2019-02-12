@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cf3a6bd0-e0b2-4875-a532-63ef34cfa860
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9741f5e3234462e0793effd3ba5242f0ff272b3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8ae3948d019467590b885c706e6b2c8d1c186da2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109933"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031545"
 ---
 # <a name="subscriptions-page-report-manager"></a>Страница «Подписки» (диспетчер отчетов)
   Используйте страницу «Подписки», чтобы просмотреть все подписки для текущего отчета или общего источника данных. Если имеется соответствующее разрешение (например, переданное задачей «Управление всеми подписками»), можно просмотреть подписки всех пользователей. В противном случае эта страница отобразит только подписки, принадлежащие вам.  
@@ -80,7 +80,7 @@ ms.locfileid: "48109933"
  Подписку нельзя обработать, если она деактивирована. Для обновления подписки и перевода ее в исправное состояние откройте подписку, а затем сохраните ее.  
   
 ## <a name="see-also"></a>См. также  
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Создание, изменение и удаление стандартных подписок &#40;Reporting Services в собственном режиме&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Создание, изменение и удаление расписаний](subscriptions/create-modify-and-delete-schedules.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)  

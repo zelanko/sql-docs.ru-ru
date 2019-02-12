@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 82d5cba8d77e1580f4d493ddad46abcd7e1319e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b5be6c0698a20e9b05549ea81878c3d7929d0743
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081362"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043015"
 ---
 # <a name="set-parameters-on-a-published-report-reporting-services-in-sharepoint-integrated-mode"></a>настроить параметры опубликованного отчета (службы Reporting Services в режиме интеграции с SharePoint)
   Параметризованным называется отчет, который принимает вводимые значения, используемые для фильтрации данных при запуске отчета. Параметры определяются на этапе создания отчета. В зависимости от того, как параметр отчета определяется в определении отчета, этот параметр может принимать одно значение, несколько значений или динамические значения, изменяющиеся в ответ на предшествующий выбор (например, когда пользователь выбирает категорию продукта, его следующим шагом может быть выбор конкретного продукта из этой категории). Параметр может иметь значение по умолчанию, которое используется для запуска отфильтрованной версии отчета в автоматическом режиме и может быть заменено другим значением.  
@@ -83,6 +83,6 @@ ms.locfileid: "48081362"
 7.  Нажмите кнопку **Применить**.  
   
 ## <a name="see-also"></a>См. также  
- [Справочная таблица по разрешениям на доступ к спискам и сайтам SharePoint для элементов сервера отчетов](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ [Справочная таблица по разрешениям на сайты SharePoint и списки для элементов сервера отчетов](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
   

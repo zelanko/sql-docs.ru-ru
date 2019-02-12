@@ -12,20 +12,20 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pictureproperties.general.f1
 ms.assetid: c2218b93-f7fe-46ef-995f-d7dadf9752ec
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: afd91dda1a6a4694980d0976f1ceae9db928c36a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: cbbe4fe5917419bc07cef81629c7b2e38b7cff15
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108434"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019643"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>Диалоговое окно «Свойства изображения» — «Общие» (построитель отчетов и SSRS)
   Перейдите на вкладку **Общие** в диалоговом окне **Свойства изображения** , чтобы добавить рисунок, изменить имя по умолчанию для изображения или добавить текст подсказки.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **Name**  
  Введите имя элемента. В пределах отчета имя должно быть уникальным. По умолчанию присваивается стандартное имя, например Изображение1 или Изображение2.  
   
  **Подсказка**  
@@ -58,7 +58,7 @@ ms.locfileid: "48108434"
   
 ## <a name="see-also"></a>См. также  
  [Примеры выражений (построитель отчетов и службы SSRS)](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Образы &#40;построитель отчетов и службы SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Изображения (построитель отчетов и службы SSRS)](report-design/images-report-builder-and-ssrs.md)   
  [Справка построителя отчетов для диалоговых окон, панелей и мастеров](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0afb8222c188ac509a2b198709922d52ca008d5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f2e83f23870d355394241550ffab24838a6b43f1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113714"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020472"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Создание пошагового отчета (построитель отчетов и службы SSRS)
   В пошаговом отчете строки детализации или дочерние группы располагаются с отступом в родительской группе в том же столбце, как показано в примере ниже.  
@@ -105,7 +105,7 @@ ms.locfileid: "48113714"
 3.  Измените заполнение для ячейки, отображающей данные группы.  
   
 ## <a name="see-also"></a>См. также  
- [И нижние колонтитулы страницы &#40;построитель отчетов и службы SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)](page-headers-and-footers-report-builder-and-ssrs.md)   
  [Форматирование элементов отчета (построитель отчетов и службы SSRS)](formatting-report-items-report-builder-and-ssrs.md)   
  [Область данных табликса (построитель отчетов и службы SSRS)](../tablix-data-region-report-builder-and-ssrs.md)   
  [Таблицы &#40;построитель отчетов и службы SSRS&#41;](tables-report-builder-and-ssrs.md)   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 43135554b1340b92f4801a0f08e002142b443981
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 8fe9eaf39f101e6f64946e7c60a04765e4099d5a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359866"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040165"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Учебник. Отчет-карта (построитель отчетов)
   Этот учебник позволяет изучить функции карты, которые можно использовать для отображения данных отчета в географическом контексте.  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6e2359a87dab19356f87574f9444962b5440c71b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: f24a625c3bd523907ba51662f80c2cd26bec5704
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359258"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043005"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Настройка проверки подлинности Windows на сервере отчетов
   По умолчанию службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] принимают запросы, в которых определена проверка подлинности Negotiate или NTLM. Если в развертывание входят клиентские приложения и браузеры, в которых используются поставщики безопасности, то можно использовать значения по умолчанию без дополнительной настройки. Если нужно использовать другого поставщика безопасности для встроенной безопасности Windows (например, требуется применять протокол Kerberos напрямую) или если значения по умолчанию были изменены, и нужно восстановить первоначальные настройки, то можно использовать сведения данного раздела, чтобы указать настройки проверки подлинности на сервере отчетов.  

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 27b487c787a82f67fc861153939eb5838373fca1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 83a9233d9d5016be3307b797bb9a5a84ead276be
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108004"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039295"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Пользовательский интерфейс графического конструктора запросов
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графический и текстовый конструкторы запросов, предназначенных для получения данных из реляционной базы данных в качестве набора данных отчета в конструкторе отчетов. Графический конструктор запросов используется для интерактивного создания запроса и для просмотра результатов при работе с источниками данных следующих типов: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB и ODBC. Текстовый конструктор запросов применяется для задания нескольких инструкций [!INCLUDE[tsql](../../../includes/tsql-md.md)] , запросов и команд со сложным синтаксисом и запросов на основе выражений. Дополнительные сведения см. в разделе [Пользовательский интерфейс текстового конструктора запросов](../text-based-query-designer-user-interface.md). Дополнительные сведения о работе с конкретными типами источников данных см. в разделе [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-datasets-ssrs.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "48108004"
  .  
   
 ## <a name="graphical-query-designer"></a>Графический конструктор запросов  
- Графический конструктор запросов поддерживает три типа команд запроса: **Text**, **StoredProcedure**или **TableDirect**. До создания запроса для набора данных нужно выбрать параметр типа команды на странице «Запрос» диалогового окна [Свойства набора данных](../dataset-properties-dialog-box-query.md) .  
+ Графический конструктор запросов поддерживает три типа команд запроса: **Текст**, **StoredProcedure**, или **TableDirect**. До создания запроса для набора данных нужно выбрать параметр типа команды на странице «Запрос» диалогового окна [Свойства набора данных](../dataset-properties-dialog-box-query.md) .  
   
  Доступны следующие параметры типа запроса.  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 61c4d6ff-6435-456a-9cbd-5113d2113e8a
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 6ded4f239d7694c4b76829f9a5cc8b3beffb6578
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 78a9aa951b96354f628a8aa6fd180fbc01b186a7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365975"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020535"
 ---
 # <a name="max-function-report-builder-and-ssrs"></a>Функция Max (построитель отчетов и службы SSRS)
   Возвращает максимальное значение всех числовых значений, отличных от NULL, заданных выражением, вычисляемым в контексте данной области.  

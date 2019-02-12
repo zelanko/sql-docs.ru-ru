@@ -12,14 +12,14 @@ f1_keywords:
 - "10151"
 ms.assetid: 97d4a29b-30ae-4141-8595-e994e47e6648
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8b202d3eadef7abc2f638cc8c084849249f8eaab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 8dd12cb87bdc4c88aca9fe68455a179bcd5896c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096734"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033665"
 ---
 # <a name="calculated-series-properties-dialog-box-general-report-builder-and-ssrs"></a>Диалоговое окно «Свойства вычисляемого ряда» — «Общие» (построитель отчетов и службы SSRS)
   Перейдите на вкладку **Формула** в диалоговом окне **Свойства вычисляемого ряда**, чтобы добавить или изменить ряд, который должен быть рассчитан на основе встроенных формул, использующих существующие данные ряда в качестве входных значений.  
@@ -60,6 +60,6 @@ ms.locfileid: "48096734"
  Укажите параметры для выбранной формулы.  
   
 ## <a name="see-also"></a>См. также  
- [Диаграммы &#40;построитель отчетов и службы SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
+ [Диаграммы (построитель отчетов и службы SSRS)](report-design/charts-report-builder-and-ssrs.md)  
   
   

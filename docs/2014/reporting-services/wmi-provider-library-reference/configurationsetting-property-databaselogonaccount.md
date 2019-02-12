@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6f66f21b5c866688bd5c348f26788f4a869aca88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c9192e0845a5a6df9c7b848a3f91368dd15cfc60
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151954"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025065"
 ---
 # <a name="databaselogonaccount-property-wmi-msreportserverconfigurationsetting"></a>Свойство DatabaseLogonAccount (WMI MSReportServer_ConfigurationSetting)
   Позволяет задать учетную запись входа, используемую сервером отчетов при соединении с его базой данных. Только для чтения.  
@@ -46,14 +46,14 @@ public string DatabaseLogonAccount;
  [Класс MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="remarks"></a>Примечания  
- Допустимые значения для этого свойства различаются в зависимости от значения [DatabaseLogonType](configurationsetting-property-databaselogontype.md) свойство.  
+ Допустимые значения этого свойства различаются в зависимости от значения свойства [DatabaseLogonType](configurationsetting-property-databaselogontype.md) .  
   
  Это свойство учитывается, если [DatabaseLogonType](configurationsetting-property-databaselogontype.md) свойству `2 (Service)`.  
   
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

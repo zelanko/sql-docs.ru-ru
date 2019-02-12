@@ -12,14 +12,14 @@ f1_keywords:
 - "10100"
 ms.assetid: 14c3eeb6-d37b-4fda-967b-43afcdb48119
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a5d1f22d37723545cde9430404a5e414fb1856c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 4fbee37fe2396c533c6cc16528d467f9862d46c3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079044"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032355"
 ---
 # <a name="data-source-properties-dialog-box-credentials"></a>Диалоговое окно «Свойства источника данных» — «Учетные данные»
   Вкладка **Общие** в диалоговом окне **Свойства источника данных** позволяет просмотреть и изменить учетные данные, используемые для подключения отчета к источнику данных. Предоставленные учетные данные используются для доступа к источнику данных и кэширования копии данных для предварительного просмотра отчета. Дополнительные сведения о кэшировании данных для предварительного просмотра см. в разделе [Предварительный просмотр отчетов](reports/previewing-reports.md). Дополнительные сведения об учетных данных см. в разделе [Указание учетных данных и сведений о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  

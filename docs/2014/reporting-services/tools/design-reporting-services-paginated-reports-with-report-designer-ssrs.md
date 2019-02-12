@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: daaa0d4a48f1e5feb90fdf2fd8270b287fa7fc97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3216a1978378676ef74c0ec11a57d73a9ba528ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145894"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037815"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Разработка отчетов с использованием конструктора отчетов (SSRS)
   Для создания полнофункциональных отчетов и систем отчетности служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используется конструктор отчетов. Конструктор отчетов — это графический интерфейс, с помощью которого можно задавать источники данных, наборы данных, запросы, позиции макета отчета для областей данных и полей, а также такие интерактивные возможности, как параметры и наборы отчетов, которые работают совместно.  
@@ -34,7 +34,7 @@ ms.locfileid: "48145894"
   
 -   сохраняйте набор мастер-копий для отчетов и связанных с ними элементов. После развертывания опубликованные отчеты могут быть случайно изменены.  
   
- Используйте этот раздел для проектирования отчетов и связанных с ними элементов для одного проекта отчета в решении среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Дополнительные сведения о программах и нескольких проектах в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] см. в разделе [Службы Reporting Services в SQL Server Data Tools (службы SSDT)](reporting-services-in-sql-server-data-tools-ssdt.md).  
+ Используйте этот раздел для проектирования отчетов и связанных с ними элементов для одного проекта отчета в решении среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Дополнительные сведения о программах и нескольких проектах в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]см. в разделе [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).  
   
 ##  <a name="bkmk_SharedDataSources"></a> Общие источники данных  
  С помощью [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] можно определять и развертывать общие источники данных для системы отчетности. Общие источники данных могут развертываться независимо от других элементов проекта с помощью свойств **OverwriteDataSources** и **TargetDataSourceFolder** . Дополнительные сведения см. в разделе [Задание свойства развертывания (службы Reporting Services)](set-deployment-properties-reporting-services.md).  
@@ -118,7 +118,7 @@ ms.locfileid: "48145894"
   
     -   Нажмите клавишу F5.  
   
-     Если используется конфигурация проекта, которая строит отчет, но не развертывает его, отчет, который указан в `StartItem` свойство текущей конфигурации открывается в отдельном окне предварительного просмотра.  
+     Если используется конфигурация проекта, которая строит отчет, но не развертывает его, отчет, указанный в свойстве `StartItem` текущей конфигурации, открывается в отдельном окне предварительного просмотра.  
   
     > [!NOTE]  
     >  Прежде чем использовать режим отладки, необходимо задать начальный элемент. В обозревателе решений щелкните правой кнопкой мыши проект отчета, нажмите кнопку **свойства**, а затем в `StartItem`, выберите имя отчета для отображения.  
@@ -183,12 +183,12 @@ ms.locfileid: "48145894"
 |3|Незначительные проблемы сборки, которые оказывают минимальное, практически незаметное влияние на макет отчета.|  
 |4|Используется только для публикации предупреждений.|  
   
- При попытке просмотра или развертывания отчета, содержащего элементы, появившиеся в [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], например карты и гистограммы, эти элементы можно удалить из отчета. По умолчанию свойство ErrorLevel конфигурации установлено в значение 2, что приведет к ошибке сборки отчета при удалении карты. Однако если изменить значение свойства ErrorLevel на 0 или 1, то карта будет удалена, будет выдано предупреждение, но процесс сборки продолжится.  
+ При попытке просмотра или развертывания отчета, содержащего элементы, появившиеся в версии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], например карты и гистограммы, эти элементы могут быть удалены из него. По умолчанию свойство ErrorLevel конфигурации установлено в значение 2, что приведет к ошибке сборки отчета при удалении карты. Однако если изменить значение свойства ErrorLevel на 0 или 1, то карта будет удалена, будет выдано предупреждение, но процесс сборки продолжится.  
   
   
 ## <a name="see-also"></a>См. также  
  [Службы Reporting Services в SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md)   
  [Средства проектирования в отчет конструктора SQL Server Data Tools запросов &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)   
- [Развертывание и поддержка версий в SQL Server Data Tools &#40;службы SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+ [Развертывание и поддержка версий в SQL Server Data Tools (службы SSRS)](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
   

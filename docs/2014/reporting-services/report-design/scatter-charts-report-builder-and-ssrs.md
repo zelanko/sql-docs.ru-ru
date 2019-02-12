@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 2520ae24-0609-4890-807d-3267018aba8e
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 58ab7a391134a36d305e3a1dc3a64543fbe4f673
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 81e490077db54e0e373b24885ff919ae2b3dd7ca
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066484"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038665"
 ---
 # <a name="scatter-charts-report-builder-and-ssrs"></a>Точечные диаграммы (построитель отчетов и службы SSRS)
-  В точечной диаграмме ряды отображаются как наборы точек. Значения представлены расположением точки на плоскости диаграммы. Категории представлены различными маркерами. Точечные диаграммы обычно используются для сравнения агрегированных значений разных категорий. Дополнительные сведения о добавлении данных в точечную диаграмму см. в разделе [диаграммы &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)  
+  В точечной диаграмме ряды отображаются как наборы точек. Значения представлены расположением точки на плоскости диаграммы. Категории представлены различными маркерами. Точечные диаграммы обычно используются для сравнения агрегированных значений разных категорий. Дополнительные сведения о добавлении данных в точечные диаграммы см. в разделе [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)  
   
  На следующем рисунке показан пример точечной диаграммы.  
   
@@ -50,6 +50,6 @@ ms.locfileid: "48066484"
  [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
  [Типы диаграмм (построитель отчетов и службы SSRS)](chart-types-report-builder-and-ssrs.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
- [Линейчатые диаграммы &#40;построитель отчетов и службы SSRS&#41;](line-charts-report-builder-and-ssrs.md)  
+ [Графики (построитель отчетов и службы SSRS)](line-charts-report-builder-and-ssrs.md)  
   
   

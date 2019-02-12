@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], changing name
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 752f31eee490cca61523e3a0bba512e687c0108b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf8c70a3d1f97ce3be25833c8f0af93d693654d9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102964"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021716"
 ---
 # <a name="change-a-model-name-master-data-services"></a>Изменение имени модели (службы Master Data Services)
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] имя модели можно изменять.  
@@ -28,7 +28,7 @@ ms.locfileid: "48102964"
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
   
 ### <a name="to-change-a-model-name"></a>Изменение имени модели  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48102964"
 6.  Нажмите **Сохранить модель**.  
   
 ## <a name="see-also"></a>См. также  
- [Создание модели &#40;службы Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)   
+ [Создание модели (службы Master Data Services)](../../2014/master-data-services/create-a-model-master-data-services.md)   
  [Удаление модели (службы Master Data Services)](../../2014/master-data-services/delete-a-model-master-data-services.md)   
  [Модели (службы Master Data Services)](../../2014/master-data-services/models-master-data-services.md)  
   

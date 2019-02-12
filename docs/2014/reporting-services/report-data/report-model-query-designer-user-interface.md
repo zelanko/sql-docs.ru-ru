@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 77b3d858696c5dc4d2ed6422eb414f6b650a0487
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 34ae0dfd8786d1c8c99d9a256f8ad8236055828e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110611"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037035"
 ---
 # <a name="report-model-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов моделей отчетов
   Конструктор отчетов содержит два конструктора запросов, которые помогают уточнить, какие именно данные из источника данных «Модель сервера отчетов» необходимо использовать в отчете. Используйте графический конструктор запросов для просмотра и выбора сущностей модели и полей сущности. Используйте текстовый редактор запросов, чтобы работать напрямую со спецификацией на языке определения семантических моделей (SMDL) в XML-формате.  
@@ -90,7 +90,7 @@ ms.locfileid: "48110611"
 ## <a name="see-also"></a>См. также  
  [Средства проектирования в отчет конструктора SQL Server Data Tools запросов &#40;SSRS&#41;](query-design-tools-ssrs.md)   
  [Добавление данных из внешних источников данных &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)   
- [Подключение к модели отчета (службы SSRS)](report-model-connection-ssrs.md)   
+ [Соединение с моделью отчета (службы SSRS)](report-model-connection-ssrs.md)   
  [Файл конфигурации RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)  
   
   

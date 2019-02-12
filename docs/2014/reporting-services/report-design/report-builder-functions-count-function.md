@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c8c9ec3622318de6d2d70b8b49294dd282487d80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4e1aaede74e9c9aa693a80149eebdc5aabb069ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114034"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029315"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>Функция Count (построитель отчетов и службы SSRS)
   Возвращает количество значений, отличных от NULL, определяемое выражением, вычисляемым в контексте данной области.  
@@ -33,16 +33,16 @@ Count(expression, scope, recursive)
   
 #### <a name="parameters"></a>Параметры  
  *expression*  
- (`Variant` или `Binary`) выражение, к которому статистическая обработка, например, `=Fields!FieldName.Value`.  
+ (`Variant` или `Binary`) Выражение, к которому применяется статистическая обработка, например `=Fields!FieldName.Value`.  
   
  *область*  
- (`String`) Имя набора данных, группы или области данных, содержащую отчет, элементы, к которым применяется Агрегатная функция. Если аргумент *scope* не задан, используется текущая область.  
+ (`String`) Имя набора данных, группы или области данных, содержащих элементы отчета, к которым применяется агрегатная функция. Если аргумент *scope* не задан, используется текущая область.  
   
  *рекурсивные*  
  (**Перечислимый тип**) Необязательно. `Simple` (по умолчанию) или `RdlRecursive`. Указывает, нужно ли выполнять статистическую обработку рекурсивно.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- Возвращает `Integer`.  
+ Возвращает значение типа `Integer`.  
   
 ## <a name="remarks"></a>Примечания  
  Значение *scope* должно быть строковой константой и не может быть выражением. Для внешних агрегатов и агрегатов, в которых не задаются другие агрегаты, параметр *scope* должен ссылаться не текущую область или включающую область. Для агрегатов, содержащих агрегаты, во вложенных агрегатах может указываться дочерняя область.  
@@ -77,9 +77,9 @@ Count(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Использование выражений в отчетах &#40;построитель отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Использование выражений в отчетах (построитель отчетов и службы SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   
- [Область выражения для суммирования, агрегатов и встроенных коллекций &#40;построитель отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

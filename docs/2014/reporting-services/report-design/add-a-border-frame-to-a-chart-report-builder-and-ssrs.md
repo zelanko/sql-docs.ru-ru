@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4eeac09776fec458b1f887769cc690e158eab40b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a15dbae1d2192c31165e04fb21ada9d0807d591e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160074"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038485"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Добавление границы рамки в диаграмму (построитель отчетов и службы SSRS)
   Чтобы улучшить визуальное восприятие диаграммы, можно использовать границы рамки. Границу рамки можно выбрать в диалоговом окне **Свойства диаграммы** или в панели свойств. Границы рамки диаграммы нельзя применить ни к какой другой области данных.  
@@ -49,6 +49,6 @@ ms.locfileid: "48160074"
 ## <a name="see-also"></a>См. также  
  [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
- [Добавление в диаграмму стилей рельефа, приподнятости и текстуры &#40;построитель отчетов и службы SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
+ [Добавление в диаграмму стилей рельефа, приподнятости и текстуры (построитель отчетов и службы SSRS)](chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: cb41b6fe5e19d69c68e7942dd1581eb7792a06af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3f740965cdc0b3c17e1a889975fae72bf37a85a6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117854"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043055"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>Управление отображением области данных табликса на странице отчетов (построитель отчетов и службы SSRS)
   В данном разделе описываются свойства области данных табликса, которые можно изменять для изменения отображения области данных табликса во время просмотра в отчете.  
@@ -56,7 +56,7 @@ ms.locfileid: "48117854"
 ## <a name="controlling-how-tablix-row-and-column-groups-render"></a>Управление подготовкой к просмотру групп строк и столбцов табликса  
  Подготовка к просмотру групп областей данных табликса зависит от структуры группы. Область данных табликса может содержать четыре области, как показано на следующем рисунке:  
   
- ![Области данных табликса](../media/rs-tablixareas.gif "области данных табликса")  
+ ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
  Области группы строк и группы столбцов содержат заголовки групп. Когда в области данных табликса есть заголовки групп, можно управлять повторением строк и столбцов путем задания свойств на странице **Общие** диалогового окна **Свойства табликса** .  
   
@@ -75,8 +75,8 @@ ms.locfileid: "48117854"
 ## <a name="see-also"></a>См. также  
  [Связывание нескольких областей данных с одним набором данных (построитель отчетов и службы SSRS)](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Вложенные области данных (построитель отчетов и службы SSRS)](nested-data-regions-report-builder-and-ssrs.md)   
- [Область выражения для суммирования, агрегатов и встроенных коллекций &#40;построитель отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [Управление разрывами страниц, заголовками, столбцами и строками &#40;построитель отчетов и службы SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [Управление разрывами страниц, заголовками, столбцами и строками (построитель отчетов и службы SSRS)](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Область данных табликса (построитель отчетов и службы SSRS)](../tablix-data-region-report-builder-and-ssrs.md)   
  [Таблицы &#40;построитель отчетов и службы SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Матрицы &#40;построитель отчетов и службы SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

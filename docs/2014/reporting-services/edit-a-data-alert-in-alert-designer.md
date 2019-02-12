@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 511a057721f1dbd8273fe1909c4eaae31dd128f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d9d658bed81c38078f64981cbfb3be6b289ffb22
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119444"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029345"
 ---
 # <a name="edit-a-data-alert-in-alert-designer"></a>изменить предупреждение в конструкторе предупреждений
   Если вы хотите изменить определение предупреждения об изменении данных, его следует открыть в диспетчере предупреждений об изменении данных. Изменить определение предупреждения может только пользователь, который его создал. Дополнительные сведения об открытии диспетчера предупреждений данных см. в разделе [Управление предупреждениями данных в диспетчере предупреждений данных](manage-my-data-alerts-in-data-alert-manager.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "48119444"
   
      Определение предупреждения откроется в конструкторе предупреждений об изменении данных.  
   
-2.  Обновите правила, параметры расписания и параметры электронной почты. Дополнительные сведения см. в разделе [конструктор предупреждений об изменении данных](../../2014/reporting-services/data-alert-designer.md) и [Создание предупреждения данных в конструкторе предупреждений данных](create-a-data-alert-in-data-alert-designer.md).  
+2.  Обновите правила, параметры расписания и параметры электронной почты. Дополнительные сведения см. в разделах [Конструктор предупреждений данных](../../2014/reporting-services/data-alert-designer.md) и [Создание предупреждения данных в конструкторе предупреждений данных](create-a-data-alert-in-data-alert-designer.md).  
   
     > [!NOTE]  
     >  Выбрать другой веб-канал данных нельзя. Чтобы использовать другой веб-канал данных, следует создать новое определение предупреждения об изменении данных.  
@@ -50,6 +50,6 @@ ms.locfileid: "48119444"
   
 ## <a name="see-also"></a>См. также  
  [Диспетчер предупреждений данных для оповещения администраторов](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [Предупреждения служб Reporting Services](../ssms/agent/alerts.md)  
+ [Предупреждения об изменении данных в службах Reporting Services](../ssms/agent/alerts.md)  
   
   

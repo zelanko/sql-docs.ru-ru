@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: af73681d-ce1c-4b6e-b195-6df3d2fb5275
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74bc6afe0c5c3bddd4b36ebe844ae963da8fbe28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2017defaba74071b1a12bee14a5d8907e4c71cda
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185494"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041805"
 ---
 # <a name="time-series-predictions-using-updated-data-intermediate-data-mining-tutorial"></a>Прогнозы временных рядов с использованием обновленных данных (учебник по интеллектуальному анализу данных — средний уровень)
     
@@ -70,7 +69,7 @@ ms.locfileid: "48185494"
   
     4.  Перетащите поле Quantity из **модель интеллектуального анализа данных** на панель **критерий или аргумент** столбца.  
   
-    5.  В **критерий или аргумент** столбец, после имени поля введите следующий текст: **5, EXTEND_MODEL_CASES**  
+    5.  В **критерий или аргумент** столбец, после имени поля введите следующий текст:  **5,EXTEND_MODEL_CASES**  
   
          Полный текст **критерий или аргумент** текстовое поле должно выглядеть следующим образом: `[Forecasting].[Quantity],5,EXTEND_MODEL_CASES`  
   
@@ -102,7 +101,7 @@ ms.locfileid: "48185494"
  [Прогнозы временных рядов с заменой данных &#40;учебника интеллектуальному анализу данных&#41;](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
 ## <a name="see-also"></a>См. также  
- [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Модель интеллектуального анализа данных для моделей временных рядов &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Технический справочник по алгоритму временных рядов (Майкрософт)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Содержимое моделей интеллектуального анализа данных для моделей временных рядов (службы Analysis Services — интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

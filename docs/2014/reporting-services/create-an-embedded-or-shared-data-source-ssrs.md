@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data sources [Reporting Services], creating
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1ec59d1259cfde65ca31e47c636109bd165c9e91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: d9da0718a6eee5fda00d6418a5b6a624f8380c7d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109444"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033485"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>создать внедренный или общий источник данных (службы SSRS)
   Источник данных отчета задает имя и информацию для соединения. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] поддерживает два типа источников данных: внедренные и Общие. Внедренный источник данных определяется в определении отчета и используется только этим отчетом. Общий источник данных определяется как отдельный элемент и может использоваться несколькими отчетами. Дополнительные сведения см. в разделе [внедренные и общие подключения к данным или источники данных &#40;построитель отчетов и службы SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  
@@ -87,10 +87,10 @@ ms.locfileid: "48109444"
   
 ## <a name="see-also"></a>См. также  
  [Сохранение учетных данных в источнике данных служб Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md)   
- [Внедренные и общие подключения к данным или источники данных &#40;построитель отчетов и службы SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Внедренные и общие подключения к данным или источники данных (построитель отчетов и службы SSRS)](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Преобразовать источник данных из внедренного в общий &#40;построитель отчетов и службы SSRS&#41;](report-data/convert-data-sources-report-builder-and-ssrs.md)   
- [Привязка отчета или модели к общему источнику данных &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
+ [Привязка отчета или модели к общему источнику данных (службы SSRS)](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Настройка свойств источника данных для отчета (диспетчер отчетов)](report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Источники данных, поддерживаемые службами Reporting Services (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

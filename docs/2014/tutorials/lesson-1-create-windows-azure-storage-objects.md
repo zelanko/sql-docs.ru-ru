@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 74edd1fd-ab00-46f7-9e29-7ba3f1a446c5
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d238284bb53e4ce6acc5d482ae66c0b21a760da6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 449f86b80b93055bb23fe4cd32ace10e15724dbc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373796"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038345"
 ---
 # <a name="lesson-1-create-windows-azure-storage-objects"></a>Урок 1. Создание объектов хранения Windows Azure
   Перед созданием резервных копий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в облачном хранилище сначала необходимо создать учетную запись хранилища, а затем контейнер больших двоичных объектов. На занятии 1 рассматриваются регистрация на портале управления Windows Azure, а также создание учетной записи хранилища и контейнера больших двоичных объектов.  

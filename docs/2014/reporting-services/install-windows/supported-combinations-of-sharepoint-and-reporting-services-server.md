@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6b2335e06f5821bedefad8aeb558a3528632ad1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b4e1a516f10c15b8e84d80ff91de1aa9d66d8e1b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102724"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034105"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server-and-add-in-sql-server-2014"></a>Поддерживаемые сочетания SharePoint, компонентов служб Reporting Services и надстроек (SQL Server 2014)
   Сервер отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] может быть установлен в режиме интеграции с SharePoint и интегрирован с развертыванием SharePoint. Не все функции поддерживаются во всех сочетаниях сервера отчетов, надстройки служб Reporting Services для SharePoint и продуктов SharePoint. В этом разделе описаны поддерживаемые сочетания. В [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] интеграция обеспечивается следующим сочетанием.  
@@ -44,7 +44,7 @@ ms.locfileid: "48102724"
 |1|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2013|Да|  
 |2|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2010|Да|  
 |3|[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|SharePoint 2013|Да|  
-|4|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2010|Да<br /><br /> Исключение: Интеграция с Power view не поддерживается.|  
+|4|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2010|Да<br /><br /> Исключение: Интеграция с Power View не поддерживается.|  
 |5|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|SharePoint 2010|Да|  
 |6|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2010|Да|  
 |7|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|SharePoint 2010|Да|  
@@ -63,10 +63,10 @@ ms.locfileid: "48102724"
   
 -   Надстройка служб SQL Server 2008 R2 не поддерживается сервером отчетов SQL Server 2012 (или более поздних версий). Программа установки компонентов, необходимых для SharePoint 2010, автоматически устанавливает надстройку служб SQL Server 2008 R2. Ее необходимо удалить перед установкой более новых версий надстройки. Обновление надстройки на месте не поддерживается.  
   
--   **Обновление.** SharePoint 2010 с установленной надстройкой [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] нельзя обновить на месте до SharePoint 2013. Для SharePoint 2013 требуется надстройка [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] версии [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или более поздней и сервер отчетов. Дополнительные сведения об обновлении см. в разделе [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md).  
+-   **Обновление:** SharePoint 2010 с установленной надстройкой [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] нельзя обновить на месте до SharePoint 2013. Для SharePoint 2013 требуется надстройка [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] версии [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или более поздней и сервер отчетов. Дополнительные сведения по обновлению см. в разделе [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md).  
   
 ## <a name="see-also"></a>См. также  
- [Где найти надстройку служб Reporting Services для продуктов SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
+ [Где найти надстройку службы Reporting Services для продуктов SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
  [Функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Обновление и перенос служб Reporting Services](upgrade-and-migrate-reporting-services.md)  
   

@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 30dea5e6c9df6f1bd7f22d0ff37ca8800b21b095
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bc761a1d54108818142c075ff3cceadc8875cc9c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132994"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038435"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>Диалоговое окно «Свойства набора данных» — «Запрос» (построитель отчетов)
   Выберите **Запрос** в диалоговом окне **Свойства набора данных** , чтобы выбрать общий набор данных на сервере отчетов или создать внедренный набор данных. Для внедренного набора данных необходимо выбрать источник данных и создать запрос.  
@@ -36,7 +36,7 @@ ms.locfileid: "48132994"
  Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **Name**  
  Введите имя набора данных. Это имя не должно совпадать ни с одним именем области данных или группы в данном отчете.  
   
  **Использовать общий набор данных**  

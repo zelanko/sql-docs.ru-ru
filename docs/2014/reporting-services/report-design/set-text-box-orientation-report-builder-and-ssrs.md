@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 64bd53f4-2f31-4732-8c2e-64c7b54b6972
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1e5639e83d3d0abcb9999d03ea0ce954c8824556
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 08f25381a87074720868b68c8c095dd8b2136d59
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119584"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025405"
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>Задание ориентации текстового поля (построитель отчетов и службы SSRS)
   Направление ориентации текстового поля может быть различным: горизонтальным, вертикальным (текст читается сверху вниз) или повернутым на 270 градусов (текст читается снизу вверх). Поскольку ориентация задается для текстового поля, а не для текста, ориентация применяется ко всему тексту в поле. Для различных областей текста нельзя указать различную ориентацию. Чтобы разместить разворачиваемый текст, задайте значения ширины столбца и высоты строки вручную.  
@@ -42,7 +42,7 @@ ms.locfileid: "48119584"
 5.  В списке выберите **Горизонтально**, **Вертикально**или **Поворот на 270 градусов**.  
   
 ## <a name="see-also"></a>См. также  
- [Текстовые поля &#40;построитель отчетов и службы SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
- [Учебник. Форматирование текста (построитель отчетов)](../tutorial-format-text-report-builder.md)  
+ [Текстовые поля (построитель отчетов и службы SSRS)](text-boxes-report-builder-and-ssrs.md)   
+ [Учебник. Форматирование текста &#40;построитель отчетов&#41;](../tutorial-format-text-report-builder.md)  
   
   

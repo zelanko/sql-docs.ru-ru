@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 98dc45752779a6610d735040e16bc5783447396d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a8bbbcc9ba9f1eefad4801a0e9294affea4ef39a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107071"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020607"
 ---
 # <a name="databaselogontype-property-wmi-msreportserverconfigurationsetting"></a>Свойство DatabaseLogonType (WMI MSReportServer_ConfigurationSetting)
   Определяет, какая учетная запись используется для доступа к базе данных сервера отчетов: учетная запись службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, учетная запись пользователя Windows, либо имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Только для чтения.  
@@ -54,16 +54,16 @@ public int DatabaseLogonType;
   
 -   2 для входа в качестве службы  
   
- Если указать значение 0 (Windows), необходимо задать значение в [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) свойство с соответствующим действительной учетной записи Windows.  
+ Если указывается значение 0 (Windows), в свойстве [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) необходимо задать соответствующую учетную запись пользователя Windows.  
   
- Если указать 1 (SQL Server), убедитесь, что значение [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) допустимое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа.  
+ Если указывается значение 1 (SQL Server), в свойстве [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) должно быть задано допустимое имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Если указывается значение 2 (служба Windows), сервер отчетов использует для доступа к своей базе данных учетную запись [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] и учетную запись службы Windows. Свойство DatabaseLogonAccount игнорируется.  
   
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

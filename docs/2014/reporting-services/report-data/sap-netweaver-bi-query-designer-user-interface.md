@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 102da66e-ca31-41aa-ab4b-c9b5ab752a72
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2c1a3c4eef40d5cac7d7dabdb0a428d97afdb136
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 951be7ea854bf3f4d9e10e902cfc6574e7749d51
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220434"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041815"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов BI SAP NetWeaver
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графический конструктор запросов, предназначенный для построения запросов многомерных выражений к источнику данных SAP NetWeaver® Business Intelligence. Графический конструктор запросов многомерных выражений имеет два режима: режим конструктора и режим запросов. В каждом режиме имеется панель «Метаданные», из которой можно перетащить элементы из InfoCube, MultiProvider или запроса с поддержкой веб-доступа, определенного на источнике данных, для построения запроса многомерных выражений, получающего данные при обработке отчета.  
@@ -59,10 +59,10 @@ ms.locfileid: "48220434"
 |**Редактировать как текст**|Переключиться из текстового конструктора запросов в графический и обратно. Недоступен для этого типа источника данных.|  
 |**Импорт**|Импортировать существующий запрос из файла определения отчета (RDL), расположенного в файловой системе. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Обновление полей набора данных](../media/rsqdicon-refreshfields.gif "Обновление полей набора данных")|Обновление метаданных из источника данных.|  
-|![Добавить вычисляемый элемент](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "добавить вычисляемый элемент")|Отображение диалогового окна **Построитель вычисляемых элементов** .|  
+|![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Отображение диалогового окна **Построитель вычисляемых элементов** .|  
 |![Переключатель для просмотра пустых ячеек](../../analysis-services/media/rsqdicon-showemptycells.gif "Переключатель для просмотра пустых ячеек")|Переключение между режимами отображения и скрытия пустых ячеек в панели «Данные». (Это эквивалентно использованию предложения NON EMPTY в многомерном выражении).|  
 |![Автоматическое выполнение запроса](../../analysis-services/media/rsqdicon-autoexecute.gif "Автоматическое выполнение запроса")|Автоматическое выполнение запроса и вывод результатов после каждого изменения, например после удаления столбца на панели «Данные». Результаты отображаются в панели «Данные».|  
-|![Удалить](../../analysis-services/media/rsqdicon-delete.gif "удалить")|Удалить выбранный на панель «Данные» столбец из запроса.|  
+|![Удалить](../../analysis-services/media/rsqdicon-delete.gif "Удалить")|Удалить выбранный на панель «Данные» столбец из запроса.|  
 |![Значок диалогового окна "Параметры запроса"](../../analysis-services/media/iconqueryparameter.gif "Значок диалогового окна \"Параметры запроса\"")|Отобразить диалоговое окно **Переменные** . Эта кнопка включена, только если выбранный куб является кубом запроса (так как переменные поддерживаются только в кубах запросов). При присвоении переменной значения по умолчанию создается соответствующий параметр в отчете.|  
 |![Выполнить запрос](../../analysis-services/media/rsqdicon-run.gif "Выполнить запрос")|Выполнить запрос и показать результаты на панели «Данные».|  
 |![Отмена запроса](../../analysis-services/media/rsqdicon-cancel.gif "Отмена запроса")|Отмена запроса.|  
@@ -96,13 +96,13 @@ ms.locfileid: "48220434"
   
 -   **Редактировать как текст**  
   
--   **Добавить вычисляемый элемент** (![добавить вычисляемый элемент](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "добавить вычисляемый элемент"))  
+-   **Добавить вычисляемый элемент** (![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **Показывать пустые ячейки** (![Переключатель для просмотра пустых ячеек](../../analysis-services/media/rsqdicon-showemptycells.gif "Переключатель для просмотра пустых ячеек"))  
   
 -   **Автоматическое выполнение** (![Автоматическое выполнение запроса](../../analysis-services/media/rsqdicon-autoexecute.gif "Автоматическое выполнение запроса"))  
   
--   **Удалить** (![удалить](../../analysis-services/media/rsqdicon-delete.gif "удалить"))  
+-   **Удалить** (![Удалить](../../analysis-services/media/rsqdicon-delete.gif "Удалить"))  
   
 ## <a name="see-also"></a>См. также  
  [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   

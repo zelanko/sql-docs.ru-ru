@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d13cec7bac124a8fb1289de6086ec0326789501e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: e63f964d61fa5f7402244186f292d6d0543b9304
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366706"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037615"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>Счетчики производительности для объектов производительности ReportServer:Service и ReportServerSharePoint:Service
   В данном разделе описаны счетчики производительности для следующих объектов производительности [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] :  

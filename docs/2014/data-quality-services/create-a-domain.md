@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.createdomain.f1
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 249e0195d02f0b157e818a0525b0170b0b817b3c
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 6db2481777a79697e109400786399a5db9daf448
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031610"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024455"
 ---
 # <a name="create-a-domain"></a>Создание домена
   В этом разделе описывается, как создать домен в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Значения в домене являются семантическим представлением данных в поле. Дополнительные сведения о доменах см. в разделе [Управление доменом](../../2014/data-quality-services/managing-a-domain.md).  
@@ -89,7 +89,7 @@ ms.locfileid: "51031610"
   
 10. Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [Завершение операции по управлению доменами](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После создания правила домена  
+##  <a name="FollowUp"></a> Дальнейшие действия. После создания домена  
  Создав домен, вы можете выполнить другие задачи управления доменами для этого домена, провести обнаружение знаний для добавления знаний в домен или добавить в домен политику сопоставления. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../../2014/data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../../2014/data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

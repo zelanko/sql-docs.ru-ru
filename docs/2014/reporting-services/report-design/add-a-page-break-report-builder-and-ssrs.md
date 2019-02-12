@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3846cd48-2787-47e9-b13b-7fc45a205f68
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0ff44ce1f100f6845999f038d21f14efce9a5654
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2fe0ade0d5011bfcbf6a2969f8e342ab20670a24
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053462"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026295"
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>Добавление разрыва страницы (построитель отчетов и службы SSRS)
   Разрыв страницы можно добавить в прямоугольники, области данных или в группы в областях данных, чтобы управлять количеством информации на каждой странице. Добавление разрывов страницы может повысить производительность опубликованных отчетов, т. к. при просмотре отчета будут обрабатываться только элементы на каждой странице. Если отчет содержит одну страницу, все элементы должны быть обработаны перед просмотром отчета.  
@@ -64,6 +64,6 @@ ms.locfileid: "48053462"
 ## <a name="see-also"></a>См. также  
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](rendering-behaviors-report-builder-and-ssrs.md)   
- [И нижние колонтитулы страницы &#40;построитель отчетов и службы SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)](page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

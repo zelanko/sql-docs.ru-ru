@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ffd9c83cb5aad8e22c98ebf1ff2472237452e1c4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: kfile
+ms.openlocfilehash: 0b954f61e947a7422d518516987be6215d6263b7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208376"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021516"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Импорт HTML в отчет (построитель отчетов и службы SSRS)
   Текстовое поле можно использовать для вставки в отчет текста в формате HTML, выбранного из поля набора данных. Этот текст может исходить из любого простого или сложного выражения, обработка которого приводит к получению правильно отформатированного кода HTML. Отформатированный текст может быть подготовлен к просмотру в любом поддерживаемом формате вывода, включая PDF.  
@@ -28,7 +28,7 @@ ms.locfileid: "53208376"
 > [!NOTE]  
 >  При импорте текста, содержащего разметку HTML, полученные данные всегда должны быть вначале подвергнуты синтаксическому анализу с помощью текстового поля. Поддерживаются не все теги HTML, поэтому код HTML, отображаемый в готовом для просмотра отчете, может отличаться от исходного кода HTML.  
   
- Чтобы быстро приступить к работе, см. в разделе [руководства: Форматирование текста &#40;построитель отчетов&#41;](../tutorial-format-text-report-builder.md).  
+ Чтобы быстро приступить к работе, см. раздел [Учебник. Форматирование текста (построитель отчетов)](../tutorial-format-text-report-builder.md)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 677469c2110bee76870e9f30ed470f894200d2ad
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: fd22b4419b8300fdaf8db6e98a3eab9683fd226e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527002"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035545"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Учебник. Создание стандартного отчета с диаграммой в режиме «вне сети» (построитель отчетов)
   В этом учебнике будет создана круговая диаграмма с помощью мастера, а затем она будет немного изменена, чтобы получить общее представление о том, что можно сделать. Задания этого учебника вы можете выполнить двумя различными способами. Оба метода имеют же результат a круговой диаграммы как показано на следующем рисунке:  

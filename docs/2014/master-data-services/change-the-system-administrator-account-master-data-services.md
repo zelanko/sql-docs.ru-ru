@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], changing
 ms.assetid: cf30312e-4338-49a7-90f0-6e4f7b431ff8
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 593e71b63cb4fc6e63c1c087e62f24c37c399e8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a10b20332059c9cf1b9aed41caf462faf96414e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069948"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020296"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>Изменение учетной записи системного администратора (службы Master Data Services)
   Можно изменить учетную запись, используется в качестве [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] системному администратору.  
@@ -50,6 +50,6 @@ ms.locfileid: "48069948"
 5.  Выполните запрос.  
   
 ## <a name="see-also"></a>См. также  
- [Администраторы &#40;службы Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
+ [Администраторы (службы Master Data Services)](../../2014/master-data-services/administrators-master-data-services.md)  
   
   

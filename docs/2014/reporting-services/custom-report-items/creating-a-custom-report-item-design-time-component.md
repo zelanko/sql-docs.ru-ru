@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 292baa254bffc16650376dbbc30e7193b8bc367c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 03d555f967b50b503d608244bdd4a8885cede61e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358826"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025865"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Создание компонента времени разработки пользовательского элемента отчета
   Компонент времени разработки пользовательского элемента отчета ― это элемент управления, который может быть использован в конструкторе отчетов среды Visual Studio. Компонент времени разработки пользовательского элемента отчета предоставляет активную область конструктора, поддерживающую операции перетаскивания, интеграцию с браузером свойств среды [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] и возможность использования пользовательских редакторов свойств.  
@@ -200,6 +200,6 @@ private void OnProportionalScaling(object sender, EventArgs e)
  [Архитектура пользовательских элементов отчета](custom-report-item-architecture.md)   
  [Создание компонента времени выполнения пользовательского элемента отчета](creating-a-custom-report-item-run-time-component.md)   
  [Библиотеки классов пользовательских элементов отчета](custom-report-item-class-libraries.md)   
- [Как Развертывание пользовательского элемента отчета](how-to-deploy-a-custom-report-item.md)  
+ [Как развернуть пользовательский элемент отчета](how-to-deploy-a-custom-report-item.md)  
   
   

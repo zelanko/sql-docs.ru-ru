@@ -1,5 +1,5 @@
 ---
-title: Учебник. Инструкции по поиску и запуску средств служб Reporting Services (SSRS) | Документация Майкрософт
+title: Учебник. Инструкции по поиску и запуску средств служб Reporting Services (SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c8c8c175eaaf84df788a9b7cbc90e637d51d5c07
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 03fb1d70046fe784fecafd8d9b3092ce21962498
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105505"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036905"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Учебник. Инструкции по поиску и запуску средств служб Reporting Services (SSRS)
-  В этом учебнике рассказывается о средствах, используемых для настройки сервера отчетов, управления содержимым и операциями сервера отчетов, создания и публикации отчетов. Этот учебник призван помочь новым пользователям понять, как найти и открыть каждый инструмент. Если вы уже знакомы с этими средствами, вы можно перейти к другим учебникам, которые помогут научиться правильно по использованию [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Дополнительные сведения о других учебниках см. в разделе [учебники по службам Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
+  В этом учебнике рассказывается о средствах, используемых для настройки сервера отчетов, управления содержимым и операциями сервера отчетов, создания и публикации отчетов. Этот учебник призван помочь новым пользователям понять, как найти и открыть каждый инструмент. Если вы уже знакомы с этими средствами, то можете перейти к другим учебникам, которые помогут научиться правильно использовать службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Дополнительные сведения о других учебниках см. в разделе [учебники по службам Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
   
  В этом разделе:  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48105505"
   
 -   [SQL Server Data Tools с конструктором и мастером отчетов](#bkmk_ssdt)  
   
--   [Построитель отчетов](#bkmk_report_builder)  
+-   [построитель отчетов](#bkmk_report_builder)  
   
 ##  <a name="bkmk_configuration_manager"></a> Использование диспетчера конфигурации служб Reporting Services (собственный режим)  
  Используйте диспетчер конфигурации для работы в собственном режиме, чтобы выполнить следующее:, , , , и.  
@@ -59,7 +59,7 @@ ms.locfileid: "48105505"
   
 -   Настройте автоматическую обработку отчетов и доставку отчетов по электронной почте.  
   
- **Установка** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] устанавливается одновременно с установкой служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в основном режиме. Дополнительные сведения см. в разделе [Установка сервера отчетов служб Reporting Services в собственном режиме](../install-windows/install-reporting-services-native-mode-report-server.md).  
+ **Установка**. Диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] устанавливается при установке служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в собственном режиме. Дополнительные сведения см. в разделе [Установка сервера отчетов служб Reporting Services в собственном режиме](../install-windows/install-reporting-services-native-mode-report-server.md).  
   
 #### <a name="to-start-the-reporting-services-configuration-manager"></a>Запуск диспетчера конфигурации служб Reporting Services  
   
@@ -85,12 +85,12 @@ ms.locfileid: "48105505"
   
      ![Средство конфигурации служб Reporting Services](../media/rs-ui-reportserverconfigkatmai.gif "Средство конфигурации служб Reporting Services")  
   
- **Дальнейшие действия:** [Настройка и администрирование сервера отчетов (службы Reporting Services в собственном режиме)](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) и [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ **Следующие шаги**. [Настройка и администрирование сервера отчетов (службы Reporting Services в собственном режиме)](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) и [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ##  <a name="bkmk_report_manager"></a> Диспетчер отчетов (собственный режим)  
  Используйте [диспетчера отчетов &#40;собственный режим служб SSRS&#41; ](../report-manager-ssrs-native-mode.md) набор разрешений, управления подписками и расписаниями и работы с отчетами. Диспетчер отчетов также можно использовать для просмотра отчетов.  
   
- **Установка:** диспетчер отчетов устанавливается при установке [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] собственный режим: [установить собственный режим сервера отчетов служб отчетов](../install-windows/install-reporting-services-native-mode-report-server.md)  
+ **Установка**. Диспетчер отчетов устанавливается при установке служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в собственном режиме. [Установка сервера отчетов служб Reporting Services в собственном режиме](../install-windows/install-reporting-services-native-mode-report-server.md)  
   
  Для работы с диспетчером отчетов необходимо иметь соответствующие разрешения (изначально разрешения на доступ к функциональным возможностям диспетчера отчетов имеют только члены группы локальных администраторов). Диспетчер отчетов предоставляет различные страницы и параметры, в зависимости от назначений роли текущего пользователя. Пользователи, у которых нет разрешения, получат пустую страницу. Пользователи, которые имеют разрешения на просмотр отчетов, получат ссылки для открытия отчетов. Дополнительные сведения о разрешениях см. в разделе [Роли и разрешения &#40;службы Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md).  
   
@@ -104,7 +104,7 @@ ms.locfileid: "48105505"
   
 4.  При запуске диспетчера отчетов на локальном сервере отчетов, см. в разделе [настроить сервер отчетов в собственном режиме для локального администрирования &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
- **Дальнейшие действия:** [Настройка диспетчера отчетов &#40;собственный режим&#41;](../report-server/configure-web-portal.md).  
+ **Следующие шаги**. [Настройка диспетчера отчетов &#40;собственный режим&#41;](../report-server/configure-web-portal.md).  
   
 ##  <a name="bkmk_managements_studio"></a> Среда Management Studio  
  Администраторы сервера отчетов могут использовать среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] для управления сервером отчетов наряду с другими серверными компонентами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Use SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md).  
@@ -152,10 +152,10 @@ ms.locfileid: "48105505"
   
  Чтобы приступить к работе над первым отчетом, см. раздел [Создание простого табличного отчета &#40;учебник по службам SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md). Дополнительные сведения о конструкторах запросов, которые можно использовать в конструкторе отчетов, см. в разделе [средства проектирования запросов в отчет конструктор SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md).  
   
-##  <a name="bkmk_report_builder"></a> Построитель отчетов  
+##  <a name="bkmk_report_builder"></a> построитель отчетов  
  Используйте [построитель отчетов &#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md) можно создавать отчеты в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office среде, похожей. Можно настраивать и обновлять существующие отчеты, независимо от того, были ли они созданы в конструкторе отчетов или в предыдущих версиях построителя отчетов. Свяжитесь с администратором, чтобы узнать расположение файла ReportBuilder3.msi, который нужно запустить для установки построителя отчетов на локальном компьютере.  
   
- **Установка:** нажатием-после версии построителя отчетов устанавливается службами [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] собственном режиме или режиме интеграции с SharePoint. Изолированная версия построителя отчетов доступна как отдельная загрузка.  См. в разделе [Установка изолированной версии построителя отчетов &#40;построитель отчетов&#41;](../install-windows/install-report-builder.md)  
+ **Установка**. Нажмите кнопку-после версии построителя отчетов устанавливается службами [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] собственном режиме или режиме интеграции с SharePoint. Изолированная версия построителя отчетов доступна как отдельная загрузка.  См. в разделе [Установка изолированной версии построителя отчетов &#40;построитель отчетов&#41;](../install-windows/install-report-builder.md)  
   
 #### <a name="to-start-report-builder-clickonce-from-report-manager-native-mode"></a>Запуск версии ClickOnce построителя отчетов из диспетчера отчетов (в собственном режиме)  
   

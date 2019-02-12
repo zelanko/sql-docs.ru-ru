@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f0112a4a9ae89dbfc2aedad38c16056a4d246964
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5b80a150bb44690bb4fbc836ba12f41fa8f82c28
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174714"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043065"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Использование внешнего источника данных подписчика (управляемая данными подписка)
   В управляемой данными подписке динамические данные подписки определяются запросом или командой, которые получают данные из внешнего источника данных. Данные подписки могут быть получены из любого поддерживаемого источника данных, который удовлетворяет требованиям обработки управляемой данными подписки. Запрос или синтаксис команды должны быть верными для модуля обработки данных, установленного на сервере отчетов.  
@@ -81,7 +81,7 @@ ms.locfileid: "48174714"
   
 ## <a name="see-also"></a>См. также  
  [Создание, изменение и удаление управляемой данными подписки](data-driven-subscriptions.md)   
- [Управляемые данными подписки](data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Подписки и доставка (службы Reporting Services)](subscriptions-and-delivery-reporting-services.md)  
   
   

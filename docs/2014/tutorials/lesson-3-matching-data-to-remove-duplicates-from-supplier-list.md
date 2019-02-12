@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 059170b6-d62e-4b28-9451-99a0cc7e1f5f
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: e8fa1173f109823fb833812170ddf0df035bfcee
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 65aa1b0531eb4ba30875e53a77551383b3f38579
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358726"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036775"
 ---
 # <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>Урок 3. Сопоставление данных для удаления повторений из списка поставщиков
   При подготовке базы знаний для операции сопоставления необходимо создать политику проверки соответствия в базе знаний. В базе знаний может существовать только одна политика проверки соответствия. Политика состоит из одного или нескольких правил сопоставления. Правило определяет домены, участвующие в процессе сопоставления, и задает весовой коэффициент каждого значения домена для сопоставления. В правиле можно указать, должны значения домена точно совпадать или быть похожими (и в какой степени). Также можно указать, является ли совпадение домена необходимым условием для процесса сопоставления. Можно проверить каждое правило отдельно и протестировать всю политику на основе образцов данных. После тестирования отображаются записи, чьи показатели сопоставления больше, чем **Минимальная оценка для записи** порог, указанный в конфигурации служб DQS в кластере (группе). Вы можете продолжить изменение правил в политике, пока не достигнете желаемых результатов.  

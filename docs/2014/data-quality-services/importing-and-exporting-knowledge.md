@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9045ee53e6e3e08222c99ddffa2935040a314b16
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: cc4665cb0730b283491bffd1a3bd27c8707ffb09
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031941"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035125"
 ---
 # <a name="importing-and-exporting-knowledge"></a>Импорт и экспорт набора знаний
   Создавать базы знаний и домены вы можете непосредственно в приложении [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] либо можно импортировать знания в базу знаний или экспортировать их оттуда. В приложении [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] вы можете использовать файл данных для импорта и экспорта или файл Excel для импорта. Используемый файл данных — это зашифрованный файл с расширением .dqs, созданный службами [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Файлы, созданные Microsoft Excel, могут иметь расширение XLSX, XLS или CSV. Эти операции дают больше гибкости в построении и совместном использовании знаний, которые используются для очистки данных и сопоставления.  
@@ -31,7 +31,7 @@ ms.locfileid: "51031941"
 |Экспорт домена из базы знаний в файл данных .dqs.|[Экспорт домена в файл DQS](../../2014/data-quality-services/export-a-domain-to-a-dqs-file.md)|  
 |Импорт домена из файла данных .dqs в существующую базу знаний.|[Импорт домена из файла DQS](../../2014/data-quality-services/import-a-domain-from-a-dqs-file.md)|  
 |Экспорт всей базы знаний в файл данных .dqs.|[Экспорт базы знаний в файл DQS](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
-|Импорт всей базы знаний в файл данных .dqs.|[Импорт базы знаний из файла DQS](../../2014/data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
+|Импорт всей базы знаний в файл данных .dqs.|[Импорт базы знаний из файла .dqs](../../2014/data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
 |Импорт значений в домен из файла Excel|[Импорт значений в домен из файла Excel](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
 |Импорт доменов из файла Excel в базу знаний|[Импорт доменов из файла Excel при обнаружении набора знаний](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
 |Импорт знаний, полученных во время очистки, в базу знаний.|[Импорт значений проекта очистки в домен](../../2014/data-quality-services/import-cleansing-project-values-into-a-domain.md)|  

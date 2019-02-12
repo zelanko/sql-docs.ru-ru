@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 094f39bf-3634-4852-9fc3-3adec4b266e5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b50b75178a8a4351bd20daffd5fb7e7f615c3513
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: e52bfb513d27225a6ae13593d2e6a196447c3d0d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354126"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041155"
 ---
 # <a name="plot-data-on-a-secondary-axis-report-builder-and-ssrs"></a>Построение данных на вспомогательной оси (построитель отчетов и службы SSRS)
   Диаграмма имеет оси двух типов: основную и вспомогательную. Вспомогательная ось полезна при сравнении двух наборов значений с двумя различающимися диапазонами данных с общей категорией.  

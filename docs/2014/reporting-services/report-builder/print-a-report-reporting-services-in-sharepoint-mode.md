@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dd5d6559d7216e5d422127b799fa835d73a2399f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2435a3e28fa4b217159ee84582dc1c10c6cc0324
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081754"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038995"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Печать отчетов (службы Reporting Services в режиме SharePoint)
   Для сервера отчетов, работающего в режиме интеграции с SharePoint, существует три способа напечатать отчет из веб-приложения SharePoint.  

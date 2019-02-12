@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d0e6fb59-ca4e-4d70-97cb-0ad183da21d3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: fba0cbf880348fa05f32e26fe8a47644aab10924
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0de0501bc62d8aa305f1bcd08e8fe3de5433ff9c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119204"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036375"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>Вывод значений круговой диаграммы в верхней части диаграммы (построитель отчетов и службы SSRS)
   По умолчанию в круговых диаграммах первое значение набора данных отсчитывается с 90-го градуса от верхней части диаграммы. Можно указать, чтобы первое значение отсчитывалось от верхней части диаграммы.  
@@ -38,6 +38,6 @@ ms.locfileid: "48119204"
   
 ## <a name="see-also"></a>См. также  
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
- [Круговые диаграммы &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Круговые диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)  
   
   

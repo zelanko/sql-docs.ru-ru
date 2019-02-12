@@ -1,5 +1,5 @@
 ---
-title: Занятие 1. Создание проекта сервера отчетов (службы Reporting Services) | Документы Майкрософт
+title: Урок 1. Создание проекта сервера отчетов (службы Reporting Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3a57bbc055c226fdfa9d4454ba22f2160dee06c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 52050b9513de2638cacc394309f7e87d6ba77709
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220974"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032365"
 ---
-# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Занятие 1. Создание проекта сервера отчетов (службы Reporting Services)
+# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Урок 1. Создание проекта сервера отчетов (службы Reporting Services)
   Чтобы создать отчет в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], необходимо сначала создать проект сервера отчетов, в котором будет сохранен файл определения отчета (с расширением RDL) и другие файлы ресурсов, необходимые для отчета. Затем будет создан действительный файл определения отчета, определен источник данных для этого отчета, набор данных и макет отчета. При выполнении отчета происходит получение и объединение фактических данных с макетом, затем осуществляется его подготовка к просмотру на экране, после чего может быть выполнен их импорт, печать или сохранение.  
   
  На этом занятии описано, как создать проект сервера отчетов в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Проект сервера отчетов используется для создания отчетов, которые выполняются на сервере отчетов.  
@@ -52,12 +52,12 @@ ms.locfileid: "48220974"
   
      Конструктор отчетов откроет и отобразит новый RDL-файл в конструкторе.  
   
- Конструктор отчетов является компонентом служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], запускаемым в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Он имеет два представления: **Конструктор** и **Предварительный просмотр**. Смена представлений осуществляется посредством выбора вкладок.  
+ Конструктор отчетов является компонентом служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , запускаемым в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Он имеет два представления: **Проектирование** и **предварительной версии**. Смена представлений осуществляется посредством выбора вкладок.  
   
  Данные определяются в области **Данные отчета** . Макет отчета определяется в представлении **Конструктор** . Отчет можно выполнить и посмотреть, как он выглядит, в представлении **Предварительный просмотр** .  
   
 ## <a name="next-task"></a>Следующая задача  
- Создание проекта отчета с именем «Учебник» и добавление в него файла определения отчета (с расширением RDL) успешно завершено. Далее требуется определить источник данных, который будет использован в отчете. См. раздел [Занятие 2. Задание информации о соединении (службы Reporting Services)](lesson-2-specifying-connection-information-reporting-services.md).  
+ Создание проекта отчета с именем «Учебник» и добавление в него файла определения отчета (с расширением RDL) успешно завершено. Далее требуется определить источник данных, который будет использован в отчете. См. в разделе [Урок 2: Задание информации о соединении &#40;службы Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md).  
   
 ## <a name="see-also"></a>См. также  
  [Создание простого табличного отчета (учебник по службам SSRS)](create-a-basic-table-report-ssrs-tutorial.md)  

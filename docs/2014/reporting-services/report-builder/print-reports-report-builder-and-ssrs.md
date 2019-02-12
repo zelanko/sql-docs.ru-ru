@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0b0f0b2087471d8f0c905b1a173eff57a0be7fd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 80b5920bdcf3aa3f1db9c649115613f6dca34ab5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096704"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031215"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>Печать отчетов (построитель отчетов и службы SSRS)
   После сохранения отчета на сервере отчетов его можно просмотреть и распечатать из браузера, диспетчера отчетов или любого приложения, использующегося для просмотра экспортированных отчетов. Перед сохранением отчета его можно напечатать во время просмотра.  
@@ -34,25 +34,25 @@ ms.locfileid: "48096704"
 3.  Распечатки экспортированных отчетов включают все видимые сведения отчета в таком виде, как они отображаются на экране. Пробелы в области конструктора отчета сохраняются. Чтобы добавить или удалить лишние пустые страницы по горизонтали, измените ширину страницы отчета.  
   
 > [!NOTE]  
->  Если для печати отчета в формате HTML использовать команду браузера «Печать», то может быть напечатана только первая страница. Можно достигнуть лучших результатов при печати отчетов в формате HTML с помощью клиента служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [Печать отчетов из браузера с помощью элемента управления печатью &#40;построитель отчетов и службы SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md).  
+>  Если для печати отчета в формате HTML использовать команду браузера «Печать», то может быть напечатана только первая страница. Можно достигнуть лучших результатов при печати отчетов в формате HTML с помощью клиента служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [Печать отчетов из браузера с помощью элемента управления печатью (построитель отчетов и службы SSRS)](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Печать отчетов из браузера с помощью элемента управления печатью &#40;построитель отчетов и службы SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
+ [Печать отчетов из браузера с помощью элемента управления печатью (построитель отчетов и службы SSRS)](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
  Описывает, как печатать отчеты на стороне клиента из веб-браузера или диспетчера отчетов.  
   
- [Печать отчетов из других приложений &#40;построитель отчетов и службы SSRS&#41;](print-reports-from-other-applications-report-builder-and-ssrs.md)  
+ [Печать отчетов из других приложений (построитель отчетов и службы SSRS)](print-reports-from-other-applications-report-builder-and-ssrs.md)  
  Описывает, как напечатать отчеты, экспортированные в другое приложение.  
   
- [Печать отчета &#40;построитель отчетов и службы SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
- Содержит пошаговые инструкции по печати отчета, управлению полями страницы и указанию размера бумаги для отчетов, подготавливаемых к просмотру в модулях подготовки отчетов к печати: "PDF", "Изображение" и "Печать".  
+ [Печать отчета (построитель отчетов и службы SSRS)](print-a-report-report-builder-and-ssrs.md)  
+ Содержит пошаговые инструкции по печати отчета, управлению полями страницы и указанию размера бумаги для отчетов, подготавливаемых к просмотру в модулях подготовки с жесткими разрывами страниц: «PDF», «Изображение» и «Печать».  
   
 ## <a name="see-also"></a>См. также  
  [Экспорт отчетов &#40;построитель отчетов и службы SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
- [И нижние колонтитулы страницы &#40;построитель отчетов и службы SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Образы &#40;построитель отчетов и службы SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)   
+ [Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Изображения (построитель отчетов и службы SSRS)](../report-design/images-report-builder-and-ssrs.md)   
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  
   
   

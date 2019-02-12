@@ -2,10 +2,8 @@
 title: sp_execute_remote (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/01/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: conceptual
 f1_keywords:
 - sp_execute_remote
@@ -18,12 +16,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c61098eabfe58cb1e791dd379cafb5f91d50f247
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a475ba50aa8d3ba140ea551306d8b9f17fe66d22
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837092"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035905"
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -107,5 +105,5 @@ EXEC sp_execute_remote @data_source_name  = N'PointToMaster',
 ## <a name="see-also"></a>См. также:
 
 [СОЗДАНИЕ ДАННЫХ ДЛЯ БАЗЫ ДАННЫХ УЧЕТНЫХ ДАННЫХ](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
-[Создание ВНЕШНЕГО источника данных (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
+[CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
     

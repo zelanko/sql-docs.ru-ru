@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: af69191452137761cfaa49d6add0ad39ad3ccdde
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ace0ffeea6d268768b4e846bbb2d75d1377fdab4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363666"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033423"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Тип соединения SAP NetWeaver BI (службы SSRS)
   Чтобы включить данные из внешнего источника данных SAP NetWeaver® Business Intelligence в отчет, необходимо иметь набор данных, основанный на источнике данных отчета типа [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных для поставщика данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 1.0 для [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  

@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 53b77db1-b013-4dac-82dd-30c0de276639
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 239ca089feac4b814600234f2b80b2de398bb989
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 835aa0c500e53ab28df491fe8209d2af27083365
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074326"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015265"
 ---
 # <a name="server-properties-execution-page"></a>Свойства сервера (страница «Выполнение»)
   Используйте данную страницу для установки значения времени ожидания для выполнения отчета. Это значение применяется ко всем отчетам, обрабатываемым текущим экземпляром сервера отчетов. Для отдельных отчетов это значение можно заменить. Указанное значение должно охватывать все операции по обработке отчета, выполняемые на сервере отчетов, с учетом обработки запросов, выполняемой на сервере базы данных в то время, когда сервер отчетов получает данные, используемые в отчете.  

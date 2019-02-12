@@ -15,12 +15,12 @@ ms.assetid: 31bad04f-7c74-4773-9f83-612704fdd21c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ca466042ba90915076b0be47f867d74c3ab86e68
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 1c28f61a39e45ea101f2e999d5787dfa23cb29c2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292070"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031795"
 ---
 # <a name="data-accessor-functions"></a>Функции метода доступа к данным
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

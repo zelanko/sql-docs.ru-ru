@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e9339227-6c2e-4c4b-8be2-8c1960bc4a8d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8e91853bba6b33ed57cc0152e266994d4e0ef528
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092917"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039356"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>Создание структуры модели интеллектуального анализа данных кластеризации последовательностей (учебник по интеллектуальному анализу данных — средний уровень)
   Первым шагом создания последовательности, модели кластеризации интеллектуального анализа данных является использование мастера интеллектуального анализа данных для создания новой структуры интеллектуального анализа данных и модели интеллектуального анализа данных на основе [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритм кластеризации последовательностей.  
@@ -73,7 +72,7 @@ ms.locfileid: "48092917"
     |Таблицы и столбцы|Тип содержимого|Тип данных|  
     |---------------------|------------------|---------------|  
     |IncomeGroup|Discrete|Текста|  
-    |OrderNumber|Key|Текста|  
+    |OrderNumber|Ключ|Текста|  
     |Region|Discrete|Текста|  
     |vAssocSeqLineItems|||  
     |Line Number|Ключевая последовательность|Long|  
@@ -91,7 +90,7 @@ ms.locfileid: "48092917"
  [Обработка модели кластеризации последовательностей](../../2014/tutorials/processing-the-sequence-clustering-model.md)  
   
 ## <a name="see-also"></a>См. также  
- [Конструктор интеллектуального анализа данных](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [конструктор интеллектуального анализа данных](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Алгоритм кластеризации последовательностей (Майкрософт)](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)  
   
   

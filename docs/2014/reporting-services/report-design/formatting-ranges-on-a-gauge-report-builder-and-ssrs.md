@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ffdec8ca-3e95-41cd-850b-9e8c83be4b49
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 82ae72d5639f4ea22e6a3762e72f65f3354d315a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: de1906afd22e5a6e33fad54e331431611d9c0998
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223024"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037965"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>Форматирование диапазонов на датчике (построитель отчетов и службы SSRS)
   Диапазон датчика — это зона или область на шкале датчика, которая указывает важный подраздел значений в датчике. Используя диапазон датчика, можно визуально отобразить момент, когда значение указателя датчика перемещается в определенную область значений. Диапазоны определяются начальным значением и конечным значением.  
@@ -32,7 +32,7 @@ ms.locfileid: "48223024"
  [Форматирование шкал на датчике (построитель отчетов и службы SSRS)](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Форматирование указателей на датчике &#40;построитель отчетов и службы SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Установка минимума и максимума на датчике (построитель отчетов и службы SSRS)](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)   
- [Учебник. Добавление в отчет ключевого показателя эффективности (построитель отчетов)](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Учебник. Добавление ключевого показателя Эффективности к отчету &#40;построитель отчетов&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [Датчики (построитель отчетов и службы SSRS)](gauges-report-builder-and-ssrs.md)  
   
   

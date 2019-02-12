@@ -11,14 +11,14 @@ f1_keywords:
 - "10017"
 ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 21fad41528bfc47ae2b117db68e73320109c98be
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c57ce5992349aa9fe195620b8ac1c1d2b2ba4744
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374753"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034205"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>Диалоговое окно «Свойства источника данных» — «Учетные данные» (построитель отчетов)
   Вкладка **Учетные данные** в диалоговом окне **Свойства источника данных** позволяет просмотреть и изменить учетные данные, используемые для подключения к источнику данных, внедренному в отчет. Указанные учетные данные используются для доступа к источнику данных во время просмотра отчетов. Дополнительные сведения об учетных данных см. в разделе [Указание учетных данных в построителе отчетов](../../2014/reporting-services/specify-credentials-in-report-builder.md).  

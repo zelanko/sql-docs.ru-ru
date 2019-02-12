@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: a4bf5968-c46f-484f-a510-65e2dde65a0d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e66a3277554c349b18499b4a1b4546ed504a043c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 57b93a04e4003d56e7e6a1aef4b264240f2b7f46
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165374"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022185"
 ---
 # <a name="listreportserversindatabase-method-wmi-msreportserverconfigurationsetting"></a>Метод ListReportServersInDatabase (WMI MSReportServer_ConfigurationSetting)
   Возвращает список установок сервера отчетов, которые находятся в базе данных сервера отчетов независимо от наличия доступа к защищенным сведениям.  
@@ -76,7 +76,7 @@ public void ListReportServersInDatabase (out string[] MachineNames,
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

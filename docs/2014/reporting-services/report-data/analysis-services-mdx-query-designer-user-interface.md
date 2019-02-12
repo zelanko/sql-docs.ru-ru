@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 34547b62ecac2a41f9d59d96d8f5c9d99f79b21e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 490b81e30833a8572ff7ce8bd51c72b5314c3bf7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081064"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030623"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] предоставляют графические конструкторы запросов для построения запросов многомерных выражений (MDX) и выражений интеллектуального анализа данных (DMX) запрашивает [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] источника данных. Данный раздел посвящен конструктору запросов многомерных выражений. Дополнительные сведения о конструкторе запросов расширений интеллектуального анализа данных см. в разделе [тип соединения служб Analysis Services для расширений интеллектуального анализа данных &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md).  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] предоставляют графические конструкторы запросов для построения запросов многомерных выражений и запросов расширений интеллектуального анализа данных для источника данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Данный раздел посвящен конструктору запросов многомерных выражений. Дополнительные сведения о конструкторе запросов многомерных выражений см. в разделе [Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)](analysis-services-connection-type-for-dmx-ssrs.md).  
   
  Графический конструктор запросов многомерных выражений имеет два режима: режим конструктора и режим запросов. В каждом режиме есть панель метаданных, из которой можно перетаскивать элементы с выбранного куба для построения запроса многомерных выражений, который извлекает данные в ходе обработки отчета.  
   
@@ -69,11 +69,11 @@ ms.locfileid: "48081064"
 |![Переключение в режим запросов многомерных выражений](../../analysis-services/media/rsqdicon-commandtypemdx.gif "Переключение в режим запросов многомерных выражений")|Перейти к многомерному выражению командного типа.|  
 |![Переключение в режим DMX-запросов](../media/rsqdicon-commandtypedmx.gif "Переключение в режим DMX-запросов")|Перейти к расширению интеллектуального анализа данных командного типа.|  
 |![Обновление результирующих данных](../../analysis-services/media/rsqdicon-refresh.gif "Обновление результирующих данных")|Обновление метаданных из источника данных.|  
-|![Добавить вычисляемый элемент](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "добавить вычисляемый элемент")|Отображение диалогового окна **Построитель вычисляемых элементов** .|  
+|![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Отображение диалогового окна **Построитель вычисляемых элементов** .|  
 |![Переключатель для просмотра пустых ячеек](../../analysis-services/media/rsqdicon-showemptycells.gif "Переключатель для просмотра пустых ячеек")|Переключение между отображением и скрытием пустых ячеек на панели «Данные». (Это эквивалентно использованию предложения NON EMPTY в многомерном выражении).|  
 |![Автоматическое выполнение запроса](../../analysis-services/media/rsqdicon-autoexecute.gif "Автоматическое выполнение запроса")|Автоматически выполнять запрос и отображать результат при каждом изменении. Результаты отображаются в панели «Данные».|  
 |![Кнопка "Показать агрегаты"](../../analysis-services/media/rsqdicon-showaggregations.gif "Кнопка \"Показать агрегаты\"")|Показать статистические выражения на панели «Данные».|  
-|![Удалить](../../analysis-services/media/rsqdicon-delete.gif "удалить")|Удалить выбранный на панель «Данные» столбец из запроса.|  
+|![Удалить](../../analysis-services/media/rsqdicon-delete.gif "Удалить")|Удалить выбранный на панель «Данные» столбец из запроса.|  
 |![Значок диалогового окна "Параметры запроса"](../../analysis-services/media/iconqueryparameter.gif "Значок диалогового окна \"Параметры запроса\"")|Отображает диалоговое окно **Параметры запроса** . При указании значений для параметра запроса автоматически создается аналогичный параметр отчета с тем же именем. В качестве значения для параметра запроса устанавливается выражение, ссылающееся на параметр отчета.|  
 |![Кнопка "Подготовить запрос"](../../analysis-services/media/rsqdicon-preparequery.gif "Кнопка \"Подготовить запрос\"")|Подготовить запрос.|  
 |![Выполнить запрос](../../analysis-services/media/rsqdicon-run.gif "Выполнить запрос")|Выполнить запрос и показать результаты на панели «Данные».|  
@@ -107,7 +107,7 @@ ms.locfileid: "48081064"
   
 -   **Редактировать как текст**  
   
--   **Добавить вычисляемый элемент** (![добавить вычисляемый элемент](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "добавить вычисляемый элемент"))  
+-   **Добавить вычисляемый элемент** (![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **Показывать пустые ячейки** (![Переключатель для просмотра пустых ячеек](../../analysis-services/media/rsqdicon-showemptycells.gif "Переключатель для просмотра пустых ячеек"))  
   
@@ -116,9 +116,9 @@ ms.locfileid: "48081064"
 -   **Показать агрегаты** (![Кнопка "Показать агрегаты"](../../analysis-services/media/rsqdicon-showaggregations.gif "Кнопка \"Показать агрегаты\""))  
   
 ## <a name="see-also"></a>См. также  
- [Определение параметров в конструкторе запросов многомерных Выражений для служб Analysis Services &#40;построитель отчетов и службы SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
+ [Определение параметров в конструкторе запросов многомерных выражений для служб Analysis Services (построитель отчетов и службы SSRS)](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
  [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Тип служб Analysis Services соединение для расширения интеллектуального анализа данных &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
+ [Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)](analysis-services-connection-type-for-dmx-ssrs.md)   
  [Файл конфигурации RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)   
  [Тип соединения служб Analysis Services для запросов многомерных выражений (службы SSRS)](analysis-services-connection-type-for-mdx-ssrs.md)  
   

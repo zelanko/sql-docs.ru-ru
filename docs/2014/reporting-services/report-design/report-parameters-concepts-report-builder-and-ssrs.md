@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 6c80988363bbf08ad63cea4671eb6a49b7a866d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7e60f6a56f63840ae49880fb1ba8b1530e04c701
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153682"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037445"
 ---
 # <a name="report-parameters-concept-report-builder-and-ssrs"></a>Концепция параметров отчета (построитель отчетов и службы SSRS)
   Можно добавлять в отчет параметры, чтобы добавлять ссылки на связанные отчеты, управлять видом отчета, фильтровать данные отчета или ограничить область отчета определенными пользователями или расположениями.  
@@ -32,7 +32,7 @@ ms.locfileid: "48153682"
   
 -   Вручную при создании параметров отчета на панели данных отчета. Параметры являются одной из встроенных коллекций, которые можно включать в выражения отчета. Так как выражения используются для задания значений повсюду в определении отчета, можно использовать параметры, чтобы управлять видом отчета или чтобы передавать значения в связанные вложенные отчеты или отчеты, которые тоже используют параметры.  
   
- Дополнительные сведения см. в разделе [Report Parameters &#40;Report Builder and Report Designer&#41;](report-parameters-report-builder-and-report-designer.md).  
+ Дополнительные сведения см. в разделе [Параметры отчета (построитель отчетов и конструктор отчетов)](report-parameters-report-builder-and-report-designer.md).  
   
  Параметры часто используются для фильтрации данных отчета как до, так и после того, как данные возвращены отчету. Дополнительные сведения см. в разделе [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
@@ -45,8 +45,8 @@ ms.locfileid: "48153682"
  Для создания моментальных снимков отчета, журналов или подписок на опубликованный отчет необходимо понимать, как параметры отчета влияют на требования по разработке отчета.  
   
 ## <a name="see-also"></a>См. также  
- [Основные понятия разработки отчетов &#40;построитель отчетов и службы SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Основные понятия разработки отчетов (построитель отчетов и службы SSRS)](report-authoring-concepts-report-builder-and-ssrs.md)   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Учебник: Добавление параметра к отчету &#40;построитель отчетов&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Учебник. Добавление параметра к отчету (построитель отчетов)](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
   

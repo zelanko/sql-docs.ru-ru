@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], tutorials
@@ -14,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6602edb6-d160-43fb-83c8-9df5dddfeb9c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12581756e6ffa7d77ba7dc3339c3f38c96962d4e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372914"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033685"
 ---
 # <a name="basic-data-mining-tutorial"></a>Учебник по основам интеллектуального анализа данных
   Добро пожаловать в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] учебник интеллектуального анализа данных. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] предоставляет интегрированную среду для создания моделей интеллектуального анализа данных и создания прогнозов. В этом учебнике предлагается выполнить сценарий кампании целевой рассылки, в которой используется машинное обучение для анализа и прогнозирования поведения заказчика. Он демонстрирует использование трех наиболее важных алгоритмов интеллектуального анализа данных: кластеризации, деревьев принятия решений и упрощенного алгоритма Байеса. Вы также узнаете, как анализировать результаты с помощью средства просмотра моделей интеллектуального анализа данных и создания прогнозов и диаграмм точности, с помощью средства интеллектуального анализа данных, включенных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Во всех примерах используется вымышленная компания [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)].  
@@ -49,7 +48,7 @@ ms.locfileid: "53372914"
  [Занятие 2. Построение структуры прямой почтовой рассылки &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
  На этом занятии рассматривается создание структур моделей интеллектуального анализа данных, которые могут быть использованы в сценарии прямой почтовой рассылки.  
   
- [Занятие 3. Добавление и обработка моделей](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
+ [Занятие 3. Добавление и обработка моделей](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
  На этом занятии будет рассмотрено добавление модели в структуру. Создаваемые модели построены на основе следующих алгоритмов.  
   
 -   алгоритм дерева принятия решений [!INCLUDE[msCoName](../includes/msconame-md.md)]  
@@ -61,7 +60,7 @@ ms.locfileid: "53372914"
  [Занятие 4. Изучение моделей целевой рассылки &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
  На этом занятии будут рассмотрены анализ и интерпретация результатов каждой модели с использованием средств просмотра.  
   
- [Занятие 5. Проверка моделей &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
+ [Занятие 5. Проверка моделей &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
  На этом занятии выполняется копия одной из моделей целевой рассылки, добавляется фильтр модели интеллектуального анализа данных для ограничения обучающих данных определенным набором клиентов, а затем производится оценка устойчивости модели.  
   
  [Занятие 6. Создание прогнозов и работа с &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  

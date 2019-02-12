@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 23898fcc3ae33fa24e0cac035cca4ed177a3e8e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2cf5c9b37fbf6e5d213d35ec9837943e2dfb95ef
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188684"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020266"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Причины ошибок служб Reporting Services и способы их устранения
   Этот раздел содержит сведения о причинах некоторых ошибок компонента служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и способах их устранения. Подразделы по сообщениям об ошибках в этом разделе содержат объяснения сообщений об ошибке, возможные причины и действия по устранению проблемы.  
@@ -29,16 +29,16 @@ ms.locfileid: "48188684"
   
 |Ошибка|Сообщение|  
 |-----------|-------------|  
-|[rsAccessedDenied — ошибка служб Reporting Services](rsaccesseddenied-reporting-services-error.md)|Предоставленные пользователю 'mydomain\myAccount' разрешения недостаточны для выполнения данной операции. (rsAccessDenied) (ReportingServicesLibrary).|  
-|[rsInternalError — ошибка служб Reporting Services](rsinternalerror-reporting-services-error.md)|Произошла внутренняя ошибка на сервере отчетов. Дополнительные подробности см. в журнале ошибок.|  
-|[rsModelGenerationError — ошибка служб Reporting Services](rsmodelgenerationerror-reporting-services-error.md)|Во время построения модели произошла ошибка. (rsModelGenerationError) (ReportingServicesLibrary) %1.|  
-|[rsProcessingError — ошибка служб Reporting Services](rsprocessingerror-reporting-services-error.md)|Во время обработки отчета произошли ошибки.|  
-|[rsServerConfigurationError — ошибка служб Reporting Services](rsserverconfigurationerror-reporting-services-error.md)|Сервер отчетов обнаружил ошибку конфигурации.|  
-|[rrRenderingError — ошибка служб Reporting Services](rrrenderingerror-reporting-services-error.md)|Во время подготовки отчета к просмотру произошла ошибка. (rrRenderingError) %1.|  
-|[Служба Windows сервера отчетов &#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|Службе Windows сервера отчетов (MSSQLSERVER) не удается соединиться с базой данных сервера отчетов.|  
+|[rsAccessedDenied - Ошибка службы Reporting Services](rsaccesseddenied-reporting-services-error.md)|Предоставленные пользователю 'mydomain\myAccount' разрешения недостаточны для выполнения данной операции. (rsAccessDenied) (ReportingServicesLibrary).|  
+|[rsInternalError - Ошибка службы Reporting Services](rsinternalerror-reporting-services-error.md)|Произошла внутренняя ошибка на сервере отчетов. Дополнительные подробности см. в журнале ошибок.|  
+|[rsModelGenerationError - Ошибка службы Reporting Services](rsmodelgenerationerror-reporting-services-error.md)|Во время построения модели произошла ошибка. (rsModelGenerationError) (ReportingServicesLibrary) %1.|  
+|[rsProcessingError - Ошибка службы Reporting Services](rsprocessingerror-reporting-services-error.md)|Во время обработки отчета произошли ошибки.|  
+|[rsServerConfigurationError - Ошибка службы Reporting Services](rsserverconfigurationerror-reporting-services-error.md)|Сервер отчетов обнаружил ошибку конфигурации.|  
+|[rrRenderingError - Ошибка службы Reporting Services](rrrenderingerror-reporting-services-error.md)|Во время подготовки отчета к просмотру произошла ошибка. (rrRenderingError) %1.|  
+|[Служба Windows сервера отчетов (MSSQLServer) 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|Службе Windows сервера отчетов (MSSQLSERVER) не удается соединиться с базой данных сервера отчетов.|  
   
 ## <a name="see-also"></a>См. также  
  [Файлы и источники журналов служб Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
- [Ошибки и события &#40;службы Reporting Services&#41;](errors-and-events-reference-reporting-services.md)  
+ [Справочник по ошибкам и событиям (службы Reporting Services)](errors-and-events-reference-reporting-services.md)  
   
   

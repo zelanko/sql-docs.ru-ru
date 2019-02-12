@@ -2,8 +2,7 @@
 title: sp_datatype_info_90 (хранилище данных SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fd24c36801d4b17217ebe688d51913618697d6a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 889c6d1b1a4e61286a96c2b57acd1a1148a069a4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830243"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043385"
 ---
 # <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 (хранилище данных SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@data_type=** ] *data_type*  
+ [ **@data_type=** ] *data_type*  
  Кодовый номер типа данных. Для получения списка всех типов данных пропустите этот аргумент. *data_type* — **int**, значение по умолчанию 0.  
   
  [  **@ODBCVer=** ] *odbc_version*  
@@ -53,9 +52,9 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|Тип данных, зависящий от СУБД.|  
 |DATA_TYPE|**smallint**|Код типа ODBC, с которым сопоставляются все столбцы данного типа.|  
 |PRECISION|**int**|Максимальная точность типа данных в источнике данных. Для типов данных, к которым понятие точности не применимо, возвращается значение NULL. Значение, возвращаемое для столбца PRECISION, имеет десятичную форму.|  
-|LITERAL_PREFIX|**varchar (** 32 **)**|Символ или символы, используемые перед константой. Например, одинарная кавычка (**"**) для символьных типов и 0 x для двоичного файла.|  
-|LITERAL_SUFFIX|**varchar (** 32 **)**|Символ или символы, используемые после константы. Например, одинарная кавычка (**"**) для символьных типов и кавычки для двоичного файла.|  
-|CREATE_PARAMS|**varchar (** 32 **)**|Описание параметров создания типа данных. Например **десятичное** является «точность, масштаб», **float** имеет значение NULL, и **varchar** — «max_length».|  
+|LITERAL_PREFIX|**varchar(** 32 **)**|Символ или символы, используемые перед константой. Например, одинарная кавычка (**"**) для символьных типов и 0 x для двоичного файла.|  
+|LITERAL_SUFFIX|**varchar(** 32 **)**|Символ или символы, используемые после константы. Например, одинарная кавычка (**"**) для символьных типов и кавычки для двоичного файла.|  
+|CREATE_PARAMS|**varchar(** 32 **)**|Описание параметров создания типа данных. Например **десятичное** является «точность, масштаб», **float** имеет значение NULL, и **varchar** — «max_length».|  
 |NULLABLE|**smallint**|Указывает возможность содержать значение NULL.<br /><br /> 1 = значения NULL допускаются.<br /><br /> 0 = значения NULL не допускаются.|  
 |CASE_SENSITIVE|**smallint**|Чувствительность к регистру.<br /><br /> 1 = все столбцы этого типа чувствительны к регистру (для параметров сортировки).<br /><br /> 0 = все столбцы этого типа не чувствительны к регистру.|  
 |SEARCHABLE|**smallint**|Задает возможность поиска для типа столбца:<br /><br /> 1 = поиск невозможен;<br /><br /> 2 = возможен поиск с оператором LIKE;<br /><br /> 3 = возможен поиск с предложением WHERE;<br /><br /> 4 = возможен поиск с предложением WHERE или оператором LIKE.|  
@@ -72,7 +71,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |USERTYPE|**smallint**|**usertype** значение из таблицы systypes.|  
   
 ## <a name="remarks"></a>Примечания  
- sp_datatype_info эквивалентна SQLGetTypeInfo в ODBC. Возвращаемые этой процедурой результаты упорядочиваются по значению DATA_TYPE, а затем по степени соответствия типа данных аналогичному типу данных ODBC SQL.  
+ sp_datatype_info is equivalent to SQLGetTypeInfo in ODBC. Возвращаемые этой процедурой результаты упорядочиваются по значению DATA_TYPE, а затем по степени соответствия типа данных аналогичному типу данных ODBC SQL.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в роли public.  

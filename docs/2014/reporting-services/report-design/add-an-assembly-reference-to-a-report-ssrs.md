@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 0a03939e-48ce-4c30-b227-98533f2e0ccb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 78e888c74c1bac7c3f4d26ae49e92dfdb3451874
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 71d2ef8ff61a8fba36ab4741cffc3c7b1ad9b551
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052270"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034125"
 ---
 # <a name="add-an-assembly-reference-to-a-report-ssrs"></a>Добавление в отчет ссылку на сборку (службы SSRS)
   При внедрении пользовательского кода, содержащего ссылки на классы платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , не входящие в <xref:System.Math> или <xref:System.Convert>, необходимо предоставить в отчете ссылку на сборку, чтобы обработчик отчетов мог разрешать имена этих классов. Дополнительные сведения см. в разделе [Добавление кода в отчет (службы SSRS)](add-code-to-a-report-ssrs.md).  
@@ -44,6 +44,6 @@ ms.locfileid: "48052270"
   
 ## <a name="see-also"></a>См. также  
  [Использование пользовательских сборок с отчетами](../custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Диалоговое окно "Свойства отчета" — "Ссылки"](../report-properties-dialog-box-references.md)  
+ [Диалоговое окно «Свойства отчета» — «Ссылки»](../report-properties-dialog-box-references.md)  
   
   

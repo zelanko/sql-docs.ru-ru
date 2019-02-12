@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 173696f4f75d14cbb0ea1b78104b69db50af7a2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d7c74eb4f69bf40446a4f912ed6673b57890c64b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065564"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029555"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Доставка электронной почтой в службах Reporting Services
   Службы SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают модуль доставки электронной почты, что дает возможность доставлять по электронной почте отчеты отдельным пользователям или группам пользователей. Модуль доставки электронной почты настраивается с помощью диспетчера конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и путем изменения файлов конфигурации этих служб.  
@@ -78,12 +78,12 @@ ms.locfileid: "48065564"
   
  Дополнительные сведения о настройке сервера отчетов в режиме интеграции с SharePoint см. в следующих разделах:  
   
--   [Настройка электронной почты для приложения служб Reporting Services &#40;SharePoint 2010 и SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [Настройка электронной почты для приложения служб Reporting Services (SharePoint 2010 и SharePoint 2013)](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## <a name="see-also"></a>См. также  
  [Задачи и разрешения](../security/tasks-and-permissions.md)   
- [Подписки и доставка &#40;службы Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [Управляемые данными подписки](data-driven-subscriptions.md)   
+ [Подписки и доставка (службы Reporting Services)](subscriptions-and-delivery-reporting-services.md)   
+ [Подписки, управляемые данными](data-driven-subscriptions.md)   
  [Назначения ролей](../security/role-assignments.md)  
   
   

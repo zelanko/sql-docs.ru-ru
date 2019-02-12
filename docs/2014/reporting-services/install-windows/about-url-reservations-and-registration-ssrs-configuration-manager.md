@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fb50a9f9674e13c1032091fbae6da55170d44863
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: fb1f04a10837088a9c427d6c0994af4334e8988f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374326"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035105"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)
   URL-адреса для приложений служб Reporting Services определяются в качестве резервирований URL-адресов в компоненте HTTP.SYS. Резервирование URL-адресов определяет синтаксис конечной точки URL-адреса к веб-приложению. При настройке приложений на сервере отчетов резервирование URL-адресов задается как для веб-службы сервера отчетов, так и для диспетчера отчетов. Резервирование URL-адресов создается автоматически при настройке URL-адресов в программе установке или программе настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -63,7 +63,7 @@ ms.locfileid: "53374326"
   
 |Резервирование URL-адресов в компоненте HTTP.SYS|URL-адрес|Объяснение|  
 |---------------------------------|---------|-----------------|  
-|http://+:80/reportserver|http://\<имя_компьютера > / reportserver<br /><br /> http://\<IP-адрес > / reportserver<br /><br /> http://localhost/reportserver|Для резервирования URL-адресов указывается шаблон (+) и номер порта 80. Этот запрос помещает в очередь сервера запросов все входящие запросы по порту 80, предназначенные любому узлу, который соответствует компьютеру сервера отчетов. Обратите внимание, что при таком резервировании URL-адресов для доступа к серверу отчетов может быть использовано любое число URL-адресов.<br /><br /> Это резервирование URL-адресов действует по умолчанию для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в большинстве операционных систем.|  
+|http://+:80/reportserver|http://\<имя_компьютера > / reportserver<br /><br /> http://\<IPAddress>/reportserver<br /><br /> http://localhost/reportserver|Для резервирования URL-адресов указывается шаблон (+) и номер порта 80. Этот запрос помещает в очередь сервера запросов все входящие запросы по порту 80, предназначенные любому узлу, который соответствует компьютеру сервера отчетов. Обратите внимание, что при таком резервировании URL-адресов для доступа к серверу отчетов может быть использовано любое число URL-адресов.<br /><br /> Это резервирование URL-адресов действует по умолчанию для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в большинстве операционных систем.|  
 |http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|Такое резервирование URL-адресов точно задает IP-адрес и поэтому является значительно более ограниченным, чем резервирование URL-адресов по шаблону. Только URL-адреса, включающие данный IP-адрес, могут подключаться к серверу отчетов. При таком резервировании URL-адрес адресов, запрос на сервер отчетов по адресу http://\<имя_компьютера > / reportserver или http://localhost/reportserver завершится сбоем.|  
   
 ##  <a name="DefaultURLs"></a> URL-адреса по умолчанию  
@@ -88,7 +88,7 @@ ms.locfileid: "53374326"
 |-------------------|-----------------|-----------------|----------------------------------------|  
 |Экземпляр по умолчанию|веб-служба сервера отчетов|http://\<имя_сервера > / reportserver|http://\<servername >: 80/reportserver|  
 |Экземпляр по умолчанию|Диспетчер отчетов|http://\<имя_сервера > / reportserver|http://\<servername >: 80/reportserver|  
-|Именованный экземпляр|веб-служба сервера отчетов|http://\<имя_сервера > / reportserver_\<имя_экземпляра >|http://\<servername >: 80/reportserver_\<имя_экземпляра >|  
+|Именованный экземпляр|веб-служба сервера отчетов|http://\<servername>/reportserver_\<instancename>|http://\<servername>:80/reportserver_\<instancename>|  
 |Именованный экземпляр|Диспетчер отчетов|http://\<имя_сервера > / reports_\<имя_экземпляра >|http://\<servername >: 80/reports_\<имя_экземпляра >|  
 |SQL Server Express|веб-служба сервера отчетов|http://\<имя_сервера > / reportserver_SQLExpress|http://\<servername >: 80/reportserver_SQLExpress|  
 |SQL Server Express|Диспетчер отчетов|http://\<имя_сервера > / reports_SQLExpress|http://\<servername >: 80/reports_SQLExpress|  

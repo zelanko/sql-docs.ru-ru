@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ad184e1faf16a06de851475d4f96fc89d398b758
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: dd30631b5ecdcfb55fcb571bd8bf3c1eb39713dc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081954"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031945"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Сочетания клавиш (построитель отчетов)
   При работе в построителе отчетов имеется доступ ко всем сочетаниям клавиш для перемещения по документам, имеющимся в среде Windows. На выбор доступны несколько стандартных схем раскладки клавиатуры.  

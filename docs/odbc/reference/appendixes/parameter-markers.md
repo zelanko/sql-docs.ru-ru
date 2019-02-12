@@ -3,8 +3,6 @@ title: Маркеры параметров | Документация Майкр
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,13 +12,14 @@ helpviewer_keywords:
 ms.assetid: 07213d04-cd31-45fd-a8c8-2e16e09eeaf4
 author: MightyPen
 ms.author: genemi
+ms.reviewer: ''
 manager: craigg
-ms.openlocfilehash: 833e2740e54f07701fb66a894bb5e4798c4a42e2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cda6719eb46a4a05222bd54062e6cab98459d7dc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516404"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042885"
 ---
 # <a name="parameter-markers"></a>Маркеры параметров
 В соответствии со спецификацией SQL-92 приложения не удается разместить маркеры параметров в следующих расположениях. Более полный список см. в спецификации SQL-92.  

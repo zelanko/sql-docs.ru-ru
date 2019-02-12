@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 24e303409568f028ff57cf189cad4f1022111e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 72bd3d617fa14e785b29b9c89e3d53d7d5dd3da4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202734"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032755"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>Страница «Общие свойства» — «Общие наборы данных» (диспетчер отчетов)
   Страница «Общий набор данных» используется для просмотра и управления свойствами элемента общего набора данных.  
@@ -37,7 +37,7 @@ ms.locfileid: "48202734"
 3.  В раскрывающемся списке выберите **Управление**. Откроется страница «Общие свойства».  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **Name**  
  Введите имя общего набора данных, которое используется для идентификации элемента в иерархии папок сервера отчетов.  
   
  **Описание**  
@@ -65,12 +65,12 @@ ms.locfileid: "48202734"
  Замена одного определения общего набора данных другим из RSD-файла, находящегося в файловой системе.  
   
 ## <a name="see-also"></a>См. также  
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Содержимое страницы &#40;диспетчера отчетов&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Страница "Содержимое" (диспетчер отчетов)](../../2014/reporting-services/contents-page-report-manager.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
  [Параметры обновления кэша &#40;диспетчера отчетов&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
  [Страница "кэширование", общие наборы данных &#40;диспетчера отчетов&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
  [Управление общими наборами данных](report-data/manage-shared-datasets.md)   
- [Кэширование общих наборов данных &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
+ [Общие наборы данных в кэше (службы SSRS)](report-server/cache-shared-datasets-ssrs.md)  
   
   

@@ -19,14 +19,14 @@ helpviewer_keywords:
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c3a102af211ccaa8fad3d7792cf868653ca4797d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e5d96e743587a0f4c00e7f5f7777b95667e1ea84
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176944"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036575"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>Диспетчер отчетов (службы SSRS в основном режиме)
   Диспетчер отчетов представляет собой веб-средство, предназначенное для доступа к отчетам и управления ими, которое применяется для администрирования экземпляра одного удаленного сервера отчетов через HTTP-соединение. Кроме того, диспетчер отчетов предоставляет средство просмотра отчетов и функции навигации. В этом разделе:  
@@ -48,7 +48,7 @@ ms.locfileid: "48176944"
   
 -   Настройки свойств выполнения отчета, истории отчета и параметров отчета.  
   
--   Создание моделей отчетов, которые подключаются и получают данные из [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] источника данных или из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] реляционного источника данных.  
+-   Создайте модели отчета, которые подключаются и получают данные из источника данных служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или из реляционного источника данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 -   Задайте параметры безопасности элементов модели, чтобы обеспечить доступ к конкретным сущностям в модели, или сопоставьте сущности со стандартными отчетами с дополнительной информацией, созданными заранее.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48176944"
   
  Диспетчер отчетов используется только для сервера отчетов, работающего в собственном режиме. Он не поддерживается для сервера отчетов, настроенного для работы в режиме интеграции с SharePoint.  
   
- Некоторые компоненты диспетчера отчетов доступны только в определенных выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Некоторые функции диспетчера отчетов доступны только в определенных выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  При новой установке только у локальных администраторов есть достаточные разрешения для работы с содержимым и параметрами. Для предоставления разрешений другим пользователям локальный администратор должен создать назначения ролей, которые обеспечат доступ к серверу отчетов. Страницы приложения и задачи, к которым пользователь впоследствии сможет получить доступ, зависят от назначений ролей этому пользователю. Дополнительные сведения см. в разделе [Предоставление пользователям доступа к серверу отчетов &#40;диспетчер отчетов&#41;](security/grant-user-access-to-a-report-server.md).  
   
@@ -114,11 +114,11 @@ ms.locfileid: "48176944"
 |![Значок страницы свойств](media/hlp-16prop.gif "значок страницы свойств")|Страница свойств|Чтобы открыть дополнительные страницы для настройки свойств и безопасности, щелкните значок свойств.|  
   
 ## <a name="see-also"></a>См. также  
- [Настройка URL-адрес &#40;диспетчер конфигурации служб SSRS&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Планирование служб Reporting Services и поддержки Power View в браузерах &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Построитель отчетов &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)   
  [Инструментальные средства служб Reporting Services](tools/reporting-services-tools.md)   
- [Управление содержимым сервера отчетов &#40;собственный режим служб SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Просмотр и изучение отчетов в собственном режиме с помощью веб-части SharePoint &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)  
   

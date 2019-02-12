@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 80b5c2e77c5e10a543c7847bd2bd2e60d9d50920
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9861bc63a8fd1e4dd76fb030baf2a11c2774961a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221754"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027577"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>Добавление действия детализации в отчет (построитель отчетов и службы SSRS)
   Отчеты, открывающиеся при щелчке ссылки в основном отчете, называются *детализированными отчетами*. Данная ссылка детализации активирует действие детализации.  
@@ -61,8 +61,8 @@ ms.locfileid: "48221754"
 7.  Для проверки ссылки надо запустить отчет и щелкнуть элемент отчета, для которого была задана ссылка.  
   
 ## <a name="see-also"></a>См. также  
- [Диалоговое окно свойств действия &#40;построитель отчетов и службы SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md)   
- [Форматирование точек данных на диаграмме &#40;построитель отчетов и службы SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Диалоговое окно "Свойства действия" (построитель отчетов и службы SSRS)](../action-properties-dialog-box-report-builder-and-ssrs.md)   
+ [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Отображение всплывающих подсказок для ряда (построитель отчетов и службы SSRS)](show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
   

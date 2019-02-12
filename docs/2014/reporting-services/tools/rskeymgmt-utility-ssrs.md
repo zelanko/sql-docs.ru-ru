@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2bd52ce353ff30a22aa1771c07359554e20f6e8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: cdd2e2bd7d668ca276cdc62d988f7334a6709e6b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541853"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038265"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Программа rskeymgmt (SSRS)
   Извлекает, восстанавливает, создает и удаляет симметричный ключ, используемый для защиты важных данных сервера отчетов от несанкционированного доступа. Эта программа также используется для соединения экземпляров сервера отчетов в конфигурацию с масштабным развертыванием. *Конфигурация сервера отчетов с масштабным развертыванием* означает множество экземпляров сервера отчетов, которые совместно используют одну базу данных сервера отчетов.  

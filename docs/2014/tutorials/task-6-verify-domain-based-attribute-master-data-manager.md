@@ -1,24 +1,21 @@
 ---
-title: 'Задача 6: Убедитесь, что атрибут на основе домена создан с помощью диспетчера основных данных | Документация Майкрософт'
+title: Задача 6. Убедитесь, что атрибут на основе домена создан с помощью диспетчера основных данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6e90517a-910c-4c33-8f11-92ac3cff4fdc
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 042cff6f687bb54466afb2334ad95402de319e94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef3d063db5578485e89dc18b4a5e93af800b15fe
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207114"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037735"
 ---
 # <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Задача 6. Убедитесь, что атрибут на основе домена создан с помощью диспетчера основных данных
   В этой задаче вы проверите, создана ли сущность **Штат** в службах **MDS** и является ли атрибут **Штат** сущности **Поставщик** атрибутом на основе домена, который зависит от сущности **Штат**, с помощью **диспетчера основных данных**.  
@@ -29,7 +26,7 @@ ms.locfileid: "48207114"
   
 3.  Убедитесь, что выбрана модель **Поставщики**, и нажмите кнопку **Обозреватель**. Вы можете перезагрузить страницу, если **Обозреватель** уже открыт.  
   
-4.  Наведите указатель мыши на элемент **Сущности** в строке меню и обратите внимание, что теперь там две сущности: **Поставщик** и **Штат**.  
+4.  Наведите указатель мыши **сущностей** в строке меню и обратите внимание, что теперь представлены две сущности: **Поставщик** и **состояние**.  
   
      ![Меню сущностей с штатом и поставщиком](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-01.jpg "меню сущностей с штатом и поставщиком")  
   

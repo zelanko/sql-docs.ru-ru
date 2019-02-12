@@ -10,18 +10,18 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.general.f1
 ms.assetid: d50863e7-50d9-4ab8-aabb-fd68e2d132a1
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 158b1931a9862b8fa419479f024db0bfdbf80cbf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2d2d034424ac4564a66b40b1479acb7dc683d7c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205034"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027185"
 ---
 # <a name="set-up-the-database-and-website-for-master-data-services"></a>Настройка базы данных и веб-сайта для служб Master Data Services
-  Используйте [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] для настройки базы данных и веб-сайт для [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS)  
+  Использование [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] для настройки базы данных и веб-сайта для [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS)  
   
  Чтобы настроить базу данных и веб-сайт, выполните следующие задачи.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48205034"
   
      Дополнительные сведения см. в разделе [веб-страницы конфигурации &#40;диспетчер конфигурации Master Data Services&#41; ](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md) и [включить службы интеграции служб Data Quality со службами Master Data Services](install-windows/enable-data-quality-services-integration-with-master-data-services.md).  
   
- Можно также использовать [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] для задания параметров для веб-приложений и служб, связанных с базой данных MDS. К примеру, можно указать, как часто загружаются данные или как часто отправляются сообщения проверки. Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../../2014/master-data-services/system-settings-master-data-services.md).  
+ Также можно использовать [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] для указания параметров веб-приложений и служб, связанных с базой данных MDS. К примеру, можно указать, как часто загружаются данные или как часто отправляются сообщения проверки. Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../../2014/master-data-services/system-settings-master-data-services.md).  
   
 ## <a name="see-also"></a>См. также  
  [База данных служб Master Data Services](../../2014/master-data-services/master-data-services-database.md)   

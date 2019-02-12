@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1061ae540d4773ae53560c464d2af568c8e35782
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+manager: kfile
+ms.openlocfilehash: 16dc2b9c39dd12e32be3a88c32a3639e8eb6b4ae
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589628"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043145"
 ---
 # <a name="project-property-pages-dialog-box"></a>Диалоговое окно страниц свойств проекта
   Страницы свойств проекта позволяют настраивать свойства развертывания проекта сервера отчетов. Чтобы открыть это диалоговое окно, в меню **Проект** щелкните _\<Имя проекта отчета_**Свойства**.  

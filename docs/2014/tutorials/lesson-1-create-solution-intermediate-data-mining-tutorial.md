@@ -1,11 +1,10 @@
 ---
-title: 'Урок 1: Создание промежуточного решения интеллектуального анализа (учебник по интеллектуальному анализу интеллектуальному анализу данных) | Документация Майкрософт'
+title: Урок 1. Создание промежуточного решения интеллектуального анализа (учебник по интеллектуальному анализу интеллектуальному анализу данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], tutorials
@@ -13,39 +12,39 @@ helpviewer_keywords:
 ms.assetid: d8e3f89f-091c-434e-8f67-639f073edcdf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 970439430e0ddd4fa3759365dad1b96a32562c9b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3bb2f1dcabe17bb2c3e7258653602ac43615c706
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079084"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035805"
 ---
-# <a name="lesson-1-creating-the-intermediate-data-mining-solution-intermediate-data-mining-tutorial"></a>Урок 1: Создание промежуточного решения интеллектуального анализа (учебник по интеллектуальному анализу интеллектуальному анализу данных)
-  В учебнике по интеллектуальному анализу данных, созданной [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проекта, содержащего простое решение интеллектуального анализа на основе новой [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] базы данных.  
+# <a name="lesson-1-creating-the-intermediate-data-mining-solution-intermediate-data-mining-tutorial"></a>Урок 1. Создание промежуточного решения интеллектуального анализа данных (учебник по интеллектуальному анализу данных — средний уровень)
+  В учебнике по интеллектуальному анализу данных (начальный уровень) был создан проект служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , который содержит простое решение для интеллектуального анализа данных на основе новой базы данных [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
- В этом учебнике будет создан отдельный [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проекта с помощью [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Вы создадите [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] источник данных, использующий [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]и добавьте несколько новых представлений источников данных для этого источника данных, для поддержки сценариев и типов модели.  
+ В этом учебнике будет создан отдельный проект служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] с помощью среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Будет создан новый источник данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , использующий базу данных [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], в который будут добавлены несколько новых представлений источников данных для поддержки сценариев и типов модели.  
   
  Это занятие содержит следующую задачу:  
   
 -   [Создание решения и источника данных &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/creating-a-solution-and-data-source-intermediate-data-mining-tutorial.md)  
   
 ## <a name="next-step"></a>Следующий шаг  
- [Занятие 2: Построение сценария прогнозирования &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Занятие 2. Построение сценария прогнозирования &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
 ## <a name="all-lessons"></a>Все занятия  
  Урок 1. Создание промежуточного решения интеллектуального анализа данных  
   
- [Занятие 2: Построение сценария прогнозирования &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Занятие 2. Построение сценария прогнозирования &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
- [Занятие 3: Построение сценария потребительской корзины &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Занятие 3. Построение сценария потребительской корзины &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
- [Занятие 4: Построение сценария кластеризации последовательностей &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
+ [Занятие 4. Построение сценария кластеризации последовательностей &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
- [Занятие 5: Построение моделей логистической регрессии нейронной сети и &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Занятие 5. Построение моделей логистической регрессии нейронной сети и &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>См. также  
- [Учебник интеллектуального анализа данных](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Создание и выполнение запросов к моделям интеллектуального анализа данных с помощью расширений интеллектуального анализа данных: учебники &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [Учебник по основам интеллектуального анализа данных](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Создание и выполнение запросов к моделям интеллектуального анализа данных с помощью расширений интеллектуального анализа данных: Учебники по &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

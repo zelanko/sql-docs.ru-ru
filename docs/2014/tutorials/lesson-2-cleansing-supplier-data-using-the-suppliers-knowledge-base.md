@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 215c14de-fc3f-46de-a022-bf69b9ea2a96
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: e8366781f25829b0063479c2874a56c184e73bad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 42006c68a50497034817cfe8df6c9172ea0cdc3b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355706"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036915"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>Занятие 2. Очистка данных поставщиков с помощью базы знаний поставщиков
   На этом занятии выполняется очистка данных поставщика в файле Excel с помощью **поставщики** базы знаний, созданный на первом занятии. Очистка данных в DQS включает **автоматизированный процесс** , анализирующий соответствие данных знаниям из базы знаний и **интерактивный процесс** , позволяющий выполнять просмотр и изменение результаты автоматизированного процесса. Функция очистки данных опознает неверные данные в источнике данных, а затем исправляет или предлагает поправки для неверных данных. Она также стандартизирует и дополняет данные клиента с помощью значений домена, начальных значений для синонимов, правил домена, связей на основе терминов, а также ссылочных данных. Можно в интерактивном режиме утверждать или отклонять изменения, предлагаемые автоматизированным процессом. См. в разделе [Очистка данных](https://msdn.microsoft.com/library/gg524800.aspx) для получения дополнительных сведений.  

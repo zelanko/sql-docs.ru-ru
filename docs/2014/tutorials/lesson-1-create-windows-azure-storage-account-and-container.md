@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: edeefac46805ba74b011d7c86202c7d5dbcdec14
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8a1f8cef9f29c856ab0bc02480221e583a0078f3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367156"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039935"
 ---
 # <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>Урок 1. Создание учетной записи хранения и контейнера Windows Azure
   Чтобы иметь возможность начать сохранение файлов данных SQL Server в службе хранилища Windows Azure, необходимо создать учетную запись хранения Windows Azure, контейнер больших двоичных объектов и подписанный URL-адрес. На занятии 1 рассматриваются вход на портал управления платформой Windows Azure, создание учетной записи хранилища, контейнера больших двоичных объектов и подписанного URL-адреса.  

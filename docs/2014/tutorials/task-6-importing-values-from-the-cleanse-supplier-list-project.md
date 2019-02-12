@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5ac003c18ae36f4cd2d58a1355df16d6d2f9b066
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0780636d3bcaecfe0519192bd450bb538d78bbf9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359856"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042925"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Задача 6. Импорт значений из проекта очистки списка поставщиков
   В этой задаче вы импортируете наборы знаний служб DQS, полученные в процессе очистки. Дополнительные сведения см. в разделе [Импорт значений проекта очистки в домен](https://msdn.microsoft.com/library/hh479581.aspx) . Вы также экспортируете базу знаний в файл служб DQS перед публикацией обновленной базы знаний **Поставщики** .  
@@ -68,6 +65,6 @@ ms.locfileid: "53359856"
 14. Нажмите кнопку **ОК** в окне сообщения.  
   
 ## <a name="next-step"></a>Следующий шаг  
- [Занятие 3. Сопоставление данных для удаления повторений из списка поставщиков](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
+ [Занятие 3. Сопоставление данных для удаления повторений из списка поставщиков](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
   
   

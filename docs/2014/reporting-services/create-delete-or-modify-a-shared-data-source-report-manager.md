@@ -15,14 +15,14 @@ helpviewer_keywords:
 - modifying shared data sources
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d11fc38c9e1729ae4651f632d2755bfbbe2f0e2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 99e083439e49d522ddc84f1f32454b0c4777237b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202894"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025875"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Создание, удаление или изменение общего источника данных (диспетчер отчетов)
   Общий источник данных определяет свойства соединения с источником данных. Если имеется источник данных, который используется многими отчетами, моделями или управляемыми данными подписками, можно создать общий источник данных, чтобы исключить дополнительные затраты на обслуживание одних и тех же сведений о соединении в разных местах.  
@@ -34,13 +34,13 @@ ms.locfileid: "48202894"
   
 ### <a name="to-create-a-shared-data-source"></a>Создание общего источника данных  
   
-1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md).  
+1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md).  
   
 2.  В диспетчере отчетов перейдите на страницу **Содержимое** .  
   
 3.  Нажмите кнопку **Создать источник данных**. Откроется страница **Создание источника данных** .  
   
-4.  Введите имя элемента. Имя должно содержать по крайней мере один символ и начинаться с буквы. Оно также может включать в себя определенные символы, за исключением пробелов и символов ; ? : \@ & = +, $ / * \< > | " /.  
+4.  Введите имя элемента. Имя должно содержать по крайней мере один символ и начинаться с буквы. Оно также может включать в себя определенные символы, за исключением пробелов и символов ; ? : \@ & = + , $ / * \< > | " /.  
   
 5.  Можно также ввести описание, чтобы предоставить пользователям сведения о данном соединении. Это описание отображается на странице **Содержимое** диспетчера отчетов.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48202894"
   
 7.  В поле **Строка подключения**укажите строку соединения, которую сервер отчетов будет использовать для подключения к источнику данных. Не рекомендуется указывать в строке соединения учетные данные.  
   
-     Следующий пример иллюстрирует строку подключения для подключения к локальной [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базы данных:  
+     В следующем примере показана строка соединения для подключения к локальной базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] .  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -64,7 +64,7 @@ ms.locfileid: "48202894"
   
     -   Если для доступа к источнику данных учетные данные не используются (например, если это XML-файл, находящийся в файловой системе), выберите **Учетные данные не требуются**. Этот тип учетных данных следует указывать только в том случае, если он допустим для источника данных. Если выбрать этот параметр для источника данных, требующего проверки подлинности, соединение завершится ошибкой. При выборе этого параметра убедитесь, что настроена учетная запись автоматического выполнения, позволяющая серверу отчетов соединяться с другими компьютерами для получения данных или файлов, если пользовательские учетные данные недоступны.  
   
-     Дополнительные сведения о настройке учетных данных см. в разделе [задание учетных данных и сведений о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md). Дополнительные сведения об учетной записи автоматического выполнения см. в разделе [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     Дополнительные сведения о настройке учетных данных см. в разделе [Указание учетных данных и сведений о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md). Дополнительные сведения об учетной записи автоматического выполнения см. в разделе [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 9. Нажмите кнопку **Проверить соединение** , чтобы проверить настройку источника данных.  
   
@@ -99,9 +99,9 @@ ms.locfileid: "48202894"
   
 ## <a name="see-also"></a>См. также  
  [Подключения к данным, источники данных и строки подключения в службах Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Содержимое страницы &#40;диспетчера отчетов&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Создание, изменение и удаление общих источников данных &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+ [Страница "Содержимое" (диспетчер отчетов)](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Создание, изменение и удаление общих источников данных (службы SSRS)](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Управление источниками данных отчета](report-data/manage-report-data-sources.md)   
- [Настройка свойств источника данных для отчета &#40;диспетчера отчетов&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Настройка свойств источника данных для отчета (диспетчер отчетов)](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

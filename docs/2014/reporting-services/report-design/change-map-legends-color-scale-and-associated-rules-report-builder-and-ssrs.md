@@ -33,13 +33,13 @@ f1_keywords:
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 99f2edaac2962fe2a11f70b0fea18f892ed740a5
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+manager: kfile
+ms.openlocfilehash: f27196d59a8e2dd65fb935c79338ecac7995cf22
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169264"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041115"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Изменение условных обозначений карты, цветовой шкалы и связанных правил (построитель отчетов и службы SSRS)
   Карта может содержать условные обозначения, цветовую шкалу и шкалу расстояний. Эти части карты помогают пользователям понять визуализацию данных на карте.  

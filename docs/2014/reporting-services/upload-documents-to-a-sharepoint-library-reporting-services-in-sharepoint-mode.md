@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 93bd1b19-061b-409f-8dc2-ec416b2f4b39
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5cfb22d29120f7ee27e378329045c79f57252d61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c5534c1946cc07e35f64ab3baf3654a589a60706
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194296"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017155"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Загрузка документов в библиотеку SharePoint (службы Reporting Services в режиме SharePoint)
   Можно передать определения отчета и модели отчета в библиотеку SharePoint. При передаче элемента сервера отчетов необходимо выбрать библиотеку или папку внутри библиотеки. Невозможно передать элемент сервера отчетов в список или на страницу.  
@@ -28,7 +28,7 @@ ms.locfileid: "48194296"
  Передача RDS-файла источника данных невозможна. Однако можно опубликовать RDS-файлы с помощью средства проектирования, такого как конструктор отчетов, для включения в библиотеку SharePoint. Во время публикации новый RSDS-файл создается из исходного RDS-файла в решении. Можно также создать новый RSDS-файл в библиотеке SharePoint, а потом установить свойства соединения с источником данных в передаваемых отчетах и моделях, чтобы использовать новое соединение.  
   
 > [!NOTE]  
->  Необходимо настроить сервер отчетов для работы в режиме интеграции с SharePoint, а экземпляр продукта SharePoint должен иметь надстройку служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], которая предоставляет файлы программ для хранения и доступа к элементам сервера отчетов с веб-сайта SharePoint.  
+>  Необходимо настроить сервер отчетов для работы в режиме интеграции с SharePoint, а экземпляр продукта SharePoint должен иметь надстройку служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , которая предоставляет файлы программ для хранения и доступа к элементам сервера отчетов с веб-сайта SharePoint.  
   
  Чтобы передать документ в библиотеку, необходимо обладать разрешением на добавление элементов на уровне веб-сайта. При использовании настроек безопасности по умолчанию это разрешение предоставляется членам группы **Владельцы** , которые обладают разрешением уровня «Полный контроль» и группе **Члены** , которая обладает разрешением уровня «Участие».  
   
@@ -49,8 +49,8 @@ ms.locfileid: "48194296"
  Отчет может содержать параметры, поэтому пользователи могут фильтровать данные. Можно настроить параметры на использование конкретных значений или изменить способ их представления для пользователя. Дополнительные сведения см. в разделе [Настройка параметров опубликованного отчета (службы Reporting Services в режиме интеграции с SharePoint)](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ## <a name="see-also"></a>См. также  
- [Публикация отчета в библиотеку SharePoint](reports/publish-a-report-to-a-sharepoint-library.md)   
- [Публикация общего источника данных в библиотеку SharePoint](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [опубликовать отчет в библиотеке SharePoint](reports/publish-a-report-to-a-sharepoint-library.md)   
+ [опубликовать общий источник данных в библиотеке SharePoint](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 00094e630c9beaf7f5093d944f267a2884c22da7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7c6cb19da853387f4684c301e183276a0f4b7e96
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059350"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027675"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Элементы отчета и наборы данных в построителе отчетов
   В построителе отчетов самым простым способом включения данных в отчет является добавление элементов отчета из коллекции элементов отчета. Части отчетов содержат наборы данных, от которых они зависят, так называемые *зависимые наборы данных*. Зависимые наборы данных основываются на общих источниках данных и могут быть внедренными и общими.  
@@ -63,7 +63,7 @@ ms.locfileid: "48059350"
 ## <a name="see-also"></a>См. также  
  [Представление конструктора отчетов (построитель отчетов)](../report-builder/report-design-view-report-builder.md)   
  [Безопасность (построитель отчетов)](../report-builder/security-report-builder.md)   
- [Элементы отчета &#40;построитель отчетов и службы SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Элементы отчета (построитель отчетов и службы SSRS)](../report-parts-report-builder-and-ssrs.md)   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

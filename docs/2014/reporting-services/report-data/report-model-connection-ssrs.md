@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: da880fb8-13cc-4d5f-b992-91ed0ec3ca7d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d1b1355893e9134723e9f073327b3da1d4803cf9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 4272c50784f3e445a936bc1b39b267424d639563
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359026"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018216"
 ---
 # <a name="report-model-connection-ssrs"></a>Соединение с моделью отчета (службы SSRS)
   Для включения данных из модели отчета необходимо использовать в качестве источника данных набор данных на основе модели отчета. В отличие от других источников данных отчета, для модели отчета не существует модуля обработки данных. В построителе отчетов необходимо перейти на сервер отчетов и выбрать модель. В конструкторе отчетов можно указать URL-адрес для модели отчета.  

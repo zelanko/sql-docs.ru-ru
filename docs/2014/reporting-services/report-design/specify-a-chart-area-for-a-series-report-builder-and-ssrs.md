@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 34337c9418151e873726e5b04fd62e41f18c004c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8578b33bb47a6bcf8c38ae091c4e959085c30b06
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100330"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020734"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>Задание области диаграммы для ряда (построитель отчетов и службы SSRS)
   Диаграмма является контейнером верхнего уровня, который включает внешнюю границу, заголовок диаграммы и условные обозначения. По умолчанию диаграмма содержит одну область диаграммы. Область диаграммы невидима на самой диаграмме, но ее можно считать контейнером, охватывающим только метки осей, заголовки осей и область построения одного или нескольких рядов. На следующем рисунке представлено понятие областей диаграммы с одной диаграммой.  
@@ -44,11 +44,11 @@ ms.locfileid: "48100330"
 4.  Выровняйте области диаграммы по вертикали (необязательно). Для этого щелкните диаграмму правой кнопкой мыши и выберите **Свойства области диаграммы**. На вкладке **Выравнивание**выберите область диаграммы, с которой нужно выровнять выбранную область.  
   
 ## <a name="see-also"></a>См. также  
- [Несколько рядов на диаграмме &#40;построитель отчетов и службы SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
- [Форматирование точек данных на диаграмме &#40;построитель отчетов и службы SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Несколько рядов на диаграмме (построитель отчетов и службы SSRS)](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+ [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Задание цветов диаграммы с помощью палитры &#40;построитель отчетов и службы SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Полярные диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
- [Фигурные диаграммы &#40;построитель отчетов и службы SSRS&#41;](shape-charts-report-builder-and-ssrs.md)   
- [Круговые диаграммы &#40;построитель отчетов и службы SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
+ [Фигурные диаграммы (построитель отчетов и службы SSRS)](shape-charts-report-builder-and-ssrs.md)   
+ [Круговые диаграммы (построитель отчетов и службы SSRS)](pie-charts-report-builder-and-ssrs.md)  
   
   

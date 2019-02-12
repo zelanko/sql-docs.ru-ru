@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d6f4508dda8496d9065655f5a8e298feaa4e9ad3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e7f600e646e4690ed735b908861bd61516337cfd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134035"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042865"
 ---
 # <a name="limit-report-history-report-manager"></a>Ограничение размеров журнала отчета (диспетчер отчетов)
   Журнал отчета — это коллекция моментальных снимков отчета, созданных на протяжении определенного времени. Можно создавать журнал отчета по запросу или определить в расписании, насколько часто должен создаваться моментальный снимок и добавляться к журналу.  
@@ -48,7 +48,7 @@ ms.locfileid: "48134035"
 4.  Выберите параметры отчета и нажмите кнопку **Применить**. Подробные сведения о каждом параметре см. в разделе [Страница "Свойства параметров моментального снимка" (диспетчер отчетов)](../snapshot-options-properties-page-report-manager.md).  
   
 ## <a name="see-also"></a>См. также  
- [Добавление моментального снимка к журналу отчета &#40;диспетчера отчетов&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Добавление моментального снимка к журналу отчета (диспетчер отчетов)](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Диспетчер отчетов (службы SSRS в собственном режиме)](../report-manager-ssrs-native-mode.md)  
   
   

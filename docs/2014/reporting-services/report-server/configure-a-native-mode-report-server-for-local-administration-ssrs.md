@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f9dc5d0ae36feb5801f026f0fca77683004e23b3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 42df5757bab7028acebf5213bda35a7466010c40
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400547"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043355"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (SSRS)
   Развертывание сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в одной из следующих операционных систем требует дополнительных шагов настройки, если вы желаете управлять экземпляром этого сервера локально. Данная тема объясняет как настроить сервер отчетов для локального администрирования. Если вы еще не установили или сервер отчетов, см. в разделе [Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) и [управление собственный режим сервера отчетов служб отчетов](manage-a-reporting-services-native-mode-report-server.md).  

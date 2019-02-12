@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 73e2eae28d1c906e065b205e5964081e52da6ac9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 46b6a89d5ce643aa67f3f514052c19ea77e6e72e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374126"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035645"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Максимальные размеры отчетов и моментальных снимков
   Администраторы, которые управляют развертыванием служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , могут использовать этот раздел, чтобы получить основные сведения об ограничениях максимального размера отчета при публикации на сервере отчетов, о подготовке к просмотру во время выполнения и сохранении в файловой системе. В этом разделе содержатся практические рекомендации по определению размера базы данных сервера отчетов, а также описывается влияние размера моментальных снимков на производительность сервера.  

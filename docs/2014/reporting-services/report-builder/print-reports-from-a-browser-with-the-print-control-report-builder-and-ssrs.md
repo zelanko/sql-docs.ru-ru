@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ea05556d69c40a18494d0b5600e05399a0da632b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d37179fe54d133268732065a51bbd299c2379418
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110734"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030395"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Печать отчетов из браузера с помощью элемента управления печатью (построитель отчетов и службы SSRS)
   Хотя браузер является наиболее популярным средством просмотра отчетов, его функции печати могут оказаться недостаточными для печати отчетов. Функции печати браузера предназначены для печати веб-страниц. Как правило, страницы, печатаемые из браузера, включают все визуальные элементы веб-страницы, а также содержимое верхнего и нижнего колонтитулов, идентифицирующее веб-сайт. При печати из браузера на печать выводится содержимое текущего окна. В случае многостраничных отчетов браузер печатает первую страницу, если ее размеры не выходят за пределы области печати. Остальные страницы напечатаны не будут.  
@@ -42,6 +42,6 @@ ms.locfileid: "48110734"
   
 ## <a name="see-also"></a>См. также  
  [Печать отчетов (построитель отчетов и службы SSRS)](print-reports-report-builder-and-ssrs.md)   
- [Печать отчета &#40;построитель отчетов и службы SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
+ [Печать отчета (построитель отчетов и службы SSRS)](print-a-report-report-builder-and-ssrs.md)  
   
   

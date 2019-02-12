@@ -2,10 +2,9 @@
 title: sys.database_service_objectives (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/30/2016
-ms.prod: ''
+ms.service: sql-database
 ms.prod_service: sql-database, sql-data-warehouse
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: conceptual
 keywords:
 - пул эластичных баз данных
@@ -17,12 +16,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: a8b37ada1fa7c6024a5454ed907b886e513c151c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a073dba8a05aa6f098bdf2b2ce1666d4cc324be
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769312"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028525"
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47769312"
 Возвращает выпуск (уровень служб), цель обслуживания (ценовой категории) и имя эластичного пула, если таковые имеются, для базы данных Azure SQL или хранилище данных SQL Azure. Если вход в базу данных master на сервере базы данных SQL Azure, возвращает сведения обо всех базах данных. Для хранилища данных SQL Azure должны быть подключены к базе данных master.  
   
   
- Сведения о ценах см. в разделе [параметры базы данных SQL и производительность: цен на базу данных SQL](https://azure.microsoft.com/pricing/details/sql-database/) и [ценами на хранилище данных SQL](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
+ Сведения о ценах см. в разделе [параметры базы данных SQL и производительность: Цены на базы данных SQL](https://azure.microsoft.com/pricing/details/sql-database/) и [цены на хранилище данных SQL](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
   
  Чтобы изменить параметры службы, см. в разделе [ALTER DATABASE (база данных SQL Azure)](../../t-sql/statements/alter-database-azure-sql-database.md) и [ALTER DATABASE (хранилище данных SQL Azure)](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).  
   
@@ -39,7 +38,7 @@ ms.locfileid: "47769312"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |database_id|ssNoversion|Идентификатор базы данных, уникальный внутри экземпляра сервера базы данных SQL Azure. Присоединяемая с [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
-|edition|sysname|Уровень служб для базы данных или хранилища данных: **основные**, **стандартный**, **уровня "премиум"** или **хранилище данных**.|  
+|edition|sysname|Уровень обслуживания для базы данных или хранилища данных: **Основные**, **стандартный**, **уровня "премиум"** или **хранилище данных**.|  
 |параметр service_objective|sysname|Ценовая категория базы данных. Если база данных в эластичном пуле, возвращает **ElasticPool**.<br /><br /> На **основные** tier, возвращает **основные**.<br /><br /> **Отдельная база данных в категории "стандартный"** возвращает одно из следующих: S0, S1, S2, S3, S4, S6, S7, S9 и S12.<br /><br /> **Отдельной базы данных уровня "премиум"** возвращает из следующих: P1, P2, P4, P6, P11 или P15.<br /><br /> **Хранилище данных SQL** возвращает DW100 через DW10000c.|  
 |elastic_pool_name|sysname|Имя [эластичного пула](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) , к которой принадлежит базе данных. Возвращает **NULL** база данных находится в отдельной базы данных или warehoue данных.|  
   

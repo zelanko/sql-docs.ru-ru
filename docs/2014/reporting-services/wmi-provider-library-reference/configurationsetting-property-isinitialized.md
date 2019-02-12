@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 0c52c4f9-784d-412e-aac1-888179ba549f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e7cc5f323e42d79d3954d3eea7009b34eddcc941
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 740c172ebc3248aabf4841fc2dd92c39531fd545
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201914"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021625"
 ---
 # <a name="isinitialized-property-wmi-msreportserverconfigurationsetting"></a>Свойство IsInitialized (WMI MSReportServer_ConfigurationSetting)
   Указывает, инициализирован ли экземпляр сервера отчетов. Только для чтения.  
@@ -48,7 +48,7 @@ public Boolean DatabaseLogonName;
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

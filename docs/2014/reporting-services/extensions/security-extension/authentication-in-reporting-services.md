@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5088cabad39f75fb1becd65a21c84133608e9a2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2ce82cc9bfb8b3f88934499db4e9295903b67702
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093324"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043205"
 ---
 # <a name="authentication-in-reporting-services"></a>Проверка подлинности в службах Reporting Services
   Проверка подлинности — это процесс определения прав пользователя на удостоверение. Чтобы проверить подлинность, можно использовать много методов. Самым распространенным является использование паролей. Например, если разрабатывается проверка подлинности с помощью форм, необходима реализация, которая запрашивает у пользователей учетные данные (обычно с помощью интерфейса, который запрашивает имя и пароль), а затем проверяет пользователей по хранилищу данных, которым может быть таблица, база данных или файл конфигурации. Если не удается проверить учетные данные, то процесс проверки подлинности завершается неуспешно и для пользователя принимается анонимное удостоверение.  

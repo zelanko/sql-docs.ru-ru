@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 101d5ba77dce4ef384e1d9ade52e8e847828d685
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e35d5ae9390a6b316ec41ce20a2983c1c78a1696
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532413"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029535"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Очистка данных с использованием знаний о справочных данных (внешних знаний)
   В этом разделе описывается очистка данных с использованием набора знаний из поставщиков ссылочных данных. Все этапы очистки данных с использованием набора знаний из поставщиков эталонных данных точно такие же, как описано в разделе [Очистка данных с использованием набора знаний служб DQS &#40;внутренних&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md), а в этом разделе приведены сведения по очистке данных с использованием службы эталонных данных в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  

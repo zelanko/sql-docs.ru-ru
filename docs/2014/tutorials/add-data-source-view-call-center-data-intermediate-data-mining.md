@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a448e7e4-dbd1-4d31-90bc-4d4a1c23b352
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f212c6436af0e35c7cfaceadf8c519765d0a07a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5da7978db04b0fdf6e1d4f7740857fc5c0cf90ed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171954"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035045"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>Добавление представления источников данных для данных Call Center (учебник по интеллектуальному анализу данных — средний уровень)
   В этой задаче добавляется представление источника данных, которое будет использоваться для доступа к данным центра обработки вызовов. Для построения исходной модели нейронной сети, предназначенной для исследования, и модели логистической регрессии, с помощью которой будут даваться рекомендации, будут использоваться одни и те же данные.  

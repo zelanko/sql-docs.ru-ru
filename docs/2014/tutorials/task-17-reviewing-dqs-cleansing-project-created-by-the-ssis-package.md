@@ -1,24 +1,21 @@
 ---
-title: 'Задача 17: Обзор очистки проекта DQS, созданного пакетом служб SSIS | Документация Майкрософт'
+title: Задача 17. Обзор DQS очистки проекта, созданного пакетом служб SSIS | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fc6cc258-72f5-4593-8edb-9f5bc66de9db
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 658f85207c2c20b86787fab8593973de7b88e13c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4653ce040e19b82b9e70daa7ebfc02047d71b194
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171464"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024445"
 ---
 # <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>Задача 17. Обзор проекта очистки данных DQS, созданного пакетом служб SSIS
   В этой задаче вы откроете проект служб DQS, созданный пакетом служб SSIS в клиенте DQS, просмотрите результаты очистки и при желании выполните интерактивную очистку и экспортируете результаты.  
@@ -29,7 +26,7 @@ ms.locfileid: "48171464"
   
 3.  Сортировать список по **время начала действия** Чтобы получить последнюю запись.  
   
-4.  Обратите внимание, что имя проекта в следующем формате: **CleanseAndCurate.Cleanse Supplier Data.GUID**.  
+4.  Обратите внимание, что имя проекта отображается в следующем формате: **CleanseAndCurate.Cleanse Supplier Data.GUID**.  
   
      ![Проект очистки DQS, созданный пакетом SSIS](../../2014/tutorials/media/et-reviewingdqscpcreatedbythessispackage.jpg "проект очистки DQS, созданный пакетом служб SSIS")  
   
@@ -41,7 +38,7 @@ ms.locfileid: "48171464"
   
 8.  На главной странице **клиента DQS**, нажмите кнопку **открыть проект качества данных** в **проекты качества данных** области.  
   
-9. В списке проектов выберите проект, созданный компонентом «Очистка данных DQS» пакета служб SSIS. Имя проекта должно быть в формате: **CleanseAndCurate.Cleanse Supplier Data.GUID (красным цветом)**. Может потребоваться отсортировать список по **Дата создания** столбца и найти последнюю запись.  
+9. В списке проектов выберите проект, созданный компонентом «Очистка данных DQS» пакета служб SSIS. Имя проекта должно быть в формате:  **CleanseAndCurate.Cleanse Supplier Data.GUID (красным цветом)**. Может потребоваться отсортировать список по **Дата создания** столбца и найти последнюю запись.  
   
 10. Нажмите кнопку **Далее**.  
   

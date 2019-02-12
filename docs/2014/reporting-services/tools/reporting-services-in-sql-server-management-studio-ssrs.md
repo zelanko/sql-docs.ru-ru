@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f6cbd9cc0723f6b1ce01799423a88c6a0f62e801
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d11f943dcbe22080609c8e10a457e2c64d904de2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132190"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036765"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Службы Reporting Services в среде SQL Server Management Studio (SSRS)
   Администраторы сервера отчетов могут использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , чтобы сделать следующее:  
@@ -37,13 +37,13 @@ ms.locfileid: "48132190"
   
 -   [Подключение к серверу отчетов в среде Management Studio](connect-to-a-report-server-in-management-studio.md)  
   
--   [Установка свойств сервера отчетов &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)  
+-   [Установка свойств сервера отчетов (среда Management Studio)](set-report-server-properties-management-studio.md)  
   
--   [Создание, удаление и изменение ролей &#40;Management Studio&#41;](../security/role-definitions-create-delete-or-modify.md)  
+-   [Создание, удаление и изменение ролей (среда Management Studio)](../security/role-definitions-create-delete-or-modify.md)  
   
 -   [Удаление элемента &#40;Management Studio&#41;](delete-an-item-management-studio.md)  
   
--   [Отмена заданий сервера отчетов &#40;Management Studio&#41;](cancel-report-server-jobs-management-studio.md)  
+-   [Отмена заданий сервера отчетов (среда Management Studio)](cancel-report-server-jobs-management-studio.md)  
   
 ## <a name="see-also"></a>См. также  
  [Справка F1 по использованию сервера отчетов среде Management Studio](report-server-in-management-studio-f1-help.md)   

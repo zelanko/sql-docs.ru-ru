@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 53d141d0-2185-466a-84dc-7b90d284da3d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d0ab2fc2b4411fa97f99b2888142ad7783d9b514
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cf4880c3f979bbafaa1591fb21d29501c581deb9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219444"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031355"
 ---
 # <a name="using-custom-assemblies-with-reports"></a>Использование пользовательских сборок с отчетами
   В службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно создавать пользовательский код для значений элементов отчета, стилей и форматирования. Так, пользовательский код можно использовать для форматирования валют в зависимости от настроек локали, для применения к определенным значениям специальных методов форматирования или для использования других бизнес-правил, установленных в конкретной компании. В частности, можно включить такой код в отчеты, создав пользовательскую сборку кода с помощью среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], на которую можно будет сослаться из файлов определения отчета. Сервер вызывает функции пользовательских сборок при выполнении отчета. Пользовательские сборки можно применять для получения значений специализированных функций, которые намечено использовать в отчетах.  
@@ -45,7 +45,7 @@ ms.locfileid: "48219444"
  [Инициализация объектов пользовательских сборок](initializing-custom-assembly-objects.md)  
  Описывает способ инициализации значений для объектов пользовательских сборок, вызываемых из отчета.  
   
- [Руководство. Отладка пользовательских сборок](how-to-debug-custom-assemblies.md)  
+ [Как Отладка пользовательских сборок](how-to-debug-custom-assemblies.md)  
  Описывает способ отладки кода пользовательских сборок.  
   
 ## <a name="see-also"></a>См. также  

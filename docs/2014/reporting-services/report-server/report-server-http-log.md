@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6b990f4a2dbf321b20d9d8e45ecf13b3ede47987
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9eb3cd35267075b6228df993f31dbec021b681bf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147874"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031375"
 ---
 # <a name="report-server-http-log"></a>Журнал HTTP-запросов сервера отчетов
   В файлах журнала HTTP сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] хранится информация для каждого HTTP-запроса и ответа, обработанного сервером отчетов. Сообщения об ошибках, связанных с переполнением очереди запросов и временем ожидания, не достигают сервера отчетов, поэтому не регистрируются в файле журнала.  
@@ -55,9 +55,9 @@ ms.locfileid: "48147874"
 ```  
   
 ## <a name="log-file-fields"></a>Поля файла журнала  
- В следующей таблице описаны поля, доступные в журнале. Настраивается список полей; можно указать, какие поля необходимо включить через `HTTPTraceSwitches` параметр конфигурации. **По умолчанию** столбца указывает ли поле будет включаться в файл журнала автоматически, если вы не укажете `HTTPTraceSwitches`.  
+ В следующей таблице описаны поля, доступные в журнале. Список полей можно изменить. С помощью параметра конфигурации `HTTPTraceSwitches` можно указать, какие поля необходимо включить. **По умолчанию** столбца указывает ли поле будет включаться в файл журнала автоматически, если вы не укажете `HTTPTraceSwitches`.  
   
-|Поле|Описание|По умолчанию|  
+|Поле|Описание|Значение по умолчанию|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Это значение является необязательным. Значением по умолчанию является ReportServerServiceHTTP_. Можно указать другое значение, если требуется использовать другое соглашение об именах (например, чтобы включить имя сервера, если файлы журналов сохраняются в каком-то централизованном расположении).|Да|  
 |HTTPTraceSwitches|Это значение является необязательным. Если указан этот параметр, можно настроить поля, используемые в файле журнала, в формате с разделителями-запятыми.|Нет|  
@@ -82,6 +82,6 @@ ms.locfileid: "48147874"
 ## <a name="see-also"></a>См. также  
  [Журнал трассировки службы сервера отчетов](report-server-service-trace-log.md)   
  [Файлы и источники журналов служб Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
- [Ошибки и события &#40;службы Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [Справочник по ошибкам и событиям (службы Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

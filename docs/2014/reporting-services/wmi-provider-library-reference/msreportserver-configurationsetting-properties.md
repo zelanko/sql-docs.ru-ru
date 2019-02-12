@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: e75fe1e5-197b-4c65-859b-370821cad003
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e6a022b50d4fb37474ba1183abc432ca4a7de463
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bf1d2d6a884f3751cd2d252bbba38d62aeea5bf9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080824"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023725"
 ---
 # <a name="msreportserverconfigurationsetting-properties"></a>Свойства MSReportServer_ConfigurationSetting
   Класс MSReportServer_ConfigurationSetting представляет установочные параметры и параметры времени выполнения для экземпляра сервера отчетов. Эти параметры хранятся в файле конфигурации RSReportServer.config.  
@@ -47,7 +47,7 @@ ms.locfileid: "48080824"
 |[IsSharePointIntegrated](configurationsetting-property-issharepointintegrated.md)|Показывает, настроен ли сервер отчетов в режиме интеграции для SharePoint.|  
 |[IsWebServiceEnabled](configurationsetting-property-iswebserviceenabled.md)|Указывает, включена ли веб-служба сервера отчетов. Только для чтения.|  
 |[IsWindowsServiceEnabled](configurationsetting-property-iswindowsserviceenabled.md)|Указывает, включена ли служба Windows сервера отчетов. Только для чтения.|  
-|[Свойство MachineAccountIdentity &#40;WMI&#41;](configurationsetting-property-machineaccountidentity.md)|Возвращает удостоверение учетной записи компьютера, на котором установлен сервер отчетов.|  
+|[Свойство MachineAccountIdentity (WMI)](configurationsetting-property-machineaccountidentity.md)|Возвращает удостоверение учетной записи компьютера, на котором установлен сервер отчетов.|  
 |[PathName](configurationsetting-property-pathname.md)|Задает путь установки для экземпляра сервера отчетов.|  
 |[SecureConnectionLevel](configurationsetting-property-secureconnectionlevel.md)|Возвращает уровень безопасного соединения, заданный в файле RSReportServer.config.|  
 |[SenderEmailAddress](configurationsetting-property-senderemailaddress.md)|Возвращает адрес, используемый для отправки электронной почты с сервера отчетов. Только для чтения.|  
@@ -55,8 +55,8 @@ ms.locfileid: "48080824"
 |[SMTPServer](configurationsetting-property-smtpserver.md)|Возвращает свойство SMTP-сервера из файла RSReportServer.config. Только для чтения.|  
 |[UnattendedExecutionAccount](configurationsetting-property-unattendedexecutionaccount.md)|Указывает учетную запись пользователя для входа, олицетворение которой выполняет сервер отчетов во время автоматического выполнения отчетов. Только для чтения.|  
 |[Версия](configurationsetting-property-version.md)|Возвращает версию сервера отчетов.|  
-|[Свойство VirtualDirectoryReportManager &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-property-virtualdirectoryreportmanager.md)|Возвращает виртуальный каталог для приложения диспетчера отчетов.|  
-|[Свойство VirtualDirectoryReportServer &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-property-virtualdirectoryreportserver.md)|Возвращает виртуальный каталог для приложения веб-службы сервера отчетов.|  
+|[Свойство VirtualDirectoryReportManager (WMI MSReportServer_ConfigurationSetting)](configurationsetting-property-virtualdirectoryreportmanager.md)|Возвращает виртуальный каталог для приложения диспетчера отчетов.|  
+|[Свойство VirtualDirectoryReportServer (WMI MSReportServer_ConfigurationSetting)](configurationsetting-property-virtualdirectoryreportserver.md)|Возвращает виртуальный каталог для приложения веб-службы сервера отчетов.|  
 |[WindowsServiceIdentityActual](configurationsetting-property-windowsserviceidentityactual.md)|Возвращает удостоверение, с которым фактически выполняется служба Windows сервера отчетов. Только для чтения.|  
 |[WindowsServiceIdentityConfigured](windowsserviceidentityconfigured-property.md)|Возвращает удостоверение, для выполнения с которым была в последний раз настроена служба Windows сервера отчетов. Только для чтения.|  
   

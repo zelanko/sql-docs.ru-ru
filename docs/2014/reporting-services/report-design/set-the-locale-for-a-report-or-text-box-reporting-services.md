@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: df115b01-184b-47f0-b5ec-0ad965ff9bee
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1526eeef7e28ea9994aa833d8272b177852ba5fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1d2552c441a17f3d79c3db0d06a0b128618503d9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067284"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027095"
 ---
 # <a name="set-the-locale-for-a-report-or-text-box-reporting-services"></a>Задание локали для отчета или текстового поля (службы Reporting Services)
   Свойство **Язык** отчета или текстового поля содержит параметр локали, определяющий форматы по умолчанию для отображения данных отчета, зависящих от языка и региона, например даты, валюты или числовых значений. Свойство **Язык** текстового поля переопределяет свойство **Язык** отчета. Если для свойства **Язык**не указано значения, то службы Reporting Services используют языковой стандарт операционной системы сервера отчетов для опубликованных отчетов и локаль компьютера, на котором создается отчет, при предварительном просмотре отчета.  
   
  При работе с отчетами в формате HTML значение свойства **Язык** по умолчанию можно переопределить и использовать язык, указанный в заголовке HTTP клиентского браузера, использовав встроенное поле User!Language в выражении для свойства **Язык** отчета или текстового поля.  
   
- Также свойство **Язык** для отчета можно указать в URL-адресе. Дополнительные сведения см. в разделе [выбранный язык для параметров отчета в URL-адрес](../set-the-language-for-report-parameters-in-a-url.md).  
+ Также свойство **Язык** для отчета можно указать в URL-адресе. Дополнительные сведения см. в статье [Задание языка для параметров отчета в URL-адресе](../set-the-language-for-report-parameters-in-a-url.md).  
   
 ### <a name="to-set-the-locale-for-a-report"></a>Назначение локали для отчета  
   
@@ -52,6 +52,6 @@ ms.locfileid: "48067284"
     -   Для свойства **UnicodeBiDi** выберите уровень внедрения разнонаправленного текста в текстовом поле.  
   
 ## <a name="see-also"></a>См. также  
- [Использование выражений в отчетах &#40;построитель отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [Использование выражений в отчетах (построитель отчетов и службы SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
   

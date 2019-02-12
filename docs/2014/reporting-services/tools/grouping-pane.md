@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 70301dae9505cce59e924cd37149e32314f6868d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fe230d9e3ed5259da9decc87e044005184b7d989
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204674"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043185"
 ---
 # <a name="grouping-pane"></a>Панель группировки
   На панели группировки отображаются группы строк и столбцов для текущей области данных табликса. Панель группирования недоступна для областей данных диаграммы и датчика. Панель группирования состоит из панелей «Группы строк» и «Группы столбцов». Панель группировки: по умолчанию и расширенный. В режиме по умолчанию отображается иерархическое представление динамических элементов групп строк и столбцов. В расширенном режиме отображаются как динамические, так и статические элементы групп строк и столбцов. Группа – это именованный набор данных из набора данных отчета, который отображается в области данных. Группы организованы в иерархии, включающие динамические и статические элементы. Дополнительные сведения см. в разделе [Основные сведения о группах (построитель отчетов и службы SSRS)](../report-design/understanding-groups-report-builder-and-ssrs.md).  
@@ -83,6 +83,6 @@ ms.locfileid: "48204674"
 ## <a name="see-also"></a>См. также  
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Выражения (построитель отчетов и службы SSRS)](../report-design/expressions-report-builder-and-ssrs.md)   
- [Фильтрация, группирование и сортировка данных &#40;построитель отчетов и службы SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

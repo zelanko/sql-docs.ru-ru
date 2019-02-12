@@ -1,24 +1,23 @@
 ---
-title: 'Занятие 4: Изучение моделей целевой рассылки (учебник интеллектуального анализа данных) | Документация Майкрософт'
+title: Урок 4. Изучение моделей целевой рассылки (учебник интеллектуального анализа данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1e00c5b9-a9f8-4503-99ee-377c9cc02d7f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 820a65ce9d45a72fe6a7629aebb7bb10374dbfae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 97db61dc3b9adf2e345957c8e08aa752e51286e0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147322"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039905"
 ---
-# <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>Занятие 4: Изучение моделей целевой рассылки (учебник интеллектуального анализа данных)
+# <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>Урок 4. Изучение моделей целевой рассылки (учебник по интеллектуальному анализу данных — начальный уровень)
   После обработки моделей в проекте, можно исследовать их для поиска интересующих трендов. Так как шаблоны могут быть сложными и трудно, просто взглянув на номера, SQL Server Data Mining предоставляет некоторые визуальные средства, которые помогают исследовать данные и пониманию правил и связей, которые алгоритмы обнаруживают в данных. Точность тестов может использоваться для проверки набора данных или определить, какая модель работает лучше, перед его развертыванием.  
   
  При использовании [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для анализа моделей каждая создаваемая модель отображается в **просмотра моделей интеллектуального анализа** вкладку в конструкторе интеллектуального анализа данных. Для исследования моделей можно использовать средства просмотра. Эти средства просмотра также доступны в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -49,13 +48,13 @@ ms.locfileid: "48147322"
  [Изучение модели дерева принятия решений &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-lesson"></a>Предыдущее занятие  
- [Урок 3. Добавление и обработка моделей](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
+ [Занятие 3. Добавление и обработка моделей](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 5: Тестирование моделей &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
+ [Занятие 5. Проверка моделей &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>См. также  
- [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Средства просмотра моделей интеллектуального анализа данных](../../2014/analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

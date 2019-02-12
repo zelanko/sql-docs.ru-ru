@@ -1,11 +1,10 @@
 ---
-title: 'Занятие 2: Построение сценария прогнозирования (учебник по интеллектуальному анализу интеллектуальному анализу данных) | Документация Майкрософт'
+title: Занятие 2. Построение сценария прогнозирования (учебник по интеллектуальному анализу интеллектуальному анализу данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - time series [Analysis Services]
@@ -14,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 9a988156-c900-4c22-97fa-f6b0c1aea9e2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 67e4843931587d9c627b229bc221a784237cc5d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ee814dc0891e70dfeccf2b96383d1d7b5c324aa8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122606"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020785"
 ---
-# <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>Занятие 2: Построение сценария прогнозирования (учебник по интеллектуальному анализу интеллектуальному анализу данных)
+# <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>Занятие 2. Построение сценария прогнозирования (учебник по интеллектуальному анализу данных — средний уровень)
   Предположим, что вы аналитик по сбыту в компании [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], получили задание составить прогноз продаж продуктов на следующий год. В частности, вам было предложено сравнить прогнозы для различных регионов и линеек продуктов. Кроме того, ему требуется понять, зависят ли продажи различных продуктов от времени года.  
   
- Для поиска необходимых сведений в этом занятии будут использованы помесячные данные о продажах организации. Кроме того, будут сведены данные по продажам в трех регионах: Европа, Северная Америка и Тихоокеанский регион.  
+ Для поиска необходимых сведений в этом занятии будут использованы помесячные данные о продажах компании. Кроме того, будут сведены данные по продажам в трех регионах: Европа, Северная Америка и Тихоокеанский регион.  
   
  В результате выполнения задач этого занятия будут получены ответы на следующие ниже вопросы.  
   
@@ -41,10 +40,10 @@ ms.locfileid: "48122606"
   
 -   Вторая часть содержит пошаговые указания по созданию общей модели временных рядов на основе всех регионов. Воспользуйтесь следующей общей модели для *перекрестного прогнозирования*.  
   
- Для выполнения задач этого занятия, перечисленных ниже, будет использоваться [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] источника данных, который был создан [занятии 1: Создание промежуточного решения интеллектуального анализа &#40;данных учебник по интеллектуальному анализу&#41; ](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md).  
+ Для выполнения задач этого занятия, перечисленных ниже, будет использоваться [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] источника данных, который был создан [занятии 1: Создание промежуточного решения интеллектуального анализа &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md).  
   
 > [!WARNING]  
->  Даты в [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] образца базы данных были обновлены для этого выпуска. При использовании более ранней версии [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] можно построить модель, выполнив эти действия, но полученные результаты могут оказаться другими.  
+>  Даты, используемые в образце базы данных [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] , изменены для этой версии. При использовании более ранней версии [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]можно построить модель, выполнив эти действия, но полученные результаты могут оказаться другими.  
   
  **Создание простой модели прогнозирования**  
   
@@ -76,18 +75,18 @@ ms.locfileid: "48122606"
  [Основные сведения о требования к временным рядам модели &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/time-series-model-requirements-intermediate-data-mining-tutorial.md)  
   
 ## <a name="all-lessons"></a>Все занятия  
- [Урок 1: Создание промежуточного решения интеллектуального анализа &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
+ [Занятие 1. Создание промежуточного решения интеллектуального анализа &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
   
- Урок 2. Сценарий прогнозирования (учебник по интеллектуальному анализу данных — средний уровень)  
+ Занятие 2. Прогнозирование сценария (учебник для интеллектуального анализа данных по интеллектуальному анализу данных)  
   
- [Занятие 3: Построение сценария потребительской корзины &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Занятие 3. Построение сценария потребительской корзины &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
- [Занятие 4: Построение сценария кластеризации последовательностей &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
+ [Занятие 4. Построение сценария кластеризации последовательностей &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
- [Занятие 5: Построение моделей логистической регрессии нейронной сети и &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Занятие 5. Построение моделей логистической регрессии нейронной сети и &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>См. также  
- [Учебник интеллектуального анализа данных](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Учебник по основам интеллектуального анализа данных](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Средний уровень учебник по интеллектуальному анализу данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [Алгоритм временных рядов (Майкрософт)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 30bd631a-f774-48e7-a13a-b6c2eb54d9bb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ebee6948403822d7e4a9f8d406d1000b27ee2468
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 147daad87bf9ec77d2c686d44d367e85a07ab4c8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182034"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043025"
 ---
 # <a name="add-html-into-a-report-report-builder-and-ssrs"></a>Добавление HTML в отчет (построитель отчетов и службы SSRS)
   С помощью заполнителя можно импортировать HTML из поля в наборе данных, чтобы использовать в отчете. По умолчанию заполнитель представляет простой текст, поэтому нужно изменить тип разметки заполнителя на HTML. Дополнительные сведения см. в разделе [Импорт HTML в отчет (построитель отчетов и службы SSRS)](importing-html-into-a-report-report-builder-and-ssrs.md).  
@@ -43,8 +43,8 @@ ms.locfileid: "48182034"
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Форматирование чисел и дат &#40;построитель отчетов и службы SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Форматирование чисел и дат (построитель отчетов и службы SSRS)](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Форматирование линий, цветов и изображений (построитель отчетов и службы SSRS)](images-report-builder-and-ssrs.md)   
- [Диалоговое окно "Свойства заполнителя" — "Общие" (построитель отчетов и службы SSRS)](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)  
+ [Диалоговое окно "Свойства заполнителя" — "Общие" (построитель отчетов и службы SSRS)](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

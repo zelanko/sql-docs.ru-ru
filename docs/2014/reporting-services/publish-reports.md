@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ef5a514e-e818-4041-a8b0-15835f9a046b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 39d5c0e2a09926c87669f537710cc44df76b30c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a19db72ae854ae3ffaf4b56587642ddb37e22e0d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200754"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032405"
 ---
 # <a name="publish-reports"></a>Публикация отчетов
-  Из[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], можно опубликовать либо все отчеты и общие источники данных в проекте сервера отчетов на сервере отчетов в процессе развертывания проекта, или можно опубликовать один отчет. Перед публикацией отчета необходимо указать URL-адрес целевого сервера отчетов. Дополнительные сведения см. в разделе [Задание свойства развертывания (службы Reporting Services)](tools/set-deployment-properties-reporting-services.md).  
+  Среда[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]позволяет опубликовать либо все отчеты и общие источники данных проекта "Сервер отчетов" на сервере отчетов в процессе развертывания проекта, либо один отчет. Перед публикацией отчета необходимо указать URL-адрес целевого сервера отчетов. Дополнительные сведения см. в разделе [Задание свойства развертывания (службы Reporting Services)](tools/set-deployment-properties-reporting-services.md).  
   
- Можно использовать [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] версии [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для открытия, изменения, предварительного просмотра, сохранения и публикации оба [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)] и [!INCLUDE[ssRSversion10](../includes/ssrsversion10-md.md)] отчеты. Дополнительные сведения см. в разделе [Развертывание и поддержка версий в SQL Server Data Tools (службы SSRS)](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+ Можно использовать версию [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для открытия, изменения, предварительного просмотра, сохранения и публикации отчетов как [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)] , так и [!INCLUDE[ssRSversion10](../includes/ssrsversion10-md.md)] . Дополнительные сведения см. в разделе [Развертывание и поддержка версий в SQL Server Data Tools (службы SSRS)](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 ### <a name="to-publish-all-reports-in-a-project"></a>Публикация всех отчетов в проекте  
   

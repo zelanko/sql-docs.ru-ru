@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9cedf942ea765bacd773e5183da6f6e6ada78a06
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 7f50c5e77e93fcddbf7eb6f1d16432dd54bc7625
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032112"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043095"
 ---
 # <a name="data-quality-client-application"></a>Клиентское приложение DQS
   Приложение [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] позволяет выполнять операции по обеспечению качества данных с помощью изолированного средства. Это приложение позволяет создавать базы знаний, создавать и выполнять проекты качества данных и выполнять административные задачи.  
@@ -37,7 +37,7 @@ ms.locfileid: "51032112"
 |-------------------------|-----------|  
 |Описывает использование баз знаний и доменов в DQS.|[Базы знаний и домены DQS](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)|  
 |Описывает очистку данных в DQS.|[Очистка данных](../../2014/data-quality-services/data-cleansing.md)|  
-|Описывает выполнение сопоставления в DQS.|[Сопоставление данных](../../2014/data-quality-services/data-matching.md)|  
+|Описывает выполнение сопоставления в DQS.|[Data Matching](../../2014/data-quality-services/data-matching.md)|  
 |Описывает администрирование DQS.|[Администрирование DQS](../../2014/data-quality-services/dqs-administration.md)|  
   
 ## <a name="see-also"></a>См. также  

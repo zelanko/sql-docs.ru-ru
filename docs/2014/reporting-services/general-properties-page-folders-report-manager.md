@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 31d99d9b-2303-4bae-9466-fb67b97cf11a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f8fca88baa1a3886f06e0c812164d0c759e7d835
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2181e4ab949eef70c5ba9cb06c4fc8cfe82435dc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156462"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031595"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>Страница свойств «Общие», папки (диспетчер отчетов)
   Для просмотра и установки свойств для создаваемых папок используется страница «Общие свойства». Данные о том, кто создал или изменил папку, а также о времени изменения папки отображаются в верхней части страницы свойств «Общие».  
@@ -35,7 +35,7 @@ ms.locfileid: "48156462"
 2.  Под баннером папки на панели инструментов нажмите **Настройки папки**.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **Name**  
  Задайте имя для папки. Имя должно содержать хотя бы одну букву или цифру. В него могут также входить пробелы и другие символы. Не используйте символы ; ? : \@ & = +, $ * \< > | "или / при указании имени.  
   
  **Описание**  
@@ -54,7 +54,7 @@ ms.locfileid: "48156462"
  Нажмите, чтобы переместить отчет или папку в пространстве имен сервера отчетов. При нажатии этой кнопки открывается страница «Переместить элементы», на которой можно просматривать папки для поиска нового местоположения папки.  
   
 ## <a name="see-also"></a>См. также  
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

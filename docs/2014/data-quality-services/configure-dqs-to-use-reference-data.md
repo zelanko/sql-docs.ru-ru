@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.administration.rdsconfiguration.f1
 - sql12.dqs.administration.configuration.createDirectRDS.f1
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: da0514f10e4669d5e1e0bd20469b5922d38f2d70
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c89d09d077a5b416d4afb46b195a03c5144c4108
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367256"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037245"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Настройка служб DQS для использования справочных данных
   В этом разделе описывается настройка служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) на использование ссылочных данных для очистки данных. Можно использовать ссылочные данные как из Windows Azure Marketplace, так и непосредственно от сторонних поставщиков ссылочных данных в сети.  
@@ -76,7 +76,7 @@ ms.locfileid: "53367256"
   
  Теперь службы ссылочных данных из настроенного стороннего поставщика служб ссылочных данных с непосредственным подключением по сети можно использовать в DQS.  
   
-##  <a name="FollowUp"></a> Дальнейшие действия: После настройки служб DQS на использование ссылочных данных  
+##  <a name="FollowUp"></a> Дальнейшие действия. После настройки служб DQS на использование ссылочных данных  
  Теперь необходимо сопоставить требуемые домены базы знаний со ссылочными данными, доступными в только что настроенных поставщиках данных. Чтобы сделать это, см. в разделе [Добавление домена или составного домена к ссылочным данным](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 549c40c4-d33d-46c2-9d6a-7bbb671ac67a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ac6f62a09e04aa589121864a789423e428a25511
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 1beb87fd647ccf033b40764d40cb8a3349d00fe3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362676"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019665"
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>Использование класса Notification для модуля доставки
   Класс <xref:Microsoft.ReportingServices.Interfaces.Notification> находится в пространстве имен <xref:Microsoft.ReportingServices.Interfaces> и представляет сведения о подписках, используемые модулями доставки при доставке отчетов. Класс <xref:Microsoft.ReportingServices.Interfaces.Notification> предоставляет ряд свойств, которые могут быть использованы при подготовке отчетов для доставки, при определении состояния уведомления и при указании пользовательских данных.  

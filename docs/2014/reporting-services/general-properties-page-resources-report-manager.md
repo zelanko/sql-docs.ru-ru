@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5b0ae98d40a6f5e1e2c830c2d5aca4cc1c99e230
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 122fb28e82050fc134b86c2dc79559dec8d02478
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181654"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032427"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Страница свойств «Общие», ресурсы (диспетчер отчетов)
   Страница свойств «Общие» для ресурсов служит для переименования, удаления, перемещения и замены ресурсов. В верхней части страницы отображаются сведения о том, кто добавил ресурс или изменил его свойства.  
@@ -35,7 +35,7 @@ ms.locfileid: "48181654"
 3.  В раскрывающемся меню выберите **Управление**. Откроется страница свойств ресурса «Общие».  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **Name**  
  Укажите имя ресурса. Имя должно содержать хотя бы одну букву или цифру. В него могут также входить пробелы и другие символы. Не используйте символы ; ? : \@ & = +, $ / * \< > | "или / при указании имени.  
   
  **Описание**  
@@ -60,7 +60,7 @@ ms.locfileid: "48181654"
  Нажмите, чтобы открыть страницу «Импорт ресурса», позволяющую выбрать файл ресурса в общей папке.  
   
 ## <a name="see-also"></a>См. также  
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Просмотр страницы, ресурсы &#40;диспетчера отчетов&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
  [Страница "Свойства безопасности", элементы (диспетчер отчетов)](../../2014/reporting-services/security-properties-page-items-report-manager.md)  

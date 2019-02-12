@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 50e0813f-f591-4688-9cd1-e6389a3808e5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2c71fd13052c02b36c7b725e4058fd827076d6a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 097a118a23bcec722710bc404e9e6452d6504b69
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058354"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032465"
 ---
 # <a name="high-availability-reporting-services"></a>Высокий уровень доступности (службы Reporting Services)
-  Сервер отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] является сервером без сохранения состояния, на котором в двух реляционных базах данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] хранятся данные приложений, содержимое, свойства и сведения о сеансах. Таким образом, лучший способ обеспечить доступность [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] функциональные возможности для следующих целей:  
+  Сервер отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] является сервером без сохранения состояния, на котором в двух реляционных базах данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] хранятся данные приложений, содержимое, свойства и сведения о сеансах. Лучшим способом обеспечить доступность функций служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] будут следующие действия.  
   
--   Используйте функцию высокого уровня доступности компонента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] для сокращения времени простоя баз данных сервера отчетов. Если вы настраиваете [!INCLUDE[ssDE](../includes/ssde-md.md)] экземпляра для запуска в отказоустойчивом кластере, при создании базы данных сервера отчетов, можно выбрать этот экземпляр.  
+-   Используйте функцию высокого уровня доступности компонента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] , чтобы максимально увеличить время работоспособности баз данных сервера отчетов. Если экземпляр компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] настроить для работы в отказоустойчивом кластере, при создании базы данных сервера отчетов можно выбрать этот экземпляр.  
   
 -   Для баз данных [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и для источников данных по возможности используйте [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../includes/sshadr-md.md)]. Дополнительные сведения см. в статье [Службы Reporting Services с группами доступности AlwaysOn (SQL Server)](../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md).  
   
@@ -39,6 +39,6 @@ ms.locfileid: "48058354"
   
 ## <a name="see-also"></a>См. также  
  [Решения высокого уровня доступности (SQL Server)](../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
- [Настройка масштабного развертывания сервера отчетов собственный режим &#40;диспетчер конфигурации служб SSRS&#41;](install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [Настройка масштабного развертывания сервера отчетов в основном режиме (диспетчер конфигурации служб SSRS)](install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
   
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.openkb.f1
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5baacbca2f7882314ac62c1ef98e22ba6eca9aa8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e7b217d8bc099924e89783492991bd12a2275adb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507545"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031235"
 ---
 # <a name="open-a-knowledge-base"></a>Открытие базы знаний
   В этом разделе описано, как открыть существующую базу знаний в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) и подготовить ее для управления доменами, обнаружения знаний или добавления политики сопоставления.  
@@ -68,7 +68,7 @@ ms.locfileid: "52507545"
   
 -   Чтобы открыть базу знаний из списка «Последние», заблокированную не вами, свяжитесь с выполнившим блокировку пользователем и попросите его разблокировать базу знаний.  
   
-##  <a name="FollowUp"></a> Дальнейшие действия: после открытия базы знаний  
+##  <a name="FollowUp"></a> Дальнейшие действия. после открытия базы знаний  
  После открытия базы знаний она переходит в состояние, указанное в столбце «Состояние» таблицы «База знаний». Для действий по обнаружению набора знаний и политикам сопоставления база знаний открывается на соответствующей странице мастера. Для действий по управлению доменами база знаний открывается на странице управления доменами. Дополнительные сведения см. в разделах [Обнаружение знаний](../../2014/data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../../2014/data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Locked"></a> Если база знаний заблокирована  

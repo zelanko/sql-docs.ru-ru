@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: da49fc88b7736bbe161bab4dfec39ab7fdb43c82
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: c85c464c6ebf32d81c08c319999aa2c6d8b1514c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350114"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043405"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)
   Точка данных является наименьшей неделимой сущностью диаграммы. Для нефигурных диаграмм представление точек данных зависит от типа диаграммы. Например, ряд графика состоит из одной или нескольких соединенных точек данных. Для фигурных диаграмм точки данных представляются отдельными срезами или сегментами, из которых состоит диаграмма. Например, для круговой диаграммы каждый из сегментов является точкой данных. Дополнительные сведения см. в разделе [Типы диаграмм (построитель отчетов и службы SSRS)](chart-types-report-builder-and-ssrs.md).  

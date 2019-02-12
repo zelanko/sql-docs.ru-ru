@@ -1,27 +1,26 @@
 ---
-title: 'Занятие 3: Доступ к веб-службы | Документация Майкрософт'
+title: Урок 3. Доступ к веб-службы | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c3e4c198-ab35-4548-9471-1b4e6b6e5dfd
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c93def5590b634d2fb3f8374b5fb875fd2d740eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108304"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024835"
 ---
 # <a name="lesson-3-accessing-the-web-service"></a>Урок 3. Доступ к веб-службе
-  После добавления в проект ссылки на веб-службу сервера отчетов будет создан экземпляр класса-посредника этой веб-службы. Теперь можно получить доступ к методам веб-службы путем вызова методов класса-посредника. Когда приложение вызывает эти методы, класса-посредника, код, сгенерированный [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] обрабатывает взаимодействие между приложением и веб-службы.  
+  После добавления в проект ссылки на веб-службу сервера отчетов будет создан экземпляр класса-посредника этой веб-службы. Теперь можно получить доступ к методам веб-службы путем вызова методов класса-посредника. Когда приложение вызывает эти методы, код класса-посредника, сформированный средой [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , обеспечивает соединения между приложением и веб-службой.  
   
- Во-первых, вы создадите экземпляр класса прокси-сервера веб службы, <xref:ReportService2010.ReportingService2010>. Затем с помощью класса-посредника нужно вызвать метод веб-службы <xref:ReportService2010.ReportingService2010.GetProperties%2A>. Вызов будет использован для получения имени и описания одного из образцов отчетов под названием Company Sales.  
+ Вначале нужно создать экземпляр класса-посредника веб-службы <xref:ReportService2010.ReportingService2010>. Затем с помощью класса-посредника нужно вызвать метод веб-службы <xref:ReportService2010.ReportingService2010.GetProperties%2A>. Вызов будет использован для получения имени и описания одного из образцов отчетов под названием Company Sales.  
   
 > [!NOTE]  
 >  Во время доступа к веб-службе, запущенной на сервере [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services, к пути «ReportServer» необходимо добавить выражение «$SQLExpress». Пример:  
@@ -114,17 +113,17 @@ ms.locfileid: "48108304"
   
 4.  Сохраните решение.  
   
- Пошаговое руководство в образце кода используется <xref:ReportService2010.ReportingService2010.GetProperties%2A> метод веб-службы для получения свойства образца отчета Company Sales 2012. <xref:ReportService2010.ReportingService2010.GetProperties%2A> Метод принимает два аргумента: имя отчета, для которого требуется извлечь сведения о свойствах, а также массив **Property []** объектов, содержащий имена свойств, значения которых требуется извлечь. Этот метод возвращает массив объектов **Property[]** , который содержит имена и значения свойств, указанных в аргументе свойств.  
+ В образце кода из этого пошагового руководства используется метод веб-службы <xref:ReportService2010.ReportingService2010.GetProperties%2A> для получения свойства образца отчета «Продажи компании в 2012 г.». <xref:ReportService2010.ReportingService2010.GetProperties%2A> Метод принимает два аргумента: имя отчета, для которого требуется извлечь сведения о свойствах, а также массив **Property []** объектов, содержащий имена свойств, значения которых требуется извлечь. Этот метод возвращает массив объектов **Property[]** , который содержит имена и значения свойств, указанных в аргументе свойств.  
   
 > [!NOTE]  
 >  Если в качестве аргумента свойств указать пустой массив **Property[]** , будут возвращены все доступные свойства.  
   
  В коде предыдущего примера используется метод <xref:ReportService2010.ReportingService2010.GetProperties%2A>, возвращающий имя и описание образца отчета «Продажи компании в 2012 г.». В этом коде используется цикл `foreach`, чтобы вывести свойства и значения на консоль.  
   
- Дополнительные сведения о создании и использовании класса-посредника для сервера веб-службы отчетов, см. в разделе [создание прокси веб-службы](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
+ Дополнительные сведения о создании и использовании класса-посредника для веб-службы сервера отчетов см. в разделе [Creating the Web Service Proxy](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
   
 ## <a name="see-also"></a>См. также  
- [Занятие 4: Запуск приложения &#40;VB VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   
+ [Занятие 4. Запуск приложения &#40;VB VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   
  [Доступ к веб-службы сервера отчетов, с помощью Visual Basic или Visual c#&#35; &#40;учебник по службам SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

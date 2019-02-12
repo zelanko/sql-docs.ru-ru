@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 16a1f51e5dec779dc185f1f1e4012a3d26069a40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0c84c1c87aa492ebc0643a72de863504eec883c6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081084"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041565"
 ---
 # <a name="previewing-reports-in-report-builder"></a>Предварительный просмотр отчетов в построителе отчетов
   При создании отчета полезно часто осуществлять предварительный просмотр, чтобы убедиться, что отчет отображает то, что нужно. Нажмите кнопку **Выполнить**для предварительного просмотра отчета. Отчет подготавливается к просмотру в режиме предварительного просмотра.  
@@ -82,6 +82,6 @@ ms.locfileid: "48081084"
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Диаграммы (построитель отчетов и службы SSRS)](../report-design/charts-report-builder-and-ssrs.md)   
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Сохранение отчетов &#40;построитель отчетов&#41;](saving-reports-report-builder.md)  
+ [Сохранение отчетов (построитель отчетов)](saving-reports-report-builder.md)  
   
   

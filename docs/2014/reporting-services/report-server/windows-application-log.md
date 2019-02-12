@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 83818feb28dbcda5f7ae981f440fd850ea59af7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 81ec8964de180ad4db9e4edd3e2c609d5ad56b63
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180874"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037305"
 ---
 # <a name="windows-application-log"></a>Журнал приложений Windows
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] записывают сообщения о событиях в журнал приложений Windows. Эти сообщения в журнале приложений можно использовать для определения событий, вызванных приложениями сервера отчетов, запущенными в локальной системе.  
   
 ## <a name="viewing-report-server-events"></a>Просмотр событий сервера отчетов  
- Программа просмотра событий позволяет просматривать данный журнал и фильтровать содержащиеся в нем сообщения. Дополнительные сведения о сообщениях о событиях см. в разделе [ошибки и события &#40;служб Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md). Дополнительные сведения о журнале приложений Windows и программе просмотра событий см. в документации по продуктам Windows.  
+ Программа просмотра событий позволяет просматривать данный журнал и фильтровать содержащиеся в нем сообщения. Дополнительные сведения о сообщениях о событиях см. в разделе [Справочник по ошибкам и событиям (службы Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md). Дополнительные сведения о журнале приложений Windows и программе просмотра событий см. в документации по продуктам Windows.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют три источника событий:  
   
@@ -50,6 +50,6 @@ ms.locfileid: "48180874"
   
 ## <a name="see-also"></a>См. также  
  [Файлы и источники журналов служб Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
- [Ошибки и события &#40;службы Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [Справочник по ошибкам и событиям (службы Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

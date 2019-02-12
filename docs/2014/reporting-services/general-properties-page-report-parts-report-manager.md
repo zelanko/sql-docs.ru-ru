@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 93ddce72-31f1-42f7-abd5-8191acbb00c5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bdbf9f69b3e1df0471b731363387542ce1fb4a3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a3872636fdfda37165bdf6cb83aa13aa51b230b2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136253"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040485"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>Страница «Общие свойства» — «элементы отчета» (диспетчер отчетов)
   Страница «Свойства» используется для просмотра и управления общими свойствами элемента отчета.  
@@ -50,7 +50,7 @@ ms.locfileid: "48136253"
  **Размер**  
  Размер файла элемента отчета. Только для чтения.  
   
- **Название**  
+ **Name**  
  Имя, введенное для обозначения элемента отчета.  
   
  **Описание**  
@@ -79,9 +79,9 @@ ms.locfileid: "48136253"
   
 ## <a name="see-also"></a>См. также  
  [Управление элементами отчета](report-design/managing-report-parts.md)   
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Содержимое страницы &#40;диспетчера отчетов&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Элементы отчета &#40;построитель отчетов и службы SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Страница "Содержимое" (диспетчер отчетов)](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Элементы отчета (построитель отчетов и службы SSRS)](report-parts-report-builder-and-ssrs.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
  [Элементы отчета и наборы данных в построителе отчетов](report-data/report-parts-and-datasets-in-report-builder.md)  
   

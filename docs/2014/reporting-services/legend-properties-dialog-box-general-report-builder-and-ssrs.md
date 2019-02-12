@@ -12,20 +12,20 @@ f1_keywords:
 - "10184"
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4b939fe20f4bcd280c00dc6279ebb1c8ba3a1f45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c6a9c5445e5ed0371922a7c5aad929519ed4e0d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082254"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022785"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>Диалоговое окно «Свойства условных обозначений» — «Общие» (построитель отчетов и службы SSRS)
   Используйте диалоговое окно **Условные обозначения** , чтобы определить внешний вид и макет условных обозначений на диаграмме. Дополнительные сведения см. в разделе [форматирование условных обозначений на диаграмме &#40;построитель отчетов и службы SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **Name**  
  Введите имя для условных обозначений.  
   
  **Макет**  
@@ -50,11 +50,11 @@ ms.locfileid: "48082254"
 ## <a name="see-also"></a>См. также  
  [Диаграммы (построитель отчетов и службы SSRS)](report-design/charts-report-builder-and-ssrs.md)   
  [Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Форматирование условных обозначений на диаграмме &#40;построитель отчетов и службы SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
+ [Форматирование условных обозначений на диаграмме (построитель отчетов и службы SSRS)](report-design/chart-legend-formatting-report-builder.md)   
  [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Задание цветов диаграммы с помощью палитры &#40;построитель отчетов и службы SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Построение данных на вспомогательной оси &#40;построитель отчетов и службы SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [Форматирование условных обозначений на диаграмме &#40;построитель отчетов и службы SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
- [Добавление скользящего среднего в диаграмму &#40;построитель отчетов и службы SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [Форматирование условных обозначений на диаграмме (построитель отчетов и службы SSRS)](report-design/chart-legend-formatting-report-builder.md)   
+ [Добавление скользящего среднего в диаграмму (построитель отчетов и службы SSRS)](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

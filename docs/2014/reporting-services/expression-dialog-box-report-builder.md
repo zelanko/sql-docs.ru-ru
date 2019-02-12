@@ -13,14 +13,14 @@ helpviewer_keywords:
 - expressions
 ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 44c99dd44a39aa2008f5e276cde79bb51b6d4d51
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 856faf8f35e30343ef322e726e3d0dffc30ebb4a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590618"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040145"
 ---
 # <a name="expression-dialog-box-report-builder"></a>Диалоговое окно «Выражение» (построитель отчетов)
   Используйте **выражение** диалоговое окно, чтобы написать [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] свойств элемента выражения для отчетов. Выражения можно использовать для задания многих свойств, в том числе цвета, шрифта, границ. Во время выполнения обработчик отчета вычисляет выражения и заменяет их результатами значения свойств.  

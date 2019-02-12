@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d049c93c74ebc60b708ab9c5f1b5da37b5a6d924
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 03107ceb9c09cd3a48a0d547882b02b951d4d3c2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056264"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020155"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Перемещение или удаление элемента (диспетчер отчетов)
   Отчеты и связанные с ними элементы, публикуемые на сервере отчетов, хранятся в папках. Элементы можно переместить в другую папку; ссылки на эти элементы будут автоматически обновлены на сервере отчетов. Прежде чем удалить какой-либо элемент, определите, не зависят ли от него другие элементы.  

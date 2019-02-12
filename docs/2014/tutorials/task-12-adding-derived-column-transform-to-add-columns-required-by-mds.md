@@ -1,24 +1,21 @@
 ---
-title: 'Задача 12: Добавление производных преобразование столбцов для добавления столбцов, необходимых MDS | Документация Майкрософт'
+title: Задача 12. Добавление производных преобразование столбцов для добавления столбцов, необходимых MDS | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 98ccb271-04da-4126-9729-67e9a479aaef
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 104fdfdebf01bece9f5a3762b33b9e31f40d06d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c80f719bd756a0ad241ef270507e638b08c2081
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125334"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036516"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Задача 12. Добавление преобразования «Производный столбец» для добавления столбцов, необходимых MDS
   В этой задаче в поток данных добавляется преобразование «Производный столбец». Вы добавляете два производных столбца, **ImportType** и **BatchTag**, к записям, переданным в это преобразование. Необходимо добавить эти столбцы перед отправкой данных в промежуточные таблицы в MDS. Это необходимые столбцы для промежуточных таблиц в MDS. См. в разделе [промежуточные таблицы конечного элемента](../master-data-services/leaf-member-staging-table-master-data-services.md) для получения дополнительных сведений.  
@@ -60,6 +57,6 @@ ms.locfileid: "48125334"
 15. Нажмите кнопку **ОК** закрыть **преобразования "Производный столбец"** диалоговое окно.  
   
 ## <a name="next-step"></a>Следующий шаг  
- [Задача 13. Добавление назначения "OLE DB" для записи данных в промежуточную таблицу MDS](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
+ [Задача 13. Добавление назначения OLE DB для записи данных в промежуточную таблицу MDS](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
   
   

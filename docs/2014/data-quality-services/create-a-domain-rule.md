@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.dm.rules.f1
 - sql12.dqs.dm.testdomainrule.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 809ac3ce20bbda443840c807ac05fd6ade7cc225
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 750773c728b2cbe026aac404f90a13928802a4bc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365116"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022955"
 ---
 # <a name="create-a-domain-rule"></a>Создание правила домена
   В этом разделе описывается, как создать правило домена в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Правило домена — это условие, которое используется для проверки, исправления и стандартизации значений домена. Правило домена должно выполняться в домене, чтобы значения домена были точными и соответствовали требованиям бизнеса. Правила домена могут включать правила проверки, которые используются для проверки значений домена, а не для исправления данных в проектах служб DQS. Правила включают также правила стандартизации, которые применяются в отношении допустимых данных и служат для исправления данных.  
@@ -97,7 +97,7 @@ ms.locfileid: "53365116"
   
 3.  Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [Завершение операции по управлению доменами](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия: После создания правила домена  
+##  <a name="FollowUp"></a> Дальнейшие действия. После создания правила домена  
  После создания правила домена можно выполнить другие задачи управления для этого домена, провести обнаружение знаний для добавления набора знаний в домен или добавить в домен политику сопоставления. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../../2014/data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../../2014/data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Conditions"></a> Условия правил домена  

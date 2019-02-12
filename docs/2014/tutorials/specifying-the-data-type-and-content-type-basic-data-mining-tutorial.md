@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 72484d27-3ef1-4f16-813c-2f43231fc2da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b97cec782c7f95de42ee64d7db0ce56ffa916c3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 583a6fda2dbb4698405a3d69f33955531b3c1c10
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176616"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040209"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>Указание типа данных и типа содержимого (учебник по интеллектуальному анализу данных — начальный уровень)
   Теперь, после выбора столбцов для построения структуры и обучения моделей, необходимо внести изменения в данные по умолчанию и в типы содержимого, заданные мастером.  
@@ -31,25 +30,25 @@ ms.locfileid: "48176616"
   
     |Столбец|Тип содержимого|Тип данных|  
     |------------|------------------|---------------|  
-    |**Строка адреса 1**|**Дискретные**|**Текст**|  
-    |**Строка адреса 2**|**Дискретные**|**Текст**|  
+    |**Строка адреса 1**|**Дискретные**|**Text**|  
+    |**Строка адреса 2**|**Дискретные**|**Text**|  
     |**Срок действия**|**Непрерывная**|**Long**|  
     |**«Покупатель велосипеда»**|**Дискретные**|**Long**|  
-    |**Расстояние до работы**|**Дискретные**|**Текст**|  
+    |**Расстояние до работы**|**Дискретные**|**Text**|  
     |**CustomerKey**|**Key**|**Long**|  
     |**DateLastPurchase**|**Непрерывная**|**Дата**|  
-    |**Email Address**|**Дискретные**|**Текст**|  
-    |**English Education**|**Дискретные**|**Текст**|  
-    |**English Occupation**|**Дискретные**|**Текст**|  
-    |**FirstName**|**Дискретные**|**Текст**|  
-    |**Gender**|**Дискретные**|**Текст**|  
-    |**Географический ключ**|**Дискретные**|**Текст**|  
-    |**House Owner Flag**|**Дискретные**|**Текст**|  
-    |**Last Name**|**Дискретные**|**Текст**|  
-    |**Семейное положение**|**Дискретные**|**Текст**|  
+    |**Email Address**|**Дискретные**|**Text**|  
+    |**English Education**|**Дискретные**|**Text**|  
+    |**English Occupation**|**Дискретные**|**Text**|  
+    |**FirstName**|**Дискретные**|**Text**|  
+    |**Gender**|**Дискретные**|**Text**|  
+    |**Географический ключ**|**Дискретные**|**Text**|  
+    |**House Owner Flag**|**Дискретные**|**Text**|  
+    |**Last Name**|**Дискретные**|**Text**|  
+    |**Семейное положение**|**Дискретные**|**Text**|  
     |**Number Cars Owned**|**Дискретные**|**Long**|  
     |**Number Children At Home**|**Дискретные**|**Long**|  
-    |**Регион**|**Дискретные**|**Текст**|  
+    |**Регион**|**Дискретные**|**Text**|  
     |**Общее количество детей**|**Дискретные**|**Long**|  
     |**Годовой доход**|**Непрерывная**|**Double**|  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48176616"
  [Создание структуры модели интеллектуального анализа данных прямой почтовой рассылки &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>См. также  
- [Типы содержимого &#40;интеллектуального анализа данных&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
- [Типы данных &#40;интеллектуального анализа данных&#41;](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
+ [Типы содержимого (интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
+ [Типы данных (интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
   
   

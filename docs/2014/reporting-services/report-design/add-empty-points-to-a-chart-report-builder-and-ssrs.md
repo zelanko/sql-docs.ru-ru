@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2b056119-439f-494f-83cf-ee0c05dc6487
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 09b5228ff383db7700d5b8f027314e6e45feb40c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fe529ac655bb9b5f0f4810ed7d0e1582693f1108
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207414"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036326"
 ---
 # <a name="add-empty-points-to-the-chart-report-builder-and-ssrs"></a>Добавление пустых точек на диаграмму (построитель отчетов и службы SSRS)
   Значения NULL отображаются на диаграмме в виде пустых мест или промежутков между точками данных в ряде. Пустые точки представляют собой точки данных, которые можно вставить в пустые места, созданные значениями NULL.  
@@ -55,6 +55,6 @@ ms.locfileid: "48207414"
  [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Типы диаграмм (построитель отчетов и службы SSRS)](chart-types-report-builder-and-ssrs.md)   
  [Добавление в диаграмму разрывов шкалы (построитель отчетов и службы SSRS)](add-scale-breaks-to-a-chart-report-builder-and-ssrs.md)   
- [Диаграммы &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)  
   
   

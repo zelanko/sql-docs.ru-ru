@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 114dcb05567fc58cb58ce46cae064f2514c1331e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 800326d3255180087cb7603435e2d0e1a8c8e029
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396505"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033655"
 ---
 # <a name="create-a-linked-domain"></a>Создание связанного домена
   В этом разделе описывается, как создать связанный домен в базе знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Связанный домен создается из другого, существующего ранее домена и наследует все значения, правила и свойства из домена, с которым он связан, за исключением имени и описания. Набором связанных доменов вы можете управлять как одним доменом. Связывая один домен с другим, вы создаете домен, который наследует содержание другого домена.  
@@ -72,7 +72,7 @@ ms.locfileid: "52396505"
   
 4.  В диалоговом окне «Создание домена» введите имя домена и описание, а затем нажмите кнопку «ОК».  
   
-##  <a name="FollowUp"></a> Дальнейшие действия: после создания связанного домена  
+##  <a name="FollowUp"></a> Дальнейшие действия. после создания связанного домена  
  После создания связанного домена можно выполнить другие задачи управления для этого домена, провести обнаружение знаний с целью добавить набор знаний в домен или добавить в домен политику сопоставления. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../../2014/data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../../2014/data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Behavior"></a> Поведение связанного домена  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 69f989fd4714aaafed94f1b8a9fb3ad077cc7cf8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a3abfb7cbecbf496c7c2083d5d75b1833069d12c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065724"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029415"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Советы по конструированию отчетов (построитель отчетов и службы SSRS)
   Следуйте приведенным ниже советам при разработке отчетов.  
@@ -156,7 +156,7 @@ ms.locfileid: "48065724"
   
     4.  Измените в заголовках столбцов свойство текстового поля WritingMode, чтобы использовать вертикальный текст.  
   
- В совокупности это поведение, свойства ширины и высоты элементов отчета, размер текста отчета, определения высоты и ширины страницы, параметры размера полей родительского отчета и метод разбиения на страницы, связанный с модулем подготовки отчетов, определяют то, какие элементы отчета поместятся на страницу, готовую к просмотру. Дополнительные сведения см. в разделе [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ В совокупности это поведение, свойства ширины и высоты элементов отчета, размер текста отчета, определения высоты и ширины страницы, параметры размера полей родительского отчета и метод разбиения на страницы, связанный с модулем подготовки отчетов, определяют то, какие элементы отчета поместятся на страницу, готовую к просмотру. Дополнительные сведения см. в статье [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также  
  [Построитель отчетов в SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   

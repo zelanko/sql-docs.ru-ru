@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 784c0401-0358-4117-9c85-4e8220ce71d9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e3c88894ee271e9b96e98e25dc14e62bfc0361ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ee6c1a8b765843304d25f1e2ad485ede2badcba4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048334"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018905"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>Создание проекта служб Analysis Services (учебник по интеллектуальному анализу данных — начальный уровень)
-  Каждый [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проекта определяет объекты в одной [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] базы данных. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Базы данных может содержать множество различных типов объектов  
+  Каждый проект служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] определяет объекты в одной базе данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . База данных [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] может содержать множество различных типов объектов  
   
 -   Многомерные модели (кубы)  
   
@@ -29,15 +28,15 @@ ms.locfileid: "48048334"
   
  Обратите внимание, что для интеллектуального анализа данных куб **не** требуется. Если необходимо выполнить интеллектуальный анализ данных на уже существующем кубе, следует добавить модели интеллектуального анализа данных в тот проект, который использовался для построения куба. Тем не менее в большинстве случаев можно строить модели на источниках реляционных данных, таких как хранилище данных, и обеспечивать более высокую производительность, не прибегая к использованию куба.  
   
- В этом учебнике будет использоваться в реляционную базу данных, [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], как источник данных. Вы развернете все объекты интеллектуального анализа данных для [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] базу данных с именем `BasicDataMining`, используемой только для интеллектуального анализа данных.  
+ В этом учебнике в качестве источника данных используется реляционное хранилище данных [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Все объекты интеллектуального анализа данных будут развернуты в базе данных [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] с именем `BasicDataMining`, используемой только для интеллектуального анализа данных.  
   
- По умолчанию [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] использует **localhost** для новых проектов экземпляр. Если необходимо использовать именованный экземпляр или другой сервер, то сначала создайте и откройте проект, а затем измените имя экземпляра.  
+ По умолчанию службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] используют для новых проектов экземпляр **localhost** . Если необходимо использовать именованный экземпляр или другой сервер, то сначала создайте и откройте проект, а затем измените имя экземпляра.  
   
- Дополнительные сведения о [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проектов, см. в разделе [Создание проекта служб Analysis Services](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md).  
+ Дополнительные сведения о службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] см. в разделе [Creating an Analysis Services Project](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md).  
   
 ### <a name="to-create-an-analysis-services-project"></a>Создание проекта служб Analysis Services  
   
-1.  Откройте [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+1.  Откройте среду [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  В меню **Файл** последовательно выберите команды **Создать**и **Проект**.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48048334"
   
 ### <a name="to-change-the-instance-where-data-mining-objects-are-stored"></a>Изменение экземпляра, на котором хранятся объекты интеллектуального анализа данных  
   
-1.  В [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]на **проекта** меню, выберите **свойства**.  
+1.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], в меню **Проект** выберите **Свойства**.  
   
 2.  В левой части панели **Страницы свойств** в области **Свойства настройки**щелкните элемент **Развертывание**.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "48048334"
  [Создание источника данных &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>См. также  
- [Построение проектов служб Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
+ [Построение проектов служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
  [Создание проекта служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7b41acb95312ac9675d711c0c02817e58dfe2106
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 552ca2c2d53ae073ab50c8db64c185a5d0bd1675
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221714"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042855"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Указание путей к внешним элементам (построитель отчетов и службы SSRS)
   В свойствах элемента отчета укажите пути к нужным элементам, таким как детализированные отчеты, вложенные отчеты и файлы изображений, которые являются внешними для файла определения отчета и размещены на сервере отчетов.  
@@ -40,12 +40,12 @@ ms.locfileid: "48221714"
   
 -   **Полный путь к элементу.**  
   
-    -   **На сервере отчетов** путь начинается с **/**(корневой папки). например /Reports/AllSubreports/Subreport1.  
+    -   **На сервере отчетов:** Путь начинается с **/**, корневой папки. например /Reports/AllSubreports/Subreport1.  
   
-    -   **На сайте SharePoint** необходимо указать в выражении имя отчета с полным URL-адресом элемента и расширением файла RDL. Например, `="http://server/site/library/folder/Report1.rdl"`.  
+    -   **На сайте SharePoint:** Необходимо указать в выражении имя отчета с полным URL-адресом элемента и расширением файла RDL. Например, `="http://server/site/library/folder/Report1.rdl"`.  
   
 ## <a name="see-also"></a>См. также  
- [Добавление внешнего изображения &#40;построитель отчетов и службы SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
+ [Добавление внешнего изображения (построитель отчетов и службы SSRS)](add-an-external-image-report-builder-and-ssrs.md)   
  [Добавление вложенного отчета и параметров (построитель отчетов и службы SSRS)](add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
  [Добавление действия детализации в отчет (построитель отчетов и службы SSRS)](add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
   

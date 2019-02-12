@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.calculatedseriesproperties.markers.f1
 ms.assetid: 3a0bb42a-af1b-4228-bc9d-f9a02bb3b987
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0ffa3f0b1709754dc7fd4269ca403a86856b4863
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 8e4d6eef27b79e86f8994dd6e79d3de83c809f48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053429"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029835"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>Диалоговое окно «Свойства вычисляемого ряда» — «Маркеры» (построитель отчетов и службы SSRS)
   Чтобы определить, как будут отображаться маркеры в каждой точке данных рядов, перейдите на вкладку **Маркеры** в диалоговом окне **Свойства вычисляемого ряда** . Маркеры доступны только для некоторых типов диаграмм. Маркеры поддерживаются в следующих типах диаграмм: диаграмма с областями, линейчатая, гистограмма, линейный график, полярная и точечная диаграммы. Дополнительные сведения о функциях диаграмм см. в статье [Типы диаграмм (построитель отчетов и службы SSRS)](report-design/chart-types-report-builder-and-ssrs.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "48053429"
  [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Задание цветов диаграммы с помощью палитры &#40;построитель отчетов и службы SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Построение данных на вспомогательной оси &#40;построитель отчетов и службы SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [Форматирование точек данных на диаграмме &#40;построитель отчетов и службы SSRS&#41;](report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Добавление скользящего среднего в диаграмму &#40;построитель отчетов и службы SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Добавление скользящего среднего в диаграмму (построитель отчетов и службы SSRS)](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

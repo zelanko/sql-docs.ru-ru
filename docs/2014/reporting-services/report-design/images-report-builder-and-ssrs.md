@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ff2a701c3425fce737c75c6fb0b6bc01698d8277
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8b8a9b295df0cfa4d49e0964a6d6c83e62fefb8e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227144"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031645"
 ---
 # <a name="images-report-builder-and-ssrs"></a>Изображения (построитель отчетов и службы SSRS)
   Изображение — это элемент отчета, содержащий ссылку на изображение, которое внедрено в отчет или хранится в базе данных, на сервере отчетов или где-либо еще в Интернете. Изображение может быть рисунком, повторяющимся в строках данных. Изображение можно также использовать в качестве фона некоторых элементов отчета.  
@@ -76,18 +76,18 @@ ms.locfileid: "48227144"
 
   
 ##  <a name="HowTo"></a> Инструкции  
- [Добавление внешнего изображения &#40;построитель отчетов и службы SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)  
+ [Добавление внешнего изображения (построитель отчетов и службы SSRS)](add-an-external-image-report-builder-and-ssrs.md)  
   
- [Внедрение изображения в отчете &#40;построитель отчетов и службы SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)  
+ [Внедрение изображения в отчет (построитель отчетов и службы SSRS)](embed-an-image-in-a-report-report-builder-and-ssrs.md)  
   
- [Добавить фоновое изображение &#40;построитель отчетов и службы SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)  
+ [Добавление фонового изображения (построитель отчетов и службы SSRS)](add-a-background-image-report-builder-and-ssrs.md)  
   
- [Добавить образ с привязкой к данным &#40;построитель отчетов и службы SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)  
+ [Добавление привязанного к данным изображения (построитель отчетов и службы SSRS)](add-a-data-bound-image-report-builder-and-ssrs.md)  
   
   
   
 ## <a name="see-also"></a>См. также  
- [Экспорт в файл изображения &#40;построитель отчетов и службы SSRS&#41;](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
+ [Экспорт в файл изображения (построитель отчетов и службы SSRS)](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

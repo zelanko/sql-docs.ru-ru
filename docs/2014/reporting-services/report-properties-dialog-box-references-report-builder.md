@@ -11,14 +11,14 @@ f1_keywords:
 - "10082"
 ms.assetid: 3414c857-8ea6-4fc4-a6d5-b4883c039efa
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7e6f4a3f590c196731ed186f95cf5dc4078a1fc0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 4acfe27815dc8eeb2f15a685937d5870fd74368b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504143"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040995"
 ---
 # <a name="report-properties-dialog-box-references-report-builder"></a>Диалоговое окно «Свойства отчета» — «Ссылки» (построитель отчетов)
   На вкладке **Ссылки** диалогового окна **Свойства отчета** можно удалить или добавить ссылки на пользовательские или другие внешние сборки и экземпляры пользовательских классов, используемые выражениями в определении отчета. Пользовательские сборки не поддерживаются в локальном режиме построителя отчетов. Для составления отчетов, использующих пользовательские сборки, с помощью конструктора отчетов в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

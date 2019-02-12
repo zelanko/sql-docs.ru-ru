@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Report Designer [Reporting Services], wizards
 ms.assetid: 68287bcf-f91a-429f-bb7c-48c029b041fa
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 19f07d48421ab00c0399b4fec299e975931c4838
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5e08d75c67bf1f335279dd1dcf3885017342e4ad
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161324"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041335"
 ---
 # <a name="report-wizard-help"></a>Справка мастера отчетов
   В этом разделе представлена справка F1 мастера отчетов. Мастер отчетов автоматизирует процесс создания табличных и матричных отчетов. В следующей таблице описаны подразделы, содержащиеся в этом разделе.  
