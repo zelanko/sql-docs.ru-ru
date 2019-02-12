@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7961facbec5f194c45c8677481af5b43bdfaa1e8
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 4628ed370354ff1551892bf979b3627e00f119b7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616404"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020775"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Импорт домена из файла .dqs
 
@@ -55,7 +55,7 @@ ms.locfileid: "52616404"
   
 6.  Убедитесь, что импортированный домен отображается в списке **Домен** . Если был импортирован составной домен, убедитесь, что он и отдельные домены, входящие в его состав, отображаются в списке **Домен** .  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После импорта домена из файла DQS  
+##  <a name="FollowUp"></a> Дальнейшие действия. после импорта домена из файла .dqs  
  После импорта домена из файла DQS можно добавить набор знаний в домен или использовать его в проекте очистки данных или сопоставления в зависимости от содержания домена. Дополнительные сведения см. в разделах [Обнаружение знаний](../data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../data-quality-services/managing-a-domain.md), [Управление составным доменом](../data-quality-services/managing-a-composite-domain.md), [Создание политики сопоставления](../data-quality-services/create-a-matching-policy.md), [Очистка данных](../data-quality-services/data-cleansing.md) и [Сопоставление данных](../data-quality-services/data-matching.md).  
   
   
