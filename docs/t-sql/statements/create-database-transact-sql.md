@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Документация Майкрософт
 description: Создание синтаксиса базы данных для SQL Server, Базы данных SQL Azure, Хранилища данных SQL Azure и Parallel Data Warehouse
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0ba661f6cc2c19b00dd5c51be9b3dfeb1d47a6e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 76f0d24c3c8eb0c2cfa77b69d45d8f5d88517a4f
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327891"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570847"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -62,7 +62,7 @@ ms.locfileid: "54327891"
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |**_\* SQL Server \*_** | [База данных SQL<br /> — логический сервер](create-database-transact-sql.md?view=azuresqldb-current) | [База данных SQL<br /> — управляемый экземпляр](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |**_\* SQL Server \*_** | [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current) | [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -893,15 +893,15 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\* База данных SQL<br />логический сервер \*_**  | [База данных SQL<br /> — управляемый экземпляр](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\* Отдельная база данных/эластичный пул Базы данных SQL<br /> \*_**  | [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Логический сервер Базы данных SQL Azure
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Отдельная база данных или эластичный пул Базы данных SQL Azure
 
 ## <a name="overview"></a>Обзор
 
-На логическом сервере базы данных SQL Azure этот оператор можно применить к серверу Azure SQL для создания отдельной базы данных или базы данных в эластичном пуле. При использовании оператора нужно указать имя базы данных, параметры сортировки, максимальный размер, выпуск, цель обслуживания, и, если это применимо, эластичный пул для новой базы данных. Также он позволяет создать базу данных в эластичном пуле. Кроме того, с его помощью можно создать копию базы данных на другом логическом сервере.
+В отдельной базе данных или эластичном пуле Базы данных SQL Azure этот оператор можно применить к серверу SQL Azure для создания отдельной базы данных или базы данных в эластичном пуле. При использовании оператора нужно указать имя базы данных, параметры сортировки, максимальный размер, выпуск, цель обслуживания, и, если это применимо, эластичный пул для новой базы данных. Также он позволяет создать базу данных в эластичном пуле. Кроме того, с его помощью можно создать копию базы данных на другом сервере Базы данных SQL.
 
 ## <a name="syntax"></a>Синтаксис 
 
@@ -973,7 +973,7 @@ EDITION
  
 Указывает уровень службы базы данных. 
 
-Отдельная или включенная в пул база данных на логическом сервере. Доступные значения: "basic", "standard", "premium", "GeneralPurpose", "BusinessCritical" и "Hyperscale". 
+Отдельные базы данных и базы данных в пуле на отдельной базе данных или в эластичном пуле. Доступные значения: "basic", "standard", "premium", "GeneralPurpose", "BusinessCritical" и "Hyperscale". 
   
 Если параметр EDITION задан, а MAXSIZE нет, то параметру MAXSIZE задается самое ограничивающее значение, поддерживаемое этим выпуском.  
   
@@ -984,7 +984,7 @@ MAXSIZE
 > [!NOTE]
 > Аргумент **MAXSIZE** не применяется к отдельным базам данных на уровне служб "Гипермасштабирование". Базы данных уровня "Гипермасштабирование" увеличиваются по мере необходимости до 100 ТБ. Служба "База данных SQL" автоматически добавляет объем хранилища. Задавать максимальный размер не нужно.
 
-**Модель на основе DTU для отдельных или включенных в пул баз данных на логическом сервере**
+**Модель на основе DTU для отдельных или включенных в пул баз данных на сервере Базы данных SQL**
 
 |**MAXSIZE**|**Basic**|**S0–S2**|**S3–S12**|**P1–P6**| **P11–P15** |
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------| 
@@ -1014,7 +1014,7 @@ MAXSIZE
 
 Значение MAXSIZE для модели на основе DTU, если оно задано, должно быть одним из допустимых значений, приведенных в таблице выше для указанного уровня служб.
  
-**Модель на основе виртуальных ядер для отдельных или включенных в пул баз данных на логическом сервере**
+**Модель на основе виртуальных ядер для отдельных или включенных в пул баз данных на сервере Базы данных SQL**
 
 **Уровень обслуживания общего назначения — вычислительная платформа поколения 4**
 
@@ -1063,12 +1063,12 @@ MAXSIZE
 
 SERVICE_OBJECTIVE
 
-- **Для отдельных или включенных в пул баз данных на логическом сервере**
+- **Для отдельных и включенных в пул баз данных**
 
   - Определяет уровень производительности. Доступные значения для целевого уровня обслуживания: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_8`, `BC_Gen5_16`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_48`, `BC_Gen5_80`. 
- - **Для отдельных баз данных логического сервера на уровне служб "Гипермасштабирование"** определяет уровень производительности. Доступные значения для целевого уровня обслуживания: `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`,    `HS_Gen5_4`,    `HS_Gen5_8`,    `HS_Gen5_16`,   `HS_Gen5_24`,   `HS_Gen5_32`,   `HS_Gen5_48`,   `HS_Gen5_80`. 
+ - **Для отдельных баз данных на уровне служб "Гипермасштабирование"** определяет уровень производительности. Доступные значения для целевого уровня обслуживания: `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`,    `HS_Gen5_4`,    `HS_Gen5_8`,    `HS_Gen5_16`,   `HS_Gen5_24`,   `HS_Gen5_32`,   `HS_Gen5_48`,   `HS_Gen5_80`. 
  
-- **Для баз данных в Управляемом экземпляре**
+- **Для баз данных в управляемом экземпляре**
 
   Определяет уровень производительности. Доступные значения для целевого уровня обслуживания: `GP_GEN4_8`, `GP_GEN4_16`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32` и `GP_Gen5_40`. 
 
@@ -1232,15 +1232,15 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [База данных SQL<br /> — логический сервер](create-database-transact-sql.md?view=azuresqldb-current)| **_\* База данных SQL<br />Управляемый экземпляр \*_**   | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current)| **_\* Управляемый экземпляр Базы данных SQL<br /> \*_**   | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
+## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
 
 ## <a name="overview"></a>Обзор
 
-В Управляемом экземпляре Azure SQL эта инструкция используется для создания базы данных. При создании базы данных в Управляемом экземпляре вы можете указать имя базы данных и параметры сортировки. 
+В управляемом экземпляре SQL Azure эта инструкция используется для создания базы данных. При создании базы данных в управляемом экземпляре вы можете указать имя базы данных и параметры сортировки. 
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -1249,7 +1249,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 [;]  
 ```
 > [!IMPORTANT]
-> Чтобы добавить файлы или настроить автономность для базы данных в Управляемом экземпляре, используйте инструкцию [ALTER DATABASE](alter-database-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldbmi).
+> Чтобы добавить файлы или настроить автономность для базы данных в управляемом экземпляре, используйте инструкцию [ALTER DATABASE](alter-database-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldbmi).
   
 ## <a name="arguments"></a>Аргументы  
   
@@ -1305,7 +1305,7 @@ CREATE DATABASE TestDB1;
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [База данных SQL<br /> — логический сервер](create-database-transact-sql.md?view=azuresqldb-current)| [База данных SQL<br /> — управляемый экземпляр](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* Хранилище данных<br />SQL \*_**    | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current)| [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* Хранилище данных<br />SQL \*_**    | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1313,7 +1313,7 @@ CREATE DATABASE TestDB1;
 
 ## <a name="overview"></a>Обзор
 
-В хранилище данных SQL Azure этот оператор можно применить к логическому серверу Azure SQL для создания базы данных в хранилище данных SQL. Для этого оператора нужно указать имя базы данных, параметры сортировки, максимальный размер, выпуск и цель обслуживания.
+В Хранилище данных SQL Azure этот оператор можно применить к серверу Базы данных SQL Azure для создания базы данных Хранилища данных SQL. Для этого оператора нужно указать имя базы данных, параметры сортировки, максимальный размер, выпуск и цель обслуживания.
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -1330,6 +1330,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
     SERVICE_OBJECTIVE = { 
          'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' 
         | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000' 
+        |'DW100c' | 'DW200c' | 'DW300c' | 'DW400c' | 'DW500c'
         | 'DW1000c' | 'DW1500c' | 'DW2000c' | 'DW2500c' | 'DW3000c' | 'DW5000c' 
         | 'DW6000c' | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
     }  
@@ -1423,7 +1424,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [База данных SQL<br /> — логический сервер](create-database-transact-sql.md?view=azuresqldb-current)| [База данных SQL<br /> — управляемый экземпляр](create-database-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\* Параллельное<br />хранилище данных \*_** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current)| [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\* Параллельное<br />хранилище данных \*_** |
 
 &nbsp;
 

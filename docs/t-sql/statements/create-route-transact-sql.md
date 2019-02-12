@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a24090fdcb1bd8b8576f545dfef11764f22a192f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8c027df69ca11c88c82195c2d621ecd33f470d6
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595692"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421152"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -85,7 +85,7 @@ WHERE database_id = DB_ID()
  Время в секундах, в течение которого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранит маршрут в таблице маршрутизации. По истечении этого времени действие маршрута истекает, и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при выборе маршрута для новых диалогов далее его не рассматривает. Если предложение опущено, то аргумент *route_lifetime* имеет значение NULL, и срок маршрута никогда не истекает.  
   
  ADDRESS **='**_next\_hop\_address_**'**  
-Для управляемого экземпляра базы данных SQL аргумент `ADDRESS` должен задавать локальный адрес. 
+Для управляемого экземпляра Базы данных SQL аргумент `ADDRESS` должен задавать локальный адрес. 
 
 Указывает сетевой адрес для данного маршрута. Аргумент *next_hop_address* задает адрес TCP/IP в следующем формате:  
   

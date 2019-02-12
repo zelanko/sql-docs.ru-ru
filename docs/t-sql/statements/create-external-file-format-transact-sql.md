@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a25ec8508701f99602392176ef8210588e872b36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8a0d6bedfb15334850e3cf21eed6dadfd21abf1f
+ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517710"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484853"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ WITH (
  *file_format_name*  
  Задает имя формата внешнего файла.
   
- FORMAT_TYPE = [ PARQUET | ORC | RCFILE | PARQUET] Задает формат внешних данных.
+ FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT] Задает формат внешних данных.
   
    -   PARQUET Задает формат Parquet.
   
@@ -131,7 +131,7 @@ WITH (
   
 -   FIELD_TERMINATOR = ' '  
   
--   FIELD_TERMINATOR = \t  
+-   FIELD_TERMINATOR = ꞌ\tꞌ  
   
 -   FIELD_TERMINATOR = '~|~'  
   
@@ -147,7 +147,7 @@ WITH (
   
 -   STRING_DELIMITER = '*'  
   
--   STRING_DELIMITER = ,  
+-   STRING_DELIMITER = ꞌ,ꞌ  
   
 -   STRING_DELIMITER = '0x7E0x7E' — две тильды (например, ~~)
  

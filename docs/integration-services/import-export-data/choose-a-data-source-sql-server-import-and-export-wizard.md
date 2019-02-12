@@ -1,7 +1,7 @@
 ---
 title: Выбор источника данных (мастер импорта и экспорта SQL Server) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,20 +13,23 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8e337704f95b432c30a6451aabe8a85b4609d5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a93eb928b8d9a756380879ad8cc30475ffd223e9
+ms.sourcegitcommit: 92c524119d7df5daf69ec144d532ddcb2e46abc0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806024"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290424"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Выбор источника данных (мастер импорта и экспорта SQL Server)
   После страницы приветствия в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется страница **Выбор источника данных**. На этой странице введите сведения об источнике данных и о том, как к нему подключиться.
   
 Сведения об источниках данных, которые можно использовать, см. в разделе [Какие источники данных и назначения можно использовать](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources).
 
+> [!NOTE]
+> Мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует SQL Server Integration Services (SSIS). Таким образом, те же ограничения, которые применяются к SSIS, также применяются к мастеру.  Например, столбцы ErrorCode и ErrorColumn, которые добавляются по умолчанию, как описано в статье [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).
+
 ## <a name="screen-shot-of-the-choose-a-data-source-page"></a>Снимок экрана: страница "Выбор источника данных" 
-На следующем снимке экрана показана первая часть страницы **Выбор источника данных** мастера. Число параметров в остальной части страницы зависит от выбранного источника данных.
+На следующем рисунке показана первая часть страницы **Выбор источника данных** мастера. Число параметров в остальной части страницы зависит от выбранного источника данных.
 
 ![Выбор источника](../../integration-services/import-export-data/media/choose-source.png)
 
@@ -66,10 +69,12 @@ ms.locfileid: "47806024"
 
 Сведения о подключении к источникам данных, не представленным в этом списке, см. в [справочнике по строкам подключения](https://www.connectionstrings.com/). На этом стороннем сайте представлены примеры строк подключения и дополнительные сведения о поставщиках данных и используемых ими данных подключений.
 
-## <a name="whats-next"></a>Дальнейшие действия  
+## <a name="whats-next"></a>Дальнейшие действия
  После того как вы укажете сведения об источнике данных и о том, как к нему подключиться, откроется страница **Выбор назначения**. На этой странице введите сведения о месте назначения для данных и о том, как к нему подключиться. Дополнительные сведения см. в разделе [Выбор назначения](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).
- 
+
 ## <a name="see-also"></a>См. также раздел
 [Приступая к работе с простым примером мастера импорта и экспорта](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
+[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
 
+[!INCLUDE[contribute-to-content](../../includes/paragraph-content/contribute-to-content.md)]

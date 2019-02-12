@@ -1,7 +1,7 @@
 ---
 title: ALTER AUTHORIZATION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 08/07/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,14 +27,15 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c7f31849aa75d0102f1406a49faf0d1c8c6a8e9
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 4960dae2aad32a75f612b1b07e4aacdeb6a3d4d9
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327550"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421231"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Изменяет владельца защищаемой сущности.    
@@ -196,6 +197,7 @@ ALTER AUTHORIZATION ON
 ### <a name="for-sql-server"></a>Для SQL Server:  
 **Требования к новому владельцу:**   
 Новый участник-владелец должен быть одним из следующих:  
+
 -   имя входа для проверки подлинности SQL Server;  
 -   имя входа для проверки подлинности Windows, представляющее пользователя Windows (а не группу);  
 -   пользователь Windows, проходящий проверку подлинности с использованием имени входа для проверки подлинности Windows, представляющего группу Windows.  
@@ -206,6 +208,7 @@ ALTER AUTHORIZATION ON
 ### <a name="for-azure-sql-database"></a>Для базы данных SQL Azure  
 **Требования к новому владельцу:**   
 Новый участник-владелец должен быть одним из следующих:  
+
 -   имя входа для проверки подлинности SQL Server;  
 -   федеративный пользователь (не группа) в Azure AD;  
 -   управляемый пользователь (не группа) или приложение в Azure AD.    
@@ -217,7 +220,8 @@ ALTER AUTHORIZATION ON
 Необходимо подключиться к целевой базе данных, чтобы изменить ее владельца.  
 
 Изменить владельца базы данных могут следующие типы учетных записей. 
-* Имя входа участника уровня службы. (Администратор SQL Azure, подготовленный при создании логического сервера.)  
+
+* Имя входа участника уровня службы. (Администратор SQL Azure, подготовленный при создании сервера Базы данных SQL.)  
 * Администратор Active Directory для Azure SQL Server.   
 * Текущий владелец базы данных.   
  

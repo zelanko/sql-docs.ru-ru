@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12ca90e681e82e56485fa0feb33326aba49fac97
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: edaaf496dc8f58c2db8b3e01938b43d2437b39f8
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133754"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428631"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -247,7 +247,7 @@ MAXDOP = *max_degree_of_parallelism*
 ### <a name="examples-use-the-adventureworks-database"></a>В примерах используется база данных AdventureWorks.  
 
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>A. Использование инструкции CREATE STATISTICS с аргументом «SAMPLE число PERCENT»  
- В следующем примере создается статистика `ContactMail1`, использующая случайную 5-процентную выборку из столбцов `BusinessEntityID` и `EmailPromotion` таблицы `Contact` базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+ В следующем примере создается статистика `ContactMail1`, использующая случайную 5-процентную выборку из столбцов `BusinessEntityID` и `EmailPromotion` таблицы `Person` базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  
 CREATE STATISTICS ContactMail1  
@@ -256,7 +256,7 @@ CREATE STATISTICS ContactMail1
 ```  
   
 ### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>Б. Использование инструкции CREATE STATISTICS с аргументами FULLSCAN и NORECOMPUTE  
- В следующем примере создается статистика `ContactMail2` по всем строкам для столбцов `BusinessEntityID` и `EmailPromotion` таблицы `Contact`, при этом автоматический перерасчет статистики блокируется.  
+ В следующем примере создается статистика `NamePurchase` по всем строкам для столбцов `BusinessEntityID` и `EmailPromotion` таблицы `Person`, при этом автоматический перерасчет статистики блокируется.  
   
 ```sql  
 CREATE STATISTICS NamePurchase  
@@ -289,7 +289,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ```  
 
 ### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>Д. Использование инструкции CREATE STATISTICS с аргументами FULLSCAN и PERSIST_SAMPLE_PERCENT  
- В приведенном ниже примере создается статистика `ContactMail2` для всех строк в столбцах `BusinessEntityID` и `EmailPromotion` таблицы `Contact` и задается 100-процентная выборка для всех последующих обновлений, которые неявно указывают процент выборки.  
+ В приведенном ниже примере создается статистика `NamePurchase` для всех строк в столбцах `BusinessEntityID` и `EmailPromotion` таблицы `Person` и задается 100-процентная выборка для всех последующих обновлений, которые неявно указывают процент выборки.  
   
 ```sql  
 CREATE STATISTICS NamePurchase  

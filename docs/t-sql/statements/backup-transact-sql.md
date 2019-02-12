@@ -47,12 +47,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1237e85271949279a96ddd149536189b9940a919
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
+ms.openlocfilehash: a098756919cec261d9416149a508b311c48cd147
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805780"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421501"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -71,7 +71,7 @@ ms.locfileid: "54805780"
 > [!div class="mx-tdCol2BreakAll"]  
 > |||| 
 > |---|---|---| 
-> |**_\* SQL Server \*_** &nbsp;|[База данных SQL<br /> — управляемый экземпляр](backup-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
+> |**_\* SQL Server \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](backup-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -940,13 +940,13 @@ WITH STATS = 5;
 > [!div class="mx-tdCol2BreakAll"]  
 > |||| 
 > |---|---|---| 
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Управляемый экземпляр<br />базы данных SQL \*_** &nbsp;|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Управляемый экземпляр Базы данных SQL<br /> \*_** &nbsp;|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
+## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
 
-Создает резервную копию базы данных SQL, размещенной в Управляемом экземпляре Базы данных SQL Azure. [Управляемый экземпляр](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) Базы данных SQL поддерживает автоматическое резервное копирование и позволяет пользователям создавать полные копии базы данных `COPY_ONLY`. Разностное резервное копирование, а также резервное копирование журналов и моментальных снимков файлов не поддерживаются.  
+Создает резервную копию базы данных SQL, размещенной в Управляемом экземпляре Базы данных SQL Azure. [Управляемый экземпляр](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) Базы данных SQL поддерживает автоматическое резервное копирование и позволяет пользователям создавать полные копии базы данных `COPY_ONLY`. Разностное резервное копирование, а также резервное копирование журналов и моментальных снимков файлов не поддерживаются.  
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -990,7 +990,7 @@ DATABASE
 > [!IMPORTANT]
 > Резервную копию базы данных, созданную в управляемом экземпляре, можно восстановить только в другом управляемом экземпляре. Ее невозможно восстановить в локальном экземпляре SQL Server (аналогично тому, как невозможно восстановить резервную копию базы данных SQL Server 2016 в экземпляре SQL Server 2012).
   
-Во время восстановления резервной копии, созданной с помощью инструкции BACKUP DATABASE (*резервной копии данных*), восстанавливается вся резервная копия. Сведения о восстановлении из автоматических резервных копий Управляемого экземпляра Базы данных SQL Azure: [Восстановление базы данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-restore)  
+Во время восстановления резервной копии, созданной с помощью инструкции BACKUP DATABASE (*резервной копии данных*), восстанавливается вся резервная копия. Сведения о восстановлении из автоматических резервных копий управляемого экземпляра Базы данных SQL Azure: [Восстановление Базы данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-restore)  
   
 { *database_name* | **@**_database\_name\_var_ }   
 Это база данных, из которой создается полная резервная копия. Если аргумент задается в виде переменной (**@**_database\_name\_var_), он может быть указан в виде строковой константы (**@**_database\_name\_var_**=**_database name_) или переменной с типом данных символьной строки **ntext** или **text**.  
@@ -1118,7 +1118,7 @@ STATS [ **=** _percentage_ ]
   
 Параметр STATS сообщает о готовности в процентах по отношению к порогу сообщения о следующем интервале. Показатель готовности в процентах имеет неточное значение; например при значении STATS=10, если процент готовности равен 40, то параметр может отображать 43 процента. Это не является проблемой для больших резервных наборов данных, поскольку показатель готовности в процентах перемещается очень медленно между обращениями ввода-вывода.  
   
-## <a name="limitations-for-sql-database-managed-instance"></a>Ограничения для управляемого экземпляра базы данных SQL
+## <a name="limitations-for-sql-database-managed-instance"></a>Ограничения для управляемого экземпляра Базы данных SQL
 Максимальный размер чередующегося набора резервной копии составляет 195 ГБ (максимальный размер большого двоичного объекта). Чтобы уменьшить размер отдельного чередующегося набора и соблюсти это ограничение, можно увеличить число чередующихся наборов в команде резервного копирования.
 
 ## <a name="security"></a>безопасность  
@@ -1148,7 +1148,7 @@ WITH STATS = 5, COPY_ONLY;
 > [!div class="mx-tdCol2BreakAll"]  
 > |||| 
 > |---|---|---| 
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — управляемый экземпляр](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Управляемый экземпляр Базы данных SQL<br />](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
 
 &nbsp;
 

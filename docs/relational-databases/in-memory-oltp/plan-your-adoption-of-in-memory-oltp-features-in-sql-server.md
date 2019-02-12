@@ -1,7 +1,7 @@
 ---
 title: Планирование применения выполняющейся в памяти OLTP в SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/21/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4adfad731797d7c210787bdfaae3defa3e0a12ea
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e3671c2b89c60a48431d52e631c11e9f06971a55
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519560"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421191"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Планирование освоения возможностей выполняющейся в памяти OLTP в SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "52519560"
 
 Для базы данных, размещенной в облачной службе базы данных SQL Azure, выбранный уровень службы повлияет на объем активной памяти, которую разрешено потреблять вашей базе данных. Необходимо спланировать мониторинг использования памяти вашей базой данных при помощи предупреждений. Подробная информация доступна в следующих статьях:
 
-- Проверьте ограничения хранилища In-Memory OLTP для вашей [ценовой категории](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels).
+- Проверьте ограничения хранилища In-Memory OLTP для вашей [ценовой категории](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#standalone-database-service-tiers-and-performance-levels).
 - [Мониторинг хранилища OLTP в памяти](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>Оптимизированные для памяти табличные переменные
@@ -205,7 +205,7 @@ ms.locfileid: "52519560"
 
 Зачастую целесообразно и удобно использовать при первоначальной реализации оптимизированной для обработки в памяти таблицы традиционный некластеризованный индекс сбалансированного дерева. Впоследствии, проанализировав работу приложения, можно перейти на индекс другого типа.
 
-Два специальных типа индексов требуют дополнительного обсуждения в контексте оптимизированных для обработки в памяти таблиц: хэш-индексы и индексы Columnstore.
+Два специальных типа индексов требуют дополнительного обсуждения в контексте оптимизированных для памяти таблиц: хэш-индексы и индексы columnstore.
 
 Обзорную информацию об индексах в оптимизированных для обработки в памяти таблицах см. в следующих источниках:
 

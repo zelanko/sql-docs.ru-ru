@@ -41,12 +41,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 72d978967591fbffa8d25b3954c78256149f7592
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: a3257e1c92460f29eef8a9f82749746d18ee8a28
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55045097"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421421"
 ---
 # <a name="restore-statements-transact-sql"></a>Инструкции RESTORE (Transact-SQL)
 Восстанавливает резервные копии баз данных SQL, созданные с помощью команды BACKUP. 
@@ -64,7 +64,7 @@ ms.locfileid: "55045097"
 > [!div class="mx-tdCol2BreakAll"]
 > ||||
 > |-|-|-|
-> |**_\* SQL Server \*_**|[База данных SQL<br /> — управляемый экземпляр](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[Управляемый экземпляр Базы данных SQL<br />](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -708,11 +708,11 @@ RESTORE DATABASE Sales
 > [!div class="mx-tdCol2BreakAll"]
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|**_\* База данных SQL<br />Управляемый экземпляр \*_**|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|**_\* Управляемый экземпляр Базы данных SQL<br /> \*_**|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
+## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
 
 Эта команда позволяет восстановить всю базу данных из полной резервной копии (полное восстановление) в учетной записи хранилища BLOB-объектов Azure.
 
@@ -723,7 +723,7 @@ RESTORE DATABASE Sales
 - [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).   
 
 > [!IMPORTANT]
-> Сведения о восстановлении из автоматических резервных копий Управляемого экземпляра Базы данных SQL Azure: [Восстановление базы данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups).
+> Сведения о восстановлении из автоматических резервных копий управляемого экземпляра Базы данных SQL Azure: [Восстановление Базы данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups).
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -766,7 +766,7 @@ FROM URL
 - Добавляется оптимизированная для операций в памяти файловая группа с названием XTP (если она отсутствовала в исходном BAK-файле). Любые существующие оптимизированные для операций в памяти файловые группы переименовываются в XTP
 - Параметры SINGLE_USER и RESTRICTED_USER преобразуются в MULTI_USER
 
-## <a name="limitations---sql-database-managed-instance"></a>Ограничения — управляемый экземпляр базы данных SQL
+## <a name="limitations---sql-database-managed-instance"></a>Ограничения — управляемый экземпляр Базы данных SQL
 Применяются следующие ограничения:
 
 - BAK-файлы, содержащие несколько резервных наборов данных, не могут быть восстановлены.
@@ -840,7 +840,7 @@ WHERE r.command = 'RESTORE DATABASE'
 > [!div class="mx-tdCol2BreakAll"]
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — управляемый экземпляр](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* Параллельное<br />хранилище данных \*_**
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|[Управляемый экземпляр Базы данных SQL<br />](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* Параллельное<br />хранилище данных \*_**
 
 &nbsp;
 

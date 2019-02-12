@@ -1,7 +1,7 @@
 ---
 title: Указания запросов (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 10/22/2018
+ms.date: 02/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a4eb946a9b851342b1f997f2b491b0b0708138c
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: 96f34d4ececcb05f91e5fc6329a598907269501e
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306281"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736974"
 ---
 # <a name="hints-transact-sql---query"></a>Указания (Transact-SQL) — запросы
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -264,7 +264,9 @@ ms.locfileid: "53306281"
 *  "DISABLE_BATCH_MODE_ADAPTIVE_JOINS"       
    Отключает адаптивные соединения в пакетном режиме. Дополнительные сведения: [Адаптивные соединения в пакетном режиме](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
 *  "DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK"       
-   Отключает обратную связь по временно предоставляемому буферу памяти в пакетном режиме. Дополнительные сведения см. в разделе [Обратная связь по временно предоставляемому буферу памяти в пакетном режиме](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
+   Отключает обратную связь по временно предоставляемому буферу памяти в пакетном режиме. Дополнительные сведения см. в разделе [Обратная связь по временно предоставляемому буферу памяти в пакетном режиме](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).   
+* "DISABLE_DEFERRED_COMPILATION_TV"    
+  Отключает отложенную компиляцию табличных переменных. См. дополнительные сведения об [отложенной компиляции табличных переменных](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).
 *  "DISABLE_INTERLEAVED_EXECUTION_TVF"      
    Отключает выполнение с чередованием для функций с табличным значением с несколькими инструкциями. Дополнительные сведения см. в разделе о [выполнении с чередованием для функций с табличным значением с несколькими инструкциями](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'      
@@ -282,7 +284,7 @@ ms.locfileid: "53306281"
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
    Заставляет оптимизатор запросов использовать модель [оценки кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md) для [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более ранних версий. Это эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 или параметру [Конфигурация области баз данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON.
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
- Принудительно применяет поведение оптимизатора запросов на уровне запроса, как если бы запрос был скомпилирован с уровнем совместимости базы данных *n*, где *n* — это поддерживаемый уровень совместимости базы данных. Список значений, поддерживаемых сейчас для *n*, см. здесь: [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md). **Применимо к** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления CU10).    
+ Принудительно применяет поведение оптимизатора запросов на уровне запроса, как если бы запрос был скомпилирован с уровнем совместимости базы данных *n*, где *n* — это поддерживаемый уровень совместимости базы данных. Список значений, поддерживаемых сейчас для *n*, см. здесь: [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md). **Применимо к **: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления CU10).    
 
    > [!NOTE]
    > Указание QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n не переопределяет значение по умолчанию или параметр оценки унаследованной кратности, если оно применяется с использованием конфигурации области баз данных, флага трассировки или другого указания запроса, например QUERYTRACEON.   
@@ -292,11 +294,11 @@ ms.locfileid: "53306281"
 *  'QUERY_PLAN_PROFILE'      
  Включает упрощенное профилирование для запроса. Когда завершается запрос, содержащий это новое указание, вызывается новое расширенное событие query_plan_profile. Это расширенное событие предоставляет статистику выполнения и фактический план выполнения XML (подобно расширенному событию query_post_execution_showplan, но только для запросов, содержащих новое указание). **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и накопительным пакетом обновления 3 (CU3) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 11 (CU11)). 
 
-  > [!NOTE]
-  > Если включен сбор расширенных событий query_post_execution_showplan, в каждый запрос, который выполняется на сервере, будет добавлена стандартная инфраструктура профилирования. Это может повлиять на общую производительность сервера.      
-  > Если вместо этого вы включите сбор расширенных событий *query_thread_profile* для использования упрощенной инфраструктуры профилирования, издержки производительности будут гораздо ниже, но по-прежнему могут влиять на производительность сервера.       
-  > Если вы включите расширенное событие query_plan_profile, упрощенная инфраструктура профилирования будет применяться только к запросам, которые выполняются с указанием QUERY_PLAN_PROFILE, и не повлияет на другие рабочие нагрузки на сервере. Используйте это указание для профилирования конкретного запроса, не влияя на другие части рабочей нагрузки сервера.
-  > Дополнительные сведения об облегченном профилировании см. в разделе [Инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).
+   > [!NOTE]
+   > Если включен сбор расширенных событий query_post_execution_showplan, в каждый запрос, который выполняется на сервере, будет добавлена стандартная инфраструктура профилирования. Это может повлиять на общую производительность сервера.      
+   > Если вместо этого вы включите сбор расширенных событий *query_thread_profile* для использования упрощенной инфраструктуры профилирования, издержки производительности будут гораздо ниже, но по-прежнему могут влиять на производительность сервера.       
+   > Если вы включите расширенное событие query_plan_profile, упрощенная инфраструктура профилирования будет применяться только к запросам, которые выполняются с указанием QUERY_PLAN_PROFILE, и не повлияет на другие рабочие нагрузки на сервере. Используйте это указание для профилирования конкретного запроса, не влияя на другие части рабочей нагрузки сервера.
+   > Дополнительные сведения об облегченном профилировании см. в разделе [Инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).
  
 Список всех поддерживаемых имен USE HINT можно запросить с помощью динамического административного представления [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).    
 

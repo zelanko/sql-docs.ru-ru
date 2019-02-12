@@ -30,12 +30,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f3f0b40e022db23cfcd650c5f2da4a5a14082d1
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: c43e8ae5b32753eccb42e1e706bbe13b9bf4f8d9
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327585"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421221"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "54327585"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database Managed Instance
+-- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database managed instance
   
 -- Syntax Users based on logins in master  
 CREATE USER user_name   
@@ -127,7 +127,7 @@ CREATE USER user_name
 CREATE USER user_name  
 [;]
 
--- Syntax for users based on Azure AD logins for Azure SQL Database Managed Instance
+-- Syntax for users based on Azure AD logins for Azure SQL Database managed instance
 CREATE USER user_name   
     [   { FOR | FROM } LOGIN login_name  ]  
     | FROM EXTERNAL PROVIDER
@@ -141,7 +141,7 @@ CREATE USER user_name
 ```
 
 > [!IMPORTANT]
-> Учетные данные Azure AD для управляемого экземпляра базы данных SQL находятся в **общедоступной предварительной версии**.
+> Имена входа Azure AD для управляемого экземпляра Базы данных SQL находятся в **общедоступной предварительной версии**.
 
 ```  
 -- Syntax for Azure SQL Data Warehouse  
@@ -269,11 +269,11 @@ GO
   
  Данные о пользователях базы данных отображаются в представлении каталога [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).
 
-Для создания имен входа Azure AD на уровне сервера в управляемом экземпляре базы данных SQL доступно новое расширение синтаксиса **FROM EXTERNAL PROVIDER**. Имена входа Azure AD позволяют сопоставлять субъекты Azure AD на уровне базы данных с именами входа Azure AD на уровне сервера. Чтобы создать пользователя Azure AD по имени входа Azure AD, используйте следующий синтаксис:
+Для создания имен входа Azure AD на уровне сервера в управляемом экземпляре Базы данных SQL доступно новое расширение синтаксиса **FROM EXTERNAL PROVIDER**. Имена входа Azure AD позволяют сопоставлять субъекты Azure AD на уровне базы данных с именами входа Azure AD на уровне сервера. Чтобы создать пользователя Azure AD по имени входа Azure AD, используйте следующий синтаксис:
 
 `CREATE USER [AAD_principal] FROM LOGIN [Azure AD login]`
 
-При создании пользователя в управляемом экземпляре базы данных SQL значение login_name должно соответствовать существующему имени входа Azure AD. В противном случае в результате использования предложения **FROM EXTERNAL PROVIDER** будет создан только пользователь Azure AD без имени входа в базе данных master. Например, следующая команда создает автономного пользователя:
+При создании пользователя в управляемом экземпляре Базы данных SQL значение login_name должно соответствовать имеющемуся имени входа Azure AD. В противном случае в результате использования предложения **FROM EXTERNAL PROVIDER** будет создан только пользователь Azure AD без имени входа в базе данных master. Например, следующая команда создает автономного пользователя:
 
 `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
@@ -464,11 +464,11 @@ WITH
     , ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON ;  
 ```
 
-### <a name="i-create-an-azure-ad-user-from-an-azure-ad-login-in-sql-database-managed-instance"></a>И. Создание пользователя Azure AD по имени входа Azure AD в управляемом экземпляре базы данных SQL
+### <a name="i-create-an-azure-ad-user-from-an-azure-ad-login-in-sql-database-managed-instance"></a>И. Создание пользователя Azure AD по имени входа Azure AD в управляемом экземпляре Базы данных SQL
 
  Чтобы создать пользователя Azure AD по имени входа Azure AD, используйте приведенный ниже синтаксис.
 
- Войдите в управляемый экземпляр, используя имя входа Azure AD с ролью `sysadmin`. Приведенная ниже инструкция создает пользователя Azure AD bob@contoso.com по имени входа bob@contoso.com. Это имя входа было создано в примере [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account).
+ Войдите в управляемый экземпляр, используя имя входа Azure AD с ролью `sysadmin`. Приведенная ниже инструкция создает пользователя Azure AD bob@contoso.com по имени входа bob@contoso.com. Это имя входа было создано в примере [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account).
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
@@ -494,7 +494,7 @@ GO
 
 ### <a name="j-create-an-azure-ad-user-without-an-aad-login-for-the-database"></a>К. Создание пользователя Azure AD без имени входа AAD для базы данных
 
-Чтобы создать пользователя Azure AD bob@contoso.com (автономного) в управляемом экземпляре базы данных SQL, используйте следующий синтаксис:
+Чтобы создать пользователя Azure AD bob@contoso.com (автономного) в управляемом экземпляре Базы данных SQL, используйте следующий синтаксис:
 
 ```sql
 CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;

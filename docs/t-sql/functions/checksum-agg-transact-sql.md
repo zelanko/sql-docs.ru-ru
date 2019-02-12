@@ -20,12 +20,12 @@ ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4312bbe98c024ce22eb775bfef03cdb1cb876e01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f74f05dcb91885bf6f95571242699672f10fb871
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838492"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513814"
 ---
 # <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ DISTINCT
 ## <a name="remarks"></a>Remarks  
 Функция `CHECKSUM_AGG` может обнаруживать изменения в таблице.
   
-Результат функции `CHECKSUM_AGG` не зависит от порядка строк в таблице. Кроме того, функции `CHECKSUM_AGG` позволяют использовать ключевое слово DISTINCT и предложение GROUP BY.
+Результат функции `CHECKSUM_AGG` не зависит от порядка строк в таблице. Кроме того, функции `CHECKSUM_AGG` позволяют использовать ключевое слово `DISTINCT` и предложение `GROUP BY`.
   
 Если значение в списке выражений изменяется, скорее всего также изменится значение контрольной суммы списка. Тем не менее существует небольшая вероятность того, что вычисленная контрольная сумма не изменится.
   
@@ -67,6 +67,7 @@ DISTINCT
   
 ```sql
 --Get the checksum value before the column value is changed.  
+
 SELECT CHECKSUM_AGG(CAST(Quantity AS int))  
 FROM Production.ProductInventory;  
 GO  
@@ -74,7 +75,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ------------------------  
 262  
 ```  
@@ -84,6 +85,7 @@ UPDATE Production.ProductInventory
 SET Quantity=125  
 WHERE Quantity=100;  
 GO  
+
 --Get the checksum of the modified column.  
 SELECT CHECKSUM_AGG(CAST(Quantity AS int))  
 FROM Production.ProductInventory;  
@@ -91,13 +93,14 @@ FROM Production.ProductInventory;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ------------------------  
 287  
 ```  
   
 ## <a name="see-also"></a>См. также раздел
 [CHECKSUM (Transact-SQL)](../../t-sql/functions/checksum-transact-sql.md)  
+[HASHBYTES (Transact-SQL)](../../t-sql/functions/hashbytes-transact-sql.md)  
+[BINARY_CHECKSUM (Transact-SQL)](../../t-sql/functions/binary-checksum-transact-sql.md)
 [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)
-  
   

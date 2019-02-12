@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 90649f491fac7d867ebad0516d1ccea5fc41d4a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: a1b5ead3e2ab16eea905af3312779631ae6344ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134174"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026783"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Настройка Reporting Services для использования альтернативного имени субъекта
   В этом разделе объясняется, как настроить [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS), чтобы использовать альтернативное имя субъекта (SAN), изменив файл rsreportserver.config и используя средство Netsh.exe.  
@@ -29,9 +29,9 @@ ms.locfileid: "48134174"
   
  Чтобы использовать SAN, SSL-сертификат должен быть зарегистрирован на сервере, подписан и иметь закрытый ключ. Самозаверяющий сертификат использовать невозможно.  
   
- URL-адреса в [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] могут быть настроены для использования SSL-сертификат. Обычно сертификат имеет только имя субъекта, которое позволяет ему использовать только один URL-адрес для сеанса SSL. SAN — это дополнительное поле в сертификате, которое позволяет службе SSL прослушивать и быть допустимой для многих URL-адресов, а также совместно использовать порт SSL с другими приложениями. SAN выглядит следующим образом: www.s2.com.  
+ URL-адреса в [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] можно настроить для использования SSL-сертификата. Обычно сертификат имеет только имя субъекта, которое позволяет ему использовать только один URL-адрес для сеанса SSL. SAN — это дополнительное поле в сертификате, которое позволяет службе SSL прослушивать и быть допустимой для многих URL-адресов, а также совместно использовать порт SSL с другими приложениями. SAN выглядит следующим образом: www.s2.com.  
   
- Дополнительные сведения о параметрах SSL для [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], см. в разделе [Настройка подключений SSL на сервер отчетов в собственном режиме](security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Дополнительные сведения о параметрах SSL см. в статье [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [Настройка соединений SSL для сервера отчетов, работающего в собственном режиме](security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ### <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Настройка SSRS для использования альтернативного имени субъекта для URL-адреса веб-службы  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48134174"
   
 ## <a name="see-also"></a>См. также  
  [Файл конфигурации RSReportServer](report-server/rsreportserver-config-configuration-file.md)   
- [Диспетчер конфигурации служб Reporting Services &#40;собственный режим&#41;](../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   

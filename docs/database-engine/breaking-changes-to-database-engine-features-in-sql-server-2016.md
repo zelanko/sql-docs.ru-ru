@@ -14,12 +14,12 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 83725ee74e17a91465356b426b13afc0c265f851
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 03827d700e268baf2695c23d9c9ea3021ebb74e2
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536367"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570687"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>Критические изменения в функциях ядра СУБД в SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -28,17 +28,19 @@ ms.locfileid: "52536367"
   
 ##  <a name="SQL15"></a> Критические изменения в [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
   
--   Столбец sample_ms column of sys.dm_io_virtual_file_stats был расширен с типа данных **int** до **bigint** .  
+-   Столбец *sample_ms* таблицы `sys.dm_io_virtual_file_stats` был расширен с типа данных **int** до **bigint**.  
   
--   Столбец TimeStamp в sys.fn_virtualfilestats был расширен с типа данных **int** до **bigint** .  
+-   Столбец *TimeStamp* таблицы `sys.fn_virtualfilestats` был расширен с типа данных **int** до **bigint**.  
 
--   Для использования хэш-алгоритмов MD2, MD4, MD5, SHA или SHA1 (не рекомендуется) необходимо задать уровень совместимости базы данных ниже 130.  
+-   Алгоритмы MD2, MD4, MD5, SHA и SHA1 недоступны при уровне совместимости 130. Использование хэш-алгоритмов MD2, MD4, MD5, SHA или SHA1 **не рекомендуется**, но их использование возможно, если уровню совместимости базы данных задать значение ниже 130.  
 
--   При уровне совместимости базы данных 130 неявные преобразования типов данных из **datetime** в **datetime2** демонстрируют повышенную точность благодаря учету долей миллисекунд. В результате преобразования дают иные значения. Всегда используйте явное приведение к типу данных datetime2, когда имеется сценарий смешанного сравнения типов данных datetime и datetime2. Дополнительные сведения см. в [этой статье](https://support.microsoft.com/help/4010261) на сайте службы поддержки Майкрософт.
+-   При уровне совместимости базы данных 130 неявные преобразования типов данных из **datetime** в **datetime2** демонстрируют повышенную точность благодаря учету долей миллисекунд. В результате преобразования дают иные значения. Всегда используйте явное приведение к типу данных datetime2, когда имеется сценарий смешанного сравнения типов данных datetime и datetime2. Дополнительные сведения см. в этой [статье службы поддержки Майкрософт](https://support.microsoft.com/help/4010261).
+
+-   При уровне совместимости базы данных 130 операции, которые выполняют неявные преобразования между определенными числовыми типами и типами данных даты и времени, демонстрируют повышенную точность и могут привести к иным преобразованным значениям. Это включает использование функций, которые требуют вычислений, таких как, например, `DATEDIFF` и `ROUND`. Дополнительные сведения см. в этой [статье службы поддержки Майкрософт](https://support.microsoft.com/help/4010261).
 
 ## <a name="previous-versions"></a> Предыдущие версии  
 
-Сведения о критических изменениях в SQL Server версии 2014 и в некоторых более ранних версиях см. в статье [Критические изменения в функциях ядра СУБД в SQL Server 2014](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?view=sql-server-2014#SQL14).
+Сведения о критических изменениях в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] и в некоторых более ранних версиях см. в статье [Критические изменения в функциях ядра СУБД в SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md#SQL14).
 
 #### <a name="archived-documentation-for-very-old-versions-of-sql-server"></a>Архивная документация по очень старым версиям SQL Server
 
@@ -49,6 +51,6 @@ ms.locfileid: "52536367"
  [Неподдерживаемые функции ядра СУБД в SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [Обратная совместимость компонента ядра СУБД SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
- [Улучшения SQL Server 2016 или SQL Server 2017 в Windows для обработки некоторых типов данных и нестандартных операций](https://support.microsoft.com/help/4010261)
+ [Улучшения SQL Server 2016 или SQL Server 2017 в Windows для обработки некоторых типов данных и нестандартных операций](https://support.microsoft.com/help/4010261)   
   
   

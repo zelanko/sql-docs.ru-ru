@@ -23,19 +23,19 @@ ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 320c11c78f95f644e373b1cd410858a81e72edad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 112d46b26d8b4e03e8842aa17b8f1ad54976e19a
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804492"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652533"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Удаляет всю коллекцию XML-схем и все ее компоненты.  
+Удаляет всю коллекцию XML-схем и все ее компоненты.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,22 +45,22 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *relational_schema*  
- Определяет имя реляционной схемы. Если не задано, предполагается использование реляционной схемы по умолчанию.  
+*relational_schema*  
+Определяет имя реляционной схемы. Если не задано, предполагается использование реляционной схемы по умолчанию.  
   
- *sql_identifier*  
- Имя удаляемой коллекции XML-схем.  
+*sql_identifier*  
+Имя удаляемой коллекции схем XML.  
   
 ## <a name="remarks"></a>Remarks  
- Удаление коллекции XML-схем является транзакционной операцией. Это значит, что если удалить коллекцию XML-схем внутри транзакции, а потом сделать откат, коллекция XML-схем не будет удалена.  
+Удаление коллекции XML-схем является транзакционной операцией. Если удалить коллекцию схем XML внутри транзакции, а потом сделать откат, коллекция XML-схем не будет удалена.  
   
- Нельзя удалить коллекцию XML-схем, если она используется. Это означает, что удаляемая коллекция не может быть:  
+Коллекцию XML-схем нельзя удалить, если она используется. Таким образом, удаляемая коллекция не может быть в любом из следующих состояний:  
   
 -   ассоциированной с любым параметром типа **xml** или столбцом;  
   
 -   указанной в ограничениях любой из таблиц;  
   
--   той, на которую ссылается привязанная к схеме функция или хранимая процедура. Например, следующая функция заблокирует коллекцию XML-схем `MyCollection`, так как функция включает `WITH SCHEMABINDING`. Если удалить ее, блокировки на XML SCHEMA COLLECTION не будет.  
+-   той, на которую ссылается привязанная к схеме функция или хранимая процедура. Например, следующая функция блокирует коллекцию XML-схем `MyCollection`, так как функция включает `WITH SCHEMABINDING`. Если удалить ее, блокировки на XML SCHEMA COLLECTION не будет.  
   
     ```  
     CREATE FUNCTION dbo.MyFunction()  
@@ -75,10 +75,10 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
     ```  
   
 ## <a name="permissions"></a>Разрешения  
- Для удаления XML SCHEMA COLLECTION необходимо обладать разрешением DROP для коллекции.  
+Для удаления XML SCHEMA COLLECTION необходимо обладать разрешением DROP для коллекции.  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример демонстрирует удаление коллекции XML-схем.  
+Следующий пример демонстрирует удаление коллекции XML-схем.  
   
 ```  
 DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;  

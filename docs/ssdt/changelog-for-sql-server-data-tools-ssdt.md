@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 53a852b5293cfc013c170723f0e031cc3800e27c
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: a82fe061c8886dc88af8b44faf4b4fb86ccda2e6
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087893"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428681"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Журнал изменений для SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "55087893"
 
 ### <a name="whats-new"></a>Новые возможности
 **SSIS**
-1. Добавление источника Power Query (предварительная версия) для служб SQL Server Integration Services 2017.
-2. Возвращена поддержка служб SQL Server Integration Services 2012.
-3. Добавлены источник и назначение Oracle для служб SQL Server Integration Services 2019.
+1. Добавлен источник Power Query (предварительная версия) для SQL Server Integration Services в ADF 2017.
+2. Возвращена поддержка для SQL Server 2012.
+3. Добавлены источник и назначение Oracle для SQL Server 2019.
 4. Устранена проблема с загрузкой задачи или компонента скрипта при миграции с предыдущих версий служб SQL Server Integration Services.
 5. Устранена проблема, из-за которой средство просмотра данных не работало в Windows 7 с пакетом обновления 1 (SP1) и Windows 8.1.
 6. Устранена проблема, из-за которой в некоторых случаях сохранение пакета вызывало аварийное завершение работы Visual Studio. 
-7. Устранена проблема, из-за которой в некоторых случаях пакет не удавалось выполнить при уровне защиты EncryptSensitiveWithPassword и целевой версии сервера ниже SQL Server 2017.
+7. Устранена проблема, из-за которой в некоторых случаях пакет не удавалось выполнить при уровне защиты EncryptSensitiveWithPassword и версии целевого сервера ниже SQL Server 2017.
 8. Устранена проблема, из-за которой заметки со шрифтом по умолчанию не отображались в SSDT.
 9. ISDeploymentWizard поддерживает проверку подлинности SQL, встроенную проверку подлинности Azure Active Directory и проверку пароля Azure Active Directory в режиме командной строки.
 

@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7dae0b33b2b3a9100aada7505e61f3e75f8bf66c
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 48044f9c24942079f66ee4675c1aa01bb6549532
+ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980487"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484863"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (хранилище данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -289,7 +289,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="determining-the-number-of-table-partitions"></a>Определение числа секций таблицы
 Каждая пользовательская таблица делится на несколько таблиц меньшего размера, которые хранятся в различных расположениях, называемых распределениями. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] использует 60 распределений. В [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] количество распределений зависит от количества вычислительных узлов.
  
-Каждое распределение содержит все секции таблицы. Например, для 60 распределений и четырех секций таблицы мы получим 320 секций. Если в таблице есть кластеризованные индексы columnstore, то в каждой секции будет один индекс columnstore, т. е. в общей сложности в таблице будет 320 индексов columnstore.
+Каждое распределение содержит все секции таблицы. Например, для 60 распределений, четырех секций таблицы и одной пустой секции мы получим 300 секций (5 x 60= 300). Если в таблице есть кластеризованные индексы columnstore, то в каждой секции будет один индекс columnstore, т. е. в общей сложности в таблице будет 300 индексов columnstore.
 
 Рекомендуется использовать меньшее число секций таблицы, чтобы в каждом индексе columnstore было достаточное количество строк для использования всех преимуществ индексов columnstore. Дополнительные инструкции см. в разделах [Секционирование таблиц в хранилище данных SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) и [Индексирование таблиц в хранилище данных SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
 

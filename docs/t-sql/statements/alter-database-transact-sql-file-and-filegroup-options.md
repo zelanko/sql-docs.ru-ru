@@ -43,12 +43,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 5a91f7bf27dea953cde7186262c8b28b2cd0cf7e
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 3ed1de27dacbd8104a9125fe105b50689a4fd9c9
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53329022"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421251"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL) 
 
@@ -65,7 +65,7 @@ ms.locfileid: "53329022"
 > [!div class="mx-tdCol2BreakAll"]
 > |||
 > |-|-|-|
-> |**_\* SQL Server \*_**<br />&nbsp;|[База данных SQL<br /> — управляемый экземпляр](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+> |**_\* SQL Server \*_**<br />&nbsp;|[Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 
 &nbsp;
 
@@ -709,15 +709,15 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > |||
 > |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016)|**_\* База данных SQL<br />Управляемый экземпляр \*_**<br />&nbsp;|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016)|**_\* Управляемый экземпляр Базы данных SQL<br /> \*_**<br />&nbsp;|
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
+## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
 
-Используйте эту инструкцию с базой данных в Управляемом экземпляре Базы данных SQL Azure.
+Используйте эту инструкцию с базой данных в управляемом экземпляре Базы данных SQL Azure.
 
-## <a name="syntax-for-databases-in-a-managed-instance"></a>Синтаксис для баз данных в Управляемом экземпляре
+## <a name="syntax-for-databases-in-a-managed-instance"></a>Синтаксис для баз данных в управляемом экземпляре
 
 ```  
 ALTER DATABASE database_name   

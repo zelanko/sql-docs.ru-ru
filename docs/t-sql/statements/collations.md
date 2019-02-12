@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f962d98bc60ea8fedc585add7617ddf938db6f4
-ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
+ms.openlocfilehash: 23f7329c6964f59cb0b7cb9f0d2db6d3b4b825ad
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49960768"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55420951"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -99,7 +99,7 @@ FROM fn_helpcollations();
 -   при восстановлении или присоединении базы данных параметры сортировки по умолчанию и параметры сортировки всех столбцов типа **char**, **varchar** и **text** или параметров базы данных должны поддерживаться операционной системой.  
   
 > [!NOTE]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Параметрами сортировки сервера для управляемого экземпляра являются **SQL_Latin1_General_CP1_CI_AS**, и изменить их невозможно.
+> Параметрами сортировки сервера для управляемого экземпляра [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] являются **SQL_Latin1_General_CP1_CI_AS**, и изменить их невозможно.
 
 > [!NOTE]
 > Преобразование кодовых страниц поддерживается для типов данных **char** и **varchar**, однако поддержка типа данных **text** не предусмотрена. Сообщения о потере данных во время преобразования кодовых страниц не выводятся.  

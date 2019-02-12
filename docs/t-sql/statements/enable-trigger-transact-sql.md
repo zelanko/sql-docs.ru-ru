@@ -23,19 +23,19 @@ ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a92ebf725860db4537b03d4d5eb917475774201a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86b23a92006e4a2f3e3896cd1fe20c8b566d14e4
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599442"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652523"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Включает триггер DML, DDL или logon.  
+Включает триггер DML, DDL или logon.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,41 +45,41 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *schema_name*  
- Имя схемы, к которой принадлежит триггер. Аргумент *schema_name* не может указываться для триггеров DDL или триггеров входа.  
+*schema_name*  
+Имя схемы, к которой принадлежит триггер. Аргумент *schema_name* не может указываться для триггеров DDL или триггеров входа.  
   
- *trigger_name*  
- Имя триггера.  
+*trigger_name*  
+Имя триггера.  
   
- ALL  
- Указывает, что включаются все триггеры, определенные в области предложения ON.  
+ALL  
+Указывает, что включаются все триггеры, определенные в области предложения ON.  
   
- *object_name*  
- Имя таблицы или представления, для выполнения которых создан триггер DML с именем *trigger_name*.  
+*object_name*  
+Имя таблицы или представления, для выполнения которых создан триггер DML с именем *trigger_name*.  
   
- DATABASE  
- Показывает, что триггер DDL *trigger_name* был создан или изменен для выполнения в области базы данных.  
+DATABASE  
+Показывает, что триггер DDL *trigger_name* был создан или изменен для выполнения в области базы данных.  
   
- ALL SERVER  
- **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ALL SERVER  
+**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Показывает, что триггер DDL *trigger_name* был создан или изменен для выполнения в области сервера. Параметр ALL SERVER также применяется к триггерам входа.  
+Показывает, что триггер DDL *trigger_name* был создан или изменен для выполнения в области сервера. Параметр ALL SERVER также применяется к триггерам входа.  
   
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных.  
   
 ## <a name="remarks"></a>Remarks  
- При включении триггера он не создается повторно. Отключенный триггер не может быть запущен, но продолжает существование в виде объекта в текущей базе данных. Включение триггера приводит к его запуску при выполнении любых инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)], на которые он изначально был запрограммирован. Триггеры отключаются с помощью инструкции [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md). Кроме того, триггеры DML, определенные в таблицах, можно отключать или включать с помощью [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+При включении триггера он не создается повторно. Отключенный триггер не может быть запущен, но продолжает существование в виде объекта в текущей базе данных. Включение триггера приводит к его запуску при выполнении любых инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)], на которые он изначально был запрограммирован. Триггеры отключаются с помощью инструкции [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md). Триггеры DML, определенные в таблицах, также можно отключать или включать с помощью [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
- Чтобы включить триггер DML, пользователь должен, как минимум, обладать разрешением ALTER для таблицы, на которую был создан триггер.  
+Чтобы включить триггер DML, пользователю необходимо, как минимум, обладать разрешением ALTER для таблицы или представления, на которые был создан триггер.  
   
- Для включения триггера DDL в области сервера (ON ALL SERVER) или триггера входа пользователь должен обладать разрешением CONTROL SERVER на этот сервер. Чтобы включить триггер DDL в области базы данных (ON DATABASE), пользователь должен, как минимум, иметь разрешение ALTER ANY DATABASE DDL TRIGGER для текущей базы данных.  
+Для включения триггера DDL в области сервера (ON ALL SERVER) или триггера входа пользователю необходимо обладать разрешением CONTROL SERVER на этот сервер. Чтобы включить триггер DDL в области базы данных (ON DATABASE), пользователю необходимо, как минимум, иметь разрешение ALTER ANY DATABASE DDL TRIGGER для текущей базы данных.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. Включение триггера DML для таблицы  
- В данном примере отключается триггер `uAddress`, созданный для таблицы `Address` в базе данных AdventureWorks, а затем он включается.  
+В данном примере отключается триггер `uAddress`, созданный для таблицы `Address` в базе данных AdventureWorks, а затем он включается.  
   
 ```  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
@@ -89,7 +89,7 @@ GO
 ```  
   
 ### <a name="b-enabling-a-ddl-trigger"></a>Б. Включение триггера DDL  
- В следующем примере создается триггер DDL `safety` в области базы данных, а затем он отключается и включается.  
+В следующем примере создается триггер DDL `safety` в области базы данных, а затем он отключается и включается.  
   
 ```  
 CREATE TRIGGER safety   
@@ -106,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-enabling-all-triggers-that-were-defined-with-the-same-scope"></a>В. Включение всех триггеров, определенных в одной области  
- В следующем примере включаются все триггеры DDL, созданные в области сервера.  
+В следующем примере включаются все триггеры DDL, созданные в области сервера.  
   
 **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

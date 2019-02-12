@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 12/03/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c29c19a67e3cbbfa4131e25151e33c67fe667169
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 8448d5fd564ff001d847e7af981bc34734cef727
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327905"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421411"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -50,7 +50,7 @@ ms.locfileid: "54327905"
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |**_\* SQL Server \*_**|[База данных SQL<br /> — логический сервер](create-login-transact-sql.md?view=azuresqldb-current)|[База данных SQL<br /> — управляемый экземпляр](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[Отдельная база данных/эластичный пул Базы данных SQL<br />](create-login-transact-sql.md?view=azuresqldb-current)|[Управляемый экземпляр Базы данных SQL<br />](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -262,11 +262,11 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\* База данных SQL<br />логический сервер \*_**|[База данных SQL<br /> — управляемый экземпляр](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\* Отдельная база данных/эластичный пул Базы данных SQL<br /> \*_**|[Управляемый экземпляр Базы данных SQL<br />](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Логический сервер Базы данных SQL Azure
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Отдельная база данных или эластичный пул Базы данных SQL Azure
   
 ## <a name="syntax"></a>Синтаксис 
   
@@ -282,7 +282,7 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>Аргументы  
 *login_name*  
-Указывает имя пользователя для создаваемого имени входа. Логический сервер базы данных SQL Azure поддерживает только имена входа SQL. 
+Указывает имя пользователя для создаваемого имени входа. Отдельная база данных или эластичный пул Базы данных SQL Azure поддерживает только имена входа SQL. 
 
 PASSWORD **='** password**'*  
 Указывает пароль для создаваемого имени входа SQL. Выбирайте надежные пароли. Дополнительные сведения см. в статьях [Надежные пароли](../../relational-databases/security/strong-passwords.md) и [Политика паролей](../../relational-databases/security/password-policy.md). Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] сохраненные сведения о пароле вычисляются с помощью SHA-512 соленого пароля. 
@@ -320,7 +320,7 @@ SID = *sid*
 
 ## <a name="logins"></a>Имена входа
 - Требуется разрешение **ALTER ANY LOGIN** на сервере или членство в предопределенной роли сервера **securityadmin**. Выполнять эту команду может только учетная запись Azure Active Directory (Azure AD) с разрешением **ALTER ANY LOGIN** на сервере или членством в разрешении securityadmin.
-- Требуется членство в Azure AD в том же каталоге, который используется для логического сервера Azure SQL.
+- Требуется членство в Azure AD в том же каталоге, который используется для сервера Базы данных SQL Azure.
   
 ## <a name="after-creating-a-login"></a>После создания имени входа  
 Созданное имя входа может подключаться к базе данных SQL, но имеет разрешения только для роли **public**. Попробуйте выполнить некоторые из приведенных ниже действий. 
@@ -378,16 +378,16 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — логический сервер](create-login-transact-sql.md?view=azuresqldb-current)|**_\* База данных SQL<br />Управляемый экземпляр \*_**|[Хранилище данных<br />SQL](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[Отдельная база данных/эластичный пул Базы данных SQL<br />](create-login-transact-sql.md?view=azuresqldb-current)|**_\* Управляемый экземпляр Базы данных SQL<br /> \*_**|[Хранилище данных<br />SQL](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
+## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
 
 ## <a name="syntax"></a>Синтаксис 
   
 ```sql
--- Syntax for Azure SQL Database Managed Instance
+-- Syntax for Azure SQL Database managed instance
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
   
 <option_list> ::=
@@ -398,7 +398,7 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 ```  
 
 > [!IMPORTANT]
-> Учетные данные Azure AD для управляемого экземпляра базы данных SQL находятся в **общедоступной предварительной версии**. Синтаксически эта функция оформляется с помощью предложения **FROM EXTERNAL PROVIDER**.
+> Имена входа Azure AD для управляемого экземпляра Базы данных SQL находятся в **общедоступной предварительной версии**. Синтаксически эта функция оформляется с помощью предложения **FROM EXTERNAL PROVIDER**.
 
 ## <a name="arguments"></a>Аргументы
 *login_name*  
@@ -420,10 +420,10 @@ SID **=** *sid*
 - В паролях учитывается регистр символов.
 - Появился новый синтаксис для создания субъектов уровня сервера, сопоставленных с учетными записями Azure AD (**FROM EXTERNAL PROVIDER**)
 - Когда указывается **FROM EXTERNAL PROVIDER**:
-    - значение login_name должно представлять существующую учетную запись Azure AD (пользователя, группу или приложение), доступную в Azure AD для текущего управляемого экземпляра SQL Azure.
+    - значение login_name должно представлять имеющуюся учетную запись Azure AD (пользователя, группу или приложение), доступную в Azure AD для текущего управляемого экземпляра SQL Azure.
     - Этот параметр невозможно использовать совместно с параметром **PASSWORD**.
     - Сейчас первое имя входа Azure AD должно создаваться стандартной учетной записью SQL Server (не относящейся к Azure AD), то есть `sysadmin`, используя приведенный выше синтаксис.
-        - При создании имени входа Azure AD с участием администратора Azure AD для управляемого экземпляра базы данных SQL возникает следующая ошибка:</br>
+        - При создании имени входа Azure AD с участием администратора Azure AD для управляемого экземпляра Базы данных SQL возникает следующая ошибка:</br>
         `Msg 15247, Level 16, State 1, Line 1
         User does not have permission to perform this action.`
         - Это известное ограничение **общедоступной предварительной версии**, которая будет исправлена в будущем.
@@ -440,14 +440,14 @@ SID **=** *sid*
 Стандартные разрешения, предоставляемые по умолчанию только что созданному имени входа Azure AD в базе данных master:
 - **CONNECT SQL** и **VIEW ANY DATABASE**.
 
-### <a name="sql-database-managed-instance-logins"></a>Имена входа управляемого экземпляра базы данных SQL
+### <a name="sql-database-managed-instance-logins"></a>Имена входа управляемого экземпляра Базы данных SQL
 
 - Требуется разрешение **ALTER ANY LOGIN** на сервере или членство в предопределенной роли сервера `securityadmin` или `sysadmin`. Выполнять команду создания может только учетная запись Azure Active Directory (Azure AD) с разрешением **ALTER ANY LOGIN** на сервере или членством в одной из этих ролей.
 - Если имя входа является субъектом SQL, только имена входа, которые относятся к роли `sysadmin`, могут использовать команду создания, чтобы создавать имена входа для учетной записи Azure AD.
-- Требуется членство в Azure AD в том же каталоге, который используется для управляемого экземпляра Azure SQL.
+- Требуется членство в Azure AD в том же каталоге, который используется для управляемого экземпляра SQL Azure.
 
 ## <a name="after-creating-a-login"></a>После создания имени входа  
-Созданное имя входа может подключаться к управляемому экземпляру базы данных SQL, но имеет разрешения только для роли **public**. Попробуйте выполнить некоторые из приведенных ниже действий. 
+Созданное имя входа может подключаться к управляемому экземпляру Базы данных SQL, но c разрешениями только для роли **public**. Попробуйте выполнить некоторые из приведенных ниже действий. 
   
 - Чтобы создать пользователя Azure AD по имени входа Azure AD, см. раздел [CREATE USER](../../t-sql/statements/create-user-transact-sql.md). 
 - Чтобы предоставить разрешения пользователю базы данных, используйте инструкцию **ALTER SERVER ROLE** ... **ADD MEMBER** для добавления пользователя в одну из встроенных ролей базы данных или пользовательскую роль либо напрямую предоставьте пользователю разрешения с помощью инструкции [GRANT](../../t-sql/statements/grant-transact-sql.md). Дополнительные сведения см. в разделах [Пользователи без прав администратора](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles и [GRANT](grant-transact-sql.md).
@@ -553,7 +553,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — логический сервер](create-login-transact-sql.md?view=azuresqldb-current)|[База данных SQL<br /> — управляемый экземпляр](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* Хранилище данных<br />SQL \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[Отдельная база данных/эластичный пул Базы данных SQL<br />](create-login-transact-sql.md?view=azuresqldb-current)|[Управляемый экземпляр Базы данных SQL<br />](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* Хранилище данных<br />SQL \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -665,7 +665,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[База данных SQL<br /> — логический сервер](create-login-transact-sql.md?view=azuresqldb-current)|[База данных SQL<br /> — управляемый экземпляр](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Параллельное<br />хранилище данных \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[Отдельная база данных/эластичный пул Базы данных SQL<br />](create-login-transact-sql.md?view=azuresqldb-current)|[Управляемый экземпляр Базы данных SQL<br />](create-login-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Параллельное<br />хранилище данных \*_**
 
 &nbsp;
 

@@ -20,16 +20,16 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 - implicit schema mapping
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91cb486c1b24cf213b765e42d721c4aeb0866ec8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 884ed081e9d1ec445815802545da2160057e9f3b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843392"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026885"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Общие сведения о диаграммах обновления (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ ms.locfileid: "47843392"
  При сопоставлении по умолчанию (когда сопоставляемая схема не указывается в диаграмме обновления), элементы диаграммы обновления сопоставляются с таблицами и дочерними элементами (в случае элементной модели сопоставления), а атрибуты сопоставляются со столбцами (в случае атрибутивной модели сопоставления).  
   
 ### <a name="element-centric-mapping"></a>Сопоставление, ориентированное на элементы  
- В диаграмме обновления, основанной на элементах, элемент содержит дочерние элементы, обозначающие свойства этого элемента. В качестве примера см. следующую диаграмму обновления. **\<Person.Contact >** элемент содержит  **\<FirstName >** и  **\<LastName >** дочерних элементов. Эти дочерние элементы являются свойствами  **\<Person.Contact >** элемент.  
+ В диаграмме обновления, основанной на элементах, элемент содержит дочерние элементы, обозначающие свойства этого элемента. В качестве примера см. следующую диаграмму обновления.  **\<Person.Contact >** элемент содержит  **\<FirstName >** и  **\<LastName >** дочерних элементов. Эти дочерние элементы являются свойствами  **\<Person.Contact >** элемент.  
   
  Эта диаграмма обновления не указывает схему сопоставления, поэтому в ней используется неявное сопоставление, где  **\<Person.Contact >** элемент сопоставляется с таблицей Person.Contact и его дочерние элементы сопоставляются FirstName и Столбцы LastName.  
   

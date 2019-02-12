@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a24215479af1aca6e1e742d5c62ba8995aaa4a8
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: fca6676b5cb7532faf7bf88cf04159c28b0fa36b
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087673"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570697"
 ---
 # <a name="sql-server-help-and-feedback"></a>Справка и отзывы по SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,6 +25,21 @@ ms.locfileid: "55087673"
 Группа разработчиков SQL Server тщательно следит за [User Voice](https://feedback.azure.com/forums/908035-sql-server) по SQL Server. Если вы хотите сообщить о проблеме с SQL Server, например о сбоях, низкой производительности, непредвиденных результатах и т. д., User Voice — лучший способ сделать это. 
 
 С помощью [User Voice](https://feedback.azure.com/forums/908035-sql-server) даже можно сообщить команде разработчиков, что они могли бы улучшить! Если у вас есть рекомендации или предложения по функциям, также сообщите об этом здесь. 
+
+## <a name="i-want-to-give-feedback-about-sql-server-documentation"></a>Я хочу оставить отзыв о документации по SQL Server
+Лучше всего связаться с командой разработки содержимого по SQL Server в разделе "Проблемы Git". Вы также найдете параметр для отправки проблемы Git в нижней части большинства наших страниц: 
+
+![отзывы о содержимом в разделе "Проблемы Git"](media/sql-server-get-help/git-issues.png)
+
+У вас есть еще чем поделиться? Идеи, предложения, отзывы, все что угодно! Это можно сделать, отправив общую проблему Git на сайт [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback). 
+
+Просто нажмите кнопку "Новая проблема", чтобы приступить к работе. 
+
+![Новая проблема Git](media/sql-server-get-help/new-git-issue.png)
+
+
+Команда разработки содержимого SQL Server также часто ждет отзывы об опросе. Если у вас есть немного свободного времени, поделитесь своими впечатлениями с нами по адресу [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey).
+
 
 ## <a name="i-want-to-make-a-suggestion-about-sql-server-management-studio"></a>Я хочу внести предложение по SQL Server Management Studio
 Группа SQL Server Management Studio (SSMS) также следит за [User Voice](https://feedback.azure.com/forums/908035-sql-server) по SQL Server User Voice. Это лучший вариант сообщить о проблемах или внести предложения. 
@@ -94,7 +109,5 @@ ms.locfileid: "55087673"
 
 Рабочая группа по содержимому SQL проверяет все общедоступные публикации на предмет технической точности и согласованности. 
 
-## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>Я хочу оставить отзыв о содержимом документации по SQL
-Если у вас есть немного свободного времени и желание поделиться мыслями об использовании документации по SQL, примите участие в опросе! Он размещен на странице [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey) и займет у вас около 10–15 минут. 
 
-У вас есть чем поделиться с командой разработки содержимого по SQL? Идеи, предложения, отзывы, что угодно еще! Вы сможете это сделать на странице [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback). 
+

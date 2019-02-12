@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51e75f21dbaa518e344ec8c43fc8c9a087cea959
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 7f3c92067adfc0469802c81d78a7267af2cd28cc
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980010"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421201"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -167,7 +167,7 @@ account_name: полное доменное имя (FQDN) учетной зап�
 
 
 **SHARD_MAP_MANAGER**   
- Для SHARD_MAP_MANAGER: указывает имя логического сервера, на котором размещен диспетчер карт сегментов в базе данных SQL Azure или базе данных SQL Server на виртуальной машине Azure.
+ Для SHARD_MAP_MANAGER: указывает имя сервера Базы данных SQL, на котором размещен диспетчер карт сегментов в Базе данных SQL Azure или базе данных SQL Server на виртуальной машине Azure.
  
  ```
  CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -188,7 +188,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 Пошаговое руководство см. в разделе [Приступая к работе с эластичными запросами для сегментирования (горизонтальное секционирование)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/).
   
 **RDBMS**   
-Для RDBMS: задает имя логического сервера удаленной базы данных в базе данных SQL Azure.  
+Для RDBMS: задает имя сервера Базы данных SQL удаленной базы данных в Базе данных SQL Azure.  
 
 ```  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';  
@@ -404,7 +404,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ## <a name="examples-azure-sql-database"></a>Примеры: База данных SQL Azure
 
 ### <a name="e-create-a-shard-map-manager-external-data-source"></a>Д. Создание внешнего источника данных для диспетчера карт сегментов
-Чтобы создать внешний источник данных, ссылающийся на SHARD_MAP_MANAGER, укажите имя логического сервера, на котором размещен диспетчер карт сегментов в базе данных SQL Azure, или базу данных SQL Server на виртуальной машине Azure.
+Чтобы создать внешний источник данных, ссылающийся на SHARD_MAP_MANAGER, укажите имя сервера Базы данных SQL, на котором размещен диспетчер карт сегментов в Базе данных SQL Azure, или базу данных SQL Server на виртуальной машине Azure.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -424,7 +424,7 @@ WITH (
 ```
 
 ### <a name="f-create-an-rdbms-external-data-source"></a>Е. Создание внешнего источника данных RDBMS
-Чтобы создать внешний источник данных для ссылки на RDBMS, указывается имя логического сервера удаленной базы данных в базе данных SQL Azure.
+Чтобы создать внешний источник данных для ссылки на RDBMS, указывается имя сервера Базы данных SQL удаленной базы данных в Базе данных SQL Azure.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
