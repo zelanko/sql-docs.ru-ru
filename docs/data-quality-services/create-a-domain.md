@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.createdomain.f1
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: a7535281aa9953330b3c894c51ec95311c5dddb2
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: f7bcb622370b691ae48161d65dbc56d922c735fa
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617554"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036394"
 ---
 # <a name="create-a-domain"></a>Создание домена
 
@@ -33,7 +33,7 @@ ms.locfileid: "52617554"
 ###  <a name="Prerequisites"></a> Предварительные требования  
  Чтобы создать домен, необходимо создать и открыть базу знаний.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
  Для создания домена необходимо иметь в базе данных DQS_MAIN роль dqs_administrator или dqs_kb_editor.  
@@ -93,7 +93,7 @@ ms.locfileid: "52617554"
   
 10. Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [Завершение операции по управлению доменами](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После создания правила домена  
+##  <a name="FollowUp"></a> Дальнейшие действия. После создания домена  
  Создав домен, вы можете выполнить другие задачи управления доменами для этого домена, провести обнаружение знаний для добавления знаний в домен или добавить в домен политику сопоставления. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../data-quality-services/create-a-matching-policy.md).  
   
   
