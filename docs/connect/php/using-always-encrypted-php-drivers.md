@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 531286af24740e37e125708a4b874b6aba27c3dc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5c82c32922712b377fd732b6745b1761e9f32a82
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403429"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55890005"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Использование функции Always Encrypted с драйверами PHP для SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -157,7 +157,7 @@ $stmt->execute();
  -   При выполнении запроса со связанными параметрами, драйверами PHP автоматически определяет тип SQL для пользователя, если пользователь явно не указывает тип SQL при использовании драйвера SQLSRV.
  -   Все значения, выводимые программой, будут представлены в открытом тексте, так как драйвер прозрачно расшифровывает данные, полученные из столбцов SSN и BirthDate.
  
-Примечание: Запросы могут выполнять сравнения на равенство по зашифрованным столбцам только в том случае, если шифрование является детерминированным. Дополнительные сведения см. в разделе [Выбор детерминированного или случайного шифрования](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
+Примечание. Запросы могут выполнять сравнения на равенство по зашифрованным столбцам, только в том случае, если шифрование является детерминированным. Дополнительные сведения см. в разделе [Выбор детерминированного или случайного шифрования](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
 SQLSRV:
 ```
@@ -255,7 +255,7 @@ $query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients
 
 Чтобы уменьшить количество вызовов хранилища главных ключей столбцов для расшифровки ключей шифрования столбца (CEK), драйвер кэширует ключей CEK открытый текст в памяти. После получения зашифрованного ключа CEK (ECEK) из метаданных базы данных, драйвер ODBC сначала пытается найти соответствующий ключ CEK открытого текста зашифрованного значения ключа в кэше. Драйвер обращается к хранилищу ключей, содержащее CMK только в том случае, если не удается найти соответствующий открытый текст ключа шифрования Столбца в кэше.
 
-Примечание: В драйвере ODBC для SQL Server, записей в кэше вытесняются по истечении времени ожидания два часа. Это означает, что для данного ECEK, драйвер обращается к хранилищу ключей только один раз в течение времени существования приложения или каждые два часа, какое значение меньше.
+Примечание. В драйвере ODBC для SQL Server записей в кэше вытесняются по истечении времени ожидания два часа. Это означает, что для данного ECEK, драйвер обращается к хранилищу ключей только один раз в течение времени существования приложения или каждые два часа, какое значение меньше.
 
 ## <a name="working-with-column-master-key-stores"></a>Работа с хранилищами главных ключей столбцов
 
@@ -269,7 +269,7 @@ $query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients
 
 Драйвер ODBC для SQL Server в Windows включает в себя встроенный столбец поставщика хранилища главного ключа для сертификата Windows Store, с именем `MSSQL_CERTIFICATE_STORE`. (Этот поставщик доступен не в macOS или Linux.) С этим поставщиком CMK хранится локально на клиентском компьютере, и никаких дополнительных настроек для приложения необходима для использования его с помощью драйвера. Тем не менее в приложении необходим доступ к сертификат и его закрытый ключ в хранилище. Дополнительные сведения см. в разделе [Create and Store Column Master Keys (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Создание и хранение главных ключей столбцов (постоянное шифрование)).
 
-### <a name="using-azure-key-vault"></a>С помощью хранилища ключей Azure
+### <a name="using-azure-key-vault"></a>Расширенное управление ключами с Azure Key Vault
 
 Хранилище ключей Azure позволяет хранить ключи шифрования, пароли и другие секретные данные, с помощью Azure и может использоваться для хранения ключей для постоянного шифрования. Драйвер ODBC для SQL Server (версии 17 и более поздние версии) включает в себя встроенные главного ключа поставщика хранилища для хранилища ключей Azure. Следующие параметры подключения обработки конфигурации Azure Key Vault: `KeyStoreAuthentication`, `KeyStorePrincipalId`, и `KeyStoreSecret`. 
  -   `KeyStoreAuthentication` может принимать одно из двух возможных строковых значений: `KeyVaultPassword` и `KeyVaultClientSecret`. Эти значения контролировать, какие учетные данные проверки подлинности используются две другие ключевые слова.
@@ -288,23 +288,23 @@ SQLSRV:
 
 С помощью учетной записи Azure Active Directory:
 ```
-$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultPassword", "KeyStorePrincipalId"=>$AADUsername, "KeyStoreAuthentication"=>$AADPassword);
+$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultPassword", "KeyStorePrincipalId"=>$AADUsername, "KeyStoreSecret"=>$AADPassword);
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 С помощью идентификатора клиента приложения Azure и секрет:
 ```
-$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultClientSecret", "KeyStorePrincipalId"=>$applicationClientID, "KeyStoreAuthentication"=>$applicationClientSecret);
+$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultClientSecret", "KeyStorePrincipalId"=>$applicationClientID, "KeyStoreSecret"=>$applicationClientSecret);
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 
 PDO_SQLSRV: С помощью учетной записи Azure Active Directory:
 ```
-$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultPassword; KeyStorePrincipalId = $AADUsername; KeyStoreAuthentication = $AADPassword;";
+$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultPassword; KeyStorePrincipalId = $AADUsername; KeyStoreSecret = $AADPassword;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 С помощью идентификатора клиента приложения Azure и секрет:
 ```
-$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultClientSecret; KeyStorePrincipalId = $applicationClientID; KeyStoreAuthentication = $applicationClientSecret;";
+$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultClientSecret; KeyStorePrincipalId = $applicationClientID; KeyStoreSecret = $applicationClientSecret;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 
