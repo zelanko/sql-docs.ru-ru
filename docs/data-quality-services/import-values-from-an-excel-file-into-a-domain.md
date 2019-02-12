@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dqs.kb.importselect.f1
 - sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 394fbfd149e9631148ca495675d93bda0ed652f1
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: dc7272c9dbc60054509a37646a0d097bce0e8c31
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616894"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017225"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Импорт значений в домен из файла Excel
 
@@ -74,7 +74,7 @@ ms.locfileid: "52616894"
   
 14. Нажмите кнопку **Готово** , чтобы добавить новые значения в базу знаний.  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После импорта значений из файла Excel в домен  
+##  <a name="FollowUp"></a> Дальнейшие действия. После импорта значений в домен из файла Excel  
  После импорта значений в домен вы можете выполнить другие задачи по управлению доменами для этого домена, провести обнаружение набора знаний для добавления его в домен или добавить в домен политику сопоставления. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Synonyms"></a> Импорт синонимов  
