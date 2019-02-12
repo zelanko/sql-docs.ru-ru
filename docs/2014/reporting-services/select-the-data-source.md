@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.rtp.rptwizard.selectdatasource.f1
 ms.assetid: cdd84ad8-7c6a-41ac-bf51-1b0973434829
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: aa201b447d9263e32aecf7d525e9460b8c0a8b37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6afc3b709daf906aec429ae92da785ecff681a48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166964"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011825"
 ---
 # <a name="select-the-data-source"></a>Выбор источника данных
   Эта страница мастера отчетов предназначена для определения источника данных для отчета.  
@@ -30,11 +30,11 @@ ms.locfileid: "48166964"
  **Новый источник данных**  
  Выберите пункт **Создать источник данных** , чтобы определить новый источник данных. Сведения об источнике данных будут использованы только в текущем отчете.  
   
- **Название**  
+ **Name**  
  Введите имя для соединения с источником данных. Имя источника данных должно быть уникальным в пределах отчета.  
   
  **Тип**  
- Выберите тип используемого источника данных (например, если используется база данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], то выберите [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]).  
+ Выберите тип используемого источника данных (например, если используется база данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , то выберите [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]).  
   
  **Строка соединения**  
  Введите строку соединения для источника данных. Дополнительные сведения о строках подключения см. в разделе [подключения к данным, источники данных и строки подключения в службах Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "48166964"
  Выберите этот параметр, чтобы сохранить источник данных не в отчете, а в качестве общего источника данных для проекта. После этого им можно будет пользоваться в качестве источника данных для других отчетов в этом проекте.  
   
 ## <a name="see-also"></a>См. также  
- [Внедренные и общие подключения к данным или источники данных &#40;построитель отчетов и службы SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Внедренные и общие подключения к данным или источники данных (построитель отчетов и службы SSRS)](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Задание учетных данных и сведениях о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Сервер отчетов служб Reporting Services](../../2014/reporting-services/reporting-services-report-server.md)   
  [Файл конфигурации RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)   

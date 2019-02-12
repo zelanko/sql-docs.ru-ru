@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eac372e9-d2a1-48a8-bbe5-09d101df16ea
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8d19f339b8cb8955ab33f73ea164f8bbfb2e7fce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 65fe3e4979e620b3f49af5def2266c84e77cc616
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205180"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017886"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>Страница «Кэширование», «Общие наборы данных» (диспетчер отчетов)
   Страница «Свойства кэширования» используется для задания параметров кэширования общего набора данных.  
@@ -57,7 +57,7 @@ ms.locfileid: "48205180"
  Сохраните изменения.  
   
 ## <a name="see-also"></a>См. также  
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
  [Общие наборы данных в кэше (службы SSRS)](report-server/cache-shared-datasets-ssrs.md)   
  [Расписания](subscriptions/schedules.md)  

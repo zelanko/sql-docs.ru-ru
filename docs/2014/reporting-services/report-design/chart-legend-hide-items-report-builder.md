@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 92256240-0cd5-4be4-8904-d1e3b93cb6b3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 25d7df59d182c7183fb843a0eb2763bc19b1eefb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 88c798ce1bd5f25b1a844894b8aa609a4c641e4c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223344"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013535"
 ---
 # <a name="hide-legend-items-on-the-chart-report-builder-and-ssrs"></a>Скрытие элементов условных обозначений на диаграмме (построитель отчетов и службы SSRS)
   По умолчанию все ряды, добавленные к диаграмме, отличной от фигурной, будут добавлены как элементы в условные обозначения. Для круговых, воронкообразных и пирамидальных диаграмм добавление любого ряда к диаграмме вызовет добавление индивидуальных точек данных к условным обозначениям.  
@@ -36,8 +36,8 @@ ms.locfileid: "48223344"
     >  Нельзя спрятать ряд только для одной группы. Если поле добавлено в область **Группа рядов** , будут скрыты все ряды, принадлежащие этой группе.  
   
 ## <a name="see-also"></a>См. также  
- [Форматирование условных обозначений на диаграмме &#40;построитель отчетов и службы SSRS&#41;](chart-legend-formatting-report-builder.md)   
- [Форматирование точек данных на диаграмме &#40;построитель отчетов и службы SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Форматирование условных обозначений на диаграмме (построитель отчетов и службы SSRS)](chart-legend-formatting-report-builder.md)   
+ [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Изменение текста элемента условных обозначений (построитель отчетов и службы SSRS)](chart-legend-change-item-text-report-builder.md)   
  [Добавление скользящего среднего в диаграмму (построитель отчетов и службы SSRS)](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)   
  [Диалоговое окно "Свойства условных обозначений" — "Общие" (построитель отчетов и службы SSRS)](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)  

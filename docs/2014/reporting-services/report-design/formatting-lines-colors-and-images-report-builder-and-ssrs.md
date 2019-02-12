@@ -23,13 +23,13 @@ f1_keywords:
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 345523929eddcefc072bc7f55be49fc5e26057d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 74b66ac83d47d87d82db9826424b8e0237d123d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192634"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028305"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Форматирование линий, цветов и изображений (построитель отчетов и службы SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] позволяют форматировать линии, цвета, области данных, изображения и другие элементы отчета.  
@@ -57,8 +57,8 @@ ms.locfileid: "48192634"
  Можно также добавлять изображения, например логотипы, к фону отчета или в прямоугольник, текстовое поле, таблицу, матрицу или другие части диаграммы либо к тексту и страницам отчета. Дополнительные сведения см. в разделе [Изображения (построитель отчетов и службы SSRS)](images-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также  
- [Форматирование текста и заполнителей &#40;построитель отчетов и службы SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Форматирование чисел и дат &#40;построитель отчетов и службы SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Форматирование текста и заполнителей (построитель отчетов и службы SSRS)](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Форматирование чисел и дат (построитель отчетов и службы SSRS)](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Форматирование текста в текстовом поле (построитель отчетов и службы SSRS)](format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [Диалоговое окно "Заливка" (построитель отчетов и службы SSRS)](../fill-dialog-box-report-builder-and-ssrs.md)  
   

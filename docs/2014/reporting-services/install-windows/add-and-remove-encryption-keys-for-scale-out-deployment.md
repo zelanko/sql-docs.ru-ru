@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4c91f05ef42f3840186ee758e733f73631c0d976
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3e26f43f0a146466e32b51ab43a2935f898e1a0e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125054"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036393"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment-ssrs-configuration-manager"></a>Добавление и удаление ключей шифрования для масштабного развертывания (диспетчер конфигурации служб SSRS)
   Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут работать в модели масштабного развертывания, где несколько серверов отчетов настроены на использование общей базы данных. Членство в масштабном развертывании основано на том, хранит ли сервер отчетов ключ шифрования в базе данных сервера отчетов. Этим членством можно управлять за счет добавления и удаления ключей шифрования для конкретных экземпляров серверов отчетов. При удалении узлов из конфигурации развертывания их можно удалять в любом порядке. Если добавляются узлы к конфигурации, необходимо подключать все новые экземпляры с сервера отчетов, который уже входит в конфигурацию.  
@@ -63,7 +63,7 @@ ms.locfileid: "48125054"
  Данные шаги удаляют сервер отчетов из масштабного развертывания, однако удаления экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на сервере отчетов не производится. После того как сервер отчетов будет удален из масштабного развертывания, службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно удалить с сервера (если службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] более не нужны). Сведения см. в разделе [Удаление существующего экземпляра SQL Server (программа установки)](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также  
- [Настройка и управление ключами шифрования &#40;диспетчер конфигурации служб SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [Инициализация сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
+ [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Инициализация сервера отчетов (диспетчер конфигурации служб SSRS)](ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

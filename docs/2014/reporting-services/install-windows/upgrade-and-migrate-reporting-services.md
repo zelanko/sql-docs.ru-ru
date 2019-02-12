@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 28f25620cede6c626280a8a095c66457344679d2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 5028e1034a7f94cc877d6164b15f6f7b925a661e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363016"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017185"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
   Этот раздел содержит общие сведения о вариантах обновления и миграции для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Существуют два принципиальных подхода к обновлению развертывания [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

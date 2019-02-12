@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 377ab4922feb0024cef55926f4baa96745c81002
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: b845480863facf66ff33c5d976531118edb2d4a9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377346"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033195"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>Изменения в работе служб SQL Server Reporting Services в выпуске SQL Server 2014
   В этом разделе описаны изменения в работе служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Изменения в работе затрагивают работу и взаимодействие компонентов в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] по сравнению с предыдущими версиями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

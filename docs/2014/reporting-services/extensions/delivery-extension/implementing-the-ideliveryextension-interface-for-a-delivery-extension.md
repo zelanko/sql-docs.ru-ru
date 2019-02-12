@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1f768da85b70168b090bfde19058926e098cd418
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: cd878e1b2a3f7e368985fa9b5b40cbdff7833a0f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356495"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017845"
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>Реализация интерфейса IDeliveryExtension для модуля доставки
   Класс модуля доставки используется для доставки пользователям уведомлений об отчетах на основании содержимого уведомлений. Класс модуля доставки также образует инфраструктуру для проверки пользовательских параметров, передаваемых в модуль доставки. Кроме того, класс модуля доставки должен содержать специальные свойства, с помощью которых клиенты могут получать сведения об имени модуля, параметрах, поддерживаемых модулем и форматах подготовки к просмотру, доступных для модуля доставки.  

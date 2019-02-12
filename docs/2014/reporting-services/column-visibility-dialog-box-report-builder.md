@@ -11,14 +11,14 @@ f1_keywords:
 - "10127"
 ms.assetid: 0c030cab-6087-45a5-99f0-c7bd693f20a1
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f6ab67682afc00057085fe3d0f793c51a28258d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 27b03c35d329f207805521a70e628a7dc2045a94
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057780"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025815"
 ---
 # <a name="column-visibility-dialog-box-report-builder"></a>Диалоговое окно «Видимость столбцов» (построитель отчетов)
   Используйте диалоговое окно **Видимость столбца** , чтобы отобразить или скрыть выбранный столбец при первом запуске отчета либо назначить другой элемент отчета для переключения видимости столбца.  
@@ -36,7 +36,7 @@ ms.locfileid: "48057780"
  **Отображать или скрывать в зависимости от выражения**  
  Этот параметр используется для изменения исходной видимости с помощью выражения.  
   
- Введите выражение, результатом которого является `Boolean` значение `True` элемент скрыт, и `False` для отображения элемента. Чтобы изменить выражение, нажмите кнопку "Выражение" (*fx*).  
+ Введите выражение, результат вычисления которого имеет тип `Boolean` (при значении `True` элемент скрыт, а при значении `False` отображается). Чтобы изменить выражение, нажмите кнопку "Выражение" (*fx*).  
   
  **Отображение может переключаться этим элементом отчета**  
  Выберите данный параметр для вывода изображения переключателя, который позволяет пользователю отображать или скрывать данный столбец в средстве просмотра отчетов в формате HTML.  
@@ -46,7 +46,7 @@ ms.locfileid: "48057780"
 ## <a name="see-also"></a>См. также  
  [Примеры выражений (построитель отчетов и службы SSRS)](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Добавление действия "Развернуть" или "Свернуть" к элементу (построитель отчетов и службы SSRS)](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [Образы &#40;построитель отчетов и службы SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Изображения (построитель отчетов и службы SSRS)](report-design/images-report-builder-and-ssrs.md)   
  [Справка построителя отчетов для диалоговых окон, панелей и мастеров](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Диалоговое окно "Свойства изображения" — "Общие" (построитель отчетов и службы SSRS)](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   

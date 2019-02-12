@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 54381870-ce67-482b-aa83-6a838cdbf9b9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 03bade736ae1a52942d42a7b1b675077a3ba6e7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b0415d5344999b61b026ef69879b607220a72031
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220004"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014925"
 ---
 # <a name="introducing-exception-handling-in-reporting-services"></a>Знакомство с обработкой исключений в службах Reporting Services
   Если приложение службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] направляет веб-службе сервера отчетов запрос, который эта служба не в состоянии обработать, служба возвращает клиенту исключение SOAP. Обработка исключений, формируемых веб-службой сервера отчетов, играет важную роль в создаваемых разработчиками приложениях, поскольку при возникновении ошибок приложения могут возвращать пользователям важные сведения.  

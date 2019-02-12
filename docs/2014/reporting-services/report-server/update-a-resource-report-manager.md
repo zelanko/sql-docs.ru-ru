@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5482a935a5357d4557a6ffd202feac6be07900e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 71ccf123b9c8f5dba751affaae0374c90b5a8d99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130364"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020227"
 ---
 # <a name="update-a-resource-report-manager"></a>обновить ресурс (диспетчер отчетов)
   Ресурс можно обновить, заменив его более новой версией. Ресурсы представляют собой хранящиеся на сервере отчетов элементы, по содержимому аналогичные переданным файлам. Можно заменить существующий ресурс, импортировав в существующий ресурс обновленное или совершенно другое содержимое файла. Обновление ресурса позволяет заменить только содержимое ресурса, сохраняя его существующие свойства и настройки безопасности.  
   
 ### <a name="to-update-a-resource"></a>Обновление ресурса  
   
-1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](../report-manager-ssrs-native-mode.md).  
+1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md).  
   
 2.  В диспетчере отчетов перейдите к ресурсу, который нужно обновить, или найдите его.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48130364"
  Если обновляемый ресурс содержит изображение, используемое в отчете, необходимо обновить отчет, чтобы изображение в нем обновилось.  
   
 ## <a name="see-also"></a>См. также  
- [Содержимое страницы &#40;диспетчера отчетов&#41;](../contents-page-report-manager.md)   
+ [Страница "Содержимое" (диспетчер отчетов)](../contents-page-report-manager.md)   
  [Страница "Передача файла" (диспетчер отчетов)](../upload-file-page-report-manager.md)   
  [Передача файлов в папку](upload-files-to-a-folder.md)   
  [Справка F1 диспетчера отчетов](../report-manager-f1-help.md)  

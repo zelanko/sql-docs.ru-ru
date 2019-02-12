@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 01d506f8db09b8bc30b5587d6d98ecec793adab9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: bf378f94e8a3a010f2959a2c8ce1bd5e69f005bb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398877"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013705"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>Написание скриптов для задач развертывания и администрирования
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживают использование сценариев для автоматизации стандартных задач по установке, развертыванию и администрированию. Развертывание сервера отчетов является многошаговым процессом. Чтобы настроить развертывание, необходимо использовать несколько средств и процессов. Для автоматизации всех задач не существует единой программы или единого подхода.  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 94095fd1879b4f4343a7a65dfd9d018ca355084f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 75136807b3bf87d143ef037dcdf4c865f73a1f48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154224"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026187"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)
   В отчете фильтр является частью набора данных, области данных или группы области данных, созданной для ограничения объема данных, используемого в отчете. Фильтры могут быть использованы для управления данными отчета в случае, когда невозможно изменить запрос к набору данных, например при использовании общего набора данных.  
@@ -84,7 +84,7 @@ ms.locfileid: "48154224"
 |--------------|------------|  
 |**Equal, Like, NotEqual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|Сравнивает выражение с одним значением.|  
 |**TopN, BottomN**|Сравнивает выражение с одним значением типа `Integer`.|  
-|**TopPercent, BottomPercent**|Сравнивает выражение с одним `Integer` или `Float` значение.|  
+|**TopPercent, BottomPercent**|Сравнивает выражение с одним значением типа `Integer` или `Float`.|  
 |**Между**|Проверяет, лежит ли выражение в диапазоне двух значений включительно.|  
 |**In**|Проверяет, содержится ли выражение в наборе значений.|  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48154224"
  Это значение также включает ссылку на параметр, чтобы дать пользователю возможность выбрать значение фильтрации в интерактивном режиме.  
   
 ## <a name="see-also"></a>См. также  
- [Использование выражений в отчетах &#40;построитель отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Использование выражений в отчетах (построитель отчетов и службы SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Параметры отчета (построитель отчетов и конструктор отчетов)](report-parameters-report-builder-and-report-designer.md)  
   
   

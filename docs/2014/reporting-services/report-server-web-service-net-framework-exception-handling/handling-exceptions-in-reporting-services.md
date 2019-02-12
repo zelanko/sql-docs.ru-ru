@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 1a443432-2db5-48c5-bc29-433b4688082f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3cecbb0fcdbaae51e53c5277402b264d9c2468ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7a83a40ebb3cc8a77e63bd7ab8b67d815f5c4a98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068414"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041245"
 ---
 # <a name="handling-exceptions-in-reporting-services"></a>Обработка исключений в службах Reporting Services
   Если клиентский запрос API-интерфейса протокола SOAP не может быть выполнен, сервер отчетов возвращает ошибку вместо ожидаемых результатов вызова. Если вызов не может быть выполнен, возвращается ошибка для веб-службы сервера отчетов как XML-элемент **Fault** протокола SOAP. Ключевым описательным элементом ошибки является элемент **detail**, который включает в себя все данные ошибки, предоставляемые сервером отчетов, а также дополнительные данные ошибки из веб-службы. Основными данными в элементе **detail** является код ошибки сервера отчетов. На основании сообщения и кода ошибки можно определить, какое следующее правильное действие следует предпринять в приложении. Дополнительные сведения об ошибках SOAP см. на веб-сайте консорциума W3C: http://www.w3.org/TR/SOAP.  

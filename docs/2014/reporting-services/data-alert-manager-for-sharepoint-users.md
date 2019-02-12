@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 859a0ba0757b141bbcba6869d1138c7a3862a3c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b5834091c16072dd143fa9ae582ea6c128331a8e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049064"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018845"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>Диспетчер предупреждений данных для пользователей SharePoint
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляется диспетчер предупреждений об изменении данных для SharePoint, позволяющий информационным работникам управлять предупреждениями об изменении данных. Они могут просматривать сведения о созданных ими предупреждениях, удалять предупреждения, открывать определения предупреждений для изменения, а также запускать предупреждения по запросу. Они могут просматривать предупреждения для одного или всех отчетов. На следующем рисунке показаны функции, доступные информационным работникам в диспетчере предупреждений об изменении данных.  
@@ -76,13 +76,13 @@ ms.locfileid: "48049064"
   
 -   [Управление предупреждениями данных в диспетчере предупреждений данных](manage-my-data-alerts-in-data-alert-manager.md)  
   
--   [Изменение предупреждения данных в конструкторе предупреждений](edit-a-data-alert-in-alert-designer.md)  
+-   [Изменение предупреждения в конструкторе предупреждений](edit-a-data-alert-in-alert-designer.md)  
   
   
   
 ## <a name="see-also"></a>См. также  
  [Конструктор предупреждений об изменении данных](../../2014/reporting-services/data-alert-designer.md)   
  [Создание предупреждения данных в конструкторе предупреждений данных](create-a-data-alert-in-data-alert-designer.md)   
- [Предупреждения служб Reporting Services](../ssms/agent/alerts.md)  
+ [Предупреждения об изменении данных в службах Reporting Services](../ssms/agent/alerts.md)  
   
   

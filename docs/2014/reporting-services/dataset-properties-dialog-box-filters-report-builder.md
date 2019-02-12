@@ -11,14 +11,14 @@ f1_keywords:
 - "10025"
 ms.assetid: 933a6f44-4eb7-4e73-9c40-ac0fd17b23d3
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ff8ae37c2caf34432acde8fab2235a3b83b372a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 58abc975b461c6d12778c95620eadedd4e6caf8a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172154"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030225"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>Диалоговое окно «Свойства набора данных» — «Фильтры» (построитель отчетов)
   Перейдите на вкладку **Фильтры** диалогового окна **Свойства набора данных** , чтобы определить фильтры для набора данных.  
@@ -55,13 +55,13 @@ ms.locfileid: "48172154"
  **Оператор**  
  Выберите оператор для сравнения выражения и значения.  
   
- **Value**  
+ **Значение**  
  Введите выражение или значение, которое будет использовано для вычисления выражения, указанного в поле **Выражение** . Чтобы изменить выражение, нажмите кнопку "Выражение" (**fx**).  
   
 ## <a name="see-also"></a>См. также  
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Параметры отчета (построитель отчетов и конструктор отчетов)](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Добавление фильтра к набору данных &#40;построитель отчетов и службы SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
- [Использование выражений в отчетах &#40;построитель отчетов и службы SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [Использование выражений в отчетах (построитель отчетов и службы SSRS)](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   
   

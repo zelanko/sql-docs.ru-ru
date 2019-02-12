@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6484ee2466fc58c6d7330822f4f47e43fcdcd955
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 185b7c9119dbd5a6105152aadcf1241abc6b82ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148304"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025045"
 ---
 # <a name="pdf-device-information-settings"></a>Настройки сведений об устройстве PDF
   В следующей таблице перечислены настройки сведений об устройстве, предназначенные для подготовки отчетов к просмотру в формате PDF.  
   
-|Настройка|Значение|  
+|Параметр|Значение|  
 |-------------|-----------|  
 |**Столбцы**|Задаваемое число столбцов в отчете. Это значение переопределяет исходные параметры отчета.|  
 |**ColumnSpacing**|Интервал между столбцами, который должен быть задан для отчета. Это значение переопределяет исходные параметры отчета.|  
@@ -41,7 +41,7 @@ ms.locfileid: "48148304"
 |`StartPage`|Первая подготавливаемая к просмотру страница отчета. Значение `0` указывает, что к просмотру подготовлены все страницы. Значение по умолчанию — `1`.|  
   
 ## <a name="see-also"></a>См. также  
- [Передача настроек сведений об устройстве для модулей подготовки отчетов](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Настройка параметров модулей подготовки отчетов в RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Технический справочник (службы SSRS)](../../2014/reporting-services/technical-reference-ssrs.md)  
   

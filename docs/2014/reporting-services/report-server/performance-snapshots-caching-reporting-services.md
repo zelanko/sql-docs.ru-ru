@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3204e8f3f47dc77f38e9690bf34c0e6b69c79fdc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: fda5ecab229910033def67480e295f6532f693b5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353152"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043135"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>Производительность, моментальные снимки, кэширование (службы Reporting Services)
   Производительность сервера отчетов зависит от сочетания факторов, которые включают оборудование, количество пользователей, одновременно обращающихся к отчетам, объем данных в отчетах и формат вывода. Чтобы понять, какие факторы производительности характерны для конкретной установки, и какие меры позволят достичь требуемых результатов, необходимо получить базовые данные и выполнить тесты. Дополнительные сведения о средствах и рекомендациях см. в следующих публикациях MSDN: [Оптимизация производительности служб Reporting Services](https://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) и [с помощью Visual Studio 2005 для выполнения нагрузочного тестирования сервера SQL Server 2005 Reporting Services отчета](https://go.microsoft.com/fwlink/?LinkID=77519).  

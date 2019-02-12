@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 13e52520b78796f41f94e5bf783e99a9bca3b3e3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: d68eab56f2ce55c1e562795a9e48c099a27a8fd2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366776"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031255"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Определение версии схемы определения отчета (SSRS)
   В файле определения отчета указывается пространство имен языка определения отчетов для версии схемы определения отчета, использованной для проверки RDL-файла. Если RDL-файл открывается в среде разработки отчетов, такой как конструктор в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , или построителе отчетов и если отчет был создан в предыдущем пространстве имен, автоматически создается файл резервной копии и отчет обновляется до текущего пространства имен. Если сохранить обновленное определение отчета, будет сохранен преобразованный RDL-файл. Это единственный способ обновления определения отчетов. Само определение отчетов не обновляется на сервере отчетов. Скомпилированный отчет обновляется на сервере отчетов. Дополнительные сведения см. в разделе [Upgrade Reports](../install-windows/upgrade-reports.md).  

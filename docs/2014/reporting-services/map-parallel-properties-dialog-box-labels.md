@@ -12,14 +12,14 @@ f1_keywords:
 - "10519"
 ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ba603b2b05108f6b7cd0b4cb7b6a4d65904af678
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: f82b38efac61ca6cdddb10c13e584c0c8f79a346
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097294"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018106"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>Диалоговое окно «Свойства параллелей карты», вкладка «Метки»
   Используйте **MapParallel свойства** диалоговое окно, чтобы изменить параметры меток горизонтальной сетки в окне просмотра карты. Параллель представляет одно из следующих значений в зависимости от выбранной системы координат области просмотра.  
@@ -52,6 +52,6 @@ ms.locfileid: "48097294"
   
 ## <a name="see-also"></a>См. также  
  [Карты (построитель отчетов и службы SSRS)](report-design/maps-report-builder-and-ssrs.md)   
- [Изменить условные обозначения, цветовая шкала и связанные правила &#40;построитель отчетов и службы SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [Изменение условных обозначений карты, цветовой шкалы и связанных правил (построитель отчетов и службы SSRS)](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: bd681b0616aa175c68104da48577ad5dc19f1897
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5122fe6ddecacb492539573aa769e34164e699f2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191233"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021535"
 ---
 # <a name="countdistinct-function-report-builder-and-ssrs"></a>Функция CountDistinct (построитель отчетов и службы SSRS)
   Возвращает количество уникальных значений, отличных от NULL, определяемое выражением, вычисляемым в контексте данной области.  
@@ -33,7 +33,7 @@ CountDistinct(expression, scope, recursive)
   
 #### <a name="parameters"></a>Параметры  
  *expression*  
- (`Variant`) Выражение, к которому статистическая обработка.  
+ (`Variant`) Выражение для выполнения статистической обработки.  
   
  *область*  
  (`String`) Необязательно. Имя набора данных, группы или области данных, содержащих элементы отчета, к которым применяется агрегатная функция. Если аргумент *scope* не задан, используется текущая область.  
@@ -42,7 +42,7 @@ CountDistinct(expression, scope, recursive)
  (**Перечислимый тип**) Необязательно. `Simple` (по умолчанию) или `RdlRecursive`. Указывает, нужно ли выполнять статистическую обработку рекурсивно.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- Возвращает `Integer`.  
+ Возвращает значение типа `Integer`.  
   
 ## <a name="remarks"></a>Примечания  
  Значение *scope* должно быть строковой константой и не может быть выражением. Для внешних агрегатов и агрегатов, в которых не задаются другие агрегаты, параметр *scope* должен ссылаться не текущую область или включающую область. Для агрегатов, содержащих агрегаты, во вложенных агрегатах может указываться дочерняя область.  
@@ -73,9 +73,9 @@ CountDistinct(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Использование выражений в отчетах &#40;построитель отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Использование выражений в отчетах (построитель отчетов и службы SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   
- [Область выражения для суммирования, агрегатов и встроенных коллекций &#40;построитель отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: da1d5dae-2517-448e-96fb-5379c93222ea
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 395e3dbb8eb2a48991e897129a91f7b4808fd110
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 268d57207280689bb1c9b2df25013d6eca435f4a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200625"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016125"
 ---
 # <a name="backupencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>Метод BackupEncryptionKey (WMI MSReportServer_ConfigurationSetting)
   Создает резервную копию ключа шифрования для указанного экземпляра сервера отчетов. Ключ шифрования хранится в зашифрованном виде под защитой пароля.  
@@ -65,7 +65,7 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

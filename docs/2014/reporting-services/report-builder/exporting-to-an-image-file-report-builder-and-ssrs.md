@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 020d8ea2-de07-4212-a2bb-2ed0df2c8db8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 940e85a5698efd06f82b57208e4d774699926ec7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3bdbed10df5dd2d8b52fdaa49d04758d150098b5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098034"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013925"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>Экспорт в файл изображения (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов изображений преобразует отчет в битовую карту или метафайл. По умолчанию модуль подготовки изображения создает отчет в файле TIFF, который можно просматривать на нескольких страницах. Полученное изображение клиент может просмотреть в программе просмотра изображений и распечатать. В этом разделе содержатся сведения о модуле подготовки изображений и описаны исключения из правил подготовки к просмотру.  
   
- Модуль подготовки изображений способен создавать файлы в любых форматах, поддерживаемых [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG и TIFF. Если используется формат TIFF, то файлу для главного потока будет присвоено имя *имя_отчета*.tif. Для других форматов, которые формируются по принципу "одна страница в одном файле", файлу будет присвоено имя *имя_отчета_страница.ext* , где *ext* — расширение файла в зависимости от выбранного формата. Чтобы создать файл в другом поддерживаемом формате изображений, укажите в параметре **OutputFormatDeviceInfo** любую из перечисленных выше строк.  
+ Модуль подготовки изображений создает файлы в форматах, поддерживаемых [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG и TIFF. Если используется формат TIFF, то файлу для главного потока будет присвоено имя *имя_отчета*.tif. Для других форматов, которые формируются по принципу "одна страница в одном файле", файлу будет присвоено имя *имя_отчета_страница.ext* , где *ext* — расширение файла в зависимости от выбранного формата. Чтобы создать файл в другом поддерживаемом формате изображений, укажите в параметре **OutputFormatDeviceInfo** любую из перечисленных выше строк.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -33,8 +33,8 @@ ms.locfileid: "48098034"
 |--------------|-------------------|------------------|  
 |BMP|BMP|image/bmp|  
 |GIF|GIF|image/gif|  
-|JPEG|jpeg|image/jpeg|  
-|PNG|png|image/png|  
+|JPEG|JPEG|image/jpeg|  
+|PNG|PNG|image/png|  
 |TIFF|tif|image/tiff|  
 |EMF|EMF|image/emf|  
 |EMFPlus|EMF|image/emf|  
@@ -69,8 +69,8 @@ ms.locfileid: "48098034"
 ## <a name="see-also"></a>См. также  
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Интерактивные возможности различных модулей подготовки отчетов &#40;построитель отчетов и службы SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](interactive-functionality-different-report-rendering-extensions.md)   
  [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
+ [Таблицы, матрицы, списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

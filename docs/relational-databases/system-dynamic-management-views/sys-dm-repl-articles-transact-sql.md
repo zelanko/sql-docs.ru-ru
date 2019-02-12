@@ -3,7 +3,6 @@ title: sys.dm_repl_articles (Transact-SQL) | Документация Майкр
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -19,12 +18,12 @@ ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 48112a8cf804b329b16aadc04992ac04b852ba07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65bc88be1b9a6cdb9a69d41a526916ab3aa7ab2a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791079"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031835"
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

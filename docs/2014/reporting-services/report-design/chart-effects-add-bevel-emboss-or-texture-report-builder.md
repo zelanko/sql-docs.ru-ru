@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2e6e59b2562928d22a3d9e0b74830d630d77728d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2076f53b428320f8635de98f7993232e65c2e29c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072014"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019037"
 ---
 # <a name="add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs"></a>Добавление в диаграмму стилей рельефа, приподнятости и текстуры (построитель отчетов и службы SSRS)
   При использовании диаграмм определенных типов можно ввести в действие эффекты рисования для повышения внешней привлекательности диаграммы. Эти эффекты рисования применяются только к ряду, представленному на диаграмме. Они не оказывают никакого влияния на другие элементы диаграммы.  
@@ -25,7 +25,7 @@ ms.locfileid: "48072014"
   
  Если используется какой-либо вариант линейчатой диаграммы или гистограммы, то можно применить стили текстуры, такие как оформление в виде цилиндра, клина и переход от светлого к темному, к отдельным линейкам или столбцам.  
   
- Кроме этих стилей рисования можно добавлять границы и тени ко многим элементам диаграммы для создания иллюзии глубины. Дополнительные сведения о других способах форматирования диаграммы см. в разделе [форматирование диаграммы &#40;построитель отчетов и службы SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md).  
+ Кроме этих стилей рисования можно добавлять границы и тени ко многим элементам диаграммы для создания иллюзии глубины. Дополнительные сведения о других способах форматирования диаграммы см. в разделе [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -61,9 +61,9 @@ ms.locfileid: "48072014"
  ![Линейчатая диаграмма с эффектом LightToDark](../media/rs-bardrawingeffects-lighttodark.gif "Линейчатая диаграмма с эффектом LightToDark")  
   
 ## <a name="see-also"></a>См. также  
- [Линейчатые диаграммы &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [Линейчатые диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
  [Гистограммы (построитель отчетов и службы SSRS)](column-charts-report-builder-and-ssrs.md)   
- [Круговые диаграммы &#40;построитель отчетов и службы SSRS&#41;](pie-charts-report-builder-and-ssrs.md)   
- [Форматирование диаграммы &#40;построитель отчетов и службы SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
+ [Круговые диаграммы (построитель отчетов и службы SSRS)](pie-charts-report-builder-and-ssrs.md)   
+ [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md)  
   
   

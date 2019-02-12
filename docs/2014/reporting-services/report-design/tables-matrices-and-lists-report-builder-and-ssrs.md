@@ -35,13 +35,13 @@ f1_keywords:
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: cf80cbb87916ccf6887f3d6508126c5770d7666c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 24b1fbcacee78de2448100d9b46f79b412140a66
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220854"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017806"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Таблицы, матрицы и списки (построитель отчетов и службы SSRS)
   Таблицы, матрицы и списки — это области данных, где данные отчета отображаются в ячейках, распределенных по строкам и столбцам. Ячейки, как правило, содержат текстовые данные, например текст, даты и числа, но могут также содержать датчики, диаграммы или элементы отчетов, такие как изображения. К таблицам, матрицам и спискам часто применяется общее название — области данных табликса.  
@@ -56,7 +56,7 @@ ms.locfileid: "48220854"
   
  ![RS_TableMatrixList](../media/rs-tablematrixlist.gif "RS_TableMatrixList")  
   
- Чтобы быстро приступить к работе с таблицами, матрицами и списками, см. разделы [Создание простого табличного отчета (построитель отчетов)](../tutorial-creating-a-basic-table-report-report-builder.md), [Учебник. Создание матричного отчета (построитель отчетов)](../tutorial-creating-a-matrix-report-report-builder.md) и [Учебник. Создание отчета в свободной форме (построитель отчетов)](../tutorial-creating-a-free-form-report-report-builder.md).  
+ Чтобы быстро приступить к работе с таблицами, матрицами и списками, см. в разделе [руководства: Создание простого табличного отчета &#40;построитель отчетов&#41;](../tutorial-creating-a-basic-table-report-report-builder.md), [руководства: Создание матричного отчета &#40;построитель отчетов&#41;](../tutorial-creating-a-matrix-report-report-builder.md), и [руководства: Создание отчета в свободной форме &#40;построитель отчетов&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
 >  Таблицы, матрицы и списки можно публиковать отдельно от отчета как элементы отчета. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -131,51 +131,51 @@ ms.locfileid: "48220854"
 ##  <a name="HowTo"></a> Инструкции  
  В этом разделе перечислены процедуры, которые показывают шаг за шагом, как работать с таблицами, матрицами и списками в конкретных отчетах, как отображать данные в строках и столбцах, добавлять и удалять столбцы, подвергать слиянию ячейки и включать подытоги для групп строк и столбцов.  
   
--   [Добавление группы подробных сведений &#40;построитель отчетов и службы SSRS&#41;](add-a-details-group-report-builder-and-ssrs.md)  
+-   [Добавление группы подробных сведений (построитель отчетов и службы SSRS)](add-a-details-group-report-builder-and-ssrs.md)  
   
--   [Добавление итога в группу или область данных Табликса &#40;построитель отчетов и службы SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
+-   [Добавление итога в группу или область данных табликса (построитель отчетов и службы SSRS)](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
--   [Изменение элемента в ячейке &#40;построитель отчетов и службы SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
+-   [Изменение элемента в ячейке (построитель отчетов и службы SSRS)](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
   
--   [Изменение высоты строки или ширины столбца &#40;построитель отчетов и службы SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
+-   [Изменение высоты строки или ширины столбца (построитель отчетов и службы SSRS)](change-row-height-or-column-width-report-builder-and-ssrs.md)  
   
--   [Вставка или удаление столбца &#40;построитель отчетов и службы SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md)  
+-   [Вставка или удаление столбца (построитель отчетов и службы SSRS)](insert-or-delete-a-column-report-builder-and-ssrs.md)  
   
--   [Вставка или удаление строки &#40;построитель отчетов и службы SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md)  
+-   [Вставка или удаление строки (построитель отчетов и службы SSRS)](insert-or-delete-a-row-report-builder-and-ssrs.md)  
   
--   [Объединение ячеек в области данных &#40;построитель отчетов и службы SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
+-   [Объединение ячеек в области данных (построитель отчетов и службы SSRS)](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [Создание группы рекурсивной иерархии &#40;построитель отчетов и службы SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+-   [Создание группы рекурсивной иерархии (построитель отчетов и службы SSRS)](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
--   [Добавление или удаление группы в области данных &#40;построитель отчетов и службы SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+-   [Добавление или удаление группы в области данных (построитель отчетов и службы SSRS)](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [Отображение верхних и нижних колонтитулов в группе &#40;построитель отчетов и службы SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+-   [Отображение верхних и нижних колонтитулов в группе (построитель отчетов и службы SSRS)](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
--   [Создание пошагового отчета &#40;построитель отчетов и службы SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
+-   [Создание пошагового отчета (построитель отчетов и службы SSRS)](create-a-stepped-report-report-builder-and-ssrs.md)  
   
--   [Добавление, перемещение или удаление таблицы, матрицы или списка &#40;построитель отчетов и службы SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
+-   [Добавление, перемещение или удаление таблицы, матрицы или списка (построитель отчетов и службы SSRS)](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
   
 
   
 ##  <a name="InThisSection"></a> в этом разделе  
  В следующих разделах приведены сведения о работе с областью данных табликса.  
   
- [Область данных Табликса &#40;построитель отчетов и службы SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Область данных табликса (построитель отчетов и службы SSRS)](../tablix-data-region-report-builder-and-ssrs.md)  
  Объясняет основные понятия, связанные с областью данных табликса, например области табликса, подробные данные и сгруппированные данные, группы столбцов и строк, а также статические и динамические строки и столбцы.  
   
- [Добавление данных в область данных Табликса &#40;построитель отчетов и службы SSRS&#41;](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
+ [Добавление данных в область данных табликса (построитель отчетов и службы SSRS)](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
  Содержит подробные сведения о добавлении подробных данных и сгруппированных данных, подытогах и итогах, а также метках для области данных табликса.  
   
- [Управление отображением области данных Табликса на странице отчета &#40;построитель отчетов и службы SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)  
+ [Управление отображением области данных табликса на странице отчетов (построитель отчетов и службы SSRS)](controlling-the-tablix-data-region-display-on-a-report-page.md)  
  Описывает свойства области данных табликса, с помощью которых можно менять режим отображения области данных табликса во время просмотра этой области в отчете.  
   
- [Управление заголовками строк и столбцов &#40;построитель отчетов и службы SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
+ [Управление заголовками строк и столбцов (построитель отчетов и службы SSRS)](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
  Описывает управление заголовками строк и столбцов, когда область данных таблицы, матрицы или списка может охватывать несколько страниц по горизонтали или по вертикали.  
   
- [Создание групп рекурсивной иерархии &#40;построитель отчетов и службы SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
+ [Создание групп рекурсивной иерархии (построитель отчетов и службы SSRS)](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
  Описывает, как отображать рекурсивные данные, в которых связь между родительским и дочерним объектами представлена полями в наборе данных.  
   
- [Основные сведения о группах &#40;построитель отчетов и службы SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
+ [Основные сведения о группах (построитель отчетов и службы SSRS)](understanding-groups-report-builder-and-ssrs.md)  
  Объясняет, что представляют собой группы и когда они используются, а также описывает группы, доступные для других областей данных табликса.  
   
 

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d0aed81ff4ac2daa517bb17ddb53ebaf7eacdcbe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: c04fdad5e53e9d50f6d910f16c8f86b0218f35be
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365416"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012785"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Урок 4. Определение подключения к данным и таблицы данных для дочернего отчета
   После проектирования родительского отчета далее необходимо создать подключение к данным и таблицу данных для дочернего отчета. В этом учебнике в качестве источника подключения к данным используется база данных AdventureWorks2008. Предусмотрена также возможность установить подключение к базе данных AdventureWorks2012.  

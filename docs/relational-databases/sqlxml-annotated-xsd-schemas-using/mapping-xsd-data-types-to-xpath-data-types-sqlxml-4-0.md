@@ -17,16 +17,16 @@ helpviewer_keywords:
 - XPath data types [SQLXML]
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: ced1a95e-18d4-4a5a-8da8-dbb6d58bbd45
-author: douglaslMS
+author: MightyPen
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01aec4bb2a1eeac47958aa517d0fefc5a165ac52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 158619cadcec1b0133b951bf2ce25445319d7ff4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650142"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034735"
 ---
 # <a name="mapping-xsd-data-types-to-xpath-data-types-sqlxml-40"></a>Сопоставление типов данных XSD с типами данных XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "47650142"
   
 |Тип данных XSD|Тип данных XDR|Эквивалентный<br /><br /> тип данных XPath|SQL Server<br /><br /> преобразование не используется|  
 |-------------------|-------------------|------------------------------------|--------------------------------------------|  
-|**Base64Binary**<br /><br /> **hexBinary**|**None**<br /><br /> **Bin.base64bin.hex**|**Неприменимо**|None<br /><br /> EmployeeID|  
+|**Base64Binary**<br /><br /> **hexBinary**|**None**<br /><br /> **bin.base64bin.hex**|**Неприменимо**|None<br /><br /> EmployeeID|  
 |**Boolean**|**boolean**|**boolean**|CONVERT(bit, EmployeeID)|  
-|**Десятичной, integer, float, byte, short, int, long, float, double, unsignedByte, типа unsignedShort, unsignedInt, unsignedLong**|**номер, int, float, i1, i2, i4, i8, r4, r8ui1, ui2, ui4, ui8**|**номер**|CONVERT(float(53), EmployeeID)|  
+|**Десятичной, integer, float, byte, short, int, long, float, double, unsignedByte, типа unsignedShort, unsignedInt, unsignedLong**|**номер, int, float, i1, i2, i4, i8, r4, r8ui1, ui2, ui4, ui8**|**number**|CONVERT(float(53), EmployeeID)|  
 |**ID, idref, idrefsentity, сущности, нотации, nmtoken, nmtokens, DateTime, string, AnyURI**|**ID, idref, idrefsentity, сущностей, перечисления, нотации, nmtoken, nmtokens, char, dateTime, dateTime.tz, string, uri, uuid**|**строка**|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |**decimal**|**fixed14.4**|**Неприменимо (есть тип данных не в XPath, эквивалентного типу fixed14.4 XDR данных.)**|CONVERT(money, EmployeeID)|  
 |**date**|**date**|**строка**|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  

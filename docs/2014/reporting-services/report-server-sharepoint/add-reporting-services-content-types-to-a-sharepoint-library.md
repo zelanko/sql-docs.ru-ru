@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ea197ddd0c24a487d152c8c6aa9eb9e177605d5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d98e8eafeb08ab8b0d37fd6a513d2fb6eb773828
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105894"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030695"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>добавить на веб-страницу веб-часть средства просмотра отчетов (службы Reporting Services в режиме интеграции с SharePoint)
   Веб-часть «Средство просмотра отчетов» может применяться для просмотра отчетов, запускаемых на сервере отчетов, настроенном для работы в режиме интеграции с SharePoint. Она позволяет отображать файлы определения отчетов (RDL), созданные в построителе отчетов или конструкторе отчетов и переданные в библиотеку.  
@@ -57,7 +57,7 @@ ms.locfileid: "48105894"
 9. Нажмите кнопку **Применить** в нижней части панели средств, а затем кнопку **ОК** , чтобы закрыть панель.  
   
 ## <a name="see-also"></a>См. также  
- [Веб-части средства просмотра отчетов на сайте SharePoint](../report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Веб-часть средства просмотра отчетов на сайте SharePoint](../report-viewer-web-part-on-a-sharepoint-site.md)   
  [Настройка веб-части средства просмотра отчетов](../customize-the-report-viewer-web-part.md)   
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Установка или удаление Reporting Services надстройки для SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  

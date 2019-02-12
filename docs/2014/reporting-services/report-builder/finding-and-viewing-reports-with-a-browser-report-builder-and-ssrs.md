@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c91d12665ac8637f9de407896aed435a02af6940
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 7a04426a5be60f596e941dd9e3da38183a545418
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365176"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036435"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Поиск и просмотр отчетов с помощью браузера (построитель отчетов и службы SSRS)
   Для просмотра отчета при непосредственном соединении с сервером отчетов можно использовать любой поддерживаемый веб-браузер. Каждому отчету на сервере отчетов соответствует URL-адрес. Предусмотрена возможность ввести веб-адрес отчета, чтобы открыть его в окне браузера независимо от веб-приложения. Отчет открывается в формате HTML и включает панель инструментов отчета, с помощью которых можно переходить по страницам или выполнять поиск значений данных в отчете. Можно задать параметры в URL-адресе, чтобы скрыть панель инструментов, или выбрать выходной формат отчета.  

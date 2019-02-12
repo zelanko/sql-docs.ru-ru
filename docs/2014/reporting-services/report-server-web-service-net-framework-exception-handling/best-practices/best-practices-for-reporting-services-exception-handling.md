@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 72fecf28-f02e-4338-b50f-0b21f520302d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7dad2ba27f67423ae84d9b63c52f479a5ffca278
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 10bf93cbaa510b9cff0cf373ada287e1aa2aea6c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144534"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034815"
 ---
 # <a name="best-practices-for-reporting-services-exception-handling"></a>Рекомендации по обработке исключений в службах Reporting Services
   При разработке приложений служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] существует несколько методик, которые можно использовать для избежания возникновения исключений или сокращения их количества. При возникновении исключений пользователю следует выводить ясное и четкое сообщение об ошибке; кроме того, следует добавить обработку исключений, чтобы приложения не завершались неожиданно.  

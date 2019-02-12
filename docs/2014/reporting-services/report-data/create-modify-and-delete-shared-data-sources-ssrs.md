@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2757c13236b871eccc91066e064924c27cc19a93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6ead1d37c40a1d0cd2d6ee668bb99d595554006a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056814"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041485"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Создание, изменение и удаление общих источников данных (SSRS)
   Общий источник данных — это набор свойств соединения с источником данных, на который могут ссылаться несколько отчетов, моделей и управляемых данными подписок, работающих на сервере отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Общие источники данных предоставляют удобный способ управления часто изменяющимися свойствами источника данных. Если изменились свойства учетной записи пользователя или пароль или база данных перенесена на другой сервер, все сведения о соединении можно изменить в одном месте.  
@@ -48,9 +48,9 @@ ms.locfileid: "48056814"
   
  Дополнительные сведения о создании общего источника данных см. в разделах:  
   
--   [Создать источник данных на внедренный или общий &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  
+-   [Создание внедренного или общего источника данных (службы SSRS)](../create-an-embedded-or-shared-data-source-ssrs.md)  
   
--   [Создание общих источников данных и управление ими &#40;службы Reporting Services в режиме интеграции с SharePoint&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
+-   [Создание общих источников данных и управление ими (службы Reporting Services в режиме интеграции с SharePoint)](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
   
  После создания общего источника данных на сервере отчетов можно создать назначения ролей, чтобы управлять доступом к источнику данных, перемещать или переименовывать его, а также переводить источник в режим вне сети, чтобы предотвратить обработку отчета во время выполнения операций обслуживания на внешнем источнике данных. Если переименовывается или перемещается в другое место элемент общего источника данных, в иерархии папок сервера отчетов сведения о пути во всех отчетах или подписках, которые ссылаются на этот общий источник данных, будут соответственно обновлены. После перевода общего источника данных в режим вне сети все отчеты, модели и подписки не будут работать, пока источник данных не будет включен повторно.  
   
@@ -70,13 +70,13 @@ ms.locfileid: "48056814"
  Отменить операцию удаления общего источника данных невозможно. Однако если общий источник данных был случайно удален, можно создать новый с теми же значениями свойств, что у старого. Нужно по очереди открыть все отчеты, модели и управляемые данными подписки и повторно привязать общий источник данных к использующим его элементам. Но так как все свойства источника данных останутся прежними, отчеты, модели и подписки будут работать по-прежнему.  
   
 ## <a name="see-also"></a>См. также  
- [Создавать и управлять общими источниками данных &#40;режим интеграции служб Reporting Services в SharePoint&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
+ [Создание общих источников данных и управление ими (службы Reporting Services в режиме интеграции с SharePoint)](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
  [Подключения к данным, источники данных и строки подключения в службах Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Управление источниками данных отчета](manage-report-data-sources.md)   
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Внедренные и общие подключения к данным или источники данных &#40;построитель отчетов и службы SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md)   
+ [Внедренные и общие подключения к данным или источники данных (построитель отчетов и службы SSRS)](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Страница "Свойства источников данных" (диспетчер отчетов)](../data-sources-properties-page-report-manager.md)   
- [Создание, удаление и изменение общего источника данных &#40;диспетчера отчетов&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Настройка свойств источника данных для отчета &#40;диспетчера отчетов&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [Создание, удаление или изменение общего источника данных (диспетчер отчетов)](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Настройка свойств источника данных для отчета (диспетчер отчетов)](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

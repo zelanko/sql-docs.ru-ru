@@ -12,20 +12,20 @@ helpviewer_keywords:
 - properties [Reporting Services], general
 ms.assetid: 10b941b2-28e6-4408-9ee4-acebc63c8496
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 24cf490734933eaa367eacf3881bacec92e877fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b1e453bf06f0035a2ceca17f9f5c0af2d2fc9a0c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112189"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023845"
 ---
 # <a name="configure-general-properties-for-a-report-report-manager"></a>Настройка общих свойств отчета (диспетчер отчетов)
     
 ### <a name="to-configure-general-report-properties"></a>Настройка общих свойств отчета  
   
-1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md).  
+1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md).  
   
 2.  В диспетчере отчетов перейдите на страницу **Содержимое** . Перейдите к отчету, для которого нужно настроить конфигурацию общих свойств, и откройте его.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48112189"
   
 ## <a name="see-also"></a>См. также  
  [Перемещение или удаление элемента &#40;диспетчера отчетов&#41;](report-server/move-or-delete-an-item-report-manager.md)   
- [Содержимое страницы &#40;диспетчера отчетов&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Страница "Содержимое" (диспетчер отчетов)](../../2014/reporting-services/contents-page-report-manager.md)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Страница «Общие свойства», отчеты &#40;диспетчера отчетов&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)  
   

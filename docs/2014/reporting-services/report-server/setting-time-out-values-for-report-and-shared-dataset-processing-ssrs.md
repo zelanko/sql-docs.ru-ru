@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d1ab4d3e1a5b251bb4ff2b311dc344dfad03b3ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 790e512beed24295e7ca31dd471905ab814a7d1d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166264"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028567"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Задание значений времени ожидания при обработке отчетов и общих наборов данных (SSRS)
   Можно указать значения времени ожидания, чтобы ограничить использование системных ресурсов. Сервер отчетов поддерживает два значения времени ожидания:  
@@ -35,7 +35,7 @@ ms.locfileid: "48166264"
  Большинство ошибок времени ожидания происходят во время обработки запроса. Если появляются ошибки превышения времени ожидания, следует попробовать увеличить значение времени ожидания для запроса. Убедитесь, что установлено корректное значение времени ожидания для выполнения отчета, превышающее время ожидания запроса. Период ожидания должен быть достаточным для завершения обработки отчета и запроса.  
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>Настройка времени ожидания запроса для внедренного набора данных в отчете  
- Значения времени ожидания запроса указываются во время создания отчета при определении внедренного набора данных. Значение времени ожидания хранится вместе с отчетом, в `Timeout` элемент определения отчета. По умолчанию это значение равно 30 секундам. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+ Значения времени ожидания запроса указываются во время создания отчета при определении внедренного набора данных. Значение времени ожидания хранится вместе с отчетом в элементе `Timeout` определения отчета. По умолчанию это значение равно 30 секундам. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
  Пользователи, имеющие разрешения на изменение свойств опубликованного отчета, могут сбросить это значение, изменив файл определения отчета.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48166264"
 >  Можно установить значение `RunningRequestsDbCycle` в файле RSReportServer.config для изменения периодичности оценки заданий.  
   
 ## <a name="see-also"></a>См. также  
- [Установка параметров обработки &#40;режим интеграции служб Reporting Services в SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Сервер отчетов служб Reporting Services (основной режим)](reporting-services-report-server-native-mode.md)   
  [Управление запущенным процессом](../subscriptions/manage-a-running-process.md)   
  [Диспетчер отчетов (службы SSRS в собственном режиме)](../report-manager-ssrs-native-mode.md)  

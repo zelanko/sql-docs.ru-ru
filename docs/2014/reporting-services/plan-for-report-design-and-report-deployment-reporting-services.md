@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: db11e53b9fb6efb50a7bb676798626f5886ff9e5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 59b1574f7c302a5cf3adc3bee04881eefd176080
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362751"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032015"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>Запланируйте создание и развертывание отчетов (службы Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] обеспечивают несколько способов разработки и развертывания отчетов. Используйте приведенную в этом разделе информацию для планирования среды создания отчетов и сервера отчетов, которые будут работать вместе. В этом разделе приводятся общие сведения о поддержке определения отчетов компонентами служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Определение отчета — это XML-файл, написанный на языке определения отчетов (RDL) или на языке определения отчетов для клиентов (RDLC). Каждое определение отчета соответствует определенной версии схемы, указанной в начале файла.  

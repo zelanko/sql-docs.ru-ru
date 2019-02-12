@@ -11,17 +11,17 @@ f1_keywords:
 - sql12.rtp.rptwizard.choosetablestyle.f1
 ms.assetid: e0026583-5744-4863-afa2-6e1585f9e8f3
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 62088c91b0fc574490a3c7f2c8d1f442c5d53add
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 589962fbb1819fd4d8f69130dd6031a92ba172ff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211393"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014525"
 ---
 # <a name="choose-the-table-style-or-choose-the-matrix-style"></a>Выбор стиля таблицы или матрицы
-  На этих страницах мастера отчетов можно выбрать стили текста и линии отчета. Список стилей основан на настраиваемом шаблоне. Конструктор отчетов предоставляет следующие исходные шаблоны: "Сланец", "Лес", "Корпоративный", "Полужирный", "Аквамарин" и "Общий".  
+  На этих страницах мастера отчетов можно выбрать стили текста и линии отчета. Список стилей основан на настраиваемом шаблоне. Конструктор отчетов предоставляет следующие исходные шаблоны: «Сланец», «Лес», «Корпоративный», «Полужирный», «Аквамарин» и «Общий».  
   
  Существует также возможность добавлять другие шаблоны.  
   

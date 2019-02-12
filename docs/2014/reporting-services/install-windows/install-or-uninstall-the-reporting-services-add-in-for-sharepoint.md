@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7ae99e33bb51b38afd92ad815662947f645bf8dc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: c7369ac2da7dd8b7f93ec02ef240d78e76967d92
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392098"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033005"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>Установка и удаление надстройки служб Reporting Services для SharePoint (SharePoint 2010 и SharePoint 2013)
   Запустите пакет установки надстройки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint (rsSharePoint.msi) на серверах SharePoint, чтобы включить функции [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в составе развертывания SharePoint. К этим компонентам относится Power View, веб-часть средства просмотра отчетов, конечная точка прокси для URL-адреса, типы содержимого и страницы приложений, которые позволяют создавать и просматривать отчеты, модели отчетов, источники данных и другое содержимое сервера отчетов на сайте SharePoint, а также управлять всем этим. Для сервера отчетов, работающего в режиме интеграции с SharePoint, надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint является обязательным компонентом. Надстройку можно установить с помощью мастера установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] или загрузить файл rsSharePoint.msi из пакета дополнительных компонентов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Список версий надстройки и страницы загрузки приведены в разделе [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  

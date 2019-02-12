@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 63b32f93-4bab-4b07-bd72-39a47aca1cda
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 77d98f92747741f80c8a0af613ecc93f7647c5af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca393776d712eabea11eab07c08fa505105363c0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157536"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017175"
 ---
 # <a name="creating-a-delivery-extension-library"></a>Создание библиотеки модулей доставки
   Каждому созданному модулю доставки служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] необходимо присвоить уникальное пространство имен. Также он должен быть встроен в библиотеку или файл сборки. Конкретное имя пространства имен не имеет значения, однако оно должно быть уникальным и не должно использоваться в других расширениях. Для модулей доставки своей компании следует создавать собственные уникальные пространства имен.  

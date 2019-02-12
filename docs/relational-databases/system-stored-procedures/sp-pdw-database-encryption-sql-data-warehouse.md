@@ -2,8 +2,7 @@
 title: sp_pdw_database_encryption (хранилище данных SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: eeb1263c02b9b06ffe747b78f8dae5691b7f92fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a76b34f09fb78bb63dca88947eef044acb6cd304
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846622"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019025"
 ---
 # <a name="sppdwdatabaseencryption-sql-data-warehouse"></a>sp_pdw_database_encryption (хранилище данных SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -41,7 +40,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
   
 -   1 = Включено  
   
- Выполнение **sp_pdw_database_encryption** без параметров возвращает текущее состояние прозрачного шифрования данных на устройстве как набор скалярный результат: 0 для отключено или 1 для включена.  
+ Выполнение **sp_pdw_database_encryption** без параметров возвращает текущее состояние прозрачного шифрования данных на устройстве как скалярные результирующий набор: 0 для отключено, или 1 для включена.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

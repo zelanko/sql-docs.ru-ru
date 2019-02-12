@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2379a62a39453dcde75b39386ab6701a9fba101a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 75845ddac250c70078c8ee43d885b7d2b99a69a1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107224"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031095"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Включение и отключение компонентов служб Reporting Services
   Неиспользуемые функции сервера отчетов можно отключить в рамках блокирующей стратегии, позволяющей снизить риск атак на рабочий сервер отчетов. В большинстве случаев рекомендуется использовать функции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] параллельно; это позволит использовать все функциональные возможности, предоставляемые службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Однако в зависимости от используемой модели развертывания можно отключить неиспользуемые функции. Например, если вся обработка отчетов производится с использованием операций по расписанию, то можно разрешить только фоновую обработку. Подобным же образом можно ограничиться запуском веб-службы сервера отчетов, если необходимо только интерактивное получение отчетов по требованию.  
@@ -32,7 +32,7 @@ ms.locfileid: "48107224"
   
 -   [Диспетчер отчетов](#ReportManager)  
   
--   [Построитель отчетов](#ReportBuilder)  
+-   [построитель отчетов](#ReportBuilder)  
   
 -   [встроенная безопасность Windows для источников данных для отчетов](#WinIntSec)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48107224"
   
 1.  Откройте файл `RsReportServer.config` в текстовом редакторе. Дополнительные сведения см. в разделе [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](modify-a-reporting-services-configuration-file-rsreportserver-config.md) в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-2.  Чтобы включить сервер веб-службы отчетов, присвойте `IsWebServiceEnabled` для `true`:  
+2.  Для включения веб-службы сервера отчетов установите для свойства `IsWebServiceEnabled` значение `true`.  
   
     ```  
     <IsWebServiceEnabled>true</IsWebServiceEnabled>  
@@ -124,13 +124,13 @@ ms.locfileid: "48107224"
   
 1.  Откройте файл RsReportServer.config в текстовом редакторе. Инструкции см. в разделе [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](modify-a-reporting-services-configuration-file-rsreportserver-config.md) в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-2.  Чтобы включить диспетчер отчетов, присвойте `IsReportManagerEnabled` для `true`:  
+2.  Чтобы включить диспетчер отчетов, присвойте свойству `IsReportManagerEnabled` значение `true`.  
   
     ```  
     <IsReportManagerEnabled>true</IsReportManagerEnabled>  
     ```  
   
-3.  Чтобы отключить диспетчер отчетов, задайте `IsReportManagerEnabled` для `false`:  
+3.  Чтобы отключить диспетчер отчетов, присвойте свойству `IsReportManagerEnabled` значение `false`.  
   
     ```  
     <IsReportManagerEnabled>false</IsReportManagerEnabled>  

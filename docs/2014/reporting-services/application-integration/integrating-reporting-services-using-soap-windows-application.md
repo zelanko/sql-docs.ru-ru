@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 638f3d5551bc04e92278405df4cddea8b73c6dcb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 93297d4b1da9363b0755ffe0e1c103a54797d299
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104304"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018096"
 ---
 # <a name="using-the-soap-api-in-a-windows-application"></a>Использование API SOAP в приложении Windows
   С помощью API SOAP служб Reporting Services можно получить доступ ко всем функциональным возможностям сервера отчетов. Поскольку API SOAP является веб-службой, к нему легко получить доступ, чтобы предоставить для пользовательских бизнес-приложений функции создания отчетов в масштабе предприятия. Чтобы получить доступ к веб-службе в приложении Windows, можно просто написать код, который вызывает службу. С помощью платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] можно создать класс-посредник, который делает доступными свойства и методы веб-службы и позволяет воспользоваться привычной инфраструктурой и программными средствами для построения бизнес-приложений на основе технологии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

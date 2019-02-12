@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 876fba07af1e7f82c38d4142914c1aded10117e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 20787347abe92f83ea2163f5cd297804153d364d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134144"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017035"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>Формирование веб-каналов данных из отчета (построитель отчетов и службы SSRS)
-  Можно формировать Atom совместимые потоки данных из отчетов и затем использовать эти потоки данных в приложениях, таких как [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] клиента, который может использовать потоки данных.  
+  Можно формировать Atom-совместимые потоки данных из отчетов, а затем использовать эти потоки данных в приложениях, например в клиенте [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , который может использовать потоки данных.  
   
  Модуль Atom подготовки отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] формирует сервисный документ канала Atom, в котором перечислены потоки данных, доступные в отчете. Этот документ содержит сведения по меньшей мере об одном потоке данных для каждой области данных отчета. В зависимости от типа области данных и самих данных, которые отображает эта область, службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут сформировать из нее несколько потоков данных.  
   

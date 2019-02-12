@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 62923987b3214a319268291b1349cb32f5bd0bd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1350c25450dfae5ed02b9761ed79182ccac817d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147461"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021607"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Функция Multilookup (построитель отчетов и службы SSRS)
   Возвращает набор первых подходящих значений для указанного набора имен из набора данных, содержащего пары «имя-значение».  
@@ -45,12 +45,12 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  Константа, задающая имя набора данных в отчете. Например, «Colors».  
   
 ## <a name="return"></a>Возвращает  
- Возвращает `VariantArray`, или `Nothing` Если совпадения нет.  
+ Возвращает значение `VariantArray` или `Nothing`, если совпадения нет.  
   
 ## <a name="remarks"></a>Примечания  
- Используйте `Multilookup` для извлечения набора значений из набора данных для пар "имя значение", где каждая пара имеет связь один-к одному. `MultiLookup` является эквивалентом функции `Lookup` для набора имен или ключей. Например, для многозначного параметра, основанный на идентификаторов первичных ключей, можно использовать `Multilookup` в выражении в текстовом поле таблицы для извлечения связанных значений из набора данных, который не привязан к параметру или таблице.  
+ Функция `Multilookup` служит для извлечения набора значений из набора данных, содержащего пары «имя-значение» со связью «один к одному». Функция `MultiLookup` является эквивалентом функции `Lookup` для набора имен или ключей. Например, для параметра с несколькими значениями на основе идентификаторов первичных ключей функция `Multilookup` может быть использована в выражении в текстовом поле таблицы для извлечения связанных значений из набора данных, не привязанного к параметру или таблице.  
   
- `Multilookup` выполняет следующие функции:  
+ Функция `Multilookup` выполняет следующие действия.  
   
 -   вычисляет исходное выражение в текущей области и создает массив объектов типа variant;  
   
@@ -62,7 +62,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Существуют следующие ограничения.  
   
--   `Multilookup` вычисляется после применения всех выражений фильтров  
+-   Функция `Multilookup` вычисляется после применения всех критериев фильтра.  
   
 -   Поддерживается только один уровень уточняющего запроса. Исходное, целевое и результирующее выражения не могут включать в себя ссылки на функцию уточняющего запроса.  
   
@@ -70,7 +70,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   Исходное, целевое и результирующее выражения не могут включать в себя ссылки на переменные отчета или группы.  
   
--   `Multilookup` не может использоваться как выражение для следующих элементов отчета:  
+-   Функцию `Multilookup` нельзя использовать в качестве выражения для следующих элементов отчета:  
   
     -   динамические строки соединения для источника данных;  
   
@@ -96,9 +96,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 |1|Accessories|  
 |2|Bikes|  
 |3|Clothing|  
-|4|Components|  
+|4|Компоненты|  
   
- Для поиска имен, соответствующих списку идентификаторов, используйте функцию `Multilookup`. Сначала необходимо разделить списка в массив строк, вызов `Multilookup` для извлечения названий категорий и объединить результаты в строку.  
+ Для поиска имен, соответствующих списку идентификаторов, используйте функцию `Multilookup`. Сначала необходимо разбить список на массив строк, вызвать  функцию `Multilookup` для извлечения названий категорий и объединить результаты в строку.  
   
  Следующее выражение при помещении текстового поля в область данных, привязанную к набору данных Category, отображает «Bikes, Components, Bikes, Accessories».  
   
@@ -111,7 +111,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="example"></a>Пример  
  Предположим, в наборе данных с именем ProductColors есть поле идентификатора цвета ColorID и поле значения цвета Color, как показано в следующей таблице.  
   
-|ColorID|Color|  
+|ColorID|Цвет|  
 |-------------|-----------|  
 |1|Красный|  
 |2|Синий|  
@@ -124,9 +124,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Использование выражений в отчетах &#40;построитель отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Использование выражений в отчетах (построитель отчетов и службы SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   
- [Область выражения для суммирования, агрегатов и встроенных коллекций &#40;построитель отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

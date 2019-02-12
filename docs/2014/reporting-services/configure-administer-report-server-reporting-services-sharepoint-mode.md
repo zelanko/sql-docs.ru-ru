@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 846e86d0-fbbb-426c-97f9-f179cd42b390
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 335300f5b8e7f91c3595cdb26cb531bb589c782a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca5f2b01894818680b6b760a1f2b8a342d43d8ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085624"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022903"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>Настройка и администрирование сервера отчетов (режим интеграции с SharePoint служб Reporting Services)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] — Это серверная платформа отчетов, который предоставляет полный спектр готовых к использованию средств и служб для создания, развертывания и управления отчетами организации, а также функции программирования, которые позволяют расширять и настраивать отчеты функциональные возможности. Среду создания отчетов можно интегрировать с продуктами SharePoint, чтобы пользоваться всеми преимуществами среды совместной работы, которые обеспечивает сайт SharePoint.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] представляют собой платформу для создания отчетов на базе сервера, которая обеспечивает широкий спектр готовых к использованию средств и служб для создания и развертывания отчетов организации и управления ими, а также функции программирования, которые позволят расширить и настроить функциональность отчетов. Среду создания отчетов можно интегрировать с продуктами SharePoint, чтобы пользоваться всеми преимуществами среды совместной работы, которые обеспечивает сайт SharePoint.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  В следующих разделах можно ознакомиться с основными понятиями, сценариями развертывания, процедурами и прочими сведениями, относящимися к интеграции среды служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] с продуктами или технологиями SharePoint.  

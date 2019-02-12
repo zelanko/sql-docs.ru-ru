@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8f15e2c6-a647-4b05-a519-1743b5d8654c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0fefdbe7100f9d8c22b6ed0026748b095ca63253
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e3911bfcd923b26251c81809c9671981e0ff84e9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108144"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018046"
 ---
 # <a name="control-report-distribution"></a>Управление распространением отчета
   Сервер отчетов можно определенным образом настроить для уменьшения рисков, связанных с электронной почтой и распространением в общей папке.  
@@ -49,7 +49,7 @@ ms.locfileid: "48108144"
   
 ## <a name="see-also"></a>См. также  
  [Настройка сервера отчетов для доставки электронной почты &#40;диспетчер конфигурации служб SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
- [Подписки и доставка &#40;службы Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Подписки и доставка (службы Reporting Services)](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Создание и администрирование подписок для серверов отчетов в собственном режиме](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
   
   

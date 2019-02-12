@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 27d5bf66-b0e7-489e-a830-ffe2ec8e5350
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 50df73e41d67b69479782385244031f85baf5652
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: df14375ad8ae54377f7dbbd599d0bcc7b50aa2d6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138794"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010795"
 ---
 # <a name="new-model-page-report-manager"></a>Страница «Создание модели» (диспетчер отчетов)
   Эта страница позволяет создать модель отчетов по умолчанию на основе общего источника данных. Модели отчетов можно создавать только из многомерных источников данных службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , реляционных источников данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и реляционных источников данных Oracle.  
@@ -39,10 +39,10 @@ ms.locfileid: "48138794"
     -   Выберите **Управление** , чтобы открыть страницу свойств отчета «Общие». Затем нажмите кнопку **Создать модель отчета** , чтобы открыть страницу «Создать модель».  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **Name**  
  Указывает имя модели. Имя должно содержать хотя бы одну букву или цифру. В него могут также входить пробелы и другие символы. При задании имени нельзя использовать следующие символы:  
   
- ; ? : \@ & = +, $ / * \< > | " /  
+ ; ? : \@ & = + , $ / * \< > | " /  
   
  **Описание**  
  Показывает описание модели. Пользователям, просматривающим этот элемент с помощью диспетчера отчетов, это описание предоставляется при просмотре иерархии папок.  

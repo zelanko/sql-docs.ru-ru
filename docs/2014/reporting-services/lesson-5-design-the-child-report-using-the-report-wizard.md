@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bc993c0881eb4aeeddb18c8df0efad69dbba261e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 20fd3bccea72f0869f267058ca6bf71acbb20425
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418355"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032315"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Занятие 5. Проектирование дочернего отчета с использованием мастера отчетов
   После создания подключения к данным и таблицы данных для дочернего отчета следующий шаг состоит в проектировании дочернего отчета в конструкторе отчетов с помощью мастера отчетов. Дополнительные сведения о конструкторе отчетов см. в разделе [Разработка отчетов с использованием конструктора отчетов (SSRS)](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  

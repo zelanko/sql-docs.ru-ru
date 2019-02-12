@@ -13,15 +13,15 @@ helpviewer_keywords:
 - metadata [Master Data Services]
 - user-defined metadata [Master Data Services]
 ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 186329f71e19f23801fb366fe2117067fbf70c6c
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: f45d9d2a50327259c987cd41fefc6039c629eb77
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419890"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022904"
 ---
 # <a name="metadata-master-data-services"></a>Метаданные (службы Master Data Services)
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] определяемые пользователем метаданные — это данные, которые служат для описания объектов модели. Например, может потребоваться отслеживать владельцев определенной модели или сущности либо отслеживать системы-источники, которые поставляют данные сущности.  

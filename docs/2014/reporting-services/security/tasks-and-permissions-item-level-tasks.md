@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ec3d958d709b1b0307b4df9be8a3d05165d0a92a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a22c255712aa3e5e6c93cd04a37f5c66d25ac140
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150204"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018116"
 ---
 # <a name="item-level-tasks"></a>Задачи уровня элемента
-  Задача уровня элемента представляет собой коллекцию разрешений, связанных с отчетом, папкой, моделью отчета, ресурсом или общим источником данных. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] также располагают задачами на уровне системы, которые применяются к сайту сервера отчетов в целом. Дополнительные сведения см. в разделе [Задачи уровня системы](tasks-and-permissions-system-level-tasks.md). Дополнительные сведения о задачах и правах в целом см. в разделе [задачи и разрешения](tasks-and-permissions.md).  
+  Задача уровня элемента представляет собой коллекцию разрешений, связанных с отчетом, папкой, моделью отчета, ресурсом или общим источником данных. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] также располагают задачами на уровне системы, которые применяются к сайту сервера отчетов в целом. Дополнительные сведения см. в разделе [Задачи уровня системы](tasks-and-permissions-system-level-tasks.md). Дополнительные сведения о задачах и правах в целом см. в разделе [Tasks and Permissions](tasks-and-permissions.md).  
   
 > [!NOTE]  
 >  Если с этими задачами работа ведется программно, необходимо использовать методы, поддерживающие задачу уровня элемента. Дополнительные сведения см. в разделе <xref:ReportService2010.ReportingService2010.ListTasks%2A> и <xref:ReportService2010.ReportingService2010.ListRoles%2A>.  

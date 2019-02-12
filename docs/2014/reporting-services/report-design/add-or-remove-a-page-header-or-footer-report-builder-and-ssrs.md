@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 21cf0a14492c31c33d7923ea34c7cb00fa69bb29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b3b42828eab3a439cb21c6d32ff0881debc663e8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162364"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011895"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Добавление или удаление верхнего или нижнего колонтитула страницы (построитель отчетов и службы SSRS)
   К верхним или нижним колонтитулам страниц можно добавить статический текст, изображения, линии, прямоугольники и границы. Если в заголовке или нижнем колонтитуле необходимо разместить переменные или вычисляемые данные, поместите выражения и связанные с данными изображения в текстовом поле.  
@@ -64,6 +64,6 @@ ms.locfileid: "48162364"
 >  При удалении колонтитула он удаляется из отчета. Любые элементы, которые ранее добавлялись в колонтитулы, не появятся после последующего создания колонтитула.  
   
 ## <a name="see-also"></a>См. также  
- [И нижние колонтитулы страницы &#40;построитель отчетов и службы SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)](page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

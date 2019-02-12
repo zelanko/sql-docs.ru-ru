@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 9fe0efd10d2c9c9e972aaf32214d3e799de12d92
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 91222c11318ffd88a152b24b284bdf8b11ed6d7b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160742"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011286"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Несколько рядов на диаграмме (построитель отчетов и службы SSRS)
   Если в диаграмме представлено несколько рядов, необходимо определить лучший способ сравнения рядов. Для отображения относительных пропорций каждого ряда можно использовать диаграмму с накоплением. Если сравниваются только два ряда с общей осью категорий (x), используйте вспомогательную ось. Это удобно при отображении двух связанных рядов данных, например, цены и количества или доходов и налогов. Если диаграмма становится трудной для восприятия, попробуйте использовать несколько областей диаграммы, чтобы визуально отделить ряды друг от друга.  
@@ -57,6 +57,6 @@ ms.locfileid: "48160742"
 ## <a name="see-also"></a>См. также  
  [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
  [Отображение на диаграмме ряда с несколькими диапазонами данных (построитель отчетов и службы SSRS)](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
- [Типы диаграмм &#40;построитель отчетов и службы SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
+ [Типы диаграмм (построитель отчетов и службы SSRS)](chart-types-report-builder-and-ssrs.md)  
   
   

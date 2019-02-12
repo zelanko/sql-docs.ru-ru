@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b614ebdb-07ca-44af-a0ff-893364bd4b71
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6a45d0bf0878b472e4979c00a5a38e8b01974a22
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 3db82b977725bdcb615ec67bd66e530b38f385c5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544330"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032805"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>Расширенные прогнозы временных рядов (учебник по интеллектуальному анализу данных — средний уровень)
   В ходе изучения модели прогнозирования было показано, что хотя продажи в большинстве регионов и следуют схожему шаблону, некоторые регионы и некоторые модели, например модель M200 в Тихоокеанском регионе, имеют очень разные тренды. Это не удивляет, поскольку различия между регионами не являются редкостью и могут быть вызваны многими факторами, включая маркетинговые акции, неточные отчеты или геополитические события.  

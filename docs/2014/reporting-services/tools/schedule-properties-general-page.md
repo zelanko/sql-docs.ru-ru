@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 629b4f350ed001edbe36efaa990a716935d493ad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: fe262291ace3828989939dd31149393808859f8b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366136"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017765"
 ---
 # <a name="schedule-properties-general-page"></a>Свойства расписания (страница «Общие»)
   Чтобы создать или изменить общее расписание, воспользуйтесь этой страницей. Общие расписания могут использоваться вместо расписаний отчетов или подписок. Изменения, внесенные в расписания, применяются после сохранения расписания. Изменение расписания не оказывает воздействия на выполняемые задания. Если какое-то расписание изменяется во время его использования, всем выполняемым в данный момент отчетам и подпискам, запущенным на основе этого расписания, будет разрешено завершение.  

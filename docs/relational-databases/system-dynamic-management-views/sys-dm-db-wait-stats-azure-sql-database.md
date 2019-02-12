@@ -2,10 +2,8 @@
 title: sys.dm_db_wait_stats (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - dm_db_wait_stats_TSQL
@@ -22,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 01fd39cccc2872e1ebbc87340f5290dc9690e093
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5b81c48e017312048f15b600382af5f95aec821
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628162"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038925"
 ---
 # <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -279,7 +277,7 @@ ms.locfileid: "47628162"
 |QUERY_NOTIFICATION_SUBSCRIPTION_MUTEX|Имеет место в процессе синхронизации состояния транзакций в уведомлениях о запросах.|  
 |QUERY_NOTIFICATION_TABLE_MGR_MUTEX|Имеет место в процессе внутренней синхронизации диспетчера уведомлений о запросах.|  
 |QUERY_NOTIFICATION_UNITTEST_MUTEX|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|QUERY_OPTIMIZER_PRINT_MUTEX|Имеет место в процессе синхронизации диагностического выхода оптимизатора запросов. Этот тип ожидания происходит, только если были включены настройки диагностики под руководством [!INCLUDE[msCoName](../../includes/msconame-md.md)] технической поддержки.|  
+|QUERY_OPTIMIZER_PRINT_MUTEX|Имеет место в процессе синхронизации диагностического выхода оптимизатора запросов. Этот тип ожидания имеет место только в случае, если были включены настройки диагностики под руководством службы поддержки продуктов [!INCLUDE[msCoName](../../includes/msconame-md.md)].|  
 |QUERY_TRACEOUT|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |QUERY_WAIT_ERRHDL_SERVICE|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |RECOVER_CHANGEDB|Имеет место в процессе синхронизации состояния базы данных в режиме «горячего» резервирования.|  

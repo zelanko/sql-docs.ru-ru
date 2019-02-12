@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3cbc3a76c1f6e5c67297f44c312fe0497666a9b8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 859c7d2cb6545c6a15e1e3e40aff28720921fb27
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505643"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023125"
 ---
 # <a name="rsexe-utility-ssrs"></a>Служебная программа RS.exe (SSRS)
   Скрипт, предоставленный во входном файле, обрабатывается служебной программой rs.exe. Используйте эту программу для автоматизации развертывания сервера отчетов и административных задач.  

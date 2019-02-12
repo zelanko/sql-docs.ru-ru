@@ -2,10 +2,9 @@
 title: sp_set_database_firewall_rule (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/04/2017
-ms.prod: ''
+ms.service: sql-database
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sp_set_database_firewall_rule
@@ -22,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8530d8a2d19a5dd9f50fb437626202565435222a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93acd6ad9e904e1e3db5dfe7e244b459e7853d70
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800682"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025465"
 ---
 # <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,10 +47,10 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
  **[@name**  =] [N] "*имя*"  
  Имя, используемое для описания и определения параметров брандмауэра на уровне базы данных. *имя* — **nvarchar(128)** без значения по умолчанию. Идентификатор Юникода `N` является необязательным для [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
- **[@start_ip_address**  =] '*start_ip_address*"  
+ **[@start_ip_address** =] '*start_ip_address*'  
  Самый маленький IP-адрес в диапазоне параметра брандмауэра на уровне базы данных. IP-адреса, которые больше этого адреса или равны ему, могут попытаться подключиться к экземпляру служб [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Наименьший возможный IP-адрес: `0.0.0.0`. *start_ip_address* — **varchar(50)** без значения по умолчанию.  
   
- [**@end_ip_address** =] '*end_ip_address*"  
+ [**@end_ip_address** =] '*end_ip_address*'  
  Самый большой IP-адрес в диапазоне параметра брандмауэра на уровне базы данных. IP-адреса, которые меньше этого адреса или равны ему, могут попытаться подключиться к экземпляру служб [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Наибольший возможный IP-адрес: `255.255.255.255`. *end_ip_address* — **varchar(50)** без значения по умолчанию.  
   
  В следующей таблице показаны поддерживаемые аргументы и параметры в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -89,7 +88,7 @@ EXECUTE sp_set_database_firewall_rule N'Example DB Setting 1', '0.0.0.4', '0.0.0
   
 ## <a name="see-also"></a>См. также  
  [Брандмауэр базы данных Azure SQL](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [Практическое: Настройка параметров брандмауэра (база данных Azure SQL)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [Как Настройка параметров брандмауэра (база данных Azure SQL)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
  [sp_set_firewall_rule &#40;базы данных SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [sp_delete_database_firewall_rule &#40;базы данных SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
  [sys.database_firewall_rules &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  

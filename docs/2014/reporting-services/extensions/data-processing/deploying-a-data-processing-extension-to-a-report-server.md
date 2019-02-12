@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Развертывание модуля обработки данных на сервере отчетов | Документы Майкрософт
+title: Как Развертывание модуля обработки данных на сервере отчетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cf4013f5a557dde93cf628f55e108c5a4e1772ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: db03408b8ed7909f534b5dad09dbb742f7edc6c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160754"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017976"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Практическое руководство. Развертывание модуля обработки данных на сервере отчетов
+# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Как развернуть модуль обработки данных на сервере отчетов
   Серверы отчетов используют модули обработки данных для получения и обработки данных в отчетах, готовых для просмотра. Сборка модуля обработки данных развертывается на сервере отчетов как закрытая сборка. Нужно также внести запись в файл конфигурации сервера отчетов RSReportServer.config.  
   
 ## <a name="procedures"></a>Процедуры  
@@ -36,7 +36,7 @@ ms.locfileid: "48160754"
   
 2.  Скопировав файл сборки, откройте файл RSReportServer.config. Файл RSReportServer.config расположен в каталоге ReportServer. Необходимо внести запись в этот файл конфигурации для файла сборки развертываемого модуля обработки данных. Файл конфигурации можно открыть с помощью среды Visual Studio или простого текстового редактора (такого как Блокнот).  
   
-3.  Найдите `Data` в файле RSReportServer.config. Запись для вновь созданного модуля обработки данных необходимо создать в месте, указанном ниже.  
+3.  Найдите в файле RSReportServer.config элемент `Data`. Запись для вновь созданного модуля обработки данных необходимо создать в месте, указанном ниже.  
   
     ```  
     <Extensions>  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3c4ccc300b260c6a0ee7d512756876015f57994f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 89dc9cf211a9ab66c5617b6ef545795f332546f0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123464"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014585"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>Добавление или удаление группы в диаграмме (построитель отчетов и службы SSRS)
   Щелкните в диаграммной области данных, чтобы отобразить панель **Данные диаграммы** . Создайте группы, перетащив поля набора данных в области **Группы категорий** и **Группы рядов** . Чтобы добавить вложенные группы, в область добавляют несколько полей.  
@@ -57,6 +57,6 @@ ms.locfileid: "48123464"
 2.  Щелкните правой кнопкой мыши группу в области **Группы категорий** или **Группы рядов** и выберите команду **Удалить**.  
   
 ## <a name="see-also"></a>См. также  
- [Диаграммы &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)  
   
   

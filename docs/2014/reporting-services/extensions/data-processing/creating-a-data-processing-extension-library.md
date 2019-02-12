@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 82f4b71b-dd39-467d-8d8c-6771eb2b12de
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9070c23997211eec25d23976a48de321611f4efd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: be66209ab3b724c31fde38bad4f251db94a72765
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217754"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017345"
 ---
 # <a name="creating-a-data-processing-extension-library"></a>Создание библиотеки модулей обработки данных
   Каждому созданному модулю обработки данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] необходимо присвоить уникальное пространство имен. Кроме того, он должен быть встроен в библиотеку или файл сборки. Конкретное имя пространства имен не имеет значения, однако оно должно быть уникальным и не должно использоваться в других расширениях. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] использует пространства имен <xref:Microsoft.ReportingServices.DataProcessing> для модулей обработки данных, поставляемых со службами [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Для модулей обработки данных своей компании следует создавать собственные уникальные пространства имен.  

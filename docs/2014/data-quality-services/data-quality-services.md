@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9517595f183e85c3becc8a6b92b364c0b25e666c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4c9e337bfd091c02645119c1f8f4c81eb8daab29
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366926"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011155"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) — это продукт, предназначенный для повышения качества данных на основе знаний. DQS позволяет построить базу знаний и использовать ее для выполнения разнообразных важных задач по обеспечению качества данных, включая исправление, дополнение, стандартизацию и устранение дубликатов данных. DQS позволяет выполнять очистку данных с использованием служб эталонных данных, расположенных в облаке и предоставляемых поставщиками эталонных данных. DQS также предоставляет функции профилирования, встроенные в задачи по обеспечению качества данных, что позволяет анализировать целостность данных.  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: e5c0b5a9-1386-47cb-aade-96653ecfaa54
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0751e3e72e7a6b9df1d2cdb8d414cfa263d38426
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5164cdfd418ad8f813b47813f7caee4799e41d90
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109600"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021405"
 ---
 # <a name="deploying-a-data-processing-extension"></a>Развертывание модуля обработки данных
   После создания модуля обработки данных для служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и компиляции его в библиотеку платформы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] необходимо сделать модуль доступным для обнаружения сервером отчетов и конструктором отчетов. Для этого нужно просто скопировать модуль в соответствующие каталоги и добавить записи в соответствующие файлы конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "48109600"
 |---------------|-----------------|  
 |`Name`|Уникальное имя модуля, например «SQL» для модуля обработки данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или «OLEDB» для модуля обработки данных OLE DB. Длина атрибута `Name` не должна превышать 255 символов. Имя должно быть уникальным среди всех элементов, вложенных в элемент **Extension** файла конфигурации.|  
 |`Type`|Список с разделителями-запятыми, содержащий полное пространство имен и имя сборки.|  
-|`Visible`|Значение `false` показывает, что модуль обработки данных не должен отображаться в пользовательском интерфейсе. Если атрибут не включается, значение по умолчанию — `true`.|  
+|`Visible`|Значение `false` показывает, что модуль обработки данных не должен отображаться в пользовательском интерфейсе. Если атрибут не указан, по умолчанию используется значение `true`.|  
   
  Дополнительные сведения о файлах RSReportServer.config и RSReportDesigner.config см. в разделе [Файлы конфигурации служб Reporting Services](../../report-server/reporting-services-configuration-files.md).  
   
@@ -43,8 +43,8 @@ ms.locfileid: "48109600"
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[Практическое руководство. Развертывание модуля обработки данных на сервере отчетов](deploying-a-data-processing-extension-to-a-report-server.md)|Описывает развертывание модуля обработки данных на сервере отчетов.|  
-|[Практическое руководство. Развертывание модуля обработки данных в конструкторе отчетов](deploying-a-data-processing-extension-to-report-designer.md)|Описывает развертывание модуля обработки данных в конструкторе отчетов.|  
+|[Как Развертывание модуля обработки данных на сервере отчетов](deploying-a-data-processing-extension-to-a-report-server.md)|Описывает развертывание модуля обработки данных на сервере отчетов.|  
+|[Как Развертывание модуля обработки данных в конструкторе отчетов](deploying-a-data-processing-extension-to-report-designer.md)|Описывает развертывание модуля обработки данных в конструкторе отчетов.|  
   
 ## <a name="see-also"></a>См. также  
  [Модули служб Reporting Services](../reporting-services-extensions.md)   

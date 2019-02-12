@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7eaddc16b25bc7ed1129cc89b67ae92ddb7aa129
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 5244d423e8e4369be7ce942fde8dbdaaf2f2e391
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376446"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017245"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Добавление каскадных параметров в отчет (построитель отчетов и службы SSRS)
   Каскадирование параметров предоставляет способ управления большими объемами данных отчета. Можно определить набор связанных параметров таким образом, чтобы список значений для одного параметра зависел от значения, выбранного в другом параметре. Например, первый параметр является независимым и может представлять список категорий продуктов. При выборе пользователем категории второй параметр зависит от значения первого параметра. Эти значения обновляются списком подкатегорий выбранной категории. При просмотре пользователем отчета значения параметров категорий и подкатегорий используются для фильтрации данных отчета.  

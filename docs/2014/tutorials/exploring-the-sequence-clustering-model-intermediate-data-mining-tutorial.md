@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fe57736160762f90f574f835673e55d19107fa15
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+manager: kfile
+ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590188"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025004"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Изучение модели кластеризации последовательностей (учебник по интеллектуальному анализу данных — средний уровень)
   Теперь, когда вы создавали **Кластеризация последовательностей по регионам** модели, ее можно просмотреть с помощью [!INCLUDE[msCoName](../includes/msconame-md.md)] средстве просмотра кластеризации последовательностей в **просмотра моделей интеллектуального анализа** конструкторе интеллектуального анализа данных. [!INCLUDE[msCoName](../includes/msconame-md.md)] Средство просмотра кластеризации последовательностей содержит пять вкладок: **Диаграмма кластеров**, **профили кластеров**, **характеристики кластера**, **ClusterDiscrimination**, и **состояний**. Дополнительные сведения о том, как использовать это средство просмотра см. в разделе [просмотр модели с помощью средства просмотра кластеризации последовательностей Майкрософт](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  

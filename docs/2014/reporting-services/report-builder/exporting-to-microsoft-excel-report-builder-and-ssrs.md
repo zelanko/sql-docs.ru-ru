@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d4c00c9d9881e7775ec311c103ca156eb555b70f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ceba0cdab54d825cfc28e1c156ca33767dfb8b8f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352386"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013560"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Экспорт в Microsoft Excel (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Excel подготавливает отчет в собственном формате [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007–2010. Благодаря модулю для подготовки отчетов, ширина столбцов в Excel более аккуратно отражает ширину столбцов в отчете.  

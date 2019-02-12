@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a640d8a5950f8a1f37b34becf470daf423ee49e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21b92fe6ab723b9e519b8828f9adcd4e67dad2e4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210944"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021385"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Области данных табликса (построитель отчетов и службы SSRS)
   Область данных табликса имеет четыре области, которые содержат ячейки табликса: угол, область группы строк, область группы столбцов и текст. Ячейки в каждой области имеют различное назначение. Можно добавить ячейки в область текста табликса, чтобы отобразить подробные данные и сгруппированные данные. Построитель отчетов и конструктор отчетов добавляют ячейки к области группы строк или группы столбцов при создании группы для отображения значений экземпляра группы. В построителе и конструкторе отчетов создаются угловые ячейки табликса, если существуют и группы строк, и группы столбцов.  
@@ -26,7 +26,7 @@ ms.locfileid: "48210944"
   
  В области конструктора пунктирные линии обозначают четыре области выбранной области данных табликса. На следующем рисунке показаны эти области, относящиеся к области табликса, с вложенными группами строк на основе категории и подкатегории, вложенными группами столбцов на основе территориального расположения и страны или региона и смежной группой столбцов на основе года.  
   
- ![Области данных табликса](../media/rs-tablixareas.gif "области данных табликса")  
+ ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
  В следующем списке описана каждая область.  
   
@@ -52,6 +52,6 @@ ms.locfileid: "48210944"
  [Таблицы &#40;построитель отчетов и службы SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Матрицы &#40;построитель отчетов и службы SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [Списки &#40;построитель отчетов и службы SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Область данных Табликса &#40;построитель отчетов и службы SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Область данных табликса (построитель отчетов и службы SSRS)](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f3da8219-e0cb-4848-95ca-285a76ec1ba9
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 09c2402b9168ac99a201afa8e0ebda971614ee4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4596485b4eebeba66028d03f5a54b3ee2461205b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097602"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015285"
 ---
-# <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>Задача 2 (дополнительно). Создание представления подписки MDS с помощью диспетчера основных данных
+# <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>Задача 2 (необязательно): Создание представления подписки MDS с помощью диспетчера основных данных
   В этой задаче вы Создание представления подписки для предоставления **поставщика** сущности в **поставщики** модели для других приложений. Это представление в текущей версии учебника не используется.  
   
 1.  Переключиться на главную страницу **диспетчера основных данных** ([http://localhost/MDS](http://localhost/MDS)), щелкнув **SQL Server 2012 Master Data Services** вверху.  
@@ -48,6 +45,6 @@ ms.locfileid: "48097602"
 10. Нажмите кнопку **Сохранить** на панели инструментов, чтобы сохранить представление подписки. Это действие создает представление в SQL Server с именем **поставщики**. Это можно проверить с помощью среды SQL Server Management Studio (SSMS).  
   
 ## <a name="next-step"></a>Следующий шаг  
- [Задача 3 &#40;необязательно&#41;: Просмотр представлений подписки](task-3-optional-reviewing-the-subscription-views.md)  
+ [Задача 3 &#40;необязательно&#41;: Анализ представлений подписки](task-3-optional-reviewing-the-subscription-views.md)  
   
   

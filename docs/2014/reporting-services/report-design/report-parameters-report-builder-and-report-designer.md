@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3baf73ba7f2c9e5d4d206234b1c9b874fbb15c59
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: bb45eb7274763446358a0336a9b2a415bc4543b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366266"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023505"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Параметры отчета (Построитель отчетов и Конструктор отчетов)
   Данная тема описывает распространенные варианты применения параметров отчета SSRS, свойства, которые вы можете установить и другую информацию относительно свойств. Параметры отчета позволяют управлять данными отчета, объединять связанные отчеты и изменять внешний вид отчетов.  
@@ -227,7 +227,7 @@ ms.locfileid: "53366266"
 ##  <a name="bkmk_Related_Topics"></a> См. также  
  [Настройка параметров отчета SSRS (тест)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
   
- [Учебник. Добавление параметра к отчету &#40;построитель отчетов&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Учебник. Добавление параметра к отчету (построитель отчетов)](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
  [Раскрытие тайны исключения InvalidReportParameterException в службе Reporting Services](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ce940bd22b9fbc5d2628cdeae3a0eea376f2bc99
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 097e61db74fbe2d1ba46ac35c6245745309d00af
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165284"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010885"
 ---
 # <a name="tasks-and-permissions"></a>Задачи и разрешения
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]под *задачами* понимаются действия, которые может выполнить пользователь или администратор. Набор задач предопределен заранее. Создавать пользовательские задачи или изменять существующие задачи нельзя ни программным способом, ни с помощью инструментальных средств. Всего существует двадцать пять задач. Они охватывают весь набор операций, доступных в рамках безопасности, основанной на ролях. В качестве примеров задач можно привести «Просмотр отчетов», «Управление отчетами», «Управление свойствами сервера отчетов».  
@@ -46,7 +46,7 @@ ms.locfileid: "48165284"
   
 ## <a name="see-also"></a>См. также  
  [Определение ролей](role-definitions.md)   
- [Предопределенные роли](role-definitions-predefined-roles.md)   
+ [Стандартные роли](role-definitions-predefined-roles.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](granting-permissions-on-a-native-mode-report-server.md)  
   
   

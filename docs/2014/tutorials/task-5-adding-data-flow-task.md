@@ -1,24 +1,21 @@
 ---
-title: 'Задача 5: Добавление задачи потока данных | Документация Майкрософт'
+title: Задача 5. Добавление задачи потока данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ae466627-cc36-4460-a234-fe060f6f01c0
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: ade652a874d8519fb0ff85c7622e2955248286d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c5cfdc3a7afa210b88bbe0410d31b5b655d95a7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137374"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017785"
 ---
 # <a name="task-5-adding-data-flow-task"></a>Задача 5. Добавление задачи потока данных
   В этой задаче вы добавите задачу потока данных в поток управления пакетом служб SSIS.  

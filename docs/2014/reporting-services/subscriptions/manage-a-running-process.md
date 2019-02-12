@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bc8c6adf930df4d6eaf721db4782d5d1627439c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 84199b2bf01101a1bcc67b6e3d0870824a116860
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166274"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013595"
 ---
 # <a name="manage-a-running-process"></a>Управление запущенным процессом
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] наблюдают за состоянием заданий, работающих на сервере отчетов. Через регулярные интервалы времени сервер отчетов просматривает внутрипроцессные задания и записывает сведения о состоянии в базу данных сервера отчетов или в базы данных приложения служб для режима интеграции с SharePoint. Задание находится в процессе выполнения, если запущены следующие процессы: выполнение запроса на удаленном или локальном сервере базы данных, обработка отчета и подготовка отчета к просмотру.  
@@ -76,7 +76,7 @@ ms.locfileid: "48166274"
   
 ### <a name="how-to-cancel-report-processing-or-subscription"></a>Отмена обработки отчета или подписки  
   
-1.  В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]установите соединение с сервером отчетов. Инструкции см. в разделе [соединиться с сервером отчетов в среде Management Studio](../tools/connect-to-a-report-server-in-management-studio.md).  
+1.  В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]установите соединение с сервером отчетов. Инструкции см. в разделе [Подключение к серверу отчетов в среде Management Studio](../tools/connect-to-a-report-server-in-management-studio.md).  
   
 2.  Откройте папку **Задания** .  
   
@@ -86,20 +86,20 @@ ms.locfileid: "48166274"
   
 1.  Откройте файл RSReportServer.config в текстовом редакторе.  
   
-2.  Найти `IsNotificationService`.  
+2.  Найдите параметр `IsNotificationService`.  
   
-3.  Задайте для него значение `False`.  
+3.  Присвойте ему значение `False`.  
   
 4.  Сохраните файл.  
   
 5.  В диспетчере отчетов удалите управляемую данными подписку из вкладки "Подписки" отчета или из папки **Мои подписки**.  
   
-6.  После удаления подписки в файле RSReportServer.config найдите `IsNotificationService` и присвойте ему значение `True`.  
+6.  После удаления подписки в файле RSReportServer.config найдите параметр `IsNotificationService` и присвойте ему значение `True`.  
   
 7.  Сохраните файл.  
   
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>Настройка параметров частоты для получения состояния заданий  
- Работающая задача хранится во временной базе данных сервера отчетов. Можно изменять параметры конфигурации в файле RSReportServer.config, чтобы управлять периодичностью, с которой сервер отчетов просматривает внутрипроцессные задания, а также интервал времени, после которого состояние работающего задания меняется с нового на работающее. `RunningRequestsDbCycle` Параметр указывает, как часто сервер отчетов просматривает работающие процессы. По умолчанию сведения о состоянии записываются каждые 60 секунд. `RunningRequestsAge` Указывает период, по которому выполняющегося задания меняется с нового на работающее.  
+ Работающая задача хранится во временной базе данных сервера отчетов. Можно изменять параметры конфигурации в файле RSReportServer.config, чтобы управлять периодичностью, с которой сервер отчетов просматривает внутрипроцессные задания, а также интервал времени, после которого состояние работающего задания меняется с нового на работающее. Параметр `RunningRequestsDbCycle` указывает периодичность, с которой сервер отчетов просматривает работающие задания. По умолчанию сведения о состоянии записываются каждые 60 секунд. Параметр `RunningRequestsAge` указывает период времени, после которого состояние выполняющегося задания меняется с «новое» на «выполняющееся».  
   
 ##  <a name="bkmk_sharepoint"></a> Просмотр и отмена заданий (режим SharePoint)  
  Управление заданиями в развертывании в режиме SharePoint осуществляется в центре администрирования SharePoint для каждого приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -120,11 +120,11 @@ ms.locfileid: "48166274"
  Заданиями можно управлять программно или с помощью скриптов. Дополнительные сведения см. в разделе <xref:ReportService2010.ReportingService2010.ListJobs%2A>, <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  
   
 ## <a name="see-also"></a>См. также  
- [Отмена заданий сервера отчетов &#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
+ [Отмена заданий сервера отчетов (среда Management Studio)](../tools/cancel-report-server-jobs-management-studio.md)   
  [Свойства задания (среда Management Studio)](../tools/job-properties-management-studio.md)   
  [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Файл конфигурации RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Мониторинг производительности сервера отчетов](../report-server/monitoring-report-server-performance.md)  
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md)   
+ [Наблюдение за производительностью сервера отчетов](../report-server/monitoring-report-server-performance.md)  
   
   

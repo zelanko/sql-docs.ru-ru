@@ -1,25 +1,24 @@
 ---
-title: 'Занятие 3: Обработка структуры интеллектуального анализа данных потребительской корзины | Документация Майкрософт'
+title: Урок 3. Обработка структуры интеллектуального анализа данных потребительской корзины | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 095a043f-cf6f-45bb-a021-ae4e1b535c65
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 979738186c9af128087049e71fa248d41fd27b50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ce2c2e6944d524a38edc331d2cd128ca7cf7d419
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192254"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018266"
 ---
-# <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Урок 3. Обработка структуры интеллектуального анализа "Потребительская корзина"
-  На этом занятии вы воспользуетесь [INSERT INTO &#40;расширений интеллектуального анализа данных&#41; ](/sql/dmx/insert-into-dmx) инструкции и представлений vAssocSeqLineItems и vAssocSeqOrders из [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] образца базы данных для обработки структур интеллектуального анализа данных и интеллектуального анализа данных модели, которые созданные в [занятии 1: Создание структуры интеллектуального анализа данных потребительской корзины](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) и [занятии 2: Добавление модели интеллектуального анализа данных к структуре интеллектуального анализа данных потребительской корзины](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
+# <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Урок 3. Обработка структуры интеллектуального анализа данных «Потребительская корзина»
+  На этом занятии вы воспользуетесь [INSERT INTO &#40;расширений интеллектуального анализа данных&#41; ](/sql/dmx/insert-into-dmx) инструкции и представлений vAssocSeqLineItems и vAssocSeqOrders из [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] образца базы данных для обработки структур интеллектуального анализа данных и интеллектуального анализа данных модели, которые созданные в [занятии 1: Создание структуры интеллектуального анализа данных потребительской корзины](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) и [Урок 2: Добавление моделей интеллектуального анализа данных к структуре интеллектуального анализа Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
   
  При обработке структуры интеллектуального анализа данных службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] считывают исходные данные и создают структуры, поддерживающие модели интеллектуального анализа данных. При обработке модели интеллектуального анализа данных, данные, определенные структурой интеллектуального анализа данных, обрабатываются выбранным алгоритмом интеллектуального анализа данных. Алгоритм находит тренды и шаблоны и сохраняет эти данные в модели интеллектуального анализа данных. Поэтому в модели интеллектуального анализа данных содержатся не фактические исходные данные, а данные, выявленные алгоритмом. Дополнительные сведения об обработке моделей интеллектуального анализа данных см. в разделе [обработки требования и соображения &#40;интеллектуального анализа данных&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
@@ -95,7 +94,7 @@ RELATE [<case key>] TO [<foreign key>]
   
 #### <a name="to-process-the-mining-structure-by-using-insert-into"></a>Обработка структуры интеллектуального анализа данных с помощью инструкции INSERT INTO  
   
-1.  В **обозревателя объектов**, щелкните правой кнопкой мыши экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], пункты **новый запрос**, а затем нажмите кнопку **расширений интеллектуального анализа данных**.  
+1.  В окне **Обозреватель объектов**щелкните правой кнопкой мыши экземпляр служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], укажите **Создать запрос**, а затем выберите пункт **Расширения интеллектуального анализа данных**.  
   
      Откроется редактор запросов, содержащий новый, пустой запрос.  
   
@@ -193,6 +192,6 @@ RELATE [<case key>] TO [<foreign key>]
  В следующем занятии будут созданы несколько прогнозов, основанных на моделях интеллектуального анализа данных, которые были добавлены в структуру «Потребительская корзина».  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 4. Прогнозирование "Потребительской корзины"](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
+ [Занятие 4. Выполнение прогнозов потребительской корзины](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
   
   

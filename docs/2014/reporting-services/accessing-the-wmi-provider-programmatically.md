@@ -11,19 +11,19 @@ ms.topic: reference
 ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8eeb349c91dd87175f8baaabad75acccc8a622d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b35b22e4eb80ba4b391cbac6c854248db3f9553c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095000"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009576"
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>Доступ к поставщику WMI программным способом
   Раздел находится в стадии разработки.  
   
 ## <a name="wmi-provider-overview"></a>Общие сведения о поставщике WMI  
- Пространством имен, используемым для получения сведений о службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в образцах кода, показанных в этом разделе, является пространство имен **System.Management**, которое находится на платформе [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. Пространство имен **System.Management** предоставляет набор классов управляемого кода, благодаря которым приложения платформы [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] могут иметь доступ к данным управления и обрабатывать эти данные. Дополнительные сведения об использовании WMI-классов служб Reporting Services, использующих пространство имен **System.Management**, см. в разделе "Доступ к данным управления при помощи пространства имен System.Managment" в описании пакетов SDK для [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  
+ Пространством имен, используемым для получения сведений о службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в образцах кода, показанных в этом разделе, является пространство имен **System.Management** , которое находится на платформе [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. Пространство имен **System.Management** предоставляет набор классов управляемого кода, благодаря которым приложения платформы [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] могут иметь доступ к данным управления и обрабатывать эти данные. Дополнительные сведения об использовании WMI-классов служб Reporting Services, использующих пространство имен **System.Management** , см. в разделе «Доступ к данным управления при помощи пространства имен System.Managment» в описании пакетов [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK.  
   
 ## <a name="finding-a-report-server-instance"></a>Поиск экземпляра сервера отчетов  
  Наиболее предпочтительным способом нахождения сведений об установках сервера отчетов является перечисление элементов коллекции экземпляра WMI. В указанном ниже примере показано, как искать свойства каждого экземпляра сервера отчетов, создав коллекцию и циклически считывая элементы коллекции для отображения свойств.  

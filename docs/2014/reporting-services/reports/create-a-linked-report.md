@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 277ee4ff416ad9710eecf501651b5a5143b0fa68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0ad789a8246479c16ed5ceba17c3e7d9cf19d6ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210214"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010895"
 ---
 # <a name="create-a-linked-report"></a>Создание связанного отчета
   Связанный отчет является элементом сервера отчетов, обеспечивающим точку доступа к существующему отчету. Концептуально связанный отчет можно сравнить с ярлыком, который используется для запуска программы или открытия файла.  
@@ -35,7 +35,7 @@ ms.locfileid: "48210214"
   
 2.  Введите имя нового связанного отчета. При необходимости введите также описание.  
   
-3.  Чтобы выбрать иную папку для отчета, щелкните **Изменить местоположение**. Щелкните папку, которую нужно использовать, или введите имя папки в поле **Местоположение** . [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Если не выбрать другую папку, связанный отчет создается в текущей папке (где хранится отчет, который он основан на).  
+3.  Чтобы выбрать иную папку для отчета, щелкните **Изменить местоположение**. Щелкните папку, которую нужно использовать, или введите имя папки в поле **Местоположение** . [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Если не выбрана иная папка, то связанный отчет создается в текущей папке (где хранится отчет, на основе которого создается связанный отчет).  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Откроется связанный отчет.  
   
@@ -44,11 +44,11 @@ ms.locfileid: "48210214"
      ![Значок "Связанный отчет"](../media/hlp-16linked.gif "Значок \"Связанный отчет\"")  
   
 ## <a name="see-also"></a>См. также  
- [Открытие и закрытие отчетов &#40;диспетчера отчетов&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [Открытие и закрытие отчетов (диспетчер отчетов)](../reports/open-and-close-a-report-report-manager.md)   
  [Страница "Создание связанного отчета" (диспетчер отчетов)](../new-linked-report-page-report-manager.md)   
  [Страница "Выбор расположения элементов" (диспетчер отчетов)](../choose-item-location-page-report-manager.md)   
  [Страница "Общие свойства", "Отчеты" (диспетчер отчетов)](../general-properties-page-reports-report-manager.md)   
  [Основные понятия служб Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md)   
- [Диспетчер отчетов (службы SSRS в собственном режиме)](../report-manager-ssrs-native-mode.md)  
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md)  
   
   

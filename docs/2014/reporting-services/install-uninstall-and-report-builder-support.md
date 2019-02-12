@@ -11,14 +11,14 @@ helpviewer_keywords:
 - administering Report Builder
 ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 216623bca9dbbc086a600578c174a60d1797a2f4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 58cd6e3180de71aff25a4ed07e3ab53c91bd5ba8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377516"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034245"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Установка, удаление и поддержка построителя отчетов
   Построитель отчетов представляет собой средство разработки отчетов, позволяющее создавать, обновлять и совместно использовать отчеты, элементы отчетов и общие наборы данных. Построитель отчетов доступен в двух вариантах: как изолированная версия и как версия [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]. Изолированная версия устанавливается на компьютере пользователем или администратором. Версия [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] устанавливается автоматически вместе со службами [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] и загружается на компьютер из диспетчера отчетов или с сайта SharePoint, интегрированного со службами [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9212fc68-f0a6-4f79-83c1-84baf4d1957e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fbe0e3b1226eca1c739d9ddb2abeff594d36793e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b4af24352b24741fffe53f9eae6675a9a43b4595
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053594"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020593"
 ---
 # <a name="new-folder-page-report-manager"></a>Страница «Создать папку» (диспетчер отчетов)
   На странице «Создание папки» можно создать новую папку в иерархии папок сервера отчетов. Создается виртуальная папка, сохраняемая в базу данных сервера отчетов. а в файловой системе компьютера папки не создается.  
@@ -35,7 +35,7 @@ ms.locfileid: "48053594"
 2.  На панели инструментов нажмите кнопку **Создать папку**.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **Name**  
  Укажите имя папки. Имя должно содержать хотя бы одну букву или цифру. Оно также может включать пробелы и специальные знаки. Не используйте символы ; ? : \@ & = +, $ / * \< > | "или / при указании имени.  
   
  **Описание**  
@@ -44,8 +44,8 @@ ms.locfileid: "48053594"
 ## <a name="see-also"></a>См. также  
  [Создание, удаление и изменение папки &#40;диспетчера отчетов&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
  [Страница «Общие свойства», папки &#40;диспетчера отчетов&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Содержимое страницы &#40;диспетчера отчетов&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Страница "Содержимое" (диспетчер отчетов)](../../2014/reporting-services/contents-page-report-manager.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
  [Страница «Общие свойства», папки &#40;диспетчера отчетов&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
   

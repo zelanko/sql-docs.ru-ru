@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 066982863d07cd125b5904e4c7467ffe9da5b107
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: efed574d2fc68fc88d5352b6bb6db09e6cab4076
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217504"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026045"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Функция подстановки (построитель отчетов и службы SSRS)
   Возвращает первое совпадающее значение для заданного имени из набора данных, содержащего пары «имя-значение».  
@@ -45,12 +45,12 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  Константа, задающая имя набора данных в отчете. Например, «Продукты».  
   
 ## <a name="return"></a>Возвращает  
- Возвращает `Variant`, или `Nothing` Если совпадения нет.  
+ Возвращает значение `Variant` или `Nothing`, если совпадения нет.  
   
 ## <a name="remarks"></a>Примечания  
- Используйте `Lookup` для извлечения значения из указанного набора данных для пары "имя значение" связью «один-к одному». Например, для поля ID в таблице функция `Lookup` может быть использована для поиска соответствующего поля Name в наборе данных, не привязанном к области данных.  
+ Функция `Lookup` позволяет извлечь значение из указанного набора данных, состоящего из пар «имя-значение» с отношением один к одному. Например, для поля ID в таблице функция `Lookup` может быть использована для поиска соответствующего поля Name в наборе данных, не привязанном к области данных.  
   
- `Lookup` выполняет следующие функции:  
+ Функция `Lookup` выполняет следующие действия.  
   
 -   Вычисляет исходное выражение в текущей области.  
   
@@ -72,7 +72,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   Исходное, целевое и результирующее выражения не могут включать в себя ссылки на переменные отчета или группы.  
   
--   `Lookup` не может использоваться как выражение для следующих элементов отчета:  
+-   Функцию `Lookup` нельзя использовать в качестве выражения для следующих элементов отчета:  
   
     -   динамические строки соединения для источника данных;  
   
@@ -98,9 +98,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Использование выражений в отчетах &#40;построитель отчетов и службы SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Использование выражений в отчетах (построитель отчетов и службы SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   
- [Область выражения для суммирования, агрегатов и встроенных коллекций &#40;построитель отчетов и службы SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

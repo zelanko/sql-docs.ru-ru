@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0ec516a74d28ff868e8a20d1c3d5cd568d3420ee
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9e3bae5d7a41d87cf07fab455b434b935636375f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352797"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016465"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Выражения (построитель отчетов и службы SSRS)
   Выражения часто используются в отчетах для получения, вычисления, отображения, группирования, сортировки, параметризации и форматирования данных. Многие свойства элементов отчета могут быть заданы в виде выражений. С помощью выражений можно управлять содержимым, внешним видом и интерактивными возможностями отчета. Выражения пишутся на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], сохраняются в определении отчета и вычисляются обработчиком отчетов при выполнении отчета.  

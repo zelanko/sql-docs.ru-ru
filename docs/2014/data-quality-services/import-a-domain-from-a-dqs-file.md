@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5a6ef09783b69f6920d5421a52fbe8dbd13ed0e4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c22babc0f8a4ff56ef845ca0fc0b5cd2b31475e1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410001"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011476"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Импорт домена из файла .dqs
   В этом разделе описывается импорт домена из файла .dqs в существующую базу знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Файл данных .dqs создается путем экспорта домена или базы знаний из приложения [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Файл данных .dqs зашифрован, поэтому его нельзя просмотреть.  
@@ -51,7 +51,7 @@ ms.locfileid: "52410001"
   
 6.  Убедитесь, что импортированный домен отображается в списке **Домен** . Если был импортирован составной домен, убедитесь, что он и отдельные домены, входящие в его состав, отображаются в списке **Домен** .  
   
-##  <a name="FollowUp"></a> Дальнейшие действия: после импорта домена из файла .dqs  
+##  <a name="FollowUp"></a> Дальнейшие действия. после импорта домена из файла .dqs  
  После импорта домена из файла DQS можно добавить набор знаний в домен или использовать его в проекте очистки данных или сопоставления в зависимости от содержания домена. Дополнительные сведения см. в разделах [Обнаружение знаний](../../2014/data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../../2014/data-quality-services/managing-a-domain.md), [Управление составным доменом](../../2014/data-quality-services/managing-a-composite-domain.md), [Создание политики сопоставления](../../2014/data-quality-services/create-a-matching-policy.md), [Очистка данных](../../2014/data-quality-services/data-cleansing.md) и [Сопоставление данных](../../2014/data-quality-services/data-matching.md).  
   
   

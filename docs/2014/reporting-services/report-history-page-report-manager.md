@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0b5865ecbca2ea5577fccf0c28faeabf27b9573d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cb6d9de69656d40b3a5fd87c5353c6d0b8f0ef5f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053144"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033865"
 ---
 # <a name="report-history-page-report-manager"></a>Страница «Журнал отчета» (диспетчер отчетов)
   Используйте страницу «Журнал отчета» для просмотра моментальных снимков ранее сформированных и сохраненных отчетов. В зависимости от параметров, заданных на сервере отчетов, в журнале отчетов могут содержаться только последние моментальные снимки.  
@@ -56,7 +56,7 @@ ms.locfileid: "48053144"
   
 ## <a name="see-also"></a>См. также  
  [Просмотр или удаление журнала отчета &#40;диспетчера отчетов&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
- [Добавление моментального снимка к журналу отчета &#40;диспетчера отчетов&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Добавление моментального снимка к журналу отчета (диспетчер отчетов)](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Страница "Общие свойства", "Отчеты" (диспетчер отчетов)](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
  [Страница Свойства параметров моментального снимка &#40;диспетчера отчетов&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  

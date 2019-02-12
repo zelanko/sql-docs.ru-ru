@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: b66cc1cb72e92670b345f0160727d306326208b6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: da1804ffec1ffd5e016590e83ac229c9e888ff97
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368566"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035405"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>Информационный менеджмент предприятия совместным использованием SSIS, MDS и DQS [учебник]
   Для управления информацией на предприятии, как правило, требуется интеграция данных со всего предприятия и из-за его пределов, очистка данных, проверка данных на наличие повторений, стандартизация данных, обогащение данных, согласование данных с юридическими и нормативными требованиями и последующее сохранение данных в централизованном расположении со всеми необходимыми параметрами безопасности.  
@@ -81,9 +78,9 @@ ms.locfileid: "53368566"
 |------------|-----------------------|------------------------------------------------|  
 |[Занятие 1. Создание базы знаний Suppliers DQS](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)|На этом занятии создается база знаний DQS с именем **поставщики**.|60|  
 |[Занятие 2. Очистка данных поставщика, с помощью знаний поставщиков](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)|На этом занятии создайте и запустите проект DQS для очистки данных поставщика в файле Excel с помощью **поставщики** знаний, созданной на первом занятии.|45|  
-|[Занятие 3. Сопоставление данных для удаления повторений из списка поставщиков](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)|На этом занятии вы создадите проект DQS для выполнения операции сопоставления, чтобы обнаружить и удалить повторения из очищенного списка поставщиков.|45|  
+|[Занятие 3. Сопоставление данных для удаления повторений из списка поставщиков](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)|На этом занятии вы создадите проект DQS для выполнения операции сопоставления, чтобы обнаружить и удалить повторения из очищенного списка поставщиков.|45|  
 |[Занятие 4. Хранение данных поставщика в MDS](../../2014/tutorials/lesson-4-storing-supplier-data-in-mds.md)|На этом занятии вы отправить очищенные и сопоставленные данные поставщиков в Master Data Services (MDS) с помощью **надстройки MDS для Excel**.|45|  
-|[Занятие 5. Автоматизация очистки данных и сопоставления с помощью служб SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|На этом занятии вы создадите решение служб SSIS, которое автоматически очищает входные данные с помощью служб DQS, сопоставляет очищенные данные для удаления повторений и сохраняет очищенные и сопоставленные данные в службах MDS.|75|  
+|[Занятие 5. Автоматизация очистки данных и сопоставления с помощью служб SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|На этом занятии вы создадите решение служб SSIS, которое автоматически очищает входные данные с помощью служб DQS, сопоставляет очищенные данные для удаления повторений и сохраняет очищенные и сопоставленные данные в службах MDS.|75|  
   
 ## <a name="next-steps"></a>Следующие шаги  
  Чтобы приступить к изучению этого учебника, перейдите к первому занятию: [Занятие 1. Создание базы знаний DQS поставщики](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md).  

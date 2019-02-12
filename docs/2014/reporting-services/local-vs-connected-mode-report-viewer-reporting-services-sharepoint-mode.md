@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a230a9bb-6046-401f-b5e5-53ff6edf2264
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b51ca3d0cc9e8716f090677f3e61d1177df746f6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9393d4c4cdd3e3655a5088d8b1dd2bcfb33285a5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372296"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039625"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer-reporting-services-in-sharepoint-mode"></a>Локальный режим и Отчеты, созданные в локальном и подключенном режиме в средстве просмотра отчетов (службы Reporting Services в режиме SharePoint)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] отчеты можно настроить для запуска либо в *локальном режиме* , либо в *режиме соединения*, который использует сервер отчетов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Вместо этого можно использовать средство просмотра отчетов для подготовки отчетов напрямую из SharePoint, если модуль обработки данных поддерживает локальный режим составления отчетов. Такой подход называется *локальным режимом*. В предыдущих версиях [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]ферма серверов SharePoint требовала подключения к серверу отчетов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , настроенному в режиме SharePoint, чтобы элемент управления просмотром отчетов мог их создавать. Данный подход называется *удаленным режимом* или *режимом соединения*.  

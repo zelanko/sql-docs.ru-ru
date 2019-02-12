@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3d5dba03f5e64d06d7c1d8dddd4df36b3f9326e4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 1c04e3d642b267660b8527502a248a386c8ba93d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358126"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010675"
 ---
 # <a name="report-server-service-trace-log"></a>Журнал трассировки службы сервера отчетов
   Журнал трассировки сервера отчетов [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] представляет собой текстовый файл ASCII, который содержит детализированную информацию о служебных операциях Сервера Отчетов, включая операции, выполняемые веб-службой Сервера Отчетов, Диспетчером Отчетов и фоновой обработкой. Файл журнала трассировки содержит избыточные сведения, которые записываются в другие файлы журналов, а также дополнительные сведения, недоступные иным способом. Данные журнала трассировки могут оказаться полезными при отладке приложения, содержащего сервер отчетов, либо при изучении конкретной проблемы, зафиксированной в журнале событий или журнале выполнения.  

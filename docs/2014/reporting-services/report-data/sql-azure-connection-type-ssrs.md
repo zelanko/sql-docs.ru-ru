@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c84def6c-e8cf-43d9-9912-098171a7ce79
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6634e0b09d2a2ea83eb84e252867a4e93c4098f3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 73e8662d7cca01979616af0a5f9221f501d1c3a2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363036"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034018"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Тип соединения с SQL Azure (SSRS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] это размещаемая реляционная база данных облачного типа на базе технологий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы включить данные из базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] в отчет, необходимо иметь набор данных, основанный на источнике данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Используйте этот тип источника данных для подключения и извлечения данных из [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

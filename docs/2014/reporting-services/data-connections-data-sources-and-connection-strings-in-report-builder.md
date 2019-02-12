@@ -11,14 +11,14 @@ f1_keywords:
 - "10421"
 ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 682b3db94bbac8e3d77b30fed90fb33885cca465
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5821d8d747609abfc8433a3ff9ad0ecf2676be7d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183494"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011016"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>Подключения к данным, источники данных и строки подключения в построителе отчетов
   Чтобы включить в отчет данные, необходимо создать подключения к данным и наборы данных. Подключение к данным содержит сведения о получении доступа к внешнему источнику данных. Набор данных содержит команду запроса, определяющую данные, которые необходимо выбрать из подключения к данным.  
@@ -56,14 +56,14 @@ ms.locfileid: "48183494"
 |SharePoint|`data source=http://MySharePointWeb/MySharePointSite/`|Задайте тип источника данных `SharePoint List`.|  
 ||||  
 |Модели отчетов|Неприменимо.|Строка подключения для модели отчета необязательна. В построителе отчетов перейдите к серверу отчетов и выберите файл SMDL, т. е. модель отчета.|  
-|Сервер Oracle|`data source=myserver`|Задайте тип источника данных `Oracle`. Клиентские средства Oracle должны быть установлены на компьютере, где работает построитель отчетов, и на сервере отчетов.|  
-|Источник данных SAP NetWeaver BI|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Задайте тип источника данных `SAP NetWeaver BI`.|  
-|Источник данных Hyperion Essbase|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Задайте тип источника данных `Hyperion Essbase`.|  
-|Источник данных типа Teradata|`data source=` *\<NN &GT;. \<NNN &GT;. \<NNN &GT;. \<N &GT;* `;`|Задайте тип источника данных `Teradata`. Строка подключения представляет собой IP-адрес в виде четырех полей, каждое из которых содержит от одного до трех числовых разрядов.|  
+|Сервер Oracle|`data source=myserver`|Установите тип источника данных `Oracle`. Клиентские средства Oracle должны быть установлены на компьютере, где работает построитель отчетов, и на сервере отчетов.|  
+|Источник данных SAP NetWeaver BI|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Установите тип источника данных `SAP NetWeaver BI`.|  
+|Источник данных Hyperion Essbase|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Установите тип источника данных `Hyperion Essbase`.|  
+|Источник данных типа Teradata|`data source=` *\<NN>.\<NNN>.\<NNN>.\<N>* `;`|Установите тип источника данных `Teradata`. Строка подключения представляет собой IP-адрес в виде четырех полей, каждое из которых содержит от одного до трех числовых разрядов.|  
 |Источник данных типа Teradata|`Database=` *\<имя базы данных>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Установите для источника данных тип `Teradata` аналогично предыдущему примеру. Используйте только базу данных по умолчанию, указанную в теге Database, и не выполняйте автоматическое обнаружение связей данных.|  
-|Источник XML-данных, веб-служба|`data source=http://adventure-works.com/results.aspx`|Задайте тип источника данных `XML`. Строка подключения является URL-адресом веб-службы, поддерживающей язык определения веб-служб (язык WSDL).|  
-|Источник XML-данных, XML-документ|`http://localhost/XML/Customers.xml`|Задайте тип источника данных `XML`. Строкой соединения является URL-адрес XML-документа.|  
-|Источник XML-данных, внедренный XML-документ|*Пустой*|Задайте тип источника данных `XML`. XML-данные внедрены в определение отчета.|  
+|Источник XML-данных, веб-служба|`data source=http://adventure-works.com/results.aspx`|Установите тип источника данных `XML`. Строка подключения является URL-адресом веб-службы, поддерживающей язык определения веб-служб (язык WSDL).|  
+|Источник XML-данных, XML-документ|`http://localhost/XML/Customers.xml`|Установите тип источника данных `XML`. Строкой соединения является URL-адрес XML-документа.|  
+|Источник XML-данных, внедренный XML-документ|*Пустой*|Установите тип источника данных `XML`. XML-данные внедрены в определение отчета.|  
   
  Дополнительные сведения обо всех типах соединений см. в разделе [Добавление данных из внешних источников данных &#40;SSRS&#41; ](report-data/add-data-from-external-data-sources-ssrs.md) и [источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
@@ -81,6 +81,6 @@ ms.locfileid: "48183494"
   
 ## <a name="see-also"></a>См. также  
  [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Элементы отчета &#40;построитель отчетов и службы SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [Элементы отчета (построитель отчетов и службы SSRS)](report-parts-report-builder-and-ssrs.md)  
   
   

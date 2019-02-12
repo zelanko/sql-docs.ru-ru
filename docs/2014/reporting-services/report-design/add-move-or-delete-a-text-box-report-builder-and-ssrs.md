@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0ca387618f1b996f620a1697053196926ed9dfd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d75b32b9b1e25c23855d35e0f8e77bbf78c24688
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123014"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010178"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>Добавление, перемещение или удаление текстового поля (построитель отчетов и службы SSRS)
   Текстовые поля — это наиболее часто используемые элементы отчета. В текст отчета можно добавить текстовое поле, в котором будут отображаться такие сведения, как заголовки, выбранные значения параметров, встроенные поля и даты.  
@@ -74,8 +74,8 @@ ms.locfileid: "48123014"
     >  Если щелкнуть текстовое поле в режиме редактирования, то для выбора этого текстового поля необходимо нажать клавишу ESC.  
   
 ## <a name="see-also"></a>См. также  
- [Текстовые поля &#40;построитель отчетов и службы SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
+ [Текстовые поля (построитель отчетов и службы SSRS)](text-boxes-report-builder-and-ssrs.md)   
  [Выражения (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   
- [Сочетания клавиш &#40;построитель отчетов&#41;](../report-builder/keyboard-shortcuts-report-builder.md)  
+ [Сочетания клавиш (построитель отчетов)](../report-builder/keyboard-shortcuts-report-builder.md)  
   
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 344d5706af4e7e963c0dbdd643efc3d0fb6b1b10
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: kfile
+ms.openlocfilehash: caf23eb7e7d0e06a9e79dbaa6b9a0120725a4b10
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205713"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031055"
 ---
 # <a name="clickthrough-reports-ssrs"></a>Отчеты с дополнительной информацией (SSRS)
   Отчетом с дополнительной информацией называется отчет, в котором есть подробные сведения о данных, содержащихся в основном отчете. Отчет с дополнительной информацией выводится, когда пользователь щелкает интерактивные данные в основном отчете. Такие отчеты автоматически создаются сервером отчетов. Конструктор моделей определяет, что должно отображаться в отчетах с дополнительной информацией, устанавливая свойства `DefaultDetailAttribute` и `DefaultAggregateAttribute` сущности в модели отчета.  

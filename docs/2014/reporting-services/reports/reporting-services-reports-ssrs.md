@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7372f5457e047772febf4cf040da3f897ae033a2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 0ae207d14e45c51cee51190bdf0849f0e49d8c05
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362906"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013605"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services (SSRS), отчеты служб
   Отчеты служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] — это основанные на XML определения отчетов, включающие данные отчетов и элементы макета отчетов. В клиентской файловой системе определения отчетов имеют расширение RDL. После публикации отчета — элемент отчетов, хранимый на сервере отчетов или сайте Sharepoint. Отчеты — это одна из частей серверной платформы создания отчетов, предоставляемая службами [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

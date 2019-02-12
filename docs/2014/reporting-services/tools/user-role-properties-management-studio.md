@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cfe2b65ec8f8260d87636384953101e3c674a0d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bb8c7b6467b862d13f242debf0d963012b44bb61
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149704"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015490"
 ---
 # <a name="user-role-properties-management-studio"></a>Свойства пользовательской роли (среда Management Studio)
   На этой странице можно просмотреть задачи, выбранные для определения роли на уровне элемента. Эту страницу также можно использовать для изменения списка задач или модификации описания роли.  
@@ -31,7 +31,7 @@ ms.locfileid: "48149704"
 >  Пользовательские назначения ролей применяются только на сервере отчетов, который работает в собственном режиме. Если сервер отчетов настроен для работы в режиме интеграции с SharePoint, то на этой странице отображаются сведения только для чтения о ролях и уровнях разрешений, которые определены на сайте SharePoint.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **Name**  
  Название определения роли.  
   
  **Описание**  

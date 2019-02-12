@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 89f395d7456eaca66d2f225fd47e4cf957186fe2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 61eaf801c3033200626c0a28294be2d3af66efb1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518012"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018076"
 ---
 # <a name="data-alert-designer"></a>Конструктор предупреждений об изменении данных
   Пользователи могут создавать и изменять определения предупреждений об изменении данных в конструкторе предупреждений об изменении данных. Определение предупреждения — это коллекция метаданных, в которую входят данные отчета, интересующие вас, правила, которым должны удовлетворять данные отчета для создания экземпляров предупреждений об изменении данных и отправки предупреждающих сообщений, получатели предупреждающих сообщений и т. д.  

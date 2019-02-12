@@ -19,20 +19,20 @@ helpviewer_keywords:
 ms.assetid: 16c21dec-6b46-4497-9a0c-1b0f2b6ab8fc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: deac736b28aa9b50c20d3a831685f1f2be62590c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2ad59a4389e8a214e12a80eef6e81127a8958562
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167694"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012445"
 ---
 # <a name="report-server-web-service"></a>веб-служба сервера отчетов
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют доступ к полному набору функций сервера отчетов с помощью веб-службы сервера отчетов. Веб-службой сервера отчетов является веб-служба XML с API-интерфейсом протокола SOAP. Она применяет протокол SOAP через протокол HTTP и действует как интерфейс связи между клиентскими программами и сервером отчетов. Веб-служба предоставляет две конечные точки — одну для выполнения отчета, а другую для управления отчетом — при помощи методов, которые предоставляют функциональные возможности сервера отчетов и дают возможность создавать пользовательские средства для любого периода жизненного цикла отчетов.  
   
  Имеются три основных способа разработки приложений служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на основе веб-службы. Можно выполнить следующие действия:   
   
--   Разрабатывать приложения с использованием [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] и пакета SDK [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Дополнительные сведения об использовании платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] для создания приложений веб-службы см. в разделе [Построение приложений с помощью веб-службы и платформы .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
+-   Разрабатывать приложения с использованием [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] и пакета [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK. Дополнительные сведения об использовании платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] для создания приложений веб-службы см. в разделе [Построение приложений с помощью веб-службы и платформы .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
   
 -   Разрабатывать приложения с использованием программы **rs** (RS.exe), среды скриптов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Скрипты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] можно использовать для запуска любых операций веб-службы сервера отчетов. Дополнительные сведения о написании скриптов в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Создание скриптов с помощью программы rs.exe и веб-службы](../tools/script-with-the-rs-exe-utility-and-the-web-service.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48167694"
  Содержит сведения о разработке приложений и веб-служб, которые вызывают API-интерфейс протокола SOAP служб Reporting Services.  
   
  [Создание скриптов с помощью программы rs.exe и веб-службы](../tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
- Содержит общие сведения о среде исполнения сценариев служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ Содержит общие сведения о среде исполнения сценариев служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  [Технический справочник (службы SSRS)](../../../2014/reporting-services/technical-reference-ssrs.md)  
  Содержит справочные материалы по методам веб-служб сервера отчетов и по соответствующим сложным типам.  

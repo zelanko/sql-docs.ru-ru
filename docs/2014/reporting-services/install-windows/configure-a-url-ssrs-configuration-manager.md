@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7ab343a4c6f70d97aa5e770b8ca21dd4d835f05c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 676bbf12efa9b8640ef244f6dd57325b047d79ba
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375936"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018925"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Настройка URL-адреса (диспетчер конфигурации служб SSRS)
   Приступать к использованию диспетчера отчетов или веб-службы сервера отчетов можно лишь после настройки как минимум одного URL-адреса для каждого приложения. Настройка URL-адресов является обязательной в случае установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме «только файлы» (иначе говоря, если на странице «Параметры установки» сервера отчетов в мастере установки выбран параметр **Установить, но не настраивать сервер** ). При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в конфигурации по умолчанию URL-адреса настраиваются автоматически для каждого приложения. Если сервер отчетов настроен для работы в режиме интеграции с SharePoint, а URL-адрес веб-службы сервера отчетов обновляется с помощью программы настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , необходимо также обновить этот URL-адрес в центре администрирования SharePoint.  

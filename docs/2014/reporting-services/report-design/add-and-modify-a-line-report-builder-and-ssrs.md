@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c3dc4a6627486c3449819da1e7987b8b8ae8f569
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 90e9a4ae2d0d119f8992cf89cb388075c264c042
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109614"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037475"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>Добавление и изменение линии (построитель отчетов и службы SSRS)
   Если нужно отделить разделы отчета каким-либо графическим элементом, можно добавить в отчет линию. Настроить внешний вид линии можно, изменяя ее свойства, такие как цвет или стиль. Например, можно встроить в отчет корпоративные цвета компании.  
@@ -38,6 +38,6 @@ ms.locfileid: "48109614"
     >  Если установить для линии стиль **двойные** и толщина линии равна 1 1/2 пт или уже, линия может не отображаться двойной при запуске отчета в построителе отчетов, конструктора отчетов или диспетчера отчетов. После экспорта отчета в другие форматы, такие как Microsoft Word и Acrobat PDF, линия будет отображаться двойной.  
   
 ## <a name="see-also"></a>См. также  
- [Прямоугольники и линии &#40;построитель отчетов и службы SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
+ [Прямоугольники и линии (построитель отчетов и службы SSRS)](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

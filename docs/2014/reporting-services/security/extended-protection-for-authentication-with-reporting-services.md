@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4382ecd50979efb6877d8eb19e8aff7dc340d847
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: d071000fa25a732465deb9c1020ed6365a9fc58e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355658"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017935"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Расширенная защита для проверки подлинности служб Reporting Services
   Расширенная защита — это набор усовершенствований, внесенных в последние версии операционной системы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. С помощью расширенной защиты приложения могут лучше защищать учетные данные и проверку подлинности. Сама эта функция не обеспечивает защиту от определенных атак, например, таких как переадресация учетных данных, однако она предоставляет таким приложениям, как службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , инфраструктуру для ввода в действие расширенной защиты проверки подлинности.  
@@ -166,7 +166,7 @@ ms.locfileid: "53355658"
  [Соединение с компонентом Database Engine с использованием расширенной защиты](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
  [Общие сведения о расширенной защите для проверки подлинности](https://go.microsoft.com/fwlink/?LinkID=177943)   
  [Интегрированная проверка подлинности Windows с расширенной защитой](https://go.microsoft.com/fwlink/?LinkId=179922)   
- [Рекомендации по безопасности Microsoft: Расширенная защита для проверки подлинности](https://go.microsoft.com/fwlink/?LinkId=179923)   
+ [Советы по безопасности от Майкрософт: расширенная защита для проверки подлинности](https://go.microsoft.com/fwlink/?LinkId=179923)   
  [Журнал трассировки службы сервера отчетов](../report-server/report-server-service-trace-log.md)   
  [Файл конфигурации RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
  [Метод SetExtendedProtectionSettings (WMI MSReportServer_ConfigurationSetting)](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  

@@ -1,22 +1,21 @@
 ---
-title: 'Занятие 2: Выполнение политик рекомендаций по расписанию | Документация Майкрософт'
+title: Занятие 2. Выполнение политик рекомендаций по расписанию | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 37ffad63-d6db-4609-8deb-786200659554
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2a29a56a53fe02aeb02c6096ca287b65c23d9b27
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29513ec37a946b9ec613ccc483048396149dd15a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170852"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026195"
 ---
 # <a name="lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis"></a>Занятие 2. Выполнение политик рекомендаций по расписанию 
   Можно настроить запланированные оценки рекомендованных политик на одном или нескольких экземплярах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Чтобы настроить рекомендованные политики на выполнение в соответствии с расписанием, необходимо импортировать эти политики в целевой экземпляр.  

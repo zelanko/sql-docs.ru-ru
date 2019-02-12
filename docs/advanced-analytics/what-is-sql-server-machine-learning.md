@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 59ec5bbacf23d0f86f88a17a68faaf27162ebdcb
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 283f39efa34721aea7613ac1a9cba115dc3311a8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596795"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032955"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>Службы машинного обучения (R, Python) в SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "53596795"
 
 Если вы ранее использовали [SQL Server 2016 R Services](r/sql-server-r-services.md), службы машинного обучения в SQL Server 2017 является следующим поколением поддержки R и обновленных версий базовый R, RevoScaleR, MicrosoftML, и другие библиотеки, представленные в 2016 г. 
 
-В базе данных SQL Azure [служб машинного обучения (с помощью R)](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r) в настоящее время находится в общедоступной предварительной версии.
+В базе данных SQL Azure [служб машинного обучения (с помощью R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) в настоящее время находится в общедоступной предварительной версии.
 
 Основные преимущества служб машинного обучения — это степень его enterprise R и пакеты Python для предоставления расширенной аналитики в масштабе и возможность передачи вычислений и обработки, где хранятся данные, что устраняет необходимость извлечения данных между сеть.
 
@@ -126,8 +126,8 @@ SQL Server 2017 поддерживает R и Python. В следующей т
 
 | Название продукта | Версия подсистемы | Дата выпуска |
 |--------------|---------|--------------|
-| Службы машинного обучения из состава SQL Server 2017 (в базе данных) | R Server 9.2.1 <br/> Сервер Python 9.2 | Октябрь 2017 г. |
-| Сервер SQL Server 2017 машинного обучения (автономный) | R Server 9.2.1 <br/> Сервер Python 9.2 | Октябрь 2017 г. |
+| Службы машинного обучения из состава SQL Server 2017 (в базе данных) | R Server 9.2.1 <br/> Python Server 9.2 | Октябрь 2017 г. |
+| Сервер SQL Server 2017 машинного обучения (автономный) | R Server 9.2.1 <br/> Python Server 9.2 | Октябрь 2017 г. |
 | SQL Server 2016 R Services (в базе данных) | R Server 9.1  | Июль 2017 г.  |
 | SQL Server 2016 R Server (изолированный)  |  R Server 9.1 | Июль 2017 г. |
 

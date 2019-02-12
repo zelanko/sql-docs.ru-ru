@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: cfacd816-00d6-4a3d-be72-1bba6f7f6886
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 534197a9ed148685d58c5f3ff17b6b329e9ee913
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: dc2898fd9bca67b0b6838e685ad0cb7e2739e3c0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219474"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029815"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>Требования к реализации пользовательских элементов отчета
   В этом разделе обсуждаются предварительные условия, которые необходимо выполнить перед разработкой и развертыванием пользовательских элементов отчета.  
@@ -45,12 +45,12 @@ ms.locfileid: "48219474"
 -   В компонентах времени разработки пользовательских элементов отчета необходимо реализовать интерфейсы из пространства имен <xref:System.ComponentModel> в платформе [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Пространство имен <xref:System.ComponentModel> описывается в документации по пакету [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
   
 > [!IMPORTANT]  
->  По умолчанию с [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] устанавливается платформа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но не устанавливается пакет SDK для платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Если пакет SDK не установлен на компьютере, а в коллекцию электронной документации не входит документация по пакету SDK, ссылки на содержимое пакета SDK в этом разделе работать не будут. После установки пакета SDK для платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] можно добавить документацию по пакету SDK в коллекцию электронной документации и в оглавление, выполнив инструкции из раздела [Добавление или удаление документации по продукту SQL Server](../../2014-toc/books-online-for-sql-server-2014.md).  
+>  По умолчанию с [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] устанавливается платформа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но не устанавливается пакет SDK для платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Если пакет SDK не установлен на компьютере, а в коллекцию электронной документации не входит документация по пакету SDK, ссылки на содержимое пакета SDK в этом разделе работать не будут. После установки пакета SDK для платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] можно добавить документацию по пакету SDK в коллекцию электронной документации и в оглавление, выполнив инструкции из раздела [Добавление или удаление документации по продукту SQL Server](../../2014-toc/books-online-for-sql-server-2014.md).  
   
 ## <a name="see-also"></a>См. также  
  [Создание компонента времени выполнения пользовательского элемента отчета](creating-a-custom-report-item-run-time-component.md)   
  [Создание компонента времени разработки пользовательского элемента отчета](creating-a-custom-report-item-design-time-component.md)   
- [Развертывание пользовательского элемента отчета](how-to-deploy-a-custom-report-item.md)   
+ [Как Развертывание пользовательского элемента отчета](how-to-deploy-a-custom-report-item.md)   
  [Библиотеки классов пользовательских элементов отчета](custom-report-item-class-libraries.md)  
   
   

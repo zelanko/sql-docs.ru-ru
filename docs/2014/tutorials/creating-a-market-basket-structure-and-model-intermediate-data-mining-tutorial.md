@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 659b7a4e-f687-44d9-a60a-86490ccbf90f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 983f5547f816785e592aa27c442db6a92b519cae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177433"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019455"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>Создание структуры и модели «Потребительская корзина» (учебник по интеллектуальному анализу данных — средний уровень)
   Теперь, после создания представления источников данных, при помощи мастера интеллектуального анализа данных создадим новую структуру интеллектуального анализа. В этой задаче вы создадите структуру интеллектуального анализа данных и модель интеллектуального анализа данных, основанный на [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритм взаимосвязей.  
@@ -57,10 +56,10 @@ ms.locfileid: "48177433"
     |Столбцы|Тип содержимого|Тип данных|  
     |-------------|------------------|---------------|  
     |IncomeGroup|Discrete|Текста|  
-    |Order Number|Key|Текста|  
+    |Order Number|Ключ|Текста|  
     |Region|Discrete|Текста|  
     |vAssocSeqLineItems|||  
-    |Модель|Key|Текста|  
+    |Модель|Ключ|Текста|  
   
 12. На **Create set тестирования** странице, значение по умолчанию для параметра **процент проверочных данных** — 30 процентов. Измените его на **0**. Нажмите кнопку **Далее**.  
   
@@ -80,6 +79,6 @@ ms.locfileid: "48177433"
   
 ## <a name="see-also"></a>См. также  
  [Алгоритм взаимосвязей (Майкрософт)](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Типы содержимого &#40;интеллектуального анализа данных&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
+ [Типы содержимого (интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
   
   

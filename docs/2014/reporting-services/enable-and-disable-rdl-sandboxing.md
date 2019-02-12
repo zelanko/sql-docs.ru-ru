@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f49c20c8efe233bb49194364943f7ebb95ed6497
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 2db60863c1ae8c21e391d62182cb27a52558a1e1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415282"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013185"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Включение и отключение «песочницы» для языка определения отчетов
   Функция «песочницы» для языка определения отчетов позволяет обнаруживать и ограничивать использование определенных типов ресурсов отдельными пользователями в среде с многочисленными пользователями, которые используют единственную веб-ферму серверов отчетов. Примером этого является сценарий услуг хост-сервера, в котором может поддерживаться единственная веб-ферма серверов отчетов, применяемая несколькими пользователями, а также, возможно, другими компаниями. Администратор сервера отчетов может включить эту функцию для выполнения следующих задач.  

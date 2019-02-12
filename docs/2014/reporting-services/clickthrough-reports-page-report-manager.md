@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: df688c3948c30bae3feef03fefbc1171e5c98491
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: eb1c984abec2667a09587eda673ed02176aa8e8e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220740"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010577"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Страница «Отчеты с дополнительной информацией» (диспетчер отчетов)
   Отчет с дополнительной информацией отображает таблицу взаимосвязанных данных, если щелкнуть интерактивные данные, содержащиеся в отчете. Такие отчеты формируются сервером отчетов на основе сведений, содержащихся в модели, с помощью которой был создан этот отчет. Если использовать отчеты с дополнительной информацией, которые формирует сервер отчетов, неудобно, можно создать пользовательские отчеты, опубликовать их на сервере отчетов и сопоставить с интерактивными точками данных, определенными в модели. Пользовательские отчеты должны создаваться в построителе отчетов из одной и той же модели, а затем публиковаться на сервере отчетов. Для сопоставления пользовательских отчетов с элементами модели используется страница «Отчеты с дополнительной информацией» в диспетчере отчетов.  
@@ -32,7 +32,7 @@ ms.locfileid: "48220740"
  Хотя можно выбрать любой отчет, к которому имеется доступ, рекомендуется выбирать только те отчеты, которые созданы специально для настраиваемой модели.  
   
 > [!NOTE]  
->  Отчеты с дополнительной информацией доступны не во всех выпусках [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Перечень функций, поддерживаемых в разных выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], см. в разделе [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Если используемый выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] неизвестен, обратитесь к администратору базы данных.  
+>  Отчеты с дополнительной информацией доступны не в каждом выпуске [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Перечень функций, поддерживаемых в разных выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], см. в разделе [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Если используемый выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] неизвестен, обратитесь к администратору базы данных.  
   
 ## <a name="navigation"></a>Навигация  
  Чтобы перейти к этому местоположению в пользовательском интерфейсе, используйте следующую процедуру.  

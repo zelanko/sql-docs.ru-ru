@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c4df8b4f17c006d51bdfc5bba6e7cb13b7cc69eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a3bea101bf16376ffc02699dc700f500f08f7222
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202974"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017725"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>Добавление или удаление индикатора (построитель отчетов и службы SSRS)
   Индикаторы — это минимальные датчики, обеспечивающие возможность быстрого определения состояния одиночного значения данных. Дополнительные сведения см. в разделе [Индикаторы (построитель отчетов и службы SSRS)](indicators-report-builder-and-ssrs.md).  
@@ -27,11 +27,11 @@ ms.locfileid: "48202974"
   
  Можно обновить значения и состояния индикаторов. Дополнительные сведения см. в следующих разделах:  
   
--   [Изменение значков индикаторов и наборов индикаторов &#40;построитель отчетов и службы SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Изменение значков индикаторов и наборов индикаторов (построитель отчетов и службы SSRS)](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [Задание и настройка единиц измерения &#40;построитель отчетов и службы SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [Задание и настройка единиц измерения (построитель отчетов и службы SSRS)](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [Задание области действия синхронизации &#40;построитель отчетов и службы SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [Задание области действия синхронизации (построитель отчетов и службы SSRS)](set-synchronization-scope-report-builder-and-ssrs.md)  
   
  Поскольку индикатор располагается внутри панели датчиков, необходимо выбрать вместо панели индикатор при необходимости настройки индикатора с помощью диалогового окна **Свойства индикатора** или панели **Свойства** . На следующем рисунке отображается выбранный индикатор на панели датчиков.  
   

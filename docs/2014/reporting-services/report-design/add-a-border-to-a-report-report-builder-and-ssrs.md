@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5688cd5beccc582ef5c3413b19938104f659680a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1bb9deac03a2ba3683922a8c7e361cb908c787c0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130664"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034715"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>Добавление в отчет границы (построитель отчетов и службы SSRS)
   Можно добавить границу к отчету путем добавления границ к самим верхним колонтитулам, нижним колонтитулам и тексту отчета, не добавляя линии или прямоугольники.  
@@ -38,6 +38,6 @@ ms.locfileid: "48130664"
 3.  Щелкните правой кнопкой мыши нижний колонтитул за пределами его элементов и выберите пункт **Свойства нижнего колонтитула**. На вкладке **Граница** добавьте левую, нижнюю и правую границу с нужным стилем.  
   
 ## <a name="see-also"></a>См. также  
- [Прямоугольники и линии &#40;построитель отчетов и службы SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
+ [Прямоугольники и линии (построитель отчетов и службы SSRS)](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

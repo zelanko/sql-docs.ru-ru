@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3853fd48c75cfeb6ec786b0d7d7518112fe07f61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a68100af72b7680ed1a9212f5d7c6c54ed07bec1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056327"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013027"
 ---
 # <a name="using-the-soap-api-in-a-web-application"></a>Использование API SOAP в веб-приложении
   С помощью API SOAP служб Reporting Services можно получить доступ ко всем функциональным возможностям сервера отчетов. Поскольку API SOAP является веб-службой, к нему легко получить доступ, чтобы предоставить для пользовательских бизнес-приложений функции создания отчетов в масштабе предприятия. Доступ к веб-службе сервера отчетов из веб-приложения осуществляется во многом аналогично доступу к API SOAP из приложения [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. С помощью платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] можно создать класс-посредник, который делает доступными свойства и методы веб-службы сервера отчетов и позволяет использовать привычную инфраструктуру и средства для построения бизнес-приложений на основе технологии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -87,7 +87,7 @@ private void Page_Load(object sender, System.EventArgs e)
 ## <a name="see-also"></a>См. также  
  [Создание приложений с помощью веб-службы и .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Интеграция служб Reporting Services в приложения](../application-integration/integrating-reporting-services-into-applications.md)   
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../report-manager-ssrs-native-mode.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md)   
  [Использование API SOAP в приложении Windows](integrating-reporting-services-using-soap-windows-application.md)  
   
   

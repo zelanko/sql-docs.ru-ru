@@ -1,5 +1,5 @@
 ---
-title: Занятие 3. Определение управляемой данными подписки | Документы Майкрософт
+title: Урок 3. Определение управляемой данными подписки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ccb9733badf6ec9bac12d383c20d4aea5090c0a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 54fd143d2b3af2596ff44a313b2d35b29fc1604a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058734"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015545"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Урок 3. Определение управляемой данными подписки
   На этом занятии будет использована управляемая данными подписка для подключения к источнику данных подписки, построен запрос, получающий данные для этой подписки, а также сопоставлен результирующий набор с отчетом и параметрами доставки.  
   
 > [!NOTE]  
 >  Перед началом работы убедитесь, что служба агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запущена. Если она не запущена, подписку сохранить не удастся.  
   
- В этом занятии предполагается, что занятия 1 и 2 пройдены и источник данных отчета использует сохраненные учетные данные.  Дополнительные сведения см. в разделе [Занятие 2. Изменение свойств источника данных отчета](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
+ В этом занятии предполагается, что занятия 1 и 2 пройдены и источник данных отчета использует сохраненные учетные данные.  Дополнительные сведения см. в разделе [Занятие 2. Изменение свойств источника данных отчета](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
   
  В этом разделе:  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48058734"
   
 1.  Для параметра **Имя файла**выберите **Получить значение из базы данных**. Выберите поле **Order**.  
   
-2.  Для параметра **Путь**выберите **Указать статическое значение**. В значении параметра, введите имя общей папки, для которого у вас есть разрешения на запись (например, `\\mycomputer\public\myreports`).  
+2.  Для параметра **Путь**выберите **Указать статическое значение**. В поле «Значение параметра» введите имя общей папки, для которой имеется разрешение на запись (например: `\\mycomputer\public\myreports`).  
   
 3.  Для параметра **Формат обработки**выберите **Получить значение из базы данных**. Выберите **Формат**.  
   
@@ -108,11 +108,11 @@ ms.locfileid: "48058734"
   
 7.  Для параметра **Пароль**выберите **Указать статическое значение**. Введите пароль. Вводите пароль внимательно. Мастер не проводит проверку пароля.  
   
-8.  Нажмите кнопку **Далее.**  
+8.  Нажмите кнопку **Далее**.  
   
 ##  <a name="bkmk_configure_parameter"></a> Шаг 5 — задайте значение параметра для изменения вывода отчета  
   
-1.  Для параметра **OrderNumber**выберите **Получить значение из базы данных**. В поле «Значение параметра» выберите **Order**. Нажмите кнопку **Далее.**  
+1.  Для параметра **OrderNumber**выберите **Получить значение из базы данных**. В поле «Значение параметра» выберите **Order**. Нажмите кнопку **Далее**.  
   
 ##  <a name="bkmk_schedule_subscription"></a> Шаг 6. Создайте расписание для подписки  
   
@@ -140,9 +140,9 @@ ms.locfileid: "48058734"
   
 ## <a name="see-also"></a>См. также  
  [Создание управляемой данными подписки (учебник по службам SSRS)](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Подписки и доставка &#40;службы Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Управляемые данными подписки](subscriptions/data-driven-subscriptions.md)   
+ [Подписки и доставка (службы Reporting Services)](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Создание, изменение и удаление управляемой данными подписки](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [Использование внешнего источника данных для данных подписчика &#40;управляемой данными подписки&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
+ [Использование внешнего источника данных подписчика (управляемая данными подписка)](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
   

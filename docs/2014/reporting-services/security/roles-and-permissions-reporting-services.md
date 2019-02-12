@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: eea655fe-43ed-418d-8233-b288a8f4daa4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4f9364b2c15adc07e7d265434678eca573537567
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ab60b588b276fd95e253d3ccf3fdeaf8ac71d409
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116882"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010976"
 ---
 # <a name="roles-and-permissions-reporting-services"></a>Роли и разрешения (службы Reporting Services)
   В службах Reporting Services реализована подсистема проверки подлинности и основанная на ролях модель авторизации. Модели авторизации и проверки подлинности зависят от режима работы сервера отчетов — собственный режим или режим SharePoint. Если сервер отчетов является частью развертывания SharePoint, доступ к серверу отчетов определяется разрешениями SharePoint.  

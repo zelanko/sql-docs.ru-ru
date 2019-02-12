@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: eea42bfc7b02c4964f34ebc6fe5f4b067a33d21e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1905dbe53d5c869c25fcf6f9b07b46bf48dcaf98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084544"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013255"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Подготовка к просмотру в виде HTML (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов в формате HTML подготавливает отчет к просмотру в HTML-формате. Модуль подготовки отчетов также позволяет создавать полностью сформированные HTML-страницы или фрагменты HTML для внедрения в другие HTML-страницы. Все документы HTML создаются в кодировке UTF-8.  
   
  Модуль подготовки отчетов в формате HTML используется по умолчанию для отчетов, просматриваемых в браузере, в том числе при запуске в диспетчере отчетов.  
   
- Модуль подготовки отчетов в формате HTML используется по умолчанию для отчетов, просматриваемых в браузере, в том числе при запуске в диспетчере отчетов. Модуль подготовки отчетов HTML может формировать код HTML в виде фрагмента или в виде полного документа HTML. Если код HTML является фрагментом, `HEAD`, `HTML`, и `BODY` теги документа HTML удаляются. Формируется только содержимое тега `BODY`. Это удобно при внедрении элементов HTML в документ HTML, созданный другим приложением.  
+ Модуль подготовки отчетов в формате HTML используется по умолчанию для отчетов, просматриваемых в браузере, в том числе при запуске в диспетчере отчетов. Модуль подготовки отчетов HTML может формировать код HTML в виде фрагмента или в виде полного документа HTML. Если код HTML является фрагментом, теги `HEAD`, `HTML` и `BODY` документа HTML удаляются. Формируется только содержимое тега `BODY`. Это удобно при внедрении элементов HTML в документ HTML, созданный другим приложением.  
   
  В некоторых сценариях параметры отчета могут использоваться для запуска атак с внедрением скрипта при подготовке отчетов к просмотру в формате HTML. Дополнительные сведения о защите отчетов см. в разделе [Обеспечение безопасности отчетов и ресурсов](../security/secure-reports-and-resources.md).  
   
@@ -102,8 +102,8 @@ ms.locfileid: "48084544"
 ## <a name="see-also"></a>См. также  
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Интерактивные возможности различных модулей подготовки отчетов &#40;построитель отчетов и службы SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](interactive-functionality-different-report-rendering-extensions.md)   
  [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
+ [Таблицы, матрицы, списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

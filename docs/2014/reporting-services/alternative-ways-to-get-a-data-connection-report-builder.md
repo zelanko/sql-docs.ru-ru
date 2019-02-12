@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f466c403ab505a57087f7f7c217de95c4d1a33dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c59a8f89c0c06aafdc9cc618b22c0bac444fe93d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211400"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018016"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>Альтернативные способы создания подключения к данным (построитель отчетов)
   Подключение к данным содержит сведения, необходимые для подключения к внешнему источнику данных, например к базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Обычно сведения о соединении и учетные данные, которые будут использоваться при соединении с источником данных, можно получить у владельца источника данных.  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 19844f7fccb9e2578169f383b59bb34099de78a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e56037bbabff784ed59f8b579f3b3402d63ccfdb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166334"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032865"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>Создание, удаление и изменение ролей (среда Management Studio)
   Службы Reporting Services предоставляют стандартные роли, определяющие уровень доступа к серверу отчетов. Каждый пользователь или группа, которым требуется доступ к серверу отчетов, получают его с помощью роли, описывающей задачи, которые может выполнять пользователь или группа. Роли определяются для сервера отчетов в целом. Нельзя изменить определение роли для конкретной части сервера отчетов или указать, что роль будет использоваться в зависимости от обстоятельств.  

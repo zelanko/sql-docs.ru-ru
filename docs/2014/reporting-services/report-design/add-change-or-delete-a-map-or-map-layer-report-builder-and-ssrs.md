@@ -27,13 +27,13 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 619f96921f1fbbaf3d1eec8d2c89a25491b46180
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 8755528b92152431c948dd06ec9d2f012178ec79
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364776"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015755"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Добавление, изменение или удаление карты или слоя карты (построитель отчетов и службы SSRS)
   Карта представляет собой набор слоев. При добавлении карты в отчет необходимо определить первый ее слой. Дополнительные слои можно создать с помощью мастера «Слой карты».  

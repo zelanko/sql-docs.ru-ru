@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 40cf4da099d5b9a9055b6fcd266c1f6169d8aaee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 52d0771d07efddd949961761d90f241f146c0af4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086914"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025835"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Сервер отчетов служб Reporting Services (собственный режим)
   Сервер отчетов, настроенный для работы в основном режиме, выполняется как сервер приложений, обеспечивающий все функции обработки и управления исключительно через компоненты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Для управления отчетами служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно использовать среду [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] или диспетчер отчетов. Для управления сервером отчетов в собственном режиме используйте диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ Для управления отчетами служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или диспетчер отчетов. Для управления сервером отчетов в собственном режиме используйте диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Если сервер отчетов настроен для работы в режиме интеграции с SharePoint, то для управления отчетами, общими источниками данных и другими элементами сервера отчетов необходимо использовать страницы управления содержимым на сайте SharePoint.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48086914"
   
 -   Балансирование обработки отчетов на сервере путем планирования обработки и указания отчетов, которые могут быть выполнены по требованию, и отчетов, загружаемых из кэша.  
   
- Разрешение на выполнение задач управления предоставляется с использованием стандартных ролей: **Системный администратор** и **Диспетчер содержимого**. Эффективное управление содержимым сервера отчетов требует назначения обеих ролей. Дополнительные сведения об этих стандартных ролях см. в статье [Роли и разрешения (службы Reporting Services)](../security/roles-and-permissions-reporting-services.md).  
+ Разрешения на выполнение задач управления предоставляются с помощью следующих двух стандартных ролей: **Системный администратор** и **диспетчера содержимого**. Эффективное управление содержимым сервера отчетов требует назначения обеих ролей. Дополнительные сведения об этих стандартных ролях см. в статье [Роли и разрешения (службы Reporting Services)](../security/roles-and-permissions-reporting-services.md).  
   
  Инструменты для управления содержимым сервера отчетов включают среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] или диспетчер отчетов. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] позволяет задавать значения по умолчанию и включать функции. Диспетчер отчетов используется для предоставления пользователям доступа к элементам и операциям сервера отчетов, просмотра и использования отчетов и других типов содержимого, а также для просмотра и использования всех общих элементов и функций распространения отчетов.  
   

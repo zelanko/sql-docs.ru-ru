@@ -11,14 +11,14 @@ f1_keywords:
 - "10021"
 ms.assetid: 75c7e54a-3d20-4c9a-88da-ab36dce2ce42
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1dcbab871d5353d4f42183e89fadb6e83ed52e1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 14c65afb6cab1062dfe0a1d5ac3e23444f89d481
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116935"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011075"
 ---
 # <a name="dataset-properties-dialog-box-fields-report-builder"></a>Диалоговое окно «Свойства набора данных» — «Поля» (построитель отчетов)
   Чтобы изменить коллекцию полей для набора данных отчета, перейдите на вкладку **Поля** в диалоговом окне **Свойства набора данных** . Список полей формируется автоматически, но с помощью вкладки **Поля** можно добавлять, изменять и удалять поля запросов и вычисляемые поля.  

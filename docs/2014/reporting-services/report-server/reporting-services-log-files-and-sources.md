@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: aa6b0aed3bafb760f73875e941815579406496b5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: c355a6ecdecc5ad17dbdba788e736dfaf701d099
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353745"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021551"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Файлы и источники журналов служб Reporting Services
   Сервер отчетов [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и среда сервера отчетов поддерживает различные назначения журналов для записи сведений об операциях и состоянии сервера. Существует два основных типа журналов: журнал выполнения и журнал трассировки. В журнал выполнения заносятся сведения о статистике выполнения отчетов, аудите, диагностике производительности и оптимизации. В журнал трассировки заносятся сведения о сообщениях об ошибках и общей диагностике.  

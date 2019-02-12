@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5a7cd9ee7026dbc662d381a76ad66be2dbbb61d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a77a96d57a1ea9489697a415e96fb52165b8270f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206254"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014815"
 ---
 # <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>Указание размера индикатора с помощью выражения (построитель отчетов и службы SSRS)
   Помимо цвета, направления и формы, для изменения визуального представления индикатора можно использовать его размер.  
@@ -30,7 +30,7 @@ ms.locfileid: "48206254"
   
  Панель **Свойства** предоставляет доступ к свойствам коллекции IndicatorStates индикатора. Разные размеры значков задаются установкой свойства ScaleFactor коллекции IndicatorStates с помощью выражения. Дополнительные сведения см. в разделе [Выражения (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md).  
   
- Выражение, используемое в этой процедуре также использовался для создания отчетов с разными размерами индикаторов, как показано в [индикаторы &#40;построитель отчетов и службы SSRS&#41;](indicators-report-builder-and-ssrs.md).  
+ Выражение, используемое для этой процедуры, также применяется для создания отчетов с разными размерами индикаторов, как показано в разделе [Индикаторы (построитель отчетов и службы SSRS)](indicators-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

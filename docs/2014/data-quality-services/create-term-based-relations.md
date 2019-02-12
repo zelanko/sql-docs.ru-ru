@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 871c6acc823606a249f0886864a84300be7f9899
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1b276f913c70619933d5f317f322fc840cc4d672
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396647"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016775"
 ---
 # <a name="create-term-based-relations"></a>Создание связей на основе термина
   В этом разделе описано создание связей на основе термина для домена в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Связь на основе термина (TBR) позволяет исправить термин, являющийся частью значения в домене. Это позволяет считать идентичными синонимами несколько значений, идентичных по написанию во всем, кроме отдельных частей. Например, вы можете задать связь на основе термина, которая изменяет термин Inc. на Incorporated. Термин Inc. будет заменяться при каждом его появлении в домене. Экземпляры Contoso, Inc. будут заменяться на Contoso, Incorporated, и эти два значения станут рассматриваться как точные синонимы.  
@@ -99,7 +99,7 @@ ms.locfileid: "52396647"
   
 7.  Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [Завершение операции по управлению доменами](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия: После создания связей на основе термина  
+##  <a name="FollowUp"></a> Дальнейшие действия. После создания связей на основе термина  
  После создания связей на основе термина можно выполнить другие задачи управления доменами с текущим доменом, выполнить обнаружение набора знаний для добавления набора знаний к домену или добавить политику сопоставления к домену. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../../2014/data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../../2014/data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f848f0f2f168304d5ceb9d3be92ed793b4579fe7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 51f062efce64d7e8f29e156c51b2972624f46d5e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206134"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037357"
 ---
 # <a name="search-page-report-manager"></a>Страница «Поиск» (диспетчер отчетов)
   На странице «Результаты поиска» можно просмотреть результаты операции поиска, заданной в отчете, моделях отчетов, связанном отчете, общем источнике данных, папке или ресурсе. Результаты поиска приводятся в списке в алфавитном порядке. Их можно сортировать по типу, имени или описанию.  
@@ -65,7 +65,7 @@ ms.locfileid: "48206134"
  Подведите курсор к элементу и щелкните стрелку раскрывающегося списка, чтобы открыть раскрывающееся меню, в котором можно получить доступ и настроить свойства выбранного элемента.  
   
 ## <a name="see-also"></a>См. также  
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

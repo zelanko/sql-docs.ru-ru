@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ae778647-1df0-4952-9a69-0ef6177eea9c
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: d804e3d2b7f851f8142f0e9c95158cb56ea521ed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c48144ca3720565c3c745ffd8aa39b0896e1fb66
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371706"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013795"
 ---
 # <a name="task-7-creating-a-composite-domain"></a>Задача 7. Создание составного домена
   В этой задаче создается составной домен, **проверка адреса**, который состоит из **строка адреса**, **Город**, **состояние**и  **ZIP-** доменов. Составной домен позволяет определить междоменное правило, включающее несколько доменов. Есть и другие преимущества составных доменов, например возможность анализировать значение поля в нескольких доменах.  Например, значение для поля «Полное имя» может быть проанализировано в отдельных доменах «Имя», «Отчество» и «Фамилия». В этом учебнике вы определяете только междоменное правило. См. в разделе [управление составным доменом](https://msdn.microsoft.com/library/hh510399.aspx) для получения дополнительных сведений.  

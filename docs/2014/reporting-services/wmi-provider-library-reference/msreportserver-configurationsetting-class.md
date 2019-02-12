@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7dfcef8a18d1d3fae45d8ebabe85da1bf5d3fbbe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3fb36315de4a9d2f83e4a6c11f129f5603147e25
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165174"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024665"
 ---
 # <a name="msreportserverconfigurationsetting-class"></a>MSReportServer_ConfigurationSetting, класс
   Представляет установочные параметры и параметры времени выполнения для экземпляра сервера отчетов. Эти параметры хранятся в файле конфигурации для сервера отчетов.  
   
- Список всех элементов этого типа, см. в разделе [элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md).  
+ Список всех элементов этого типа см. в разделе [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,7 +46,7 @@ public class MSReportServer_ConfigurationSetting
  Все открытые статические (**Shared** в [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) элементы этого типа можно использовать в многопотоковых операциях. Для элементов экземпляра потокобезопасность не гарантируется.  
   
 ## <a name="example"></a>Пример  
- Чтобы запустить приведенный ниже код, добавьте имя сервера вместо каждого местозаполнителя \<*имя_сервера*>. Путь обновления должен указывать на фактическое расположение установки, если оно отличается от расположения по умолчанию. В следующем примере кода выполняется итерация по всем свойствам [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md) класс, выводит имя каждого свойства и его значение на консоль.  
+ Чтобы запустить приведенный ниже код, добавьте имя сервера вместо каждого местозаполнителя \<*имя_сервера*>. Путь обновления должен указывать на фактическое расположение установки, если оно отличается от расположения по умолчанию. Приведенный ниже пример кода проходит по всем свойствам класса [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md) и выводит на консоль имя каждого свойства и его значение.  
   
 ```vb  
 Imports System  

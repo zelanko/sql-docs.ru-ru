@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b2745d6eacbbf17e65ba8d17b4293b98f942d850
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 59ab630cfbae4dc642eb7dbe200d913e36720b47
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206654"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013174"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>Отмена заданий сервера отчетов (среда Management Studio)
   Диалоговое окно **Отмена заданий сервера отчетов** позволяет просмотреть или отменить выполняющиеся отчеты. В этом диалоговом окне отображаются все задания, выполняемые в данный момент на сервере отчетов. Несмотря на то, что выполняемые задания нельзя приостановить или перезапустить, задачи, завершение которых требует слишком долгого времени, можно отменить — все сразу или по отдельности.  
@@ -37,7 +37,7 @@ ms.locfileid: "48206654"
 >  Эта функция не поддерживается в [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services. Эта страница не отображается при запуске выпуска [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **Name**  
  Отображается имя отчета. Подписки идентифицируются описаниями.  
   
  **Тип**  

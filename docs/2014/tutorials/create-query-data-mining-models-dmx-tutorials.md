@@ -1,26 +1,25 @@
 ---
-title: 'Создание и выполнение запросов к моделям интеллектуального анализа данных с помощью расширений интеллектуального анализа данных: учебники (службы Analysis Services — Интеллектуальный анализ данных) | Документация Майкрософт'
+title: 'Создание моделей интеллектуального анализа данных и выполнение к ним запросов с помощью расширений интеллектуального анализа данных: Учебники (службы Analysis Services — Интеллектуальный анализ данных) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 145b81a7-c0c3-4ca3-bb32-0b482423b9a0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4cc23d274fc086168f580031d9dd7f44b1afd05c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176994"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012525"
 ---
-# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Создание и выполнение запросов к моделям интеллектуального анализа данных с помощью расширений интеллектуального анализа данных: учебники (службы Analysis Services — Интеллектуальный анализ данных)
+# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Создание моделей интеллектуального анализа данных и выполнение к ним запросов с помощью расширений интеллектуального анализа данных: учебники (службы Analysis Services — интеллектуальный анализ данных)
   После создания решения интеллектуального анализа данных с помощью [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], можно создавать запросы к модели интеллектуального анализа данных для прогнозирования трендов, выявления закономерностей в данных и измерения точности моделей интеллектуального анализа данных.  
   
  Приведенные в следующем списке пошаговые учебники помогут вам понять, как построение и запуск запросов интеллектуального анализа данных с помощью [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , чтобы вы могли получить ваши данные.  
@@ -39,10 +38,10 @@ ms.locfileid: "48176994"
   
      В этом учебнике создается модель прогнозирования для демонстрации процесса использования инструкции CREATE MODEL (DMX). Затем добавляются связанные модели и выполняется настройка поведения каждой из них путем изменения параметров алгоритма временных рядов (Майкрософт). Наконец, создаются прогнозы, которые обновляются новыми данными. Возможность обновления временного ряда во время создания прогнозов появилась в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
-## <a name="reference"></a>Справочник  
- [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+## <a name="reference"></a>Ссылка  
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; ссылки](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>См. также  
   

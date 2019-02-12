@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2d72c7991f1ebcf36a3408af344225967c1dc498
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c607291cd2675e454861aa4c79da608d8bcaba1b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144704"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010966"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Создание, изменение и удаление моментальных снимков в журнале отчетов
   Журнал отчета — это коллекция моментальных снимков отчета. Журнал отчета можно изменять, добавляя и удаляя моментальные снимки или редактируя свойства, от которых зависит его сохранение. Журнал отчета может быть создан вручную или по расписанию.  
@@ -61,10 +61,10 @@ ms.locfileid: "48144704"
  Но весь журнал целиком удаляется при удалении отчета. Например, при удалении месячного отчета по продажам по причине замещения его более новой версией, весь связанный с отчетом журнал будет утрачен. Однако при перемещении отчета весь журнал перемещается вместе с ним.  
   
 ## <a name="see-also"></a>См. также  
- [Создание журнала отчета &#40;режим интеграции служб Reporting Services в SharePoint&#41;](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Управление содержимым сервера отчетов &#40;собственный режим служб SSRS&#41;](report-server-content-management-ssrs-native-mode.md)   
- [Добавление моментального снимка к журналу отчета &#40;диспетчера отчетов&#41;](add-a-snapshot-to-report-history-report-manager.md)   
+ [Создание журнала отчета (службы Reporting Services в режиме интеграции с SharePoint)](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md)   
+ [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](report-server-content-management-ssrs-native-mode.md)   
+ [Добавление моментального снимка к журналу отчета (диспетчер отчетов)](add-a-snapshot-to-report-history-report-manager.md)   
  [Ограничение размеров журнала отчета (диспетчер отчетов)](../reports/limit-report-history-report-manager.md)  
   
   

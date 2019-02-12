@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 9c69792d-d7c4-453b-ae2f-6d2d071d8606
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 853bed4a458fd7f3e7472c563b0cd973bb3eea5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 845013f002bc0d0937ae012ef033aaea1d45cc89
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063384"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025886"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>Проверка наличия обновлений или отключение обновлений (построитель отчетов и службы SSRS)
   При каждом открытии отчета построитель отчетов проверяет, не вносились ли на сервере или на сайте SharePoint, объединенном с сервером отчетов, изменения в опубликованные экземпляры элементов отчета в данном отчете. Построитель отчетов также проверяет элементы, зависящие от элементов отчетов, например наборы данных и параметры. При обновлении элементов отчетов или их зависимостей на сайте или сервере в информационной панели отчета отображается количество обновленных элементов. Можно просмотреть и принять или отклонить изменения или отключить информационную панель.  
@@ -37,7 +37,7 @@ ms.locfileid: "48063384"
 -   Щелкните правой кнопкой мыши в области конструктора за пределами отчета или в тексте отчета, а затем нажмите кнопку **проверять наличие обновлений**.  
   
 ## <a name="see-also"></a>См. также  
- [Элементы отчета &#40;построитель отчетов и службы SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [Элементы отчета (построитель отчетов и службы SSRS)](report-parts-report-builder-and-ssrs.md)   
  [Опубликовать и переиздать элементы отчета &#40;построитель отчетов и службы SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
  [Просмотр элементов отчета и назначение папки по умолчанию &#40;построитель отчетов и службы SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
  [Устранение неполадок в элементах отчета &#40;построитель отчетов и службы SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   

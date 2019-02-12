@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0162c6e640c13e743d3ad816e7fcb3286758f635
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ae8fddf7e008c1c97c30c18deb2d8aec60b77415
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222254"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009586"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Просмотр элементов отчета и назначение папки по умолчанию (построитель отчетов и службы SSRS)
   Самым простым способом создания отчетов является добавление существующих элементов отчета, таких как таблицы и диаграммы, к отчету из галереи элементов отчетов. При добавлении элемента отчета к отчету добавляется также все, что необходимо для его выполнения. Например, все элементы отчета, используемые для отображения данных, зависят от набора данных, т. е. запроса и соединения с источником данных. После добавления элемента отчета к отчету ее можно изменить в соответствии с требованиями.  
@@ -65,9 +65,9 @@ ms.locfileid: "48222254"
   
 ## <a name="see-also"></a>См. также  
  [Снимите флажок для обновлений или отключение обновлений &#40;построитель отчетов и службы SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
- [Элементы отчета &#40;построитель отчетов и службы SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Элементы отчета (построитель отчетов и службы SSRS)](../report-parts-report-builder-and-ssrs.md)   
  [Элементы отчета и наборы данных в построителе отчетов](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Устранение неполадок в элементах отчета &#40;построитель отчетов и службы SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
- [Опубликовать и переиздать элементы отчета &#40;построитель отчетов и службы SSRS&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
+ [Публикация и повторная публикация элементов отчетов (построитель отчетов и службы SSRS)](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

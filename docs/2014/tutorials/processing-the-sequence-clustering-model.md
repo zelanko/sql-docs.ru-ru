@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4a7545fd-37a3-4766-ad59-0946f1bd3524
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d5dc03fefedbf95d9e84069c2875db9e8a4be7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066174"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022175"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>Обработка модели кластеризации последовательностей
   После создания новой структуры интеллектуального анализа данных необходимо выполнить развертывание изменений, внесенных в решение интеллектуального анализа данных, а затем обработать структуру. После завершения обработки новой структуры и модели интеллектуального анализа данных можно просмотреть модель интеллектуального анализа данных.  
@@ -25,7 +24,7 @@ ms.locfileid: "48066174"
   
 ### <a name="to-process-the-mining-structure-and-model"></a>Обработка структуры и модели интеллектуального анализа данных  
   
-1.  На **модель интеллектуального анализа данных** меню [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]выберите **обработать структуру интеллектуального анализа данных и все модели**.  
+1.  В меню **Модель интеллектуального анализа данных** среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]выберите команду **Обработать структуру интеллектуального анализа данных и все модели**.  
   
 2.  В окне предупреждения с вопросом о том, нужно ли выполнить построение и развертывание проекта, нажмите кнопку **Да**.  
   
@@ -41,8 +40,8 @@ ms.locfileid: "48066174"
  [Изучение модели кластеризации последовательностей &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>См. также  
- [Конструктор интеллектуального анализа данных](../../2014/analysis-services/data-mining/data-mining-designer.md)   
- [Алгоритм кластеризации последовательностей (Майкрософт)](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Требования к обработке и рекомендации по &#40;интеллектуального анализа данных&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [конструктор интеллектуального анализа данных](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Требования к обработке и связанные замечания (интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

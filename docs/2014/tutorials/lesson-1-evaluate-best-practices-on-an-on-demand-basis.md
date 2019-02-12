@@ -1,22 +1,21 @@
 ---
-title: 'Занятие 1: Выполнение политик рекомендаций на основе по запросу | Документация Майкрософт'
+title: Урок 1. Оцените рекомендации на основе по запросу | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 868338d3-29c8-4a55-ab02-51a358d5b7ca
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b6f8fc7193539ab411ea81bdfa6621e5c480029a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc8da3880afe5cf107c7e6df260957e3df6ddc9d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091064"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013585"
 ---
 # <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>Урок 1. Выполнение политик рекомендаций по запросу
   Метод оценки политики по требованию (называемый также нерегламентированным) позволяет быстро оценить рекомендованные политики, чтобы определить, соответствует ли экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] советам и рекомендациям.  
@@ -33,6 +32,6 @@ ms.locfileid: "48091064"
  [Выполнение политики по запросу с помощью обозревателя объектов](../ssms/object/object-explorer.md)  
   
 ## <a name="see-also"></a>См. также  
- [Урок 2. Выполнение политик рекомендаций по расписанию](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Занятие 2. Выполнение политик рекомендаций по расписанию](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 119fa4121e6f18d9592b60b6fcb8504a1228d848
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 830854a26d3f9b05465ee37aac6a9b7584750fe2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353922"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012715"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Установка изолированной версии построителя отчетов (построитель отчетов)
   Можно установить построитель отчетов из [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] пакет дополнительных компонентов на [центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkID=168472) или расположения как общая папка, к которому имеет файл ReportBuilder3_x86.msi — пакет установщика Windows для построителя отчетов было загружено.  

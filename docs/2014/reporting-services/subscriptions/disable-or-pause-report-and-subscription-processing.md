@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4c15666aecbbdde8ca95eaf684bf9909454d3d42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68d6284f7b7b832b37806d2fb39e506689a3b031
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129315"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040685"
 ---
 # <a name="pause-report-and-subscription-processing"></a>Приостановка обработки отчета и подписки
   Приостановить обработку отчетов или подписки напрямую невозможно. Однако можно остановить обработку отчетов и подписки перед ее началом или после соединения с источником данных. Также можно предотвратить обработку отчетов или подписки, запретив пользователям доступ к этим элементам.  
@@ -49,7 +49,7 @@ ms.locfileid: "48129315"
   
 ## <a name="see-also"></a>См. также  
  [Сервер отчетов служб Reporting Services (основной режим)](../report-server/reporting-services-report-server-native-mode.md)   
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../report-manager-ssrs-native-mode.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md)   
  [Страница "Свойства безопасности", элементы (диспетчер отчетов)](../security-properties-page-items-report-manager.md)  
   
   

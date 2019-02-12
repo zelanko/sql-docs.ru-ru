@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a6c4d822448b452cd66cbc59beffb8fe2d6f0fb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 96d3310c489dea5aadc3e9b7e873dbb89ceee9bb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082754"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009689"
 ---
 # <a name="move-items-page-report-manager"></a>Страница «Перемещение элементов» (диспетчер отчетов)
   Используйте страницу «Перемещение элементов», чтобы переместить отчет, папку или другой элемент в новое местоположение на сервере отчетов. Можно ввести путь нового местоположения или использовать представление дерева для указания нового местоположения в пространстве имен сервера отчетов. Переместить можно только те элементы, на перемещение которых есть разрешение и которые хранятся на текущем сервере отчетов.  
@@ -66,7 +66,7 @@ ms.locfileid: "48082754"
 4.  На панели инструментов элемента нажмите кнопку **Переместить**.  
   
 ## <a name="see-also"></a>См. также  
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Страница «Общие свойства», папки &#40;диспетчера отчетов&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [Страница "Общие свойства", "Отчеты" (диспетчер отчетов)](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Страница «Общие свойства», ресурсы &#40;диспетчера отчетов&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md)   

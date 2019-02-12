@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2c6190ec6494e5a723aa449c5d4053c12979076c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8a3ee59a669d08d495b55d5c36699fd9ef2f42a9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206114"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023025"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Управление сервером отчетов служб Reporting Services в собственном режиме
   Этот раздел содержит описание процедур по настройке экземпляра сервера отчетов в собственном режиме с использованием диспетчера конфигурации служб Reporting Services.  
@@ -32,20 +32,20 @@ ms.locfileid: "48206114"
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
  Представляет шаги запуска программы настройки служб Reporting Services.  
   
- [Настройка учетной записи службы &#40;диспетчер конфигурации служб SSRS&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)  
+ [Настройка учетной записи службы (диспетчер конфигурации служб SSRS)](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)  
  Объясняет, как задать учетную запись и пароль службы сервера отчетов.  
   
- [Регистрация имени участника-службы &#40;имени участника-службы&#41; для сервера отчетов](register-a-service-principal-name-spn-for-a-report-server.md)  
+ [Регистрация имени участника-службы для сервера отчетов](register-a-service-principal-name-spn-for-a-report-server.md)  
  Показывает, как вручную зарегистрировать имя участника-службы для сервера отчетов, который запускается от учетной записи пользователя домена в сети, где используется проверка подлинности по протоколу Kerberos.  
   
- [Настройка URL-адрес &#40;диспетчер конфигурации служб SSRS&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](../install-windows/configure-a-url-ssrs-configuration-manager.md)  
  Описывает, как назначить один или несколько URL-адресов для получения доступа к веб-службе сервера отчетов и к диспетчеру отчетов.  
   
- [Создание базы данных сервера отчетов собственный режим &#40;диспетчер конфигурации служб SSRS&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
+ [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигурации служб SSRS)](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
  Представляет шаги создания базы данных сервера отчетов. Этот шаг требуется для развертывания установки служб Reporting Services.  
   
 ### <a name="advanced-or-optional-configuration"></a>Дополнительные или необязательные параметры настройки  
- [Настройка масштабного развертывания сервера отчетов собственный режим &#40;диспетчер конфигурации служб SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [Настройка масштабного развертывания сервера отчетов в основном режиме (диспетчер конфигурации служб SSRS)](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  Представляет шаги настройки нескольких серверов отчетов для совместного использования базы данных сервера отчетов.  
   
  [Настройка сервера отчетов для доставки электронной почты &#40;диспетчер конфигурации служб SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
@@ -54,20 +54,20 @@ ms.locfileid: "48206114"
  [настроить брандмауэр для доступа к серверу отчетов](configure-a-firewall-for-report-server-access.md)  
  Описывает, как открыть порты для передачи входящих запросов и ответов от сервера отчетов.  
   
- [Настройка сервера отчетов в собственном режиме для локального администрирования &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
+ [Настройка сервера отчетов, работающего в основном режиме, для локального администрирования (службы SSRS)](configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
  Описывает дополнительные шаги, которые необходимо выполнить для соединения с сервером отчетов или диспетчером отчетов с помощью http://localhost.  
   
- [Настройка сервера отчетов для удаленного администрирования](configure-a-report-server-for-remote-administration.md)  
+ [настроить сервер отчетов для удаленного администрирования](configure-a-report-server-for-remote-administration.md)  
  Описывает, как настроить экземпляр удаленного сервера отчетов для удаленного соединения и настройки с другого компьютера.  
   
- [Включение и отключение компонентов Reporting Services](turn-reporting-services-features-on-or-off.md)  
+ [включать и отключать компоненты служб Reporting Services](turn-reporting-services-features-on-or-off.md)  
  Объясняет, как удалить неиспользуемые компоненты после установки служб Reporting Services.  
   
- [Включение отслеживания удаленных ошибок &#40;службы Reporting Services&#41;](enable-remote-errors-reporting-services.md)  
+ [Включение отслеживания удаленных ошибок (службы Reporting Services)](enable-remote-errors-reporting-services.md)  
  Поясняет, как задать свойства сервера на сервере отчетов для возвращения дополнительных сведений об условиях возникновения ошибок на удаленных серверах.  
   
 ## <a name="see-also"></a>См. также  
  [Настройка и администрирование сервера отчетов (службы Reporting Services в собственном режиме)](configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Настройка и администрирование сервера отчетов (службы Reporting Services в режиме интеграции с SharePoint)](../configure-administer-report-server-reporting-services-sharepoint-mode.md)  
+ [Настройка и администрирование сервера отчетов (режим интеграции с SharePoint служб Reporting Services)](../configure-administer-report-server-reporting-services-sharepoint-mode.md)  
   
   

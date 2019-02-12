@@ -1,22 +1,21 @@
 ---
-title: 'Урок 1: Создание модели интеллектуального анализа данных и структура интеллектуального анализа данных временных рядов | Документация Майкрософт'
+title: Урок 1. Создание модели интеллектуального анализа данных и структура интеллектуального анализа данных временных рядов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b201f2b8-9ab5-425b-9ff3-fe321a60a7b7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5ea66ce1ef677e150a93fbd873c8b97f939e19e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174024"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014165"
 ---
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Урок 1. Создание модели интеллектуального анализа данных временных рядов и структуры интеллектуального анализа данных
   На этом занятии будет создана модель интеллектуального анализа данных, с помощью которой можно спрогнозировать значения во времени на основании исторических данных. После создания модели автоматически будет создана базовая структура, которую можно использовать в качестве основы для дополнительных моделей интеллектуального анализа данных.  
@@ -84,7 +83,7 @@ CREATE MINING MODEL [Mining Model Name]
   
 2.  В **соединение с сервером** диалоговом окне для **тип сервера**выберите **служб Analysis Services**. В **имя_сервера**, тип `LocalHost`, или имя экземпляра [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , требуется подключение к для этого занятия. Нажмите кнопку **Соединить**.  
   
-3.  В **обозревателя объектов**, щелкните правой кнопкой мыши экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], пункты **новый запрос**, а затем нажмите кнопку **расширений интеллектуального анализа данных**.  
+3.  В окне **Обозреватель объектов**щелкните правой кнопкой мыши экземпляр служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], укажите **Создать запрос**, а затем выберите пункт **Расширения интеллектуального анализа данных**.  
   
      Откроется редактор запросов, содержащий новый, пустой запрос.  
   
@@ -196,7 +195,7 @@ CREATE MINING MODEL [Mining Model Name]
  В следующем занятии будет добавлена модель интеллектуального анализа данных для **Forecasting_MIXED** структуры интеллектуального анализа данных, который вы только что создали.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 2. Добавление моделей интеллектуального анализа данных в структуру интеллектуального анализа временных рядов](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
+ [Занятие 2. Добавление моделей интеллектуального анализа данных для структуры интеллектуального анализа данных временных рядов](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
   
 ## <a name="see-also"></a>См. также  
  [Модель интеллектуального анализа данных для моделей временных рядов &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   

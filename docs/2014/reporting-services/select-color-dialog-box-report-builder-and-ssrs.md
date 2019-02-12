@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 42dc3c37a93bf3240b4332915488ad293b68ec66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 59f66df0022d81c3aa12015b265ccd8b7d735190
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184664"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031455"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>Диалоговое окно «Выбор цвета» (построитель отчетов и службы SSRS)
   Используйте диалоговое окно **Выбор цвета** , чтобы указать параметры цвета для фона одной или нескольких ячеек в области данных или текстовом поле либо для всей диаграммы.  
@@ -69,7 +69,7 @@ ms.locfileid: "48184664"
  **Оттенок**  
  Десятичное значение для цветового тона цвета HSB. Введите или задайте с помощью счетчика значение в диапазоне от 0 до 255.  
   
- **Насыщенность**  
+ **насыщенность**  
  Десятичное значение для насыщенности цвета HSB. Введите или задайте с помощью счетчика значение в диапазоне от 0 до 255.  
   
  **Яркость**  
@@ -80,6 +80,6 @@ ms.locfileid: "48184664"
   
 ## <a name="see-also"></a>См. также  
  [Форматирование элементов отчета (построитель отчетов и службы SSRS)](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Форматирование текста и заполнителей &#40;построитель отчетов и службы SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Форматирование текста и заполнителей (построитель отчетов и службы SSRS)](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

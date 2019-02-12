@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - RDL [Reporting Services], generating
 - RDL [Reporting Services], tutorials
 - RDL [Reporting Services], serializing
 ms.assetid: 8f81d48f-7ab9-4ef8-bce0-7d16d9a47fbd
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2f104892e3ee8a8c542c41bc07789a94ab8d0c4e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 313a5268b754089d4ca8964328d53cb23ec6edd1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349386"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014045"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>Обновление отчетов с помощью классов, созданных из схемы языка определения отчетов (учебник по службам SSRS)
   Этот учебник демонстрирует, как использовать инструмент определения схемы XML (Xsd.exe) создавать классы, позволяющие сериализацию и десериализацию файлов определения отчета (RDL и RDLC) с [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer> класса.  
@@ -59,18 +58,18 @@ ms.locfileid: "53349386"
 > [!NOTE]  
 >  Образцы не устанавливаются автоматически в процессе установки, но их можно установить в любое время. Сведения об образцах см. в разделе [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887).  
   
- **Предполагаемое время для выполнения заданий учебника:** 30 минут  
+ **Предполагаемое время для выполнения заданий учебника**: 30 минут  
   
 ## <a name="tasks"></a>Задания  
  [Занятие 1. Создание проекта Visual Studio RDL-схемы](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
   
  [Занятие 2. Создания классов из RDL-схемы с помощью инструмента xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
   
- [Занятие 3. Загрузка определения отчета с сервера отчетов](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)  
+ [Занятие 3. Загрузка определения отчета с сервера отчетов](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)  
   
  [Занятие 4. Обновление определения отчета программным способом](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)  
   
- [Занятие 5. Публикация определения отчета на сервере отчетов](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
+ [Занятие 5. Публикация определения отчета на сервере отчетов](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
   
  [Занятие 6. Выполнение приложения схемы языка определения Отчетов &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
   

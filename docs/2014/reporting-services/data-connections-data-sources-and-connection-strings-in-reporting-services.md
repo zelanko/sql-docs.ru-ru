@@ -18,14 +18,14 @@ helpviewer_keywords:
 - logins [Reporting Services]
 ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 78d118a8d0e5edabe48715c2b5c8b0b547bee7c5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: d54894d703b2919d9128dccc698ee8fad51e5af2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354614"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028615"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
   Для включения данных в отчет [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , вам необходимо сначала создать *источники данных* и *наборы данных*. Данная тема объясняет типы источников данных, как создать источники данных и предоставляет важную информацию, относящуюся к учетным данным источника данных. Источник данных включает в себя тип источника данных, информацию о подключении и используемый тип учетных данных. Существует два типа источников данных отчета: внедренные и общие. Внедренный источник данных определяется в отчете и используется только этим отчетом. Общий источник данных определяется независимо от отчета и может использоваться несколькими отчетами. Дополнительные сведения см. в разделах [Внедренные и общие подключения к данным или источники данных (построитель отчетов и службы SSRS)](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) и [Внедренные и общие наборы данных (построитель отчетов и службы SSRS)](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  

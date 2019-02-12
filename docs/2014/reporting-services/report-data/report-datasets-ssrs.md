@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 45546e63eff82c5ba4467193811b572756331513
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cb76a3dfff5ec980d94e3ecf27de6b588c98cf1a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201504"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040515"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>Добавление данных в отчет (построитель отчетов и службы SSRS)
   Чтобы добавить данные в отчет, необходимо создать наборы данных. Каждый набор данных представляет результирующий набор команды запроса к источнику данных. Столбцы в результирующем наборе представляют собой коллекцию полей. Стройки в результирующем наборе представляют данные. Набор данных не содержит фактических данных. Набор данных содержит информацию, необходимую для получения определенного набора данных из источника данных.  
@@ -39,7 +39,7 @@ ms.locfileid: "48201504"
   
  Также можно добавить наборы данных в отчет, добавив элементы отчета, включающие наборы данных, от которых они зависят. [!INCLUDE[ssRBrptparts](../../../includes/ssrbrptparts-md.md)]  
   
- Дополнительные сведения о создании отчета с данными из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Учебник. Создание простого табличного отчета (построитель отчетов)](../tutorial-creating-a-basic-table-report-report-builder.md). О построении отчета, включающего собственные данные, см. в разделе [Учебник. Создание стандартного отчета с диаграммой в режиме "вне сети" (построитель отчетов)](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Чтобы узнать, как создать отчет, отображающий данные из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных, см. в разделе [руководства: Создание простого табличного отчета &#40;построитель отчетов&#41;](../tutorial-creating-a-basic-table-report-report-builder.md). Чтобы создать отчет, содержащий собственные данные, см. в разделе [руководства: Создание стандартного отчета с диаграммой автономно &#40;построитель отчетов&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -66,7 +66,7 @@ ms.locfileid: "48201504"
   
 -   [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
--   [Диаграммы &#40;построитель отчетов и службы SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+-   [Диаграммы (построитель отчетов и службы SSRS)](../report-design/charts-report-builder-and-ssrs.md)  
   
 -   [Спарклайны и гистограммы (построитель отчетов и службы SSRS)](../report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -74,9 +74,9 @@ ms.locfileid: "48201504"
   
 -   [Параметры отчета (построитель отчетов и конструктор отчетов)](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [Элементы отчета &#40;построитель отчетов и службы SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
+-   [Элементы отчета (построитель отчетов и службы SSRS)](../report-parts-report-builder-and-ssrs.md)  
   
--   [Фильтрация, группирование и сортировка данных &#40;построитель отчетов и службы SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+-   [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
  ![Значок стрелки, используемый для ссылки возврата в начало](../../2014-toc/media/uparrow16x16.gif "Значок стрелки, используемый для ссылки возврата в начало") [В начало](#BackToTop)  
   
@@ -110,17 +110,17 @@ ms.locfileid: "48201504"
   
  [Добавление, изменение и обновление полей в области данных отчета (построитель отчетов и службы SSRS)](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
- [Построение запроса в конструкторе реляционных запросов &#40;построитель отчетов и службы SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
+ [Построение запроса в конструкторе реляционных запросов (построитель отчетов и службы SSRS)](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
   
- [Отображение скрытых наборов данных для значений параметра в многомерных данных &#40;построитель отчетов и службы SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
+ [Отображение скрытых наборов данных для значений параметра в многомерных данных (построитель отчетов и службы SSRS)](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
   
  [Добавление фильтра к набору данных (построитель отчетов и службы SSRS)](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
- [Установка сообщения об отсутствии данных для области данных &#40;построитель отчетов и службы SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [Установка сообщения об отсутствии данных для области данных (построитель отчетов и службы SSRS)](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [Связь параметра запроса с параметром отчета &#40;построитель отчетов и службы SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
+ [Связь параметра запроса с параметром отчета (построитель отчетов и службы SSRS)](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
   
- [Определение параметров в конструкторе запросов многомерных Выражений для служб Analysis Services &#40;построитель отчетов и службы SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
+ [Определение параметров в конструкторе запросов многомерных выражений для служб Analysis Services (построитель отчетов и службы SSRS)](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
   
  ![Значок стрелки, используемый для ссылки возврата в начало](../../2014-toc/media/uparrow16x16.gif "Значок стрелки, используемый для ссылки возврата в начало") [В начало](#BackToTop)  
   
@@ -139,6 +139,6 @@ ms.locfileid: "48201504"
   
 ## <a name="see-also"></a>См. также  
  [Представление конструктора отчетов (построитель отчетов)](../report-builder/report-design-view-report-builder.md)   
- [Основные понятия разработки отчетов &#40;построитель отчетов и службы SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Основные понятия разработки отчетов (построитель отчетов и службы SSRS)](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

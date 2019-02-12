@@ -1,24 +1,21 @@
 ---
-title: 'Задача 2: Сопоставление столбцов Excel с доменами DQS | Документация Майкрософт'
+title: Задача 2. Сопоставление столбцов Excel с доменами DQS | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f347cc92-950f-4021-b7af-393640dfe821
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4af26cb52b8d30dbfad5fc5ab40dc732f8ce4dc2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9bc721869c1287be709c594fd60aad511709e46
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135524"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020474"
 ---
 # <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Задача 2. Сопоставление столбцов Excel с доменами DQS
     
@@ -39,7 +36,7 @@ ms.locfileid: "48135524"
     |ContactEmailAddress|Адрес электронной почты|  
     |Строка адреса|Строка адреса|  
     |Город|Город|  
-    |Состояние|Состояние|  
+    |Штат|Штат|  
     |Страна (щелкните **+ (Добавить сопоставление столбца)** панели инструментов, чтобы добавить строку)|Country|  
     |Почтовый индекс|Почтовый индекс|  
   

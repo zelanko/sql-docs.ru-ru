@@ -20,13 +20,13 @@ f1_keywords:
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 9e58bcac859d4774803d3cec639a3b7582ee0065
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 447ca38b75b21bdb2015a29ea6ff357eba6f24db
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528689"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025725"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Диаграммы (построитель отчетов и службы SSRS)
   При необходимости сведения данных в визуальный формат используется диаграммная область данных. Диаграммы позволяют представлять большие объемы статистических данных для быстрого просмотра. Важно внимательно подготовить и осмыслить данные перед созданием диаграммы, так как это поможет создавать диаграммы быстро и качественно. Дополнительные сведения см. в разделе [Добавление диаграммы в отчет (построитель отчетов и службы SSRS)](add-a-chart-to-a-report-report-builder-and-ssrs.md). Чтобы немедленном использовании диаграммы см. в разделе панели, столбца, спарклайн и учебники по круговой диаграммы в [учебники &#40;построитель отчетов&#41; ](../report-builder-tutorials.md) или строке и учебники по круговой диаграммы в [руководствах &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  

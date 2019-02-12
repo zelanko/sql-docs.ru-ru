@@ -1,22 +1,21 @@
 ---
-title: 'Занятие 3: Загрузка определения отчета с сервера отчетов | Документация Майкрософт'
+title: Урок 3. Загрузка определения отчета с сервера отчетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ad8b31c-43b0-4481-a31b-090cbed4a438
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c9555f2ec58aefa5f0a3b071b0d4cf7c8ee7ff14
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: d4c51002c8c829417c63a0dd6c59a3538604fd81
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813877"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025645"
 ---
 # <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Урок 3. Загрузка определения отчета с сервера отчетов
   После создания проекта и формирования классов из схемы языка определения отчетов необходимо загрузить определение отчета с сервера отчетов.  
@@ -98,7 +97,7 @@ ms.locfileid: "51813877"
     ```  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- На следующем занятии будет создан код для обновления определения отчета, которое было загружено с сервера отчетов. См. в разделе [урок 4: обновление определения отчета программным способом](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
+ На следующем занятии будет создан код для обновления определения отчета, которое было загружено с сервера отчетов. См. в разделе [урок 4: Обновление определения отчета программным способом](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
   
 ## <a name="see-also"></a>См. также  
  [Обновление отчетов с помощью классов, созданных из RDL-схемы &#40;учебник по службам SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

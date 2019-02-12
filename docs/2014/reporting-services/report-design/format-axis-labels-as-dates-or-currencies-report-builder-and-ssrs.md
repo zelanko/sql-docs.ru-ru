@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e9a01a74-2f51-4b35-be3a-a6138568f6cf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 87984d85ea18415472669cf4ce05dbdbe300e8e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bd85296b786683176c8c05e53cd7e0c11cc7cd18
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182114"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029485"
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>Форматирование меток оси в виде значений даты или валюты (построитель отчетов и службы SSRS)
   Если на оси отображаются правильно отформатированные значения типа DateTime, диаграмма автоматически отобразит эти значения как дни. Чтобы указать интервал даты-времени для оси X, такой как интервал в месяцах или интервал в часах, необходимо отформатировать метки оси и задать в качестве типа интервала оси допустимый интервал значений даты или времени.  
@@ -62,6 +62,6 @@ ms.locfileid: "48182114"
  [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
  [Задание логарифмической шкалы (построитель отчетов и службы SSRS)](specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [Задание интервала оси &#40;построитель отчетов и службы SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [Задание интервала оси (построитель отчетов и службы SSRS)](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
   

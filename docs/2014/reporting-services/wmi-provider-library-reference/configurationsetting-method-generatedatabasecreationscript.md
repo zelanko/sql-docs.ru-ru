@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5d456e0949f38a402b4947c72a3f3f9ec029f2a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2dbd112c340662ed90632a06904c0b3bd1939a3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213493"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022115"
 ---
 # <a name="generatedatabasecreationscript-method-wmi-msreportserverconfigurationsetting"></a>Метод GenerateDatabaseCreationScript (WMI MSReportServer_ConfigurationSetting)
   Формирует скрипт SQL, который можно использовать для создания базы данных сервера отчетов.  
@@ -53,7 +53,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  Указывает, следует ли создать базу данных в собственном режиме или в режиме SharePoint.  
   
 > [!IMPORTANT]  
->  Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *IsSharePointMode* = `True` не поддерживается, так как в режиме интеграции с SharePoint, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] общей службы SharePoint, и не управляются средствами поставщика WMI. Этот параметр должен всегда установлен в `False`.  
+>  Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *IsSharePointMode* = `True` не поддерживается, так как в режиме интеграции с SharePoint, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] общей службы SharePoint, и не управляются средствами поставщика WMI. Этот параметр должен всегда быть установлен в значение `False`.  
   
  *Скрипт*  
  [out] Строка, содержащая сформированный скрипт SQL.  
@@ -78,7 +78,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

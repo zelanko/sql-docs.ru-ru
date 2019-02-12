@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 202d2331364480cfdac89019dfa918c327544b26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: aace9882e358bcd5e5626cc625ed3dbbe4495cce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090264"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017045"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигурации служб SSRS)
   В собственном режиме службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве внутреннего хранилища. База данных является обязательной и служит для хранения опубликованных отчетов, общих источников данных, данных сеансов, ресурсов и метаданных сервера.  
@@ -33,7 +33,7 @@ ms.locfileid: "48090264"
 ## <a name="when-to-create-or-configure-the-report-server-databases"></a>Случаи, требующие создания или настройки базы данных сервера отчетов  
  Создавать и настраивать базы данных сервера отчетов требуется в тех случаях, когда сервер отчетов установлен в режиме «только файлы».  
   
- Если вы установили [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в конфигурации по умолчанию для основного режима, базы данных сервера отчетов создается и настраивается автоматически во время установки экземпляра сервера отчетов. Просмотреть или изменить параметры, заданные программой установки можно с помощью диспетчера конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ Если службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] установлены в конфигурации по умолчанию для собственного режима, база данных сервера отчетов создается и настраивается автоматически во время установки экземпляра сервера отчетов. Просмотреть или изменить параметры, заданные программой установки можно с помощью диспетчера конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ##  <a name="rsdbrequirements"></a> Перед началом работы  
  Создание или настройка базы данных сервера отчетов представляет собой многошаговый процесс. Перед созданием базы данных сервера отчетов необходимо продумать, какие параметры будут заданы на перечисленных ниже этапах.  
@@ -116,12 +116,12 @@ ms.locfileid: "48090264"
   
 7.  Просмотрите сведения на странице «Сводка» и удостоверьтесь в том, что все настройки указаны правильно, после этого нажмите кнопку **Далее**.  
   
-8.  Проверьте соединение, щелкнув на URL-адресе страницы «URL-адрес сервера отчетов» или страницы «URL-адрес диспетчера отчетов». Тест будет успешным лишь в том случае, если эти URL-адреса заранее определены. Если подключение к базе данных сервера отчетов действует, в окне браузера отображается либо иерархия папок сервера отчетов, либо диспетчер отчетов. Дополнительные сведения см. в разделе [проверка установки служб Reporting Services](verify-a-reporting-services-installation.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+8.  Проверьте соединение, щелкнув на URL-адресе страницы «URL-адрес сервера отчетов» или страницы «URL-адрес диспетчера отчетов». Тест будет успешным лишь в том случае, если эти URL-адреса заранее определены. Если подключение к базе данных сервера отчетов действует, в окне браузера отображается либо иерархия папок сервера отчетов, либо диспетчер отчетов. Дополнительные сведения см. в статье [Проверка установки служб Reporting Services](verify-a-reporting-services-installation.md) в электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>См. также  
- [Настройка подключения к базе данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Настройка подключения к базе данных сервера отчетов (диспетчер конфигураций служб Reporting Services)](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [База данных &#40;собственный режим служб SSRS&#41;](../../sql-server/install/database-ssrs-native-mode.md)   
- [Управление сервером отчетов служб собственный режим Reporting Services](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
+ [Управление сервером отчетов служб Reporting Services в собственном режиме](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2330060b0a659715f8a8b80c3d2e1fbe24e93d04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1b1bed586c6ec2878fd2a63f7d9ca8bce46bab53
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050911"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017704"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)
   Число, размер и расположение элементов отчета влияют на процесс разбиения текста отчета на страницы модулями подготовки отчетов. Далее описывается процесс подготовки к просмотру различных элементов отчета.  
@@ -78,7 +78,7 @@ ms.locfileid: "48050911"
   
 -   Повторяющиеся заголовки столбцов и строк.  
   
-     Верхние колонтитулы имеют приоритет над нижними. Внутренние повторяющиеся группы имеют приоритет над внешними. Элементы `RepeatWith` свойство имеет значение, установленные ближе к целевой области данных имеют приоритет перед элементами, расположенными дальше от области данных.  
+     Верхние колонтитулы имеют приоритет над нижними. Внутренние повторяющиеся группы имеют приоритет над внешними. Элементы с заданным свойством `RepeatWith`, установленные ближе к целевой области данных, имеют приоритет перед элементами, расположенными дальше от нее.  
   
 -   Маленькие элементы отчета, например текстовые поля или прямоугольники, свойство KeepTogether явно установлено значение `true`.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48050911"
 ## <a name="see-also"></a>См. также  
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](rendering-behaviors-report-builder-and-ssrs.md)   
- [Интерактивные возможности различных модулей подготовки отчетов &#40;построитель отчетов и службы SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Списки (построитель отчетов и службы SSRS)](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

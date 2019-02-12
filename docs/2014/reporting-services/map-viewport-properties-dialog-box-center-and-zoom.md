@@ -12,14 +12,14 @@ f1_keywords:
 - "10506"
 ms.assetid: 642a06f5-293f-48e0-97a6-1489dbefa719
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 205471b262ae041858db72c5db8d9c603eb716b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 883f39c6d7db59fd02aea53096b3502c722dca54
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072034"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026184"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>Диалоговое окно «Свойства окна просмотра карты», вкладка «Центрирование и масштабирование»
   Вкладка **Центрирование и масштабирование** диалогового окна **Свойства окна просмотра карты** позволяет задать центральную точку и масштаб карты. После указания источника данных и границ карты, включаемой в отчет, можно указать центр представления и масштаб карты для дальнейшего управления ее внешним видом. Изменение параметров зависит от способа, используемого для указания значений центральной точки и масштаба. Нажмите кнопку **Выражение** (*fx*), чтобы изменить выражение, задающее значение параметра.  

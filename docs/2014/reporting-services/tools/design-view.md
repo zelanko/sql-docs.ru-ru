@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 32578d4810140314964d3e7e2ceaa8d836aa99bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6d703bc03c6ad715efad06612b06210f8bad4bc1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137394"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010430"
 ---
 # <a name="design-view"></a>Конструктор
   Конструктор позволяет расположить элементы в отчете. Конструктор иногда называют областью конструктора или макетом.  
@@ -52,7 +52,7 @@ ms.locfileid: "48137394"
  Панель «Свойства» предназначена для просмотра свойств текущего выбранного в области конструктора элемента отчета или текущей выбранной группы в панели «Группирование». Можно также щелкнуть выбранный элемент отчета правой кнопкой мыши, а затем выбрать пункт **Свойства** , открыв соответствующее диалоговое окно **Свойства** для элемента или группы отчета.  
   
 ## <a name="see-also"></a>См. также  
- [И нижние колонтитулы страницы &#40;построитель отчетов и службы SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Советы по конструированию отчетов (построитель отчетов и службы SSRS)](../report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   

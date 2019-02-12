@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b02779c2-a6b9-453c-815f-adad53353952
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b11e02c807abe8fa4231d15129f5ae3b96d5c05a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 4ce9fb555cce7913939eb8e611a319d7a938c064
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366566"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016515"
 ---
 # <a name="teradata-connection-type-ssrs"></a>Тип соединения Teradata (службы SSRS)
   Чтобы включить в отчет данные из реляционной базы данных Teradata, необходимо иметь набор данных, основанный на источнике данных отчета типа Teradata. Этот встроенный тип источника данных основан на управляемом поставщике .NET для модуля обработки данных Teradata.  

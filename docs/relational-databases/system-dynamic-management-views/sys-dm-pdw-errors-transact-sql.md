@@ -2,8 +2,8 @@
 title: sys.dm_pdw_errors (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8868a654d46842acea95d087ec54831b210ba16a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c9b99ffbb25ccf07b56da747f38ccb124adc5aef
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672923"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016045"
 ---
 # <a name="sysdmpdwerrors-transact-sql"></a>sys.dm_pdw_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "51672923"
 |Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |error_id|**nvarchar(36)**|Ключ для этого представления.<br /><br /> Уникальный числовой идентификатор, связанный с ошибкой.|Уникальными среди всех ошибок запросов в системе.|  
-|источник|**Nvarchar(64)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|источник|**nvarchar(64)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |Тип|**nvarchar(4000)**|Тип произошедшей ошибки.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |create_time|**datetime**|Время возникновения ошибки.|Меньше или равна текущее время.|  
 |pwd_node_id|**int**|Идентификатор определенного узла, сложной, если таковые имеются. Дополнительные сведения о идентификаторы узлов, см. в разделе [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).||  

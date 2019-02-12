@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.kb.createcd.f1
 - sql12.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9b2efda76c0e1005a298e67b139233a96796522b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3cfaf75851b97a8b13856fa8f65aca0bde7e10d1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413781"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034095"
 ---
 # <a name="create-a-composite-domain"></a>Создание составного домена
   В этом разделе описывается, как создать составной домен в базе знаний в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Составной домен состоит из нескольких отдельных доменов, применимых к одному полю данных. Дополнительные сведения о составных доменах см. в разделе [Управление составным доменом](../../2014/data-quality-services/managing-a-composite-domain.md).  
@@ -89,7 +89,7 @@ ms.locfileid: "52413781"
   
 6.  Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [Завершение операции по управлению доменами](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия: после создания составного домена  
+##  <a name="FollowUp"></a> Дальнейшие действия. после создания составного домена  
  После создания составного домена можно выполнить другие задачи по управлению для этого домена, провести обнаружение знаний для добавления набора знаний в домен или добавить в домен политику сопоставления. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../../2014/data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../../2014/data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  

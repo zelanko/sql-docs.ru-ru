@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 81faaac64b045911ca6b8cfc6dabaa5389ce8a5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bbd72a6eadac5f65d292b742885c1af957a637e1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159524"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039685"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Определение параметров в конструкторе запросов многомерных выражений для служб Analysis Services (построитель отчетов и службы SSRS)
   Чтобы параметризовать запрос многомерных выражений для источника данных служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , необходимо добавить параметр запроса к этому запросу. В конструкторе запросов многомерных выражений параметр запроса можно добавить как в режиме конструктора, так и в режиме запроса, настроив фильтр. После определения запроса с параметром запроса, службы Reporting Services автоматически создают параметр отчета и набор данных, чтобы предоставить список допустимых значений. Это позволяет пользователю указать значение, которое передается непосредственно запросу.  
@@ -32,7 +32,7 @@ ms.locfileid: "48159524"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-design-mode"></a>Определение параметра запроса в многомерном выражении в режиме конструктора  
   
-1.  В области данных отчета щелкните правой кнопкой мыши на поле набора данных, созданного из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] тип источника данных и нажмите кнопку **запроса**. Конструктор запросов многомерных выражений открывается в режиме конструктора.  
+1.  В области данных отчета щелкните правой кнопкой мыши набор данных, созданный из типа источника данных служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , и выберите пункт **Запрос**. Конструктор запросов многомерных выражений открывается в режиме конструктора.  
   
 2.  Перетащите измерение в область фильтра в первую ячейку в столбце **Измерение** .  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48159524"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>Определение параметра запроса в многомерном выражении в режиме запроса  
   
-1.  В области данных отчета щелкните правой кнопкой мыши на поле набора данных, созданного из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] тип источника данных и нажмите кнопку **запроса**. Конструктор запросов многомерных выражений открывается в режиме конструктора.  
+1.  В области данных отчета щелкните правой кнопкой мыши набор данных, созданный из типа источника данных служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , и выберите пункт **Запрос**. Конструктор запросов многомерных выражений открывается в режиме конструктора.  
   
 2.  На панели инструментов нажмите кнопку **Конструктор** , чтобы переключиться в режим запроса.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48159524"
      Чтобы просмотреть набор данных, который включает доступные значения для параметра отчета, щелкните правой кнопкой мыши в любом пустом месте на панели данных отчета и выберите пункт **Показывать скрытые наборы данных**. В области данных отчета отображаются все наборы данных отчета.  
   
 ## <a name="see-also"></a>См. также  
- [Тип соединения служб аналитики для многомерных Выражений &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
- [Пользовательский интерфейс конструктора запросов многомерных выражений Analysis Services](analysis-services-mdx-query-designer-user-interface.md)  
+ [Тип соединения служб Analysis Services для запросов многомерных выражений (службы SSRS)](analysis-services-connection-type-for-mdx-ssrs.md)   
+ [Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services](analysis-services-mdx-query-designer-user-interface.md)  
   
   

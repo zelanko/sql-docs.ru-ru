@@ -29,16 +29,16 @@ helpviewer_keywords:
 - Execute method
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32e6ae99d44fbcf3f09a18fb899a2d14368dfd31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cdd0c4efafbab577aef1016d367ca2210ea3d863
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790912"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011436"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Объектная модель массовой загрузки XML SQL Server (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ ms.locfileid: "47790912"
   
  Значение по умолчанию — FALSE.  
   
- Каталог временных файлов  
+ TempFilePath  
  Указывает файловый путь, по которому массовая загрузка XML создает временные файлы для хранения данных, массово загружаемых в транзакции. (Это свойство полезно, только когда свойство Transaction имеет значение TRUE.) Следует убедиться, что у учетной записи [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], используемой для массовой загрузки XML, есть доступ к этому пути. Если это свойство не установлено, массовая загрузка XML хранит временные файлы в месте, заданном переменной среды TEMP.  
   
  Transaction  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7482b4a2ac81541cdd9f6317d7f76291e34aa162
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b2e318d8426f9c78e0065377dcb27a6186e31c0d
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420655"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079470"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Настройка HTTP-доступа к службам Analysis Services в службах IIS 8.0
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "52420655"
 > [!NOTE]  
 >  Не забудьте разблокировать порты в брандмауэре Windows, чтобы он разрешал клиентские подключения к удаленному серверу служб Analysis Services. Дополнительные сведения см. в статье [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-##  <a name="bkmk_copy"></a> Шаг 1. Копирование файлов MSMDPUMP в папку на веб-сервере  
+##  <a name="bkmk_copy"></a> Шаг 1. Копирование файлов MSMDPUMP в папку на веб-сервере  
  Каждая создаваемая конечная точка HTTP должна иметь собственный набор файлов MSMDPUMP. На этом этапе необходимо скопировать исполняемый файл MSMDPUMP, файл конфигурации и папку ресурсов из папок программ служб Analysis Services в новую папку виртуального каталога. Эта папка будет создана в файловой системе компьютера, на котором выполняется служба IIS.  
   
  Диск должен быть отформатирован для работы с файловой системой NTFS. Путь к создаваемой папке не должен содержать пробелов.  
@@ -111,8 +111,10 @@ ms.locfileid: "52420655"
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
+> [!NOTE]  
+>  Диспетчер служб IIS не может быть возможность подключиться к службам Analysis Services в текущей версии, если база данных из предыдущей резервной копии. Это вызвано изменениями в MSMDPUMP и должна быть решена путем копирования файла msmdpump.dll с предыдущую рабочую версию.
   
-##  <a name="bkmk_appPool"></a> Шаг 2. Создайте пул приложений и виртуальный каталог на сервере IIS  
+##  <a name="bkmk_appPool"></a> Шаг 2. Создайте пул приложений и виртуальный каталог на сервере IIS  
  Затем создайте пул приложений и конечную точку для средства переноса.  
   
 #### <a name="create-an-application-pool"></a>Создание пула приложений  
@@ -148,7 +150,7 @@ ms.locfileid: "52420655"
 > [!NOTE]  
 >  В предыдущие версии этих инструкций входили действия по созданию виртуального каталога. Теперь они не требуются.  
   
-##  <a name="bkmk_auth"></a> Шаг 3. Настройка аутентификации IIS и добавление расширения  
+##  <a name="bkmk_auth"></a> Шаг 3. Настройка аутентификации IIS и добавление расширения  
  В этом шаге продолжается настройка только что созданного виртуального каталога SSAS. Должен быть указан метод проверки подлинности, а затем добавлена схема скриптов. Поддерживаемые методы проверки подлинности для доступа к службам Analysis Services по протоколу HTTP:  
   
 -   Проверка подлинности Windows (Kerberos или NTLM)  

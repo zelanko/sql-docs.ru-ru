@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 51f5315633939431bb6e8287773453e08de188a7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: d3e5c894c75002f95ed67c8383c5497db998dfa9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412031"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011965"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>Область выражения для итогов, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)
   Термин *область* используется в нескольких контекстах, что становится понятно при написании выражений. Область может указывать на данные, используемые для вычисления выражений, набор текстовых полей на подготавливаемой странице, набор элементов отчета, которые могут отображаться или быть скрытыми. Термин *область* используется в разделах о вычислении выражений, синтаксисе агрегатных функций, условной видимости и в сообщениях об ошибках, связанных с этими темами. Ниже приводится описание различий в употреблении термина *область* .  

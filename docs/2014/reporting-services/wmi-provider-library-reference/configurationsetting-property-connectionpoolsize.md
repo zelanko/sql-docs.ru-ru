@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: b80c8e5d-b725-4fe4-aec6-02fb18ec4434
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f4f555db5b87e2233229215da5b800c0eedea61c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 589069aebe2275fd06e58385fd85cffaaa3c1222
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172084"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016135"
 ---
 # <a name="connectionpoolsize-property-wmi-msreportserverconfigurationsetting"></a>Свойство ConnectionPoolSize (WMI MSReportServer_ConfigurationSetting)
   Размер пула соединений, используемого сервером отчетов для связи с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , где находится база данных сервера отчетов. Только для чтения.  
@@ -48,7 +48,7 @@ public UInt32 ConnectionPoolSize;
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

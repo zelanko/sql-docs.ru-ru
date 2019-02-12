@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4874ba29-429b-4dd4-a8cb-d4f087237dc2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8a2697af9ede2b6b72e7f08efd88822101c51d53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 057d2c4c75bbc0d7070992571a80907e811d354e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102804"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031635"
 ---
 # <a name="view-page-reports-report-manager"></a>Страница «Вид», отчеты (диспетчер отчетов)
   Просмотреть отчет можно на странице «Просмотр». При первом открытии в диспетчере отчетов отчет имеет формат HTML. В верхней части HTML-отчета содержится панель инструментов, позволяющая перемещаться по страницам отчета, выполнять поиск или экспортировать отчет в другой формат. На следующей диаграмме представлена панель инструментов «Отчеты».  
@@ -39,7 +39,7 @@ ms.locfileid: "48102804"
 >  Моментальные снимки состояния выполнения отчетов и некоторые форматы экспорта доступны не во всех выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="see-also"></a>См. также  
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

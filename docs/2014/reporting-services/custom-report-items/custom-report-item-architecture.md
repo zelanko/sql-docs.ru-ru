@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2a88ea46-c9f8-4dd7-aad1-16de11da4f06
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3d75fed63f44e0371b81fbd7309a0a3f826543b5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 24457cb6a471b91666f4eb0792e1c8fa186eaf42
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401057"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011835"
 ---
 # <a name="custom-report-item-architecture"></a>Архитектура пользовательских элементов отчета
   Пользовательский элемент отчета является расширением языка определения отчетов (RDL), позволяющим разработчикам добавлять функции, изначально не поддерживаемые в RDL, или расширять функциональные возможности существующих элементов управления. Существует два основных компонента пользовательского элемента отчета: компонент времени выполнения и компонент времени разработки. Эти компоненты реализованы как сборки платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и могут быть записаны на любом соответствующем CLS языке.  
@@ -37,6 +37,6 @@ ms.locfileid: "52401057"
 ## <a name="see-also"></a>См. также:  
  [Создание компонента времени выполнения пользовательского элемента отчета](../custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [Создание компонента времени разработки пользовательского элемента отчета](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
- [Как Развертывание пользовательского элемента отчета](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [Как развернуть пользовательский элемент отчета](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

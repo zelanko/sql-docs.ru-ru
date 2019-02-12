@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b23f670aa6ddabbf3789da4b06fb8b9b1a4d1e13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5a8957c3dbc7fdf627edde70814227833d81f4c6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211196"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036036"
 ---
 # <a name="using-url-access-in-a-web-application"></a>Использование доступа по URL-адресу в веб-приложении
   Доступ по URL-адресам в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] специально разработан таким образом, чтобы можно было получить доступ по сети к отдельным отчетам. Этот тип доступа наилучшим образом подходит для интеграции средств просмотра и навигации по отчетам в пользовательских веб-приложениях. Использовать доступ по URL-адресам в веб-приложениях можно следующим образом.  

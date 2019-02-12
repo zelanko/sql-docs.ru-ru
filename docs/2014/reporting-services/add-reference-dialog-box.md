@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Edit References dialog box
 ms.assetid: 7bdd2eee-195a-4a2f-a0aa-56f7e90c1fb4
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d857a936c0c1a25ff54f4b51aa6511a101e96b2d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 72c14cba8580e926eff05dbb5b7644d64e517913
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223294"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009488"
 ---
 # <a name="add-reference-dialog-box"></a>Диалоговое окно «Добавление ссылки»
   Диалоговое окно **Добавление ссылки** предназначено для добавления в отчет ссылок на пользовательские сборки или компоненты [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] . После добавления ссылки на сборку в отчет можно включать выражения или внедренный пользовательский код, включающий полные ссылки на классы или методы в сборке или компоненте. Дополнительные сведения см. в разделах [Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов (службы SSRS)](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md) и [Добавление в отчет ссылку на сборку (службы SSRS)](report-design/add-an-assembly-reference-to-a-report-ssrs.md).  

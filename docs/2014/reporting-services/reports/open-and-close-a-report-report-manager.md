@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b8db59646eb8bbb4d4bbe35c0fc54e4b243d4b28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 41d67805a939cd6b5826dd227cc02e348e48dc32
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065734"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034404"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Открытие и закрытие отчетов (диспетчер отчетов)
   Диспетчер отчетов можно использовать для просмотра отчетов, опубликованных на сервере отчетов. По умолчанию все отчеты открываются в формате HTML. После открытия отчета, его можно экспортировать для просмотра в формате других приложений. Если отчет содержит интерактивные функции, либо разработан в построителе отчетов и содержит интерактивные данные, можно щелкать ссылки для просмотра дополнительных отчетов или данных.  
   
 ### <a name="to-view-a-report"></a>Просмотр отчета  
   
-1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](../report-manager-ssrs-native-mode.md).  
+1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md).  
   
 2.  Найдите отчет непосредственно в папках или путем поиска по имени. Для просмотра содержимого любой из папок нужно щелкнуть имя или значок соответствующей папки на странице **Содержимое** . Для поиска отчета введите полностью или частично его имя в текстовом поле **Поиск** в верхней части страницы.  
   
@@ -42,8 +42,8 @@ ms.locfileid: "48065734"
      Закрываемый отчет не удаляется из кэша браузера. Для отключения от отчета необходимо закрыть браузер.  
   
 ## <a name="see-also"></a>См. также  
- [Поиск отчетов и других элементов &#40;построитель отчетов и службы SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [Содержимое страницы &#40;диспетчера отчетов&#41;](../contents-page-report-manager.md)   
+ [Поиск отчетов и других элементов (построитель отчетов и службы SSRS)](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
+ [Страница "Содержимое" (диспетчер отчетов)](../contents-page-report-manager.md)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Управление содержимым сервера отчетов (службы Reporting Services в собственном режиме)](../report-server/report-server-content-management-ssrs-native-mode.md)  
   

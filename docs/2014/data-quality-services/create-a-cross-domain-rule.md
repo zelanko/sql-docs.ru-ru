@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.dm.testcdrule.f1
 - sql12.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: e413c2a6057476fb44d5a7a106c8374621b9937c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b50eb916b114387f9d80202cf0993e830e79aecd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415681"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012031"
 ---
 # <a name="create-a-cross-domain-rule"></a>Создание междоменного правила
   В этом разделе описано, как создать междоменное правило для составного домена в базе знаний служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Междоменное правило проверяет связь между значениями в отдельных доменах, включенных в составной домен. Междоменное правило должно выполняться в составном домене, чтобы значения в домене были точными и соответствовали требованиям бизнеса. Междоменное правило используется для проверки, исправления и стандартизации значений в домене.  
@@ -94,7 +94,7 @@ ms.locfileid: "52415681"
   
 2.  Закончив работу со всеми междоменными правилами, нажмите кнопку **Готово** , чтобы завершить действие управления доменами, как описано в разделе [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия: После создания междоменного правила  
+##  <a name="FollowUp"></a> Дальнейшие действия. После создания междоменного правила  
  Создав перекрестное правило, можно выполнить для этого домена другие задачи управления доменами, провести обнаружение знаний для добавления знаний в домен или добавить в домен политику сопоставления. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../../2014/data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../../2014/data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

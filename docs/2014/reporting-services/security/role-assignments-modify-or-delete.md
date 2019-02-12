@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6a562c7b9a888f6bfbb071e3068a3c4cf661c3ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 19f87ffa52dcc8cc1434afa7e6519e93bd580cb5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215534"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026895"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>Изменение или удаление назначения ролей (диспетчер отчетов)
   Назначение ролей сопоставляет учетную запись группы или пользователя со стандартным определением роли, включающим задачи, которые могут быть выполнены. Оно определяет типы операций, которые пользователь может выполнять с папками, отчетами, моделями и другим типом содержимого. Чтобы создать, изменить или удалить назначения ролей, используется диспетчер отчетов. После создания назначения ролей для конкретного пользователя или группы ее можно изменить, выбрав другую роль. Если нужно отменить разрешения на сервер отчетов, можно удалить на нем назначение ролей.  
@@ -37,7 +37,7 @@ ms.locfileid: "48215534"
   
 ### <a name="to-modify-or-delete-a-system-role-assignment"></a>Удаление или изменение назначения системной роли  
   
-1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](../report-manager-ssrs-native-mode.md).  
+1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](../report-manager-ssrs-native-mode.md).  
   
 2.  Щелкните элемент **Настройки сайта**.  
   
@@ -67,6 +67,6 @@ ms.locfileid: "48215534"
  (Создание и управление role-assignments.md)   
  [Назначения ролей](role-assignments.md)   
  [Страница "Параметры сайта" (диспетчер отчетов)](../site-settings-page-report-manager.md)   
- [Страница "Создание назначения системной роли": "изменение назначения системных ролей" (диспетчер отчетов)](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+ [Создание назначения системной роли: Страница «Изменение» назначения роли системы &#40;диспетчера отчетов&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
   

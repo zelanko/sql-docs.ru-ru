@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 75cd508f-b126-418b-848d-3c4c3e6c303f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1e0bee469bd6dbbc93a48051e7c2e236c6c65c74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21eaa86fb1ff594e8b9d2b779b787276ee13ab4b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180924"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028895"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>Задание набора проверочных данных для структуры (учебник по интеллектуальному анализу данных — начальный уровень)
   На нескольких последних экранах мастера интеллектуального анализа данных данные разбиваются на обучающий и проверочный наборы. Затем структура именуется и включается детализация на модели.  
@@ -35,7 +34,7 @@ ms.locfileid: "48180924"
 ## <a name="specifying-drillthrough"></a>Задание детализации  
  Детализация может быть включена для моделей и структур. Флажок в этом диалоговом окне включает детализацию для именованной модели. После обработки модели можно извлекать подробные сведения из обучающих данных, которые использовались при создании модели.  
   
- Если детализация также разрешена для базовой структуры интеллектуального анализа данных, то можно получать сведения из вариантов модели и структуры интеллектуального анализа данных, включая столбцы, отсутствующие в модели интеллектуального анализа данных. Дополнительные сведения см. в разделе [Drillthrough Queries &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md).  
+ Если детализация также разрешена для базовой структуры интеллектуального анализа данных, то можно получать сведения из вариантов модели и структуры интеллектуального анализа данных, включая столбцы, отсутствующие в модели интеллектуального анализа данных. Дополнительные сведения см. в разделе [Запросы детализации (интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 #### <a name="to-name-the-model-and-structure-and-specify-drillthrough"></a>Именование модели и структуры и задание детализации  
   
@@ -53,11 +52,11 @@ ms.locfileid: "48180924"
  [Указание типа данных и типа содержимого &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 3. Добавление и обработка моделей](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
+ [Занятие 3. Добавление и обработка моделей](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
   
 ## <a name="see-also"></a>См. также  
  [Включение детализации для модели интеллектуального анализа данных](../../2014/analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)   
- [Запросы детализации &#40;интеллектуального анализа данных&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)   
+ [Запросы детализации (интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)   
  [Определение обучающих данных &#40;мастер интеллектуального анализа данных&#41;](../../2014/analysis-services/specify-the-training-data-data-mining-wizard.md)  
   
   

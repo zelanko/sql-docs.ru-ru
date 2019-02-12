@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cba6c585d94615a1afa5d09ffb62a84da2177616
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 383e356a85597a6b6564584fc375e83f258241b9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223044"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019365"
 ---
 # <a name="detail-property"></a>Свойство Detail
   Свойство **Detail** класса [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]SoapException**служб** имеет следующую структуру XML:  

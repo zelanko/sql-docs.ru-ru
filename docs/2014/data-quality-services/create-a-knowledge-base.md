@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.kb.selectkb.f1
 - sql12.dqs.kb.newkb.f1
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 41e4f8b200a113dc7f4c3bc6ba4edd94d341c523
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 2edab11fc05f7fec3af8d2fcbff48f4f44a2e8e0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033001"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036015"
 ---
 # <a name="create-a-knowledge-base"></a>Создание базы знаний
   В этом разделе описано, как создать базу знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) и подготовить ее для управления доменами, обнаружения знаний или добавления политики сопоставления.  

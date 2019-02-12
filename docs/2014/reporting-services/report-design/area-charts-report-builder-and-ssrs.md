@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4d19fa1a5aca4ac67be6328646df47267218af42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f8970e77cf6ab77dc5dd4cc0544237d6a1269db2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191004"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034165"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>Диаграммы с областями (построитель отчетов и службы SSRS)
-  В диаграммах с областями данные выводятся в виде точек, соединенных линией, с закрашенными ниже этой линии областями. Дополнительные сведения о добавлении данных в диаграмму с областями см. в разделе [диаграммы &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md).  
+  В диаграммах с областями данные выводятся в виде точек, соединенных линией, с закрашенными ниже этой линии областями. Дополнительные сведения о добавлении данных в диаграммы с областями см. в разделе [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md).  
   
  На следующей иллюстрации показан пример диаграммы с областями с накоплением. Рассматриваемые данные хорошо подходят для отображения на диаграмме с областями с накоплением, поскольку эта диаграмма позволяет отображать итоги для всех рядов, а также пропорциональную долю каждого ряда в общем итоге.  
   
@@ -55,6 +55,6 @@ ms.locfileid: "48191004"
  [Типы диаграмм (построитель отчетов и службы SSRS)](chart-types-report-builder-and-ssrs.md)   
  [Графики (построитель отчетов и службы SSRS)](line-charts-report-builder-and-ssrs.md)   
  [Изменение типа диаграммы (построитель отчетов и службы SSRS)](change-a-chart-type-report-builder-and-ssrs.md)   
- [Значение Null, точек данных на диаграммах и пустые &#40;построитель отчетов и службы SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
+ [Точки данных со значением NULL и пустые точки в диаграммах (построитель отчетов и службы SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

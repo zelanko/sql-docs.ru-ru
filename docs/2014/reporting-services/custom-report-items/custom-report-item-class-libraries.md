@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e65ae16a2297c0f54f16e31e770623c8edd80639
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 5a5586ac74b77a6019d83a451a0b94fa2aa1bca2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376806"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012545"
 ---
 # <a name="custom-report-item-class-libraries"></a>Библиотеки классов пользовательского элемента отчета
   В пользовательских элементах отчетов используются классы из пространства имен `Microsoft.ReportDesigner`. Классы, используемые для реализации пользовательского элемента отчета, можно разделить на две основные группы: уникальные классы, созданные для поддержки инфраструктуры пользовательских элементов отчетов, и управляемые классы-оболочки, инкапсулирующие функциональные возможности соответствующих элементов языка определения отчетов. Образец кода для использования этих классов см. на странице [Образцы продуктов служб SQL Server Reporting](https://go.microsoft.com/fwlink/?LinkId=177889).  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7a3e1d824567358d54afef75c22d78613b883b5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca003e937f5e9547fa1bda0243967a8ff1d8331a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133294"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019325"
 ---
 # <a name="report-manager-f1-help"></a>Справка F1 диспетчера отчетов
   Следующие разделы содержат справку по страницам для диспетчера отчетов служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Каждой странице приложения посвящен отдельный раздел. Доступны могут быть не все страницы. Доступность страниц определяется настройками безопасности. Чтобы открыть эти разделы в диспетчере отчетов, на главной панели инструментов нажмите кнопку **Справка** .  
@@ -104,9 +104,9 @@ ms.locfileid: "48133294"
  Дополнительные сведения о диспетчере отчетов и службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]см. в электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на сайте MSDN.  
   
 ## <a name="see-also"></a>См. также  
- [Управление содержимым сервера отчетов &#40;собственный режим служб SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Справочник по компонентам (службы Reporting Services)](feature-reference-reporting-services.md)   
- [Управление содержимым сервера отчетов &#40;собственный режим служб SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Диспетчер отчетов](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Обзор компонентов служб отчетов](tools/reporting-services-tools.md)  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8bba223000110229c6df9098c263afaea30d711a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4f3d77e65361081a2c06e9e10c25b1bf6757d5d6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117352"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019405"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>Вставка или удаление столбца (построитель отчетов и службы SSRS)
   Добавить или удалить столбцы можно в области данных табликса. Областью данных табликса может быть таблица, матрица или список. Следующие процедуры не применяются к области данных диаграммы и датчика.  
@@ -59,7 +59,7 @@ ms.locfileid: "48117352"
 -   Щелкните правой кнопкой мыши ячейку группы столбцов в области данных табликса там, где нужно удалить столбец, и выберите команду **Удалить столбцы**.  
   
 ## <a name="see-also"></a>См. также  
- [Основные сведения о группах &#40;построитель отчетов и службы SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)   
+ [Основные сведения о группах (построитель отчетов и службы SSRS)](understanding-groups-report-builder-and-ssrs.md)   
  [Область данных табликса (построитель отчетов и службы SSRS)](../tablix-data-region-report-builder-and-ssrs.md)   
  [Таблицы &#40;построитель отчетов и службы SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Матрицы &#40;построитель отчетов и службы SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8b591801-42d5-49fa-b710-bf7e6917accf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5c2fa313e594dae2cfac69684770e77908c56eff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 309bf459e82d0683d708401e10aa7b3c911a5cec
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352610"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036105"
 ---
 # <a name="using-the-renderedoutputfile-class-for-a-delivery-extension"></a>Использование класса RenderedOutputFile для модуля доставки
   Класс <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> представляет поток данных и сведения о свойствах, связанных с ним. Свойство **Data** класса <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> используется для представления подготовленного отчета или ресурса отчета в качестве объекта **Stream**.  

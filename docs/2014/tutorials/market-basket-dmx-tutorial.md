@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
@@ -18,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0f29aff4341126665e184e12219aca014222cd82
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: fe12f1c4ca1c0946572c61e89f4f4edb8ba9a762
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360796"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027534"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Учебник по расширениям интеллектуального анализа данных потребительской корзины
   С помощью данного учебника вы научитесь создавать, обучать и исследовать модели интеллектуального анализа данных при помощи языка запросов расширения интеллектуального анализа данных (DMX). После этого вы будете использовать модели интеллектуального анализа данных для создания прогнозов, описывающих, какие продукты будут покупаться с наибольшей вероятностью.  
@@ -93,7 +92,7 @@ ms.locfileid: "53360796"
  [Занятие 2. Добавление моделей интеллектуального анализа данных к структуре интеллектуального анализа данных потребительской корзины](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
  На этом занятии рассматривается использование инструкции `ALTER` для добавления моделей интеллектуального анализа данных в структуру интеллектуального анализа данных.  
   
- [Занятие 3. Обработка структуры интеллектуального анализа данных потребительской корзины](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [Занятие 3. Обработка структуры интеллектуального анализа данных потребительской корзины](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
  На этом занятии рассматривается использование инструкции `INSERT INTO` для обработки структур интеллектуального анализа данных и связанных с ними моделей интеллектуального анализа данных.  
   
  [Занятие 4. Выполнение прогнозов потребительской корзины](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
@@ -116,6 +115,6 @@ ms.locfileid: "53360796"
 ## <a name="see-also"></a>См. также  
  [Bike Buyer расширений интеллектуального анализа данных учебника](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [Учебник по основам интеллектуального анализа данных](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Занятие 3. Построение сценария потребительской корзины &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Занятие 3. Построение сценария потребительской корзины &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

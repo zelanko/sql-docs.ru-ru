@@ -1,22 +1,21 @@
 ---
-title: 'Урок 1: Создание структуры интеллектуального анализа данных для покупателя велосипеда | Документация Майкрософт'
+title: Урок 1. Создание структуры интеллектуального анализа данных для покупателя велосипеда | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a73ac60b-660f-458a-bd2f-993fbeba7226
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6aa8d340b64f98193b31b6ebc6321407cff8368
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082684"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025805"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Урок 1. Создание структуры интеллектуального анализа данных для покупателя велосипеда
   На этом занятии вы создадите структуры интеллектуального анализа данных, которая позволяет предсказать, купит ли потенциальный клиент [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] велосипед. Если вы не знакомы со структурами интеллектуального анализа данных и их роли в интеллектуальном анализе данных, см. в разделе [структур интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
@@ -215,6 +214,6 @@ WITH HOLDOUT (<holdout specifier>)
  На следующем занятии вы добавите модели интеллектуального анализа данных в только что созданную структуру.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 2. Добавление моделей интеллектуального анализа к структуре интеллектуального анализа "Покупатель велосипеда"](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [Занятие 2. Добавление моделей интеллектуального анализа данных для структуры интеллектуального анализа данных для покупателя велосипеда](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
   
   

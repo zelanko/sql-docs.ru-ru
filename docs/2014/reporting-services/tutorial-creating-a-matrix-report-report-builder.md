@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 45e488f189cf9068531b927b1b28bfde621555da
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 86bffd9c3cf98732da253e511287a9c9e722f4a7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353395"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033125"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Учебник. Создание матричного отчета (построитель отчетов)
   Это учебник поможет создать простой матричный отчет на основе образца данных по продажам. Матрица имеет вложенные группы строк и столбцов и смежную группу столбцов. Вы узнаете, как форматировать столбцы и поворачивать текст. На приведенном далее рисунке показан отчет, похожий на тот, который будет в итоге создан.  
@@ -48,7 +48,7 @@ ms.locfileid: "53353395"
   
 1.  [Поворот текстового поля на 270 градусов](#RotateTextBox)  
   
- Предполагаемое время для выполнения заданий данного учебника: 20 минут.  
+ Предполагаемое время для выполнения заданий данного учебника: 20 минут.  
   
 ## <a name="requirements"></a>Требования  
  Дополнительные сведения о требованиях см. в разделе [Предварительные условия для использования учебников (построитель отчетов)](../reporting-services/report-builder-tutorials.md).  

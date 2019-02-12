@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: aa3dbc789b561702d21d705d1b9d362f7f3c01d7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 7f7f1df9e5b5ee885af3e7a0fe462faeafd2d6b7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416665"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026425"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Занятие 2. Изменение свойств источника данных отчета
   На этом занятии с помощью диспетчера отчетов будет выбираться отчет, который необходимо доставить получателям. Управляемая данными подписка, которую вы создадите, будет распространять отчет **Заказ на продажу** , созданный при работе с учебником [Создание простого табличного отчета (учебник по службам SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). В последующих шагах будут изменены сведения о соединении с источником данных, используемые в отчете для получения данных. Только отчеты, использующие **сохраненные учетные данные** для доступа к источнику данных для отчета, могут распространяться с помощью управляемой данными подписки. Сохраненные учетные данные нужны для автоматической обработки отчета.  

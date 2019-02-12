@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5ef8efba-6d48-4aeb-a3b9-a02ba5a44614
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 620aeb6092f5499e1d9797451347e282a0802a7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9e6b467700d816e4b46dfa7ae38f67be32234c7d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102634"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041795"
 ---
 # <a name="add-a-details-group-report-builder-and-ssrs"></a>Добавление группы подробных сведений (построитель отчетов и службы SSRS)
   Подробные данные из набора данных отчета указываются в виде группы, не содержащей выражение группы. Если необходимо отобразить подробные данные для матрицы, вернуть подробные данные, удаленные из таблицы или списка, или добавить дополнительные группы сведений, то следует добавить дополнительную группу сведений к существующей области данных табликса. Дополнительные сведения о группах см. в разделе [Основные сведения о группах (построитель отчетов и службы SSRS)](understanding-groups-report-builder-and-ssrs.md).  
@@ -39,8 +39,8 @@ ms.locfileid: "48102634"
      Новая группа подробностей добавляется в панель «Группирование» в виде дочерней группы, и маркер строки для группы, выбранной в шаге 1, отображает значок группы подробностей. Дополнительные сведения о маркерах см. в разделе [Ячейки, строки и столбцы области данных табликса &#40;построитель отчетов&#41; и службы SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также  
- [Добавление или удаление группы в области данных &#40;построитель отчетов и службы SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
- [Основные сведения о группах &#40;построитель отчетов и службы SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)   
+ [Добавление или удаление группы в области данных (построитель отчетов и службы SSRS)](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
+ [Основные сведения о группах (построитель отчетов и службы SSRS)](understanding-groups-report-builder-and-ssrs.md)   
  [Область данных табликса (построитель отчетов и службы SSRS)](../tablix-data-region-report-builder-and-ssrs.md)   
  [Таблицы &#40;построитель отчетов и службы SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Матрицы &#40;построитель отчетов и службы SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

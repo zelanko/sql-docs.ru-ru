@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5f55cbf6-0db4-4cb4-a0f5-e27441873d4f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f762b6c561f96f8ced9f8fe977dceb3b9208d01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6e631a8983705d4f58e4b193823c9a255284f346
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048524"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015255"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>Создание структуры и модели прогнозирования (учебник по интеллектуальному анализу данных — средний уровень)
   Далее будет использоваться мастер интеллектуального анализа данных для создания новой структуры интеллектуального анализа данных и модели интеллектуального анализа данных на основе только что созданного представления источников данных. В этой задаче вы укажете, что модели интеллектуального анализа данных следует использовать [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритм временных рядов.  
@@ -64,7 +63,7 @@ ms.locfileid: "48048524"
  [Изменение структуры прогнозирования &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/modifying-the-forecasting-structure-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>См. также  
- [Конструктор интеллектуального анализа данных](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [конструктор интеллектуального анализа данных](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Алгоритм временных рядов (Майкрософт)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2029cd6fd95916b71ee673713978a1fe3a1ccd36
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 15bac4bb872e1fb3fc42fb62cf355f53358442b9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082545"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014575"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService, файл конфигурации
   Файл ReportingServicesService.exe.config содержит параметры, позволяющие настраивать трассировку.  
@@ -29,7 +29,7 @@ ms.locfileid: "48082545"
  Этот файл находится в папке \Reporting Services\Report Server\Bin.  
   
 ## <a name="editing-guidelines"></a>Рекомендации по изменению  
- В этом файле можно переименовать файл журнала, а также увеличить (или уменьшить) уровень трассировки. Другие параметры изменять не следует. Инструкции см. в разделе [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](modify-a-reporting-services-configuration-file-rsreportserver-config.md). Дополнительные сведения о журналах трассировки см. в разделе [журнал трассировки службы сервера отчетов](report-server-service-trace-log.md).  
+ В этом файле можно переименовать файл журнала, а также увеличить (или уменьшить) уровень трассировки. Другие параметры изменять не следует. Инструкции см. в разделе [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](modify-a-reporting-services-configuration-file-rsreportserver-config.md). Дополнительные сведения о журналах трассировки см. в разделе [Журнал трассировки службы сервера отчетов](report-server-service-trace-log.md).  
   
 ## <a name="example-configuration"></a>Пример конфигурации  
  В следующем примере показаны параметры и значения по умолчанию из файла ReportingServicesService.exe.config.  
@@ -72,7 +72,7 @@ ms.locfileid: "48082545"
 ## <a name="configuration-settings"></a>Параметры конфигурации  
  Сведения об отдельных параметрах приведены в следующей таблице. Параметры представлены в том порядке, в котором они следуют в файле конфигурации.  
   
-|Настройка|Описание|  
+|Параметр|Описание|  
 |-------------|-----------------|  
 |**RStrace**|Задает пространства имен для ошибок и трассировки.|  
 |**DefaultTraceSwitch**|Задает уровень данных, записываемых в журнал трассировки ReportServerService. Каждый уровень содержит данные, передаваемые более низкими уровнями. Отключать трассировку не рекомендуется. Допустимы следующие значения.<br /><br /> 0 = Отключить трассировку<br /><br /> 1 = Исключения и перезапуски<br /><br /> 2 = Исключения, перезапуски, предупреждения<br /><br /> 3 = Исключения, перезапуски, предупреждения, сообщения о состоянии (по умолчанию)<br /><br /> 4 = Подробный режим|  

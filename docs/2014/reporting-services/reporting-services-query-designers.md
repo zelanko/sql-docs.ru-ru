@@ -11,21 +11,21 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: 07efd3f1-804f-45f7-b62a-3e727a3d9835
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1e8a2fabc77b4b2ca5d8a27b83c29c233148032e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 45273aa1bce0e0caec60ce415762f0c52fe67a98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219501"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010815"
 ---
 # <a name="reporting-services-query-designers"></a>Конструкторы запросов служб Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляет графический и текстовый конструкторы запросов для построения запросов для каждого типа источника данных в отчете.  
   
  Некоторые источники данных поддерживают графические конструкторы запросов, которые позволяют формировать запросы в интерактивном режиме. Для других источников данных используется текстовый конструктор запросов. В графическом конструкторе запросов поддерживается перетаскивание из источника данных в область конструктора элементов метаданных, представляющих данные. В текстовом конструкторе запросов на панели запроса можно ввести текст команды. Переключение из графического конструктора запросов в текстовый производится щелчком значка текстового конструктора запросов на панели инструментов.  
   
- Доступные типы источников данных определяются модулями обработки данных служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], установленными на клиенте или на сервере отчетов. Дополнительные сведения см. в разделе [файл конфигурации RSReportDesigner](report-server/rsreportdesigner-configuration-file.md) и [файл конфигурации RSReportServer](report-server/rsreportserver-config-configuration-file.md).  
+ Доступные типы источников данных определяются модулями обработки данных служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , установленными на клиенте или на сервере отчетов. Дополнительные сведения см. в разделах [RSReportDesigner Configuration File](report-server/rsreportdesigner-configuration-file.md) и [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md).  
   
  Модуль обработки данных и связанный с ним конструктор запросов могут иметь различный уровень поддержки источников данных.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "48219501"
 -   [Пользовательский интерфейс текстового конструктора запросов](../../2014/reporting-services/text-based-query-designer-user-interface.md)  
   
 ## <a name="see-also"></a>См. также  
- [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Источники данных, поддерживаемые службами Reporting Services (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Добавление данных из внешних источников данных &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md)   
  [Модули обработки данных и поставщики данных .NET Framework &#40;SSRS&#41;](report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md)   
- [Расширения &#40;SSRS&#41;](extensions-ssrs.md)  
+ [Расширения (SSRS)](extensions-ssrs.md)  
   
   

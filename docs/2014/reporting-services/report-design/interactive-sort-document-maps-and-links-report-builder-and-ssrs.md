@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 68e73b7fc2d7b1982724da4040c4912473f30d78
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 62ed0c324711ab38460c59ecc0e74291a1080d2d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352573"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017735"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)
   В веб-средах можно добавлять множество функций, обеспечивающих взаимодействие пользователей с отчетами. Пользователи могут изменять порядок сортировки значений в отчете, показывать или скрывать элементы отчета, а также щелкать ссылки для перехода к другим отчетам или веб-страницам. Также можно добавить оглавление или схему документа. Пользователи отчета могут переходить к различным областям отчета, щелкая элементы в оглавлении или схеме документа.  

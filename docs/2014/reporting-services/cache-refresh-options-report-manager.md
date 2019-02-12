@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e1fb1f7f249d8252873eb7ecc879aac05fb496b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b759391592a84d0509a8036277ccb6e0cc92a279
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081554"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011507"
 ---
 # <a name="cache-refresh-options-report-manager"></a>Cache Refresh Options (Report Manager)
   Страница «Параметры обновления кэша» позволяет создать расписания, предназначенные для предварительной загрузки кэша временными копиями данных для отчета или для общего набора данных. План обновления включает расписание и параметр, позволяющий указать или переопределить значения для параметров. Для общего набора данных нельзя переопределять значения для параметров, которые отмечены как допускающие только чтение. Можно создавать и использовать больше одного плана обновления с помощью страницы параметров обновления.  
@@ -66,12 +66,12 @@ ms.locfileid: "48081554"
  **Настройка**  
  Щелкните, чтобы открыть страницу «Расписание», которая используется для указания сведений о частоте.  
   
- Дополнительные сведения см. в разделе [новое расписание: изменить расписание страницу &#40;диспетчера отчетов&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md).  
+ Дополнительные сведения см. в разделе [новое расписание: Изменение расписания страницы &#40;диспетчера отчетов&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md).  
   
  **Общее расписание**  
  Выберите этот параметр, чтобы использовать существующее расписание.  
   
- Дополнительные сведения см. в разделе [создание, изменение и удаление расписаний](subscriptions/create-modify-and-delete-schedules.md).  
+ Дополнительные сведения см. в статье [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md).  
   
  **@\<** *Параметр* **>**  
  Указание одного сочетания значений параметров. Этот раздел появляется, только если текущий набор данных или отчет имеет параметры.  
@@ -130,7 +130,7 @@ ms.locfileid: "48081554"
   
 ## <a name="see-also"></a>См. также  
  [Задачи уровня элемента](security/tasks-and-permissions-item-level-tasks.md)   
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
  [Кэширование отчетов (службы SSRS)](report-server/caching-reports-ssrs.md)   
  [Управление общими наборами данных](report-data/manage-shared-datasets.md)  

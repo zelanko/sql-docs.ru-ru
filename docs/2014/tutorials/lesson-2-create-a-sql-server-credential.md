@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 64f8805c-1ddc-4c96-a47c-22917d12e1ab
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b1a59c1e32773ddc022319a9357ea61802864a77
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fbea11b0500c075105bff885cdb1cd8264b320d6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372586"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014085"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>Занятие 2. Создание учетных данных SQL Server
-  **Учетные данные.** Учетные данные [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] являются объектом, который используется для хранения информации о проверке подлинности, которая необходима для подключения к источнику за пределами SQL Server.  В данном случае процессы резервного копирования и восстановления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] используют учетные данные для проверки подлинности в службе хранилища больших двоичных объектов Windows Azure. Учетные данные хранят имя учетной записи хранилища и значения **ключа доступа** учетной записи хранилища. После создания учетных данных их необходимо указать в параметре WITH CREDENTIAL при выполнении инструкций BACKUP/RESTORE. Дополнительную информацию о просмотре, копировании или повторном создании учетной записи хранилища **access keys**см. в разделе [Ключи доступа к учетной записи](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
+  **Учетные данные**. Учетные данные [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] являются объектом, который используется для хранения информации о проверке подлинности, которая необходима для подключения к источнику за пределами SQL Server.  В данном случае процессы резервного копирования и восстановления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] используют учетные данные для проверки подлинности в службе хранилища больших двоичных объектов Windows Azure. Учетные данные хранят имя учетной записи хранилища и значения **ключа доступа** учетной записи хранилища. После создания учетных данных их необходимо указать в параметре WITH CREDENTIAL при выполнении инструкций BACKUP/RESTORE. Дополнительную информацию о просмотре, копировании или повторном создании учетной записи хранилища **access keys**см. в разделе [Ключи доступа к учетной записи](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
  Общие сведения об учетных данных см. в разделе [Учетные данные](../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
@@ -53,6 +52,6 @@ ms.locfileid: "53372586"
  Дополнительные сведения о службе хранилища больших двоичных объектов Windows Azure для резервного копирования основные понятия и требования, см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилищ больших двоичных объектов Windows Azure](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ### <a name="next-lesson"></a>Следующее занятие  
- [Занятие 3. Запись полной резервной копии в Windows Azure Blob Storage Service](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md).  
+ [Занятие 3. Запись полной резервной копии в Windows Azure Blob Storage Service](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md).  
   
   

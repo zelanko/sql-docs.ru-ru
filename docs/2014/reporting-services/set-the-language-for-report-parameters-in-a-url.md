@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: e1ccf22f-80d6-45bc-aae0-f5f263275092
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3d855e911a20749b405179ebd31dfb10ac6ddc97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c6150d3060861d2e485ea8e3cd5ad2a0eecc6e38
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122864"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031405"
 ---
 # <a name="set-the-language-for-report-parameters-in-a-url"></a>Задать язык для параметров отчета в URL-адресе
   Параметр *rs:ParameterLanguage* для доступа по URL-адресу устраняет проблему, когда для интерпретации таких региональных параметров отчета, как дата, время, валюта и числа, используется язык браузера. URL-адрес с указанным параметром *rs:ParameterLanguage*интерпретируется независимо от браузера. Например, если на сервере отчетов установлены региональные параметры «Немецкий», но пользователь обращается к отчету по URL-адресу из браузера, в котором установлены региональные параметры «Английский (США)», то значения параметров, передаваемые на сервер отчетов, будут обрабатываться неправильно.  
@@ -43,7 +43,7 @@ http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render
  Дополнительно к значениям **true** и **false** для параметра доступа по URL-адресу *rc:Parameters*теперь можно передавать значение **Collapsed**. Если в URL-адресе используется значение *rc:Parameters*=**Collapsed** , область параметров в средстве просмотра HTML-страниц сворачивается, но пользователь может ее включить. Значение **false** полностью удаляет область параметров с панели инструментов средства просмотра HTML-страниц и делает ее недоступной для пользователя.  
   
 ## <a name="see-also"></a>См. также  
- [URL-адресов &#40;SSRS&#41;](url-access-ssrs.md)   
+ [Доступ по URL-адресу (службы SSRS)](url-access-ssrs.md)   
  [Ссылка на параметр доступа по URL-адресу](url-access-parameter-reference.md)  
   
   

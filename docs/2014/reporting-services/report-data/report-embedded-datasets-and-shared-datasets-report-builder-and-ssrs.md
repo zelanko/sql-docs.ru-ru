@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 278cbff64973a76afd82ae7f01e8c81d12f20e5a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 3c1e16950a2092feb69159cdcad18c4b7d6f69fe
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373396"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012695"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)
   Набор данных указывает данные, которые надо извлечь через соединение с данными. Набор данных основывается на подключении к данным, сохраненном в отчете как внедренный источник данных или как ссылка на общий источник данных на сервере отчетов. Набор данных включает в себя запрос, указывающий на набор полей. При перетаскивании этих полей в область конструктора создаются выражения, значением которых при выполнении отчета являются фактические данные.  

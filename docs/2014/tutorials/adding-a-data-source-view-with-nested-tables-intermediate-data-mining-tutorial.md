@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a14cd7f1-7a10-4ec6-af6a-f5f0676a0308
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 70db9a9ff6ed8aa5c9a960ae40009369341b99b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 648b9d561ae340b67ed5e2d1aa878969e5a3bc47
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068044"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016755"
 ---
 # <a name="adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial"></a>Добавление представления источников данных с вложенными таблицами (учебник по интеллектуальному анализу данных — средний уровень)
   Для создания модели потребительской корзины необходимо использовать представление источника данных, поддерживающее ассоциативных данные. Это представление также будет использоваться в сценарии кластеризации последовательностей.  
@@ -82,7 +81,7 @@ ms.locfileid: "48068044"
   
 ## <a name="see-also"></a>См. также  
  [Средний уровень учебник по интеллектуальному анализу данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
- [Структуры интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Модели интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 148e0ece44e97bd4c559bbed9cc95aa97092dffb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fc9427e01f320778eafc1bac738daed0e80ce3c8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171054"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014005"
 ---
 # <a name="getreportserverurls-method-wmi-msreportserverinstance"></a>Метод GetReportServerUrls (WMI MSReportServer_Instance)
   Возвращает список URL-адресов, которые пользователи могут использовать для доступа к серверу отчетов и диспетчеру отчетов.  
@@ -37,7 +37,7 @@ public void GetReportServerUrls(out string[] applicationName,
   
 ## <a name="parameters"></a>Параметры  
  *ApplicationName[]*  
- Массив, который содержит установленные приложения. Значения: либо `ReportServerWebService` или `ReportManager`.  
+ Массив, который содержит установленные приложения. Значения: либо `ReportServerWebService`, либо `ReportManager`.  
   
  *URLs[]*  
  Массив, который содержит успешно зарегистрированные URL-адреса.  
@@ -56,7 +56,7 @@ public void GetReportServerUrls(out string[] applicationName,
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

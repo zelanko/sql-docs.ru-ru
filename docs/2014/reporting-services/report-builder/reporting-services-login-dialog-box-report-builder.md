@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: daf5eec6-f9d2-475c-8c65-9cf74e5523a2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f593da2103d0efda0b70e5628e23249e437fedfb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ce767793dc0994c30bba1301a193f0736c7e2e14
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223214"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030425"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Диалоговое окно «Имя входа служб Reporting Services» (построитель отчетов)
   В диалоговом окне **Имя входа служб Reporting Services** задаются учетные данные для публикации отчетов на сервере отчетов. За помощью при возникновении проблем с этими учетными данными обратитесь к администратору сервера отчетов.  

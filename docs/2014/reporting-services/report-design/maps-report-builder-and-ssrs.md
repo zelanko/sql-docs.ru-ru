@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 320737c3a84eb1f01899c14dfb2f4c1eefb60856
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 90a8f755b49e0b4f931325de25abea3654cc7d1f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354461"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013965"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Карты (построитель отчетов и службы SSRS)
   Для визуализации бизнес-данных в географическом контексте можно добавить в отчет карту. Выбранный тип карты будет зависеть от того, какую информацию следует взять из отчета. Можно добавить карту, которая отображает только местоположения, или пузырьковую карту, которая изменяет размер пузырьков в зависимости от количества домов в области, или карту с отметками, которая изменяет стиль маркера в зависимости от наиболее доходного продукта в каждом магазине, или линейную карту, которая отображает маршруты между магазинами.  

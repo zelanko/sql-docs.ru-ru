@@ -15,14 +15,14 @@ helpviewer_keywords:
 - query designers [Reporting Services], text-based
 ms.assetid: 44b7c664-03aa-494e-a484-052b318e810c
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 36805b803d52652d0b072f6124eb2f90cf9617c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 61c57d661a9865c9ced6912af921dd45b9e1db74
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085744"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012395"
 ---
 # <a name="text-based-query-designer-user-interface"></a>Пользовательский интерфейс текстового конструктора запросов
   Текстовый конструктор запросов предназначен для ввода запроса на языке запросов, поддерживаемом источником данных, его выполнения и просмотра результатов во время разработки. Можно указать несколько инструкций, запросов или команд языка [!INCLUDE[tsql](../includes/tsql-md.md)] для создания собственных модулей обработки данных, а также указать запросы, заданные как выражения. Поскольку текстовый конструктор запросов не выполняет предварительную обработку запроса и позволяет использовать любой синтаксис запросов, он представляет собой стандартное средство конструктора запросов для источников данных многих типов.  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 60a601fb20617f5a41b27a7c1972778e116f25a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4db37e85a43b6eb64a6999590f5b2be92293de56
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111734"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016785"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Включение отслеживания удаленных ошибок (службы Reporting Services)
-  Можно задать свойства сервера на сервере отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , чтобы возвращались дополнительные сведения об ошибках, возникающих на удаленных серверах. Если сообщение об ошибке содержит текст «Чтобы получить дополнительные сведения об этой ошибке, перейдите к серверу отчетов на локальном сервере или включите отслеживание удаленных ошибок», то можно задать свойство `EnableRemoteErrors`, чтобы получить доступ к дополнительным сведениям, которые могут помочь в устранении возникшей неполадки. Дополнительные сведения см. в разделе [системные свойства сервера отчетов](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+  Можно задать свойства сервера на сервере отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , чтобы возвращались дополнительные сведения об ошибках, возникающих на удаленных серверах. Если сообщение об ошибке содержит текст «Чтобы получить дополнительные сведения об этой ошибке, перейдите к серверу отчетов на локальном сервере или включите отслеживание удаленных ошибок», то можно задать свойство `EnableRemoteErrors`, чтобы получить доступ к дополнительным сведениям, которые могут помочь в устранении возникшей неполадки. Дополнительные сведения см. в разделе [Системные свойства сервера отчетов](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **В этом разделе:**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48111734"
   
 ##  <a name="bkmk_mgtStudio"></a> Включение отслеживания удаленных ошибок в среде SQL Server Management Studio (собственный режим)  
   
-1.  Запустите среду Management Studio и соединитесь с экземпляром сервера отчетов. Дополнительные сведения см. в разделе [соединиться с сервером отчетов в среде Management Studio](../tools/connect-to-a-report-server-in-management-studio.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+1.  Запустите среду Management Studio и соединитесь с экземпляром сервера отчетов. Дополнительные сведения см. в разделе [Подключение к серверу отчетов в среде Management Studio](../tools/connect-to-a-report-server-in-management-studio.md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 2.  Щелкните правой кнопкой мыши узел сервера отчетов и выберите пункт **Свойства**.  
   

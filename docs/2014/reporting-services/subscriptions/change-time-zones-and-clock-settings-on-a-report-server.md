@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 79df62b8215c242c7f2af2032bdb7671281178fd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 961b9bbbbaf47e716f887a1a0b3904f545357ecb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362336"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017754"
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>Изменение часовых поясов и настроек часов на сервере отчетов
   Сервер отчетов всегда использует локальное время компьютера, на котором он установлен. Задать для сервера отчетов другой часовой пояс нельзя. Если клиентское приложение обращается к серверу отчетов, работающему в другом часовом поясе, запланированная операция выполняется в соответствии с часовым поясом сервера отчетов. На страницах управления диспетчером отчетов и службами SharePoint часовой пояс указывается на каждой странице расписания, чтобы пользователь точно знал, когда будет выполнена запланированная операция. Например, на странице для создания пользовательского расписания будет указано "Время выражено в (UTC-08:00) по тихоокеанскому времени (США и Канада)".  

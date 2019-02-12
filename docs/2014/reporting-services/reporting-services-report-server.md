@@ -24,18 +24,18 @@ helpviewer_keywords:
 ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e91d3e4ec882793ded89c934a598cafd1b4ca6e6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 0b745a3d9cfd88bb65b60720903768672fbe1e88
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352355"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019095"
 ---
 # <a name="reporting-services-report-server"></a>Сервер отчетов служб Reporting Services
   В этом разделе приведен обзор сервера отчетов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] — центрального компонента установки [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Он состоит из пары модулей обработки, к которым прилагается коллекция модулей специального назначения, обеспечивающих выполнение операций проверки подлинности, обработки данных, подготовки отчетов и доставки. Сервер отчетов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] может работать в одном из двух режимов развертывания: в собственном режиме или в режиме интеграции с SharePoint. В разделе [Сравнение функций режима интеграции с SharePoint и собственного режима](#bkmk_featuresupport) можно найти сравнительную таблицу функций.  
   
- **Установка:** Дополнительные сведения об установке служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] см. в следующих разделах:  
+ **Установка**. Дополнительные сведения об установке служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] см. в следующих разделах:  
   
 -   [Установка сервера отчетов служб Reporting Services в собственном режиме](install-windows/install-reporting-services-native-mode-report-server.md)  
   

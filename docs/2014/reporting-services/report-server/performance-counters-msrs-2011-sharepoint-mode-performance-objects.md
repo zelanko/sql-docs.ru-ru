@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 843f0da00a9f7a496c30db9b40fb95cdb2244efe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9154d8fe244449d38eef0f220fc1215f6bbb71cf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349897"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023475"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-sharepoint-mode-and-msrs-2014-windows-service-sharepoint-mode-performance-objects-sharepoint-mode"></a>Счетчики производительности для объектов производительности веб-службы MSRS 2014 в режиме интеграции с SharePoint и службы Windows для MSRS 2014 в режиме интеграции с SharePoint (режим SharePoint)
   В этом разделе рассматриваются счетчики производительности для объектов производительности `MSRS 2014 Web Service SharePoint Mode` и `MSRS 2014 Windows Service SharePoint Mode`, которые принадлежат к числу компонентов развертывания служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] в режиме SharePoint.  

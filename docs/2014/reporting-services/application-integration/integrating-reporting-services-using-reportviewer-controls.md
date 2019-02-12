@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 230ee06508cf5dab0a89371202b8e7623f7652dc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: a9dbcf9efdb4febaf6a6647e754d31380e575727
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373166"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009556"
 ---
 # <a name="integrating-reporting-services-using-the-reportviewer-controls"></a>Интеграция служб Reporting Services с помощью элементов управления ReportViewer
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] предоставляет два элемента управления ReportViewer для внедрения в приложения функциональности просмотра отчетов. К ним относятся версия для приложений на базе Windows Forms, а также версия для приложений Web Forms. Эти элементы управления предоставляют одинаковые функциональные возможности, однако каждый из них разработан с учетом особенностей соответствующей среды. Оба элемента управления обрабатывают отчеты, развернутые на сервере отчетов (режим удаленной обработки) или скопированные на компьютер, где еще не установлены службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (режим локальной обработки).  

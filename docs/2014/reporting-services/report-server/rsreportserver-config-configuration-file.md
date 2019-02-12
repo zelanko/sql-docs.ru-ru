@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4cab512c13e324c9593f6983ede6851c9d87cc7e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 3b532758e9a8631adeacd00a4fce8d9029cfcd1b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366786"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015605"
 ---
 # <a name="rsreportserver-configuration-file"></a>RSReportServer Configuration File
   В файле **RsReportServer.config** хранятся параметры, которые используются диспетчером отчетов, веб-службами сервера отчетов и приложением фоновой обработки. Все приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] работают в одном процессе, который считывает параметры конфигурации, хранящиеся в файле RSReportServer.config. Серверы отчетов, работающие в собственном режиме и в режиме интеграции с SharePoint, используют файл RSReportServer.config, однако в этих режимах используются разные параметры из этого файла конфигурации. Версия файла для режима интеграции с SharePoint имеет меньший размер, поскольку многие параметры для этого режима хранятся не в файле, а в базах данных конфигурации SharePoint. В этом разделе описывается файл конфигурации по умолчанию, который устанавливается для собственного режима и для режима интеграции с SharePoint, а также некоторые важные параметры и варианты работы, которые управляются файлом конфигурации.  

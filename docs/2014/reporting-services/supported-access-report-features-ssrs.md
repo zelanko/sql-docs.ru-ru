@@ -17,14 +17,14 @@ helpviewer_keywords:
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0d3c218b5e72e231179443c146a6ea3c23747d4e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e33547643adf7345bbbc7c020dcbd11959bb6119
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180614"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012035"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Поддерживаемые функции отчетов Access (службы SSRS)
   Когда отчет импортируется в конструктор отчетов, процесс импорта преобразует отчет [!INCLUDE[msCoName](../includes/msconame-md.md)] Access в RDL-файл служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. 'Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] поддерживает некоторое число функций Access, но из-за различий между Access и [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] часть элементов может быть слегка изменена или не поддерживаться. В этом разделе описано преобразование функций отчетов Access в функции на языке определения отчетов.  
@@ -57,7 +57,7 @@ ms.locfileid: "48180614"
   
 |||||  
 |-|-|-|-|  
-|image|Метка|Линия|Прямоугольник|  
+|Изображение|Метка|Линия|Прямоугольник|  
 |SubForm|SubReport<br /><br /> **Примечание** элемент управления SubReport преобразуется внутри основного отчета, сам вложенный отчет преобразуется отдельно.|TextBox||  
   
  Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] не поддерживают следующие элементы управления:  
@@ -85,7 +85,7 @@ ms.locfileid: "48180614"
 |IsHyperlink|IsVisible|KeepTogether (группа)|Слева|  
 |LeftMargin|LineSlant|LineSpacing|LinkChildFields|  
 |LinkMasterFields|NewRowOrCol|PageFooter|PageHeader|  
-|Страницы|Рисунок|PictureTiling (отчет)|ReadingOrder|  
+|Pages|Рисунок|PictureTiling (отчет)|ReadingOrder|  
 |RepeatSection|RightMargin|RunningSum|SizeMode|  
 |TextAlign|TOP|TopMargin|Ширина|  
   
@@ -264,7 +264,7 @@ ms.locfileid: "48180614"
 |||||  
 |-|-|-|-|  
 |Avg|Count|Max|Min|  
-|StDev|StDevP|SUM|Var|  
+|StDev|StDevP|Sum|Var|  
 |VarP||||  
   
 #### <a name="text-functions"></a>Текстовые функции  
@@ -294,7 +294,7 @@ ms.locfileid: "48180614"
 ## <a name="rectangles-and-containment"></a>Прямоугольники и включение  
  В определении отчета служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] прямоугольники могут содержать другие элементы отчета. Любой прямоугольник, превышающий размеры элемента отчета и перекрывающий более 90% его поверхности, становится контейнером этого элемента.  
   
-## <a name="bitmaps"></a>Битовые карты  
+## <a name="bitmaps"></a>Растровые изображения  
  Все битовые карты, внедренные в отчет, преобразуются при импорте в формат BMP, независимо от первоначального формата. Например, если отчет содержит файлы в формате JPG или GIF, то ресурсы, импортированные вместе с отчетом, будут преобразованы в BMP-файлы. Битовые карты хранятся в отчете в виде внедренных изображений. Сведения о внедренных изображениях см. в разделе [образы &#40;построитель отчетов и службы SSRS&#41;](report-design/images-report-builder-and-ssrs.md).  
   
 ## <a name="other-considerations"></a>Другие вопросы  

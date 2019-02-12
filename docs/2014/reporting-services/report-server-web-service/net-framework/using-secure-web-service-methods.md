@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 87329299-c2ea-4517-9148-d855726768a9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 84dd6a3dcf6ca60a2f0af92064777ae5e204c31d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bedd007e7dabe1f96ac9f5fc22f565952c99d728
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074458"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018865"
 ---
 # <a name="using-secure-web-service-methods"></a>Использование защищенных методов веб-службы
   При вызове некоторых из методов веб-служб сервера отчетов может потребоваться наличие безопасного соединения. То, для каких из методов требуется наличие безопасного соединения, определяется значением параметра `SecureConnectionLevel` в файле RSReportServer.config. Значение этого параметра должно быть целым числом и находиться в диапазоне от 0 и выше. Данные значения описываются в следующей таблице.  

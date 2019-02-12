@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 77a4a9b2749eefbe43cac04351fd1d2bd2c9300e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cfc294f1ae01241dbcabfff954aa42c242f6aad7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138765"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018236"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>Размещение меток на диаграмме (построитель отчетов и службы SSRS)
   Поскольку формы всех типов диаграмм различны, метки точек данных помещаются в оптимальные положения, не ухудшающие удобочитаемость диаграммы. Позиции меток по умолчанию зависят от типа диаграммы:  
@@ -63,7 +63,7 @@ ms.locfileid: "48138765"
 6.  Для воронкообразной диаграммы выберите значение для свойства FunnelLabelStyle. Для воронкообразной диаграммы выберите значение для свойства PyramidLabelStyle.  
   
     > [!NOTE]  
-    >  Если этому свойству присвоено значение `OutsideInColumn`, метки отображаются в вертикальном столбце. Положение столбца изменить невозможно.  
+    >  Если это свойство имеет значение `OutsideInColumn`, метки отображаются в вертикальном столбце. Положение столбца изменить невозможно.  
   
 ### <a name="to-change-the-position-of-point-labels-in-a-bar-chart"></a>Изменение положения меток точек на линейчатой диаграмме  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48138765"
   
 6.  Выберите значение для свойства BarLabelStyle.  
   
- Если метка линии стиль имеет значение `Outside`, метки будут располагаться за пределами Линейки, до тех пор, пока она помещается в области диаграммы. Если метку не удается поместить за пределами линейки, но ее можно расположить в области диаграммы, метка помещается внутри линейки в позиции, ближайшей к концу линейки.  
+ Если стиль линейчатой диаграммы имеет значение `Outside`, метки будут располагаться за пределами линейки, пока она помещается в области диаграммы. Если метку не удается поместить за пределами линейки, но ее можно расположить в области диаграммы, метка помещается внутри линейки в позиции, ближайшей к концу линейки.  
   
 ### <a name="to-change-the-position-of-point-labels-in-an-area-column-line-or-scatter-chart"></a>Изменение положения меток точек в диаграмме с областями, гистограмме, графике и точечной диаграмме  
   
@@ -96,11 +96,11 @@ ms.locfileid: "48138765"
 6.  Выберите значение для свойства Position.  
   
 ## <a name="see-also"></a>См. также  
- [Круговые диаграммы &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Линейчатые диаграммы &#40;построитель отчетов и службы SSRS&#41;](bar-charts-report-builder-and-ssrs.md)   
+ [Круговые диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)   
+ [Линейчатые диаграммы (построитель отчетов и службы SSRS)](bar-charts-report-builder-and-ssrs.md)   
  [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Форматирование меток оси в виде значений даты или валюты &#40;построитель отчетов и службы SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Отображение меток точек данных за пределами круговой диаграммы &#40;построитель отчетов и службы SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [Отображение меток точек данных за пределами круговой диаграммы (построитель отчетов и службы SSRS)](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
   
   

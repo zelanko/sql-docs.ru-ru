@@ -1,22 +1,21 @@
 ---
-title: 'Урок 3: Обработка временных рядов, структуры и моделей | Документация Майкрософт'
+title: Урок 3. Обработка временных рядов структуры и моделей | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 16e27b57-eae1-47a7-a02c-47b6ed487d87
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 605476076746aafe6336c82a8cd6c5b2a32b30c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061664"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026275"
 ---
 # <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Урок 3. Обработка структуры и моделей временных рядов
   На этом занятии вы воспользуетесь [INSERT INTO &#40;расширений интеллектуального анализа данных&#41; ](/sql/dmx/insert-into-dmx) инструкции для обработки структуры интеллектуального анализа данных и созданные модели интеллектуального анализа данных временных рядов.  
@@ -79,7 +78,7 @@ OPENQUERY (<source data definition>)
   
 #### <a name="to-process-the-mining-structure-and-related-mining-models-by-using-insert-into"></a>Обработка структуры интеллектуального анализа данных и связанных с ней моделей с помощью инструкции INSERT INTO  
   
-1.  В **обозревателя объектов**, щелкните правой кнопкой мыши экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], пункты **новый запрос**, а затем нажмите кнопку **расширений интеллектуального анализа данных**.  
+1.  В окне **Обозреватель объектов**щелкните правой кнопкой мыши экземпляр служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], укажите **Создать запрос**, а затем выберите пункт **Расширения интеллектуального анализа данных**.  
   
      Откроется редактор запросов, содержащий новый, пустой запрос.  
   
@@ -123,7 +122,7 @@ OPENQUERY (<source data definition>)
     FROM vTimeSeries ORDER BY [ReportingDate]')  
     ```  
   
-     Исходный запрос ссылается на [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] источник данных, определенный в образце проекта «intermediatetutorial». Этот источник данных используется запросом для доступа к представлению vTimeSeries. Это представление содержит исходные данные, которые будут использованы для обучения модели интеллектуального анализа данных. Если вы не знакомы с этого проекта или о представлении, см. в разделе[занятии 2: построение сценария прогнозирования &#40;данных учебник по интеллектуальному анализу&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+     Исходный запрос ссылается на [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] источник данных, определенный в образце проекта «intermediatetutorial». Этот источник данных используется запросом для доступа к представлению vTimeSeries. Это представление содержит исходные данные, которые будут использованы для обучения модели интеллектуального анализа данных. Если вы не знакомы с этого проекта или о представлении, см. в разделе[занятии 2: Построение сценария прогнозирования &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
      Полная инструкция теперь должна выглядеть следующим образом.  
   
@@ -147,7 +146,7 @@ OPENQUERY (<source data definition>)
  После окончания выполнения запроса можно создавать прогнозы с использованием обработанных моделей интеллектуального анализа данных. В следующем занятии будет создано несколько прогнозов на основе созданных моделей интеллектуального анализа данных.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 4. Создание прогнозов временных рядов с использованием расширений интеллектуального анализа данных](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
+ [Занятие 4. Создание прогнозов временных рядов, с помощью расширений интеллектуального анализа данных](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
   
 ## <a name="see-also"></a>См. также  
  [Требования к обработке и рекомендации по &#40;интеллектуального анализа данных&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)   

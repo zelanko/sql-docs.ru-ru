@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: eb066c069d9cc1e15d442627e018818b35097e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b566b27ca060f84fe976a3827e5f657ca43bf741
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174014"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022605"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляет возможности интерактивных отчетов, которые позволяют работать с отчетом во время выполнения. Не все выходные форматы отчета поддерживают полный диапазон интерактивных возможностей. Чтобы понять, как интерактивные возможности работают с конкретными выходными форматами, смотрите следующую таблицу.  
+  В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] представлены функции интерактивной подготовки к просмотру, с помощью которых можно работать с отчетом во время выполнения. Не все выходные форматы отчета поддерживают полный диапазон интерактивных возможностей. Чтобы понять, как интерактивные возможности работают с конкретными выходными форматами, смотрите следующую таблицу.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -114,6 +114,6 @@ ms.locfileid: "48174014"
  [Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Матрицы &#40;построитель отчетов и службы SSRS&#41;](../report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Диаграммы &#40;построитель отчетов и службы SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+ [Диаграммы (построитель отчетов и службы SSRS)](../report-design/charts-report-builder-and-ssrs.md)  
   
   

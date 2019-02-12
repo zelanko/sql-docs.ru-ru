@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: d4ebe420-a4a9-4076-89d3-41abe726fc5c
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: fa9f529e286951aab08bb2d29f8dcc06f837e8c2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 401768ca9a811e9b9709127be391bb52de778b32
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408978"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024345"
 ---
 # <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>Задача 8. Добавление преобразования "Условное разбиение" к выводу "Очистка разбиения"
   В этом преобразовании в поток данных добавляется преобразование «Условное разбиение». Преобразование «Условное разбиение» может направлять строки данных в различные выходы в зависимости от содержимого данных. В этом учебнике используется **состояние записи** выходного столбца из преобразования очистки DQS. В этом учебнике вы передаете на сервер MDS только верные или исправленные записи. Поэтому вы проверяете, если **состояние записи** — **исправьте** или **исправлено**и объединяете записи перед передачей записей в MDS.  

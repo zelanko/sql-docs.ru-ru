@@ -15,14 +15,14 @@ helpviewer_keywords:
 - iOS
 ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2cc1725bc1cad98033fbc4c47c1611e7c8b35f32
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 89560cb29adfe83435d9b02a4b10e568a79ad352
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360236"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013405"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Просмотр отчетов служб Reporting Services на устройствах с Microsoft Surface и Apple iOS
   В этой статье описаны функции и рабочие процессы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , поддерживаемые для планшета Microsoft Surface и устройств с Apple iOS 6 и Apple Safari, таких как iPad.  

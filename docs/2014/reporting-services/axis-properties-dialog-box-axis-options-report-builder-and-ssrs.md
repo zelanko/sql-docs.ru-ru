@@ -12,17 +12,17 @@ f1_keywords:
 - "10138"
 ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c2911f9ac2da57e284bd6841df7b4b1ec5b2b105
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 690f092b98a76ddd9ccc18d15f4250e7e856efa0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144184"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030655"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>Диалоговое окно «Свойства оси» — «Параметры оси» (построитель отчетов и службы SSRS)
-  Выберите **параметры оси** на **горизонтальной** или **свойства вертикальной оси** диалоговое окно, чтобы задать внешний вид указанной оси диаграммы. В предыдущих версиях служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] на горизонтальной оси диаграммы по умолчанию отображались все метки. Однако в службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 метки на диаграмме опускаются, чтобы изображение было понятнее, а метки не пересекались. Дополнительные сведения см. в разделе [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
+  Выберите **параметры оси** на **горизонтальной** или **свойства вертикальной оси** диалоговое окно, чтобы задать внешний вид указанной оси диаграммы. В предыдущих версиях служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]на горизонтальной оси диаграммы по умолчанию отображались все метки. Однако в службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 метки на диаграмме опускаются, чтобы изображение было понятнее, а метки не пересекались. Дополнительные сведения см. в разделе [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Параметры  
  **Включить разрывы шкалы**  
@@ -68,6 +68,6 @@ ms.locfileid: "48144184"
  [Форматирование меток оси в виде значений даты или валюты &#40;построитель отчетов и службы SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Построение данных на вспомогательной оси &#40;построитель отчетов и службы SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Спарклайны и гистограммы (построитель отчетов и службы SSRS)](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Добавление или удаление полей из диаграммы &#40;построитель отчетов и службы SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [Добавление или удаление полей из диаграммы (построитель отчетов и службы SSRS)](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
   

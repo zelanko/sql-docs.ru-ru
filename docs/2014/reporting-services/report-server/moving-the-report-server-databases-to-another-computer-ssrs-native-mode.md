@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b353e2034a7a21d963bed48e7ee7e670f677f70c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e7cbe523d7edb8872814c3280c8e7c8a06cbf84a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078584"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016626"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Перемещение баз данных сервера отчетов на другой компьютер (собственный режим служб SSRS)
   Базы данных сервера отчетов, используемые в установке, можно переместить на экземпляр компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] , находящийся на другом компьютере. Базы данных reportserver и reportservertempdb должны перемещаться или копироваться вместе. Установка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требует наличия обеих баз данных. База данных reportservertempdb должна быть связана по имени с перемещаемой базой данных reportserver.  
@@ -215,16 +215,16 @@ GO
 7.  Нажмите кнопку **Далее** , затем — кнопку **Готово**.  
   
 > [!NOTE]  
->  Объект [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требует установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] экземпляр содержит `RSExecRole` роли. Создание роли, регистрация имени входа и назначения ролей происходят, когда с помощью программы настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливается подключение к базе данных сервера отчетов. При иных подходах к настройке соединения (особенно если используется программа командной строки rsconfig.exe) сервер отчетов окажется в неработоспособном состоянии. Чтобы сервер отчетов стал доступным, возможно, придется записать код инструментария WMI. Дополнительные сведения см. в разделе [Доступ к поставщику WMI для служб Reporting Services](../tools/access-the-reporting-services-wmi-provider.md).  
+>  Установка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требует, чтобы экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] включал роль `RSExecRole`. Создание роли, регистрация имени входа и назначения ролей происходят, когда с помощью программы настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливается подключение к базе данных сервера отчетов. При иных подходах к настройке соединения (особенно если используется программа командной строки rsconfig.exe) сервер отчетов окажется в неработоспособном состоянии. Чтобы сервер отчетов стал доступным, возможно, придется записать код инструментария WMI. Дополнительные сведения см. в разделе [Доступ к поставщику WMI для служб Reporting Services](../tools/access-the-reporting-services-wmi-provider.md).  
   
 ## <a name="see-also"></a>См. также  
- [Создание роли RSExecRole](../security/create-the-rsexecrole.md)   
+ [Создание RSExecRole](../security/create-the-rsexecrole.md)   
  [Запуск и остановка службы сервера отчетов](start-and-stop-the-report-server-service.md)   
- [Настройка подключения к базе данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Настройка учетной записи автоматического выполнения &#40;диспетчер конфигурации служб SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Диспетчер конфигурации служб Reporting Services &#40;собственный режим&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Настройка подключения к базе данных сервера отчетов (диспетчер конфигураций служб Reporting Services)](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Программа rsconfig (SSRS)](../tools/rsconfig-utility-ssrs.md)   
- [Настройка и управление ключами шифрования &#40;диспетчер конфигурации служб SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [База данных сервера отчетов &#40;собственный режим служб SSRS&#41;](report-server-database-ssrs-native-mode.md)  
+ [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [База данных сервера отчетов (службы Reporting Services в собственном режиме)](report-server-database-ssrs-native-mode.md)  
   
   

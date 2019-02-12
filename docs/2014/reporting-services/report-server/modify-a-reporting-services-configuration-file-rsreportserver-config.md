@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 304c1048c206f179d5e29d3b5aa097d21a124512
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9ca7b2b7ed4cc66a3c47b2f2ad8044775d69c6ed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065334"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015005"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Изменение файла конфигурации служб Reporting Services (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сохраняют параметры приложения в наборе файлов конфигурации. Программа установки создает файлы конфигурации для каждого устанавливаемого экземпляра сервера отчетов. Значения в каждом файла задаются либо во время установки, либо при использовании средств и приложений для настройки сервера и подготовки его к работе. В некоторых случаях приходится изменять непосредственно сам файл, чтобы добавить дополнительные параметры или настроить их. Параметры конфигурации задаются либо как элементы XML, либо как атрибуты. Если вы знакомы с XML и файлами конфигурации, то можете использовать редактор текста или кода для настройки пользовательских параметров.  
@@ -81,7 +81,7 @@ ms.locfileid: "48065334"
   
 4.  Введите элемент или значение, которое необходимо добавить или использовать. Элементы вводятся с учетом регистра. При добавлении элемента следите за правильным использованием букв верхнего и нижнего регистра. При настройке модуля подготовки отчетов, модуля проверки подлинности или модулей обработки данных можно руководствоваться конкретными инструкциями по изменению файлов конфигурации:  
   
-    -   [Аутентификация с использованием сервера отчетов](../security/authentication-with-the-report-server.md)  
+    -   [Проверка подлинности с использованием сервера отчетов](../security/authentication-with-the-report-server.md)  
   
     -   [Настройка передачи файлов cookie для пользовательской проверки подлинности в диспетчере отчетов](../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48065334"
  [Развертывание модуля обработки данных](../extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Развертывание модуля доставки](../extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [Развертывание модуля подготовки отчетов](../extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [Развертывание пользовательского элемента отчета](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
+ [Как Развертывание пользовательского элемента отчета](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
  [Файлы конфигурации служб Reporting Services](reporting-services-configuration-files.md)  
   
   

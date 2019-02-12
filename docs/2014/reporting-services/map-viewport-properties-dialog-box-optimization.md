@@ -12,14 +12,14 @@ f1_keywords:
 - "10522"
 ms.assetid: 8c0310ba-eedd-4c9f-95bd-1f9e2a1a8ed3
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0e1fd77ed97e42eaadd76f7b9c50f74d6b5007a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 411dd5fdcd58b9f009ffe8fbdefa39e39c273435
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162744"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012885"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>Диалоговое окно «Свойства окна просмотра карты», вкладка «Оптимизация»
   Вкладка **Оптимизация** диалогового окна **Свойства окна просмотра карты** позволяет управлять разрешением при просмотре карты в отчете.  

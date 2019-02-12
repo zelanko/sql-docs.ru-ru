@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: bccdc243-4366-4ce5-8e63-3dd6c463fa52
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 34b6f109ab102f39908639f6182c25ca4cbb60e0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: b21a8b6f0865ae0b8b51f4923809eb3dd5f7e204
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363896"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011815"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>Выбор между доступом по URL-адресу и протоколом SOAP
   Интеграция служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательские приложения может оказаться сложной задачей. При этом проблема состоит не в сложности модели программирования или интерфейсов API, а в наличии множества способов для интеграции. Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с самого начала разрабатывались в качестве платформы разработки и поэтому построены с учетом гибких возможностей программирования. Такая гибкость обуславливает необходимость принятия важных решений для интеграции функций служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] по управлению отчетами и перемещению по отчетам в существующие бизнес-приложения.  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 66ee754963d6020b39f046ff6a5d73ea46450437
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 11cf069257a0f851794341820994fbb453cb0052
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407592"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026105"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Управление содержимым сервера отчетов (службы Reporting Services в собственном режиме)
   В службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]управление содержимым относится к управлению элементами сервера отчетов. Всеми этими элементами можно управлять независимо друг от друга посредством свойств и настроек безопасности. Любой элемент можно переместить в другое место в пространстве имен папок сервера отчетов. Для эффективного управления элементами необходимо знать, какие задачи выполняет диспетчер содержимого.  

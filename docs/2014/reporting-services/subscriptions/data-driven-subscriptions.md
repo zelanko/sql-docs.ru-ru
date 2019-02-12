@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 71ab6239172ea39a8adcee9ca017a5408079a8d5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ca57a64268beb85e08a56c79184338a872bceed0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357148"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011845"
 ---
 # <a name="data-driven-subscriptions"></a>управляемая данными подписка
   Управляемая данными подписка обеспечивает возможность использования данных динамической подписки, получаемых от внешнего источника данных во время выполнения. В управляемой данными подписке можно также использовать статический текст и значения по умолчанию, указываемые при определении подписки. С помощью управляемых данными подписок можно осуществлять следующее.  

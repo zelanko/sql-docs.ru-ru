@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmatchingmap.f1
 - sql12.dqs.kb.kbmatchingpolicy.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 37a65dc6a237803822f2d3214e7209f60e89d6bb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b5fff7c8804feab436271d60f3e5542b372ada60
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539642"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025355"
 ---
 # <a name="create-a-matching-policy"></a>Создание политики сопоставления
   В этом разделе описывается создание политики сопоставления в базе знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Подготовка процесса сопоставления в DQS с помощью выполнения операции политики сопоставления на образце данных. В данной операции создается и проверяется одно или несколько правил сопоставления в политике, затем публикуется база знаний, что делает правила сопоставления доступными для общего пользования. В базе знаний может быть только одна политика сопоставления, но эта политика может содержать несколько правил сопоставления.  
@@ -186,7 +186,7 @@ ms.locfileid: "52539642"
   
 9. Нажмите кнопку **Отмена** , чтобы прервать операцию политики сопоставления, отменить результаты работы и вернуться на домашнюю страницу DQS.  
   
-##  <a name="FollowUp"></a> Дальнейшие действия: после создания политики сопоставления  
+##  <a name="FollowUp"></a> Дальнейшие действия. после создания политики сопоставления  
  После создания политики сопоставления можно запустить проект сопоставления на основе базы знаний, которая содержит политику сопоставления. Дополнительные сведения см. в статье [Запуск проекта сопоставления](../../2014/data-quality-services/run-a-matching-project.md).  
   
 ##  <a name="Tabs"></a> Profiler and Results Tabs  

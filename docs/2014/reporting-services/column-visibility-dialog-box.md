@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: ca59d1cd-d782-4298-aa61-4f312c32eb50
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bf9f11b8b56333dba7c0d2a5066712017ea194cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 056cc6b6385b2f57c52dbaaceedf75d342254c89
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215264"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036135"
 ---
 # <a name="column-visibility-dialog-box"></a>Диалоговое окно «Видимость столбца»
   Используйте диалоговое окно **Видимость столбца** , чтобы отобразить или скрыть выбранный столбец при первом запуске отчета либо назначить другой элемент отчета для переключения видимости столбца.  
@@ -37,7 +37,7 @@ ms.locfileid: "48215264"
  **Отображать или скрывать в зависимости от выражения**  
  Этот параметр используется для изменения исходной видимости с помощью выражения.  
   
- Введите выражение, результатом которого является `Boolean` значение `True` элемент скрыт, и `False` для отображения элемента. Чтобы изменить выражение, нажмите кнопку "Выражение" (*fx*).  
+ Введите выражение, результат вычисления которого имеет тип `Boolean` (при значении `True` элемент скрыт, а при значении `False` отображается). Чтобы изменить выражение, нажмите кнопку "Выражение" (*fx*).  
   
  **Отображение может переключаться этим элементом отчета**  
  Выберите данный параметр для отображения изображения переключателя, который позволяет пользователю отображать или скрывать данный элемент отчета в средстве просмотра HTML-страниц.  
@@ -47,7 +47,7 @@ ms.locfileid: "48215264"
 ## <a name="see-also"></a>См. также  
  [Примеры выражений (построитель отчетов и службы SSRS)](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Добавление действия "Развернуть" или "Свернуть" к элементу (построитель отчетов и службы SSRS)](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [Образы &#40;построитель отчетов и службы SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Изображения (построитель отчетов и службы SSRS)](report-design/images-report-builder-and-ssrs.md)   
  [Справка F1 по использованию конструктора отчетов](tools/report-designer-f1-help.md)  
   
   

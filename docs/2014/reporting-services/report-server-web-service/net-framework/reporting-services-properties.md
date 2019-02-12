@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8c855194-4c20-4ecc-a328-5137d54b560c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 176c823af74d2b9842477d02c4e560984673dc21
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b2bd9ad5f828072985817b6ee3eb78897bab0b97
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061674"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014974"
 ---
 # <a name="reporting-services-properties"></a>Свойства служб Reporting Services
   Сервер отчетов определяет набор системных свойств, являющихся глобальными для сервера отчетов, и набор свойств элементов, связанных с отдельным элементом, хранимым в базе данных сервера отчетов. Свойства, определенные сервером отчетов, не могут быть удалены; в некоторых случаях они доступны только для чтения. Приложение может расширить системные свойства и свойства элементов, добавив к ним дополнительные определяемые пользователем свойства.  
@@ -45,7 +45,7 @@ ms.locfileid: "48061674"
 |Раздел|Описание|  
 |-----------|-----------------|  
 |[Свойства элемента сервера отчетов](reporting-services-properties-report-server-item-properties.md)|Описывает характерные для элементов свойства в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
-|[Свойства системы сервера отчетов](reporting-services-properties-report-server-system-properties.md)|Описывает характерные для системы свойства в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
+|[Системные свойства сервера отчетов](reporting-services-properties-report-server-system-properties.md)|Описывает характерные для системы свойства в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
   
 ## <a name="see-also"></a>См. также  
  [Создание приложений с помощью веб-службы и .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)   

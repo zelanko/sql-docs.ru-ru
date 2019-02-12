@@ -19,28 +19,28 @@ helpviewer_keywords:
 - id-prefix annotation [SQLXML]
 - is-mapping-schema annotation
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37b1505d0d35300fcf088e78d4c46ae2f69f4aa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5b2e9be930bf7ef2cfc70ab9e900ae8f957152c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733472"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034665"
 ---
 # <a name="annotation-interpretation---other-annotations"></a>Интерпретация заметки — прочие заметки
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Помимо заметок, описанных в предыдущих подразделах этого раздела, массовая загрузка XML интерпретирует ниже приведенные заметки.  
   
  **sql:id-prefix**  
- Если схема указывает префиксы к XML-данным, то перед передачей данных в Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] массовая загрузка XML удаляет эти префиксы.  
+ Если схема указывает префиксы к XML-данным, то перед передачей данных в Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]массовая загрузка XML удаляет эти префиксы.  
   
- **SQL: USE-cdata**  
+ **sql:use-cdata**  
  Массовая загрузка XML считывает текст, хранящийся в разделах CDATA, и отправляет его в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- **заметки SQL: URL-кодирование**  
+ **sql:url-encode**  
  Массовая загрузка XML не поддерживает эту заметку. Например, в выходных XML-данных нельзя указать URL-адрес и ожидать, что массовая загрузка XML считает данные из местоположения и сохранит их в базе данных.  
   
  **sql:is-mapping-schema**  
@@ -49,7 +49,7 @@ ms.locfileid: "47733472"
 > [!NOTE]  
 >  Массовая загрузка XML не поддерживает встроенные схемы сопоставления.  
   
- **SQL: Key-поля**  
+ **sql:key-fields**  
  Массовая загрузка XML никогда не обрабатывает эту заметку.  
   
 ## <a name="see-also"></a>См. также  

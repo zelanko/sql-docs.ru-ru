@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4a55d34c86622ef837d9c7264a614ba59552c978
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1dbef5a6deb17a6b7cf570bbeb96d79a941b837f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089194"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018855"
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>Получение данных из модели интеллектуального анализа данных (расширения интеллектуального анализа данных) (службы SSRS)
   Для использования в отчете данных из модели интеллектуального анализа данных служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] необходимо определить источник данных служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и один или несколько наборов данных отчета. При создании определения источника данных необходимо указать строку соединения и учетные данные, необходимые для осуществления доступа к источнику данных с компьютера клиента.  
   
  Можно создать определение внедренного источника данных для использования в одном отчете или определение общего источника данных для использования в нескольких отчетах. Процедуры в этом разделе предназначены для создания внедренного источника данных. Дополнительные сведения об общих источниках данных см. в разделах [Внедренные и общие подключения к данным или источники данных (построитель отчетов и службы SSRS)](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) и [Создание, изменение и удаление общих источников данных (SSRS)](create-modify-and-delete-shared-data-sources-ssrs.md).  
   
- После создания [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] источника данных, можно создать один или несколько наборов данных. Для каждого из наборов данных следует использовать конструктор запросов прогноза интеллектуального анализа данных (расширения интеллектуального анализа данных), чтобы создать DMX-запрос, определяющий коллекцию полей. Дополнительные сведения см. в статье [Analysis Services DMX Query Designer User Interface](analysis-services-dmx-query-designer-user-interface.md).  
+ После определения источника данных служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] можно создать один или несколько наборов данных. Для каждого из наборов данных следует использовать конструктор запросов прогноза интеллектуального анализа данных (расширения интеллектуального анализа данных), чтобы создать DMX-запрос, определяющий коллекцию полей. Дополнительные сведения см. в статье [Analysis Services DMX Query Designer User Interface](analysis-services-dmx-query-designer-user-interface.md).  
   
  Имя созданного набора данных появляется на панели «Данные отчета» в виде узла под соответствующим источником данных.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48089194"
   
 4.  В раскрывающемся списке **Тип** выберите пункт **Службы Microsoft SQL Server Analysis Services**.  
   
-5.  Укажите строку соединения, соответствующую источнику данных служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+5.  Укажите строку соединения, соответствующую источнику данных служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
      Данные для строки соединения и учетные данные для подключения к источнику данных можно получить у администратора базы данных. Ниже приведен пример строки соединения для образца базы данных [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] на локальном клиенте.  
   
@@ -65,11 +65,11 @@ ms.locfileid: "48089194"
   
 ### <a name="to-create-a-dataset-for-a-microsoft-sql-server-analysis-services"></a>Создание набора данных для служб Microsoft SQL Server Analysis Services  
   
-1.  В **данные отчета** панели, щелкните правой кнопкой мыши имя источника данных, который подключается к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] источника данных, а затем щелкните **добавить набор данных**.  
+1.  В области **Данные отчета** щелкните правой кнопкой мыши имя источника данных, который соединяется с источником данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , и выберите **Добавить набор данных**.  
   
 2.  В диалоговом окне **Свойства набора данных** введите имя в текстовое поле **Имя** .  
   
-3.  В **"источник данных"**, убедитесь, что имя является именем источника данных, который подключается к [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] источника данных.  
+3.  В поле **Источник данных**убедитесь, что указанное имя является именем источника данных, соединяющегося со службами [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 4.  Нажмите кнопку **Конструктор запросов** , чтобы открыть графический конструктор запросов для интерактивного построения запроса. Если конструктор запросов открывается в режиме многомерных выражений (MDX), нажмите кнопку **Расширения интеллектуального анализа данных командного типа** (![Переключение в режим DMX-запросов](../media/rsqdicon-commandtypedmx.gif "Переключение в режим DMX-запросов")) на панели инструментов для переключения на конструктор запросов интеллектуального анализа данных. Дополнительные сведения см. в статье [Analysis Services DMX Query Designer User Interface](analysis-services-dmx-query-designer-user-interface.md).  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48089194"
      Набор данных и его коллекция полей появляются в области данных отчета под узлом источника данных.  
   
 ## <a name="see-also"></a>См. также  
- [Тип служб Analysis Services соединение для расширения интеллектуального анализа данных &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
+ [Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)](analysis-services-connection-type-for-dmx-ssrs.md)   
  [Подключения к данным, источники данных и строки подключения в службах Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Коллекция полей набора данных (построитель отчетов и службы SSRS)](dataset-fields-collection-report-builder-and-ssrs.md)   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5e70f08293132f570ddb0663db7944ecb4bba497
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: adabb736dd34b35ee98f4ed46b84fd9205d504b5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507971"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012135"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Создание предупреждения данных в конструкторе предупреждений данных
   Создание определений предупреждений об изменении данных осуществляется в конструкторе предупреждений об изменении данных. После сохранения их можно открыть, изменить, а затем снова сохранить в конструкторе предупреждений об изменении данных. Дополнительные сведения об изменении определений предупреждений см. в разделах [Управление предупреждениями данных в диспетчере предупреждений данных](manage-my-data-alerts-in-data-alert-manager.md) и [Изменение предупреждения данных в конструкторе предупреждений](edit-a-data-alert-in-alert-designer.md).  

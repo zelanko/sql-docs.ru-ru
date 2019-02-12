@@ -13,16 +13,16 @@ helpviewer_keywords:
 - node tests [SQLXML]
 - location path for XPath query
 ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2883b1645dfe1114fc40f63c576797b477ae0ea5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15d5389f9a16d676aa5d644b030455d4c63adf7b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792022"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027406"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Задание проверки узла в пути доступа (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,12 +31,12 @@ ms.locfileid: "47792022"
 > [!NOTE]  
 >  Шаблон проверки узла * (например `child::*`) не поддерживается.  
   
-## <a name="node-test-example-1"></a>Проверка узла: Пример 1  
+## <a name="node-test-example-1"></a>Проверка узла. Пример 1  
  Путь к расположению `child::Customer` выбирает  **\<клиента >** дочерние элементы узла контекста.  
   
  В следующем примере элемент `child` является осью, а `Customer` является проверкой узла. Основным типом узла для **дочерних** ось является  **\<элемент >**. Таким образом, проверка узла возвращает значение TRUE Если  **\<клиента >** узел является  **\<элемент >** узла. Если узел контекста не имеет  **\<клиента >** дочерних элементов, возвращается пустой набор узлов.  
   
-## <a name="node-test-example-2"></a>Проверка узла: Пример 2  
+## <a name="node-test-example-2"></a>Проверка узла. Пример 2  
  Путь к расположению `attribute::CustomerID` выбирает **CustomerID** атрибут узла контекста.  
   
  В этом примере элемент `attribute` является осью, а `CustomerID` является проверкой узла. Тип узла участника **атрибут** ось является  **\<атрибут >**. Таким образом, проверка узла возвращает значение TRUE Если **CustomerID** —  **\<атрибут >** узла. Если узел контекста не имеет **CustomerID**, возвращается пустой набор узлов.  

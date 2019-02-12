@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c2e6d846be6b4ff3d13b840d3cc67064aeaf5240
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 106045d6899534bea31e6db264033f79dcb76a96
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404539"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010441"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application-sharepoint-2010-and-sharepoint-2013"></a>Настройка электронной почты для приложения служб Reporting Services (SharePoint 2010 и SharePoint 2013)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Функция предупреждения об изменении данных служб отправляет предупреждения в сообщениях электронной почты. Для отправки электронной почты могут потребоваться настройка приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и изменение модуля доставки электронной почты приложением службы. Необходимо настроить параметры электронной почты и в том случае, если планируется использование модуля доставки электронной почты функцией подписки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

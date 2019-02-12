@@ -2,10 +2,9 @@
 title: sys.database_usage (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
+ms.service: sql-database
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - database_usage
@@ -22,17 +21,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f17e34de7c230b111652ea57a3baa072a442a6a5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 62942e939c1221b90b623db12c922f3dcc580c99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656743"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024905"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **Примечание: Это относится только к базе данных SQL Azure версии 11.**  
+  **Примечание. Это относится только к базе данных SQL Azure версии 11.**  
   
  Выводит количество, тип и длительность существования баз данных на [!INCLUDE[ssSDS](../../includes/sssds-md.md)] сервера.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "51656743"
 |Имя столбца|Описание|  
 |-----------------|-----------------|  
 |time|Дата возникновения событий использования.|  
-|sku|Тип уровня службы для базы данных: **Web**, **бизнеса**, **основные**, **стандартный**, **уровня "премиум"**|  
+|sku|Тип уровня службы базы данных. **Web**, **бизнеса**, **основные**, **стандартный**, **уровня "премиум"**|  
 |quantity|Максимальное число баз данных номера SKU, который существовал в течение этого дня.|  
   
 ## <a name="permissions"></a>Разрешения  

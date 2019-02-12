@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a67dc03e-f838-4ec2-9ef6-f04895bab3c7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d34dafd60f2165f2ae90661feca2bafac462dab7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4a02db047e17c7bacf7183a10a0db93d8ac905e9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101054"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031387"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>Страница «Выбор общего набора данных» (диспетчер отчетов)
   Страница «Выбор общего набора данных» используется для просмотра и изменения общих наборов данных, которые в настоящее время связаны с отчетом.  
@@ -50,8 +50,8 @@ ms.locfileid: "48101054"
  Сохраните изменения.  
   
 ## <a name="see-also"></a>См. также  
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Содержимое страницы &#40;диспетчера отчетов&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Страница "Содержимое" (диспетчер отчетов)](../../2014/reporting-services/contents-page-report-manager.md)   
  [Управление общими наборами данных](report-data/manage-shared-datasets.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
  [Элементы отчета и наборы данных в построителе отчетов](report-data/report-parts-and-datasets-in-report-builder.md)   

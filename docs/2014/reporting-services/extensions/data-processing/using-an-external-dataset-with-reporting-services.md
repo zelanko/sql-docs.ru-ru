@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9169fbb442302461bb7b987e6f43919947bc109e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e7f5cdd32104a9477dddb2620b749b647ad775d8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053134"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023485"
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Использование внешнего набора данных со службами Reporting Services
   Объект **DataSet** является центральным элементом поддержки разъединенных распределенных сценариев данных в [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Объект **DataSet** является находящимся в оперативной памяти представлением данных, обеспечивающим согласованную реляционную программную модель, независимо от источника данных. Он может использоваться с несколькими различными источниками данных, XML-данными или для управления данными, локальными по отношению к приложению. Объект **DataSet** представляет полный набор данных, включая связанные таблицы, ограничения и связи между таблицами. В связи с тем, что объект **DataSet** обладает высокой гибкостью хранения и представления данных, данные пользователя могут быть преобразованы в объект **DataSet** перед созданием отчетов по этим данным.  

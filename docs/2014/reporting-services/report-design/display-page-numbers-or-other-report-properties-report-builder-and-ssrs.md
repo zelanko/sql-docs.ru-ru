@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8bfb730a7c19e4aa2481ed50ec69b5356c955584
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0aa360b52f6928db53a473712c38bbfc2d05de78
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148825"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037827"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Отображение номеров страниц или других свойств отчета (построитель отчетов и службы SSRS)
   К верхним или нижним колонтитулам страниц в отчете легко добавить номера страниц, заголовок отчета, имя файла и другие свойства отчета. Эти свойства хранятся в виде полей в папке «Встроенные поля» в области данных отчета.  
@@ -63,9 +63,9 @@ ms.locfileid: "48148825"
   
 1.  Щелкните правой кнопкой мыши текстовое поле, содержащее выражение [&PageNumber], и выберите пункт **Выражения**.  
   
-     Текстовое поле **Задать выражение для: значение** содержит выражение =Globals!PageNumber.  
+     Текстовое поле **Задать выражение для: Значение** текстовое поле содержит выражение = Globals! PageNumber.  
   
-2.  Поместите курсор после знака = и введите `"Page " &`.  
+2.  Установите курсор после знака = и введите текст `"Page " &`.  
   
      Теперь выражение будет иметь вид ="Стр. "&Globals!PageNumber  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48148825"
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [И нижние колонтитулы страницы &#40;построитель отчетов и службы SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
- [Форматирование текста в текстовом поле &#40;построитель отчетов и службы SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Форматирование текста в текстовом поле (построитель отчетов и службы SSRS)](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
   

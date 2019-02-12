@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4fc706cd372f4bee0c9449b15de6d070240141bd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 770cfbd68a2126bed6bbe024c93e1c5ae623bc59
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414791"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041045"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Create, Modify, and Delete Standard Subscriptions (Reporting Services in Native Mode)
   Стандартная подписка — это подписка, созданная конкретным пользователем, который хочет получать отчет по электронной почте или в общую папку. Стандартная подписка всегда определяется через отчет, на котором она основана.  

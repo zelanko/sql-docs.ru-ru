@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7b2018ce-c5f9-4f8b-bd44-4201379a584b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e5af1b9ad92c91e2c97cc8b237e04729f4209324
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 920fc72443036328e4ac5c9181c479b2900d84fc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356074"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020455"
 ---
 # <a name="var-function-report-builder-and-ssrs"></a>Функция Var (построитель отчетов и службы SSRS)
   Возвращает дисперсию всех числовых значений, отличных от NULL, заданных выражением, вычисляемым для данной области.  

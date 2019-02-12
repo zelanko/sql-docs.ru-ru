@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b06708d5-4477-4a51-bf8d-0b1e3c1f9ebb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4cc0e052b49cbfbf2324850aced8bd4753ca7ee3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: eb35c829b798335a27a37629711acf299ac2c7c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058174"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023535"
 ---
 # <a name="exploring-the-naive-bayes-model-basic-data-mining-tutorial"></a>Изучение модели упрощенного алгоритма Байеса (учебник по интеллектуальному анализу данных — начальный уровень)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Упрощенный алгоритм Байеса предоставляет несколько методов отображения взаимодействия между покупкой велосипедов и входными атрибутами.  
@@ -90,7 +89,7 @@ ms.locfileid: "48058174"
 -   [Изучение модели кластеризации &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 5: Тестирование моделей &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
+ [Занятие 5. Проверка моделей &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-task-in-lesson"></a>Предыдущая задача занятия  
  [Изучение модели кластеризации &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  

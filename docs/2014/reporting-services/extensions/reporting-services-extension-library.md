@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e8eff470-64d6-41c3-b98b-5ec916c121c3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d465bc3b1b0d8a70ff4e205b3c1851750455e814
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a7c5191a5b2964d8dbf9f5611cc051cdae4ffe33
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075746"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036175"
 ---
 # <a name="reporting-services-extension-library"></a>Библиотека модулей служб Reporting Services
   Библиотека модулей служб Reporting Services — это набор классов, интерфейсов и типов значений, включенных в службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Эта библиотека предоставляет доступ к системным функциям и предназначена в качестве основы для расширения компонентов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с помощью приложений [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  

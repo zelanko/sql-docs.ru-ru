@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6a303135-c0ef-44cd-a423-1cea8df3dcf3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7f4722a2b338b0187bdd93cb9501e626c42acf02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4da46abbfb586a2968f92a04538f5a82e06898c6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166894"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031225"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>установить соединение с веб-частью «Фильтр» или с веб-частью «Документы» (службы Reporting Services в режиме интеграции с SharePoint)
   Если используется продукт SharePoint, можно создать панель мониторинга или страницу веб-частей, включающую веб-части «Фильтр» или «Документы» и веб-часть средства просмотра отчетов. Поддерживается версия [!INCLUDE[SPF2010](../includes/spf2010-md.md)] или [!INCLUDE[SPS2010](../includes/sps2010-md.md)]. Также поддерживаются версии [!INCLUDE[winSPServ3](../includes/winspserv3-md.md)] и [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007. С помощью соединения с веб-частью «Фильтр» пользователи, которые выбирают значения фильтра в веб-части «Фильтр», могут отправить значение в параметризованный отчет на той же самой странице. С помощью соединения с веб-частью «Документы» пользователи, выбравшие отчет в библиотеке «Документы», могут просмотреть его в веб-части «Средство просмотра отчетов».  
@@ -77,8 +77,8 @@ ms.locfileid: "48166894"
 11. Проверьте изменения и сохраните страницу.  
   
 ## <a name="see-also"></a>См. также  
- [Добавление веб-части средства просмотра отчетов на веб-страницу &#40;режим интеграции служб Reporting Services в SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
- [Веб-части средства просмотра отчетов на сайте SharePoint](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Добавление веб-части средства просмотра отчетов на веб-страницу (службы Reporting Services в режиме интеграции с SharePoint)](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
+ [Веб-часть средства просмотра отчетов на сайте SharePoint](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Настройка веб-части средства просмотра отчетов](../../2014/reporting-services/customize-the-report-viewer-web-part.md)  
   
   

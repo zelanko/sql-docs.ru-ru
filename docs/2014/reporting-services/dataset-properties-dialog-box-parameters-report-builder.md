@@ -11,14 +11,14 @@ f1_keywords:
 - "10023"
 ms.assetid: 3a0672ad-c969-455b-b952-585164ce1dda
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: bb8ac0237fc9175f29471a66b7e3916122b55707
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 207aa0b0657670d93dbdfc92b80a0c3d3285de7d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082294"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030205"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>Диалоговое окно «Свойства набора данных» — «Настройки» (построитель отчетов)
   Выберите **параметры** на **свойства набора данных** диалоговое окно для добавления, изменения и удаления параметров запроса.  
@@ -80,7 +80,7 @@ ms.locfileid: "48082294"
  [Справка построителя отчетов для диалоговых окон, панелей и мастеров](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Диалоговое окно свойств набора данных, запрос &#40;построитель отчетов&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [Выражения (построитель отчетов и службы SSRS)](report-design/expressions-report-builder-and-ssrs.md)   
- [Учебник. Добавление параметра к отчету (построитель отчетов)](tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Учебник. Добавление параметра к отчету &#40;построитель отчетов&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Параметры отчета (построитель отчетов и конструктор отчетов)](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Конструкторы запросов (построитель отчетов)](../../2014/reporting-services/query-designers-report-builder.md)   

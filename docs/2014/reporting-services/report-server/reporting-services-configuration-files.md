@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a752a226a550e867fed5b0ca59143a72df6c7dcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 651f8f2fa263918a59a4756a53f1e86f4679c60e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183296"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025696"
 ---
 # <a name="reporting-services-configuration-files"></a>Файлы конфигурации служб Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] хранят сведения о компонентах в реестре и файлах конфигурации, которые копируются в файловую систему при установке. Файлы конфигурации содержат комбинацию значений только для внутреннего использования и пользовательских значений. Пользовательские значения задаются при установке с помощью средств настройки, программ командной строки, а также посредством ручного редактирования файлов конфигурации.  
@@ -46,7 +46,7 @@ C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER
   
 |Место хранения|Описание|Местоположение|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|Хранит параметры конфигурации для областей функций службы сервера отчетов: диспетчера отчетов, веб-службы сервера отчетов и фоновой обработки. Дополнительные сведения о каждом параметре см. в разделе [файл конфигурации RSReportServer](rsreportserver-config-configuration-file.md).|\<каталог_установки>\Reporting Services\ReportServer|  
+|RSReportServer.config|Хранит параметры настройки для областей функций служб сервера отчетов: диспетчера отчетов, веб-службы сервера отчетов и фоновой обработки. Дополнительные сведения о каждом параметре см. в разделе [RSReportServer Configuration File](rsreportserver-config-configuration-file.md).|\<каталог_установки>\Reporting Services\ReportServer|  
 |RSSrvPolicy.config|Хранит политики управления доступом для кода для модулей сервера. Дополнительные сведения об этом файле см. в разделе [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md).|\<каталог_установки>\Reporting Services\ReportServer|  
 |Файл RSMgrPolicy.config|Хранит политики управления доступом для кода для диспетчера отчетов. Дополнительные сведения об этом файле см. в разделе [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md).|\<каталог_установки>\Reporting Services\ReportManager|  
 |Файл Web.config для веб-службы сервера отчетов|Включает только те параметры, которые необходимы для ASP.NET.|\<каталог_установки>\Reporting Services\ReportServer|  
@@ -67,7 +67,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 |Место хранения|Описание|Местоположение|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|Хранит параметры конфигурации для областей функций службы сервера отчетов: диспетчера отчетов, веб-службы сервера отчетов и фоновой обработки. Дополнительные сведения о каждом параметре см. в разделе [файл конфигурации RSReportServer](rsreportserver-config-configuration-file.md).|\<каталог_установки>\Reporting Services\ReportServer|  
+|RSReportServer.config|Хранит параметры настройки для областей функций служб сервера отчетов: диспетчера отчетов, веб-службы сервера отчетов и фоновой обработки. Дополнительные сведения о каждом параметре см. в разделе [RSReportServer Configuration File](rsreportserver-config-configuration-file.md).|\<каталог_установки>\Reporting Services\ReportServer|  
 |RSSrvPolicy.config|Хранит политики управления доступом для кода для модулей сервера. Дополнительные сведения об этом файле см. в разделе [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md).|\<каталог_установки>\Reporting Services\ReportServer|  
 |Файл Web.config для веб-службы сервера отчетов|Включает только те параметры, которые необходимы для ASP.NET.|\<каталог_установки>\Reporting Services\ReportServer|  
 |Параметры регистрации|Хранит состояние настройки и другие параметры, которые используются для отмены установки служб Reporting Services. Также хранит сведения о каждом приложении службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Не изменяйте эти параметры вручную, поскольку это может нарушить целостность установки.|HKEY_LOCAL_MACHINE \SOFTWARE \Microsoft \Microsoft SQL Server \\<ИД экземпляра\>\Setup<br /><br /> Идентификатор экземпляра образца: MSSQL12.MSSQLSERVER<br /><br /> **и**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Reporting Services\Service Applications|  
@@ -75,7 +75,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 ## <a name="see-also"></a>См. также  
  [Сервер отчетов служб Reporting Services (основной режим)](reporting-services-report-server-native-mode.md)   
- [Модули служб Reporting Services](../extensions/reporting-services-extensions.md)   
+ [модули служб Reporting Services](../extensions/reporting-services-extensions.md)   
  [Программа rsconfig (SSRS)](../tools/rsconfig-utility-ssrs.md)   
  [Запуск и остановка службы сервера отчетов](start-and-stop-the-report-server-service.md)  
   

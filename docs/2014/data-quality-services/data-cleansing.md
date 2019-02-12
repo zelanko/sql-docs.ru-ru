@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2f1da635e524b746bb96d0d19876285c869679e2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: bf9bcf7f96616d4c0ac49fa361a145bc69ec1d55
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395517"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020386"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   Очистка данных — это процесс анализа качества данных в источнике данных с выполняемым вручную утверждением или отклонением рекомендаций, даваемых системой, и внесением изменений в данные. Очистка данных в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) состоит из автоматического процесса, анализирующего соответствие данных знаниям из базы знаний, и интерактивного процесса, позволяющего диспетчеру данных проверять и изменять результаты автоматического процесса, чтобы обеспечить надлежащий результат очистки данных.  

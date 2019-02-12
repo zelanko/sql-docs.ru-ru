@@ -2,7 +2,7 @@
 title: sys.database_files (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/19/2016
-ms.prod: ''
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a237a562b747922fba4c294330bc9db067822242
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36fe2a156a7c83e8f884c135f24351371b0af533
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689962"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032305"
 ---
 # <a name="sysdatabasefiles-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47689962"
 |**is_media_read_only**|**bit**|1 = файл находится на носителе только для чтения.<br /><br /> 0 = файл размещен на носителе для чтения-записи.|  
 |**is_read_only**|**bit**|1 = файл помечен как файл только для чтения.<br /><br /> 0 = файл помечен для чтения-записи.|  
 |**is_sparse**|**bit**|1 = разреженный файл.<br /><br /> 0 = неразреженный файл.<br /><br /> Дополнительные сведения см. в разделе [Просмотр размера разреженного файла снимка базы данных (Transact-SQL)](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).|  
-|**значение аргумента is_percent_growth**|**bit**|1 = размер файла увеличивается в процентах.<br /><br /> 0 = абсолютное увеличение размера в страницах.|  
+|**is_percent_growth**|**bit**|1 = размер файла увеличивается в процентах.<br /><br /> 0 = абсолютное увеличение размера в страницах.|  
 |**is_name_reserved**|**bit**|1 = имя удаленного файла (name или physical_name) доступно для использования только после следующего резервного копирования журнала. После того как файлы удалены из базы данных, логические имена остаются в зарезервированном состоянии до следующего резервного копирования журнала. Этот столбец является важным только в случае использования модели полного восстановления и модели восстановления с неполным протоколированием.|  
 |**create_lsn**|**numeric(25,0)**|Регистрационный номер транзакции в журнале (LSN), на котором создан файл.|  
 |**drop_lsn**|**numeric(25,0)**|Номер LSN, с которым файл удален.<br /><br /> 0 = имя файла недоступно для повторного использования.|  

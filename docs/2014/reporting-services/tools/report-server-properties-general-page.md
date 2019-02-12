@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: af0db1ac3d03fa03ea7bb3267656597d164c5302
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4f92c0886bf3e1e5d5022cde96ad39671588225d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222220"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019345"
 ---
 # <a name="server-properties-general-page"></a>Свойства сервера (страница «Общие»)
   Данная страница позволяет просмотреть или изменить заголовок, используемый в диспетчере отчетов, включить или отключить папку «Мои отчеты», выбрать определение роли для защиты папки «Мои отчеты», а также включить или отключить клиентское средство управления печатью.  
@@ -28,7 +28,7 @@ ms.locfileid: "48222220"
  Свойства сервера, для которых доступна настройка, определяются режимом сервера. Если сервер отчетов настроен для работы в режиме интеграции с SharePoint, то включить папку «Мои отчеты» или установить заголовок приложения для диспетчера отчетов нельзя.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **Name**  
  Введите имя приложения, которое отображается в диспетчере отчетов. По умолчанию это значение служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Указанное имя отображается только в диспетчере отчетов.  
   
  **Версия**  
@@ -50,13 +50,13 @@ ms.locfileid: "48222220"
  Задает определение роли для защиты папки «Мои отчеты». Это определение роли обозначает набор задач, которые поддерживаются во время работы в каждой папке «Мои отчеты».  
   
  **Разрешить загрузку элемента управления печатью ActiveX клиента**  
- Наборы `EnableClientPrinting` системному свойству сервера отчетов. Если клиентская печать разрешена, у пользователей, имеющих разрешения локального администратора, имеется возможность загрузки подписанного элемента управления ActiveX для печати HTML-отчетов. Дополнительные сведения см. в разделе [Включение и отключение печати на стороне клиента для служб Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ Позволяет задать системное свойство `EnableClientPrinting` сервера отчетов. Если клиентская печать разрешена, у пользователей, имеющих разрешения локального администратора, имеется возможность загрузки подписанного элемента управления ActiveX для печати HTML-отчетов. Дополнительные сведения см. в разделе [Включение и отключение печати на стороне клиента для служб Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
 ## <a name="see-also"></a>См. также  
  [Установка свойств сервера отчетов (среда Management Studio)](set-report-server-properties-management-studio.md)   
  [Подключение к серверу отчетов в среде Management Studio](connect-to-a-report-server-in-management-studio.md)   
- [Включение и отключение папки "Мои отчеты"](../report-server/enable-and-disable-my-reports.md)   
+ [Включение и отключение папки «Мои отчеты»](../report-server/enable-and-disable-my-reports.md)   
  [Справка F1 по использованию сервера отчетов среде Management Studio](report-server-in-management-studio-f1-help.md)   
- [Защита рабочего пространства "Мои отчеты"](../security/secure-my-reports.md)  
+ [Обеспечение безопасности «Моих отчетов»](../security/secure-my-reports.md)  
   
   

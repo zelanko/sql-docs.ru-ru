@@ -2,8 +2,7 @@
 title: sp_pdw_log_user_data_masking (хранилище данных SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 23d7846bd72329a62579765679687204a8e14ec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0d9a6ec090e799b4b6f0aad7e7335d1e36999dd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630242"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022990"
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (хранилище данных SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47630242"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Журналы действий влияет **sp_pdw_log_user_data_masking** уверены [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналы действий. **sp_pdw_log_user_data_masking** не влияет на журналах транзакций базы данных, или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] журналы ошибок.  
   
- **Фон:** в конфигурации по умолчанию [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналы действий содержат полную [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций и может в некоторых случаях включают пользовательские данные, содержащиеся в операциях, таких как **вставить**,  **ОБНОВЛЕНИЕ**, и **ВЫБЕРИТЕ** инструкций. При возникновении проблемы на устройстве это позволяет анализа условий, которые не нужно воспроизвести проблему их причиной. Чтобы не допустить данные пользователя, записываемый [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналы действий, которые клиенты могут выбрать включение маскирование данных пользователя с помощью этой хранимой процедуры. Инструкции по-прежнему должны записываться в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналы действий, но все литералы в инструкциях, может содержать данные пользователя будут замаскированы; заменить некоторые предопределенные константы.  
+ **Фон:** В конфигурации по умолчанию [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналы действий содержат полную [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций и может в некоторых случаях включают пользовательские данные, содержащиеся в операциях, таких как **вставить**, **обновления**, и **ВЫБЕРИТЕ** инструкций. При возникновении проблемы на устройстве это позволяет анализа условий, которые не нужно воспроизвести проблему их причиной. Чтобы не допустить данные пользователя, записываемый [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналы действий, которые клиенты могут выбрать включение маскирование данных пользователя с помощью этой хранимой процедуры. Инструкции по-прежнему должны записываться в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналы действий, но все литералы в инструкциях, может содержать данные пользователя будут замаскированы; заменить некоторые предопределенные константы.  
   
  При включении прозрачного шифрования данных на устройстве маскирования данных пользователя в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналы действий включается автоматически.  
   

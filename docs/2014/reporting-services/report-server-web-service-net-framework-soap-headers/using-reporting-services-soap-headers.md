@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 306d2c06-a25a-40f8-8a35-13dd32e8841e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 247233e90e5fa35cbaacd905d208f07f15e850bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3a9e61cc8cc546156d24c209a68c3a523a0f8a29
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083864"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015065"
 ---
 # <a name="using-reporting-services-soap-headers"></a>Использование заголовков SOAP служб Reporting Services
   Связь с методом веб-службы по протоколу SOAP имеет стандартный формат. Данные, закодированные в XML-документе, являются частью этого формата. XML-документ состоит из корневого элемента **Envelope**, который в свою очередь состоит из обязательного элемента **Body** и дополнительного элемента **Header**. Элемент **Body** содержит данные, соответствующие сообщению. Необязательный элемент **Header** может содержать дополнительную информацию, не связанную напрямую с конкретным сообщением. Каждый дочерний элемент **Header** называется заголовком SOAP.  

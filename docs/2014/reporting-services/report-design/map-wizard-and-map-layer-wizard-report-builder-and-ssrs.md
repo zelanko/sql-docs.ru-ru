@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a0f004a2d145356e38816b65fc2cd5c2a1972074
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: aa0ccc9d3b2ca01e1b2279f71ef2815c81e060e3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362916"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011855"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Мастер карт и мастер слоев карт (построитель отчетов и службы SSRS)
   Мастер карт и мастер слоев карт автоматизируют задачи создания карты, добавления слоя карты или изменения параметров слоя карты применительно к существующему слою.  
@@ -271,7 +271,7 @@ ms.locfileid: "53362916"
  ![Значок стрелки, используемый для ссылки возврата в начало](../../2014-toc/media/uparrow16x16.gif "Значок стрелки, используемый для ссылки возврата в начало") [В начало](#BackToTop)  
   
 ## <a name="see-also"></a>См. также  
- [Устранение неполадок в отчетах: Отчеты-карты &#40;построитель отчетов и службы SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Планирование отчета-карты (построитель отчетов и службы SSRS)](plan-a-map-report-report-builder-and-ssrs.md)   
  [Карты (построитель отчетов и службы SSRS)](maps-report-builder-and-ssrs.md)  
   

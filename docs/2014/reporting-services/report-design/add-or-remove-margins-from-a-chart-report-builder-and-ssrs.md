@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 91c43f58-5771-4d33-a54d-0e802d2f5cba
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1dce4183ff7e873fd16ac3df8a346a600c7cb0dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4bff4422d255359c575956768d40c53ef0e39cb6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105834"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028055"
 ---
 # <a name="add-or-remove-margins-from-a-chart-report-builder-and-ssrs"></a>Добавление или удаление полей из диаграммы (построитель отчетов и службы SSRS)
   В гистограмме и точечной диаграмме боковые поля автоматически добавляются по краям оси X. В линейчатой диаграмме боковые поля автоматически добавляются по краям оси X. Для всех остальных диаграмм боковые поля не добавляются. Размер поля изменить нельзя.  
@@ -43,6 +43,6 @@ ms.locfileid: "48105834"
  [Диалоговое окно "Свойства оси" — "Параметры оси" (построитель отчетов и службы SSRS)](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
  [Задание интервала оси (построитель отчетов и службы SSRS)](specify-an-axis-interval-report-builder-and-ssrs.md)   
  [Форматирование меток оси в виде значений даты или валюты &#40;построитель отчетов и службы SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Диаграммы &#40;построитель отчетов и службы SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)  
   
   

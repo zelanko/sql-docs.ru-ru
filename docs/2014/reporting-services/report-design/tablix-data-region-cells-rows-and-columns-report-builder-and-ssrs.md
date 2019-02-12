@@ -15,13 +15,13 @@ f1_keywords:
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 6e3e43a8b2f39d4396945d47ee7e943e64fd1195
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f55324123716289fec88b9d9bc531dccb22848d3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072434"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043235"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Ячейки, строки и столбцы области данных табликса (построитель отчетов и службы SSRS)
   Чтобы эффективнее управлять процессом отображения данных в строках и столбцах области данных табликса в отчете, необходимо уметь определять метки, итоги, строки и столбцы для подробных данных и групп. Во многих случаях для отображения данных можно пользоваться структурами по умолчанию для таблиц, матриц и списков. Дополнительные сведения см. в разделе [таблиц &#40;построитель отчетов и службы SSRS&#41;](tables-report-builder-and-ssrs.md), [матрицы &#40;построитель отчетов и службы SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), или [перечислены &#40;построитель отчетов и SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
@@ -121,6 +121,6 @@ ms.locfileid: "48072434"
  Ранее объединенные ячейки можно разбить. Разбиение ячеек может быть выполнено как по горизонтали (на несколько столбцов), либо по вертикали (на несколько строк). Чтобы разбить ячейку на блок ячеек, сначала необходимо разбивать их по горизонтали, а затем каждую из получившихся строк — по вертикали.  
   
 ## <a name="see-also"></a>См. также  
- [Область данных Табликса &#40;построитель отчетов и службы SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Область данных табликса (построитель отчетов и службы SSRS)](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

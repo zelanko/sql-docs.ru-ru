@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ab5e18825ec9a328db926829355b706cff2a58d8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 1f8dcab2a07aca7971ea8c799660b075fe0bcfd2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366716"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022987"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Создание простого табличного отчета (учебник по службам SSRS)
   Этот учебник предназначен для создания простой табличный отчет на основе [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базы данных с помощью конструктора отчетов. Для создания отчетов также можно использовать построитель отчетов и мастер отчетов. В этом учебнике требуется создать проект отчета, указать сведения о соединении, определить запрос, добавить область данных таблицы и выполнить предварительный просмотр отчета.  
@@ -45,17 +45,17 @@ ms.locfileid: "53366716"
  Для получения данных из базы данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] необходимо иметь разрешения только на чтение.  
   
 ## <a name="tasks"></a>Задания  
- [Занятие 1. Создание проекта сервера отчетов &#40;службы Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)  
+ [Занятие 1. Создание проекта сервера отчетов (службы Reporting Services)](lesson-1-creating-a-report-server-project-reporting-services.md)  
   
- [Занятие 2. Задание информации о соединении &#40;службы Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)  
+ [Занятие 2. Задание информации о соединении (службы Reporting Services)](lesson-2-specifying-connection-information-reporting-services.md)  
   
- [Занятие 3. Определение набора данных для табличного отчета &#40;службы Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
+ [Занятие 3. Определение набора данных для табличного отчета (службы Reporting Services)](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
   
- [Занятие 4. Добавление таблицы в отчет &#40;службы Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)  
+ [Занятие 4. Добавление таблицы в отчет (службы Reporting Services)](lesson-4-adding-a-table-to-the-report-reporting-services.md)  
   
- [Занятие 5. Форматирование отчета &#40;службы Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)  
+ [Занятие 5. Форматирование отчета (службы Reporting Services)](lesson-5-formatting-a-report-reporting-services.md)  
   
- [Занятие 6. Добавление группирования и итогов &#40;службы Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
+ [Занятие 6. Добавление группирования и итогов (службы Reporting Services)](lesson-6-adding-grouping-and-totals-reporting-services.md)  
   
 > [!NOTE]  
 >  При просмотре учебников рекомендуется добавить **Далее** и **Назад** кнопок панели инструментов средства просмотра документов. Дополнительные сведения см. в разделе  

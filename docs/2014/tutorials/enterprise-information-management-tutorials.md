@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8745dc80-193d-4de0-9f17-ba648ab1e81c
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9e40202ef0230fbbdddd1c596e5dc41b4d44a0fe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ee7cc12f4fde3a2e5116458034ae3d4a8cc1c13a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373996"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015115"
 ---
 # <a name="enterprise-information-management-tutorials"></a>Учебники по информационному менеджменту предприятия
   В этом разделе содержатся учебники по управлению данными на предприятии с помощью технологий управления данными на предприятии (EIM), включенных в службы [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Технологии управления данными на предприятии (EIM) предоставляют портфель корпоративных решений, которые позволяют организациям обеспечивать надежность и согласованность своих данных, для принятия на их основе важных бизнес-решений. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] содержит следующие технологии, помогающие в реализации решений EIM на предприятии.  

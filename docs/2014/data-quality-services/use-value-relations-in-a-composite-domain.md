@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.cdvaluerelations.f1
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 12689babd1fbb928e4ec086ef78d85d263ea17cb
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 28af90490875c06382845fbb9ae7a07281725d25
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032871"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025195"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>Использование связей значений в составном домене
   В этом разделе описываются способы просмотра сочетаний значений, обнаруженных для составного домена в процессе обнаружения знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Эта страница показывает количество повторений сочетаний значений. Управление значениями не поддерживается для составных доменов, поэтому операции с этими значениями выполнить не удастся.  
@@ -49,7 +49,7 @@ ms.locfileid: "51032871"
   
 6.  Изменить какие-либо значения в этой таблице нельзя. Если вы выполнили другие операции, нажмите кнопку **Готово** для завершения действия по управлению доменами. В противном случае нажмите кнопку **Отмена**.  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После просмотра связей значений  
+##  <a name="FollowUp"></a> Дальнейшие действия. после просмотра связей значений  
  После просмотра связей значений в домене можно выполнить другие задачи по управлению доменами, произвести обнаружение знаний для добавления набора знаний в домен или добавить в домен политику сопоставления. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../../2014/data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../../2014/data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

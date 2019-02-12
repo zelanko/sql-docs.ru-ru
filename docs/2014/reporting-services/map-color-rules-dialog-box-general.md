@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.shared.mapcolorrulesgeneral.f1
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6557db236aba57db2c6f06a29faee1f05bdc30cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6c1d4289f9785d6975c6bba85e8215f208a3c537
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179294"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018256"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>Диалоговое окно «Правила цвета карты» — «Общие»
   Перейдите на страницу **Общие** в диалоговом окне **Свойства правил цвета** , чтобы определить параметры цвета для элементов карты на данном слое. Элементы карты включают многоугольники, линии и точки. Правила цвета можно применить, если создана связь между элементами карты на основе пространственных и аналитических данных из поля набора данных либо из поля источника пространственных данных.  
@@ -61,6 +61,6 @@ ms.locfileid: "48179294"
   
 ## <a name="see-also"></a>См. также  
  [Карты (построитель отчетов и службы SSRS)](report-design/maps-report-builder-and-ssrs.md)   
- [Изменить условные обозначения, цветовая шкала и связанные правила &#40;построитель отчетов и службы SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [Изменение условных обозначений карты, цветовой шкалы и связанных правил (построитель отчетов и службы SSRS)](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ad14d7005dc01c700b99c4a41cc8f95cac30da02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: adfda7de7c700959e375678a8d45b4c522b59577
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078646"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031467"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>устанавливать разрешения на элементы сервера отчетов с помощью сайта SharePoint (службы Reporting Services в режиме интеграции с SharePoint)
   Если параметры безопасности по умолчанию не обеспечивают нужного уровня доступа, можно создать разрешения, чтобы предоставить доступ к определенным элементам или операциям сервера отчетов. Пользовательские параметры безопасности могут оказаться полезными, если требуется ограничить доступ к конкретному отчету.  
@@ -73,10 +73,10 @@ ms.locfileid: "48078646"
 12. Нажмите кнопку **ОК**. После того как пользователь получил возможность изменять разрешения на конкретную модель, он может открыть модель для изменения ее внутренних разрешений.  
   
 ## <a name="see-also"></a>См. также  
- [Использование встроенных средств безопасности в Windows SharePoint Services для элементов сервера отчетов](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
+ [Использование встроенных средств безопасности служб Windows SharePoint Services при работе с элементами сервера отчетов](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
  [Задание разрешений для работы сервера отчетов в веб-приложении SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [Сайт SharePoint и справочник по разрешениям списка для элементов сервера отчетов](sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
+ [Справочная таблица по разрешениям на сайты SharePoint и списки для элементов сервера отчетов](sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

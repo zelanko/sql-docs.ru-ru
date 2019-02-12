@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f0d74f8c-600d-4df5-a742-695e6947a071
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e1264808911226150bc908e356e1b08ab90e72fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055004"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011145"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>Проверка модели с фильтром (учебник по интеллектуальному анализу данных — начальный уровень)
   Теперь, когда выяснилось, что `TM_Decision_Tree` наиболее точной является модель, будет настроить модель для удовлетворения потребностей [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] кампании прямой почтовой рассылки. В частности отдел маркетинга бы хотели узнать, если имеются различия между мужского и женского клиентов. Сведения могут помочь им в выборе журналов для размещения рекламы и продуктов, которые в почтовых рассылках.  
@@ -88,7 +87,7 @@ ms.locfileid: "48055004"
   
  [Изучение модели дерева принятия решений &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
- [Проверка точности при помощи диаграммы точности прогнозов &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Проверка точности с помощью диаграмм точности прогнозов (учебник интеллектуального анализа данных — начальный уровень)](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 #### <a name="to-explore-the-filtered-models"></a>Исследование моделей с фильтрами  
   
@@ -130,15 +129,15 @@ ms.locfileid: "48055004"
  Пример применения фильтров к вложенным таблицам, см. в разделе [данных учебник по интеллектуальному анализу &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md).  
   
 ## <a name="previous-task-in-lesson"></a>Предыдущая задача занятия  
- [Проверка точности при помощи диаграммы точности прогнозов &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Проверка точности с помощью диаграмм точности прогнозов (учебник интеллектуального анализа данных — начальный уровень)](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 6: Создание прогнозов и работа с &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Занятие 6. Создание прогнозов и работа с &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>См. также  
  [Средний уровень учебник по интеллектуальному анализу данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
- [Задачи модели интеллектуального анализа данных и инструкции по](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Задачи и инструкции по модели интеллектуального анализа данных](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Удаление фильтра из модели интеллектуального анализа данных](../../2014/analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)   
- [Фильтры для моделей интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [Фильтры для моделей интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

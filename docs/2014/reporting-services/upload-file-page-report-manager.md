@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7bb3166f-9374-4449-b66a-ffb77298507d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8c58757e975f4a5ef68804f190aafeec0197a902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d83f8d097c74b0a7171d0e91e1d36ad716a00415
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128264"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023545"
 ---
 # <a name="upload-file-page-report-manager"></a>Страница «Выгрузка файла» (диспетчер отчетов)
   Используйте страницу «Передача файла», чтобы опубликовать файл из файловой системы в базе данных сервера отчетов. Переданные файлы представлены как элементы иерархии папок сервера отчетов.  
@@ -50,15 +50,15 @@ ms.locfileid: "48128264"
  **Обзор**  
  Нажмите, чтобы выбрать файл в файловой системе.  
   
- **Название**  
+ **Name**  
  Введите имя файла в виде, в котором оно будет представлено в пространстве имен сервера отчетов. Имя должно содержать хотя бы одну букву или цифру. Оно также может включать пробелы и специальные знаки. Не используйте символы ; ? : \@ & = +, $ * \< > | "или / при указании имени элемента.  
   
  **Перезаписать элемент, если он существует**  
  Установите этот флажок, если нужно заменить существующий элемент новой версией. Чтобы перезаписать существующую версию, имена нового элемента и существующего элемента должны точно совпадать.  
   
 ## <a name="see-also"></a>См. также  
- [Диспетчер отчетов &#40;собственный режим служб SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Содержимое страницы &#40;диспетчера отчетов&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Страница "Содержимое" (диспетчер отчетов)](../../2014/reporting-services/contents-page-report-manager.md)   
  [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)   
  [Передача файлов в папку](report-server/upload-files-to-a-folder.md)  
   

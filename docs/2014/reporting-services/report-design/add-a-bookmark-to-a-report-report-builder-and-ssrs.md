@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 78ebab378601e63f0b50c18ed0693efb97a59254
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 33252d10da04299c4b4f4e6177745567335a5256
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154144"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024821"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>Добавление в отчет закладки (построитель отчетов и службы SSRS)
   Закладки и ссылки на закладки следует добавлять в отчет, если необходимо создать пользовательское оглавление или внутренние ссылки для навигации по отчету. Обычно закладки создаются в тех местах отчета, к которым следует направить пользователей, например к таблицам или графикам, либо к уникальным групповым значениям, отображаемым в таблице или матрице. Можно создать собственные строки и использовать их в качестве закладок, либо, при работе с группами, можно установить закладку на выражение группы.  
@@ -58,6 +58,6 @@ ms.locfileid: "48154144"
 ## <a name="see-also"></a>См. также  
  [Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Выражения (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   
- [Фильтрация, группирование и сортировка данных &#40;построитель отчетов и службы SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8520607baa223931169300ab2840d364598d0dec
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: kfile
+ms.openlocfilehash: fbc55765d8955c47f677c70968b33b35dfa641a1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135137"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037455"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>опубликовать отчет в библиотеке SharePoint
   Чтобы опубликовать отчет на сайте SharePoint, настроенном для интеграции с SharePoint, необходимо задать свойства проекта в конструкторе отчетов. В свойствах проекта все ссылки на серверы, отчеты и общие источники данных следует указывать в виде полных URL-адресов. В определении отчета все ссылки на вложенные отчеты, детализированные отчеты и такие ресурсы, как изображения, расположенные в Интернете, должны представлять собой полные URL-адреса.  

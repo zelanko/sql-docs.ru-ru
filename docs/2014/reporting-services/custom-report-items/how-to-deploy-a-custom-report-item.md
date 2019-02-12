@@ -1,5 +1,5 @@
 ---
-title: Развертывание пользовательского элемента отчета | Документы Майкрософт
+title: Как Развертывание пользовательского элемента отчета | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 48e55cfb3eb754af540ca4eb4d19ae415d396f60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 891cafeac3901376793383cdd5cd499c549d45f6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175874"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033215"
 ---
-# <a name="how-to-deploy-a-custom-report-item"></a>Развертывание пользовательского элемента отчета
+# <a name="how-to-deploy-a-custom-report-item"></a>Как развернуть пользовательский элемент отчета
   Чтобы развернуть пользовательский элемент отчета в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], нужно изменить файлы конфигурации сервера отчетов и скопировать сборки времени разработки и времени выполнения в соответствующие папки приложений для конструктора отчетов и сервера отчетов.  
   
 ### <a name="to-deploy-a-custom-report-item"></a>Развертывание пользовательского элемента отчета  

@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1a6c138e-643b-4ae6-ad08-93631f149c20
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 559f6aa6b31b8998703a93e84dc100ce375cbda8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a86ddf0a715fc3a2313f555e898b3bd94cf66d8c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139534"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030595"
 ---
 # <a name="modifying-the-forecasting-structure-intermediate-data-mining-tutorial"></a>Изменение структуры прогнозирования (учебник по интеллектуальному анализу данных — средний уровень)
   Созданная в предыдущей задаче структура интеллектуального анализа данных содержит одну модель прогнозирования. Перед обработкой и изучением этой модели необходимо внести небольшие изменения в ее структуру и изменить одно из свойств.  
   
 ## <a name="modifying-the-mining-structure"></a>Изменение структуры интеллектуального анализа данных  
- Структуры интеллектуального анализа данных можно изменить с помощью **структуры интеллектуального анализа данных** конструктора интеллектуального анализа данных. При создании модели с помощью мастера интеллектуального анализа данных использовалось три столбца: ReportingDate, ModelRegion и Quantity. Тем не менее **Forecasting** таблица также содержит столбец Amount, который можно использовать для прогнозирования объема продаж. С помощью **структуры интеллектуального анализа данных** вкладку, этот столбец из представления источников данных можно добавить к структуре интеллектуального анализа данных.  
+ Структуры интеллектуального анализа данных можно изменить с помощью **структуры интеллектуального анализа данных** конструктора интеллектуального анализа данных. При создании модели в мастере интеллектуального анализа данных использовалось три столбца: ReportingDate, ModelRegion и Quantity. Тем не менее **Forecasting** таблица также содержит столбец Amount, который можно использовать для прогнозирования объема продаж. С помощью **структуры интеллектуального анализа данных** вкладку, этот столбец из представления источников данных можно добавить к структуре интеллектуального анализа данных.  
   
 #### <a name="to-add-the-amount-column-to-the-forecasting-mining-structure"></a>Добавление столбца Amount в структуру таблицы интеллектуального анализа данных Forecasting  
   
@@ -54,7 +53,7 @@ ms.locfileid: "48139534"
  [Настройка и обработка модели прогнозирования &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../2014/tutorials/customize-process-forecasting-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>См. также  
- [Структуры интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Модели интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

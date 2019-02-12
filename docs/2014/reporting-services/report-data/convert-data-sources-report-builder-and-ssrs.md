@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3bd7ed750917129496caf9febe711df9fd0cebc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bc8c9b65c70fef86887ed80a8049b4e930188ffe
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090994"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038395"
 ---
 # <a name="convert-a-data-source-from-embedded-to-shared-report-builder-and-ssrs"></a>Преобразование источника данных из внедренного в общий (построитель отчетов и службы SSRS)
   Каждый источник данных в области данных отчета является внедренным и привязанным к определенному отчету либо общим. В построителе отчетов общий источник данных указывает на опубликованный общий источник данных на сервере отчетов или сайте SharePoint. В конструкторе отчетов общий источник данных указывает на общий источник данных в папке **Общие источники данных** в обозревателе решений.  

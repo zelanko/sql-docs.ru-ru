@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 50746639-da7c-46a5-ac7b-e87dd6b91880
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 58f8e9f581781c3a7503c55744c0ec0abf3973dd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: e8e2e218eb702f2606293596206e43373a6b6a8f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360676"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030715"
 ---
 # <a name="using-the-setting-class-for-a-delivery-extension"></a>Использование класса Setting для модуля доставки
   Класс <xref:Microsoft.ReportingServices.Interfaces.Setting> находится в пространстве имен <xref:Microsoft.ReportingServices.Interfaces> и представляет сведения о параметрах настройки для модуля доставки. Класс <xref:Microsoft.ReportingServices.Interfaces.Setting> предусматривает инфраструктуру для хранения информации о параметрах, необходимых для нормального функционирования модуля доставки. Так, в модуле доставки электронной почты сервера отчетов необходимо указывать параметры, требуемые для доставки электронной почты, такие как адрес получателя, адрес отправителя, строка темы электронного письма и т.д. Разумеется, для того, чтобы модуль доставки мог доставлять уведомления и отчеты, нестандартные поставщики доставки будут требовать от пользователя указания соответствующих параметров.  

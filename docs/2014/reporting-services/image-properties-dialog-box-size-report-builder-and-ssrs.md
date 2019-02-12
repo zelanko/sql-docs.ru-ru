@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pictureproperties.size.f1
 ms.assetid: 144a5da4-a3c3-4856-942e-7b7c60e2f6fa
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 97dce14bed313a8044486f4e7609557e2ad13057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 0d9610544543e88fd8e50e9d3ccc2fc64ecb84a5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112686"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016115"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>Диалоговое окно «Свойства изображения» — «Размер» (построитель отчетов и SSRS)
   Выберите вкладку **Размер** в диалоговом окне **Свойства изображения** , чтобы отформатировать размер изображений, отображаемых в поле или в области конструирования, либо откорректировать величину дополнительного пространства между границей ячейки или текстового поля и рисунком или значением, содержащимися в ячейке или текстовом поле.  
@@ -52,7 +52,7 @@ ms.locfileid: "48112686"
 ## <a name="see-also"></a>См. также  
  [Изображение диалогового окна «Общие» свойства &#40;построитель отчетов и службы SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Образы &#40;построитель отчетов и службы SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Изображения (построитель отчетов и службы SSRS)](report-design/images-report-builder-and-ssrs.md)   
  [Справка построителя отчетов для диалоговых окон, панелей и мастеров](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

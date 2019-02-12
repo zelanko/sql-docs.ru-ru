@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d91acd160949d0438c73d21ac3e422f57a3522cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f4122aa579766d80cfac6600753d4a8f8a672ae9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081693"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017916"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Создание управляемой данными подписки (учебник по службам SSRS)
   Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляют управляемые данными подписки, позволяющие настроить распространение отчета на основе динамических данных подписчиков. Управляемые данными подписки предназначены для следующих типов сценариев:  
@@ -34,13 +34,13 @@ ms.locfileid: "48081693"
   
  Учебник разделен на три занятия.  
   
- [Урок 1. Создание образца базы данных подписчика](lesson-1-creating-a-sample-subscriber-database.md)  
+ [Занятие 1. Создание образца базы данных подписчика](lesson-1-creating-a-sample-subscriber-database.md)  
  На этом занятии рассматривается создание локальной базы данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], в которой содержатся сведения о подписчике.  
   
- [Урок 2. Изменение свойств источника данных отчета](lesson-2-modifying-the-report-data-source-properties.md)  
+ [Занятие 2. Изменение свойств источника данных отчета](lesson-2-modifying-the-report-data-source-properties.md).  
  На этом занятии изучается изменение свойств источника данных отчета для обеспечения автоматического выполнения отчета. Для обеспечения автоматического выполнения необходимы сохраненные учетные данные. Вы также измените набор данных отчета, включив в него параметр, значение которого берется из данных подписчика.  
   
- [Урок 3. Определение управляемой данными подписки](lesson-3-defining-a-data-driven-subscription.md)  
+ [Занятие 3. Определение управляемой данными подписки](lesson-3-defining-a-data-driven-subscription.md)  
  На этом занятии рассматриваются способы определения управляемой данными подписки. На этом занятии будет подробно разобрана каждая страница в мастере управляемой данными подписки.  
   
 ## <a name="requirements"></a>Требования  
@@ -56,7 +56,7 @@ ms.locfileid: "48081693"
   
 -   Должна быть запущена служба агента SQL Server.  
   
--   Отчет, который включает параметры. Этот учебник основывается на образце отчета, `Sales Orders` создаются с помощью учебника [создание простого табличного отчета &#40;учебник по службам SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md).  
+-   Отчет, который включает параметры. В этом учебнике используется образец отчета `Sales Orders` , созданный при работе с учебником [Создание простого табличного отчета (учебник по службам SSRS)](create-a-basic-table-report-ssrs-tutorial.md).  
   
 -   Образец базы данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)], который предоставляет данные для образца отчета.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48081693"
  **Предполагаемое время для выполнения заданий учебника:** 30 минут. И еще 30 минут, если вы еще не прошли учебник по созданию простого отчета.  
   
 ## <a name="see-also"></a>См. также  
- [Управляемые данными подписки](subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Создание простого табличного отчета (учебник по службам SSRS)](create-a-basic-table-report-ssrs-tutorial.md)  
   
   

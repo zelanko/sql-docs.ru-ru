@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4959243f633702fb0f0afd9b2444ae65666ef680
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: d93314c6cfe7f260422cfc1f0e4eb28d934bc305
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506961"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015085"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Отслеживание подписок служб Reporting Services
   Вы можете отслеживать подписки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательском интерфейсе, Windows PowerShell или в файлах журнала. Параметры, которые можно отслеживать, зависят от того, какой режим сервера отчетов используется.  

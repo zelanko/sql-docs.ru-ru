@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 90928774eb2429430da0cbc1e8904ec5b1dc0c08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d77a978ca0d1f8f1f175871d5acd6de0aa5c6e64
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161734"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019125"
 ---
 # <a name="set-report-processing-properties"></a>Установка свойств обработки отчетов
   Свойства выполнения отчета определяют, как отчет обрабатывается. Свойства выполнения должны быть установлены для каждого отчета отдельно.  
@@ -57,10 +57,10 @@ ms.locfileid: "48161734"
  Если выполняется это условие, сервер отчетов отключит подписку в следующий раз, когда она должна выполняться по расписанию. Для повторного включения подписки откройте, а затем сохраните ее. При открытии подписки сервер отчетов обновляет значения параметров подписки теми, что указаны для моментального снимка. Дополнительные сведения о подписках см. в разделе [Подписки и доставка (службы Reporting Services)](../subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
 ## <a name="see-also"></a>См. также  
- [Установка параметров обработки &#40;режим интеграции служб Reporting Services в SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Настройка свойств выполнения для отчета &#40;диспетчера отчетов&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
+ [Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Настройка свойств выполнения для отчета (диспетчер отчетов)](../reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Основные понятия служб Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md)   
- [Добавление моментального снимка в журнал отчета](add-a-snapshot-to-report-history-report-manager.md)   
- [Определение учетных данных и сведениях о подключении для источников данных отчета](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [Как Добавление моментального снимка к журналу отчета](add-a-snapshot-to-report-history-report-manager.md)   
+ [Задание учетных данных и сведениях о соединении для источников данных отчета](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

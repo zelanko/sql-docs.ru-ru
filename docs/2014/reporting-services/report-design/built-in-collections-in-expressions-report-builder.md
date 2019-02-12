@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 6065291efcf59f5ac5341b47bfdae95afb35a119
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7a94b17d36429c27e2ddc9b958a4d0e8d8278f9c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095664"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037215"
 ---
 # <a name="built-in-collections-in-expressions-report-builder-and-ssrs"></a>Встроенные коллекции в выражениях (построитель отчетов и службы SSRS)
   В выражение в отчете можно включить ссылки на следующие встроенные коллекции: ReportItems, Parameters, Fields, DataSets, DataSources, Variables и встроенные поля для общих сведений, таких как имя отчета. В диалоговом окне **Выражения** отображаются не все коллекции. Коллекции DataSets и DataSources доступны только во время выполнения для отчетов, опубликованных на сервере отчетов. Коллекция ReportItems является коллекцией текстовых полей в области отчета, например текстовых полей на странице или в верхнем колонтитуле.  
@@ -52,7 +52,7 @@ ms.locfileid: "48095664"
 |*Collection.Member*|`=User.Language`|  
   
 ## <a name="see-also"></a>См. также  
- [Добавление выражения &#40;построитель отчетов и службы SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)   
+ [Добавление выражения (построитель отчетов и службы SSRS)](add-an-expression-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md)  
   
   

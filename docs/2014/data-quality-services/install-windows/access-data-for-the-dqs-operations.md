@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 71ef931fc857841365919073cb470c725c3714e0
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 951ff99f6c1e234a0c2861b12ae8f54815f1e37e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030703"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019925"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Предоставление доступа к данным для операций со службами DQS
   Чтобы использовать исходные данные для операций служб [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) и экспортировать обработанные данные, выполните одно из следующих действий.  
@@ -40,13 +40,13 @@ ms.locfileid: "51030703"
   
 4.  В диалоговом окне **Свойства имени входа** щелкните страницу **Сопоставление пользователей** в левой части.  
   
-5.  На правой панели установите флажок в столбце **Сопоставление** для базы данных **DQS_STAGING_DATA** , а затем выберите следующие роли в панели **Членство в роли базы данных для DQS_STAGING_DATA** :  
+5.  В области справа установите флажок в разделе **карты** столбец для **DQS_STAGING_DATA** базы данных, а затем выберите следующие роли в **членство в роли для базы данных: DQS_STAGING_DATA** панели:  
   
-    -   **db_datareader**: чтение данных из таблиц и представлений.  
+    -   **db_datareader**: Чтение данных из таблиц и представлений  
   
-    -   **db_datawriter**: добавление, удаление и изменение данных в таблицах.  
+    -   **db_datawriter**: Добавление, удаление и изменение данных в таблицах.  
   
-    -   **db_ddladmin**: создание, изменение или удаление таблиц и представлений.  
+    -   **db_ddladmin**: Создание, изменение или удаление таблиц и представлений.  
   
 6.  В диалоговом окне **Свойства имени входа** нажмите кнопку **ОК** , чтобы применить изменения.  
   

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: a922d01d0085830cde30bbc16fcd6f79e106ff03
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 19e402f1b74f72ce962aaa95f5f48794ffb7c154
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394245"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018126"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Задача 1 (предварительное требование): Удаление данных поставщика в MDS
   В этой задаче будут удалены данные о поставщиках, хранящихся в MDS. Отправить данные вручную с помощью **надстройки MDS для Excel** на предыдущем занятии. Пакет служб SSIS, который будет создан на этом занятии, будет автоматически загружать данные в MDS. Поэтому перед тестированием пакета служб SSIS необходимо удалить данные поставщиков из MDS, удалить производную иерархию, удалить сущности поставщиков и состояний, а также создать сущность поставщика без данных.  

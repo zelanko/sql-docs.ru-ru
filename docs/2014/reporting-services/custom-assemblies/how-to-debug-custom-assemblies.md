@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отладка пользовательских сборок | Документы Майкрософт
+title: Как Отладка пользовательских сборок | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d151641736523457e4c22ea94f50fb0652a73aa3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: da4171b624fd4caf4eabae5cec50c4b6c19578b7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159734"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011496"
 ---
-# <a name="how-to-debug-custom-assemblies"></a>Практическое руководство. Отладка пользовательских сборок
+# <a name="how-to-debug-custom-assemblies"></a>Как выполнять отладку пользовательских сборок
   В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] предусмотрен ряд средств отладки, помогающих проанализировать код пользовательской сборки и найти в нем ошибки. Выбор наиболее подходящего средства отладки зависит от того, какая цель должна быть достигнута. В этом примере используется [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  
   
  Рекомендуемый способ проектирования, разработки и тестирования пользовательских сборок для службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] состоит в создании решения, содержащего не только пользовательскую сборку, но и тестовые отчеты.  
