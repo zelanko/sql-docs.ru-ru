@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1fb4109af9bc9a063444a02205f980628f6f2643
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 10d6d79587051b78f212c5fbe4a9d866ee0c75e0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100234"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014630"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>Удаление изолированной версии построителя отчетов (построитель отчетов)
   Изолированную версию построителя отчетов можно удалить с помощью панели управления или из командной строки. Удалить версию [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] построителя отчетов невозможно без удаления служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].  
@@ -31,7 +31,7 @@ ms.locfileid: "48100234"
   
 2.  На панели управления щелкните элемент **Программы и компоненты**.  
   
-3.  Найдите построитель отчетов « [!INCLUDE[msCoИмя](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] » в списке **Имя** и щелкните его.  
+3.  Найдите построитель отчетов « [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] » в списке **Имя** и щелкните его.  
   
 4.  Нажмите кнопку **Удалить**.  
   
