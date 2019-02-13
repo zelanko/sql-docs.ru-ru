@@ -1,6 +1,6 @@
 ---
 title: Поддерживаемые источники данных в SQL Server Analysis Services для табличных моделей 1400 | Документация Майкрософт
-ms.date: 05/07/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 856e15e7365128bc79d119afe267334fb8470832
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4c900c6f1683b9f4c96355a759c604022515d2ce
+ms.sourcegitcommit: 89a7bd9ccbcb19bb92a1f4ba75576243a58584e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041662"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56159759"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>Источники данных, поддерживаемые в SQL Server Analysis Services табличных моделей 1400
 
@@ -29,17 +29,22 @@ SSAS табличных моделей на уровне совместимос�
 
 ## <a name="cloud-data-sources"></a>Облачными источниками данных
 
-|Источник данных Azure  |В памяти  |DirectQuery  |
+|Источник данных  |В памяти  |DirectQuery  |
 |---------|---------|---------|
 |База данных SQL Azure     |   Да      |    Да      |
 |Хранилище данных SQL Azure     |   Да      |   Да       |
-|хранилище BLOB-объектов Azure.     |   Да       |    Нет      |
+|хранилище BLOB-объектов Azure     |   Да       |    Нет      |
 |Хранилище таблиц Azure    |   Да       |    Нет      |
-|Azure Cosmos DB      |  Да        |  Нет        |
-|Azure Data Lake Store     |   Да       |    Нет      |
-|Azure HDInsight HDFS     |     Да     |   Нет       |
-|Azure HDInsight Spark (бета-версия)     |   Да       |   Нет       |
+|Azure Cosmos DB     |  Да        |  Нет        |
+|Azure Data Lake Store (поколение 1)<sup>[1](#gen2)</sup>      |   Да       |    Нет      |
+|Azure HDInsight HDFS    |     Да     |   Нет       |
+|Azure HDInsight Spark <sup> [2](#databricks)</sup>     |   Да       |   Нет       |
 ||||
+
+<a name="gen2">1</a> -ADLS Gen2 сейчас не поддерживается.   
+<a name="databricks">2</a> — azure Databricks с помощью Spark, соединитель в настоящее время не поддерживается.   
+
+
 
 **Поставщик**   
 В памяти и моделей DirectQuery, подключающихся к источникам данных Azure используйте поставщик данных .NET Framework для SQL Server.

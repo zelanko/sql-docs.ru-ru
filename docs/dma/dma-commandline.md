@@ -15,15 +15,15 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 7d02ead6a601c47ba68bd12ece8fa444ceee5a9e
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 7769edd1718881a01fe0f40ae2b7dc0e8b8ec78a
+ms.sourcegitcommit: 89a7bd9ccbcb19bb92a1f4ba75576243a58584e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226401"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56159769"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Запустите помощник по миграции данных из командной строки
-В версии 2.1 и выше, когда установки помощника по миграции данных, также устанавливается dmacmd.exe в *% ProgramFiles %\\Microsoft Data Migration Assistant\\*. Используйте dmacmd.exe для оценки баз данных в автоматическом режиме и вывода результата JSON или CSV-файл. Этот метод особенно полезен при оценке в нескольких базах данных или огромных баз данных. 
+В версии 2.1 и выше, когда установки помощника по миграции данных, также устанавливается dmacmd.exe в *% ProgramFiles %\\Microsoft Data Migration Assistant\\*. Используйте dmacmd.exe для оценки баз данных в автоматическом режиме и вывода результата JSON или CSV-файл. Этот метод особенно полезен при оценке в нескольких базах данных или огромных баз данных. 
 
 > [!NOTE]
 > Dmacmd.exe поддерживает только оценки. В настоящее время не поддерживается миграция.
@@ -45,14 +45,18 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | Как использовать dmacmd.exe текст справки        | Нет
 |`/AssessmentName`     |   Имя проекта оценки   | Да
 |`/AssessmentDatabases`     | Разделенный пробелами список строк подключения. Имя базы данных (начальный каталог) учитывается регистр. | Да
-|`/AssessmentTargetPlatform`     | Целевая платформа для оценки, поддерживаемые значения: Файл SqlServer2012, SqlServer2014, SqlServer2016 и AzureSqlDatabaseV12. Значение по умолчанию — SqlServer2016   | Нет
+|`/AssessmentTargetPlatform`     | Целевая платформа для оценки, поддерживаемые значения: Файл SqlServer2012, SqlServer2014, SqlServer2016 и AzureSqlDatabaseV12. Default is SqlServer2016   | Нет
 |`/AssessmentEvaluateFeatureParity`  | Запустить правила равенства  | Нет
 |`/AssessmentEvaluateCompatibilityIssues`     | Выполнение правил совместимости  | Да <br> (AssessmentEvaluateCompatibilityIssues или AssessmentEvaluateRecommendations является обязательным.)
 |`/AssessmentEvaluateRecommendations`     | Выполните рекомендуемые возможности        | Да <br> (AssessmentEvaluateCompatibilityIssues или AssessmentEvaluateRecommendationsis требуется)
 |`/AssessmentOverwriteResult`     | Перезаписать файл результатов    | Нет
 |`/AssessmentResultJson`     | Полный путь к файлу результатов JSON     | Да <br> (AssessmentResultJson или AssessmentResultCsv является обязательным)
 |`/AssessmentResultCsv`    | Полный путь к CSV-файл результатов   | Да <br>(AssessmentResultJson или AssessmentResultCsv является обязательным)
-
+|`/Action`    | Используйте SkuRecommendation, чтобы получить рекомендации SKU, используйте AssessTargetReadiness провести оценку готовности целевой объект.   | Нет
+|`/SourceConnections`    | Пробелами списком строк подключения. Имя базы данных (начальный каталог) является необязательным. Если имя базы данных не указан, проверяются все базы данных в источнике.   | Да <br>(Требуется действие «AssessTargetReadiness»)
+|`/TargetReadinessConfiguration`    | Полный путь к XML-файл, описывающий значения для имени, соединения с источниками и файл результатов.   | Да <br>(TargetReadinessConfiguration или SourceConnections является обязательным)
+|`/FeatureDiscoveryReportJson`    | Путь к функции обнаружения JSON отчетов. Если этот файл будет создан, его можно использовать для повторного запуска оценки готовности целевой без подключения к источнику.   | Нет
+|`/ImportFeatureDiscoveryReportJson`    | Путь к функции обнаружения JSON отчет, созданный ранее. Вместо соединения с источниками этот файл будет использоваться.   | Нет
 
 ## <a name="examples-of-assessments-using-the-cli"></a>Примеры оценки, с помощью интерфейса командной строки
 
@@ -66,8 +70,8 @@ DmaCmd.exe /AssessmentName="string"
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
-Catalog=DatabaseName;***Integrated Security=true*"**
-***/AssessmentEvaluateCompatibilityIssues*** /AssessmentOverwriteResult
+Catalog=DatabaseName;Integrated Security=true"
+/AssessmentEvaluateCompatibilityIssues /AssessmentOverwriteResult
 /AssessmentResultJson="C:\\temp\\Results\\AssessmentReport.json"
 ```
 
@@ -76,8 +80,8 @@ Catalog=DatabaseName;***Integrated Security=true*"**
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
-Catalog=DatabaseName;***User Id=myUsername;Password=myPassword;***"
-***/AssessmentEvaluateRecommendations*** /AssessmentOverwriteResult
+Catalog=DatabaseName;User Id=myUsername;Password=myPassword;"
+/AssessmentEvaluateRecommendations /AssessmentOverwriteResult
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
@@ -87,22 +91,22 @@ Catalog=DatabaseName;***User Id=myUsername;Password=myPassword;***"
 DmaCmd.exe /AssessmentName="TestAssessment"
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
 Catalog=DatabaseName;Integrated Security=true"
-***/AssessmentTargetPlatform="SqlServer2012"***
+/AssessmentTargetPlatform="SqlServer2012"
 /AssessmentEvaluateRecommendations /AssessmentOverwriteResult
-***/AssessmentResultJson***="C:\\temp\\Results\\AssessmentReport.json"
-***/AssessmentResultCsv***="C:\\temp\\Results\\AssessmentReport.csv"
+/AssessmentResultJson="C:\\temp\\Results\\AssessmentReport.json"
+/AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
 **Оценки одного-базы данных для целевой платформы базы данных SQL Azure, сохранить результаты в файл, файл JSON и CSV-файл**
 
 ```
-DmaCmd.exe /AssessmentName="TestAssessment" 
+DmaCmd.exe /AssessmentName="TestAssessment" 
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
 Catalog=DatabaseName;Integrated Security=true"
 /AssessmentTargetPlatform="AzureSqlDatabaseV12"
 /AssessmentEvaluateCompatibilityIssues /AssessmentEvaluateFeatureParity
-/AssessmentOverwriteResult 
-/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
+/AssessmentOverwriteResult 
+/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
 /AssessmentResultJson="C:\\temp\\AssessmentReport.json"
 ```
 
@@ -110,15 +114,103 @@ Catalog=DatabaseName;Integrated Security=true"
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
-***/AssessmentDatabases="Server=SQLServerInstanceName1;Initial
+/AssessmentDatabases="Server=SQLServerInstanceName1;Initial
 Catalog=DatabaseName1;Integrated Security=true"
 "Server=SQLServerInstanceName1;Initial Catalog=DatabaseName2;Integrated
 Security=true" "Server=SQLServerInstanceName2;Initial
-Catalog=DatabaseName3;Integrated Security=true"***
+Catalog=DatabaseName3;Integrated Security=true"
 /AssessmentTargetPlatform="SqlServer2016"
 /AssessmentEvaluateCompatibilityIssues /AssessmentOverwriteResult
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 /AssessmentResultJson="C:\\Results\\test2016.json"
+```
+
+**Оценка готовности целевой базы данных одного, с использованием проверки подлинности Windows**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/SourceConnections="Server=SQLServerInstanceName;Initial Catalog=DatabaseName;Integrated Security=true" 
+/AssessmentOverwriteResult 
+/AssessmentResultJson="C:\temp\Results\AssessmentReport.json"
+```
+
+**Оценка готовности целевой базы данных одного, с использованием проверки подлинности SQL Server**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/SourceConnections="Server=SQLServerInstanceName;Initial Catalog=DatabaseName;User Id=myUsername;Password=myPassword;" /AssessmentEvaluateRecommendations 
+/AssessmentOverwriteResult 
+/AssessmentResultJson="C:\temp\Results\AssessmentReport.json" 
+
+```
+
+**Оценка готовности целевой базы данных нескольких**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/SourceConnections="Server=SQLServerInstanceName1;Initial Catalog=DatabaseName1;Integrated Security=true" "Server=SQLServerInstanceName1;Initial Catalog=DatabaseName2;Integrated Security=true" "Server=SQLServerInstanceName2;Initial Catalog=DatabaseName3;Integrated Security=true" 
+/AssessmentOverwriteResult  
+/AssessmentResultJson="C:\Results\test2016.json"
+
+```
+
+**Оценка готовности целевой объект для всех баз данных на сервере с использованием проверки подлинности Windows**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/SourceConnections="Server=SQLServerInstanceName;Integrated Security=true" 
+/AssessmentOverwriteResult 
+/AssessmentResultJson="C:\temp\Results\AssessmentReport.json"
+
+```
+
+**Оценка готовности целевой, импортировав созданную ранее отчет об обнаружении компонентов**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/ImportFeatureDiscoveryReportJson="c:\temp\feature_report.json" 
+/AssessmentOverwriteResult 
+/AssessmentResultJson="C:\temp\Results\AssessmentReport.json"
+
+```
+
+**Оценка готовности целевой путем предоставления файла конфигурации**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/TargetReadinessConfiguration=.\Config.xml
+
+```
+Содержимое файла конфигурации, при использовании соединения с источниками:
+```
+<?xml version="1.0" encoding="utf-8" ?>
+<TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
+  <AssessmentName>name</AssessmentName>
+  <SourceConnections>
+    <SourceConnection>connection string 1</SourceConnection>
+    <SourceConnection>connection string 2</SourceConnection>
+    <!-- ... -->
+    <SourceConnection>connection string n</SourceConnection>
+  </SourceConnections>
+  <AssessmentResultJson>path\to\file.json</AssessmentResultJson>
+  <FeatureDiscoveryReportJson>path\to\featurediscoveryreport.json</FeatureDiscoveryReportJson>
+  <OverwriteResult>true</OverwriteResult> <!-- or false -->
+</TargetReadinessConfiguration>
+```
+
+Содержимое файла конфигурации при импорте отчет об обнаружении компонентов:
+```
+<TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
+  <AssessmentName>name</AssessmentName>
+  <ImportFeatureDiscoveryReportJson>path\to\featurediscoveryfile.json</ImportFeatureDiscoveryReportJson>
+  <AssessmentResultJson>path\to\resultfile.json</AssessmentResultJson>
+  <OverwriteResult>true</OverwriteResult><!-- or false -->
+</TargetReadinessConfiguration>
 ```
 
 ## <a name="azure-sql-database-sku-recommendations-using-the-cli"></a>Рекомендации SKU базы данных SQL Azure с помощью интерфейса командной строки
