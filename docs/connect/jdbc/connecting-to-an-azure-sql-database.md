@@ -1,7 +1,7 @@
 ---
 title: Подключение к базе данных Azure SQL | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4caaa9ca14fd2f8eb396ef2c2869ba30bd48420
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d948e4a790933e6f703232e3f642241395bbb410
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602214"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736985"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Подключение к базе данных SQL Azure
 
@@ -78,15 +78,15 @@ shutdown /r /t 1
 ## <a name="appending-the-server-name-to-the-userid-in-the-connection-string"></a>Добавление имени сервера к идентификатору пользователя UserId в строке подключения  
 
 До [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] версии 4.0 при установлении соединения с базой данных [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] требовалось добавление имени сервера к параметру UserId в строке подключения. Например, user@servername. Начиная с версии 4.0 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] добавление компонента @servername к параметру UserId в строке подключения не требуется.  
-  
+
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Для использования шифрования необходимо задать hostNameInCertificate
 
-При подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], следует указать **hostNameInCertificate** при указании **шифрования = true**. (Если имя сервера в строке подключения указано *shortName*. *domainName*, задайте **hostNameInCertificate** свойства \*. *domainName*.)  
-  
-Пример:  
+До версии 7.2 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], при подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], следует указать **hostNameInCertificate** при указании **шифрования = true** (если имя сервера в соединении Строка является *shortName*. *domainName*, задайте **hostNameInCertificate** свойства \*. *domainName*.). Это свойство является необязательным, начиная с версии 7.2 драйвера.
+
+Пример:
 
 ```java
-jdbc:sqlserver://abcd.int.mscds.com;databaseName= myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate= *.int.mscds.com;  
+jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;
 ```
 
 ## <a name="see-also"></a>См. также:

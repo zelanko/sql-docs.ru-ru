@@ -4,20 +4,21 @@ hide_bc: true
 title: Безопасность SQL Server
 description: Ознакомьтесь с функциями, которые обеспечивают безопасность SQL Server.
 ms.topic: hub-page
+ms.prod: sql
 featureFlags:
 - clicktale
-ms.openlocfilehash: a127925183744c7e64e443d1127517c5fe41da23
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a8e0f1a1c9e09992ec92813903fd563d48fe7fa4
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698132"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079280"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -27,7 +28,7 @@ ms.locfileid: "51698132"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">Загрузить SQL Server</span>
+                                    <span class="likeAnH3">Попробовать SQL Server 2019 (предварительная версия)</span>
                                 </div>
                             </div>
                         </div>

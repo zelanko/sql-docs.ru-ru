@@ -4,20 +4,21 @@ hide_bc: true
 title: 'SQL Server: непрерывность бизнес-процессов'
 description: Ознакомьтесь с различными функциями SQL Server для обеспечения высокого уровня доступности, аварийного восстановления и непрерывности бизнес-процессов независимо от условий.
 ms.topic: hub-page
+ms.prod: sql
 featureFlags:
 - clicktale
-ms.openlocfilehash: 3aa486304568d2d572b1d1946a89c8ab5ec9753a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bcf57c58e706a8f25a1cd2f2ace671480352f5a2
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698162"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079370"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -27,7 +28,7 @@ ms.locfileid: "51698162"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">Загрузить SQL Server</span>
+                                    <span class="likeAnH3">Попробовать SQL Server 2019 (предварительная версия)</span>
                                 </div>
                             </div>
                         </div>
