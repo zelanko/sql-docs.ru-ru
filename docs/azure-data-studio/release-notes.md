@@ -3,7 +3,7 @@ title: Заметки о выпуске и журнал изменений
 titleSuffix: Azure Data Studio
 description: Заметки о выпуске Azure Data Studio
 ms.custom: seodec18
-ms.date: 01/17/2019
+ms.date: 02/13/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,17 +11,34 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 163f5740626b0f4cb927272d46acddc79495e4c1
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: bd3151ae475f96b3e4df227bb4d312940c10bed0
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361684"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231131"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Azure Data Studio последние заметки о выпуске и журнал изменений
 
 **[Скачайте и установите последний выпуск!](download.md)**
 
+## <a name="february-2019-february-release"></a>Февраля 2019 г. (Февральский выпуск)
+
+Дата выпуска: 13 февраля 2019 г.  
+Версия: 1.4.5
+
+- Добавлен **пакет администрирования для SQL Server** пакет расширения, чтобы было проще установить расширения, связанные с администратора SQL Server. В том числе:
+    - [Агент SQL Server](https://docs.microsoft.com/sql/azure-data-studio/sql-server-agent-extension?view=sql-server-2017)
+    - [Приложение SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension?view=sql-server-2017)
+    - [Импорта SQL Server](https://docs.microsoft.com/sql/azure-data-studio/sql-server-import-extension?view=sql-server-2017)
+- Добавлена поддержка фильтрации расширенных событий в расширении Profiler
+- Added Сохранить как XML-компонент, который можно сохранить результаты T-SQL в виде XML
+- Добавлены усовершенствования Data-Tier Application Wizard
+    - Создать скрипт кнопки
+    - Добавлено представление, чтобы обеспечить предупреждения о возможной потере данных во время развертывания
+- Обновляет [расширение предварительной версии SQL Server 2019 г.](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- Результаты потоковой передачи включена по умолчанию для длительных запросов
+- Разрешить ["ошибки" и выдает](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1).
 
 ## <a name="january-hotfix-2019-january-hotfix-release"></a>Исправление января 2019 года (января исправления года)
 

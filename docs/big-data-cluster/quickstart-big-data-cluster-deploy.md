@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3495d41028f72093b58f546d3da2139ff02b848d
-ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
+ms.openlocfilehash: 6873ee04323ffbc813553237d79e523023a48618
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898989"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231071"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Краткое руководство. Развертывание кластера больших данных SQL Server в службе Azure Kubernetes (AKS)
 
@@ -171,56 +171,7 @@ kubectl get svc service-proxy-lb -n <your-cluster-name>
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-Большие данные кластера SQL Server теперь развертывается в AKS. Теперь можно использовать Azure Data Studio для подключения к основной экземпляр SQL Server и конечных точек HDFS или Spark, с помощью Azure Data Studio.
-
-### <a id="master"></a> Основной экземпляр
-
-Основной экземпляр SQL Server — это традиционные экземпляр SQL Server, содержащий реляционных баз данных SQL Server. Следующие шаги описывают, как подключиться к основной экземпляр с помощью студии данных Azure.
-
-1. Из командной строки найти IP-адрес главного экземпляра с помощью следующей команды:
-
-   ```
-   kubectl get svc endpoint-master-pool -n <your-cluster-name>
-   ```
-
-1. В Azure данных Studio нажмите клавишу **F1** > **новое подключение**.
-
-1. В **тип подключения**выберите **Microsoft SQL Server**.
-
-1. Введите IP-адрес главного экземпляра SQL Server в **имя_сервера** (например: **\<IP-адрес\>, 31433**).
-
-1. Введите имя входа SQL **имя пользователя** (`SA`) и **пароль** (пароль, введенный в скрипте развертывания).
-
-1. Изменить целевой объект **имя базы данных** к одному из реляционных баз данных.
-
-   ![Подключиться к основной экземпляр](./media/quickstart-big-data-cluster-deploy/connect-to-cluster.png)
-
-1. Нажмите клавишу **Connect**и **панель мониторинга сервера** должен отображаться.
-
-### <a id="hdfs"></a> Шлюз HDFS и Spark
-
-**HDFS/Spark шлюза** позволяет подключать для работы с пулом носителей HDFS и для выполнения заданий Spark. Следующие шаги описывают способ подключения с помощью Azure Data Studio.
-
-1. Из командной строки найти IP-адрес шлюза HDFS/Spark с помощью следующей команды:
-
-   ```
-   kubectl get svc service-security-lb -n <your-cluster-name>
-   ```
- 
-1. В Azure данных Studio нажмите клавишу **F1** > **новое подключение**.
-
-1. В **тип подключения**выберите **кластера больших данных в SQL Server**.
-   
-   > [!TIP]
-   > Если вы не видите **кластера больших данных в SQL Server** подключения введите, убедитесь, что вы установили [расширение SQL Server 2019](../azure-data-studio/sql-server-2019-extension.md) и перезагрузка студии данных после завершения расширения Установка.
-
-1. Введите IP-адрес кластера больших данных в **имя_сервера** (не указать порт).
-
-1. Введите `root` для **пользователя** и укажите **пароль** к кластеру больших данных, введенные в скрипте развертывания.
-
-   ![Подключение к шлюзу HDFS и Spark](./media/quickstart-big-data-cluster-deploy/connect-to-cluster-hdfs-spark.png)
-
-1. Нажмите клавишу **Connect**и **панель мониторинга сервера** должен отображаться.
+Большие данные кластера SQL Server теперь развертывается в AKS. Теперь можно использовать Azure Data Studio для подключения к кластеру. Дополнительные сведения см. в разделе [соединиться с сервером SQL кластера больших данных с помощью Azure Data Studio](connect-to-big-data-cluster.md).
 
 ## <a name="clean-up"></a>Очистить
 
