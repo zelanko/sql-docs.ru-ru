@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5c25c25223f660f4e5a71897bf599b986135bf7a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 006a32630fbc862a3cfcf711526cec052796e1a3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617441"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013215"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Очистка данных в составном домене
 
@@ -58,7 +58,7 @@ ms.locfileid: "52617441"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- При тестировании определительного междоменного правила *Then* , **Value is equal to**диалоговое окно **Тестирование правила для составного домена** содержит новый столбец **Исправить на**, в котором отображаются правильные данные. В проекте очистки DQS это определяющее междоменное правило меняет данные со 100-процентной достоверностью, а в столбце **Причина** отображается следующее сообщение: "Исправлено правилом *\<имя_междоменного_правила>*". Дополнительные сведения о междоменных правилах см. в разделе [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md).  
+ При тестировании определительного междоменного правила *Then* , **Value is equal to**диалоговое окно **Тестирование правила для составного домена** содержит новый столбец **Исправить на**, в котором отображаются правильные данные. В проекте служб DQS по очистке это определительное междоменное правило меняет данные со 100-процентной достоверностью, а в столбце **Причина** отображается следующее сообщение: "Исправлено правилом '*\<Имя междоменного правила>*'". Дополнительные сведения о междоменных правилах см. в разделе [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  Определительное междоменное правило не работает для составных доменов, присоединенных к службе ссылочных данных.  

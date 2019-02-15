@@ -16,17 +16,17 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 663733493bba7e96d8bb55519013128fd62a2eaf
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: bc02cf0c9076f036bb2b199e4eb0627103e4c03b
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072238"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807454"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Преобразует аргумент *inputdate* в соответствующее значение *datetimeoffset* в целевом часовом поясе. Если аргумент *inputdate* предоставляется без сведений о смещении, функция применяет смещение часового пояса при условии, что в целевом часовом поясе указано значение *inputdate*. Если аргумент *inputdate* предоставляется как значение *datetimeoffset*, предложение **AT TIME ZONE** преобразует его в целевой часовой пояс с помощью правил преобразования часовых поясов.  
+  Преобразует аргумент *inputdate* в соответствующее значение *datetimeoffset* в целевом часовом поясе. Если аргумент *inputdate* предоставляется без сведений о смещении, функция применяет смещение часового пояса, предполагая, что *inputdate* находится в целевом часовом поясе. Если аргумент *inputdate* предоставляется как значение *datetimeoffset*, предложение **AT TIME ZONE** преобразует его в целевой часовой пояс с помощью правил преобразования часовых поясов.  
   
  При преобразовании значений **datetime** в разных часовых поясах реализация функции **AT TIME ZON** зависит от механизма Windows.  
   
@@ -43,7 +43,7 @@ inputdate AT TIME ZONE timezone
  Выражение, которое можно привести к значению **smalldatetime**, **datetime**, **datetime2** или **datetimeoffset**.  
   
  *timezone*  
- Имя целевого часового пояса. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зависит от часовых поясов, которые хранятся в реестре Windows. Все часовые пояса, установленные на компьютере, хранятся в следующем кусте реестра: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. Список установленных часовых поясов также отображается в представлении [sys.time_zone_info (Transact-SQL)](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md).  
+ Имя целевого часового пояса. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зависит от часовых поясов, которые хранятся в реестре Windows. Часовые пояса, установленные на компьютере, хранятся в следующем кусте реестра: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. Список установленных часовых поясов также отображается в представлении [sys.time_zone_info (Transact-SQL)](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md).  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Возвращает тип данных **datetimeoffset**.  
@@ -52,9 +52,9 @@ inputdate AT TIME ZONE timezone
  Значение **datetimeoffset** в целевом часовом поясе.  
   
 ## <a name="remarks"></a>Remarks  
- **AT TIME ZONE** применяет специальные правила для преобразования входных значений в типы данных **smalldatetime**, **datetime** и **datetime2**, которые входят в интервал, затрагиваемый при переходе на летнее время.  
+ **AT TIME ZONE** применяет специальные правила для преобразования входных значений с типами данных **smalldatetime**, **datetime** и **datetime2**, которые попадают в период перехода на летнее время:  
   
--   Если время переводится вперед, возникает разница с местным временем, длительность которой зависит от настройки часов (обычно 1 час, но в зависимости от часового пояса значение может составлять 30–45 минут). В этом случае точки во времени в диапазоне этой разницы преобразуются со смещением *после* перехода на летнее время.  
+-   Если часы переводятся вперед, возникает разница с местным временем, равная интервалу перевода. Интервал обычно составляет 1 час, но в некоторых часовых поясах это может быть 30–45 минут. Точки во времени, попадающие в указанный период, преобразуются со смещением *после* перехода на летнее время.  
   
     ```  
     /*  
@@ -169,5 +169,4 @@ FOR SYSTEM_TIME AS OF @ASOF;
 ## <a name="see-also"></a>См. также:  
  [Типы даты и времени](../../t-sql/data-types/date-and-time-types.md)   
  [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
-  
   

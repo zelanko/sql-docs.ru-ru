@@ -1,7 +1,7 @@
 ---
 title: GetAncestor (ядро СУБД) | Документы Майкрософт
 ms.custom: ''
-ms.date: 7/22/2017
+ms.date: 07/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 89442e4d787c66ed76e6c2db3ff9539a14156782
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bd3974aee87cc3a9f0549d51988d8b0e8886a1c6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699252"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026225"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ WHERE OrgNode.GetAncestor(1) = @CurrentEmployee ;
 ```  
   
 ### <a name="b-returning-the-grandchildren-of-a-parent"></a>Б. Возвращение внучатых узлов родительского узла  
-Функция `GetAncestor(2)` возвращает имена сотрудников, расположенные двумя уровнями ниже текущего узла в иерархии. Эти элементы являются внучатыми для текущего узла. В следующем примере используется функция `GetAncestor(2)`.
+Функция `GetAncestor(2)` возвращает имена сотрудников, расположенные двумя уровнями ниже текущего узла в иерархии. Эти имена сотрудников являются внучатыми узлами для текущего узла. В следующем примере используется функция `GetAncestor(2)`.
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid  
@@ -99,8 +99,8 @@ FROM HumanResources.EmployeeDemo
 WHERE OrgNode.GetAncestor(0) = @CurrentEmployee ;  
 ```  
   
-### <a name="d-returning-a-hierarchy-level-if-a-table-is-not-present"></a>Г. Возвращение уровня иерархии в случае отсутствия таблицы  
-Функция `GetAncestor` возвращает выбранный уровень в иерархии даже в случае отсутствия таблицы. Например, следующим фрагментом кода назначается текущий сотрудник и возвращается идентификатор `hierarchyid` предка текущего сотрудника без обращения к таблице.
+### <a name="d-returning-a-hierarchy-level-if-a-table-isnt-present"></a>Г. Возвращение уровня иерархии в случае отсутствия таблицы  
+Функция `GetAncestor` возвращает выбранный уровень в иерархии даже в случае отсутствия таблицы. Например, в следующем фрагменте кода указывается текущий сотрудник и возвращается идентификатор `hierarchyid` узла-предка текущего сотрудника без обращения к таблице.
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid ;  
@@ -122,5 +122,4 @@ this.GetAncestor(1)
 [Справочник по методам типа данных hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Иерархические данные (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid (Transact-SQL)](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   

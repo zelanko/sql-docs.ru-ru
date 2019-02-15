@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7a2e658020afaa9910c0bd988efc6f0c528e499e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ce425476f44e8e806a26e0fbe0201e088f7d12bf
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697882"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760017"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Предопределенные роли базы данных агента SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "51697882"
 Роль**SQLAgentUserRole** имеет наименьшие права из всех предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Она имеет разрешения только на операторы, локальные задания и расписания заданий. Члены роли **SQLAgentUserRole** имеют разрешения только на локальные задания и расписания заданий, которыми они владеют. Они не могут использовать многосерверные задания (задания с главным и целевым серверами) и изменять владение заданиями для получения доступа к заданиям, которыми не владеют в настоящее время. Члены роли**SQLAgentUserRole** могут просматривать список доступных учетных записей-посредников только в диалоговом окне **Свойства шага задания** среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. В обозревателе объектов среды **членам роли** SQLAgentUserRole [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] виден только узел **Задания**.  
   
 > [!IMPORTANT]  
-> При предоставлении доступа к учетной записи-посреднику **членам**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**ролей базы данных агента** следует учитывать влияние этого на безопасность. Члены ролей **SQLAgentReaderRole** и **SQLAgentOperatorRole** автоматически являются членами роли **SQLAgentUserRole**. Это означает, что члены ролей **SQLAgentReaderRole** и **SQLAgentOperatorRole** имеют доступ ко всем учетным записям-посредникам агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые были предоставлены роли **SQLAgentUserRole** , и могут использовать эти учетные записи.  
+> При предоставлении доступа к прокси-объектам участникам **ролей** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaserole**, оцените, как это повлияет на безопасность. Члены ролей **SQLAgentReaderRole** и **SQLAgentOperatorRole** автоматически являются членами роли **SQLAgentUserRole**. Это означает, что члены ролей **SQLAgentReaderRole** и **SQLAgentOperatorRole** имеют доступ ко всем учетным записям-посредникам агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые были предоставлены роли **SQLAgentUserRole** , и могут использовать эти учетные записи.  
   
 В следующей таблице приводится сводка разрешений роли **SQLAgentUserRole** на объекты агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -70,7 +70,7 @@ ms.locfileid: "51697882"
 Роль**SQLAgentReaderRole** имеет все разрешения роли **SQLAgentUserRole** , а также разрешения на просмотр списка имеющихся многосерверных заданий, их свойств и их журнала. Члены этой роли могут также просматривать не только информацию о заданиях и расписаниях заданий, которыми они владеют, но и список всех имеющихся заданий, расписаний заданий и их свойств. Члены роли**SQLAgentReaderRole** не могут изменять владельцев заданий для получения доступа к не принадлежащим им заданиям. В обозревателе объектов среды **членам роли** SQLAgentReaderRole [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] виден только узел **Задания**.  
   
 > [!IMPORTANT]  
-> При предоставлении доступа к учетной записи-посреднику **членам**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**ролей базы данных агента** следует учитывать влияние этого на безопасность. Члены роли **SQLAgentReaderRole** автоматически являются членами роли **SQLAgentUserRole**. Это означает, что члены роли **SQLAgentReaderRole** имеют доступ ко всем учетным записям-посредникам агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые были предоставлены роли **SQLAgentUserRole** , и могут использовать эти учетные записи.  
+> При предоставлении доступа к прокси-объектам участникам **ролей** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaserole**, оцените, как это повлияет на безопасность. Члены роли **SQLAgentReaderRole** автоматически являются членами роли **SQLAgentUserRole**. Это означает, что члены роли **SQLAgentReaderRole** имеют доступ ко всем учетным записям-посредникам агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые были предоставлены роли **SQLAgentUserRole** , и могут использовать эти учетные записи.  
   
 В следующей таблице приводится сводка разрешений роли **SQLAgentReaderRole** на объекты агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -94,7 +94,7 @@ ms.locfileid: "51697882"
 В обозревателе объектов среды **членам роли**SQLAgentOperatorRole **видны узлы**Задания **,** Предупреждения **,** Операторы [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и **Учетные записи-посредники**. Членам этой роли не доступен только узел **Журналы ошибок** .  
   
 > [!IMPORTANT]  
-> При предоставлении доступа к учетной записи-посреднику **членам**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**ролей базы данных агента** следует учитывать влияние этого на безопасность. Члены роли **SQLAgentOperatorRole** автоматически являются членами ролей **SQLAgentUserRole** и **SQLAgentReaderRole**. Это означает, что члены роли **SQLAgentOperatorRole** имеют доступ ко всем учетным записям-посредникам агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые были предоставлены роли **SQLAgentUserRole** или **SQLAgentReaderRole** , и могут использовать эти учетные записи.  
+> При предоставлении доступа к прокси-объектам участникам **ролей** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaserole**, оцените, как это повлияет на безопасность. Члены роли **SQLAgentOperatorRole** автоматически являются членами ролей **SQLAgentUserRole** и **SQLAgentReaderRole**. Это означает, что члены роли **SQLAgentOperatorRole** имеют доступ ко всем учетным записям-посредникам агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые были предоставлены роли **SQLAgentUserRole** или **SQLAgentReaderRole** , и могут использовать эти учетные записи.  
   
 В следующей таблице приводится сводка разрешений роли **SQLAgentOperatorRole** на объекты агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

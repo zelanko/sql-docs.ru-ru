@@ -28,17 +28,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ce3a973f84664769ced971eedb28a1c13faeae8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9262ca6e0f2dce018ae925b05e306cc43753a0b7
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519696"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759977"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Задает порядок частей даты (месяца, дня и года) для интерпретации символьных строк **date**, **smalldatetime**, **datetime**, **datetime2** и **datetimeoffset**.  
+  Задает порядок элементов даты (месяц, день, год) при интерпретации символьных строк дат. Эти строки имеют тип **date**, **smalldatetime**, **datetime**, **datetime2** или **datetimeoffset**.  
   
  Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
@@ -57,9 +57,9 @@ SET DATEFORMAT { format | @format_var }
 ## <a name="remarks"></a>Remarks  
  Значение **ydm** параметра DATEFORMAT не поддерживается для типов данных **date**, **datetime2** и **datetimeoffset**.  
   
- Влияние параметра DATEFORMAT на интерпретацию символьных строк может отличаться для значений **datetime** и **smalldatetime** и значений **date**, **datetime2** и **datetimeoffset** в зависимости от формата строки. Эта настройка влияет на интерпретацию символьных строк при их преобразовании в значения даты для хранения в базе данных. Настройка не влияет на отображение дат, хранящихся в базе данных, а также на формат их хранения.  
+ Параметр DATEFORMAT может интерпретировать символьные строки по-разному для разных типов данных даты в зависимости от их формата строк. Например, интерпретации **datetime** и **smalldatetime** могут не соответствовать **date**, **datetime2** или  **datetimeoffset**. Этот параметр влияет на интерпретацию символьных строк при их преобразовании в значения даты для базы данных. Он не влияет на отображение значений типов данных даты, хранящихся в базе данных, а также на формат их хранения.  
   
- Некоторые форматы символьных строк, например ISO 8601, интерпретируются независимо от значения параметра DATEFORMAT.  
+ Некоторые форматы символьных строк, например ISO 8601, интерпретируются независимо от параметра DATEFORMAT.  
   
  Установка SET DATEFORMAT происходит во время выполнения, а не во время синтаксического анализа.  
   
@@ -91,6 +91,4 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)  
-  
-  
 

@@ -1,7 +1,7 @@
 ---
 title: Приоритет типов данных (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/23/2017
+ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -19,17 +19,17 @@ ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6bd65fe0ef44b672e689aebd99b5f166ce562d23
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 630e2e06013c09d0597c0eefbf69a66e2824f3a9
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020309"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079340"
 ---
 # <a name="data-type-precedence-transact-sql"></a>Приоритет типов данных (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-Если оператор связывает два выражения различных типов данных, то по правилам приоритета типов данных определяется, какой тип данных имеет меньший приоритет и будет преобразован в тип данных с большим приоритетом. Если неявное преобразование не поддерживается, возвращается ошибка. Если оба операнда выражения имеют одинаковый тип данных, результат операции будет иметь тот же тип данных.
+Если оператор сочетает выражения различных типов данных, тип данных с меньшим приоритетом сначала преобразуется в тип данных с большим приоритетом. Если неявное преобразование не поддерживается, возвращается ошибка. Если оператор сочетает выражения операндов с одинаковым типом данных, результат операции будет иметь тот же тип данных.
   
 В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется следующий приоритет типов данных:
   
@@ -68,5 +68,4 @@ ms.locfileid: "56020309"
 [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
 [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)
-  
   

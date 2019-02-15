@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0f97176e1600ca741ddc20eed03aed639c945c76
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: b94f615ddcc2f1b3eb0c577130ee375cc0672848
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616434"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024595"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Предоставление доступа к данным для операций со службами DQS
 
@@ -44,9 +44,9 @@ ms.locfileid: "52616434"
   
 4.  В диалоговом окне **Свойства имени входа** щелкните страницу **Сопоставление пользователей** в левой части.  
   
-5.  На правой панели установите флажок в столбце **Сопоставление** для базы данных **DQS_STAGING_DATA** , а затем выберите следующие роли в панели **Членство в роли базы данных для DQS_STAGING_DATA** :  
+5.  На правой панели установите флажок в столбце **Сопоставление** для базы данных **DQS_STAGING_DATA**, а затем на панели **Членство в роли базы данных для: DQS_STAGING_DATA** выберите следующие роли.  
   
-    -   **db_datareader**: чтение данных из таблиц и представлений.  
+    -   **db_datareader**: чтение данных из таблиц и представлений  
   
     -   **db_datawriter**: добавление, удаление и изменение данных в таблицах.  
   

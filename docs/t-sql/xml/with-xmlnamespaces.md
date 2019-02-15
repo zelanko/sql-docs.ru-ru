@@ -3,7 +3,6 @@ title: WITH XMLNAMESPACES (Transact-SQL) | Документы Майкрософ
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - WITH XMLNAMESPACES clause
 - declaring XML namespaces
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fbc0773b08ea682a9bc8e4803572b9ceae3d28d3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: ee0c340ebc917d7ced83b453d1cfd6126ff42f2e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256179"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026605"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,11 +86,13 @@ DEFAULT <xml_namespace_uri>
 -   Префикс `xml` не может быть переопределен пространством имен, отличным от пространства имен с URI `'http://www.w3.org/XML/1998/namespace'`, и этому URI не может быть назначен другой префикс.  
   
 -   Префикс `xsi` пространства имен XML не может быть повторно объявлен, если в запросе используется директива ELEMENTS XSINIL.  
-  
+
+-   Для использования стандартного пространства имен xsi объявлять "http://www.w3.org/2001/XMLSchema-instance" не требуется. Если это не сделано, обработчик XML/XPATH добавит это неявно, и выражения xpath могут использовать префикс xsi при условии корректного объявления схемы "http://www.w3.org/2001/XMLSchema-instance" в XML-документе.
+
 -   Строковые значения URI кодируются в соответствии с кодовой страницей параметров сортировки текущей базы данных и преобразуются внутри SQL Server в Юникод.  
   
 -   Неотображаемые символы удаляются из URI пространства имен XML в соответствии с правилами XSD, принятыми для типа **xs:anyURI**. Имейте в виду, что преобразование символов значений URI пространств имен XML в аналогичные последовательности символов и обратно не выполняется.  
-  
+
 -   При обработке URI пространства имен XML проверяется наличие недопустимых символов для XML 1.0; при обнаружении такого символа (например, U+0007) формируется ошибка.  
   
 -   После удаления всех неотображаемых символов идентификатор URI пространства имен XML не может оказаться строкой нулевой длины; в противном случае произойдет ошибка «invalid empty namespace URI» (недопустимый пустой URI-идентификатор пространства имен).  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: ca8a9b258275c0e8b2368519d8af7ca18aad70aa
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 850af4e77b1fcaf8ffdaa0ede7bcaeba79695adc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617464"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013425"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS
 
@@ -36,11 +36,11 @@ ms.locfileid: "52617464"
   
 1.  Запустите файл DQSInstaller.exe на компьютере, где необходимо установить сервер [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], одним из следующих способов.  
   
-    -   **Экран запуска**: на экране **Пуск** нажмите кнопку **Программа установки Data Quality Server**  
+    -   **Начальный экран**. На **начальном экране** щелкните **Установщик сервера служб Data Quality**.  
   
-    -   **Меню "Пуск"**: на панели задач нажмите кнопку **Пуск**, укажите **Все программы**и выберите [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]. В разделе [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]щелкните **Data Quality Services**и выберите **Программа установки Data Quality Server.**  
+    -   **Меню "Пуск"**. На панели задач нажмите кнопку **Пуск**, выберите **Все программы** и щелкните [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]. В разделе [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]щелкните **Data Quality Services**и выберите **Программа установки Data Quality Server.**  
   
-    -   **Проводник Windows**: найдите файл DQSInstaller.exe. Если был установлен экземпляр SQL Server по умолчанию, файл DQSInstaller.exe будет помещен в папку C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn. Дважды щелкните файл DQSInstaller.exe.  
+    -   **Проводник**. Найдите файл DQSInstaller.exe. Если был установлен экземпляр SQL Server по умолчанию, файл DQSInstaller.exe будет помещен в папку C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn. Дважды щелкните файл DQSInstaller.exe.  
   
 2.  На экране откроется окно командной строки, в котором будет отображаться состояние установки. Обратите внимание на следующие три момента.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52617464"
 3.  Откроется окно с запросом пароля для главного ключа базы данных. Главный ключ базы данных используется для шифрования ключей справочных служб данных стороннего поставщика, которые сохраняются в базе данных DQS_MAIN при последующей настройке поставщиков справочных данных в [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS).  
   
     > [!IMPORTANT]  
-    >  Пароль должен состоять минимум из восьми символов и содержать символы как минимум трех из четырех категорий: прописные буквы английского алфавита (A, B, C,… Z), строчные буквы английского алфавита (a, b, c,... z), цифры (0, 1, 2,... 9) и специальные символы (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/). Например, P@ssword. Если пароль не удовлетворяет этим требованиям, установщик попросит ввести другой пароль.  
+    >  Пароль должен состоять не менее чем из восьми символов и содержать символы как минимум трех из четырех категорий: прописные буквы английского алфавита (A, B, C,… Z), строчные буквы английского алфавита (a, b, c,... z), цифры (0, 1, 2,... 9) и специальные символы (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/). Например, P@ssword. Если пароль не удовлетворяет этим требованиям, установщик попросит ввести другой пароль.  
   
 4.  Введите пароль, подтвердите его, а затем нажмите клавишу ВВОД, чтобы продолжить установку.  
   
@@ -91,9 +91,9 @@ ms.locfileid: "52617464"
   
 3.  Запустите файл DQSInstaller.exe из командной строки со следующими параметрами или без них:  
   
-    -   **Без параметров командной строки**: введите `dqsinstaller.exe`и нажмите клавишу ВВОД.  
+    -   **Без параметров командной строки**. Введите `dqsinstaller.exe` и нажмите клавишу ВВОД.  
   
-    -   **С параметром командной строки**: введите необходимую команду, как указано в таблице выше, и нажмите клавишу ВВОД.  
+    -   **С параметрами командной строки**. Введите необходимую команду, как указано в таблице выше, и нажмите клавишу ВВОД.  
   
 4.  Необходимые действия выполняются исходя из указанной команды: Если выбрана установка сервера [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] без параметров командной строки, оставшиеся шаги установки будут аналогичны шагам 2–6 подраздела [Запуск файла DQSInstaller.exe с экрана "Пуск", из меню "Пуск" или из проводника Windows](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#WindowsExplorer).  
   

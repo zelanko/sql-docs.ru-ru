@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 39f3d82d65eb0dd05b8459742febd67d2bc56790
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 481a2fe18c99621b8331ab204a99e1d7efd37f24
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732031"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55889985"
 ---
 # <a name="query-profiling-infrastructure"></a>Инфраструктура профилирования запросов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,12 @@ WITH (MAX_MEMORY=4096 KB,
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 включает переработанную версию упрощенного профилирования с минимальным потреблением ресурсов. Упрощенное профилирование можно также включить глобально с помощью [флага трассировки 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) в версиях, указанных выше в поле *Применимо к*. Новая функция динамического управления [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) введена для возвращения плана выполнения запроса для активных запросов.
 
-Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, если упрощенное профилирование не включено глобально, можно использовать [указание запроса USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) с новым аргументом **QUERY_PLAN_PROFILE** для включения упрощенного профилирования на уровне запроса для любого сеанса. После завершения запроса, содержащего это новое указание, также выводится новое расширенное событие ***query_plan_profile***, предоставляющее действительный план выполнения в формате XML, аналогично расширенному событию *query_post_execution_showplan*. Ниже приведен пример сеанса, использующего это расширенное событие.
+Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, если упрощенное профилирование не включено глобально, можно использовать [указание запроса USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) с новым аргументом **QUERY_PLAN_PROFILE** для включения упрощенного профилирования на уровне запроса для любого сеанса. После завершения запроса, содержащего это новое указание, также выводится новое расширенное событие ***query_plan_profile***, предоставляющее действительный план выполнения в формате XML, аналогично расширенному событию *query_post_execution_showplan*. 
+
+> [!NOTE]
+> Расширенное событие *query_plan_profile* также использует упрощенное профилирование, даже если указание запроса отсутствует. 
+
+Пример сеанса с расширенным событием *query_plan_profile* можно настроить, как показано ниже:
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_Plan] ON SERVER

@@ -19,12 +19,12 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 63af3d34937b221a50f7c6217ae9c73c41d1cbb6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a9f6cc5a6ba2c63add3742602b89bbb627677286
+ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209303"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832086"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Подготовка базы данных-получателя для присоединения к группе доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -194,36 +194,36 @@ ms.locfileid: "53209303"
         GO  
         ```  
   
-5.  После того как полная резервная копия базы данных будет восстановлена, необходимо создать резервную копию журнала базы данных-источника. Например, следующая инструкция [!INCLUDE[tsql](../../../includes/tsql-md.md)] выполняет резервное копирование журнала в файл резервной копии с именем *E:\MyDB1_log.bak*:  
+5.  После того как полная резервная копия базы данных будет восстановлена, необходимо создать резервную копию журнала базы данных-источника. Например, следующая инструкция [!INCLUDE[tsql](../../../includes/tsql-md.md)] выполняет резервное копирование журнала в файл резервной копии с именем *E:\MyDB1_log.trn*:  
   
     ```  
     BACKUP LOG MyDB1   
-      TO DISK = 'E:\MyDB1_log.bak'   
+      TO DISK = 'E:\MyDB1_log.trn'   
     GO  
     ```  
   
 6.  Перед присоединением базы данных к вторичной реплике необходимо применить эту обязательную резервную копию журнала (и все последующие резервные копии журнала).  
   
-     Например, следующая инструкция [!INCLUDE[tsql](../../../includes/tsql-md.md)] восстанавливает первый журнал из файла *C:\MyDB1.bak*:  
+     Например, следующая инструкция [!INCLUDE[tsql](../../../includes/tsql-md.md)] восстанавливает первый журнал из файла *C:\MyDB1.trn*:  
   
     ```  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=1, NORECOVERY  
     GO  
     ```  
   
 7.  Если перед присоединением базы данных-получателя будут созданы любые дополнительные резервные копии журнала, необходимо будет последовательно восстановить все эти резервные копии журналов на том экземпляре сервера, на котором размещена вторичная реплика. При этом необходимо использовать инструкцию RESTORE WITH NORECOVERY.  
   
-     Например, следующая инструкция [!INCLUDE[tsql](../../../includes/tsql-md.md)] восстанавливает два дополнительных журнала из файла *E:\MyDB1_log.bak*:  
+     Например, следующая инструкция [!INCLUDE[tsql](../../../includes/tsql-md.md)] восстанавливает два дополнительных журнала из файла *E:\MyDB1_log.trn*:  
   
     ```  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=2, NORECOVERY  
     GO  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=3, NORECOVERY  
     GO  
     ```  
