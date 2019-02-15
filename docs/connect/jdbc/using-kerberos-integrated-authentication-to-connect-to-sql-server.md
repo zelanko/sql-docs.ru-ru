@@ -1,7 +1,7 @@
 ---
 title: Использование встроенной проверки подлинности Kerberos для соединения с SQL Server | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a7bd04090fd6c6a0cc7a0b8374930f3aba378113
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d67a368c1c33d9f3c85e36d15ad2b77fe7837c88
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396163"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736995"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Использование встроенной проверки подлинности Kerberos для подключения к SQL Server
 
@@ -48,7 +48,7 @@ ms.locfileid: "52396163"
 
 - Если указать **значение authenticationScheme = JavaKerberos** , но не указано **integratedSecurity = true**, то драйвер не будет **значение authenticationScheme** Свойство соединения и он будет ожидать искать пользователя имя и пароль в строке подключения.
 
-Если создание соединения выполняется из источника данных, то можно программно задать схему проверки подлинности с помощью метода setAuthenticationScheme и (при необходимости) имя субъекта-службы для подключений Kerberos с помощью метода **setServerSpn**.
+Если создание соединения выполняется из источника данных, то можно программно задать схему проверки подлинности с помощью метода **setAuthenticationScheme** и (при необходимости) имя субъекта-службы для подключений Kerberos с помощью метода **setServerSpn**.
 
 Для поддержки проверки подлинности по протоколу Kerberos добавлено новое средство ведения журнала — com.microsoft.sqlserver.jdbc.internals.KerbAuthentication. Дополнительные сведения см. в статье [Трассировка операций драйвера](../../connect/jdbc/tracing-driver-operation.md).
 
@@ -68,7 +68,7 @@ ms.locfileid: "52396163"
 
 Вы можете указать имя субъекта-службы с помощью свойства соединения **serverSpn** или просто разрешить драйверу сформировать его (по умолчанию). Это свойство имеет вид "MSSQLSvc/fqdn:port\@REALM", где fqdn — это полное доменное имя, port — номер порта, а REALM — это область Kerberos SQL Server в верхнем регистре. Область из этого свойства является необязательной, если область конфигурации Kerberos по умолчанию совпадает с областью сервера и по умолчанию не включена. Если вы хотите поддерживать сценарии проверки подлинности между областями, в которых область по умолчанию в конфигурации Kerberos отличается от области сервера, необходимо задать имя субъекта-службы с помощью свойства serverSpn.
 
-Например, может выглядеть ваши имя участника-службы: «MSSQLSvc/some-server.zzz.corp.contoso.com:1433\@ZZZZ. CORP. CONTOSO.COM»
+Например, имя субъекта-службы может выглядеть так: «MSSQLSvc/some-server.zzz.corp.contoso.com:1433\@ZZZZ. CORP. CONTOSO.COM»
 
 Дополнительные сведения об именах субъектов-служб (SPN) см. в разделах:
 
@@ -112,17 +112,17 @@ SQLJDBCDriver {
 
 Помимо возможности получения драйвером учетных данных Kerberos согласно настройкам, заданным в файле конфигурации модуля входа, драйвер может использовать существующие учетные данные. Это может оказаться полезным в том случае, когда приложению необходимо создавать соединения с учетными данными нескольких пользователей.
 
-Драйвер попытается использовать существующие учетные данные, если они доступны, а затем попытается войти с использованием указанного модуля входа. Поэтому при использовании метода Subject.doAs для выполнения кода в определенном контексте будет создано соединение с учетными данными, переданными при вызове Subject.doAs.
+Драйвер попытается использовать существующие учетные данные, если они доступны, а затем попытается войти с использованием указанного модуля входа. Поэтому при использовании метода `Subject.doAs` для выполнения кода в определенном контексте будет создано соединение с учетными данными, переданными при вызове `Subject.doAs`.
 
 Дополнительные сведения см. в разделе [Файл конфигурации входа JAAS](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jgss/tutorials/LoginConfigFile.html) и [Класс Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html).
 
-Начиная с Microsoft JDBC Driver 6.2, имя файла конфигурации модуля входа при необходимости могут передаваться с помощью jaasConfigurationName свойства подключения, это позволяет иметь собственную конфигурацию входа каждого подключения.
+Начиная с Microsoft JDBC Driver 6.2, имя файла конфигурации модуля входа можно при необходимости передать с помощью свойства подключения `jaasConfigurationName`, это позволяет иметь собственную конфигурацию входа каждого подключения.
 
 ## <a name="creating-a-kerberos-configuration-file"></a>Создание файла конфигурации Kerberos
 
 Дополнительные сведения о файлах конфигурации Kerberos см. в разделе [Требования Kerberos](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jgss/tutorials/KerberosReq.html).
 
-Ниже приведен образец файла конфигурации домена, где YYYY и ZZZZ — имена доменов на сайте.
+Ниже приведен образец файла конфигурации домена, где YYYY и ZZZZ — доменные имена.
 
 ```ini
 [libdefaults]  
@@ -153,7 +153,7 @@ forwardable = yes
 
 Файл конфигурации домена можно включить с помощью параметра -Djava.security.krb5.conf. Вы можете включить файл конфигурации модуля входа с **-Djava.security.auth.login.config**.
 
-Например, при запуске приложения можно указать следующую командную строку:
+Например можно использовать следующую команду для запуска приложения:
 
 ```bash
 Java.exe -Djava.security.auth.login.config=SQLJDBCDriver.conf -Djava.security.krb5.conf=krb5.ini <APPLICATION_NAME>  
@@ -192,6 +192,33 @@ jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationSc
 ```
 
 Свойство username не требует области, если пользователь принадлежит к default_realm, в файл krb5.conf. Когда `userName` и `password` устанавливается вместе с `integratedSecurity=true;` и `authenticationScheme=JavaKerberos;` , подключение устанавливается с указанием имени как участник Kerberos вместе с введенного пароля.
+
+## <a name="using-kerberos-authentication-from-unix-machines-on-the-same-domain"></a>Использование проверки подлинности Kerberos с компьютеров Unix на том же домене
+
+В этом руководстве предполагается, что рабочая Установка Kerberos уже существует. Выполните следующий код на компьютере Windows с работа проверки подлинности Kerberos для проверки, если упомянутой выше имеет значение true. Код выведет «схема проверки подлинности: KERBEROS» в консоль при успешном выполнении. За пределами, представленные требуются дополнительные флаги времени выполнения, зависимости ни параметры драйвера. Одинаковые блоки кода можно запускать на платформе Linux для проверки успешного подключения.
+
+```java
+SQLServerDataSource ds = new SQLServerDataSource();
+ds.setServerName("<server>");
+ds.setPortNumber(1433); // change if necessary
+ds.setIntegratedSecurity(true);
+ds.setAuthenticationScheme("JavaKerberos");
+ds.setDatabaseName("<database>");
+
+try (Connection c = ds.getConnection(); Statement s = c.createStatement();
+        ResultSet rs = s.executeQuery("select auth_scheme from sys.dm_exec_connections where session_id=@@spid")) {
+    while (rs.next()) {
+        System.out.println("Authentication Scheme: " + rs.getString(1));
+    }
+}
+```
+
+1. Клиентский компьютер к домену к тому же домену, что и сервер.
+2. (Необязательно) Задайте расположение билет Kerberos по умолчанию. Это наиболее удобно сделать, задав `KRB5CCNAME` переменной среды.
+3. Получить билет Kerberos, либо путем создания нового или поместив существующий в расположение по умолчанию для билета Kerberos. Чтобы создать запрос в службу, просто используйте окно терминала и инициализировать билета через `kinit USER@DOMAIN.AD` где «USER» и «домен. AD» — это основной и домена соответственно. Пример: `kinit SQL_SERVER_USER03@MICROSOFT.COM`. Билет будет создан в расположении по умолчанию запрос в службу или в `KRB5CCNAME` путь Если задать.
+4. Терминал предложит ввести пароль, введите пароль.
+5. Проверьте учетные данные в билете через `klist` и подтвердить учетные данные, тех, которые планируется использовать для проверки подлинности.
+6. Запустите приведенный выше образец кода и убедиться в успешности проверки подлинности Kerberos.
 
 ## <a name="see-also"></a>См. также:
 

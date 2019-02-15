@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: ba1cb702faef5826158f9f65e9bb36d794934a5a
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 7620050a28029010a4e0f0fd2e125a17a84721a0
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991777"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737145"
 ---
 # <a name="download-and-install-sqlpackage"></a>Скачайте и установите sqlpackage
 
@@ -25,9 +25,9 @@ sqlpackage выполняется в Windows, macOS и Linux.
 
 |Платформа|Загрузить|Дата выпуска|Версия|Сборка
 |:---|:---|:---|:---|:---|
-|Windows|[Установщик MSI](https://go.microsoft.com/fwlink/?linkid=2033947)|24 октября 2018 г.|18.0|15.0.4200.1|
-|macOS .NET Core (Предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2044514)|15 ноября 2018 г. | - |15.0.4240.1|
-|Linux .NET Core (Предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2044263)|15 ноября 2018 г. | - |15.0.4240.1|
+|Windows|[Установщик MSI](https://go.microsoft.com/fwlink/?linkid=2069405)|1 февраля 2019 г.|18.1|15.0.4316.1|
+|macOS .NET Core (Предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2069126)|1 февраля 2019 г. | 18.1 |15.0.4316.1|
+|Linux .NET Core (Предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2069122)|1 февраля 2019 г. | 18.1 |15.0.4316.1|
 
 Дополнительные сведения о последнем выпуске см. в разделе [заметки о выпуске](sqlpackage-release-notes.md).
 
@@ -35,14 +35,14 @@ sqlpackage выполняется в Windows, macOS и Linux.
 
 Этот выпуск sqlpackage включает стандартные возможности установщика Windows и ZIP-файл: 
 
-1. Скачайте и запустите [DacFramework.msi установщик Windows](https://go.microsoft.com/fwlink/?linkid=2033947).
+1. Скачайте и запустите [DacFramework.msi установщик Windows](https://go.microsoft.com/fwlink/?linkid=2069405).
 2. Откройте новое окно командной строки и запустите sqlpackage.exe
     - sqlpackage устанавливается в ```C:\Program Files\Microsoft SQL Server\150\DAC\bin``` папки
     - Установка x86 версии в x64 компьютере устанавливается sqlpackage ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin``` папки
 
 ## <a name="get-sqlpackage-preview-for-macos"></a>Получить sqlpackage (Предварительная версия) для macOS
 
-1. Скачайте [sqlpackage для macOS](https://go.microsoft.com/fwlink/?linkid=2044514).
+1. Скачайте [sqlpackage для macOS](https://go.microsoft.com/fwlink/?linkid=2069126).
 2. Извлеките файл и запустить sqlpackage, откройте новое окно терминала и введите следующие команды:
 
    **Установка ZIP:**
@@ -57,7 +57,7 @@ sqlpackage выполняется в Windows, macOS и Linux.
 
 ## <a name="get-sqlpackage-preview-for-linux"></a>Получить sqlpackage (Предварительная версия) для Linux
 
-1. Скачайте [sqlpackage для Linux](https://go.microsoft.com/fwlink/?linkid=2044263) с помощью одного из установщиков или архива tar.gz:
+1. Скачайте [sqlpackage для Linux](https://go.microsoft.com/fwlink/?linkid=2069122) с помощью одного из установщиков или архива tar.gz:
 2. Извлеките файл и запустить sqlpackage, откройте новое окно терминала и введите следующие команды:
 
    **Установка ZIP:**

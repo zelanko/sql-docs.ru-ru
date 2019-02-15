@@ -1,7 +1,7 @@
 ---
 title: Скачивание Microsoft JDBC Driver для SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/19/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,17 +11,17 @@ ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 098822de96e4bdfe74251137ff3819e5a0ae7a41
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
-ms.translationtype: MTE75
+ms.openlocfilehash: 82a9b15e396cfe747dc92336dd6bd76e638d52ba
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299651"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736725"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Скачивание драйвера Microsoft JDBC Driver for SQL Server
 
   > [!div class="nextstepaction"]
-  > [Поделитесь своим мнением о SQL документация содержания!](https://aka.ms/sqldocsurvey)
+  > [Поделитесь своим мнением о содержании документации по SQL!](https://aka.ms/sqldocsurvey)
 
 ## <a name="using-the-jdbc-driver-with-maven-central"></a>С помощью драйвера JDBC с Maven Central
 Драйвер JDBC можно добавить в проект Maven, добавив его в качестве зависимости в файл POM.xml, используя следующий код:
@@ -30,11 +30,12 @@ ms.locfileid: "54299651"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.0.0.jre10</version>
+    <version>7.2.0.jre11</version>
 </dependency>
 ```  
 
 ## <a name="available-downloads-of-jdbc-driver-for-sql-server"></a>Доступные загрузки драйвера JDBC для SQL Server
+ * [Microsoft JDBC Driver 7.2 для SQL Server](https://go.microsoft.com/fwlink/?linkid=2063159)
  * [Microsoft JDBC Driver 7.0 для SQL Server](https://go.microsoft.com/fwlink/?linkid=2005972) 
  * [Microsoft JDBC Driver 6.4 для SQL Server](https://go.microsoft.com/fwlink/?linkid=868290) 
  * [Microsoft JDBC Driver 6.2 для SQL Server](https://go.microsoft.com/fwlink/?linkid=852460) 

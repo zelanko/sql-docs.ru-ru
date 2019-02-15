@@ -1,7 +1,7 @@
 ---
 title: Использование расширенных типов данных | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b794a8c93fd7a9c83e783a04999cbeb8a9e58f48
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ddef588be6f7e15c8a3f7f8e981a44cfcb5c9076
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510503"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736825"
 ---
 # <a name="using-advanced-data-types"></a>Использование расширенных типов данных
 
@@ -26,16 +26,19 @@ ms.locfileid: "52510503"
   
 ## <a name="remarks"></a>Remarks
 
-В следующей таблице перечислены все стандартные сопоставления между расширенными типами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], типами данных JDBC, и типами данных языка программирования Java.  
+В следующей таблице перечислены все стандартные сопоставления между расширенными типами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], типами данных JDBC и типами данных языка программирования Java.  
   
 |Типы SQL Server|Типы JDBC (java.sql.Types)|Типы языка Java|  
 |----------------------|-----------------------------------|-------------------------|  
 |varbinary(max)<br /><br /> image|LONGVARBINARY|byte[] \(по умолчанию), Blob, InputStream, String|  
 |text<br /><br /> varchar(max)|LONGVARCHAR|String (по умолчанию), Clob, InputStream|  
-|ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (по умолчанию), Clob, NClob (Java SE 6.0)|  
-|xml|LONGVARCHAR<br /><br /> SQLXML (Java SE 6.0)|String (по умолчанию), InputStream, Clob, byte[],Blob, SQLXML (Java SE 6.0)|  
+|ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (default), Clob, NClob|  
+|xml|LONGVARCHAR<br /><br /> SQLXML|String (default), InputStream, Clob, byte[], Blob, SQLXML|  
 |Пользовательский тип<sup>1</sup>|VARBINARY|String (по умолчанию), byte[], InputStream|  
-  
+|sqlvariant|SQLVARIANT|Объект|  
+|geometry<br /><br /> geography|VARBINARY|byte[]|  
+
+
 <sup>1</sup> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] поддерживает отправку и получение пользовательских типов CLR в виде двоичных данных, но не поддерживает работу с метаданными CLR.  
   
 В следующих разделах приведены примеры использования драйвера JDBC и расширенных типов данных.  
@@ -156,18 +159,26 @@ try (Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, Resul
   
 - Доступ к XML как к байтовому массиву с ведущей меткой следования байтов (BOM) при кодировании в UTF-16 для взаимообмена с другими средствами обработками XML и файлами на диске.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требует для XML в кодировке UTF-16 ведущую метку следования байтов (BOM). Приложение должно использовать эту метку при указании значений параметров XML в виде байтовых массивов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда выводит XML-значения как строки в кодировке UTF-16 без метки следования байтов и без внедренного объявления кодировки. Если значения XML извлекаются в формате byte[], BinaryStream или Blob, то для значения ожидается метка следования байтов UTF-16.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требует для XML в кодировке UTF-16 ведущую метку порядка байтов (BOM). Приложение должно использовать эту метку при указании значений параметров XML в виде байтовых массивов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда выводит XML-значения как строки в кодировке UTF-16 без метки порядка байтов и без внедренного объявления кодировки. Если значения XML извлекаются в формате byte[], BinaryStream или Blob, то для значения ожидается метка следования байтов UTF-16.  
   
 Дополнительные сведения о типе данных **xml** можно найти в разделе "Тип данных XML" электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="user-defined-data-type"></a>Пользовательский тип данных  
 
-Введение определяемых пользователем типов (UDT) в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] совершенствует систему типов SQL, позволяя пользователю сохранять объекты и настраиваемые структуры данных в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Определяемые пользователем типы могут содержать несколько типов данных, и их поведение может отличаться от традиционных псевдонимов типов данных, которые состоят из одного системного типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Определяемые пользователем типы данных определяются с помощью любого из языков, которые поддерживаются средой Microsoft .NET CLR и формируют проверяемый код. Это языки Microsoft Visual C# и Visual Basic .NET. Данные предоставляются в виде полей и свойств класса или структуры на базе платформы .NET Framework, а особенности работы определяются методами класса или структуры.  
+Введение пользовательских типов (UDT) в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] совершенствует систему типов SQL, позволяя пользователю сохранять объекты и настраиваемые структуры данных в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Определяемые пользователем типы могут содержать несколько типов данных, и их поведение может отличаться от традиционных псевдонимов типов данных, которые состоят из одного системного типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Определяемые пользователем типы данных определяются с помощью любого из языков, которые поддерживаются средой Microsoft .NET CLR и формируют проверяемый код. Это языки Microsoft Visual C# и Visual Basic .NET. Данные предоставляются в виде полей и свойств класса или структуры на базе платформы .NET Framework, а особенности работы определяются методами класса или структуры.  
   
-В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользовательские типы данных можно использовать в качестве идентификатора столбцов таблицы, как переменную в пакете [!INCLUDE[tsql](../../includes/tsql-md.md)] или как аргумент функции [!INCLUDE[tsql](../../includes/tsql-md.md)] или хранимой процедуры.  
+В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользовательские типы можно использовать в качестве идентификатора столбцов таблицы, как переменную в пакете [!INCLUDE[tsql](../../includes/tsql-md.md)] или как аргумент функции [!INCLUDE[tsql](../../includes/tsql-md.md)] или хранимой процедуры.  
   
 Дополнительные сведения о применении пользовательских типов данных см. в разделе "Использование и изменение экземпляров пользовательских типов" в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
+## <a name="sqlvariant-data-type"></a>Sql_variant Data Type
+
+Сведения о типе данных sql_variant, см. в разделе [использование типа данных Sql_variant](../../connect/jdbc/using-sql-variant-datatype.md).  
+
+## <a name="spatial-data-types"></a>Типы пространственных данных
+
+Сведения о типах пространственных данных, см. в разделе [пространственных типов данных с помощью](../../connect/jdbc/use-spatial-datatypes.md).  
+
 ## <a name="see-also"></a>См. также:
 
 [Основные сведения о типах данных драйвера JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

@@ -1,7 +1,7 @@
 ---
 title: Заметки о выпуске для драйвера JDBC | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 01/29/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,16 +11,54 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e7225da803185074e50f3c33d734ec50ccdc29b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: MTE75
+ms.openlocfilehash: 4b7f863c7534421fa6e091e793297b4be3f73542
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514569"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737065"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Заметки о выпуске для драйвера JDBC
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+
+## <a name="updates-in-microsoft-jdbc-driver-72-for-sql-server"></a>Обновления в Microsoft JDBC Driver 7.2 для SQL Server
+
+7.2 драйвера Microsoft JDBC для SQL Server полностью соответствует спецификации API JDBC 4.2. JAR-файлы в пакете 7,2 присваиваются в соответствии с совместимость версий Java. Например mssql-jdbc-7.2.0.jre11.jar файл из 7,2 пакета следует использовать с помощью Java 11.
+
+### <a name="support-for-jdk-11"></a>Поддержка JDK 11
+
+7.2 драйвера Microsoft JDBC для SQL Server теперь совместимы с Java Development Kit (JDK) версии 11.0 в дополнение к JDK 1.8.
+
+### <a name="support-for-active-directory-managed-service-identity-msi-authentication"></a>Поддержка проверки подлинности Active Directory управляемого удостоверения службы (MSI)
+
+7.2 драйвера Microsoft JDBC для SQL Server теперь поддерживает режим проверки подлинности Active Directory управляемого удостоверения службы (MSI). Этот режим проверки подлинности применяется в ресурсах Azure с поддержкой включена функция «Identity». Обоих типов из управляемых удостоверений системы (MSI) поддерживаются получения драйвером **accessToken** для установления безопасного соединения.
+
+Дополнительные сведения и пример приложения для использования этого режима проверки подлинности можно найти здесь: [Соединение с использованием проверки подлинности Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)
+
+### <a name="osgi-support"></a>Поддержка OSGi
+
+7.2 драйвера Microsoft JDBC для SQL Server появилась поддержка OSGi к драйверу, добавив ниже реализации для `org.osgi.service.jdbc.DataSourceFactory` и `org.osgi.framework.BundleActivator` :
+
+- `com.microsoft.sqlserver.jdbc.osgi.SQLServerDataSourceFactory`
+- `com.microsoft.sqlserver.jdbc.osgi.Activator`
+
+### <a name="sqlservererror-apis"></a>API-интерфейсы SQLServerError
+
+7.2 драйвера Microsoft JDBC для SQL Server представляет `SQLServerException.getSQLServerError()` и `SQLServerError` считывания API для получения дополнительных сведений об ошибке, созданные на сервере. Дополнительные сведения см. в статье [Обработка ошибок](../../connect/jdbc/handling-errors.md).
+
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-163"></a>Обновлена версия библиотеки проверки подлинности Microsoft Azure Active Directory (ADAL4J) для Java: 1.6.3.
+
+7.2 драйвера Microsoft JDBC для SQL Server был обновлен его зависимость Maven «Microsoft Azure библиотеку аутентификации Active Directory (ADAL4J) для Java» до версии 1.6.3, который также вводит «Java клиента среды выполнения для AutoRest» как зависимость Maven (версия: 1.6.5). Дополнительные сведения о зависимостях см. в разделе [зависимости Microsoft JDBC Driver компонентов для SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+
+### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>Обновленная версия «Microsoft Azure ключ хранилища пакета SDK для Java»: 1.2.0).
+
+7.2 драйвера Microsoft JDBC для SQL Server был обновлен его зависимость Maven от «Microsoft Azure ключ хранилища пакета SDK для Java» до версии 1.2.0, что также приводит к «Microsoft Azure SDK для Key Vault WebKey» как зависимость Maven (версия: 1.2.0). Дополнительные сведения о зависимостях см. в разделе [зависимости Microsoft JDBC Driver компонентов для SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+
+### <a name="known-issues"></a>Известные проблемы
+
+С 7.2 драйвера Microsoft JDBC для SQL Server с определенным параметризованных запросов существует известная проблема. Обновление версии 7.2 (v7.2.1), будет выпущено в ближайшее время для устранения этой проблемы.
+
 
 ## <a name="updates-in-microsoft-jdbc-driver-70-for-sql-server"></a>Обновления в Microsoft JDBC Driver 7.0 для SQL Server
 
@@ -75,9 +113,9 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
             SQLServerKeyVaultAuthenticationCallback authenticationCallback) throws SQLServerException;
 ```
 
-### <a name="updated-adal4j-version-160"></a>Обновленная версия ADAL4J: 1.6.0
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-160"></a>Обновлена версия библиотеки проверки подлинности Microsoft Azure Active Directory (ADAL4J) для Java: 1.6.0.
 
-7.0 драйвера Microsoft JDBC для SQL Server был обновлен его зависимость Maven azure-activedirectory-library-for-java (ADAL4J) до версии 1.6.0. Дополнительные сведения о зависимостях см. в разделе [зависимости Microsoft JDBC Driver компонентов для SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+7.0 драйвера Microsoft JDBC для SQL Server был обновлен его зависимость Maven «Microsoft Azure библиотеку аутентификации Active Directory (ADAL4J) для Java» до версии 1.6.0. Дополнительные сведения о зависимостях см. в разделе [зависимости Microsoft JDBC Driver компонентов для SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ## <a name="updates-in-microsoft-jdbc-driver-64-for-sql-server"></a>Обновления в драйвере Microsoft JDBC 6.4 для SQL Server
 
@@ -93,7 +131,7 @@ Microsoft JDBC Driver 6.4 для SQL Server полностью соответс�
 
 ### <a name="added-connection-property-sslprotocol"></a>Добавлено свойство подключения: sslProtocol
 
-Новое свойство соединения позволяет пользователям указывать ключевое слово протокола TLS. Возможными значениями являются: «TLS», «TLSv1», «TLSv1.1» и «TLSv1.2». Дополнительные сведения см. в разделе [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol).
+Новое свойство соединения позволяет пользователям указывать ключевое слово протокола TLS. Возможны следующие значения: «TLS», «TLSv1», «TLSv1.1» и «TLSv1.2». Дополнительные сведения см. в разделе [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol).
 
 ### <a name="deprecated-connection-property-fipsprovider"></a>Рекомендуется использовать свойство соединения: fipsProvider
 
@@ -131,9 +169,9 @@ Microsoft JDBC Driver 6.4 для SQL Server полностью соответс�
 
 Драйвер JDBC поддерживает встроенную проверку подлинности Azure Active Directory во всех поддерживаемых операционных системах (Windows, Linux, Mac) с Kerberos. Кроме того в операционных системах Windows, пользователи могут проходить проверку подлинности с sqljdbc_auth.dll.
 
-### <a name="updated-adal4j-version-140"></a>Обновленная версия ADAL4J: 1.4.0
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>Обновлена версия библиотеки проверки подлинности Microsoft Azure Active Directory (ADAL4J) для Java: 1.4.0.
 
-Драйвер JDBC был обновлен его зависимость Maven azure-activedirectory-library-for-java (ADAL4J) до версии 1.4.0. Дополнительные сведения о зависимостях см. в разделе [зависимости Microsoft JDBC Driver компонентов для SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+Драйвер JDBC был обновлен его зависимость Maven «Microsoft Azure библиотеку аутентификации Active Directory (ADAL4J) для Java» до версии 1.4.0. Дополнительные сведения о зависимостях см. в разделе [зависимости Microsoft JDBC Driver компонентов для SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ## <a name="updates-in-microsoft-jdbc-driver-62-for-sql-server"></a>Обновления в Microsoft JDBC Driver 6.2 для SQL Server
 

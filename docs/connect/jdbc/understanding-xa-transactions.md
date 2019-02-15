@@ -1,7 +1,7 @@
 ---
 title: Основные сведения о транзакциях XA | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8231b574516c11995dc5f91e5cf59fcdcfb6dc04
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5d88840ef429258ad425e867efc4b744f6a5d3c5
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393838"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736945"
 ---
 # <a name="understanding-xa-transactions"></a>Основные сведения о транзакциях XA
 
@@ -45,9 +45,9 @@ ms.locfileid: "52393838"
 
 - Если транзакции XA используются вместе с координатором распределенных транзакций (Майкрософт) (MS DTC), то текущая версия MS DTC может не поддерживать сильно связанные ветви XA. Например, в MS DTC действует взаимно однозначное сопоставление между идентификатором ветви транзакции XA (XID) и идентификатором транзакции MS DTC, и работа, выполняемая слабосвязанными ветвями XA, изолируется.  
   
-     Исправление, предоставляемое в статье [MSDTC and Tightly Coupled Transactions](https://support.microsoft.com/kb/938653), обеспечивает поддержку сильно связанных ветвей XA, когда несколько ветвей XA с одним глобальным идентификатором транзакции (GTRID) сопоставляются с одним идентификатором транзакции MS DTC. В результате в каждой из нескольких сильно связанных ветвей XA в диспетчере ресурсов (например, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) можно просматривать изменения, выполненные другой ветвью.  
+     Исправление, предоставляемое в статье [MSDTC and Tightly Coupled Transactions](https://support.microsoft.com/kb/938653), обеспечивает поддержку сильно связанных ветвей XA, когда несколько ветвей XA с одним глобальным идентификатором транзакции (GTRID) сопоставляются с одним идентификатором транзакции MS DTC. В результате в каждой из нескольких сильно связанных ветвей XA в диспетчере ресурсов (например, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) можно просматривать изменения, выполненные другой ветвью.
   
-- Флаг [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) разрешает приложениям использовать тесно связанные транзакции XA, имеющие различные идентификаторы ветвей транзакции (BQUAL), но одинаковые глобальные идентификаторы транзакции (GTRID) и идентификатор формата (FormatID). Для использования этой функции необходимо задать [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) на параметр flags XAResource.start метода:  
+- Флаг [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) разрешает приложениям использовать тесно связанные транзакции XA, имеющие различные идентификаторы ветвей транзакции (BQUAL), но одинаковые глобальные идентификаторы транзакции (GTRID) и идентификатор формата (FormatID). Для использования этой функции необходимо задать [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) на параметр flags XAResource.start метода:
   
     ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
@@ -61,11 +61,12 @@ ms.locfileid: "52393838"
 > Компоненты распределенных транзакций JDBC находятся в каталоге XA в каталоге установки драйвера JDBC. К этим компонентам относятся файлы xa_install.sql и sqljdbc_xa.dll.  
 
 > [!NOTE]  
-> Начиная с общедоступной предварительной версии SQL Server 2019 CTP 2.0, JDBC XA, компоненты распределенных транзакций помещаются подсистемы SQL Server, которые можно включить или отключить с помощью системы хранимой процедуры. Чтобы включить необходимые компоненты для выполнения распределенных транзакциях XA, с помощью драйвера JDBC, выполните следующие хранимые процедуры.
+> Начиная с SQL Server 2019 общедоступной предварительной версии CTP 2.0 JDBC XA, компоненты распределенных транзакций, включаются в ядре SQL Server и можно включить или отключить с помощью системы хранимой процедуры.
+> Чтобы включить необходимые компоненты для выполнения распределенных транзакциях XA, с помощью драйвера JDBC, выполните следующую хранимую процедуру.
 >
 > EXEC sp_sqljdbc_xa_install
 >
-> Чтобы отключить ранее установленных компонентов, выполните следующие хранимые процедуры. 
+> Чтобы отключить ранее установленных компонентов, выполните следующую хранимую процедуру.
 >
 > EXEC sp_sqljdbc_xa_uninstall
 
@@ -83,7 +84,7 @@ ms.locfileid: "52393838"
   
 4. В диалоговом окне **Свойства: локальная DTC** перейдите на вкладку **Безопасность**.  
   
-5. Установите флажок **Включить транзакции XA** и нажмите кнопку **ОК**. Это приведет к перезапуску службы MS DTC.  
+5. Установите флажок **Включить транзакции XA** и нажмите кнопку **ОК**. Это приведет к перезапуску службы MS DTC.
   
 6. Еще раз нажмите кнопку **ОК**, чтобы закрыть диалоговое окно **Свойства**, а затем закройте окно **Службы компонентов**.  
   
@@ -104,11 +105,11 @@ ms.locfileid: "52393838"
   
 В каждый момент времени в каждом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно настроить только одну версию сборки sqljdbc_xa.dll. Приложениям могут понадобиться различные версии драйвера JDBC для подключения к одному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью соединения XA. В этом случае в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо установить файл sqljdbc_xa.dll, который содержит новейшую версию драйвера JDBC.  
   
-Существует три способа, чтобы проверить версию файла sqljdbc_xa.dll, установленную в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Существует три способа, чтобы проверить версию файла sqljdbc_xa.dll, установленную в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 1. Откройте каталог LOG на компьютере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], который будет участвовать в распределенных транзакциях. Выберите и откройте файл [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ERRORLOG. Найдите в файле ERRORLOG фразу "Используется SQLJDBC_XA.dll версии...".  
   
-2. Откройте каталог Binn на компьютере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], который будет участвовать в распределенных транзакциях. Выберите сборку sqljdbc_xa.dll.  
+2. Откройте каталог Binn на компьютере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], который будет участвовать в распределенных транзакциях. Выберите сборку sqljdbc_xa.dll.
 
     - В Windows Vista и более поздних версиях: щелкните правой кнопкой мыши файл sqljdbc_xa.dll и выберите пункт меню «Свойства». Перейдите на вкладку **Подробно**. В поле **Версия файла** показана версия файла sqljdbc_xa.dll, которая в настоящий момент установлена в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -128,11 +129,11 @@ ms.locfileid: "52393838"
 Эти параметры относятся к экземпляру SQL Server и должны быть созданы в следующем разделе реестра:  
 
 ```bash
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL\<version>.<instance_name>\XATimeout  
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<instance_name>\XATimeout  
 ```
 
 > [!NOTE]  
-> Для 32-разрядной версии SQL Server на 64-разрядных компьютерах необходимо создать параметры реестра в следующем разделе: `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\MSSQL\<version>.<instance_name>\XATimeout`
+> Для 32-разрядной версии SQL Server на 64-разрядных компьютерах необходимо создать параметры реестра в следующем разделе: `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\MSSQL<version>.<instance_name>\XATimeout`
   
 Время ожидания задается для каждой транзакции при ее запуске. По истечении времени ожидания выполняется откат транзакции в SQL Server. Время ожидания зависит от параметров реестра и указанных пользователем параметров в XAResource.setTransactionTimeout(). Вот несколько примеров интерпретации таких значений времени ожидания.  
   
@@ -157,7 +158,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL\<version>.<inst
 При установке новой версии драйвера JDBC также следует обновить файл sqljdbc_xa.dll, расположенный на сервере, с помощью файла sqljdbc_xa.dll из этой новой версии.  
   
 > [!IMPORTANT]  
-> Файл sqljdbc_xa.dll следует обновлять во время планового обслуживания либо в случае, если не выполняется ни одной транзакции MS DTC.  
+> Файл sqljdbc_xa.dll следует обновлять во время планового обслуживания либо в случае, если не выполняется ни одной транзакции MS DTC.
   
 1. Выгрузите файл sqljdbc_xa.dll с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] команда **sqljdbc_xa DBCC (FREE)**.  
   
@@ -167,7 +168,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL\<version>.<inst
   
 ### <a name="configuring-the-user-defined-roles"></a>Настройка определяемых пользователем ролей
 
-Чтобы предоставить определенному пользователю разрешения для участия в распределенных транзакциях через драйвер JDBC, его необходимо включить в роль SqlJDBCXAUser. Например, следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет добавить пользователя с именем shelby (стандартное имя входа пользователя SQL Server) в роль SqlJDBCXAUser:  
+Чтобы предоставить определенному пользователю разрешения для участия в распределенных транзакциях через драйвер JDBC, его необходимо включить в роль SqlJDBCXAUser. Например, следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет добавить пользователя с именем shelby (стандартное имя входа пользователя SQL) в роль SqlJDBCXAUser:  
 
 ```sql
 USE master  
