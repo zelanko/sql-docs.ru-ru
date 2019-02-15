@@ -1,5 +1,5 @@
 ---
-title: Анализ и создание отчетов с помощью средства business intelligence (BI)
+title: Средства Microsoft Business Intelligence (BI) для анализа и отчетности
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -9,14 +9,14 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 519aa33d615c244289fdf53d6cea6684a8a04dce
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 73dd4f2163169930d7766d3a287b8a5c38de0ee1
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553146"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289192"
 ---
-# <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Анализ и создание отчетов с помощью средства business intelligence (BI)
+# <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Средства Microsoft Business Intelligence (BI) для анализа и отчетности
 
   В следующей таблице показано сопоставление рабочих нагрузок для анализа и отчетов со средствами бизнес-аналитики Майкрософт, которые лучше всего подходят для этих рабочих нагрузок.  
   
@@ -33,8 +33,8 @@ ms.locfileid: "53553146"
 |Самостоятельное выполнение прогнозной аналитики||||||[Интеллектуальный анализ данных надстройки для Excel](../analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)|  
 |Визуализация и анализ данных||[Power View](https://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [Power Map](https://go.microsoft.com/fwlink/p/?LinkId=391848)|||||  
 |Формирование вопросов с помощью запросов на естественном языке|||||[ВОПРОСЫ И ОТВЕТЫ](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)||  
-|Доступ к отчетам с помощью мобильных устройств||||[HTML 5 (поддерживает просмотр < файлы размером 10 МБ)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (поддерживает просмотр < 250 МБ)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Мобильное приложение Power BI на устройствах iOS](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Мобильное приложение Power BI на устройствах Android](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Мобильное приложение Power BI для Windows 10](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
-|Совместная работа и общий доступ|||[Веб-сайты SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391849)|[Сайтов групп SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391850)|[Сайты Power BI](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
+|Доступ к отчетам с помощью мобильных устройств||||[HTML 5 (поддерживает просмотр файлов размером до 10 МБ)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (поддерживает просмотр файлов размером до 250 МБ)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Мобильное приложение Power BI на устройствах с iOS](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Мобильное приложение Power BI на устройствах с Android](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Мобильное приложение Power BI для Windows](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
+|Совместная работа и общий доступ|||[Веб-сайты SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391849)|[Сайтов групп SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391850)|[Веб-сайты Power BI](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**Корпоративная бизнес-аналитика**|IT Pro||||||  
 |Создавайте многомерные или табличные корпоративные модели||||||[Службы Analysis Services](../analysis-services/analysis-services.md)|  
 |Создавайте специальные визуализации данных|||[Power View для SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391858)||||  

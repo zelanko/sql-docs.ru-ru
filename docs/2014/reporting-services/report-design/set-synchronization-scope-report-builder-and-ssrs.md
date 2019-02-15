@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6f4a11e6-6151-47be-a43f-e3dbf6c0e737
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 87aa869269b11ce6e3d3c54296ed08861e0406bb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3c2286ec6a8995d6fe707690629cbcce0dede127
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034765"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293392"
 ---
 # <a name="set-synchronization-scope-report-builder-and-ssrs"></a>Задание области действия синхронизации (построитель отчетов и службы SSRS)
   Индикаторы показывают значения данных с проведением синхронизации по всему диапазону значений индикаторов в пределах указанной области действия. По умолчанию областью действия родительского контейнера индикатора является объект, который содержит индикатор, такой как таблица или матрица. Синхронизацию индикатора можно менять в зависимости от разметки отчета. Например, если в такой области данных, как таблица, есть группа строк, можно выбрать эту группу в качестве области индикатора. Индикатор позволяет также пропускать синхронизацию.  

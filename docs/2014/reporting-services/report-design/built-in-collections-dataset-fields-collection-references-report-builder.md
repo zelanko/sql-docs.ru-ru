@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 906cda310ff4478854d2b308332571fa6dbdd155
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d4717b1f8a905576d2f59657fd8ae8ad00396e3b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037165"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297432"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>Ссылки на коллекцию полей набора данных (построитель отчетов и службы SSRS)
   В каждом наборе данных отчета содержится одна коллекция Fields. Коллекция Fields представляет собой набор полей, заданных запросом набора данных, и все созданные дополнительные вычисляемые поля. После создания набора данных коллекция полей появляется в области **Данные отчета** .  

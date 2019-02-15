@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 2dae0498da8fe1387b6b082d7cc6ae37af27d464
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a40980ddd8ee29d05fe4278baf512790751ee7d8
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010195"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293792"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Добавление гиперссылки на URL-адрес (построитель отчетов и службы SSRS)
   Можно добавить к элементу отчета гиперссылку, при щелчке которой будет осуществлен переход в браузере по заданному URL-адресу. Гиперссылкой может служить статический URL-адрес или выражение, результатом вычисления которого будет такой адрес. Если в базе данных есть поле, содержащее URL-адрес, выражение может содержать это поле, что приведет к формированию в отчете динамического списка гиперссылок. Гиперссылки можно добавлять в текстовые поля, диаграммы, изображения и датчики. У пользователя должно быть право доступа к указанному URL-адресу.  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - shared data sources
 - data sources
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 97a619b1618c1e733a61e5cd9ea825e07efddcac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e507d9fa5b57fe63c1540f4490a7b04d878199f0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031955"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288942"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>Внедренные и общие подключения к данным или источники данных (построитель отчетов и службы SSRS)
   Отчеты используют подключения к данным для получения данных об отчете при выполнении запросов или при обработке отчета. Подключение можно выбрать из списка встроенных типов подключений: к реляционной базе данных, к многомерной базе данных, веб-службе или некоторым другим источникам данных. При описании подключений к данным используются следующие термины.  

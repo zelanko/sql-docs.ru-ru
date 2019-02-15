@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 75136807b3bf87d143ef037dcdf4c865f73a1f48
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1d8d52b8b725666b69cf596848ec6626f22814a1
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026187"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290942"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)
   В отчете фильтр является частью набора данных, области данных или группы области данных, созданной для ограничения объема данных, используемого в отчете. Фильтры могут быть использованы для управления данными отчета в случае, когда невозможно изменить запрос к набору данных, например при использовании общего набора данных.  

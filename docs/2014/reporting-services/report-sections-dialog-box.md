@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1ff14dfa-d56b-449f-bef1-cc217f3c14b7
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: eb397f8ab7e953c81d37e354506ef3435fccba2f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 80a20d6458732150404ac5b6927a12e1fe159054
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022575"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298312"
 ---
 # <a name="report-sections-dialog-box"></a>Диалоговое окно «Разделы отчета»
   При открытии отчета конструктор отчетов проверяет, что отчет содержит только один язык определения отчетов (RDL)  **\<разделе >** элемент. Открытие отчета с несколькими элементами **\<Section>** не поддерживается.  

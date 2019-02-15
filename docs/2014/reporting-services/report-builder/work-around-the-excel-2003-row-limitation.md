@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d78406155e9d2fb808664ce1377d0aba9d52dc84
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 37c20a59efa741b5ca768cd6b63773ad7aa15afe
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032452"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287982"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>Обход ограничения строк Excel
   В этом разделе объясняется, как обойти ограничения строк Excel 2003 при экспорте отчетов в Excel. Это решение подходит для отчета, который содержит только таблицу.  

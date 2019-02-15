@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3216a1978378676ef74c0ec11a57d73a9ba528ab
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1c2f2fcb146be8e90a8b279920ea70cdcdc04300
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037815"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292062"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Разработка отчетов с использованием конструктора отчетов (SSRS)
   Для создания полнофункциональных отчетов и систем отчетности служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используется конструктор отчетов. Конструктор отчетов — это графический интерфейс, с помощью которого можно задавать источники данных, наборы данных, запросы, позиции макета отчета для областей данных и полей, а также такие интерактивные возможности, как параметры и наборы отчетов, которые работают совместно.  

@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.embeddedimages.f1
 - "10060"
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: b1541073379aa27c932fcadf7558de7d34c57e8d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ca23d1dfb1b35d165959d2a249130ddf9afc7678
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037865"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288962"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>Внедрение изображения в отчет (построитель отчетов и службы SSRS)
   Отчет может содержать внедренное изображение. Внедрение изображения гарантирует постоянную доступность изображения для отчета, однако увеличивает размер определения отчета (файла, который определяет отчет). Изображения, внедренные в отчет, перечислены на панель данных отчета.  

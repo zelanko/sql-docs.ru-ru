@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 268deacf076f7ea79222dd441777f1ad16149750
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e41b76481748175a68b4a0a0a4877c7c17147788
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028275"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288572"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Встроенные глобальные значения и ссылки на пользовательские поля (построитель отчетов и службы SSRS)
   Коллекция «Встроенные поля», включающая как коллекцию `Globals`, так и коллекцию `User`, представляет глобальные значения, предоставленные службами Reporting Services при обработке отчета. Коллекция `Globals` предоставляет такие значения, как имя отчета, время начала обработки отчета и текущее количество страниц для верхнего или нижнего колонтитула отчета. Коллекция `User` предоставляет идентификатор пользователя и параметры языка. Эти значения можно использовать в выражениях для фильтрации результатов отчета.  

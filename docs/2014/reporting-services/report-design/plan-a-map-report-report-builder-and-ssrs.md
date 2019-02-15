@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 84a55d4f18b52d103997fdafee2fc2c84d9495f6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 37dfbbec68d525667d415cca852aded4aba8b747
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040735"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288192"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Планирование отчета-карты (построитель отчетов и службы SSRS)
   Хорошее представление сведений в отчетах может помочь их пониманию и выполнению действий. Для представления аналитических данных в отчете, например данных о продажах или демографических данных по географическим районам, можно добавить в отчет карту. Карта может содержать несколько уровней, каждый уровень содержит элементы карты, определенные в конкретном типе пространственных данных: точки, представляющие расположение, линии, представляющие маршруты, или многоугольники, представляющие области. Можно соотнести аналитические данные с каждым элементом карты на каждом уровне.  

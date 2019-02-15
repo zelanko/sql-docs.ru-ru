@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d4540cdd9d0d8c196e9f304508fd60edd99f2174
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 692cb15e699a7c4403e2590bb119350cac74e5e2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032975"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289539"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Диалоговое окно «Параметры построителя отчетов» — «Настройки» (построитель отчетов)
   Нажмите кнопку **построитель отчетов** а затем нажмите кнопку **параметры** для задания параметров для отображения последних файлов и подключений. Можно также изменить сервер отчетов по умолчанию или добавить его, если сервер по умолчанию не задан.  
