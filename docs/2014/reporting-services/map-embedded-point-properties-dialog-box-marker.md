@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapembeddedpointlayerproperties.marker.f1
 - "10530"
 ms.assetid: 3c5eb1c5-d40a-424f-aa7c-43b112f42dec
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8d3006469ef9b9d84fcbbff1a05339930134dbc6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 891d1a6e94e5e496e39c5fc8bb5c774976bd537a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018176"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286602"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>Диалоговое окно «Свойства внедренной точки карты», маркер
   Перейдите на вкладку **Маркер** диалогового окна **Свойства внедренной точки** , чтобы изменить параметры типа или размера маркеров для следующих элементов карты.  

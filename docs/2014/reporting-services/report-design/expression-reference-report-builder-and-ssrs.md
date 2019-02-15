@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1ed7f6b31303a078da975850cd3cd3bf38554199
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0b902cfcb12a38ae15a175502884c1720a5a9c90
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022246"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285433"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>Справочник выражений (построитель отчетов и службы SSRS)
   Выражения отчета поддерживают различные ссылки на встроенные функции и встроенные коллекции. Чтобы отчет можно было опубликовать или обработать, выражения должны иметь допустимый синтаксис [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  

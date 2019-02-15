@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e64f98f376e704716a40eedcda8351331280fb9e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 977a7dcb943b3479dd5649cfcf842aefcf469e90
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031855"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285722"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Диалоговое окно «Свойства источника данных» — «Общие» (построитель отчетов)
   Перейдите на вкладку **Общие** диалогового окна **Свойства источника данных** , чтобы выбрать общий источник данных с сервера отчетов либо создать или изменить сведения о соединении для источника данных, внедренного в отчет.  

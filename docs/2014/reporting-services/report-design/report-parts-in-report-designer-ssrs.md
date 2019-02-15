@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 70a4cdef25a096f4ff0514f169839df482e9f4b3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9c8646e1fda1b36408276ec61272240b78bea74f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043345"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286332"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>Части отчетов в конструкторе отчетов (SSRS)
   В конструкторе отчетов можно создавать таблицы, графики и другие элементы отчетов в проекте, а также публиковать их в виде *элементов отчета* на сервере отчетов или сайте SharePoint, интегрированном с сервером отчетов, для дальнейшего использования в других отчетах.  

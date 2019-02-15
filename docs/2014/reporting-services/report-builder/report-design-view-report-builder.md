@@ -19,15 +19,15 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 714fe10abac63da9abdb7c1415e8f6abbfba11b0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d1a9e3264ce3580ec5b1c6d110ce745236accff1
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012098"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287022"
 ---
 # <a name="report-design-view-report-builder"></a>Представление конструктора отчетов (построитель отчетов)
   Окно построителя отчетов предназначено для упрощения организации ресурсов отчета и быстрого построения нужных отчетов. В центре окна расположена область конструктора, в верхней части — лента, а слева, внизу и справа находятся панели «Данные отчета», «Группирование» и «Свойства», а также галерея элементов отчетов. В области конструктора добавляются и организовываются элементы отчета. Лента распределяет традиционные элементы меню по категории, что упрощает их поиск и использование. Панели позволяют добавлять, выбирать и организовать ресурсы отчета и изменить свойства элементов отчета.  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1f8dcab2a07aca7971ea8c799660b075fe0bcfd2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 83046be3fc713768d4dffd8dc2ef22f37496858e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022987"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286682"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Создание простого табличного отчета (учебник по службам SSRS)
   Этот учебник предназначен для создания простой табличный отчет на основе [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базы данных с помощью конструктора отчетов. Для создания отчетов также можно использовать построитель отчетов и мастер отчетов. В этом учебнике требуется создать проект отчета, указать сведения о соединении, определить запрос, добавить область данных таблицы и выполнить предварительный просмотр отчета.  
