@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a939770ba7b362e2601ecb45b126066341c7c34e
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 54036ccf8d8b47eedede1d2ddfe5d85b6dbee351
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030525"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407524"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Расширить функциональные возможности путем создания расширений Studio данных Azure
 
@@ -35,11 +35,11 @@ ms.locfileid: "53030525"
 
 Чтобы разрабатывать расширения необходимо Node.js установлена и доступна в вашей $PATH. Node.js включает в себя npm, диспетчер пакетов Node.js, который будет использоваться для установки расширения генератора.
 
-Чтобы начать новое расширение, можно использовать генератор Studio модуль обработки данных Azure. Yeoman [расширение генератора](https://www.npmjs.com/package/generator-sqlops) позволяет легко создавать проекты простое расширение. Чтобы запустить генератор, введите следующую команду в командной строке:
+Чтобы начать новое расширение, можно использовать генератор Studio модуль обработки данных Azure. Yeoman [расширение генератора](https://www.npmjs.com/package/generator-azuredatastudio) позволяет легко создавать проекты простое расширение. Чтобы запустить генератор, введите следующую команду в командной строке:
 
-`npm install -g yo generator-sqlops`
+`npm install -g yo generator-azuredatastudio`
 
-`yo sqlops`
+`yo azuredatastudio`
 
 
 **Ссылки на расширения**

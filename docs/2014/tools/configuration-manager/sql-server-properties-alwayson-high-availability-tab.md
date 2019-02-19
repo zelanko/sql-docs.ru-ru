@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 91aedc290389f317a04263a1bbdde2bb086226a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: daf3ed025405b753116bba267ce6f4c50d350601
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062665"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407544"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>Свойства SQL Server (вкладка «Высокий уровень доступности AlwaysOn»)
   На вкладке **Высокий уровень доступности AlwaysOn** в диалоговом окне **Свойства SQL Server** в диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно включить или отключить функцию «Группы доступности AlwaysOn» в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Включение функции «Группы доступности AlwaysOn» является предварительным требованием для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы группы доступности использовались в качестве решения высокого уровня доступности и аварийного восстановления.  

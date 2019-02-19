@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 5ef8efba-6d48-4aeb-a3b9-a02ba5a44614
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 61e5ca1b562a2b809319cf15e7fa6d5df8f6ed16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 28cea87efddcb03767cbf36add4b5d171be1efbb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800692"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286162"
 ---
 # <a name="add-a-details-group-report-builder-and-ssrs"></a>Добавление группы подробных сведений (построитель отчетов и службы SSRS)
 В отчете [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы подробные данные из набора данных отчета указываются в виде группы, не содержащей выражение группы. Если необходимо отобразить подробные данные для матрицы, вернуть подробные данные, удаленные из таблицы или списка, или добавить дополнительные группы сведений, то следует добавить дополнительную группу сведений к существующей области данных табликса. Дополнительные сведения о группах см. в разделе [Основные сведения о группах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  

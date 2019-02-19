@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE
 ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 5b3ab32ed1e5924a38b35bc2ad6664a23ff712a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a13e645117997c5a4e57ea5152f3154b5c4f3610
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724612"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289682"
 ---
 # <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>Добавление на карту пользовательских местоположений (построитель отчетов и службы SSRS)
   После добавления карты в отчет [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы в нее можно добавлять собственные точечные местоположения.  

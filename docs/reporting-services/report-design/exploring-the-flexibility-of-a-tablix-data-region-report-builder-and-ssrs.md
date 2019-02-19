@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 5814c665ae8e815890068f7334097f54b7c399bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f70a913bce975ea9aa8832930857b3880cfc0b1b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628852"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298159"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Изучение возможностей области данных табликса (построитель отчетов и службы SSRS)
 В отчете [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы добавление области данных таблицы, матрицы или списка на вкладке "Вставка" на ленте начинается с исходного шаблона для области данных табликса, но не ограничивается этим шаблоном. Можно продолжать разработку способа отображения данных путем добавления или удаления любых средств области данных табликса, таких как группы, строки и столбцы.  

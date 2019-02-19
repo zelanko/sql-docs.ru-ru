@@ -9,14 +9,14 @@ helpviewer_keywords:
 - keyboard shortcuts
 - shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 0d51d20ae6e3ce9ff780de03a105be31a1466e74
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 17718148e369e53d9b33867975ca4d3b9af1a13f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712675"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292212"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Сочетания клавиш (построитель отчетов)
   При создании и редактировании отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы в построителе отчетов имеется доступ ко всем сочетаниям клавиш для перемещения по документам, имеющимся в среде Windows. На выбор доступны несколько стандартных схем раскладки клавиатуры.  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 73268c03ef80b13a28d8011f9b6860abcfac79e2
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 776dfbba57afe73e019a9c1c671e8f2bae63165b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030373"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285492"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>Добавление в отчет закладки (построитель отчетов и службы SSRS)
   Закладки и ссылки на закладки следует добавлять в отчет, если необходимо создать пользовательское оглавление или внутренние ссылки для навигации по отчету. Обычно закладки создаются в тех местах отчета, к которым следует направить пользователей, например к таблицам или графикам, либо к уникальным групповым значениям, отображаемым в таблице или матрице. Можно создать собственные строки и использовать их в качестве закладок, либо, при работе с группами, можно установить закладку на выражение группы.  

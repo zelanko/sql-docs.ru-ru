@@ -9,14 +9,14 @@ f1_keywords:
 - "10157"
 - sql13.rtp.rptdesigner.chartareaproperties.alignment.f1
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d90c5b4fb77a496477e0e43adcfd3165a441dbea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 09af545e5268192c221d7d129ee39e52fbfdb0b2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650442"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296842"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>Задание области диаграммы для ряда (построитель отчетов и службы SSRS)
   В отчетах с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] *диаграмма* является контейнером верхнего уровня, который включает внешнюю границу, заголовок диаграммы и условные обозначения. По умолчанию диаграмма содержит одну *область диаграммы*. Область диаграммы невидима на самой диаграмме, но ее можно считать контейнером, охватывающим только метки осей, заголовки осей и область построения одного или нескольких рядов. На следующем рисунке представлены несколько областей диаграммы на одной диаграмме.  
@@ -45,7 +45,7 @@ ms.locfileid: "47650442"
  [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Задание цветов диаграммы с помощью палитры &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Полярные диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)   
- [Фигурные диаграммы &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)   
+ [Фигурные диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)   
  [Круговые диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
   
   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: b9642af3-b3ae-4f78-b0be-8f96b79fc313
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8f60cd93baed4f1f3bd6aec837c6c9304729d061
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9e1698d581d920379b085290d646bca12ab5ff6a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612902"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289143"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>Вставка или удаление строки (построитель отчетов и службы SSRS)
 Можно добавить или удалить строки в области данных табликса в отчете с разбиением на страницы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Областью данных табликса может быть таблица, матрица или список. Следующие процедуры не применяются к области данных диаграммы и датчика.  
@@ -27,7 +27,7 @@ ms.locfileid: "47612902"
   
 -   В конструкторе щелкните левый верхний угол области данных табликса, чтобы поверх и рядом с ней появились маркеры столбца и строки.  
   
-     Дополнительные сведения об областях данных см. в разделе [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
+     Дополнительные сведения об областях данных см. в разделе [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ## <a name="to-insert-a-row-in-a-selected-data-region"></a>Вставка строки в выделенную область данных  
   

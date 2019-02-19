@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 12b769f09f89f0d844b090c9ad8fc00863e9ab81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8176db14311914a3935d86fdf83cc88e5428630f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831471"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295582"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Создание пошагового отчета (построитель отчетов и службы SSRS)
 Пошаговый отчет представляет собой тип отчета  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы, где строки детализации или дочерние группы располагаются с отступом в родительской группе в том же столбце, как показано в примере ниже.  

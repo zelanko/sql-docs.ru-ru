@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 66d349e2cb6203689ec2bdee70345c0968699a72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: df76a5ec3434119c7d40ed23f3d41b1f197ca20b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785452"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294162"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Области данных табликса (построитель отчетов и службы SSRS)
  В отчете с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] область данных табликса имеет четыре области, которые содержат ячейки табликса:   
@@ -51,7 +51,7 @@ ms.locfileid: "47785452"
  [Учебники по построителю отчетов](../../reporting-services/report-builder-tutorials.md)   
  [Таблицы &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Создание матрицы](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Создание счета-фактуры и форм со списками](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Создание счета-фактуры и формы со списками](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Область данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
   
   

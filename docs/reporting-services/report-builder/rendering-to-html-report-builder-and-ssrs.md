@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 2d184a787becf3e82df7f9051eb8ad576ec1efa1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 672633023578e309ca3e40fe48b9a5bcc2286b86
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644282"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296512"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Подготовка к просмотру в виде HTML (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов в формате HTML подготавливает отчет с разбиением на страницы к просмотру в HTML-формате. Модуль подготовки отчетов также позволяет создавать полностью сформированные HTML-страницы или фрагменты HTML для внедрения в другие HTML-страницы. Все документы HTML создаются в кодировке UTF-8.  
@@ -94,6 +94,6 @@ ms.locfileid: "47644282"
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Таблицы, матрицы, списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

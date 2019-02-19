@@ -19,14 +19,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 6ff5c2e66580eabb29908dcec99b3eaa429d1d04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b03f701a40c97d5958e5e8b2146844f335d64724
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759802"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298642"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)
   Отчет может содержать верхний и нижний колонтитулы, которые располагаются в верхней и нижней части каждой страницы соответственно. Верхние и нижние колонтитулы могут содержать статический текст, изображения, линии, прямоугольники, границы, цвет фона, фоновые изображения и выражения. Выражения включают ссылки на поля набора данных для отчетов, имеющих один и только один набор данных, а также вызовы агрегатных функций, которые включают набор данных в качестве области.  

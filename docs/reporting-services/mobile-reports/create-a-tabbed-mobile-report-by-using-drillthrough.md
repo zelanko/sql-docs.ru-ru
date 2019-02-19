@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d01f9f1bef4d13cbce3f3e736cbef2f838c680ef
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 45b598a405637d17c1e22cccfdb67858bd8e2a46
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906180"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287912"
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>Создание мобильного отчета со вкладками с помощью детализации
 Вы можете научиться создавать мобильных отчет [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , который выглядит и работает как отчет с вкладками, с помощью детализации и параметров.

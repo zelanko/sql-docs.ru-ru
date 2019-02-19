@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 28716b24e66cdb4c410fe26bc00db48ee7436e8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 38ff22fcfdb291c2ac3924985949142006eff812
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775919"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292192"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>Указание согласованных цветов для нескольких фигурных диаграмм (построитель отчетов и службы SSRS)
   На нефигурных диаграммах в отчете с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] выбирает новый цвет из палитры, связанной с индексом рядов в диаграмме. Например, первый ряд в диаграмме сопоставлен с первым цветом палитры. Однако в фигурных диаграммах используется другой принцип. В фигурных диаграммах каждый цвет палитры сопоставлен с точкой данных в наборе данных. Так, точка данных 1 сопоставлен с первым цветом палитры, точка данных 2 — со вторым цветом палитры и т. д.  

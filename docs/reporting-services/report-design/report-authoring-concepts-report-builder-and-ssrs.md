@@ -9,14 +9,14 @@ helpviewer_keywords:
 - concepts
 - terminology
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: fab47f8994be4500cca49bc427aa7ec7292be2a2
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7357530ed6990c10ece43748c6ef7dd3a00c6454
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710995"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288732"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Основные понятия разработки отчетов (построитель отчетов и службы SSRS)
   В этом разделе кратко определены некоторые основные понятия, используемые в документации по построителю отчетов и конструктору отчетов для описания отчетов с разбиением на страницы. Определения отдельных слов и терминов см. в разделе [Глоссарий (построитель отчетов)](../../reporting-services/report-builder/glossary-report-builder.md).  

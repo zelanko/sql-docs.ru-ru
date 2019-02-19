@@ -47,14 +47,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.chartproperties.border.f1
 - "10247"
 ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 22328fb1900ba12e347b3c280d758c6dce1ef834
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ebca36e31b832d0aeb4aef588564b64c618c45b7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727142"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291535"
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>Форматирование диаграммы (построитель отчетов и службы SSRS)
   После определения данных для диаграммы и нужного представления диаграммы можно добавить форматирование, чтобы улучшить общий внешний вид и выделить ключевые точки данных. Наиболее общие параметры форматирования могут быть изменены в диалоговом окне «Свойства». Для этого нужно щелкнуть правой кнопкой мыши элемент диаграммы, чтобы отобразить контекстное меню. Каждый элемент диаграммы имеет собственное диалоговое окно. Дополнительные сведения о элементах диаграмм см. в статье [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  

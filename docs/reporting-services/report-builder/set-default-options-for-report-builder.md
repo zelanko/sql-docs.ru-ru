@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ee6b34ed594948bd796f589c7ded4b4259062a3d
-ms.sourcegitcommit: e0178cb14954c45575a0bab73dcc7547014d03b3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0b1f78502b93cffb3f72593d8a383a301362ea39
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52860087"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295982"
 ---
 # <a name="set-default-options-for-report-builder"></a>Задание параметров по умолчанию для построителя отчетов
   В построителе отчетов можно задать некоторое количество подходящих значений по умолчанию, чтобы упростить и ускорить создание отчетов.  Например, если можно задать или изменить сервер отчетов по умолчанию, построитель отчетов автоматически сохраняет отчеты на тот же сервер отчетов, пока не будет указано иное.  

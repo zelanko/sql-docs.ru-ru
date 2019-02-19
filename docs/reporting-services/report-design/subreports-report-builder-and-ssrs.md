@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: db4c5726d0bcfea62d9e5dad59cbce7771c3592b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 08368e7b8374938390f9667d6437dfc055ff7754
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756602"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288982"
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>Вложенные отчеты (построитель отчетов и службы SSRS)
   Вложенный отчет представляет собой элемент отчета, отображающий другой отчет в тексте главного отчета. Концептуально вложенный отчет в отчете напоминает фрейм на веб-странице. Он используется для внедрения отчета в другой отчет. В качестве вложенного отчета можно использовать любой отчет. Отчет, отображаемый в качестве вложенного отчета, обычно хранится на сервере отчетов в той же папке, что и родительский отчет. Можно настроить родительский отчет таким образом, чтобы он передавал вложенному отчету параметры. Вложенный отчет может повторяться в пределах областей данных с использованием параметра для фильтрации данных в каждом экземпляре вложенного отчета.  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 401917f16372f453291b511c39d99836dd1d4cd4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9e822814d9ec770c6cdbaddec5a4832c5543ceb4
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644562"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287432"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>Диаграммы с областями (построитель отчетов и службы SSRS)
   В диаграммах с областями данные выводятся в виде точек, соединенных линией, с закрашенными ниже этой линии областями. Дополнительные сведения о добавлении данных в диаграммы с областями см. в разделе [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a458fdf9-fb2a-4fee-9fbd-b38f36e91753
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4be086fc974ccb6338f75eed0cf10ccb0087edc0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 50a51ce650bf4c9b7fa7ff4b8cd19f940d54d04b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031689"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298492"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>Подготовка данных к просмотру (построитель отчетов и службы SSRS)
   При использовании шаблонных модулей подготовки отчета, таких как HTML, MHTML, Word, Excel, PDF или изображения, данные и их организация не меняются. При экспорте в формате модуля подготовки отчетов, например в формате значений, разделенных запятыми (CSV) или в формате XML, визуальные элементы макета не отображаются. Модули подготовки в форматах CSV и XML при подготовке отчета обрабатывают его текст по определенным правилам. Правила определяют, как отображаются данные в этих форматах.  

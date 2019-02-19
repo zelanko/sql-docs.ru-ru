@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: f86e4f10b6f3315207eb378d4aca4cf32b2e9e91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 13faf9b2519f0a0a21f9811375f476cf5a0fba20
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743502"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293068"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Печать отчетов из браузера с помощью элемента управления печатью (построитель отчетов и службы SSRS)
   Хотя браузер является наиболее популярным средством просмотра отчетов, его функции печати могут оказаться недостаточными для печати отчетов. Функции печати браузера предназначены для печати веб-страниц. Как правило, страницы, печатаемые из браузера, включают все визуальные элементы веб-страницы, а также содержимое верхнего и нижнего колонтитулов, идентифицирующее веб-сайт. При печати из браузера на печать выводится содержимое текущего окна. В случае многостраничных отчетов браузер печатает первую страницу, если ее размеры не выходят за пределы области печати. Остальные страницы напечатаны не будут.  

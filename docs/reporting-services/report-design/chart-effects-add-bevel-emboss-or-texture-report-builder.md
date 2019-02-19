@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 9318aaa40ae8dc8dc2689ff511afc95752b0b50c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 53c9e31720d331218e95edaa2081e5219f0bc674
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703792"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287312"
 ---
 # <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>Эффекты диаграммы — добавление багетной рамки, рельефа и текстуры (построитель отчетов)
   При использовании диаграмм определенных типов можно ввести в действие эффекты рисования для повышения внешней привлекательности диаграммы. Эти эффекты рисования применяются только к ряду, представленному на диаграмме. Они не оказывают никакого влияния на другие элементы диаграммы.  

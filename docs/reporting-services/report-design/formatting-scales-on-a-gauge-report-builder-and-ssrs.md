@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 3a53f97d83dfa65399064479820a1ac987e6b1f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ec55fc1c24424635c6dd504395c3a4a056fc50d1
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800252"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293786"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Форматирование шкал на датчике (построитель отчетов и службы SSRS)
   В отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы шкала датчика представляет собой отображаемый на датчике диапазон чисел, ограниченный максимальным и минимальным значениями. Обычно шкала датчика содержит метки и деления, что упрощает считывание показаний указателя датчика. Шкала датчика обычно связана с одним или несколькими указателями. На одном и том же датчике может быть несколько шкал.  
@@ -78,7 +78,7 @@ ms.locfileid: "47800252"
   
 ## <a name="see-also"></a>См. также:  
  [Форматирование диапазонов на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
- [Форматирование указателей на датчике &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [Форматирование указателей на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Форматирование меток оси в виде значений даты или валюты &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Датчики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  

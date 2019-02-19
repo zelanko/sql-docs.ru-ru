@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 057b2805c611957babd3b2b6e4237dce7a1d8d49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e4bee88917f0bb4e512002549b17469004cd2880
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632052"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286513"
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>Добавление данных в область данных табликса (построитель отчетов и службы SSRS)
 Чтобы в отчетах с разбиением на страницы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] отобразить данные из набора данных отчета в таблице или матрице, в каждой ячейке данных следует указать нужное имя поля из набора данных. Можно отображать подробные или сгруппированные данные. Если добавить в таблицу или матрицу группы, то строки и столбцы для групповых значений и сгруппированные данные добавляются автоматически. Затем к данным можно добавить подытоги и итоги.  

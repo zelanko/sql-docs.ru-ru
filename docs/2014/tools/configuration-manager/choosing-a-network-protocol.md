@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - shared memory [SQL Server]
@@ -24,12 +23,12 @@ ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 86a15b6617b85de2e0a44287344ef47c92546072
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068574"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407554"
 ---
 # <a name="choosing-a-network-protocol"></a>Выбор сетевого протокола
   Чтобы установить соединение с [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , необходимо включить сетевой протокол. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может обслуживать запросы через несколько протоколов одновременно. Клиенты подключаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи одного протокола. Если программе клиента неизвестно, какой протокол прослушивается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , настройте клиент для последовательного использования нескольких протоколов. Для включения, выключения и настройки сетевых протоколов используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -62,6 +61,6 @@ ms.locfileid: "48068574"
 ## <a name="enabling-the-protocol"></a>Включение протокола  
  Для работы протокол должен быть включен и на сервере, и на клиенте. Сервер может одновременно прослушивать запросы по всем включенным протоколам. Клиентский компьютер может выбрать один из них либо поочередно пытаться соединяться по протоколам, перечисленным в диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Краткий учебник о настройке протоколов и подключении к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)]см. в разделе [Tutorial: Getting Started with the Database Engine](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
+ Краткие инструкции по настройке протоколов и подключению к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] см. в руководстве [по началу работы с ядром СУБД](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
   
   

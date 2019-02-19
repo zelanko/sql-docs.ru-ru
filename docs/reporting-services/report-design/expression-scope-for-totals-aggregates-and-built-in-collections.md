@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 92156defdf08b3828fde898c7043a941bbd7326b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9cb351a5627dd525dd1eeb7bbeb9b7a9be821bc0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394017"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297482"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Область выражения для суммирования, агрегатных функций и встроенных коллекций
   Термин *область* используется в нескольких контекстах, что становится понятно при написании выражений. Область может указывать на данные, используемые для вычисления выражений, набор текстовых полей на подготавливаемой странице, набор элементов отчета, которые могут отображаться или быть скрытыми. Термин *область* используется в разделах о вычислении выражений, синтаксисе агрегатных функций, условной видимости и в сообщениях об ошибках, связанных с этими темами. Ниже приводится описание различий в употреблении термина *область* .  

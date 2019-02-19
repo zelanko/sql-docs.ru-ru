@@ -8,14 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - searching reports
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d17541a43178f7ebe5161904266087096844b680
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ea304423f392815b2eeeca18580ad5a73f140751
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620992"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296922"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report"></a>Поиск текста, числа и даты в отчете
   Можно искать содержимое в отчете, введя слово или фразу, которую нужно найти (максимальная длина искомого термина составляет 256 знаков). Поиск является техникой навигации, которая ищет совпадающее значение и устанавливает фокус на часть отчета, содержащую это значение.  

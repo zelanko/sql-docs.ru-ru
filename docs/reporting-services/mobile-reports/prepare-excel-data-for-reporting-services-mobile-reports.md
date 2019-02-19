@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 9285b9b89930fe540f9b5493f1730184cf4e9526
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0391ea88e192b694d99cd557760cfc588e77f768
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813837"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286382"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Подготовка данных в Excel для мобильных отчетов службы отчетов
   

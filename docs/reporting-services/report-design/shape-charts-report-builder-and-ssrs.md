@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: bb7e960f98e4f1d866e5a43d9cbc34aa155527ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 84b61392cc0b080ae8e58e5518ad920bc756a64f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847922"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291652"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Фигурные диаграммы (построитель отчетов и службы SSRS)
   Фигурная диаграмма показывает значения данных в процентах от целого. Фигурные диаграммы обычно используются для отображения результатов сравнения различных значений в наборе с учетом пропорций. Категории представлены отдельными сегментами фигуры. Размер сегмента определяется этим значением. Фигурные диаграммы аналогичны по своему назначению круговым диаграммам, за исключением того, что в них категории упорядочиваются от наиболее крупных до самых мелких.  

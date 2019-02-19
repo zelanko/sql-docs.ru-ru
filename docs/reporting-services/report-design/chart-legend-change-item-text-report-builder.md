@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8ffbc6d38d8d63ea783c5b24534b4d1a34a16a5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 410529d8691474e3b10d8e1907282d91bbe6a68b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761015"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285552"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>Условные обозначения диаграммы — изменение текста элемента (построитель отчетов)
   При помещении поля в область «Значения» диаграммы автоматически создается элемент условных обозначений, содержащий имя этого поля. Каждый элемент условных обозначений связан с отдельным рядом на диаграмме, за исключением фигурных диаграмм, в которых условные обозначения связаны с конкретными точками данных, а не с отдельными рядами.  

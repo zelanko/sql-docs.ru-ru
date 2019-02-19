@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 945ee262e8d507a62aa954eec847e3b7bd4ac308
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 13186bed8bae4f695f908cceb7c4884acd87ca74
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524497"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292802"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>Добавление привязанного к данным изображения (построитель отчетов и службы SSRS)
   Отчет может включать ссылку на изображение, хранящееся в базе данных. Такое изображение называется *изображением, привязанным к данным*. Примерами изображений, привязанных к данным, служат картинки, выводящиеся вместе с наименованиями товаров в списке товаров.  

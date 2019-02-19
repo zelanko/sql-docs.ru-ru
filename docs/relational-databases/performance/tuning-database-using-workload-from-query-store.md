@@ -12,12 +12,12 @@ ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 439967d45e74b0069d3064af64393151f9efc735
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 15f9bb429509f64909888883a718325b76efae27
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376606"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331504"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Настройка базы данных с помощью рабочей нагрузки из хранилища запросов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,6 +47,6 @@ ms.locfileid: "53376606"
 
 ## <a name="see-also"></a>См. также:  
 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)    (Помощник по настройке ядра СУБД)  
-[Учебник. Помощник по настройке ядра СУБД](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)     
+[Учебник. Помощник по настройке ядра СУБД](../../tools/dta/tutorial-database-engine-tuning-advisor.md)        
 [Сбор данных в хранилище запросов](../../relational-databases/performance/how-query-store-collects-data.md)     
 [Query Store Best Practices](../../relational-databases/performance/best-practice-with-the-query-store.md) (Рекомендации по использованию хранилища запросов)

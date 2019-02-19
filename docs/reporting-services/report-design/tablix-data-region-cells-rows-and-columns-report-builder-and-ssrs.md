@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.deletecolumns.f1
 - sql13.rtp.rptdesigner.deleterows.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ee4c33b671e691aa6303c501c8080c3c66464f9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 528341a6537c78e62ae0d689ee59bb59a6ecab9f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835962"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288102"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Ячейки, строки и столбцы области данных табликса (построитель отчетов и службы SSRS)
   Чтобы эффективнее управлять процессом отображения данных в строках и столбцах области данных табликса в отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы, необходимо уметь определять метки, итоги, строки и столбцы для подробных данных и групп. Во многих случаях для отображения данных можно пользоваться структурами по умолчанию для таблиц, матриц и списков. Дополнительные сведения см. в разделах [Таблицы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [Матрицы](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) или [Списки](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  

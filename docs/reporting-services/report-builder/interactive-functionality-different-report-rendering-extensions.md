@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c9e980b05432f9e7fdd54bbd45165d62bff88c4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 83398ce2bf9e12a6b16ef5495d63716d4f3b1903
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789082"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286582"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>Интерактивные возможности различных модулей подготовки отчетов к просмотру
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляет функции для взаимодействия с отчетом с разбиением на страницы во время выполнения. Не все выходные форматы отчета поддерживают полный диапазон интерактивных возможностей. Чтобы понять, как интерактивные возможности работают с конкретными выходными форматами, воспользуйтесь приведенной ниже таблицей.  
