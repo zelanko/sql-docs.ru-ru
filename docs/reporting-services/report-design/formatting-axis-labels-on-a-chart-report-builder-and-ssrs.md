@@ -23,14 +23,14 @@ f1_keywords:
 helpviewer_keywords:
 - "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 263cd5cc24a293192c434c644c387f5678e120fe
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ad16182f372452cf8e5e2910a8f7306d3d9a1225
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031423"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296582"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)
   Диаграммы, основанные на системе координат (гистограммы, линейчатые диаграммы, диаграммы с областями, точечные, графики, диаграммы диапазонов), имеют две оси, использующиеся для классификации и отображения связей между данными. Для каждой оси применимы свои виды форматирования.  

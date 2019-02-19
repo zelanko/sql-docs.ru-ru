@@ -11,12 +11,12 @@ ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
 manager: craigg
-ms.openlocfilehash: 0a4e877a91cad978bb62747bd50e40adaa69ef1c
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 8389cbad7e5124c1c20c2e076df34fc97306d8ef
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030608"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407584"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>Учебник. Создайте расширение Studio данных Azure
 
@@ -37,16 +37,15 @@ Azure Data Studio лежит та же платформа, как Visual Studio 
 
 - [Node.js](https://nodejs.org) установлена и доступна в вашей `$PATH`. Node.js включает [npm](https://www.npmjs.com/), диспетчер пакетов Node.js, который используется для установки расширения генератора.
 - [Visual Studio Code](https://code.visualstudio.com) отладка расширения.
-- Azure Data Studio [отладка расширение](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug).
-- Убедитесь, `sqlops` указан в пути. Для Windows, убедитесь, что `Add to Path` параметр в setup.exe. Для Mac или Linux, выполните *установить команду «sqlops» в пути* параметр.
-- Отладка SQL Operations Studio расширение (необязательно). Это позволяет протестировать свое расширение без необходимости пакет и установите его в студию данных Azure.
+- Azure Data Studio [отладки расширения](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) (необязательно). Это позволяет протестировать свое расширение без необходимости пакет и установите его в студию данных Azure.
+- Убедитесь, `azuredatastudio` указан в пути. Для Windows, убедитесь, что `Add to Path` параметр в setup.exe. Для Mac или Linux, выполните *установить команду «azuredatastudio» в пути* параметр.
 
 
 ## <a name="install-the-extension-generator"></a>Установите генератор расширения
 
 Чтобы упростить процесс создания расширения, мы создали [генератор расширения](https://code.visualstudio.com/docs/extensions/yocode) с помощью Yeoman. Чтобы установить его, выполните следующую команду из командной строки:
 
-`npm install -g yo generator-sqlops`
+`npm install -g yo generator-azuredatastudio`
 
 ## <a name="create-your-extension"></a>Создать расширения
 
@@ -54,13 +53,13 @@ Azure Data Studio лежит та же платформа, как Visual Studio 
 
 1. Запустите генератор расширения с помощью следующей команды:
 
-   `yo sqlops`
+   `yo azuredatastudio`
 
 2. Выберите **новых клавиатурах** из списка типов расширений:
 
    ![расширение генератора](./media/tutorial-create-extension/extension-generator.png)
 
-3. Выполните действия, чтобы заполнить имя расширения (в этом руководстве используйте **ssmskeymap**) и добавьте описание.
+3. Выполните действия, чтобы заполнить имя расширения (в этом руководстве используйте **ssmskeymap2**) и добавьте описание.
 
 Завершения предыдущих шагов создана новая папка. Откройте папку, в Visual Studio Code и вы готовы создать свое собственное расширение привязки ключей.
 
