@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 31e280cd389bdfd7985bfa995aecbf8ed020417d
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: f00d147c5b9a3e6a2ec6137d72940cae9e67158d
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420229"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265401"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Выпуски и поддерживаемые функции SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ ms.locfileid: "54420229"
 |Resource Governor|Да|нет|нет|нет|нет|  
 |Параллелизм секционированных таблиц|Да|нет|нет|нет|нет|
 |Несколько контейнеров файлового потока|Да|Да <sup>2</sup>|Да <sup>2</sup>|Да <sup>2</sup>|Да <sup>2</sup>|
-|Поддержка NUMA, выделение памяти больших страниц и массива буфера|Да|нет|нет|нет|нет|
+|Поддержка NUMA, выделение памяти больших страниц и массива буфера|Да|Нет <sup>4</sup>|нет|нет|нет|
 |Buffer Pool Extension|Да|Да|нет|нет|нет|
 |Управление ресурсами ввода-вывода|Да|нет|нет|нет|нет|  
 |Отложенная устойчивость|Да|Да|Да|Да|Да|
@@ -188,6 +188,8 @@ ms.locfileid: "54420229"
 <sup>2</sup> Применимо к [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] с пакетом обновления 1 (SP1). 
 
 <sup>3</sup> Эта функция не включена в вариант установки LocalDB.
+
+<sup>4</sup> Для выпусков Standard Edition и SQL Server с клиентской лицензией число процессоров, используемых SQL Server Standard, может быть ограничено. При этом SQL Server Standard учитывает архитектуру NUMA. 
 ##  <a name="RDBMSS"></a> RDBMS Security  
   
 |Компонент|Enterprise|Standard|Web Edition|Express|Express с дополнительными службами|  
