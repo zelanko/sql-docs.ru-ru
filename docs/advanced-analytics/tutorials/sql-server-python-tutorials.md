@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9101471c53ea1e253f7a6eb13e0c2cb2bc137ed3
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: f5dab603a7295009bee5275b721e987d5de76710
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046464"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425789"
 ---
 # <a name="sql-server-2017-python-tutorials"></a>Учебники по SQL Server 2017 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "54046464"
 
 | Ссылка | Описание |
 |------|-------------|
-| [Краткое руководство. Скрипт Python «Hello world» в SQL Server](quickstart-r-run-using-tsql.md) | Основы вызова Python в T-SQL. |
+| [Краткое руководство. Скрипт Python «Hello world» в SQL Server](quickstart-python-run-using-t-sql.md) | Основы вызова Python в T-SQL. |
 | [Краткое руководство. Создавать, обучать и использовать модели Python с хранимыми процедурами в SQL Server](quickstart-python-train-score-in-tsql.md) | Описывает механизм встраивания кода Python в хранимую процедуру, предоставляя входных данных и выполнение хранимой процедуры. |
 | [Учебник. Создание модели с помощью revoscalepy](use-python-revoscalepy-to-create-model.md) | Показано, как выполнять код из удаленного терминала Python, используя контекст вычислений SQL Server. Можно немного знаком с Python инструменты и среды. Образец кода находится, создающий модель с помощью **rxLinMod**, из новой **revoscalepy** библиотеки. |
 | [Учебник. Дополнительные аналитические функции Python в базе данных для разработчиков SQL](sqldev-in-database-python-for-sql-developers.md) | В этом пошаговом руководстве end-to-end демонстрирует процесс создания полного решения Python с помощью T-SQL хранимой процедуры. Включается весь код Python.|

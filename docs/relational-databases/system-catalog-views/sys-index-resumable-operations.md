@@ -1,7 +1,7 @@
 ---
 title: sys.index_resumable_operations (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/10/2017
+ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,17 +20,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df53ab01ecd535de0f742129cae56c44cd2d6221
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 780cffa17f6ee1af70d942545632c98c9d6dc1e7
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821786"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425779"
 ---
 # <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 **sys.index_resumable_operations** — это системное представление, которое отслеживает и проверяет текущее состояние выполнения для возобновляемого перестроения индекса.  
-**Применяется к**: SQL Server 2017 и Azure базы данных SQL 
+**Область применения**: SQL Server 2017 и Azure базы данных SQL
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -46,25 +47,31 @@ ms.locfileid: "47821786"
 |**last_pause_time**|**значения даты и времени**| Операции с индексами время последней приостановки (допускающие значение NULL). Значение NULL, если операция работает и никогда не приостанавливается.|
 |**total_execution_time**|**int**|Общее время выполнения со времени начала в минутах (не допускает значения NULL)|
 |**percent_complete**|**real**|Ход выполнения завершения операции индекса в % (не допускает значения NULL).|
-|**page_count**|**bigint**|Общее число страниц индекса, выделенной с помощью операции построения индекса для нового и сопоставления индексов (не допускает значения NULL). 
+|**page_count**|**bigint**|Общее число страниц индекса, выделенной с помощью операции построения индекса для нового и сопоставления индексов (не допускает значения NULL).
 
-## <a name="permissions"></a>Разрешения  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
-   
-## <a name="example"></a>Пример  
- Список всех возобновляемых операций перестроения индексов, которые находятся в состоянии ПРИОСТАНОВКИ. 
-  
-```  
+## <a name="permissions"></a>Разрешения
+
+[!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+
+## <a name="example"></a>Пример
+
+ Список всех возобновляемых операций перестроения индексов, которые находятся в состоянии ПРИОСТАНОВКИ.
+
+```sql
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  
-```  
-  
-## <a name="see-also"></a>См. также 
- [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)    
- [Представления каталога &#40;Transact-SQL&#41; ](catalog-views-transact-sql.md) [объекта представления каталога &#40;Transact-SQL&#41; ](object-catalog-views-transact-sql.md) [sys.indexes &#40;Transact-SQL&#41; ](sys-xml-indexes-transact-sql.md) [sys.index_columns &#40;Transact-SQL&#41;](sys-index-columns-transact-sql.md)   
- [sys.xml_indexes (Transact-SQL)](sys-xml-indexes-transact-sql.md)   
- [sys.objects (Transact-SQL)](sys-index-columns-transact-sql.md)   
- [sys.key_constraints &#40;Transact-SQL&#41;](sys-key-constraints-transact-sql.md)   
- [sys.filegroups (Transact-SQL)](sys-filegroups-transact-sql.md)   
- [sys.partition_schemes (Transact-SQL)](sys-partition-schemes-transact-sql.md)   
- [Часто задаваемые вопросы о запросах к системному каталогу SQL Server](querying-the-sql-server-system-catalog-faq.md)   
-  
+```
+
+## <a name="see-also"></a>См. также
+
+- [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
+- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
+- [Представления каталога](catalog-views-transact-sql.md)
+- [Представления каталога объектов](object-catalog-views-transact-sql.md)
+- [sys.indexes](sys-xml-indexes-transact-sql.md)
+- [sys.index_columns](sys-index-columns-transact-sql.md)
+- [sys.xml_indexes](sys-xml-indexes-transact-sql.md)
+- [sys.objects](sys-index-columns-transact-sql.md)
+- [sys.key_constraints](sys-key-constraints-transact-sql.md)
+- [sys.filegroups](sys-filegroups-transact-sql.md)
+- [sys.partition_schemes](sys-partition-schemes-transact-sql.md)
+- [Часто задаваемые вопросы о запросах к системному каталогу SQL Server](querying-the-sql-server-system-catalog-faq.md)
