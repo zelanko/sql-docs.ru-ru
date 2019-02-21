@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 7769edd1718881a01fe0f40ae2b7dc0e8b8ec78a
-ms.sourcegitcommit: 89a7bd9ccbcb19bb92a1f4ba75576243a58584e8
+ms.openlocfilehash: 505ea8d199ee2fe666d65c474e7f11dfaadcf18f
+ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56159769"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56464730"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Запустите помощник по миграции данных из командной строки
 В версии 2.1 и выше, когда установки помощника по миграции данных, также устанавливается dmacmd.exe в *% ProgramFiles %\\Microsoft Data Migration Assistant\\*. Используйте dmacmd.exe для оценки баз данных в автоматическом режиме и вывода результата JSON или CSV-файл. Этот метод особенно полезен при оценке в нескольких базах данных или огромных баз данных. 
@@ -45,7 +45,7 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | Как использовать dmacmd.exe текст справки        | Нет
 |`/AssessmentName`     |   Имя проекта оценки   | Да
 |`/AssessmentDatabases`     | Разделенный пробелами список строк подключения. Имя базы данных (начальный каталог) учитывается регистр. | Да
-|`/AssessmentTargetPlatform`     | Целевая платформа для оценки, поддерживаемые значения: Файл SqlServer2012, SqlServer2014, SqlServer2016 и AzureSqlDatabaseV12. Default is SqlServer2016   | Нет
+|`/AssessmentTargetPlatform`     | Целевая платформа для оценки, поддерживаемые значения: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 и SqlServerWindows2017. Значение по умолчанию — SqlServerWindows2017   | Нет
 |`/AssessmentEvaluateFeatureParity`  | Запустить правила равенства  | Нет
 |`/AssessmentEvaluateCompatibilityIssues`     | Выполнение правил совместимости  | Да <br> (AssessmentEvaluateCompatibilityIssues или AssessmentEvaluateRecommendations является обязательным.)
 |`/AssessmentEvaluateRecommendations`     | Выполните рекомендуемые возможности        | Да <br> (AssessmentEvaluateCompatibilityIssues или AssessmentEvaluateRecommendationsis требуется)

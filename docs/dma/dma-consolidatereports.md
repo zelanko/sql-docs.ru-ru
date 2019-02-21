@@ -2,7 +2,7 @@
 title: Оценка предприятия и объединение отчетов с оценкой (SQL Server) | Документация Майкрософт
 description: Узнайте, как использовать DMA для оценки предприятия и объединение отчетов с оценкой перед обновлением SQL Server или переход на базу данных SQL Azure.
 ms.custom: ''
-ms.date: 10/22/2018
+ms.date: 02/20/20198
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: d26de5c86485e6e7a2c6a11b8528c55c8ce92229
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: cd3951aaddc19a7b96cc7645084166f19d41422b
+ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300091"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56464780"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Оценка предприятия и объединять оценки с помощью DMA
 
@@ -37,15 +37,15 @@ ms.locfileid: "54300091"
     - [PowerBI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
     - [Модули Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Загрузите и извлеките:
-    - [DMA отчеты Power BI шаблона](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip).
-    - [LoadWarehouse скрипт](https://msdnshared.blob.core.windows.net/media/2018/10/LoadWarehouse.zip).
+    - [DMA отчеты Power BI шаблона](https://msdnshared.blob.core.windows.net/media/2019/02/PowerBI-Reports1.zip).
+    - [LoadWarehouse скрипт](https://msdnshared.blob.core.windows.net/media/2019/02/LoadWarehouse.zip).
 
 ## <a name="loading-the-powershell-modules"></a>Загрузка модулей PowerShell
 Сохранение модулей PowerShell в каталог modules PowerShell позволяет вызывать модули без необходимости загружать их явно перед использованием.
 
 Чтобы загрузить модули, выполните следующие действия:
 1. Перейдите к C:\Program Files\WindowsPowerShell\Modules и создайте папку с именем **DataMigrationAssistant**.
-2. Откройте [модули PowerShell](https://msdnshared.blob.core.windows.net/media/2018/10/PowerShell-Modules.zip), а затем сохраните их в созданную папку.
+2. Откройте [модули PowerShell](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules.zip), а затем сохраните их в созданную папку.
 
       ![Модули PowerShell](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -97,13 +97,13 @@ ms.locfileid: "54300091"
 
 В следующей таблице описываются параметры, связанные с функцией dmaDataCollector.
 
-|Параметр  |Описание
+|Параметр  |Описание |
 |---------|---------|
 |**getServerListFrom** | Данные инвентаризации. Возможные значения: **SqlServer** и **CSV**.<br/>Дополнительные сведения см. в разделе [создания перечня серверов SQL Server](#create-inventory). |
 |**serverName** | Имя экземпляра SQL Server при использовании запасов **SqlServer** в **getServerListFrom** параметра. |
 |**databaseName** | Размещение таблицы inventory базы данных. |
 |**AssessmentName** | Имя оценки DMA. |
-|**TargetPlatform** | Оценка целевого типа, который вы хотите выполнить.  Возможные значения: **AzureSQLDatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**,  **SQLServerLinux2017**, и **SQLServerWindows2017**. |
+|**TargetPlatform** | Оценка целевого типа, который вы хотите выполнить.  Возможные значения: **AzureSQLDatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**,  **SQLServerLinux2017**, **SQLServerWindows2017**, и **ManagedSqlServer**. |
 |**AuthenticationMethod** | Метод проверки подлинности для подключения к целевым объектам SQL Server, вы хотите оценить. Возможные значения: **SQLAuth** и **WindowsAuth**. |
 |**OutputLocation** | Каталог, в котором для хранения JSON оценки выходной файл. В зависимости от количества баз данных, оцениваются и количество объектов в базах данных оценки может занять слишком долго. Файл будет записан после выполнения всех оценок. |
 
@@ -119,9 +119,9 @@ ms.locfileid: "54300091"
 
 В следующей таблице описываются параметры, связанные с функцией dmaProcessor.
 
-|Параметр  |Описание
+|Параметр  |Описание |
 |---------|---------|
-|**processTo**  | Расположение, к которому будут обрабатываться JSON-файл. Возможные значения: **SQLServer** и **AzureSQLDatabase**. |
+|**processTo** | Расположение, к которому будут обрабатываться JSON-файл. Возможные значения: **SQLServer** и **AzureSQLDatabase**. |
 |**serverName** | Экземпляр SQL Server, к которому данные будут обрабатываться.  Если указать **AzureSQLDatabase** для **processTo** параметра, включите только имя SQL Server (не включайте. database.windows.net). Вам предложат для двух имен входа при разработке для базы данных SQL Azure; Первый — учетные данные клиента Azure, второй — на имя для входа администратора для сервера SQL Azure. |
 |**CreateDMAReporting** | Промежуточной базы данных, создаваемой для обработки JSON-файл.  Если база данных уже существует, необходимо задать этот параметр один, затем не создаются объекты.  Этот параметр полезен для повторного создания один объект, который был удален. |
 |**CreateDataWarehouse** | Создает хранилище данных, который будет использоваться в отчете Power BI. |
@@ -161,22 +161,43 @@ ms.locfileid: "54300091"
 
    После отчета обновляются данные из **DMAWarehouse** базы данных, вам предоставляется отчет, подобный следующему.
 
-   ![Представление отчетов DMAWarehouse](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report.png)
+   ![Представление отчетов DMAWarehouse](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report1.png)
 
    > [!TIP]
-   > Если вы не видите данных, которые вы ожидали, попробуйте изменить active закладки.  Дополнительные сведения см. в разделе функциональные возможности.
+   > Если вы не видите данных, которые вы ожидали, попробуйте изменить active закладки.  Дополнительные сведения см. в разделе подробно в следующем разделе.
 
 ## <a name="working-with-dma-reports"></a>Работа с отчетами DMA
-Для работы с отчетом, DMA, использование срезов для фильтрации по:
+Для работы с отчетами DMA используйте закладки и срезы для фильтрации по:
+- Оценка типов (база данных SQL Azure, Azure SQL MI, SQL на локальной) 
 - Имя экземпляра
 - Имя базы данных
 - Имя команды
 
-Закладки также можно использовать для переключения контекста отчетов между:
-- Оценок облака
+Чтобы получить доступ к колонке "закладки" и "фильтры", выберите закладку фильтры на странице основного отчета:
+
+![DMA отчет закладки и фильтры](../dma/media//dma-consolidatereports/dma-report-bookmarks-filters.png)
+
+Это позволяет колонку следующего вида:
+
+![Колонка DMA представлений отчетов](../dma/media//dma-consolidatereports/dma-report-views-blade.png)
+
+Закладки можно использовать для переключения контекста отчетов между:
+- Оценок облака Azure SQL DB
+- Azure SQL MI cloud оценок
 - В локальной оценок
 
-  ![DMA отчет закладки](../dma/media//dma-consolidatereports/dma-report-bookmarks.png)
+  ![Представления отчетов о DMA закладки](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
+
+Чтобы скрыть фильтры колонки, удерживая нажатой кнопку "Назад":
+
+![Кнопка "Назад" DMA представлений отчетов](../dma/media//dma-consolidatereports/dma-report-bookmarks-back.png)
+
+Есть приглашение в левом нижнем углу страницы отчета для отображения, применяется ли в настоящее время фильтр на любой из следующих:
+* FactAssessment — InstanceName
+* FactAssessment — имя базы данных
+* dimDBOwner - DBOwner
+
+![Применен фильтр строки](../dma/media//dma-consolidatereports/dma-filter-applied-prompt.png)
 
 > [!NOTE]
 > Если только выполнить оценку базы данных SQL Azure, заполняются только отчеты в облаке. И наоборот если только выполнить оценку в локальной, заполняются только отчеты на локальном. Тем не менее если выполнить приложение Azure и локальной оценку, а затем загрузки обоих оценок в хранилище, можно переключаться между облачной и локальной отчеты с помощью клавиши CTRL значок.
