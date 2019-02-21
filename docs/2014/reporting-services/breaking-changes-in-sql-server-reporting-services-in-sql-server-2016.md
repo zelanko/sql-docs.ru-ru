@@ -57,7 +57,7 @@ ms.locfileid: "56040175"
 ### <a name="the-reporting-services-wmi-provider-no-longer-supports-configuration-of-sharepoint-mode"></a>Настройка режима интеграции с SharePoint больше не поддерживается поставщиком WMI для служб Reporting Services.  
  Настройка служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] с SharePoint теперь полностью осуществляется с помощью командлетов SharePoint и центра администрирования SharePoint. Новая архитектура режима интеграции с SharePoint служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] использует архитектуру служб SharePoint. SharePoint не поддерживает интерфейсы WMI.  
   
- В следующем списке указаны компоненты и рабочие процессы, затронутые данными изменениями.  
+ В следующем списке указаны компоненты и рабочие процессы, затронутые данными изменениями:  
   
 -   Пользовательские приложения, в которых используется поставщик WMI [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint.  
   

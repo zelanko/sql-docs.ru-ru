@@ -1,5 +1,5 @@
 ---
-title: Настройка действий системы при успешном или неуспешном выполнении шага задания | Документация Майкрософт
+title: Настройка потока действий системы при успешном или неуспешном выполнении шага задания | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,7 +22,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 12/13/2018
 ms.locfileid: "53366626"
 ---
-# <a name="set-job-step-success-or-failure-flow"></a>Set Job Step Success or Failure Flow
+# <a name="set-job-step-success-or-failure-flow"></a>Настройка потока действий системы при успешном или неуспешном выполнении шага задания
   При создании задания агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно определить действия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при возникновении ошибки в ходе его выполнения. Определите действия, которые должен предпринять [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при успешном и неуспешном завершении каждого шага задания. Затем с помощью агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настройте логику потока действий на шаге.  
   
 -   **Перед началом:**  
@@ -44,7 +44,7 @@ ms.locfileid: "53366626"
   
 ##  <a name="SSMS"></a> Использование среды SQL Server Management Studio  
   
-#### <a name="to-set-job-step-success-or-failure-flow"></a>Настройка действий системы при успешном или неуспешном выполнении шага задания  
+#### <a name="to-set-job-step-success-or-failure-flow"></a>Настройка потока действий системы при успешном или неуспешном выполнении шага задания  
   
 1.  В **обозревателе объектов**раскройте узел **Агент SQL Server**, а затем узел **Задания**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "53366626"
   
 ##  <a name="TSQL"></a> Использование Transact-SQL  
   
-#### <a name="to-set-job-step-success-or-failure-flow"></a>Настройка действий системы при успешном или неуспешном выполнении шага задания  
+#### <a name="to-set-job-step-success-or-failure-flow"></a>Настройка потока действий системы при успешном или неуспешном выполнении шага задания  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

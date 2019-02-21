@@ -1,5 +1,5 @@
 ---
-title: Настройка действий системы при успешном или неуспешном выполнении шага задания | Документация Майкрософт
+title: Настройка потока действий системы при успешном или неуспешном выполнении шага задания | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51698269"
 ---
-# <a name="set-job-step-success-or-failure-flow"></a>Set Job Step Success or Failure Flow
+# <a name="set-job-step-success-or-failure-flow"></a>Настройка потока действий системы при успешном или неуспешном выполнении шага задания
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -51,7 +51,7 @@ ms.locfileid: "51698269"
   
 ## <a name="SSMS"></a>Использование среды SQL Server Management Studio  
   
-#### <a name="to-set-job-step-success-or-failure-flow"></a>Настройка действий системы при успешном или неуспешном выполнении шага задания  
+#### <a name="to-set-job-step-success-or-failure-flow"></a>Настройка потока действий системы при успешном или неуспешном выполнении шага задания  
   
 1.  В **обозревателе объектов**раскройте узел **Агент SQL Server**, а затем узел **Задания**.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "51698269"
   
 ## <a name="TSQL"></a>Использование Transact-SQL  
   
-#### <a name="to-set-job-step-success-or-failure-flow"></a>Настройка действий системы при успешном или неуспешном выполнении шага задания  
+#### <a name="to-set-job-step-success-or-failure-flow"></a>Настройка потока действий системы при успешном или неуспешном выполнении шага задания  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
