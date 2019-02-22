@@ -1,8 +1,0 @@
-- name: Драйвер Node.js для SQL Server
-  href: node-js-driver-for-sql-server.md
-- name: "Шаг\_1. Настройка среды разработки для разработки на Node.js"
-  href: step-1-configure-development-environment-for-node-js-development.md
-- name: "Шаг\_2. Создание базы данных SQL для разработки на Node.js"
-  href: step-2-create-a-sql-database-for-node-js-development.md
-- name: "Шаг\_3. Эксперимент, подразумевающий подключение к SQL с помощью Node.js"
-  href: step-3-proof-of-concept-connecting-to-sql-using-node-js.md

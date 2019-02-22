@@ -1,8 +1,0 @@
-- name: Службы Integration Services (SSIS)
-  href: integration-services-service-ssis-service.md
-- name: Управление пакетами (службы SSIS)
-  href: package-management-ssis-service.md
-- name: 'Cобытия, зарегистрированные службами Integration Services'
-  href: events-logged-by-the-integration-services-service.md
-- name: Службы Integration Services (SSIS) в кластере
-  href: integration-services-ssis-in-a-cluster.md

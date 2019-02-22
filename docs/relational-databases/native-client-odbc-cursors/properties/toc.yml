@@ -1,8 +1,0 @@
-- name: Свойства курсора
-  href: cursor-properties.md
-- name: Параллелизм курсоров (ODBC)
-  href: cursor-concurrency-odbc.md
-- name: Размер набора строк курсора
-  href: cursor-rowset-size.md
-- name: Уровень изоляции транзакций курсора
-  href: cursor-transaction-isolation-level.md

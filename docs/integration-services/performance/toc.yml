@@ -1,8 +1,0 @@
-- name: Наблюдение за выполнением пакетов и других операций
-  href: monitor-running-packages-and-other-operations.md
-- name: Регистрация событий в пакете служб Integration Services
-  href: events-logged-by-an-integration-services-package.md
-- name: Ведение журналов в службах Integration Services (SSIS)
-  href: integration-services-ssis-logging.md
-- name: Счетчики производительности
-  href: performance-counters.md

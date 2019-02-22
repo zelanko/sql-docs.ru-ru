@@ -1,8 +1,0 @@
-- name: Разработка пользовательского перечислителя по каждому элементу
-  href: developing-a-custom-foreach-enumerator.md
-- name: Создание пользовательского перечислителя по каждому элементу
-  href: creating-a-custom-foreach-enumerator.md
-- name: Написание кода пользовательского перечислителя по каждому элементу
-  href: coding-a-custom-foreach-enumerator.md
-- name: Разработка пользовательского интерфейса для пользовательского перечислителя по каждому элементу
-  href: developing-a-user-interface-for-a-custom-foreach-enumerator.md

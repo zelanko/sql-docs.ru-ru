@@ -1,8 +1,0 @@
-- name: Управление доступом для кода в службах Reporting Services
-  href: code-access-security-in-reporting-services.md
-- name: Разработка безопасных приложений (службы Reporting Services)
-  href: secure-development-reporting-services.md
-- name: Основные сведения о политиках безопасности
-  href: understanding-security-policies.md
-- name: Использование файлов политики безопасности служб Reporting Services
-  href: using-reporting-services-security-policy-files.md

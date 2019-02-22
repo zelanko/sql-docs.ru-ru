@@ -1,8 +1,0 @@
-- name: Способы реализации курсоров
-  href: how-cursors-are-implemented.md
-- name: Библиотека курсоров ODBC
-  href: odbc-cursor-library.md
-- name: Использование серверных курсоров
-  href: using-server-cursors.md
-- name: Использование результирующих наборов по умолчанию в SQL Server
-  href: using-sql-server-default-result-sets.md

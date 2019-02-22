@@ -1,8 +1,0 @@
-- name: Использование инструкций по курсорам (ODBC)
-  href: using-cursors-how-to-topics-odbc.md
-- name: Выбор и обновление наборов строк (ODBC)
-  href: fetch-and-update-rowsets-odbc.md
-- name: Использование курсоров (ODBC)
-  href: use-cursors-odbc.md
-- name: Использование привязки наборов строк (ODBC)
-  href: use-rowset-binding-odbc.md

@@ -1,8 +1,0 @@
-- name: Использование заголовков SOAP служб Reporting Services
-  href: using-reporting-services-soap-headers.md
-- name: Методы пакетной работы
-  href: batching-methods.md
-- name: Определение состояния выполнения
-  href: identifying-execution-state.md
-- name: Задание пространства имен элементов для метода GetProperties
-  href: setting-the-item-namespace-for-the-getproperties-method.md

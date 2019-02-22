@@ -1,8 +1,0 @@
-- name: Подробные сведения о программировании курсоров (ODBC)
-  href: cursor-programming-details-odbc.md
-- name: Быстрые курсоры последовательного доступа (ODBC)
-  href: fast-forward-only-cursors-odbc.md
-- name: Неявные преобразования курсора (ODBC)
-  href: implicit-cursor-conversions-odbc.md
-- name: Использование автоматической выборки с помощью курсоров ODBC
-  href: using-autofetch-with-odbc-cursors.md

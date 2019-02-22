@@ -1,8 +1,0 @@
-- name: "Драйвер SQL Python\_— pymssql"
-  href: python-sql-driver-pymssql.md
-- name: "Шаг\_1. Настройка среды разработки для разработки на Python в pymssql"
-  href: step-1-configure-development-environment-for-pymssql-python-development.md
-- name: "Шаг\_2. Создание базы данных SQL для разработки на Python в pymssql"
-  href: step-2-create-a-sql-database-for-pymssql-python-development.md
-- name: "Шаг\_3. Подтверждение концепции, подразумевающее подключение к SQL с помощью pymssql"
-  href: step-3-proof-of-concept-connecting-to-sql-using-pymssql.md
