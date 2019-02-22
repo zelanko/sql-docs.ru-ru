@@ -13,15 +13,15 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7ffa7e044b5771bcf1181ee3aa0e22dfbdd8e555
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a4a3b450427aa8369b1e76c91265a8c663df0243
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020635"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590377"
 ---
 # <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Содержит по строке для каждой физической базы данных на вычислительном узле. Статистические сведения о физической базы данных, чтобы получить подробные сведения о базах данных. Для объединения данных, присоединить `sys.pdw_nodes_pdw_physical_databases` для `sys.pdw_database_mappings` и `sys.databases` таблицы.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "56020635"
 |physical_name|**sysname**|Физическое имя базы данных на оболочки/вычислительных узлов. Это значение совпадает с значение в столбце physical_name [sys.pdw_database_mappings &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) представления.|  
 |pdw_node_id|**int**|Уникальный числовой идентификатор, связанный с узлом.|  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-returning"></a>A. Возврат  
  Следующий запрос возвращает имя и идентификатор каждой базы данных в master и имя соответствующей базы данных на каждом вычислительном узле.  

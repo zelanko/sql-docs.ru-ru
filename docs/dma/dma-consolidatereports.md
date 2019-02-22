@@ -2,7 +2,7 @@
 title: Оценка предприятия и объединение отчетов с оценкой (SQL Server) | Документация Майкрософт
 description: Узнайте, как использовать DMA для оценки предприятия и объединение отчетов с оценкой перед обновлением SQL Server или переход на базу данных SQL Azure.
 ms.custom: ''
-ms.date: 02/20/20198
+ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: cd3951aaddc19a7b96cc7645084166f19d41422b
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+ms.openlocfilehash: 400876a2738c2ca791d3aee12da20c9af1db5b9f
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464780"
+ms.locfileid: "56590349"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Оценка предприятия и объединять оценки с помощью DMA
 
@@ -186,7 +186,7 @@ ms.locfileid: "56464780"
 - Azure SQL MI cloud оценок
 - В локальной оценок
 
-  ![Представления отчетов о DMA закладки](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
+![Представления отчетов о DMA закладки](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
 
 Чтобы скрыть фильтры колонки, удерживая нажатой кнопку "Назад":
 

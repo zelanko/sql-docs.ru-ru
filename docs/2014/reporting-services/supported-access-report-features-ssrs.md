@@ -251,7 +251,7 @@ ms.locfileid: "56294272"
 |-|-|-|-|  
 |InputBox|InputBox$|MsgBox||  
   
-#### <a name="program-flow-functions"></a>Функции управления ходом выполнения программы  
+#### <a name="program-flow-functions"></a>Функции управления потоком выполнения программы  
  Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] поддерживают следующие функции управления ходом выполнения программы.  
   
 |||||  
