@@ -28,18 +28,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fbbf5a3ad4c3d6a667ae2622e5bf09ea5f39c911
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: bdea0473176e08c51931f1bb192462c5c45ee514
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300110"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802380"
 ---
 # <a name="sqlcmd-utility"></a>Служебная программа sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [Поделитесь своим мнением о SQL документация содержания!](https://aka.ms/sqldocsurvey)
 
 > SQL Server 2014 и ниже, см. в разделе [служебная программа sqlcmd](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
 > ).
@@ -66,7 +63,7 @@ ms.locfileid: "54300110"
 
 Номер выпуска: 15.0 <br>
 Номер сборки: 15.0.1000.34<br>
-Дата выпуска 18 октября 2018 г.
+Дата выпуска: 18 октября 2018 г.
 
 Новая версия SQLCMD поддерживает аутентификацию Azure AD, включая многофакторную идентификацию (MFA) поддержку функций базы данных SQL, хранилище данных SQL и постоянного шифрования.
 Новый BCP поддерживает аутентификацию Azure AD, включая поддержку многофакторной идентификации (MFA) для базы данных SQL и хранилища данных SQL.
@@ -80,7 +77,7 @@ ms.locfileid: "54300110"
 > [!NOTE]
 > Необходим версии 13.1 или более поздней, для поддержки Always Encrypted (`-g`) и проверки подлинности Azure Active Directory (`-G`). (На компьютере можно установить несколько версий sqlcmd.exe. Убедитесь, что используется правильная версия. Чтобы определить версию, выполните `sqlcmd -?`.)
 
-Служебная программа sqlcmd из Azure Cloud Shell можно попробовать ее предварительно установки по умолчанию. [![Запуск Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "запустите Cloud Shell")](https://shell.azure.com)
+Вы можете попробовать программу sqlcmd из Azure Cloud Shell предварительно устанавливается по умолчанию: [ ![запуска Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "запуска Cloud Shell")](https://shell.azure.com)
 
   Чтобы выполнить инструкции sqlcmd в SSMS, выберите "Режим SQLCMD" в раскрывающемся списке "Запрос" на верхней панели навигации.  
   
@@ -215,7 +212,7 @@ sqlcmd
 
    Чтобы включить интерактивную проверку подлинности, укажите параметр -G с именем пользователя (-U), без пароля.
 
-   В следующем примере экспортируется данных с помощью Azure AD интерактивный режим, указывающее имя пользователя, где пользователь представляет учетную запись AAD. Это тот же пример, используемый в предыдущем разделе: *Имя пользователя и пароль Azure Active Directory*  
+   В следующем примере экспортируется данных с помощью Azure AD интерактивный режим, указывающее имя пользователя, где пользователь представляет учетную запись AAD. Это тот же пример, используемый в предыдущем разделе: *Azure Active Directory, имя пользователя и пароль*.  
 
    Интерактивный режим требуется пароль вводиться вручную, или для учетных записей с многофакторной проверкой подлинности включена, выполните настроенный метод проверки подлинности многофакторной проверки Подлинности.
 
@@ -248,10 +245,10 @@ sqlcmd
 **-j** выводит на экран необработанные сообщения об ошибках.
   
  **-K** _application_intent_  
- Объявляет тип рабочей нагрузки приложения при соединении с сервером. Единственным поддерживаемым в данное время значением является **ReadOnly**. Если параметр **-K** не указан, то программа sqlcmd не будет поддерживать возможность подключения к вторичной реплике в группе доступности AlwaysOn. Дополнительные сведения см. в статье [Активные вторичные реплики: доступ только для чтения к вторичным репликам (группы доступности AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
+ Объявляет тип рабочей нагрузки приложения при соединении с сервером. Единственным поддерживаемым в данное время значением является **ReadOnly**. Если параметр **-K** не указан, то программа sqlcmd не будет поддерживать возможность подключения к вторичной реплике в группе доступности AlwaysOn. Дополнительные сведения см. в разделе [Активные вторичные реплики: вторичные реплики для чтения (группы доступности AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
 **-M** _отработка_отказа_в_сети_с_подсетями_  
- Всегда указывайте параметр **-M** при соединении с прослушивателем группы доступности SQL Server или экземпляром отказоустойчивого кластера SQL Server. **-M** обеспечивает более быстрое обнаружение активного (в данный момент) сервера и соединение с ним. Если параметр **-M** не указан, значит **-M** отключен. Дополнительные сведения см. в статьях: [Прослушиватели, подключение клиентов и отработка отказа приложений](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Создание и настройка групп доступности (SQL Server)](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) и [Активные вторичные реплики. Доступ только для чтения к вторичным репликам (группы доступности AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx). 
+ Всегда указывайте параметр **-M** при соединении с прослушивателем группы доступности SQL Server или экземпляром отказоустойчивого кластера SQL Server. **-M** обеспечивает более быстрое обнаружение активного (в данный момент) сервера и соединение с ним. Если параметр **-M** не указан, значит **-M** отключен. Дополнительные сведения в статьях: [Прослушиватели, подключение клиентов и отработка отказа приложений](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Создание и настройка групп доступности (SQL Server)](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) и [Активные вторичные реплики. Доступ только для чтения к вторичным репликам (группы доступности AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx). 
   
  **-N**  
  С помощью этого переключателя клиент запрашивает шифрованное соединение.  
@@ -840,7 +837,7 @@ sqlcmd
 
 `GO`
 
-При нажатии клавиши ВВОД выводится следующее информационное сообщение: «Контекст базы данных изменен на "AdventureWorks2012"».  
+При нажатии клавиши ВВОД отображается следующее информационное сообщение: "Контекст базы данных изменен на AdventureWorks2012".  
   
 ### <a name="output-format-from-transact-sql-queries"></a>Формат вывода результатов выполнения запросов Transact-SQL  
  Сначала программа**sqlcmd** выводит заголовок с именами столбцов, перечисленными в списке выборки, которые разделяются символом, определенным в переменной SQLCMDCOLSEP. По умолчанию это пробел. Если имя столбца короче, чем ширина столбца, выходные данные дополняются пробелами до начала следующего столбца.  

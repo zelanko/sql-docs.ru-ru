@@ -11,12 +11,12 @@ ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dba0e72f3575c0958ad142b6d27b7be410d6cec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 005a2c4b34c9aae2cfdfe4663cbfcbe06a68b81a
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658752"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676112"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>Выполнение прямых и подготовленных инструкций в драйвере PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,8 +34,11 @@ ms.locfileid: "47658752"
   
 Если запрос требует контекста, который был задан в предыдущем запросе, затем выполните запросы PDO::SQLSRV_ATTR_DIRECT_QUERY задается значение True. Например при использовании временных таблиц в запросы, PDO::SQLSRV_ATTR_DIRECT_QUERY должно быть присвоено значение True.  
   
-В следующем примере показано, что если требуется контекст от предыдущей инструкции, необходимо задать PDO::SQLSRV_ATTR_DIRECT_QUERY значение True.  В этом примере используется временные таблицы, которые доступны только на последующие инструкции в программе, если запросы выполняются непосредственно.  
+В следующем примере показано, что если требуется контекст от предыдущей инструкции, необходимо задать PDO::SQLSRV_ATTR_DIRECT_QUERY значение True. В этом примере используется временные таблицы, которые доступны только на последующие инструкции в программе, если запросы выполняются непосредственно.  
   
+> [!NOTE]
+> Если запрос для вызова хранимой процедуры и временные таблицы, используемые в этой хранимой процедуре, воспользуйтесь [PDO::exec](../../connect/php/pdo-exec.md) вместо этого.
+
 ```  
 <?php  
    $conn = new PDO('sqlsrv:Server=(local)', '', '');  

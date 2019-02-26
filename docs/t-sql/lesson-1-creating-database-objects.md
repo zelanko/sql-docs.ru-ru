@@ -11,18 +11,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7887e63dbe7879a17433dce0bd35c346c860097e
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 874bedd5e6f8eec03941fa3d3fc957351166500b
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299291"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801148"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Урок 1. Создание объектов базы данных и отправка запросов к ним
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
 
 На этом занятии вы узнаете, как создать базу данных, создать таблицу в базе данных и получить доступ к данным таблицы и изменить их. Поскольку это занятие является введением к использованию языка [!INCLUDE[tsql](../includes/tsql-md.md)], в нем не используются и не описываются многие параметры, доступные для этих инструкций.  
   

@@ -1,7 +1,7 @@
 ---
 title: Загрузка драйверов Майкрософт для PHP для SQL Server | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3dd99ffa39de48dbf8839cbe06a8bb236fffbdf3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: e62fc14eff52fa64e9e9f9dc041cc3c8601230e5
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606204"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744614"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>Загрузка драйверов Майкрософт для PHP для SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,6 +28,8 @@ ms.locfileid: "51606204"
 Можно загрузить предварительно созданные драйверы для своей платформы из [драйверы Майкрософт для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases) странице проекта в Github. Каждый пакет установки содержит файлы драйвера SQLSRV и PDO_SQLSRV потоками и однопоточных варианта. В Windows они также доступны в 32-разрядных и 64-разрядных вариантов. См. в разделе [требования к системе для драйверов Майкрософт для PHP для SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md) список файлов драйверов, которые содержатся в каждом пакете. Файл драйвера должно соответствовать версии PHP, архитектура и threadedness среду PHP.
 
 В Linux и macOS, драйверы можно также установить с помощью PECL, обнаруженных в [учебник по установке](../../connect/php/installation-tutorial-linux-mac.md).
+
+Вы также можете создавать драйверы из источника, при построении PHP или с помощью `phpize`. Если вы решили создать драйверы из источника, у вас есть возможность создавать их статически в PHP вместо создания расширения как общий, добавив `--enable-sqlsrv=static --with-pdo_sqlsrv=static` (в Linux и macOS) или `--enable-sqlsrv=static --with-pdo-sqlsrv=static` (в Windows) для `./configure` при использовании команды Построение PHP. Дополнительные сведения о PHP система сборки и `phpize`, см. в разделе [документации по PHP](http://php.net/manual/install.php).
   
 ## <a name="moving-the-driver-file-into-your-extension-directory"></a>Перемещение файла драйвера в каталог расширения  
 Драйвер должен находиться в каталоге, где его можно найти в среде выполнения PHP. Проще всего поместить файл драйвера в каталог расширения PHP по умолчанию — чтобы найти каталог по умолчанию, запустите `php -i | sls extension_dir` на Windows или `php -i | grep extension_dir` в Linux и Mac OS. Если не используется расширение каталога по умолчанию, указать каталог, в файле конфигурации PHP (php.ini) с помощью **extension_dir** параметр. Например, в Windows, если вы поместили файл драйвера вашей `c:\php\ext` directory, добавьте следующую строку в файл php.ini:

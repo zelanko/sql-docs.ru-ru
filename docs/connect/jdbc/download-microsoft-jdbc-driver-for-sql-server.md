@@ -11,17 +11,15 @@ ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7577dc8b26ade71f88ba6762bd90768d6b9276df
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 27ff741558f45b775a517fbab960163dfe20bbf8
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154609"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802480"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Скачивание драйвера Microsoft JDBC Driver for SQL Server
 
-  > [!div class="nextstepaction"]
-  > [Поделитесь своим мнением о содержании документации по SQL!](https://aka.ms/sqldocsurvey)
 
 ## <a name="using-the-jdbc-driver-with-maven-central"></a>С помощью драйвера JDBC с Maven Central
 Драйвер JDBC можно добавить в проект Maven, добавив его в качестве зависимости в файл POM.xml, используя следующий код:
