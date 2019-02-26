@@ -21,18 +21,15 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b95da5f74481fed0053f31cde326fe271e79abc9
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 168022a77687fd8d655b02e975dbe88fbb0bf685
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299221"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803129"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>Типы данных и функции даты и времени (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
 
 В разделах этой статьи представлен обзор всех типов данных и функций даты и времени [!INCLUDE[tsql](../../includes/tsql-md.md)].
 -   [Типы данных даты и времени](#DateandTimeDataTypes)  

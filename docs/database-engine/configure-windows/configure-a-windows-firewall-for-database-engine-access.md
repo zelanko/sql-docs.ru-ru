@@ -15,18 +15,16 @@ ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2aa8a6ca557e4d4b358f646c73cb24cc69bdd009
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 6fb534c8715c486d3abbb04d5cb61c9ee51f43ff
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299046"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801508"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Настройка брандмауэра Windows для доступа к компоненту Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  > [!div class="nextstepaction"]
-  > [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
 
   В данном разделе описывается, как настроить брандмауэр Windows для доступа к компоненту Database Engine в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью диспетчера конфигурации SQL Server. Системы брандмауэров предотвращают несанкционированный доступ к ресурсам компьютера. Чтобы обращаться к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] через брандмауэр, необходимо разрешить такой доступ в настройках брандмауэра на компьютере с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -99,6 +97,6 @@ ms.locfileid: "54299046"
 7.  В диалоговом окне **Имя** введите имя и описание для этого правила, а затем нажмите кнопку **Готово**.  
   
 ## <a name="see-also"></a>См. также:  
- [Как Настройка параметров брандмауэра (база данных SQL Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
+ [Как Настройка параметров брандмауэра (база данных SQL Microsoft Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   

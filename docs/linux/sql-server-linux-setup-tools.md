@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 80bff9787e750e39a0747be831b1fc902d6923a8
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 20b383929910bf24ef9dc89950f15815afdef3bd
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270177"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801758"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Установка sqlcmd и bcp средства командной строки SQL Server в Linux
 
@@ -23,8 +23,8 @@ ms.locfileid: "51270177"
 
 Средства командной строки, драйверы Microsoft ODBC и их зависимости, установите следующие действия. **Mssql-tools** пакет содержит:
 
-- **sqlcmd**: программа командной строки запроса.
-- **BCP**: массового импорта и экспорта служебной программы.
+- **sqlcmd**: Программа командной строки запроса.
+- **BCP**: Служебная программа для массового импорта экспорта.
 
 Установите средства для выбранной платформы:
 
@@ -77,7 +77,7 @@ ms.locfileid: "51270177"
    >   sudo yum update mssql-tools
    >   ```
 
-1. **Необязательный**: добавление `/opt/mssql-tools/bin/` для вашей **путь** переменной среды в оболочке bash.
+1. **Необязательный**: Добавить `/opt/mssql-tools/bin/` для вашей **путь** переменной среды в оболочке bash.
 
    Чтобы сделать **sqlcmd и bcp** доступен из оболочки bash для сеансов входа изменить ваш **путь** в **~/.bash_profile** файл с помощью следующей команды:
 
@@ -122,7 +122,7 @@ ms.locfileid: "51270177"
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **Необязательный**: добавление `/opt/mssql-tools/bin/` для вашей **путь** переменной среды в оболочке bash.
+1. **Необязательный**: Добавить `/opt/mssql-tools/bin/` для вашей **путь** переменной среды в оболочке bash.
 
    Чтобы сделать **sqlcmd и bcp** доступен из оболочки bash для сеансов входа изменить ваш **путь** в **~/.bash_profile** файл с помощью следующей команды:
 
@@ -161,7 +161,7 @@ ms.locfileid: "51270177"
    >   sudo zypper update mssql-tools
    >   ```
 
-1. **Необязательный**: добавление `/opt/mssql-tools/bin/` для вашей **путь** переменной среды в оболочке bash.
+1. **Необязательный**: Добавить `/opt/mssql-tools/bin/` для вашей **путь** переменной среды в оболочке bash.
 
    Чтобы сделать **sqlcmd и bcp** доступен из оболочки bash для сеансов входа изменить ваш **путь** в **~/.bash_profile** файл с помощью следующей команды:
 
@@ -190,9 +190,9 @@ ms.locfileid: "51270177"
 # brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install --no-sandbox mssql-tools
+brew install mssql-tools
 #for silent install: 
-#ACCEPT_EULA=y brew install --no-sandbox mssql-tools
+#HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=y brew install mssql-tools
 ```
 
 ## <a id="docker"></a> Docker
@@ -233,7 +233,7 @@ brew install --no-sandbox mssql-tools
     | SLES | `sudo zypper install msodbcsql-13.1.6.0-1.x86_64.rpm`<br/>`sudo zypper install mssql-tools-14.0.5.0-1.x86_64.rpm` |
     | Ubuntu | `sudo dpkg -i msodbcsql_13.1.6.0-1_amd64.deb`<br/>`sudo dpkg -i mssql-tools_14.0.5.0-1_amd64.deb` |
 
-1. **Разрешить отсутствующие зависимости**: возможно, отсутствуют зависимости на этом этапе. В противном случае этот шаг можно пропустить. В некоторых случаях необходимо вручную найти и установить эти зависимости.
+1. **Разрешить отсутствующие зависимости**: Возможно, отсутствуют зависимости на этом этапе. В противном случае этот шаг можно пропустить. В некоторых случаях необходимо вручную найти и установить эти зависимости.
 
     Для пакетов RPM можно проверить необходимые зависимости, выполнив следующие команды:
 

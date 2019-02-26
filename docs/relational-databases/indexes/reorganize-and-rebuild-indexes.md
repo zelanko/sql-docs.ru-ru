@@ -32,18 +32,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71d792b7978f7523f7aefe97bd7a5c0a3c69db2a
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 85ccb9573cb1a8a283e6deec7a52b0e9c5857da7
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300431"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802608"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Реорганизация и перестроение индексов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
 
 В этом разделе описывается реорганизация или перестроение фрагментированного индекса в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] автоматически изменяет индексы при вставке, обновлении или удалении базовых данных. Со временем эти изменения могут привести к тому, что данные в индексе окажутся разбросанными по базе данных (фрагментированными). Фрагментация имеет место в тех случаях, когда в индексах содержатся страницы, для которых логический порядок, основанный на значении ключа, не совпадает с физическим порядком в файле данных. Существенно фрагментированные индексы могут серьезно снижать производительность запросов и служить причиной замедления отклика приложения, особенно операций сканирования.  
   

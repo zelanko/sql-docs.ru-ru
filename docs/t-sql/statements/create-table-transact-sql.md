@@ -47,18 +47,15 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 81d4a9bf01c4c9a958d8ae2b7292a1130250bbf4
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 86c739e5a6fdb0f265737e85c3b12934b64a8026
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421401"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802588"
 ---
 # <a name="create-table-transact-sql"></a>Инструкция CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [Поделитесь своим мнением о содержании документации по SQL!](https://aka.ms/sqldocsurvey)
 
 Создает новую таблицу в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   

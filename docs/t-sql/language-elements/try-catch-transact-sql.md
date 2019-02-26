@@ -30,18 +30,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1487803dbbcb2ef09dd182dea2eaffa6a967badf
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 17a73ac1df6510adb9d43f7f638d39527e84b05b
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298931"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801498"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  > [!div class="nextstepaction"]
-  > [Поделитесь своим мнением о содержании документации по SQL!](https://aka.ms/sqldocsurvey)
 
   Реализация обработчика ошибок на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] похожа на обработку исключений в языках [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# и [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Группа инструкций на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] может быть заключена в блок TRY. Если ошибка возникает в блоке TRY, управление передается следующей группе инструкций, заключенных в блок CATCH.  
   

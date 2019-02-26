@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b8d274e0d43f476d2e00b64dc4ea2188c79ae082
-ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
+ms.openlocfilehash: a9a1d940d7229910c899104a19e3a710eb7eae92
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832146"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590499"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -48,16 +48,14 @@ ms.locfileid: "55832146"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |**_\* SQL Server \*_** &nbsp;|[Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-current)|[Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|**_\* SQL Server \*_** &nbsp;|[Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-current)|[Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## <a name="sql-server"></a>SQL Server
-
-## <a name="overview"></a>Обзор
+## <a name="overview-sql-server"></a>Общие сведения SQL Server
 
 В SQL Server эта инструкция изменяет базу данных или файлы и файловые группы, связанные с базой данных. Добавляет или удаляет файлы и файловые группы из базы данных, изменяет атрибуты базы данных или ее файлов и файловых групп, изменяет параметры сортировки базы данных и устанавливает параметры базы данных. Моментальные снимки базы данных изменить нельзя. Чтобы изменить параметры базы данных, связанные с репликацией, используйте процедуру [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
 
@@ -285,16 +283,14 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|**_\* Отдельная база данных/эластичный пул Базы данных SQL<br /> \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|**_\* Отдельная база данных/эластичный пул Базы данных SQL<br /> \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Отдельная база данных или эластичный пул Базы данных SQL Azure
-
-## <a name="overview"></a>Обзор
+## <a name="overview-azure-sql-database-single-databaseelastic-pool"></a>Общие сведения Отдельная база данных или эластичный пул Базы данных SQL Azure
 
 В Базе данных SQL Azure эта инструкция предназначена для изменения базы данных на отдельной базе данных или эластичном пуле. Используйте эту инструкцию, чтобы изменить имя базы данных, изменить выпуск и цель обслуживания базы данных, присоединить или удалить базы данных из эластичного пула, настроить параметры базы данных, добавить или удалить дополнительные базы данных для георепликации или настроить уровень совместимости базы данных.
 
@@ -693,16 +689,14 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* Управляемый экземпляр Базы данных SQL<br /> \*_** &nbsp;|[Хранилище данных<br />SQL](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* Управляемый экземпляр Базы данных SQL<br /> \*_** &nbsp;|[Хранилище данных<br />SQL](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
-
-## <a name="overview"></a>Обзор
+## <a name="overview-azure-sql-database-managed-instance"></a>Общие сведения Управляемый экземпляр Базы данных SQL Azure
 
 В управляемом экземпляре Базы данных SQL Azure эта инструкция используется для настройки параметров базы данных.
 
@@ -722,8 +716,10 @@ ALTER DATABASE
 ```  
 -- Azure SQL Database Syntax  
 ALTER DATABASE { database_name | CURRENT }  
-{  
-    <file_and_filegroup_options>  
+{
+    MODIFY NAME = new_database_name   
+  | COLLATE collation_name    
+  | <file_and_filegroup_options>  
   | SET <option_spec> [ ,...n ]  
   | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }   
 }  
@@ -816,16 +812,14 @@ ALTER DATABASE WideWorldImporters
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-current)|[Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* Хранилище данных<br />SQL \*_** &nbsp;|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-current)|[Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* Хранилище данных<br />SQL \*_** &nbsp;|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## <a name="azure-sql-data-warehouse"></a>Хранилище данных SQL Azure
-
-## <a name="overview"></a>Обзор
+## <a name="overview-azure-sql-data-warehouse"></a>Общие сведения Хранилище данных SQL Azure
 
 Изменяет имя, максимальный размер или цель обслуживания для базы данных.
 
@@ -938,16 +932,14 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-current)|[Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-current)|[Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
+||||||
 
 &nbsp;
 
-## <a name="parallel-data-warehouse"></a>Параллельное хранилище данных
-
-## <a name="overview"></a>Обзор
+## <a name="overview-parallel-data-warehouse"></a>Общие сведения Параллельное хранилище данных
 
 Изменяет параметры максимального размера базы данных для реплицированных таблиц, распределенных таблиц и журнала транзакций в параллельном хранилище данных. С помощью этой инструкции можно управлять выделением дискового пространства для базы данных по мере изменения ее размера. В статье также описан синтаксис, связанный с настройкой параметров баз данных в Parallel Data Warehouse.
 

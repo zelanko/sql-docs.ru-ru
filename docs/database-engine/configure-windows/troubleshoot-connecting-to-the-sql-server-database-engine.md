@@ -14,19 +14,16 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d70a08ac868aa28a38f3e32a9fb32024bc345193
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: fd08989eb41f5b5a2b1c3f677f8dcff64b25b6ea
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300471"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802758"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Устранение неполадок при соединении с компонентом SQL Server Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-
-  > [!div class="nextstepaction"]
-  > [Поделитесь своим мнением о содержании документации по SQL!](https://aka.ms/sqldocsurvey)
 
 Здесь приводится полный список методов поиска и устранения неполадок, которые можно использовать в случае неудачных попыток соединения с компонентом SQL Server Database Engine. Порядок этих действий не соответствует последовательности, в которой решаются наиболее вероятные проблемы. Сначала указываются шаги по устранению базовых ошибок, а затем рассматриваются более сложные вопросы. При выполнении этих действий предполагается, что вы подключаетесь к SQL Server с другого компьютера по протоколу TCP/IP — такая ситуация является наиболее распространенной. Эти действия предназначены для SQL Server 2016 с SQL Server и клиентскими приложениями под управлением Windows 10. Однако с незначительными изменениями их также можно применять к другим версиям SQL Server и другим операционным системам.
 

@@ -14,18 +14,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8277582639ebb5ae507c320c38f9ffbe7e0da43
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2fffbb19685087883d9b788e7dc894eb413f4b0b
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019540"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802788"
 ---
 # <a name="create-foreign-key-relationships"></a>Создание связей по внешнему ключу
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
 
   В данном разделе описывается создание связей внешнего ключа в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Связь создается между двумя таблицами, чтобы связать строки одной таблицы со строками другой.    
      

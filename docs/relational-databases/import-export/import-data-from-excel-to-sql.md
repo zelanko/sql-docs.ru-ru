@@ -11,18 +11,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77acf33ae4cdc4626f5467f136d8fb96b5ba96ed
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: cafc8346cbdd03c99f68ec879601689a7bf90781
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299554"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802221"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Импорт данных из Excel в SQL Server или базу данных Azure
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
 
 Импортировать данные из файлов Excel в SQL Server или базу данных SQL Azure можно несколькими способами. Некоторые методы позволяют импортировать данные за один шаг непосредственно из файлов Excel. Для других методов необходимо экспортировать данные Excel в виде текста, прежде чем их можно будет импортировать. В этой статье перечислены часто используемые методы и содержатся ссылки для получения дополнительных сведений.
 
@@ -226,7 +223,7 @@ bcp.exe ImportFromExcel..Data_bcp in "D:\Desktop\data.csv" -T -c -t ,
 
 Дополнительные сведения о мастере копирования см. в указанных ниже разделах.
 -   [Мастер копирования фабрики данных](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
--   [Руководство Создание конвейера с действием копирования с помощью мастера копирования фабрики данных](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
+-   [Учебник. Создание конвейера с действием копирования с помощью мастера копирования фабрики данных](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
 
 ## <a name="adf"></a> Фабрика данных Azure
 Если вы уже работали с фабрикой данных Azure и не хотите запускать мастер копирования, создайте конвейер с действием копирования из текстового файла в SQL Server или Базу данных SQL Azure.
@@ -240,7 +237,7 @@ bcp.exe ImportFromExcel..Data_bcp in "D:\Desktop\data.csv" -T -c -t ,
 
 Чтобы научиться копировать данные с помощью фабрики данных Azure, см. указанные ниже разделы.
 -   [Перемещение данных с помощью действия копирования](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
--   [Руководство Создание конвейера с действием копирования с помощью портала Azure](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+-   [Учебник. Создание конвейера с действием копирования с помощью портала Azure](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## <a name="see-also"></a>См. также:
 [Импорт данных из Excel или экспорт данных в Excel с помощью служб SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md)

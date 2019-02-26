@@ -11,19 +11,16 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: bd388ede86a397fa83bf98deb017e294cb280752
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 7d6aece1a3e43fd7a732dd61864349f8f3c92520
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300161"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802271"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Выбор метода обновления компонента Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-> [!div class="nextstepaction"]
-> [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
-  
 Существует несколько подходов, которые следует учитывать при планировании обновления предыдущего выпуска SQL Server до версии [!INCLUDE[ssDE](../../includes/ssde-md.md)], чтобы свести к минимуму время простоя и риски. Можно выполнить обновление на месте, миграцию в новую установку или последовательное обновление. Следующая схема поможет вам выбрать один из этих подходов. Каждый из подходов, указанных в схеме, кроме того, обсуждается ниже. Чтобы получить дополнительные сведения о точках принятия решений в этой схеме, ознакомьтесь с разделом [Составление и тестирование плана обновления ядра СУБД](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  ![Дерево выбора метода для обновления компонента Database Engine](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Дерево выбора метода для обновления компонента Database Engine")  

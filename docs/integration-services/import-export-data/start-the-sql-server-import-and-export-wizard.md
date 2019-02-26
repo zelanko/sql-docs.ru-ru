@@ -16,17 +16,15 @@ ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed4bb739f6ca74e5e0744af1ed40b37196995213
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 8db11de67db871df75605099191a2ae0e34be0b9
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299061"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801338"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>запустить мастер импорта и экспорта SQL Server
 
-  > [!div class="nextstepaction"]
-  > [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
 
 Запустите мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] одним из описанных здесь способов, чтобы импортировать данных из любого поддерживаемого источника данных и экспортировать данные в него.
 

@@ -23,17 +23,14 @@ ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 17e210356aadaa17394abf0b68bf9303461943d2
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 04299edc56a8b09d47cfd82d41a348b8fe2f7778
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300341"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802451"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>Настройка сервера отчетов для работы с электронной почтой (диспетчер конфигурации служб Reporting Services)
-
-  > [!div class="nextstepaction"]
-  > [Поделитесь своим мнением о SQL документация содержания!](https://aka.ms/sqldocsurvey)
 
 
   Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают модуль доставки по электронной почте, позволяющий распространять отчеты с помощью электронной почты. В зависимости от того, каким образом определена электронная подписка, рассылка может включать уведомление, ссылку, вложение или внедренный отчет. Модуль доставки по электронной почте работает с существующими технологиями почтовых серверов. Почтовый сервер должен быть либо SMTP-сервером, либо перенаправителем. Сервер отчетов соединяется с SMTP-сервером через объекты данных совместной работы (библиотека cdosys.dll), предоставляемых операционной системой.  
