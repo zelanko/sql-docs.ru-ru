@@ -1,259 +1,1940 @@
 items:
+- name: Содержание корневого каталога SQL Server +
+  href: /sql/sql-server/sql-server-technical-documentation
 - name: Что такое службы SQL Server Reporting Services (SSRS)?
-  href: create-deploy-and-manage-mobile-and-paginated-reports.md
+  href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
 - name: Обзор
   items:
   - name: Новые возможности служб Reporting Services
-    href: what-s-new-in-sql-server-reporting-services-ssrs.md
+    href: ../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md
   - name: Журнал изменений
-    href: change-log-sql-server-reporting-services.md
+    href: ../reporting-services/change-log-sql-server-reporting-services.md
   - name: Основные понятия служб Reporting Services (SSRS)
-    href: reporting-services-concepts-ssrs.md
+    href: ../reporting-services/reporting-services-concepts-ssrs.md
   - name: Функции и задачи служб Reporting Services
-    href: reporting-services-features-and-tasks-ssrs.md
+    href: ../reporting-services/reporting-services-features-and-tasks-ssrs.md
   - name: Backward Compatibility
-    href: reporting-services-backward-compatibility.md
+    href: ../reporting-services/reporting-services-backward-compatibility.md
     items:
     - name: Устаревшие функции
-      href: deprecated-features-in-sql-server-reporting-services-ssrs.md
+      href: ../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md
     - name: Неподдерживаемые функции в SSRS в SQL Server 2016
-      href: discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
+      href: ../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
     - name: Критически важные изменения в SSRS в SQL Server 2016
-      href: breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
+      href: ../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
     - name: Изменения в работе служб SQL Server Reporting Services в SQL Server 2016
-      href: behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
+      href: ../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
 - name: Планирование
   items:
   - name: Выбор средств бизнес-аналитики для анализа и отчетов
-    href: choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md
+    href: ../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md
   - name: Поддержка браузера для служб Reporting Services и Power View
-    href: browser-support-for-reporting-services-and-power-view.md
+    href: ../reporting-services/browser-support-for-reporting-services-and-power-view.md
   - name: Планирование разработки и развертывания отчетов
-    href: plan-for-report-design-and-report-deployment-reporting-services.md
+    href: ../reporting-services/plan-for-report-design-and-report-deployment-reporting-services.md
   - name: Возможности служб Reporting Services в различных выпусках SQL Server
-    href: reporting-services-features-supported-by-the-editions-of-sql-server-2016.md
-- name: Установить
+    href: ../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md
+- name: Установка Reporting Services 2017
   href: ../reporting-services/install-windows/install-reporting-services.md
+  items:
+  - name: Как найти ключ продукта для Reporting Services 2017
+    href: ../reporting-services/install-windows/find-reporting-services-product-key-ssrs.md
+- name: Установка Reporting Services 2016 в собственном режиме
+  href: ../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md
+  items:
+  - name: Выполнение установки в режиме «только файлы» служб Reporting Services
+    href: ../reporting-services/install-windows/files-only-installation-reporting-services.md
+  - name: Параллельная установка служб Reporting Services и служб IIS (собственный режим SSRS)
+    href: ../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
+  - name: Размещение базы данных сервера отчетов в отказоустойчивом кластере SQL Server
+    href: ../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
+  - name: Использование диспетчера конфигурации служб Reporting Services (собственный режим)
+    href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
+    items:
+    - name: Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)
+      href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
+    - name: Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)
+      href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
+      items:
+      - name: Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)
+        href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
+      - name: Настройка URL-адреса (диспетчер конфигурации служб SSRS)
+        href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
+      - name: Синтаксис резервирования URL-адресов (диспетчер конфигурации служб SSRS)
+        href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
+      - name: URL-адреса файлов конфигурации (диспетчер конфигурации служб SSRS)
+        href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
+      - name: Резервирование URL-адресов при развертывании сервера отчетов на нескольких экземплярах (диспетчер конфигурации служб SSRS)
+        href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
+    - name: Создание базы данных
+      href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
+    - name: Создание базы данных в собственном режиме
+      href: ../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md
+    - name: Настройка подключения к базе данных сервера отчетов
+      href: ../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md
+    - name: Настройки электронной почты — основной режим служб Reporting Services (диспетчер конфигураций)
+      href: ../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
+    - name: Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)
+      href: ../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
+    - name: Ключи шифрования служб SSRS — управление ключами шифрования
+      href: ../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
+      items:
+      - name: Ключи шифрования служб SSRS — инициализация сервера отчетов
+        href: ../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md
+      - name: Ключи шифрования служб SSRS — хранение зашифрованных данных сервера отчетов
+        href: ../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md
+      - name: Ключи шифрования служб SSRS — создание резервных копий и восстановление
+        href: ../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md
+      - name: Ключи шифрования служб SSRS — удаление и повторное создание
+        href: ../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md
+      - name: Ключи шифрования служб SSRS — добавление и удаление для масштабного развертывания
+        href: ../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
+    - name: Параметры подписки и учетная запись общей папки (диспетчер конфигураций)
+      href: ../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md
+    - name: Настройка масштабного развертывания сервера отчетов в собственном режиме (диспетчер конфигурации служб SSRS)
+      href: ../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
+    - name: Интеграция с Power BI
+      href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md
+- name: Установка служб Reporting Services 2016 в режиме интеграции с SharePoint
+  href: ../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md
+  items:
+  - name: Поддерживаемые сочетания SharePoint, компонентов служб Reporting Services и надстроек (SQL Server 2016)
+    href: ../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md
+  - name: Где найти надстройку служб SSRS для SharePoint
+    href: ../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md
+  - name: Установка первого сервера отчетов в режиме интеграции с SharePoint
+    href: ../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md
+  - name: Установка или удаление надстройки служб Reporting Services для SharePoint
+    href: ../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md
+  - name: Добавление дополнительного сервера отчетов в ферму (горизонтально масштабируемые службы SSRS)
+    href: ../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md
+  - name: Добавление дополнительного клиентского веб-интерфейса служб Reporting Services в ферме
+    href: ../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md
+  - name: Настройка электронной почты для приложения служб Reporting Services
+    href: ../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md
+  - name: Подготовка подписок и предупреждений для приложений служб SSRS
+    href: ../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md
+  - name: Служба Claims to Windows Token Service (c2WTS) и службы SSRS
+    href: ../reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md
+- name: Установка служб Reporting Services из командной строки
+  href: ../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md
+- name: Install Report Builder
+  href: ../reporting-services/install-windows/install-report-builder.md
+- name: Удаление построителя отчетов
+  href: ../reporting-services/install-windows/uninstall-report-builder.md
+- name: Verify a Reporting Services Installation
+  href: ../reporting-services/install-windows/verify-a-reporting-services-installation.md
+- name: Устранение неполадок при установке служб Reporting Services
+  href: ../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md
+- name: Upgrade and Migrate Reporting Services
+  href: ../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md
+  items:
+  - name: Перенос установки служб Reporting Services (собственный режим)
+    href: ../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md
+  - name: Перенос установки служб Reporting Services (режим интеграции с SharePoint)
+    href: ../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md
+  - name: Миграция из собственного режима в режим интеграции с SharePoint (SSRS)
+    href: ../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md
+  - name: Обновление базы данных сервера отчетов
+    href: ../reporting-services/install-windows/upgrade-a-report-server-database.md
+  - name: Upgrade Reports
+    href: ../reporting-services/install-windows/upgrade-reports.md
+  - name: Операции резервного копирования и восстановления для служб Reporting Services
+    href: ../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md
 - name: Веб-портал
-  href: web-portal-ssrs-native-mode.md
+  href: ../reporting-services/web-portal-ssrs-native-mode.md
   items:
   - name: Фирменная символика на веб-портале
-    href: branding-the-web-portal.md
+    href: ../reporting-services/branding-the-web-portal.md
   - name: Работа с общими наборами данных
-    href: work-with-shared-datasets-web-portal.md
+    href: ../reporting-services/work-with-shared-datasets-web-portal.md
   - name: Работа с отчетами с разбиением на страницы
-    href: working-with-paginated-reports-web-portal.md
+    href: ../reporting-services/working-with-paginated-reports-web-portal.md
   - name: Работа с моментальными снимками
-    href: working-with-snapshots-web-portal.md
+    href: ../reporting-services/working-with-snapshots-web-portal.md
   - name: Работа с подписками
-    href: working-with-subscriptions-web-portal.md
+    href: ../reporting-services/working-with-subscriptions-web-portal.md
   - name: Работа с ключевыми показателями эффективности
-    href: working-with-kpis-in-reporting-services.md
+    href: ../reporting-services/working-with-kpis-in-reporting-services.md
   - name: Мои параметры для интеграции с Power BI
-    href: my-settings-for-power-bi-integration-web-portal.md
-- name: Сервер отчетов
+    href: ../reporting-services/my-settings-for-power-bi-integration-web-portal.md
+- name: Обзор
   href: ../reporting-services/report-server/reporting-services-report-server-native-mode.md
-- name: Сервер отчетов (SharePoint)
+- name: Настройка и администрирование сервера отчетов (службы Reporting Services в собственном режиме)
+  href: ../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md
+  items:
+  - name: настроить сервер отчетов
+    href: ../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md
+  - name: Настройка веб-портала
+    href: ../reporting-services/report-server/configure-web-portal.md
+  - name: Управление сервером отчетов служб Reporting Services в собственном режиме
+    href: ../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md
+    items:
+    - name: Configure a Firewall for Report Server Access
+      href: ../reporting-services/report-server/configure-a-firewall-for-report-server-access.md
+    - name: Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (SSRS)
+      href: ../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md
+    - name: настроить сервер отчетов для удаленного администрирования
+      href: ../reporting-services/report-server/configure-a-report-server-for-remote-administration.md
+    - name: настроить сервер отчетов в кластере с балансированием сетевой нагрузки
+      href: ../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md
+    - name: Включение отслеживания удаленных ошибок (службы Reporting Services)
+      href: ../reporting-services/report-server/enable-remote-errors-reporting-services.md
+    - name: зарегистрировать имя участника-службы для сервера отчетов
+      href: ../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md
+    - name: Включение и отключение компонентов служб Reporting Services
+      href: ../reporting-services/report-server/turn-reporting-services-features-on-or-off.md
+    - name: Включение доступа к серверу отчетов для мобильного приложения Power BI
+      href: ../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md
+- name: Управление содержимым сервера отчетов (службы Reporting Services в собственном режиме)
+  href: ../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md
+  items:
+  - name: Создание, удаление и изменение папки (веб-портала)
+    href: ../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md
+  - name: создать, изменить или удалить папку
+    href: ../reporting-services/report-server/create-delete-or-modify-a-folder-report-manager.md
+  - name: Перемещение или удаление элемента
+    href: ../reporting-services/report-server/move-or-delete-an-item-report-manager.md
+  - name: Передача файлов в папку
+    href: ../reporting-services/report-server/upload-files-to-a-folder.md
+  - name: обновить ресурс
+    href: ../reporting-services/report-server/update-a-resource-report-manager.md
+- name: Запуск и остановка службы сервера отчетов
+  href: ../reporting-services/report-server/start-and-stop-the-report-server-service.md
+- name: Домены приложений для приложений сервера отчетов
+  href: ../reporting-services/report-server/application-domains-for-report-server-applications.md
+- name: Включение и отключение печати на стороне клиента для служб Reporting Services
+  href: ../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md
+- name: Включение и отключение папки «Мои отчеты»
+  href: ../reporting-services/report-server/enable-and-disable-my-reports.md
+- name: Переименование компьютера, на котором установлен сервер отчетов
+  href: ../reporting-services/report-server/rename-a-report-server-computer.md
+- name: База данных сервера отчетов (службы Reporting Services в собственном режиме)
+  href: ../reporting-services/report-server/report-server-database-ssrs-native-mode.md
+  items:
+  - name: Администрирование базы данных сервера отчетов (службы Reporting Services в собственном режиме)
+    href: ../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md
+  - name: Перемещение баз данных сервера отчетов на другой компьютер (собственный режим служб SSRS)
+    href: ../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md
+- name: Файлы конфигурации
+  href: ../reporting-services/report-server/reporting-services-configuration-files.md
+  items:
+  - name: RsReportServer.config Configuration File
+    href: ../reporting-services/report-server/rsreportserver-config-configuration-file.md
+  - name: ReportingServicesService, файл конфигурации
+    href: ../reporting-services/report-server/reportingservicesservice-configuration-file.md
+  - name: RSReportDesigner, файл конфигурации
+    href: ../reporting-services/report-server/rsreportdesigner-configuration-file.md
+  - name: Изменение файла конфигурации служб Reporting Services (RSreportserver.config)
+    href: ../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md
+- name: Файлы и источники журналов служб Reporting Services
+  href: ../reporting-services/report-server/reporting-services-log-files-and-sources.md
+  items:
+  - name: Журнал выполнения сервера отчетов и представление ExecutionLog3
+    href: ../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md
+  - name: Журналы ULS SharePoint
+    href: ../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md
+  - name: Журнал трассировки службы сервера отчетов
+    href: ../reporting-services/report-server/report-server-service-trace-log.md
+  - name: Журнал HTTP-запросов сервера отчетов
+    href: ../reporting-services/report-server/report-server-http-log.md
+  - name: Журнал приложений Windows
+    href: ../reporting-services/report-server/windows-application-log.md
+  - name: Проверка запуска отчета
+    href: ../reporting-services/report-server/verifying-a-report-run.md
+- name: Производительность, моментальные снимки, кэширование (службы Reporting Services)
+  href: ../reporting-services/report-server/performance-snapshots-caching-reporting-services.md
+  items:
+  - name: Наблюдение за производительностью сервера отчетов
+    href: ../reporting-services/report-server/monitoring-report-server-performance.md
+    items:
+    - name: Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 (собственный режим)
+      href: ../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md
+    - name: Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 в режиме интеграции с SharePoint (режим SharePoint)
+      href: ../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md
+    - name: Счетчики производительности для объектов производительности ReportServer:Service и ReportServerSharePoint:Service
+      href: ../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md
+  - name: Установка свойств обработки отчетов
+    href: ../reporting-services/report-server/set-report-processing-properties.md
+  - name: Настройка доступной памяти для приложений сервера отчетов
+    href: ../reporting-services/report-server/configure-available-memory-for-report-server-applications.md
+  - name: Задание значений времени ожидания при обработке отчетов и общих наборов данных (SSRS)
+    href: ../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md
+  - name: Обработка больших отчетов
+    href: ../reporting-services/report-server/process-large-reports.md
+  - name: Максимальные размеры отчетов и моментальных снимков
+    href: ../reporting-services/report-server/report-and-snapshot-size-limits.md
+  - name: Кэширование отчетов
+    href: ../reporting-services/report-server/caching-reports-ssrs.md
+  - name: Общие наборы данных в кэше
+    href: ../reporting-services/report-server/cache-shared-datasets-ssrs.md
+  - name: выполнить предварительную загрузку кэша
+    href: ../reporting-services/report-server/preload-the-cache-report-manager.md
+  - name: кэшировать общий набор данных
+    href: ../reporting-services/report-server/cache-a-shared-dataset.md
+  - name: кэшировать отчет
+    href: ../reporting-services/report-server/cache-a-report-report-manager.md
+  - name: Создание, изменение и удаление моментальных снимков в журнале отчетов
+    href: ../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md
+  - name: Добавление моментального снимка к журналу отчета
+    href: ../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md
+  - name: Создавать журнал отчета
+    href: ../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md
+- name: Обзор
   href: ../reporting-services/report-server-sharepoint/reporting-services-report-server.md
+- name: Сервер отчетов (SharePoint)
+  href: ../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md
+  items:
+  - name: Служба SharePoint и приложения службы
+    href: ../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md
+    items:
+    - name: Управление приложением службы SharePoint — Reporting Services
+      href: ../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md
+    - name: Резервное копирование и восстановление приложений служб Reporting Services для SharePoint
+      href: ../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md
+  - name: Командлеты PowerShell для режима интеграции служб Reporting Services с SharePoint
+    href: ../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md
+  - name: Настройка и администрирование (режим совместимости с SharePoint)
+    href: ../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md
+    items:
+    - name: Компоненты семейства веб-сайтов — Reporting Services
+      href: ../reporting-services/report-server-sharepoint/site-collection-features-reporting-services.md
+    - name: Компоненты семейства веб-сайтов — сервер отчетов и Power View
+      href: ../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md
+    - name: Компоненты и параметры сайта — Reporting Services
+      href: ../reporting-services/report-server-sharepoint/site-settings-and-features-reporting-services.md
+    - name: Параметры сайта и компоненты — синхронизация файлов сервера в SharePoint
+      href: ../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md
+    - name: Добавление типов содержимого служб Reporting Services в библиотеку SharePoint
+      href: ../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md
+    - name: Отчеты, созданные в локальном и подключенном режимах в средстве просмотра отчетов
+      href: ../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md
+    - name: Отправка документов в библиотеку SharePoint
+      href: ../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md
+    - name: Определение параметров обработки
+      href: ../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md
+  - name: Веб-часть "Средство просмотра отчетов" на сайте SharePoint
+    href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md
+    items:
+    - name: Развертывание веб-части средства просмотра отчетов
+      href: ../reporting-services/report-server-sharepoint/deploy-report-viewer-web-part.md
+    - name: Добавление веб-части средства просмотра отчетов на веб-страницу
+      href: ../reporting-services/report-server-sharepoint/add-report-viewer-web-part-to-page.md
+    - name: Подключение к веб-части фильтров или документов
+      href: ../reporting-services/report-server-sharepoint/connect-filter-or-documents-web-part-sharepoint-integrated-mode.md
+    - name: Настройка веб-части "Средство просмотра отчетов"
+      href: ../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md
+    - name: Параметры сайта SharePoint для веб-части "Средство просмотра отчетов"
+      href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site-settings.md
+- name: Высокий уровень доступности
+  href: ../reporting-services/report-server-sharepoint/high-availability-reporting-services.md
+- name: Включение и отключение песочницы для языка определения отчетов
+  href: ../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md
+- name: Настройка использования альтернативного имени субъекта в Reporting Services
+  href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
 - name: Закрепление в Power BI
-  href: pin-reporting-services-items-to-power-bi-dashboards.md
-- name: построитель отчетов
+  href: ../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md
+- name: Обзор
   href: ../reporting-services/report-builder/report-builder-in-sql-server-2016.md
-- name: проектирование отчетов
+- name: Запуск построителя отчетов
+  href: ../reporting-services/report-builder/start-report-builder.md
+  items:
+  - name: Задание параметров по умолчанию для построителя отчетов
+    href: ../reporting-services/report-builder/set-default-options-for-report-builder.md
+- name: Учебник. Создание стандартного отчета с диаграммой в режиме «вне сети»
+  href: ../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md
+- name: Представление конструктора отчетов
+  href: ../reporting-services/report-builder/report-design-view-report-builder.md
+  items:
+  - name: Предварительный просмотр отчетов в построителе отчетов
+    href: ../reporting-services/report-builder/previewing-reports-in-report-builder.md
+- name: Представление конструктора общих наборов данных
+  href: ../reporting-services/report-builder/shared-dataset-design-view-report-builder.md
+- name: Сочетания клавиш
+  href: ../reporting-services/report-builder/keyboard-shortcuts-report-builder.md
+- name: Поиск, просмотр и управление отчетами
+  href: ../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md
+  items:
+  - name: Поиск и просмотр отчетов на веб-портале
+    href: ../reporting-services/report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md
+  - name: Поиск и просмотр отчетов с помощью браузера
+    href: ../reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md
+  - name: Диалоговое окно «Преобразование пользовательского элемента отчета»
+    href: ../reporting-services/report-builder/convert-cri-dialog-box-report-builder.md
+- name: Скрытие элемента (построитель отчетов и службы SSRS)
+  href: ../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md
+- name: Export Reports
+  href: ../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md
+  items:
+  - name: Интерактивные возможности модулей подготовки отчетов
+    href: ../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md
+  - name: Экспорт в CSV-файл
+    href: ../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md
+  - name: Экспорт в Microsoft Excel
+    href: ../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md
+  - name: Экспорт в Microsoft Word
+    href: ../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md
+  - name: Подготовка к просмотру в виде HTML
+    href: ../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md
+  - name: Экспорт в файл изображения
+    href: ../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md
+  - name: Экспорт в PDF-файл
+    href: ../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md
+  - name: Экспорт в XML
+    href: ../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md
+  - name: Формирование веб-каналов данных из отчетов
+    href: ../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md
+  - name: Формирование веб-каналов данных из отчета
+    href: ../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md
+  - name: Work Around the Excel 2003 Row Limitation
+    href: ../reporting-services/report-builder/work-around-the-excel-2003-row-limitation.md
+- name: Печать отчетов
+  href: ../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md
+  items:
+  - name: Печать отчетов из браузера с помощью элемента управления печатью
+    href: ../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md
+  - name: Печать отчетов из других приложений
+    href: ../reporting-services/report-builder/print-reports-from-other-applications-report-builder-and-ssrs.md
+  - name: Печать отчета
+    href: ../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md
+  - name: Печать отчетов (службы Reporting Services в режиме SharePoint)
+    href: ../reporting-services/report-builder/print-a-report-reporting-services-in-sharepoint-mode.md
+- name: Сохранение отчетов
+  href: ../reporting-services/report-builder/saving-reports-report-builder.md
+  items:
+  - name: Сохранение отчетов на сервере отчетов
+    href: ../reporting-services/report-builder/save-reports-to-a-report-server-report-builder.md
+  - name: Сохранение отчета в библиотеке SharePoint
+    href: ../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md
+- name: безопасность
+  href: ../reporting-services/report-builder/security-report-builder.md
+- name: Словарь (построитель отчетов)
+  href: ../reporting-services/report-builder/glossary-report-builder.md
+- name: Планирование отчета
   href: ../reporting-services/report-design/planning-a-report-report-builder.md
-- name: Работа с отчетами
+- name: Советы по конструированию отчетов
+  href: ../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md
+- name: Основные понятия о разработке отчетов
+  href: ../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md
+  items:
+  - name: Отчеты, элементы отчетов и определения отчетов
+    href: ../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md
+  - name: Области данных и карты
+    href: ../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md
+  - name: Понятия параметров отчета
+    href: ../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md
+- name: Таблицы, матрицы и списки
+  href: ../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md
+  items:
+  - name: Таблицы
+    href: ../reporting-services/report-design/tables-report-builder-and-ssrs.md
+  - name: Создание матрицы
+    href: ../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md
+  - name: Создание счета-фактуры и формы со списками
+    href: ../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md
+  - name: Область данных табликса
+    href: ../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md
+    items:
+    - name: Области данных табликса
+      href: ../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md
+    - name: Ячейки, строки и столбцы области данных табликса
+      href: ../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md
+  - name: Подготовка данных для отображения в области данных табликса
+    href: ../reporting-services/report-design/preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs.md
+  - name: Добавление данных в область данных табликса
+    href: ../reporting-services/report-design/adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md
+  - name: Изучение возможностей области данных табликса
+    href: ../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md
+  - name: Управление отображением области данных табликса на странице отчетов
+    href: ../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md
+  - name: Управление заголовками строк и столбцов
+    href: ../reporting-services/report-design/controlling-row-and-column-headings-report-builder-and-ssrs.md
+  - name: Основные сведения о группах
+    href: ../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md
+  - name: Создание групп рекурсивной иерархии
+    href: ../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md
+  - name: Добавление группы подробных сведений
+    href: ../reporting-services/report-design/add-a-details-group-report-builder-and-ssrs.md
+  - name: Добавление итога в группу или область данных табликса
+    href: ../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md
+  - name: изменить элемент в ячейке
+    href: ../reporting-services/report-design/change-an-item-within-a-cell-report-builder-and-ssrs.md
+  - name: Изменение высоты строки или ширины столбца
+    href: ../reporting-services/report-design/change-row-height-or-column-width-report-builder-and-ssrs.md
+  - name: Вставка или удаление столбца
+    href: ../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md
+  - name: Вставка или удаление строки
+    href: ../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md
+  - name: Объединение ячеек в области данных
+    href: ../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md
+  - name: Создание группы рекурсивной иерархии
+    href: ../reporting-services/report-design/create-a-recursive-hierarchy-group-report-builder-and-ssrs.md
+  - name: Добавление или удаление группы в области данных
+    href: ../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md
+  - name: Отображение верхних и нижних колонтитулов в группе
+    href: ../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md
+  - name: Создание пошагового отчета
+    href: ../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md
+  - name: Добавление, перемещение или удаление таблицы, матрицы или списка
+    href: ../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md
+- name: Элементы отчетов
+  href: ../reporting-services/report-design/report-parts-report-builder-and-ssrs.md
+  items:
+  - name: Публикация и повторная публикация элементов отчетов (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md
+  - name: Просмотр элементов отчета и назначение папки по умолчанию (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md
+- name: Диаграммы
+  href: ../reporting-services/report-design/charts-report-builder-and-ssrs.md
+  items:
+  - name: Добавление диаграммы в отчет (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md
+  - name: Типы диаграмм (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/chart-types-report-builder-and-ssrs.md
+    items:
+    - name: Изменение типа диаграммы (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md
+    - name: Диаграммы с областями (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/area-charts-report-builder-and-ssrs.md
+    - name: Линейчатые диаграммы (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md
+    - name: Гистограммы (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/column-charts-report-builder-and-ssrs.md
+    - name: Графики (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/line-charts-report-builder-and-ssrs.md
+    - name: Круговые диаграммы (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md
+    - name: Полярные диаграммы (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md
+    - name: Диаграммы диапазонов (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/range-charts-report-builder-and-ssrs.md
+    - name: Точечные диаграммы (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/scatter-charts-report-builder-and-ssrs.md
+    - name: Фигурные диаграммы (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md
+    - name: Биржевые диаграммы (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/stock-charts-report-builder-and-ssrs.md
+    - name: Диаграммы "дерево" и "солнечные лучи" в Reporting Services
+      href: ../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md
+  - name: Форматирование диаграммы (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md
+    items:
+    - name: Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md
+      items:
+      - name: Указание согласованных цветов для нескольких фигурных диаграмм (построитель отчетов и службы SSRS)
+        href: ../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md
+      - name: Задание цветов диаграммы с помощью палитры (построитель отчетов и службы SSRS)
+        href: ../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md
+      - name: Выделение данных диаграммы путем добавления полосковых линий (построитель отчетов и службы SSRS)
+        href: ../reporting-services/report-design/highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md
+    - name: Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md
+      items:
+      - name: Форматирование меток оси в виде значений даты или валюты (построитель отчетов и службы SSRS)
+        href: ../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md
+      - name: Размещение меток на диаграмме (построитель отчетов и службы SSRS)
+        href: ../reporting-services/report-design/position-labels-in-a-chart-report-builder-and-ssrs.md
+      - name: Задание интервала оси (построитель отчетов и службы SSRS)
+        href: ../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md
+      - name: Добавление или удаление полей из диаграммы (построитель отчетов и службы SSRS)
+        href: ../reporting-services/report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md
+      - name: Задание логарифмической шкалы (построитель отчетов и службы SSRS)
+        href: ../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md
+    - name: Условные обозначения диаграммы — форматирование
+      href: ../reporting-services/report-design/chart-legend-formatting-report-builder.md
+    - name: Условные обозначения диаграммы — скрытие элементов
+      href: ../reporting-services/report-design/chart-legend-hide-items-report-builder.md
+    - name: Условные обозначения диаграммы — изменение текста элемента
+      href: ../reporting-services/report-design/chart-legend-change-item-text-report-builder.md
+    - name: Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md
+      items:
+      - name: Отображение всплывающих подсказок для ряда (построитель отчетов и службы SSRS)
+        href: ../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md
+      - name: Отображение меток точек данных за пределами круговой диаграммы (построитель отчетов и службы SSRS)
+        href: ../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md
+      - name: Отображение процентных значений на круговой диаграмме (построитель отчетов и службы SSRS)
+        href: ../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md
+    - name: Эффекты диаграммы — трехмерное отображение, багетная рамка и другие
+      href: ../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md
+    - name: Эффекты диаграммы — добавление трехмерных эффектов
+      href: ../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md
+    - name: Эффекты диаграммы — добавление багетной рамки, рельефа и текстуры
+      href: ../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md
+    - name: Добавление границы рамки в диаграмму (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/add-a-border-frame-to-a-chart-report-builder-and-ssrs.md
+    - name: Вывод значений круговой диаграммы в верхней части диаграммы (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs.md
+  - name: Точки данных со значением NULL и пустые точки в диаграммах (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md
+    items:
+    - name: Добавление пустых точек на диаграмму (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md
+  - name: Отображение на диаграмме ряда с несколькими диапазонами данных (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md
+    items:
+    - name: Добавление в диаграмму разрывов шкалы (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/add-scale-breaks-to-a-chart-report-builder-and-ssrs.md
+  - name: Несколько рядов на диаграмме (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md
+    items:
+    - name: Задание области диаграммы для ряда (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/specify-a-chart-area-for-a-series-report-builder-and-ssrs.md
+    - name: Построение данных на вспомогательной оси (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md
+  - name: Связывание нескольких областей данных с одним набором данных (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md
+    items:
+    - name: Отображение одних и тех же данных в матрице и на диаграмме
+      href: ../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md
+  - name: Добавление или удаление группы в диаграмме (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md
+  - name: Добавление скользящего среднего в диаграмму (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md
+  - name: Сбор мелких срезов на круговой диаграмме (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md
+  - name: Устранение неполадок с диаграммами (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/troubleshoot-charts-report-builder-and-ssrs.md
+- name: Спарклайны и гистограммы
+  href: ../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md
+  items:
+  - name: Добавление спарклайнов и гистограмм (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/add-sparklines-and-data-bars-report-builder-and-ssrs.md
+  - name: Выравнивание данных в диаграмме в таблице или матрице (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md
+- name: Датчики
+  href: ../reporting-services/report-design/gauges-report-builder-and-ssrs.md
+  items:
+  - name: Форматирование шкал на датчике
+    href: ../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md
+  - name: Форматирование указателей на датчике
+    href: ../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md
+  - name: Форматирование диапазонов на датчике
+    href: ../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md
+  - name: Добавление датчика в отчет
+    href: ../reporting-services/report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md
+  - name: Установка минимума и максимума на датчике
+    href: ../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md
+- name: Индикаторы
+  href: ../reporting-services/report-design/indicators-report-builder-and-ssrs.md
+  items:
+  - name: Добавление или удаление индикатора
+    href: ../reporting-services/report-design/add-or-delete-an-indicator-report-builder-and-ssrs.md
+  - name: Изменение значков индикаторов и наборов индикаторов
+    href: ../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md
+  - name: Задание и настройка единиц измерения
+    href: ../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md
+  - name: Задание области действия синхронизации
+    href: ../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md
+  - name: Указание размера индикатора с помощью выражения
+    href: ../reporting-services/report-design/specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md
+  - name: Добавление индикаторов и датчиков на панель датчиков
+    href: ../reporting-services/report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md
+- name: Карты
+  href: ../reporting-services/report-design/maps-report-builder-and-ssrs.md
+  items:
+  - name: Планирование отчета-карты
+    href: ../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md
+  - name: Мастер карт и мастер слоев карт
+    href: ../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md
+  - name: Настройка данных и отображения карты или слоя карты
+    href: ../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md
+  - name: Изменение параметров отображения многоугольников, линий и точек с помощью правил и аналитических данных
+    href: ../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md
+  - name: добавить, изменить или удалить карту или слой карты
+    href: ../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md
+  - name: изменить условные обозначения карты, цветовую шкалу и связанные правила
+    href: ../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md
+  - name: Добавление на карту пользовательских местоположений
+    href: ../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md
+  - name: Устранение неполадок в отчетах. Отчеты-карты
+    href: ../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md
+- name: Изображения, текстовые поля, прямоугольники и линии
+  href: ../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md
+  items:
+  - name: Текстовые поля (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md
+    items:
+    - name: Добавление, перемещение или удаление текстового поля (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/add-move-or-delete-a-text-box-report-builder-and-ssrs.md
+    - name: Задание ориентации текстового поля (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md
+    - name: Разрешение расширения или сжатия для текстового поля (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md
+  - name: Прямоугольники и линии (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md
+    items:
+    - name: Добавление прямоугольника или контейнера (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md
+    - name: Добавление и изменение линии (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/add-and-modify-a-line-report-builder-and-ssrs.md
+    - name: Добавление в отчет границы (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/add-a-border-to-a-report-report-builder-and-ssrs.md
+  - name: Изображения (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/images-report-builder-and-ssrs.md
+    items:
+    - name: Добавление внешнего изображения (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md
+    - name: Внедрение изображения в отчет (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md
+    - name: Добавление фонового изображения (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md
+    - name: Добавление привязанного к данным изображения (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md
+- name: Форматирование элементов отчета
+  href: ../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md
+  items:
+  - name: Форматирование текста и заполнителей (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md
+    items:
+    - name: Форматирование текста в текстовом поле (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md
+  - name: Импорт HTML в отчет (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md
+    items:
+    - name: Добавление HTML в отчет (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md
+  - name: Форматирование чисел и дат (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md
+  - name: Форматирование линий, цветов и изображений (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md
+  - name: Задание локали для отчета или текстового поля
+    href: ../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md
+- name: Параметры отчета
+  href: ../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md
+  items:
+  - name: Добавление, изменение или удаление параметра отчета
+    href: ../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md
+  - name: добавить, изменить или удалить допустимые значения параметра отчета
+    href: ../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md
+  - name: добавить, изменить или удалить значения по умолчанию для параметра отчета
+    href: ../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md
+  - name: Изменение порядка параметров отчета
+    href: ../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md
+  - name: Добавление каскадных параметров в отчет
+    href: ../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md
+  - name: Добавление в отчет параметра с несколькими значениями
+    href: ../reporting-services/report-design/add-a-multi-value-parameter-to-a-report.md
+  - name: настроить параметры опубликованного отчета
+    href: ../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md
+  - name: Настройка области параметров в отчете
+    href: ../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md
+- name: Фильтрация, группирование и сортировка данных
+  href: ../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md
+  items:
+  - name: Примеры выражения групп
+    href: ../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md
+  - name: Примеры уравнений фильтра
+    href: ../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md
+  - name: Добавление фильтров набора данных, фильтров области данных и групповых фильтров
+    href: ../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md
+  - name: Добавление фильтра
+    href: ../reporting-services/report-design/add-a-filter-report-builder-and-ssrs.md
+  - name: Сортировка данных в области данных
+    href: ../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md
+  - name: Часто используемые фильтры
+    href: ../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md
+  - name: Панель группировки
+    href: ../reporting-services/report-design/grouping-pane-report-builder.md
+- name: Детализация, углубленная детализация, вложенные отчеты и вложенные области данных
+  href: ../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md
+  items:
+  - name: Детализированные отчеты (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md
+    items:
+    - name: Добавление действия детализации в отчет (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md
+  - name: Вложенные отчеты (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/subreports-report-builder-and-ssrs.md
+    items:
+    - name: Добавление вложенного отчета и параметров (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md
+  - name: Действие детализации (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md
+    items:
+    - name: Добавление действия "Развернуть" или "Свернуть" к элементу (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md
+  - name: Вложенные области данных (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md
+  - name: Указание путей к внешним элементам (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md
+- name: Выражения
+  href: ../reporting-services/report-design/expressions-report-builder-and-ssrs.md
+  items:
+  - name: Добавление выражения
+    href: ../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md
+  - name: Примеры выражений
+    href: ../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md
+  - name: Использование выражений в отчетах
+    href: ../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md
+  - name: Область выражения для суммирования, агрегатных функций и встроенных коллекций
+    href: ../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md
+  - name: Пользовательский код и ссылок на сборки в выражениях в конструкторе отчетов
+    href: ../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md
+    items:
+    - name: Добавление в отчет ссылку на сборку
+      href: ../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md
+    - name: добавить код в отчет
+      href: ../reporting-services/report-design/add-code-to-a-report-ssrs.md
+  - name: Справочник выражений
+    href: ../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md
+    items:
+    - name: Функции построителя отчетов — справочник по агрегатным функциям
+      href: ../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md
+      items:
+      - name: Функции построителя отчетов — агрегатная функция
+        href: ../reporting-services/report-design/report-builder-functions-aggregate-function.md
+      - name: Функции построителя отчетов — функция Avg
+        href: ../reporting-services/report-design/report-builder-functions-avg-function.md
+      - name: Функции построителя отчетов — функция Count
+        href: ../reporting-services/report-design/report-builder-functions-count-function.md
+      - name: Функции построителя отчетов — функция CountDistinct
+        href: ../reporting-services/report-design/report-builder-functions-countdistinct-function.md
+      - name: Функции построителя отчетов — функция CountRows
+        href: ../reporting-services/report-design/report-builder-functions-countrows-function.md
+      - name: Функции построителя отчетов — функция First
+        href: ../reporting-services/report-design/report-builder-functions-first-function.md
+      - name: Функции построителя отчетов — функция InScope
+        href: ../reporting-services/report-design/report-builder-functions-inscope-function.md
+      - name: Функции построителя отчетов — функция Last
+        href: ../reporting-services/report-design/report-builder-functions-last-function.md
+      - name: Функции построителя отчетов — функция Level
+        href: ../reporting-services/report-design/report-builder-functions-level-function.md
+      - name: Функции построителя отчетов — функция Lookup
+        href: ../reporting-services/report-design/report-builder-functions-lookup-function.md
+      - name: Функции построителя отчетов — функция LookupSet
+        href: ../reporting-services/report-design/report-builder-functions-lookupset-function.md
+      - name: Функции построителя отчетов — функция Max
+        href: ../reporting-services/report-design/report-builder-functions-max-function.md
+      - name: Функции построителя отчетов — функция Min
+        href: ../reporting-services/report-design/report-builder-functions-min-function.md
+      - name: Функции построителя отчетов — функция Multilookup
+        href: ../reporting-services/report-design/report-builder-functions-multilookup-function.md
+      - name: Функции построителя отчетов — функция Previous
+        href: ../reporting-services/report-design/report-builder-functions-previous-function.md
+      - name: Функции построителя отчетов — функция RowNumber
+        href: ../reporting-services/report-design/report-builder-functions-rownumber-function.md
+      - name: Функции построителя отчетов — функция RunningValue
+        href: ../reporting-services/report-design/report-builder-functions-runningvalue-function.md
+      - name: Функции построителя отчетов — функция StDev
+        href: ../reporting-services/report-design/report-builder-functions-stdev-function.md
+      - name: Функции построителя отчетов — функция StDevP
+        href: ../reporting-services/report-design/report-builder-functions-stdevp-function.md
+      - name: Функции построителя отчетов — функция Sum
+        href: ../reporting-services/report-design/report-builder-functions-sum-function.md
+      - name: Функции построителя отчетов — функция Union
+        href: ../reporting-services/report-design/report-builder-functions-union-function.md
+      - name: Функции построителя отчетов — функция Var
+        href: ../reporting-services/report-design/report-builder-functions-var-function.md
+      - name: Функции построителя отчетов — функция VarP
+        href: ../reporting-services/report-design/report-builder-functions-varp-function.md
+    - name: Типы данных в выражениях
+      href: ../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md
+    - name: Константы в выражениях
+      href: ../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md
+    - name: Операторы в выражениях
+      href: ../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md
+    - name: Встроенные коллекции в выражениях
+      href: ../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md
+      items:
+      - name: Встроенные коллекции — глобальные значения и ссылки на пользовательские поля
+        href: ../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md
+      - name: Встроенные коллекции — ссылки на коллекцию параметров
+        href: ../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md
+      - name: Встроенные коллекции — ссылки на коллекцию полей набора данных
+        href: ../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md
+      - name: Встроенные коллекции — ссылки на DataSources и DataSets
+        href: ../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md
+      - name: Встроенные коллекции — ссылки на переменные отчета и группы
+        href: ../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md
+      - name: Встроенные коллекции — ссылки на коллекцию ReportItems
+        href: ../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md
+    - name: Формулы в запросах модели отчета
+      href: ../reporting-services/report-design/formulas-in-report-model-queries-report-builder-and-ssrs.md
+- name: Интерактивная сортировка, схемы документов и ссылки
+  href: ../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md
+  items:
+  - name: Интерактивная сортировка (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md
+    items:
+    - name: Добавление интерактивной сортировки в таблицу или матрицу (построитель отчетов и службы SSRS)
+      href: ../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md
+  - name: Добавление гиперссылки на URL-адрес (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md
+  - name: Добавление в отчет закладки (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md
+  - name: Создание схемы документа (построитель отчетов и службы SSRS)
+    href: ../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md
+- name: Макет страницы и подготовка к просмотру
+  href: ../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md
+  items:
+  - name: Поведение при подготовке к просмотру
+    href: ../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md
+    items:
+    - name: Подготовка к просмотру областей данных
+      href: ../reporting-services/report-design/rendering-data-regions-report-builder-and-ssrs.md
+    - name: Подготовка к просмотру элементов отчета
+      href: ../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md
+    - name: Подготовка данных к просмотру
+      href: ../reporting-services/report-design/rendering-data-report-builder-and-ssrs.md
+  - name: Разбиение на страницы в службах Reporting Services
+    href: ../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md
+  - name: Верхние и нижние колонтитулы страницы
+    href: ../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md
+  - name: Управление разрывами страниц, заголовками, столбцами и строками
+    href: ../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md
+  - name: Добавление разрыва страницы
+    href: ../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md
+  - name: Отображение заголовков строк и столбцов на нескольких страницах
+    href: ../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md
+  - name: Добавление или удаление верхнего или нижнего колонтитула страницы
+    href: ../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md
+  - name: Сохранение заголовков видимыми при прокрутке отчета
+    href: ../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md
+  - name: Отображение номеров страниц или других свойств отчета
+    href: ../reporting-services/report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md
+  - name: Скрытие верхнего или нижнего колонтитула первой или последней страницы
+    href: ../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md
+- name: Элементы отчетов в конструкторе отчетов
+  href: ../reporting-services/report-design/report-parts-in-report-designer-ssrs.md
+- name: Управление элементами отчета
+  href: ../reporting-services/report-design/managing-report-parts.md
+- name: Обзор
   href: ../reporting-services/reports/reporting-services-reports-ssrs.md
-- name: Данные отчета
+- name: Публикация источников данных и отчетов
+  href: ../reporting-services/reports/publishing-data-sources-and-reports.md
+  items:
+  - name: Предварительный просмотр отчетов
+    href: ../reporting-services/reports/previewing-reports.md
+  - name: Публикация отчетов на сервере отчетов
+    href: ../reporting-services/reports/publishing-reports-to-a-report-server.md
+  - name: опубликовать отчет в библиотеке SharePoint
+    href: ../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md
+  - name: опубликовать общий источник данных в библиотеке SharePoint
+    href: ../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md
+- name: язык определения отчетов
+  href: ../reporting-services/reports/report-definition-language-ssrs.md
+- name: определить версию схемы определения отчета
+  href: ../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md
+- name: Поиск текста, числа и даты в отчете
+  href: ../reporting-services/reports/find-text-numbers-or-dates-in-a-report.md
+- name: Настройка свойств выполнения для отчета
+  href: ../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md
+- name: ограничить объем журнала отчета
+  href: ../reporting-services/reports/limit-report-history-report-manager.md
+- name: открыть и закрыть отчет
+  href: ../reporting-services/reports/open-and-close-a-report-report-manager.md
+- name: передать файл или отчет
+  href: ../reporting-services/reports/upload-a-file-or-report-report-manager.md
+- name: Создание связанного отчета
+  href: ../reporting-services/reports/create-a-linked-report.md
+- name: Отчеты с дополнительной информацией (SSRS)
+  href: ../reporting-services/reports/clickthrough-reports-ssrs.md
+- name: Просмотр и изучение отчетов в собственном режиме с помощью веб-части SharePoint (службы SSRS)
+  href: ../reporting-services/reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md
+- name: Обзор
   href: ../reporting-services/report-data/report-data-ssrs.md
-- name: Мобильные отчеты
+- name: Источники данных, поддерживаемые службами Reporting Services
+  href: ../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md
+- name: Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)
+  href: ../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md
+- name: Добавление и проверка подключения к данным
+  href: ../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md
+- name: Создание, изменение и удаление общих источников данных
+  href: ../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md
+- name: Создание и изменение внедренных источников данных
+  href: ../reporting-services/report-data/create-and-modify-embedded-data-sources.md
+- name: Преобразование источников данных
+  href: ../reporting-services/report-data/convert-data-sources-report-builder-and-ssrs.md
+- name: Добавление данных из внешних источников данных
+  href: ../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md
+  items:
+  - name: Тип соединения SQL Server
+    href: ../reporting-services/report-data/sql-server-connection-type-ssrs.md
+  - name: Тип соединения служб Analysis Services для многомерных выражений
+    href: ../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md
+    items:
+    - name: Расширенные свойства поля для базы данных служб Analysis Services
+      href: ../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md
+  - name: Тип соединения PowerPivot
+    href: ../reporting-services/report-data/power-pivot-connection-type-ssrs.md
+  - name: Тип соединения список SharePoint
+    href: ../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md
+  - name: Тип соединения с SQL Azure
+    href: ../reporting-services/report-data/sql-azure-connection-type-ssrs.md
+  - name: Тип соединения OLE DB
+    href: ../reporting-services/report-data/ole-db-connection-type-ssrs.md
+  - name: Тип соединения с параллельным хранилищем данных SQL Server
+    href: ../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md
+  - name: Тип соединения Teradata
+    href: ../reporting-services/report-data/teradata-connection-type-ssrs.md
+  - name: Тип соединения Oracle
+    href: ../reporting-services/report-data/oracle-connection-type-ssrs.md
+  - name: Тип соединения SAP NetWeaver BI
+    href: ../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md
+  - name: Тип соединения Hyperion Essbase
+    href: ../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md
+  - name: Тип соединения ODBC
+    href: ../reporting-services/report-data/odbc-connection-type-ssrs.md
+  - name: Тип соединения XML
+    href: ../reporting-services/report-data/xml-connection-type-ssrs.md
+    items:
+    - name: Синтаксис запроса XML для XML-данных отчета
+      href: ../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md
+    - name: Синтаксис пути к элементу для XML-данных отчета
+      href: ../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md
+  - name: Соединение с моделью отчета
+    href: ../reporting-services/report-data/report-model-connection-ssrs.md
+  - name: Тип соединения служб Analysis Services для расширений интеллектуального анализа данных
+    href: ../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md
+    items:
+    - name: получить данные из модели интеллектуального анализа данных (расширения интеллектуального анализа данных)
+      href: ../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md
+  - name: Модули обработки данных и поставщики данных .NET Framework
+    href: ../reporting-services/report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md
+    items:
+    - name: Регистрация стандартного поставщика данных .NET Framework
+      href: ../reporting-services/report-data/register-a-standard-net-framework-data-provider-ssrs.md
+- name: Управление источниками данных отчета
+  href: ../reporting-services/report-data/manage-report-data-sources.md
+- name: Задание учетных данных и сведениях о соединении для источников данных отчета
+  href: ../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md
+- name: Сохраненные учетные данные в источнике данных Reporting Services
+  href: ../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md
+- name: Обновление учетных данных в источниках данных отчетов с сайта SharePoint
+  href: ../reporting-services/report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md
+- name: Указание соединений для пользовательских модулей обработки данных
+  href: ../reporting-services/report-data/specify-connections-for-custom-data-processing-extensions.md
+- name: Привязка отчета или модели к общему источнику данных
+  href: ../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md
+- name: Настройка свойств источника данных для отчета
+  href: ../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md
+- name: использовать в отчетах ODC-файл подключения к данным Office
+  href: ../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md
+- name: Область данных отчета
+  href: ../reporting-services/report-data/report-data-pane.md
+- name: Наборы данных отчетов
+  href: ../reporting-services/report-data/report-datasets-ssrs.md
+  items:
+  - name: Средства проектирования запросов
+    href: ../reporting-services/report-data/query-design-tools-ssrs.md
+    items:
+    - name: Построение запроса в конструкторе реляционных запросов
+      href: ../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md
+    - name: Связь параметра запроса с параметром отчета
+      href: ../reporting-services/report-data/associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md
+    - name: Определение параметров в конструкторе запросов многомерных выражений для служб Analysis Services
+      href: ../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md
+    - name: Диалоговое окно «Определение параметров запроса»
+      href: ../reporting-services/report-data/define-query-parameters-dialog-box.md
+    - name: Пользовательский интерфейс конструктора DMX-запросов служб Analysis Services
+      href: ../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md
+    - name: Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services
+      href: ../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md
+    - name: Пользовательский интерфейс графического конструктора запросов
+      href: ../reporting-services/report-data/graphical-query-designer-user-interface.md
+    - name: Пользовательский интерфейс конструктора реляционных запросов
+      href: ../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md
+    - name: Пользовательский интерфейс конструктора запросов Hyperion Essbase
+      href: ../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md
+    - name: Пользовательский интерфейс конструктора запросов моделей отчетов
+      href: ../reporting-services/report-data/report-model-query-designer-user-interface.md
+    - name: Пользовательский интерфейс конструктора запросов BI SAP NetWeaver
+      href: ../reporting-services/report-data/sap-netweaver-bi-query-designer-user-interface.md
+    - name: Конструктор запросов к спискам SharePoint
+      href: ../reporting-services/report-data/sharepoint-list-query-designer-report-builder.md
+    - name: Пользовательский интерфейс текстового конструктора запросов
+      href: ../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md
+  - name: Внедренные и общие наборы данных
+    href: ../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md
+  - name: Создание общего или внедренного набора данных
+    href: ../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md
+  - name: Элементы отчета и наборы данных в построителе отчетов
+    href: ../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md
+  - name: Управление общими наборами данных
+    href: ../reporting-services/report-data/manage-shared-datasets.md
+  - name: Добавление, изменение и обновление полей в области данных отчета
+    href: ../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md
+  - name: Добавление фильтра к набору данных
+    href: ../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md
+  - name: Отображение скрытых наборов данных для значений параметра в многомерных данных
+    href: ../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md
+  - name: Установка сообщения об отсутствии данных для области данных
+    href: ../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md
+  - name: Коллекция полей набора данных
+    href: ../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md
+  - name: Диалоговое окно «Свойства набора данных» — «Настройки»
+    href: ../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md
+  - name: Диалоговое окно «Свойства набора данных» — «Настройки»
+    href: ../reporting-services/report-data/dataset-properties-dialog-box-parameters.md
+  - name: Диалоговое окно «Свойства набора данных» — «Запрос»
+    href: ../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md
+  - name: Внедренные и общие наборы данных отчета
+    href: ../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md
+- name: Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server
   href: ../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md
-- name: Безопасность и защита
+- name: 'Мобильный отчет SQL Server: подробные пошаговые инструкции'
+  href: ../reporting-services/mobile-reports/sql-server-mobile-reports-end-to-end-walk-through.md
+- name: Создание мобильных отчетов служб Reporting Services
+  href: ../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md
+- name: Design first or data first when creating in Reporting Services mobile reports
+  href: ../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md
+- name: Data for Reporting Services mobile reports
+  href: ../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md
+  items:
+  - name: Work with simulated data (Работа со смоделированными данными)
+    href: ../reporting-services/mobile-reports/work-with-simulated-data-in-reporting-services-mobile-reports.md
+  - name: Get data from shared datasets
+    href: ../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md
+  - name: Prepare data for Reporting Services mobile reports
+    href: ../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md
+  - name: Подготовка данных в Excel для мобильных отчетов службы отчетов
+    href: ../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md
+  - name: Сохранение форматирования дат для служб Analysis Services в мобильных отчетах
+    href: ../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md
+- name: Добавление параметров в мобильный отчет
+  href: ../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md
+  items:
+  - name: Открытие мобильного отчета с определенными параметрами строки запроса
+    href: ../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md
+- name: Добавление детализации из мобильного отчета в другие мобильные отчеты или URL-адреса
+  href: ../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md
+- name: Создание мобильного отчета с вкладками с помощью детализации | Мобильные отчеты служб Reporting Services
+  href: ../reporting-services/mobile-reports/create-a-tabbed-mobile-report-by-using-drillthrough.md
+- name: Добавление навигаторов в мобильные отчеты
+  href: ../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md
+- name: Добавление визуализаций в мобильные отчеты
+  href: ../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md
+  items:
+  - name: Группирование данных в мобильном отчете по столбцам или строкам
+    href: ../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md
+- name: Добавление сеток (таблиц) данных в мобильные отчеты
+  href: ../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md
+- name: Добавление датчиков в мобильные отчеты | Службы Reporting Services
+  href: ../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md
+- name: Создание макета мобильного отчета для телефона или планшета
+  href: ../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md
+- name: Maps in Reporting Services mobile reports
+  href: ../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md
+  items:
+  - name: Custom maps in Reporting Services mobile reports
+    href: ../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md
+  - name: Добавление пользовательской карты в мобильный отчет служб Reporting Services
+    href: ../reporting-services/mobile-reports/add-a-custom-map-to-a-reporting-services-mobile-report.md
+- name: Обзор
   href: ../reporting-services/security/reporting-services-security-and-protection.md
-- name: Подписки и доставка
+- name: Расширенная защита для проверки подлинности служб Reporting Services
+  href: ../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md
+- name: Проверка подлинности с использованием сервера отчетов
+  href: ../reporting-services/security/authentication-with-the-report-server.md
+  items:
+  - name: Настройка проверки подлинности Windows на сервере отчетов
+    href: ../reporting-services/security/configure-windows-authentication-on-the-report-server.md
+  - name: Настройка проверки подлинности Windows на сервере отчетов
+    href: ../reporting-services/security/configure-basic-authentication-on-the-report-server.md
+  - name: Настройка нестандартной проверки подлинности или проверку подлинности с помощью форм на сервере отчетов
+    href: ../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md
+  - name: Настройка передачи файлов cookie для пользовательской проверки подлинности на веб-портале
+    href: ../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md
+- name: Роли и разрешения
+  href: ../reporting-services/security/roles-and-permissions-reporting-services.md
+  items:
+  - name: Предоставление пользователям доступа к серверу отчетов
+    href: ../reporting-services/security/grant-user-access-to-a-report-server.md
+  - name: Предоставление разрешений на сервер отчетов в собственном режиме
+    href: ../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md
+    items:
+    - name: Защищаемые элементы
+      href: ../reporting-services/security/securable-items.md
+    - name: Задачи и разрешения
+      href: ../reporting-services/security/tasks-and-permissions.md
+    - name: Разрешения в задачах на уровне элемента
+      href: ../reporting-services/security/tasks-and-permissions-item-level-tasks.md
+    - name: Задачи и разрешения — задачи на уровне системы
+      href: ../reporting-services/security/tasks-and-permissions-system-level-tasks.md
+    - name: Создание назначений ролей и управление ими
+      href: ../reporting-services/security/create-and-manage-role-assignments.md
+    - name: Обеспечение защиты папок
+      href: ../reporting-services/security/secure-folders.md
+    - name: Защищенные отчеты и ресурсы
+      href: ../reporting-services/security/secure-reports-and-resources.md
+    - name: Защита совместно используемых элементов источника данных
+      href: ../reporting-services/security/secure-shared-data-source-items.md
+    - name: Защита элементов общего набора данных
+      href: ../reporting-services/security/secure-shared-dataset-items.md
+    - name: Обеспечение безопасности «Моих отчетов»
+      href: ../reporting-services/security/secure-my-reports.md
+    - name: Создание роли RSExecRole
+      href: ../reporting-services/security/create-the-rsexecrole.md
+    - name: Определение ролей
+      href: ../reporting-services/security/role-definitions.md
+    - name: Создание, удаление или изменение определений ролей
+      href: ../reporting-services/security/role-definitions-create-delete-or-modify.md
+    - name: Предварительно определенные роли
+      href: ../reporting-services/security/role-definitions-predefined-roles.md
+    - name: Назначения ролей
+      href: ../reporting-services/security/role-assignments.md
+    - name: Изменение или удаление назначений ролей
+      href: ../reporting-services/security/role-assignments-modify-or-delete.md
+  - name: Предоставление разрешений для элементов сервера отчетов на сайте SharePoint
+    href: ../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md
+    items:
+    - name: Использование встроенных средств безопасности служб Windows SharePoint Services при работе с элементами сервера отчетов
+      href: ../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md
+    - name: Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint
+      href: ../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md
+    - name: Справочная таблица по разрешениям на сайты SharePoint и списки для элементов сервера отчетов
+      href: ../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md
+    - name: Задание разрешений для работы сервера отчетов в веб-приложении SharePoint
+      href: ../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md
+    - name: задать разрешения для элементов сервера отчетов на сайте SharePoint
+      href: ../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md
+- name: Настройка соединений SSL для сервера отчетов, работающего в собственном режиме
+  href: ../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md
+- name: Обзор
   href: ../reporting-services/subscriptions/schedules.md
-- name: Средства +
+- name: Create, Modify, and Delete Schedules
+  href: ../reporting-services/subscriptions/create-modify-and-delete-schedules.md
+- name: Приостановка и возобновление общих расписаний
+  href: ../reporting-services/subscriptions/pause-and-resume-shared-schedules.md
+- name: Изменение часовых поясов и настроек часов на сервере отчетов
+  href: ../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md
+- name: Управление запущенным процессом
+  href: ../reporting-services/subscriptions/manage-a-running-process.md
+- name: Subscriptions and Delivery
+  href: ../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md
+  items:
+  - name: Доставка электронной почтой в службах Reporting Services
+    href: ../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md
+  - name: Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками
+    href: ../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md
+    items:
+    - name: Доставка библиотек SharePoint в службах Reporting Services
+      href: ../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md
+  - name: Создание подписок для работающих в основном режиме серверов отчетов и управление этими подписками
+    href: ../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md
+    items:
+    - name: Использование страницы "Мои подписки" (сервер отчетов в основном режиме)
+      href: ../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md
+  - name: Доставка отчетов в общие папки с помощью служб Reporting Services
+    href: ../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md
+  - name: Отключение или приостановка обработки отчетов и подписок
+    href: ../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md
+  - name: управляемая данными подписка
+    href: ../reporting-services/subscriptions/data-driven-subscriptions.md
+    items:
+    - name: Создание, изменение и удаление управляемых данными подписок
+      href: ../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md
+    - name: Использование внешнего источника данных для данных подписчика
+      href: ../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md
+  - name: Отслеживание подписок служб Reporting Services
+    href: ../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md
+  - name: Изменение модуля доставки отчетов служб Reporting Services по умолчанию
+    href: ../reporting-services/subscriptions/change-the-default-reporting-services-delivery-extension.md
+  - name: Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
+    href: ../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md
+- name: Обзор
   href: ../reporting-services/tools/reporting-services-tools.md
+- name: Службы Reporting Services в SQL Server Data Tools
+  href: ../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md
+  items:
+  - name: Разработка отчетов с использованием конструктора отчетов
+    href: ../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md
+    items:
+    - name: Добавление в проект отчета нового или существующего отчета
+      href: ../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md
+  - name: Развертывание и поддержка версий в SQL Server Data Tools
+    href: ../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md
+  - name: Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме SharePoint (SSRS)
+    href: ../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md
+  - name: Задание свойства развертывания
+    href: ../reporting-services/tools/set-deployment-properties-reporting-services.md
+  - name: Закрепление области данных отчета в конструкторе отчетов
+    href: ../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md
+  - name: Справка F1 конструктора отчетов
+    href: ../reporting-services/tools/report-designer-f1-help.md
+    items:
+    - name: Структура документа
+      href: ../reporting-services/tools/document-outline.md
+    - name: Конструктор
+      href: ../reporting-services/tools/design-view.md
+    - name: Предварительный просмотр
+      href: ../reporting-services/tools/preview-view.md
+    - name: Панель группировки
+      href: ../reporting-services/tools/grouping-pane.md
+    - name: Диалоговое окно страниц свойств проекта
+      href: ../reporting-services/tools/project-property-pages-dialog-box.md
+    - name: Диалоговое окно «Имя входа служб Reporting Services» (службы SSRS)
+      href: ../reporting-services/tools/reporting-services-login-dialog-box-ssrs.md
+- name: Службы Reporting Services в среде SQL Server Management Studio
+  href: ../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md
+  items:
+  - name: Установка свойств сервера отчетов
+    href: ../reporting-services/tools/set-report-server-properties-management-studio.md
+  - name: Подключение к серверу отчетов в среде Management Studio
+    href: ../reporting-services/tools/connect-to-a-report-server-in-management-studio.md
+  - name: удалить элемент
+    href: ../reporting-services/tools/delete-an-item-management-studio.md
+  - name: Справка F1 по использованию сервера отчетов среде Management Studio
+    href: ../reporting-services/tools/report-server-in-management-studio-f1-help.md
+    items:
+    - name: Отмена заданий сервера отчетов
+      href: ../reporting-services/tools/cancel-report-server-jobs-management-studio.md
+    - name: Удаление объектов из каталога
+      href: ../reporting-services/tools/delete-catalog-items-management-studio.md
+    - name: Свойства задания
+      href: ../reporting-services/tools/job-properties-management-studio.md
+    - name: Создание общего расписания
+      href: ../reporting-services/tools/new-shared-schedule-management-studio.md
+    - name: Создать системную роль
+      href: ../reporting-services/tools/new-system-role-management-studio.md
+    - name: Создание пользовательской роли
+      href: ../reporting-services/tools/new-user-role-management-studio.md
+    - name: Свойства расписания (страница «Общие»)
+      href: ../reporting-services/tools/schedule-properties-general-page.md
+    - name: Свойства расписания (страница отчетов)
+      href: ../reporting-services/tools/schedule-properties-reports-page.md
+    - name: Свойства сервера (страница «Общие»)
+      href: ../reporting-services/tools/report-server-properties-general-page.md
+    - name: Свойства сервера (страница «Выполнение»)
+      href: ../reporting-services/tools/server-properties-execution-page.md
+    - name: Свойства сервера (страница «Журнал»)
+      href: ../reporting-services/tools/server-properties-history-page.md
+    - name: Свойства сервера (страница «Регистрация»)
+      href: ../reporting-services/tools/server-properties-logging-page.md
+    - name: Свойства сервера (страница «Безопасность»)
+      href: ../reporting-services/tools/server-properties-security-page-reporting-services.md
+    - name: Свойства сервера (страница «Дополнительно»)
+      href: ../reporting-services/tools/server-properties-advanced-page-reporting-services.md
+    - name: Свойства системной роли
+      href: ../reporting-services/tools/system-role-properties-management-studio.md
+    - name: Свойства роли пользователя
+      href: ../reporting-services/tools/user-role-properties-management-studio.md
+- name: Среда разработки построителя отчетов
+  href: ../reporting-services/tools/report-builder-authoring-environment-ssrs.md
+- name: Сценарии и PowerShell со службами Reporting Services
+  href: ../reporting-services/tools/scripting-and-powershell-with-reporting-services.md
+  items:
+  - name: Создание скриптов с помощью программы rs.exe и веб-службы
+    href: ../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md
+    items:
+    - name: Форматирование файла скрипта служб Reporting Services
+      href: ../reporting-services/tools/format-a-reporting-services-script-file.md
+    - name: Запуск файла скрипта для служб Reporting Services
+      href: ../reporting-services/tools/run-a-reporting-services-script-file.md
+  - name: Написание скриптов для задач развертывания и администрирования
+    href: ../reporting-services/tools/script-deployment-and-administrative-tasks.md
+  - name: Образец скрипта программы rs.exe служб Reporting Services для копирования содержимого между серверами отчетов
+    href: ../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md
+  - name: Доступ к поставщику WMI для служб Reporting Services
+    href: ../reporting-services/tools/access-the-reporting-services-wmi-provider.md
+- name: Программы командной строки сервера отчетов
+  href: ../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md
+  items:
+  - name: Программа rskeymgmt
+    href: ../reporting-services/tools/rskeymgmt-utility-ssrs.md
+  - name: Программа rsconfig
+    href: ../reporting-services/tools/rsconfig-utility-ssrs.md
+  - name: Служебная программа RS.exe (SSRS)
+    href: ../reporting-services/tools/rs-exe-utility-ssrs.md
+- name: Учебник. Инструкции по поиску и запуску средств служб Reporting Services
+  href: ../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
 - name: Предупреждения об изменении данных (SharePoint)
-  href: reporting-services-data-alerts.md
+  href: ../reporting-services/reporting-services-data-alerts.md
   items:
   - name: Конструктор предупреждений об изменении данных
-    href: data-alert-designer.md
+    href: ../reporting-services/data-alert-designer.md
   - name: Диспетчер предупреждений данных для пользователей SharePoint
-    href: data-alert-manager-for-sharepoint-users.md
+    href: ../reporting-services/data-alert-manager-for-sharepoint-users.md
   - name: Диспетчер предупреждений данных для оповещения администраторов
-    href: data-alert-manager-for-alerting-administrators.md
+    href: ../reporting-services/data-alert-manager-for-alerting-administrators.md
   - name: Предупреждающие сообщения
-    href: data-alert-messages.md
+    href: ../reporting-services/data-alert-messages.md
   - name: Создание предупреждения данных в конструкторе предупреждений данных
-    href: create-a-data-alert-in-data-alert-designer.md
+    href: ../reporting-services/create-a-data-alert-in-data-alert-designer.md
   - name: изменить предупреждение в конструкторе предупреждений
-    href: edit-a-data-alert-in-alert-designer.md
+    href: ../reporting-services/edit-a-data-alert-in-alert-designer.md
   - name: Управление всеми предупреждениями данных на сайте SharePoint в диспетчере предупреждений данных
-    href: manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md
+    href: ../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md
   - name: Управление предупреждениями данных в диспетчере предупреждений данных
-    href: manage-my-data-alerts-in-data-alert-manager.md
+    href: ../reporting-services/manage-my-data-alerts-in-data-alert-manager.md
   - name: Предоставление разрешений для пользователей и оповещение администраторов
-    href: grant-permissions-to-users-and-alerting-administrators.md
+    href: ../reporting-services/grant-permissions-to-users-and-alerting-administrators.md
 - name: Модули
-  href: extensions-ssrs.md
+  href: ../reporting-services/extensions-ssrs.md
   items:
   - name: Настройка параметров модулей подготовки отчетов в RSReportServer.Config
-    href: customize-rendering-extension-parameters-in-rsreportserver-config.md
+    href: ../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md
 - name: Доступ по URL-адресу
-  href: url-access-ssrs.md
+  href: ../reporting-services/url-access-ssrs.md
   items:
   - name: Доступ к элементам сервера отчетов с использованием URL-адреса
-    href: access-report-server-items-using-url-access.md
+    href: ../reporting-services/access-report-server-items-using-url-access.md
   - name: Pass a Report Parameter Within a URL
-    href: pass-a-report-parameter-within-a-url.md
+    href: ../reporting-services/pass-a-report-parameter-within-a-url.md
   - name: Ссылка на параметр доступа по URL-адресу
-    href: url-access-parameter-reference.md
+    href: ../reporting-services/url-access-parameter-reference.md
   - name: Задать язык для параметров отчета в URL-адресе
-    href: set-the-language-for-report-parameters-in-a-url.md
+    href: ../reporting-services/set-the-language-for-report-parameters-in-a-url.md
   - name: Указание настройки сведений об устройстве в URL-адресе
-    href: specify-device-information-settings-in-a-url.md
+    href: ../reporting-services/specify-device-information-settings-in-a-url.md
   - name: Экспорт отчета с применением доступа по URL-адресу
-    href: export-a-report-using-url-access.md
+    href: ../reporting-services/export-a-report-using-url-access.md
   - name: Поиск отчета с использованием URL-адресов
-    href: search-a-report-using-url-access.md
+    href: ../reporting-services/search-a-report-using-url-access.md
   - name: Обработка моментального снимка журнала отчета с использованием доступа по URL-адресу
-    href: render-a-report-history-snapshot-using-url-access.md
-- name: Поставщик WMI
+    href: ../reporting-services/render-a-report-history-snapshot-using-url-access.md
+- name: Обзор
   href: ../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md
-- name: Устранение неполадок +
+- name: MSReportServer_Instance, класс
+  href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-class.md
+  items:
+  - name: Элементы MSReportServer_Instance
+    href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md
+  - name: Свойства MSReportServer_Instance
+    href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties.md
+    items:
+    - name: Свойства MSReportServer_Instance — EditionID
+      href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md
+    - name: Свойства MSReportServer_Instance — EditionName
+      href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md
+    - name: Свойства MSReportServer_Instance — InstanceID
+      href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instanceid.md
+    - name: Свойства MSReportServer_Instance — InstanceName
+      href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instancename.md
+    - name: Свойства MSReportServer_Instance — IsSharePointIntegrated
+      href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-issharepointintegrated.md
+    - name: Свойства MSReportServer_Instance — Version
+      href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-version.md
+  - name: Методы MSReportServer_Instance
+    href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods.md
+    items:
+    - name: Методы MSReportServer_Instance — GetReportServerUrls
+      href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md
+- name: MSReportServer_ConfigurationSetting, класс
+  href: ../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md
+  items:
+  - name: Элементы MSReportServer_ConfigurationSetting
+    href: ../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md
+  - name: Свойства MSReportServer_ConfigurationSetting
+    href: ../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-properties.md
+    items:
+    - name: Свойство ConfigurationSetting — ConnectionPoolSize
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-connectionpoolsize.md
+    - name: Свойство ConfigurationSetting — DatabaseLogonAccount
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogonaccount.md
+    - name: Свойство ConfigurationSetting — DatabaseLogonTimeout
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontimeout.md
+    - name: Свойство ConfigurationSetting — DatabaseLogonType
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md
+    - name: Свойство ConfigurationSetting — DatabaseName
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databasename.md
+    - name: Свойство ConfigurationSetting — DatabaseQueryTimeout
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databasequerytimeout.md
+    - name: Свойство ConfigurationSetting — DatabaseServerName
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaseservername.md
+    - name: Свойство ConfigurationSetting — InstallationID
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-installationid.md
+    - name: Свойство ConfigurationSetting — InstanceName
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-instancename.md
+    - name: Свойство ConfigurationSetting — IsInitialized
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-isinitialized.md
+    - name: Свойство ConfigurationSetting — IsSharePointIntegrated
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-issharepointintegrated.md
+    - name: Свойство ConfigurationSetting — IsWebServiceEnabled
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-iswebserviceenabled.md
+    - name: Свойство ConfigurationSetting — IsWindowsServiceEnabled
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-iswindowsserviceenabled.md
+    - name: Свойство ConfigurationSetting — MachineAccountIdentity
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-machineaccountidentity.md
+    - name: Свойство ConfigurationSetting — PathName
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-pathname.md
+    - name: Свойство ConfigurationSetting — SecureConnectionLevel
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-secureconnectionlevel.md
+    - name: Свойство ConfigurationSetting — SenderEmailAddress
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-senderemailaddress.md
+    - name: Свойство ConfigurationSetting — SendUsingSMTPServer
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-sendusingsmtpserver.md
+    - name: Свойство ConfigurationSetting — SMTPServer
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-smtpserver.md
+    - name: Свойство ConfigurationSetting — UnattendedExecutionAccount
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-unattendedexecutionaccount.md
+    - name: Свойство ConfigurationSetting — Version
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-version.md
+    - name: Свойство ConfigurationSetting — VirtualDirectoryReportManager
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-virtualdirectoryreportmanager.md
+    - name: Свойство ConfigurationSetting — VirtualDirectoryReportServer
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-virtualdirectoryreportserver.md
+    - name: Свойство ConfigurationSetting — WindowsServiceIdentityActual
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-windowsserviceidentityactual.md
+    - name: Свойство ConfigurationSetting — WindowsServiceIdentityConfigured
+      href: ../reporting-services/wmi-provider-library-reference/windowsserviceidentityconfigured-property.md
+    - name: Свойство ConfigurationSetting — RSWindowsExtendedProtectionLevel
+      href: ../reporting-services/wmi-provider-library-reference/rswindowsextendedprotectionlevel-property.md
+    - name: Свойство ConfigurationSetting — RSWindowsExtendedProtectionScenario
+      href: ../reporting-services/wmi-provider-library-reference/rswindowsextendedprotectionscenario-property.md
+  - name: Методы MSReportServer_ConfigurationSetting
+    href: ../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-methods.md
+    items:
+    - name: Метод ConfigurationSetting — BackupEncryptionKey
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md
+    - name: Метод ConfigurationSetting — CreateSSLCertificateBinding
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-createsslcertificatebinding.md
+    - name: Метод ConfigurationSetting — DeleteEncryptedInformation
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-deleteencryptedinformation.md
+    - name: Метод ConfigurationSetting — DeleteEncryptionKey
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-deleteencryptionkey.md
+    - name: Метод ConfigurationSetting — GenerateDatabaseCreationScript
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md
+    - name: Метод ConfigurationSetting — GenerateDatabaseRightsScript
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md
+    - name: Метод ConfigurationSetting — GenerateDatabaseUpgradeScript
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md
+    - name: Метод ConfigurationSetting — GetAdminSiteUrl
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-getadminsiteurl.md
+    - name: Метод ConfigurationSetting — GetDatabaseVersionDisplayName
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-getdatabaseversiondisplayname.md
+    - name: Метод ConfigurationSetting — InitializeReportServer
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-initializereportserver.md
+    - name: Метод ConfigurationSetting — ListInstalledSharePointVersions
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listinstalledsharepointversions.md
+    - name: Метод ConfigurationSetting — ListIPAddresses
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listipaddresses.md
+    - name: Метод ConfigurationSetting — ListReportServersInDatabase
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listreportserversindatabase.md
+    - name: Метод ConfigurationSetting — ListReservedURLs
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listreservedurls.md
+    - name: Метод ConfigurationSetting — ListSSLCertificateBindings
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listsslcertificatebindings.md
+    - name: Метод ConfigurationSetting — ListSSLCertificates
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listsslcertificates.md
+    - name: Метод ConfigurationSetting — ReencryptSecureInformation
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-reencryptsecureinformation.md
+    - name: Метод ConfigurationSetting — RemoveSSLCertificateBinding
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-removesslcertificatebinding.md
+    - name: Метод ConfigurationSetting — RemoveUnattendedExecutionAccount
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-removeunattendedexecutionaccount.md
+    - name: Метод ConfigurationSetting — RemoveURL
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-removeurl.md
+    - name: Метод ConfigurationSetting — ReserveURL
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-reserveurl.md
+    - name: Метод ConfigurationSetting — RestoreEncryptionKey
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-restoreencryptionkey.md
+    - name: Метод ConfigurationSetting — SetDatabaseConnection
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setdatabaseconnection.md
+    - name: Метод ConfigurationSetting — SetDatabaseLogonTimeout
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setdatabaselogontimeout.md
+    - name: Метод ConfigurationSetting — SetDatabaseQueryTimeout
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setdatabasequerytimeout.md
+    - name: Метод ConfigurationSetting — SetEmailConfiguration
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setemailconfiguration.md
+    - name: Метод ConfigurationSetting — SetSecureConnectionLevel
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md
+    - name: Метод ConfigurationSetting — SetServiceState
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setservicestate.md
+    - name: Метод ConfigurationSetting — SetUnattendedExecutionAccount
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setunattendedexecutionaccount.md
+    - name: Метод ConfigurationSetting — SetVirtualDirectory
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md
+    - name: Метод ConfigurationSetting — SetWindowsServiceIdentity
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setwindowsserviceidentity.md
+    - name: Метод ConfigurationSetting — SetExtendedProtectionSettings
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md
+- name: Обзор
   href: ../reporting-services/troubleshooting/troubleshoot-reporting-services.md
+- name: Справочник по ошибкам и событиям
+  href: ../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md
+  items:
+  - name: Причины ошибок служб Reporting Services и способы их устранения
+    href: ../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md
+    items:
+    - name: rsAccessedDenied - Ошибка службы Reporting Services
+      href: ../reporting-services/troubleshooting/rsaccesseddenied-reporting-services-error.md
+    - name: rsInternalError - Ошибка службы Reporting Services
+      href: ../reporting-services/troubleshooting/rsinternalerror-reporting-services-error.md
+    - name: rsModelGenerationError - Ошибка службы Reporting Services
+      href: ../reporting-services/troubleshooting/rsmodelgenerationerror-reporting-services-error.md
+    - name: rsProcessingError - Ошибка службы Reporting Services
+      href: ../reporting-services/troubleshooting/rsprocessingerror-reporting-services-error.md
+    - name: rsServerConfigurationError - Ошибка службы Reporting Services
+      href: ../reporting-services/troubleshooting/rsserverconfigurationerror-reporting-services-error.md
+    - name: rrRenderingError - Ошибка службы Reporting Services
+      href: ../reporting-services/troubleshooting/rrrenderingerror-reporting-services-error.md
+    - name: Служба Windows сервера отчетов (MSSQLServer) 107
+      href: ../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md
+- name: Устранение неполадок при подготовке отчетов служб Reporting Services
+  href: ../reporting-services/troubleshooting/troubleshoot-reporting-services-report-issues.md
+- name: Устранение неполадок, связанных с подписками и доставкой служб Reporting Services
+  href: ../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md
+- name: Устранение проблем проектирования отчетов с помощью служб Reporting Services
+  href: ../reporting-services/troubleshooting/troubleshoot-report-design-issues-with-reporting-services.md
+- name: Устранение неполадок при извлечении данных с помощью отчетов служб Reporting Services
+  href: ../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md
+- name: Устранение неполадок при обработке отчетов служб Reporting Services
+  href: ../reporting-services/troubleshooting/troubleshoot-processing-of-reporting-services-reports.md
+- name: Устранение неполадок при подготовке отчетов служб Reporting Services
+  href: ../reporting-services/troubleshooting/troubleshoot-reporting-services-report-rendering-issues.md
+- name: Устранение неполадок с публикацией и просмотром отчетов на сервере отчетов, работающем в основном режиме
+  href: ../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md
+- name: Устранение неполадок с подключением к серверу и базе данных в Reporting Services
+  href: ../reporting-services/troubleshooting/troubleshoot-server-and-database-connection-problems-with-reporting-services.md
 - name: Разработчик
   items:
   - name: REST API
-    href: developer/rest-api.md
-  - name: Примеры REST API
+    href: ../reporting-services/developer/rest-api.md
+  - name: Примеры REST API +
     href: https://github.com/Microsoft/Reporting-Services
-  - name: Интеграция приложений
+  - name: Интеграция служб Reporting Services в приложения
     href: ../reporting-services/application-integration/integrating-reporting-services-into-applications.md
-  - name: Веб-служба сервера отчетов
+  - name: Интеграция с помощью элементов управления средства просмотра отчетов
+    items:
+    - name: Приступая к работе
+      href: ../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-get-started.md
+    - name: Интеграция служб Reporting Services с помощью элементов управления средства просмотра отчетов
+      href: ../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md
+    - name: Интеграция служб Reporting Services с помощью элемента управления средства просмотра отчетов WebForms
+      href: ../reporting-services/application-integration/using-the-webforms-reportviewer-control.md
+    - name: Интеграция служб Reporting Services с помощью элемента управления средства просмотра отчетов WinForms
+      href: ../reporting-services/application-integration/using-the-winforms-reportviewer-control.md
+    - name: Сбор данных в элементе управления средства просмотра отчетов
+      href: ../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md
+    - name: Поддержка средства просмотра отчетов
+      href: ../reporting-services/application-integration/reportviewer-controls-support.md
+    - name: Журнал изменений элементов управления средства просмотра отчетов
+      href: ../reporting-services/application-integration/changelog.md
+  - name: Интеграция служб Reporting Services напрямую
+    items:
+    - name: Выбор между доступом по URL-адресу и протоколом SOAP
+      href: ../reporting-services/application-integration/choosing-between-url-access-and-soap.md
+    - name: Интеграция служб Reporting Services с использованием протокола SOAP
+      href: ../reporting-services/application-integration/integrating-reporting-services-using-soap.md
+    - name: Интеграция служб Reporting Services с использованием протокола SOAP — веб-приложения
+      href: ../reporting-services/application-integration/integrating-reporting-services-using-soap-web-application.md
+    - name: Интеграция служб Reporting Services с использованием протокола SOAP — Windows-приложение
+      href: ../reporting-services/application-integration/integrating-reporting-services-using-soap-windows-application.md
+    - name: Интеграция служб Reporting Services с помощью доступа по URL-адресу
+      href: ../reporting-services/application-integration/integrating-reporting-services-using-url-access.md
+    - name: Интеграция службы Reporting Services с использованием URL-адресов — веб-приложения
+      href: ../reporting-services/application-integration/integrating-reporting-services-using-url-access-web-application.md
+    - name: Интеграция служб Reporting Services с помощью доступа по URL-адресу — Windows-приложение
+      href: ../reporting-services/application-integration/integrating-reporting-services-using-url-access-windows-application.md
+  - name: веб-служба сервера отчетов
     href: ../reporting-services/report-server-web-service/report-server-web-service.md
-  - name: Модули
+  - name: Доступ к API-интерфейсу SOAP
+    href: ../reporting-services/report-server-web-service/accessing-the-soap-api.md
+  - name: The Role of SOAP in Reporting Services
+    href: ../reporting-services/report-server-web-service/the-role-of-soap-in-reporting-services.md
+  - name: Методы веб-службы сервера отчетов
+    href: ../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md
+  - name: Методы авторизации
+    href: ../reporting-services/report-server-web-service/methods/authorization-methods.md
+  - name: Источники данных и методы соединения
+    href: ../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md
+  - name: Методы связанных отчетов
+    href: ../reporting-services/report-server-web-service/methods/linked-reports-methods.md
+  - name: Методы моделей — веб-служба сервера отчетов
+    href: ../reporting-services/report-server-web-service/methods/model-methods-report-server-web-service.md
+  - name: Методы подготовки к просмотру и выполнения
+    href: ../reporting-services/report-server-web-service/methods/rendering-and-execution-methods.md
+  - name: Методы журнала отчета
+    href: ../reporting-services/report-server-web-service/methods/report-history-methods.md
+  - name: Методы параметров отчета
+    href: ../reporting-services/report-server-web-service/methods/report-parameters-methods.md
+  - name: Методы управления пространством имен сервера отчетов
+    href: ../reporting-services/report-server-web-service/methods/report-server-namespace-management-methods.md
+  - name: Конечные точки веб-службы сервера отчетов
+    href: ../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md
+  - name: Методы планирования
+    href: ../reporting-services/report-server-web-service/methods/scheduling-methods.md
+  - name: Методы подписки и доставки
+    href: ../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md
+  - name: Building Applications Using the Web Service and the .NET Framework
+    href: ../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md
+  - name: Знакомство с обработкой исключений в службах Reporting Services
+    href: ../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md
+  - name: Обработка исключений в службах Reporting Services
+    href: ../reporting-services/report-server-web-service-net-framework-exception-handling/handling-exceptions-in-reporting-services.md
+  - name: Рекомендации по обработке исключений в службах Reporting Services
+    href: ../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/best-practices-for-reporting-services-exception-handling.md
+  - name: Обработка предупреждений и ситуаций, не вызывающих исключения
+    href: ../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/handling-warnings-and-cases-that-do-not-cause-exceptions.md
+  - name: Предотвращение недопустимых запросов
+    href: ../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/preventing-invalid-requests.md
+  - name: Использование свойства Detail для обработки определенных ошибок
+    href: ../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md
+  - name: Использование блоков Try-Catch
+    href: ../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-try-and-catch-blocks.md
+  - name: Класс SoapException в службах Reporting Services
+    href: ../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md
+  - name: Свойство Detail
+    href: ../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md
+  - name: Элемент HelpLink
+    href: ../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/helplink-element.md
+  - name: Таблица ошибок SoapException
+    href: ../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/soapexception-errors-table.md
+  - name: Использование заголовков SOAP служб Reporting Services
+    href: ../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md
+  - name: Методы пакетной работы
+    href: ../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md
+  - name: Определение состояния выполнения
+    href: ../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md
+  - name: Задание пространства имен элементов для метода GetProperties
+    href: ../reporting-services/report-server-web-service-net-framework-soap-headers/setting-the-item-namespace-for-the-getproperties-method.md
+  - name: Вызов методов веб-служб
+    href: ../reporting-services/report-server-web-service/net-framework/calling-web-service-methods.md
+  - name: Создание учетной записи-посредника веб-службы
+    href: ../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md
+  - name: Пропуск значений для необязательных объектов веб-службы
+    href: ../reporting-services/report-server-web-service/net-framework/omitting-values-for-optional-web-service-objects.md
+  - name: Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру
+    href: ../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md
+  - name: Параметры модулей доставки служб Reporting Services
+    href: ../reporting-services/report-server-web-service/net-framework/reporting-services-delivery-extension-settings.md
+  - name: Свойства Reporting Services — свойства элементов сервера отчетов
+    href: ../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-item-properties.md
+  - name: Свойства служб Reporting Services — свойства системы сервера отчетов
+    href: ../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md
+  - name: Свойства служб Reporting Services
+    href: ../reporting-services/report-server-web-service/net-framework/reporting-services-properties.md
+  - name: Задание свойства Url для веб-службы
+    href: ../reporting-services/report-server-web-service/net-framework/setting-the-url-property-of-the-web-service.md
+  - name: Передача аргументов методу веб-службы
+    href: ../reporting-services/report-server-web-service/net-framework/supplying-web-service-method-arguments.md
+  - name: Использование защищенных методов веб-службы
+    href: ../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md
+  - name: Использование элемента управления RSClientPrint в пользовательских приложениях
+    href: ../reporting-services/report-server-web-service/net-framework/using-the-rsclientprint-control-in-custom-applications.md
+  - name: Проверка подлинности веб-службы
+    href: ../reporting-services/report-server-web-service/net-framework/web-service-authentication.md
+  - name: Библиотека модулей служб Reporting Services
     href: ../reporting-services/extensions/reporting-services-extension-library.md
-  - name: Пользовательские элементы отчета
+  - name: Создание библиотеки модулей обработки данных
+    href: ../reporting-services/extensions/data-processing/creating-a-data-processing-extension-library.md
+  - name: Общие сведения о модулях обработки данных
+    href: ../reporting-services/extensions/data-processing/data-processing-extensions-overview.md
+  - name: Отладка кода модуля обработки данных
+    href: ../reporting-services/extensions/data-processing/debugging-data-processing-extension-code.md
+  - name: Развертывание модуля обработки данных на сервере отчетов
+    href: ../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-a-report-server.md
+  - name: Развертывание модуля обработки данных в конструкторе отчетов
+    href: ../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md
+  - name: Развертывание модуля обработки данных
+    href: ../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md
+  - name: Реализация класса Command для модуля обработки данных
+    href: ../reporting-services/extensions/data-processing/implementing-a-command-class-for-a-data-processing-extension.md
+  - name: Реализация класса Connection для модуля обработки данных
+    href: ../reporting-services/extensions/data-processing/implementing-a-connection-class-for-a-data-processing-extension.md
+  - name: Реализация модуля обработки данных
+    href: ../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md
+  - name: Реализация класса DataReader для модуля обработки данных
+    href: ../reporting-services/extensions/data-processing/implementing-a-datareader-class-for-a-data-processing-extension.md
+  - name: Подготовка к реализации модуля обработки данных
+    href: ../reporting-services/extensions/data-processing/preparing-to-implement-a-data-processing-extension.md
+  - name: Использование внешнего набора данных со службами Reporting Services
+    href: ../reporting-services/extensions/data-processing/using-an-external-dataset-with-reporting-services.md
+  - name: Создание библиотеки модулей доставки
+    href: ../reporting-services/extensions/delivery-extension/creating-a-delivery-extension-library.md
+  - name: Отладка кода модулей доставки
+    href: ../reporting-services/extensions/delivery-extension/debugging-delivery-extension-code.md
+  - name: Общие сведения о модулях доставки
+    href: ../reporting-services/extensions/delivery-extension/delivery-extensions-overview.md
+  - name: Развертывание модуля доставки
+    href: ../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md
+  - name: Реализация модуля доставки
+    href: ../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md
+  - name: Реализация интерфейса IDeliveryExtension для модуля доставки
+    href: ../reporting-services/extensions/delivery-extension/implementing-the-ideliveryextension-interface-for-a-delivery-extension.md
+  - name: Подготовка к реализации модуля доставки
+    href: ../reporting-services/extensions/delivery-extension/preparing-to-implement-a-delivery-extension.md
+  - name: Удаление модуля доставки
+    href: ../reporting-services/extensions/delivery-extension/removing-a-delivery-extension.md
+  - name: Использование класса Notification для модуля доставки
+    href: ../reporting-services/extensions/delivery-extension/using-a-notification-class-for-a-delivery-extension.md
+  - name: Использование класса RenderedOutputFile для модуля доставки
+    href: ../reporting-services/extensions/delivery-extension/using-the-renderedoutputfile-class-for-a-delivery-extension.md
+  - name: Использование класса Report в модуле доставки
+    href: ../reporting-services/extensions/delivery-extension/using-the-report-class-for-a-delivery-extension.md
+  - name: Использование класса Setting для модуля доставки
+    href: ../reporting-services/extensions/delivery-extension/using-the-setting-class-for-a-delivery-extension.md
+  - name: Развертывание модуля подготовки отчетов
+    href: ../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md
+  - name: Реализация модуля подготовки отчетов
+    href: ../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md
+  - name: Реализация интерфейса IRenderingExtension
+    href: ../reporting-services/extensions/rendering-extension/implementing-the-irenderingextension-interface.md
+  - name: Удаление модуля подготовки отчетов
+    href: ../reporting-services/extensions/rendering-extension/removing-a-rendering-extension.md
+  - name: Общие сведения о модулях подготовки отчетов
+    href: ../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md
+  - name: Проверка подлинности в службах Reporting Services
+    href: ../reporting-services/extensions/security-extension/authentication-in-reporting-services.md
+  - name: Авторизация в службах Reporting Services
+    href: ../reporting-services/extensions/security-extension/authorization-in-reporting-services.md
+  - name: Как установить настраиваемые модули безопасности
+    href: ../reporting-services/extensions/security-extension/how-to-install-custom-security-extensions.md
+  - name: Реализация модуля безопасности
+    href: ../reporting-services/extensions/security-extension/implementing-a-security-extension.md
+  - name: Общие сведения о модулях безопасности
+    href: ../reporting-services/extensions/security-extension/security-extensions-overview.md
+  - name: Управление доступом для кода в службах Reporting Services
+    href: ../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md
+  - name: Разработка безопасных приложений (службы Reporting Services)
+    href: ../reporting-services/extensions/secure-development/secure-development-reporting-services.md
+  - name: Основные сведения о политиках безопасности
+    href: ../reporting-services/extensions/secure-development/understanding-security-policies.md
+  - name: Использование файлов политики безопасности служб Reporting Services
+    href: ../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md
+  - name: модули служб Reporting Services
+    href: ../reporting-services/extensions/reporting-services-extensions.md
+  - name: Вопросы безопасности для модулей
+    href: ../reporting-services/extensions/security-considerations-for-extensions.md
+  - name: Создание компонента времени разработки пользовательского элемента отчета
     href: ../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md
-  - name: Пользовательские сборки
+  - name: Создание компонента времени выполнения пользовательского элемента отчета
+    href: ../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md
+  - name: Архитектура пользовательских элементов отчета
+    href: ../reporting-services/custom-report-items/custom-report-item-architecture.md
+  - name: Библиотеки классов пользовательского элемента отчета
+    href: ../reporting-services/custom-report-items/custom-report-item-class-libraries.md
+  - name: Требования к реализации пользовательских элементов отчета
+    href: ../reporting-services/custom-report-items/custom-report-item-implementation-requirements.md
+  - name: Пользовательские элементы отчета
+    href: ../reporting-services/custom-report-items/custom-report-items.md
+  - name: Как развернуть пользовательский элемент отчета
+    href: ../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md
+  - name: Доступ к пользовательским сборкам посредством выражений
     href: ../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md
+  - name: Проверка предположений о наличии разрешений в пользовательских сборках
+    href: ../reporting-services/custom-assemblies/asserting-permissions-in-custom-assemblies.md
+  - name: Развертывание пользовательской сборки
+    href: ../reporting-services/custom-assemblies/deploying-a-custom-assembly.md
+  - name: Как выполнять отладку пользовательских сборок
+    href: ../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md
+  - name: Инициализация объектов пользовательских сборок
+    href: ../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md
+  - name: Ссылки на сборки в RDL-файле
+    href: ../reporting-services/custom-assemblies/referencing-assemblies-in-an-rdl-file.md
+  - name: Использование пользовательских сборок с отчетами
+    href: ../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md
+  - name: Использование пользовательских сборок со строгими именами
+    href: ../reporting-services/custom-assemblies/using-strong-named-custom-assemblies.md
 - name: Технический справочник
-  href: technical-reference-ssrs.md
+  href: ../reporting-services/technical-reference-ssrs.md
   items:
   - name: Справочник по функциям
-    href: feature-reference-reporting-services.md
+    href: ../reporting-services/feature-reference-reporting-services.md
   - name: Параметры сведений об устройстве для модуля подготовки отчетов
-    href: device-information-settings-for-rendering-extensions-reporting-services.md
+    href: ../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md
     items:
     - name: Настройки сведений об устройстве ATOM
-      href: atom-device-information-settings.md
+      href: ../reporting-services/atom-device-information-settings.md
     - name: Настройки сведений об устройстве CSV
-      href: csv-device-information-settings.md
+      href: ../reporting-services/csv-device-information-settings.md
     - name: Настройки сведений об устройстве Excel
-      href: excel-device-information-settings.md
+      href: ../reporting-services/excel-device-information-settings.md
     - name: Настройки сведений об устройстве HTML
-      href: html-device-information-settings.md
+      href: ../reporting-services/html-device-information-settings.md
     - name: Настройки сведений об устройстве вывода изображений
-      href: image-device-information-settings.md
+      href: ../reporting-services/image-device-information-settings.md
     - name: Настройки сведений об устройстве MHTML
-      href: mhtml-device-information-settings.md
+      href: ../reporting-services/mhtml-device-information-settings.md
     - name: Настройки сведений об устройстве PDF
-      href: pdf-device-information-settings.md
+      href: ../reporting-services/pdf-device-information-settings.md
     - name: Настройки сведений об устройстве PPTX
-      href: pptx-device-information-settings.md
+      href: ../reporting-services/pptx-device-information-settings.md
     - name: Настройки сведений об устройстве XML
-      href: xml-device-information-settings.md
+      href: ../reporting-services/xml-device-information-settings.md
     - name: Настройки сведений об устройстве Word
-      href: word-device-information-settings.md
+      href: ../reporting-services/word-device-information-settings.md
     - name: Настройки сведений об устройстве RGDI
-      href: rgdi-device-information-settings.md
+      href: ../reporting-services/rgdi-device-information-settings.md
   - name: Средство просмотра HTML-страниц и панель инструментов отчета
-    href: html-viewer-and-the-report-toolbar.md
+    href: ../reporting-services/html-viewer-and-the-report-toolbar.md
 - name: Учебники
-  href: reporting-services-tutorials-ssrs.md
+  href: ../reporting-services/reporting-services-tutorials-ssrs.md
   items:
   - name: Создание простого табличного отчета (учебник по службам SSRS)
-    href: create-a-basic-table-report-ssrs-tutorial.md
+    href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
     items:
-    - name: Занятие 1. Создание проекта сервера отчетов
-      href: lesson-1-creating-a-report-server-project-reporting-services.md
-    - name: Занятие 2. Задание информации о соединении
-      href: lesson-2-specifying-connection-information-reporting-services.md
-    - name: Занятие 3. Определение набора данных для табличного отчета
-      href: lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
-    - name: Занятие 4. Добавление таблицы в отчет
-      href: lesson-4-adding-a-table-to-the-report-reporting-services.md
-    - name: 'Lesson 5: Formatting a Report'
-      href: lesson-5-formatting-a-report-reporting-services.md
-    - name: 'Lesson 6: Adding Grouping and Totals'
-      href: lesson-6-adding-grouping-and-totals-reporting-services.md
+    - name: Урок 1. Создание проекта сервера отчетов
+      href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
+    - name: Занятие 2. Задание информации о строке соединения
+      href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
+    - name: Урок 3. Определение набора данных для табличного отчета (службы Reporting Services)
+      href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
+    - name: Урок 4. Добавление таблицы в отчет
+      href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
+    - name: Занятие 5. Форматирование отчета
+      href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
+    - name: Урок 6. Добавление группирования и итогов
+      href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
   - name: Создание управляемой данными подписки (учебник по службам SSRS)
-    href: create-a-data-driven-subscription-ssrs-tutorial.md
+    href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
     items:
-    - name: Занятие 1. Создание образца базы данных подписчика
-      href: lesson-1-creating-a-sample-subscriber-database.md
-    - name: 'Lesson 2: Modifying the Report Data Source Properties'
-      href: lesson-2-modifying-the-report-data-source-properties.md
-    - name: 'Lesson 3: Defining a Data-Driven Subscription'
-      href: lesson-3-defining-a-data-driven-subscription.md
+    - name: Урок 1. Создание образца базы данных подписчика
+      href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
+    - name: Занятие 2. Изменение свойств источника данных отчета
+      href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
+    - name: Урок 3. Определение управляемой данными подписки
+      href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
   - name: Создание детализированного (RDLC) отчета с параметрами с помощью ReportViewer (учебник SSRS)
-    href: create-drillthrough-rdlc-report-with-parameters-reportviewer.md
+    href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
     items:
     - name: Урок 1. Создание нового веб-сайта
-      href: lesson-1-create-a-new-web-site.md
+      href: ../reporting-services/lesson-1-create-a-new-web-site.md
     - name: Занятие 2. Определение подключения к данным и таблицы данных для родительского отчета
-      href: lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
-    - name: Занятие 3. Проектирование родительского отчета с использованием мастера отчетов
-      href: lesson-3-design-the-parent-report-using-the-report-wizard.md
-    - name: Занятие 4. Определение подключения к данным и таблицы данных для родительского отчета
-      href: lesson-4-define-a-data-connection-and-data-table-for-child-report.md
-    - name: Занятие 5. Проектирование родительского отчета с использованием мастера отчетов
-      href: lesson-5-design-the-child-report-using-the-report-wizard.md
+      href: ../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
+    - name: Урок 3. Проектирование родительского отчета с использование мастера отчетов
+      href: ../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md
+    - name: Урок 4. Определение подключения к данным и таблицы данных для дочернего отчета
+      href: ../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md
+    - name: Занятие 5. Проектирование дочернего отчета с использованием мастера отчетов
+      href: ../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md
     - name: Урок 6. Добавление в приложение элемента управления ReportViewer
-      href: lesson-6-add-a-reportviewer-control-to-the-application.md
+      href: ../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md
     - name: Занятие 7. Добавление операции детализации к родительскому отчету
-      href: lesson-7-add-drillthrough-action-on-parent-report.md
-    - name: Занятие 8. Создание фильтра данных
-      href: lesson-8-create-a-data-filter.md
-    - name: 'Lesson 9: Build and Run the Application'
-      href: lesson-9-build-and-run-the-application.md
+      href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
+    - name: Урок 8. Создание фильтра данных
+      href: ../reporting-services/lesson-8-create-a-data-filter.md
+    - name: Урок 9. Построение и запуск приложения
+      href: ../reporting-services/lesson-9-build-and-run-the-application.md
   - name: Учебники по построителю отчетов
-    href: report-builder-tutorials.md
+    href: ../reporting-services/report-builder-tutorials.md
     items:
     - name: Предварительные условия для использования учебников
-      href: prerequisites-for-tutorials-report-builder.md
+      href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
     - name: Альтернативные способы создания подключения к данным (построитель отчетов)
-      href: alternative-ways-to-get-a-data-connection-report-builder.md
+      href: ../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md
     - name: Учебник. Создание простого табличного отчета
-      href: tutorial-creating-a-basic-table-report-report-builder.md
+      href: ../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md
     - name: Учебник. Создание матричного отчета
-      href: tutorial-creating-a-matrix-report-report-builder.md
+      href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
     - name: Учебник. Создание отчета в свободной форме
-      href: tutorial-creating-a-free-form-report-report-builder.md
+      href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
     - name: Учебник. Форматирование текста (построитель отчетов)
-      href: tutorial-format-text-report-builder.md
+      href: ../reporting-services/tutorial-format-text-report-builder.md
     - name: Учебник. Добавление гистограммы к отчету (построитель отчетов)
-      href: tutorial-add-a-column-chart-to-your-report-report-builder.md
+      href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
     - name: Учебник. Добавление круговой диаграммы к отчету (построитель отчетов)
-      href: tutorial-add-a-pie-chart-to-your-report-report-builder.md
-    - name: Учебник. Добавление линейчатой диаграммы к отчету (построитель отчетов)
-      href: tutorial-add-a-bar-chart-to-your-report-report-builder.md
+      href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
+    - name: Учебник. Добавление в отчет линейчатой диаграммы (построитель отчетов)
+      href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
     - name: Учебник. Добавление спарклайна в отчет (построитель отчетов)
-      href: tutorial-add-a-sparkline-to-your-report-report-builder.md
+      href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
     - name: Учебник. Добавление в отчет ключевого показателя эффективности
-      href: tutorial-adding-a-kpi-to-your-report-report-builder.md
+      href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
     - name: Учебник. Отчет-карта
-      href: tutorial-map-report-report-builder.md
+      href: ../reporting-services/tutorial-map-report-report-builder.md
     - name: Учебник. Добавление параметра к отчету (построитель отчетов)
-      href: tutorial-add-a-parameter-to-your-report-report-builder.md
+      href: ../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md
     - name: Учебник. Создание детализированных и главных отчетов
-      href: tutorial-creating-drillthrough-and-main-reports-report-builder.md
+      href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
     - name: Учебник. Общие сведения о выражениях
-      href: tutorial-introducing-expressions.md
-ms.openlocfilehash: bf39fd7ed94dff4fb4efbbc80f25b954438c5494
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+      href: ../reporting-services/tutorial-introducing-expressions.md
+ms.openlocfilehash: 87e4b66b79941be4940bd5c3e4904a01d0e9be92
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350588"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676202"

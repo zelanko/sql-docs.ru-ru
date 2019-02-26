@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b11b3154162fafdfc717e9785fb65e59dc45799c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ba2ed69239313a7933840d7a99ccbf3ce0864bfd
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510817"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828424"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Настройка постоянной памяти (PMEM) для SQL Server в Linux
 
@@ -80,7 +80,7 @@ ndctl list
 
   Когда устройство будет настроено ndctl, отформатирован и подключен, файлы базы данных можно разместить в нем. Можно также создать новую базу данных 
 
-1. Включите просвещения файл базы данных SQL Server с помощью флага трассировки 3979. Этот флаг трассировки — это флаг трассировки при запуске и таким образом, необходимо включить с помощью служебной программы mssql-conf.
+1. Так как устройства PMEM O_DIRECT safe, установите флаг трассировки 3979 для отключения механизма принудительной записи на диск. Этот флаг трассировки — это флаг трассировки при запуске и таким образом, необходимо включить с помощью служебной программы mssql-conf. Обратите внимание на то, что это изменение конфигурации уровня сервера, и этот флаг трассировки не следует использовать при наличии любой O_DIRECT несоответствующих устройств, которым требуется механизма принудительной записи на диск для обеспечения целостности данных. Дополнительные сведения см. в разделе https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux.
 
 1. Перезапуск SQL Server.
 
