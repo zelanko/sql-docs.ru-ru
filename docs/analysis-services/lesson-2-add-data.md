@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 22ee688f6ef1036c63cd3bf878ccf2fce869115f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b135362a9f64ac8e1bd0f696f88b8aa92d8af283
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401639"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852939"
 ---
 # <a name="lesson-2-add-data"></a>Занятие 2. Добавление данных
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 На этом занятии вы используете мастер импорта таблиц в SSDT для подключения к базе данных AdventureWorksDW SQL, выбора данных, предварительного просмотра и фильтрации данных и затем импортировать данные в рабочую область модели.  
   
-С помощью мастера импорта таблиц можно импортировать данные из разных реляционных источников: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata и других. Шаги по импорту данных из каждого из этих реляционных источников очень похожи на те, которые будут описаны ниже. Можно также выбрать данные с помощью хранимой процедуры. Дополнительные сведения об импорте данных и различные типы источников данных, можно импортировать из см. в разделе [источников данных](../analysis-services/tabular-models/data-sources-ssas-tabular.md).  
+С помощью мастера импорта таблиц можно импортировать данные из разных реляционных источников: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata и других. Шаги по импорту данных из каждого из этих реляционных источников очень похожи на те, которые будут описаны ниже. Можно также выбрать данные с помощью хранимой процедуры. Дополнительные сведения об импорте данных и различные типы источников данных, можно импортировать из см. в разделе [источников данных](../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
   
 Предполагаемое время выполнения данного занятия: **20 минут**  
   
@@ -164,7 +164,7 @@ ms.locfileid: "52401639"
 -   Click **Файл** > **Сохранить все**.  
   
 ## <a name="whats-next"></a>Дальнейшие действия
-Перейдите к следующему занятию: [Занятие 3. Пометить как таблицу дат](../analysis-services/lesson-3-mark-as-date-table.md).
+Перейдите к следующему занятию: [Занятие 3. Пометить как таблицу дат](../analysis-services/lesson-3-mark-as-date-table.md).
 
   
   
