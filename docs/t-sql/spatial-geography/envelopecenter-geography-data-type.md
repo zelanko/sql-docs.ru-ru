@@ -18,21 +18,21 @@ ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2f53f6efd0e4c1dbcbbeaccc78fd25fdad0c093
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b81d00f3cb8e208cd2fa34792a2d61943ff1bca
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685372"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154939"
 ---
-# <a name="envelopecenter-geography-data-type-"></a>EnvelopeCenter (тип данных geography)
+# <a name="envelopecenter-geography-data-type"></a>EnvelopeCenter (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает точку, которую можно использовать как центр ограничивающей окружности для экземпляра **geography**.  
+Возвращает точку, которую можно использовать как центр ограничивающей окружности для экземпляра **geography**.  
   
- Чтобы определить ограничивающую окружность, все точки в экземпляре описываются как вектор от центра Земли к точке на поверхности Земли. Центральная точка ограничивающей окружности рассчитывается как среднее значение всех векторов. Для закрытых циклов либо в экземпляре **polygon**, либо в экземпляре **linestring** первая и последняя точка используются только один раз.  
+Каждая точка в экземпляре описывается как вектор. Для построения ограничивающей окружности вектор направляется из центра Земли к точке на поверхности Земли. Центральная точка ограничивающей окружности рассчитывается как среднее значение всех векторов. Для закрытых циклов либо в экземпляре **polygon**, либо в экземпляре **LineString** первая и последняя точка используются только один раз.  
   
- Этот метод типа данных **geography** поддерживает экземпляры **FullGlobe** или пространственные экземпляры, размер которых больше полушария.  
+Этот метод типа данных **geography** поддерживает экземпляры **FullGlobe** или пространственные экземпляры, размер которых больше полушария.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,19 +42,19 @@ EnvelopeCenter( )
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
+Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Тип возвращаемых данных CLR: **SqlGeography**  
+Возвращаемый тип CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Примечания  
- Этот метод возвращает **point**. При использовании с функцией `EnvelopeAngle()` `EnvelopeCenter()` возвращает ограничивающую окружность экземпляра **geography**.  
+## <a name="remarks"></a>Remarks  
+Этот метод возвращает **point**. При использовании с функцией `EnvelopeAngle()` `EnvelopeCenter()` возвращает ограничивающую окружность экземпляра **geography**.  
   
 > [!NOTE]  
 >  `EnvelopeCenter()` возвращает ограничивающую окружность для экземпляра **geography**, но при этом не гарантируется создание на основе результатов минимальной ограничивающей окружности. Напротив, метод `STEnvelope()` типа данных **geometry** гарантирует возврат минимального ограничивающего прямоугольника при применении в экземпляре **geometry**.  
   
- В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или более поздних версиях возвращает центр окружности, представляющей огибающую этого экземпляра в виде **point**. Для всех больших объектов, определенных параметром `EnvelopeAngle()` = 180, `EnvelopeCenter()` возвращает значение (90,0).  
+В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или более поздних версиях возвращает центр окружности, представляющей огибающую этого экземпляра в виде **point**. Для всех больших объектов, определенных параметром `EnvelopeAngle()` = 180, `EnvelopeCenter()` возвращает значение (90,0).  
   
- Этот метод не является точным.  
+Этот метод не является точным.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -64,7 +64,7 @@ SELECT @g.EnvelopeCenter().ToString();
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [EnvelopeAngle ( тип данных geography)](../../t-sql/spatial-geography/envelopeangle-geography-data-type.md)  
+[Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+[EnvelopeAngle ( тип данных geography)](../../t-sql/spatial-geography/envelopeangle-geography-data-type.md)  
   
   

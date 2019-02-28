@@ -1,19 +1,19 @@
 ---
-title: Учебник. Добавление спарклайна в отчет (построитель отчетов) | Документация Майкрософт
+title: Учебник. Добавление спарклайна в отчет (построитель отчетов) | Документация Майкрософт
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a4ea0601aff712034a58f73953718bcd70514351
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711146"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298612"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Учебник. Добавление спарклайна в отчет (построитель отчетов)
 

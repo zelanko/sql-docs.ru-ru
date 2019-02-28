@@ -22,19 +22,19 @@ ms.assetid: 71a413ed-64f1-4ab9-9c52-c5959a77d00f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 013c620609b5f8d3fc603df993eda1af377c1a26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26baf53b4c5c3bddd768b2382f82583eae477605
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686798"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331584"
 ---
 # <a name="gt-not-greater-than-transact-sql"></a>!&gt; (Не больше) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Сравнивает два выражения (оператор сравнения). При сравнении ненулевых выражений результат будет TRUE, если значение левого операнда не больше значения правого операнда; в противном случае, результат будет FALSE. В отличие от оператора сравнения = (равенство), результат сравнения двух значений NULL с помощью оператора !> не зависит от свойства ANSI_NULLS.  
+  Сравнивает два выражения (оператор сравнения). При сравнении ненулевых выражений результат будет TRUE, если значение левого операнда не больше значения правого операнда. В противном случае результат будет FALSE. В отличие от оператора сравнения = (равенство) результат сравнения >= двух значений, равных NULL, не зависит от свойства ANSI_NULLS.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на статью") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,5 +53,4 @@ expression !> expression
 ## <a name="see-also"></a>См. также:  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)  
-  
   

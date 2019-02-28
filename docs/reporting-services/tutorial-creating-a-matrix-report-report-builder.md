@@ -1,19 +1,19 @@
 ---
-title: Учебник. Создание матричного отчета (построитель отчетов) | Документы Майкрософт
+title: Учебник. Создание матричного отчета (построитель отчетов) | Документация Майкрософт
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 812885a0638c9acf56cc0fc91f4f47915d6455cb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712375"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291682"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Учебник. Создание матричного отчета (построитель отчетов)
 В этом учебнике вы создадите отчет [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы, содержащий матрицу образца данных по продажам во вложенных группах строк и столбцов. 
@@ -22,7 +22,7 @@ ms.locfileid: "52712375"
   
 ![report-builder-matrix-tutorial](../reporting-services/media/report-builder-matrix-tutorial.png)
    
-Предполагаемое время для выполнения заданий данного учебника: 20 минут  
+Предполагаемое время для выполнения заданий данного учебника: 20 минут.  
   
 ## <a name="requirements"></a>Требования  
 Сведения о требованиях см. в разделе [Предварительные условия для использования учебников](../reporting-services/prerequisites-for-tutorials-report-builder.md). 
@@ -49,7 +49,7 @@ ms.locfileid: "52712375"
   
 5.  Нажмите кнопку **Далее**.  
   
-6.  На странице **Выбор соединения с источником данных** выберите существующий источник данных или перейдите к серверу отчетов и выберите источник данных. Если отсутствуют доступные источники данных или доступ к серверу отчетов, можно воспользоваться внедренным источником данных. Сведения о создании внедренного источника данных см. в разделе [Учебник. Создание простого табличного отчета (построитель отчетов)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  На странице **Выбор соединения с источником данных** выберите существующий источник данных или перейдите к серверу отчетов и выберите источник данных. Если отсутствуют доступные источники данных или доступ к серверу отчетов, можно воспользоваться внедренным источником данных. Дополнительные сведения о создании внедренного источника данных см. в статье [Учебник. Создание простого табличного отчета (построитель отчетов)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Нажмите кнопку **Далее**.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "52712375"
   
 13. Нажмите кнопку **Готово**.  
   
-    Матрица добавляется в область конструктора. Панель «Группы строк» показывает две группы строк: Territory и SalesDate. Панель «Группы столбцов» отображает две группы столбцов: Subcategory и Product. Подробные данные — это все данные, которые извлекаются с помощью запроса к набору данных.  
+    Матрица добавляется в область конструктора. На панели «Группы строк» показаны две группы строк: Territory и SalesDate. На панели «Группы столбцов» показаны две группы столбцов: Subcategory и Product. Подробные данные — это все данные, которые извлекаются с помощью запроса к набору данных.  
     
     ![report-builder-row-and-column-groups](../reporting-services/media/report-builder-row-and-column-groups.png)
   
@@ -335,7 +335,7 @@ ms.locfileid: "52712375"
   
 2.  Выберите ячейку, содержащую `[Territory].` 
 
-    >**Примечание**. Выделите ячейку, а не текст в ней. Свойство WritingMode доступно только для ячейки.
+    >**Примечание.** Выделите ячейку, а не текст в ней. Свойство WritingMode доступно только для ячейки.
     
      ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
   

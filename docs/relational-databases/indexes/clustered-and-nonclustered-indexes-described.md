@@ -1,7 +1,7 @@
 ---
 title: Описание кластеризованных и некластеризованных индексов | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e8daf01c2676c72630beb80d7511e2fa84afe9c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 0e05b2efa7be0bcd362de0ab4ed8f78b5033b149
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299271"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265221"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Описания кластеризованных и некластеризованных индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,10 @@ ms.locfileid: "54299271"
  Дополнительные типы специальных индексов см. в разделе [Indexes](../../relational-databases/indexes/indexes.md) .  
   
 ## <a name="indexes-and-constraints"></a>Индексы и ограничения  
- Индексы создаются автоматически при определении ограничений PRIMARY KEY или UNIQUE на основе столбцов таблицы. Например, при создании таблицы и указании конкретного столбца в качестве первичного ключа, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] автоматически создает на основе этого столбца ограничение PRIMARY KEY и индекс. Дополнительные сведения см. в разделах [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md) и [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md).  
+
+Индексы создаются автоматически при определении ограничений PRIMARY KEY или UNIQUE на основе столбцов таблицы. Например, при создании таблицы с ограничением UNIQUE [!INCLUDE[ssDE](../../includes/ssde-md.md)] автоматически создает некластеризованный индекс. При настройке PRIMARY KEY [!INCLUDE[ssDE](../../includes/ssde-md.md)] автоматически создает кластеризованный индекс, если он еще не существует. Если вы пытаетесь применить ограничение PRIMARY KEY в существующей таблице, для которой уже создан кластеризованный индекс, SQL Server применяет первичный ключ с помощью некластеризованного индекса.
+
+Дополнительные сведения см. в разделах [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md) и [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md).  
   
 ## <a name="how-indexes-are-used-by-the-query-optimizer"></a>Как оптимизатор запросов использует индексы  
  Правильно построенные индексы могут сократить количество дисковых операций ввода-вывода, уменьшить потребление системных ресурсов, таким образом улучшая производительность запроса. Индексы могут быть полезны во множестве запросов, содержащих инструкции SELECT, UPDATE, DELETE или MERGE. Рассмотрим запрос `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . При выполнении этого запроса оптимизатор запросов оценивает все доступные методы получения данных и выбирает наиболее эффективный метод. Этим методом может являться просмотр таблицы или просмотр одного или более индексов, если они существуют.  

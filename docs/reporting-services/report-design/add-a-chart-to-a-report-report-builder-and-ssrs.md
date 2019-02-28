@@ -6,21 +6,21 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 550459c3b261a42aa1b5be0ad37cd1681f566a02
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 53e52f403c6ed76db265a05879a9ebea15aca30d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030783"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298352"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Добавление диаграммы в отчет (построитель отчетов и службы SSRS)
   Если в отчете с разбиением на страницы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] необходимо создать сводку данных в визуальном формате, можно использовать область данных "Диаграмма". Важно выбрать тип диаграммы, подходящий для типа представляемых данных. От этого зависит, насколько успешно можно будет интерпретировать данные, представленные в виде диаграммы. Дополнительные сведения см. в разделе [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
  Самым простым способом добавления диаграммная область данных в отчет является запуск мастера создания диаграмм. Мастер поддерживает гистограммы, графики, круговые диаграммы, линейчатые диаграммы и диаграммы с областями. Диаграммы этих и других типов также можно добавить вручную.  
   
- Добавив диаграммную область данных в область конструктора, можно перетаскивать поля набора данных отчета с числовыми и нечисловыми данными на панель «Данные диаграммы». Щелкните в области данных диаграммы, чтобы отобразить панель "Данные диаграммы" с ее тремя областями: "Группы рядов", "Группы категорий" и "Значения".  
+ Добавив диаграммную область данных в область конструктора, можно перетаскивать поля набора данных отчета с числовыми и нечисловыми данными на панель «Данные диаграммы». Щелкните в области данных диаграммы, чтобы отобразить панель «Данные диаграммы» с ее тремя областями: «Группы рядов», «Группы категорий» и «Значения».  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -68,9 +68,9 @@ ms.locfileid: "50030783"
  [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Типы диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Точки данных со значением NULL и пустые точки в диаграммах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Учебник. Добавление в отчет линейчатой диаграммы (построитель отчетов)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Учебник. Добавление линейчатой диаграммы к отчету (построитель отчетов)](https://go.microsoft.com/fwlink/?LinkId=198052)   
  [Учебник. Добавление в отчет линейчатой диаграммы (конструктор отчетов)](https://go.microsoft.com/fwlink/?LinkId=198042)   
- [Учебник. Добавление в отчет круговой диаграммы (построитель отчетов)](https://go.microsoft.com/fwlink/?LinkId=198051)   
- [Учебник. Добавление в отчет круговой диаграммы (конструктор отчетов)](https://go.microsoft.com/fwlink/?LinkId=198041)  
+ [Учебник. Добавление круговой диаграммы к отчету (построитель отчетов)](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [Учебник. Добавление круговой диаграммы к отчету (конструктор отчетов)](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

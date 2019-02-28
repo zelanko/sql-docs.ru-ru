@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 15c2ebe8c7084e10e4b7ff1ad556ed465d91c799
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e7b776893c15532efc1d2dac54d16a7bc9035991
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813967"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295912"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Work with simulated data in Reporting Services mobile reports
 При размещении элемента коллекции в область конструктора [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] немедленно генерирует смоделированные данные для этого элемента. Эти данные служат для достижения нескольких полезных целей при создании мобильных отчетов.   
@@ -26,7 +26,7 @@ ms.locfileid: "51813967"
   
 Смоделированные данные также предоставляют шаблон, который точно соответствует требованиям к данным конкретного проекта мобильного отчета.   
   
--  В правом верхнем углу представления данных щелкните **Экспортировать все данные**.   
+-  В правом верхнем углу представления данных щелкните **Экспортировать все данные** .   
   
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] создает документ Excel, содержащий смоделированные данные, позволяя тем самым быстро заменить фактические данные, готовые к импорту.   
   
@@ -38,7 +38,7 @@ ms.locfileid: "51813967"
   
 Когда все элементы управления привязаны к реальным данным, смоделированные таблицы, которые больше не используются, автоматически удаляются из мобильного отчета. Нельзя удалить смоделированные таблицы, на которые еще ссылаются элементы в области конструктора.  
   
->**Примечание**. Смоделированные данные не увеличивают общее занимаемое мобильным отчетом место, так как они не сериализуются с мобильным отчетом, а генерируются динамически во время выполнения.  
+>**Примечание.** Смоделированные данные не увеличивают общее занимаемое мобильным отчетом место, так как они не сериализуются с мобильным отчетом, а генерируются динамически во время выполнения.  
   
 ### <a name="see-also"></a>См. также раздел  
 - [Создание и публикация мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  

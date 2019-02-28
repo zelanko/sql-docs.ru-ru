@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 30514478f54d71d88245ace385600cb2931101eb
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7dcd5d57b3b5452a9d14b8951cc8f8d6572f452d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814147"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288952"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Добавление гиперссылки на URL-адрес (построитель отчетов и службы SSRS)
 Вы можете узнать, как добавить действия гиперссылок в текстовые поля, изображения, диаграммы и датчики в отчеты с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  . Ссылки могут указывать на другие отчеты, закладки в отчете либо статические или динамические URL-адреса. 
@@ -26,7 +26,7 @@ ms.locfileid: "51814147"
  
  *  Вы также можете **добавить закладку в определенное место** того же отчета. 
   
-Попробуйте добавить гиперссылки с образцами данных в разделе [Учебник. Форматирование текста &#40;построитель отчетов&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+Попробуйте добавить гиперссылки с образцами данных, выполнив инструкции из статьи [Учебник. Форматирование текста (построитель отчетов)](../../reporting-services/tutorial-format-text-report-builder.md)  
   
 > [!NOTE]  
 >  Ссылки, привязанные к полям набора данных, могут стать мишенью для злонамеренного вторжения. Дополнительные сведения см. в разделе [Защищенные отчеты и ресурсы](../../reporting-services/security/secure-reports-and-resources.md).  

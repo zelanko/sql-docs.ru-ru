@@ -13,14 +13,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.indicatorproperties.validateandstates.f1
 - sql13.rtp.rptdesigner.indicatorproperties.general.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d8bb40ecff48e048f38ce793203e70471f43f28e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bea364e4d2314f612ec102edbbab9f9e39e8940e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726352"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289272"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Индикаторы (построитель отчетов и службы SSRS)
   В отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы индикаторы — это минимальные датчики, обеспечивающие возможность быстрого определения состояния одиночного значения данных. Значки, которые представляют индикаторы и их состояния, просты и визуально эффективны, даже если они имеют небольшие размеры.  
@@ -41,7 +41,7 @@ ms.locfileid: "47726352"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] содержат наборы встроенных индикаторов и значков индикаторов, которые используются в изначальном виде. При этом можно также создавать свои значки и наборы индикаторов.  
   
- Дополнительные сведения об использовании индикаторов в качестве ключевых показателей эффективности см. в разделе [Учебник. Добавление в отчет ключевого показателя эффективности (построитель отчетов)](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Дополнительные сведения об использовании индикаторов в качестве ключевых показателей эффективности см. в статье [Учебник. Добавление в отчет ключевого показателя эффективности (построитель отчетов)](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  Индикаторы можно публиковать отдельно от отчета в виде элементов отчета. Узнайте больше об [элементах отчета](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  

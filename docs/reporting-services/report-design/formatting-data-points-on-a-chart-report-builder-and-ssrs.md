@@ -9,14 +9,14 @@ f1_keywords:
 - "10248"
 - sql13.rtp.rptdesigner.serieslabelproperties.general.f1
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: a6ed0e02b12080389b12d0dabc9028de33e9cdb4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e2ee94edec262fb9ddef64d64e90958e77cdf228
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021228"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296962"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)
 В отчете [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы точка данных является наименьшей неделимой сущностью диаграммы. Для нефигурных диаграмм представление точек данных зависит от типа диаграммы. Например, ряд графика состоит из одной или нескольких соединенных точек данных. Для фигурных диаграмм точки данных представляются отдельными срезами или сегментами, из которых состоит диаграмма. Например, для круговой диаграммы каждый из сегментов является точкой данных. Дополнительные сведения см. в разделе [Типы диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "50021228"
 ## <a name="positioning-data-point-labels-on-a-chart"></a>Позиционирование на диаграмме меток точек данных  
  Для всех типов диаграмм можно отобразить метки точек данных, щелкнув диаграмму правой кнопкой мыши и выбрав команду **Отобразить метки данных**. Позиции меток определяются в зависимости от типа диаграммы.  
   
--   Для линейчатой диаграммы можно изменить положение меток точек данных при помощи пользовательского атрибута **BarLabelStyle** . Есть четыре возможные позиции: снаружи, слева, по центру и справа. Если метка линии имеет стиль «Снаружи», то она будет располагаться за пределами линии, но в пределах области диаграммы. Если метка не может быть расположена за пределами линии, но в пределах области диаграммы, то она позиционируется внутри линии.  
+-   Для линейчатой диаграммы можно изменить положение меток точек данных при помощи пользовательского атрибута **BarLabelStyle** . Существует четыре возможные позиции: «Снаружи», «Слева», «По центру» и «Справа». Если метка линии имеет стиль «Снаружи», то она будет располагаться за пределами линии, но в пределах области диаграммы. Если метка не может быть расположена за пределами линии, но в пределах области диаграммы, то она позиционируется внутри линии.  
   
 -   Для круговой диаграммы можно изменить положение меток точек данных при помощи пользовательского атрибута **PieLabelStyle** . Положение меток точки данных относительно круговой диаграммы связано с множеством факторов — ее размерами, наличием места вокруг диаграммы, положением условных обозначений, а также размером самих меток. Дополнительные сведения см. в статье [Отображение меток точек данных за пределами круговой диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md).  
   
@@ -98,7 +98,7 @@ ms.locfileid: "50021228"
  [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Форматирование меток оси в виде значений даты или валюты &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Учебник. Добавление круговой диаграммы к отчету &#40;построитель отчетов&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Учебник. Добавление круговой диаграммы к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   

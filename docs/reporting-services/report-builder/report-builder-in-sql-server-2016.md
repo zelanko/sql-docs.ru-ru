@@ -11,14 +11,14 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 381f0070a8e045aeec707c1f8dc9a6df9cd157d9
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f37319c07856f0e31abcb2afb047bdea2904063a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711422"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290302"
 ---
 # <a name="report-builder-in-sql-server"></a>Построитель отчетов в SQL Server
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] — это инструмент создания отчетов с разбиением на страницы, предназначенный для корпоративных пользователей, которые предпочитают работать в автономной среде вместо использования конструктора отчетов в Visual Studio.  Во время проектирования отчета с разбиением на страницы вы создаете определение отчета, в котором указано, откуда и какие брать данные, а также как их отображать. При запуске отчета обработчик получает заданное определение отчета, извлекает данные и объединяет их с макетом отчета, чтобы создать отчет. Отчет можно предварительно просмотреть в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. После этого отчет можно опубликовать в собственном режиме или в режиме интеграции с SharePoint на сервере отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (2016 и более ранние версии). Можно также опубликовать отчет с разбивкой на страницы в службе Power BI. Узнайте больше об [отчетах с разбивкой на страницы в Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (предварительная версия).
@@ -73,7 +73,7 @@ ms.locfileid: "52711422"
 
   [Новые возможности служб Reporting Services и построителя отчетов для SQL Server](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   Описываются новые функции этой версии [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].   
-  [Учебник. Создание стандартного отчета с диаграммой в режиме «вне сети»](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+  [Учебник. Создание стандартного отчета с диаграммой в автономном режиме](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Содержатся общие сведения о [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] и мастерах, которые могут помочь в создании отчетов. Учебник содержит набор данных для работы, поэтому соединяться с источником данных не нужно.  
   
  [Планирование отчета (построитель отчетов)](../../reporting-services/report-design/planning-a-report-report-builder.md)  

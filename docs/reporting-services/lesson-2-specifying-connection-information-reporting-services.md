@@ -1,21 +1,21 @@
 ---
-title: Занятие 2. Задание информации о соединении (службы Reporting Services) | Документы Майкрософт
+title: Занятие 2. Задание информации о соединении (службы Reporting Services) | Документация Майкрософт
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 381192f80128ca3bd2ebade55dc539137c4bc9bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: da47a0fd587d48dd9d932504d6a5cd45d0d54664
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805612"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294702"
 ---
-# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Занятие 2. Задание информации о соединении (службы Reporting Services)
+# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Занятие 2. Задание информации о строке соединения (службы Reporting Services)
 После добавления разбитого на страницы отчета [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] к проекту Tutorial на занятии 1 следует задать *источник данных*, который представляет собой сведения о соединении, используемые отчетом для доступа к данным, которые располагаются в реляционной базе данных, многомерной базе данных или ином источнике.  
   
 В этом занятии в качестве источника данных используется образец базы данных [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]. В учебнике предполагается, что эта база данных находится в экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] по умолчанию, установленном на локальном компьютере.  
@@ -54,7 +54,7 @@ ms.locfileid: "47805612"
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] Источник данных **AdventureWorks2014** появляется в области **данных отчета** .  
 ![ssrs_adventureworks_datasource](../reporting-services/media/ssrs-adventureworks-datasource.png)  
 ## <a name="next-task"></a>Следующая задача  
-Соединение с образцом базы данных [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] успешно создано. Далее предстоит создать отчет. См. [Занятие 3. Определение набора данных для табличного отчета (службы Reporting Services)](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
+Соединение с образцом базы данных [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] успешно создано. Далее предстоит создать отчет. См. [Занятие 3. Определение набора данных для табличного отчета (службы Reporting Services)](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Подключения данных, Источники данных и Строки подключения в службе Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  

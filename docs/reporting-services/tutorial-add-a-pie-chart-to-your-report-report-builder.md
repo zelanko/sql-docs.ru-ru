@@ -1,19 +1,19 @@
 ---
-title: Учебник. Добавление круговой диаграммы к отчету (построитель отчетов) | Документы Майкрософт
+title: Учебник. Добавление круговой диаграммы к отчету (построитель отчетов) | Документация Майкрософт
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 10d17a596568fd706b696359ef43bc8f257afdf9
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710735"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293643"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Учебник. Добавление круговой диаграммы к отчету (построитель отчетов)
 В этом учебнике вы создадите круговую диаграмму в отчете Reporting Services с разбивкой на страницы. Вы добавите процентные значения и объедините несколько небольших секторов в один сектор.
@@ -29,7 +29,7 @@ ms.locfileid: "52710735"
 > [!NOTE]  
 > В этом учебнике шаги для мастера объединены в две процедуры. Пошаговые инструкции по переходу к серверу отчетов, добавлению источника данных и набора данных см. в первом учебнике этой серии: [Учебник. Создание простого табличного отчета (построитель отчетов)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Предполагаемое время для выполнения заданий этого учебника: 10 минут  
+Предполагаемое время для выполнения заданий данного учебника: 10 минут.  
   
 ## <a name="requirements"></a>Требования  
 Дополнительные сведения о требованиях см. в разделе [Предварительные условия для использования учебников (построитель отчетов)](../reporting-services/prerequisites-for-tutorials-report-builder.md).  

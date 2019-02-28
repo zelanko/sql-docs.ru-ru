@@ -13,14 +13,14 @@ f1_keywords:
 - "10500"
 - sql13.rtp.rptdesigner.maptitleproperties.general.f1
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c68165a01fa4843a2467471b0db3a13386beb0a4
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a5026ba1558d0796f715ea8f61e6e90ed628c2e9
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814297"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290193"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Карты (построитель отчетов и службы SSRS)
   Для визуализации бизнес-данных в географическом контексте можно добавить в отчет с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] карту. Выбранный тип карты будет зависеть от того, какую информацию следует взять из отчета. Можно добавить карту, которая отображает только местоположения, или пузырьковую карту, которая изменяет размер пузырьков в зависимости от количества домов в области, или карту с отметками, которая изменяет стиль маркера в зависимости от наиболее доходного продукта в каждом магазине, или линейную карту, которая отображает маршруты между магазинами.  
@@ -29,7 +29,7 @@ ms.locfileid: "51814297"
   
  ![rs_MapElements](../../reporting-services/report-design/media/rs-mapelements.gif "rs_MapElements")  
   
- Дополнительные сведения об использовании карты см. в разделах [Учебник. Отчет-карта (построитель отчетов)](../../reporting-services/tutorial-map-report-report-builder.md) или [Образцы отчетов (построитель отчетов и службы SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Для быстрого начала работы с картами см. [Учебник. Отчет-карта (построитель отчетов)](../../reporting-services/tutorial-map-report-report-builder.md) или статью с [образцами отчетов (построитель отчетов и службы SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  Карты можно сохранять отдельно от отчета как элементы отчета. Узнайте больше об [элементах отчета](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -224,7 +224,7 @@ ms.locfileid: "51814297"
   
  Если при просмотре отчета-карты результат не соответствует ожиданиям, причины могут быть различными. Чтобы выделить и разрешить отдельные проблемы, полезно работать с каждым слоем в отдельности. Используйте панель «Карта», чтобы выбрать слой и легко изменить его видимость.  
   
- Дополнительные сведения о проблемах, связанных с отчетами-картами, см. в разделе [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ Дополнительные сведения о проблемах, связанных с отчетами-картами, см. статью [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md).  
   
 ##  <a name="HowTo"></a> Инструкции  
  В данном разделе содержатся пошаговые инструкции, описывающие, как работать с картами и слоями карт в отчетах.  
@@ -250,6 +250,6 @@ ms.locfileid: "51814297"
   
  [Добавление на карту пользовательских местоположений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md).  
   
   

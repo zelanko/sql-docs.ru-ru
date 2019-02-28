@@ -5,14 +5,14 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c77e8fdb5c3c7f4e163472b5a2fc8325d8d3583a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 552a6883f1d17b54e5163368bdce6d426907e0ba
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396837"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298482"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] является автономным приложением и устанавливается на компьютере пользователем или администратором. Вы можете установить приложение из центра загрузки Майкрософт, с сервера отчетов [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] или с сайта SharePoint, интегрированного с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -67,7 +67,7 @@ ms.locfileid: "52396837"
   
 ## <a name="to-install-includessrbnoversionincludesssrbnoversionmd-from-the-command-line"></a>Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] из командной строки 
 
- Кроме того, можно установить [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] из командной строки, задав аргументы для настройки установки. Кроме стандартных внутренних параметров MSI, вы можете использовать пользовательские параметры, предоставляемые [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]: RBINSTALLDIR и REPORTSERVERURL. RBINSTALLDIR указывает корневой каталог установки для [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. REPORTSERVERURL указывает сервер отчетов по умолчанию, используемый [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] для сохранения отчетов на сервере.  
+ Кроме того, можно установить [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] из командной строки, задав аргументы для настройки установки. Кроме стандартных внутренних параметров MSI можно использовать пользовательские параметры, предоставляемые [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]: RBINSTALLDIR и REPORTSERVERURL. RBINSTALLDIR указывает корневой каталог установки для [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. REPORTSERVERURL указывает сервер отчетов по умолчанию, используемый [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] для сохранения отчетов на сервере.  
   
  Если необходимо произвести установку в полностью автоматическом режиме, без какого-либо взаимодействия с пользовательским интерфейсом, укажите параметр **/quiet** . Флаг параметра подавляет сообщения об ошибках установки. В связи с этим при использовании автоматической установки рекомендуется включить параметр **/l** , указывающий необходимость ведения журнала.   
   
@@ -85,7 +85,7 @@ ms.locfileid: "52396837"
   
      `msiexec/i ReportBuilder3.msi /option [value] [/option [value]]`  
   
-     Для установки [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] нужны два параметра: RBINSTALLDIR и REPORTSERVERURL. Вам не обязательно включать эти аргументы в командную строку. Ниже приведена базовая команда:  
+     У установки [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] имеется два параметра: RBINSTALLDIR и REPORTSERVERURL. Вам не обязательно включать эти аргументы в командную строку. Ниже приведена базовая команда:  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   

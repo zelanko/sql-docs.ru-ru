@@ -6,19 +6,19 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 429c9948a9b99dd1d2622682f2daa1ad257a0a4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 42804131c70b9a0077a3492b1c3532fb8de37a98
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746552"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298098"
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>Создание счета-фактуры и формы со списками (построитель отчетов и службы SSRS)
   Область списка данных повторяется с каждой группой или строкой набора данных отчета с разбиением на страницы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Список может использоваться для создания отчетов произвольного формата, таких как счета, либо совместно с другими областями данных. Можно определять списки, содержащие любое количество элементов отчета. Список может быть вложен  
   
- Чтобы быстро приступить к работе со списками, см. раздел [Учебник. Создание отчета в свободной форме (построитель отчетов)](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
+ Чтобы быстро приступить к работе со списками, см. [Учебник. Создание отчета в свободной форме (построитель отчетов)](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
 >  Списки можно публиковать отдельно от отчета как элементы отчета. Дополнительные сведения см. в разделе [Элементы отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  

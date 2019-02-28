@@ -1,19 +1,19 @@
 ---
-title: Учебник. Форматирование текста (построитель отчетов) | Документация Майкрософт
+title: Учебник. Форматирование текста (построитель отчетов) | Документация Майкрософт
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 68297156870ac3eefc5b532b7e15f253064e4608
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ddc7aefa65f87e5647186358e0f7ae0019964ff0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711663"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289648"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Учебник. Форматирование текста (построитель отчетов)
 
@@ -25,7 +25,7 @@ ms.locfileid: "52711663"
   
 На одном из этапов будет намеренно допущена ошибка с целью проиллюстрировать, почему именно она является ошибкой. После этого ошибка будет исправлена для достижения желаемого эффекта.  
     
-Предполагаемое время для выполнения заданий данного учебника: 20 минут  
+Предполагаемое время для выполнения заданий данного учебника: 20 минут.  
   
 ## <a name="requirements"></a>Требования  
 Дополнительные сведения о требованиях см. в разделе [Предварительные условия для использования учебников (построитель отчетов)](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "52711663"
 
     Если область **данных отчета** не видна, на вкладке **Вид** установите флажок **Данные отчета**.
   
-2.  В поле **Имя** введите **TextDataSource**  
+2.  В поле **Имя** введите **TextDataSource**.  
   
 3.  Нажмите кнопку **Использовать соединение, внедренное в отчет**.  
   

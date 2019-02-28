@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8e9d481e03efdcfb7ff109998eda3f4b2f6f3a3d
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 23bee332835d0beb812d7737c254d6eccabee6d1
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711605"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288608"
 ---
 # <a name="report-builder-tutorials"></a>Учебники по построителю отчетов
 
@@ -72,6 +72,6 @@ ms.locfileid: "52711605"
 
 [Представление конструктора отчетов](../reporting-services/report-builder/report-design-view-report-builder.md)  
 [Построитель отчетов в SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-[Руководство. Создание стандартного отчета с диаграммой в автономном режиме](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+[Учебник. Создание стандартного отчета с диаграммой в режиме "вне сети"](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

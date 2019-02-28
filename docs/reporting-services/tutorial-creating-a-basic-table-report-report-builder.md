@@ -1,19 +1,19 @@
 ---
-title: Учебник. Создание простого табличного отчета (построитель отчетов) | Документация Майкрософт
+title: Учебник. Создание простого табличного отчета (построитель отчетов) | Документация Майкрософт
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3e41b40bceadec4c841aa5b464e2946915003b93
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712355"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298390"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Учебник. Создание простого табличного отчета (построитель отчетов)
 Это учебник поможет создать простой табличный отчет на основе образца данных по продажам. На приведенной ниже иллюстрации показан отчет, который предстоит создать.  
@@ -21,7 +21,7 @@ ms.locfileid: "52712355"
 ![SSRS_Tutorial_Basic_Table_Report](../reporting-services/media/ssrs-tutorial-basic-table-report.png)  
   
 
-Предполагаемое время для выполнения заданий данного учебника: 20 минут  
+Предполагаемое время для выполнения заданий данного учебника: 20 минут.  
   
 ## <a name="requirements"></a>Требования  
 Дополнительные сведения о требованиях см. в разделе [Предварительные условия для использования учебников (построитель отчетов)](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -184,7 +184,7 @@ ms.locfileid: "52712355"
   
 4.  Нажмите кнопку **Далее** для просмотра таблицы, а затем кнопку **Готово**.  
   
-Таблица добавляется в область конструктора. В таблице содержится 5 столбцов и 5 строк. Панель "Группы строк" содержит три группы строк: SalesDate, Subcategory и Details. Подробные данные — это все данные, которые извлекаются с помощью запроса к набору данных.  
+Таблица добавляется в область конструктора. В таблице содержится 5 столбцов и 5 строк. Панель «Группы строк» показывает три группы строк: SalesDate, Subcategory и Details. Подробные данные — это все данные, которые извлекаются с помощью запроса к набору данных.  
   
 ## <a name="FormatCurrency"></a>2. Форматирование данных в денежном формате  
 По умолчанию сводные данные поля Sales отображаются в виде числа с общим форматом. Отформатируйте его для представления валюты.   

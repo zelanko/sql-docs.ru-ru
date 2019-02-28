@@ -12,14 +12,14 @@ helpviewer_keywords:
 - status information [Reporting Services]
 - inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 7afbcb496179a583d40a4f194d55c872f43cb293
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dad31c0742cfa71a3a5f38659adab9bea220ee0e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535611"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289645"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Отслеживание подписок служб Reporting Services
   Вы можете отслеживать подписки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательском интерфейсе, Windows PowerShell или в файлах журнала. Параметры, которые можно отслеживать, зависят от того, какой режим сервера отчетов используется.  
@@ -76,7 +76,7 @@ ms.locfileid: "52535611"
   
  Ниже приведен пример сообщения об ошибке трассировки журнала файла, связанного с подписками.  
   
--   library!WindowsService_7!b60!05/20/2014-22:34:36:: i СВЕДЕНИЯ: Инициализация EnableExecutionLogging как True, как указано в Server system properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ОШИБКА: **Ошибка при отправке сообщения**. Исключение: System.Net.Mail.SmtpException: SMTP-серверу требуется безопасное соединение, или клиент не прошел проверку подлинности. Ответ сервера: 5.7.1. Клиент не прошел проверку подлинности в System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response).  
+-   library!WindowsService_7!b60!05/20/2014-22:34:41:: i СВЕДЕНИЯ: Инициализация EnableExecutionLogging как True, как указано в Server system properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ОШИБКА: **Ошибка при отправке сообщения электронной почты**. Исключение: System.Net.Mail.SmtpException: SMTP-серверу требуется безопасное соединение, или клиент не прошел проверку подлинности. Получен ответ сервера. 5.7.1. Клиент не прошел проверку подлинности в System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response).  
   
  Файл журнала не содержит сведения об открытии отчета или об успешном фактическом выполнении доставки. Успешная доставка означает, что ошибки обработчика планирования и доставки отсутствуют и сервер отчетов подключился к почтовому серверу. Если при попытке доставки по электронной почте в почтовый ящик пользователя пришло сообщение о невозможности доставки отчета, то эти сведения не будут включены в файл журнала. Дополнительные сведения о файлах журналов см. в разделе [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
@@ -97,7 +97,7 @@ ms.locfileid: "52535611"
 ||||||||  
 |-|-|-|-|-|-|-|  
 |Дата|Процесс|Область|Категория|Level|Correlation|Сообщение|  
-|5/21/2014 14:34:06:15|Пул приложений: a0ba039332294f40bc4a81544afde01d|службы SQL Server Reporting Services|Расширение электронной почты сервера отчетов|Непредвиденное|(пусто)|**Ошибка при отправке сообщения электронной почты.** Исключение: System.Net.Mail.SmtpException: почтовый ящик недоступен. Ответ сервера: 5.7.1. У клиента нет разрешений для отправки, так как данный отправитель в System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) в System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) в System.Net.Mail.SmtpClient.Send(MailMessage message) в Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification).|  
+|5/21/2014 14:34:06:15|Пул приложений: a0ba039332294f40bc4a81544afde01d|службы SQL Server Reporting Services|Расширение электронной почты сервера отчетов|Непредвиденное|(пусто)|**Ошибка при отправке сообщения электронной почты.** Исключение: System.Net.Mail.SmtpException: Почтовый ящик недоступен. Получен ответ сервера. 5.7.1. У клиента нет разрешений для отправки, так как данный отправитель в System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) в System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) в System.Net.Mail.SmtpClient.Send(MailMessage message) в Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification).|  
   
 ##  <a name="bkmk_use_powershell"></a> Использование PowerShell для отслеживания подписок  
  Примеры скриптов PowerShell для проверки состояния подписок в собственном режиме или в режиме SharePoint см. в разделе [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c1fbb2ad5c2c652f5be04982ffaedb7eadea97be
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810994"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294782"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Maps in Reporting Services mobile reports
 Карты — это отличный способ визуализировать географические данные. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] есть три разных типа визуализации карт, а также доступны встроенные карты континентов и некоторых отдельных странах. Вы также можете [передавать и использовать пользовательские карты](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   
@@ -65,7 +65,7 @@ ms.locfileid: "47810994"
   
 4. В представлении **Данные** на панели **Свойства данных** в разделе **Ключи** в поле слева выберите таблицу с данными карты, а в поле справа выберите поле ключа, которое соответствует области на карте.  
   
-5. В разделе **Значения** та же таблица уже указана в поле слева. Выберите числовое поле, значения из которого нужно отобразить на карте.   
+5. В разделе **Значения**та же таблица уже указана в поле слева. Выберите числовое поле, значения из которого нужно отобразить на карте.   
   
 6. Если это тепловая карта с диапазонами, в разделе **Целевые значения** в поле слева будет указана та же таблица. В поле справа выберите числовое поле, значения из которого будут считаться целевыми.   
   

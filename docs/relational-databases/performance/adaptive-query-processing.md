@@ -2,7 +2,7 @@
 title: Адаптивная обработка запросов в базах данных Microsoft SQL | Документация Майкрософт | Документация Майкрософт
 description: Функции адаптивной обработки запросов для улучшения производительности запросов в SQL Server (2017 и более поздних версиях) и базе данных SQL Azure.
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 02/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,18 +14,19 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4097e4c4a56e34f95282a400fb07ac454a3660dd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: aba4aa388cb9ffac518b09077d535b618206ab71
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207318"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319265"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Адаптивная обработка запросов в базах данных SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Эта статья описывает функции адаптивной обработки запросов, позволяющие улучшить производительность запросов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDS](../../includes/sssds-md.md)]:
 - Обратная связь по временно предоставляемому буферу памяти в пакетном режиме
+- Обратная связь по временно предоставляемому буферу памяти в строковом режиме (общедоступная предварительная версия при уровне совместимости базы данных, равном 150)
 - Адаптивное соединение в пакетном режиме
 - Выполнение с чередованием
 
@@ -36,8 +37,6 @@ ms.locfileid: "53207318"
 Дополнительные сведения об обработке запросов и режимах выполнения в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье [Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md).
 
 Иногда план, выбранный оптимизатором запросов, по ряду причин отличается от оптимального. Например, предполагаемое количество строк, передаваемых через план запроса, может оказаться неправильным. Оценка затрат помогает определить, какой план выбирается для выполнения. Если оценки кратности неправильны, по-прежнему используется исходный план, несмотря на неточные первоначальные предположения.
-
-![Функции адаптивной обработки запросов](./media/1_AQPFeatures.png)
 
 ### <a name="how-to-enable-adaptive-query-processing"></a>Включение адаптивной обработки запросов
 Рабочие нагрузки можно автоматически сделать соответствующими для адаптивной обработки запросов, включив для базы данных уровень совместимости 140.  Это можно сделать с помощью Transact-SQL. Пример:  
@@ -368,6 +367,7 @@ OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
 Указание запроса USE HINT имеет приоритет над конфигурацией, областью действия которой является база данных, или флагом трассировки.
 
 ## <a name="see-also"></a>См. также:
+[Интеллектуальная обработка запросов в базах данных SQL](../../relational-databases/performance/intelligent-query-processing.md)   
 [Центр производительности для базы данных SQL Azure и ядра СУБД SQL Server](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md)    
 [Справочник по логическим и физическим операторам Showplan](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    

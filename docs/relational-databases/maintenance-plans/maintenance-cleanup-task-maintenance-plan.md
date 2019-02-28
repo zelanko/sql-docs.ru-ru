@@ -15,12 +15,12 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf6a87ac5c41a2bd28a528a7337d05cb8dcf8775
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5e54371d1877bbebfe566692aa02f7237593b43b
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532111"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154749"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Задача «Очистка после обслуживания» (план обслуживания)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52532111"
  Путь к папке, содержащей удаляемые файлы, и ее имя.  
   
  **Расширение файла**  
- Введите расширение удаляемых файлов.  
+ Введите расширение удаляемого файла. Не добавляйте другие символы до или после расширения (например BAK или TRN). 
   
  **Включить вложенные папки первого уровня**  
  Удаляет файлы с расширением, заданным в поле **Расширение файла** , из вложенных папок первого уровня относительно поля **Папка**.  

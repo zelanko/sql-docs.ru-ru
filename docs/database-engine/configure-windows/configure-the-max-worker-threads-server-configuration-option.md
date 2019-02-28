@@ -14,12 +14,12 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2522a2efa2edfb899d2693e6f4746edd85f2d7fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c35aab2ebd2b31fbbe7067bc8049930f791543c3
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420405"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56230981"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Настройка параметра конфигурации сервера max worker threads
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "52420405"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Дальнейшие действия**  [После настройки параметра max worker threads](#FollowUp)  
+-   **Дальнейшие действия.**  [После настройки параметра max worker threads](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -73,7 +73,8 @@ ms.locfileid: "52420405"
     |Число процессоров|32-разрядный компьютер|64-разрядный компьютер|  
     |------------|------------|------------| 
     |\< — 4 процессора|256|512|
-    |\> 4 процессора|256 + ((число логических ЦП – 4) * 8)|512 + ((число логических ЦП – 4) * 16)| 
+    |\> — 4 процессора и \< — 64 процессора|256 + ((число логических ЦП – 4) * 8)|512 + ((число логических ЦП – 4) * 16)|
+    |\> — 64 процессора|256 + ((число логических ЦП – 4) * 32)|512 + ((число логических ЦП – 4) * 32)|
   
     > [!NOTE]  
     > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] больше нельзя устанавливать в 32-разрядной операционной системе. Значения для 32-разрядного компьютера приведены, чтобы помочь клиентам, работающим с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более ранних версий.   Для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , работающего в 32-разрядном компьютере, рекомендуется ограничить число рабочих потоков до 1024.  

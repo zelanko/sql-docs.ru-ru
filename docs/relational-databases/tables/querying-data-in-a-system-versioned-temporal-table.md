@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9e1e9c58b88e7edd48fe3a1390f56e313572adf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3de7c69169198302535eb7ff5dc855faa4f44974
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418815"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319115"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Запрос данных в темпоральной таблице с системным управлением версиями
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ FOR SYSTEM_TIME AS OF '2015-09-01 T10:00:00.7230011' ;
 Первые два вложенных предложения возвращают версии строки, пересекающиеся с указанным периодом (т. е. те, которые были начаты до этого периода и завершены после него), тогда как CONTAINED IN возвращает только те, которые существовали в пределах указанного периода.  
   
 > [!IMPORTANT]  
->  Если вы ищете только версии строки, не являющиеся текущими, рекомендуется использовать **CONTAINED IN** , так как это предложение работает только с прежней таблицей и обеспечивает оптимальную производительность запросов. Используйте **ALL** , когда необходимо запросить текущие и прошлые данные без каких-либо ограничений.  
+>  Если вы ищете только версии строки, не являющиеся текущими, рекомендуется выполнить запрос непосредственно к прежней таблице, так как это обеспечивает оптимальную производительность запросов. Используйте **ALL** , когда необходимо запросить текущие и прошлые данные без каких-либо ограничений.  
   
 ```  
 /* Query using BETWEEN...AND sub-clause*/  

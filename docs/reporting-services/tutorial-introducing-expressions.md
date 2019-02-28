@@ -1,19 +1,19 @@
 ---
-title: Учебник. Общие сведения о выражениях | Документация Майкрософт
+title: Учебник. Общие сведения о выражениях | Документация Майкрософт
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a1dff1baf3d6a7cba7d1fc17f8febf6feeb68c3a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410711"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292222"
 ---
 # <a name="tutorial-introducing-expressions"></a>Учебник. Общие сведения о выражениях
 В этом учебнике по [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] вы научитесь использовать выражения со стандартными функциями и операторами для создания эффективных и гибких отчетов [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы. 
@@ -89,7 +89,7 @@ ms.locfileid: "52410711"
     ```  
 
   
-10. На панели инструментов конструктора запросов нажмите кнопку **Выполнить** (**!**). В результирующем наборе будет 23 строки данных в следующих столбцах: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase и LastPurchase.  
+10. На панели инструментов конструктора запросов нажмите кнопку **Выполнить** (**!**). В результирующем наборе будет 23 строк данных в следующих столбцах: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase и LastPurchase.  
 
     ![руководство-по-выражениям-построителя-отчетов-запрос-как-текст](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -357,7 +357,7 @@ ms.locfileid: "52410711"
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>Поиск значений в наборе данных CountryRegion  
   
-1.  Щелкните заголовок столбца **Country Region ID** (ИД региона страны) и удалите **ID**, чтобы осталось только **Country Region**(Регион страны).  
+1.  Щелкните заголовок столбца **Country Region ID** (ИД региона страны) и удалите текст: **ID**, чтобы осталось только **Country Region** (Регион страны).  
   
 2.  Щелкните правой кнопкой мыши ячейку для столбца **Country Region** и выберите пункт **Выражение**.  
   

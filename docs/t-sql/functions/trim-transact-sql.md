@@ -19,18 +19,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7854b2419b3644c2f3c76cd96cccc06bfae2902
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: b7752dc7d83424be107190c01abfd99a787e5fba
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299621"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803149"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [Поделитесь своим мнением о содержании документации по SQL.](https://aka.ms/sqldocsurvey)
 
 Удаляет символ пробела `char(32)` или другие заданные символы в начале или конце строки.  
  
@@ -52,7 +49,7 @@ characters
 Возвращает символьное выражение с типом аргумента string, в котором символ пробела `char(32)` или другие заданные символы удалены с обеих сторон. Возвращает `NULL`, если входная строка равна `NULL`.
 
 ## <a name="remarks"></a>Remarks   
-По умолчанию функция `TRIM` удаляет символ пробела `char(32)` с обеих сторон. Это равносильно `LTRIM(RTRIM(@string))`. Поведение функции `TRIM ` с заданными символами идентично поведению функции `REPLACE`, которая заменяет символы в начале или конце строки пустыми строками.
+По умолчанию функция `TRIM` удаляет символ пробела `char(32)` с обеих сторон. Такая реакция на событие эквивалентна `LTRIM(RTRIM(@string))`. Поведение функции `TRIM ` с заданными символами идентично поведению функции `REPLACE`, которая заменяет символы в начале или конце строки пустыми строками.
 
 
 ## <a name="examples"></a>Примеры
@@ -84,4 +81,5 @@ SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
  [RTRIM (Transact-SQL)](../../t-sql/functions/rtrim-transact-sql.md)  
  [STRING_SPLIT (Transact-SQL)](../../t-sql/functions/string-split-transact-sql.md)  
  [SUBSTRING (Transact-SQL)](../../t-sql/functions/substring-transact-sql.md)  
- [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
+

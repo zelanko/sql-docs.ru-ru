@@ -15,17 +15,17 @@ ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5b2028b4cd7e59e207f0045e00ef8f3e9a346b24
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7c28685843884275261909cd54309a83e5d3d1e2
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026615"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154769"
 ---
 # <a name="query-method-xml-data-type"></a>query() (тип данных xml)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Определяет запрос XQuery для экземпляра типа данных **xml**. Результат имеет тип данных **xml**. Метод возвращает экземпляр нетипизированного XML.  
+Определяет запрос XQuery для экземпляра типа данных **xml**. Результат имеет тип данных **xml**. Метод возвращает экземпляр нетипизированного XML.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,16 +35,16 @@ query ('XQuery')
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- XQuery  
- Это строка, выражение XQuery, выполняющее в экземпляре XML запросы к узлам — элементам и атрибутам.  
+XQuery  
+Это строка, выражение XQuery, выполняющее в экземпляре XML запросы к узлам — элементам и атрибутам.  
   
 ## <a name="examples"></a>Примеры  
- В этом подразделе приведены примеры использования метода query() типа данных **xml**.  
+В этом подразделе приведены примеры использования метода query() типа данных **xml**.  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. Использование метода query() для переменной типа xml  
- В следующем примере объявляется переменная **@myDoc** типа данных **xml**, и этой переменной присваивается экземпляр XML. Далее методом **query()** для документа определяется запрос XQuery.  
+В следующем примере объявляется переменная **@myDoc** типа данных **xml**, и этой переменной присваивается экземпляр XML. Далее методом **query()** для документа определяется запрос XQuery.  
   
- Запрос извлекает дочерний элемент <`Features`> элемента <`ProductDescription`>:  
+Запрос извлекает дочерний элемент <`Features`> элемента <`ProductDescription`>:  
   
 ```  
 declare @myDoc xml  
@@ -59,7 +59,7 @@ set @myDoc = '<Root>
 SELECT @myDoc.query('/Root/ProductDescription/Features')  
 ```  
   
- Результат:  
+Далее представлен результат.  
   
 ```  
 <Features>  
@@ -69,7 +69,7 @@ SELECT @myDoc.query('/Root/ProductDescription/Features')
 ```  
   
 ### <a name="b-using-the-query-method-against-an-xml-type-column"></a>Б. Использование метода query() для столбца типа XML  
- В следующем примере метод **query()** используется для задания запроса XQuery к столбцу **CatalogDescription** типа данных **xml** в базе данных **AdventureWorks**:  
+В следующем примере метод **query()** используется для задания запроса XQuery к столбцу **CatalogDescription** типа данных **xml** в базе данных **AdventureWorks**:  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -83,15 +83,15 @@ declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-
      /PD:ProductDescription/PD:Features/wm:Warranty ') = 1  
 ```  
   
- Обратите внимание на следующие данные из предыдущего запроса:  
+Обратите внимание на следующие элементы из предыдущего запроса:  
   
--   Столбец CatalogDescription является типизированным столбцом **xml**. Это означает, что имеется связанная с ним коллекция схем. В [прологе XQuery](../../xquery/modules-and-prologs-xquery-prolog.md) ключевое слово **namespace** используется для определения префикса, который в дальнейшем используется в теле запроса.  
+-   Столбец CatalogDescription является типизированным столбцом **xml**. Это означает, что с ним связана коллекция схем. В [прологе XQuery](../../xquery/modules-and-prologs-xquery-prolog.md) ключевое слово **namespace** определяет префикс, который в дальнейшем используется в тексте запроса.  
   
 -   Метод **query()** строит XML, элемент <`Product`>, имеющий атрибут **ProductModelID**, и значение атрибута **ProductModelID** извлекается из базы данных. Дополнительные сведения о конструировании XML см. в разделе [XML-конструкция (XQuery)](../../xquery/xml-construction-xquery.md).  
   
--   Метод [exist() (тип данных XML)](../../t-sql/xml/exist-method-xml-data-type.md) в предложении WHERE используется для нахождения только тех строк, которые в XML содержат элемент <`Warranty`>. Ключевое слово **namespace**, опять же, используется для определения двух префиксов пространства имен.  
+-   [Метод exist() (тип данных XML)](../../t-sql/xml/exist-method-xml-data-type.md) в предложении WHERE находит только те строки, которые в XML содержат элемент <`Warranty`>. Опять же, ключевое слово **namespace** определяет два префикса пространства имен.  
   
- Частичный результат:  
+Далее представлен частичный результат.  
   
 ```  
 <Product ProductModelID="19"/>   
@@ -99,7 +99,7 @@ declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-
 ...  
 ```  
   
- Заметим, что оба метода — и query(), и exist() — объявляют префикс PD. В этих случаях для первоначального определения префиксов и использования их в запросе можно использовать WITH XMLNAMESPACES.  
+Заметим, что оба метода — и query(), и exist() — объявляют префикс PD. В этих случаях для первоначального определения префиксов и использования их в запросе можно использовать WITH XMLNAMESPACES.  
   
 ```  
 WITH XMLNAMESPACES 

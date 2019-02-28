@@ -18,29 +18,33 @@ ms.assetid: ee4e715d-d8f1-4d0e-81b3-04573ec9f13c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 22fa94df7bf1ed0b408e4a5b2ac388697f5939d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee6d1c5da2988123c21a6f21d507bdea7fb94b69
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748692"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265312"
 ---
 # <a name="string-operators-transact-sql"></a>Строковые операторы(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает следующие операторы работы со строками. Операторы объединения строк могут объединять две и более символьные или двоичные строки, два и более столбца или сочетания строк и имен столбцов в одно выражение. Операторы строк шаблонов могут соответствовать одному или нескольким символам в такой операции сравнения строк, как LIKE или PATINDEX.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает следующие операторы работы со строками. Операторы объединения строк могут объединять два и более следующих типов данных в одно выражение: 
+* символьные или двоичные строки;
+* столбцы 
+* сочетание строк и имен столбцов. 
+
+Операторы строк шаблонов могут соответствовать одному или нескольким символам в операции сравнения строк. LIKE и PATINDEX — примеры двух таких операций.  
   
 ## <a name="section-heading"></a>Заголовок раздела  
- [+ (объединение строк)](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+[+ (объединение строк)](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
   
- [+= (присваивание объединения строк)](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
+[+= (присваивание объединения строк)](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
   
- [% (подстановочный знак — символы для сопоставления)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
+[% (подстановочный знак — символы для сопоставления)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
- [[ ] (подстановочный знак — символы для сопоставления)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
+[[ ] (подстановочный знак — символы для сопоставления)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
   
- [[^] (подстановочный знак — символы не для сопоставления)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
+[[^] (подстановочный знак — символы не для сопоставления)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
   
- [_ (подстановочный знак — совпадение одного символа)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
-  
+[_ (подстановочный знак — совпадение одного символа)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
   

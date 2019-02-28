@@ -22,12 +22,12 @@ ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70907736aab1cdcf628f763209b39e88f1a2bf6f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 89b8317b9782685d7486eb375045ca6988af28d0
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511623"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56230951"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  При использовании ключевого слова SOME или ANY значение **TRUE** возвращается, если указанное сравнение имеет значение TRUE для любой пары (_scalar_expression_**,**_x_), где *x* является одним из значений набора из одного столбца; иначе возвращается значение **FALSE**.  
   
 ## <a name="remarks"></a>Remarks  
- Для ключевого слова SOME необходим аргумент *scalar_expression*, чтобы провести непосредственное сравнение по крайней мере одного значения, возвращенного вложенным запросом. Инструкции, которым необходим аргумент *scalar_expression* для сравнения каждого значения, возвращенного вложенным запросом, перечислены в разделе [ALL (Transact-SQL)](../../t-sql/language-elements/all-transact-sql.md). Например, если вложенный запрос возвращает значения 2 и 3, то при значении *scalar_expression* = SOME (subquery) для выражения *scalar_express*, равного 2, будет возвращаться TRUE. Если вложенный запрос возвращает значения 2 и 3, то при *scalar_expression* = ALL (subquery) будет возвращаться FALSE, так как некоторые значения вложенного запроса (значение 3) не отвечают критериям этого выражения.  
+ Для ключевого слова SOME необходим аргумент *scalar_expression*, чтобы провести непосредственное сравнение по крайней мере одного значения, возвращенного вложенным запросом. Инструкции, которым необходим аргумент *scalar_expression* для сравнения каждого значения, возвращенного вложенным запросом, перечислены в разделе [ALL (Transact-SQL)](../../t-sql/language-elements/all-transact-sql.md). Например, если вложенный запрос возвращает значения 2 и 3, то при значении *scalar_expression* = SOME (subquery) для выражения *scalar_express*, равного 2, будет возвращаться TRUE. Если вложенный запрос возвращает значения 2 и 3, то при *scalar_expression* = ALL (subquery) будет возвращаться FALSE, так как некоторые значения вложенного запроса (значение 3) могут не отвечать критериям этого выражения.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -116,13 +116,13 @@ IF
     ON Sales.SalesOrderDetail.ProductID = Production.Product.ProductID   
     WHERE SalesOrderID = @OrderID  
    )  
-PRINT 'At least one item for this order cannot be manufactured in specified number of days.'  
+PRINT 'At least one item for this order can't be manufactured in specified number of days.'  
 ELSE   
 PRINT 'All items for this order can be manufactured in the specified number of days or less.' ;  
   
 ```  
   
- Для проверки этой процедуры выполните ее, используя `SalesOrderID``49080`, имеющий один компонент, требующий на выполнение `2` дня, и два компонента, требующих немедленного выполнения. Первая инструкция отвечает этим критериям. Второй запрос этим критериям не отвечает.  
+ Для проверки этой процедуры выполните ее, используя `SalesOrderID``49080`, имеющий один компонент, требующий на выполнение `2` дня, и два компонента, требующих немедленного выполнения. Первая инструкция отвечает этим критериям. Второй запрос — нет.  
   
 ```  
 EXECUTE ManyDaysToComplete 49080, 2 ;  
@@ -138,7 +138,7 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `At least one item for this order cannot be manufactured in specified number of days.`  
+ `At least one item for this order can't be manufactured in specified number of days.`  
   
 ## <a name="see-also"></a>См. также:  
  [ALL (Transact-SQL)](../../t-sql/language-elements/all-transact-sql.md)   
@@ -148,5 +148,4 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)   
  [IN (Transact-SQL)](../../t-sql/language-elements/in-transact-sql.md)  
-  
   

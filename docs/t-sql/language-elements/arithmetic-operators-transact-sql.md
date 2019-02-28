@@ -18,17 +18,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b124878e337473789665aeba9b8509be9732f8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80574014aa381744177369fbac9dd4f6b39fb44f
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783662"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154779"
 ---
 # <a name="arithmetic-operators-transact-sql"></a>Арифметические операторы (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Арифметические операторы выполняют математические операции над двумя выражениями одного или различных типов данных из категории числовых типов данных. Дополнительные сведения о категориях типов данных см. в статье [Соглашения о синтаксисе в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+Арифметические операторы выполняют математические операции над двумя выражениями одного или нескольких типов данных. Они запускаются из категории числовых типов данных. Дополнительные сведения о категориях типов данных см. в статье [Соглашения о синтаксисе в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 |Оператор|Значение|  
 |--------------|-------------|  
@@ -38,13 +38,13 @@ ms.locfileid: "47783662"
 |[/ (деление)](../../t-sql/language-elements/divide-transact-sql.md)|Деление|  
 |[% (остаток от деления)](../../t-sql/language-elements/modulo-transact-sql.md)|Возвращает целочисленный остаток при делении. Например, 12 % 5 = 2, поскольку остаток от деления 12 на 5 равен 2.|  
   
- Операторы (+) и (–) можно также использовать для выполнения арифметических операций со значениями типов **datetime** и **smalldatetime**.  
+Операторы (+) и (–) можно также использовать для выполнения арифметических операций со значениями типов **datetime** и **smalldatetime**.  
   
- Дополнительные сведения о точности и масштабе результатов арифметических операций см. в статье [Точность, масштаб и длина (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
+Дополнительные сведения о точности и масштабе результатов арифметических операций см. в статье [Точность, масштаб и длина (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Математические функции (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
+[Математические функции (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+[Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
+[Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
   
   

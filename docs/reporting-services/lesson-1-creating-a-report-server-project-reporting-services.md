@@ -1,21 +1,21 @@
 ---
-title: Занятие 1. Создание проекта сервера отчетов (службы Reporting Services) | Документы Майкрософт
+title: Урок 1. Создание проекта сервера отчетов (службы Reporting Services) | Документация Майкрософт
 ms.date: 11/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 741621c22d8abcc9420b40afa07f4707bc1418ae
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 72d337f441d3aabb5dc1ee8801a5cec200904d23
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383659"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292352"
 ---
-# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Занятие 1. Создание проекта сервера отчетов (службы Reporting Services)
+# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Урок 1. Создание проекта сервера отчетов (службы Reporting Services)
 
 На этом занятии вы создадите *проект сервера отчетов* и *RDL-файл определения отчета* в [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] в среде Visual Studio. 
 
@@ -39,7 +39,7 @@ ms.locfileid: "49383659"
 
 5. Щелкните **Проект сервера отчетов** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png). 
 
-   >**Примечание.** Если элемент **Business Intelligence** (Бизнес-аналитика) или **Проект сервера отчетов** отсутствует, необходимо обновить шаблоны бизнес-аналитики SQL Server Data Tools. См. страницу [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).  
+   >**Примечание.** Если элемент **Бизнес-аналитика** или **Проект сервера отчетов** отсутствует, необходимо обновить шаблоны бизнес-аналитики SQL Server Data Tools. См. страницу [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).  
   
 5.  В поле **Имя**введите **Руководство**.  
 
@@ -55,7 +55,7 @@ ms.locfileid: "49383659"
   
 1.  В области **обозревателя решений** щелкните правой кнопкой мыши **Отчеты** > **Добавить** > **Новый элемент**. 
 
-    >**Совет.** Если область **обозревателя решений** не отображается, в меню **Вид** выберите пункт **Обозреватель решений**. 
+    >**Совет**. Если область **обозревателя решений** не отображается, в меню **Вид** выберите пункт **Обозреватель решений**. 
 
     ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
   
@@ -72,7 +72,7 @@ ms.locfileid: "49383659"
     Данные определяются в области **Данные отчета** . Макет отчета определяется в представлении **Конструктор** . Отчет можно выполнить и посмотреть, как он выглядит, в представлении **Предварительный просмотр** .  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-Создание проекта отчета с именем «Учебник» и добавление в него файла определения отчета (с расширением RDL) успешно завершено. Далее требуется определить источник данных, который будет использован в отчете. См. раздел [Занятие 2. Задание информации о соединении (службы Reporting Services)](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
+Создание проекта отчета с именем «Учебник» и добавление в него файла определения отчета (с расширением RDL) успешно завершено. Далее требуется определить источник данных, который будет использован в отчете. См. [Занятие 2. Задание информации о соединении (службы Reporting Services)](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Создание простого табличного отчета (учебник по службам SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  

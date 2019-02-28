@@ -21,19 +21,19 @@ ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d95e76ebfc1bca5aa310d8c4e377592ec1670721
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 081425bf857be0a637159304facdcfb1aa625642
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753392"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287832"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает порядок использования значения NULL для базы данных по умолчанию, действующий в текущем сеансе.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на статью") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,13 +44,13 @@ GETANSINULL ( [ 'database' ] )
   
 ## <a name="arguments"></a>Аргументы  
  '*database*'  
- Имя базы данных, для которой возвращается информация о допустимости значений NULL. Аргумент *database* имеет тип **char** или **nchar**. Если аргумент *database* имеет тип **char**, он неявно преобразуется в **nchar**.  
+ Имя базы данных, для которой возвращается информация о допустимости значений NULL. Аргумент database имеет тип **char** или **nchar**. Если аргумент *database* имеет тип **char**, он неявно преобразуется в **nchar**.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- Если значения NULL в указанной базе данных допустимы, а допустимость значений NULL для столбцов или типов не определена явно, функция GETANSINULL возвращает 1. Это значение по умолчанию для ANSI NULL.  
+GETANSINULL возвращает 1, если допустимость значений NULL базы данных допускает значения NULL. Это возвращаемое значение также требует, чтобы допустимость значений NULL для столбца или типа данных не была явно определена. По умолчанию ANSI NULL задано значение 1. 
   
  Чтобы включить поведение по умолчанию для ANSI NULL, необходимо задать одно следующих условий.  
   

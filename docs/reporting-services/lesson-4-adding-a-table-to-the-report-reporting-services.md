@@ -1,21 +1,21 @@
 ---
-title: Занятие 4. Добавление таблицы в отчет (службы Reporting Services) | Документы Майкрософт
+title: Урок 4. Добавление таблицы в отчет (службы Reporting Services) | Документация Майкрософт
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e956658d0a831835aa4c6067b17f3169de405da1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a4df3f6c94ff4aee674721a47421e0696cc8e2c3
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772642"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287242"
 ---
-# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Занятие 4. Добавление таблицы в отчет (службы Reporting Services)
+# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Урок 4. Добавление таблицы в отчет (службы Reporting Services)
 После определения набора данных вы можете приступать к конструированию отчета. Макет отчета создается путем перетаскивания в область конструктора областей данных, текстовых полей, изображений и других элементов, которые необходимо включить в отчет.  
   
 Элементы, содержащие повторяющиеся строки данных из базовых наборов данных, называются *областями данных*. Простые отчеты имеют только одну область данных, но можно добавить больше, например, если требуется добавить диаграмму в табличный отчет. После добавления области данных можно добавлять в нее поля.  
@@ -43,7 +43,7 @@ ms.locfileid: "47772642"
 7.  Добавьте поле «LineTotal» тем же способом, создав пятый столбец. Заголовок столбца «Линейный итог». Конструктор отчетов автоматически создает понятное имя для столбца, разбивая LineTotal на два слова.  
   
   
-На приведенной ниже диаграмме показана табличная область данных с заполненными полями "Дата", "Заказ", "Продукт", "Количество" и "Линейный итог".  
+На следующей диаграмме показана табличная область данных, в которой заполнены следующие поля: «Дата», «Заказ», «Продукт», «Количество» и «Линейный итог».  
 ![rs_BasicTableDetailsDesign](../reporting-services/media/rs-basictabledetailsdesign.png)  
   
 ## <a name="preview-your-report"></a>Просмотр отчета  

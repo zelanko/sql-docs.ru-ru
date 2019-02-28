@@ -18,17 +18,17 @@ ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 518272fb8e49825ed528700d5ee5e6d8f46a615e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 34cb0cbe98bd0afd9eb1e3183839984799df7718
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832732"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154839"
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Возвращает приближение из многоугольников для экземпляра **geography**, содержащего сегменты дуги.  
+Возвращает приближение из многоугольников для экземпляра **geography**, содержащего сегменты дуги.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,63 +38,63 @@ ms.locfileid: "47832732"
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *tolerance*  
- Выражение типа **double**, которое определяет максимальную ошибку между исходным сегментом дуги и его линейной аппроксимацией.  
+_tolerance_  
+Выражение типа **double**, которое определяет максимальную ошибку между исходным сегментом дуги и его линейной аппроксимацией.  
   
- *relative*  
- Представляет собой выражение типа **bool**, указывающее, следует ли использовать относительный максимум для отклонения. Когда для относительного параметра задается значение false (0), для абсолютного максимума устанавливается значение, равное возможному отклонению линейной аппроксимации.  Если для относительного параметра задано значение true, то вычисляется погрешность, равная произведению параметра tolerance на диаметр ограничивающего прямоугольника для пространственного объекта.  
+_relative_  
+Представляет собой выражение типа **bool**, указывающее, следует ли использовать относительный максимум для отклонения. Если относительный параметр принимает значение false (0), для абсолютного максимума устанавливается значение, равное возможному отклонению линейной аппроксимации. Если относительный параметр принимает значение true, то вычисляется погрешность, равная произведению параметра tolerance на диаметр ограничивающего прямоугольника для пространственного объекта.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
+Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Тип возвращаемых данных CLR: **SqlGeography**  
+Возвращаемый тип CLR: **SqlGeography**  
   
 ## <a name="exceptions"></a>Исключения  
- Если установить погрешность <= 0, возникнет исключение **ArgumentOutOfRange**.  
+Если установить погрешность <= 0, возникнет исключение **ArgumentOutOfRange**.  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод позволяет указывать допустимое количество ошибок для результирующего объекта **LineString**.  
+Этот метод позволяет указывать допустимое количество ошибок для результирующего объекта **LineString**.  
   
- Метод **CurveToLineWithTolerance** вернет экземпляр **LineString** для экземпляра **CircularString** или **CompoundCurve** и экземпляр **Polygon** для экземпляра **CurvePolygon**.  
+Метод **CurveToLineWithTolerance** вернет экземпляр **LineString** для экземпляра **CircularString** или **CompoundCurve** и экземпляр **Polygon** для экземпляра **CurvePolygon**.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. Использование различных значений погрешности в экземпляре CircularString  
- В следующем примере показано, каким образом задание погрешности влияет на экземпляр `LineString`, возвращаемый из экземпляра `CircularString`:  
+В следующем примере показано, каким образом задание погрешности влияет на экземпляр `LineString`, возвращаемый из экземпляра `CircularString`:  
   
- ```
- DECLARE @g geography;  
- SET @g = geography::Parse('CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)');  
- SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.01, 0).STNumPoints();
+```
+DECLARE @g geography;  
+SET @g = geography::Parse('CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)');  
+SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.01, 0).STNumPoints();
 ```  
   
 ### <a name="b-using-the-method-on-a-multilinestring-instance-containing-one-linestring"></a>Б. Использование метода в экземпляре MultiLineString, содержащем один элемент LineString  
- Следующий пример показывает, что возвращается из экземпляра `MultiLineString`, который содержит только один экземпляр `LineString`:  
+Следующий пример показывает, что возвращается из экземпляра `MultiLineString`, который содержит только один экземпляр `LineString`:  
   
- ```
- DECLARE @g geography;  
- SET @g = geography::Parse('MULTILINESTRING((-122.358 47.653, -122.348 47.649))');  
- SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
- ```  
+```
+DECLARE @g geography;  
+SET @g = geography::Parse('MULTILINESTRING((-122.358 47.653, -122.348 47.649))');  
+SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
+```  
   
 ### <a name="c-using-the-method-on-a-multilinestring-instance-containing-multiple-linestrings"></a>В. Использование метода в экземпляре MultiLineString, содержащем несколько элементов LineString  
- Следующий пример показывает, что возвращается из экземпляра `MultiLineString`, который содержит более одного экземпляра `LineString`:  
+Следующий пример показывает, что возвращается из экземпляра `MultiLineString`, который содержит более одного экземпляра `LineString`:  
   
- ```
- DECLARE @g geography;  
- SET @g = geography::Parse('MULTILINESTRING((-122.358 47.653, -122.348 47.649),(-123.358 47.653, -123.348 47.649))');  
- SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
- ```  
+```
+DECLARE @g geography;  
+SET @g = geography::Parse('MULTILINESTRING((-122.358 47.653, -122.348 47.649),(-123.358 47.653, -123.348 47.649))');  
+SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
+```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>Г. Установка параметра relative в значение true для вызова экземпляра CurvePolygon  
- В следующем примере используется экземпляр `CurvePolygon` для вызова `CurveToLineWithTolerance()` с параметром *relative*, имеющим значение true:  
+В следующем примере используется экземпляр `CurvePolygon` для вызова `CurveToLineWithTolerance()` с параметром *relative*, имеющим значение true:  
   
- ```
- DECLARE @g geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658), (-122.348 47.658, -122.358 47.658, -122.358 47.653)))';  
- SELECT @g.CurveToLineWithTolerance(.5,1).ToString();
- ```  
+```
+DECLARE @g geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658), (-122.348 47.658, -122.358 47.658, -122.358 47.653)))';  
+SELECT @g.CurveToLineWithTolerance(.5,1).ToString();
+```  
   
 ## <a name="see-also"></a>См. также:  
- [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
+[Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

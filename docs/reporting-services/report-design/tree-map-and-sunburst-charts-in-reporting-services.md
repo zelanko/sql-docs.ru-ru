@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c255369e8292aa2b7275a58d5e8375890153a5aa
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 012963436b26952cd730a82bbf407803ac600fe2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814107"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295552"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Диаграммы "дерево" и "солнечные лучи" в Reporting Services
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -114,7 +114,7 @@ ms.locfileid: "51814107"
   
 1.  **Получение данных**.  
   
-     Запрос в этом разделе основан на базе данных AdventureWorks, которую можно скачать на странице [полной резервной копии базы данных AdventureWorks 2016](https://github.com/Microsoft/sql-server-samples/releases) в GitHub.  
+     Запрос в этом разделе основан на базе данных AdventureWorks, которую можно скачать на странице веб-сайта GitHub о [резервном копировании всей базы данных AdventureWorks 2016](https://github.com/Microsoft/sql-server-samples/releases).  
   
   
 2.  **Создание источника данных**.  
@@ -176,8 +176,8 @@ ms.locfileid: "51814107"
 ## <a name="see-also"></a>См. также раздел  
 * [Представление конструктора общих наборов данных (построитель отчетов)](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
 * [Отображение всплывающих подсказок для ряда (построитель отчетов и службы SSRS)](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
-* [Учебник. Диаграммы "дерево" в Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
-* [Диаграмма "дерево". Приложения визуализации данных Microsoft Research для Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)  
+* [Учебник. Древовидные диаграммы в Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
+* [Treemap: Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx) (Древовидная диаграмма. Приложения визуализации данных Microsoft Research для Office)  
 <br>  
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
