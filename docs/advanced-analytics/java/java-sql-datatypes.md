@@ -3,18 +3,18 @@ title: Типы данных Java, поддерживаемые в SQL Server 20
 description: Сопоставление типов данных, из Java к SQL Server для структур входные и выходные данные, а также для входных параметров в sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6921a40efc9af3ef94c0a53f8409891fee16127e
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 4c0f691b8bb389c2da2001d19f0684b7f928f707
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432537"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017820"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Java и SQL Server поддерживаемые типы данных
 
@@ -24,25 +24,31 @@ ms.locfileid: "53432537"
 
 Для входных и выходных наборов данных в настоящее время поддерживаются следующие типы данных SQL и Java.
 
-| Тип SQL        | Тип Java | | |
-| ------------- |-------------|-|-|
-| bit      | boolean | | |
-| Tinyint      | short      | | |
-| Smallint | short      | | |
-| int | ssNoversion      | | |
-| Real | FLOAT      | | |
-| Bigint | long      | | |
-| FLOAT | double      | | |
-| nchar(n) | Строка (Юникод)      | | |
-| nvarchar(n) | Строка (Юникод)      | | |
-| binary(n) | byte[]      | | |
-| varbinary(n) | byte[]      | | |
+| Тип данных SQL        | Тип данных Java | Комментарий | |
+| ------------- |-------------|-|
+| bit      | boolean | |
+| Tinyint      | short      | |
+| Smallint | short      | |
+| int | ssNoversion      | |
+| Real | FLOAT      | |
+| Bigint | long      | |
+| FLOAT | double      | |
+| nchar(n) | String      | |
+| nvarchar(n) | String  | |
+| binary(n) | byte[]      | |
+| varbinary(n) | byte[]      | |
+| nvarchar(max) | String | |
+| varbinary(max) | byte[] | |
+| UNIQUEIDENTIFIER | String | |
+| char(n) | String | Поддерживается только на UTF8 строки |
+| varchar(n) | String | Поддерживается только на UTF8 строки |
+| varchar(max) | String | Поддерживается только на UTF8 строки |
 
 ## <a name="data-types-for-input-parameters"></a>Типы данных для входных параметров
 
 Для входных параметров в настоящее время поддерживаются следующие типы данных SQL и Java.
 
-| Тип SQL        | Тип Java | | |
+| Тип данных SQL        | Тип данных Java | Комментарий | |
 | ------------- |-------------|-|-|
 | bit      | boolean | | |
 | Tinyint      | short      | | |
@@ -51,12 +57,16 @@ ms.locfileid: "53432537"
 | Real | FLOAT      | | |
 | Bigint | long      | | |
 | FLOAT | double      | | |
-| nchar(n) | Строка (Юникод)      | | |
-| nvarchar(n) | Строка (Юникод)      | | |
+| nchar(n) | String      | | |
+| nvarchar(n) | String      | | |
 | binary(n) | byte[]      | | |
 | varbinary(n) | byte[]      | | |
-| nvarchar(max) | Строка (Юникод)      | | |
+| nvarchar(max) | String      | | |
 | varbinary(max) | byte[]      | | |
+| UNIQUEIDENTIFIER | String | | |
+| char(n) | String | Поддерживается только на UTF8 строки | |
+| varchar(n) | String | Поддерживается только на UTF8 строки | |
+| varchar(max) | String | Поддерживается только на UTF8 строки | |
 
 ## <a name="see-also"></a>См. также
 

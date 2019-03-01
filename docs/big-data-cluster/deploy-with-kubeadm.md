@@ -5,17 +5,17 @@ description: Сведения о настройке Kubernetes на нескол
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 78d2024f09e78645d8fa1c35279b296e3cda53d7
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 56eb95042199298be2728c475d26cb52bea993e2
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241595"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017990"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-big-data-cluster-preview-deployments"></a>Настройка Kubernetes на несколько компьютеров для развертывания кластера (Предварительная версия) SQL Server 2019 больших данных
 
@@ -26,9 +26,11 @@ ms.locfileid: "54241595"
 
 ## <a name="prerequisites"></a>предварительные требования
 
-- Несколько Linux физические компьютеры или виртуальные машины для использования для кластера
-- Рекомендуемая конфигурация: 8 процессоров, 32 ГБ памяти и по крайней мере 100 ГБ хранилища для каждой машины
-- Минимум три машины в кластере
+- Не менее 3 Linux физических компьютеров или виртуальных машин
+- Рекомендуемая конфигурация для компьютера:
+   - 8 процессоров
+   - 32 ГБ памяти
+   - 100 ГБ ресурсов хранения
 
 ## <a name="prepare-the-machines"></a>Подготовка компьютеров
 
@@ -146,4 +148,4 @@ kubectl get nodes
 
 Действия, описанные в этой статье настроить кластер Kubernetes на нескольких компьютерах Ubuntu. Следующим шагом является развертывание кластера SQL Server 2019 больших данных. Инструкции см. следующую статью:
 
-[Развертывание SQL Server 2019 CTP-версии 2.2 в Kubernetes](deployment-guidance.md#deploy)
+[Развертывание SQL Server в Kubernetes](deployment-guidance.md#deploy)

@@ -5,17 +5,17 @@ description: В этой статье описывается основной э
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 778645079d2585bd86fc01c5d5e1130c564b0de5
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 67109dc6af3c03960435116c79e9f92ae79f595c
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242015"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017800"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>Что такое основной экземпляр в кластере SQL Server 2019 больших данных?
 
@@ -29,7 +29,7 @@ ms.locfileid: "54242015"
 
 ## <a name="scale-out-query-management"></a>Горизонтальное масштабирование запросов управления
 
-Основной экземпляр SQL Server содержит ядро запросов горизонтального масштабирования, который используется для распределения запросов между экземплярами SQL Server на узлах в [вычислений пула](concept-compute-pool.md). Обработчик запросов горизонтальное масштабирование также предоставляет доступ через Transact-SQL для всех таблиц Hive в кластере без дополнительной настройки. (Поддержка таблиц hive не CTP 2.2)
+Основной экземпляр SQL Server содержит ядро запросов горизонтального масштабирования, который используется для распределения запросов между экземплярами SQL Server на узлах в [вычислений пула](concept-compute-pool.md). Обработчик запросов горизонтальное масштабирование также предоставляет доступ через Transact-SQL для всех таблиц Hive в кластере без дополнительной настройки. (Поддержка таблиц hive не находится в CTP-версия 2.3)
 
 ## <a name="metadata-and-user-databases"></a>Метаданные и пользовательских баз данных
 

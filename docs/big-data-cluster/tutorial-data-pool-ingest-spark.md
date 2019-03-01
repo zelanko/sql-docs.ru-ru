@@ -5,17 +5,17 @@ description: Этом руководстве показано, как прием
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1e6f75f21a02b30a6f75d79a9da5be0320485c5b
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 28a151f00683455b582bb29a5d141a76f237caf1
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241685"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017740"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Учебник. Прием данных в пул данных SQL Server с помощью заданий Spark
 
@@ -64,7 +64,7 @@ ms.locfileid: "54241685"
       );
    ```
   
-1. В CTP-версии 2.2 Создание данных пула является асинхронным, но нет способа определить, когда сеть будет еще. Подождите 2 минуты, чтобы убедиться в том, что при создании пула данных, прежде чем продолжить.
+1. В CTP-версии 2.3 Создание данных пула является асинхронным, но нет способа определить, когда сеть будет еще. Подождите 2 минуты, чтобы убедиться в том, что при создании пула данных, прежде чем продолжить.
 
 ## <a name="start-a-spark-streaming-job"></a>Запустить задание потоковой передачи Spark
 

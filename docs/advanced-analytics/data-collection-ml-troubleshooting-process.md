@@ -2,17 +2,17 @@
 title: Устранение неполадок при сборе данных для машинного обучения — службы SQL Server машинного обучения
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2723131e66cc149209e77884a3a9c160d4c27a0e
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: edfacb2e4d519d4f709d352f52645526cb341fad
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644993"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017940"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Устранение неполадок при сборе данных для машинного обучения
 
@@ -90,7 +90,7 @@ WITH RESULT SETS ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES\bin\x64\RGui.exe`
 
-В консоли R отображаются сведения о версии во время запуска. Например следующая версия представляет конфигурации по умолчанию для SQL Server 2017 CTP 2.0:
+В консоли R отображаются сведения о версии во время запуска. Например следующая версия представляет конфигурации по умолчанию для SQL Server 2017:
 
     *Microsoft R Open 3.3.3*
 

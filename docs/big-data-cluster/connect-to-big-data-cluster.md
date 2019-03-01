@@ -5,16 +5,16 @@ description: Узнайте, как подключаться к основной
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/12/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 103e02d456f1176c3bb49c1e67f84215399ab5cd
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: cb205f387fb326b1717ec65512a911b2ae244495
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231041"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017710"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Подключение к кластеру больших данных SQL Server с помощью Azure Data Studio
 
@@ -79,17 +79,9 @@ ms.locfileid: "56231041"
 В большинстве случаев подключения к основной экземпляр SQL Server предоставляет вам доступ HDFS и Spark также до **Data Services** узла. Но по-прежнему можете создать выделенное подключение к **HDFS/Spark шлюза** при необходимости. Следующие шаги описывают способ подключения с помощью Azure Data Studio.
 
 1. Из командной строки найти IP-адрес шлюза HDFS/Spark с помощью одного из следующих команд.
-   
-   **AKS развертываний:**
 
    ```
-   kubectl get svc service-security-lb -n <your-cluster-name>
-   ```
-
-   **Развертывание AKS не**:
-
-   ```
-   kubectl get svc service-security-nodeport -n <your-cluster-name>
+   kubectl get svc endpoint-security -n <your-cluster-name>
    ```
  
 1. В Azure данных Studio нажмите клавишу **F1** > **новое подключение**.

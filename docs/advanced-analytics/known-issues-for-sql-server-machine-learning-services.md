@@ -2,17 +2,17 @@
 title: Известные проблемы для языка R и интеграция Python — службы машинного обучения SQL Server
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/13/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6dc02c56bda3cdf904e0c53115d4fbbfcfafe9fc
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: fd6f67e3095af0f1a53ed533ea9b763d52547e39
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645533"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018070"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Известные проблемы в службах машинного обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -5,17 +5,17 @@ description: Дополнительные сведения о развертыв
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 422c09654f214d067b7d1ad7fd8bcca1dfe8f7e8
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: e92ae469c03f6b2b5547acb1f31baac334926edf
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087863"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018010"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Развертывание кластеров больших данных SQL Server в Kubernetes
 
@@ -84,10 +84,10 @@ kubectl config view
 
 | Переменная среды | Обязательно | Значение по умолчанию | Описание |
 |---|---|---|---|
-| **ACCEPT_EULA** | Да | Н/Д | Примите лицензионное соглашение SQL Server (например, «Y»).  |
+| **ACCEPT_EULA** | Да | Н/Д | Примите лицензионное соглашение SQL Server (например, «Да»).  |
 | **CLUSTER_NAME** | Да | Н/Д | Имя пространства имен Kubernetes для развертывания кластера больших данных в SQLServer. |
 | **CLUSTER_PLATFORM** | Да | Н/Д | Платформы, на которой развернут кластер Kubernetes. Может быть `aks`, `minikube`, `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | Нет | 1 | Число реплик пула вычислений, чтобы выстроить. В CTP-версии 2.2 только табличные значения допускается-1. |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | Нет | 1 | Число реплик пула вычислений, чтобы выстроить. В CTP-версии 2.3 только табличные значения допускается-1. |
 | **CLUSTER_DATA_POOL_REPLICAS** | Нет | 2 | Количество данных пула реплик, чтобы выстроить. |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | Нет | 2 | Число реплик пула хранения, чтобы выстроить. |
 | **DOCKER_REGISTRY** | Да | TBD | Частный реестр, где хранятся образы, используемые для развертывания кластера. |
@@ -189,7 +189,7 @@ export STORAGE_CLASS_NAME=standard
 API создания кластера используется для инициализации пространств имен Kubernetes и развернуть всех модулях приложения в пространстве имен. Чтобы развернуть кластер больших данных SQL Server в кластере Kubernetes, выполните следующую команду:
 
 ```bash
-mssqlctl create cluster <your-cluster-name>
+mssqlctl cluster create --name <your-cluster-name>
 ```
 
 Во время начальной загрузки кластера командное окно клиента будет выводить состояние развертывания. Во время развертывания вы увидите ряд сообщений где ожидает pod контроллера:
@@ -202,7 +202,7 @@ mssqlctl create cluster <your-cluster-name>
 
 ```output
 2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
-2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
 ```
 
 > [!IMPORTANT]
@@ -215,21 +215,23 @@ mssqlctl create cluster <your-cluster-name>
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-## <a id="masterip"></a> Получите экземпляр SQL Server Master и IP-адреса кластера больших данных SQL Server
+## <a id="masterip"></a> Получение конечных точек кластера больших данных
 
-После успешного выполнения сценария развертывания, можно получить IP-адрес главного экземпляра SQL Server, используя шаги, описанные ниже. Этот IP-адрес и порт номер 31433 будет использовать для подключения к основной экземпляр SQL Server (например:  **\<ip адрес\>, 31433**). Аналогичным образом, для больших объемов данных SQL Server IP-адрес кластера. На вкладке "конечные точки службы" на портале администрирования кластера также описаны все конечные точки кластера. На портале администрирования кластера можно использовать для мониторинга развертывания. Доступны на портале с помощью внешних IP-адрес и порт номер для `service-proxy-lb` (например: **https://\<ip адрес\>: 30777: портал**). Учетные данные для доступа к порталу администрирования являются значениями `CONTROLLER_USERNAME` и `CONTROLLER_PASSWORD` переменные среды, приведенные выше.
+После успешного выполнения сценария развертывания, можно получить IP-адрес главного экземпляра SQL Server, используя шаги, описанные ниже. Этот IP-адрес и порт номер 31433 будет использовать для подключения к основной экземпляр SQL Server (например:  **\<ip-address-of-endpoint-master-pool\>, 31433**). Аналогичным образом, можно подключиться к SQL Server, IP-адреса кластера (шлюз HDFS или Spark) больших данных связанные с **безопасности конечных точек** службы.
 
-### <a name="aks"></a>AKS
-
-Если вы используете AKS, Azure предоставляет службы Azure Подсистема балансировки нагрузки. Выполните следующую команду:
+Следующие команды kubectl Получение общих конечных точек для больших данных кластера:
 
 ```bash
 kubectl get svc endpoint-master-pool -n <your-cluster-name>
-kubectl get svc service-security-lb -n <your-cluster-name>
-kubectl get svc service-proxy-lb -n <your-cluster-name>
+kubectl get svc endpoint-security -n <your-cluster-name>
+kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
-Найдите **External-IP** значение, присвоенное к службе. Затем подключитесь к основной экземпляр SQL Server с помощью IP-адрес на порте 31433 (например:  **\<ip адрес\>, 31433**) и SQL Server конечную точку кластера больших данных с помощью external-IP для `service-security-lb` службы. 
+Найдите **External-IP** значение, назначенное для каждой службы.
+
+Кроме того, здесь все конечные точки кластера в **конечные точки службы** на портале администрирования кластера. Доступны на портале с помощью внешних IP-адрес и порт номер для `endpoint-service-proxy` (например: **https://\<ip-address-of-endpoint-service-proxy\>: 30777: портал**). Учетные данные для доступа к порталу администрирования являются значениями `CONTROLLER_USERNAME` и `CONTROLLER_PASSWORD` переменные среды, приведенные выше. На портале администрирования кластера также можно отслеживать развертывание.
+
+Дополнительные сведения о подключении см. в разделе [соединиться с сервером SQL кластера больших данных с помощью Azure Data Studio](connect-to-big-data-cluster.md).
 
 ### <a name="minikube"></a>Minikube
 
@@ -253,8 +255,11 @@ kubectl get svc -n <your-cluster-name>
 1. Удалите старый кластер с `mssqlctl delete cluster` команды.
 
    ```bash
-    mssqlctl delete cluster <old-cluster-name>
+    mssqlctl cluster delete --name <old-cluster-name>
    ```
+
+   > [!Important]
+   > Используйте версию **mssqlctl** , соответствующий кластер. Не удаляйте кластер старых с новой версией **mssqlctl**.
 
 1. Удалите все старые версии **mssqlctl**.
 
@@ -270,13 +275,13 @@ kubectl get svc -n <your-cluster-name>
    **Windows:**
 
    ```powershell
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com
    ```
 
    **Linux:**
    
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com --user
    ```
 
    > [!IMPORTANT]
@@ -328,14 +333,11 @@ kubectl get svc -n <your-cluster-name>
    | Служба | Описание |
    |---|---|
    | **endpoint-master-pool** | Предоставляет доступ к основной экземпляр.<br/>(**EXTERNAL-IP, 31433** и **SA** пользователя) |
-   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | Поддержка средств и клиентов, управления кластером. |
-   | **service-proxy-lb**<br/>**service-proxy-nodeport** | Предоставляет доступ к [портал администрирования кластера](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**: 30777: портал)|
-   | **service-security-lb**<br/>**service-security-nodeport** | Предоставляет доступ к шлюзу HDFS или Spark.<br/>(**EXTERNAL-IP** и **корневой** пользователя) |
+   | **Конечная точка контроллер** | Поддержка средств и клиентов, управления кластером. |
+   | **endpoint-service-proxy** | Предоставляет доступ к [портал администрирования кластера](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**: 30777: портал)|
+   | **endpoint-security** | Предоставляет доступ к шлюзу HDFS или Spark.<br/>(**EXTERNAL-IP** и **корневой** пользователя) |
 
-   > [!NOTE]
-   > Имена служб, зависит от среды Kubernetes. При развертывании в службе Azure Kubernetes (AKS), имена служб заканчиваться **-lb**. Для сред с minikube и kubeadm имена служб заканчиваться **- nodeport**.
-
-1. Используйте [портал администрирования кластера](cluster-admin-portal.md) мониторинге развертывания на **развертывания** вкладки. Вам придется ждать для **службы прокси-сервера балансировки нагрузки** службы для запуска до доступа к этому порталу, поэтому он не будет доступен в начале развертывания.
+1. Используйте [портал администрирования кластера](cluster-admin-portal.md) мониторинге развертывания на **развертывания** вкладки. Вам придется ждать для **конечная точка службы прокси-сервера** службы для запуска до доступа к этому порталу, поэтому он не будет доступен в начале развертывания.
 
 > [!TIP]
 > Дополнительные сведения об устранении неполадок кластера см. в разделе [команды Kubectl для наблюдения и диагностики кластеров SQL Server с большими данными](cluster-troubleshooting-commands.md).

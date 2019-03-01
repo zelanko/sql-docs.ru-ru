@@ -1,21 +1,21 @@
 ---
 title: Установка SQL Server службы машинного обучения (R, Python, Java) на платформе Linux | Документация Майкрософт
-description: В этой статье описывается установка SQL Server служб машинного обучения (R, Python, Java) на Ubuntu и Red Hat.
+description: Сведения об установке SQL Server служб машинного обучения (R, Python, Java) на Ubuntu и Red Hat.
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 01/18/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7e140a4eeb8fe6481b52be378c6ad9569160e9e3
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: b27c2f897f3a96003eefe879aba4f1d5dba7512d
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397663"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018060"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>Установка SQL Server 2019 службы машинного обучения (R, Python, Java) на платформе Linux
 
@@ -27,7 +27,7 @@ ms.locfileid: "54397663"
 
 ## <a name="uninstall-previous-ctp"></a>Удаление предыдущей CTP-версии
 
-Список пакетов изменилось за последние несколько выпусков CTP, приводит к меньшим числом пакетов. Мы рекомендуем удалить CTP-версии 2.0 или 2.1, чтобы удалить все предыдущие пакеты перед установкой CTP-версии 2.2 или более поздней версии. Side-by-side установку нескольких версий не поддерживается.
+Список пакетов изменилось за последние несколько выпусков CTP, приводит к меньшим числом пакетов. Мы рекомендуем удалить CTP-версии 2.x, чтобы удалить все предыдущие пакеты перед установкой CTP-версии 2.3. Side-by-side установку нескольких версий не поддерживается.
 
 ### <a name="1-confirm-package-installation"></a>1. Подтверждение установки пакета
 
@@ -61,7 +61,7 @@ ls /opt/microsoft/mssql/bin
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-22-install"></a>3. Продолжить установку CTP 2.2
+### <a name="3-proceed-with-ctp-23-install"></a>3. Продолжить установку CTP 2.3
 
 Установите на самом высоком уровне пакета, с помощью инструкций в этой статье для вашей операционной системы.
 
@@ -298,42 +298,50 @@ sudo zypper install mssql-server-extensibility-java
 
 1. Добавьте учетную запись пользователя mssql, используемой для запуска службы SQL Server. Это необходимо, если настройка еще не запущен ранее.
 
-  ```bash
-  sudo /opt/mssql/bin/mssql-conf setup
-  ```
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf setup
+   ```
 
 2. Примите лицензионные соглашения для открытым исходным кодом R и Python. Это можно осуществить несколькими способами. Если вы ранее принят лицензирования SQL Server и теперь при добавлении расширения R или Python, следующая команда является ваше согласие на свои условия:
 
-  ```bash
-  # Run as SUDO or root
-  # Use set + EULA 
-    sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
-  ```
+   ```bash
+   # Run as SUDO or root
+   # Use set + EULA 
+   sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
+   ```
 
-  Альтернативный рабочий процесс представляет, что если вы еще не приняли компонент SQL Server database engine, лицензионное соглашение, программа установки обнаруживает mssql-mlservices пакеты и запросы для принятия лицензионного соглашения при `mssql-conf setup` выполняется. Дополнительные сведения о параметрах лицензионное соглашение, см. в разделе [SQL Server можно настроить с помощью средства mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
+   Альтернативный рабочий процесс представляет, что если вы еще не приняли компонент SQL Server database engine, лицензионное соглашение, программа установки обнаруживает mssql-mlservices пакеты и запросы для принятия лицензионного соглашения при `mssql-conf setup` выполняется. Дополнительные сведения о параметрах лицензионное соглашение, см. в разделе [SQL Server можно настроить с помощью средства mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-eula).
 
-3. Для R интеграции только, задайте функции **MKL_CBWR** переменную среды, чтобы [гарантировать согласованный результат](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) из вычислений Intel Math Kernel Library (MKL).
+3. Разрешите исходящий сетевой доступ. Исходящий сетевой доступ отключен по умолчанию. Чтобы включить исходящие запросы, задайте «outboundnetworkaccess» логическое свойство, используя средство mssql-conf. Дополнительные сведения см. в разделе [Настройка SQL Server в Linux с помощью mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
 
-  + Измените или создайте файл с именем **.bash_profile** в домашнем каталоге пользователя, добавив строку `export MKL_CBWR="AUTO"` к файлу.
+   ```bash
+   # Run as SUDO or root
+   # Enable outbound requests over the network
+   sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
+   ```
 
-  + Выполните этот файл, введя `source .bash_profile` в командной строке bash.
+4. Для R интеграции только, задайте функции **MKL_CBWR** переменную среды, чтобы [гарантировать согласованный результат](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) из вычислений Intel Math Kernel Library (MKL).
 
-4. Перезапустите службу панели запуска SQL Server и экземпляра компонента database engine. 
+   + Измените или создайте файл с именем **.bash_profile** в домашнем каталоге пользователя, добавив строку `export MKL_CBWR="AUTO"` к файлу.
 
-  ```bash
-  systemctl restart mssql-launchpadd
+   + Выполните этот файл, введя `source .bash_profile` в командной строке bash.
 
-  systemctl restart mssql-server.service
-  ```
+5. Перезапустите службу панели запуска SQL Server и экземпляра компонента database engine для чтения обновленные значения из INI-файл. Сообщение перезапуска, напоминающее каждый раз, когда изменяется параметр относящиеся к расширяемости.  
 
-5. Включить выполнение внешних скриптов, с помощью Azure Data Studio или другого средства, например SQL Server Management Studio (только Windows), которое будет выполняться Transact-SQL. 
+   ```bash
+   systemctl restart mssql-launchpadd
 
-  ```bash
-  EXEC sp_configure 'external scripts enabled', 1 
-  RECONFIGURE WITH OVERRIDE 
-  ```
+   systemctl restart mssql-server.service
+   ```
 
-6. Еще раз перезапустите службу панели запуска.
+6. Включить выполнение внешних скриптов, с помощью Azure Data Studio или другого средства, например SQL Server Management Studio (только Windows), которое будет выполняться Transact-SQL. 
+
+   ```bash
+   EXEC sp_configure 'external scripts enabled', 1 
+   RECONFIGURE WITH OVERRIDE 
+   ```
+
+7. Еще раз перезапустите службу панели запуска.
 
 ## <a name="verify-installation"></a>Проверка установки
 

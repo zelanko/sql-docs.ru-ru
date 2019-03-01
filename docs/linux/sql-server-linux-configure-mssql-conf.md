@@ -4,18 +4,18 @@ description: В этой статье описывается, как испол�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/31/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 94d5aa81e6d9da31593f03b867a1f25b5ecc85b0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: bcebae572cb6704051712e44fd0dcf71a2eff5ea
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401899"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018080"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Настройка SQL Server в Linux с помощью средства mssql-conf
 
@@ -74,6 +74,7 @@ ms.locfileid: "52401899"
 | [Предел памяти](#memorylimit) | Задайте ограничение памяти для SQL Server. |
 | [Служба координатора распределенных транзакций](#msdtc) | Настройка и устранение неполадок MSDTC на платформе Linux. |
 | [MLServices лицензионные соглашения.](#mlservices-eula) | Примите лицензионные соглашения Python и R для mlservices пакетов. Применимо к SQL Server 2019 только.|
+| [outboundnetworkaccess](#mlservices-outbound-access) |Разрешить исходящий сетевой доступ для [mlservices](sql-server-linux-setup-machine-learning.md) модули R, Python и Java.|
 | [TCP-порт](#tcpport) | Изменение порта, где SQL Server прослушивает соединения. |
 | [TLS](#tls) | Настройте безопасность на транспортном уровне. |
 | [Флаги трассировки](#traceflags) | Набор флагов трассировки, который планируется использовать службу. |
@@ -508,7 +509,7 @@ sudo systemctl restart mssql-server
 
 Существует несколько других параметров для mssql-conf, который можно использовать для наблюдения и диагностики MSDTC. В следующей таблице кратко описаны эти параметры. Дополнительные сведения по их использованию см. сведения в статье службы поддержки Windows, [как включить диагностическую трассировку для MS DTC](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
 
-| параметр MSSQL-conf | Описание |
+| mssql-conf setting | Описание |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | Настройте безопасный rpc только вызовы для распределенных транзакций |
 | distributedtransaction.fallbacktounsecurerpcifnecessary | Настройка безопасности вызовы rpc только для распределенных |транзакции
@@ -544,10 +545,10 @@ sudo /opt/mssql/bin/mssql-conf setup
 sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 # Alternative valid syntax
-# Add R or Python to an existing installation
+# Adds the EULA section to the INI and sets acceptulam to yes
 sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
 
-# Rescind EULA acceptance
+# Rescind EULA acceptance and removes the setting
 sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
 ```
 
@@ -558,7 +559,34 @@ sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
 accepteula = Y
 accepteulaml = Y
 ```
+:::moniker-end
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
+## <a id="mlservices-outbound-access"></a> Разрешить исходящий сетевой доступ
+
+Исходящий сетевой доступ для расширений R, Python и Java в [службы машинного обучения SQL Server](sql-server-linux-setup-machine-learning.md) функция отключена по умолчанию. Чтобы включить исходящие запросы, задайте «outboundnetworkaccess» логическое свойство, с помощью mssql-conf.
+
+После задания значения свойства, перезапустите службу панели запуска SQL Server для чтения обновленные значения из INI-файл. Сообщение перезапуска, напоминающее каждый раз, когда изменяется параметр относящиеся к расширяемости.
+
+```bash
+# Adds the extensibility section and property.
+# Sets "outboundnetworkaccess" to true.
+# This setting is required if you want to access data or operations off the server.
+sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
+
+# Turns off network access but preserves the setting
+/opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 0
+
+# Removes the setting and rescinds network access
+sudo /opt/mssql/bin/mssql-conf unset extensibility.outboundnetworkaccess
+```
+
+Можно также добавить «outboundnetworkaccess» непосредственно к [mssql.conf файл](#mssql-conf-format):
+
+```ini
+[extensibility]
+outboundnetworkaccess = 1
+```
 :::moniker-end
 
 ## <a id="tcpport"></a> Изменение TCP-порт
@@ -590,7 +618,7 @@ accepteulaml = Y
 |Параметр |Описание |
 |--- |--- |
 |**Network.ForceEncryption** |Если значение равно 1, затем [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] заставляет все подключения должны быть зашифрованы. По умолчанию этот параметр является 0. |
-|**Network.tlscert** |Абсолютный путь к сертификату файла, который [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует для TLS. Пример   `/etc/ssl/certs/mssql.pem`  Файл сертификата должны быть доступны с помощью учетной записи mssql. Корпорация Майкрософт рекомендует ограничения доступа к файлу с помощью `chown mssql:mssql <file>; chmod 400 <file>`. |
+|**network.tlscert** |Абсолютный путь к сертификату файла, который [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует для TLS. Пример   `/etc/ssl/certs/mssql.pem`  Файл сертификата должны быть доступны с помощью учетной записи mssql. Корпорация Майкрософт рекомендует ограничения доступа к файлу с помощью `chown mssql:mssql <file>; chmod 400 <file>`. |
 |**Network.tlskey** |Абсолютный путь к закрытому ключу файла, который [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует для TLS. Пример  `/etc/ssl/private/mssql.key`  Файл сертификата должны быть доступны с помощью учетной записи mssql. Корпорация Майкрософт рекомендует ограничения доступа к файлу с помощью `chown mssql:mssql <file>; chmod 400 <file>`. |
 |**Network.tlsprotocols** |Разделенный запятыми список, из какой TLS протоколы разрешено использовать с SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] всегда пытается согласовать надежный протокол разрешенных. Если клиент не поддерживает любой допустимый протокол [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] отклоняет попытки подключения.  Для обеспечения совместимости всех поддерживаемых протоколов разрешены по умолчанию (1.2, 1.1, 1.0).  Если ваши клиенты поддерживают TLS 1.2, корпорация Майкрософт рекомендует, позволяя только TLS 1.2. |
 |**Network.tlsciphers** |Указывает, какие шифры допускаемых [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для TLS. Эта строка должны быть отформатированы в [формате списка шифров OpenSSL](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). Как правило нет необходимости для изменения этого параметра. <br /> По умолчанию допускаются следующие шифров: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
@@ -653,7 +681,7 @@ sudo cat /var/opt/mssql/mssql.conf
 Обратите внимание на то, что все параметры, не отображаются в этот файл при использовании значения по умолчанию. В следующем разделе приводится пример **mssql.conf** файла.
 
 
-## <a id="mssql-conf-format"></a> Формат MSSQL.conf
+## <a id="mssql-conf-format"></a> mssql.conf format
 
 Следующие **/var/opt/mssql/mssql.conf** файл содержит пример для каждого параметра. Этот формат можно использовать вручную внести изменения в **mssql.conf** файл при необходимости. Если вы вручную измените файл, необходимо перезапустить SQL Server перед применением изменений. Чтобы использовать **mssql.conf** файла с помощью Docker, необходимо иметь Docker [сохранить данные](sql-server-linux-configure-docker.md). Сначала добавьте полное **mssql.conf** файла в каталоге узла, а затем запустите контейнер. Пример этого [отзывы клиентов](sql-server-linux-customer-feedback.md).
 

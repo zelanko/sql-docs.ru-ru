@@ -1,85 +1,110 @@
 ---
-title: Развертывание приложения
+title: Развертывание приложений с помощью mssqlctl
 titleSuffix: SQL Server 2019 big data clusters
 description: Разверните скрипт Python или R в качестве приложения в кластере SQL Server 2019 больших данных (Предварительная версия).
 author: TheBharath
 ms.author: bharaths
 manager: craigg
-ms.date: 12/11/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f37267083e0e56dd6e3c0e06c1d80ed79c0d9969
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 6d0f5fba93b74aa5751635c9a10f320c85036bbb
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241935"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017830"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Развертывание приложения в кластере SQL Server 2019 больших данных (Предварительная версия)
 
 В этой статье описывается развертывание и управление ими скрипт R и Python, как приложение в кластере SQL Server 2019 больших данных (Предварительная версия).
+ 
+## <a name="whats-new-and-improved"></a>Новые и улучшенные 
 
-Развертываются и управляются с помощью приложения Python и R **mssqlctl-pre** программы командной строки, который включен в CTP-версии 2.2. В этой статье приведены примеры того, как развернуть эти скрипты R и Python в качестве приложения из командной строки.
+- Одной программы командной строки для управления кластером и приложения.
+- Упрощенное развертывание приложений, предоставляя точный контроль через спецификаций файлов.
+- Поддерживает размещение типами приложений - служб SSIS и MLeap (новый компонент в CTP-версия 2.3)
+- [Расширение VS Code](app-deployment-extension.md) для управления развертыванием приложений
+
+Приложения развертываются и управляются с помощью `mssqlctl` программы командной строки. В этой статье приведены примеры того, как развертывать приложения из командной строки. Чтобы узнать, как использовать это в Visual Studio Code см [расширение VS Code](app-deployment-extension.md).
+
+Поддерживаются следующие типы приложений:
+- R и Python приложений (функции, моделей и приложения)
+- MLeap обслуживания
+- Службы SQL Server Integration Services
 
 ## <a name="prerequisites"></a>предварительные требования
 
-Необходимо иметь кластер SQL Server 2019 больших данных, настроенный. Дополнительные сведения см. в разделе [развертывание сервера SQL, большие данные кластера в Kubernetes](deployment-guidance.md). 
-
-## <a name="installation"></a>Установка
-
-**Mssqlctl-pre** командной строки служебная программа для предварительного просмотра средство развертывания приложений Python и R. Чтобы установить программу, используйте следующую команду:
-
-```cmd
-pip install -r https://private-repo.microsoft.com/python/ctp-2.2/mssqlctlpre/mssqlctlpre.txt --trusted-host https://private-repo.microsoft.com
-```
+- [Кластер SQL Server 2019 больших данных](deployment-guidance.md)
+- [Программа командной строки mssqlctl](deploy-install-mssqlctl.md)
 
 ## <a name="capabilities"></a>Возможности
 
-В CTP-версии 2.2, которые можно создавать удалять, выводить список и запускать приложение R или Python. В следующей таблице описаны команды развертывания приложения, которые можно использовать с **mssqlctl-pre**.
+В SQL Server 2019 CTP-версии 2.3 (Предварительная версия) можно создавать, удалять, описания, инициализации список, выполнять и обновлять приложения. В следующей таблице описаны команды развертывания приложения, которые можно использовать с **mssqlctl**.
 
-| Command | Описание |
-|---|---|
-| `mssqlctl-pre login` | Войдите в кластер SQL Server больших данных |
-| `mssqlctl-pre app create` | Создание приложения |
-| `mssqlctl-pre app list` | Список развернутых приложений |
-| `mssqlctl-pre app delete` | Удаление приложения |
-| `mssqlctl-pre app run` | Список запущенных приложений |
+|Command |Описание |
+|:---|:---|
+|`mssqlctl login` | Войдите в кластер SQL Server больших данных |
+|`mssqlctl app create` | Создайте приложение. |
+|`mssqlctl app delete` | Для удаления приложения. |
+|`mssqlctl app describe` | Описание приложения. |
+|`mssqlctl app init` | Kickstart новый скелет приложения. |
+|`mssqlctl app list` | Список приложений. |
+|`mssqlctl app run` | Запустите приложение. |
+|`mssqlctl app update`| Обновите приложение. |
 
 Вы можете получить справку с `--help` параметра, как показано в следующем примере:
 
 ```bash
-mssqlctl-pre app create --help
+mssqlctl app create --help
 ```
 
 Эти команды, более подробно в следующих разделах.
 
 ## <a name="log-in"></a>Войти
 
-Перед настройкой приложения Python и R, сначала выполнить вход в кластер для обработки больших данных с использованием SQL Server `mssqlctl-pre login` команды. Укажите внешний IP-адрес `service-proxy-lb` или `service-proxy-nodeport` служб (например: `https://ip-address:30777`), а также имя пользователя и пароль для кластера.
-
-Можно получить IP-адрес **службы прокси lb** или **службы, прокси-сервера, nodeport** службу, выполнив следующую команду в окне bash или cmd:
-
-```bash 
-kubectl get svc service-proxy-lb -n <name of your cluster>
-```
+Перед развертыванием или взаимодействия с приложениями, сначала войдите в кластер для обработки больших данных с использованием SQL Server `mssqlctl login` команды. Укажите внешний IP-адрес `endpoint-service-proxy` службы (например: `https://ip-address:30777`), а также имя пользователя и пароль для кластера.
 
 ```bash
-mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb>:30777 -u <user-name> -p <password>
+mssqlctl login -e https://<ip-address-of-endpoint-service-proxy>:30777 -u <user-name> -p <password>
+```
+
+## <a name="aks"></a>AKS
+
+Если вы используете AKS, необходимо выполнить следующую команду, чтобы получить IP-адрес `endpoint-service-proxy` службу, выполнив следующую команду в окне bash или cmd:
+
+
+```bash
+kubectl get svc endpoint-service-proxy -n <name of your cluster>
+```
+
+
+## <a name="kubeadm-or-minikube"></a>Kubeadm или Minikube
+
+Если вы используете Kubeadm или Minikube, выполните следующую команду для получения IP-адрес для входа в кластер
+
+```bash
+kubectl get node --selector='node-role.kubernetes.io/master' 
 ```
 
 ## <a name="create-an-app"></a>Создание приложения
 
-Чтобы создать приложение, следует передать файлы кода Python или R, чтобы **mssqlctl-pre** с `app create` команды. Эти файлы находятся локально на компьютере, который вы создаете приложение из.
+Чтобы создать приложение, используйте `mssqlctl` с `app create` команды. Эти файлы находятся локально на компьютере, который вы создаете приложение из.
 
 Чтобы создать новое приложение в кластере большие данные, используйте следующий синтаксис:
 
 ```bash
-mssqlctl-pre app create -n <app_name> -v <version_number> -r <runtime> -i <path_to_code_init> -c <path_to_code> --inputs <input_params> --outputs <output_params> 
+mssqlctl app create -n <app_name> -v <version_number> --spec <directory containing spec file>
 ```
 
 Следующая команда является примером как может выглядеть эта команда:
+
+Это предполагает, что у вас есть файл с именем `spec.yaml` в `addpy` папку. `addpy` Папка содержит `add.py` и `spec.yaml` `spec.yaml` — это файл спецификации для `add.py` приложения.
+
+
+`add.py` создает следующие приложения python: 
 
 ```py
 #add.py
@@ -88,37 +113,56 @@ def add(x,y):
         return result;
 result=add(x,y)
 ```
-Чтобы попробовать сделать это, сохраните приведенный выше код в локальный каталог, как `add.py` и выполните приведенную ниже команду
+
+Следующий сценарий — пример содержимого для `spec.yaml`:
+
+```yaml
+#spec.yaml
+name: add-app #name of your python script
+version: v1  #version of the app 
+runtime: Python #the languge this app uses (R or Python)
+src: ./add.py #full path to the loction of the app
+entrypoint: add #the function that will be called upon execution
+replicas: 1  #number of replicas needed
+poolsize: 1  #the pool size that you need your app to scale
+inputs:  #input parameters that the app expects and the type
+  x: int
+  y: int
+output: #output parameter the app expects and the type
+  result: int
+```
+
+Чтобы попробовать сделать это, скопируйте приведенный выше код в два файла в каталоге `addpy` как `add.py` и `spec.yaml` и выполните следующую команду:
 
 ```bash
-mssqlctl-pre app create --name add-app --version v1 --runtime Python --code ./add.py  --inputs x=int,y=int --outputs result=int 
+mssqlctl app create --spec ./addpy
 ```
 
 Вы можете проверить, если приложение развертывается с помощью команды списка:
 
 ```bash
-mssqlctl-pre app list
+mssqlctl app list
 ```
 
-Если развертывание не будет завершено, вы должны увидеть «штат» Показать «Создание»: 
+Если развертывание не будет завершено, вы должны увидеть `state` Показать `WaitingforCreate` как в примере ниже: 
 
 ```
 [
   {
     "name": "add-app",
-    "state": "Creating",
+    `state`: "WaitingforCreate",
     "version": "v1"
   }
 ]
 ```
 
-После успешного завершения развертывания вы увидите «состояние» изменить на «Готово»:
+После успешного завершения развертывания, вы увидите `state` измените `Ready` состояния:
 
 ```
 [
   {
     "name": "add-app",
-    "state": "Ready",
+    `state`: `Ready`,
     "version": "v1"
   }
 ]
@@ -131,19 +175,19 @@ mssqlctl-pre app list
 Следующая команда перечисляет все доступные приложения в кластере большие данные:
 
 ```bash
-mssqlctl-pre app list
+mssqlctl app list
 ```
 
-Если указать имя и версию, будут перечислены этого конкретного приложения и его состояние ("Создание" или "Готово"):
+Если указать имя и версия, в ней этого конкретного приложения и его состояние ("Создание" или "Готово"):
 
 ```bash
-mssqlctl-pre app list --name <app_name> --version <app_version>
+mssqlctl app list --name <app_name> --version <app_version>
 ```
 
 В следующем примере демонстрируется эта команда:
 
 ```bash
-mssqlctl-pre app list --name add-app --version v1
+mssqlctl app list --name add-app --version v1
 ```
 
 Вы должны увидеть результат, аналогичный приведенному ниже:
@@ -152,7 +196,7 @@ mssqlctl-pre app list --name add-app --version v1
 [
   {
     "name": "add-app",
-    "state": "Ready",
+    `state`: `Ready`,
     "version": "v1"
   }
 ]
@@ -160,16 +204,16 @@ mssqlctl-pre app list --name add-app --version v1
 
 ## <a name="run-an-app"></a>Запуск приложения
 
-Если приложение находится в состоянии «Готово», можно использовать его, запустив его с указанным входные параметры. Для запуска приложений, используйте следующий синтаксис:
+Если приложение находится в `Ready` состоянии, его можно использовать, запустив его с указанным входные параметры. Для запуска приложений, используйте следующий синтаксис:
 
 ```bash
-mssqlctl-pre app run --name <app_name> --version <app_version> --inputs <inputs_params>
+mssqlctl app run --name <app_name> --version <app_version> --inputs <inputs_params>
 ```
 
 Например, следующая команда демонстрирует выполнения команды:
 
 ```bash
-mssqlctl-pre app run --name add-app --version v1 --inputs x=1,y=2
+mssqlctl app run --name add-app --version v1 --inputs x=1,y=2
 ```
 
 Если выполнение прошло успешно, вы увидите выходные данные, указанные при создании приложения. Пример приведен ниже.
@@ -187,16 +231,69 @@ mssqlctl-pre app run --name add-app --version v1 --inputs x=1,y=2
 }
 ```
 
+## <a name="create-an-app-skeleton"></a>Создайте схему приложения
+
+Команда init предоставляет каркас с соответствующей изменяются при возможности, необходимые для развертывания приложения. В приведенном ниже примере создает hello, это можно сделать, выполнив следующую команду.
+
+```
+mssqlctl app init --name hello --version v1 --template python
+```
+
+Это создаст папку с именем hello.  Вы можете перейдите в каталог и проверять созданные файлы в папке. Spec.yaml определяет приложения, такие как имя, версию и исходного кода. Вы можете изменить спецификации, чтобы изменить имя, версию, входные и выходные данные.
+
+Ниже приведен пример выходных данных команды init, которое будет отображаться в папке
+
+```
+hello.py
+README.md
+run-spec.yaml
+spec.yaml
+
+```
+
+## <a name="describe-an-app"></a>Описание приложения
+
+Команда describe содержит подробные сведения о приложении, включая конечную точку в кластере. Обычно это используется, разработчик приложения для создания приложения с помощью клиента swagger и использование веб-службы для взаимодействия с приложением в RESTful-образом.
+
+```
+{
+  "input_param_defs": [
+    {
+      "name": "x",
+      "type": "int"
+    },
+    {
+      "name": "y",
+      "type": "int"
+    }
+  ],
+  "links": {
+    "app": "https://10.1.1.3:30777/api/app/add-app/v1",
+    "swagger": "https://10.1.1.3:30777/api/app/add-app/v1/swagger.json"
+  },
+  "name": "add-app",
+  "output_param_defs": [
+    {
+      "name": "result",
+      "type": "int"
+    }
+  ],
+  `state`: `Ready`,
+  "version": "v1"
+}
+
+```
+
 ## <a name="delete-an-app"></a>Удаление приложения
 
 Чтобы удалить приложение из кластера больших данных, используйте следующий синтаксис:
 
 ```bash
-mssqlctl-pre app delete --name add-app --version v1
+mssqlctl app delete --name add-app --version v1
 ```
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Вы можете также проверить Дополнительные примеры по [ https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster). 
+Вы можете также проверить Дополнительные примеры по [примеры развертывания приложений](https://aka.ms/sql-app-deploy).
 
 Дополнительные сведения о больших данных кластеров SQL Server, см. в разделе [Каковы кластеров SQL Server 2019 больших данных?](big-data-cluster-overview.md).

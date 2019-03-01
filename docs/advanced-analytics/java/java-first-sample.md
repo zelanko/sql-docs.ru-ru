@@ -3,18 +3,18 @@ title: Пример Java и руководство по SQL Server 2019 - слу
 description: Запустите пример кода Java на SQL Server 2019 дополнительные действия по использованию расширения языка Java с данными SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 32c0792882020612c40a0c41b1c54aaeb51da91c
-ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
+ms.openlocfilehash: 86a379191033f49ab6a5d06ceda2d1ed7a747c12
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069064"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018040"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>Пошаговое руководство по примеру SQL Server Java
 
@@ -26,7 +26,7 @@ ms.locfileid: "54069064"
 
 + SQL Server Management Studio или другое средство для выполнения T-SQL.
 
-+ Java SE Development Kit (JDK) 1.10 на Windows или JDK 1.8 в Linux.
++ Java SE Development Kit (JDK) версии 8 в Windows или Linux.
 
 Компиляции из командной строки с помощью **javac** достаточно для этого руководства. 
 
@@ -240,7 +240,7 @@ public class OutputRow {
 
 + В Linux выполните следующий код в SQL Server Management Studio или другого средства, используемые для запуска Transact-SQL. 
 
-+ В Windows, измените **@myClassPath** для N'C:\myJavaCode\' (предполагается, что это родительская папка \pkg) перед выполнением запроса в SQL Server Management Studio или другого средства.
++ В Windows, измените @myClassPath для N'C:\myJavaCode\' (предполагается, что это родительская папка \pkg) перед выполнением запроса в SQL Server Management Studio или другого средства.
 
 ```sql
 DECLARE @myClassPath nvarchar(50)

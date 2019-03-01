@@ -5,17 +5,17 @@ description: В этой статье описываются последние 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4f16ee38b09198c036941085c9d7a5a1ee35f01b
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a6f40d4f113942fe774665358d8f1202ba8c4632
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242075"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017950"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>Заметки о выпуске для кластеров SQL Server 2019 больших данных
 
@@ -23,11 +23,98 @@ ms.locfileid: "54242075"
 
 | Выпуск | Дата |
 |---|---|
+| [CTP-ВЕРСИИ 2.3](#ctp23) | Февраля 2019 г. |
 | [CTP-ВЕРСИИ 2.2](#ctp22) | Декабря 2018 г. |
 | [CTP-ВЕРСИИ 2.1](#ctp21) | Ноябрь 2018 г. |
 | [CTP-ВЕРСИИ 2.0](#ctp20) | Октября 2018 г. |
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+## <a id="ctp23"></a> CTP-версии 2.3 (февраля 2019 г.)
+
+Новые возможности и известные проблемы с кластерами больших данных в SQL Server 2019 CTP 2.3 в следующих разделах.
+
+### <a name="whats-in-the-ctp-23-release"></a>Новые возможности в выпуске CTP-версии 2.3
+
+- [Отправка заданий Spark на кластерах SQL Server больших данных в IntelliJ](spark-submit-job-intellij-tool-plugin.md).
+- [Общий интерфейс командной строки для приложения развертывания и управления кластерами](big-data-cluster-create-apps.md).
+- [Расширение VS Code для развертывания приложений к кластерам больших данных в SQL Server](app-deployment-extension.md).
+- Новый параметр для **mssqlctl** средство.
+- [Использовать Sparklyr в кластере SQL Server 2019 больших данных](sparklyr-from-RStudio.md).
+- Новые возможности единой подключения для [главного экземпляра SQL Server и шлюза HDFS/Spark](connect-to-big-data-cluster.md).
+- При удалении кластера с **удаления кластера mssqlctl** теперь удаляет только объекты в пространстве имен, которые были частью кластера больших данных, но оставляет пространства имен. Ранее эта команда удалены все пространство имен.
+- Имена конечных точек были изменены и объединены в этом выпуске:
+
+   | Предыдущий конечных точек | Новая конечная точка |
+   |---|---|
+   | **service-security-lb**<br/>**service-security-nodeport** | **endpoint-security** |
+   | **service-proxy-lb**<br/>**service-proxy-nodeport** | **endpoint-service-proxy** |
+   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | **Конечная точка контроллер** |
+
+### <a name="known-issues"></a>Известные проблемы
+
+Следующие разделы содержат известные проблемы для больших данных кластеров SQL Server в CTP-версии 2.3.
+
+#### <a name="deployment"></a>Развертывание
+
+- Обновление данных кластерам больших данных с предыдущего выпуска не поддерживается.
+
+   > [!IMPORTANT]
+   > Необходимо создать резервную копию данных и удалите существующего кластера больших данных (с помощью предыдущей версии **mssqlctl**) перед развертыванием в последнем выпуске. Дополнительные сведения см. в разделе [обновление до нового выпуска](deployment-guidance.md#upgrade).
+
+- **ACCEPT_EULA** переменной среды должен быть «yes» или «Да», чтобы принять условия лицензионного соглашения. Предыдущие выпуски разрешены «y» и «Y», но они больше не принимаются и приведет к сбою развертывания.
+
+- **CLUSTER_PLATFORM** переменные среды не имеет значения по умолчанию, как в предыдущих выпусках.
+
+- После развертывания в AKS, могут появиться следующие два события-предупреждения из развертывания. Оба эти события перечислены известные проблемы, но они не препятствуют успешному развертыванию кластера больших данных в AKS.
+
+   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+
+   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+
+- Если происходит сбой развертывания кластера больших данных, связанное пространство имен не удаляется. В итоге потерянные пространством имен в кластере. Обойти это можно вручную удалить пространство имен перед развертыванием кластера с тем же именем.
+
+#### <a name="cluster-administration-portal"></a>Портал администрирования кластера
+
+На портале администрирования кластера не содержит конечную точку для главного экземпляра SQL Server. Чтобы найти IP-адрес и порт для главного экземпляра, воспользуйтесь следующим **kubectl** команды:
+
+```
+kubectl get svc endpoint-master-pool -n <your-cluster-name>
+```
+
+#### <a name="external-tables"></a>Внешние таблицы
+
+- Это позволяет создать внешнюю таблицу пула данных для таблицы, которая имеет неподдерживаемые типы столбцов. При выполнении запроса внешней таблицы, вы получите сообщение следующего вида:
+
+   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+
+- Если базовый файл копируется в HDFS в то же время при выполнении запроса внешней таблицы пула хранения, может появиться ошибка.
+
+   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+#### <a name="spark-and-notebooks"></a>Spark и записные книжки
+
+- IP-адресом МОДУЛЯ адреса могут измениться в среде Kubernetes, время перезагрузки модулей POD. В сценарии, где перезапускает master-pod, сеанс Spark может произойти сбой с `NoRoteToHostException`. Это связано с виртуальной машины Java кэшей, не обновляется с помощью нового IP-адреса адреса.
+
+- Если у вас есть Jupyter уже установлен и отдельные Python в Windows, записные книжки Spark может завершиться ошибкой. Чтобы обойти эту проблему, обновите Jupyter до последней версии.
+
+- В записной книжке, если щелкнуть **добавить текст** команды ячейку текст добавляется в режиме предварительного просмотра, а не в режиме редактирования. Можно щелкнуть значок предварительного просмотра, чтобы переключиться в режим правки и изменять ячейки.
+
+#### <a name="hdfs"></a>HDFS
+
+- Если щелкнуть правой кнопкой мыши файл в файловой системе HDFS, чтобы сделать это, может появиться следующая ошибка:
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   В настоящее время нет способа для предварительного просмотра файлов, размер которых превышает 30 МБ студии данных Azure.
+
+- Изменения конфигурации HDFS, влечет за собой изменения hdfs-site.xml не поддерживаются.
+
+#### <a name="security"></a>безопасность
+
+- SA_PASSWORD является частью среды и доступными (например, в файл дампа кабель). После развертывания, необходимо сбросить SA_PASSWORD на основной экземпляр. Это не ошибка, но шаг по обеспечению безопасности. Дополнительные сведения о способах изменения SA_PASSWORD в контейнере Linux, см. в разделе [Смена пароля Администратора](../linux/quickstart-install-connect-docker.md#sapassword).
+
+- AKS журналы могут содержать пароль системного Администратора для развертывания кластера больших данных.
 
 ## <a id="ctp22"></a> CTP-версии 2.2 (декабря 2018 г.)
 

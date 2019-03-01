@@ -5,17 +5,17 @@ description: Сведения о настройке службы Azure Kubernete
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5e4ec4e6f0de497e3ec5d35293ad142696a19a46
-ms.sourcegitcommit: 3a1e0b92cbe53ccf3b233faf8629d16bbf673b30
+ms.openlocfilehash: ae8a8b2869a46a9157c805edcb8c6d74ca49e3d0
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55229035"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018000"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>Настройка службы Azure Kubernetes для развертывания кластера (Предварительная версия) SQL Server 2019 больших данных
 
@@ -38,36 +38,39 @@ AKS позволяет легко создавать, настраивать и 
 
 - Минимальная 1.10 версия для сервера Kubernetes. Для AKS, необходимо использовать `--kubernetes-version` параметр, чтобы указать версию стандарта не по умолчанию.
 
-- Для среды AKS для оптимальной производительности при проверке основных сценариев мы рекомендуем по крайней мере три агента виртуальных машин с по крайней мере 4 виртуальных ЦП и оставить 32 ГБ памяти каждая. Инфраструктура Azure предлагает несколько вариантов размера для виртуальных машин, см. в разделе [здесь](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) для выбранных элементов в регионе, который вы планируете развернуть.
+- Для оптимальной производительности при проверке основных сценариев в AKS используйте следующую команду:
+   - Не менее 3 виртуальных машин агента
+   - 4 виртуальных ЦП на виртуальную Машину
+   - 32 ГБ памяти на виртуальную Машину
+
+   > [!TIP]
+   > Инфраструктура Azure предлагает несколько вариантов размера для виртуальных машин, см. в разделе [здесь](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) для выбранных элементов в регионе, который вы планируете развернуть.
 
 ## <a name="create-a-resource-group"></a>Создайте группу ресурсов
 
 Группа ресурсов Azure — это логическая группа, в какие Azure развертываются и администрируются ресурсы. Следующие действия, вход в Azure и создайте группу ресурсов в кластере AKS.
 
-> [!TIP]
-> Если вы используете Windows, используйте PowerShell для дальнейших действий, описанных.
-
 1. В командной строке выполните следующую команду и следуйте инструкциям на экране входа в подписку Azure:
 
-    ```bash
+    ```azurecli
     az login
     ```
 
 1. Если у вас несколько подписок, всех подписок можно просмотреть, выполнив следующую команду:
 
-   ```bash
+   ```azurecli
    az account list
    ```
 
 1. Если вы хотите изменить в другую подписку вы выполните следующую команду:
 
-   ```bash
+   ```azurecli
    az account set --subscription <subscription id>
    ```
 
 1. Создайте группу ресурсов с помощью **Создание группы az** команды. В следующем примере создается группа ресурсов, с именем `sqlbigdatagroup` в `westus2` расположение.
 
-   ```bash
+   ```azurecli
    az group create --name sqlbigdatagroup --location westus2
    ```
 
@@ -75,7 +78,7 @@ AKS позволяет легко создавать, настраивать и 
 
 1. Создание кластера Kubernetes в AKS при помощи [создать az aks](https://docs.microsoft.com/cli/azure/aks) команды. В следующем примере создается кластер Kubernetes с именем *kubcluster* с тремя узлами агентов Linux. Убедитесь, что вы создаете кластер AKS в той же группе ресурсов, который использовался в предыдущих разделах.
 
-    ```bash
+    ```azurecli
    az aks create --name kubcluster \
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
@@ -94,13 +97,13 @@ AKS позволяет легко создавать, настраивать и 
 
 1. Чтобы настроить kubectl для подключения к кластеру Kubernetes, выполните [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) команды. Этот шаг скачиваются учетные данные и настройка интерфейса командной строки, чтобы их использовать kubectl.
 
-   ```bash
+   ```azurecli
    az aks get-credentials --resource-group=sqlbigdatagroup --name kubcluster
    ```
 
 1. Чтобы проверить подключение к кластеру, используйте [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) команду, чтобы получить список узлов кластера.  В приведенном ниже примере показаны выходные данные при 1 главный, а 3 узлов агентов.
 
-   ```bash
+   ```
    kubectl get nodes
    ```
 
