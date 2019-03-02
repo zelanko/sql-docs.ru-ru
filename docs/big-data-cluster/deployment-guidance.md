@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e92ae469c03f6b2b5547acb1f31baac334926edf
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 4aba7c8bbe7af361dc118111c8502546c83dd61c
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018010"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227206"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Развертывание кластеров больших данных SQL Server в Kubernetes
 
@@ -94,20 +94,22 @@ kubectl config view
 | **DOCKER_REPOSITORY** | Да | TBD | Частный репозиторий в реестре выше, где хранятся образы.  Он необходим в течение условная общедоступная Предварительная версия. |
 | **DOCKER_USERNAME** | Да | Н/Д | Имя пользователя для доступа к образы контейнеров, в случае, если они хранятся в частный репозиторий. Он необходим в течение условная общедоступная Предварительная версия. |
 | **DOCKER_PASSWORD** | Да | Н/Д | Пароль для доступа к выше частный репозиторий. Он необходим в течение условная общедоступная Предварительная версия.|
-| **DOCKER_EMAIL** | Да | Н/Д | Электронная почта, связанная с выше частный репозиторий. Он необходим в течение неконтролируемые закрытой предварительной версии. |
 | **DOCKER_IMAGE_TAG** | Нет | Последние | Метка, используемая для добавлять теги к изображениям. |
 | **DOCKER_IMAGE_POLICY** | Нет | Всегда | Всегда принудительный операции извлечения образов.  |
-| **DOCKER_PRIVATE_REGISTRY** | Да | 1 | Для тех же временных рамках условная общедоступная Предварительная версия это значение должно быть установлено в 1. |
+| **DOCKER_PRIVATE_REGISTRY** | Да | Н/Д | Для тех же временных рамках условная общедоступная Предварительная версия необходимо задать это значение «1». |
 | **CONTROLLER_USERNAME** | Да | Н/Д | Имя пользователя администратора кластера. |
 | **CONTROLLER_PASSWORD** | Да | Н/Д | Пароль администратора кластера. |
 | **KNOX_PASSWORD** | Да | Н/Д | Пароль для пользователя Knox. |
 | **MSSQL_SA_PASSWORD** | Да | Н/Д | Пароль пользователя SA для главного экземпляра SQL. |
 | **USE_PERSISTENT_VOLUME** | Нет | true | `true` для использования утверждения постоянного тома Kubernetes для хранения pod.  `false` Использование временных узлов хранилища для хранения pod. См. в разделе [постоянного хранения](concept-data-persistence.md) Дополнительные сведения. При развертывании SQL Server, большие данные кластера в minikube и USE_PERSISTENT_VOLUME = true, необходимо задать значение для `STORAGE_CLASS_NAME=standard`. |
 | **STORAGE_CLASS_NAME** | Нет | значение по умолчанию | Если `USE_PERSISTENT_VOLUME` является `true` это указывает на имя класса хранения Kubernetes для использования. См. в разделе [постоянного хранения](concept-data-persistence.md) Дополнительные сведения. При развертывании SQL Server, большие данные кластера в minikube, имя класса для хранения по умолчанию отличается, и его необходимо переопределить, задав `STORAGE_CLASS_NAME=standard`. |
+| **CONTROLLER_PORT** | Нет | 30080 | Порт TCP/IP, который прослушивает служба контроллера в общедоступной сети. |
 | **MASTER_SQL_PORT** | Нет | 31433 | Порт TCP/IP, который ожидает передачи данных master экземпляра SQL в общедоступной сети. |
 | **KNOX_PORT** | Нет | 30443 | Порт TCP/IP, который ожидает передачи данных Apache Knox в общедоступной сети. |
+| **PROXY_PORT** | Нет | 30777 | Порт TCP/IP, служба прокси-сервер ожидает передачи данных в общедоступной сети. Это порт, используемый для вычисления на портале URL-адрес. |
 | **GRAFANA_PORT** | Нет | 30888 | Порт TCP/IP, который ожидает передачи данных Grafana, наблюдение за приложением в общедоступной сети. |
 | **KIBANA_PORT** | Нет | 30999 | Порт TCP/IP, который прослушивает приложение поиска журнала Kibana в общедоступной сети. |
+
 
 > [!IMPORTANT]
 >1. В течение ограниченной закрытой предварительной версии, учетные данные для частного реестра Docker будет предоставляться вам после рассмотрения вашего [регистрации EAP](https://aka.ms/eapsignup).
@@ -125,7 +127,7 @@ kubectl config view
 С помощью окна командной строки (не PowerShell), настройте следующие переменные среды. Не используйте кавычки вокруг значений.
 
 ```cmd
-SET ACCEPT_EULA=Y
+SET ACCEPT_EULA=yes
 SET CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
 SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
@@ -137,7 +139,6 @@ SET DOCKER_REGISTRY=private-repo.microsoft.com
 SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
 SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-SET DOCKER_EMAIL=<your Docker email, use the username provided by Microsoft>
 SET DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -146,7 +147,7 @@ SET DOCKER_PRIVATE_REGISTRY="1"
 Инициализируйте следующие переменные среды. В bash можно использовать кавычки вокруг каждого значения.
 
 ```bash
-export ACCEPT_EULA=Y
+export ACCEPT_EULA=yes
 export CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
 export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
@@ -158,7 +159,6 @@ export DOCKER_REGISTRY="private-repo.microsoft.com"
 export DOCKER_REPOSITORY="mssql-private-preview"
 export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
 export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
-export DOCKER_EMAIL="<your Docker email, use the username provided by Microsoft>"
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -271,17 +271,17 @@ kubectl get svc -n <your-cluster-name>
    > Не следует устанавливать новую версию **mssqlctl** не удалив сначала все более ранние версии.
 
 1. Установите последнюю версию **mssqlctl**. 
-   
+
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
 
    **Linux:**
-   
+
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

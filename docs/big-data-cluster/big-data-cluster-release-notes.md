@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a6f40d4f113942fe774665358d8f1202ba8c4632
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: e7de0c9dafe7c5c8f8a4b2a2dc709105218fb2fc
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017950"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227216"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>Заметки о выпуске для кластеров SQL Server 2019 больших данных
 
@@ -41,6 +41,7 @@ ms.locfileid: "57017950"
 - [Расширение VS Code для развертывания приложений к кластерам больших данных в SQL Server](app-deployment-extension.md).
 - Новый параметр для **mssqlctl** средство.
 - [Использовать Sparklyr в кластере SQL Server 2019 больших данных](sparklyr-from-RStudio.md).
+- Подключите внешних HDFS-совместимом хранилище кластера больших данных с помощью [распределение по уровням HDFS](hdfs-tiering.md).
 - Новые возможности единой подключения для [главного экземпляра SQL Server и шлюза HDFS/Spark](connect-to-big-data-cluster.md).
 - При удалении кластера с **удаления кластера mssqlctl** теперь удаляет только объекты в пространстве имен, которые были частью кластера больших данных, но оставляет пространства имен. Ранее эта команда удалены все пространство имен.
 - Имена конечных точек были изменены и объединены в этом выпуске:
@@ -74,14 +75,6 @@ ms.locfileid: "57017950"
 
 - Если происходит сбой развертывания кластера больших данных, связанное пространство имен не удаляется. В итоге потерянные пространством имен в кластере. Обойти это можно вручную удалить пространство имен перед развертыванием кластера с тем же именем.
 
-#### <a name="cluster-administration-portal"></a>Портал администрирования кластера
-
-На портале администрирования кластера не содержит конечную точку для главного экземпляра SQL Server. Чтобы найти IP-адрес и порт для главного экземпляра, воспользуйтесь следующим **kubectl** команды:
-
-```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
-```
-
 #### <a name="external-tables"></a>Внешние таблицы
 
 - Это позволяет создать внешнюю таблицу пула данных для таблицы, которая имеет неподдерживаемые типы столбцов. При выполнении запроса внешней таблицы, вы получите сообщение следующего вида:
@@ -91,6 +84,8 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 - Если базовый файл копируется в HDFS в то же время при выполнении запроса внешней таблицы пула хранения, может появиться ошибка.
 
    `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- При создании внешней таблицы к базе данных Oracle, использовать символьные типы данных, мастер виртуализации Azure Data Studio интерпретирует эти столбцы как VARCHAR в определении внешней таблицы. В результате сбоя в язык DDL внешней таблицы. Измените схемы Oracle для NVARCHAR2 на типе, или вручную создайте инструкций ВНЕШНЕЙ таблицы, укажите NVARCHAR, а не с помощью мастера.
 
 #### <a name="spark-and-notebooks"></a>Spark и записные книжки
 

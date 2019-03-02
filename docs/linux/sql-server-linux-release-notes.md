@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 49c16a062977e13f8bf30de10811f48f24d380d3
-ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
+ms.openlocfilehash: cd5c39f230db8fc72388d006fc17302956424633
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069840"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227316"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для SQL Server 2017 в Linux
 
@@ -49,14 +49,14 @@ ms.locfileid: "54069840"
 | Выпуск               | Версия       | Дата выпуска |
 |-----------------------|---------------|--------------|
 | [CU13](#CU13)         | 14.0.3048.4   | 2018-12-18   |
-| [CU12](#CU12)         | 14.0.3045.24  | 2018 г.-10-24   |
+| [CU12](#CU12)         | 14.0.3045.24  | 2018-10-24   |
 | [CU11](#CU11)         | 14.0.3038.14  | 2018-09-20   |
 | [CU10](#CU10)         | 14.0.3037.1   | 2018-08-27   |
-| [CU9 GDR2](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
+| [CU9-GDR2](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
 | [GDR2](#GDR2)         | 14.0.2002.14  | 2018-08-18   |
 | [CU9](#CU9)           | 14.0.3030.27  | 2018-07-18   |
 | [CU8](#CU8)           | 14.0.3029.16  | 2018-06-21   |
-| [НАКОПИТЕЛЬНЫМ ПАКЕТОМ ОБНОВЛЕНИЯ 7](#CU7)           | 14.0.3026.27  | 2018-05-24   |
+| [CU7](#CU7)           | 14.0.3026.27  | 2018-05-24   |
 | [CU6](#CU6)           | 14.0.3025.34  | 2018-04-19   |
 | [CU5](#CU5)           | 14.0.3023.8   | 2018-03-20   |
 | [CU4](#CU4)           | 14.0.3022.28  | 2018-02-20   |
@@ -382,8 +382,6 @@ sudo systemctl start mssql-server
 В следующих разделах описаны известные проблемы, Общая доступность (GA) версия [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] в Linux.
 
 #### <a name="general"></a>Общие
-
-- Обновление до общедоступной версии выпуска [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] поддерживаются только из CTP 2.1 или более поздней версии. 
 
 - Длина имени узла где [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] установленных должно превышать 15 знаков или меньше. 
 
