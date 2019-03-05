@@ -1,7 +1,7 @@
 ---
 title: Диагностическое соединение для администраторов баз данных | Документы Майкрософт
 ms.custom: ''
-ms.date: 10/16/2015
+ms.date: 02/27/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -21,15 +21,15 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c51655426d892c4d6e233bc72b7388d200bbce8a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 7cdcffb40c1c0e15a1be56a4484edade6b5f1463
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589399"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955985"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Диагностическое соединение для администраторов баз данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет специальное диагностическое соединение для администраторов, когда стандартное соединение с сервером невозможно. Это диагностическое соединение позволяет администратору получить доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения диагностических запросов и устранения проблем, даже когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не отвечает на стандартные запросы на соединение.  
   
  Такое выделенное административное соединение (DAC) поддерживает шифрование и другие средства безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Выделенное административное соединение позволяет только изменять контекст пользователя на другого пользователя с правами администратора.  

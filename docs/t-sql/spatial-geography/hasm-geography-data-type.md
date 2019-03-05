@@ -18,31 +18,31 @@ ms.assetid: e752e97f-1619-437d-b962-48c188b4e94c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b5da9f9b70489a87d93521f85dbdb6b708f79066
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ece3c57981f52b1359f40d59487c464b6c5a230
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679452"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852859"
 ---
 # <a name="hasm-geography-data-type"></a>HasM (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Возвращает значение 1 (true), если пространственный объект содержит по крайней мере одно значение M. В противном случае возвращает значение 0 (false).  
+Возвращает значение 1 (true), если пространственный объект содержит по крайней мере одно значение M. В противном случае возвращает значение 0 (false).  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```sql  
   
 .HasM  
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
+Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Тип возвращаемых данных CLR: **Boolean**  
+Возвращаемый тип CLR: **Boolean**  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Примеры  
   

@@ -8,18 +8,18 @@ ms.custom: ''
 ms.topic: article
 ms.date: 06/18/2018
 ms.author: genemi
-ms.openlocfilehash: 4286a9a1fcc2eff3becd483d658b371bb6452032
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7f759dbe9022cff557461d900a35b3ccc91d2c4b
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600374"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007577"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Модули подключения для базы данных Microsoft SQL
 
 В этой статье ссылками на загрузку модулей подключения или *драйверы* , клиентские программы можно использовать для взаимодействия с [Microsoft SQL Server](../relational-databases/database-features.md)и с его двойником в облаке [Azure База данных SQL](https://docs.microsoft.com/azure/sql-database/). Драйверы доступны для различных языков программирования, работающих под управлением следующих ОС:
 
-- Linux (Ubuntu)
+- Linux
 - MacOS
 - Windows
 

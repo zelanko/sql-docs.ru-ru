@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: adfb1663d9ec1b86abf38c46c0056622105b80d5
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 252e162b78f93b156adcea045bc869e618176331
+ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56956035"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305362"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Оценка предприятия и объединять оценки с помощью DMA
 
@@ -71,6 +71,9 @@ ms.locfileid: "56956035"
 - Таблицы SQL Server
 
 ### <a name="if-using-a-csv-file"></a>Если в CSV-файле
+> [!IMPORTANT]
+> Убедитесь, что файл инвентаризации сохраняется как файл с разделителями запятыми (CSV).
+
 При использовании CSV-файл для импорта данных, убедитесь, существует только два столбца данных — **имя экземпляра** и **имя базы данных**, и что у столбцов нет строки заголовка.
  
  ![содержимое файла CSV](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
@@ -153,10 +156,7 @@ ms.locfileid: "56956035"
 
 1. Откройте шаблон DMA отчеты Power BI в Power BI Desktop.
 2. Введите данные сервера, которые указывают на вашей **DMAWarehouse** базы данных, а затем выберите **нагрузки**.
-
-    > [!IMPORTANT]
-    > Не нажимайте клавишу ВВОД, чтобы принять значения.
-
+   
       ![Загрузить шаблон DMA отчеты Power BI](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
    После отчета обновляются данные из **DMAWarehouse** базы данных, вам предоставляется отчет, подобный следующему.

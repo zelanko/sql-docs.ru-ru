@@ -5,17 +5,17 @@ description: В этой статье описываются последние 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e7de0c9dafe7c5c8f8a4b2a2dc709105218fb2fc
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: dced44806927f7b41957c2eb8374688e8be88f1f
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227216"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334751"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>Заметки о выпуске для кластеров SQL Server 2019 больших данных
 
@@ -39,7 +39,7 @@ ms.locfileid: "57227216"
 - [Отправка заданий Spark на кластерах SQL Server больших данных в IntelliJ](spark-submit-job-intellij-tool-plugin.md).
 - [Общий интерфейс командной строки для приложения развертывания и управления кластерами](big-data-cluster-create-apps.md).
 - [Расширение VS Code для развертывания приложений к кластерам больших данных в SQL Server](app-deployment-extension.md).
-- Новый параметр для **mssqlctl** средство.
+- [Изменения в **mssqlctl** средство использование команды](#mssqlctlctp23).
 - [Использовать Sparklyr в кластере SQL Server 2019 больших данных](sparklyr-from-RStudio.md).
 - Подключите внешних HDFS-совместимом хранилище кластера больших данных с помощью [распределение по уровням HDFS](hdfs-tiering.md).
 - Новые возможности единой подключения для [главного экземпляра SQL Server и шлюза HDFS/Spark](connect-to-big-data-cluster.md).
@@ -74,6 +74,18 @@ ms.locfileid: "57227216"
    `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
 
 - Если происходит сбой развертывания кластера больших данных, связанное пространство имен не удаляется. В итоге потерянные пространством имен в кластере. Обойти это можно вручную удалить пространство имен перед развертыванием кластера с тем же именем.
+
+#### <a id="mssqlctlctp23"></a> mssqlctl
+
+- **Mssqlctl** изменился инструмент из команды глагол существительное, упорядочение с заказом глагол существительное. Например `mssqlctl create cluster` теперь `mssqlctl cluster create`.
+
+- `--name` Теперь является параметр требуется при создании кластера с `mssqlctl cluster create`.
+
+   ```bash
+   mssqlctl cluster create --name <cluster_name>
+   ```
+
+- Важные сведения об обновлении до последней версии кластеров больших данных и **mssqlctl**, см. в разделе [обновление до нового выпуска](deployment-guidance.md#upgrade).
 
 #### <a name="external-tables"></a>Внешние таблицы
 

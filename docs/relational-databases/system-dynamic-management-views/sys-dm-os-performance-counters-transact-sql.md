@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 002003864c61dae1b55f7fdfab10ff18ec97f68f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dcfe7869767bc9178f9241c3ffa82d166685d7ac
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669683"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334711"
 ---
 # <a name="sysdmosperformancecounters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "51669683"
 |**object_name**|**nchar(128)**|Категория, к которой принадлежит счетчик.|  
 |**counter_name**|**nchar(128)**|Имя счетчика. Чтобы получить дополнительные сведения о счетчике, это имя раздела, чтобы выбрать из списка счетчиков в [использование объектов SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md). |  
 |**instance_name**|**nchar(128)**|Имя заданного экземпляра счетчика. Обычно содержит имя базы данных.|  
-|**cntr_value**|**bigint**|Текущее значение счетчика.<br /><br /> **Примечание:** для посекундных счетчиков данное значение является совокупным. Значение частоты должно быть вычислено выборкой значений в дискретные интервалы времени. Разность между двумя последовательными значениям выборки равна частоте используемого интервала времени.|  
-|**cntr_type**|**int**|Тип счетчика, как определено архитектурой производительности Windows. См. в разделе [типы счетчиков производительности WMI](https://msdn2.microsoft.com/library/aa394569.aspx) на сайтах MSDN или документации по Windows Server, Дополнительные сведения о типах счетчиков производительности.|  
+|**cntr_value**|**bigint**|Текущее значение счетчика.<br /><br /> **Примечание.** Для посекундных счетчиков данное значение является совокупным. Значение частоты должно быть вычислено выборкой значений в дискретные интервалы времени. Разность между двумя последовательными значениям выборки равна частоте используемого интервала времени.|  
+|**cntr_type**|**int**|Тип счетчика, как определено архитектурой производительности Windows. См. в разделе [типы счетчиков производительности WMI](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-performance-counter-types) на документы или документации по Windows Server, Дополнительные сведения о типах счетчиков производительности.|  
 |**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
   
 ## <a name="remarks"></a>Примечания  
