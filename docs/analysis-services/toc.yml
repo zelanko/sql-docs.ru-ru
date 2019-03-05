@@ -1,6 +1,6 @@
 items:
-- name: Содержание корневого каталога SQL Server +
-  href: /sql/sql-server/sql-server-technical-documentation
+- name: Содержание таблицы корневого каталога SQL Server ++
+  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 - name: Сведения о SQL Server Analysis Services
   href: ../analysis-services/analysis-services.md
 - name: Обзор
@@ -34,6 +34,8 @@ items:
       href: ../analysis-services/globalization-tips-and-best-practices-analysis-services.md
 - name: Учебники
   items:
+  - name: Общие сведения о службах Analysis Services
+    href: ../analysis-services/analysis-services-tutorials-ssas.md
   - name: Табличное моделирование (с уровнем совместимости 1400)
     href: ../analysis-services/tutorial-tabular-1400/as-adventure-works-tutorial.md
     items:
@@ -1328,6 +1330,8 @@ items:
     items:
     - name: Обзор управления сервером SQL Server Analysis Services
       href: ../analysis-services/instances/analysis-services-instance-management.md
+    - name: Высокий уровень доступности и масштабируемость
+      href: ../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md
     - name: Свойства сервера
       items:
       - name: Обзор свойств сервера
@@ -1381,6 +1385,16 @@ items:
       href: ../analysis-services/instances/clear-the-analysis-services-caches.md
     - name: Средство проверки согласованности базы данных (DBCC)
       href: ../analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services.md
+    - name: Элементы проекта скриптов Analysis Services в SSMS
+      href: ../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md
+    - name: Создание скриптов Analysis Services в SSMS
+      href: ../analysis-services/instances/create-analysis-services-scripts-in-management-studio.md
+    - name: Планирование задач администрирования с помощью агента SQL Server
+      href: ../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md
+    - name: Использование шаблонов Analysis Services в SSMS
+      href: ../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md
+    - name: Автоматизация административных задач Analysis Services с помощью SSIS
+      href: ../analysis-services/instances/automate-analysis-services-administrative-tasks-with-ssis.md
   - name: Подключить
     items:
     - name: Обзор подключения к серверам
@@ -1421,10 +1435,15 @@ items:
       items:
       - name: Программирование табличных моделей с уровнем совместимости 1103 и ниже
         href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md
-      - name: Язык CSDL +
-        href: /bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
-      - name: Интерфейс IMDEmbeddedData
-        href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/imdembeddeddata-interface.md
+      - name: Заметки языка CSDL для бизнес-аналитики (CSDLBI)
+        href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md
+        items:
+        - name: Атрибуты CSDLBI для разработки отчетов
+          href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-attributes-for-report-design.md
+        - name: Основные понятия CSDLBI
+          href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-concepts.md
+        - name: Справочник по языку CSDL +
+          href: /bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
       - name: Представление
         items:
         - name: Представление соединения (табличное)
@@ -1451,58 +1470,70 @@ items:
           href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-representation-tabular.md
         - name: Основные сведения о табличной модели объектов на уровнях с 1050 по 1103
           href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md
+      - name: Интерфейс IMDEmbeddedData
+        href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/imdembeddeddata-interface.md
   - name: Многомерные модели
     items:
     - name: Программирование многомерной модели
       href: ../analysis-services/multidimensional-models/multidimensional-model-programming.md
     - name: Объекты AMO +
       href: /bi-reference/amo/developing-with-analysis-management-objects-amo
-    - name: Объекты ASSL и характеристики объектов
-      href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
-    - name: Резервное копирование, восстановление и синхронизация баз данных (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md
-    - name: Отмена команд (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/canceling-commands-xmla.md
-    - name: Создание и изменение объектов (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/creating-and-altering-objects-xmla.md
-    - name: Определение и идентификация объектов (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md
-    - name: Создание агрегатов (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md
-    - name: Разработка с использованием XMLA в службах Analysis Services
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md
-    - name: Обработка ошибок и предупреждений (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/handling-errors-and-warnings-xmla.md
-    - name: Вставка, обновление и удаление элементов (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md
-    - name: Блокировка и снятие блокировки баз данных (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/locking-and-unlocking-databases-xmla.md
-    - name: Управление кэшами (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-caches-xmla.md
-    - name: Управление соединениями и сеансами (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md
-    - name: Управление транзакциями (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-transactions-xmla.md
-    - name: Слияние секций (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md
-    - name: Наблюдение за трассировками (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/monitoring-traces-xmla.md
-    - name: Выполнение пакетных операций (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md
-    - name: Обработка объектов (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md
-    - name: Обновление ячеек (XML для аналитики)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md
-    - name: Обозначения в XML языка ASSL
-      href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-xml-conventions.md
     - name: Разработка на языке ASSL (язык ASSL)
       href: ../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
+      items:
+      - name: Справочник по языку скриптов Analysis Services (ASSL для XMLA) +
+        href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
+      - name: Объекты ASSL и характеристики объектов
+        href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
+      - name: Резервное копирование, восстановление и синхронизация баз данных (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md
+      - name: Отмена команд (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/canceling-commands-xmla.md
+      - name: Создание и изменение объектов (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/creating-and-altering-objects-xmla.md
+      - name: Определение и идентификация объектов (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md
+      - name: Создание агрегатов (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md
+      - name: Разработка с использованием XMLA в службах Analysis Services
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md
+      - name: Обработка ошибок и предупреждений (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/handling-errors-and-warnings-xmla.md
+      - name: Вставка, обновление и удаление элементов (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md
+      - name: Блокировка и снятие блокировки баз данных (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/locking-and-unlocking-databases-xmla.md
+      - name: Управление кэшами (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-caches-xmla.md
+      - name: Управление соединениями и сеансами (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md
+      - name: Управление транзакциями (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-transactions-xmla.md
+      - name: Слияние секций (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md
+      - name: Наблюдение за трассировками (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/monitoring-traces-xmla.md
+      - name: Выполнение пакетных операций (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md
+      - name: Обработка объектов (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md
+      - name: Обновление ячеек (XML для аналитики)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md
+      - name: Обозначения в XML языка ASSL
+        href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-xml-conventions.md
     - name: XML для аналитики (XMLA) +
       href: /bi-reference/xmla/xml-for-analysis-xmla-reference
-    - name: ADOMD.NET +
-      href: /bi-reference/adomd/developing-with-adomd-net
-    - name: Язык сценариев Analysis Services (ASSL для XMLA) +
-      href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
+    - name: Программирование сервера ADOMD.NET
+      href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md
+      items:
+      - name: Функциональные возможности сервера ADOMD.NET
+        href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality.md
+      - name: Архитектура серверных объектов ADOMD.NET
+        href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture.md
+      - name: Определяемые пользователем функции и хранимые процедуры
+        href: ../analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md
+      - name: Справочник по ADOMD.NET +
+        href: /bi-reference/adomd/developing-with-adomd-net
     - name: Объекты баз данных (службы Analysis Services — многомерные данные)
       href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
     - name: можно изменить расположение фигур на вкладке
@@ -2453,9 +2484,9 @@ items:
     href: /bi-reference/schema-rowsets/analysis-services-schema-rowsets
   - name: События трассировки +
     href: /bi-reference/trace-events/analysis-services-trace-events
-ms.openlocfilehash: a9359b578b321f76e62483f2ed08887dc73d18c8
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.openlocfilehash: 9d0f4813ece4aeadb0e33733b8fed21d096650c6
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676222"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852979"
