@@ -1,7 +1,7 @@
 ---
 title: Заметки о выпуске драйверов Майкрософт для PHP для SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/20/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,17 +13,34 @@ ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a22e88aef13c86179dc4cea71ed1003eadfd8661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c2e7377b1072c30e5c5ef038b93a88f0c222260
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624062"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744354"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Заметки о выпуске драйверов Майкрософт для PHP для SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 На этой странице описаны, что был добавлен в каждую версию [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+
+## <a name="whats-new-in-version-56"></a>Новые возможности версии 5.6
+
+- Поддержка PHP 7.3
+- Поддержка Microsoft ODBC Driver 17.3 на всех платформах
+- Поддержка macOS Mojave (требует ODBC драйвер 17.3 или более поздней версии)
+- Поддержка Ubuntu 18.10 и Suse Linux 15 (оба требуют ODBC драйвер 17.3 или более поздней версии)
+- Прекращена поддержка PHP 7.0
+- Прекращена поддержка Linux Ubuntu 17.10 и macOS El Capitan
+- Поддержка маркера доступа Azure AD (в Linux и macOS требуется драйвер ODBC 17.2 + и unixODBC 2.3.6+)
+- Поддержка проверки подлинности с помощью Azure AD, с помощью управляемого удостоверения для ресурсов Azure (требуется драйвер ODBC 17.3 +)
+- Новые функции выборки:
+  - Новый флаг PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE для pdo_sqlsrv для возврата даты и времени в виде объектов
+  - Добавьте параметр ReturnDatesAsStrings на уровне инструкций для sqlsrv
+  - Новые параметры на уровне соединения и инструкции для обоих драйверов для форматирования десятичные значения в выбранных результатов
+- Поддержка статическую компиляцию драйверы, если пользователи решили сборку из исходного файла
+- Повышена производительности за счет кэширования метаданных при выборке и ускоряя преобразования строк Юникода
 
 ## <a name="whats-new-in-version-53"></a>Новые возможности версии 5.3
 

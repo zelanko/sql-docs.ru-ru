@@ -2,7 +2,7 @@
 title: Драйвер OLE DB для SQL Server | Документы Майкрософт
 description: Драйвер Microsoft OLE DB для SQL Server
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: befcc84662b2273f81faaded76045d4d44b03e98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00be1d87dbc8ba071403722b7e575e5ab1c7a215
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687872"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744574"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>Драйвер Microsoft OLE DB для SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,11 +64,11 @@ OLE DB не [undeprecated](https://blogs.msdn.microsoft.com/sqlnativeclient/2017
 > [!NOTE]
 > Чтобы использовать новый драйвер OLE DB Майкрософт для SQL Server в существующие приложения, необходимо запланировать для преобразования строки подключения из SQLOLEDB и SQLNCLI, MSOLEDBSQL.
   
-## <a name="in-this-section"></a>в этом разделе  
-[Когда использовать драйвер OLE DB для SQL Server](../oledb/when-to-use-oledb-driver-for-sql-server.md)  
+## <a name="in-this-section"></a>В этом разделе  
+[Когда использовать драйвер OLE DB для SQL Server](../oledb/when-to-use-oledb-driver-for-sql-server.md)  
  Обсуждается место драйвера OLE DB для SQL Server среди технологий доступа к данным корпорации Майкрософт, дается его сравнение с компонентами доступа к данным Windows DAC и ADO.NET, а также предоставляются указания, помогающие решить, какую технологию доступа к данным следует использовать.  
   
- [Возможности драйвера OLE DB для SQL Server](../oledb/features/oledb-driver-for-sql-server-features.md )  
+ [OLE DB Driver for SQL Server features](../oledb/features/oledb-driver-for-sql-server-features.md ) (Функции драйвера OLE DB для SQL Server)  
  Описание возможностей, поддерживаемых драйвером OLE DB для SQL Server.  
   
  [Создание приложений с помощью драйвера OLE DB для SQL Server](../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
@@ -76,18 +76,18 @@ OLE DB не [undeprecated](https://blogs.msdn.microsoft.com/sqlnativeclient/2017
   
  В этом разделе также рассматриваются драйвера OLE DB для установки SQL Server и развертывания, включая способ распространения драйвера OLE DB для SQL Server библиотеки.  
   
- [Системные требования драйвера OLE DB для SQL Server](../oledb/system-requirements-for-oledb-driver-for-sql-server.md)  
+ [Требования к системе для драйвера OLE DB для SQL Server](../oledb/system-requirements-for-oledb-driver-for-sql-server.md)  
  Обсуждаются системные ресурсы, необходимые для использования драйвера OLE DB для SQL Server.  
   
- [Программирование драйвера OLE DB для SQL Server](../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
+ [OLE DB Driver for SQL Server programming](../oledb/ole-db/oledb-driver-for-sql-server-programming.md) (Программирование драйвера OLE DB для SQL Server)  
  Сведения об использовании драйвера OLE DB для SQL Server.  
   
- [Дополнительные сведения о драйвере OLE DB для SQL Server](../oledb/finding-more-oledb-driver-for-sql-server-information.md)  
+ [Finding more OLE DB Driver for SQL Server information](../oledb/finding-more-oledb-driver-for-sql-server-information.md) (Дополнительные сведения о драйвере OLE DB для SQL Server)  
  Предоставляет дополнительные ресурсы о драйвере OLE DB для SQL Server, включая ссылки на внешние ресурсы и получение дальнейшей помощи.  
   
   
-## <a name="see-also"></a>См. также:  
- [Обновление приложения с переходом от SQL Server 2005 Native Client](../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)    
- [Инструкции по OLE DB](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Updating an application from SQL Server 2005 Native Client](../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)   (Обновление приложения с переходом от SQL Server 2005 Native Client)  
+ [Инструкции по OLE DB](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

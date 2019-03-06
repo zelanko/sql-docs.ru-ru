@@ -1,8 +1,8 @@
 ---
-title: Использование файлов библиотеки и заголовков драйвера OLE DB для SQL Server | Документы Майкрософт
+title: Использование файлов библиотеки и заголовков драйвера OLE DB для SQL Server | Документация Майкрософт
 description: Использование файлов библиотеки и заголовков драйвера OLE DB для SQL Server
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9cd6a50bec611b7068b3f79f3867f9e2a6242a70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 528f55ba4a95da2f7e68de47ad25f88eae3af668
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816042"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744424"
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>Использование файлов библиотеки и заголовков драйвера OLE DB для SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47816042"
   
  Драйвер OLE DB для SQL Server заголовка и файлы библиотек устанавливаются в следующий каталог:  
   
- *% PROGRAM FILES %* \Microsoft SQL Server\Client SDK\OLEDB\181\SDK  
+ *%PROGRAM FILES%* \Microsoft SQL Server\Client SDK\OLEDB\182\SDK  
   
  Драйвер OLE DB для SQL Server заголовочного файла (msoledbsql.h) может использоваться для добавления драйвера OLE DB для функции доступа к данным SQL Server в пользовательские приложения. Файл заголовка драйвера OLE DB для SQL Server содержит все определения, атрибуты, свойства и интерфейсы, необходимые для использования новых функций, представленных в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
@@ -45,10 +45,10 @@ ms.locfileid: "47816042"
   
  Файл заголовка драйвера OLE DB для SQL Server имеет обратную совместимость с файлом заголовка sqloledb.h, используемым компонентами доступа к данным MDAC, но не содержит идентификаторов CLSID для SQLOLEDB (поставщик OLE DB для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], включенный в компоненты MDAC) или символов для функциональных возможностей XML (которые не поддерживаются драйвером OLE DB для SQL Server).    
   
- Приложения OLE DB, которые используют драйвер OLE DB для SQL Server достаточно указать msoledbsql.h. Если приложение использует как компоненты MDAC (SQLOLEDB), так и драйвер OLE DB для SQL Server, оно может ссылаться как на sqloledb.h, так и на msoledbsql.h при условии, что ссылка на файл sqloledb.h будет идти первой.  
+ Приложения OLE DB, использующие драйвер OLE DB для SQL Server достаточно указать msoledbsql.h. Если приложение использует как компоненты MDAC (SQLOLEDB), так и драйвер OLE DB для SQL Server, оно может ссылаться как на sqloledb.h, так и на msoledbsql.h при условии, что ссылка на файл sqloledb.h будет идти первой.  
   
-## <a name="using-the-ole-db-driver-for-sql-server-header-file"></a>С помощью драйвера OLE DB для SQL Server заголовочного файла  
- Чтобы использовать драйвер OLE DB для SQL Server заголовочного файла, необходимо использовать **включают** инструкции в программном коде на C/C++. Ниже описывается выполнение этого приложения OLE DB.  
+## <a name="using-the-ole-db-driver-for-sql-server-header-file"></a>С помощью драйвера OLE DB для SQL Server файл заголовка  
+ Чтобы использовать драйвер OLE DB для SQL Server заголовочного файла, необходимо использовать **включают** инструкции в программном коде на C/C++. Следующие разделы описывают, как это сделать в приложениях OLE DB.  
   
 > [!NOTE]  
 >  Драйвер OLE DB для SQL Server заголовочные и библиотечные файлы можно только в том случае, скомпилированный с помощью C++ в Visual Studio 2012 или более поздней версии.  

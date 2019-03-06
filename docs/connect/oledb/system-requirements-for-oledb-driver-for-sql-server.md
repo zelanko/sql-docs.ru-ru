@@ -1,8 +1,8 @@
 ---
-title: Требования к системе для драйвера OLE DB для SQL Server | Документы Майкрософт
+title: Требования к системе для драйвера OLE DB для SQL Server | Документация Майкрософт
 description: Требования для драйвера OLE DB для SQL Server
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: a2ff38f4322209c7ed6eb46a5ba97f360ca3650b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6462901ba1e3e73ca8c0a4ca448d8bc689bd8868
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821032"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744434"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>Требования к системе для драйвера OLE DB для SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,12 +38,16 @@ ms.locfileid: "47821032"
 >  Перед установкой данного программного обеспечения убедитесь, что вы вошли в систему с правами администратора.  
 
 ## <a name="operating-system-requirements"></a>Требования к операционной системе  
- Список операционных систем, поддерживающих драйвера OLE DB для SQL Server, см. в разделе [политики поддержки для драйвер OLE DB для SQL Server](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md).  
+ Список операционных систем, поддерживающих драйвера OLE DB для SQL Server, см. в разделе [политики поддержки для драйвера OLE DB для SQL Server](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md).  
 
-## <a name="sql-server-requirements"></a>Требования к SQL Server  
+ ## <a name="azure-active-directory-authentication-requirements"></a>Требования для проверки подлинности Azure Active Directory  
+ При использовании методов проверки подлинности Azure Active Directory с помощью драйвера OLE DB, убедитесь, что [Active Directory Authentication Library для SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) установки. ADAL не требуется для других методов проверки подлинности или операций OLE DB.
+Дополнительные сведения см. в статье об [использовании Azure Active Directory](features/using-azure-active-directory.md).
+
+## <a name="sql-server-requirements"></a>требования SQL Server  
  Чтобы использовать драйвер OLE DB для SQL Server для доступа к данным в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] баз данных, необходимо иметь экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен.  
 
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] поддерживает подключения с помощью всех версий компонентов MDAC, компонентов доступа к данным Windows и всех версий драйвера OLE DB для SQL Server. Когда клиент более старой версии соединяется с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], неизвестные клиенту типы данных сервера сопоставляются типам, совместимым с версией клиента. Дополнительные сведения см. в подразделе «Совместимость типов данных для версий клиента» ниже в этом разделе.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] поддерживает подключения с помощью всех версий компонентов MDAC, компонентов доступа к данным Windows и всех версий драйвера OLE DB для SQL Server. Когда клиент более старой версии соединяется с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], неизвестные клиенту типы данных сервера сопоставляются типам, совместимым с версией клиента. Дополнительные сведения см. в разделе [Совместимость типов данных для версий клиента](#data-type-compatibility-for-client-versions).  
 
 ## <a name="cross-language-requirements"></a>Требования к версиям на разных языках  
  Английская версия драйвер OLE DB для SQL Server поддерживается на всех локализованных версиях поддерживаемых операционных систем. Локализованные версии драйвер OLE DB для SQL Server, поддерживаются в локализованных операционных системах, которые являются совпадает с языком локализованного драйвер OLE DB версии SQL Server. Локализованные версии драйвера OLE DB для SQL Server также поддерживаются английскими версиями операционных систем, если установлены соответствующие языковые настройки.  
@@ -68,7 +72,7 @@ ms.locfileid: "47821032"
 
 |Тип данных|собственный клиент SQL Server<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Драйвер OLE DB для SQL Server|Компоненты доступа к данным Windows, компоненты MDAC и<br /><br /> Драйвер OLE DB для приложений SQL Server OLE DB со свойством DataTypeCompatibility = 80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|CLR UDT (\<= 8 КБ)|определяемый пользователем тип|определяемый пользователем тип|определяемый пользователем тип|Varbinary|  
+|CLR UDT (\<= 8 КБ)|определяемый пользователем тип|определяемый пользователем тип|определяемый пользователем тип|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|image|  
 |varchar(max)|varchar|varchar|varchar|Текст|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|NVARCHAR|Ntext|  
@@ -79,6 +83,6 @@ ms.locfileid: "47821032"
 |datetimeoffset|varchar|datetimeoffset|datetimeoffset|Varchar|  
 |time|varchar|time|time|Varchar|  
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Драйвер OLE DB для SQL Server](../oledb/oledb-driver-for-sql-server.md)   
  [Установка драйвера OLE DB для SQL Server](../oledb/applications/installing-oledb-driver-for-sql-server.md)  

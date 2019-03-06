@@ -1,7 +1,7 @@
 ---
 title: Загрузка драйверов Майкрософт для PHP для SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/20/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f946aa354ddde07db6abd5797982c1621bf24dbb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a8799a77817b7e01b8c3391a9b2ed06fd6bbd3c0
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605254"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744374"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Загрузка драйверов Майкрософт для PHP для SQL Server
 
@@ -25,6 +25,7 @@ ms.locfileid: "51605254"
 
 В следующих версиях драйверов для PHP в Windows доступны для загрузки:
 
+- [Драйверы Майкрософт версии 5.6 для PHP для SQL Server](https://www.microsoft.com/download/details.aspx?id=57916)
 - [Драйверы Майкрософт версии 5.3 для PHP для SQL Server](https://www.microsoft.com/download/details.aspx?id=57163)
 - [Драйверы Майкрософт версии 5.2 для PHP для SQL Server](https://www.microsoft.com/download/details.aspx?id=56729)
 - [Драйверы Майкрософт версии 4.3 для PHP для SQL Server](https://www.microsoft.com/download/details.aspx?id=55642)
@@ -34,6 +35,7 @@ ms.locfileid: "51605254"
 
 Драйверы для PHP легко загружаются и установить с помощью PECL в Linux и macOS. См. в разделе [учебник по установке Linux и macOS](installation-tutorial-linux-mac.md) подробные сведения. Если вам нужно вручную установить драйверы для PHP в Linux и macOS, следующие версии доступны для загрузки:
 
+- [Драйверы Майкрософт версии 5.6 для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
 - [Драйверы Майкрософт версии 5.3 для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.3.0)
 - [Драйверы Майкрософт версии 5.2 для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.2.0)
 - [Драйверы Майкрософт версии 4.3 для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v4.3.0)

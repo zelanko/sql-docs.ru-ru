@@ -1,8 +1,8 @@
 ---
-title: Создание приложений с помощью драйвера OLE DB для SQL Server | Документы Майкрософт
+title: Создание приложений с помощью драйвера OLE DB для SQL Server | Документация Майкрософт
 description: Создание приложений с помощью драйвера OLE DB для SQL Server
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8be648639f3b345f6d6eb16c6f51c58064d9270a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2e9b88c12a4abb25fed87c8f273a9949b85c4ee
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691794"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744414"
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>Создание приложений с помощью драйвера OLE DB для SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47691794"
 
   При разработке приложения, использующего драйвер OLE DB для SQL Server библиотеки, существует ряд проблем, которые следует учитывать. В этом разделе рассматриваются многие из этих проблем, включая переход от компонентов MDAC на драйвер OLE DB для SQL Server, с помощью драйвера OLE DB для SQL Server заголовка файлы библиотеки и общие сведения о различных строках соединения, которые могут использоваться с драйвером OLE DB для S QL Server.  
 
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Установка драйвера OLE DB для SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
  Описывается способ установки драйвер OLE DB для SQL Server, задающие различные компоненты устанавливаются в каталог и удаление драйвера OLE DB для SQL Server.  
 
@@ -43,10 +43,10 @@ ms.locfileid: "47691794"
  [Использование файлов библиотеки и заголовков драйвера OLE DB для SQL Server](../../oledb/applications/using-the-oledb-driver-for-sql-server-header-and-library-files.md)  
  В этой статье описывается использование драйвера OLE DB для SQL Server файлов заголовков и библиотек в приложении.  
 
- [Обновление приложения с переходом от MDAC на драйвер OLE DB для SQL Server](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)  
+ [Обновление приложения с переходом от MDAC на драйвер OLE DB для SQL Server](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)  
  Различия между драйвер OLE DB для SQL Server и компоненты MDAC и проблемы, которые необходимо учитывать при переходе с компонентов MDAC на драйвер OLE DB для SQL Server.  
 
- [Обновление приложения с переходом от SQL Server 2005 Native Client](../../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)  
+ [Updating an application from SQL Server 2005 Native Client](../../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md) (Обновление приложения с переходом от SQL Server 2005 Native Client)  
  Обсуждаются вопросы, которые следует учитывать при обновлении с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client чтобы драйвер OLE DB для SQL Server.  
 
  [Использование объектов ADO с драйвером OLE DB для SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)  
@@ -57,4 +57,4 @@ ms.locfileid: "47691794"
 
 ## <a name="see-also"></a>См. также:  
  [Драйвер OLE DB для SQL Server](../../oledb/oledb-driver-for-sql-server.md)     
- [Инструкции по OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
+ [Инструкции по OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

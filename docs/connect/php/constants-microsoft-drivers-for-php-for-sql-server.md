@@ -1,7 +1,7 @@
 ---
 title: Константы (драйверы Майкрософт для PHP для SQL Server) | Документы Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94be5540c0fedcf3449b8ac41398ab3f08abbd32
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 172b96b63f65b5ee8b576ba6ee9c18aad18e3531
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409531"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744454"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Константы (драйверы Майкрософт для PHP для SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -68,6 +68,11 @@ ms.locfileid: "52409531"
 ### <a name="handling-numeric-fetches"></a>Обработка числовых выборки
 Атрибут PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE можно использовать для обработки числовых операций выборки из столбцов с числовыми типами SQL (бит, целое число, smallint, tinyint, float и real). Когда PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE имеет значение true, результаты из целочисленного столбца отображаются в виде целых чисел, расположенном SQL и reals представляются в виде числа с плавающей запятой. Этот атрибут можно задать с помощью [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md). 
 
+Вы можете изменить поведение по умолчанию десятичное форматирования с PDO::SQLSRV_ATTR_FORMAT_DECIMALS и PDO::SQLSRV_ATTR_DECIMAL_PLACES атрибутами. Поведение этих атрибутов идентична соответствующие параметры на стороне SQLSRV (**FormatDecimals** и **DecimalPlaces**), за исключением того, что выходные данные параметры не поддерживаются для форматирования. Эти атрибуты могут быть установлены на уровне инструкции или соединения с [PDO::setAttribute](../../connect/php/pdo-setattribute.md) или [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), но переопределяет любой атрибут инструкции соответствующего атрибут соединения. Дополнительные сведения см. в разделе [форматирование десятичных строк и денежные значения (драйвер PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).
+
+### <a name="handling-date-and-time-fetches"></a>Обработка выборок значений даты и времени
+
+PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE указывает, следует ли получить типы даты и времени как [PHP DateTime](http://php.net/manual/en/class.datetime.php) объектов. Если оставить это значение false, поведение по умолчанию — вернуть их в виде строки. Этот атрибут может задаваться на уровне инструкции или соединения с [PDO::setAttribute](../../connect/php/pdo-setattribute.md) или [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), но переопределяет соответствующий атрибут инструкции атрибут соединения. Дополнительные сведения см. в разделе [как: получить дату и время типы как объектов DateTime PHP с помощью драйвера PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV  
 Следующие разделы содержат константы, используемые драйвером SQLSRV.  
@@ -140,7 +145,7 @@ ms.locfileid: "52409531"
 |SQLSRV_PHPTYPE_DATETIME|DATETIME|  
 |SQLSRV_PHPTYPE_FLOAT|float|  
 |SQLSRV_PHPTYPE_STREAM (кодировка $<sup>1</sup>)|STREAM|  
-|SQLSRV_PHPTYPE_STRING (кодировка $<sup>1</sup>)|String|  
+|SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|String|  
   
 1. **SQLSRV_PHPTYPE_STREAM** и **SQLSRV_PHPTYPE_STRING** принимают параметр, который указывает кодировку потока. Следующая таблица содержит константы SQLSRV, которые являются допустимыми параметрами, а также описание соответствующей кодировки.  
   
@@ -185,7 +190,7 @@ ms.locfileid: "52409531"
 |SQLSRV_SQLTYPE_NTEXT|ntext<sup>2</sup>|  
 |SQLSRV_SQLTYPE_REAL|REAL|  
 |SQLSRV_SQLTYPE_SMALLDATETIME|smalldatetime|  
-|SQLSRV_SQLTYPE_SMALLINT|SMALLINT|  
+|SQLSRV_SQLTYPE_SMALLINT|smallint|  
 |SQLSRV_SQLTYPE_SMALLMONEY|SMALLMONEY|  
 |SQLSRV_SQLTYPE_TEXT|text<sup>3</sup>|  
 |SQLSRV_SQLTYPE_TIME|time<sup>4</sup>|  

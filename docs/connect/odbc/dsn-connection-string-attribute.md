@@ -1,7 +1,7 @@
 ---
 title: Имя источника данных и строки подключения ключевые слова для драйвера ODBC — SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 12/11/2018
+ms.date: 02/04/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,12 +10,12 @@ ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
 manager: craigg
-ms.openlocfilehash: 0dedb58cf0a9825625027e363db20a56f06839dd
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: e2db3b8df9ea63c16e0e96af9df42b7c22adaf80
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306241"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662878"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Ключевые слова и атрибуты строки подключения и имени DSN
 
@@ -23,7 +23,7 @@ ms.locfileid: "53306241"
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>Поддерживаемые ключевых слов строки соединения с Источником/и атрибуты соединения
 
-В следующей таблице перечислены доступные ключевые слова и атрибуты для каждой платформы (L: Linux ; M: Mac ; W: WINDOWS Щелкните слово или атрибут для получения дополнительных сведений.
+В следующей таблице перечислены доступные ключевые слова и атрибуты для каждой платформы (L: Linux; M: Mac; Запись: Windows). Щелкните слово или атрибут для получения дополнительных сведений.
 
 | Ключевые слова строки подключения и имени DSN | Атрибут подключения | Платформа |
 |-|-|-|
@@ -105,7 +105,7 @@ ms.locfileid: "53306241"
 | | [SQL_COPT_SS_CONCAT_NULL](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconcatnull) | LMW |
 | | [SQL_COPT_SS_CONNECTION_DEAD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconnectiondead) | LMW |
 | | [SQL_COPT_SS_ENLIST_IN_DTC](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistindtc) | W |
-| | [SQL_COPT_SS_ENLIST_IN_XA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistinxa) | W |
+| | [SQL_COPT_SS_ENLIST_IN_XA](dsn-connection-string-attribute.md#sql_copt_ss_enlist_in_xa) | LMW |
 | | [SQL_COPT_SS_FALLBACK_CONNECT](dsn-connection-string-attribute.md#sqlcoptssfallbackconnect) | LMW |
 | | [SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
 | | [SQL_COPT_SS_MUTUALLY_AUTHENTICATED](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
@@ -156,6 +156,7 @@ ms.locfileid: "53306241"
 |ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Интегрированная проверка подлинности Azure Active Directory.|
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Проверка подлинности с использованием пароля Azure Active Directory.|
 |ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Интерактивная проверка подлинности Azure Active Directory.|
+|ActiveDirectoryMsi|SQL_AU_AD_MSI|Проверка подлинности Azure Active Directory управляемое удостоверение службы. Для назначаемого пользователем удостоверения UID присваивается идентификатор объекта удостоверения пользователя. |
 | |SQL_AU_RESET|Отменить задание. Переопределяет любое имя DSN или строку подключения.|
 
 > [!NOTE]
@@ -214,4 +215,21 @@ ms.locfileid: "53306241"
 |-|-|
 | char * | Путь к библиотеке поставщика хранилища ключей |
 
+### <a name="sqlcoptssenlistinxa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
+Чтобы включить транзакции XA с XA-совместимым обработчиком транзакций (TP), приложение должно вызвать **SQLSetConnectAttr** с SQL_COPT_SS_ENLIST_IN_XA и указатель на `XACALLPARAM` объект. Этот параметр поддерживается в Windows, Linux (17.3 и более поздние версии) и Mac.
+```
+SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
+``` 
+ Чтобы связать XA-транзакцию с соединением ODBC только, укажите значение TRUE или FALSE SQL_COPT_SS_ENLIST_IN_XA вместо указателя при вызове **SQLSetConnectAttr**. Это допустимо только в Windows и не может использоваться для указания операции XA с помощью клиентского приложения. 
+ ```
+SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
+``` 
+
+|Значение|Описание|Платформы|  
+|-----------|-----------------|-----------------|  
+|Объект XACALLPARAM *|Указатель на объект `XACALLPARAM`.|Windows, Linux и Mac|
+|TRUE|Связывает XA-транзакцию с соединением ODBC. Все связанные действия базы данных будут выполняться под защитой XA-транзакции.|Windows|  
+|FALSE|Отменяет связь транзакции с соединением ODBC.|Windows|
+
+ См. в разделе [с помощью транзакции XA](../../connect/odbc/use-xa-with-dtc.md) Дополнительные сведения о транзакциях XA.

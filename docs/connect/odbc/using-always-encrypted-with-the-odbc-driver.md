@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 72ff999a4b88bff5d8b78f8e8b936da18b8a4e16
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
-ms.translationtype: MTE75
+ms.openlocfilehash: 1ba94395acad1aec8717c570cc4b6e30ed7a12a4
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044951"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662858"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Использование функции Always Encrypted с драйвером ODBC для SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -96,7 +96,7 @@ CREATE TABLE [dbo].[Patients](
 
 - Данные, вставленные в столбцы базы данных (в том числе в зашифрованные) передаются в качестве привязанных параметров (см. [Функция SQLBindParameter](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)). Несмотря на то, что при отправке значений в незашифрованные столбцы использовать параметры необязательно (но настоятельно рекомендуется, так как это помогает предотвратить внедрение кода SQL), они требуются для значений, предназначенных для зашифрованных столбцов. Если значения, вставленные в столбцы SSN или BirthDate были переданы в качестве литералов, внедренных в инструкции запроса, выполнение запроса завершится ошибкой, так как драйвер не будет пытаться шифрования или другим образом обработать литералы в запросах. В результате сервер отклонит их как несовместимые с зашифрованными столбцами.
 
-- Тип параметра, вставляемого в столбец SSN SQL присваивается SQL_CHAR, который сопоставляет **char** тип данных SQL Server (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Если тип параметра было присвоено SQL_WCHAR, который сопоставляет **nchar**, выполнение запроса завершится ошибкой, так как постоянное шифрование не поддерживает преобразование на стороне сервера с nchar зашифрованные значения в зашифрованный char. См. в разделе [Справочник по программированию ODBC — приложение г. Типы данных](https://msdn.microsoft.com/library/ms713607.aspx) сведения о сопоставлении типов данных.
+- Тип параметра, вставляемого в столбец SSN SQL присваивается SQL_CHAR, который сопоставляет **char** тип данных SQL Server (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Если тип параметра было присвоено SQL_WCHAR, который сопоставляет **nchar**, выполнение запроса завершится ошибкой, так как постоянное шифрование не поддерживает преобразование на стороне сервера с nchar зашифрованные значения в зашифрованный char. См. в разделе [Справочник по программированию ODBC — типы данных приложение D:](https://msdn.microsoft.com/library/ms713607.aspx) сведения о сопоставлении типов данных.
 
 ```
     SQL_DATE_STRUCT date;
@@ -286,7 +286,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Управление обращениями для получения метаданных для параметров запроса
 
-Если для соединения включена функция Always Encrypted, по умолчанию драйвер будет вызывать [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) для каждого параметризованного запроса, передавая инструкцию запроса (без значений параметров) в SQL Server. Эта хранимая процедура анализирует инструкцию запроса, чтобы узнать, должен быть зашифрован и если да, возвращает связанные с шифрованием сведения для каждого параметра Разрешить драйверу шифровать их. Описанное выше поведение обеспечивает высокий уровень прозрачности для клиентского приложения. Так как значения, предназначенные для зашифрованных столбцов, передаются драйверу в параметрах, приложению (и разработчику приложений) не требуется знать, какие запросы получают доступ к зашифрованным столбцам.
+Если для соединения включена функция Always Encrypted, по умолчанию драйвер будет вызывать [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) для каждого параметризованного запроса, передавая инструкцию запроса (без значений параметров) в SQL Server. Эта хранимая процедура анализирует инструкцию запроса, чтобы узнать, должен быть зашифрован и если да, возвращает связанные с шифрованием сведения для каждого параметра Разрешить драйверу шифровать их. Описанное выше поведение обеспечивает высокий уровень прозрачности для клиентского приложения: приложение (и разработчику приложений) не обязательно должно знать, какие запросы получают доступ к зашифрованным столбцам, до тех пор, пока будут переданы значения, предназначенные для зашифрованных столбцов драйвер в параметрах.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>-Оператор Always Encrypted поведение
 
@@ -369,6 +369,8 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 
 - Идентификатор и секрет клиента — с помощью этого метода указаны учетные данные идентификатора клиента приложения и секрет приложения.
 
+- Управляемое удостоверение службы - в этом случае учетные данные, присвоенным системой идентификатором или назначаемого пользователем удостоверения. Для назначаемого пользователем удостоверения UID присваивается идентификатор объекта удостоверения пользователя.
+
 Чтобы разрешить драйвер на использование ключей CMK, хранящимся в AKV для шифрования столбца, используйте следующие ключевые слова только на строку подключения:
 
 |Тип учетных данных| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
@@ -386,7 +388,7 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**Имя пользователя и пароль**
+**Имя пользователя и пароль**:
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
@@ -551,7 +553,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 - Чтобы вставить зашифрованные данные в виде varbinary(max), (например что полученный выше), установите `BCPMODIFYENCRYPTED` равным TRUE и выполнять операции BCP IN. Чтобы быть расшифровываемой результирующих данных убедитесь, что назначение столбца ключа шифрования Столбца, из которого был изначально получен зашифрованный текст.
 
-При использовании **bcp** служебной программы: Элемент управления `ColumnEncryption` , используйте параметр -D и укажите имя источника данных, содержащий необходимое значение. Чтобы вставить зашифрованных данных, убедитесь, `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` пользователя включен.
+При использовании **bcp** служебной программы: элемент управления `ColumnEncryption` , используйте параметр -D и укажите имя источника данных, содержащий необходимое значение. Чтобы вставить зашифрованных данных, убедитесь, `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` пользователя включен.
 
 Следующая таблица содержит краткое описание действий при работе в зашифрованном столбце:
 
@@ -577,7 +579,8 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |`ColumnEncryption`|Принимаются значения `Enabled` / `Disabled`.<br>`Enabled` — включает функцию Always Encrypted для подключения.<br>`Disabled` — отключает для подключения функцию Always Encrypted. <br><br>Значение по умолчанию — `Disabled`.|  
 |`KeyStoreAuthentication` | Допустимые значения: `KeyVaultPassword`, `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | Когда `KeyStoreAuthentication`  =  `KeyVaultPassword`, это значение на допустимое имя участника-пользователя Active Directory Azure. <br>Когда `KeyStoreAuthetication`  =  `KeyVaultClientSecret` это значение равно допустимый Azure Active Directory приложения идентификатор клиента |
-|`KeyStoreSecret` | Когда `KeyStoreAuthentication`  =  `KeyVaultPassword` это значение равно пароль, соответствующий имени пользователя. <br>Когда `KeyStoreAuthentication`  =  `KeyVaultClientSecret` это значение равно секрет приложения, связанный с допустимым Azure Active Directory идентификатор клиента приложения|
+|`KeyStoreSecret` | Когда `KeyStoreAuthentication`  =  `KeyVaultPassword` это значение равно пароль, соответствующий имени пользователя. <br>Когда `KeyStoreAuthentication`  =  `KeyVaultClientSecret` это значение равно секрет приложения, связанный с допустимым Azure Active Directory идентификатор клиента приложения |
+
 
 ### <a name="connection-attributes"></a>Атрибуты соединения
 

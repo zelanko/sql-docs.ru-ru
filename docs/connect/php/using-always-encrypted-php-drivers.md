@@ -269,7 +269,7 @@ $query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients
 
 Драйвер ODBC для SQL Server в Windows включает в себя встроенный столбец поставщика хранилища главного ключа для сертификата Windows Store, с именем `MSSQL_CERTIFICATE_STORE`. (Этот поставщик доступен не в macOS или Linux.) С этим поставщиком CMK хранится локально на клиентском компьютере, и никаких дополнительных настроек для приложения необходима для использования его с помощью драйвера. Тем не менее в приложении необходим доступ к сертификат и его закрытый ключ в хранилище. Дополнительные сведения см. в разделе [Create and Store Column Master Keys (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Создание и хранение главных ключей столбцов (постоянное шифрование)).
 
-### <a name="using-azure-key-vault"></a>Расширенное управление ключами с Azure Key Vault
+### <a name="using-azure-key-vault"></a>Использование Azure Key Vault
 
 Хранилище ключей Azure позволяет хранить ключи шифрования, пароли и другие секретные данные, с помощью Azure и может использоваться для хранения ключей для постоянного шифрования. Драйвер ODBC для SQL Server (версии 17 и более поздние версии) включает в себя встроенные главного ключа поставщика хранилища для хранилища ключей Azure. Следующие параметры подключения обработки конфигурации Azure Key Vault: `KeyStoreAuthentication`, `KeyStorePrincipalId`, и `KeyStoreSecret`. 
  -   `KeyStoreAuthentication` может принимать одно из двух возможных строковых значений: `KeyVaultPassword` и `KeyVaultClientSecret`. Эти значения контролировать, какие учетные данные проверки подлинности используются две другие ключевые слова.

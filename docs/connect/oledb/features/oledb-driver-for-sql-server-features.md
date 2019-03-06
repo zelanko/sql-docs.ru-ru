@@ -2,7 +2,7 @@
 title: Драйвер OLE DB для компонентов SQL Server | Документация Майкрософт
 description: Возможности драйвера OLE DB для SQL Server
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: fa0fcda394142cd8ac2b3df5b91f5f8c4ad25739
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8458d6293aec1180e547a80649c302015e9a521
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840912"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744464"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>Возможности драйвера OLE DB для SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,10 @@ ms.locfileid: "47840912"
   
  [Выполнение асинхронных операций](../../oledb/features/performing-asynchronous-operations.md)  
  Обсуждение поддержки драйвером OLE DB для SQL Server асинхронных операций, то есть способности немедленно возвращать управление, не блокируя вызывающий поток.  
-  
+
+[Использование Azure Active Directory](using-azure-active-directory.md)  
+Описание новых методов проверки подлинности, представленные в драйвере OLE DB 18.2.1, которые имеют более безопасные настройки по умолчанию и разрешено подключение к экземпляру базы данных SQL Azure с помощью федеративного удостоверения.
+
  [Использование множественных активных результирующих наборов (MARS)](../../oledb/features/using-multiple-active-result-sets-mars.md)  
  Описывает, как драйвер OLE DB для SQL Server поддерживает несколько активных результирующих наборов (MARS). Режим MARS позволяет выполнять и получать несколько результирующих наборов через одно подключение к базе данных.  
   
@@ -86,6 +89,9 @@ ms.locfileid: "47840912"
   
  [Поддержка UTF-16 в драйвере OLE DB для SQL Server](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
  Рассматривает изменение поведения, появившееся в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Если при привязке результата столбца или выходного параметра указывается буфер фиксированной длины, символ **wchar**, записываемый в буфер перед завершающим символом, является старшей кодовой точкой суррогатной пары, а следующий символ **wchar** является младшей кодовой точкой суррогатной пары, то драйвер OLE DB для SQL Server не добавит в буфер старшую кодовую точку суррогатной пары.  
+ 
+ [Поддержка UTF-8 в драйвере OLE DB для SQL Server](../../oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+ Обсуждение поддержки UTF-8 server кодирования и конфигурации меры предосторожности, которые пользователи должны предпринять при работе с данными в кодировке UTF-8.
   
  [Поддержка высокого уровня доступности и аварийного восстановления в драйвере OLE DB для SQL Server](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
  Описывается настройка приложения для использования функций высокого уровня доступности и аварийного восстановления, появившихся в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
