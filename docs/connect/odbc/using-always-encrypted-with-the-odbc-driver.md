@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 1ba94395acad1aec8717c570cc4b6e30ed7a12a4
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
-ms.translationtype: HT
+ms.openlocfilehash: dd6037cbc40c9cf422c38827d5c96115db33db73
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662858"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956065"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Использование функции Always Encrypted с драйвером ODBC для SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -538,7 +538,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 Перед шифрованием ODBC Driver 17 for SQL Server, символьных и двоичных столбцов не удалось получить в частях с SQLGetData. Можно сделать только один вызов SQLGetData, с буфером достаточной длины для хранения данных всего столбца.
 
 ### <a name="send-data-in-parts-with-sqlputdata"></a>Отправлять данные в частях с SQLPutData
-В частях с SQLPutData невозможно отправить данные для вставки или сравнения. Можно сделать только один вызов SQLPutData, с помощью буфер, содержащий все данные. Для вставки данных long в зашифрованных столбцах, используйте интерфейс API массового копирования, описанных в следующем разделе, с помощью файла входных данных.
+Перед 17.3 драйвер ODBC для SQL Server в частях с SQLPutData невозможно отправить данные для вставки или сравнения. Можно сделать только один вызов SQLPutData, с помощью буфер, содержащий все данные. Для вставки данных long в зашифрованных столбцах, используйте интерфейс API массового копирования, описанных в следующем разделе, с помощью файла входных данных.
 
 ### <a name="encrypted-money-and-smallmoney"></a>Зашифрованные money и smallmoney
 Шифрование **деньги** или **smallmoney** столбцов нельзя указать с помощью параметров, так как нет конкретного не эти типы, приводит к пересекаться операнд типа ошибки какие сопоставляется с типом данных ODBC.
