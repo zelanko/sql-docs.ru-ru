@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00bea67666845ea43226b4bfe48b6dd5ab3f3741
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: 1b92bc15079fcc85212ea3d1b51be64a3348a4b1
+ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590459"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305372"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Интеллектуальная обработка запросов в базах данных SQL
 
@@ -29,13 +29,14 @@ ms.locfileid: "56590459"
 | **Функция интеллектуальной обработки запросов** | **Поддерживается в Базе данных Azure SQL** | **Поддерживается в SQL Server** |
 | --- | --- | --- |
 | [Адаптивные соединения в пакетном режиме](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#batch-mode-adaptive-joins) | Да, при уровне совместимости 140| Да, начиная с SQL Server 2017 при уровне совместимости 140|
+| [Приблизительный подсчет различных объектов](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | Да, в режиме общедоступной предварительной версии| Да, начиная с SQL Server 2019 CTP 2.0 в режиме общедоступной предварительной версии|
+| [Пакетный режим для данных rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | Да, при уровне совместимости 150 в режиме общедоступной предварительной версии| Да, начиная с SQL Server 2019 CTP 2.0 при уровне совместимости 150 в режиме общедоступной предварительной версии|
 | [Выполнение с чередованием](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#interleaved-execution-for-multi-statement-table-valued-functions) | Да, при уровне совместимости 140| Да, начиная с SQL Server 2017 при уровне совместимости 140|
 | [Обратная связь по временно предоставляемому буферу памяти в пакетном режиме](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | Да, при уровне совместимости 140| Да, начиная с SQL Server 2017 при уровне совместимости 140|
 | [Обратная связь по временно предоставляемому буферу памяти в строковом режиме](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Да, при уровне совместимости 150 в режиме общедоступной предварительной версии| Да, начиная с SQL Server 2019 CTP 2.0 при уровне совместимости 150 в режиме общедоступной предварительной версии|
-| [Приблизительный подсчет различных объектов](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | Да, в режиме общедоступной предварительной версии| Да, начиная с SQL Server 2019 CTP 2.0 в режиме общедоступной предварительной версии|
-| [Отложенная компиляция табличных переменных](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | Да, при уровне совместимости 150 в режиме общедоступной предварительной версии| Да, начиная с SQL Server 2019 CTP 2.0 при уровне совместимости 150 в режиме общедоступной предварительной версии|
-| [Пакетный режим для данных rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | Да, при уровне совместимости 150 в режиме общедоступной предварительной версии| Да, начиная с SQL Server 2019 CTP 2.0 при уровне совместимости 150 в режиме общедоступной предварительной версии|
 | [Встраивание скалярных определяемых пользователем функций](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | Нет, но запланировано на будущее обновление | Да, начиная с SQL Server 2019 CTP 2.1 при уровне совместимости 150 в режиме общедоступной предварительной версии|
+| [Отложенная компиляция табличных переменных](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | Да, при уровне совместимости 150 в режиме общедоступной предварительной версии| Да, начиная с SQL Server 2019 CTP 2.0 при уровне совместимости 150 в режиме общедоступной предварительной версии|
+
 
 
 ## <a name="adaptive-query-processing"></a>Адаптивная обработка запросов
