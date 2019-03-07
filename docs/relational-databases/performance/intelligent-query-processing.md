@@ -2,7 +2,7 @@
 title: Интеллектуальная обработка запросов в базах данных Microsoft SQL | Документы Майкрософт
 description: Функции интеллектуальной обработки запросов для повышения производительности запросов в SQL Server и базе данных SQL Azure.
 ms.custom: ''
-ms.date: 02/14/2019
+ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc47ad30edc0eb4092aa1f92fef703c95cb34593
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 00bea67666845ea43226b4bfe48b6dd5ab3f3741
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291662"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590459"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Интеллектуальная обработка запросов в базах данных SQL
 
@@ -101,6 +101,8 @@ ms.locfileid: "56291662"
 
 > [!NOTE]
 > Предоставляется общедоступная предварительная версия функции "Пакетный режим для данных rowstore".  
+
+Пакетный режим для данных rowstore обеспечивает выполнение в пакетном режиме для аналитических рабочих нагрузок без необходимости использовать индексы columnstore.  Эта функция поддерживает выполнение в пакетном режиме и фильтры по битовым картам для кучи на диске и индексов сбалансированного дерева. Пакетный режим rowstore обеспечивает поддержку для всех операторов, доступных в этом режиме.
 
 ### <a name="background"></a>Историческая справка
 
