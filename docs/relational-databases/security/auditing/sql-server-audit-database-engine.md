@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8e5c839f8c5005e3f02129e36023db53f70f4a20
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: eebc9f2cdc059bb8d90c290981da0560a15ab5dc
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590308"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590479"
 ---
 # <a name="sql-server-audit-database-engine"></a>Подсистема аудита SQL Server (Database Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "53590308"
 ### <a name="database-mirroring-and-sql-server-audit"></a>Зеркальное отображение баз данных и подсистема аудита SQL Server  
  Если для базы данных определена спецификация аудита базы данных и используется зеркальное отображение базы данных, то в нее будет включена спецификация аудита базы данных. Для правильной работы на зеркальном экземпляре SQL необходимо выполнить настройку следующих элементов.  
   
--   Чтобы спецификация аудита базы данных могла создавать записи аудита, на зеркальном сервере должен присутствовать аудит с тем же идентификатором GUID. Это можно настроить с помощью команды CREATE AUDIT WITH GUID**=**_\<идентификатор GUID подсистемы аудита целевого сервера_>.  
+-   Чтобы спецификация аудита базы данных могла создавать записи аудита, на зеркальном сервере должен присутствовать аудит с тем же идентификатором GUID. Это можно настроить с помощью команды CREATE AUDIT WITH GUID **=**_\<GUID из подсистемы аудита исходного сервера>_.  
   
 -   При использовании в качестве цели двоичного файла учетная запись службы зеркального сервера должна обладать необходимыми разрешениями на место назначения, куда производится запись аудиторского следа.  
   

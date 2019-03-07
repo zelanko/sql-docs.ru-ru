@@ -18,17 +18,17 @@ ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f517a0a991d36fb0371a7f2eee5e3fb4a0dacc2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d093331425443a0879d5f59f5a2d03fdebcb2abd
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715960"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425759"
 ---
 # <a name="instanceof-geometry-data-type"></a>InstanceOf (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Метод, который проверяет принадлежность экземпляра **geometry** к указанному типу. Возвращает значение 1, если экземпляр **geometry** имеет указанный тип или если указанный тип является предком типа экземпляра в иерархии. В противном случае возвращает значение 0.
+Метод, который проверяет принадлежность экземпляра **geometry** к указанному типу. Возвращает значение 1, если тип экземпляра **geometry** соответствует указанному типу. Этот метод также возвращает значение 1, если указанный тип является предком типа экземпляра. В противном случае этот метод всегда возвращает значение 0.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,13 +38,13 @@ ms.locfileid: "47715960"
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *geometry_type*  
- Строка типа **nvarchar(4000)**, задающая один из 15 типов, доступных в иерархии типов **geometry**.  
+*geometry_type*  
+Строка **nvarchar(4000)**, задающая один из 15 типов, доступных в иерархии типов **geometry**.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Тип возвращаемых данных CLR: **SqlBoolean**  
+ Возвращаемый тип CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  Входные данные метода должны быть одного из следующих типов: **Geometry**, **Point**, **Curve**, **LineString**, **CircularString**, **CompoundCurve**, **Surface**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiSurface**, **MultiPolygon**, **MultiCurve**, **MultiLineString** или **MultiPoint**. Если в качестве входного аргумента указана любая другая строка, этот метод вызовет исключение **ArgumentException**.  

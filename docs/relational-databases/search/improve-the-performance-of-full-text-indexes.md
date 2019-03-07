@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d79d404e72f13ade55f6bd64f261741d86b78347
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8637754097be0837f51ef3fda06375abcb084cae
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532551"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590439"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Улучшение производительности полнотекстовых индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,8 +83,8 @@ ms.locfileid: "52532551"
 `SQLFT<DatabaseID\><FullTextCatalogID\>.LOG[<n\>]`
   
 Ниже перечислены переменные части в именах файла журнала сканирования.
--   <**DatabaseID**> — идентификатор базы данных. <**dbid**> является пятизначным числом с нулями в начале.  
--   <**FullTextCatalogID**> — идентификатор полнотекстового каталога. <**catid**> является пятизначным числом с нулями в начале.  
+-   \<**DatabaseID**> — идентификатор базы данных. <**dbid**> является пятизначным числом с нулями в начале.  
+-   <**FullTextCatalogID**> — идентификатор полнотекстового каталога. \<**catid**> является пятизначным числом с нулями в начале.  
 -   <**n**> — целое число, свидетельствующее о существовании одного или нескольких журналов сканирования одного полнотекстового каталога.  
   
  Например, `SQLFT0000500008.2` является файлом журнала сканирования для базы данных с идентификатором базы данных 5 и идентификатором полнотекстового каталога 8. Двойка в конце имени файла показывает, что этой паре базы данных и каталога соответствуют два файла журналов сканирования.  
@@ -142,7 +142,7 @@ ms.locfileid: "52532551"
 2.  500 МБ — это ориентировочный объем памяти, необходимый другим процессам в системе. Если система выполняет дополнительную работу, то это значение следует соответствующим образом увеличить.  
 3.  .*ism_size* равно 8 МБ для платформ x64.  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Пример. Оценка требований к памяти fdhost.exe  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Пример Оценка требований к памяти fdhost.exe  
   
  В этом примере используется 64-разрядный компьютер с 8 ГБ ОЗУ и четырьмя двухъядерными процессорами. Первое вычисление оценивает объем памяти, необходимый для fdhost.exe, — *F*. Число диапазонов сканирования: `8`.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "52532551"
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>Пример. Задание значения параметра "Макс. памяти сервера"  
+ #### <a name="example-setting-max-server-memory"></a>Пример Задание значения параметра max server memory  
   
  В данном примере хранимая процедура [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) и инструкции [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] используются для присвоения параметру **Макс. памяти сервера** значения, которое было вычислено для *M* в предыдущем примере, `7052`:  
   

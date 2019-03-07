@@ -19,19 +19,19 @@ ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d30c93cd56467c6137db647e52ea97f2cc7641ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a9598ccdb6ed8e38c5b7a44341dcf3e54732418a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509582"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802838"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Сравнивает скалярное значение с набором значений, состоящим из одного столбца.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на статью") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -56,17 +56,17 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Boolean**  
   
 ## <a name="result-value"></a>Значение результата  
- Возвращает TRUE, если заданное сравнение возвращает TRUE для всех пар (_scalar_expression_**,**_x)_, где *x* является значением из набора строк, состоящего из одного столбца; в противном случае возвращает FALSE.  
+ Возвращает TRUE, если заданное сравнение возвращает TRUE для всех пар (_scalar_expression_**,**_x)_, где *x* является значением из набора строк, состоящего из одного столбца. В противном случае возвращает значение FALSE.  
   
 ## <a name="remarks"></a>Remarks  
- Если аргумент *scalar_expression* установлен в значение ALL, будет выполнено сравнение каждого значения, возвращаемого вложенным запросом. Например, если вложенный запрос возвращает значения 2 и 3, то при *scalar_expression* <= ALL будет возвращаться TRUE для значения *scalar_expression*, равного 2. Если вложенный запрос возвращает значения 2 и 3, то при *scalar_expression* = ALL (subquery) будет возвращаться FALSE, так как некоторые значения вложенного запроса (значение 3) не отвечают критериям этого выражения.  
+ Если аргумент *scalar_expression* установлен в значение ALL, будет выполнено сравнение каждого значения, возвращаемого вложенным запросом. Например, если вложенный запрос возвращает значения 2 и 3, то при *scalar_expression* <= ALL будет возвращаться TRUE для значения *scalar_expression*, равного 2. Если вложенный запрос возвращает значения 2 и 3, то при *scalar_expression* = ALL (subquery) будет возвращаться FALSE, так как некоторые значения вложенного запроса (значение 3) могут не отвечать критериям этого выражения.  
   
  Инструкции, которым необходим аргумент *scalar_expression* для сравнения каждого значения, возвращенного вложенным запросом, перечислены в разделе [SOME &#124; ANY (Transact-SQL)](../../t-sql/language-elements/some-any-transact-sql.md).  
   
- В этом разделе имеются ссылки на выражение ALL при его использовании совместно с вложенными запросами. ALL может также использоваться с инструкциями [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) и [SELECT](../../t-sql/queries/select-transact-sql.md).  
+ В этой статье приводятся ссылки на выражение ALL при его использовании совместно с вложенными запросами. ALL может также использоваться с инструкциями [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) и [SELECT](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
- В приведенном ниже примере показано создание хранимой процедуры, определяющей, могут ли в течение заданного количества дней быть выполнены все части заказа с указанным идентификатором `SalesOrderID` из базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. В этом примере вложенный запрос используется для создания списка числовых значений `DaysToManufacture` для всех заказов с указанным идентификатором `SalesOrderID`, после чего происходит проверка того, что время производства всех заказов (`DaysToManufacture`) находится в пределах указанного числа дней.  
+ В приведенном ниже примере показано создание хранимой процедуры, определяющей, могут ли в течение заданного количества дней быть выполнены все части заказа с указанным идентификатором `SalesOrderID` из базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. В этом примере вложенный запрос используется для создания списка числовых значений `DaysToManufacture` для всех компонентов с указанным идентификатором `SalesOrderID`, после чего происходит проверка того, что время производства всех заказов (`DaysToManufacture`) находится в пределах указанного числа дней.  
   
 ```  
 -- Uses AdventureWorks  
@@ -84,11 +84,11 @@ IF
    )  
 PRINT 'All items for this order can be manufactured in specified number of days or less.'  
 ELSE   
-PRINT 'Some items for this order cannot be manufactured in specified number of days or less.' ;  
+PRINT 'Some items for this order cann't be manufactured in specified number of days or less.' ;  
   
 ```  
   
- Для проверки этой процедуры выполните ее, используя заказ `SalesOrderID 49080`. В него входит один компонент, производство которого занимает `2` дня, и два компонента, производство которых занимает 0 дней. Первая из нижеследующих инструкций отвечает этим критериям. Второй запрос этим критериям не отвечает.  
+ Для проверки этой процедуры выполните ее, используя заказ `SalesOrderID 49080`. В него входит один компонент, производство которого занимает `2` дня, и два компонента, производство которых занимает 0 дней. Первая из нижеследующих инструкций отвечает этим критериям. Второй запрос — нет.  
   
 ```  
 EXECUTE DaysToBuild 49080, 2 ;  
@@ -104,7 +104,7 @@ EXECUTE DaysToBuild 49080, 1 ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Some items for this order cannot be manufactured in specified number of days or less.`  
+ `Some items for this order can't be manufactured in specified number of days or less.`  
   
 ## <a name="see-also"></a>См. также:  
  [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)   
@@ -115,5 +115,4 @@ EXECUTE DaysToBuild 49080, 1 ;
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)   
  [IN (Transact-SQL)](../../t-sql/language-elements/in-transact-sql.md)  
-  
   

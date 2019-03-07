@@ -18,12 +18,12 @@ ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b408b3f4d71f80bb2317a58ddd0ff0f578807946
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3737c5dabc8b88970a24cbadcc9617457cf862eb
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202813"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828134"
 ---
 # <a name="connect-to-server-database-engine"></a>Соединение с сервером (ядро СУБД)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "53202813"
   
 > [!NOTE]  
 > Для подключения к активному пользовательскому экземпляру [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] установите подключение с использованием протокола именованных каналов, указав имя канала, например, `np:\\.\pipe\3C3DF6B1-2262-47\tsql\query`. Дополнительные сведения см. в документации по [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
-  
+> [!NOTE]  
+> Обычно данные о подключениях хранятся в журнале "Недавно использовавшиеся" (MRU). Чтобы удалить записи из журнала MRU, просто щелкните поле со списком **Имя сервера**, выберите имя сервера для удаления и нажмите клавишу **DEL**.  
+   
 **Проверка подлинности**  
 Текущая версия SSMS предлагает пять режимов проверки подлинности при подключении к экземпляру [!INCLUDE[ssDE](../../includes/ssde_md.md)]. Если диалоговое окно проверки подлинности не соответствует перечисленным ниже, скачайте последнюю версию SSMS на странице [Скачивание SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
 

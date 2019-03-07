@@ -16,12 +16,12 @@ ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 93461858c1318b65d3fd75160e06785847c265a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 178d926dbcbfc6e599a57207369bf61e603468a9
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598292"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828454"
 ---
 # <a name="filetables-sql-server"></a>Таблицы FileTable (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,6 +83,8 @@ ms.locfileid: "47598292"
 -   Операции API-интерфейсов Windows являются по своей природе нетранзакционными и не связаны с пользовательскими транзакциями. Тем не менее транзакционный доступ к данным FILESTREAM, хранящимся в таблице FileTable, полностью поддерживается, как это происходит для любого столбца FILESTREAM в обычной таблице.  
   
 -   Кроме того, таблицы FileTable можно запрашивать и обновлять с помощью обычного доступа [!INCLUDE[tsql](../../includes/tsql-md.md)] . Они интегрируются со средствами управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и такими компонентами, как средство резервного копирования.  
+
+-   Нельзя отправить запрос по электронной почте через компонент dbmail и вложить файл, расположенный в каталоге filestream (и filetable соответственно). Драйвер фильтра файловой системы RsFx0420 проверяет запросы ввода-вывода, входящие в папку filestream и исходящие из нее. Запросы, которые не исходят из исполняемого файла SQL Server и кода Filestream, будут прямо запрещены.
   
 ##  <a name="additional"></a> Дополнительные замечания об использовании таблиц FileTable  
   

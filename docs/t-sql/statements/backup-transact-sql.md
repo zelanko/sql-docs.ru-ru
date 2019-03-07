@@ -1,7 +1,7 @@
 ---
 title: BACKUP (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -47,20 +47,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a098756919cec261d9416149a508b311c48cd147
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: c764f90d21300ee5c537265de86a10971d9c0991
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421501"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828244"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
-Создание резервной копии базы данных SQL. 
+Создание резервной копии базы данных SQL.
 
 Щелкните одну из следующих вкладок, чтобы изучить синтаксис, аргументы, примечания, разрешения и примеры для используемой вам версии SQL.
 
-Дополнительные сведения о соглашениях о синтаксисе см. в статье [Соглашения о синтаксисе в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
+Дополнительные сведения о соглашениях о синтаксисе см. в статье [Соглашения о синтаксисе в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## <a name="click-a-product"></a>Выберите продукт!
 
@@ -68,1293 +68,1261 @@ ms.locfileid: "55421501"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> |||| 
-> |---|---|---| 
-> |**_\* SQL Server \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](backup-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
+||||
+|---|---|---|
+|**_\* SQL Server \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+||||
 
 &nbsp;
 
 ## <a name="sql-server"></a>SQL Server
 
-Создает резервную копию всей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (чтобы получить резервную копию базы данных) либо файлов или файловых групп базы данных (чтобы получить резервную копию файлов (BACKUP DATABASE)). Кроме того, при использовании модели полного восстановления или модели восстановления с неполным протоколированием создается резервная копия журнала транзакций (BACKUP LOG). 
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```sql 
---Backing Up a Whole Database   
-BACKUP DATABASE { database_name | @database_name_var }   
-  TO <backup_device> [ ,...n ]   
-  [ <MIRROR TO clause> ] [ next-mirror-to ]  
-  [ WITH { DIFFERENTIAL 
-           | <general_WITH_options> [ ,...n ] } ]  
-[;]  
-  
---Backing Up Specific Files or Filegroups  
-BACKUP DATABASE { database_name | @database_name_var }   
- <file_or_filegroup> [ ,...n ]   
-  TO <backup_device> [ ,...n ]   
-  [ <MIRROR TO clause> ] [ next-mirror-to ]  
-  [ WITH { DIFFERENTIAL | <general_WITH_options> [ ,...n ] } ]  
-[;]  
-  
---Creating a Partial Backup  
-BACKUP DATABASE { database_name | @database_name_var }   
- READ_WRITE_FILEGROUPS [ , <read_only_filegroup> [ ,...n ] ]  
-  TO <backup_device> [ ,...n ]   
-  [ <MIRROR TO clause> ] [ next-mirror-to ]  
-  [ WITH { DIFFERENTIAL | <general_WITH_options> [ ,...n ] } ]  
-[;]  
-  
---Backing Up the Transaction Log (full and bulk-logged recovery models)  
-BACKUP LOG 
-  { database_name | @database_name_var }  
-  TO <backup_device> [ ,...n ]   
-  [ <MIRROR TO clause> ] [ next-mirror-to ]  
-  [ WITH { <general_WITH_options> | \<log-specific_optionspec> } [ ,...n ] ]  
-[;]  
-  
-<backup_device>::=   
- {  
-   { logical_device_name | @logical_device_name_var }   
- | {   DISK 
-     | TAPE 
-     | URL } =   
-     { 'physical_device_name' | @physical_device_name_var | 'NUL' }  
- }   
-  
-<MIRROR TO clause>::=  
- MIRROR TO <backup_device> [ ,...n ]  
-  
-<file_or_filegroup>::=  
- {  
-   FILE = { logical_file_name | @logical_file_name_var }   
- | FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }  
- }   
-  
-<read_only_filegroup>::=  
-FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }  
-  
-<general_WITH_options> [ ,...n ]::=   
---Backup Set Options  
-   COPY_ONLY   
- | { COMPRESSION | NO_COMPRESSION }   
- | DESCRIPTION = { 'text' | @text_variable }   
- | NAME = { backup_set_name | @backup_set_name_var }   
- | CREDENTIAL  
- | ENCRYPTION  
- | FILE_SNAPSHOT  
- | { EXPIREDATE = { 'date' | @date_var }   
-        | RETAINDAYS = { days | @days_var } }   
-  
---Media Set Options  
-   { NOINIT | INIT }   
- | { NOSKIP | SKIP }   
- | { NOFORMAT | FORMAT }   
- | MEDIADESCRIPTION = { 'text' | @text_variable }   
- | MEDIANAME = { media_name | @media_name_variable }   
- | BLOCKSIZE = { blocksize | @blocksize_variable }   
-  
---Data Transfer Options  
-   BUFFERCOUNT = { buffercount | @buffercount_variable }   
- | MAXTRANSFERSIZE = { maxtransfersize | @maxtransfersize_variable }  
-  
---Error Management Options  
-   { NO_CHECKSUM | CHECKSUM }  
- | { STOP_ON_ERROR | CONTINUE_AFTER_ERROR }  
-  
---Compatibility Options  
-   RESTART   
-  
---Monitoring Options  
-   STATS [ = percentage ]   
-  
---Tape Options. 
-   { REWIND | NOREWIND }   
- | { UNLOAD | NOUNLOAD }   
-  
---Log-specific Options. 
-   { NORECOVERY | STANDBY = undo_file_name }  
- | NO_TRUNCATE  
-  
---Encryption Options  
- ENCRYPTION (ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY } , encryptor_options ) <encryptor_options> ::=   
-   SERVER CERTIFICATE = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name   
-```  
-  
-## <a name="arguments"></a>Аргументы  
+Создает резервную копию всей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (чтобы получить резервную копию базы данных) либо файлов или файловых групп базы данных (чтобы получить резервную копию файлов (BACKUP DATABASE)). Кроме того, при использовании модели полного восстановления или модели восстановления с неполным протоколированием создается резервная копия журнала транзакций (BACKUP LOG).
 
-DATABASE  
-Указывает, что должна быть создана резервная копия всей базы данных. Если указан список файлов и файловых групп, то только они включаются в резервную копию. Во время создания полной или разностной резервной копии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает резервную копию той части журнала транзакций, которая достаточна для создания согласованной базы данных во время ее восстановления.  
-  
-Во время восстановления резервной копии, созданной с помощью инструкции BACKUP DATABASE (*резервной копии данных*), восстанавливается вся резервная копия. Восстановление на определенный момент времени или к определенной транзакции возможно только для резервной копии журналов.  
-  
-> [!NOTE]  
-> Для базы данных **master** может быть произведено только полное резервное копирование.  
-  
-LOG 
+## <a name="syntax"></a>Синтаксис
 
-Указывает только на резервное копирование журнала транзакций. Создается резервная копия части журнала, начинающейся с конца последней успешно созданной копии и заканчивающейся текущим концом журнала. До создания первой резервной копии журнала необходимо создать полную резервную копию базы данных.  
+```sql
+--Backing Up a Whole Database
+BACKUP DATABASE { database_name | @database_name_var }
+  TO <backup_device> [ ,...n ]
+  [ <MIRROR TO clause> ] [ next-mirror-to ]
+  [ WITH { DIFFERENTIAL
+           | <general_WITH_options> [ ,...n ] } ]
+[;]
+
+--Backing Up Specific Files or Filegroups
+BACKUP DATABASE { database_name | @database_name_var }
+ <file_or_filegroup> [ ,...n ]
+  TO <backup_device> [ ,...n ]
+  [ <MIRROR TO clause> ] [ next-mirror-to ]
+  [ WITH { DIFFERENTIAL | <general_WITH_options> [ ,...n ] } ]
+[;]
+
+--Creating a Partial Backup
+BACKUP DATABASE { database_name | @database_name_var }
+ READ_WRITE_FILEGROUPS [ , <read_only_filegroup> [ ,...n ] ]
+  TO <backup_device> [ ,...n ]
+  [ <MIRROR TO clause> ] [ next-mirror-to ]
+  [ WITH { DIFFERENTIAL | <general_WITH_options> [ ,...n ] } ]
+[;]
+
+--Backing Up the Transaction Log (full and bulk-logged recovery models)
+BACKUP LOG
+  { database_name | @database_name_var }
+  TO <backup_device> [ ,...n ]
+  [ <MIRROR TO clause> ] [ next-mirror-to ]
+  [ WITH { <general_WITH_options> | \<log-specific_optionspec> } [ ,...n ] ]
+[;]
   
-Резервную копию журналов можно восстановить на определенный момент времени или к определенной транзакции, указав предложение `WITH STOPAT`, `STOPATMARK` или `STOPBEFOREMARK` в инструкции [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md).  
-  
-> [!NOTE]  
->  После обычной процедуры создания резервной копии журналов некоторые записи в журнале транзакций становятся неактивными, если не были указаны параметры `WITH NO_TRUNCATE` или `COPY_ONLY`. Журнал усекается после того, как все записи внутри одного или нескольких виртуальных файлов журнала становятся неактивными. Если журнал не усекается после совершения нескольких процедур резервного копирования журнала, это означает, что что-то может препятствовать его усечению. Дополнительные сведения см. в разделе [Факторы, которые могут вызвать задержку усечения журнала](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation).  
-  
-{ _database\_name_ | **@**_database\_name\_var_ }   
-База данных, журнал транзакций и часть данных или все данные, которые подвергаются резервному копированию. Если аргумент задается в виде переменной (**@**_database\_name\_var_), он может быть указан в виде строковой константы (**@**_database\_name\_var_**=**_database name_) или переменной с типом данных символьной строки **ntext** или **text**.  
-  
-> [!NOTE]  
-> Невозможно создать резервную копию зеркальной базы данных при партнерстве в зеркальном отображении базы данных.  
-  
-\<file_or_filegroup> [ **,**...*n* ]  
-Используется только с инструкцией BACKUP DATABASE. Определяет файл базы данных или файловую группу, которые будут включены в резервную копию файлов, либо файл или файловую группу, доступные только для чтения, которые будут включены в частичную резервную копию.  
-  
-FILE **=** { *logical_file_name* | **@**_logical\_file\_name\_var_ }  
-Логическое имя файла или переменная, значение которой равно логическому имени файла, который следует включить в резервную копию.  
-  
-FILEGROUP **=** { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_var_ }  
-Логическое имя файловой группы или переменная со значением, равным логическому имени файловой группы, которую следует включить в резервную копию. В простой модели восстановления создание резервной копии файловой группы разрешено лишь для файловых групп, доступных только для чтения.  
-  
-> [!NOTE]  
+<backup_device>::=
+ {
+  { logical_device_name | @logical_device_name_var }
+ | {   DISK
+     | TAPE
+     | URL } =
+     { 'physical_device_name' | @physical_device_name_var | 'NUL' }
+ }
+
+<MIRROR TO clause>::=
+ MIRROR TO <backup_device> [ ,...n ]
+
+<file_or_filegroup>::=
+ {
+   FILE = { logical_file_name | @logical_file_name_var }
+ | FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
+ }
+
+<read_only_filegroup>::=
+FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
+
+<general_WITH_options> [ ,...n ]::=
+--Backup Set Options
+   COPY_ONLY
+ | { COMPRESSION | NO_COMPRESSION }
+ | DESCRIPTION = { 'text' | @text_variable }
+ | NAME = { backup_set_name | @backup_set_name_var }
+ | CREDENTIAL
+ | ENCRYPTION
+ | FILE_SNAPSHOT
+ | { EXPIREDATE = { 'date' | @date_var }
+        | RETAINDAYS = { days | @days_var } }
+
+--Media Set Options
+   { NOINIT | INIT }
+ | { NOSKIP | SKIP }
+ | { NOFORMAT | FORMAT }
+ | MEDIADESCRIPTION = { 'text' | @text_variable }
+ | MEDIANAME = { media_name | @media_name_variable }
+ | BLOCKSIZE = { blocksize | @blocksize_variable }
+
+--Data Transfer Options
+   BUFFERCOUNT = { buffercount | @buffercount_variable }
+ | MAXTRANSFERSIZE = { maxtransfersize | @maxtransfersize_variable }
+
+--Error Management Options
+   { NO_CHECKSUM | CHECKSUM }
+ | { STOP_ON_ERROR | CONTINUE_AFTER_ERROR }
+
+--Compatibility Options
+   RESTART
+
+--Monitoring Options
+   STATS [ = percentage ]
+
+--Tape Options
+   { REWIND | NOREWIND }
+ | { UNLOAD | NOUNLOAD }
+
+--Log-specific Options
+   { NORECOVERY | STANDBY = undo_file_name }
+ | NO_TRUNCATE
+
+--Encryption Options
+ ENCRYPTION (ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY } , encryptor_options ) <encryptor_options> ::=
+   SERVER CERTIFICATE = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
+```
+
+## <a name="arguments"></a>Аргументы
+
+DATABASE — указывает, что нужно создать полную резервную копию базы данных. Если указан список файлов и файловых групп, то только они включаются в резервную копию. Во время создания полной или разностной резервной копии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает резервную копию той части журнала транзакций, которая достаточна для создания согласованной базы данных во время ее восстановления.
+
+Во время восстановления резервной копии, созданной с помощью инструкции BACKUP DATABASE (*резервной копии данных*), восстанавливается вся резервная копия. Восстановление на определенный момент времени или к определенной транзакции возможно только для резервной копии журналов.
+
+> [!NOTE]
+> Для базы данных **master** может быть произведено только полное резервное копирование.
+
+LOG
+
+Указывает только на резервное копирование журнала транзакций. Создается резервная копия части журнала, начинающейся с конца последней успешно созданной копии и заканчивающейся текущим концом журнала. До создания первой резервной копии журнала необходимо создать полную резервную копию базы данных.
+
+Резервную копию журналов можно восстановить на определенный момент времени или к определенной транзакции, указав предложение `WITH STOPAT`, `STOPATMARK` или `STOPBEFOREMARK` в инструкции [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md).
+
+> [!NOTE]
+> После обычной процедуры создания резервной копии журналов некоторые записи в журнале транзакций становятся неактивными, если не были указаны параметры `WITH NO_TRUNCATE` или `COPY_ONLY`. Журнал усекается после того, как все записи внутри одного или нескольких виртуальных файлов журнала становятся неактивными. Если журнал не усекается после совершения нескольких процедур резервного копирования журнала, это означает, что что-то может препятствовать его усечению. Дополнительные сведения см. в разделе [Факторы, которые могут вызвать задержку усечения журнала](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation).
+
+{ _database\_name_ | **@**_database\_name\_var_ } — определяет базу данных, из которой создается резервная копия журнала транзакций, части или всей базы данных. Если аргумент задается в виде переменной (**@**_database\_name\_var_), он может быть указан в виде строковой константы (**@**_database\_name\_var_**=**_database name_) или переменной с типом данных символьной строки **ntext** или **text**.
+
+> [!NOTE]
+> Невозможно создать резервную копию зеркальной базы данных при партнерстве в зеркальном отображении базы данных.
+
+\<file_or_filegroup> [ **,**...*n* ] — используется только с инструкцией BACKUP DATABASE. Определяет файл базы данных или файловую группу, которые будут включены в резервную копию файлов, либо файл или файловую группу, доступные только для чтения, которые будут включены в частичную резервную копию.
+
+FILE **=** { *logical_file_name* | **@**_logical\_file\_name\_var_ } — логическое имя файла или переменная, значение которой равно логическому имени файла, назначенного для включения в резервную копию.
+
+FILEGROUP **=** { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_var_ } — логическое имя файловой группы или переменная, значение которой равно логическому имени файловой группы, назначенной для включения в резервную копию. В простой модели восстановления создание резервной копии файловой группы разрешено лишь для файловых групп, доступных только для чтения.
+
+> [!NOTE]
 > Рекомендуется использовать резервные копии файлов в случае, если размер базы данных и требования по производительности делают полное резервное копирование базы данных нецелесообразным. Устройство NUL может использоваться для тестирования производительности резервного копирования, но не должно использоваться в производственных средах.
-  
-*n*  
-Заполнитель, который показывает, что через запятую можно указать несколько файлов или файловых групп. Их число не ограничено. 
-  
-Дополнительные сведения см. в разделе [Полные резервные копии файлов (SQL Server)](../../relational-databases/backup-restore/full-file-backups-sql-server.md) и [Резервное копирование файлов и файловых групп (SQL Server)](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).  
-  
-READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_var_ } [ **,**..._n_ ] ]  
-Определяет частичную резервную копию. В частичную резервную копию входят все файлы базы данных, доступные для чтения и записи: первичная файловая группа и все вторичные файловые группы, доступные для чтения и записи, а также все указанные файлы и файловые группы, доступные только для чтения.  
-  
-READ_WRITE_FILEGROUPS  
-Указывает, что все файловые группы, доступные для чтения и записи, должны быть включены в частичную резервную копию. Если база данных доступна только для чтения, READ_WRITE_FILEGROUPS включает только первичную файловую группу.  
-  
-> [!IMPORTANT]  
-> Явный список доступных для записи и чтения файловых групп с применением FILEGROUP вместо READ_WRITE_FILEGROUPS создает резервную копию файлов.  
-  
-FILEGROUP = { *logical_filegroup_name* | **@**_logical\_filegroup\_name\_var_ }  
-Логическое имя файловой группы, доступной только для чтения, или переменная со значением, равным логическому имени доступной только для чтения файловой группы, которую следует включить в частичную резервную копию. Дополнительные сведения см. в подразделе "\<file_or_filegroup>," выше.
-  
-*n*  
-Заполнитель, который показывает, что через запятую можно указать несколько файловых групп, доступных только для чтения.  
-  
-Дополнительные сведения о частичных резервных копиях см. в разделе [Частичные резервные копии (SQL Server)](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
-  
-TO \<backup_device> [ **,**...*n* ] Указывает, что сопутствующий набор [устройств резервного копирования](../../relational-databases/backup-restore/backup-devices-sql-server.md) является незеркальным набором носителей или первым из зеркальных носителей внутри зеркального набора носителей (для которого объявлено одно или несколько предложений MIRROR TO).  
-  
+
+*n* — заполнитель, который показывает, что через запятую можно указать несколько файлов или файловых групп. Их число не ограничено.
+
+Дополнительные сведения см. в статьях о [полных резервных копиях файлов](../../relational-databases/backup-restore/full-file-backups-sql-server.md) и [резервном копировании файлов и файловых групп](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).
+
+READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_var_ } [ **,**..._n_ ] ] — определяет частичную резервную копию. В частичную резервную копию входят все файлы базы данных, доступные для чтения и записи: первичная файловая группа и все вторичные файловые группы, доступные для чтения и записи, а также все указанные файлы и файловые группы, доступные только для чтения.
+
+READ_WRITE_FILEGROUPS — указывает, что в частичную резервную копию должны быть включены все файловые группы, доступные для чтения и записи. Если база данных доступна только для чтения, READ_WRITE_FILEGROUPS включает только первичную файловую группу.
+
+> [!IMPORTANT]
+> Явный список доступных для записи и чтения файловых групп с применением FILEGROUP вместо READ_WRITE_FILEGROUPS создает резервную копию файлов.
+
+FILEGROUP = { *logical_filegroup_name* | **@**_logical\_filegroup\_name\_var_ } — логическое имя файловой группы, доступной только для чтения, или переменная со значением, равным логическому имени доступной только для чтения файловой группы, которую следует включить в частичную резервную копию. Дополнительные сведения см. в подразделе "\<file_or_filegroup>," выше.
+
+*n* — заполнитель, который показывает, что через запятую можно указать несколько файловых групп, доступных только для чтения.
+
+Дополнительные сведения о частичных резервных копиях см. в [этой статье](../../relational-databases/backup-restore/partial-backups-sql-server.md).
+
+TO \<backup_device> [ **,**...*n* ] Указывает, что сопутствующий набор [устройств резервного копирования](../../relational-databases/backup-restore/backup-devices-sql-server.md) является незеркальным набором носителей или первым из зеркальных носителей внутри зеркального набора носителей (для которого объявлено одно или несколько предложений MIRROR TO).
+
 \<backup_device>
 
-Указывает логическое или физическое устройство резервного копирования, используемое для создания резервной копии.  
-  
-{ *logical_device_name* | **@**_logical\_device\_name\_var_ } **Применяется к:** SQL Server   
-Логическое имя устройства резервного копирования, на котором создается резервная копия базы данных. Логическое имя должно соответствовать правилам для идентификаторов. Если аргумент задается в виде переменной (@*logical_device_name_var*), имя устройства резервного копирования можно указать как строковую константу (@_logical\_device\_name\_var_**=** logical backup device name) или как переменную любого строкового типа данных **ntext** или **text**.  
-  
-{ DISK | TAPE | URL} **=** { **'**_physical\_device\_name_**'** | **@**_physical\_device\_name\_var_ | 'NUL' } **Применяется к:** DISK, TAPE и URL применяются к SQL Server. 
-Определяет файл диска, ленточное устройство или службу хранилища BLOB-объектов Microsoft Azure. Формат URL-адреса используется для создания резервных копий в службе хранилища Microsoft Azure. Дополнительные сведения и примеры см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). См. учебник в статье [Учебник. Резервное копирование и восстановление SQL Server с помощью службы хранилищ BLOB-объектов Microsoft Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md) 
+Указывает логическое или физическое устройство резервного копирования, используемое для создания резервной копии.
 
-> [!NOTE] 
+{ *logical_device_name* | **@**_logical\_device\_name\_var_ } **Применяется к:** SQL Server — логическое имя устройства резервного копирования, на котором создается резервная копия базы данных. Логическое имя должно соответствовать правилам для идентификаторов. Если аргумент задается в виде переменной (@*logical_device_name_var*), имя устройства резервного копирования можно указать как строковую константу (@_logical\_device\_name\_var_**=** logical backup device name) или как переменную любого строкового типа данных **ntext** или **text**.
+
+{ DISK | TAPE | URL} **=** { **'**_physical\_device\_name_**'** | **@**_physical\_device\_name\_var_ | 'NUL' } **Применяется к:** DISK, TAPE и URL применяются к SQL Server.
+Определяет файл диска, ленточное устройство или службу хранилища BLOB-объектов Microsoft Azure. Формат URL-адреса используется для создания резервных копий в службе хранилища Microsoft Azure. Дополнительные сведения и примеры см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). См. учебник в статье [Учебник. Резервное копирование и восстановление SQL Server с помощью службы хранилищ BLOB-объектов Microsoft Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)
+
+> [!NOTE]
 > Дисковое устройство NUL удалит всю присланную на него информацию, его следует использовать только для тестирования. Оно не предназначено для производственной эксплуатации.
-  
-> [!IMPORTANT]  
-> Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) CU2 по [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], при резервном копировании на URL-адрес можно сохранить резервную копию только на одном устройстве. Чтобы выполнить резервное копирование на несколько устройств при резервном копировании на URL-адрес, необходимо использовать версию с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и токены подписанных URL-адресов (SAS). Примеры создания подписанного URL-адреса см. в разделах [Резервное копирование SQL Server на URL-адрес](../../relational-databases/backup-restore/sql-server-backup-to-url.md) и [Упрощение создания учетных данных SQL с токенами подписанных URL-адресов в хранилище Azure с помощью Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
-  
-**URL-адрес применим к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) CU2 до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
-  
-Дисковое устройство не обязательно должно существовать до указания в инструкции BACKUP. Если физическое устройство существует и в инструкции BACKUP не указан параметр INIT, то резервная копия дозаписывается на устройство.  
- 
-> [!NOTE] 
+> [!IMPORTANT]
+> Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) CU2 по [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], при резервном копировании на URL-адрес можно сохранить резервную копию только на одном устройстве. Чтобы выполнить резервное копирование на несколько устройств при резервном копировании на URL-адрес, необходимо использовать версию с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и токены подписанных URL-адресов (SAS). Примеры создания подписанного URL-адреса см. в разделах [Резервное копирование SQL Server на URL-адрес](../../relational-databases/backup-restore/sql-server-backup-to-url.md) и [Упрощение создания учетных данных SQL с токенами подписанных URL-адресов в хранилище Azure с помощью Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).
+
+**URL-адрес применим к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) CU2 до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+
+Дисковое устройство не обязательно должно существовать до указания в инструкции BACKUP. Если физическое устройство существует и в инструкции BACKUP не указан параметр INIT, то резервная копия дозаписывается на устройство.
+
+> [!NOTE]
 > Устройство NULL удалит все входящие данные, отправленные в этот файл, однако операция резервного копирования все равно пометит все страницы как архивированные.
-  
-Дополнительные сведения см. в разделе [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
-  
-> [!NOTE]  
-> Параметр TAPE будет удален в следующей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.  
-  
-*n*  
-Заполнитель, который показывает, что можно указать до 64 устройств резервного копирования через запятую.  
-  
-MIRROR TO \<backup_device> [ **,**...*n* ] Указывает набор от одного до трех дополнительных устройств резервного копирования, которые будут зеркалами для устройств резервного копирования, описанных в предложении TO. В предложении MIRROR TO должен быть указан тот же тип и то же количество устройств резервного копирования, что и в предложении TO. Максимальное число предложений MIRROR TO — три.  
-  
-Этот параметр доступен только в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition.  
-  
-> [!NOTE]  
-> Для MIRROR TO = DISK команда BACKUP автоматически определяет подходящий размер блока дисковых устройств на основе размера сектора диска. Если диск MIRROR TO отформатирован с иным размером сектора, чем у диска — основного устройства резервного копирования, команда BACKUP не сработает.  Для зеркалирования резервных копий на устройствах с разными размерами секторов необходимо указать параметр BLOCKSIZE и задать в нем наибольший размер сектора среди всех целевых устройств.  Дополнительные сведения о размере блока см. в разделе BLOCKSIZE ниже в этой статье.  
-  
+
+См. дополнительные сведения [об устройствах резервного копирования](../../relational-databases/backup-restore/backup-devices-sql-server.md).
+
+> [!NOTE]
+> Параметр TAPE будет удален в следующей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.
+
+*n* — заполнитель, который показывает, что можно указать до 64 устройств резервного копирования через запятую.
+
+MIRROR TO \<backup_device> [ **,**...*n* ] Указывает набор от одного до трех дополнительных устройств резервного копирования, которые будут зеркалами для устройств резервного копирования, описанных в предложении TO. В предложении MIRROR TO должен быть указан тот же тип и то же количество устройств резервного копирования, что и в предложении TO. Максимальное число предложений MIRROR TO — три.
+
+Этот параметр доступен только в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition.
+
+> [!NOTE]
+> Для MIRROR TO = DISK команда BACKUP автоматически определяет подходящий размер блока дисковых устройств на основе размера сектора диска. Если диск MIRROR TO отформатирован с иным размером сектора, чем у диска — основного устройства резервного копирования, команда BACKUP не сработает. Для зеркалирования резервных копий на устройствах с разными размерами секторов необходимо указать параметр BLOCKSIZE и задать в нем наибольший размер сектора среди всех целевых устройств. Дополнительные сведения о размере блока см. в разделе BLOCKSIZE ниже в этой статье.
+
 \<backup_device> См. раздел "\<backup_device>," выше.
-  
-*n*  
-Заполнитель, который показывает, что можно указать до 64 устройств резервного копирования через запятую. Количество устройств в предложении MIRROR TO должно быть равно количеству устройств в предложении TO.  
-  
-Дополнительные сведения см. в подразделе "Семейства носителей в зеркальных наборах носителей" в разделе [Замечания](#general-remarks) далее в этой статье.  
-  
-[ *next-mirror-to* ]  
-Заполнитель, показывающий, что в одной инструкции BACKUP в дополнение к одному предложению TO может содержаться до трех предложений MIRROR TO.  
-  
-### <a name="with-options"></a>Параметры инструкции WITH  
-Задает параметры, которые будут использоваться для операции создания резервной копии.  
-  
-CREDENTIAL  
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) CU2 до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
-Используется только при создании резервной копии для службы хранилища BLOB-объектов Microsoft Azure.  
-  
+
+*n* — заполнитель, который показывает, что можно указать до 64 устройств резервного копирования через запятую. Количество устройств в предложении MIRROR TO должно быть равно количеству устройств в предложении TO.
+
+Дополнительные сведения см. в подразделе "Семейства носителей в зеркальных наборах носителей" в разделе [Замечания](#general-remarks) далее в этой статье.
+
+[ *next-mirror-to* ] — заполнитель, показывающий, что в одной инструкции BACKUP в дополнение к одному предложению TO может содержаться до трех предложений MIRROR TO.
+
+### <a name="with-options"></a>Параметры инструкции WITH
+
+Задает параметры, которые будут использоваться для операции создания резервной копии.
+
+CREDENTIAL — **применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) CU2 до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+Используется только при создании резервной копии для службы хранилища BLOB-объектов Microsoft Azure.
+
 FILE_SNAPSHOT **Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
-Служит для создания снимка экрана Azure файлов базы данных, когда все файлы базы данных SQL Server хранятся с помощью службы хранилища BLOB-объектов Azure. Дополнительные сведения см. в разделе [Файлы данных SQL Server в Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). Резервное копирование снимков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует моментальные снимки Azure файлов базы данных (файлов данных и журнала) в согласованном состояние. Согласованный набор моментальных снимков Azure составляет резервную копию, они копируются в файл резервной копии. Единственное различие между `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` и `BACKUP LOG TO URL WITH FILE_SNAPSHOT` заключается в том, что последняя инструкция усекает журнал транзакций, а первая — нет. При использовании резервного копирования снимков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для восстановления базы данных до точки времени, когда была создана резервная копия журнала транзакций, требуется только одна резервная копия журнала транзакций после создания первоначальной полной резервной копии (это необходимо [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для создания цепочки резервного копирования). Кроме того, для восстановления базы данных до точки времени между двумя операциями резервного копирования журнала транзакций требуется только две резервные копии журнала транзакций.  
-    
-DIFFERENTIAL (разностная)  
+Служит для создания снимка экрана Azure файлов базы данных, когда все файлы базы данных SQL Server хранятся с помощью службы хранилища BLOB-объектов Azure. Дополнительные сведения см. в разделе [Файлы данных SQL Server в Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). Резервное копирование снимков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует моментальные снимки Azure файлов базы данных (файлов данных и журнала) в согласованном состояние. Согласованный набор моментальных снимков Azure составляет резервную копию, они копируются в файл резервной копии. Единственное различие между `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` и `BACKUP LOG TO URL WITH FILE_SNAPSHOT` заключается в том, что последняя инструкция усекает журнал транзакций, а первая — нет. При использовании резервного копирования снимков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для восстановления базы данных до точки времени, когда была создана резервная копия журнала транзакций, требуется только одна резервная копия журнала транзакций после создания первоначальной полной резервной копии (это необходимо [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для создания цепочки резервного копирования). Кроме того, для восстановления базы данных до точки времени между двумя операциями резервного копирования журнала транзакций требуется только две резервные копии журнала транзакций.
 
-Используется только с инструкцией BACKUP DATABASE. Указывает, что резервная копия базы данных или файлов должна состоять только из тех частей базы данных или файлов, которые были изменены с момента создания последней полной резервной копии. Файл разностной резервной копии обычно занимает меньше места, чем полная резервная копия. Используйте этот параметр, чтобы не нужно было применять отдельные резервные копии журналов, созданные во время последнего полного резервного копирования.  
-  
-> [!NOTE]  
-> По умолчанию `BACKUP DATABASE` создает полную резервную копию.  
-  
-Дополнительные сведения см. в разделе [Разностные резервные копии (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
-  
-ENCRYPTION  
-Используется для указания шифрования для резервного копирования. Можно указать алгоритм шифрования, с помощью которого будет зашифрована резервная копия, или указать значение `NO_ENCRYPTION`, чтобы не шифровать резервную копию. Использовать шифрование рекомендуется. Оно обеспечивает защиту файлов резервной копии. Далее представлен список доступных алгоритмов.  
-  
-- `AES_128`  
-- `AES_192`  
-- `AES_256`  
-- `TRIPLE_DES_3KEY`  
-- `NO_ENCRYPTION`    
+DIFFERENTIAL (разностная)
 
-Если вы решили использовать шифрование, также необходимо указать параметры шифратора.  
-  
-- SERVER CERTIFICATE = имя_шифратора  
-- SERVER ASYMMETRIC KEY = имя_шифратора  
-  
-> [!WARNING]  
-> При использовании шифрования вместе с аргументом `FILE_SNAPSHOT` файл метаданных шифруется с использованием заданного алгоритма шифрования. Система проверяет, что для базы данных было выполнено [прозрачное шифрование данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md). Дополнительное шифрование самих данных не выполняется. Резервное копирование завершается сбоем, если база данных не была зашифрована или если шифрование не было завершено до того, как была издана инструкция о резервном копировании.  
-  
-**Параметры резервного набора данных**  
-  
-Эти параметры влияют на резервный набор данных, который создается этой операцией резервного копирования.  
-  
-> [!NOTE]  
-> Чтобы указать резервный набор для операции восстановления, воспользуйтесь параметром `FILE = <backup_set_file_number>`. Дополнительные сведения о том, как задать резервный набор данных, см. в подразделе "Задание резервного набора данных" раздела [Аргументы RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
-  
-COPY_ONLY — указывает, что используется *резервная копия только для копирования*, которая не влияет на обычную последовательность резервных копий. Резервная копия только для копирования создается независимо от обычных, регулярно создаваемых резервных копий. Процесс такого резервного копирования не влияет на обычные процедуры резервного копирования и восстановления базы данных.  
-  
-Резервные копии должны использоваться в тех ситуациях, когда резервная копия делается с особой целью, например при выполнении резервного копирования журнала перед восстановлением файла в сети. Обычно резервная копия журналов только для копирования используется один раз, а затем стирается.  
-  
-- Если инструкция `BACKUP DATABASE` используется с параметром `COPY_ONLY`, то создается полная резервная копия, которая не может быть использована в качестве базовой копии для разностного копирования. Битовая карта разностного резервного копирования не обновляется, а разностные резервные копии ведут себя так, словно резервной копии только для копирования не существует. Последующие разностные резервные копии используют в качестве своей основы самую свежую из обычных полных резервных копий.  
-  
-    > [!IMPORTANT]  
-    > Если `DIFFERENTIAL` и `COPY_ONLY` используются вместе, `COPY_ONLY` игнорируется и создается разностная резервная копия.  
-  
-- При использовании с инструкцией `BACKUP LOG` параметр `COPY_ONLY` создает *резервную копию журналов только для копирования*, при этом журнал транзакций не усекается. Резервная копия журналов, предназначенная только для копирования, не влияет на цепочку журналов. Другие резервные копии журналов ведут себя так, словно ее не существует.  
-  
-Дополнительные сведения см. в разделе [Резервные копии только для копирования (SQL Server)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
-  
-{ COMPRESSION | NO_COMPRESSION }  
-В [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] и более поздних версиях указывает необходимость [сжатия резервной копии](../../relational-databases/backup-restore/backup-compression-sql-server.md), переопределяя значение уровня сервера по умолчанию.  
-  
-При установке по умолчанию резервные копии не сжимаются. Это поведение можно изменить с помощью параметра конфигурации сервера [сжатие резервной копии по умолчанию](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Дополнительные сведения о просмотре текущего значения этого параметра см. в разделе [Просмотр или изменение свойств сервера (SQL Server)](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).  
+Используется только с инструкцией BACKUP DATABASE. Указывает, что резервная копия базы данных или файлов должна состоять только из тех частей базы данных или файлов, которые были изменены с момента создания последней полной резервной копии. Файл разностной резервной копии обычно занимает меньше места, чем полная резервная копия. Используйте этот параметр, чтобы не нужно было применять отдельные резервные копии журналов, созданные во время последнего полного резервного копирования.
+
+> [!NOTE]
+> По умолчанию `BACKUP DATABASE` создает полную резервную копию.
+
+Дополнительные сведения см. в разделе [о разностных резервных копиях](../../relational-databases/backup-restore/differential-backups-sql-server.md).
+
+ENCRYPTION — используется для указания шифрования для резервного копирования. Можно указать алгоритм шифрования, с помощью которого будет зашифрована резервная копия, или указать значение `NO_ENCRYPTION`, чтобы не шифровать резервную копию. Использовать шифрование рекомендуется. Оно обеспечивает защиту файлов резервной копии. Далее представлен список доступных алгоритмов.
+
+- `AES_128`
+- `AES_192`
+- `AES_256`
+- `TRIPLE_DES_3KEY`
+- `NO_ENCRYPTION`
+
+Если вы решили использовать шифрование, также необходимо указать параметры шифратора.
+
+- SERVER CERTIFICATE = имя_шифратора
+- SERVER ASYMMETRIC KEY = имя_шифратора
+
+> [!WARNING]
+> При использовании шифрования вместе с аргументом `FILE_SNAPSHOT` файл метаданных шифруется с использованием заданного алгоритма шифрования. Система проверяет, что для базы данных было выполнено [прозрачное шифрование данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md). Дополнительное шифрование самих данных не выполняется. Резервное копирование завершается сбоем, если база данных не была зашифрована или если шифрование не было завершено до того, как была издана инструкция о резервном копировании.
+
+**Параметры резервного набора данных**
+
+Эти параметры влияют на резервный набор данных, который создается этой операцией резервного копирования.
+
+> [!NOTE]
+> Чтобы указать резервный набор для операции восстановления, воспользуйтесь параметром `FILE = <backup_set_file_number>`. Дополнительные сведения о том, как задать резервный набор данных, см. в разделе "Указание резервного набора данных" [статьи об аргументах RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
+
+COPY_ONLY — указывает, что используется *резервная копия только для копирования*, которая не влияет на обычную последовательность резервных копий. Резервная копия только для копирования создается независимо от обычных, регулярно создаваемых резервных копий. Процесс такого резервного копирования не влияет на обычные процедуры резервного копирования и восстановления базы данных.
+
+Резервные копии должны использоваться в тех ситуациях, когда резервная копия делается с особой целью, например при выполнении резервного копирования журнала перед восстановлением файла в сети. Обычно резервная копия журналов только для копирования используется один раз, а затем стирается.
+
+- Если инструкция `BACKUP DATABASE` используется с параметром `COPY_ONLY`, то создается полная резервная копия, которая не может быть использована в качестве базовой копии для разностного копирования. Битовая карта разностного резервного копирования не обновляется, а разностные резервные копии ведут себя так, словно резервной копии только для копирования не существует. Последующие разностные резервные копии используют в качестве своей основы самую свежую из обычных полных резервных копий.
+
+    > [!IMPORTANT]
+    > Если `DIFFERENTIAL` и `COPY_ONLY` используются вместе, `COPY_ONLY` игнорируется и создается разностная резервная копия.
+
+- При использовании с инструкцией `BACKUP LOG` параметр `COPY_ONLY` создает *резервную копию журналов только для копирования*, при этом журнал транзакций не усекается. Резервная копия журналов, предназначенная только для копирования, не влияет на цепочку журналов. Другие резервные копии журналов ведут себя так, словно ее не существует.
+
+Дополнительные сведения см. в [статье о резервных копиях только для копирования](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).
+
+{ COMPRESSION | NO_COMPRESSION } — применяется только в [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] и более поздних версиях; указывает необходимость [сжатия резервной копии](../../relational-databases/backup-restore/backup-compression-sql-server.md), переопределяя значение по умолчанию на уровне сервера.
+
+При установке по умолчанию резервные копии не сжимаются. Это поведение можно изменить с помощью параметра конфигурации сервера [сжатие резервной копии по умолчанию](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Дополнительные сведения о просмотре текущего значения этого параметра см. в статье [Просмотр или изменение свойств сервера (SQL Server)](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).
 
 Сведения об использовании сжатия резервных копий в базах данных с включенным [прозрачным шифрованием данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) см. в разделе [Замечания](#general-remarks).
-  
-COMPRESSION  
-Явное включение сжатия резервных копий.  
-  
-NO_COMPRESSION  
-Явное отключение сжатия резервной копии.  
-  
-DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
-Указывает произвольное текстовое описание резервного набора данных. В этой строке может содержаться до 255 символов.  
-  
-NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }  
-Указывает имя резервного набора данных. Длина имени не может превышать 128 символов. Если параметр NAME не указан, то имя является пустым.  
-  
-{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** _days_ }  
-Указывает время, по истечении которого резервный набор данных для этой резервной копии может быть перезаписан. Если использованы оба этих параметра, то RETAINDAYS имеет приоритет над EXPIREDATE.  
-  
-Если ни один из этих параметров не указан, то срок хранения определяется по параметру конфигурации **mediaretention**. Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).   
-  
-> [!IMPORTANT]  
-> Данные параметры защищают [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только от перезаписи файла. Ленточные носители могут быть стерты при помощи других методов, а файлы на диске могут быть удалены через операционную систему. Дополнительные сведения о проверке истечения срока действия см. в подразделах «SKIP» и «FORMAT» в этом разделе.  
-  
-EXPIREDATE **=** { **'**_date_**'** | **@**_date\_var_ }  
-Указывает дату, по наступлении которой резервный набор данных считается устаревшим и может быть перезаписан. Если аргумент задается в виде переменной (@_date\_var_), то содержащаяся в ней дата должна соответствовать настроенному системному формату для типа **datetime** и быть указана одним из следующих способов:  
-  
-- Строковая константа (@_date\_var_ **=** date)  
-- Переменная типа символьной строки (за исключением типов данных **ntext** и **text**)  
-- **smalldatetime**  
-- Переменная **datetime**  
-  
-Пример:  
-  
-- `'Dec 31, 2020 11:59 PM'`  
-- `'1/1/2021'`  
-  
-Сведения о том, как задать значения **datetime**, см. в разделе [Типы даты и времени](../../t-sql/data-types/date-and-time-types.md).  
-  
-> [!NOTE]  
-> Чтобы игнорировать дату истечения срока действия, используйте параметр `SKIP`.  
-  
-RETAINDAYS **=** { *days* | **@**_days\_var_ }  
-Указывает количество дней, которое должно пройти, прежде чем этот набор носителей резервных копий может быть перезаписан. Если аргумент задается в виде переменной (**@**_days\_var_), то он должен быть целым числом.  
-  
-**Параметры набора носителей**  
-  
-Эти параметры влияют на весь набор носителей.  
-  
-{ **NOINIT** | INIT }  
-Влияет на то, будет ли операция резервного копирования перезаписывать резервные наборы данных, существующие на носителе резервной копии, или будет дописывать новые наборы данных к ним в конец. По умолчанию данные будут дописываться в самый свежий резервный набор данных на носителе (NOINIT).  
-  
-> [!NOTE]  
-> Дополнительные сведения о взаимодействии между параметрами { **NOINIT** | INIT } и { **NOSKIP** | SKIP } см. в подразделе [Замечания](#general-remarks) ниже в этом разделе.  
-  
-NOINIT  
-Указывает, что резервный набор данных дозаписывается на заданный набор носителей с сохранением уже существующих резервных наборов данных. Если для набора носителей задан пароль носителя, то этот пароль должен быть предоставлен. NOINIT является значением по умолчанию.  
-  
-Дополнительные сведения см. в разделах [Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
-  
-INIT  
-Указывает, что все резервные наборы данных должны быть перезаписаны с сохранением заголовка носителя. Если параметр INIT указан, то любой существующий резервный набор данных на этом устройстве будет перезаписан, если это возможно. По умолчанию BACKUP проверяет наличие следующих состояний и, в случае обнаружения, не производит их перезапись:  
-  
-- Срок действия какого-либо резервного набора данных еще не истек. Дополнительные сведения см. в разделах `EXPIREDATE` и `RETAINDAYS`.  
-- Имя резервного набора данных, заданное в инструкции BACKUP (если указано), не совпадает с именем на носителе резервных копий. Дополнительные сведения см. в описании параметра NAME, приведенном выше в этом разделе.  
-  
-Для переопределения этих проверок воспользуйтесь параметром `SKIP`.  
-  
-Дополнительные сведения см. в разделах [Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
-  
-{ **NOSKIP** | SKIP }  
-Влияет на то, будет ли операция создания резервной копии проверять дату и время истечения срока и резервных наборов данных на носителе перед их перезаписью.  
-  
-> [!NOTE]  
-> Дополнительные сведения о взаимодействии между параметрами { **NOINIT** | INIT } и { **NOSKIP** | SKIP } см. в подразделе "Замечания" ниже в этом разделе.  
-  
-NOSKIP  
-Указывает инструкции BACKUP, что следует провести проверку сроков хранения всех резервных наборов данных на носителе перед тем, как разрешить их перезапись. Это поведение по умолчанию.  
-  
-SKIP  
-Отключает проверку сроков действия и имен резервных наборов данных, которая обычно проводится инструкцией BACKUP для предотвращения перезаписи. Дополнительные сведения о взаимодействии между параметрами { INIT | NOINIT } и { NOSKIP | SKIP } см. в подразделе «Замечания» ниже в этом разделе.  
-Чтобы узнать даты сроков хранения резервных наборов данных, запросите столбец **expiration_date** в таблице журнала [backupset](../../relational-databases/system-tables/backupset-transact-sql.md).  
-  
-{ **NOFORMAT** | FORMAT }  
-Определяет, должен ли заголовок носителя быть записан на томах, используемых для текущей операции резервного копирования, перезаписывая любые существующие заголовки носителей и резервные наборы данных.  
-  
-NOFORMAT  
-Определяет, что текущая операция резервного копирования сохранит существующие заголовки носителей и резервные наборы данных на томах носителей, используемых для текущей операции резервного копирования. Это поведение по умолчанию.  
-  
-FORMAT  
-Указывает, что должен быть создан новый набор носителей. При использовании предложения FORMAT операция резервного копирования будет записывать новый заголовок носителя на всех томах носителей, используемых для операции резервного копирования. Существующее содержимое тома становится недействительным, поскольку все существующие заголовки носителей и резервные наборы данных при этом перезаписываются.  
-  
-> [!IMPORTANT]  
-> Используйте `FORMAT` с осторожностью. Форматирование любого тома из набора носителей делает весь набор непригодным для использования. Например, если инициализируется одиночная лента, принадлежащая существующему чередующемуся набору носителей, то становится невозможно использовать весь набор носителей.  
-  
-Указание предложения FORMAT неявно включает в себя указание параметра `SKIP`, поэтому параметр `SKIP` не нужно задавать явно.  
-  
-MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ }  
-Указывает произвольное текстовое описание набора носителей, длина которого не должна превышать 255 символов.  
-  
-MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ }  
-Указывает имя носителя для всего набора носителей резервных копий. Длина имени носителя не должна превышать 128 символов. Если указан аргумент `MEDIANAME`, то он должен совпадать с заранее заданным именем носителя, уже существующим в томах резервных копий. Если он не указан или если указан параметр SKIP, то проверки имени носителя не происходит.  
-  
-BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }  
-Указывает размер физического блока в байтах. Поддерживаются размеры 512, 1024, 2048, 4096, 8192, 16 384, 32 768 и 65 536 байт (64 КБ). Значение по умолчанию равно 65 536 для ленточных устройств и 512 для других устройств. Обычно в этом параметре нет необходимости, так как инструкция BACKUP автоматически выбирает размер блока, соответствующий устройству. Явная установка размера блока переопределяет автоматический выбор размера блока.  
-  
-Если создается резервная копия, которую планируется копировать на компакт-диск и восстанавливать с него, укажите BLOCKSIZE=2048.  
-  
-> [!NOTE]  
-> Этот параметр обычно влияет на производительность только при записи на ленточные устройства.  
-  
-**Параметры передачи данных**  
-  
-BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }  
-Указывает общее число буферов ввода-вывода, которые будут использоваться для операции резервного копирования. Можно указать любое целое положительное значение, однако большое число буферов может вызвать ошибку нехватки памяти из-за чрезмерного виртуального адресного пространства в процессе Sqlservr.exe.  
-  
-Общее используемое буферами пространство определяется по следующей формуле: *buffercount/maxtransfersize*.  
-  
-> [!NOTE]  
-> Важные сведения об использовании параметра `BUFFERCOUNT` см. в блоге [Неправильный параметр передачи данных BufferCount может привести к OOM](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).  
-  
-MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } указывает наибольший объем пакета данных в байтах для обмена данными между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и носителем резервного набора. Поддерживаются значения, кратные 65 536 байтам (64 КБ), вплоть до 4 194 304 байт (4 МБ).  
 
-> [!NOTE]  
-> Если при создании резервных копий с помощью модуля записи SQL база данных имеет настроенный [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) или включает [файловые группы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md), то `MAXTRANSFERSIZE` во время восстановления должно быть больше или равно `MAXTRANSFERSIZE`, использованному при создании резервной копии. 
+COMPRESSION — явно включает сжатие резервных копий.
 
-> [!NOTE]  
+NO_COMPRESSION — явно отключает сжатие резервных копий.
+
+DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ } — произвольное текстовое описание резервного набора данных. В этой строке может содержаться до 255 символов.
+
+NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ } — указывает имя резервного набора данных. Длина имени не может превышать 128 символов. Если параметр NAME не указан, то имя является пустым.
+
+{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** _days_ } — указывает время, по истечении которого резервный набор данных для этой резервной копии может быть перезаписан. Если использованы оба этих параметра, то RETAINDAYS имеет приоритет над EXPIREDATE.
+
+Если ни один из этих параметров не указан, то срок хранения определяется по параметру конфигурации **mediaretention**. Дополнительные сведения см. в статье о [параметрах конфигурации сервера](../../database-engine/configure-windows/server-configuration-options-sql-server.md).
+
+> [!IMPORTANT]
+> Данные параметры защищают [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только от перезаписи файла. Ленточные носители могут быть стерты при помощи других методов, а файлы на диске могут быть удалены через операционную систему. Дополнительные сведения о проверке истечения срока действия см. в подразделах «SKIP» и «FORMAT» в этом разделе.
+
+EXPIREDATE **=** { **'**_date_**'** | **@**_date\_var_ } — указывает, когда резервный набор данных становится устаревшим и его можно перезаписывать. Если аргумент задается в виде переменной (@_date\_var_), то содержащаяся в ней дата должна соответствовать настроенному системному формату для типа **datetime** и быть указана одним из следующих способов:
+
+- Строковая константа (@_date\_var_ **=** date)
+- Переменная типа символьной строки (за исключением типов данных **ntext** и **text**)
+- **smalldatetime**
+- Переменная **datetime**
+
+Пример:
+
+- `'Dec 31, 2020 11:59 PM'`
+- `'1/1/2021'`
+
+Сведения о том, как задать значения **datetime**, см. в разделе [Типы даты и времени](../../t-sql/data-types/date-and-time-types.md).
+
+> [!NOTE]
+> Чтобы игнорировать дату истечения срока действия, используйте параметр `SKIP`.
+
+RETAINDAYS **=** { *days* | **@**_days\_var_ } — указывает, сколько дней должно пройти, прежде чем этот набор носителей резервных копий можно будет перезаписать. Если аргумент задается в виде переменной (**@**_days\_var_), то он должен быть целым числом.
+
+**Параметры набора носителей**
+
+Эти параметры влияют на весь набор носителей.
+
+{ **NOINIT** | INIT } — определяет, будет ли операция резервного копирования перезаписывать резервные наборы данных, существующие на носителе резервных копий, или добавлять новые наборы данных. По умолчанию данные будут дописываться в самый свежий резервный набор данных на носителе (NOINIT).
+
+> [!NOTE]
+> Дополнительные сведения о взаимодействии между параметрами { **NOINIT** | INIT } и { **NOSKIP** | SKIP } см. в подразделе [Замечания](#general-remarks) ниже в этом разделе.
+
+NOINIT — указывает, что резервный набор данных дозаписывается на заданный набор носителей с сохранением уже существующих резервных наборов данных. Если для набора носителей задан пароль носителя, то этот пароль должен быть предоставлен. NOINIT является значением по умолчанию.
+
+Дополнительные сведения см. в статье о [наборах носителей, семействах носителей и резервных наборах данных](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).
+
+INIT — указывает, что все резервные наборы данных должны быть перезаписаны с сохранением заголовка носителя. Если параметр INIT указан, то любой существующий резервный набор данных на этом устройстве будет перезаписан, если это возможно. По умолчанию BACKUP проверяет наличие следующих состояний и, в случае обнаружения, не производит их перезапись:
+
+- Срок действия какого-либо резервного набора данных еще не истек. Дополнительные сведения см. в разделах `EXPIREDATE` и `RETAINDAYS`.
+- Имя резервного набора данных, заданное в инструкции BACKUP (если указано), не совпадает с именем на носителе резервных копий. Дополнительные сведения см. в описании параметра NAME, приведенном выше в этом разделе.
+
+Для переопределения этих проверок воспользуйтесь параметром `SKIP`.
+
+Дополнительные сведения см. в статье о [наборах носителей, семействах носителей и резервных наборах данных](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).
+
+{ **NOSKIP** | SKIP } — определяет, будет ли при создании резервной копии проверяться дату и время окончания срока действия резервных наборов данных на носителе перед их перезаписью.
+
+> [!NOTE]
+> Дополнительные сведения о взаимодействии между параметрами { **NOINIT** | INIT } и { **NOSKIP** | SKIP } см. в подразделе "Замечания" ниже в этом разделе.
+
+NOSKIP — указывает, что инструкция BACKUP должна проверять сроки хранения всех резервных наборов данных на носителе перед тем, как разрешить их перезапись. Это поведение по умолчанию.
+
+SKIP — отключает проверку сроков действия и имен резервных наборов данных, которая обычно проводится с помощью инструкции BACKUP для предотвращения перезаписи. Дополнительные сведения о взаимодействии между параметрами { INIT | NOINIT } и { NOSKIP | SKIP } см. в подразделе «Замечания» ниже в этом разделе.
+Чтобы узнать даты сроков хранения резервных наборов данных, запросите столбец **expiration_date** в таблице журнала [backupset](../../relational-databases/system-tables/backupset-transact-sql.md).
+
+{ **NOFORMAT** | FORMAT } — определяет, нужно ли записывать заголовок носителя на томах, используемых для текущей операции резервного копирования, перезаписывая любые существующие заголовки носителей и резервные наборы данных.
+
+NOFORMAT — определяет, что при текущей операции резервного копирования существующие заголовки носителей и резервные наборы данных сохраняются на томах носителей, используемых для текущей операции резервного копирования. Это поведение по умолчанию.
+
+FORMAT — указывает, что нужно создать новый набор носителей. При использовании предложения FORMAT операция резервного копирования будет записывать новый заголовок носителя на всех томах носителей, используемых для операции резервного копирования. Существующее содержимое тома становится недействительным, поскольку все существующие заголовки носителей и резервные наборы данных при этом перезаписываются.
+
+> [!IMPORTANT]
+> Используйте `FORMAT` с осторожностью. Форматирование любого тома из набора носителей делает весь набор непригодным для использования. Например, если инициализируется одиночная лента, принадлежащая существующему чередующемуся набору носителей, то становится невозможно использовать весь набор носителей.
+
+Указание предложения FORMAT неявно включает в себя указание параметра `SKIP`, поэтому параметр `SKIP` не нужно задавать явно.
+
+MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ } — указывает произвольное текстовое описание набора носителей, длина которого не должна превышать 255 символов.
+
+MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ } — указывает имя носителя для всего набора носителей резервных копий. Длина имени носителя не должна превышать 128 символов. Если указан аргумент `MEDIANAME`, то он должен совпадать с заранее заданным именем носителя, уже существующим в томах резервных копий. Если он не указан или если указан параметр SKIP, то проверки имени носителя не происходит.
+
+BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ } — указывает размер физического блока в байтах. Поддерживаются размеры 512, 1024, 2048, 4096, 8192, 16 384, 32 768 и 65 536 байт (64 КБ). Значение по умолчанию равно 65 536 для ленточных устройств и 512 для других устройств. Обычно в этом параметре нет необходимости, так как инструкция BACKUP автоматически выбирает размер блока, соответствующий устройству. Явная установка размера блока переопределяет автоматический выбор размера блока.
+
+Если создается резервная копия, которую планируется копировать на компакт-диск и восстанавливать с него, укажите BLOCKSIZE=2048.
+
+> [!NOTE]
+> Этот параметр обычно влияет на производительность только при записи на ленточные устройства.
+
+**Параметры передачи данных**
+
+BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ } — определяет общее число буферов ввода-вывода, которые будут использоваться для операции резервного копирования. Можно указать любое целое положительное значение, однако большое число буферов может вызвать ошибку нехватки памяти из-за чрезмерного виртуального адресного пространства в процессе Sqlservr.exe.
+
+Общее используемое буферами пространство определяется по следующей формуле: *buffercount/maxtransfersize*.
+
+> [!NOTE]
+> Важные сведения об использовании параметра `BUFFERCOUNT` см. в блоге [Неправильный параметр передачи данных BufferCount может привести к OOM](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).
+
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } указывает наибольший объем пакета данных в байтах для обмена данными между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и носителем резервного набора. Поддерживаются значения, кратные 65 536 байтам (64 КБ), вплоть до 4 194 304 байт (4 МБ).
+
+> [!NOTE]
+> Если при создании резервных копий с помощью модуля записи SQL база данных имеет настроенный [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) или включает [файловые группы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md), то `MAXTRANSFERSIZE` во время восстановления должно быть больше или равно `MAXTRANSFERSIZE`, использованному при создании резервной копии.
+
+> [!NOTE]
 > Для баз данных с включенным [прозрачным шифрованием данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) и одним файлом данных `MAXTRANSFERSIZE` по умолчанию — 65 536 (64 КБ). Для баз данных без включенного шифрования TDE `MAXTRANSFERSIZE` по умолчанию — 1 048 576 (1 МБ) при сохранении резервных копий на диск и 65 536 (64 КБ) при использовании VDI или ленточных носителей.
 > Дополнительные сведения об использовании сжатия резервных копий в работе с базами данных с включенным шифрованием TDE см. в разделе [Замечания](#general-remarks).
-  
-**Параметры управления ошибками**  
-  
-Эти параметры позволяют определить, разрешены ли контрольные суммы резервных копий в операции резервного копирования и останавливается ли операция при обнаружении ошибки.  
-  
-{ **NO_CHECKSUM** | CHECKSUM }  
-Определяет, разрешены ли контрольные суммы.  
-  
-NO_CHECKSUM  
-Явно отменяет создание контрольных сумм резервных копий (и проверку контрольных сумм страниц). Это поведение по умолчанию.  
-  
-CHECKSUM  
-Указывает, что при операции резервного копирования выполняется проверка контрольной суммы и наличия разрывов на каждой странице (если эти проверки включены и доступны), а также будет создаваться контрольная сумма для всей резервной копии.  
-  
-Использование контрольных сумм резервных копий может повлиять на производительность рабочей нагрузки и пропускной способности резервного копирования.  
-  
-Дополнительные сведения см. в разделе [Возможные ошибки носителей во время резервного копирования и восстановления (SQL Server)](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
-  
-{ **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR }  
-Определяет, остановится ли операция резервного копирования после обнаружения ошибки в контрольной сумме страницы или продолжит работу.  
-  
-STOP_ON_ERROR  
-Определяет, что инструкция BACKUP должна завершиться с ошибкой, если проверка контрольной суммы страницы выдает отрицательный результат. Это поведение по умолчанию.  
-  
-CONTINUE_AFTER_ERROR  
-Определяет, что инструкция BACKUP должна продолжить выполнение, несмотря на возникновение таких ошибок, как неверные контрольные суммы или разрывы страницы.  
-  
-Если не удается создать [резервную копию заключительного фрагмента журнала](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) поврежденной базы данных, используя параметр NO_TRUNCATE, можно попытаться сделать это, указав параметр CONTINUE_AFTER_ERROR вместо NO_TRUNCATE.  
-  
-Дополнительные сведения см. в разделе [Возможные ошибки носителей во время резервного копирования и восстановления (SQL Server)](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
-  
-**Параметры совместимости**  
-  
-RESTART  
-Начиная с версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], не имеет никакого эффекта. Этот параметр оставлен в данной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для обеспечения совместимости с предыдущими версиями.  
-  
-**Параметры наблюдения**  
-  
-STATS [ **=** _percentage_ ]  
-Отображает сообщение каждый раз, когда завершается очередной *процент* задания, и используется для отслеживания хода выполнения. Если *процент* не задан, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выдает сообщение после каждых выполненных 10 процентов.  
-  
-Параметр STATS сообщает о готовности в процентах по отношению к порогу сообщения о следующем интервале. Показатель готовности в процентах имеет неточное значение; например при значении STATS=10, если процент готовности равен 40, то параметр может отображать 43 процента. Это не является проблемой для больших резервных наборов данных, поскольку показатель готовности в процентах перемещается очень медленно между обращениями ввода-вывода.  
-  
-**Параметры ленты**  
 
-Эти параметры используются только для ленточных устройств. При использовании другого устройства они не обрабатываются.  
-  
-{ **REWIND** | NOREWIND }  
-REWIND
+**Параметры управления ошибками**
 
-Указывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] освобождает и перематывает ленту. REWIND — значение по умолчанию.  
-  
+Эти параметры позволяют определить, разрешены ли контрольные суммы резервных копий в операции резервного копирования и останавливается ли операция при обнаружении ошибки.
+
+{ **NO_CHECKSUM** | CHECKSUM } — определяет, используются ли контрольные суммы.
+
+NO_CHECKSUM — явно отменяет создание контрольных сумм (и проверку контрольных сумм страниц) для резервных копий. Это поведение по умолчанию.
+
+CHECKSUM — указывает, что при операции резервного копирования выполняется проверка контрольной суммы и наличия разрывов на каждой странице (если эти проверки включены и доступны), а также будет создаваться контрольная сумма для всей резервной копии.
+
+Использование контрольных сумм резервных копий может повлиять на производительность рабочей нагрузки и пропускной способности резервного копирования.
+
+Дополнительные сведения см. в статье об [ошибках носителей, возникающих во время резервного копирования и восстановления](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).
+
+{ **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR } — определяет, остановится ли операция резервного копирования после обнаружения ошибки в контрольной сумме страницы или продолжит работу.
+
+STOP_ON_ERROR — указывает, что операция BACKUP должна завершаться ошибкой при несовпадении контрольной суммы. Это поведение по умолчанию.
+
+CONTINUE_AFTER_ERROR — указывает, что операция BACKUP должна продолжать работу даже при наличии таких ошибок, как несовпадение контрольной суммы или разрыв страницы.
+
+Если не удается создать [резервную копию заключительного фрагмента журнала](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) поврежденной базы данных, используя параметр NO_TRUNCATE, можно попытаться сделать это, указав параметр CONTINUE_AFTER_ERROR вместо NO_TRUNCATE.
+
+Дополнительные сведения см. в статье об [ошибках носителей, возникающих во время резервного копирования и восстановления](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).
+
+**Параметры совместимости**
+
+RESTART — начиная с версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] не действует. Этот параметр оставлен в данной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для обеспечения совместимости с предыдущими версиями.
+
+**Параметры наблюдения**
+
+STATS [ **=** _percentage_ ] — отвечает за отображение сообщения при каждом завершении очередного *процента* задания и позволяет отслеживать ход выполнения. Если *процент* не задан, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выдает сообщение после каждых выполненных 10 процентов.
+
+Параметр STATS сообщает о готовности в процентах по отношению к порогу сообщения о следующем интервале. Показатель готовности в процентах имеет неточное значение; например при значении STATS=10, если процент готовности равен 40, то параметр может отображать 43 процента. Это не является проблемой для больших резервных наборов данных, поскольку показатель готовности в процентах перемещается очень медленно между обращениями ввода-вывода.
+
+**Параметры ленты**
+
+Эти параметры используются только для ленточных устройств. При использовании другого устройства они не обрабатываются.
+
+{ **REWIND** | NOREWIND } REWIND
+
+Указывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] освобождает и перематывает ленту. REWIND — значение по умолчанию.
+
 NOREWIND
 
-Указывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохранит ленту открытой после операции резервного копирования. С помощью этого параметра можно улучшить производительность при выполнении нескольких операций резервного копирования на ленту.  
-  
-Параметр NOREWIND включает в себя параметр NOUNLOAD, поэтому эти параметры несовместимы в одной инструкции BACKUP.  
-  
-> [!NOTE]  
-> При использовании параметра `NOREWIND` экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] продолжает владеть накопителем на ленточном накопителе до тех пор, пока инструкция BACKUP или RESTORE, работающая в этом же процессе, не использует параметр `REWIND` или `UNLOAD` либо пока не закончит работу экземпляр сервера. Поскольку лента остается открытой, другие процессы не могут получить доступа к ленте. Дополнительные сведения об отображении списка открытых лент и закрытии открытой ленты см. в разделе [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
-  
-{ **UNLOAD** | NOUNLOAD }    
+Указывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохранит ленту открытой после операции резервного копирования. С помощью этого параметра можно улучшить производительность при выполнении нескольких операций резервного копирования на ленту.
 
-> [!NOTE]  
-> `UNLOAD` и `NOUNLOAD` — это настройки сеанса, которые сохраняются в течение работы сеанса или пока не будут сброшены при указании другого значения.  
-  
+Параметр NOREWIND включает в себя параметр NOUNLOAD, поэтому эти параметры несовместимы в одной инструкции BACKUP.
+
+> [!NOTE]
+> При использовании параметра `NOREWIND` экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] продолжает владеть накопителем на ленточном накопителе до тех пор, пока инструкция BACKUP или RESTORE, работающая в этом же процессе, не использует параметр `REWIND` или `UNLOAD` либо пока не закончит работу экземпляр сервера. Поскольку лента остается открытой, другие процессы не могут получить доступа к ленте. Дополнительные сведения об отображении списка открытых лент и закрытии открытой ленты см. в статье об [устройствах резервного копирования](../../relational-databases/backup-restore/backup-devices-sql-server.md).
+
+{ **UNLOAD** | NOUNLOAD }
+
+> [!NOTE]
+> `UNLOAD` и `NOUNLOAD` — это настройки сеанса, которые сохраняются в течение работы сеанса или пока не будут сброшены при указании другого значения.
+
 UNLOAD
 
-Указывает, что лента автоматически перематывается и выгружается по завершении операции резервного копирования. Параметр UNLOAD применяется в начале сеанса по умолчанию. 
-  
+Указывает, что лента автоматически перематывается и выгружается по завершении операции резервного копирования. Параметр UNLOAD применяется в начале сеанса по умолчанию.
+
 NOUNLOAD
 
-Указывает, что после завершения операции BACKUP лента остается в ленточном накопителе.  
-  
-> [!NOTE]  
-> При резервном копировании на ленточное устройство резервного копирования параметр `BLOCKSIZE` влияет на производительность операции резервного копирования. Этот параметр обычно влияет на производительность только при записи на ленточные устройства.  
-  
-**Параметры, относящиеся к журналам**  
+Указывает, что после завершения операции BACKUP лента остается в ленточном накопителе.
 
-Эти параметры применяются только с инструкцией `BACKUP LOG`.  
-  
-> [!NOTE]  
-> Если создание резервных копий журналов не требуется, следует применять простую модель восстановления. Дополнительные сведения см. в разделе [Модели восстановления (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
-  
-{ NORECOVERY | STANDBY **=** _undo_file_name_ }  
-  NORECOVERY 
+> [!NOTE]
+> При резервном копировании на ленточное устройство резервного копирования параметр `BLOCKSIZE` влияет на производительность операции резервного копирования. Этот параметр обычно влияет на производительность только при записи на ленточные устройства.
 
-Создает резервную копию остатка журнала и оставляет базу данных в состоянии RESTORING. Параметр NORECOVERY полезен при возникновении ошибки в базе данных-получателе или при сохранении остатка журнала после операции RESTORE.  
-  
-Для наиболее эффективного создания резервной копии журналов, при котором не происходит усечение журнала и которое автоматически переводит базу данных в состояние RESTORING, используйте совместно параметры `NO_TRUNCATE` и `NORECOVERY`.  
-  
-STANDBY **=** _standby_file_name_ 
+**Параметры, относящиеся к журналам**
 
-Создает резервную копию остатка журнала и оставляет базу данных в режиме только для чтения и состоянии STANDBY. Предложение STANDBY записывает резервные данные (выполняя откат, но с параметром дальнейшего восстановления). Применения параметра STANDBY эквивалентно параметру BACKUP LOG WITH NORECOVERY, за которым следует RESTORE WITH STANDBY.  
-  
-Для использования режима ожидания необходим резервный файл, указанный аргументом *standby_file_name*, местоположение которого хранится в журнале базы данных. Если указанный файл уже существует, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] перезаписывает его; если файл не существует, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] его создает. Резервный файл становится частью базы данных.  
-  
-В этом файле содержатся изменения, которые прошли откат и которые должны быть возвращены, если впоследствии будут применены операции RESTORE LOG. На диске должно быть достаточно места для дальнейшего увеличения размера резервного файла, так как в нем содержатся все различающиеся страницы из базы данных, которые были изменены при откате незавершенных транзакций.  
-  
-NO_TRUNCATE  
+Эти параметры применяются только с инструкцией `BACKUP LOG`.
 
-Указывает, что усечение журнала не происходит, а компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] пытается осуществить резервное копирование независимо от состояния базы данных. Следовательно, резервная копия, созданная с параметром `NO_TRUNCATE`, может иметь неполные метаданные. Данный параметр позволяет производить создание резервной копии журнала в тех ситуациях, когда база данных повреждена.  
-  
-Параметр NO_TRUNCATE процедуры BACKUP LOG эквивалентен одновременному указанию COPY_ONLY и CONTINUE_AFTER_ERROR.  
-  
-Без параметра `NO_TRUNCATE` база данных должна находиться в режиме ONLINE. Если база данных находится в состоянии SUSPENDED, то будет возможно создать резервную копию, указав параметр `NO_TRUNCATE`. Но если база данных находится в состоянии OFFLINE или EMERGENCY, то инструкция BACKUP не разрешена даже с параметром `NO_TRUNCATE`. Дополнительные сведения о состояниях базы данных см. в разделе [Состояния базы данных](../../relational-databases/databases/database-states.md).  
-  
-## <a name="about-working-with-sql-server-backups"></a>Работа с резервными копиями SQL Server  
-В этом разделе вводятся следующие основные понятия, связанные с резервным копированием:  
-  
-[Типы резервного копирования](#Backup_Types)  
-[Усечение журнала транзакций](#Tlog_Truncation)  
-[Форматирование носителей резервных копий](#Formatting_Media)  
-[Работа с устройствами резервного копирования и наборами носителей](#Backup_Devices_and_Media_Sets)  
-[Восстановление резервных копий SQL Server](#Restoring_Backups)  
-  
-> [!NOTE]  
-> Основные сведения о резервной копии в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Обзор резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
-  
-###  <a name="Backup_Types"></a>Типы резервного копирования  
-Поддерживаемые типы резервных копий зависят от модели восстановления базы данных следующим образом.  
-  
-- Все модели восстановления поддерживают полные и разностные резервные копии данных.  
-  
-    |Область охвата резервной копии|Типы резервного копирования|  
-    |---------------------|------------------|  
-    |Вся база данных|[Резервные копии базы данных](../../relational-databases/backup-restore/full-database-backups-sql-server.md) охватывают всю базу данных.<br /><br /> Кроме того, каждая резервная копия базы данных может служить базой для последовательности [разностных резервных копий](../../relational-databases/backup-restore/differential-backups-sql-server.md) базы данных.|  
-    |Частичная копия базы данных|[Частичные резервные копии](../../relational-databases/backup-restore/partial-backups-sql-server.md) охватывают файловые группы, доступные для чтения и записи, а также могут охватывать один или более файлов или файловых групп, доступных только для чтения.<br /><br /> Кроме того, каждая частичная резервная копия может служить базой для последовательности [разностных частичных резервных копий базы данных](../../relational-databases/backup-restore/differential-backups-sql-server.md).|  
-    |Файл или файловая группа|[Резервные копии файлов](../../relational-databases/backup-restore/full-file-backups-sql-server.md) охватывают один или несколько файлов или файловых групп. Они актуальны только для баз данных, содержащих множество файловых групп. В рамках простой модели восстановления охват резервных копий файлов и файловых групп ограничивается только вторичными файловыми группами, доступными только для чтения.<br /> Кроме того, каждая резервная копия файла может служить базой для последовательности [разностных резервных копий файла](../../relational-databases/backup-restore/differential-backups-sql-server.md).|  
-  
-- В рамках модели полного восстановления или модели с неполным протоколированием обычные резервные копии также обязаны содержать последовательные *резервные копии журнала транзакций* (или *резервные копии журналов*). Каждая резервная копия журнала охватывает часть журнала транзакций, которая была активна во время создания резервной копии, а также все записи журнала, не включенные в предыдущую резервную копию журнала.  
-  
-     Чтобы снизить вероятность потери результатов работы ценой увеличения административных издержек, запланируйте в расписании частое создание резервной копии журнала. Планирование разностного резервного копирования между полными резервными копиями сокращает время восстановления путем сокращения количества резервных копий журналов, которые необходимо восстанавливать после восстановления данных.  
-  
-     Рекомендуется хранить резервные копии журналов на отдельном от резервных копий базы данных томе.  
-  
-    > [!NOTE]  
-    > До создания первой резервной копии журнала необходимо создать полную резервную копию базы данных.  
-  
-- *Резервная копия только для копирования* — это полная резервная копия или резервная копия журналов, созданная с особой целью. Такая копия не зависит от нормальной последовательности создания обычных резервных копий. Для создания резервной копии только для копирования используется параметр COPY_ONLY инструкции BACKUP. Дополнительные сведения см. в разделе [Резервные копии только для копирования (SQL Server)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
-  
-###  <a name="Tlog_Truncation"></a> Усечение журнала транзакций  
-Регулярные операции резервного копирования крайне важны во избежание переполнения журнала транзакций базы данных. При использовании простой модели восстановления усечение журналов происходит автоматически (после создания резервной копии базы данных). При использовании модели полного восстановления усечение происходит при создании резервной копии журнала транзакций. Однако иногда процесс усечения может быть задержан. Дополнительные сведения о факторах, из-за которых усечение журнала может откладываться, см. в разделе [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md).  
-  
-> [!NOTE]  
-> Параметры `BACKUP LOG WITH NO_LOG` и `WITH TRUNCATE_ONLY` больше не поддерживаются. Если используется модель восстановления с неполным протоколированием или модель полного восстановления, а пользователю необходимо удалить цепочку резервных копий журнала из базы данных, то стоит переключиться на простую модель восстановления. Дополнительные сведения см. в разделе [Просмотр или изменение модели восстановления базы данных (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
-  
-###  <a name="Formatting_Media"></a> Форматирование носителей резервных копий  
-Носитель резервной копии форматируется инструкцией BACKUP только при выполнении любого из следующих условий:  
-  
-- Указан параметр `FORMAT`.  
-- носитель пуст;  
-- операция производит запись дополнительной ленты.  
-  
-###  <a name="Backup_Devices_and_Media_Sets"></a> Работа с устройствами резервного копирования и наборами носителей  
-  
-#### <a name="backup-devices-in-a-striped-media-set-a-stripe-set"></a>Устройства резервного копирования в чередующемся наборе носителей (чередующийся набор)  
-*Чередующийся набор* — это набор дисковых файлов, в которых данные разделены на блоки и распределены в определенном порядке. Количество устройств резервного копирования, использующихся в чередующемся наборе, должно оставаться одинаковым (кроме случаев, когда носители повторно инициализируются инструкцией `FORMAT`).  
-  
-В следующем примере резервная копия базы данных [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] записывается на новый чередующийся набор носителей, который использует три дисковых файла.  
-  
-```sql  
-BACKUP DATABASE AdventureWorks2012  
-TO DISK='X:\SQLServerBackups\AdventureWorks1.bak',   
-DISK='Y:\SQLServerBackups\AdventureWorks2.bak',   
-DISK='Z:\SQLServerBackups\AdventureWorks3.bak'  
-WITH FORMAT,  
-   MEDIANAME = 'AdventureWorksStripedSet0',  
-   MEDIADESCRIPTION = 'Striped media set for AdventureWorks2012 database;  
-GO  
-```  
-  
-После определения устройства резервного копирования как части чередующегося набора данное устройство нельзя использовать для резервного копирования на одно устройство до тех пор, пока не будет указан параметр FORMAT. Аналогично: устройство резервного копирования, содержащее нечередующиеся резервные копии, не может использоваться в чередующемся наборе до тех пор, пока не будет указан параметр FORMAT. Для разбиения чередующегося резервного набора данных используйте параметр FORMAT.  
-  
-Если при записи заголовка носителя не был указан ни параметр MEDIANAME, ни параметр MEDIADESCRIPTION, то поле заголовка носителя, соответствующее отсутствующему параметру, будет пустым.  
-  
-#### <a name="working-with-a-mirrored-media-set"></a>Работа с зеркальным набором носителей  
-Обычно в резервных копиях не применяется зеркальное отображение, при этом инструкции BACKUP содержат только предложение TO. Однако для каждого набора носителей может существовать до четырех зеркальных наборов. При работе с зеркальным набором носителей операция резервного копирования производит запись на несколько групп устройств резервного копирования. Каждая такая группа составляет одну зеркальную копию внутри зеркального набора носителей. В каждой зеркальной копии должны использоваться одинаковое количество и тип физических устройств резервного копирования, при этом все устройства должны иметь одинаковые свойства.  
-  
-Для создания резервной копии на зеркальном наборе носителей должны присутствовать все зеркала. Чтобы создать резервную копию на зеркальном наборе носителей, используйте предложение `TO` для описания первой зеркальной копии и предложения `MIRROR TO` для описания каждой дополнительной зеркальной копии.  
-  
-Для зеркальных наборов носителей каждое предложение `MIRROR TO` должно содержать то же количество и такой же тип устройств, что и предложение TO. Следующий пример демонстрирует запись, производящуюся на зеркальный набор носителей, который состоит из двух зеркальных копий. Используется по три устройства на зеркальную копию.  
-  
-```sql  
-BACKUP DATABASE AdventureWorks2012  
-TO DISK='X:\SQLServerBackups\AdventureWorks1a.bak',   
-  DISK='Y:\SQLServerBackups\AdventureWorks2a.bak',   
-  DISK='Z:\SQLServerBackups\AdventureWorks3a.bak'  
-MIRROR TO DISK='X:\SQLServerBackups\AdventureWorks1b.bak',   
-  DISK='Y:\SQLServerBackups\AdventureWorks2b.bak',   
-  DISK='Z:\SQLServerBackups\AdventureWorks3b.bak';  
-GO  
-```  
-  
-> [!IMPORTANT]  
-> Этот пример создан для того, чтобы была возможность протестировать его на локальной системе. На практике резервное копирование на несколько устройств, находящихся на одном диске, приводит к ухудшению производительности и сводит на нет пользу от избыточности, ради которой и были разработаны зеркальные наборы носителей.  
-  
-##### <a name="media-families-in-mirrored-media-sets"></a>Семейства носителей в зеркальных наборах носителей  
-Каждое устройство резервного копирования, описанное в предложении `TO` инструкции BACKUP, соответствует семейству носителей. Например, если в предложении `TO` перечислены три устройства, то инструкция BACKUP записывает данные в три семейства носителей. В зеркальном наборе носителей данных каждая зеркальная копия должна содержать копию каждого семейства носителей. Именно поэтому число устройств должно быть одинаковым для всех зеркальных копий.  
-  
-Если для каждой зеркальной копии перечислено несколько устройств, то их порядок определяет, какое семейство носителей будет записано на какое устройство. Например, в каждом из списков устройств второе устройство соответствует второму семейству носителей. Для устройств, которые описаны в примере выше, соответствие устройств семействам носителей показано в следующей таблице.  
-  
-|Зеркальное отображение|Семейство носителей 1|Семейство носителей 2|Семейство носителей 3|  
-|---------|---------|---------|---------|  
-|0|`Z:\AdventureWorks1a.bak`|`Z:\AdventureWorks2a.bak`|`Z:\AdventureWorks3a.bak`|  
-|1|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
-  
- Резервная копия семейства носителей всегда должна создаваться на одном и то же устройстве, входящем в состав определенной зеркальной копии. Поэтому каждый раз, когда используется существующий набор носителей, перечисляйте устройства для каждой зеркальной копии в том же порядке, в котором они были заданы при создании этого набора.  
-  
-Дополнительные сведения о зеркальных наборах носителей резервных копий см. в разделе [Зеркальные наборы носителей резервных копий (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md). Дополнительные сведения о наборах носителей и семействах носителей в целом см. в разделе [Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
-  
-###  <a name="Restoring_Backups"></a> Восстановление резервных копий SQL Server  
-Для восстановления базы данных и при необходимости перевода ее в оперативный режим либо для восстановления файла или файловой группы используются либо инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), либо задачи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Restore**. Дополнительные сведения см. в статье [Обзор процессов восстановления (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
-  
-##  <a name="Additional_Considerations"></a> Дополнительные сведения о параметрах инструкции BACKUP  
-  
-###  <a name="Interactions_SKIP_etc"></a> Взаимодействие SKIP, NOSKIP, INIT и NOINIT  
-Эта таблица описывает взаимодействие между параметрами { **NOINIT** | INIT } и { **NOSKIP** | SKIP }.  
-  
-> [!NOTE]  
-> Если носитель на магнитной ленте пуст или файла резервной копии диска не существует, то все эти взаимодействия записывают заголовок носителя и продолжают работу. Если носитель не пустой и у него отсутствует допустимый заголовок носителя, то эти операции сформируют отзыв о том, что отсутствует допустимый носитель MTF, и прекратят операцию резервного копирования.  
-  
-||NOINIT|INIT|  
-|------|------------|----------|  
-|NOSKIP|Если в томе содержится правильный заголовок носителя, то выполняется проверка совпадения имени носителя с указанным параметром `MEDIANAME` (если он задан). Если установлено совпадение, резервный набор данных дозаписывается с сохранением всех существующих резервных наборов данных.<br /> Если том не содержит правильного заголовка носителя, возникает ошибка.|Если том содержит заголовок носителя, проводятся следующие проверки.<br /><ul><li>Если указан параметр `MEDIANAME`, то проверяется, совпадает ли заданное имя носителя с именем носителя заголовка носителя.<sup>1</sup></li><li>Проверяется, есть ли на носителе резервные наборы данных с неистекшим сроком действия. Если есть, то процесс резервного копирования прекращается.</li></ul><br />Если все эти проверки пройдены, то происходит перезапись всех резервных наборов данных на носителе. Сохраняется только заголовок носителя.<br /> Если в томе не содержится правильного заголовка носителя, то он создается с применением указанных параметров `MEDIANAME` и `MEDIADESCRIPTION` (если они заданы).|  
-|SKIP|Если том содержит верный заголовок носителя, то резервный набор данных дозаписывается с сохранением всех существующих резервных наборов данных.|Если в томе содержится правильный заголовок носителя<sup>2</sup>, то выполняется перезапись всех резервных наборов данных на носителе, при этом сохраняется только заголовок носителя.<br /> Если носитель пуст, то создается заголовок носителя, исходя из заданных параметров `MEDIANAME` и `MEDIADESCRIPTION` (если они указаны).|  
+> [!NOTE]
+> Если создание резервных копий журналов не требуется, следует применять простую модель восстановления. Дополнительные сведения см. в статье о [моделях восстановления](../../relational-databases/backup-restore/recovery-models-sql-server.md).
 
-<sup>1</sup> Пользователь должен принадлежать к соответствующей предопределенной роли базы данных или роли сервера для выполнения операции резервного копирования.    
+{ NORECOVERY | STANDBY **=** _undo_file_name_ }
 
-<sup>2</sup> В допустимость входит номер версии MTF и другие сведения заголовка. Если указанная версия не поддерживается или имеет непредвиденное значение, то возникает ошибка.  
-  
-## <a name="compatibility"></a>Совместимость  
-  
-> [!CAUTION]  
-> Резервные копии, созданные более поздними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , не могут быть восстановлены в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-Инструкция BACKUP поддерживает параметр `RESTART` для предоставления обратной совместимости с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Но параметр RESTART не имеет влияния.  
-  
-## <a name="general-remarks"></a>Общие замечания  
-Резервные копии базы данных или журналов могут дозаписываться на дисковый накопитель или на ленточное устройство, что позволяет хранить базу данных и ее журнал транзакций в одном физическом местоположении.  
-  
-Инструкция BACKUP не разрешена в явных и неявных транзакциях.  
-  
-Межплатформенные операции резервного копирования даже между различными типами процессоров могут выполняться до тех пор, пока параметры сортировки базы данных поддерживаются операционной системой.  
- 
-При использовании сжатия резервных копий в базах данных с включенным [прозрачным шифрованием данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) с одним файлом данных рекомендуется использовать параметр `MAXTRANSFERSIZE` **больше 65 536 (64 КБ)**.   
+NORECOVERY
+
+Создает резервную копию остатка журнала и оставляет базу данных в состоянии RESTORING. Параметр NORECOVERY полезен при возникновении ошибки в базе данных-получателе или при сохранении остатка журнала после операции RESTORE.
+
+Для наиболее эффективного создания резервной копии журналов, при котором не происходит усечение журнала и которое автоматически переводит базу данных в состояние RESTORING, используйте совместно параметры `NO_TRUNCATE` и `NORECOVERY`.
+
+STANDBY **=** _standby_file_name_
+
+Создает резервную копию остатка журнала и оставляет базу данных в режиме только для чтения и состоянии STANDBY. Предложение STANDBY записывает резервные данные (выполняя откат, но с параметром дальнейшего восстановления). Применения параметра STANDBY эквивалентно параметру BACKUP LOG WITH NORECOVERY, за которым следует RESTORE WITH STANDBY.
+
+Для использования режима ожидания необходим резервный файл, указанный аргументом *standby_file_name*, местоположение которого хранится в журнале базы данных. Если указанный файл уже существует, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] перезаписывает его; если файл не существует, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] его создает. Резервный файл становится частью базы данных.
+
+В этом файле содержатся изменения, которые прошли откат и которые должны быть возвращены, если впоследствии будут применены операции RESTORE LOG. На диске должно быть достаточно места для дальнейшего увеличения размера резервного файла, так как в нем содержатся все различающиеся страницы из базы данных, которые были изменены при откате незавершенных транзакций.
+
+NO_TRUNCATE
+
+Указывает, что усечение журнала не происходит, а компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] пытается осуществить резервное копирование независимо от состояния базы данных. Следовательно, резервная копия, созданная с параметром `NO_TRUNCATE`, может иметь неполные метаданные. Данный параметр позволяет производить создание резервной копии журнала в тех ситуациях, когда база данных повреждена.
+
+Параметр NO_TRUNCATE процедуры BACKUP LOG эквивалентен одновременному указанию COPY_ONLY и CONTINUE_AFTER_ERROR.
+
+Без параметра `NO_TRUNCATE` база данных должна находиться в режиме ONLINE. Если база данных находится в состоянии SUSPENDED, то будет возможно создать резервную копию, указав параметр `NO_TRUNCATE`. Но если база данных находится в состоянии OFFLINE или EMERGENCY, то инструкция BACKUP не разрешена даже с параметром `NO_TRUNCATE`. Дополнительные сведения о состояниях базы данных см. в разделе [Состояния базы данных](../../relational-databases/databases/database-states.md).
+
+## <a name="about-working-with-sql-server-backups"></a>Работа с резервными копиями SQL Server
+
+В этом разделе вводятся следующие основные понятия, связанные с резервным копированием:
+
+[Типы резервного копирования](#Backup_Types)
+[Усечение журнала транзакций](#Tlog_Truncation)
+[Форматирование носителей резервных копий](#Formatting_Media)
+[Работа с устройствами резервного копирования и наборами носителей](#Backup_Devices_and_Media_Sets)
+[Восстановление резервных копий SQL Server](#Restoring_Backups)
+
+> [!NOTE]
+> Основные сведения о резервном копировании в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вы найдете в [этой статье](../../relational-databases/backup-restore/backup-overview-sql-server.md).
+
+### <a name="Backup_Types"></a>Типы резервного копирования
+
+Поддерживаемые типы резервных копий зависят от модели восстановления базы данных следующим образом.
+
+- Все модели восстановления поддерживают полные и разностные резервные копии данных.
+
+    |Область охвата резервной копии|Типы резервного копирования|
+    |---------------------|------------------|
+    |Вся база данных|[Резервные копии базы данных](../../relational-databases/backup-restore/full-database-backups-sql-server.md) охватывают всю базу данных.<br /><br /> Кроме того, каждая резервная копия базы данных может служить базой для последовательности [разностных резервных копий](../../relational-databases/backup-restore/differential-backups-sql-server.md) базы данных.|
+    |Частичная копия базы данных|[Частичные резервные копии](../../relational-databases/backup-restore/partial-backups-sql-server.md) охватывают файловые группы, доступные для чтения и записи, а также могут охватывать один или более файлов или файловых групп, доступных только для чтения.<br /><br /> Кроме того, каждая частичная резервная копия может служить базой для последовательности [разностных частичных резервных копий базы данных](../../relational-databases/backup-restore/differential-backups-sql-server.md).|
+    |Файл или файловая группа|[Резервные копии файлов](../../relational-databases/backup-restore/full-file-backups-sql-server.md) охватывают один или несколько файлов или файловых групп. Они актуальны только для баз данных, содержащих множество файловых групп. В рамках простой модели восстановления охват резервных копий файлов и файловых групп ограничивается только вторичными файловыми группами, доступными только для чтения.<br /> Кроме того, каждая резервная копия файла может служить базой для последовательности [разностных резервных копий файла](../../relational-databases/backup-restore/differential-backups-sql-server.md).|
+
+- В рамках модели полного восстановления или модели с неполным протоколированием обычные резервные копии также обязаны содержать последовательные *резервные копии журнала транзакций* (или *резервные копии журналов*). Каждая резервная копия журнала охватывает часть журнала транзакций, которая была активна во время создания резервной копии, а также все записи журнала, не включенные в предыдущую резервную копию журнала.
+
+    Чтобы снизить вероятность потери результатов работы ценой увеличения административных издержек, запланируйте в расписании частое создание резервной копии журнала. Планирование разностного резервного копирования между полными резервными копиями сокращает время восстановления путем сокращения количества резервных копий журналов, которые необходимо восстанавливать после восстановления данных.
+
+     Рекомендуется хранить резервные копии журналов на отдельном от резервных копий базы данных томе.
+
+    > [!NOTE]
+    > До создания первой резервной копии журнала необходимо создать полную резервную копию базы данных.
+
+- *Резервная копия только для копирования* — это полная резервная копия или резервная копия журналов, созданная с особой целью. Такая копия не зависит от нормальной последовательности создания обычных резервных копий. Для создания резервной копии только для копирования используется параметр COPY_ONLY инструкции BACKUP. Дополнительные сведения см. в [статье о резервных копиях только для копирования](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).
+
+### <a name="Tlog_Truncation"></a> Усечение журнала транзакций
+
+Регулярные операции резервного копирования крайне важны во избежание переполнения журнала транзакций базы данных. При использовании простой модели восстановления усечение журналов происходит автоматически (после создания резервной копии базы данных). При использовании модели полного восстановления усечение происходит при создании резервной копии журнала транзакций. Однако иногда процесс усечения может быть задержан. Дополнительные сведения о факторах, из-за которых усечение журнала может откладываться, см. в [этой статье](../../relational-databases/logs/the-transaction-log-sql-server.md).
+
+> [!NOTE]
+> Параметры `BACKUP LOG WITH NO_LOG` и `WITH TRUNCATE_ONLY` больше не поддерживаются. Если используется модель восстановления с неполным протоколированием или модель полного восстановления, а пользователю необходимо удалить цепочку резервных копий журнала из базы данных, то стоит переключиться на простую модель восстановления. Дополнительные сведения см. в статье о [просмотре и изменении модели восстановления базы данных](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).
+
+### <a name="Formatting_Media"></a> Форматирование носителей резервных копий
+
+Носитель резервной копии форматируется инструкцией BACKUP только при выполнении любого из следующих условий:
+
+- Указан параметр `FORMAT`.
+- носитель пуст;
+- операция производит запись дополнительной ленты.
+
+### <a name="Backup_Devices_and_Media_Sets"></a> Работа с устройствами резервного копирования и наборами носителей
+
+#### <a name="backup-devices-in-a-striped-media-set-a-stripe-set"></a>Устройства резервного копирования в чередующемся наборе носителей (чередующийся набор)
+*Чередующийся набор* — это набор дисковых файлов, в которых данные разделены на блоки и распределены в определенном порядке. Количество устройств резервного копирования, использующихся в чередующемся наборе, должно оставаться одинаковым (кроме случаев, когда носители повторно инициализируются инструкцией `FORMAT`).
+
+В следующем примере резервная копия базы данных [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] записывается на новый чередующийся набор носителей, который использует три дисковых файла.
+
+```sql
+BACKUP DATABASE AdventureWorks2012
+TO DISK='X:\SQLServerBackups\AdventureWorks1.bak',
+DISK='Y:\SQLServerBackups\AdventureWorks2.bak',
+DISK='Z:\SQLServerBackups\AdventureWorks3.bak'
+WITH FORMAT,
+  MEDIANAME = 'AdventureWorksStripedSet0',
+  MEDIADESCRIPTION = 'Striped media set for AdventureWorks2012 database;
+GO
+```
+
+После определения устройства резервного копирования как части чередующегося набора данное устройство нельзя использовать для резервного копирования на одно устройство до тех пор, пока не будет указан параметр FORMAT. Аналогично: устройство резервного копирования, содержащее нечередующиеся резервные копии, не может использоваться в чередующемся наборе до тех пор, пока не будет указан параметр FORMAT. Для разбиения чередующегося резервного набора данных используйте параметр FORMAT.
+
+Если при записи заголовка носителя не был указан ни параметр MEDIANAME, ни параметр MEDIADESCRIPTION, то поле заголовка носителя, соответствующее отсутствующему параметру, будет пустым.
+
+#### <a name="working-with-a-mirrored-media-set"></a>Работа с зеркальным набором носителей
+
+Обычно в резервных копиях не применяется зеркальное отображение, при этом инструкции BACKUP содержат только предложение TO. Однако для каждого набора носителей может существовать до четырех зеркальных наборов. При работе с зеркальным набором носителей операция резервного копирования производит запись на несколько групп устройств резервного копирования. Каждая такая группа составляет одну зеркальную копию внутри зеркального набора носителей. В каждой зеркальной копии должны использоваться одинаковое количество и тип физических устройств резервного копирования, при этом все устройства должны иметь одинаковые свойства.
+
+Для создания резервной копии на зеркальном наборе носителей должны присутствовать все зеркала. Чтобы создать резервную копию на зеркальном наборе носителей, используйте предложение `TO` для описания первой зеркальной копии и предложения `MIRROR TO` для описания каждой дополнительной зеркальной копии.
+
+Для зеркальных наборов носителей каждое предложение `MIRROR TO` должно содержать то же количество и такой же тип устройств, что и предложение TO. Следующий пример демонстрирует запись, производящуюся на зеркальный набор носителей, который состоит из двух зеркальных копий. Используется по три устройства на зеркальную копию.
+
+```sql
+BACKUP DATABASE AdventureWorks2012
+TO DISK='X:\SQLServerBackups\AdventureWorks1a.bak',
+  DISK='Y:\SQLServerBackups\AdventureWorks2a.bak',
+  DISK='Z:\SQLServerBackups\AdventureWorks3a.bak'
+MIRROR TO DISK='X:\SQLServerBackups\AdventureWorks1b.bak',
+  DISK='Y:\SQLServerBackups\AdventureWorks2b.bak',
+  DISK='Z:\SQLServerBackups\AdventureWorks3b.bak';
+GO
+```
+
+> [!IMPORTANT]
+> Этот пример создан для того, чтобы была возможность протестировать его на локальной системе. На практике резервное копирование на несколько устройств, находящихся на одном диске, приводит к ухудшению производительности и сводит на нет пользу от избыточности, ради которой и были разработаны зеркальные наборы носителей.
+
+##### <a name="media-families-in-mirrored-media-sets"></a>Семейства носителей в зеркальных наборах носителей
+
+Каждое устройство резервного копирования, описанное в предложении `TO` инструкции BACKUP, соответствует семейству носителей. Например, если в предложении `TO` перечислены три устройства, то инструкция BACKUP записывает данные в три семейства носителей. В зеркальном наборе носителей данных каждая зеркальная копия должна содержать копию каждого семейства носителей. Именно поэтому число устройств должно быть одинаковым для всех зеркальных копий.
+
+Если для каждой зеркальной копии перечислено несколько устройств, то их порядок определяет, какое семейство носителей будет записано на какое устройство. Например, в каждом из списков устройств второе устройство соответствует второму семейству носителей. Для устройств, которые описаны в примере выше, соответствие устройств семействам носителей показано в следующей таблице.
+
+|Зеркальное отображение|Семейство носителей 1|Семейство носителей 2|Семейство носителей 3|
+|---------|---------|---------|---------|
+|0|`Z:\AdventureWorks1a.bak`|`Z:\AdventureWorks2a.bak`|`Z:\AdventureWorks3a.bak`|
+|1|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|
+
+ Резервная копия семейства носителей всегда должна создаваться на одном и то же устройстве, входящем в состав определенной зеркальной копии. Поэтому каждый раз, когда используется существующий набор носителей, перечисляйте устройства для каждой зеркальной копии в том же порядке, в котором они были заданы при создании этого набора.
+
+Дополнительные сведения о зеркальных наборах носителей резервных копий см. в [этой статье](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md). Дополнительные сведения о наборах носителей и семействах носителей в целом см. в [этой статье](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).
+
+### <a name="Restoring_Backups"></a> Восстановление резервных копий SQL Server
+
+Для восстановления базы данных и при необходимости перевода ее в оперативный режим либо для восстановления файла или файловой группы используются либо инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), либо задачи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Restore**. Дополнительные сведения см. в статье [о процессах восстановления](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
+
+## <a name="Additional_Considerations"></a> Дополнительные сведения о параметрах инструкции BACKUP
+
+### <a name="Interactions_SKIP_etc"></a> Взаимодействие SKIP, NOSKIP, INIT и NOINIT
+
+Эта таблица описывает взаимодействие между параметрами { **NOINIT** | INIT } и { **NOSKIP** | SKIP }.
+
+> [!NOTE]
+> Если носитель на магнитной ленте пуст или файла резервной копии диска не существует, то все эти взаимодействия записывают заголовок носителя и продолжают работу. Если носитель не пустой и у него отсутствует допустимый заголовок носителя, то эти операции сформируют отзыв о том, что отсутствует допустимый носитель MTF, и прекратят операцию резервного копирования.
+
+||NOINIT|INIT|
+|------|------------|----------|
+|NOSKIP|Если в томе содержится правильный заголовок носителя, то выполняется проверка совпадения имени носителя с указанным параметром `MEDIANAME` (если он задан). Если установлено совпадение, резервный набор данных дозаписывается с сохранением всех существующих резервных наборов данных.<br /> Если том не содержит правильного заголовка носителя, возникает ошибка.|Если том содержит заголовок носителя, проводятся следующие проверки.<br /><ul><li>Если указан параметр `MEDIANAME`, то проверяется, совпадает ли заданное имя носителя с именем носителя заголовка носителя.<sup>1</sup></li><li>Проверяется, есть ли на носителе резервные наборы данных с неистекшим сроком действия. Если есть, то процесс резервного копирования прекращается.</li></ul><br />Если все эти проверки пройдены, то происходит перезапись всех резервных наборов данных на носителе. Сохраняется только заголовок носителя.<br /> Если в томе не содержится правильного заголовка носителя, то он создается с применением указанных параметров `MEDIANAME` и `MEDIADESCRIPTION` (если они заданы).|
+|SKIP|Если том содержит верный заголовок носителя, то резервный набор данных дозаписывается с сохранением всех существующих резервных наборов данных.|Если в томе содержится правильный заголовок носителя<sup>2</sup>, то выполняется перезапись всех резервных наборов данных на носителе, при этом сохраняется только заголовок носителя.<br /> Если носитель пуст, то создается заголовок носителя, исходя из заданных параметров `MEDIANAME` и `MEDIADESCRIPTION` (если они указаны).|
+
+<sup>1</sup> Пользователь должен принадлежать к соответствующей предопределенной роли базы данных или роли сервера для выполнения операции резервного копирования.
+
+<sup>2</sup> В допустимость входит номер версии MTF и другие сведения заголовка. Если указанная версия не поддерживается или имеет непредвиденное значение, то возникает ошибка.
+
+## <a name="compatibility"></a>Совместимость
+
+> [!CAUTION]
+> Резервные копии, созданные более поздними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , не могут быть восстановлены в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+Инструкция BACKUP поддерживает параметр `RESTART` для предоставления обратной совместимости с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Но параметр RESTART не имеет влияния.
+
+## <a name="general-remarks"></a>Общие замечания
+
+Резервные копии базы данных или журналов могут дозаписываться на дисковый накопитель или на ленточное устройство, что позволяет хранить базу данных и ее журнал транзакций в одном физическом местоположении.
+
+Инструкция BACKUP не разрешена в явных и неявных транзакциях.
+
+Межплатформенные операции резервного копирования даже между различными типами процессоров могут выполняться до тех пор, пока параметры сортировки базы данных поддерживаются операционной системой.
+
+При использовании сжатия резервных копий в базах данных с включенным [прозрачным шифрованием данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) с одним файлом данных рекомендуется использовать параметр `MAXTRANSFERSIZE` **больше 65 536 (64 КБ)**.
 Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], это включает оптимизированный алгоритм сжатия для баз данных с шифрованием TDE, который сначала расшифровывает страницу, сжимает ее, а затем зашифровывает снова. При использовании `MAXTRANSFERSIZE = 65536` (64 КБ) сжатие резервных копий в базах данных с включенным шифрованием TDE напрямую сжимает зашифрованные страницы и может не обеспечивать хорошее сжатие. Дополнительные сведения см. в разделе [Сжатие резервных копий для баз данных с включенным шифрованием TDE](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
 
-> [!NOTE]  
+> [!NOTE]
 > Иногда значение `MAXTRANSFERSIZE` по умолчанию больше 64 КБ:
-> * Если в базе данных создано множество файлов данных, используется `MAXTRANSFERSIZE` > 64 КБ
-> * При архивации по URL-адресу используется значение по умолчанию `MAXTRANSFERSIZE = 1048576` (1 МБ)
->   
+>
+> - Если в базе данных создано множество файлов данных, используется `MAXTRANSFERSIZE` > 64 КБ
+> - При архивации по URL-адресу используется значение по умолчанию `MAXTRANSFERSIZE = 1048576` (1 МБ)
+>
 > Даже когда действует одно из этих условий, следует явно задать в команде архивации значение `MAXTRANSFERSIZE` больше 64 КБ, чтобы получить новый алгоритм сжатия.
-  
-По умолчанию каждая успешная операция резервного копирования добавляет запись в журнал ошибок служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и в журнал системных событий. Если создание резервной копии журналов производится очень часто, это приводит к быстрому накоплению сообщений об успешном завершении. Это приводит к увеличению журналов ошибок, затрудняя поиск других сообщений. Если работа существующих скриптов не зависит от этих записей, то их можно отключить с помощью флага трассировки 3226. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
-  
-## <a name="interoperability"></a>Совместимость  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует процесс резервного копирования в сети, что позволяет создавать резервную копию базы данных во время ее использования. Во время резервного копирования можно производить большинство операций. Например, во время создания резервной копии разрешены инструкции INSERT, UPDATE и DELETE.  
-  
-Следующие операции запрещены во время создания резервной копии базы данных или журнала транзакций.  
-  
-- Операции управления файлами, такие как инструкция `ALTER DATABASE` с параметрами `ADD FILE` или `REMOVE FILE`.  
-  
-- Операции сжатия базы данных или файла. Сюда же включены операции автоматического сжатия.  
-  
-Если операция резервного копирования перекрывается операцией сжатия или управления файлами, то возникает конфликт. Независимо от того, какая из операций начнет конфликтовать с первой, вторая операция ждет блокировки набора первой операции в течение определенного времени (длительность времени ожидания определяется настройкой времени ожидания сеанса). Если разблокировка происходит до истечения времени ожидания, работа второй операции продолжается. Если разблокировки за этот период не происходит, вторая операция заканчивается неудачно.  
- 
-## <a name="metadata"></a>Метаданные  
-В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеются следующие таблицы журнала резервного копирования, которые позволяют отслеживать действия резервного копирования:  
-  
-- [backupfile (Transact-SQL)](../../relational-databases/system-tables/backupfile-transact-sql.md)  
-- [backupfilegroup (Transact-SQL)](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)  
-- [backupmediafamily (Transact-SQL)](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)  
-- [backupmediaset (Transact-SQL)](../../relational-databases/system-tables/backupmediaset-transact-sql.md)  
-- [backupset (Transact-SQL)](../../relational-databases/system-tables/backupset-transact-sql.md)  
-  
-При проведении восстановления в случае, если резервный набор данных не был записан в базу данных **msdb**, таблицы журнала резервного копирования могут быть изменены.  
-  
-## <a name="security"></a>безопасность  
-Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], параметры `PASSWORD` и `MEDIAPASSWORD` не поддерживаются при создании резервных копий. Восстановление резервных копий, созданных с применением пароля, остается возможным.  
-  
-### <a name="permissions"></a>Разрешения  
-Разрешения BACKUP DATABASE и BACKUP LOG назначены по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_owner** и **db_backupoperator** .  
-  
-Проблемы, связанные с владельцем и разрешениями у физических файлов на устройстве резервного копирования, могут помешать операции резервного копирования. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь возможность считывать и записывать данные на устройстве; учетная запись, от имени которой выполняется служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , должна иметь разрешения на запись. Однако процедура [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), добавляющая запись для устройства резервного копирования в системные таблицы, не проверяет разрешения на доступ к файлу. Проблемы физического файла устройства резервного копирования могут не проявляться до момента доступа к физическому ресурсу во время операции резервного копирования или восстановления.  
-  
-##  <a name="examples"></a> Примеры  
-Этот раздел содержит следующие примеры.  
-  
-- A. [Создание резервной копии всей базы данных](#backing_up_db)  
-- Б. [Создание резервной копии базы данных и журнала](#backing_up_db_and_log)  
-- В. [Создание полной резервной копии вторичных файловых групп](#full_file_backup)  
-- Г. [Создание разностной резервной копии файлов вторичных файловых групп](#differential_file_backup)  
-- Д. [Создание зеркального набора носителей с одним семейством с его последующим использованием для резервного копирования](#create_single_family_mirrored_media_set)  
-- Е. [Создание зеркального набора носителей с несколькими семействами с его последующим использованием для резервного копирования](#create_multifamily_mirrored_media_set)  
-- Ж [Создание резервной копии на существующем зеркальном наборе носителей](#existing_mirrored_media_set)  
-- З. [Создание сжатой резервной копии на новом наборе носителей](#creating_compressed_backup_new_media_set)  
-- И. [Резервное копирование в службу хранилища больших двоичных объектов Microsoft Azure](#url)  
-  
-> [!NOTE]  
-> В инструкции по резервному копированию содержатся дополнительные примеры. Дополнительные сведения см. в разделе [Общие сведения о резервном копировании (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
-  
-###  <a name="backing_up_db"></a> A. Создание резервной копии всей базы данных  
-Следующий пример производит резервное копирование базы данных [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] в файл на диске.  
-  
-```sql  
-BACKUP DATABASE AdventureWorks2012   
- TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
-   WITH FORMAT;  
-GO  
-```  
-  
-###  <a name="backing_up_db_and_log"></a> Б. Создание резервной копии базы данных и журнала  
-В следующем примере используется образец базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], которая по умолчанию использует простую модель восстановления. Для поддержки резервного копирования журналов база данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] была перенастроена на использование модели полного восстановления.  
-  
-Далее используется процедура [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) для создания двух логических [устройств резервного копирования](../../relational-databases/backup-restore/backup-devices-sql-server.md), на одном из которых — `AdvWorksData` — будут создаваться резервные копии данных, а на втором — `AdvWorksLog` — резервные копии журналов.  
-  
-Затем производится полное резервное копирование базы данных на устройство `AdvWorksData` и, после периода обновления, резервное копирование журнала на устройство `AdvWorksLog`.  
-  
-```sql  
--- To permit log backups, before the full database backup, modify the database   
--- to use the full recovery model.  
-USE master;  
-GO  
-ALTER DATABASE AdventureWorks2012  
-   SET RECOVERY FULL;  
-GO  
--- Create AdvWorksData and AdvWorksLog logical backup devices.   
-USE master  
-GO  
-EXEC sp_addumpdevice 'disk', 'AdvWorksData',   
-'Z:\SQLServerBackups\AdvWorksData.bak';  
-GO  
-EXEC sp_addumpdevice 'disk', 'AdvWorksLog',   
-'X:\SQLServerBackups\AdvWorksLog.bak';  
-GO  
-  
--- Back up the full AdventureWorks2012 database.  
-BACKUP DATABASE AdventureWorks2012 TO AdvWorksData;  
-GO  
--- Back up the AdventureWorks2012 log.  
-BACKUP LOG AdventureWorks2012  
-   TO AdvWorksLog;  
-GO  
-```  
-  
-> [!NOTE]  
->  Следует регулярно создавать резервные копии журнала производственной базы данных. Такие резервные копии следует создавать достаточно часто, чтобы избежать потери данных.  
-  
-###  <a name="full_file_backup"></a> В. Создание полной резервной копии вторичных файловых групп  
-В следующем примере создается полная резервная копия каждого файла в обеих вторичных файловых группах.  
-  
-```sql  
---Back up the files in SalesGroup1:  
-BACKUP DATABASE Sales  
-   FILEGROUP = 'SalesGroup1',  
-   FILEGROUP = 'SalesGroup2'  
-   TO DISK = 'Z:\SQLServerBackups\SalesFiles.bck';  
-GO  
-```  
-  
-###  <a name="differential_file_backup"></a> Г. Создание разностной резервной копии файлов вторичных файловых групп  
-В следующем примере создается разностная резервная копия каждого файла в обеих вторичных файловых группах.  
-  
-```sql  
---Back up the files in SalesGroup1:  
-BACKUP DATABASE Sales  
-   FILEGROUP = 'SalesGroup1',  
-   FILEGROUP = 'SalesGroup2'  
-   TO DISK = 'Z:\SQLServerBackups\SalesFiles.bck'  
-   WITH   
-      DIFFERENTIAL;  
-GO  
-```  
-  
-###  <a name="create_single_family_mirrored_media_set"></a> Д. Создание зеркального набора носителей с одним семейством с его последующим использованием для резервного копирования  
-В следующем примере создается зеркальный набор носителей (содержащий одно семейство носителей и четыре зеркала), на который производится резервное копирование базы данных [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)].  
-  
-```sql  
-BACKUP DATABASE AdventureWorks2012  
-TO TAPE = '\\.\tape0'  
-MIRROR TO TAPE = '\\.\tape1'  
-MIRROR TO TAPE = '\\.\tape2'  
-MIRROR TO TAPE = '\\.\tape3'  
-WITH  
-   FORMAT,  
-   MEDIANAME = 'AdventureWorksSet0';  
-```  
-  
-###  <a name="create_multifamily_mirrored_media_set"></a> Е. Создание зеркального набора носителей с несколькими семействами с его последующим использованием для резервного копирования  
-В следующем примере создается зеркальный набор носителей, каждое зеркало которого состоит из двух семейств носителей. Затем показано, как производится резервное копирование базы данных [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] на оба зеркала.  
-  
-```sql  
-BACKUP DATABASE AdventureWorks2012  
-TO TAPE = '\\.\tape0', TAPE = '\\.\tape1'  
-MIRROR TO TAPE = '\\.\tape2', TAPE = '\\.\tape3'  
-WITH  
-   FORMAT,  
-   MEDIANAME = 'AdventureWorksSet1';  
-```  
-  
-###  <a name="existing_mirrored_media_set"></a> G. Создание резервной копии на существующем зеркальном наборе носителей  
-В следующем примере выполняется дополнительная запись резервного набора данных на набор носителей, созданный в предыдущем примере.  
-  
-```sql  
-BACKUP LOG AdventureWorks2012  
-TO TAPE = '\\.\tape0', TAPE = '\\.\tape1'  
-MIRROR TO TAPE = '\\.\tape2', TAPE = '\\.\tape3'  
-WITH   
-   NOINIT,  
-   MEDIANAME = 'AdventureWorksSet1';  
-```  
-  
-> [!NOTE]  
->  Параметр NOINIT, установленный по умолчанию, приведен здесь для ясности.  
-  
-###  <a name="creating_compressed_backup_new_media_set"></a> H. Создание сжатой резервной копии на новом наборе носителей  
-В следующем примере осуществляется форматирование носителя, создание нового набора носителей и создание полной сжатой резервной копии базы данных [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)].  
-  
-```sql  
-BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'   
-WITH   
-   FORMAT,   
-   COMPRESSION;  
-```  
 
-###  <a name="url"></a> I. Резервное копирование в службу хранилища больших двоичных объектов Microsoft Azure 
-В следующем примере выполняется полное резервное копирование базы данных `Sales` в службу хранилища больших двоичных объектов Microsoft Azure.  Имя учетной записи хранилища — `mystorageaccount`.  Контейнер называется `myfirstcontainer`.  Хранимая политика доступа была создана с правами на чтение, запись, удаление и составление списков.  Учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, были созданы с использованием подписанного URL-адреса, который связан с хранимой политикой доступа.  Сведения о резервном копировании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в службу хранилища BLOB-объектов Microsoft Azure см. в разделах [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) и [Резервное копирование в SQL Server по URL-адресу](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
+По умолчанию каждая успешная операция резервного копирования добавляет запись в журнал ошибок служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и в журнал системных событий. Если создание резервной копии журналов производится очень часто, это приводит к быстрому накоплению сообщений об успешном завершении. Это приводит к увеличению журналов ошибок, затрудняя поиск других сообщений. Если работа существующих скриптов не зависит от этих записей, то их можно отключить с помощью флага трассировки 3226. Дополнительные сведения см. в статье [о флагах трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
-```sql  
+## <a name="interoperability"></a>Совместимость
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует процесс резервного копирования в сети, что позволяет создавать резервную копию базы данных во время ее использования. Во время резервного копирования можно производить большинство операций. Например, во время создания резервной копии разрешены инструкции INSERT, UPDATE и DELETE.
+
+Следующие операции запрещены во время создания резервной копии базы данных или журнала транзакций.
+
+- Операции управления файлами, такие как инструкция `ALTER DATABASE` с параметрами `ADD FILE` или `REMOVE FILE`.
+
+- Операции сжатия базы данных или файла. Сюда же включены операции автоматического сжатия.
+
+Если операция резервного копирования перекрывается операцией сжатия или управления файлами, то возникает конфликт. Независимо от того, какая из операций начнет конфликтовать с первой, вторая операция ждет блокировки набора первой операции в течение определенного времени (длительность времени ожидания определяется настройкой времени ожидания сеанса). Если разблокировка происходит до истечения времени ожидания, работа второй операции продолжается. Если разблокировки за этот период не происходит, вторая операция заканчивается неудачно.
+
+## <a name="metadata"></a>Метаданные
+
+В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеются следующие таблицы журнала резервного копирования, которые позволяют отслеживать действия резервного копирования:
+
+- [backupfile;](../../relational-databases/system-tables/backupfile-transact-sql.md)
+- [backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)
+- [backupmediafamily;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)
+- [backupmediaset;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)
+- [backupset;](../../relational-databases/system-tables/backupset-transact-sql.md)
+
+При проведении восстановления в случае, если резервный набор данных не был записан в базу данных **msdb**, таблицы журнала резервного копирования могут быть изменены.
+
+## <a name="security"></a>безопасность
+
+Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], параметры `PASSWORD` и `MEDIAPASSWORD` не поддерживаются при создании резервных копий. Восстановление резервных копий, созданных с применением пароля, остается возможным.
+
+### <a name="permissions"></a>Разрешения
+
+Разрешения BACKUP DATABASE и BACKUP LOG назначены по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_owner** и **db_backupoperator** .
+
+Проблемы, связанные с владельцем и разрешениями у физических файлов на устройстве резервного копирования, могут помешать операции резервного копирования. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь возможность считывать и записывать данные на устройстве; учетная запись, от имени которой выполняется служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , должна иметь разрешения на запись. Однако процедура [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), добавляющая запись для устройства резервного копирования в системные таблицы, не проверяет разрешения на доступ к файлу. Проблемы физического файла устройства резервного копирования могут не проявляться до момента доступа к физическому ресурсу во время операции резервного копирования или восстановления.
+
+## <a name="examples"></a> Примеры
+
+Этот раздел содержит следующие примеры.
+
+- A. [Создание резервной копии всей базы данных](#backing_up_db)
+- Б. [Создание резервной копии базы данных и журнала](#backing_up_db_and_log)
+- В. [Создание полной резервной копии вторичных файловых групп](#full_file_backup)
+- Г. [Создание разностной резервной копии файлов вторичных файловых групп](#differential_file_backup)
+- Д. [Создание зеркального набора носителей с одним семейством с его последующим использованием для резервного копирования](#create_single_family_mirrored_media_set)
+- Е. [Создание зеркального набора носителей с несколькими семействами с его последующим использованием для резервного копирования](#create_multifamily_mirrored_media_set)
+- Ж. [Создание резервной копии на существующем зеркальном наборе носителей](#existing_mirrored_media_set)
+- З. [Создание сжатой резервной копии на новом наборе носителей](#creating_compressed_backup_new_media_set)
+- И. [Резервное копирование в службу хранилища больших двоичных объектов Microsoft Azure](#url)
+
+> [!NOTE]
+> В инструкции по резервному копированию содержатся дополнительные примеры. Дополнительные сведения см. в [обзоре резервного копирования](../../relational-databases/backup-restore/backup-overview-sql-server.md).
+
+### <a name="backing_up_db"></a> A. Создание резервной копии всей базы данных
+
+Следующий пример производит резервное копирование базы данных [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] в файл на диске.
+
+```sql
+BACKUP DATABASE AdventureWorks2012
+ TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'
+    WITH FORMAT;
+GO
+```
+
+### <a name="backing_up_db_and_log"></a> Б. Создание резервной копии базы данных и журнала
+
+В следующем примере используется образец базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], которая по умолчанию использует простую модель восстановления. Для поддержки резервного копирования журналов база данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] была перенастроена на использование модели полного восстановления.
+
+Далее используется процедура [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) для создания двух логических [устройств резервного копирования](../../relational-databases/backup-restore/backup-devices-sql-server.md), на одном из которых — `AdvWorksData` — будут создаваться резервные копии данных, а на втором — `AdvWorksLog` — резервные копии журналов.
+
+Затем производится полное резервное копирование базы данных на устройство `AdvWorksData` и, после периода обновления, резервное копирование журнала на устройство `AdvWorksLog`.
+
+```sql
+-- To permit log backups, before the full database backup, modify the database
+-- to use the full recovery model.
+USE master;
+GO
+ALTER DATABASE AdventureWorks2012
+    SET RECOVERY FULL;
+GO
+-- Create AdvWorksData and AdvWorksLog logical backup devices.
+USE master
+GO
+EXEC sp_addumpdevice 'disk', 'AdvWorksData',
+'Z:\SQLServerBackups\AdvWorksData.bak';
+GO
+EXEC sp_addumpdevice 'disk', 'AdvWorksLog',
+'X:\SQLServerBackups\AdvWorksLog.bak';
+GO
+
+-- Back up the full AdventureWorks2012 database.
+BACKUP DATABASE AdventureWorks2012 TO AdvWorksData;
+GO
+-- Back up the AdventureWorks2012 log.
+BACKUP LOG AdventureWorks2012
+    TO AdvWorksLog;
+GO
+```
+
+> [!NOTE]
+> Следует регулярно создавать резервные копии журнала производственной базы данных. Такие резервные копии следует создавать достаточно часто, чтобы избежать потери данных.
+
+### <a name="full_file_backup"></a> В. Создание полной резервной копии вторичных файловых групп
+
+В следующем примере создается полная резервная копия каждого файла в обеих вторичных файловых группах.
+
+```sql
+--Back up the files in SalesGroup1:
+BACKUP DATABASE Sales
+    FILEGROUP = 'SalesGroup1',
+    FILEGROUP = 'SalesGroup2'
+    TO DISK = 'Z:\SQLServerBackups\SalesFiles.bck';
+GO
+```
+
+### <a name="differential_file_backup"></a> Г. Создание разностной резервной копии файлов вторичных файловых групп
+
+В следующем примере создается разностная резервная копия каждого файла в обеих вторичных файловых группах.
+
+```sql
+--Back up the files in SalesGroup1:
+BACKUP DATABASE Sales
+    FILEGROUP = 'SalesGroup1',
+    FILEGROUP = 'SalesGroup2'
+    TO DISK = 'Z:\SQLServerBackups\SalesFiles.bck'
+    WITH
+      DIFFERENTIAL;
+GO
+```
+
+### <a name="create_single_family_mirrored_media_set"></a> Д. Создание зеркального набора носителей с одним семейством с его последующим использованием для резервного копирования
+
+В следующем примере создается зеркальный набор носителей (содержащий одно семейство носителей и четыре зеркала), на который производится резервное копирование базы данных [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)].
+
+```sql
+BACKUP DATABASE AdventureWorks2012
+TO TAPE = '\\.\tape0'
+MIRROR TO TAPE = '\\.\tape1'
+MIRROR TO TAPE = '\\.\tape2'
+MIRROR TO TAPE = '\\.\tape3'
+WITH
+    FORMAT,
+    MEDIANAME = 'AdventureWorksSet0';
+```
+
+### <a name="create_multifamily_mirrored_media_set"></a> Е. Создание зеркального набора носителей с несколькими семействами с его последующим использованием для резервного копирования
+
+В следующем примере создается зеркальный набор носителей, каждое зеркало которого состоит из двух семейств носителей. Затем показано, как производится резервное копирование базы данных [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] на оба зеркала.
+
+```sql
+BACKUP DATABASE AdventureWorks2012
+TO TAPE = '\\.\tape0', TAPE = '\\.\tape1'
+MIRROR TO TAPE = '\\.\tape2', TAPE = '\\.\tape3'
+WITH
+    FORMAT,
+    MEDIANAME = 'AdventureWorksSet1';
+```
+
+### <a name="existing_mirrored_media_set"></a> G. Создание резервной копии на существующем зеркальном наборе носителей
+
+В следующем примере выполняется дополнительная запись резервного набора данных на набор носителей, созданный в предыдущем примере.
+
+```sql
+BACKUP LOG AdventureWorks2012
+TO TAPE = '\\.\tape0', TAPE = '\\.\tape1'
+MIRROR TO TAPE = '\\.\tape2', TAPE = '\\.\tape3'
+WITH
+    NOINIT,
+    MEDIANAME = 'AdventureWorksSet1';
+```
+
+> [!NOTE]
+> Параметр NOINIT, установленный по умолчанию, приведен здесь для ясности.
+
+### <a name="creating_compressed_backup_new_media_set"></a> H. Создание сжатой резервной копии на новом наборе носителей
+
+В следующем примере осуществляется форматирование носителя, создание нового набора носителей и создание полной сжатой резервной копии базы данных [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)].
+
+```sql
+BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'
+WITH
+    FORMAT,
+    COMPRESSION;
+```
+
+### <a name="url"></a> I. Резервное копирование в службу хранилища больших двоичных объектов Microsoft Azure
+
+В следующем примере выполняется полное резервное копирование базы данных `Sales` в службу хранилища больших двоичных объектов Microsoft Azure. Имя учетной записи хранилища — `mystorageaccount`. Контейнер называется `myfirstcontainer`. Хранимая политика доступа была создана с правами на чтение, запись, удаление и составление списков. Учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, были созданы с использованием подписанного URL-адреса, который связан с хранимой политикой доступа. Сведения о резервном копировании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в службу хранилища BLOB-объектов Microsoft Azure см. в разделах [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) и [Резервное копирование в SQL Server по URL-адресу](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
+
+```sql
 BACKUP DATABASE Sales
 TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_20160726.bak'
 WITH STATS = 5;
 ```
-  
-## <a name="see-also"></a>См. также:  
-[Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
-[Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
-[Резервные копии заключительного фрагмента журнала (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)   
-[ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
-[DBCC SQLPERF (Transact-SQL)](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
-[RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
-[Инструкция RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
-[RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
-[RESTORE LABELONLY (Transact-SQL)](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)   
-[RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
-[sp_addumpdevice (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
-[sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
-[sp_helpfile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
-[sp_helpfilegroup (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
-[Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
-[Поэтапное восстановление баз данных с оптимизированными для памяти таблицами](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)  
-  
+
+## <a name="see-also"></a>См. также:
+
+- [Устройства резервного копирования](../../relational-databases/backup-restore/backup-devices-sql-server.md)
+- [Наборы носителей, семейства носителей и резервные наборы данных](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)
+- [Резервные копии заключительного фрагмента журнала](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)
+- [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)
+- [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)
+- [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)
+- [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)
+- [инструкция RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)
+- [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)
+- [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
+- [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)
+- [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [sp_helpfile](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)
+- [sp_helpfilegroup](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)
+- [Параметры конфигурации сервера](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
+- [Поэтапное восстановление баз данных с оптимизированными для памяти таблицами](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)
+
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> |||| 
-> |---|---|---| 
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Управляемый экземпляр Базы данных SQL<br /> \*_** &nbsp;|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
+> ||||
+> |---|---|---|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Управляемый экземпляр Базы данных SQL<br /> \*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 
 &nbsp;
 
 ## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
 
-Создает резервную копию базы данных SQL, размещенной в Управляемом экземпляре Базы данных SQL Azure. [Управляемый экземпляр](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) Базы данных SQL поддерживает автоматическое резервное копирование и позволяет пользователям создавать полные копии базы данных `COPY_ONLY`. Разностное резервное копирование, а также резервное копирование журналов и моментальных снимков файлов не поддерживаются.  
+Создает резервную копию базы данных SQL, размещенной в Управляемом экземпляре Базы данных SQL Azure. [Управляемый экземпляр](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) Базы данных SQL поддерживает автоматическое резервное копирование и позволяет пользователям создавать полные копии базы данных `COPY_ONLY`. Разностное резервное копирование, а также резервное копирование журналов и моментальных снимков файлов не поддерживаются.
 
-## <a name="syntax"></a>Синтаксис  
-  
-```sql 
-BACKUP DATABASE { database_name | @database_name_var }   
-  TO URL = { 'physical_device_name' | @physical_device_name_var }   [ ,...n ] 
-  WITH COPY_ONLY [, { <general_WITH_options> } ]  
-[;]  
+## <a name="syntax"></a>Синтаксис
 
-<general_WITH_options> [ ,...n ]::=  
- 
---Media Set Options  
-   MEDIADESCRIPTION = { 'text' | @text_variable }   
- | MEDIANAME = { media_name | @media_name_variable }   
+```sql
+BACKUP DATABASE { database_name | @database_name_var }
+  TO URL = { 'physical_device_name' | @physical_device_name_var }[ ,...n ]
+  WITH COPY_ONLY [, { <general_WITH_options> } ]
+[;]
+
+<general_WITH_options> [ ,...n ]::=
+
+--Media Set Options
+   MEDIADESCRIPTION = { 'text' | @text_variable }
+ | MEDIANAME = { media_name | @media_name_variable }
  | BLOCKSIZE = { blocksize | @blocksize_variable }
-  
---Data Transfer Options  
-   BUFFERCOUNT = { buffercount | @buffercount_variable }   
- | MAXTRANSFERSIZE = { maxtransfersize | @maxtransfersize_variable }  
-  
---Error Management Options  
-   { NO_CHECKSUM | CHECKSUM }  
- | { STOP_ON_ERROR | CONTINUE_AFTER_ERROR }  
-  
---Compatibility Options  
-   RESTART   
-  
---Monitoring Options  
-   STATS [ = percentage ]   
-   
---Encryption Options  
- ENCRYPTION (ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY } , encryptor_options ) <encryptor_options> ::=   
-   SERVER CERTIFICATE = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name   
-```  
-  
-## <a name="arguments"></a>Аргументы  
 
-DATABASE  
-Указывает, что должна быть создана резервная копия всей базы данных. При резервном копировании базы данных управляемый экземпляр создает резервную копию части журнала транзакций, достаточной для создания согласованной базы данных при ее восстановлении.  
+--Data Transfer Options
+   BUFFERCOUNT = { buffercount | @buffercount_variable }
+ | MAXTRANSFERSIZE = { maxtransfersize | @maxtransfersize_variable }
+
+--Error Management Options
+   { NO_CHECKSUM | CHECKSUM }
+ | { STOP_ON_ERROR | CONTINUE_AFTER_ERROR }
+
+--Compatibility Options
+   RESTART
+
+--Monitoring Options
+   STATS [ = percentage ]
+
+--Encryption Options
+ ENCRYPTION (ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY } , encryptor_options ) <encryptor_options> ::=
+   SERVER CERTIFICATE = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
+```
+
+## <a name="arguments"></a>Аргументы
+
+DATABASE — указывает, что нужно создать полную резервную копию базы данных. При резервном копировании базы данных управляемый экземпляр создает резервную копию части журнала транзакций, достаточной для создания согласованной базы данных при ее восстановлении.
 
 > [!IMPORTANT]
 > Резервную копию базы данных, созданную в управляемом экземпляре, можно восстановить только в другом управляемом экземпляре. Ее невозможно восстановить в локальном экземпляре SQL Server (аналогично тому, как невозможно восстановить резервную копию базы данных SQL Server 2016 в экземпляре SQL Server 2012).
-  
-Во время восстановления резервной копии, созданной с помощью инструкции BACKUP DATABASE (*резервной копии данных*), восстанавливается вся резервная копия. Сведения о восстановлении из автоматических резервных копий управляемого экземпляра Базы данных SQL Azure: [Восстановление Базы данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-restore)  
-  
-{ *database_name* | **@**_database\_name\_var_ }   
-Это база данных, из которой создается полная резервная копия. Если аргумент задается в виде переменной (**@**_database\_name\_var_), он может быть указан в виде строковой константы (**@**_database\_name\_var_**=**_database name_) или переменной с типом данных символьной строки **ntext** или **text**.  
-  
-Дополнительные сведения см. в разделе [Полные резервные копии файлов (SQL Server)](../../relational-databases/backup-restore/full-file-backups-sql-server.md) и [Резервное копирование файлов и файловых групп (SQL Server)](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).  
-  
-  
+
+Во время восстановления резервной копии, созданной с помощью инструкции BACKUP DATABASE (*резервной копии данных*), восстанавливается вся резервная копия. Сведения о восстановлении из автоматических резервных копий управляемого экземпляра Базы данных SQL Azure: [Восстановление Базы данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-restore)
+
+{ *database_name* | **@**_database\_name\_var_ } — указывает базу данных, из которой создается полная резервная копия. Если аргумент задается в виде переменной (**@**_database\_name\_var_), он может быть указан в виде строковой константы (**@**_database\_name\_var_**=**_database name_) или переменной с типом данных символьной строки **ntext** или **text**.
+
+Дополнительные сведения см. в статьях о [полных резервных копиях файлов](../../relational-databases/backup-restore/full-file-backups-sql-server.md) и [резервном копировании файлов и файловых групп](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).
+
 TO URL
 
-Указывает URL-адрес, используемый для операции резервного копирования. Формат URL-адреса используется для создания резервных копий в службе хранилища Microsoft Azure. 
+Указывает URL-адрес, используемый для операции резервного копирования. Формат URL-адреса используется для создания резервных копий в службе хранилища Microsoft Azure.
 
-> [!IMPORTANT]  
-> Для резервного копирования на множество устройств по URL-адресу необходимо использовать токены подписанных URL-адресов (SAS). Примеры создания подписанного URL-адреса см. в разделах [Резервное копирование SQL Server на URL-адрес](../../relational-databases/backup-restore/sql-server-backup-to-url.md) и [Упрощение создания учетных данных SQL с токенами подписанных URL-адресов в хранилище Azure с помощью Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
-  
-*n*  
-Заполнитель, который показывает, что можно указать до 64 устройств резервного копирования через запятую.  
-  
-### <a name="with-options"></a>Параметры инструкции WITH  
-Задает параметры, которые будут использоваться для операции создания резервной копии.  
-  
-CREDENTIAL  
-Используется только при создании резервной копии для службы хранилища BLOB-объектов Microsoft Azure.  
-  
-ENCRYPTION  
-Используется для указания шифрования для резервного копирования. Можно указать алгоритм шифрования, с помощью которого будет зашифрована резервная копия, или указать значение `NO_ENCRYPTION`, чтобы не шифровать резервную копию. Использовать шифрование рекомендуется. Оно обеспечивает защиту файлов резервной копии. Далее представлен список доступных алгоритмов.  
-  
-- `AES_128`  
-- `AES_192`  
-- `AES_256`  
-- `TRIPLE_DES_3KEY`  
-- `NO_ENCRYPTION`    
+> [!IMPORTANT]
+> Для резервного копирования на множество устройств по URL-адресу необходимо использовать токены подписанных URL-адресов (SAS). Примеры создания подписанного URL-адреса см. в разделах [Резервное копирование SQL Server на URL-адрес](../../relational-databases/backup-restore/sql-server-backup-to-url.md) и [Упрощение создания учетных данных SQL с токенами подписанных URL-адресов в хранилище Azure с помощью Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).
 
-Если вы решили использовать шифрование, также необходимо указать параметры шифратора.  
-  
-- SERVER CERTIFICATE = имя_шифратора  
-- SERVER ASYMMETRIC KEY = имя_шифратора  
-  
-**Параметры резервного набора данных**  
-  
-COPY_ONLY — указывает, что используется *резервная копия только для копирования*, которая не влияет на обычную последовательность резервных копий. Резервная копия только для копирования создается независимо от автоматических резервных копий базы данных SQL Azure. Дополнительные сведения см. в разделе [Резервные копии только для копирования (SQL Server)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
-  
-{ COMPRESSION | NO_COMPRESSION }  
-Указывает, выполняется ли для этой резервной копии [сжатие](../../relational-databases/backup-restore/backup-compression-sql-server.md), переопределяя настройку по умолчанию на уровне сервера.  
-  
-По умолчанию резервные копии не сжимаются. Это поведение можно изменить с помощью параметра конфигурации сервера [сжатие резервной копии по умолчанию](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Дополнительные сведения о просмотре текущего значения этого параметра см. в разделе [Просмотр или изменение свойств сервера (SQL Server)](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).  
+*n* — заполнитель, который показывает, что можно указать до 64 устройств резервного копирования через запятую.
+
+### <a name="with-optionsspecifies-options-to-be-used-with-a-backup-operation"></a>WITH — задает параметры, которые будут использоваться для операции создания резервной копии.
+
+CREDENTIAL — используется, только если резервная копия сохранена в службе хранилища BLOB-объектов Microsoft Azure.
+
+ENCRYPTION — используется для указания шифрования для резервного копирования. Можно указать алгоритм шифрования, с помощью которого будет зашифрована резервная копия, или указать значение `NO_ENCRYPTION`, чтобы не шифровать резервную копию. Использовать шифрование рекомендуется. Оно обеспечивает защиту файлов резервной копии. Далее представлен список доступных алгоритмов.
+
+- `AES_128`
+- `AES_192`
+- `AES_256`
+- `TRIPLE_DES_3KEY`
+- `NO_ENCRYPTION`
+
+Если вы решили использовать шифрование, также необходимо указать параметры шифратора.
+
+- SERVER CERTIFICATE = имя_шифратора
+- SERVER ASYMMETRIC KEY = имя_шифратора
+
+**Параметры резервного набора данных**
+
+COPY_ONLY — указывает, что используется *резервная копия только для копирования*, которая не влияет на обычную последовательность резервных копий. Резервная копия только для копирования создается независимо от автоматических резервных копий базы данных SQL Azure. Дополнительные сведения см. в [статье о резервных копиях только для копирования](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).
+
+{ COMPRESSION | NO_COMPRESSION } — указывает, выполняется ли для резервной копии [компрессия резервной копии](../../relational-databases/backup-restore/backup-compression-sql-server.md), переопределяя значение по умолчанию на уровне сервера.
+
+По умолчанию резервные копии не сжимаются. Это поведение можно изменить с помощью параметра конфигурации сервера [сжатие резервной копии по умолчанию](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Дополнительные сведения о просмотре текущего значения этого параметра см. в статье [Просмотр или изменение свойств сервера (SQL Server)](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).
 
 Сведения об использовании сжатия резервных копий в базах данных с включенным [прозрачным шифрованием данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) см. в разделе [Замечания](#general-remarks).
-  
-COMPRESSION  
-Явное включение сжатия резервных копий.  
-  
-NO_COMPRESSION  
-Явное отключение сжатия резервной копии.  
-  
-DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
-Указывает произвольное текстовое описание резервного набора данных. В этой строке может содержаться до 255 символов.  
-  
-NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }  
-Указывает имя резервного набора данных. Длина имени не может превышать 128 символов. Если параметр NAME не указан, то имя является пустым.  
-  
-MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ }  
-Указывает произвольное текстовое описание набора носителей, длина которого не должна превышать 255 символов.  
-  
-MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ }  
-Указывает имя носителя для всего набора носителей резервных копий. Длина имени носителя не должна превышать 128 символов. Если указан аргумент `MEDIANAME`, то он должен совпадать с заранее заданным именем носителя, уже существующим в томах резервных копий. Если он не указан или если указан параметр SKIP, то проверки имени носителя не происходит.  
-  
-BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }  
-Указывает размер физического блока в байтах. Поддерживаются размеры 512, 1024, 2048, 4096, 8192, 16 384, 32 768 и 65 536 байт (64 КБ). Значение по умолчанию равно 65 536 для ленточных устройств и 512 для других устройств. Обычно в этом параметре нет необходимости, так как инструкция BACKUP автоматически выбирает размер блока, соответствующий устройству. Явная установка размера блока переопределяет автоматический выбор размера блока.  
-  
-**Параметры передачи данных**  
-  
-BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }  
-Указывает общее число буферов ввода-вывода, которые будут использоваться для операции резервного копирования. Можно указать любое целое положительное значение, однако большое число буферов может вызвать ошибку нехватки памяти из-за чрезмерного виртуального адресного пространства в процессе Sqlservr.exe.  
-  
-Общее используемое буферами пространство определяется по следующей формуле: *buffercount/maxtransfersize*.  
-  
-> [!NOTE]  
-> Важные сведения об использовании параметра `BUFFERCOUNT` см. в блоге [Неправильный параметр передачи данных BufferCount может привести к OOM](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).  
-  
-MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } указывает наибольший объем пакета данных в байтах для обмена данными между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и носителем резервного набора. Поддерживаются значения, кратные 65 536 байтам (64 КБ), вплоть до 4 194 304 байт (4 МБ).  
 
-> [!NOTE]  
+COMPRESSION — явно включает сжатие резервных копий.
+
+NO_COMPRESSION — явно отключает сжатие резервных копий.
+
+DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ } — произвольное текстовое описание резервного набора данных. В этой строке может содержаться до 255 символов.
+
+NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ } — указывает имя резервного набора данных. Длина имени не может превышать 128 символов. Если параметр NAME не указан, то имя является пустым.
+
+MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ } — указывает произвольное текстовое описание набора носителей, длина которого не должна превышать 255 символов.
+
+MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ } — указывает имя носителя для всего набора носителей резервных копий. Длина имени носителя не должна превышать 128 символов. Если указан аргумент `MEDIANAME`, то он должен совпадать с заранее заданным именем носителя, уже существующим в томах резервных копий. Если он не указан или если указан параметр SKIP, то проверки имени носителя не происходит.
+
+BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ } — указывает размер физического блока в байтах. Поддерживаются размеры 512, 1024, 2048, 4096, 8192, 16 384, 32 768 и 65 536 байт (64 КБ). Значение по умолчанию равно 65 536 для ленточных устройств и 512 для других устройств. Обычно в этом параметре нет необходимости, так как инструкция BACKUP автоматически выбирает размер блока, соответствующий устройству. Явная установка размера блока переопределяет автоматический выбор размера блока.
+
+**Параметры передачи данных**
+
+BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ } — определяет общее число буферов ввода-вывода, которые будут использоваться для операции резервного копирования. Можно указать любое целое положительное значение, однако большое число буферов может вызвать ошибку нехватки памяти из-за чрезмерного виртуального адресного пространства в процессе Sqlservr.exe.
+
+Общее используемое буферами пространство определяется по следующей формуле: *buffercount/maxtransfersize*.
+
+> [!NOTE]
+> Важные сведения об использовании параметра `BUFFERCOUNT` см. в блоге [Неправильный параметр передачи данных BufferCount может привести к OOM](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).
+
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } указывает наибольший объем пакета данных в байтах для обмена данными между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и носителем резервного набора. Поддерживаются значения, кратные 65 536 байтам (64 КБ), вплоть до 4 194 304 байт (4 МБ).
+
+> [!NOTE]
 > Для баз данных с включенным [прозрачным шифрованием данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) и одним файлом данных `MAXTRANSFERSIZE` по умолчанию — 65 536 (64 КБ). Для баз данных без включенного шифрования TDE `MAXTRANSFERSIZE` по умолчанию — 1 048 576 (1 МБ) при сохранении резервных копий на диск и 65 536 (64 КБ) при использовании VDI или ленточных носителей.
 > Дополнительные сведения об использовании сжатия резервных копий в работе с базами данных с включенным шифрованием TDE см. в разделе [Замечания](#general-remarks).
-  
-**Параметры управления ошибками**  
-  
-Эти параметры позволяют определить, разрешены ли контрольные суммы резервных копий в операции резервного копирования и останавливается ли операция при обнаружении ошибки.  
-  
-{ **NO_CHECKSUM** | CHECKSUM }  
-Определяет, разрешены ли контрольные суммы.  
-  
-NO_CHECKSUM  
-Явно отменяет создание контрольных сумм резервных копий (и проверку контрольных сумм страниц). Это поведение по умолчанию.  
-  
-CHECKSUM  
-Указывает, что при операции резервного копирования выполняется проверка контрольной суммы и наличия разрывов на каждой странице (если эти проверки включены и доступны), а также будет создаваться контрольная сумма для всей резервной копии.  
-  
-Использование контрольных сумм резервных копий может повлиять на производительность рабочей нагрузки и пропускной способности резервного копирования.  
-  
-Дополнительные сведения см. в разделе [Возможные ошибки носителей во время резервного копирования и восстановления (SQL Server)](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
-  
-{ **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR }  
-Определяет, остановится ли операция резервного копирования после обнаружения ошибки в контрольной сумме страницы или продолжит работу.  
-  
-STOP_ON_ERROR  
-Определяет, что инструкция BACKUP должна завершиться с ошибкой, если проверка контрольной суммы страницы выдает отрицательный результат. Это поведение по умолчанию.  
-  
-CONTINUE_AFTER_ERROR  
-Определяет, что инструкция BACKUP должна продолжить выполнение, несмотря на возникновение таких ошибок, как неверные контрольные суммы или разрывы страницы.  
-  
-Если не удается создать [резервную копию заключительного фрагмента журнала](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) поврежденной базы данных, используя параметр NO_TRUNCATE, можно попытаться сделать это, указав параметр CONTINUE_AFTER_ERROR вместо NO_TRUNCATE.  
-  
-Дополнительные сведения см. в разделе [Возможные ошибки носителей во время резервного копирования и восстановления (SQL Server)](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
-  
-**Параметры совместимости**  
-  
-RESTART  
-Данный параметр не делает ничего. Он оставлен в этой версии для совместимости с предыдущими версиями SQL Server. 
-  
-**Параметры наблюдения**  
-  
-STATS [ **=** _percentage_ ]  
-Отображает сообщение каждый раз, когда завершается очередной *процент* задания, и используется для отслеживания хода выполнения. Если *процент* не задан, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выдает сообщение после каждых выполненных 10 процентов.  
-  
-Параметр STATS сообщает о готовности в процентах по отношению к порогу сообщения о следующем интервале. Показатель готовности в процентах имеет неточное значение; например при значении STATS=10, если процент готовности равен 40, то параметр может отображать 43 процента. Это не является проблемой для больших резервных наборов данных, поскольку показатель готовности в процентах перемещается очень медленно между обращениями ввода-вывода.  
-  
+
+**Параметры управления ошибками**
+
+Эти параметры позволяют определить, разрешены ли контрольные суммы резервных копий в операции резервного копирования и останавливается ли операция при обнаружении ошибки.
+
+{ **NO_CHECKSUM** | CHECKSUM } — определяет, используются ли контрольные суммы.
+
+NO_CHECKSUM — явно отменяет создание контрольных сумм (и проверку контрольных сумм страниц) для резервных копий. Это поведение по умолчанию.
+
+CHECKSUM — указывает, что при операции резервного копирования выполняется проверка контрольной суммы и наличия разрывов на каждой странице (если эти проверки включены и доступны), а также будет создаваться контрольная сумма для всей резервной копии.
+
+Использование контрольных сумм резервных копий может повлиять на производительность рабочей нагрузки и пропускной способности резервного копирования.
+
+Дополнительные сведения см. в статье об [ошибках носителей, возникающих во время резервного копирования и восстановления](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).
+
+{ **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR } — определяет, остановится ли операция резервного копирования после обнаружения ошибки в контрольной сумме страницы или продолжит работу.
+
+STOP_ON_ERROR — указывает, что операция BACKUP должна завершаться ошибкой при несовпадении контрольной суммы. Это поведение по умолчанию.
+
+CONTINUE_AFTER_ERROR — указывает, что операция BACKUP должна продолжать работу даже при наличии таких ошибок, как несовпадение контрольной суммы или разрыв страницы.
+
+Если не удается создать [резервную копию заключительного фрагмента журнала](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) поврежденной базы данных, используя параметр NO_TRUNCATE, можно попытаться сделать это, указав параметр CONTINUE_AFTER_ERROR вместо NO_TRUNCATE.
+
+Дополнительные сведения см. в статье об [ошибках носителей, возникающих во время резервного копирования и восстановления](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).
+
+**Параметры совместимости**
+
+RESTART — не действует. Он оставлен в этой версии для совместимости с предыдущими версиями SQL Server.
+
+**Параметры наблюдения**
+
+STATS [ **=** _percentage_ ] — отвечает за отображение сообщения при каждом завершении очередного *процента* задания и позволяет отслеживать ход выполнения. Если *процент* не задан, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выдает сообщение после каждых выполненных 10 процентов.
+
+Параметр STATS сообщает о готовности в процентах по отношению к порогу сообщения о следующем интервале. Показатель готовности в процентах имеет неточное значение; например при значении STATS=10, если процент готовности равен 40, то параметр может отображать 43 процента. Это не является проблемой для больших резервных наборов данных, поскольку показатель готовности в процентах перемещается очень медленно между обращениями ввода-вывода.
+
 ## <a name="limitations-for-sql-database-managed-instance"></a>Ограничения для управляемого экземпляра Базы данных SQL
+
 Максимальный размер чередующегося набора резервной копии составляет 195 ГБ (максимальный размер большого двоичного объекта). Чтобы уменьшить размер отдельного чередующегося набора и соблюсти это ограничение, можно увеличить число чередующихся наборов в команде резервного копирования.
 
-## <a name="security"></a>безопасность  
+## <a name="security"></a>безопасность
 
-### <a name="permissions"></a>Разрешения  
-Разрешения BACKUP DATABASE по умолчанию назначаются участникам предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_owner** и **db_backupoperator**.  
-  
-Проблемы с владением и разрешениями для URL-адреса могут помешать операции резервного копирования. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь возможность считывать и записывать данные на устройстве; учетная запись, от имени которой выполняется служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , должна иметь разрешения на запись.   
-  
-##  <a name="examples"></a> Примеры  
-В примере показано резервное копирование COPY_ONLY базы данных `Sales` в службу хранилища BLOB-объектов Microsoft Azure.  Имя учетной записи хранилища — `mystorageaccount`.  Контейнер называется `myfirstcontainer`.  Хранимая политика доступа была создана с правами на чтение, запись, удаление и составление списков.  Учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, были созданы с использованием подписанного URL-адреса, который связан с хранимой политикой доступа.  Сведения о резервном копировании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в службу хранилища BLOB-объектов Microsoft Azure см. в разделах [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) и [Резервное копирование в SQL Server по URL-адресу](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
+### <a name="permissions"></a>Разрешения
 
-```sql  
+Разрешения BACKUP DATABASE по умолчанию назначаются участникам предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_owner** и **db_backupoperator**.
+
+Проблемы с владением и разрешениями для URL-адреса могут помешать операции резервного копирования. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь возможность считывать и записывать данные на устройстве; учетная запись, от имени которой выполняется служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , должна иметь разрешения на запись.
+
+## <a name="examples"></a> Примеры
+
+В примере показано резервное копирование COPY_ONLY базы данных `Sales` в службу хранилища BLOB-объектов Microsoft Azure. Имя учетной записи хранилища — `mystorageaccount`. Контейнер называется `myfirstcontainer`. Хранимая политика доступа была создана с правами на чтение, запись, удаление и составление списков. Учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, были созданы с использованием подписанного URL-адреса, который связан с хранимой политикой доступа. Сведения о резервном копировании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в службу хранилища BLOB-объектов Microsoft Azure см. в разделах [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) и [Резервное копирование в SQL Server по URL-адресу](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
+
+```sql
 BACKUP DATABASE Sales
 TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_20160726.bak'
 WITH STATS = 5, COPY_ONLY;
 ```
 
-  
-## <a name="see-also"></a>См. также:  
-  
+## <a name="see-also"></a>См. также:
+
 [Восстановление базы данных](restore-statements-transact-sql.md)
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> |||| 
-> |---|---|---| 
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Управляемый экземпляр Базы данных SQL<br />](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
+> ||||
+> |---|---|---|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Управляемый экземпляр Базы данных SQL<br />](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 
 &nbsp;
 
-## <a name="parallel-data-warehouse"></a>Параллельное хранилище данных
+## <a name="analytics-platform-system"></a>Система платформы аналитики
 
-Создает резервную копию базы данных [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] и сохраняет резервную копию за пределами устройства, в указанном пользователем расположении в сети. Используйте эту инструкцию вместе с [RESTORE DATABASE (Parallel Data Warehouse)](../../t-sql/statements/restore-statements-transact-sql.md) для аварийного восстановления или копирования базы данных с одного устройства на другое.  
-  
-**Перед началом работы** изучите статью "Получение и настройка сервера резервного копирования" в [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
-  
-В среде [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] существует два типа резервных копий. *Полная резервная копия базы данных* — это резервная копия всей базы данных [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. *Разностная резервная копия* сохраняет только те изменения, которые были внесены с момента последнего полного резервного копирования. Резервная копия пользовательской базы данных включает пользователей базы данных и роли базы данных. Резервная копия базы данных master включает данные для входа.  
-  
-Дополнительные сведения о резервном копировании баз данных [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] см. в разделе "Резервное копирование и восстановление" в [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```sql  
---Create a full backup of a user database or the master database.  
-BACKUP DATABASE database_name  
-    TO DISK = '\\UNC_path\backup_directory'  
-    [ WITH [ ( ]  <with_options> [ ,...n ]  [ ) ] ]  
-[;]  
-  
---Create a differential backup of a user database.  
-BACKUP DATABASE database_name  
-    TO DISK = '\\UNC_path\backup_directory'  
-    WITH [ ( ] DIFFERENTIAL   
-    [ , <with_options> [ ,...n ] [ ) ]  
-[;]  
-  
-<with_options> ::=  
-    DESCRIPTION = 'text'  
-    | NAME = 'backup_name'  
-```  
-  
-## <a name="arguments"></a>Аргументы  
-*database_name*  
-Имя базы данных для создания резервной копии. Можно создать резервную копию базы данных master или пользовательской базы данных.  
-  
-TO DISK = '\\\\*UNC_path*\\*backup_directory*'  
-Сетевой путь к каталогу, в который [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] запишет файлы резервной копии. Например, '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'.  
-  
-- Путь к имени каталога резервного копирования должен уже существовать; его необходимо указать как полный путь UNC.  
-- Каталог резервного копирования, *backup_directory*, не должен существовать до запуска команды резервного копирования. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] создаст каталог резервного копирования.  
-- Путь к каталогу резервного копирования не может быть локальным путем или расположением на любом из узлов устройства [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
-- Максимальная длина пути UNC и имени каталога резервного копирования равна 200 символов.  
-- Для сервера или узла необходимо указать IP-адрес.  Невозможно указать для них имя хоста или сервера.  
-  
-DESCRIPTION = **'**_text_**'**  
-Задает текстовое описание резервной копии. Максимальная длина текста составляет 255 символов.  
-  
-Описание хранится в метаданных и отображается, если заголовок резервной копии восстанавливается с помощью инструкции RESTORE HEADERONLY.  
-  
-NAME = **'**_backup \_name_**'**  
-Задает имя резервной копии. Имя резервной копии может отличаться от имени базы данных.  
-  
-- Длина имени не может превышать 128 символов.  
-- Не может содержать путь.  
-- Должно начинаться с буквы, цифры или подчеркивания (_). Разрешенные специальные символы: подчеркивание (\_), дефис (-) или пробел ( ). Имена резервных копий не могут заканчиваться пробелом.  
-- Выполнение инструкции завершится ошибкой, если *backup_name* уже существует в заданном расположении.  
-  
-Это имя хранится в метаданных и отображается, если заголовок резервной копии восстанавливается с помощью инструкции RESTORE HEADERONLY.  
-  
-DIFFERENTIAL (разностная)  
-Указывает, что необходимо создать разностную резервную копию пользовательской базы данных. Если не задать этот параметр, по умолчанию выполняется полное резервное копирование базы данных. Имя разностной резервной копии не обязательно должно совпадать с именем полной резервной копии. Для отслеживания разностной резервной копии и соответствующей ей полной резервной копии рекомендуется использовать одно и то же имя с добавлением diff или full соответственно.  
-  
-Пример:  
-  
-`BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerFull';`  
-  
-`BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerDiff' WITH DIFFERENTIAL;`  
-  
-## <a name="permissions"></a>Разрешения  
-Требуется разрешение **BACKUP DATABASE** или участие в предопределенной роли базы данных **db_backupoperator**. Создать резервную копию базы данных master может только обычный пользователь, добавленный в предопределенную роль базы данных **db_backupoperator**. Создать резервную копию базы данных master может только роль **sa**, администратор структуры или участники предопределенной роли базы данных **sysadmin**.  
-  
-Требуется учетная запись Windows с разрешениями на доступ к каталогу резервного копирования, создание такого каталога и запись в него. Необходимо также сохранить имя учетной записи Windows и пароль в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Чтобы добавить эти сетевые учетные данные для [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте хранимую процедуру [sp_pdw_add_network_credentials (хранилище данных SQL)](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).  
-  
-Дополнительные сведения об управлении учетными данными в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] см. в разделе [Безопасность](#Security).  
-  
-## <a name="error-handling"></a>Обработка ошибок  
-Ошибки BACKUP DATABASE возникают в следующих ситуациях:  
-  
-- Недостаточно разрешений пользователя для создания резервной копии.  
+Создает резервную копию базы данных [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] и сохраняет резервную копию за пределами устройства, в указанном пользователем расположении в сети. Используйте эту инструкцию вместе с [RESTORE DATABASE (Analytics Platform System)](../../t-sql/statements/restore-statements-transact-sql.md) для аварийного восстановления или копирования базы данных с одного устройства на другое.
+
+**Перед началом работы** изучите статью "Получение и настройка сервера резервного копирования" в [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+
+В среде [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] существует два типа резервных копий. *Полная резервная копия базы данных* — это резервная копия всей базы данных [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. *Разностная резервная копия* сохраняет только те изменения, которые были внесены с момента последнего полного резервного копирования. Резервная копия пользовательской базы данных включает пользователей базы данных и роли базы данных. Резервная копия базы данных master включает данные для входа.
+
+Дополнительные сведения о резервном копировании баз данных [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] см. в разделе "Резервное копирование и восстановление" в [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+
+## <a name="syntax"></a>Синтаксис
+
+```sql
+--Create a full backup of a user database or the master database.
+BACKUP DATABASE database_name
+    TO DISK = '\\UNC_path\backup_directory'
+    [ WITH [ ( ]<with_options> [ ,...n ][ ) ] ]
+[;]
+
+--Create a differential backup of a user database.
+BACKUP DATABASE database_name
+    TO DISK = '\\UNC_path\backup_directory'
+    WITH [ ( ] DIFFERENTIAL
+    [ , <with_options> [ ,...n ] [ ) ]
+[;]
+
+<with_options> ::=
+    DESCRIPTION = 'text'
+    | NAME = 'backup_name'
+```
+
+## <a name="arguments"></a>Аргументы
+
+*database_name* — имя базы данных для создания резервной копии. Можно создать резервную копию базы данных master или пользовательской базы данных.
+
+TO DISK = '\\\\*UNC_path*\\*backup_directory*' — сетевой путь к каталогу, в который [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] запишет файлы резервной копии. Например, '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'.
+
+- Путь к имени каталога резервного копирования должен уже существовать; его необходимо указать как полный путь UNC.
+- Каталог резервного копирования, *backup_directory*, не должен существовать до запуска команды резервного копирования. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] создаст каталог резервного копирования.
+- Путь к каталогу резервного копирования не может быть локальным путем или расположением на любом из узлов устройства [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+- Максимальная длина пути UNC и имени каталога резервного копирования равна 200 символов.
+- Для сервера или узла необходимо указать IP-адрес. Невозможно указать для них имя хоста или сервера.
+
+DESCRIPTION = **'**_text_**'**  — задает текстовое описание резервной копии. Максимальная длина текста составляет 255 символов.
+
+Описание хранится в метаданных и отображается, если заголовок резервной копии восстанавливается с помощью инструкции RESTORE HEADERONLY.
+
+NAME = **'**_backup \_name_**'**  — указывает имя резервной копии. Имя резервной копии может отличаться от имени базы данных.
+
+- Длина имени не может превышать 128 символов.
+- Не может содержать путь.
+- Должно начинаться с буквы, цифры или подчеркивания (_). Разрешенные специальные символы: подчеркивание (\_), дефис (-) или пробел ( ). Имена резервных копий не могут заканчиваться пробелом.
+- Выполнение инструкции завершится ошибкой, если *backup_name* уже существует в заданном расположении.
+
+Это имя хранится в метаданных и отображается, если заголовок резервной копии восстанавливается с помощью инструкции RESTORE HEADERONLY.
+
+DIFFERENTIAL — указывает, что необходимо создать разностную резервную копию пользовательской базы данных. Если не задать этот параметр, по умолчанию выполняется полное резервное копирование базы данных. Имя разностной резервной копии не обязательно должно совпадать с именем полной резервной копии. Для отслеживания разностной резервной копии и соответствующей ей полной резервной копии рекомендуется использовать одно и то же имя с добавлением diff или full соответственно.
+
+Пример:
+
+`BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerFull';`
+
+`BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerDiff' WITH DIFFERENTIAL;`
+
+## <a name="permissions"></a>Разрешения
+
+Требуется разрешение **BACKUP DATABASE** или участие в предопределенной роли базы данных **db_backupoperator**. Создать резервную копию базы данных master может только обычный пользователь, добавленный в предопределенную роль базы данных **db_backupoperator**. Создать резервную копию базы данных master может только роль **sa**, администратор структуры или участники предопределенной роли базы данных **sysadmin**.
+
+Требуется учетная запись Windows с разрешениями на доступ к каталогу резервного копирования, создание такого каталога и запись в него. Необходимо также сохранить имя учетной записи Windows и пароль в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Чтобы добавить эти сетевые учетные данные для [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте хранимую процедуру [sp_pdw_add_network_credentials (Хранилище данных SQL)](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).
+
+Дополнительные сведения об управлении учетными данными в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] см. в разделе [Безопасность](#Security).
+
+## <a name="error-handling"></a>Обработка ошибок
+
+Ошибки BACKUP DATABASE возникают в следующих ситуациях:
+
+- Недостаточно разрешений пользователя для создания резервной копии.
 - [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] не имеет необходимых разрешений в сетевом расположении, где будет храниться резервная копия.
-- База данных не существует.  
-- Целевой каталог уже существует в общей сетевой папке.  
-- Целевая общая сетевая папка недоступна.  
-- В целевой общей сетевой папке недостаточно места для хранения резервной копии. Команда BACKUP DATABASE не подтверждает, что дискового пространства достаточно, прежде чем запустить резервное копирование, из-за чего при выполнении инструкции BACKUP DATABASE может возникнуть ошибка нехватки места. В случае нехватки места на диске [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] выполняет откат команды BACKUP DATABASE. Чтобы уменьшить размер базы данных, запустите [DBCC SHRINKLOG (хранилище данных SQL Azure)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)  
-- Попытка запустить резервное копирование в рамках транзакции.  
-  
-## <a name="general-remarks"></a>Общие замечания  
-Прежде чем выполнять резервное копирование базы данных, воспользуйтесь инструкцией [DBCC SHRINKLOG (хранилище данных SQL Azure)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md), чтобы уменьшить размер базы данных. 
- 
-Резервная копия [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] хранится в качестве набора файлов в том же каталоге.  
-  
-Разностная резервная копия обычно создается быстрее, чем полная, создавать такие копии можно чаще. Если на одной полной резервной копии основано несколько разностных, каждая из последних включает все изменения из предыдущей разностной резервной копии.  
-  
-Если отменить команду BACKUP, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] удалит целевой каталог и все файлы, созданные для этой резервной копии. Если [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] теряет сетевое подключение к папке, выполнить откат невозможно.  
-  
-Полные резервные копии и разностные резервные копии хранятся в разных каталогах. Соглашения об именовании не применяются для указания, что полная и разностная резервные копии связаны. Для отслеживания этого можно использовать собственные соглашения об именовании. Кроме того, это можно отследить, воспользовавшись инструкцией WITH DESCRIPTION для добавления описания, а затем воспользовавшись инструкцией RESTORE HEADERONLY для извлечения описания.  
-  
-## <a name="limitations-and-restrictions"></a>Ограничения  
-Невозможно создать разностную резервную копию базы данных master. Поддерживается только создание полных резервных копий базы данных master.  
-  
-Файлы резервных копий хранятся в формате, который подходит только для восстановления резервной копии на устройстве [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] с использованием инструкции [RESTORE DATABASE (Parallel Data Warehouse)](../../t-sql/statements/restore-statements-transact-sql.md).  
-  
-Резервное копирование, выполненное при помощи инструкции BACKUP DATABASE, невозможно использовать для передачи данных или пользовательских сведений в базы данных SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для этого можно воспользоваться функцией копирования удаленной таблицы. Дополнительные сведения см. в разделе "Копирование удаленной таблицы" в разделе [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
-  
-[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] использует технологию резервного копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для создания резервных копий и восстановления баз данных. Параметры резервного копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преднастроены для сжатия резервных копий. Невозможно задать параметры резервного копирования, такие как сжатие, контрольная сумма, размер блока и число буферов.  
-  
-На устройстве не может одновременно выполняться несколько операций резервного копирования или восстановления базы данных. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] помещает команды резервного копирования или восстановления в очередь до тех пор, пока текущая команда резервного копирования или восстановления не будет выполнена.  
-  
-Целевое устройство для восстановления резервной копии должно иметь не меньше вычислительных узлов, чем исходное. Целевое устройство может иметь больше вычислительных узлов, чем исходное, но не меньше.  
-  
-[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] не отслеживает расположение и имена резервных копий, поскольку резервные копии хранятся за пределами устройства.  
-  
-[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] отслеживает успешное или неудачное резервное копирование баз данных.  
-  
-Разностную резервную копию можно создать только в том случае, если успешно выполнено последнее полное резервное копирование. Предположим, что в понедельник вы создали полную резервную копию базы данных "Продажи", резервное копирование было выполнено успешно. Затем во вторник вы пытаетесь создать полную резервную копию базы данных "Продажи", и операция завершается сбоем. После этого сбоя невозможно создать разностную резервную копию на основе полной резервной копии, созданной в понедельник. Перед созданием разностной резервной копии необходимо успешно создать полную резервную копию.  
-  
-## <a name="metadata"></a>Метаданные  
-Эти динамические административные представления содержат сведения обо всех операциях резервного копирования, восстановления и загрузки. Эта информация сохраняется и после перезапуска системы.  
-  
-- [sys.pdw_loader_backup_runs (Transact-SQL)](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
-- [sys.pdw_loader_backup_run_details (Transact-SQL)](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
-- [sys.pdw_loader_run_stages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
-## <a name="performance"></a>Производительность  
-При создании резервной копии [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] сначала создает резервные копии метаданных, а затем выполняет параллельное резервное копирование данных базы данных, которые хранятся на вычислительных узлах. Данные копируются напрямую из каждого вычислительного узла в каталог резервного копирования. Чтобы обеспечить максимальную производительность при переносе данных из вычислительных узлов в каталог резервного копирования, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] контролирует число вычислительных узлов, которые параллельно копируют данные.  
-  
-## <a name="locking"></a>Блокировка  
-Осуществляет блокировку ExclusiveUpdate объекта DATABASE.  
-  
-##  <a name="Security"></a> безопасность  
-Резервные копии [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] не хранятся на устройстве. Следовательно, ИТ-специалисты отвечают за управление всеми аспектами безопасности резервных копий. Например, сюда относится управление безопасностью данными резервного копирования, безопасностью сервера, на котором хранятся резервные копии и безопасностью сетевой инфраструктуры, подключающей сервер резервного копирования к устройству [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
-  
-**Управление сетевыми учетными данными**  
-  
-Сетевой доступ к каталогу резервного копирования осуществляется по стандартным принципам безопасности при обмене файлами в Windows. Прежде чем выполнять резервное копирование, необходимо создать или указать учетную запись Windows, которая будет использоваться для проверки подлинности [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] в каталоге резервного копирования. Эта учетная запись Windows должна иметь разрешения на доступ к каталогу резервного копирования, создание такого каталога и запись в него.  
-  
-> [!IMPORTANT]  
-> Чтобы снизить риски безопасности в работе с данными, рекомендуется назначить одну учетную запись Windows исключительно для выполнения резервного копирования и восстановления. Предоставьте этой учетной записи разрешения исключительно для расположения резервного копирования.  
-  
-Необходимо сохранить имя пользователя и пароль в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], выполнив хранимую процедуру [sp_pdw_add_network_credentials (хранилище данных SQL)](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md). [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] использует диспетчер учетных данных Windows для хранения и шифрования имен пользователей и паролей в узле управления и в вычислительных узлах. Учетные данные не архивируются с помощью команды BACKUP DATABASE.  
-  
-Чтобы удалить сетевые учетные данные из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], см. раздел [sp_pdw_remove_network_credentials (хранилище данных SQL)](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).  
-  
-Чтобы перечислить все сетевые учетные данные, хранимые в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], воспользуйтесь динамическим административным представлением [sys.dm_pdw_network_credentials (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  
-  
-## <a name="examples"></a>Примеры  
-  
-### <a name="a-add-network-credentials-for-the-backup-location"></a>A. Добавление сетевых учетных данных для расположения резервного копирования  
-Чтобы создать резервную копию, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] должен иметь разрешения на чтение и запись в каталоге резервного копирования. В следующем примере показано добавление учетных данных для пользователя. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] сохранит эти учетные данные и будет использовать их для операций резервного копирования и восстановления.  
-  
-> [!IMPORTANT]  
-> По соображениям безопасности рекомендуется создать одну доменную учетную запись исключительно с целью создания резервных копий.  
-  
-```sql  
-EXEC sp_pdw_add_network_credentials 'xxx.xxx.xxx.xxx', 'domain1\backupuser', '*****';  
-```  
-  
-### <a name="b-remove-network-credentials-for-the-backup-location"></a>Б. Удаление сетевых учетных данных для расположения резервного копирования  
-В следующем примере показано удаление учетных данных для доменного пользователя из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
-  
-```sql  
-EXEC sp_pdw_remove_network_credentials 'xxx.xxx.xxx.xxx';  
-```  
-  
-### <a name="c-create-a-full-backup-of-a-user-database"></a>В. Создание полной резервной копии пользовательской базы данных  
-В следующем примере создается полная резервная копия пользовательской базы данных "Счета". [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] создаст каталог Invoices2013 и сохранит файлы резервной копии в каталог \\\10.192.63.147\backups\yearly\Invoices2013Full.  
-  
-```sql  
-BACKUP DATABASE Invoices TO DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';  
-```  
-  
-### <a name="d-create-a-differential-backup-of-a-user-database"></a>Г. Создание разностной резервной копии пользовательской базы данных  
-В следующем примере создается разностная резервная копия, которая содержит все изменения, внесенные с момента последнего полного резервного копирования базы данных "Счета". [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] создаст каталог \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff, в котором будут сохранены файлы. Описание Invoices 2013 differential backup будет сохранено вместе с информацией о заголовке резервной копии.  
-  
-Разностная резервная копия будет создана успешно только в том случае, если успешно выполнено предыдущее полное резервное копирование базы данных "Счета".  
-  
-```sql  
-BACKUP DATABASE Invoices TO DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff'  
-    WITH DIFFERENTIAL,   
-    DESCRIPTION = 'Invoices 2013 differential backup';  
-```  
-  
-### <a name="e-create-a-full-backup-of-the-master-database"></a>Д. Создание полной резервной копии базы данных master  
-В следующем примере создается полная резервная копия базы данных master и сохраняется в каталоге \\\10.192.63.147\backups\2013\daily\20130722\master.  
-  
-```sql  
-BACKUP DATABASE master TO DISK = '\\xxx.xxx.xxx.xxx\backups\2013\daily\20130722\master';  
-```  
-  
-### <a name="f-create-a-backup-of-appliance-login-information"></a>Е. Создайте резервную копию данных для входа на устройство.  
-Данные для входа на устройство хранятся в базе данных master. Для резервного копирования данных для входа на устройство потребуется создать резервную копию базы данных master.  
-  
-В следующем примере создается полная резервная копия базы данных master.  
-  
-```sql  
-BACKUP DATABASE master TO DISK = '\\xxx.xxx.xxx.xxx\backups\2013\daily\20130722\master'  
-WITH (   
-    DESCRIPTION = 'Master Backup 20130722',  
-    NAME = 'login-backup'  
-)  
-;  
-```  
-  
-## <a name="see-also"></a>См. также:  
-[RESTORE DATABASE (Parallel Data Warehouse)](../../t-sql/statements/restore-statements-transact-sql.md)   
+- База данных не существует.
+- Целевой каталог уже существует в общей сетевой папке.
+- Целевая общая сетевая папка недоступна.
+- В целевой общей сетевой папке недостаточно места для хранения резервной копии. Команда BACKUP DATABASE не подтверждает, что дискового пространства достаточно, прежде чем запустить резервное копирование, из-за чего при выполнении инструкции BACKUP DATABASE может возникнуть ошибка нехватки места. В случае нехватки места на диске [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] выполняет откат команды BACKUP DATABASE. Чтобы уменьшить размер базы данных, запустите [DBCC SHRINKLOG (хранилище данных SQL Azure)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)
+- Попытка запустить резервное копирование в рамках транзакции.
+
+## <a name="general-remarks"></a>Общие замечания
+
+Прежде чем выполнять резервное копирование базы данных, воспользуйтесь инструкцией [DBCC SHRINKLOG (хранилище данных SQL Azure)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md), чтобы уменьшить размер базы данных.
+
+Резервная копия [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] хранится в качестве набора файлов в том же каталоге.
+
+Разностная резервная копия обычно создается быстрее, чем полная, создавать такие копии можно чаще. Если на одной полной резервной копии основано несколько разностных, каждая из последних включает все изменения из предыдущей разностной резервной копии.
+
+Если отменить команду BACKUP, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] удалит целевой каталог и все файлы, созданные для этой резервной копии. Если [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] теряет сетевое подключение к папке, выполнить откат невозможно.
+
+Полные резервные копии и разностные резервные копии хранятся в разных каталогах. Соглашения об именовании не применяются для указания, что полная и разностная резервные копии связаны. Для отслеживания этого можно использовать собственные соглашения об именовании. Кроме того, это можно отследить, воспользовавшись инструкцией WITH DESCRIPTION для добавления описания, а затем воспользовавшись инструкцией RESTORE HEADERONLY для извлечения описания.
+
+## <a name="limitations-and-restrictions"></a>Ограничения
+
+Невозможно создать разностную резервную копию базы данных master. Поддерживается только создание полных резервных копий базы данных master.
+
+Файлы резервной копии сохраняются в формате, который применим только для восстановления резервной копии на устройстве [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] с помощью инструкции [RESTORE DATABASE (Analytics Platform System)](../../t-sql/statements/restore-statements-transact-sql.md).
+
+Резервное копирование, выполненное при помощи инструкции BACKUP DATABASE, невозможно использовать для передачи данных или пользовательских сведений в базы данных SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для этого можно воспользоваться функцией копирования удаленной таблицы. Дополнительные сведения см. в разделе "Копирование удаленной таблицы" в разделе [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+
+[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] использует технологию резервного копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для создания резервных копий и восстановления баз данных. Параметры резервного копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преднастроены для сжатия резервных копий. Невозможно задать параметры резервного копирования, такие как сжатие, контрольная сумма, размер блока и число буферов.
+
+На устройстве не может одновременно выполняться несколько операций резервного копирования или восстановления базы данных. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] помещает команды резервного копирования или восстановления в очередь до тех пор, пока текущая команда резервного копирования или восстановления не будет выполнена.
+
+Целевое устройство для восстановления резервной копии должно иметь не меньше вычислительных узлов, чем исходное. Целевое устройство может иметь больше вычислительных узлов, чем исходное, но не меньше.
+
+[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] не отслеживает расположение и имена резервных копий, поскольку резервные копии хранятся за пределами устройства.
+
+[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] отслеживает успешное или неудачное резервное копирование баз данных.
+
+Разностную резервную копию можно создать только в том случае, если успешно выполнено последнее полное резервное копирование. Предположим, что в понедельник вы создали полную резервную копию базы данных "Продажи", резервное копирование было выполнено успешно. Затем во вторник вы пытаетесь создать полную резервную копию базы данных "Продажи", и операция завершается сбоем. После этого сбоя невозможно создать разностную резервную копию на основе полной резервной копии, созданной в понедельник. Перед созданием разностной резервной копии необходимо успешно создать полную резервную копию.
+
+## <a name="metadata"></a>Метаданные
+
+Эти динамические административные представления содержат сведения обо всех операциях резервного копирования, восстановления и загрузки. Эта информация сохраняется и после перезапуска системы.
+
+- [sys.pdw_loader_backup_runs](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)
+- [sys.pdw_loader_backup_run_details](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)
+- [sys.pdw_loader_run_stages](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)
+
+## <a name="performance"></a>Производительность
+
+При создании резервной копии [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] сначала создает резервные копии метаданных, а затем выполняет параллельное резервное копирование данных базы данных, которые хранятся на вычислительных узлах. Данные копируются напрямую из каждого вычислительного узла в каталог резервного копирования. Чтобы обеспечить максимальную производительность при переносе данных из вычислительных узлов в каталог резервного копирования, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] контролирует число вычислительных узлов, которые параллельно копируют данные.
+
+## <a name="locking"></a>Блокировка
+
+Осуществляет блокировку ExclusiveUpdate объекта DATABASE.
+
+## <a name="Security"></a> безопасность
+
+Резервные копии [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] не хранятся на устройстве. Следовательно, ИТ-специалисты отвечают за управление всеми аспектами безопасности резервных копий. Например, сюда относится управление безопасностью данными резервного копирования, безопасностью сервера, на котором хранятся резервные копии и безопасностью сетевой инфраструктуры, подключающей сервер резервного копирования к устройству [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+
+**Управление сетевыми учетными данными**
+
+Сетевой доступ к каталогу резервного копирования осуществляется по стандартным принципам безопасности при обмене файлами в Windows. Прежде чем выполнять резервное копирование, необходимо создать или указать учетную запись Windows, которая будет использоваться для проверки подлинности [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] в каталоге резервного копирования. Эта учетная запись Windows должна иметь разрешения на доступ к каталогу резервного копирования, создание такого каталога и запись в него.
+
+> [!IMPORTANT]
+> Чтобы снизить риски безопасности в работе с данными, рекомендуется назначить одну учетную запись Windows исключительно для выполнения резервного копирования и восстановления. Предоставьте этой учетной записи разрешения исключительно для расположения резервного копирования.
+
+Имя пользователя и пароль следует сохранить в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], выполнив хранимую процедуру [sp_pdw_add_network_credentials (Хранилище данных SQL)](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md). [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] использует диспетчер учетных данных Windows для хранения и шифрования имен пользователей и паролей в узле управления и в вычислительных узлах. Учетные данные не архивируются с помощью команды BACKUP DATABASE.
+
+Чтобы удалить сетевые учетные данные из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], воспользуйтесь инструкциями из статьи [sp_pdw_remove_network_credentials (SQL Data Warehouse)](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) (sp_pdw_remove_network_credentials (Хранилище данных SQL)).
+
+Чтобы перечислить все сетевые учетные данные, сохраненные в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], воспользуйтесь динамическим административным представлением [sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).
+
+## <a name="examples"></a>Примеры
+
+### <a name="a-add-network-credentials-for-the-backup-location"></a>A. Добавление сетевых учетных данных для расположения резервного копирования
+
+Чтобы создать резервную копию, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] должен иметь разрешения на чтение и запись в каталоге резервного копирования. В следующем примере показано добавление учетных данных для пользователя. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] сохранит эти учетные данные и будет использовать их для операций резервного копирования и восстановления.
+
+> [!IMPORTANT]
+> По соображениям безопасности рекомендуется создать одну доменную учетную запись исключительно с целью создания резервных копий.
+
+```sql
+EXEC sp_pdw_add_network_credentials 'xxx.xxx.xxx.xxx', 'domain1\backupuser', '*****';
+```
+
+### <a name="b-remove-network-credentials-for-the-backup-location"></a>Б. Удаление сетевых учетных данных для расположения резервного копирования
+
+В следующем примере показано удаление учетных данных для доменного пользователя из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+
+```sql
+EXEC sp_pdw_remove_network_credentials 'xxx.xxx.xxx.xxx';
+```
+
+### <a name="c-create-a-full-backup-of-a-user-database"></a>В. Создание полной резервной копии пользовательской базы данных
+
+В следующем примере создается полная резервная копия пользовательской базы данных "Счета". [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] создаст каталог Invoices2013 и сохранит файлы резервной копии в каталог \\\10.192.63.147\backups\yearly\Invoices2013Full.
+
+```sql
+BACKUP DATABASE Invoices TO DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';
+```
+
+### <a name="d-create-a-differential-backup-of-a-user-database"></a>Г. Создание разностной резервной копии пользовательской базы данных
+
+В следующем примере создается разностная резервная копия, которая содержит все изменения, внесенные с момента последнего полного резервного копирования базы данных "Счета". [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] создаст каталог \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff, в котором будут сохранены файлы. Описание Invoices 2013 differential backup будет сохранено вместе с информацией о заголовке резервной копии.
+
+Разностная резервная копия будет создана успешно только в том случае, если успешно выполнено предыдущее полное резервное копирование базы данных "Счета".
+
+```sql
+BACKUP DATABASE Invoices TO DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff'
+    WITH DIFFERENTIAL,
+    DESCRIPTION = 'Invoices 2013 differential backup';
+```
+
+### <a name="e-create-a-full-backup-of-the-master-database"></a>Д. Создание полной резервной копии базы данных master
+
+В следующем примере создается полная резервная копия базы данных master и сохраняется в каталоге \\\10.192.63.147\backups\2013\daily\20130722\master.
+
+```sql
+BACKUP DATABASE master TO DISK = '\\xxx.xxx.xxx.xxx\backups\2013\daily\20130722\master';
+```
+
+### <a name="f-create-a-backup-of-appliance-login-information"></a>Е. Создайте резервную копию данных для входа на устройство.
+
+Данные для входа на устройство хранятся в базе данных master. Для резервного копирования данных для входа на устройство потребуется создать резервную копию базы данных master.
+
+В следующем примере создается полная резервная копия базы данных master.
+
+```sql
+BACKUP DATABASE master TO DISK = '\\xxx.xxx.xxx.xxx\backups\2013\daily\20130722\master'
+WITH (
+    DESCRIPTION = 'Master Backup 20130722',
+    NAME = 'login-backup'
+)
+;
+```
+
+## <a name="see-also"></a>См. также:
+
+[RESTORE DATABASE (Parallel Data Warehouse)](../../t-sql/statements/restore-statements-transact-sql.md)
 
 ::: moniker-end

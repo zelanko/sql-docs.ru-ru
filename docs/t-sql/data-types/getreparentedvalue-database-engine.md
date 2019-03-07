@@ -18,17 +18,17 @@ ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6f96840516b160a7fef7fd97454250131695fc7f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4bca90e100baf2a7509636966ee1391645827bb9
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033055"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662788"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает узел, путь к которому от корневого элемента состоит из пути к *newRoot* и пути от *oldRoot* к узлу *this*.
+Возвращает узел, путь к которому от корневого элемента состоит из пути к _newRoot_ и пути от _oldRoot_.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,11 +43,11 @@ SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newR
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-*oldRoot*  
+_oldRoot_  
 **hierarchyid** узла, представляющего уровень иерархии, который подлежит изменению.
   
-*newRoot*  
-Идентификатор **hierarchyid**, представляющий узел, которым будет заменен раздел *oldRoot* текущего узла при перемещении узла.
+_newRoot_  
+Тип **hierarchyid**, представляющий узел. Замените раздел _oldRoot_ текущего узла, чтобы переместить этот узел.
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
 **Возвращаемый тип SQL Server:hierarchyid**
@@ -55,7 +55,7 @@ SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newR
 **Возвращаемый тип CLR:SqlHierarchyId**
   
 ## <a name="remarks"></a>Remarks  
-Может использоваться для изменения дерева путем перемещения узлов из *oldRoot* в *newRoot*. Метод GetReparentedValue может быть использован для перемещения узла иерархии в новое местоположение в иерархии. Тип данных **hierarchyid** представляет, но не обеспечивает соблюдение иерархической структуры. Пользователям необходимо убедиться в том, что структура идентификатора иерархии пригодна для нового местоположения. Уникальный индекс с типом данных **hierarchyid** позволяет избежать повторения записей. Пример перемещения поддерева целиком см. в статье [Иерархические данные (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md).
+Используется для изменения дерева путем перемещения узлов из _oldRoot_ в _newRoot_. Метод GetReparentedValue используется для перемещения узла иерархии в новое расположение в иерархии. Тип данных **hierarchyid** представляет иерархическую структуру, но не обеспечивает ее соблюдение. Пользователям необходимо убедиться в том, что структура идентификатора иерархии пригодна для нового местоположения. Уникальный индекс с типом данных **hierarchyid** позволяет избежать повторения записей. Пример перемещения поддерева целиком см. в статье [Иерархические данные (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Примеры  
   

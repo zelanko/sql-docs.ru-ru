@@ -13,12 +13,12 @@ ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 657118f6b10b32d85f9020f01d95bf12eecb4498
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: aedefdb9234279a3be93bcfb4705e227e0badebd
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701142"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590399"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>Создание связи между таблицами на диаграмме (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "51701142"
   
 2.  Перетащите выбранные столбцы в связанную таблицу.  
   
-3.  Отображаются два диалоговых окна: **Связь по внешнему ключу** и **Таблицы и столбцы**, второе отображается на переднем плане.  
+3.  Отобразятся два диалоговых окна: **Связь по внешнему ключу** и **Таблицы и столбцы**, второе отображается на переднем плане.  
   
-4.  **Имя связи** устанавливается системой в формате FK_*локальная_таблица*_*таблица_внешнего_ключа*. Можно изменить это значение.  
+4.  **Имя связи** устанавливается системой в формате FK_*локальная_таблица*\_*таблица_внешнего_ключа*. Можно изменить это значение.  
   
 5.  Убедитесь, что **Таблица первичного ключа** правильно задает таблицу.  
   

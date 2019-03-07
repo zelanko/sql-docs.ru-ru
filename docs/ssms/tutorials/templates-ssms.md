@@ -5,7 +5,7 @@ keywords: SQL Server, SSMS, SQL Server Management Studio, шаблоны
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
-ms.topic: Tutorial
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 4d3f2de58bdbfb4f476710bb9bb629dcac3db940
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e83eea4a1f7dbcf40a4b221ca1936e823d59c86f
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670042"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662768"
 ---
-# <a name="tutorial-using-templates-in-sql-server-management-studio"></a>Руководство. Использование шаблонов в SQL Server Management Studio
+# <a name="tutorial-using-templates-in-sql-server-management-studio"></a>Учебник. Использование шаблонов в среде SQL Server Management Studio
 Это руководство знакомит вас с готовыми шаблонами Transact-SQL (T-SQL), доступными в среде SQL Server Management Studio (SSMS). Вы узнаете, как выполнять следующие задачи:
 
 > [!div class="checklist"]

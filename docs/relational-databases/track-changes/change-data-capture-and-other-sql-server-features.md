@@ -12,12 +12,12 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a293914cad908b8c4d7fc295bf1e0846446dc2ec
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: eddf09ca0ff3f07f058b439c49a69eea366add85
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991827"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590409"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Система отслеживания измененных данных и другие функции SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "53991827"
   
 2.  Создайте задание отслеживания и задание очистки в новой основной базе данных (ранее зеркальной базе данных). Создание заданий выполняйте с помощью хранимой процедуры [sp_cdc_add_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md) .  
   
- Для просмотра текущей конфигурации задания очистки или отслеживания пользуйтесь хранимой процедурой [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) в новом экземпляре основного сервера. Для конкретной базы данных задание отслеживания называется cdc.*имя_базы_данных*_capture, а задание очистки — cdc.*имя_базы_данных*_cleanup, где *имя_базы_данных* — имя базы данных.  
+ Для просмотра текущей конфигурации задания очистки или отслеживания пользуйтесь хранимой процедурой [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) в новом экземпляре основного сервера. Для конкретной базы данных задание отслеживания называется cdc.*database\_name*\_capture, а задание очистки — cdc.*database\_name*\_cleanup, где *database_name* — имя базы данных.  
   
- Для изменения конфигурации задания пользуйтесь хранимой процедурой [sys.sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
+ Для изменения конфигурации задания пользуйтесь хранимой процедурой [sys.sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md) .  
   
  Сведения о зеркальном отображении базы данных см. в разделе [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   

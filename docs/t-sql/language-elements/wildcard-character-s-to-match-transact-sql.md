@@ -22,20 +22,20 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df735e98cb20643f9030c77f8e5dcc22ab126fef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4620f38c01f1bd7c4158387a607da12fbb95b865
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847462"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425819"
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (символы-шаблоны для сопоставления) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Соответствуют какому-либо одиночному символу в пределах указанного диапазона или набора, заданного в квадратных скобках `[ ]`. Эти символы-шаблоны могут использоваться в тех операциях сравнения строк, которые задействуют соответствие шаблону, например `LIKE` или `PATINDEX`.  
+Соответствуют какому-либо одиночному символу в пределах указанного диапазона или набора, заданного в квадратных скобках `[ ]`. Эти символы-шаблоны могут использоваться в тех операциях сравнения строк, которые задействуют соответствие шаблону, например `LIKE` или `PATINDEX`.  
   
 ## <a name="examples"></a>Примеры  
-### <a name="a-simple-example"></a>A. Простой пример   
+### <a name="a-simple-example"></a>А. Простой пример   
 В следующем примере возвращаются имена, начинающиеся с буквы `m`. `[n-z]` указывает, что вторая буква должна находиться в диапазоне от `n` до `z`. Символ-шаблон процента `%` разрешает любые символы, начинающиеся с символа 3, или не разрешает ни одного. Этому условию удовлетворяют базы данных `model` и `msdb`. База данных `master` не соответствует условию и исключается из результирующего набора.
  
 ```sql
@@ -67,7 +67,7 @@ INNER JOIN Person.Address AS a ON a.AddressID = ea.AddressID
 WHERE a.PostalCode LIKE '[0-9][0-9][0-9][0-9]';  
 ```  
   
- Результирующий набор:  
+ Ниже приведен результирующий набор.  
   
 ```  
 EmployeeID      FirstName      LastName      PostalCode  

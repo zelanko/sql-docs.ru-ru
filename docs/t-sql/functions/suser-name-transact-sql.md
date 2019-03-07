@@ -25,19 +25,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4642513fa6301ef8826562ff0141d8c13227f9c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b3de8ceac86cf0c08f1ff543c8d964a1960f615
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818442"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662638"
 ---
 # <a name="susername-transact-sql"></a>SUSER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
-  Возвращает идентификационное имя учетной записи пользователя.  
+Возвращает идентификационное имя учетной записи пользователя.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,28 +47,28 @@ SUSER_NAME ( [ server_user_id ] )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *server_user_id*  
- Идентификационный номер учетной записи пользователя. Необязательный аргумент *server_user_id* имеет тип **int**. Аргумент *server_user_id* может быть идентификационным номером любого имени для входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также пользователя или группы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, которые обладают разрешениями на подключение к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если аргумент *server_user_id* не указан, возвращается идентификационное имя для входа текущего пользователя. Если параметр содержит слово NULL, то возвращается NULL.  
+_server\_user\_id_  
+Идентификационный номер учетной записи пользователя. Необязательный аргумент _server\_user\_id_ имеет тип **int**. Аргумент _server\_user\_id_ может быть идентификационным номером любого имени для входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также пользователя или группы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows с разрешением на подключение к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если аргумент _server\_user\_id_ не указан, возвращается идентификационное имя для входа текущего пользователя. Если параметр содержит слово NULL, то возвращается NULL.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- **nvarchar(128)**  
+**nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0 идентификатор безопасности (SID) заменил идентификатор пользователя сервера (SUID).  
+В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0 идентификатор безопасности (SID) заменил идентификатор пользователя сервера (SUID).  
   
- SUSER_NAME возвращает имя для входа, которое присутствует в системной таблице **syslogins**.  
+SUSER_NAME возвращает имя для входа, которое присутствует в системной таблице **syslogins**.  
   
- SUSER_NAME можно использовать в списке выборки в предложении WHERE, а также везде, где разрешено использовать выражения. Вслед за функцией SUSER_NAME всегда должны следовать скобки, даже если параметр не указан.  
+Функция SUSER_NAME может применяться в списке выбора, в предложении WHERE и в выражении, где это допустимо. Используйте круглые скобки после SUSER_NAME, даже если параметр не указан.  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример иллюстрирует получение идентификационного имени учетной записи с идентификационным номером `1`.  
+Следующий пример иллюстрирует получение идентификационного имени учетной записи с идентификационным номером `1`.  
   
 ```  
 SELECT SUSER_NAME(1);  
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [SUSER_ID (Transact-SQL)](../../t-sql/functions/suser-id-transact-sql.md)   
- [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)  
+[SUSER_ID (Transact-SQL)](../../t-sql/functions/suser-id-transact-sql.md)   
+[Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

@@ -11,20 +11,20 @@ ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 05dcf3c0c5850b95aa9d657ee228138b0ca0e57d
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 4d7f668c35cf65caa48fda0e58c7d8b73a682385
+ms.sourcegitcommit: 5861b7b0cd9bf6d43cefad5d0356f5821bd17d4a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256849"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56411933"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Сопоставление типов данных в мастере импорта и экспорта SQL Server
  В мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно задать имя, тип данных и свойства типа данных для столбцов в новых целевых таблицах и файлах, но нельзя указать настраиваемые преобразования для значений столбцов. Поэтому важное значение имеет встроенное сопоставление типов данных из источника с типами данных в назначении.  
   
 ##  <a name="wizardMapping"></a> Каким образом мастер выполняет сопоставление типов данных источника и назначения?
 При сопоставлении типов данных из одной системы или версии базы данных с другой мастер использует файлы сопоставления, устанавливаемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Например, он может сопоставить типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с типами данных Oracle. По умолчанию файлы сопоставления в XML-формате устанавливаются в следующие папки.
--   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\** (для 64-разрядной версии)
--   **C:\Program Files (x86)\Microsoft SQL Server\130\DTSMappingFiles\** (для 32-разрядной версии).  
+-   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\\** (для 64-разрядной версии)
+-   **C:\Program Files (x86)\Microsoft SQL Server\130\DTSMappingFiles\\** (для 32-разрядной версии).  
   
  Если существующий файл сопоставления был изменен или в папку был добавлен новый файл сопоставления, необходимо закрыть и заново открыть мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , чтобы загрузить новые или измененные файлы.  
  

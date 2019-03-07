@@ -30,19 +30,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b4a2ef2ec0367bdae858578f07cc062fd5cf50d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f35a455b23d9fed53d40810a4aac87353458f11
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799412"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801458"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Отмечает успешное завершение явной или неявной транзакции. Если значение @@TRANCOUNT равно 1, то инструкция COMMIT TRANSACTION делает все изменения, произведенные с начала транзакции, постоянной частью базы данных, освобождает ресурсы, удерживаемые транзакцией, и уменьшает значение параметра @@TRANCOUNT до 0. Если значение переменной @@TRANCOUNT больше 1, инструкция COMMIT TRANSACTION уменьшает значение @@TRANCOUNT только на 1 и оставляет транзакцию активной.  
+  Отмечает успешное завершение явной или неявной транзакции. Если значение @@TRANCOUNT равно 1, то инструкция COMMIT TRANSACTION делает все изменения, произведенные с начала транзакции, постоянной частью базы данных, освобождает ресурсы транзакции и уменьшает значение параметра @@TRANCOUNT до 0. Если значение @@TRANCOUNT больше 1, инструкция COMMIT TRANSACTION уменьшает значение @@TRANCOUNT только на 1 и оставляет транзакцию активной.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на статью") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -63,26 +63,26 @@ COMMIT [ TRAN | TRANSACTION ]
   
 ## <a name="arguments"></a>Аргументы  
  *transaction_name*  
- **ПРИМЕНИМО К**: SQL Server и база данных SQL Azure
+ **ПРИМЕНИМО К:** SQL Server и База данных SQL Azure
  
- Не учитывается компонентом [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. *transaction_name* указывает имя транзакции, присвоенное предыдущей инструкцией BEGIN TRANSACTION. Аргумент *transaction_name* должен соответствовать правилам для идентификаторов, но его длина не может превышать 32 символа. *transaction_name* может использоваться как указание программистам, с какой вложенной инструкцией BEGIN TRANSACTION связана инструкция COMMIT TRANSACTION.  
+ Не учитывается компонентом [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. *transaction_name* указывает имя транзакции, присвоенное предыдущей инструкцией BEGIN TRANSACTION. Аргумент *transaction_name* должен соответствовать правилам для идентификаторов, но его длина не может превышать 32 символа. *transaction_name* сообщает программистам, с какой вложенной инструкцией BEGIN TRANSACTION связана инструкция COMMIT TRANSACTION.  
   
  *@tran_name_variable*  
- **ПРИМЕНИМО К**: SQL Server и база данных SQL Azure  
+ **ПРИМЕНИМО К:** SQL Server и База данных SQL Azure  
  
 Имя определенной пользователем переменной, содержащей допустимое имя транзакции. Переменная должна быть объявлена с типом данных char, varchar, nchar или nvarchar. Если переменной присваивается значение длиной более 32 символов, используются только первые 32, остальные усекаются.  
   
  DELAYED_DURABILITY  
- **ПРИМЕНИМО К**: SQL Server и база данных SQL Azure   
+ **ПРИМЕНИМО К:** SQL Server и База данных SQL Azure   
 
- Параметр, который запрашивает фиксацию этой транзакции с задержанной устойчивостью. Этот запрос пропускается, если база данных была изменена с использованием `DELAYED_DURABILITY = DISABLED` или `DELAYED_DURABILITY = FORCED`. Дополнительные сведения см. в статье [Управление устойчивостью транзакций](../../relational-databases/logs/control-transaction-durability.md).  
+ Параметр, который запрашивает эту транзакцию, должен фиксироваться с задержанной устойчивостью. Этот запрос пропускается, если база данных была изменена с использованием `DELAYED_DURABILITY = DISABLED` или `DELAYED_DURABILITY = FORCED`. Дополнительные сведения см. в разделе [Управление устойчивостью транзакций](../../relational-databases/logs/control-transaction-durability.md).  
   
 ## <a name="remarks"></a>Remarks  
  Обязанностью программиста на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] является вызов инструкции COMMIT TRANSACTION только в том случае, когда все данные, относящиеся к транзакции, логически верны.  
   
- Если зафиксированная транзакция является распределенной транзакцией [!INCLUDE[tsql](../../includes/tsql-md.md)], инструкция COMMIT TRANSACTION вызывает координатор MS DTC для использования двухфазного протокола фиксации на всех серверах, участвующих в транзакции. Если локальная транзакция охватывает две или более базы данных одного и того же экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], то экземпляр использует встроенный двухэтапный алгоритм для фиксирования всех баз данных, вызванных в транзакции.  
+ Если зафиксированная транзакция является распределенной транзакцией [!INCLUDE[tsql](../../includes/tsql-md.md)], инструкция COMMIT TRANSACTION вызывает координатор MS DTC для использования двухфазного протокола фиксации на всех серверах, участвующих в транзакции. Если локальная транзакция охватывает две или более базы данных одного и того же экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], то экземпляр использует встроенную двухфазную фиксацию для всех баз данных, вызванных в транзакции.  
   
- При использовании вложенных транзакций фиксация внутренних транзакций не освобождает ресурсы и не делает их изменения постоянными. Изменения данных становятся постоянными и ресурсы освобождаются только при фиксации внешней транзакции. Вызов каждой инструкции COMMIT TRANSACTION приводит к тому, что если значение @@TRANCOUNT больше 1, то значение переменной @@TRANCOUNT просто уменьшается на 1. Когда значение @@TRANCOUNT уменьшится до нуля, вся внешняя транзакция фиксируется. Так как аргумент *transaction_name* не учитывается компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)], вызов инструкции COMMIT TRANSACTION, содержащей ссылку на имя внешней транзакции, приводит к тому, что если существуют необработанные внутренние транзакции, то значение @@TRANCOUNT уменьшается только на 1.  
+ При использовании вложенных транзакций фиксация внутренних транзакций не освобождает ресурсы и не делает их изменения постоянными. Изменения данных становятся постоянными и ресурсы освобождаются только при фиксации внешней транзакции. Вызов каждой инструкции COMMIT TRANSACTION приводит к тому, что если значение @@TRANCOUNT больше 1, то значение переменной @@TRANCOUNT просто уменьшается на 1. Когда значение @@TRANCOUNT уменьшится до нуля, вся внешняя транзакция фиксируется. Так как аргумент *transaction_name* не учитывается компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)], вызов инструкции COMMIT TRANSACTION, содержащей ссылку на имя внешней транзакции, приводит к тому, что если существуют необработанные внутренние транзакции, то значение @@TRANCOUNT уменьшается только на 1.  
   
  Вызов инструкции COMMIT TRANSACTION, когда значение параметра @@TRANCOUNT равно нулю, приводит к ошибке, так как нет соответствующей инструкции BEGIN TRANSACTION.  
   
@@ -96,7 +96,7 @@ COMMIT [ TRAN | TRANSACTION ]
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-committing-a-transaction"></a>A. Фиксация транзакции  
-**ОБЛАСТЬ ПРИМЕНЕНИЯ:** SQL Server, база данных SQL Azure, хранилище данных SQL Azure и Parallel Data Warehouse   
+**ПРИМЕНИМО К:** SQL Server, База данных SQL Azure, Хранилище данных SQL Azure и Parallel Data Warehouse   
 
 В следующем примере удаляется кандидат на вакансию. В нем используется база данных AdventureWorks. 
   
@@ -108,9 +108,9 @@ COMMIT TRANSACTION;
 ```  
   
 ### <a name="b-committing-a-nested-transaction"></a>Б. Фиксация вложенной транзакции  
-**ПРИМЕНИМО К**: SQL Server и база данных SQL Azure    
+**ПРИМЕНИМО К:** SQL Server и База данных SQL Azure    
 
-В следующем примере создается таблица и формируется три уровня вложенных транзакций, которые затем фиксируются. Хотя каждая инструкция `COMMIT TRANSACTION` имеет параметр *transaction_name*, связи между инструкциями `COMMIT TRANSACTION` и `BEGIN TRANSACTION` не существует. Параметры *transaction_name* удобны для понимания и помогают программисту удостовериться в том, что закодировано верное количество фиксаций, необходимое для того, чтобы уменьшить значение `@@TRANCOUNT` до 0 и таким образом зафиксировать внешнюю транзакцию. 
+В следующем примере создается таблица и формируется три уровня вложенных транзакций, которые затем фиксируются. Хотя каждая инструкция `COMMIT TRANSACTION` имеет параметр *transaction_name*, связи между инструкциями `COMMIT TRANSACTION` и `BEGIN TRANSACTION` не существует. Параметры *transaction_name* позволяют программисту удостовериться в том, что закодировано правильное количество фиксаций, необходимое для того, чтобы уменьшить значение `@@TRANCOUNT` до 0 и таким образом зафиксировать внешнюю транзакцию. 
   
 ```   
 IF OBJECT_ID(N'TestTran',N'U') IS NOT NULL  
@@ -172,5 +172,4 @@ PRINT N'Transaction count after COMMIT OuterTran = '
  [ROLLBACK WORK (Transact-SQL)](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION (Transact-SQL)](../../t-sql/language-elements/save-transaction-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
-  
   

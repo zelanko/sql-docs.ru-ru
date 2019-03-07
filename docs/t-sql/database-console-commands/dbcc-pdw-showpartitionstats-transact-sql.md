@@ -12,19 +12,19 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4417dcd94c3dd24e22805f713901c5ddfbf6b727
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 50f6d68034ce6575c765b80c6fb1a658baba6d0a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035025"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802968"
 ---
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Отображает размер и число строк для каждой секции таблицы в базе данных [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
-![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Синтаксические обозначения в Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,16 +42,16 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
 Необходимо разрешение **VIEW SERVER STATE**.
   
 ## <a name="result-sets"></a>Результирующие наборы  
-Это результат выполнения команды DBCC PDW_SHOWPARTITIONSTATS.
+Этот набор является результатом выполнения команды DBCC PDW_SHOWPARTITIONSTATS.
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |partition_number|ssNoversion|Номер секции.|  
 |used_page_count|BIGINT|Число страниц, используемых для данных.|  
-|reserved_page_count|BIGINT|Число страниц, выделенных для секции.|  
+|reserved_page_count|BIGINT|Количество страниц, зарезервированных в секции.|  
 |row_count|BIGINT|Число строк в секции.|  
 |pdw_node_id|ssNoversion|Вычислительный узел для данных.|  
-|distribution_id|ssNoversion|Идентификатор распространения для данных.|  
+|distribution_id|ssNoversion|Идентификатор единицы распределения для данных.|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdwshowpartitionstats-basic-syntax-examples"></a>A. Примеры базового синтаксиса DBCC PDW_SHOWPARTITIONSTATS  
@@ -65,4 +65,4 @@ DBCC PDW_SHOWPARTITIONSTATS (FactInternetSales);
 ## <a name="see-also"></a>См. также раздел
 [DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)](dbcc-pdw-showexecutionplan-transact-sql.md)  
 [DBCC PDW_SHOWSPACEUSED (Transact-SQL)](dbcc-pdw-showspaceused-transact-sql.md)  
-  
+ 

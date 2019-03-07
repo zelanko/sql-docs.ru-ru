@@ -5,7 +5,7 @@ keywords: SQL Server, SSMS, SQL Server Management Studio, скрипты, на
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
-ms.topic: Tutorial
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: d2ebf81dcab52be193d1472f5f1dc4f4495aba50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce0ffdaa26e0ca48eef710f8368b8cb2b0c92191
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711232"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662828"
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>Учебник. Создание скриптов для объектов в среде SQL Server Management Studio
 В этом учебнике вы научитесь создавать скрипты Transact-SQL (T-SQL) для различных объектов, доступных в SQL Server Management Studio (SSMS). В нем приводятся примеры создания скриптов для следующих объектов:
@@ -47,7 +47,7 @@ ms.locfileid: "47711232"
 - Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Скачайте [образцы баз данных AdventureWorks2016](https://github.com/Microsoft/sql-server-samples/releases).
 
-Инструкции по восстановлению баз данных в SSMS см. в статье [Восстановление базы данных](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+См. инструкции по восстановлению резервной копии базы данных с помощью SSMS см. в статье: [Восстановление базы данных](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
 ## <a name="script-queries-from-the-gui"></a>Создание скриптов для запросов в графическом пользовательском интерфейсе

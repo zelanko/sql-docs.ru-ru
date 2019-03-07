@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76db4e710c2bd3d6eac25383a1db66a3720280ca
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d2ddd236ee002015390336c25039158bba70a998
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014509"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590372"
 ---
 # <a name="data-type-conversion-database-engine"></a>Преобразование типов данных (ядро СУБД)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -100,7 +100,7 @@ CAST ( $157.27 AS VARCHAR(10) )
 |**datetime**, **smalldatetime**|**Дата**|  
 |Все значения NULL|**Variant** со значением NULL|  
   
-Все одиночные значения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преобразуются в одиночные значения [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], за исключением **binary**, **varbinary** и **image**. В [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] эти значения преобразуются в одномерные массивы **Byte()**. Этот массив имеет диапазон **Byte(** от 0 до *length*1 **)**, где *length* — число байтов в значениях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** или **image**.
+Все одиночные значения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преобразуются в одиночные значения [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], за исключением **binary**, **varbinary** и **image**. В [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] эти значения преобразуются в одномерные массивы **Byte()**. Этот массив имеет диапазон **Byte(** от 0 до _length_ 1 **)**, где *length* — число байтов в значениях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** или **image**.
   
 Ниже приведена таблица преобразования типов данных [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] в типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   

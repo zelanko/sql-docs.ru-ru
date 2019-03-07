@@ -18,12 +18,12 @@ ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8f7c5e2cf81cd4b90a2667cb51e4110a8313802a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 527c08a55fca49f2545c0757091f67442b3a495f
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014756"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676022"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ SqlInt16 GetLevel ( )
 ## <a name="remarks"></a>Remarks  
 Используется, чтобы определить уровень одного или нескольких узлов или сопоставить узлы элементам определенного уровня. Корень иерархии — уровень 0.
   
-Метод GetLevel очень полезен для индексов поиска преимущественно в ширину. Дополнительные сведения см. в статье [Иерархические данные (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md).
+Метод GetLevel полезен для индексов поиска в ширину. Дополнительные сведения см. в статье [Иерархические данные (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Примеры  
   
@@ -94,5 +94,4 @@ this.GetLevel()
 [Справочник по методам типа данных hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Иерархические данные (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid (Transact-SQL)](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   
