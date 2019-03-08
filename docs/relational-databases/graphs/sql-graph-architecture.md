@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4c7c5bae386f142dff45be8a1b1371f104cfab3
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: ed234a487d5c382400b3a839820a4509c8b880f2
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044550"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579354"
 ---
 # <a name="sql-graph-architecture"></a>Архитектура графа базы данных SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ ms.locfileid: "55044550"
 
 |Задача   |Связанные статьи  |Примечания
 |---  |---  |---  |
-|CREATE TABLE |[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` Теперь расширена для поддержки создания таблицы AS УЗЛОВ или ГРАНИЧНУЮ AS. Обратите внимание, что краевую таблицу может иметь или не иметь какие-либо пользовательские атрибуты.  |
+|CREATE TABLE |[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE` Теперь расширена для поддержки создания таблицы AS УЗЛОВ или ГРАНИЧНУЮ AS. Обратите внимание, что краевую таблицу может иметь или не иметь какие-либо пользовательские атрибуты.  |
 |ALTER TABLE    |[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)|Таблиц узлов и ребер может быть изменен так же с помощью реляционной таблице `ALTER TABLE`. Пользователи могут добавлять или изменять пользовательские столбцы, индексы или ограничения. Однако изменение столбцы внутреннего графика, например `$node_id` или `$edge_id`, приведет к ошибке.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Пользователи могут создавать индексы на псевдо столбцов и определяемых пользователем столбцах таблицы узлов и ребер. Поддерживаются все типы индексов, включая кластеризованный и некластеризованный индексы columnstore.  |
 |СОЗДАНИЕ ОГРАНИЧЕНИЯ ГРАНИЦ    |[ОГРАНИЧЕНИЯ ГРАНИЦ &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |Пользователи могут теперь создавать ограничения границ на граничные таблицы для реализации определенной семантики и также целостность данных  |

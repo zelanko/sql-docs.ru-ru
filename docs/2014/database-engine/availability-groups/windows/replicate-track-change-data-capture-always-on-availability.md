@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1b3bf1b9c7b43a2196f2bc2c09422feb43cbc7c4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134094"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579324"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Репликация, отслеживание изменений, изменение данных и группы доступности AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Репликация, отслеживание измененных данных (CDC) и отслеживание изменений (CT) поддерживаются в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] помогает обеспечивать высокий уровень доступности и дополнительные возможности восстановления баз данных.  
@@ -218,7 +218,7 @@ ms.locfileid: "54134094"
   
 ### <a name="considerations"></a>Замечания  
   
--   База данных распространителя не поддерживается в сочетании с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] или с зеркальным отображением базы данных. Конфигурация репликации работает совместно с экземпляром SQL Server, на котором настроен распространитель. Именно по этой причине база данных распространителя не может участвовать в репликации или зеркальном отображении. Чтобы обеспечить высокий уровень доступности для распространителя, используйте отказоустойчивый кластер SQL Server. Дополнительные сведения см. в разделе [ экземпляры отказоустойчивого кластера AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   База данных распространителя не поддерживается в сочетании с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] или с зеркальным отображением базы данных. Конфигурация репликации работает совместно с экземпляром SQL Server, на котором настроен распространитель. Именно по этой причине база данных распространителя не может участвовать в репликации или зеркальном отображении. Чтобы обеспечить высокий уровень доступности для распространителя, используйте отказоустойчивый кластер SQL Server. Дополнительные сведения см. в статье [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 -   Отработка отказа подписчика на базу данных-получателя — сравнительно сложная процедура, выполняемая вручную. Процедура, по существу, идентична методу, используемому для переключения на зеркальную базу данных подписчика. Чтобы подписчики могли участвовать в группе доступности, они должны использовать [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] или более позднюю версию.  
   
@@ -231,7 +231,7 @@ ms.locfileid: "54134094"
   
 -   [Обслуживание базы данных публикации AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Администрирование репликации часто задаваемые вопросы](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
+-   [Вопросы и ответы об администрировании репликации](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **Change data capture**  
   
@@ -253,7 +253,7 @@ ms.locfileid: "54134094"
  [Подписчики репликации и группы доступности AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Группы доступности AlwaysOn: Взаимодействие (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [ экземпляры отказоустойчивого кластера AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
+ [Группы доступности AlwaysOn: Взаимодействие (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [экземпляры отказоустойчивого кластера AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [О фиксации измененных данных (SQL Server)](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Об отслеживании изменений (SQL Server)](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Репликация SQL Server](../../../relational-databases/replication/sql-server-replication.md)   

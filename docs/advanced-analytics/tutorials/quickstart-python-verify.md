@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b0ef5d33757d9f8c4e3aed53d3867bfd5b1297b2
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 25bf5a7e7d18810c782d1ce2f4986fc433421395
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513764"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57577934"
 ---
 # <a name="quickstart-verify-python-exists-in-sql-server"></a>Краткое руководство. Проверка наличия Python в SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -146,4 +146,4 @@ WITH RESULT SETS  ((ColName nvarchar(25) , ColMean float, ColStdDev  float, ColM
 Теперь, когда вы убедитесь, что экземпляр готов для работы с Python, внимательно ознакомьтесь собой базовый взаимодействие Python.
 
 > [!div class="nextstepaction"]
-> [Краткое руководство. Скрипт Python «Hello world» в SQL Server ](quickstart-python-run-using-t-sql.md)
+> [Краткое руководство. Скрипт Python «Hello world» в SQL Server](quickstart-python-run-using-t-sql.md)

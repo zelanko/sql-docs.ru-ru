@@ -16,12 +16,12 @@ ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 15e75dd27ca447eaab326ff50cc67614d442e096
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 43727e0c7795fbd1f2f0c6a56693c2f06fdf4536
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543594"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579044"
 ---
 # <a name="high-availability-solutions-sql-server"></a>Решения высокого уровня доступности (SQL Server)
   В данном разделе представлены некоторые решения высокой доступности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , позволяющие повысить уровень доступности серверов или баз данных. Решения по повышению уровня доступности защищают от последствий ошибок в программах и сбоев оборудования, помогая сохранить доступность приложений, и предельно сокращают для пользователей время простоя.  
@@ -36,10 +36,10 @@ ms.locfileid: "52543594"
  Экземпляры отказоустойчивого кластера (режим AlwaysOn)  
  Как часть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn экземпляры отказоустойчивой кластеризации AlwaysOn эффективно используют функциональные возможности сервера отказоустойчивой кластеризации Windows (WSFC) для обеспечения высокого уровня доступности локальных за счет избыточности на экземпляре сервера уровень a  *экземпляр отказоустойчивого кластера* (FCI). Экземпляр отказоустойчивого кластера (FCI) является единственным экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установленным на всех узлах отказоустойчивой кластеризации Windows Server (WSFC) и, возможно, в нескольких подсетях. Экземпляр отказоустойчивого кластера выглядит в сети как экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запущенный на одном компьютере, но экземпляр отказоустойчивого кластера обеспечивает отработку отказа с переходом одного узла WSFC на другой узел, если текущий узел становится недоступным.  
   
- Дополнительные сведения см. в разделе [ экземпляры отказоустойчивого кластера AlwaysOn (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md).  
+ Дополнительные сведения см. в статье [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md).  
   
  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
- [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] — решение по обеспечению высокой доступности и аварийного восстановления на уровне предприятия, впервые введенное в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] для повышения доступности одной или нескольких пользовательских баз данных. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] требует, чтобы экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] располагались на узлах отказоустойчивого кластера Windows Server (WSFC). Дополнительные сведения см. в разделе [ группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
+ [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] — решение по обеспечению высокой доступности и аварийного восстановления на уровне предприятия, впервые введенное в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] для повышения доступности одной или нескольких пользовательских баз данных. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] требует, чтобы экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] располагались на узлах отказоустойчивого кластера Windows Server (WSFC). Дополнительные сведения см. в разделе [группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
 > [!NOTE]  
 >  Экземпляр отказоустойчивого кластера (FCI) может эффективно использовать [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] для выполнения удаленного аварийного восстановления на уровне базы данных. Дополнительные сведения см. в разделе [Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "52543594"
   
 ## <a name="see-also"></a>См. также  
  [Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [Зеркальное отображение базы данных: Взаимодействие и совместная работа &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Зеркальное отображение базы данных: взаимодействие и совместимость &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Нерекомендуемые функции ядра СУБД в SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

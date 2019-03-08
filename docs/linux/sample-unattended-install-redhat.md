@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: bb42309e2ea2958e5e96cb42909e7fdcf27812b3
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: 28fe32859ddec126d763447911db6a11f343f97a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760047"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578987"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Образец. Установка сценария автоматической установки SQL Server для Red Hat Enterprise Linux
 
@@ -172,7 +172,7 @@ echo Done!
 
 ## <a name="understanding-the-script"></a>Основные сведения о скрипте
 
-Первое, что делает сценарий Bash устанавливается несколько переменных.  Это могут быть переменные сценария, как в примере, или переменные среды.  Переменная ``` MSSQL_SA_PASSWORD ``` — **требуется** при установке SQL Server, другие — пользовательские переменные, созданные для скрипта.  Пример сценария выполняет следующие действия:
+Первое, что делает сценарий Bash устанавливается несколько переменных.  Это могут быть переменные сценария, как в примере, или переменные среды.  Переменная `MSSQL_SA_PASSWORD` — **требуется** при установке SQL Server, другие — пользовательские переменные, созданные для скрипта.  Пример сценария выполняет следующие действия:
 
 1. Импортируйте открытых ключей Microsoft GPG.
 

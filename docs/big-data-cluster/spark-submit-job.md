@@ -9,12 +9,12 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c7d37843aff49f27ec05cdcf7b89febd86c72fbf
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: c1d439c13b06b305c814813eeca7cb9bf8aa53c5
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241590"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578244"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Отправка заданий Spark в кластерах больших данных SQL Server в Azure Data Studio
 
@@ -34,7 +34,7 @@ ms.locfileid: "54241590"
 
 + Нажмите кнопку **новое задание Spark** на панели мониторинга, чтобы открыть диалоговое окно отправки задания Spark.
 
-    ![Отправьте меню, нажав панель мониторинга ](./media/submit-spark-job/new-spark-job.png)
+    ![Отправьте меню, нажав панель мониторинга](./media/submit-spark-job/new-spark-job.png)
  
 + Щелкните правой кнопкой мыши в кластере, в обозревателе объектов и выберите **отправить задание Spark** в контекстном меню. Откроется диалоговое окно отправки задания Spark.  
  

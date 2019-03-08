@@ -27,12 +27,12 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad056a757a25b8bc1c358fd37d9073370d9ed279
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 24367bfec4b0e25fec60eb49c77a74e1ccd54f46
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133844"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579764"
 ---
 # <a name="bcp-utility"></a>Программа bcp
   **Bcp** программа массового копирования данных между экземпляром [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и файлом данных в указанном пользователем формате. С помощью программы **bcp** можно выполнять импорт большого количества новых строк в таблицы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или экспорт данных из таблиц в файлы данных. За исключением случаев использования параметра **queryout** , применение программы не требует знания языка [!INCLUDE[tsql](../includes/tsql-md.md)]. Чтобы выполнить импорт данных в таблицу, необходимо или использовать файл форматирования, созданный для этой таблицы, либо изучить структуру таблицы и типов данных, допустимых для ее столбцов.  
@@ -218,7 +218,7 @@ ms.locfileid: "54133844"
  Указывает, что пустые столбцы во время данной операции должны сохранить значение NULL вместо любых вставляемых значений столбцов по умолчанию. Дополнительные сведения см. в разделе [Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
  **-K** _application_intent_  
- Объявляет тип рабочей нагрузки приложения при соединении с сервером. Единственным возможным значением является **ReadOnly**. Если параметр **-K** не указан, программа bcp не будет поддерживать соединение с вторичной репликой в группе доступности AlwaysOn. Дополнительные сведения см. в разделе [ активные вторичные реплики: Вторичные реплики для чтения (группы доступности AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Объявляет тип рабочей нагрузки приложения при соединении с сервером. Единственным возможным значением является **ReadOnly**. Если параметр **-K** не указан, программа bcp не будет поддерживать соединение с вторичной репликой в группе доступности AlwaysOn. Дополнительные сведения см. в статье [Активные вторичные реплики: Вторичные реплики для чтения (группы доступности AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **-L** _last_row_  
  Указывает номер последней строки для экспорта из таблицы или импорта из файла данных. Этот параметр должен иметь значение больше (>) 0 но меньше (\<) или равно (=), номер последней строки. Если параметр отсутствует, по умолчанию используется последняя строка файла.  

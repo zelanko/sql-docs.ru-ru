@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: c6327ae25e9e0b22310e810cd33f7176ecc1349d
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: 878eda9c8816e400c873154f1c1cf3d613f8fea3
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760057"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579054"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Образец. Установка сценария автоматической установки SQL Server для Ubuntu
 
@@ -176,7 +176,7 @@ echo Done!
    ```
 
 ### <a name="understanding-the-script"></a>Основные сведения о скрипте
-Первое, что делает сценарий Bash устанавливается несколько переменных. Это могут быть переменные сценария, как в примере, или переменные среды. Переменная ``` MSSQL_SA_PASSWORD ``` — **требуется** при установке SQL Server, другие — пользовательские переменные, созданные для скрипта. Пример сценария выполняет следующие действия:
+Первое, что делает сценарий Bash устанавливается несколько переменных. Это могут быть переменные сценария, как в примере, или переменные среды. Переменная `MSSQL_SA_PASSWORD` — **требуется** при установке SQL Server, другие — пользовательские переменные, созданные для скрипта. Пример сценария выполняет следующие действия:
 
 1. Импортируйте открытых ключей Microsoft GPG.
 

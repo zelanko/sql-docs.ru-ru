@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0567ab525c4c8d1c2a9efdbfc3011a925f70401c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: aca12552338eb05549199b22af3a63e9f4b4a101
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397759"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579444"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Обзор логической архитектуры (службы Analysis Services — многомерные данные)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Службы Analysis Services работают в режиме развертывания сервера, который определяет архитектуру памяти и среду выполнения, используемую моделями Analysis Services различных типов. Режим сервера определяется во время установки. **Многомерный и интеллектуальный анализ данных режим** поддерживает традиционный OLAP и интеллектуального анализа данных. **Табличный режим** поддерживает табличные модели. **В режиме интеграции с SharePoint** ссылается на экземпляр служб Analysis Services, который был установлен как [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint, используемый для загрузки и запросов к Excel или [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] моделей данных в книге.  
   
- В этом разделе рассматривается основная архитектура служб Analysis Services, применяемая в режиме многомерных данных и интеллектуального анализа данных. Дополнительные сведения о других режимах см. в разделе [табличное моделирование ](../../../analysis-services/tabular-models/tabular-models-ssas.md) и [сравнение табличных и многомерных решений ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
+ В этом разделе рассматривается основная архитектура служб Analysis Services, применяемая в режиме многомерных данных и интеллектуального анализа данных. Дополнительные сведения о других режимах см. в разделе [табличное моделирование](../../../analysis-services/tabular-models/tabular-models-ssas.md) и [сравнение табличных и многомерных решений](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
 ## <a name="basic-architecture"></a>Базовая архитектура  
  Экземпляр служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] может содержать несколько баз данных, а в базе данных могут одновременно присутствовать объекты OLAP и объекты интеллектуального анализа данных. Приложения подключаются к указанному экземпляру служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и к указанной базе данных. На серверном компьютере может эксплуатироваться несколько экземпляров служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Экземпляры [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] именуются как "\<ServerName >\\< имя_экземпляра\>«. На следующем рисунке показано все упомянутые связи между [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] объектов.  
@@ -121,6 +121,6 @@ ms.locfileid: "52397759"
  В приведенном здесь примере содержится только одна таблица фактов. Когда в кубе есть несколько таблиц фактов, меры каждой из них организуются в группы мер, причем группа мер связана с соответствующим набором измерений согласно заданным связям измерений. Эти связи определяются указанием участвующих таблиц в представлении источника данных и гранулярности связи. **См. также:**[связей измерений](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 ## <a name="see-also"></a>См. также  
- [Многомерный шаблон баз данных ](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Многомерный шаблон баз данных](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c2e9c5b1a0bf136e6b21f5b3ad6f12107d1f9b9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126074"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578324"
 ---
 # <a name="sql-server-replication"></a>Репликация SQL Server
   Репликация представляет собой набор технологий копирования и распространения данных и объектов баз данных между базами данных, а также синхронизации баз данных для поддержания согласованности. Используя репликацию, можно распространять данные в различные расположения, а также удаленным или мобильным пользователям по локальным или глобальным сетям посредством коммутируемого соединения, по беспроводным соединениям и через Интернет.  
@@ -29,24 +29,24 @@ ms.locfileid: "54126074"
   
 
 ## <a name="whats-new"></a>новые возможности 
-- SQL Server 2017 не появилось несколько важных новых функций для репликации SQL Server. 
-- SQL Server 2016 не появилось несколько важных новых функций для репликации SQL Server. 
+- Репликация в SQL Server 2017 не содержит существенных новых функций по сравнению с SQL Server. 
+- Репликация в SQL Server 2016 не содержит существенных новых функций по сравнению с SQL Server. 
 
-Для обеспечения обратной совместимости см. сведения [обратная совместимость репликации](replication-backward-compatibility.md) 
+Сведения об обратной совместимости см. в разделе [Обратная совместимость репликации](replication-backward-compatibility.md). 
 
 
- ## <a name="replication-security"></a>Безопасности репликации
+ ## <a name="replication-security"></a>Безопасность репликации
   
 -   [Просмотр и изменение параметров безопасности репликации](security/view-and-modify-replication-security-settings.md)  
 -   [Управление именами для входа в списке доступа к публикации](security/manage-logins-in-the-publication-access-list.md)  
   
-## <a name="publishing-and-distribution"></a>Публикации и распространения  
+## <a name="publishing-and-distribution"></a>Публикация и распространение  
   
 -   [Настройка публикации и распространения](configure-publishing-and-distribution.md)   
 -   [Просмотр и изменение свойств публикации](publish/view-and-modify-publication-properties.md)   
 -   [Отключение публикации и распространения](disable-publishing-and-distribution.md)  
   
-## <a name="publications-and-articles"></a>Публикаций и статей 
+## <a name="publications-and-articles"></a>Публикации и статьи 
   
 -   [Create a Publication](publish/create-a-publication.md)    
 -   [Определение статьи](publish/define-an-article.md)   
@@ -63,7 +63,7 @@ ms.locfileid: "54126074"
   
 ### <a name="snapshot-options"></a>Параметры моментального снимка  
   
--   [Настройка свойств моментального снимка](publish/configure-snapshot-properties-replication-transact-sql-programming.md)    
+-   [Настройка свойств моментальных снимков](publish/configure-snapshot-properties-replication-transact-sql-programming.md)    
 -   [Deliver a Snapshot Through FTP](publish/deliver-a-snapshot-through-ftp.md) (Доставка моментального снимка через FTP) 
   
 ### <a name="filter-data"></a>Фильтрация данных  
@@ -82,7 +82,7 @@ ms.locfileid: "54126074"
 ### <a name="merge-replication-options"></a>Параметры репликации слиянием  
   
 -   [Определение связи логических записей между статьями таблиц слияния](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
--   [Указать свойств репликации слиянием](publish/specify-merge-replication-properties.md)    
+-   [Указание свойств репликации слиянием](publish/specify-merge-replication-properties.md)    
 -   [Определение арбитра для статей публикации слиянием](publish/specify-a-merge-article-resolver.md)    
 
   
@@ -126,13 +126,13 @@ ms.locfileid: "54126074"
 -   [Администрирование топологии Peer-to-Peer](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)    
 -   [Замораживание топологии репликации](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)    
 -   [Настройка задания набора транзакций для издателя Oracle](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
--   [Обновление скриптов репликации ](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
+-   [Обновление скриптов репликации](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
 ## <a name="monitor"></a>Монитор
   
 -   [Allow Non-Administrators to Use Replication Monitor](monitor/allow-non-administrators-to-use-replication-monitor.md) (Предоставление пользователям без прав администратора разрешения на использование монитора репликации)    
 -   [Наблюдение за репликацией программным образом](monitor/programmatically-monitor-replication.md)    
--   [Просмотр реплицированных команд и другие сведения в базе данных распространителя ](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
--   [Просмотр сведений о конфликтах для публикаций слиянием ](view-conflict-information-for-merge-publications.md) 
+-   [Просмотр реплицированных команд и другие сведения в базе данных распространителя](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [Просмотр сведений о конфликтах для публикаций слиянием](view-conflict-information-for-merge-publications.md) 
 -   [Измерение задержки и проверка правильности соединений для репликации транзакций](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

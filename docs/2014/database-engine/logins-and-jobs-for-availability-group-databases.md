@@ -14,12 +14,12 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8653161775a35e326a7ed85ed982f1cb75bee03
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361497"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579224"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>Управление именами входа и заданиями для баз данных группы доступности (SQL Server)
   Необходимо постоянно поддерживать одинаковый набор имен входа пользователей и заданий агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в каждой базе данных-источнике группы доступности AlwaysOn и соответствующих баз данных-получателей. Имена входа и задания необходимо воспроизвести на каждом экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , на котором размещается реплика доступности для группы доступности.  
@@ -30,7 +30,7 @@ ms.locfileid: "53361497"
   
      Экземпляры серверов, на которых размещены реплики доступности для группы доступности, могут быть настроены по-разному, например с использованием других букв дисков ленточных накопителей и т. д. Задания для каждой группы доступности должны допускать подобные различия.  
   
-     Обратите внимание, что задания резервного копирования могут использовать функцию [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) , чтобы определить, является ли локальная реплика предпочтительной для выполнения резервного копирования согласно настройкам резервного копирования группы доступности. Задания резервного копирования, созданные с помощью [мастера планов обслуживания](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) , изначально используют эту функцию. Для других заданий резервного копирования рекомендуется использовать эту функцию в качестве условия в заданиях резервного копирования, чтобы они выполнялись только для предпочитаемой реплики. Дополнительные сведения см. в разделе [ активные вторичные реплики: Резервного копирования во вторичных репликах (группы доступности AlwaysOn)](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Обратите внимание, что задания резервного копирования могут использовать функцию [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) , чтобы определить, является ли локальная реплика предпочтительной для выполнения резервного копирования согласно настройкам резервного копирования группы доступности. Задания резервного копирования, созданные с помощью [мастера планов обслуживания](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) , изначально используют эту функцию. Для других заданий резервного копирования рекомендуется использовать эту функцию в качестве условия в заданиях резервного копирования, чтобы они выполнялись только для предпочитаемой реплики. Дополнительные сведения см. в статье [Активные вторичные реплики: Резервного копирования во вторичных репликах (группы доступности AlwaysOn)](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Имена входа**  
   

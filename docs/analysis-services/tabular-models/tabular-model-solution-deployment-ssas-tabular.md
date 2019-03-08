@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 77889113dd7987827426bae2357e89590754a545
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 0fc639564c1ac37af1cf29cc119cbf48cbf3baee
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072350"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579543"
 ---
 # <a name="tabular-model-solution-deployment"></a>Развертывание решений табличной модели 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -86,6 +86,6 @@ ms.locfileid: "53072350"
 |[Синхронизация баз данных служб Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)|Описывает использование мастера синхронизации баз данных для синхронизации метаданных и данных между любыми двумя табличными или многомерными базами данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
 ## <a name="see-also"></a>См. также  
- [Соединение с базой данных табличной модели ](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
+ [Соединение с табличным шаблоном базы данных](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
   

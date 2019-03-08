@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5e7a1934a207beebca88e3939a211667e94be976
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 103d0a724fa3abeae61441f64dd763424e9454e8
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415611"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579634"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Связанные проекты для решений интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -201,7 +201,7 @@ ms.locfileid: "52415611"
 -   Не все полнотекстовые языки поддерживают семантическое индексирование. Список поддерживаемых языков см. в разделе [sys.fulltext_semantic_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
 ## <a name="see-also"></a>См. также  
- [Решения многомерной модели ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [Решения многомерной модели](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Решения табличных моделей](../../analysis-services/tabular-models/tabular-models-ssas.md)  
   
   

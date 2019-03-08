@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: eba8822f7fe21e089d9c02b8f6df6cf5ec0e5294
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: f7493c09964db2e0a8cbd17c6a2278dd554a2dcc
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072111"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579454"
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>Программирование табличных моделей с уровнем совместимости 1200 и выше
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "53072111"
 ## <a name="see-also"></a>См. также  
  [Документация для разработчика служб Analysis Services](../../analysis-services/analysis-services-developer-documentation.md)   
  [Программирование табличных моделей для совместимости уровни 1050 по 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
- [Технический справочник по ](../../analysis-services/powershell/technical-reference-ssas.md) [обновление служб Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
+ [Технический справочник по](../../analysis-services/powershell/technical-reference-ssas.md)[обновление служб Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
  [Уровень совместимости табличных моделей и баз данных](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
   
   

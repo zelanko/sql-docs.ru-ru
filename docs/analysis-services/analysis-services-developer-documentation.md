@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b0932c9ebcd2d516a5bfb0e6ea5608501e4f514a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 8822a85e39efde36a04b92e8a926adca6839cf58
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146100"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578104"
 ---
 # <a name="analysis-services-developer-documentation"></a>Документация для разработчика служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -72,5 +72,5 @@ ms.locfileid: "50146100"
 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md) Документирует командлеты, используемые для административных функций, а также общего назначения **Invoke-ASCmd** командлетом, принимающим любой скрипт или запрос в качестве входных данных.
 
 ## <a name="see-also"></a>См. также
-[Технический справочник по ](../analysis-services/powershell/technical-reference-ssas.md) 
- [запросов и справочник по языку выражений &#40;служб Analysis Services&#41;](http://msdn.microsoft.com/library/gg492188.aspx)
+[Технический справочник по](../analysis-services/powershell/technical-reference-ssas.md)
+[запросов и справочник по языку выражений &#40;служб Analysis Services&#41;](http://msdn.microsoft.com/library/gg492188.aspx)

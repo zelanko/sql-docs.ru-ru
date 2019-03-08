@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6b0c376c6ab8625d2f31e6ad6ea132842315b1e1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 988a091fa7d536386cadd2ed3412213a2e608564
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410780"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579434"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Урок 1. Создание нового проекта табличной модели
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "52410780"
 
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
-Дополнительные сведения о различных типах проектов табличных моделей, см. в разделе [проекты табличной модели](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Дополнительные сведения о среде создания табличных моделей, см. в разделе [конструктор табличных моделей ](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
+Дополнительные сведения о различных типах проектов табличных моделей, см. в разделе [проекты табличной модели](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Дополнительные сведения о среде создания табличных моделей, см. в разделе [конструктор табличных моделей](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
   
 
 ## <a name="whats-next"></a>Дальнейшие действия

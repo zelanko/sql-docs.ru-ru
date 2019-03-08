@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0421361cf1718d6ee280269f9da125c148aa3afd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9e52e3962fa1928d7f7680a750d6c1efe5201c6f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518270"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579404"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Настройка сетевых адаптеров InfiniBand для Analytics Platform System
 В этой статье описывается настройка сетевых адаптеров InfiniBand на сервере не является специализированным клиента для подключения к узлу в Parallel Data Warehouse (PDW). Используйте эти инструкции для базовых параметров подключения и высокую доступность, таким образом, загрузка, резервного копирования и другие процессы автоматически подключиться к активной сети InfiniBand.  
@@ -182,5 +182,5 @@ ms.locfileid: "52518270"
     -   MyPDW-SQLCTL01  
   
 ## <a name="see-also"></a>См. также  
-[Приобретение и настройка сервера для загрузки ](acquire-and-configure-loading-server.md)  
+[Приобретение и настройка сервера для загрузки](acquire-and-configure-loading-server.md)  
   

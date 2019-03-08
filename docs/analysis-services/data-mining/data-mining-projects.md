@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 75e71b4a17aa74ecb33f0a0d8c195b2e60b0e5a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3f2fd0817aeae714ca1e217b9dc2011df92c4b28
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506922"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579384"
 ---
 # <a name="data-mining-projects"></a>Проекты интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -213,7 +213,7 @@ ms.locfileid: "52506922"
 |Ссылки на сведения о каждом средстве просмотра моделей интеллектуального анализа данных|[Средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |Сведения о создании диаграммы точности прогнозов, диаграммы роста прибыли или матрицы классификации и сведения о тестировании структуры интеллектуального анализа данных|[Тестирование и проверка (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |Сведения о параметрах обработки и разрешениях|[Обработка объектов интеллектуального анализа данных](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|Дополнительные сведения о службах Analysis Services|[Многомерный шаблон баз данных ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Дополнительные сведения о службах Analysis Services|[Многомерный шаблон баз данных](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>См. также  
  [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md)   

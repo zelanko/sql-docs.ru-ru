@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c9bcc5ba99736a6bb65bde4aff20e220d70303d4
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 1ef8f66d220561407c0bcafedde8a402f871924a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242025"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578114"
 ---
 # <a name="train-and-create-machine-learning-models-with-spark"></a>Обучение и создание моделей машинного обучения Spark
 
@@ -88,7 +88,7 @@ data = data_all.select(select_cols)
 
 ## <a name="step-4---split-as-training-and-test-set"></a>Шаг 4 - разбиение как обучающую и тестовую выборки
 
-Для обучения модели, а остальные 25% для оценки модели используйте 75% строк. Кроме того сохраняются обучения и тестовых наборов данных для хранилища HDFS. Шаг не является обязательным, но для демонстрации показано сохранение и загрузка в формате ORC. Другие форматы, например, `Parquet `также может использоваться.
+Для обучения модели, а остальные 25% для оценки модели используйте 75% строк. Кроме того сохраняются обучения и тестовых наборов данных для хранилища HDFS. Шаг не является обязательным, но для демонстрации показано сохранение и загрузка в формате ORC. Другие форматы, например, `Parquet` также может использоваться.
 
 Опубликовать этот шаг, вы увидите два каталоги, созданные с именем AdultCensusIncomeTrain и AdultCensusIncomeTest
 

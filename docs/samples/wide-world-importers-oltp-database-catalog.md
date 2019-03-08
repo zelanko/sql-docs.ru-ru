@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d98e87d18d76162e5bf9dcb4779a8bc7fec74385
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: e26299f221facfc6828369e1c75225f206937eb4
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617632"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579584"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Каталог базы данных WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -202,7 +202,7 @@ WideWorldImporters использует небольшое количество 
 |Configuration_ApplyAuditing|Аудит ADDS. Аудит сервера применяется для баз данных standard edition; Аудит дополнительные базы данных добавляется для выпуска enterprise edition.|
 |Configuration_ApplyColumnstoreIndexing|Применяется для индексирования columnstore `Sales.OrderLines` и `Sales.InvoiceLines` и повторно индексирует соответствующим образом.|
 |Configuration_ApplyFullTextIndexing|Применяет полнотекстовых индексов для `Application.People`, `Sales.Customers`, `Purchasing.Suppliers`, и `Warehouse.StockItems`. Заменяет `Website.SearchForPeople`, `Website.SearchForSuppliers`, `Website.SearchForCustomers`, `Website.SearchForStockItems`, `Website.SearchForStockItemsByTags` с замены процедур, использующих полнотекстового индексирования.|
-|Configuration_ApplyPartitioning|Применяется для секционирования таблиц `Sales.CustomerTransactions and `Purchasing.SupplierTransactions и изменяет порядок индексов в соответствии с.|
+|Configuration_ApplyPartitioning|Применяется для секционирования таблиц `Sales.CustomerTransactions` и `Purchasing.SupplierTransactions`и повторно упорядочивает индексов в соответствии с.|
 |Configuration_ApplyRowLevelSecurity|Применяет безопасность на уровне строк клиенты фильтруются по продажам «Территория», связанные с ролями.|
 |Configuration_ConfigureForEnterpriseEdition|Применяет индексирования columnstore, полнотекстового поиска, в памяти, polybase и секционирование.|
 |Configuration_EnableInMemory|Добавляет файловую группу оптимизированной для памяти (когда не работает в Azure), заменяет `Warehouse.ColdRoomTemperatures`, `Warehouse.VehicleTemperatures` эквиваленты в памяти и переносит данные, повторно создает `Website.OrderIDList`, `Website.OrderList`, `Website.OrderLineList`, `Website.SensorDataList` табличных типов с эквиваленты, оптимизированных для памяти, удаляет и воссоздает процедуры `Website.InvoiceCustomerOrders`, `Website.InsertCustomerOrders`, и `Website.RecordColdRoomTemperatures` , использующий эти табличные типы.|
