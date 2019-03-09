@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services занятие для учебника по 7: Создание ключевых показателей эффективности | Документация Майкрософт'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e0cd1cfa0c468f28b5cadfc9757671f18206d2cd
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 348a012b5915c6b02f04481673fc33128001ff73
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43087569"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685411"
 ---
 # <a name="create-key-performance-indicators"></a>Создание ключевых показателей эффективности
 
@@ -22,11 +23,11 @@ ms.locfileid: "43087569"
 
 В этом занятии вы создадите ключевые показатели эффективности (KPI). Ключевые показатели эффективности используются для оценки производительности значения, определенного *базы* измерения, от *целевой* значения, также определенного мерой или абсолютным значением. В клиентских приложения создания отчетов показатели KPI предоставляют бизнесменам быстрый и легкий способ получения обзорных сведений о развитии бизнеса или определении тенденций. Дополнительные сведения см. в разделе [ключевые показатели эффективности](../tabular-models/kpis-ssas-tabular.md)
   
-Предполагаемое время выполнения этого занятия: **15 минут**  
+Предполагаемое время выполнения данного занятия: **15 минут**  
   
 ## <a name="prerequisites"></a>предварительные требования  
 
-Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Перед выполнением задач на этом занятии, необходимо завершить предыдущее занятие: [Lesson 6: создание мер](../tutorial-tabular-1400/as-lesson-6-create-measures.md).   
+Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Прежде чем выполнять задания в этом занятии, необходимо завершить предыдущее занятие: [Занятие 6. Создание мер](../tutorial-tabular-1400/as-lesson-6-create-measures.md).   
   
 ## <a name="create-key-performance-indicators"></a>Создание ключевых показателей эффективности  
   
@@ -81,6 +82,6 @@ ms.locfileid: "43087569"
   
 ## <a name="whats-next"></a>Дальнейшие действия
 
-[Занятие 8: Создание перспектив](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md).
+[Занятие 8. Создание перспектив](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md).
   
   

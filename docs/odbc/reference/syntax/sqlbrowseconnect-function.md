@@ -11,6 +11,7 @@ apiname:
 - SQLBrowseConnect
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLBrowseConnect
@@ -20,12 +21,12 @@ ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe1b9c7d3d93604e2f19de754ff25517ef23cb07
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 96d46f8aaf2ab051255c1f75bcd2c4547c922cdc
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211714"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683614"
 ---
 # <a name="sqlbrowseconnect-function"></a>Функция SQLBrowseConnect
 **Соответствие стандартам**  
@@ -69,7 +70,7 @@ SQLRETURN SQLBrowseConnect(
  [Выход] Общее число символов (исключая конечное значение null), доступных для возврата в \* *OutConnectionString*. Если количество символов, доступных для возврата больше или равно *BufferLength*, строку подключения в \* *OutConnectionString* усекается до  *BufferLength* минус длина знак завершения null.  
   
 ## <a name="returns"></a>Возвращает  
- Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, значение SQL_ERROR, SQL_INVALID_HANDLE или SQL_STILL_EXECUTING.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_ERROR, SQL_INVALID_HANDLE, or SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLBrowseConnect** возвращает значение SQL_ERROR, SQL_SUCCESS_WITH_INFO или SQL_NEED_DATA, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* значение SQL_HANDLE_STMT и *дескриптор ConnectionHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLBrowseConnect** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  
@@ -112,7 +113,7 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>Аргумент InConnectionString  
  Обзор запроса строки подключения имеет следующий синтаксис:  
   
- *Строка подключения* :: = *атрибут*[`;`] &#124; *атрибут* `;` *строки подключения*;<br>
+ *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*;<br>
  *attribute* ::= *attribute-keyword*`=`*attribute-value* &#124; `DRIVER=`[`{`]*attribute-value*[`}`]<br>
  *attribute-keyword* ::= `DSN` &#124; `UID` &#124; `PWD` &#124; *driver-defined-attribute-keyword*<br>
  *attribute-value* ::= *character-string*<br>
@@ -127,11 +128,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>Аргумент OutConnectionString  
  Обзор результирующей строке подключения приведен список атрибутов соединения. Атрибут соединения состоит ключевое слово атрибута и соответствующее значение атрибута. Обзор результирующей строке подключения имеет следующий синтаксис:  
   
- *Строка подключения* :: = *атрибут*[`;`] &#124; *атрибут* `;` *строки подключения*<br>
+ *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*<br>
  *attribute* ::= [`*`]*attribute-keyword*`=`*attribute-value*<br>
  *attribute-keyword* ::= *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keyword*<br>
  *ODBC-attribute-keyword* = {`UID` &#124; `PWD`}[`:`*localized-identifier*] *driver-defined-attribute-keyword* ::= *identifier*[`:`*localized-identifier*] *attribute-value* ::= `{` *attribute-value-list* `}` &#124; `?` (The braces are literal; they are returned by the driver.)<br>
- *списка значений атрибута* :: = *символьной строки* [`:`*локализованные символьная строка*] &#124; *символьной строки* [`:` *локализованные символьная строка*] `,` *списка значений атрибута*<br>
+ *attribute-value-list* ::= *character-string* [`:`*localized-character string*] &#124; *character-string* [`:`*localized-character string*] `,` *attribute-value-list*<br>
   
  где *символьной строки* и *локализованные символьная строка* иметь ноль или несколько символов. *идентификатор* и *локализованный идентификатор* имеют один или несколько символов. *ключевым словом атрибутов* задается без учета регистра; и *значение атрибута* может учитываться регистр. Из-за подключения строка инициализации файлов грамматики, ключевые слова, локализованную идентификаторы и значения атрибутов, содержать символы **[]{}(),? \*=! @** следует избегать. Из-за грамматики в сведениях о системе, ключевые слова и имена источников данных не может содержать обратную косую черту (\\) символов.  
   

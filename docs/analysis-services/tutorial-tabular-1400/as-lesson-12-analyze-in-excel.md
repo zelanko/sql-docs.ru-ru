@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services занятие для учебника по 12: анализ в Excel | Документация Майкрософт'
-ms.date: 08/27/2018
+title: 'Analysis Services занятие для учебника по 12: Анализ в Excel | Документация Майкрософт'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4b4531183c890e43158f2d9c0f9f4b18f5d303be
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: efd71653e723344e9175d9ab1529fafd610901df
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084457"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685432"
 ---
 # <a name="analyze-in-excel"></a>Анализ в Excel
 
@@ -24,11 +25,11 @@ ms.locfileid: "43084457"
   
 Для этого занятия необходимо установить Excel на том же компьютере, что и Visual Studio.
   
-Предполагаемое время выполнения этого занятия: **5 минут**.  
+Предполагаемое время выполнения данного занятия: **5 минут**  
   
 ## <a name="prerequisites"></a>предварительные требования  
 
-Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Перед выполнением задач на этом занятии, необходимо завершить предыдущее занятие: [занятие 11: Создание ролей](../tutorial-tabular-1400/as-lesson-11-create-roles.md).  
+Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Прежде чем выполнять задания в этом занятии, необходимо завершить предыдущее занятие: [Занятие 11. Создание ролей](../tutorial-tabular-1400/as-lesson-11-create-roles.md).  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>Просмотр с помощью перспектив «По умолчанию» и «Продажи через Интернет»  
 
@@ -76,7 +77,7 @@ ms.locfileid: "43084457"
   
 ## <a name="whats-next"></a>Дальнейшие действия
 
-Перейдите к следующему занятию: [занятие 13: развертывание](../tutorial-tabular-1400/as-lesson-13-deploy.md).
+Перейдите к следующему занятию: [Занятие 13. Развертывание](../tutorial-tabular-1400/as-lesson-13-deploy.md).
 
   
   

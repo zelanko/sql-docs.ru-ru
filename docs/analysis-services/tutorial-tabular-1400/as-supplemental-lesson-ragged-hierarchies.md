@@ -1,6 +1,6 @@
 ---
-title: 'Дополнительное занятие для учебника по Analysis Services: неоднородные иерархии | Документация Майкрософт'
-ms.date: 08/27/2018
+title: 'Analysis Services дополнительное занятие для учебника по: Неоднородные иерархии | Документация Майкрософт'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1aa9b8b0e456bb4f4aeff0a2a8e03d4938a46399
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 39f8bcc63b7e5344f70a6d4a3b6c44ae3e69e108
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074834"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685402"
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>Дополнительный урок. Неоднородные иерархии
 
@@ -47,10 +48,10 @@ ms.locfileid: "43074834"
 
     | Таблица 1           | Столбец       | Направление фильтра   | Таблица 2     | Столбец      | Активен |
     |-------------------|--------------|--------------------|-------------|-------------|--------|
-    | FactResellerSales | OrderDateKey | По умолчанию            | DimDate     | Дата        | Да    |
-    | FactResellerSales | DueDate      | По умолчанию            | DimDate     | Дата        | Нет     |
-    | FactResellerSales | ShipDateKey  | По умолчанию            | DimDate     | Дата        | Нет     |
-    | FactResellerSales | ProductKey   | По умолчанию            | DimProduct  | ProductKey  | Да    |
+    | FactResellerSales | OrderDateKey | Значение по умолчанию            | DimDate     | Дата        | Да    |
+    | FactResellerSales | DueDate      | Значение по умолчанию            | DimDate     | Дата        | Нет     |
+    | FactResellerSales | ShipDateKey  | Значение по умолчанию            | DimDate     | Дата        | Нет     |
+    | FactResellerSales | ProductKey   | Значение по умолчанию            | DimProduct  | ProductKey  | Да    |
     | FactResellerSales | EmployeeKey  | К обеим таблицам | DimEmployee | EmployeeKey | Да    |
 
 5. В **DimEmployee** таблицы, создайте следующую [вычисляемых столбцов](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md): 
@@ -90,7 +91,7 @@ ms.locfileid: "43074834"
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],5,1)) 
     ```
 
-6.  В **DimEmployee** таблицы, создайте [иерархии](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md) с именем **организации**. Добавьте следующие столбцы по порядку: **Level1**, **Level2**, **Level3**, **Level4**, **Level5**.
+6.  В **DimEmployee** таблицы, создайте [иерархии](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md) с именем **организации**. Добавьте следующие столбцы по порядку: **LEVEL1**, **Level2**, **Level3**, **Level4**, **Level5**.
 
 7.  В **FactResellerSales** таблицы, создайте следующую [мер](../tutorial-tabular-1400/as-lesson-6-create-measures.md):
 
@@ -121,6 +122,6 @@ ms.locfileid: "43074834"
     Теперь выглядит гораздо лучше!
 
 ## <a name="see-also"></a>См. также   
-[Урок 9. Создание иерархий](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)  
+[Занятие 9. Создание иерархий](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)  
 [Дополнительное занятие. динамическая безопасность](../tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)  
 [Дополнительное занятие. строки детализации](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)  

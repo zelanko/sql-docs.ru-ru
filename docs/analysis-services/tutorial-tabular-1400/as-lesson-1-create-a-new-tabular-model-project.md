@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services занятие для учебника по 1: Создание нового проекта табличной модели | Документация Майкрософт'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9135df30afcec9bdae307d9b12aec6810baa98ec
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 42dbe017baa29bb241cb2fa56f4fad3f70f5e3bb
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417235"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685221"
 ---
 # <a name="create-a-tabular-model-project"></a>Создание проекта табличной модели
 
@@ -48,7 +49,7 @@ ms.locfileid: "52417235"
       
 6.  В **уровень совместимости**выберите **SQL Server 2017 / Azure Analysis Services (1400)**.   
  
-    ![как tmd занятия 1](../tutorial-tabular-1400/media/as-lesson1-tmd.png)
+    ![as-lesson1-tmd](../tutorial-tabular-1400/media/as-lesson1-tmd.png)
       
     Если вы не видите SQL Server 2017 / Azure Analysis Services (1400) в списке уровней совместимости, вы не используете последнюю версию SQL Server Data Tools. Инструкции по получению последней версии см. в разделе [Установка SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt).  
       

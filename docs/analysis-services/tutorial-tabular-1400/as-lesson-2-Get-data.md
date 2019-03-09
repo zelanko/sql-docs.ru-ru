@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services занятие для учебника по 2: получение данных | Документация Майкрософт'
-ms.date: 08/27/2018
+title: 'Analysis Services занятие для учебника по 2: Получение данных | Документация Майкрософт'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ad1f5bc8fb59be05f10d476ccb3a66ea1c1747b9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 01bf31c3d4f89b77ebdceae2e69d4054a578b03f
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43062215"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685321"
 ---
 # <a name="get-data"></a>Получение данных
 
@@ -27,11 +28,11 @@ ms.locfileid: "43062215"
 > [!NOTE]
 > Задачи и образов в этом руководстве показано, подключение к базе данных AdventureWorksDW2014 на локальном сервере. В некоторых случаях к базе данных AdventureWorksDW на хранилище данных SQL Azure могут отображаться различные объекты; Тем не менее они по сути одинаковые.
   
-Предполагаемое время выполнения данного занятия: **10 минут.**  
+Предполагаемое время выполнения данного занятия: **10 минут**  
   
 ## <a name="prerequisites"></a>предварительные требования  
 
-Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Перед выполнением задач на этом занятии, необходимо завершить предыдущее занятие: [занятии 1: Создание нового проекта табличной модели](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md).  
+Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Прежде чем выполнять задания в этом занятии, необходимо завершить предыдущее занятие: [Занятие 1. Создание нового проекта табличной модели](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Создание подключения  
   
@@ -56,9 +57,9 @@ ms.locfileid: "43062215"
   
 5.  В навигаторе выберите **AdventureWorksDW** базы данных, а затем нажмите кнопку **ОК**. Вы создали подключение к базе данных. 
   
-6.  В навигаторе установите флажок напротив следующих таблиц: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**,  **DimProductCategory**, **DimProductSubcategory**, и **FactInternetSales**.  
+6.  В навигаторе установите флажок напротив следующих таблиц: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**,  **DimProductSubcategory**, и **FactInternetSales**.  
 
-    ![как-занятие 2 выберите tables](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
+    ![as-lesson2-select-tables](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
   
 После нажатия кнопки OK откроется редактор запросов. В следующем разделе выберите только данные, которые требуется импортировать.
 
@@ -159,7 +160,7 @@ ms.locfileid: "43062215"
   
 ## <a name="whats-next"></a>Дальнейшие действия
 
-[Занятие 3: Обозначение таблицы дат](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md).
+[Занятие 3. Пометить как таблицу дат](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md).
 
   
   

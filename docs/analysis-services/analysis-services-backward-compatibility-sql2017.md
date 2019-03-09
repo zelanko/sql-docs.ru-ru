@@ -1,6 +1,6 @@
 ---
 title: Обратная совместимость служб SQL Server 2017 Analysis Services | Документация Майкрософт
-ms.date: 01/09/2019
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 411fa78bada76c79d4a869d68c94abf752b8466a
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: e7903de787a1b63627bca8da23369fbee9014c6e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185080"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685741"
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Обратная совместимость служб анализа (SQL 2017 г.)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "54185080"
 |Multidimensional|Интеллектуальный анализ данных|
 |Multidimensional|Удаленные связанные группы мер|
 |Табличный|Модели с уровнем совместимости 1100 и 1103|
-|Табличный|Свойства табличной объектной модели: Column.IsDefaultImage Column.TableDetailPosition Column.IsDefaultLabel,|
+|Табличный|Свойства табличной объектной модели: Column.TableDetailPosition, Column.IsDefaultLabel, Column.IsDefaultImage|
 |Инструменты|Приложение SQL Server Profiler для перехвата трассировки<br /><br /> В качестве замены можно использовать профилировщик расширенных событий, встроенный в SQL Server Management Studio.  <br /> См. раздел [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
 |Инструменты|Воспроизведение трассировки с помощью приложения SQL Server Profiler <br />Замена. Замена отсутствует.|  
 |Объекты управления трассировкой и интерфейсы API трассировки|Объекты Microsoft.AnalysisServices.Trace (содержат интерфейсы API для объектов трассировки и воспроизведения Analysis Services). Замена состоит из нескольких частей:<br /><br /> — Настройка трассировки: Microsoft.SqlServer.Management.XEvent<br />-Чтение трассировки: Microsoft.SqlServer.XEvent.Linq<br />— Воспроизведение трассировки: None|  

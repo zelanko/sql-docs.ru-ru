@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services занятие для учебника по 9: создание иерархий | Документация Майкрософт'
-ms.date: 08/27/2018
+title: 'Analysis Services занятие для учебника по 9: Создание иерархий | Документация Майкрософт'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
-ms.openlocfilehash: 0261da590a30e077db8332aca35ed32dcc5656c6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: cdb9f571e7bc1630ce12c0d0a4b7f57df8961907
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071817"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685421"
 ---
 # <a name="create-hierarchies"></a>Создание иерархий
 
@@ -28,7 +29,7 @@ ms.locfileid: "43071817"
   
 ## <a name="prerequisites"></a>предварительные требования  
 
-Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Перед выполнением задач на этом занятии, необходимо завершить предыдущее занятие: [занятии 8: Создание перспектив](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md).  
+Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Прежде чем выполнять задания в этом занятии, необходимо завершить предыдущее занятие: [Занятие 8. Создание перспектив](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md).  
   
 ## <a name="create-hierarchies"></a>Создание иерархий  
   
@@ -78,6 +79,6 @@ ms.locfileid: "43071817"
   
  ## <a name="whats-next"></a>Дальнейшие действия
 
-[Занятие 10: Создание секций](../tutorial-tabular-1400/as-lesson-10-create-partitions.md). 
+[Занятие 10. Создание секций](../tutorial-tabular-1400/as-lesson-10-create-partitions.md). 
   
   

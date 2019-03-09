@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ab05885243d09dcc2aece09b7b8931fc17a5921c
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 9dfb6706f27006ccb876615316533bc8e15b3101
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556236"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683634"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>Заметки о выпуске для кластеров SQL Server 2019 больших данных
 
@@ -74,6 +74,32 @@ ms.locfileid: "57556236"
    `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
 
 - Если происходит сбой развертывания кластера больших данных, связанное пространство имен не удаляется. В итоге потерянные пространством имен в кластере. Обойти это можно вручную удалить пространство имен перед развертыванием кластера с тем же именем.
+
+#### <a name="kubeadm-deployments"></a>kubeadm развертываний
+
+Если вы используете kubeadm для развертывания Kubernetes на нескольких компьютерах, на портале администрирования кластера отображаться неправильно конечные точки, необходимые для подключения к кластеру больших данных. При возникновении этой проблемы, воспользуйтесь следующей решение проблемы, чтобы узнать IP-адреса конечной точки службы.
+
+- Если вы подключаетесь из кластера, запрашивать IP-адрес службы для конечной точки, которую вы хотите подключиться к Kubernetes. Например, следующая **kubectl** команда отображает IP-адрес главного экземпляра SQL Server:
+
+   ```bash
+   kubectl get service endpoint-master-pool -n <clusterName> -o=custom-columns="IP:.spec.clusterIP,PORT:.spec.ports[*].nodePort"
+   ```
+
+- Если вы подключаетесь из за пределов кластера, следуйте инструкциям ниже для подключения:
+
+   1. Получить IP-адрес узла под управлением главного экземпляра SQL Server: `kubectl get pod mssql-master-pool-0 -o jsonpath="Name: {.metadata.name} Status: {.status.hostIP}" -n <clusterName>`.
+
+   1. Подключитесь к экземпляру SQL Server master, используя этот IP-адрес.
+
+   1. Запрос **cluster_endpoint_table** в базе данных master для других внешних конечных точек.
+
+      Если время ожидания подключения, возможна брандмауэр соответствующем узле. В этом случае необходимо обратитесь к администратору кластера Kubernetes и попросить для IP-адреса узла, который предоставляется наружу. Это может быть любой узел. Затем можно использовать этот IP-адрес и соответствующий порт для подключения к различным службам, запущенных в кластере. Например администратор может найти этот IP-адрес, выполнив:
+
+      ```
+      [root@m12hn01 config]# kubectl cluster-info
+      Kubernetes master is running at https://172.50.253.99:6443
+      KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+      ```
 
 #### <a id="mssqlctlctp23"></a> mssqlctl
 

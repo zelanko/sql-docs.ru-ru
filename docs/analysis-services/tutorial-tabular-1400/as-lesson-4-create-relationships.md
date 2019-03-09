@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services занятие для учебника по 4: Создание связей | Документация Майкрософт'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a39978dc461bd660d932e13561ed4d00c4041e0e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 16fcf8e5f85464dbba7666f0f4ebebba829405af
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394530"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685629"
 ---
 # <a name="create-relationships"></a>Создавать связи
 
@@ -26,7 +27,7 @@ ms.locfileid: "52394530"
   
 ## <a name="prerequisites"></a>предварительные требования  
 
-Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Прежде чем выполнять задания в этом занятии, необходимо завершить предыдущее занятие: [Занятие 3. Пометить как таблицу дат](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md). 
+Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Прежде чем выполнять задания в этом занятии, необходимо завершить предыдущее занятие: [Занятие 3. Пометить как таблицу дат](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md). 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>Обзор существующих связей и добавление новых  
 
@@ -75,7 +76,7 @@ ms.locfileid: "52394530"
 
 Стрелка указывает направление фильтрации. Звездочка показывает, что эта таблица является *многих* стороне в кратности связи, а второй показывает, что эта таблица *один* стороны связи. Если вам нужно изменить связь; Например измените направление фильтрации или кратность, дважды щелкните линию связи, чтобы открыть диалоговое окно Изменение связи.
 
-![как изменить lesson4](../tutorial-tabular-1400/media/as-lesson4-edit.png)
+![as-lesson4-edit](../tutorial-tabular-1400/media/as-lesson4-edit.png)
 
 Эти функции предназначены для расширенного моделирования данных и выходят за рамки данного руководства. Дополнительные сведения см. в разделе [двунаправленного кросс-фильтры для табличных моделей в службах Analysis Services](../tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md).
 
@@ -102,7 +103,7 @@ ms.locfileid: "52394530"
   
 ## <a name="whats-next"></a>Дальнейшие действия
 
-[Занятие 5. Создание вычисляемых столбцов](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).
+[Занятие 5. Создание вычисляемых столбцов](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).
   
   
   

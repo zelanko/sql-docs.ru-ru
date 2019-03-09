@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services занятие для учебника по 13: развертывание | Документация Майкрософт'
-ms.date: 08/27/2018
+title: 'Analysis Services занятие для учебника по 13: Развертывание | Документация Майкрософт'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bad6f58800e6a023fe5014462fbe6bbaf76bfe8e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: ab561b096c4436349580201eec3b3ea10a8aaa75
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43090436"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685311"
 ---
 # <a name="deploy"></a>Развертывание
 
@@ -22,11 +23,11 @@ ms.locfileid: "43090436"
 
 На этом занятии вы настроите свойства развертывания; Указание сервера для развертывания и имя для модели. Затем развернуть модель на сервер. После развертывания модели, пользователи смогут подключаться к нему с помощью клиентского приложения для создания отчетов. Дополнительные сведения см. в разделе [развертывание в Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy) и [развертывание решений табличной модели](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
   
-Предполагаемое время выполнения этого занятия: **5 минут**.  
+Предполагаемое время выполнения данного занятия: **5 минут**  
   
 ## <a name="prerequisites"></a>предварительные требования  
 
-Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Перед выполнением задач на этом занятии, необходимо завершить предыдущее занятие: [занятие 12: анализ в Excel](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md).  
+Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Прежде чем выполнять задания в этом занятии, необходимо завершить предыдущее занятие: [Занятие 12. Анализ в Excel](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md).  
 
 > [!IMPORTANT]  
 > Если развертывание служб Azure Analysis Services, необходимо иметь [разрешения администратора](https://docs.microsoft.com/azure/analysis-services/analysis-services-server-admins) на serever.  

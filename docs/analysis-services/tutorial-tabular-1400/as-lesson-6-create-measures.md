@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services занятие для учебника по 6: создание мер | Документация Майкрософт'
-ms.date: 08/27/2018
+title: 'Analysis Services занятие для учебника по 6: Создание мер | Документация Майкрософт'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9b466a703dd04a53c6ebf7c6fac624476abcc52
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: f3592f1494661fa603e6dc252d3cd2e10093c24e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43093967"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685651"
 ---
 # <a name="create-measures"></a>Создание мер
 
@@ -32,7 +33,7 @@ ms.locfileid: "43093967"
   
 ## <a name="prerequisites"></a>предварительные требования  
 
-Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Перед выполнением задач на этом занятии, необходимо завершить предыдущее занятие: [занятия 5: Создание вычисляемых столбцов](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).  
+Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Прежде чем выполнять задания в этом занятии, необходимо завершить предыдущее занятие: [Занятие 5. Создание вычисляемых столбцов](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Создание мер  
   
@@ -77,7 +78,7 @@ ms.locfileid: "43093967"
   
     Функция автосуммирования автоматически создаст меру для выбранного столбца, используя стандартную статистическую формулу DistinctCount.  
     
-       ![как newmeasure2 lesson6](../tutorial-tabular-1400/media/as-lesson6-newmeasure2.png)
+       ![as-lesson6-newmeasure2](../tutorial-tabular-1400/media/as-lesson6-newmeasure2.png)
   
 4.  В сетке мер щелкните новую меру, а затем в **свойства** окно в **имя меры**, переименуйте эту меру в **InternetDistinctCountSalesOrder**. 
  
@@ -89,13 +90,13 @@ ms.locfileid: "43093967"
     |Столбец|Имя меры|Автосуммирование (∑)|Формула|  
     |----------------|----------|-----------------|-----------|  
     |SalesOrderLineNumber|InternetOrderLinesCount|Count|=COUNTA([SalesOrderLineNumber])|  
-    |OrderQuantity|InternetTotalUnits|SUM|=SUM([OrderQuantity])|  
-    |DiscountAmount|InternetTotalDiscountAmount|SUM|=SUM([DiscountAmount])|  
-    |TotalProductCost|InternetTotalProductCost|SUM|=SUM([TotalProductCost])|  
-    |SalesAmount|InternetTotalSales|SUM|=SUM([SalesAmount])|  
-    |Маржа|InternetTotalMargin|SUM|=SUM([маржа])|  
-    |TaxAmt|InternetTotalTaxAmt|SUM|=SUM([TaxAmt])|  
-    |Freight|InternetTotalFreight|SUM|=SUM([фрахт])|  
+    |OrderQuantity|InternetTotalUnits|Sum|=SUM([OrderQuantity])|  
+    |DiscountAmount|InternetTotalDiscountAmount|Sum|=SUM([DiscountAmount])|  
+    |TotalProductCost|InternetTotalProductCost|Sum|=SUM([TotalProductCost])|  
+    |SalesAmount|InternetTotalSales|Sum|=SUM([SalesAmount])|  
+    |Маржа|InternetTotalMargin|Sum|=SUM([маржа])|  
+    |TaxAmt|InternetTotalTaxAmt|Sum|=SUM([TaxAmt])|  
+    |Freight|InternetTotalFreight|Sum|=SUM([фрахт])|  
   
 2.  Щелкнув пустую ячейку в сетке мер или с помощью строки формул создайте, следующие пользовательские меры в указанном порядке:  
   
@@ -127,6 +128,6 @@ ms.locfileid: "43093967"
   
 ## <a name="whats-next"></a>Дальнейшие действия
 
-[Занятие 7: Создание ключевых показателей эффективности](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md).  
+[Занятие 7. Создание ключевых показателей эффективности](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md).  
 
   
