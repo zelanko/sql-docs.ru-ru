@@ -1,7 +1,7 @@
 ---
 title: GROUP BY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 03/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -33,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3aafd6afb6e619cb9d4112fe5c7fcd1c1775d84b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 536283eb15d0b2f40e896520ab5d73327320bf56
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509055"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227196"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT — GROUP BY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -91,6 +91,7 @@ GROUP BY
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
     | column-expression
+    | ROLLUP ( <group_by_expression> [ ,...n ] ) 
 } [ ,...n ]
 
 ```  
@@ -264,9 +265,9 @@ GROUP BY GROUPING SETS ( Country, () );
 
 ### <a name="group-by--all--column-expression--n-"></a>GROUP BY [ ALL ] column-expression [ ,...n ] 
 
-Применимо к: SQL Server и база данных SQL Azure
+Применимо для следующих объектов: SQL Server и база данных SQL Azure
 
-ПРИМЕЧАНИЕ. Этот синтаксис поддерживается только для обратной совместимости. В будущей версии он будет удален. Избегайте использования этого синтаксиса в новых разработках и учитывайте необходимость изменения в будущем приложений, использующих этот синтаксис сейчас.
+Примечание. Этот синтаксис поддерживается только для обратной совместимости. В будущей версии он будет удален. Избегайте использования этого синтаксиса в новых разработках и учитывайте необходимость изменения в будущем приложений, использующих этот синтаксис сейчас.
 
 Указывает включить все группы в результаты независимо от того, соответствуют ли они условиям поиска в предложении WHERE. Группы, которые не соответствуют условиям поиска, имеют значение NULL для статистического вычисления. 
 
@@ -275,7 +276,7 @@ GROUP BY ALL
 - Применение предложения к столбцам, имеющим атрибут FILESTREAM, приведет к ошибке.
   
 ### <a name="with-distributedagg"></a>WITH (DISTRIBUTED_AGG)
-Применимо к: хранилище данных SQL Azure и Parallel Data Warehouse
+Применимо для следующих объектов: Хранилище данных SQL Azure и Parallel Data Warehouse
 
 Указание запроса DISTRIBUTED_AGG заставляет систему MPP перераспределять таблицу по определенному столбцу до выполнения статистического вычисления. Только один столбец в предложении GROUP BY может иметь указание запроса DISTRIBUTED_AGG. После завершения запроса перераспределенная таблица удаляется. Исходная таблица не изменяется.  
 
@@ -302,7 +303,7 @@ GROUP BY ALL
   
 ## <a name="limitations-and-restrictions"></a>Ограничения
 
-Применимо к: SQL Server (начиная с версии 2008), хранилище данных SQL Azure
+Применимо для следующих объектов: SQL Server (начиная с версии 2008), хранилище данных SQL Azure
 
 ### <a name="maximum-capacity"></a>Максимальная емкость
 
@@ -344,7 +345,7 @@ GROUP BY ALL
 |Компонент|Службы SQL Server Integration Services|Уровень совместимости SQL Server — 100 или более|Уровень совместимости SQL Server 2008 или более поздней версии — 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |Статистические функции DISTINCT|Не поддерживаются для конструкций WITH CUBE или WITH ROLLUP.|Поддерживаются для конструкций WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE или ROLLUP.|Аналогично уровню совместимости 100.|  
-|Определяемая пользователем функция с именем CUBE или ROLLUP в предложении GROUP BY|Определяемая пользователем функция **dbo.cube(**_arg1_**,**_...argN_**)** or **dbo.rollup(**_arg1_**,**..._argN_**)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`.|Определяемая пользователем функция **dbo.cube (**_arg1_**,**...argN **)** or **dbo.rollup(** arg1 **,**_...argN_**)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`.<br /><br /> Возвращается сообщение об ошибке: "Неправильный синтаксис рядом с ключевым словом "cube"&#124;"rollup"".<br /><br /> Чтобы избежать этой проблемы, замените конструкцию `dbo.cube` на `[dbo].[cube]` или конструкцию `dbo.rollup` на `[dbo].[rollup]`.<br /><br /> Следующий пример является допустимым: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`.|Определяемая пользователем функция **dbo.cube (**_arg1_**,**_...argN_) or **dbo.rollup(**_arg1_**,**_...argN_**)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`.|  
+|Определяемая пользователем функция с именем CUBE или ROLLUP в предложении GROUP BY|Определяемая пользователем функция **dbo.cube(**_arg1_**,**_...argN_**)** or **dbo.rollup(**_arg1_**,**..._argN_**)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Определяемая пользователем функция **dbo.cube (**_arg1_**,**...argN **)** or **dbo.rollup(** arg1 **,**_...argN_**)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Выдается следующее сообщение об ошибке: "Применение неверного синтаксиса недалеко от ключевого слова 'cube'&#124;'rollup'".<br /><br /> Чтобы избежать этой проблемы, замените конструкцию `dbo.cube` на `[dbo].[cube]` или конструкцию `dbo.rollup` на `[dbo].[rollup]`.<br /><br /> Следующий пример является допустимым: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`.|Определяемая пользователем функция **dbo.cube (**_arg1_**,**_...argN_) or **dbo.rollup(**_arg1_**,**_...argN_**)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|Не поддерживается|Поддерживается|Поддерживается|  
 |CUBE|Не поддерживается|Поддерживается|Не поддерживается|  
 |ROLLUP|Не поддерживается|Поддерживается|Не поддерживается|  
@@ -403,7 +404,7 @@ HAVING DATEPART(yyyy,OrderDate) >= N'2003'
 ORDER BY DATEPART(yyyy,OrderDate);  
 ```  
   
-## <a name="examples-sql-data-warehouse-and-parallel-data-warehouse"></a>Примеры: хранилище данных SQL и Parallel Data Warehouse  
+## <a name="examples-sql-data-warehouse-and-parallel-data-warehouse"></a>Примеры: Хранилище данных SQL и Parallel Data Warehouse  
   
 ### <a name="e-basic-use-of-the-group-by-clause"></a>Д. Базовое использование предложения GROUP BY  
  В следующем примере вычисляется общий объем всех продаж за каждый день. Выводится только одна строка, содержащая общий объем продаж по каждому дню.  

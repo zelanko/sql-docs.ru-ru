@@ -1,6 +1,6 @@
 ---
 title: Заметки о выпуске SQL Server 2019 | Документация Майкрософт
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 9e717104c2bc75bd056aa513566e12db6bd5c2b8
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 1afd1c7c1c3c142745e667662f51027218598e2f
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802390"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017730"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Заметки о выпуске предварительной версии SQL Server 2019
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "56802390"
 - Установите на компьютерах с Linux для [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) и [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Работайте с SQL Server 2019 в Docker](../linux/quickstart-install-connect-docker.md).
 
-## <a name="ctp-22-december-2018"></a>CTP 2.2 (декабрь 2018 г.)
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2 — последний общедоступный выпуск [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
+## <a name="ctp-23"></a>CTP 2.3
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 — последний общедоступный выпуск [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2 доступен только в виде ознакомительной версии. Другие выпуски недоступны. Поддержка CTP 2.2 описана в файле `license_Eval.rtf` на установочном носителе.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 доступен только в виде ознакомительной версии. Другие выпуски недоступны. Поддержка CTP 2.3 описана в файле `license_Eval.rtf` на установочном носителе.
 
 Ограниченную поддержку можно найти в следующих ресурсах:
 
@@ -49,7 +49,7 @@ ms.locfileid: "56802390"
 
 - Или опубликуйте твит [@SQLServer](https://twitter.com/SQLServer) с [#sqlhelp](https://twitter.com/search?q=%23sqlhelp).
 
-### <a name="documentation-ctp-22"></a>Документация (CTP 2.2)
+### <a name="documentation-ctp-23"></a>Документация (CTP 2.3)
 
 - **Проблема и последствия для клиентов**: Документация для SQL Server 2019 (15.x) ограничена, и материалы включены в набор документации по [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Содержимое статей, относящееся к SQL Server 2019 (15.x), отмечено с помощью раздела **Область применения**.
 
@@ -57,7 +57,7 @@ ms.locfileid: "56802390"
 
 - **Проблема и последствия для клиентов**: Локальные материалы для SQL Server 2019 (15.x) отсутствуют.
 
-### <a name="hardware-and-software-requirements"></a>Требования к оборудованию и программному обеспечению
+### <a name="hardware-and-software-requirements-ctp-23"></a>Требования к оборудованию и программному обеспечению (CTP 2.3)
 
 - **Проблема и последствия для клиентов**: Требования к оборудованию и программному обеспечению по-прежнему проверяются и не являются окончательными для выпуска продукта.
 
@@ -71,21 +71,11 @@ ms.locfileid: "56802390"
 
 ### <a name="updated-compiler"></a>Обновленный компилятор
 
-- **Проблема и последствия для клиентов**: сборка [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] выполнена с помощью обновленного компилятора. В CTP 2.1 была известная проблема, при которой результаты для чисел с плавающей точкой и результаты других сценариев преобразования могли отличаться от результатов таких же операций в прошлых версиях из-за использования обновленного компилятора. В CTP 2.2 была проведена дополнительная работа, чтобы убедиться, что сценарии, на которые распространяется эта проблема, возвращают те же результаты, что и в предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. На момент выхода CTP 2.2 эта проблема была полностью устранена. Если вы обнаружите какие-либо различия в результатах по сравнению с [!INCLUDE[ss2017](../includes/sssqlv14-md.md)], незамедлительно сообщите о них [команде разработчиков [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](http://aka.ms/sqlfeedback).
+- **Проблема и последствия для клиентов**: сборка [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] выполнена с помощью обновленного компилятора. В CTP 2.1 была известная проблема, при которой результаты для чисел с плавающей точкой и результаты других сценариев преобразования могли отличаться от результатов таких же операций в прошлых версиях из-за использования обновленного компилятора. В CTP 2.2 была проведена дополнительная работа, чтобы убедиться, что сценарии, на которые распространяется эта проблема, возвращают те же результаты, что и в предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. На момент выхода CTP 2.3 эта проблема была полностью устранена. Если вы обнаружите какие-либо различия в результатах по сравнению с [!INCLUDE[ss2017](../includes/sssqlv14-md.md)], незамедлительно сообщите о них [команде разработчиков [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](http://aka.ms/sqlfeedback).
 
 - **Обходной путь**: Недоступно
 
-- **Область применения**: SQL Server 2019 CTP 2.2, CTP 2.1
-
-### <a name="sql-server-integration-services-ssis-page-deployment-after-switching-db-to-single-user-mode-and-then-switching-back"></a>Развертывание пакета SQL Server Integration Services (SSIS) после переключения базы данных в однопользовательский режим и обратно
-
-- **Проблема и последствия для клиентов**: После переключения SSISDB из однопользовательского режима обратно в многопользовательский при развертывании пакета может отображаться следующее сообщение об ошибке:
-
-  `Cannot continue the execution because the session is in the kill state.`
-
-- **Обходной путь**: Остановите и перезапустите экземпляр SQL Server, а затем переключите SSISDB обратно в многопользовательский режим.
-
-- **Область применения**: SQL Server 2019 (предварительная версия) CTP 2.2, CTP 2.1
+- **Область применения**: SQL Server 2019 CTP 2.3, CTP 2.2, CTP 2.1
 
 ### <a name="utf-8-collations"></a>Параметры сортировки UTF-8
 
@@ -100,7 +90,7 @@ ms.locfileid: "56802390"
  
 - **Обходной путь**: для CTP [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] — отсутствует.
 
-- **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2, CTP 2.1, CTP 2.0.
+- **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
 
 ### <a name="sql-graph"></a>Граф SQL
 
@@ -108,7 +98,7 @@ ms.locfileid: "56802390"
 
 - **Обходной путь**: Написание скриптов [!INCLUDE[tsql](../includes/tsql-md.md)] и их выполнение на сервере с помощью [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] или SQLCMD будет работать. Операции экспорта или импорта объектов базы данных, которые создают ограничения ребер, имеют новый синтаксис слияния языка DML или создают производные таблицы и представления для объектов графа, не будут работать. Пользователям придется вручную создавать такие объекты в своей базе данных с помощью скриптов [!INCLUDE[tsql](../includes/tsql-md.md)]. 
 
-- **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2, CTP 2.1, CTP 2.0.
+- **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3, CTP 2.2, CTP 2.1, 2.0.
 
 ### <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted с безопасными анклавами.
 
@@ -116,42 +106,23 @@ ms.locfileid: "56802390"
 
 - **Обходной путь**: Чтобы включить полнофункциональные вычисления, выполните команду `DBCC traceon(127,-1)`. Дополнительные сведения см. в разделе [Настройка безопасного анклава](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-- **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2, CTP 2.1, CTP 2.0.
+- **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3, 2.2, CTP 2.1, 2.0.
 
-## <a name="ctp-21-october-2018"></a>CTP 2.1 (октябрь 2018 г.)
+### <a name="system-dynamic-management-views"></a>Системные динамические административные представления
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 — предыдущий общедоступный выпуск [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
+- **Проблема и последствия для клиентов**: Возвращающая табличные значения функция системы [sys.dm_db_objects_disabled_on_compatibility_level_change](../relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md) возвращает случайные значения в столбце `dependency`.
 
-### <a name="udf-inlining"></a>Встроенные определяемые пользователем функции
+- **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3.
 
-- **Проблема и последствия для клиентов**: Существуют экстремальные сценарии, когда вложенные вызовы к встроенным функциям, определяемым пользователем, неправильно проходят проверку безопасности.
-  
-- **Обходной путь**: Отключите встраивание для таких определяемых пользователем функций с помощью параметра `INLINE = OFF`.
+### <a name="sql-server-analysis-services-ssas"></a>Службы SQL Server Analysis Services (SSAS)
 
-- **Область применения**: SQL Server 2019 CTP 2.1
+- **Проблема и последствия для клиентов**: В табличных моделях с динамической безопасностью в некоторых случаях пользователь видит данные другого пользователя, принадлежащего к той же роли.
 
-### <a name="sql-server-integration-service---fuzzy-lookup-transformation"></a>Служба интеграции SQL Server — нечеткий уточняющий запрос
+  **Сценарий**. В модели есть по меньшей мере две роли. Одна из ролей не имеет какого-либо выражения динамической безопасности, которое бы содержало `USERNAME` или `USERPRINCIPALNAME`. Вторая роль с динамической безопасностью на уровне строк определяется для пользователей A и B с помощью выражения, содержащего `USERNAME` или `USERPRINCIPLENAME`. Пользователь А и пользователь Б могут подключаться к данным и запрашивать их, но при определенных обстоятельствах пользователь Б может видеть данные, которые предназначены только для пользователя A.
 
-- **Проблема и последствия для клиентов**: Нечеткий уточняющий запрос, настроенный на повторное использование индекса, завершается следующей ошибкой:
+- **Обходной путь**: Добавьте фиктивную меру в модель. Например, `[DummyMeasure] := UserName()`. Это гарантирует, что динамические выражения оцениваются для выражений безопасности на уровне строк.
 
-  `The specified delimiters do not match the delimiters used to build the pre-existing match index "...". This error occurs when the delimiters used to tokenize fields do not match. This can have unknown effects on the matching behavior or results.`
-
-- **Обходной путь**: Недоступно
-
-- **Дополнительные сведения**: Недоступно  
-
-- **Применимо к**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP2.1
-
-### <a name="lightweight-query-profiling-infrastructure"></a>Упрощенная инфраструктура профилирования запросов
-
-- **Проблема и последствия для клиентов**: В результате выполнения команды `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = ON` возвращается синтаксическая ошибка. Сценарии, зависящие от выполнения этой команды, завершатся ошибкой.
-
-  > [!NOTE]
-  > В настоящее время упрощенной инфраструктурой профилирования запросов (LWP) нельзя управлять на уровне отдельной базы данных, и она остается активированной для всех баз данных по умолчанию. Дополнительные сведения о LWP см. в [статье о новых возможностях SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
-
-- **Обходной путь**: для CTP [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] — отсутствует.
-
-- **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 и CTP 2.0.
+- **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

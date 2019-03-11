@@ -13,12 +13,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f7e80b878583932976c85f7fa390ed546a67587
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1cd361a27a07c7b7750046d9664d77fd6d3fdc04
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401127"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007587"
 ---
 # <a name="always-encrypted-cryptography"></a>Системы шифрования c технологиями постоянного шифрования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52401127"
   В этой статье описаны алгоритмы шифрования и механизмы извлечения шифровальных материалов, которые используются в функции [Постоянное шифрование](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) баз данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)].  
   
 ## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Ключи, хранилища ключей и алгоритмы шифрования ключей  
- В технологии постоянного шифрования используются два типа ключей: главные ключи столбца и ключи шифрования столбца.  
+ Технологии постоянного шифрования используют два типа ключей: главные ключи столбцов и ключи шифрования столбцов.  
   
  Главный ключ столбца — это ключ, который используется для шифрования других ключей. Он находится под контролем клиента и хранится во внешнем хранилище ключей. Драйвер клиента с поддержкой постоянного шифрования взаимодействует с хранилищем ключей через поставщика хранилища главного столбца ключа, который может быть либо частью библиотеки драйверов (системный поставщик или поставщик [!INCLUDE[msCoName](../../../includes/msconame-md.md)]), либо частью клиентского приложения (пользовательский поставщик). На данный момент клиентские библиотеки драйверов включают поставщики хранилища ключей [!INCLUDE[msCoName](../../../includes/msconame-md.md)] для [хранилища сертификатов Windows](/windows/desktop/SecCrypto/using-certificate-stores) и аппаратные модули безопасности (HSM).  (Текущий список поставщиков см. в статье [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md).) Разработчик приложения может задать пользовательского поставщика для произвольного хранилища.  
   
@@ -73,7 +73,7 @@ iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_
   
  По сравнению с другими способами шифрования (например, использования предварительно определенного значения вектора инициализации), метод детерминированного шифрования более эффективно скрывает шаблоны.  
   
-### <a name="step-2-computing-aes256cbc-ciphertext"></a>Шаг 2. Вычисление зашифрованного текста AES_256_CBC  
+### <a name="step-2-computing-aes256cbc-ciphertext"></a>Этап 2. Вычисление зашифрованного текста AES_256_CBC  
  После вычисления вектора инициализации создается зашифрованный текст **AES_256_CBC** :  
   
 ```  
@@ -100,7 +100,7 @@ versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
-### <a name="step-4-concatenation"></a>Шаг 4. Объединение  
+### <a name="step-4-concatenation"></a>Шаг 4. Concatenation  
  Зашифрованное значение создается путем простого объединения байтовой версии алгоритма, имитовставки, значения вектора инициализации и зашифрованного текста AES_256_CBC.  
   
 ```  
@@ -110,11 +110,11 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 ## <a name="ciphertext-length"></a>Длина зашифрованного текста  
  Длина (в байтах) конкретных компонентов зашифрованного текста **AEAD_AES_256_CBC_HMAC_SHA_256** :  
   
--   versionbyte — 1 байт;  
+-   versionbyte: 1  
   
--   MAC — 32 байта;  
+-   MAC: 32  
   
--   IV — 16 байт;  
+-   IV: 16  
   
 -   aes_256_cbc_ciphertext — `(FLOOR (DATALENGTH(cell_data)/ block_size) + 1)* block_size`, где:  
   

@@ -1,7 +1,7 @@
 ---
 title: table_constraint (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 09/11/2018
+ms.date: 03/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ef0833709d409e7393d71a402b823375b895fb2a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: bcab3eb3b41cf0dbbcb46a48a612d35bde66de14
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327396"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227156"
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "54327396"
           [ , {node_table TO node_table }]
           [ , ...n ]
         )
-        [ ON DELETE NO ACTION]
+        [ ON DELETE { NO ACTION | CASCADE } ]
     | DEFAULT constant_expression FOR column [ WITH VALUES ]   
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )  
 }  
@@ -163,7 +163,7 @@ ms.locfileid: "54327396"
   
  Может быть определено для ограничений FOREIGN KEY и CHECK. Если ограничение сопровождается этим предложением, оно не выполняется, когда агенты репликации выполняют операции вставки, обновления или удаления.  
 
- CONNECTION Указывает пару таблиц узлов, соединение которых разрешает определенное ограничение ребер.  
+ CONNECTION Указывает пару таблиц узлов, соединение которых разрешает определенное ограничение ребер. При DELETE указывает, что происходит со строками в пограничной таблице, если удаляются узлы, которые были соединены через эту границу в этой пограничной таблице. 
  
  DEFAULT  
  Задает значение по умолчанию для столбца. Определения DEFAULT могут использоваться для указания значений по умолчанию для новых столбцов в существующих строках данных. Определения DEFAULT нельзя добавлять к столбцам, которые содержат данные типа **timestamp**, обладают свойством IDENTITY, существующим определением DEFAULT, или в том случае, если для них задано значение по умолчанию. Если для столбца задано значение по умолчанию, необходимо удалить его перед заданием нового умолчания. Если значение по умолчанию указывается для столбца определяемого пользователем типа, этот тип должен поддерживать неявное преобразование выражения *constant_expression* в определяемый пользователем тип. Для сохранения совместимости с более ранними версиями сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] значению DEFAULT может быть присвоено имя ограничения.  

@@ -18,24 +18,24 @@ ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 233a560903676736350935729d8002021f802d65
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 37b88f07571029e39080f38c1406ab89ec73b0a3
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327745"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852879"
 ---
 # <a name="deny-schema-permissions-transact-sql"></a>DENY, запрет разрешений на схему (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Запрещает разрешения на схему.  
+Запрещает разрешения на схему.  
   
 
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на статью") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```sql
 DENY permission  [ ,...n ] } ON SCHEMA :: schema_name  
     TO database_principal [ ,...n ]   
     [ CASCADE ]  
@@ -43,14 +43,14 @@ DENY permission  [ ,...n ] } ON SCHEMA :: schema_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *permission*  
- Указывает разрешение, которое может быть запрещено на схему. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
+*permission*  
+Указывает разрешение, которое может быть запрещено на схему. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- ON SCHEMA **::** schema *_name*  
- Указывает схему, на которую запрещается разрешение. Квалификатор области **::** является обязательным.  
+ON SCHEMA **::** schema *_name*  
+Указывает схему, на которую запрещается разрешение. Квалификатор области **::** является обязательным.  
   
- *database_principal*  
- Задает участника, для которого запрещается разрешение. *database_principal* может быть одним из следующих:  
+*database_principal*  
+Указывает участника, для которого запрещается разрешение. *database_principal* может быть одним из следующих:  
   
 -   пользователь базы данных;  
 -   роль базы данных;  
@@ -62,10 +62,10 @@ DENY permission  [ ,...n ] } ON SCHEMA :: schema_name
 -   пользователь базы данных, не сопоставленный с сервером-участником.  
   
 CASCADE  
- Указывает, что запрещаемое разрешение также запрещается для других участников, которым оно было предоставлено данным участником.  
+Запрещает разрешение для любых других участников, которым *database_principal* явно предоставил разрешение.
   
 *denying_principal*  
- Задает участника, от которого участник, выполняющий данный запрос, получает право на запрет разрешения. *denying_principal* может быть одним из следующих:  
+Задает участника, от которого участник, выполняющий данный запрос, получает право на запрет разрешения. *denying_principal* может быть одним из следующих:  
   
 -   пользователь базы данных;  
 -   роль базы данных;  
@@ -76,8 +76,8 @@ CASCADE
 -   пользователь базы данных, сопоставленный с асимметричным ключом;  
 -   пользователь базы данных, не сопоставленный с сервером-участником.  
   
-## <a name="remarks"></a>Примечания  
- Схема — это защищаемая сущность уровня базы данных, содержащаяся в базе данных, которая является для нее родительской в иерархии разрешений. Наиболее специфичные и ограниченные разрешения на работу со схемой, которые можно запрещать, приведены в следующей таблице вместе с общими разрешениями, неявно их включающими.  
+## <a name="remarks"></a>Remarks  
+Схема — это защищаемый объект уровня базы данных. Она находится в базе данных, которая является родительской в иерархии разрешений. Наиболее часто указываемые и ограниченные разрешения, которые могут быть запрещены в схеме, перечислены в следующей таблице. В таблице показаны наиболее общие разрешения, неявно их содержащие.  
   
 |Разрешение схемы|Содержится в разрешении схемы|Содержится в разрешении базы данных|  
 |-----------------------|----------------------------------|------------------------------------|  
@@ -95,15 +95,15 @@ CASCADE
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется разрешение CONTROL для схемы. Если указан параметр AS, указанный участник должен быть владельцем схемы.  
+Требуется разрешение CONTROL для схемы. Если указан параметр AS, указанный участник должен быть владельцем схемы.  
   
-## <a name="see-also"></a>См. также  
- [CREATE SCHEMA (Transact-SQL)](../../t-sql/statements/create-schema-transact-sql.md)   
- [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
- [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
- [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
- [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+[CREATE SCHEMA (Transact-SQL)](../../t-sql/statements/create-schema-transact-sql.md)   
+[DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
+[Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
+[Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+[sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+[sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+[HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

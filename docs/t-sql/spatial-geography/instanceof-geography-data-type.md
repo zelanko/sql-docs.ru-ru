@@ -18,49 +18,49 @@ ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 33de78007a5d9fb199debff7f0dceb0cb56a2dd5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0ef6816efa98d3e9b2da27525d700fb4eba2501
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807962"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852999"
 ---
 # <a name="instanceof-geography-data-type"></a>InstanceOf (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Проверяет принадлежность экземпляра **geography** к указанному типу.  
+Проверяет принадлежность экземпляра **geography** к указанному типу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```sql  
   
 .InstanceOf ( 'geography_type')  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *geography_type*  
- Строка типа **nvarchar(4000)**, задающая один из 16 типов, доступных в иерархии типов **geography**.  
+*geography_type*  
+Строка типа **nvarchar(4000)**, задающая один из 16 типов, доступных в иерархии типов **geography**.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
+Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Тип возвращаемых данных CLR: **SqlBoolean**  
+Возвращаемый тип CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- Возвращает значение 1, если тип экземпляра **geography** совпадает с указанным типом или указанный тип является предком типа экземпляра. В противном случае возвращает значение 0.  
+Возвращает значение 1, если тип экземпляра **geography** совпадает с указанным типом или указанный тип является предком типа экземпляра. В противном случае возвращает значение 0.  
   
- Этот метод типа данных **geography** поддерживает экземпляры **FullGlobe** или пространственные экземпляры, размер которых больше полушария.  
+Этот метод типа данных **geography** поддерживает экземпляры **FullGlobe** или пространственные экземпляры, размер которых больше полушария.  
   
- Входные данные метода должны быть одного из следующих типов: Geometry, Point, Curve, LineString,CircularString, Surface, Polygon, CurvePolygon, **GeometryCollection**, **MultiSurface**, **MultiPolygon, MultiCurve, MultiLineString**, **MultiPoint** или **FullGlobe**.  
+Входным аргументом метода должен быть один из следующих объектов: Geometry, Point, Curve, LineString, CircularString, Surface, Polygon, CurvePolygon, **GeometryCollection**, **MultiSurface**, **MultiPolygon, MultiCurve, MultiLineString**, **MultiPoint** или **FullGlobe**.  
   
- Если в качестве входного аргумента указана любая другая строка, этот метод вызовет исключение `ArgumentException`.  
+Если в качестве входного аргумента указана любая другая строка, этот метод вызовет исключение `ArgumentException`.  
   
- Этот метод не является точным.  
+Этот метод не является точным.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере создается экземпляр `MultiPoint` и производится вызов метода `InstanceOf()`, позволяющий определить, принадлежит ли этот экземпляр типу `GeometryCollection`.  
+В следующем примере создается экземпляр `MultiPoint` и производится вызов метода `InstanceOf()`, позволяющий определить, принадлежит ли этот экземпляр типу `GeometryCollection`.  
   
-```  
+```sql  
 DECLARE @g geography;  
 SET @g = geography::STGeomFromText('MULTIPOINT(-122.360 47.656, -122.343 47.656)', 4326);  
 SELECT @g.InstanceOf('GEOMETRYCOLLECTION');  
