@@ -156,6 +156,32 @@ items:
         href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
       - name: Использование расширенного сервера журнала Spark
         href: ../big-data-cluster/spark-history-server.md
+  - name: Справочник
+    items:
+    - name: Справочник по mssqlctl
+      items:
+      - name: mssqlctl
+        href: ../big-data-cluster/reference-mssqlctl.md
+      - name: Развертывание приложения
+        items:
+        - name: Приложение mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl-app.md
+        - name: Шаблон приложения mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl-app-template.md
+      - name: Кластер
+        items:
+        - name: Кластер mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl-cluster.md
+        - name: Конфигурация кластера mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
+        - name: Отладка кластера mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
+      - name: Хранилище
+        items:
+        - name: Хранилище mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl-storage.md
+        - name: Подключение хранилища mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
 - name: Непрерывность бизнес-процессов
   href: redirectfrom-business-continuity-10.md
   items:
@@ -6847,8 +6873,6 @@ items:
             href: ../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md
   - name: Настройка
     items:
-    - name: Адаптивная обработка запросов
-      href: ../relational-databases/performance/adaptive-query-processing.md
     - name: Автоматическая настройка
       href: ../relational-databases/automatic-tuning/automatic-tuning.md
     - name: Оценка кратности
@@ -7988,7 +8012,7 @@ items:
     - name: Установить
       href: ../azure-data-studio/download.md
     - name: Заметки о выпуске
-      href: ../azure-data-studio/release-notes.md
+      href: ../azure-data-studio/release-notes-azure-data-studio.md
     - name: Краткие руководства
       items:
       - name: Подключение и отправка запроса к SQL Server
@@ -10976,7 +11000,7 @@ items:
         href: ../relational-databases/event-classes/database-suspect-data-page-event-class.md
       - name: ErrorLog, класс событий
         href: ../relational-databases/event-classes/errorlog-event-class.md
-      - name: EventLog, класс событий
+      - name: Класс событий EventLog
         href: ../relational-databases/event-classes/eventlog-event-class.md
       - name: Exception, класс событий
         href: ../relational-databases/event-classes/exception-event-class.md
@@ -17159,9 +17183,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Поддержка пространств имен в XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 085652bdfcac1b7bea33c7e9307da37d749a65ea
-ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
+ms.openlocfilehash: c1bcf717605ff5c3cd1cf5722154fe518721c9e6
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57401976"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579794"
