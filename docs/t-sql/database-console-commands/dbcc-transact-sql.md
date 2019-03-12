@@ -34,15 +34,15 @@ helpviewer_keywords:
 - progress reporting [DBCC statements]
 - informational statements [SQL Server]
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 30b407b4cbfd10f6a5844978bbabbb9bf26e2784
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e746569eb629eb41c96cc7738e9529949307532e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731352"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685721"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,8 +105,8 @@ ms.locfileid: "47731352"
 |DBCC ALLOC REPAIR|Во время этого этапа выполняются исправления базы данных, если указывается параметр REPAIR_FAST, REPAIR_REBUILD или REPAIR_ALLOW_DATA_LOSS и имеются ошибки на уровне распределения пространства.|О состоянии не сообщается.|  
 |DBCC SYS CHECK|Во время этого этапа проверяются системные таблицы базы данных.|Отчет о состоянии сформирован на уровне страниц базы данных.<br /><br /> Значение отчета о состоянии обновляется через каждую 1 000 проверенных страниц базы данных.|  
 |DBCC SYS REPAIR|Во время этого этапа выполняются исправления базы данных, если указывается параметр REPAIR_FAST, REPAIR_REBUILD или REPAIR_ALLOW_DATA_LOSS и имеются ошибки на уровне системных таблиц.|Отчет о состоянии сформирован на уровне отдельных исправлений.<br /><br /> Счетчик обновляется для каждой завершенной операции исправления.|  
-|DBCC SSB CHECK|Во время этого этапа проверяются объекты компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker.<br /><br /> Примечание. Этот этап не выполняется при выполнении команды DBCC CHECKTABLE.|О состоянии не сообщается.|  
-|DBCC CHECKCATALOG|Во время этого этапа проверяется согласованность каталогов базы данных.<br /><br /> Примечание. Этот этап не выполняется при выполнении команды DBCC CHECKTABLE.|О состоянии не сообщается.|  
+|DBCC SSB CHECK|Во время этого этапа проверяются объекты компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker.<br /><br /> Примечание. Эта фаза не выполняется при выполнении инструкции DBCC CHECKTABLE.|О состоянии не сообщается.|  
+|DBCC CHECKCATALOG|Во время этого этапа проверяется согласованность каталогов базы данных.<br /><br /> Примечание. Эта фаза не выполняется при выполнении инструкции DBCC CHECKTABLE.|О состоянии не сообщается.|  
 |DBCC IVIEW CHECK|Во время этого этапа проверяется логическая согласованность всех индексированных представлений базы данных.|Отчет о состоянии сформирован на уровне отдельных представлений баз данных.|  
   
 ## <a name="informational-statements"></a>Информационные инструкции  
@@ -144,6 +144,6 @@ ms.locfileid: "47731352"
 |[DBCC dllname (FREE)](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)|[DBCC HELP](../../t-sql/database-console-commands/dbcc-help-transact-sql.md)|  
 |[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)|[DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)|  
 |[DBCC FREESESSIONCACHE](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)|[DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)|  
-|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (с пакетом обновления 2 (SP2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|  
+|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **Область применения**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
   

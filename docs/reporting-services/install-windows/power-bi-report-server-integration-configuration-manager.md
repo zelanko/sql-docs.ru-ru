@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 19543e33782d2d175f5ddfbc065f6016cbed3fcc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: 1543846ec5353f5419b12bb5747b1ced53d2b4f0
+ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029583"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57556246"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Интеграция сервера отчетов с Power BI (диспетчер конфигурации)
 
@@ -20,7 +20,7 @@ ms.locfileid: "50029583"
 
 Страница  **Интеграция с Power BI** в диспетчере конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используется для регистрации сервера отчетов в нужном управляемом клиенте Azure Active Directory (AD), чтобы предоставить пользователям сервера отчетов возможность закрепления поддерживаемых элементов отчетов на панелях мониторинга [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] . Список поддерживаемых элементов, которые можно закреплять, см. в статье [Закрепление элементов служб Reporting Services на информационных панелях Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).
 
-##  <a name="bkmk_requirements"></a> Требования к интеграции с Power BI
+## <a name="bkmk_requirements"></a> Требования к интеграции с Power BI
 
 Помимо подключения к Интернету, необходимого для перехода к службе [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , для обеспечения интеграции [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]нужно выполнить приведенные ниже требования.
 
@@ -44,7 +44,7 @@ ms.locfileid: "50029583"
 
     notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared data set. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
 
-##  <a name="bkmk_steps2integrate"></a> Интеграция и регистрация сервера отчетов
+## <a name="bkmk_steps2integrate"></a> Интеграция и регистрация сервера отчетов
 
 В диспетчере конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выполните приведенные ниже действия. Дополнительные сведения см. в разделе [Диспетчер конфигурации служб Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
@@ -61,7 +61,7 @@ ms.locfileid: "50029583"
 
 5. Нажмите кнопку **Копировать** в окне **Результаты** , чтобы скопировать сведения о регистрации в буфер обмена Windows и сохранить их для дальнейшего использования.
 
-##  <a name="bkmk_unregister"></a> Отмена регистрации в Power BI
+## <a name="bkmk_unregister"></a> Отмена регистрации в Power BI
 
 **Отменить регистрацию.** Отмена регистрации сервера отчетов в Azure Active Directory приведет к следующим результатам:
 
@@ -145,12 +145,16 @@ ms.locfileid: "50029583"
 
 ![ssRS-subscription-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
+
+## <a name="considerations-and-limitations"></a>Рекомендации и ограничения
+
+* Viral и для государственных организаций клиенты не поддерживаются.
 
 ## <a name="next-steps"></a>Следующие шаги
 
 [Мои параметры для интеграции с Power BI (веб-портал)](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
-[Закрепление элементов служб Reporting Services на информационных панелях Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
-[Панели мониторинга в Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
+[Закрепление элементов служб Reporting Services на информационных панелях Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
+[информационных панелях Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

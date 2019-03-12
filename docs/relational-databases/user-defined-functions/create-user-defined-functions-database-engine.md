@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b2ff8188f2733fd0467ac39266bc9f0510de621
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b8c69ac0361f29c81341831b25e3591716484902
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515483"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579723"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Создание определяемых пользователем функций (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -200,7 +200,7 @@ FROM dbo.ufn_FindReports(1);
 > [!IMPORTANT]
 > Функции MSTVF имеют фиксированное предполагаемое значение кратности 100 начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и 1 в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
 > Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] для оптимизации плана выполнения, который использует функции MSTVF, можно использовать выполнение с чередованием, что обеспечивает фактическую кратность вместо приведенной выше эвристики.     
-> Дополнительные сведения см. в разделе [Выполнение с чередованием для функций с табличным значением с несколькими инструкциями](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
+> Дополнительные сведения см. в разделе [Выполнение с чередованием для функций с табличным значением с несколькими инструкциями](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).
 
 > [!NOTE]  
 > Параметры ANSI_WARNINGS не годятся для передачи в хранимые процедуры, пользовательские функции и при объявлении и установке переменных в пакетных инструкциях. Например, если объявить переменную как **char(3)**, а затем присвоить ей значение длиннее трех символов, данные будут усечены до размера переменной, а инструкция `INSERT` или `UPDATE` завершится без ошибок.

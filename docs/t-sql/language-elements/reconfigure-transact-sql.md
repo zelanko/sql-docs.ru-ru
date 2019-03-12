@@ -23,12 +23,12 @@ ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9bbc09590943948d27ebd989b38b6ea9f2c94559
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa99cc5549d463b48b8eff8989df312abf5d4f0f
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844952"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736809"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +64,10 @@ RECONFIGURE [ WITH OVERRIDE ]
  Разрешения для RECONFIGURE по умолчанию предоставляются участникам, которым предоставлено разрешение ALTER SETTINGS. Этим разрешением неявно обладают встроенные роли сервера **sysadmin** и **serveradmin**.    
     
 ## <a name="examples"></a>Примеры    
- Следующий пример устанавливает верхний предел для параметра `recovery interval` в `75` минут с помощью разрешения `RECONFIGURE WITH OVERRIDE`. Интервалы восстановления более 60 минут нежелательны и по умолчанию запрещены. Однако из-за параметра `WITH OVERRIDE` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не проверяет, является ли указанное значение (`90`) параметра `recovery interval` допустимым.    
+ Следующий пример устанавливает верхний предел для параметра `recovery interval` в `75` минут с помощью разрешения `RECONFIGURE WITH OVERRIDE`. Интервалы восстановления более 60 минут нежелательны и по умолчанию запрещены. Однако из-за параметра `WITH OVERRIDE` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не проверяет, является ли указанное значение (`75`) параметра `recovery interval` допустимым.    
     
 ```    
-EXEC sp_configure 'recovery interval', 75'    
+EXEC sp_configure 'recovery interval', 75    
 RECONFIGURE WITH OVERRIDE;    
 GO    
 ```    

@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df69488ebf433257ba4b1af7c13ec1c299afa831
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 04681d455fe4589135cd0b112c310e2dd0a027b3
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256379"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579104"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -102,10 +102,10 @@ bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 
 ```
 Теперь измененный файл форматирования отображает:
-* Первое поле данных в `myRemap.bcp` сопоставляется с первым столбцом. ` myRemap.. PersonID`
+* Первое поле данных в `myRemap.bcp` сопоставляется с первым столбцом. `myRemap.. PersonID`
 * Второе поле данных в `myRemap.bcp` сопоставляется с третьим столбцом. `myRemap.. LastName`
 * Третье поле данных в `myRemap.bcp` сопоставляется со вторым столбцом. `myRemap.. FirstName`
-* Четвертое поле данных в `myRemap.bcp` сопоставляется с четвертым столбцом. ` myRemap.. Gender`
+* Четвертое поле данных в `myRemap.bcp` сопоставляется с четвертым столбцом. `myRemap.. Gender`
 
 ### Создание XML-файла форматирования <a name="xml_format_file"></a>  
 Дополнительные сведения см. в разделе [XML-файлы форматирования (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) .  Следующая команда будет использовать [служебную программу bcp](../../tools/bcp-utility.md) для создания XML-файла форматирования `myRemap.xml`на основе схемы `myRemap`.  Кроме того, квалификатор `c` используется для указания символьных данных, `t,` используется для указания запятую в качестве признака конца поля, а `T` используется для указания доверенного соединения с использованием встроенной системы безопасности.  Для создания XML-файла форматирования должен использоваться квалификатор `x` .  В командной строке введите следующую команду:

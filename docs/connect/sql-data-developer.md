@@ -11,12 +11,12 @@ ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e598a2b383e0580a3be7eccc460c36ec863ffb0
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 42c28c1852c5d9c2e931973413a7671ed77b9e6a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616685"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578294"
 ---
 # <a name="sql-data-developer"></a>Разработчик данных SQL
 Используйте платформы данных Microsoft SQL для создания решений для обработки данных на мобильных устройствах и настольных компьютеров для веб-серверы, серверы предприятия и облака.  
@@ -28,7 +28,7 @@ ms.locfileid: "52616685"
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): использование LocalDB во время разработки в написании и тестировании кода Transact-SQL без необходимости управления полным экземпляром сервера SQL Server.
 
 ## <a name="sql-data-tools"></a>SQL Data tools
-* [SQL Server Data Tools ](../ssdt/download-sql-server-data-tools-ssdt.md) : использование SSDT для сборки реляционных баз данных, баз данных Azure SQL, пакетов служб Integration Services, моделей данных служб Analysis Services и Reporting Services отчеты.
+* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) : использование SSDT для сборки реляционных баз данных, баз данных Azure SQL, пакетов служб Integration Services, моделей данных служб Analysis Services и Reporting Services отчеты.
 * [Средства управления SQL Server](../ssms/download-sql-server-management-studio-ssms.md): SSMS используйте настройки, наблюдения и администрирования экземпляров SQL Server.
 
 ## <a name="sql-data-access"></a>Доступ к данным SQL
@@ -41,7 +41,7 @@ ms.locfileid: "52616685"
 * [SQLXML 4.0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): используйте SQLXML 4.0, чтобы экспортировать реляционные данные в XML.
 
 ## <a name="data-collection-processing-and-visualization"></a>Сбор данных, обработки и визуализации
-* [службы Analysis Services](../analysis-services/analysis-services-developer-documentation.md)
+* [Службы Analysis Services](../analysis-services/analysis-services-developer-documentation.md)
 * [Службы интеграции](../integration-services/integration-services-developer-documentation.md)  
 * [Службы Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)
 * [Службы Replication Services](../relational-databases/replication/concepts/replication-developer-documentation.md)

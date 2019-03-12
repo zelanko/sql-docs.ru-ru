@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Документация Майкрософт
 description: Создание синтаксиса базы данных для SQL Server, Базы данных SQL Azure, Хранилища данных SQL Azure и Analytics Platform System
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/08/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3bcbd86b04acf394bc9909369968f552e08a0c22
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 81464ed0bdb3246b805a0c44f17baa9fdeaf59e5
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828224"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683694"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -1258,7 +1258,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 - Субъект серверного уровня
 - Администратор Azure AD для локального сервера SQL Server Azure
-- Участник роли базы данных `dbmanager`
+- Участник роли базы данных `dbcreator`
 
 ## <a name="examples"></a>Примеры
 

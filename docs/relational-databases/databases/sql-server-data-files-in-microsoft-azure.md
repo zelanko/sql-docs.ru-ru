@@ -11,12 +11,12 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 402cbe79a85b1c7e9cd926922fd8f2c3abca04b6
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: 5dc7979ea9778ad6f580bb4c7c4af517dc3d515f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744494"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579515"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Файлы данных SQL Server в Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "56744494"
   
  В этом разделе представлены основные понятия и рекомендации, необходимые для хранения файлов данных SQL Server в службе хранилища Microsoft Azure.  
   
- Практические рекомендации по использованию этой функции см. в статье [Учебник. Использование службы хранилища BLOB-объектов Azure с SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+ Практические рекомендации по использованию этой функции см. в статье [Учебник. использованию службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 ## <a name="why-use-sql-server-data-files-in-microsoft-azure"></a>Зачем использовать файлы данных SQL Server в Microsoft Azure? 
   
@@ -130,7 +130,7 @@ ON
 ### <a name="sql-server-management-studio-support"></a>Поддержка среды SQL Server Management Studio  
  Среда SQL Server Management Studio позволяет использовать этот компонент с помощью нескольких диалоговых окон. Можно ввести URL-адрес контейнера хранилища, например https://teststorageaccnt.blob.core.windows.net/testcontainer/:
  
- в поле **Путь** в нескольких разных диалоговых окнах ( **Создание базы данных**, **Присоединение базы данных**и **Восстановление базы данных**). Дополнительные сведения см. в статье [Учебник. Использование службы хранилища BLOB-объектов Azure с SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+ в поле **Путь** в нескольких разных диалоговых окнах ( **Создание базы данных**, **Присоединение базы данных**и **Восстановление базы данных**). Дополнительные сведения см. в статье [Учебник. использованию службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 ### <a name="sql-server-management-objects-smo-support"></a>Поддержка управляющих объектов SQL Server (SMO)  
  При использовании компонента SQL Server Data Files в Azure поддерживаются все управляющие объекты SQL Server (SMO). Если объект SMO требует пути к файлам, вместо локального пути используйте формат URL-адреса большого двоичного объекта, например `https://teststorageaccnt.blob.core.windows.net/testcontainer/`. Дополнительные сведения об управляющих объектах SQL Server (SMO) см. в разделе [Учебник по программированию управляющих объектов SQL Server (SMO)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) электронной документации по SQL Server.  
@@ -151,7 +151,7 @@ ON
     Решение. Эта ошибка отображается при попытке удалить учетные данные, которые используются активным файлом базы данных в службе хранилища Azure. Чтобы удалить учетные данные, необходимо сначала удалить сопоставленный большой двоичный объект, которому принадлежит этот файл базы данных. Чтобы удалить большой двоичный объект с активной арендой, сначала необходимо прервать аренду.  
   
 -   *Подписанный URL-адрес был создан в контейнере неправильно.*   
-     Решение. Убедитесь, что вы создали подпись общего доступа для контейнера правильно. Ознакомьтесь с инструкциями, приведенными в занятии 2 в [руководстве по использованию службы хранилища BLOB-объектов Azure с SQL Server 2016](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md).  
+     Решение. Убедитесь, что вы создали подпись общего доступа для контейнера правильно. Ознакомьтесь с инструкциями, приведенными в занятии 2 в [руководстве по использованию службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md).  
   
 -   *Учетные данные SQL Server созданы неправильно.*   
     Решение. Убедитесь, что в поле **Идентификатор** указано значение "Подписанный URL-адрес" и секрет сформирован правильно. Ознакомьтесь с инструкциями, приведенными в занятии 3 в [руководстве по использованию службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../lesson-3-database-backup-to-url.md).  

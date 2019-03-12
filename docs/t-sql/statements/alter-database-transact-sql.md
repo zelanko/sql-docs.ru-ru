@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/08/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1e13fd0eacc1bb9584b59ac309724516e83e9698
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: f1ce25ad1f6ac2a84b391a50e1be6014dae23c5b
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828164"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683704"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -728,49 +728,41 @@ ALTER DATABASE { database_name | CURRENT }
 }  
 
 ```
--- Azure SQL Database Syntax ALTER DATABASE { database_name | CURRENT } {     <file_and_filegroup_options>   | SET <option_spec> [ ,...n ]   | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 } } [;]
-
-<file_and_filegroup_options>::=   <add_or_modify_files>::=   <filespec>::=   <add_or_modify_filegroups>::=   <filegroup_updatability_option>::=
-
-<option_spec> ::= {     <auto_option>   | <change_tracking_option>   | <cursor_option>   | <db_encryption_option>   | <db_update_option>   | <db_user_access_option>   | <delayed_durability_option>   | <parameterization_option>   | <query_store_options>   | <snapshot_option>   | <sql_option>   | <target_recovery_time_option>   | <temporal_history_retention> }
-
-```
-
-## Arguments
+## <a name="arguments"></a>Аргументы
 
 *database_name*
 
-Is the name of the database to be modified.
+Имя изменяемой базы данных.
 
 CURRENT
 
-Designates that the current database in use should be altered.
+Определяет, что должна быть изменена текущая используемая база данных.
 
-## Remarks
+## <a name="remarks"></a>Remarks
 
-To remove a database, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
-To decrease the size of a database, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
+Чтобы удалить базу данных, используйте инструкцию [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
+Чтобы уменьшить размер базы данных, используйте предложение [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
 
-The ALTER DATABASE statement must run in autocommit mode (the default transaction management mode) and is not allowed in an explicit or implicit transaction.
+Инструкция ALTER DATABASE должна выполняться в режиме автоматической фиксации (режим управления транзакциями по умолчанию) и не разрешена в явной или неявной транзакции.
 
-Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.
+Очистка кэша планов становится причиной перекомпиляции всех последующих планов выполнения и приводит к непредвиденному временному снижению производительности обработки запросов. Для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружил %d экземпляров, записанных на диск хранилищ кэша для хранилища кэша "%s" (части кэша планов) в результате операций по обслуживанию или изменению конфигурации базы данных". Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.
 
-The procedure cache is also flushed in the following scenario: You run several queries against a database that has default options. Then, the database is dropped.
+Кроме того, кэш процедур сбрасывается в указанных ниже случаях. Выполняется несколько запросов в базе данных с параметрами по умолчанию. Затем база данных уничтожается.
 
-## Viewing Database Information
+## <a name="viewing-database-information"></a>Просмотр сведений о базе данных
 
-You can use catalog views, system functions, and system stored procedures to return information about databases, files, and filegroups.
+Для возврата сведений о базах данных, файлах и файловых группах можно использовать представления каталогов, системные функции и системные хранимые процедуры.
 
-## Permissions
+## <a name="permissions"></a>Разрешения
 
-Only the server-level principal login (created by the provisioning process) or members of the `dbmanager` database role can alter a database.
+Изменять базу данных могут только имя входа субъект серверного уровня (созданное в процессе провизионирования) или члены роли базы данных `dbcreator`.
 
 > [!IMPORTANT]
-> The owner of the database cannot alter the database unless they are a member of the `dbmanager` role.
+> Владелец базы данных не может изменять базу данных, если он не является членом роли `dbcreator`.
 
-## Examples
+## <a name="examples"></a>Примеры
 
-The following examples show you how to set automatic tuning and how to add a file in a managed instance.
+В следующих примерах показано, как задать автоматическую настройку и как добавить файл в управляемый экземпляр.
 
 ```sql
 ALTER DATABASE WideWorldImporters

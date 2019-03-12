@@ -11,12 +11,12 @@ ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e2d5798ca55bbc216192c89803db8f9b205db65
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4bcc1a27b690f1a0337fb4c6a75813bcf3a14fd2
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502083"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756693"
 ---
 # <a name="filestream-ddl-functions-stored-procedures-and-views"></a>FILESTREAM DDL, функции, хранимые процедуры и представления
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "52502083"
   
 -   [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)  
   
--   [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  
+-   [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
--   [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)DROP INDEX  
+-   [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)
   
 ##  <a name="func"></a> Системные функции  
   

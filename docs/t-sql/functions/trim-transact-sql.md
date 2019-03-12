@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7752dc7d83424be107190c01abfd99a787e5fba
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 7561c69a9a0e0186f9564441839816247797998b
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803149"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578234"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ characters
 Возвращает символьное выражение с типом аргумента string, в котором символ пробела `char(32)` или другие заданные символы удалены с обеих сторон. Возвращает `NULL`, если входная строка равна `NULL`.
 
 ## <a name="remarks"></a>Remarks   
-По умолчанию функция `TRIM` удаляет символ пробела `char(32)` с обеих сторон. Такая реакция на событие эквивалентна `LTRIM(RTRIM(@string))`. Поведение функции `TRIM ` с заданными символами идентично поведению функции `REPLACE`, которая заменяет символы в начале или конце строки пустыми строками.
+По умолчанию функция `TRIM` удаляет символ пробела `char(32)` с обеих сторон. Такая реакция на событие эквивалентна `LTRIM(RTRIM(@string))`. Поведение функции `TRIM` с заданными символами идентично поведению функции `REPLACE`, которая заменяет символы в начале или конце строки пустыми строками.
 
 
 ## <a name="examples"></a>Примеры

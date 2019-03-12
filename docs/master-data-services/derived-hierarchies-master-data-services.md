@@ -15,12 +15,12 @@ ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2158ebe21779866fbdc3c356164eb3a17d1eed04
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 126ebfadfea6b67c0627984bac34b8925d766771
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767816"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736783"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Производные иерархии (Master Data Services)
 
@@ -68,7 +68,7 @@ ms.locfileid: "52767816"
  Иерархия такого типа предотвращает перемещение элемента на недопустимый уровень. Например, можно переместить велосипед Road-650 из одной подкатегории, «Дорожные велосипеды», в другую, «Горные велосипеды». Нельзя перенести Road-650 напрямую внутри категории, например 1 {велосипеды}. Каждый раз при перемещении элемента в дереве иерархии значение атрибута на основе домена для элемента изменяется, отражая это перемещение.  
   
 ## <a name="notes"></a>Примечания  
- Все элементы в производной иерархии сортируются по коду. Нельзя менять порядок сортировки.  
+ Все элементы в производной иерархии сортируются по идентификатору. Нельзя менять порядок сортировки.  
   
  Если атрибут на основе домена для элемента пуст и атрибут используется в производной иерархии, то элемент не отображается в иерархии. Можно создать бизнес-правила, которые требуют заполнения атрибутов. Дополнительные сведения см. в разделе [Запрос значений атрибута (службы Master Data Services)](../master-data-services/require-attribute-values-master-data-services.md).  
   

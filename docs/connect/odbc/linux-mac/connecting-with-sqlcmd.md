@@ -13,12 +13,12 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21021402a10494306a3b667c5f7b83977dc7d205
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d436072e81212203aff568feba1d764b07c31b8a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512540"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579264"
 ---
 # <a name="connecting-with-sqlcmd"></a>Соединение с помощью sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -46,7 +46,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -C — доверять сертификату сервера.  
 
-- -d *имя_базы_данных* проблема `USE ` *имя_базы_данных* инструкции при запуске `sqlcmd`.  
+- -d *имя_базы_данных* проблема `USE` *имя_базы_данных* инструкции при запуске `sqlcmd`.  
 
 - -D — интерпретировать значение, передаваемое параметру `sqlcmd` -S, как имя источника данных (DSN). Дополнительные сведения см. в разделе "Поддержка имени DSN в `sqlcmd` и `bcp`" в конце этой статьи.  
   

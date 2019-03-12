@@ -21,12 +21,12 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 02cc6ae014dc52df01e08c13b9610be5ffa50c6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1a252e56d7e625632fdb2d8cb929056daa14815
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720322"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736772"
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ COLUMNS_UPDATED ( )
   
 Функция `COLUMNS_UPDATED` возвращает один байт или несколько, которые упорядочены слева направо. Крайний правый бит каждого байта является наименее значимым битом. Крайний правый бит крайнего левого байта представляет первый столбец в таблице, следующий бит слева представляет второй столбец и так далее. Функция `COLUMNS_UPDATED` возвращает несколько байт, если таблица в которой триггер создается, содержит более чем восемь столбцов, с наименее значащим байтом в крайней левой позиции. Функция `COLUMNS_UPDATED` возвращает значение TRUE для всех столбцов при операциях INSERT, так как при вставке столбцам присваиваются явно указанные значения или неявные значения (NULL).
   
-Чтобы проверить обновление и вставку в определенные столбцы, следуйте синтаксису битовых операторов и целой битовой маске проверяемого столбца. Например, пусть таблица **t1** содержит столбцы **C1**, **C2**, **C3**, **C4** и **C5**. Чтобы проверить, все ли столбцы **C2**, **C3** и **C4** (в таблице **t1** под действием триггера UPDATE) успешно обновлены, следуйте синтаксису **& 14**. Чтобы проверить обновление только столбца **C2**, укажите **& 2**. Фактические примеры см. в разделе [Пример A](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/t-sql/functions/columns-updated-transact-sql.md#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) и [Примере Б](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/t-sql/functions/columns-updated-transact-sql.md#b-using-columns_updated-to-test-more-than-eight-columns).
+Чтобы проверить обновление и вставку в определенные столбцы, следуйте синтаксису битовых операторов и целой битовой маске проверяемого столбца. Например, пусть таблица **t1** содержит столбцы **C1**, **C2**, **C3**, **C4** и **C5**. Чтобы проверить, все ли столбцы **C2**, **C3** и **C4** (в таблице **t1** под действием триггера UPDATE) успешно обновлены, следуйте синтаксису **& 14**. Чтобы проверить обновление только столбца **C2**, укажите **& 2**. Фактические примеры см. в разделе [Пример A](#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) и [Примере Б](#b-using-columns_updated-to-test-more-than-eight-columns).
   
 Функция `COLUMNS_UPDATED` может быть использована внутри триггера INSERT или UPDATE языка [!INCLUDE[tsql](../../includes/tsql-md.md)].
   

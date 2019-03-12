@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c046b2c2288264062f9f837c7a2bd3b74de83c35
-ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
+ms.openlocfilehash: 27fbb65a3fcdcdfd78fd825dc767e5f31590c0fb
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425869"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572827"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +79,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 *udt_name*  
 Имя определяемого пользователем типа среды CLR.  
   
-{ **.** | **::** }  
+`{ . | :: }`  
 Указывает метод пользовательского типа среды CLR. Для метода экземпляра (не статического) используйте точку (**.**). Для статического метода используйте два двоеточия (**::**). Для обращения к методу, свойству или полю определяемого пользователем типа среды CLR необходимо разрешение EXECUTE для этого типа.  
   
 _method_name_ **(** _argument_ [ **,**... *n* ] **)**  
@@ -91,7 +91,7 @@ _method_name_ **(** _argument_ [ **,**... *n* ] **)**
 *mutator_method*  
 Метод из сборки, который может менять состояние объекта. К этому методу применяется свойство SQLMethodAttribute.IsMutator.  
   
-{ **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
+`{ += | -= | *= | /= | %= | &= | ^= | |= }`  
 Составной оператор присваивания:  
   
  +=              Сложение и присваивание  
@@ -166,7 +166,7 @@ FOR *select_statement*
 READ ONLY  
 Предотвращает внесение изменений через этот курсор. В предложении WHERE CURRENT OF нельзя помещать ссылку на курсор в инструкцию UPDATE или DELETE. Этот параметр имеет преимущество над установленной по умолчанию возможностью обновления курсора. Это ключевое слово отличается от READ_ONLY тем, что между READ и ONLY вместо подчеркивания употребляется пробел.  
   
-UPDATE [OF *column_name*[ **,**... *n* ] ]  
+`UPDATE [OF column_name[ ,... n ] ]`  
 Определяет обновляемые столбцы в курсоре. Если OF *column_name* [**,**...*n*] определено, только перечисленные столбцы позволяют вносить изменения. Если список не предоставлен, можно обновить все столбцы, если только курсор не был определен как READ_ONLY.  
   
 ## <a name="remarks"></a>Remarks  
