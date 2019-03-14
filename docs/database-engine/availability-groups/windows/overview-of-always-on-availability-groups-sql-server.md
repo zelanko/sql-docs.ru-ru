@@ -17,12 +17,12 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ab315e41607d528a1d34be6e61a6344350eb240
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 69efd860fe91080960ffb12995bea675e4686878
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215261"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579674"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Обзор групп доступности AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "53215261"
  Для развертывания [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в целях обеспечения высокой доступности в Windows требуется кластер WSFC. Все реплики доступности в заданной группе доступности должны располагаться на разных узлах одного кластера WSFC. Единственное исключение состоит в том, что при переносе в другой кластер WSFC группа доступности может временно находится в двух кластерах. 
 
  >[!NOTE]
- >Сведения о группах доступности в Linux см. в разделе [Группы доступности AlwaysOn для SQL Server в Linux ](../../../linux/sql-server-linux-availability-group-overview.md). 
+ >Сведения о группах доступности в Linux см. в статье [Группы доступности Always On для SQL Server в Linux](../../../linux/sql-server-linux-availability-group-overview.md). 
 
  В конфигурации с высоким уровнем доступности роль кластера создается для каждой создаваемой группы доступности. Кластер WSFC отслеживает эту роль для оценки работоспособности первичной реплики. Кворум для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] рассчитывается на всех узлах в кластере WSFC вне зависимости от того, хранится ли на данном узле кластера какая-либо реплика доступности. В отличие от процесса зеркального отображения базы данных, в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] нет роли следящего объекта.  
   

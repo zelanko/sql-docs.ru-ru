@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d953127249bb6f82626dfff647b15dc40aba859
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 048e3b88ff45147e30121c3b754527b71d30ea7b
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334841"
+ms.locfileid: "57401936"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "57334841"
   - Более компактный файл для скачивания
     - Текущий размер пакета меньше половины размера пакета в SSMS 17.x (ок. 400 МБ). По мере добавления компонентов IS обратно в SSMS размер будет постепенно увеличиваться, но не станет таким большим, как раньше.
   - SSMS работает на основе изолированной оболочки Visual Studio 2017
-    - Это означает использование современной оболочки (мы выбрали Visual Studio 2107 15.6.4). Новая оболочка содержит все исправления специальных возможностей, внесенные в SSMS и Visual Studio.
+    - Это означает использование современной оболочки (мы выбрали Visual Studio 2017 15.6.4). Новая оболочка содержит все исправления специальных возможностей, внесенные в SSMS и Visual Studio.
   - Улучшения специальных возможностей SSMS
     - Мы проделали большую работу, чтобы устранить проблемы со специальными возможностями во всех инструментах (SSMS, DTA и Profiler).
   - SSMS можно установить в пользовательской папке

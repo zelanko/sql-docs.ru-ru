@@ -45,12 +45,12 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7e7b0f75274504ce035d46e0277fc939ef74adda
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 093a70a8e9651271aa2a8df4641f6f1e568fc2a7
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334671"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756739"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Требования к оборудованию и программному обеспечению для установки SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -135,6 +135,25 @@ ms.locfileid: "57334671"
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] — SharePoint  
 > 
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Надстройка для продуктов SharePoint  
+
+**Поддержка Server Core.**
+
+ Теперь [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживается в установке основных серверных компонентов систем Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 и Windows Server 2019. 
+
+Установка [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] в режиме основных серверных компонентов поддерживается в следующих выпусках Windows Server:
+
+|                              |                                |
+| :------------------------    | :------------------------------|
+| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
+| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
+| Windows Server 2012 R2 Standard | Windows Server 2012 R2 Datacenter|
+| Windows Server 2012 Standard | Windows Server 2012 Datacenter |
+| Windows Server 2008 R2 Standard с пакетом обновления 1 (SP1) | Windows Server 2008 R2 Datacenter с пакетом обновления 1 (SP1) |
+| Windows Server 2008 R2 Enterprise с пакетом обновления 1 (SP1) | Windows Server 2008 R2 Web с пакетом обновления 1 (SP1)|
+   | &nbsp; | &nbsp; |
+
+Дополнительные сведения об установке [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] в режиме основных серверных компонентов см. в статье [Установка SQL Server в Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
+
   
 ### <a name="features-supported-on-32-bit-client-operating-systems"></a>Функции, поддерживаемые в 32-разрядных клиентских операционных системах  
  Клиентские операционные системы Windows, такие как Windows 10 и Windows 8.1, могут иметь 32-разрядную или 64-разрядную архитектуру.   Полная поддержка всех функций SQL Server доступна только в 64-разрядных операционных системах. В поддерживаемых 32-разрядных операционных системах Microsoft поддерживаются следующие функции:  

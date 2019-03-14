@@ -1,5 +1,5 @@
 ---
-title: Шаг 4. Добавление конфигураций пакетов | Документы Майкрософт
+title: Шаг 4. Добавление конфигураций пакетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9ed2d231414ca36bef186a8d2e70d491a469fb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51ca1188b8954564fc929dd0cdc34715466aee8b
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605692"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756679"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>Занятие 1–4. Добавление конфигураций пакетов
 В этой задаче необходимо добавить конфигурацию каждому пакету. Конфигурации позволяют обновлять значения свойств и объектов пакетов во время выполнения.  
@@ -32,6 +32,8 @@ ms.locfileid: "47605692"
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] распознают, что файлы DataTransferConfig.dtsConfig и LoadXMLData.dtsConfig представляют собой зависимости пакетов DataTransfer и LoadXMLData, и на следующем занятии при создании комплекта развертывания в них автоматически будут содержаться эти файлы конфигурации.  
   
 ### <a name="to-create-indirect-configuration-for-the-datatransfer-package"></a>Создание косвенной конфигурации для пакета DataTransfer  
+
+Проверьте текущую модель развертывания проекта и при необходимости измените ее на **модель развертывания пакета**. В меню **Проект** выберите пункт **Преобразовать в модель развертывания пакета**.
   
 1.  В обозревателе решений дважды щелкните DataTransfer.dtsx.  
   

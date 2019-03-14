@@ -20,12 +20,12 @@ ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: d99971c4672413a7845c8ec3bdb4d9949a3b978f
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: dcbf57bfed8a22c957487f82f4f4d0b2086cce89
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380835"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579514"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Центр производительности для базы данных Azure SQL и SQL Server Database Engine
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "53380835"
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **Оптимизация оптимизатора запросов**|[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)<br />[Указание запроса USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Статистика](../../relational-databases/statistics/statistics.md)**|[Условия обновления статистики](../statistics/statistics.md)<br />[Обновить статистику](../../relational-databases/statistics/update-statistics.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[In-Memory OLTP (In-Memory Optimization)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)** (Выполняющаяся в памяти OLTP (оптимизация в памяти))|[Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)<br />[Скомпилированные в собственном коде хранимые процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)<br />[Создание таблиц в базе данных TempDB и обращение к ним из скомпилированных в собственном коде хранимых процедур](../../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)<br />[Диагностика общих проблем с производительностью хэш-индексов для оптимизированных для памяти таблиц](https://msdn.microsoft.com/library/1954a997-7585-4713-81fd-76d429b8d095)<br />[Демонстрация. Повышение производительности In-Memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)|
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Интеллектуальная обработка запросов](../../relational-databases/performance/intelligent-query-processing.md)**|[Адаптивная обработка запросов](../../relational-databases/performance/adaptive-query-processing.md)|
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Интеллектуальная обработка запросов](../../relational-databases/performance/intelligent-query-processing.md)**|[Интеллектуальная обработка запросов](../../relational-databases/performance/intelligent-query-processing.md)|
   
 ## <a name="see-also"></a>См. также:  
  [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)   

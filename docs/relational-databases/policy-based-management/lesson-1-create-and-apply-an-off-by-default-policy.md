@@ -1,5 +1,5 @@
 ---
-title: Занятие 1. Создание и применение политики, отключенной по умолчанию | Документация Майкрософт
+title: Урок 1. Создание и применение политики, отключенной по умолчанию | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 678f9da12655cc733dcdf95aca5f61e5aa1cd45e
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 88f5919c1bd36b912c2205da2032413ec39150f1
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158627"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579539"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Урок 1. Создание и применение политики, отключенной по умолчанию
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "52158627"
   
 6.  В области **Данные целевого объекта** при возникновении ошибки дополнительные сведения можно просмотреть в столбце **Сообщение** . Для просмотра отчета, содержащего результаты проверки каждого свойства аспекта, в столбце **Сообщение** нажмите **Просмотреть** . 
 
-    ![Просмотреть результаты оценки политики ](Media/lesson-1-create-and-apply-an-off-by-default-policy/view-results-of-policy-evaluation.png)
+    ![Просмотреть результаты оценки политики](Media/lesson-1-create-and-apply-an-off-by-default-policy/view-results-of-policy-evaluation.png)
   
 7.  Описание политики отобразится в нижней части страницы, и в разделе **Дополнительная справка** будет показана гиперссылка, настроенная для политики. Для открытия веб-страницы, указанной при создании политики, щелкните сообщение гиперссылки.   
 

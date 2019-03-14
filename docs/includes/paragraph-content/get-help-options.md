@@ -1,4 +1,12 @@
-##  <a name="infotipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) получить справку
+---
+ms.openlocfilehash: 7b33204158993340927d4f40fdf83853b3fd757d
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419549"
+---
+##  <a name="infotipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) Справка
 
 - [Способы обратной связи](https://docs.microsoft.com/sql/sql-server/sql-server-get-help)
 - [UserVoice — предложения по улучшению SQL Server](https://feedback.azure.com/forums/908035-sql-server)

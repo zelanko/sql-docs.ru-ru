@@ -22,12 +22,12 @@ ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a5023afdfe6b1ebe4267c0bff9741f6651e4bde
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a27c434bb10b863459b138f98b9974b4d25794c3
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020425"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57401796"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>Точность, масштаб и длина (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "56020425"
 -   Оба выражения имеют тип **decimal**.  
 -   Одно выражение имеет тип **decimal**, а другое имеет тип данных со старшинством меньше, чем **decimal**.  
   
-Операнды выражений обозначены как выражение e1 с точностью p1 и масштабом s2 и выражение e2 с точностью p2 и масштабом s2. Точность и масштаб для любого выражения, отличного от **decimal**, соответствуют типу данных этого выражения.
+Операнды выражений обозначены как выражение e1 с точностью p1 и масштабом s2 и выражение e2 с точностью p2 и масштабом s2. Точность и масштаб для любого выражения, отличного от **decimal**, соответствуют типу данных этого выражения. Функция max(a,b) принимает большее из значений a и b. Аналогичным образом функция min(a,b) принимает меньшее из значений a и b.
   
 |Операция|Точность результата|Масштаб результата *|  
 |---|---|---|

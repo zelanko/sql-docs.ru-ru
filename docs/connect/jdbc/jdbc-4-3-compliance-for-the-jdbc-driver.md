@@ -11,12 +11,12 @@ ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f38b700f998babd9af54c3bf8a27409a4d2b6ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc2fbb2b217880b255d522149dabd38701a8c0e4
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623942"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579064"
 ---
 # <a name="jdbc-43-compliance-for-the-jdbc-driver"></a>Соответствие требованиям JDBC 4.3 для JDBC Driver
 
@@ -31,5 +31,5 @@ ms.locfileid: "47623942"
 
 |Новый интерфейс API|Описание|Значимые реализации|  
 |-----------------|-----------------|-------------------------------|  
-|void java.sql.connection.beginRequest()|Подсказки к драйверу, что запрос, независимый элемент работы, который начинается в данном соединении. Подробнее: [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--).|Сохраняет значения полей подключения, которые могут быть изменены через открытые методы API: `databaseAutoCommitMode`, `transactionIsolationLevel`, `networkTimeout`, `holdability`, `sendTimeAsDatetime`, `statementPoolingCacheSize`, `disableStatementPooling`, `serverPreparedStatementDiscardThreshold`, `enablePrepareOnFirstPreparedStatementCall `, `catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert `.|
+|void java.sql.connection.beginRequest()|Подсказки к драйверу, что запрос, независимый элемент работы, который начинается в данном соединении. Подробнее: [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--).|Сохраняет значения полей подключения, которые могут быть изменены через открытые методы API: `databaseAutoCommitMode`, `transactionIsolationLevel`, `networkTimeout`, `holdability`, `sendTimeAsDatetime`, `statementPoolingCacheSize`, `disableStatementPooling`, `serverPreparedStatementDiscardThreshold`, `enablePrepareOnFirstPreparedStatementCall`, `catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert`.|
 |void java.sql.connection.endRequest()|Подсказки для драйвера, который был выполнен запрос, а независимый элемент работы. Подробнее: [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#endRequest--).|Закрывает операторы, которые создаются во время операция и выполняет откат всех открытых транзакций. Метод также отменяет изменения в поля подключения, которые перечислены выше.|

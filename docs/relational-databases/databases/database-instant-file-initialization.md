@@ -1,7 +1,7 @@
 ---
 title: Мгновенная инициализация файлов базы данных | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/09/2018
+ms.date: 03/07/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e365ef2eed7dcd3f20dd5a9ad9a94627191c4df9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9b75512b0b0e4f4975074bd35f797f526d25ffc2
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204923"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683604"
 ---
 # <a name="database-file-initialization"></a>Инициализация файлов базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,15 +52,17 @@ ms.locfileid: "53204923"
   
 Предоставление учетной записи разрешения `Perform volume maintenance tasks` .  
   
-1.  На компьютере, где будет создан файл резервной копии, откройте приложение **Local Security Policy** (`secpol.msc`).  
+1.  На компьютере, где будет создан файл данных, откройте приложение **Локальная политика безопасности** (`secpol.msc`).  
   
 2.  Разверните на левой панели узел **Локальные политики**, а затем щелкните пункт **Назначение прав пользователей**.  
   
 3.  На правой панели дважды щелкните **Выполнение задач по обслуживанию томов**.  
   
-4.  Щелкните кнопку **Добавить пользователя или группу** и добавьте любые учетные записи пользователя, которые использовались для резервного копирования.  
+4.  Выберите пункт **Добавить пользователя или группу** и добавьте учетную запись, от имени которой запущена служба SQL Server.  
   
 5.  Нажмите кнопку **Применить**и закройте все диалоговые окна **Локальная политика безопасности** .  
+
+1. Перезапустите службу SQL Server.
 
 > [!NOTE]
 > Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], это разрешение можно предоставлять учетной записи службы во время установки. При использовании [установки из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) добавьте аргумент /SQLSVCINSTANTFILEINIT либо установите флажок *Предоставить право на выполнение задач обслуживания тома службе ядра СУБД SQL Server* в [мастере установки](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).
@@ -71,15 +73,11 @@ ms.locfileid: "53204923"
 ## <a name="remarks"></a>Remarks
 Если учетной записи запуска службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставлено разрешение *SE_MANAGE_VOLUME_NAME*, во время запуска в журнале ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистрируется подобное информационное сообщение. 
 
-```
-Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-```
+`Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
 Если учетной записи запуска службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **не предоставлено** разрешение *SE_MANAGE_VOLUME_NAME*, во время запуска в журнале ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистрируется подобное информационное сообщение. 
 
-```
-Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-```
+`Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
 **Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 4 (SP4), [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и версий с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 

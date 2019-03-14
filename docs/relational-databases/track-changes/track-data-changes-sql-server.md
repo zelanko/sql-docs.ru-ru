@@ -20,16 +20,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f757719563cd2f5ba190b3d2d0f0b3b33f38df40
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1c5979aade2147d74c2ff34b5d6cc2e48771bab2
+ms.sourcegitcommit: 1968bf31c63210f7f62ea553e67aa792950c89bb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666415"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725465"
 ---
 # <a name="track-data-changes-sql-server"></a>Отслеживание измененных данных (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] предоставляет две функции отслеживания изменений в базе данных: [система отслеживания измененных данных](#Capture) и [отслеживание изменений](#Tracking). Эти функции позволяют приложениям обнаруживать изменения DML (операции вставки, обновления и удаления), произведенные в пользовательских таблицах базы данных. Отслеживание измененных данных и отслеживание изменений можно включить для одной и той же базы данных без каких-либо дополнительных действий. Список выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поддерживающих отслеживание измененных данных и отслеживание изменений, см. в разделе [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Отслеживание изменений поддерживается [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] предоставляет две функции отслеживания изменений в базе данных: [система отслеживания измененных данных](#Capture) и [отслеживание изменений](#Tracking). Эти функции позволяют приложениям обнаруживать изменения DML (операции вставки, обновления и удаления), произведенные в пользовательских таблицах базы данных. Отслеживание измененных данных и отслеживание изменений можно включить для одной и той же базы данных без каких-либо дополнительных действий. Список выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поддерживающих отслеживание измененных данных и отслеживание изменений, см. в разделе [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Отслеживание изменений поддерживается [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Отслеживание измененных данных поддерживается только в SQL Server и Управляемом экземпляре Базы данных SQL Azure.
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>Преимущества использования отслеживания измененных данных или отслеживания изменений  
  Возможность выполнять запросы к измененным данным в базе данных — важное условие для эффективной работы некоторых приложений. Обычно для определения изменений данных разработчикам приложений приходилось реализовывать в своих приложениях специальный метод отслеживания, использующий сочетание триггеров, столбцов отметок времени и дополнительных таблиц. Создание таких приложений обычно связано с большими трудозатратами, требует обновлений схемы и часто вызывает серьезное снижение производительности.  
@@ -155,7 +155,7 @@ ms.locfileid: "51666415"
   
 -   [Центр разработки Microsoft Sync Framework](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     Содержит полную документацию по [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] и [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. В документации по [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]раздел "Как использовать отслеживание изменений SQL Server" содержит подробные сведения и примеры программного кода.  
+     Содержит полную документацию по [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] и [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. В документации по [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)] раздел «Как использовать отслеживание изменений SQL Server» содержит подробные сведения и примеры программного кода.  
   
 ## <a name="related-tasks-required"></a>Связанные задачи (обязательно)  
   

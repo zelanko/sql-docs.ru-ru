@@ -22,16 +22,16 @@ helpviewer_keywords:
 - removing buffers
 - DBCC DROPCLEANBUFFERS statement
 ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ac58dec08cd70a051062fdd08118d321e87ae2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc5f75e1ee5ed661fc0c5a5558edb265b619bb7c
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722222"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685341"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -75,11 +75,11 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="permissions"></a>Разрешения  
 
-Область применения: SQL Server, Parallel Data Warehouse 
+Применимо для следующих объектов: SQL Server, Parallel Data Warehouse 
 
 - Необходимо членство в предопределенной роли сервера **sysadmin** .  
 
-Область применения этой статьи: Хранилище данных SQL Azure
+Применимо для следующих объектов: Хранилище данных SQL Azure
 
 - Необходимо членство в предопределенной роли сервера DB_OWNER.  
   

@@ -11,19 +11,19 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 1612e35dc2b586825d47979b6baa1a002b0d9895
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: b9a699ba1764af5728f7731626dc94400dc4d246
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419819"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578814"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Рабочая роль масштабного развертывания служб Integration Services (SSIS)
 
 Рабочая роль Scale Out запускает службу рабочей роли Scale Out для получения задач выполнения из мастера Scale Out. Затем рабочая роль выполняет пакеты локально с помощью `ISServerExec.exe`.
 
 ## <a name="configure-the-scale-out-worker-service"></a>Настройка службы рабочей роли Scale Out
-Службу рабочей роли Scale Out можно настроить с помощью файла ` \<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`. После изменения файла конфигурации следует перезапустить службу.
+Службу рабочей роли Scale Out можно настроить с помощью файла `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`. После изменения файла конфигурации следует перезапустить службу.
 
 |Конфигурация  |Описание  |Значение по умолчанию|
 |---------|---------|---------|
@@ -36,16 +36,16 @@ ms.locfileid: "54419819"
 |StoreName|Имя хранилища, где находится сертификат рабочей роли.|My|
 |AgentHeartbeatInterval|Интервал пульса для рабочей роли масштабного развертывания.|00:01:00|
 |TaskHeartbeatInterval|Интервал вывода состояния задачи для рабочей роли масштабного развертывания.|00:00:10|
-|HeartbeatErrorTollerance|По истечении этого периода после последнего успешного пульса задачи она прекращается, если в ответе пульса возвращается ошибка.|00:10:00|
+|HeartbeatErrorTolerance|По истечении этого периода после последнего успешного пульса задачи она прекращается, если в ответе пульса возвращается ошибка.|00:10:00|
 |TaskRequestMaxCPU|Верхний предел ресурсов ЦП для запроса задач рабочей ролью масштабного развертывания.|70.0|
 |TaskRequestMinMemory|Нижний предел объекта памяти в МБ для запроса задач рабочей ролью масштабного развертывания.|100.0|
 |MaxTaskCount|Максимальное число задач, которое может вмещать в себя рабочая роль масштабного развертывания.|10|
-|LeaseInternval|Интервал аренды для задачи, содержащейся в рабочей роли масштабного развертывания.|00:01:00|
+|LeaseInterval|Интервал аренды для задачи, содержащейся в рабочей роли масштабного развертывания.|00:01:00|
 |TasksRootFolder|Папка журналов задач. Если значение не указано, используется путь к папке `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks`. Папка [учетная_запись] соответствует учетной записи, с помощью которой выполняется служба рабочей роли масштабного развертывания. По умолчанию используется учетная запись SSISScaleOutWorker140.|Пустой|
 |TaskLogLevel|Уровень ведения журнала задач для рабочей роли масштабного развертывания. (Verbose 0x01, Information 0x02, Warning 0x04, Error 0x08, Progress 0x10, CriticalError 0x20, Audit 0x40)|126 (Information, Warning, Error, Progress, CriticalError, Audit)|
 |TaskLogSegment|Интервал времени для файла журнала задач.|00:00:00|
 |TaskLogEnabled|Указывает, включен ли журнал задач.|true|
-|ExecutionLogCacheFolder|Папка, используемая для кэширования журнала выполнения пакета. Если значение не указано, используется путь к папке ` \<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache`. Папка [учетная_запись] соответствует учетной записи, с помощью которой выполняется служба рабочей роли масштабного развертывания. По умолчанию используется учетная запись SSISScaleOutWorker140.|Пустой|
+|ExecutionLogCacheFolder|Папка, используемая для кэширования журнала выполнения пакета. Если значение не указано, используется путь к папке `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache`. Папка [учетная_запись] соответствует учетной записи, с помощью которой выполняется служба рабочей роли масштабного развертывания. По умолчанию используется учетная запись SSISScaleOutWorker140.|Пустой|
 |ExecutionLogMaxBufferLogCount|Максимальное количество кэшированных журналов выполнения кэширования в одном буфере в памяти.|10000|
 |ExecutionLogMaxInMemoryBufferCount|Максимальное количество буферов журналов выполнения в памяти.|10|
 |ExecutionLogRetryCount|Число повторных попыток при сбое ведения журнала выполнения.|3|

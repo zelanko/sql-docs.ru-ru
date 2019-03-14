@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2ac6f2a1692d72eecbcd97dbc3536dcebd6f2ec
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c9c0d51046b7ac30cbf1f2a608c51c34974b75d9
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356027"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579394"
 ---
 # <a name="subqueries-sql-server"></a>Вложенные запросы (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -490,7 +490,7 @@ GO
 Эту инструкцию нельзя преобразовать в соединение. Аналогичное соединение по неравенству имеет другой смысл: оно находит названия продуктов, которые принадлежат какой-либо подкатегории, отличной от готового велосипеда.      
 
 ### <a name="upsert"></a> Вложенные запросы в инструкциях UPDATE, DELETE и INSERT
-Вложенные запросы могут использоваться в инструкциях языка `UPDATE`, `DELETE`, `INSERT` и `SELECT `.    
+Вложенные запросы могут использоваться в инструкциях `UPDATE`, `DELETE`, `INSERT` и `SELECT` языка обработки данных DML.    
 
 В следующем примере удваивается значение столбца *ListPrice* таблицы *Production.Product*. Вложенный запрос в предложении `WHERE` ссылается на таблицу *Purchasing.ProductVendor* для ограничения количества обновляемых строк таблицы *Product* только теми, у которых идентификатор *BusinessEntity* равен 1540.
 

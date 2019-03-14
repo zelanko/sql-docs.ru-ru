@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: cfe10c3f5c3db33a5e9e0e417477cf2e36a2f035
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6a8e2aabc262eae4f25bf1cc5056955b58b874d0
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406451"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579364"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Новые возможности в SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 SQL Server 2017 — это важный шаг к созданию универсальной платформы SQL Server, которая позволит вам свободно выбирать языки разработки, типы данных, локальные или облачные среды и операционные системы, обеспечивая совместимость с Linux, контейнерами Docker на базе Linux и с Windows. Этот раздел содержит сводку о новых возможностях в отдельных функциональных областях, а также ссылки на дополнительные сведения. Дополнительные сведения о SQL Server в Linux см. в [документации по SQL Server в Linux](https://docs.microsoft.com/sql/linux/).
 
-[![Скачать из центра оценки](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Опробуйте сами:** [скачайте выпуск SQL Server 2017 за октябрь 2017 г.:](https://go.microsoft.com/fwlink/?LinkID=829477).
+[![Скачать в центре оценки ПО](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Попробуйте:** [Скачайте выпуск SQL Server 2017, октябрь 2017 г.:](https://go.microsoft.com/fwlink/?LinkID=829477).
 
 > [!NOTE]
 > Помимо приведенных ниже изменений следует отметить накопительные обновления, которые регулярно выпускаются после выхода общедоступной версии. Эти накопительные обновления содержат много усовершенствований и исправлений. Сведения о последнем выпуске накопительного обновления см в разделе [Накопительные обновления SQL Server 2017](https://aka.ms/sql2017cu).
@@ -33,7 +33,7 @@ SQL Server 2017 включает множество новых функций, 
 - **Сборки CLR** теперь можно добавлять в список разрешенных в качестве обходного пути для функции `clr strict security`, описанной в CTP 2.0. Для поддержки списка разрешенных доверенных сборок (RC1) добавлены функции [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) и [sys.trusted_assemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).  
 - **Возобновляемая перестройка индексов в подключенном режиме**: позволяет возобновить эту операцию с момента остановки после сбоя (например, при отработке отказа в реплику или нехватке места на диске) либо приостановить и возобновить ее позже. В разделе [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) и [руководящие принципы для операций с индексами в сети](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
 - Параметр **IDENTITY_CACHE** для ALTER DATABASE SCOPED CONFIGURATION позволяет избежать пропусков в значениях столбцов удостоверений при непредвиденной перезагрузке или отработке отказа сервера на вторичный сервер. В разделе [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). (CTP 2.0)
-- Новое поколение функций обработки запросов, использующих стратегии оптимизации для адаптации к среде выполнения рабочих нагрузок ваших приложений. В первую версию семейства функций для **адаптивной обработки запросов** мы включили три улучшения: **адаптивные соединения в пакетном режиме**, **обратная связь по временно предоставляемому буферу памяти в пакетном режиме** и **выполнение с чередованием** для многооператорных функций с табличными значениями.  См. раздел [Адаптивная обработка запросов в базах данных SQL](../relational-databases/performance/adaptive-query-processing.md).
+- Новое поколение функций обработки запросов, использующих стратегии оптимизации для адаптации к среде выполнения рабочих нагрузок ваших приложений. В первую версию семейства функций для **адаптивной обработки запросов** мы включили три улучшения: **адаптивные соединения в пакетном режиме**, **обратная связь по временно предоставляемому буферу памяти в пакетном режиме** и **выполнение с чередованием** для многооператорных функций с табличными значениями.  См. статью [Интеллектуальная обработка запросов в базах данных SQL](../relational-databases/performance/intelligent-query-processing.md).
 - **Автоматическая настройка базы данных** предоставляет сведения о возможных проблемах с обработкой запросов и рекомендуемые решения. Она также может автоматически исправлять выявленные проблемы. См. раздел [Automatic tuning](../relational-databases/automatic-tuning/automatic-tuning.md) (Автоматическая настройка). (CTP 2.0)
 - Новые **возможности для баз данных графов**, предназначенные для моделирования связей "многие ко многим", включают новый синтаксис [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) для создания граничных таблиц и таблиц узлов, а также ключевое слово [MATCH](../t-sql/queries/match-sql-graph.md) для запросов. См. раздел [Graph Processing with SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md) (Работа с графами в SQL Server 2017). (CTP 2.0)
 - Параметр sp_configure, который называется `clr strict security`, включен по умолчанию для повышения безопасности сборок CLR. См. раздел [CLR strict security](../database-engine/configure-windows/clr-strict-security.md). (CTP 2.0)

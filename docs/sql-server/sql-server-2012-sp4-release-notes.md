@@ -11,19 +11,19 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d9e89edc1deb8e16dc69c58a7f959db74c1e6024
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1d74f0569e2add7d9c8b72a86871540bef146f5e
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017065"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579644"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Заметки о выпуске пакетов обновления к SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 В этом разделе приводятся заметки к четырем пакетам обновления для SQL Server 2012. Каждый пакет обновления содержит в себе предыдущие пакеты.
 
 Пакеты обновления доступны только через Интернет, а не на установочном носителе, и могут быть загружены следующим образом:
-- [SQL Server 2012 с пакетом обновления 4 (SP4) ](https://go.microsoft.com/fwlink/?linkid=846937)
+- [SQL Server 2012 с пакетом обновления 4 (SP4)](https://go.microsoft.com/fwlink/?linkid=846937)
 - [SQL Server 2012 с пакетом обновления 3 (SP3)](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)
 - [SQL Server 2012 с пакетом обновления 2 (SP2)](https://support.microsoft.com/KB/2958429)
 - [SQL Server 2012 с пакетом обновления 1 (SP1)](https://go.microsoft.com/fwlink/p/?LinkID=268158)
@@ -162,7 +162,7 @@ ms.locfileid: "56017065"
   
 3.  Запустите мастер настройки продуктов SharePoint 2013 или выполните аналогичный набор действий по конфигурации для настройки фермы SharePoint.  
   
-**Решение.**  Если вы установили [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме SharePoint до настройки фермы SharePoint, требуемые действия зависят от других установленных компонентов.  
+**Решение:**  Если вы установили [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме SharePoint до настройки фермы SharePoint, требуемые действия зависят от других установленных компонентов.  
   
 #### <a name="power-view-in-sharepoint-server-2013-requires-microsoftanalysisservicesspclientdll"></a>Для Power View в SharePoint Server 2013 требуется библиотека Microsoft.AnalysisServices.SPClient.dll  
 **Проблема.** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] не устанавливает требуемый компонент, библиотеку **Microsoft.AnalysisServices.SPClient.dll**. При установке предварительной версии SharePoint Server 2013 Preview и [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint, если пакет установщика PowerPivot для SharePoint 2013, файл **spPowerPivot.msi**, не скачан и не запущен, Power View не будет работать. Нарушения будут проявляться следующим образом.  
@@ -175,19 +175,19 @@ ms.locfileid: "56017065"
   
 -   «Значение "SharePoint Principal" не поддерживается для свойства строки подключения "User Identity"».  
   
-**Решение.** Установите пакет установщика PowerPivot для SharePoint 2013 (**spPowerPivot.msi**) на SharePoint Server 2013. Пакет установщика доступен в составе пакета дополнительных компонентов [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Пакет дополнительных компонентов можно загрузить из центра загрузки [!INCLUDE[msCoName](../includes/msconame-md.md)] по ссылке [Пакет дополнительных компонентов SQL Server 2012 с пакетом обновления 1 (SP1)](https://go.microsoft.com/fwlink/p/?LinkID=268266)  
+**Решение:** Установите пакет установщика PowerPivot для SharePoint 2013 (**spPowerPivot.msi**) на SharePoint Server 2013. Пакет установщика доступен в составе пакета дополнительных компонентов [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Пакет дополнительных компонентов можно загрузить из центра загрузки [!INCLUDE[msCoName](../includes/msconame-md.md)] по ссылке [Пакет дополнительных компонентов SQL Server 2012 с пакетом обновления 1 (SP1)](https://go.microsoft.com/fwlink/p/?LinkID=268266)  
   
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>После планового обновления данных листы Power View в книге PowerPivot удаляются  
 **Проблема**. В надстройке PowerPivot для SharePoint при использовании **планового обновления данных** для книги с Power View удаляются все листы Power View.  
   
-**Решение**. Чтобы использовать **плановое обновление данных** с книгами Power View, создайте книгу PowerPivot, представляющую собой просто модель данных. Создайте отдельную книгу с листами Excel и листами Power View, ссылающимися на книгу PowerPivot с моделью данных. Обновление данных можно планировать только для книги PowerPivot с моделью данных.  
+**Обходной путь**: Чтобы использовать **плановое обновление данных** с книгами Power View, создайте книгу PowerPivot, представляющую собой просто модель данных. Создайте отдельную книгу с листами Excel и листами Power View, ссылающимися на книгу PowerPivot с моделью данных. Обновление данных можно планировать только для книги PowerPivot с моделью данных.  
   
 ### <a name="data-quality-services"></a>Data Quality Services  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>Доступ к DQS в неверном выпуске SQL Server 2012  
 **Проблема:** В версии RTM [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] компонент служб Data Quality Services (DQS) поддерживается в выпусках SQL Server, отличных от Enterprise, Business Intelligence и Developer. После установки SQL Server 2012 с пакетом обновления 1 (SP1) службы DQS будут недоступны во всех выпусках, за исключением Enterprise, Business Intelligence и Developer.  
   
-**Решение**. Если службы DQS используются в неподдерживаемом выпуске, выполните обновление до поддерживаемого выпуска или удалите зависимость от этой функции в своих приложениях.  
+**Обходной путь**: Если службы DQS используются в неподдерживаемом выпуске, выполните обновление до поддерживаемого выпуска или удалите зависимость от этой функции в своих приложениях.  
   
 ### <a name="sql-server-express"></a>SQL Server Express  
   
