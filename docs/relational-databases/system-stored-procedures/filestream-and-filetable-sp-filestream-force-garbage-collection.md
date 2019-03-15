@@ -19,12 +19,12 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39fc70d04635008cf00a9c8e02ef0bae97af1cbf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e95110bdbbfbe0f5ca6ff453045cc4f759163036
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540298"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973683"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_filestream_force_garbage_collection
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **@dbname** = _database_name_**"**  
- Обозначает имя базы данных, в которой будет запущен сборщик мусора.  
+ **@dbname** = *database_name* обозначает имя базы данных под управлением сборщик мусора.  
   
 > [!NOTE]  
 >  *DBName* — **sysname**. Если он не указан, предполагается текущая база данных.  

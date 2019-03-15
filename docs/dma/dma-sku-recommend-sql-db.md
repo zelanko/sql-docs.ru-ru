@@ -2,7 +2,7 @@
 title: Определить нужный номер SKU базы данных Azure SQL для вашей локальной базы данных (Data Migration Assistant) | Документация Майкрософт
 description: Узнайте, как использовать помощник по миграции данных для выявления справа номер SKU базы данных SQL Azure для вашей локальной базы данных
 ms.custom: ''
-ms.date: 01/11/2019
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 002a9fc587d742c235aedb0f773864296bdf645b
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 578e6ac47e84ad764cb050112eae768ff21444f3
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226501"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973832"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Определить нужный номер SKU базы данных Azure SQL для базы данных на предприятии
 

@@ -2,7 +2,7 @@
 title: Перенести учетные данные SQL Server с помощью Data Migration Assistant | Документация Майкрософт
 description: Узнайте, как перенести учетные данные SQL Server с помощью Data Migration Assistant
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 20084c0fadbccab9c920cb81b29cf30cb2cf739c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 53b5564cbcae177842fe79a9c11bec346eeb8dae
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392627"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973144"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Перенести учетные данные SQL Server с помощью Data Migration Assistant
 

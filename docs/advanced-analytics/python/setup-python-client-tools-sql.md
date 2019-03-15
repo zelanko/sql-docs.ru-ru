@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c61275d1a52a3e248e2c1f551d30ece20c92b7fb
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 6642a91e61900847b2eeb8875d731634cc03b38e
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579564"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976314"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Настройка клиента обработки и анализа данных для разработки Python для службы машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "57579564"
 Чтобы проверить установку, можно использовать встроенные записные книжки Jupyter, как описано в этой статье или [привязывать библиотеки](#install-ide) PyCharm или любой другой интегрированной среде разработки, которое вы обычно используете.
 
 > [!Tip]
-> Видеозапись с демонстрацией упражнений, см. в разделе [выполнения R и Python удаленно в SQL Server из записных книжек Jupyter](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
+> Видеозапись с демонстрацией упражнений, см. в разделе [выполнения R и Python удаленно в SQL Server из записных книжек Jupyter](https://youtu.be/D5erljpJDjE).
 
 > [!Note]
 > Вместо установки библиотеки клиента использует [изолированный сервер](../install/sql-machine-learning-standalone-windows-install.md) качестве полнофункционального клиента, что некоторые клиенты предпочитают для более глубокого работы сценария. Автономный сервер полностью отделен от SQL Server, но так как он имеет те же библиотеки Python, можно использовать его как клиент для анализа в базе данных SQL Server. Вы также можно использовать для работы, не относящиеся к SQL, включая возможность импортировать и моделирование данных с других платформ данных. При установке изолированного сервера, можно найти исполняемый файл Python в этом месте: `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`. Проверить установку, [откройте записную книжку Jupyter](#python-tools) для выполнения команд, с помощью Python.exe в этом расположении.

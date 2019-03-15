@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f148c4cee111febc5d1e0203cc5eb484ec556d4f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 16f3ffbbd1435e9006bcbc26c86fb53dfca9bf65
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801354"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973134"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Скачайте и установите Studio данных Azure
 
@@ -38,11 +38,12 @@ ms.locfileid: "56801354"
 
 ## <a name="get-azure-data-studio-for-windows"></a>Получить Studio данных Azure для Windows
 
-Этот выпуск [!INCLUDE[name-sos](../includes/name-sos-short.md)] включает в себя стандартные возможности установщика Windows и ZIP-файл:
+Этот выпуск [!INCLUDE[name-sos](../includes/name-sos-short.md)] включает в себя стандартные возможности установщика Windows и ZIP-файл.
+
+*Установщик пользователя* рекомендуется, так как он не требуются права администратора, что упрощает установок и обновлений. Установщик для пользователя не требуются права администратора, что и расположение находится в папке AppData (LOCALAPPDATA) пользователя. Установщик для пользователя также предоставляет более стабильную работу фонового обновления. Дополнительные сведения см. в разделе [настройки пользователя для Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
+
 
 **Установщик для пользователя** (рекомендуется)
-
-Установщик пользователя рекомендуется, так как он не требуются права администратора, что упрощает установок и обновлений.
 
 1. Скачайте и запустите [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *пользователя* установщик Windows](https://go.microsoft.com/fwlink/?linkid=2072725).
 2. Запуск [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] приложения.

@@ -2,7 +2,7 @@
 title: Миграция на локальном сервере SQL Server или SQL Server на виртуальных машинах Azure в базу данных SQL Azure с помощью Data Migration Assistant | Документация Майкрософт
 description: Узнайте, как использовать Data Migration Assistant для переноса в SQL Server в локальной базе данных SQL Azure
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,21 +12,21 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: db4b48d736b46c0381749943916272e763a077c7
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: d807396f7c8bd334de38cdc1744f6bee90d619e0
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643852"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974065"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Миграция на локальном сервере SQL Server или SQL Server на виртуальных машинах Azure в базу данных SQL Azure с помощью Data Migration Assistant
 
 Помощник по миграции данных позволяет простой проверки SQL Server в локальной и обновляется до более поздних версиях SQL Server или миграции на SQL Server на виртуальных машинах Azure или базы данных SQL Azure.
 
-В этой статье содержатся пошаговые инструкции по миграции SQL Server в локальной базе данных SQL Azure с помощью Data Migration Assistant.   
+В этой статье содержатся пошаговые инструкции по миграции SQL Server в локальной базе данных SQL Azure с помощью Data Migration Assistant.   
 
 ## <a name="create-a-new-migration-project"></a>Создайте новый проект миграции
 

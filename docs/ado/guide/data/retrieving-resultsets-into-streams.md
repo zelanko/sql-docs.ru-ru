@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 45ba231b1523a74ac8b2c09f55e19c3dc287ef20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ad9c21deb365428a6642f3ee9b7f48396d7c4f9
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734962"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973503"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Извлечение результирующих наборов в потоки
 Вместо получения результатов в традиционных **записей** объекта ADO вместо этого можно получить результаты запроса в поток. ADO **Stream** объекта (или другим объектом, поддерживающим COM- **IStream** интерфейса, например ASP **запроса** и **ответа** объектов ) можно использовать для хранения этих результатов. Эта функция применяется для получения результатов в формате XML. С помощью SQL Server, например, XML результаты могут быть возвращены несколькими способами, например с помощью предложения FOR XML с помощью SQL-запрос SELECT или с помощью запроса XPath.  
@@ -30,7 +30,7 @@ ms.locfileid: "47734962"
 ## <a name="for-xml-query-example"></a>Пример запросов XML  
  Следующий пример написан на языке VBScript в базу данных Northwind:  
   
-```  
+```html
 <!-- BeginRecordAndStreamVBS -->  
 <%@ LANGUAGE = VBScript %>  
 <%  Option Explicit      %>  
@@ -145,7 +145,7 @@ ms.locfileid: "47734962"
   
 ### <a name="for-xml-syntax"></a>ДЛЯ XML-синтаксис  
   
-```  
+```syntax
 FOR XML [RAW|AUTO|EXPLICIT]  
 ```  
   
@@ -153,7 +153,7 @@ FOR XML [RAW|AUTO|EXPLICIT]
   
  Ниже приводится пример инструкции SELECT SQL FOR XML:  
   
-```  
+```sql
 SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO  
 ```  
   
@@ -161,19 +161,19 @@ SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO
   
  Как шаблон XML-запрос запрос FOR XML выглядит следующим образом:  
   
-```  
+```xml
 <sql:query> SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO </sql:query>  
 ```  
   
  В этом примере указывается ASP **ответа** для объекта **выходные данные Stream** свойство:  
   
-```  
+```vb
 adoCmd.Properties("Output Stream") = Response  
 ```  
   
  Затем укажите **adExecuteStream** параметр **Execute**. В этом примере создает оболочку для потока в XML-теги для создания острова данных XML:  
   
-```  
+```vb
 Response.write "<XML ID=MyDataIsle>"  
 adoCmd.Execute , , adExecuteStream  
 Response.write "</XML>"  

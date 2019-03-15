@@ -3,17 +3,17 @@ title: Командная строка установки компонентов
 description: Запустите программу установки командной строки SQL Server, добавляемый экземпляр ядра СУБД SQL Server поддерживает язык R и Python интеграции.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/21/2018
+ms.date: 03/13/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8e3c101eae8e02446a9e47b17255e2ca2b501774
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 3f78447054d96f1552ae09c62f3b8a2f18bc58bf
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645530"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976354"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Установка SQL Server в машинном обучении компоненты R и Python из командной строки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "53645530"
 | /IACCEPTPYTHONLICENSETERMS | Указывает, что вы приняли условия лицензионного соглашения по использованию компонентов Python. |
 | /IACCEPTSQLSERVERLICENSETERMS | Указывает, что вы приняли условия лицензионного соглашения по использованию SQL Server.|
 | / MRCACHEDIRECTORY | Для установки в автономном режиме устанавливается в папку, содержащую CAB-файлы компонентов R. |
-| / MPYCACHEDIRECTORY | Для установки в автономном режиме устанавливается в папку, содержащую CAB-файлы компонентов Python. |
+| / MPYCACHEDIRECTORY | Зарезервировано для последующего использования. Используйте % TEMP % для хранения CAB-файлы Python компонентов для установки на компьютерах, у которых нет подключения к Интернету. |
 
 
 ## <a name="indb"></a> Установку экземпляра базы данных
@@ -132,13 +132,13 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 
 ## <a name="silent"></a> Автоматическая установка
 
-Автоматическая установка подавляет поиск расположения файлов .cab. По этой причине необходимо указать расположение, куда должны быть распакованы CAB-файлы. Для этого можно временный каталог.
+Автоматическая установка подавляет поиск расположения файлов .cab. По этой причине необходимо указать расположение, куда должны быть распакованы CAB-файлы. Для Python файлы CAB-файла должен быть расположен в папке % TEMP *. Для R, можно задать папку пути с помощью вы можете временный каталог для данного.
  
 ```cmd  
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY 
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS 
-/MRCACHEDIRECTORY=%temp% /MPYCACHEDIRECTORY=%temp%
+/MRCACHEDIRECTORY=%temp% 
 ```
 
 ## <a name="shared-feature"></a> Установок отдельного сервера
