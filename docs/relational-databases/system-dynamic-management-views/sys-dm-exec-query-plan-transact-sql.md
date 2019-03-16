@@ -19,40 +19,43 @@ ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe063150263b5611c9920ee1a4fb3a3bd8c85b2f
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: cb77a386ac0c7aa4fe6246b04723227b68ffa455
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56956015"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58080256"
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает события инструкции Showplan в XML-формате для пакета, указанного в дескрипторе плана. План, указанный в дескрипторе плана может быть кэширован или выполняться в данный момент.  
+Возвращает события инструкции Showplan в XML-формате для пакета, указанного в дескрипторе плана. План, указанный в дескрипторе плана может быть кэширован или выполняться в данный момент.  
   
- Схема XML для Showplan опубликованные, так и найти по адресу [веб-узле Microsoft](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409). Эта схема также доступна в папке установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Схема XML для Showplan опубликованные, так и найти по адресу [веб-узле Microsoft](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409). Эта схема также доступна в папке установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-sys.dm_exec_query_plan ( plan_handle )  
+sys.dm_exec_query_plan(plan_handle)  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *plan_handle*  
- Уникальным образом определяет план запроса для пакета, который находится в кэше или выполняется в данный момент.  
+*plan_handle*  
+— Это маркер, который уникально идентифицирует план выполнения запроса для запущенного пакета, и ее план находится в кэше планов, или в данный момент. *plan_handle* — **varbinary(64)**.   
+
+*Plan_handle* можно получить из следующих объектов DMO:
   
- *plan_handle* — **varbinary(64)**. *plan_handle* можно получить из следующих объектов DMO:  
+-   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
- [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+-   [sys.dm_exec_query_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
- [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
-  
- [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+-   [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+
+-   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+
+-   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
@@ -78,7 +81,7 @@ sys.dm_exec_query_plan ( plan_handle )
  Из-за ограничения количества уровней вложенности, допустимых в **xml** тип данных, **sys.dm_exec_query_plan** не может возвратить планы запросов, которые соответствуют или превосходят 128 уровней вложенных элементов. В более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это условие предназначалось для предотвращения возврата плана запроса и формирования ошибки 6335. В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 и более поздних версиях **query_plan** столбец возвращает значение NULL. Можно использовать [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) функции динамического управления для возврата плана запроса в текстовом формате.  
   
 ## <a name="permissions"></a>Разрешения  
- Для выполнения **sys.dm_exec_query_plan**, пользователь должен быть членом **sysadmin** предопределенной роли сервера или иметь разрешение VIEW SERVER STATE на сервере.  
+ Для выполнения **sys.dm_exec_query_plan**, пользователь должен быть членом **sysadmin** предопределенной роли сервера или иметь `VIEW SERVER STATE` разрешение на сервере.  
   
 ## <a name="examples"></a>Примеры  
  Следующие примеры показывают, как использовать **sys.dm_exec_query_plan** динамическое административное представление.  
@@ -95,7 +98,7 @@ sys.dm_exec_query_plan ( plan_handle )
   
  Сначала получите идентификатор серверного процесса (SPID) для процесса, выполняющего запрос или пакет, при помощи хранимой процедуры `sp_who`:  
   
-```  
+```sql  
 USE master;  
 GO  
 exec sp_who;  
@@ -104,7 +107,7 @@ GO
   
  Результирующий набор, возвращаемый процедурой `sp_who`, показывает, что идентификатор SPID равен `54`. Идентификатор SPID можно использовать с динамическим административным представлением `sys.dm_exec_requests` для получения дескриптора плана при помощи следующего запроса:  
   
-```  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_requests  
@@ -114,39 +117,44 @@ GO
   
  Таблицы, которая возвращается методом **sys.dm_exec_requests** указывает, что дескриптор плана для медленно выполняемого запроса или пакета `0x06000100A27E7C1FA821B10600`, который можно указать в качестве *plan_handle* аргумент с `sys.dm_exec_query_plan` Чтобы получить план выполнения в формате XML следующим образом. План выполнения в формате XML для медленно выполняемого запроса или пакета содержится в **query_plan** столбец таблицы, возвращаемой функцией `sys.dm_exec_query_plan`.  
   
-```  
+```sql  
 USE master;  
 GO  
-SELECT * FROM sys.dm_exec_query_plan (0x06000100A27E7C1FA821B10600);  
+SELECT * 
+FROM sys.dm_exec_query_plan (0x06000100A27E7C1FA821B10600);  
 GO  
 ```  
   
 ### <a name="b-retrieve-every-query-plan-from-the-plan-cache"></a>Б. Получение плана каждого запроса из кэша планов  
  Чтобы получить моментальный снимок всех планов запроса, хранимых в кэше планов, необходимо получить дескрипторы планов для всех запросов, хранящихся в кэше, запросив динамическое административное представление `sys.dm_exec_cached_plans`. Дескрипторы планов хранятся в столбце `plan_handle` представления `sys.dm_exec_cached_plans`. Затем воспользуйтесь оператором CROSS APPLY для передачи дескрипторов плана в функцию `sys.dm_exec_query_plan`, как показано ниже. Вывод инструкции Showplan в формате XML для каждого плана, находящегося в кэше планов, находится в столбце `query_plan` возвращаемой таблицы.  
   
-```  
+```sql  
 USE master;  
 GO  
-SELECT * FROM sys.dm_exec_cached_plans cp CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);  
+SELECT * 
+FROM sys.dm_exec_cached_plans AS cp 
+CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);  
 GO  
 ```  
   
 ### <a name="c-retrieve-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>В. Получение всех планов запросов, для которых сервер собрал статистику запросов из кэша планов  
  Чтобы получить моментальный снимок всех планов запроса, для которых сервером была собрана статистика и которые в настоящий момент находятся в кэше планов, необходимо получить дескрипторы планов в кэше, запросив динамическое административное представление `sys.dm_exec_query_stats`. Дескрипторы планов хранятся в столбце `plan_handle` представления `sys.dm_exec_query_stats`. Затем воспользуйтесь оператором CROSS APPLY для передачи дескрипторов плана в функцию `sys.dm_exec_query_plan`, как показано ниже. Вывод инструкции Showplan в формате XML для каждого плана, который находится в кэше планов и для которого сервер собирал статистику, находится в столбце `query_plan` возвращаемой таблицы.  
   
-```  
+```sql  
 USE master;  
 GO  
-SELECT * FROM sys.dm_exec_query_stats qs CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle);  
+SELECT * 
+FROM sys.dm_exec_query_stats AS qs 
+CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle);  
 GO  
 ```  
   
 ### <a name="d-retrieve-information-about-the-top-five-queries-by-average-cpu-time"></a>Г. Получение сведений о первых пяти запросах по среднему времени ЦП  
  Следующий пример возвращает планы и среднее время ЦП для пяти первых запросов.  
   
-```  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
-Plan_handle, query_plan   
+   plan_handle, query_plan   
 FROM sys.dm_exec_query_stats AS qs  
 CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle)  
 ORDER BY total_worker_time/execution_count DESC;  
@@ -163,4 +171,3 @@ GO
  [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
   
   
-
