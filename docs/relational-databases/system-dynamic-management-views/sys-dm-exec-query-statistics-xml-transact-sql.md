@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8bb66c5bb9b4f69b32efd7761ae08677ee243fee
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 63e1d22670929448110083c31e9900e462d576bc
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044630"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072308"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -58,23 +58,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 ## <a name="remarks"></a>Примечания
 Этой системной функции доступен, начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1. См. в статье базы Знаний [3190871](https://support.microsoft.com/en-us/help/3190871)
 
-Это системная функция работает при обоих **стандартный** и **упрощенных** инфраструктуру профилирования статистики выполнения запросов.  
-  
-**Стандартный** инфраструктуру профилирования статистики можно включить с помощью:
-  -  [SET STATISTICS XML НА](../../t-sql/statements/set-statistics-xml-transact-sql.md)
-  -  [SET STATISTICS PROFILE НА](../../t-sql/statements/set-statistics-profile-transact-sql.md)
-  -  `query_post_execution_showplan` расширенных событий.  
-  
-**Упрощенный** инфраструктуру профилирования статистики доступен в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 и может быть включен:
-  -  Глобально с помощью трассировки флаг 7412.
-  -  С помощью [ *query_thread_profile* ](https://support.microsoft.com/kb/3170113) расширенных событий.
-  
-> [!NOTE]
-> После включения флаг трассировки 7412 упрощенных профилирование будет включено для любой потребитель статистику о выполнении запросов инфраструктуры вместо обычного профилирования, например динамического административного Представления профилирования [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).
-> Тем не менее, обычного профилирования по-прежнему используется для инструкции SET STATISTICS XML, *Включить действительный план* действие в [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], и `query_post_execution_showplan` xEvent.
-
-> [!IMPORTANT]
-> TPC-c, как рабочая нагрузка Включение инфраструктуру профилирования статистики упрощенных добавляет издержки 1,5 – 2 процента. Напротив инфраструктуру профилирования статистики standard можно добавить на 90 процентов затраты для один и тот же сценарий рабочей нагрузки.
+Это системная функция работает при обоих **стандартный** и **упрощенных** инфраструктуру профилирования статистики выполнения запросов. Дополнительные сведения см. в разделе [Инфраструктура профилирования запросов](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md).  
 
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение `VIEW SERVER STATE` на сервере.  

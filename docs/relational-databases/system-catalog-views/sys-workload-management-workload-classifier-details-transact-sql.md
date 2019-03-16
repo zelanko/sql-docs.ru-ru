@@ -1,7 +1,7 @@
 ---
 title: sys.workload_management_workload_classifier_details (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 02/08/2019
+ms.date: 03/13/2019
 ms.prod: ''
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: e4b884f779de2bf535b58d88659efffbd7901627
-ms.sourcegitcommit: aa8bec762be29a29aed651d98ed4d868da85ba67
+ms.openlocfilehash: 421f47aee86c2e5bbdffe485ffea0cffef73bafd
+ms.sourcegitcommit: 05bb10710489bef16bb2c53b3803e9b8eea1429a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57975389"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57988780"
 ---
 # <a name="sysworkloadmanagementworkloadclassifierdetails-transact-sql-preview"></a>sys.workload_management_workload_classifier_details (Transact-SQL) (Предварительная версия)
 
@@ -37,4 +37,4 @@ ms.locfileid: "57975389"
 
 ## <a name="next-steps"></a>Следующие шаги
   
- Список всех представлений каталога для хранилища данных SQL и Parallel Data Warehouse, см. в разделе [хранилище данных SQL и представления каталога хранилища параллельных данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Чтобы создать классификатор рабочей нагрузки, см. в разделе [СОЗДАНИЯ КЛАССИФИКАТОРА рабочей НАГРУЗКИ](../../t-sql/statements/create-workload-classifier-transact-sql.md). Дополнительные сведения о классификации рабочей нагрузки см. в разделе [классификации рабочей нагрузки хранилища данных SQL](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
+ Список всех представлений каталога для хранилища данных SQL и Parallel Data Warehouse, см. в разделе [хранилище данных SQL и представления каталога хранилища параллельных данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Чтобы создать классификатор рабочей нагрузки, см. в разделе [СОЗДАНИЯ КЛАССИФИКАТОРА рабочей НАГРУЗКИ](../../t-sql/statements/create-workload-classifier-transact-sql.md). Дополнительные сведения о классификации рабочей нагрузки, см. в разделе [классификации рабочей нагрузки хранилища данных SQL](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

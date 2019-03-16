@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 936bc010838b3869c567117a9e87cdc2c4ce6d52
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 1c98f6110aa6cc0bbb86f04a685211d7dc58447a
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596130"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072158"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Сценарии обработки и анализа данных, а также шаблоны решений
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "53596130"
 
 ## <a name="customer-churn"></a>Оттока клиентов
 
-[Шаблон прогнозирования оттока клиентов (службы R SQL Server)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/Introduction.md)
+[Шаблон прогнозирования оттока клиентов (службы R SQL Server)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/README.md)
 
 **Что:** Анализ и прогнозирование оттока клиентов важна в любой отрасли, где необходимо обрабатываются и предотвратить потери клиентов к конкурентам: банков, телекоммуникаций и розничной торговли и др. Целью такого анализа является определение клиентов, которые с высокой вероятностью могут уйти к конкурентам, и принятие надлежащих мер для их удержания.
 
@@ -64,7 +64,7 @@ ms.locfileid: "53596130"
   
 ## <a name="predictive-maintenance"></a>профилактическое обслуживание.
 
-[Шаблон профилактического обслуживания (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/Introduction.md)
+[Шаблон профилактического обслуживания (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 
 **Что:** Для повышения эффективности задач обслуживания путем регистрации предыдущих сбоев и использовать эти данные для прогнозирования, когда или куда устройство может завершиться ошибкой, которая прогнозного обслуживания. Возможность прогнозирования устаревания устройства будет особенно полезным для приложений, использующих распределенные данные или датчики. Этот метод также может применяться для отслеживания или прогнозирования ошибок в устройств Интернета вещей (Интернет вещей).
 
