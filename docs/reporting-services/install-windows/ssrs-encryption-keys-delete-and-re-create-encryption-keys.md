@@ -16,7 +16,7 @@ author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: d910518c2811877920c1656b36a771ea6aebc61b
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47747202"
@@ -41,7 +41,7 @@ ms.locfileid: "47747202"
   
      Если повторно создаются ключи шифрования для сервера отчетов с масштабным развертыванием, нужно отключить это свойство на всех экземплярах в развертывании.  
   
-    1.  Откройте проводник Windows и перейдите в папку " *диск*:\Program Files\Microsoft SQL Server\\\*экземпляр_сервера_отчетов*\Reporting Services". Замените *диск* своей буквой диска, а *экземпляр_сервера_отчетов* — именем папки, соответствующей экземпляру сервера отчетов, для которого нужно отключить веб-службу и доступ по протоколу HTTP. Например, «C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services».  
+    1.  Откройте проводник Windows и перейдите в папку " *диск*:\Program Files\Microsoft SQL Server\\*экземпляр_сервера_отчетов*\Reporting Services". Замените *диск* своей буквой диска, а *экземпляр_сервера_отчетов* — именем папки, соответствующей экземпляру сервера отчетов, для которого нужно отключить веб-службу и доступ по протоколу HTTP. Например, «C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services».  
   
     2.  Откройте файл rsreportserver.config.  
   
