@@ -23,7 +23,7 @@ items:
     href: ../advanced-analytics/java/java-first-sample.md
   - name: Типы данных Java и SQL
     href: ../advanced-analytics/java/java-sql-datatypes.md
-- name: Установить
+- name: Установка
   items:
   - name: Различия в SQL Server 2019
     href: ../advanced-analytics/install/sql-machine-learning-services-ver15.md
@@ -228,6 +228,10 @@ items:
       href: ../advanced-analytics/r/creating-multiple-models-using-rxexecby.md
   - name: Развертывание
     items:
+    - name: Внедрение с помощью хранимых процедур
+      href: ../advanced-analytics/r/operationalizing-your-r-code.md
+    - name: Создание рабочих процессов SSIS и SSRS на языке R
+      href: ../advanced-analytics/r/creating-workflows-that-use-r-in-sql-server.md
     - name: Преобразование кода R для SQL Server
       href: ../advanced-analytics/r/converting-r-code-for-use-in-sql-server.md
     - name: Создание хранимой процедуры с помощью sqlrutils
@@ -315,23 +319,9 @@ items:
       href: ../advanced-analytics/common-issues-external-script-execution.md
     - name: Ошибки скрипта R
       href: ../advanced-analytics/r-script-execution-errors.md
-  - name: Блоги
-    items:
-    - name: SQL Server +
-      href: https://blogs.technet.microsoft.com/dataplatforminsider/
-    - name: R Server +
-      href: https://blogs.msdn.microsoft.com/microsoftrservertigerteam/
-    - name: Машинное обучение +
-      href: https://blogs.technet.microsoft.com/machinelearning/
-  - name: Форумы
-    items:
-    - name: SQL Server +
-      href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
-    - name: Machine Learning Server +
-      href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
-ms.openlocfilehash: 643bd99806e6af28c115a5de087d5719adcf152f
-ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
+ms.openlocfilehash: e442194899dcae6fd9c30d57af763bb67791c20f
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57401806"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976364"

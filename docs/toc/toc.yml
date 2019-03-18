@@ -50,7 +50,7 @@ items:
       href: ../big-data-cluster/big-data-cluster-overview.md
     - name: Заметки о выпуске
       href: ../big-data-cluster/big-data-cluster-release-notes.md
-  - name: Установить
+  - name: Установка
     items:
     - name: Установка инструментов
       items:
@@ -176,7 +176,7 @@ items:
           href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
         - name: Отладка кластера mssqlctl
           href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
-      - name: Хранилище
+      - name: Память
         items:
         - name: Хранилище mssqlctl
           href: ../big-data-cluster/reference-mssqlctl-storage.md
@@ -825,7 +825,7 @@ items:
       items:
       - name: Конфигурация
         items:
-        - name: UPGRADE
+        - name: Обновление
           href: ../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md
         - name: Режимы кворума и голосование
           href: ../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
@@ -877,7 +877,7 @@ items:
               href: ../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
             - name: Пример Настройка с использованием сертификатов (T-SQL)
               href: ../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md
-          - name: UPGRADE
+          - name: Обновление
             href: ../database-engine/database-mirroring/upgrading-mirrored-instances.md
           - name: Удаление зеркального отображения
             href: ../database-engine/database-mirroring/remove-database-mirroring-sql-server.md
@@ -1059,7 +1059,7 @@ items:
       href: ../relational-databases/databases/databases.md
     - name: Практические руководства
       items:
-      - name: управление
+      - name: Управление
         items:
         - name: Создание базы данных
           href: ../relational-databases/databases/create-a-database.md
@@ -1221,7 +1221,7 @@ items:
       items:
       - name: Файловый поток
         href: ../relational-databases/blob/filestream-sql-server.md
-      - name: Filetable
+      - name: FileTable
         href: ../relational-databases/blob/filetables-sql-server.md
       - name: Сравнение параметров для хранения больших двоичных объектов
         href: ../relational-databases/blob/compare-options-for-storing-blobs-sql-server.md
@@ -1269,7 +1269,7 @@ items:
         href: ../relational-databases/blob/access-filetables-with-transact-sql.md
       - name: Доступ с помощью API-интерфейсов ввода-вывода файлов
         href: ../relational-databases/blob/access-filetables-with-file-input-output-apis.md
-      - name: управление
+      - name: Управление
         href: ../relational-databases/blob/manage-filetables.md
       - name: схема
         href: ../relational-databases/blob/filetable-schema.md
@@ -1339,7 +1339,7 @@ items:
         href: ../relational-databases/indexes/index-properties-f1-help.md
     - name: Индексы columnstore
       items:
-      - name: новые возможности
+      - name: Новые возможности
         href: ../relational-databases/indexes/columnstore-indexes-what-s-new.md
       - name: Руководство по проектированию
         href: ../relational-databases/indexes/columnstore-indexes-design-guidance.md
@@ -1453,7 +1453,7 @@ items:
   - name: Таблицы
     href: ../relational-databases/tables/tables.md
     items:
-    - name: управление
+    - name: Управление
       items:
       - name: Создание
         href: ../relational-databases/tables/create-tables-database-engine.md
@@ -1547,7 +1547,7 @@ items:
     - name: Темпоральные таблицы
       href: ../relational-databases/tables/temporal-tables.md
       items:
-      - name: управление
+      - name: Управление
         items:
         - name: Начало работы
           href: ../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md
@@ -1617,7 +1617,7 @@ items:
       items:
       - name: Включение и отключение
         href: ../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md
-      - name: управление
+      - name: Управление
         href: ../relational-databases/track-changes/manage-change-tracking-sql-server.md
       - name: Использование
         href: ../relational-databases/track-changes/work-with-change-tracking-sql-server.md
@@ -1664,7 +1664,7 @@ items:
         href: ../relational-databases/triggers/get-information-about-dml-triggers.md
       - name: Удаление или отключение триггеров DML
         href: ../relational-databases/triggers/delete-or-disable-dml-triggers.md
-  - name: Пользовательские функции.
+  - name: Определяемые пользователем функции
     href: ../relational-databases/user-defined-functions/user-defined-functions.md
     items:
     - name: Детерминированные и недетерминированные функции
@@ -2054,7 +2054,7 @@ items:
     - name: Управление сборками интеграции
       href: ../relational-databases/clr-integration/assemblies-database-engine.md
       items:
-      - name: управление
+      - name: Управление
         href: ../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md
       - name: Alter
         href: ../relational-databases/clr-integration/assemblies/altering-an-assembly.md
@@ -2073,7 +2073,7 @@ items:
     - name: Интеграция
       href: ../relational-databases/clr-integration/clr-integration-overview.md
       items:
-      - name: новые возможности
+      - name: Новые возможности
         href: ../relational-databases/clr-integration/clr-integration-what-s-new.md
       - name: Включить
         href: ../relational-databases/clr-integration/clr-integration-enabling.md
@@ -2303,7 +2303,7 @@ items:
   - name: JSON
     href: ../relational-databases/json/json-data-sql-server.md
     items:
-    - name: управление
+    - name: Управление
       items:
       - name: Хранение документов
         href: ../relational-databases/json/store-json-documents-in-sql-tables.md
@@ -2419,7 +2419,7 @@ items:
         href: ../relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
       - name: Функция ConnectionValidSharedMemory в общей памяти dbmslpcn.dll
         href: ../relational-databases/native-client/applications/connectionvalidsharedmemory-function-in-dbmslpcn-dll-shared-memory.md
-      - name: Установить
+      - name: Установка
         href: ../relational-databases/native-client/applications/installing-sql-server-native-client.md
       - name: Политики поддержки
         href: ../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md
@@ -3287,7 +3287,7 @@ items:
         href: ../relational-databases/server-management-objects-smo/tasks/programming-specific-tasks.md
       - name: Планирование автоматических административных задач в агенте SQL Server
         href: ../relational-databases/server-management-objects-smo/tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md
-      - name: Создание скриптов
+      - name: Написание скриптов
         href: ../relational-databases/server-management-objects-smo/tasks/scripting.md
       - name: Трассировка и воспроизведение событий
         href: ../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md
@@ -3940,6 +3940,11 @@ items:
     href: ../relational-databases/sql-server-index-design-guide.md
   - name: Архитектура страниц и экстентов
     href: ../relational-databases/pages-and-extents-architecture-guide.md
+    items:
+    - name: Чтение страниц
+      href: ../relational-databases/reading-pages.md
+    - name: Запись страниц
+      href: ../relational-databases/writing-pages.md
   - name: Оптимизация и проверка после миграции
     href: ../relational-databases/post-migration-validation-and-optimization-guide.md
   - name: Архитектура обработчика запросов
@@ -3952,11 +3957,6 @@ items:
     href: ../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
   - name: Архитектура управления памятью
     href: ../relational-databases/memory-management-architecture-guide.md
-    items:
-    - name: Чтение страниц
-      href: ../relational-databases/reading-pages.md
-    - name: Запись страниц
-      href: ../relational-databases/writing-pages.md
 - name: Установка
   href: redirectfrom-installation-10.md
   items:
@@ -4397,6 +4397,7 @@ items:
       - name: Страница "Дополнительно"
         href: ../database-engine/configure-windows/server-properties-advanced-page.md
 - name: Перенос и загрузка данных
+  href: ../toc/sectionfor-migrate-load-data-overall-sql-server.md
   items:
   - name: SQL Server Integration Services (SSIS) ++
     href: ../integration-services/index.md
@@ -4698,7 +4699,7 @@ items:
               href: ../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md
             - name: Повторная инициализация подписок
               href: ../relational-databases/replication/reinitialize-subscriptions.md
-      - name: Administer
+      - name: Администрирование
         items:
         - name: Скрипты вывода сведений Dist и Pub
           href: ../relational-databases/replication/administration/distributor-and-publisher-information-script.md
@@ -5542,7 +5543,7 @@ items:
           href: ../sql-server/stretch-database/enable-stretch-database-for-a-table.md
         - name: Выбор строк для миграции
           href: ../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md
-      - name: управление
+      - name: Управление
         items:
         - name: Мониторинг миграции
           href: ../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md
@@ -5588,7 +5589,7 @@ items:
   - name: Помощник по миграции баз данных (DMA)
     href: ../dma/dma-overview.md
     items:
-    - name: новые возможности
+    - name: Новые возможности
       href: ../dma/dma-whatsnew.md
     - name: Оценка
       href: ../dma/dma-assesssqlonprem.md
@@ -5793,7 +5794,7 @@ items:
         href: ../ssma/db2/assessing-db2-schemas-for-conversion-db2tosql.md
       - name: Преобразование схем DB2
         href: ../ssma/db2/converting-db2-schemas-db2tosql.md
-      - name: Помощник миграции SQL Server
+      - name: Помощник по миграции SQL Server
         href: ../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md
       - name: Создание отчетов
         href: ../ssma/db2/generating-reports-db2tosql.md
@@ -6263,7 +6264,7 @@ items:
           href: ../ssma/sybase/global-settings-tester-sybasetosql.md
 - name: Управление, мониторинг и настройка
   items:
-  - name: управление
+  - name: Управление
     items:
     - name: Центральные серверы управления
       href: ../relational-databases/administer-multiple-servers-using-central-management-servers.md
@@ -6362,7 +6363,7 @@ items:
     - name: Управление на основе политик
       href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
       items:
-      - name: управление
+      - name: Управление
         items:
         - name: Создание политики
           href: ../relational-databases/policy-based-management/create-a-policy-based-management-policy.md
@@ -6614,7 +6615,7 @@ items:
         href: ../relational-databases/data-collection/management-data-warehouse.md
       - name: Безопасность сборщика данных
         href: ../relational-databases/data-collection/data-collector-security.md
-      - name: управление
+      - name: Управление
         href: ../relational-databases/data-collection/manage-data-collection.md
         items:
         - name: Запуск или остановка
@@ -6717,7 +6718,7 @@ items:
     - name: Хранилище запросов
       href: ../relational-databases/performance/monitoring-performance-by-using-the-query-store.md
       items:
-      - name: In-Memory OLTP
+      - name: Выполняющаяся в памяти OLTP
         href: ../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
       - name: Рекомендации
         href: ../relational-databases/performance/best-practice-with-the-query-store.md
@@ -7182,7 +7183,7 @@ items:
     href: ../relational-databases/cursors.md
   - name: Соединения
     href: ../relational-databases/performance/joins.md
-  - name: Создание скриптов
+  - name: Написание скриптов
     href: ../relational-databases/scripting/database-engine-scripting.md
   - name: Вложенные запросы
     href: ../relational-databases/performance/subqueries.md
@@ -7203,7 +7204,7 @@ items:
         href: ../relational-databases/polybase/polybase-scale-out-groups.md
     - name: Практические руководства
       items:
-      - name: Установить
+      - name: Установка
         items:
         - name: Установка в Windows
           href: ../relational-databases/polybase/polybase-installation.md
@@ -7219,7 +7220,7 @@ items:
             href: ../relational-databases/polybase/polybase-configuration.md
         - name: хранилище BLOB-объектов Azure
           href: ../relational-databases/polybase/polybase-configure-azure-blob-storage.md
-        - name: SQL Server
+        - name: SQL Server
           href: ../relational-databases/polybase/polybase-configure-sql-server.md
         - name: Oracle;
           href: ../relational-databases/polybase/polybase-configure-oracle.md
@@ -7966,7 +7967,7 @@ items:
         items:
         - name: Создание собственных ключей +
           href: /azure/sql-database/transparent-data-encryption-byok-azure-sql
-      - name: Постоянное шифрование
+      - name: Always Encrypted
         href: ../relational-databases/security/encryption/always-encrypted-database-engine.md
         items:
         - name: Always Encrypted с безопасными анклавами
@@ -8006,10 +8007,10 @@ items:
 - name: Инструменты
   href: ../tools/overview-sql-tools.md
   items:
-  - name: Azure Data Studio.
+  - name: Azure Data Studio
     href: ../azure-data-studio/what-is.md
     items:
-    - name: Установить
+    - name: Установка
       href: ../azure-data-studio/download.md
     - name: Заметки о выпуске
       href: ../azure-data-studio/release-notes-azure-data-studio.md
@@ -8211,12 +8212,12 @@ items:
   - name: Распределенное воспроизведение
     href: ../tools/distributed-replay/sql-server-distributed-replay.md
     items:
-    - name: Установить
+    - name: Установка
       href: ../tools/distributed-replay/install-distributed-replay-overview.md
       items:
       - name: Требования
         href: ../tools/distributed-replay/distributed-replay-requirements.md
-      - name: Установить
+      - name: Установка
         href: ../tools/distributed-replay/install-distributed-replay.md
       - name: Выполнение действий после установки
         href: ../tools/distributed-replay/complete-the-post-installation-steps.md
@@ -8420,22 +8421,14 @@ items:
     items:
     - name: Скачивание SSDT
       href: ../ssdt/download-sql-server-data-tools-ssdt.md
-    - name: Обзор
-      items:
-      - name: Журнал изменений для SSDT
-        href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
-      - name: Data-Tier Application Framework. Условия лицензирования
-        href: ../ssdt/data-tier-application-framework-license-terms.md
-      - name: Предыдущие выпуски SSDT и SSDT-BI
-        href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
-      - name: Поддержка Azure Active Directory
-        href: ../ssdt/azure-active-directory.md
-      - name: Средства SQL Server
-        href: ../ssdt/sql-server-tools.md
-      - name: Условия лицензии SSDT
-        href: ../ssdt/sql-server-data-tools-license-terms.md
-      - name: Условия лицензии SSDT (VS 2017)
-        href: ../ssdt/sql-server-data-tools-license-terms-vs2017.md
+    - name: Журнал изменений для SSDT
+      href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
+    - name: Предыдущие выпуски SSDT и SSDT-BI
+      href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
+    - name: Поддержка Azure Active Directory
+      href: ../ssdt/azure-active-directory.md
+    - name: Средства SQL Server
+      href: ../ssdt/sql-server-tools.md
     - name: Разработка базы данных вне сети с учетом проекта
       href: ../ssdt/project-oriented-offline-database-development.md
       items:
@@ -8661,7 +8654,7 @@ items:
         href: ../ssms/ssms-utility.md
       - name: Сочетания клавиш SSMS
         href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
-    - name: Агент SQL Server
+    - name: Агент SQL Server
       href: ../ssms/agent/sql-server-agent.md
       items:
       - name: Публиковать инструкции загрузки
@@ -9050,7 +9043,7 @@ items:
         href: ../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md
       - name: Справка F1 по зарегистрированным серверам
         href: ../ssms/register-servers/registered-servers-f1-help.md
-    - name: Создание скриптов
+    - name: Написание скриптов
       href: ../ssms/scripting/database-engine-scripting.md
       items:
       - name: Редакторы запросов и текста
@@ -9775,8 +9768,6 @@ items:
           href: ../ssms/visual-db-tools/print-query-results-visual-database-tools.md
     - name: Ресурсы
       items:
-      - name: Условия лицензии
-        href: ../ssms/sql-server-management-studio-license-terms.md
       - name: Справка и поддержка пользователей в SSMS
         href: ../ssms/user-assistance-in-sql-server-management-studio.md
       - name: Анонимные данные об использовании
@@ -9918,7 +9909,7 @@ items:
       href: ../relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
 - name: Учебники
   items:
-  - name: SQL Server
+  - name: SQL Server
     href: ../sql-server/tutorials-for-sql-server-2016.md
   - name: Компонент Database Engine
     href: ../relational-databases/database-engine-tutorials.md
@@ -9947,7 +9938,7 @@ items:
       href: ../t-sql/lesson-2-configuring-permissions-on-database-objects.md
     - name: Урок 3. Удаление объектов базы данных
       href: ../t-sql/lesson-3-deleting-database-objects.md
-- name: 'SQL Server в Linux:'
+- name: SQL Server в Linux
   href: ../linux/sql-server-linux-overview.md
   items:
   - name: Обзор
@@ -10009,7 +10000,7 @@ items:
       href: ../linux/sql-server-linux-replication-tutorial-tsql.md
   - name: Основные понятия
     items:
-    - name: Установить
+    - name: Установка
       items:
       - name: Установка SQL Server
         href: ../linux/sql-server-linux-setup.md
@@ -10052,7 +10043,7 @@ items:
         href: ../linux/sql-server-linux-develop-use-vscode.md
       - name: Использование SSDT
         href: ../linux/sql-server-linux-develop-use-ssdt.md
-    - name: управление
+    - name: Управление
       href: ../linux/sql-server-linux-management-overview.md
       items:
       - name: Использование для управления SSMS
@@ -10063,7 +10054,7 @@ items:
         href: ../linux/sql-server-linux-use-log-shipping.md
       - name: Использование DB Mail и оповещений по почте
         href: ../linux/sql-server-linux-db-mail-sql-agent.md
-    - name: анализа
+    - name: Миграция
       href: ../linux/sql-server-linux-migrate-overview.md
       items:
       - name: Экспорт и импорт BACPAC из Windows
@@ -10138,9 +10129,9 @@ items:
           items:
           - name: Развертывание
             href: ../linux/sql-server-linux-kubernetes-deploy.md
-          - name: управление
+          - name: Управление
             href: ../linux/sql-server-linux-kubernetes-manage.md
-          - name: Подключить
+          - name: Подключение
             href: ../linux/sql-server-linux-kubernetes-connect.md
           - name: Создание скриптов развертывания
             href: ../linux/sql-server-linux-kubernetes-create-deployment.md
@@ -11322,17 +11313,13 @@ items:
         href: ../powershell/encode-and-decode-sql-server-identifiers.md
       - name: Применение escape-символов к идентификаторам SQL Server
         href: ../powershell/escape-sql-server-identifiers.md
-    - name: Ресурсы
-      items:
-      - name: Условия лицензионного соглашения SQL Server PowerShell
-        href: ../powershell/sql-server-powershell-license-terms.md
     - name: Справочник по командлетам
       items:
       - name: Командлеты SqlServer
         href: /powershell/module/sqlserver/
       - name: Командлеты SQLPS
         href: /powershell/module/sqlps/
-  - name: представлений системного каталога;
+  - name: Представления системного каталога
     href: ../relational-databases/system-catalog-views/catalog-views-transact-sql.md
     items:
     - name: Часто задаваемые вопросы о запросах к системному каталогу сервера SQL Server
@@ -11961,6 +11948,10 @@ items:
         href: ../relational-databases/system-catalog-views/sys-pdw-table-distribution-properties-transact-sql.md
       - name: sys.pdw_table_mappings
         href: ../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md
+      - name: sys.workload-management-workload-classifier-details
+        href: ../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md
+      - name: sys.workload-management-workload-classifiers
+        href: ../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md
     - name: Stretch Database
       items:
       - name: sys.remote_data_archive_databases
@@ -12000,7 +11991,7 @@ items:
         href: ../relational-databases/system-catalog-views/sys-xml-schema-wildcard-namespaces-transact-sql.md
       - name: sys.xml_schema_wildcards
         href: ../relational-databases/system-catalog-views/sys-xml-schema-wildcards-transact-sql.md
-  - name: Системные представления в режиме совместимости
+  - name: Представления совместимости системы
     href: ../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md
     items:
     - name: sys.sysaltfiles
@@ -14165,7 +14156,7 @@ items:
         href: ../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md
       - name: sp_special_columns_100
         href: ../relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md
-    - name: Агент SQL Server
+    - name: Агент SQL Server
       href: ../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md
       items:
       - name: sp_add_alert
@@ -16639,6 +16630,8 @@ items:
           href: ../t-sql/statements/create-user-transact-sql.md
         - name: VIEW
           href: ../t-sql/statements/create-view-transact-sql.md
+        - name: WORKLOAD CLASSIFIER
+          href: ../t-sql/statements/create-workload-classifier-transact-sql.md
         - name: WORKLOAD GROUP
           href: ../t-sql/statements/create-workload-group-transact-sql.md
         - name: XML INDEX
@@ -16781,6 +16774,8 @@ items:
           href: ../t-sql/statements/drop-user-transact-sql.md
         - name: VIEW
           href: ../t-sql/statements/drop-view-transact-sql.md
+        - name: WORKLOAD CLASSIFIER
+          href: ../t-sql/statements/drop-workload-classifier-transact-sql.md
         - name: WORKLOAD GROUP
           href: ../t-sql/statements/drop-workload-group-transact-sql.md
         - name: XML SCHEMA COLLECTION
@@ -17183,9 +17178,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Поддержка пространств имен в XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: c1bcf717605ff5c3cd1cf5722154fe518721c9e6
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: d658d240d44697d6d3632142b1d4034468ffc91f
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579794"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974573"
