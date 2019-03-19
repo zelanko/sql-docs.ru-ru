@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bdea0473176e08c51931f1bb192462c5c45ee514
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 12a3fff2ff310f2aa096ec4bc49b76b9895cf3f7
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802380"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974523"
 ---
 # <a name="sqlcmd-utility"></a>Служебная программа sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,23 +54,23 @@ ms.locfileid: "56802380"
 
 ## <a name="download-the-latest-version-of-sqlcmd-utility"></a>Загрузите последнюю версию программы sqlcmd
 
-**[![скачать](../ssdt/media/download.png) Скачать служебные программы командной строки Microsoft 15.0.x для SQL Server (х64) (2,4 МБ)](https://go.microsoft.com/fwlink/?linkid=2043518)**
-<br>**[![скачать](../ssdt/media/download.png) Скачать служебные программы командной строки Microsoft 15.0.x для SQL Server (х86) (2,2 МБ)](https://go.microsoft.com/fwlink/?linkid=2043622)**
+**[![скачать](../ssdt/media/download.png) Скачать служебные программы командной строки Microsoft 15.0.x для SQL Server (х64) (2,6 МБ)](https://go.microsoft.com/fwlink/?linkid=2082790)**
+<br>**[![скачать](../ssdt/media/download.png) Скачать служебные программы командной строки Microsoft 15.0.x для SQL Server (х86) (2,3 МБ)](https://go.microsoft.com/fwlink/?linkid=2082695)**
 
 Программы командной строки по общей доступности (GA), однако они выпускаются с помощью пакета установщика для [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 **Сведения о версии**
 
 Номер выпуска: 15.0 <br>
-Номер сборки: 15.0.1000.34<br>
-Дата выпуска: 18 октября 2018 г.
+Номер сборки: 15.0.1300.359<br>
+Дата выпуска: 13 марта 2019 г.
 
 Новая версия SQLCMD поддерживает аутентификацию Azure AD, включая многофакторную идентификацию (MFA) поддержку функций базы данных SQL, хранилище данных SQL и постоянного шифрования.
 Новый BCP поддерживает аутентификацию Azure AD, включая поддержку многофакторной идентификации (MFA) для базы данных SQL и хранилища данных SQL.
 
-**Требования к системе** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2 этот компонента необходимы [установщика Windows 4.5](https://www.microsoft.com/download/details.aspx?id=8483) и [17.2 драйвер Microsoft ODBC для SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
+**Требования к системе** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2 этот компонента необходимы [установщика Windows 4.5](https://www.microsoft.com/download/details.aspx?id=8483) и [17.3.1.1 драйвер Microsoft ODBC для SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
  
-Проверяемый версией SQLCMD `sqlcmd -?` команду и убедитесь, что 15.0.1000.34 версии или более поздней версии используется.
+Проверяемый версией SQLCMD `sqlcmd -?` команду и убедитесь, что 15.0.1300.359 версии или более поздней версии используется.
 
 
 
