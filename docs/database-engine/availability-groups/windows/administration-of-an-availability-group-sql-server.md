@@ -13,12 +13,12 @@ ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2eb19a9d8524a88436e0c3080f852f770aca6986
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3190fba7fd3e09e19236340659e4a43bf252f4ab
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214805"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973063"
 ---
 # <a name="administration-of-an-availability-group"></a>Администрирование группы доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ ms.locfileid: "53214805"
 -   **Технические документы**  
   
      [Технические документы Майкрософт по SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)    
-     [Технические документы группы консультантов по SQL Server](https://sqlcat.com/)  
+     [Технические документы группы консультантов по SQL Server](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
 ## <a name="see-also"></a>См. также:  
  [Группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   

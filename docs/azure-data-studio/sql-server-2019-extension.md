@@ -3,7 +3,7 @@ title: Расширение SQL Server 2019 (Предварительная ве
 titleSuffix: Azure Data Studio
 description: Расширение 2019 г. версия SQL Server для данных в студии
 ms.custom: seodec18
-ms.date: 02/13/2019
+ms.date: 03/18/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,13 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c90be7f91c4f3bb465e2cf29b8ee69e2f8d8b6e9
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: dfa49b1611c7fd9b196e57ea08575388aa90329b
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231061"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161552"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Расширение SQL Server 2019 (Предварительная версия)
 
@@ -31,9 +30,9 @@ ms.locfileid: "56231061"
 
    |Платформа|Загрузить|Дата выпуска|Версия
    |:---|:---|:---|:---|
-   |Windows|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2072794)|13 февраля 2019 г. |0.10.2
-   |macOS|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2072793)|13 февраля 2019 г. |0.10.2
-   |Linux|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2072792)|13 февраля 2019 г. |0.10.2
+   |Windows|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2083220)|18 марта 2019 г. |0.11.0
+   |macOS|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2083219)|18 марта 2019 г. |0.11.0
+   |Linux|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2083218)|18 марта 2019 г. |0.11.0
 
 1. В Azure Data Studio выберите **установить расширения из пакета VSIX** из **файл** меню и выберите загруженный VSIX-файл.
 
@@ -44,6 +43,14 @@ ms.locfileid: "56231061"
 1. После повторной загрузки расширения будут установлены зависимости. Вы увидите ход выполнения в окне вывода и может занять несколько минут.
 
 1. После зависимостей завершить установку, закройте и снова откройте Studio данных Azure. **Кластера больших данных в SQL Server** тип подключения недоступен, необходимо перезапустить Studio данных Azure.
+
+## <a name="release-notes-v0110"></a>Заметки о выпуске (v0.11.0)
+  * Поддержка записной книжки Jupyter, предназначенные для поддержки для ядра Python3 и Spark, была перемещена в Azure Data Studio. Это расширение больше не нужна для использования записными книжками.
+  * Большое количество ошибок в мастерах внешних данных:
+    * Сопоставления типов Oracle были обновлены в соответствии с изменениями, встроенными в SQL Server 2019 CTP 2.3.
+    * Устранена проблема, в которых были потери новых схем, введенные в элементы управления из таблицы сопоставления.
+    * Устранена проблема, где проверка узел базы данных в таблице сопоставления не привел к все таблицы и представления, для которого проверяется.
+
 
 ## <a name="release-notes-v0102"></a>Заметки о выпуске (v0.10.2)
 ### <a name="sql-server-2019-support"></a>Поддержка SQL Server 2019

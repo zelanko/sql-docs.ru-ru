@@ -1,20 +1,21 @@
 ---
-title: Что&#39;s новый - службы машинного обучения SQL Server
+title: Новые возможности - служб машинного обучения SQL Server | Документация Майкрософт
 description: Объявления новых функций для каждого выпуска SQL Server 2016 R Services, R Server, службы машинного обучения SQL Server 2017.
-ms.prod: sql
-ms.technology: machine-learning
 ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
+ms.custom: sqlseattle
+ms.prod: sql
+ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 43f1f5fb9ace80da357ecca9e4abd715bd4a6048
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 64e98073dabd490965fb5d582102a6eb962c5a13
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018050"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161832"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Новые возможности в службах машинного обучения SQL Server
 
@@ -29,7 +30,7 @@ ms.locfileid: "57018050"
 
 | Выпуск | Обновления компонентов |
 |---------|----------------|
-| CTP-ВЕРСИИ 2.3 | Новых поддерживаемых [типами данных Java](java/java-sql-datatypes.md). |
+| CTP 2.3 | Новых поддерживаемых [типами данных Java](java/java-sql-datatypes.md). |
 | | В Windows, код Java может осуществляться в внешнюю библиотеку при помощи [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) инструкции. Функциональные возможности, аналогичные будут доступны на платформе Linux в следующей CTP-версии. Дополнительные сведения: [Как вызвать Java из SQL Server](java/howto-call-java-from-sql.md). |
 | | В Windows, код Python может осуществляться внешнюю библиотеку, используя [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) инструкции. Функциональные возможности, аналогичные будут доступны на платформе Linux в следующей CTP-версии. |
 | CTP 2.2 | Нет изменений. |

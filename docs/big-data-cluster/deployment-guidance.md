@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4aba7c8bbe7af361dc118111c8502546c83dd61c
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: 817ffcc1ea17a8526304b4bc9064c1becfff90f9
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227206"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161649"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Развертывание кластеров больших данных SQL Server в Kubernetes
 
@@ -94,6 +94,7 @@ kubectl config view
 | **DOCKER_REPOSITORY** | Да | TBD | Частный репозиторий в реестре выше, где хранятся образы.  Он необходим в течение условная общедоступная Предварительная версия. |
 | **DOCKER_USERNAME** | Да | Н/Д | Имя пользователя для доступа к образы контейнеров, в случае, если они хранятся в частный репозиторий. Он необходим в течение условная общедоступная Предварительная версия. |
 | **DOCKER_PASSWORD** | Да | Н/Д | Пароль для доступа к выше частный репозиторий. Он необходим в течение условная общедоступная Предварительная версия.|
+| **DOCKER_EMAIL** | Да | Н/Д | Адрес электронной почты. |
 | **DOCKER_IMAGE_TAG** | Нет | Последние | Метка, используемая для добавлять теги к изображениям. |
 | **DOCKER_IMAGE_POLICY** | Нет | Всегда | Всегда принудительный операции извлечения образов.  |
 | **DOCKER_PRIVATE_REGISTRY** | Да | Н/Д | Для тех же временных рамках условная общедоступная Предварительная версия необходимо задать это значение «1». |
@@ -139,7 +140,8 @@ SET DOCKER_REGISTRY=private-repo.microsoft.com
 SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
 SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-SET DOCKER_PRIVATE_REGISTRY="1"
+SET DOCKER_EMAIL=<your email address>
+SET DOCKER_PRIVATE_REGISTRY=1
 ```
 
 ### <a name="linux"></a>Linux
@@ -147,8 +149,8 @@ SET DOCKER_PRIVATE_REGISTRY="1"
 Инициализируйте следующие переменные среды. В bash можно использовать кавычки вокруг каждого значения.
 
 ```bash
-export ACCEPT_EULA=yes
-export CLUSTER_PLATFORM=<minikube or aks or kubernetes>
+export ACCEPT_EULA="yes"
+export CLUSTER_PLATFORM="<minikube or aks or kubernetes>"
 
 export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
 export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
@@ -159,6 +161,7 @@ export DOCKER_REGISTRY="private-repo.microsoft.com"
 export DOCKER_REPOSITORY="mssql-private-preview"
 export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
 export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
+export DOCKER_EMAIL="<your email address>"
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 

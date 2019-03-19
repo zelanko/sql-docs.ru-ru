@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 11/28/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: jrasnick
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -18,14 +18,16 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0eae7da31570855ac60552aa95a8f1f3d7864cd0
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 1c2fe6751662ece91fac02f026f36f1733f0d612
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801538"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57988800"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 Функция с табличным значением, которая разбивает строку на строки подстрок в зависимости от указанного знака разделения.
@@ -39,12 +41,13 @@ STRING_SPLIT требует уровня совместимости не ниж�
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
-  
-```  
+
+```sql
 STRING_SPLIT ( string , separator )  
-```  
-  
-## <a name="arguments"></a>Аргументы  
+```
+
+## <a name="arguments"></a>Аргументы
+
  *строка*  
  [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого символьного типа (например, **nvarchar**, **varchar**, **nchar** или **char**).  
   
@@ -82,20 +85,22 @@ SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');
 
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-split-comma-separated-value-string"></a>A. Разделение строки значений с разделителями-запятыми  
+### <a name="a-split-comma-separated-value-string"></a>A. Разделение строки значений с разделителями-запятыми
+
 Следующая инструкция анализирует разделенный запятыми список значений и возвращает все непустые токены:  
-  
-```sql  
+
+```sql
 DECLARE @tags NVARCHAR(400) = 'clothing,road,,touring,bike'  
   
 SELECT value  
 FROM STRING_SPLIT(@tags, ',')  
-WHERE RTRIM(value) <> '';  
-```  
-  
+WHERE RTRIM(value) <> '';
+```
+
 Функция STRING_SPLIT вернет пустую строку, если между разделителями ничего нет. Condition RTRIM(value) <> '' удаляет пустые токены.  
   
-### <a name="b-split-comma-separated-value-string-in-a-column"></a>Б. Разделение строки значений с разделителями-запятыми в столбце  
+### <a name="b-split-comma-separated-value-string-in-a-column"></a>Б. Разделение строки значений с разделителями-запятыми в столбце
+
 Таблица Product содержит столбец с разделенным запятыми списком тегов, как показано в следующем примере:  
   
 |ProductId|Имя|Теги|  
@@ -105,13 +110,13 @@ WHERE RTRIM(value) <> '';
 |3|HL Mountain Frame|bike,mountain|  
   
 Следующий запрос преобразовывает каждый список тегов и соединяет его с исходной строкой:  
-  
+
 ```sql  
 SELECT ProductId, Name, value  
 FROM Product  
     CROSS APPLY STRING_SPLIT(Tags, ',');  
-```  
-  
+```
+
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 |ProductId|Имя|value|  
@@ -127,9 +132,10 @@ FROM Product
   >[!NOTE]
   > Порядок вывода может меняться и _не_ обязательно совпадает с порядком подстрок во входной строке.
   
-### <a name="c-aggregation-by-values"></a>В. Объединение по значениям  
+### <a name="c-aggregation-by-values"></a>В. Объединение по значениям
+
 Пользователю необходимо создать отчет, в котором приводится число продуктов по каждому тегу, причем теги упорядочены по числу продуктов, и отфильтрованы теги с более чем двумя продуктами.  
-  
+
 ```sql  
 SELECT value as tag, COUNT(*) AS [Number of articles]  
 FROM Product  
@@ -137,36 +143,38 @@ FROM Product
 GROUP BY value  
 HAVING COUNT(*) > 2  
 ORDER BY COUNT(*) DESC;  
-```  
-  
-### <a name="d-search-by-tag-value"></a>Г. Поиск по значению тега  
+```
+
+### <a name="d-search-by-tag-value"></a>Г. Поиск по значению тега
+
 Разработчикам необходимо создать запросы для поиска статей по ключевым словам. Они могут использовать представленные ниже запросы.  
   
 Поиск продуктов с одним тегом (clothing):  
-  
-```sql  
+
+```sql
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE 'clothing' IN (SELECT value FROM STRING_SPLIT(Tags, ','));  
-```  
-  
+```
+
 Поиск продуктов с двумя тегами (clothing и road):  
-  
+
 ```sql  
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE EXISTS (SELECT *  
     FROM STRING_SPLIT(Tags, ',')  
     WHERE value IN ('clothing', 'road'));  
-```  
-  
-### <a name="e-find-rows-by-list-of-values"></a>Д. Поиск строк по списку значений  
+```
+
+### <a name="e-find-rows-by-list-of-values"></a>Д. Поиск строк по списку значений
+
 Разработчикам необходимо создать запрос, который находит статьи по списку идентификаторов. Они могут использовать следующий запрос:  
-  
+
 ```sql  
 SELECT ProductId, Name, Tags  
 FROM Product  
-JOIN STRING_SPLIT('1,2,3',',')   
+JOIN STRING_SPLIT('1,2,3',',')
     ON value = ProductId;  
 ```  
 
@@ -176,15 +184,14 @@ JOIN STRING_SPLIT('1,2,3',',')
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';  
-```  
-  
-## <a name="see-also"></a>См. также:  
-[LEFT (Transact-SQL)](../../t-sql/functions/left-transact-sql.md)     
-[LTRIM (Transact-SQL)](../../t-sql/functions/ltrim-transact-sql.md)     
-[RIGHT (Transact-SQL)](../../t-sql/functions/right-transact-sql.md)    
-[RTRIM (Transact-SQL)](../../t-sql/functions/rtrim-transact-sql.md)     
-[SUBSTRING (Transact-SQL)](../../t-sql/functions/substring-transact-sql.md)     
-[TRIM (Transact-SQL)](../../t-sql/functions/trim-transact-sql.md)     
-[Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)      
-  
-  
+```
+
+## <a name="see-also"></a>См. также:
+
+[LEFT (Transact-SQL)](../../t-sql/functions/left-transact-sql.md)<br />
+[LTRIM (Transact-SQL)](../../t-sql/functions/ltrim-transact-sql.md)<br />
+[RIGHT (Transact-SQL)](../../t-sql/functions/right-transact-sql.md)<br />
+[RTRIM (Transact-SQL)](../../t-sql/functions/rtrim-transact-sql.md)<br />
+[SUBSTRING (Transact-SQL)](../../t-sql/functions/substring-transact-sql.md)<br />
+[TRIM (Transact-SQL)](../../t-sql/functions/trim-transact-sql.md)<br />
+[Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)

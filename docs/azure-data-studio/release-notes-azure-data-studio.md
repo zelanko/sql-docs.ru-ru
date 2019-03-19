@@ -11,16 +11,47 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b481151636db4f54212c96b0ea21f989afb917d3
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 746f3d97ed0157f6b97128dbfdf1b88a5276062c
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57581679"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161631"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 
 **[Скачайте и установите последний выпуск!](download.md)**
+
+## <a name="march-2019"></a>Марта 2019 г.
+
+18 марта 2019 &nbsp;  /  &nbsp; версии: 1.5.1
+
+&nbsp;
+
+| Изменить | Сведения |
+| :----- | :------ |
+| Добавлен [PostgreSQL расширение для Azure Data Studio](postgres-extension.md) | Поддерживаемые функции: <br/>&bull; &nbsp; Диалоговое окно подключения <br/>&bull; &nbsp; Обозреватель объектов <br/>&bull; &nbsp; Редактор запросов <br/>&bull; &nbsp; Создание диаграмм <br/>&bull; &nbsp; Панели мониторинга <br/>&bull; &nbsp; Фрагменты кода <br/>&bull; &nbsp; Изменение данных <br/>&bull; &nbsp; Записные книжки |
+| Записные книжки добавлена SQL | Добавлена поддержка ядра SQL встроенные средства просмотра записной книжки: <br/>&bull; &nbsp; Поддерживает T-SQL <br/>&bull; &nbsp; Поддержка PGSQL |
+| Добавленное расширение PowerShell  | Переводит [расширение PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) столкнуться из VS Code.  |
+| Добавлено расширение DACPAC-файл SQL Server  | Удаляет Data-Tier Application Wizard из расширения импорта SQL Server в новый модуль.  |
+| Добавленное расширение сообщества QueryPlan.show | Добавляет поддержку интеграции для визуализации планов запросов  |
+| Обновленные расширение предварительной версии SQL Server 2019 г. | &bull; &nbsp; Поддержка записной книжки Jupyter, в частности Python3 ядер и Spark, были перемещены в средство Azure Data Studio core. <br/>&bull; &nbsp; Исправления ошибок для внешних данных  |
+| Разрешенные ошибки и проблемы. | См. в разделе [ошибок и проблем на GitHub](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Известные проблемы
+- [#4427](https://github.com/Microsoft/azuredatastudio/issues/4427): Щелкнув Run на ячейки перед ядра готов к использованию для Spark приведет к неустранимой ошибке **обходной путь:** Подождите, пока ядра загружаются до выполнения ни одной из ячеек
+- [#4493](https://github.com/Microsoft/azuredatastudio/issues/4493): Рекламные ОБЪЯВЛЕНИЯ, запускаемых из SSMS с использованием проверки подлинности SQL - запросы у пользователя пароль **обходной путь:** Использование проверки подлинности Windows сейчас. 
+- [#4494](https://github.com/Microsoft/azuredatastudio/issues/4494): Не удается установить SQL записных книжек <br/>
+**Решение:** Выполните инструкции по решению действия [здесь](https://github.com/Microsoft/azuredatastudio/issues/4494#issuecomment-473043832). 
+- [#4503](https://github.com/Microsoft/azuredatastudio/issues/4503): Azure Data Studio не может быть открыт непосредственно из папки, файлы для загрузки (Mac) <br />
+**Решение:** Перезапустите компьютер после распаковки приложения. Будут исследованы. 
+- [#4539](https://github.com/Microsoft/azuredatastudio/issues/4539):  Записная книжка "команды" Сохранить как теряет контекст соединения <br />
+**Решение:** Будет исправлена в следующем выпуске. 
+- [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458): SqlToolsService, вызывает сбой извлечения пакета DAC, если используется недопустимая версия <br/>
+**Решение:** Перезапустите Studio данных Azure и убедитесь, что используется правильная версия.
+- Новые значки записной книжки и открыть записную книжку теряются. <br/> 
+**Обходное решение.** Тип устаревшего соединения является устаревшим. Мы рекомендуем использовать подключение к конечной точке SQL Server, и вы получите все действия (новой записной книжки, задание Spark), должным образом. 
 
 ## <a name="february-2019"></a>Февраля 2019 г.
 
