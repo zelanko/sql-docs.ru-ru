@@ -1,7 +1,7 @@
 ---
 title: sys.dm_pdw_exec_requests (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/13/2019
+ms.date: 03/19/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 972a5a5f1be1f06f22a520281b1eaa0e1e3a03b1
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: 09ec22504cce0439d6d3f23360586fb0b41ee0c8
+ms.sourcegitcommit: f8fced37f3fe5c45b2b97219d378137afd68cf76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973413"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58198193"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -33,17 +33,17 @@ ms.locfileid: "57973413"
 |status|**nvarchar(32)**|Текущее состояние запроса.|«Выполняется», «Приостановлено», «Завершено», «Отменено», «Сбой».|  
 |submit_time|**datetime**|Время отправки запроса для выполнения.|Допустимые **datetime** меньше или равна start_time и текущего времени.|  
 |start_time|**datetime**|Время начала выполнения запроса.|Значение NULL для запросов в очереди; в противном случае допустимый **datetime** меньше или равна текущее время.|  
-|end_compile_time|**datetime**|Время, обработчик завершения компиляции запроса.|Значение NULL для запросов, которые не были скомпилированы еще; в противном случае допустимый **datetime** меньше, чем start_time и меньше или равно текущее время.|
-|end_time|**datetime**|Время, по которому выполнение запроса завершено, ошибкой или был отменен.|Значение NULL для запросов в очереди, либо active; в противном случае допустимый **datetime** меньше или равна текущее время.|  
-|total_elapsed_time|**int**|Время затраченное на выполнение с момента запуска запроса, в миллисекундах.|Между 0 и разница между start_time и end_time.</br></br> Если total_elapsed_time превышает максимальное значение для целого числа, total_elapsed_time будут продолжать максимальное значение. Это условие будет создавать предупреждение «превышено максимальное значение.»</br></br> Максимальное значение в миллисекундах соответствует 24,8 дня.|  
+|end_compile_time|**datetime**|Время, обработчик завершения компиляции запроса.|Значение NULL для запросов, которые еще не были скомпилированы еще; в противном случае допустимый **datetime** меньше, чем start_time и меньше или равно текущее время.|
+|end_time|**datetime**|Время, по которому выполнения запроса, не удалось, была завершена или отменена.|Значение NULL для запросов в очереди, либо active; в противном случае допустимый **datetime** меньше или равна текущее время.|  
+|total_elapsed_time|**int**|Время затраченное на выполнение с момента запуска запроса, в миллисекундах.|Между 0 и разница между start_time и end_time.</br></br> Если total_elapsed_time превышает максимальное значение для целого числа, total_elapsed_time будут продолжать максимальное значение. Это условие будет создавать предупреждение «превышено максимальное значение.»</br></br> Максимальное значение в миллисекундах совпадает 24,8 дня.|  
 |Метка|**nvarchar(255)**|Строку необязательную метку, связанную с некоторые операторы запроса SELECT.|Любая строка, содержащая «a – z», «A – Z», "0-9", «_».|  
 |error_id|**nvarchar(36)**|Уникальный идентификатор ошибку, связанную с запросом, если таковые имеются.|См. в разделе [sys.dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); значение NULL, если не возникло ошибок.|  
 |database_id|**int**|Идентификатор базы данных, используемой явный контекст (например, используйте DB_X).|См. в разделе с кодом в [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |command|**nvarchar(4000)**|Содержит полный текст запроса, предоставленных пользователю.|Любой допустимый текст, запроса или запроса. Запросы, в которых превышает 4 000 байт, усекаются.|  
-|resource_class|**nvarchar(20)**|Класс ресурсов для данного запроса. См. связанные **concurrency_slots_used** в [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).|Статические классы ресурсов</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>SmallRC классы динамических ресурсов</br>MediumRC</br>LargeRC</br>XLargeRC|
-|важность (Предварительная версия для SQL DW Gen2)|**nvarchar(32)**|Отправлено важность запроса. Запросы с низким будут важности остается в очереди в приостановленном состоянии, если выше важности запросы отправляются.  Запросы с высокой важностью будет выполняться до нижней важность запросов, отправленных ранее. |NULL</br>low</br>below_normal</br>Норм.</br>above_normal</br>high|
+|resource_class|**nvarchar(20)**|Класс ресурсов для данного запроса. См. связанные **concurrency_slots_used** в [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  Дополнительные сведения о классах ресурсов см. в разделе [ресурсов классов и управление рабочими нагрузками](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |Статические классы ресурсов</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br></br>Динамические классы ресурсов</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
+|важность (Предварительная версия для SQL DW Gen2)|**nvarchar(32)**|Отправлено важность запроса. Запросы с низким важности останется в очереди в приостановленном состоянии, если выше важности запросы отправляются.  Запросы с высокой важностью будет выполняться до нижней важность запросов, отправленных ранее.  Дополнительные сведения о важности, см. в разделе [важность рабочих нагрузок](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>low</br>below_normal</br>Норм.</br>above_normal</br>high|
   
- Сведения о максимальное число строк, сохраняемых в этом представлении см. в разделе «Минимальное и максимальное значения» в [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ Сведения о максимальное число строк, которые хранятся в этом представлении см. в разделе «Минимальное и максимальное значения» в [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
 ## <a name="permissions"></a>Разрешения
 
@@ -58,4 +58,4 @@ ms.locfileid: "57973413"
   
 ## <a name="see-also"></a>См. также
 
- [Хранилище данных SQL и параллельные хранилища данных динамические административные представления &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md) </br>[Важность рабочих нагрузок хранилища данных SQL](/azure/sql-data-warehouse/sql-data-warehouse-workload-importance)
+ [Хранилище данных SQL и параллельные хранилища данных динамические административные представления &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md) 

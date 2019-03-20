@@ -2,7 +2,7 @@
 title: Оценка предприятия и объединение отчетов с оценкой (SQL Server) | Документация Майкрософт
 description: Узнайте, как использовать DMA для оценки предприятия и объединение отчетов с оценкой перед обновлением SQL Server или переход на базу данных SQL Azure.
 ms.custom: ''
-ms.date: 03/12/2019
+ms.date: 03/19/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: b2723d437a8171570436fb42f7cd9e305e3a8fea
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: 35b90cec967f60f0adfc4d9720f3aec809006f8c
+ms.sourcegitcommit: f8fced37f3fe5c45b2b97219d378137afd68cf76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974293"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58198203"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Оценка предприятия и объединять оценки с помощью DMA
 
@@ -37,15 +37,15 @@ ms.locfileid: "57974293"
     - [PowerBI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
     - [Модули Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Загрузите и извлеките:
-    - [DMA отчеты Power BI шаблона](https://msdnshared.blob.core.windows.net/media/2019/02/PowerBI-Reports.zip).
-    - [LoadWarehouse скрипт](https://msdnshared.blob.core.windows.net/media/2019/02/LoadWarehouse1.zip).
+    - [DMA отчеты Power BI шаблона](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip).
+    - [LoadWarehouse скрипт](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip).
 
 ## <a name="loading-the-powershell-modules"></a>Загрузка модулей PowerShell
 Сохранение модулей PowerShell в каталог modules PowerShell позволяет вызывать модули без необходимости загружать их явно перед использованием.
 
 Чтобы загрузить модули, выполните следующие действия:
 1. Перейдите к C:\Program Files\WindowsPowerShell\Modules и создайте папку с именем **DataMigrationAssistant**.
-2. Откройте [модули PowerShell](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules2.zip), а затем сохраните их в созданную папку.
+2. Откройте [модули PowerShell](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/3/PowerShell-Modules2.zip), а затем сохраните их в созданную папку.
 
       ![Модули PowerShell](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
