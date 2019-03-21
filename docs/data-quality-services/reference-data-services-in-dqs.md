@@ -11,12 +11,12 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 92112b0211536bcb964d71e538a92311b2579117
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 98801ffe8ea0066bc425622a0f62e7306a217ff2
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027135"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305942"
 ---
 # <a name="reference-data-services-in-dqs"></a>Службы эталонных данных в DQS
 
@@ -59,7 +59,7 @@ ms.locfileid: "56027135"
   
 1.  **Настройка сведений о поставщиках ссылочных данных в DQS**. Перед тем как использовать эталонные данные в DQS, необходимо настроить подробные сведения о службах эталонных данных в DQS.  
   
-    1.  Если используется Marketplace, потребуется действующий ключ учетной записи Marketplace. Перейдите к категории данных [Службы Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) в Marketplace и подпишитесь на службы необходимых поставщиков.  
+    1.  Если используется Marketplace, потребуется действующий ключ учетной записи Marketplace, перейдите в папку [Data Services](https://azuremarketplace.microsoft.com/marketplace/apps/category/azure-active-directory-apps?page=1&subcategories=data-services) категории данных в Marketplace и Подпишитесь на службы необходимых поставщиков.  
   
     2.  При использовании прямого подключения к поставщику эталонных данных перед использованием этих данных необходимо в DQS добавить подробные сведения о поставщике эталонных данных, к которому выполняется прямое подключение.  
   

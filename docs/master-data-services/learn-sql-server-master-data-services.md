@@ -13,12 +13,12 @@ ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c38c1ee94399023fd3ac529a1f7d9cf914f5130f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 6c32d4cf8fe16ec52d8af3ade01cea82badd40cd
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809446"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305842"
 ---
 # <a name="learn-sql-server-master-data-services"></a>Изучение служб SQL Server Master Data Services
 
@@ -27,8 +27,8 @@ ms.locfileid: "52809446"
   
   
 ## <a name="training"></a>Обучение  
-* Чтобы изучить новые функции и возможности, представленные в [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], испытайте эту [**виртуальную лабораторию TechNet**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23113&lod=true) (требуется вход с учетной записью Майкрософт).  
-* Разработайте решение [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] для хранения и управления главными списками географических данных, используя надстройку для Excel и [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], испытайте эту [**виртуальную лабораторию TechNet**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23112&lod=true). Вы создадите сущности и иерархии, а также воспользуетесь [!INCLUDE[ssIS_md](../includes/ssis-md.md)] для заполнения таблицы измерения.  
+* Для изучения новых функциях и возможностях, появившихся в [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], попробуйте [Self-paced лаборатории](https://www.microsoft.com/handsonlabs/selfpacedlabs) (вход в систему с учетной записью Майкрософт является обязательным).  
+* Для разработки [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] решения для хранения и управления главными списками географических данных, используя надстройку для Excel и [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], попробуйте [Self-paced лаборатории](https://www.microsoft.com/handsonlabs/selfpacedlabs). Вы создадите сущности и иерархии, а также воспользуетесь [!INCLUDE[ssIS_md](../includes/ssis-md.md)] для заполнения таблицы измерения.  
   
 ## <a name="videos"></a>Видеоролики  
 * Узнать о новых возможностях в выпуске [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] продукта [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] [**можно из этого видеоролика**](https://www.youtube.com/watch?v=cKA72FpOVxI).  

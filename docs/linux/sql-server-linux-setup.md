@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 4e4de2fbb87fb7716ccde8de52924cd2402424fc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e400d73137750bda913003aed1717793634cfd41
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675463"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280628"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Руководство по установке для SQL Server в Linux
 
@@ -38,8 +38,8 @@ SQL Server 2017 поддерживается в Red Hat Enterprise Linux (RHEL),
 
 | Платформа | Поддерживаемые версии | Получить
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3 или 7.4 | [Получить RHEL 7.4](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
-| **SUSE Linux Enterprise Server** | до версии 12 с пакетом обновления 2 | [Получить SLES версии 12 с пакетом обновления 2](https://www.suse.com/products/server)
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [Получить RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **SUSE Linux Enterprise Server** | v12 SP2 | [Получить SLES версии 12 с пакетом обновления 2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Получить Ubuntu 16.04](https://www.ubuntu.com/download/server)
 | **Подсистема docker** | 1.8+ | [Получить Docker](https://www.docker.com/products/overview)
 
@@ -54,7 +54,7 @@ SQL Server 2017 имеет следующие требования к систе
 
 |||
 |-----|-----|
-| **Память** | 2 GB |
+| **Память** | 2 ГБ |
 | **Файловая система** | **XFS** или **EXT4** (других файловых систем, таких как **BTRFS**, не поддерживаются) |
 | **Место на диске** | 6 ГБ |
 | **Тактовая частота процессора** | С частотой 2 ГГц |
@@ -193,7 +193,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
     > [!NOTE]
     > Вы также можете установить пакеты RPM (RHEL и SLES) с `rpm -ivh` команда, но команды в предыдущей таблице автоматически установить зависимости благодарственное из доступных репозиториев.
 
-1. **Разрешить отсутствующие зависимости**: возможно, отсутствуют зависимости на этом этапе. В противном случае этот шаг можно пропустить. В Ubuntu, если у вас есть доступ для утвержденных репозиториев, содержащий эти зависимости, самым простым решением является использование `apt-get -f install` команды. Эта команда также завершается установка SQL Server. Чтобы вручную проверить зависимости, используйте следующие команды:
+1. **Разрешить отсутствующие зависимости**: Возможно, отсутствуют зависимости на этом этапе. В противном случае этот шаг можно пропустить. В Ubuntu, если у вас есть доступ для утвержденных репозиториев, содержащий эти зависимости, самым простым решением является использование `apt-get -f install` команды. Эта команда также завершается установка SQL Server. Чтобы вручную проверить зависимости, используйте следующие команды:
 
    | Платформа | Команда list зависимостей |
    |-----|-----|

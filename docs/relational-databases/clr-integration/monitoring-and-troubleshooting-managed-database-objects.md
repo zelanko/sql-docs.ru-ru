@@ -14,12 +14,12 @@ ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5f355e7fcb46c12e34b23d332cf10da536697ac3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 79e95ac14691a4e712710303542c5743f57aacf6
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663784"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305982"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Наблюдение и устранение неполадок в управляемых объектах базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51663784"
   
 |Событие|Описание|  
 |-----------|-----------------|  
-|[Класс событий Assembly Load](https://msdn.microsoft.com/library/cfb0b69d-4ce0-4067-a3df-d82775e57886)|Используется для наблюдения за запросами на загрузку сборок (успех или неудача).|  
+|[Класс событий Assembly Load](/sql/database-engine/assembly-load-event-class)|Используется для наблюдения за запросами на загрузку сборок (успех или неудача).|  
 |[Класс событий SQL: BatchStarting](../../relational-databases/event-classes/sql-batchstarting-event-class.md), [класс событий SQL: BatchCompleted](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|Предоставляет сведения о пакетах [!INCLUDE[tsql](../../includes/tsql-md.md)], которые начали или завершили работу.|  
 |[SP: Starting, класс событий](../../relational-databases/event-classes/sp-starting-event-class.md), [SP: Completed, класс событий](../../relational-databases/event-classes/sp-completed-event-class.md)|Используется для наблюдения за выполнением хранимых процедур [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |[Класс событий SQL: StmtStarting](../../relational-databases/event-classes/sql-stmtstarting-event-class.md), [класс событий SQL: StmtCompleted](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|Используется для наблюдения за выполнением процедур [!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR.|  

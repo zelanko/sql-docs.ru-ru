@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: cd5c39f230db8fc72388d006fc17302956424633
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: feba6aca66d4428733b11db778c6b590dfde9f8b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227316"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290780"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для SQL Server 2017 в Linux
 
@@ -30,7 +30,7 @@ ms.locfileid: "57227316"
 
 | Платформа | Файловая система | Руководство по установке |
 |-----|-----|-----|
-| Red Hat Enterprise Linux 7.3 или 7.4, рабочая станция, сервер и рабочего стола | XFS или EXT4 | [Руководство по установке](quickstart-install-connect-red-hat.md) | 
+| Red Hat Enterprise Linux 7.3, 7.4, 7.5 или 7.6 Server | XFS или EXT4 | [Руководство по установке](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server до версии 12 SP2 | XFS или EXT4 | [Руководство по установке](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | XFS или EXT4 | [Руководство по установке](quickstart-install-connect-ubuntu.md) | 
 | Docker Engine 1.8 + на Windows, Mac или Linux | Н/Д | [Руководство по установке](quickstart-install-connect-docker.md) | 

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3af3d6ba14e4a9f3e2948c910e4282e33c032d3e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4a66d4665af9980822f5ce4c41ed0b94964fa8c5
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214316"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305992"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Языки и параметры сортировки (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "53214316"
   
 -   0x0416 или 1046 — **португальский (Бразилия)**.  
   
- Более полный список см. в разделе [Идендификаторы языковых стандартов, назначаемые в Майкрософт](http://msdn.microsoft.com/goglobal/bb964664.aspx). Дополнительные сведения см. в разделе [Кодировки и кодовые страницы](http://msdn.microsoft.com/goglobal/bb688114.aspx).  
+ Более полный список см. в разделе [Идендификаторы языковых стандартов, назначаемые в Майкрософт](http://msdn.microsoft.com/goglobal/bb964664.aspx). Дополнительные сведения см. в разделе [Кодировки и кодовые страницы](/globalization/encoding/encoding-overview).  
   
 > [!NOTE]  
 >  Свойство **Language** не определяет язык, на котором возвращаются системные сообщения и отображаются строки в пользовательском интерфейсе. Ошибки, предупреждения и сообщения локализованы для всех языков, поддерживаемых в Microsoft Office и Office 365, и используются автоматически, когда соединение с клиентом указывает один из поддерживаемых языков.  

@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 ms.custom: sql-linux, seodec18
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 03e3b5d578c8fee68098674e9b82501a290bafda
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: dce4418dee10ff356d5c922350cd2fda29b44795
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579245"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277313"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Краткое руководство. Установка SQL Server и создать базу данных в Red Hat
 
@@ -25,7 +25,7 @@ ms.locfileid: "57579245"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-В этом кратком руководстве вы устанавливаете SQL Server 2017 или SQL Server 2019 на Red Hat Enterprise Linux (RHEL) 7.3 +. После этого следует подключиться с помощью **sqlcmd** создать свою первую базу данных и выполнения запросов.
+В этом кратком руководстве вы устанавливаете SQL Server 2017 или SQL Server 2019 на Red Hat Enterprise Linux (RHEL). После этого следует подключиться с помощью **sqlcmd** создать свою первую базу данных и выполнения запросов.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -40,7 +40,7 @@ ms.locfileid: "57579245"
 
 ## <a name="prerequisites"></a>предварительные требования
 
-Необходимо иметь RHEL 7.3 или 7.4 машину с **по крайней мере 2 ГБ** памяти.
+Необходимо иметь компьютер RHEL 7.3, 7.4, 7.5 или 7.6 с **по крайней мере 2 ГБ** памяти.
 
 Чтобы установить Red Hat Enterprise Linux на своем локальном компьютере, перейдите к [ https://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Кроме того, можно создать виртуальные машины RHEL в Azure. См. в разделе [Создание и управление виртуальными машинами Linux с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)и использовать `--image RHEL` в вызове `az vm create`.
 
