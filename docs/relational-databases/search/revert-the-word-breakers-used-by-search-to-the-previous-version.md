@@ -1,23 +1,22 @@
 ---
 title: Восстановление предыдущих версий средств разбиения текста на слова, используемых поиском | Документация Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5251c082e2a31493110fe63f2bfb044c6a3a2f2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5714b90b0d3222c947afc3988fa88e6d478691ef
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675004"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974403"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Перевод средств разбиения по словам, используемых поиском, на предыдущую версию
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,7 +132,7 @@ ms.locfileid: "51675004"
 |Язык|Аббревиатура<br />применяется в<br />реестр|LCID|  
 |--------------|---------------------------------------|----------|  
 |Арабский|ara|1025|  
-|German|deu|1031|  
+|Немецкий|deu|1031|  
 |Японский|jpn|1041|  
 |Нидерландский|nld|1043|  
 |Русский|rus|1049|  
@@ -167,7 +166,7 @@ ms.locfileid: "51675004"
   
     4.  Если в выбранном языке используется парадигматический модуль, обновите значение по умолчанию этого раздела, указав имя файла предыдущего парадигматического модуля из таблицы.  
   
-7.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<<language_key>**. *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
+7.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>**. *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
   
 8.  Замените значение раздела **WBreakerClass** значением текущего средства разбиения по словам из таблицы.  
   
@@ -196,7 +195,7 @@ ms.locfileid: "51675004"
   
     4.  Если в выбранном языке используется парадигматический модуль, обновите значение по умолчанию этого раздела, указав имя файла текущего парадигматического модуля из таблицы.  
   
-5.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<<language_key>**. *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
+5.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>**. *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
   
 6.  Замените значение раздела **WBreakerClass** значением предыдущего средства разбиения по словам из таблицы.  
   
@@ -225,7 +224,7 @@ ms.locfileid: "51675004"
 |Предыдущий идентификатор CLSID|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |Предыдущее имя файла|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |Текущий идентификатор CLSID|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|Текущее имя файла|MsWb7.dll|MSWB7.dll|  
+|Текущее имя файла|MSWB7.dll|MSWB7.dll|  
   
  **Японский (jpn), LCID 1041**  
   
@@ -243,7 +242,7 @@ ms.locfileid: "51675004"
 |Предыдущий идентификатор CLSID|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |Предыдущее имя файла|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |Текущий идентификатор CLSID|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|Текущее имя файла|MsWb7.dll|MSWB7.dll|  
+|Текущее имя файла|MSWB7.dll|MSWB7.dll|  
   
  **Русский (rus), LCID 1049**  
   
@@ -252,7 +251,7 @@ ms.locfileid: "51675004"
 |Предыдущий идентификатор CLSID|2CB6CDA4-1C14-4392-A8EC-81EEF1F2E079|E06A0DDD-E81A-4e93-8A8D-F386C3A1B670|  
 |Предыдущее имя файла|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |Текущий идентификатор CLSID|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
-|Текущее имя файла|MsWb7.dll|MSWB7.dll|  
+|Текущее имя файла|MSWB7.dll|MSWB7.dll|  
   
 ##  <a name="newnew"></a> Языки, у которых именем файла текущего и предыдущего средства разбиения по словам не является NaturalLanguage6.dll  
  Для языков в следующей таблице имена файлов предыдущей версии средств разбиения по словам и парадигматических модулей отличаются от имен файлов новой версии. NaturalLanguage6.dll не является ни текущим, ни предыдущим именем файла. Заменять файлы не требуется, поскольку программа установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] копирует и текущую и предыдущую версии компонентов в папку Binn. Однако необходимо изменить набор записей реестра, указав в них предыдущую или текущую версию компонентов.  
@@ -288,7 +287,7 @@ ms.locfileid: "51675004"
   
     4.  Если в выбранном языке используется парадигматический модуль, обновите значение по умолчанию этого раздела, указав имя файла предыдущего парадигматического модуля из таблицы.  
   
-4.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<<language_key>**. *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
+4.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>**. *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
   
 5.  Замените значение раздела **WBreakerClass** значением текущего средства разбиения по словам из таблицы.  
   
@@ -312,7 +311,7 @@ ms.locfileid: "51675004"
   
     4.  Если в выбранном языке используется парадигматический модуль, обновите значение по умолчанию этого раздела, указав имя файла текущего парадигматического модуля из таблицы.  
   
-4.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<<language_key>**. *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
+4.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>**. *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
   
 5.  Замените значение раздела **WBreakerClass** значением предыдущего средства разбиения по словам из таблицы.  
   

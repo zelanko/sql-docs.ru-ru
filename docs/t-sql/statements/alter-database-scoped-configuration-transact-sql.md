@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 03/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5ac0dbfdc3a4acd94a7892372ddb336a3bb70642
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 13ad41189f1d8d1b9a7401502dec4d24e6e37c1d
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579684"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974393"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -45,7 +45,9 @@ ms.locfileid: "57579684"
 - включить или выключить сбор статистики выполнения для скомпилированных в собственном коде модулей T-SQL.
 - Включение или отключение параметров подключения по умолчанию для инструкций DDL, поддерживающих синтаксис ONLINE=.
 - Включение или отключение параметров возобновления по умолчанию для инструкций DDL, поддерживающих синтаксис RESUMABLE=.
-- Включение или отключение функции автоматического удаления глобальных временных таблиц
+- Включение или отключение функции автоматического удаления глобальных временных таблиц. 
+- Включение или отключение функции [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md).
+- Включение или отключение [упрощенной инфраструктуры профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ![Значок ссылки](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -67,18 +69,20 @@ ALTER DATABASE SCOPED CONFIGURATION
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
+    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
+    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
+    | TSQL_SCALAR_UDF_INLINING = { ON | OFF }
+    | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+    | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
     | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF }
     | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }
-    | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
-    | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
-    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
-    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
-    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
     | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
     | DEFERRED_COMPILATION_TV = { ON | OFF }
-    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
-    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
+    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+    | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
 }
 ```
 
@@ -87,6 +91,10 @@ ALTER DATABASE SCOPED CONFIGURATION
 FOR SECONDARY
 
 Задает параметры для баз данных-получателей (все базы данных-получатели должны иметь одинаковые значения).
+
+CLEAR PROCEDURE_CACHE    
+
+Очистка кэша процедур (планов) для базы данных. Может выполняться для баз данных-источников и баз данных-получателей.  
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
@@ -139,10 +147,6 @@ PRIMARY
 
 Это значение допустимо только для баз данных-получателей, пока база данных находится на сервере-источнике; оно указывает, что значение этого параметра для всех баз данных-получателей будет равно значению, заданному для сервера-источника. Если конфигурация для сервера-источника изменится, значение в базах данных-получателях изменится соответственно, задавать значение базы данных-получателя явным образом не требуется. PRIMARY — это параметр по умолчанию для баз данных-получателей.
 
-CLEAR PROCEDURE_CACHE
-
-Очистка кэша процедур (планов) для базы данных. Может выполняться для баз данных-источников и баз данных-получателей.
-
 IDENTITY_CACHE **=** { **ON** | OFF }
 
 **Применимо к**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
@@ -151,6 +155,76 @@ IDENTITY_CACHE **=** { **ON** | OFF }
 
 > [!NOTE]
 > Этот параметр можно задать только для сервера-источника. Дополнительные сведения см. в статье [Столбцы идентификаторов](create-table-transact-sql-identity-property.md).
+
+INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
+
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
+Позволяет включить или отключить выполнение с чередованием для функций с табличным значением и множеством инструкций в области базы данных или инструкции, сохранив уровень совместимости базы данных 140 или выше. Выполнение с чередованием — одна из возможностей адаптивной обработки запросов в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Дополнительные сведения см. в статье [Интеллектуальная обработка запросов](../../relational-databases/performance/intelligent-query-processing.md).
+
+> [!NOTE]
+> Для уровня совместимости базы данных 130 или более низкого эта конфигурация области баз данных не оказывает влияния.
+
+BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
+
+**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+Позволяет включить или отключить обратную связь по временно предоставляемому буферу памяти в пакетном режиме в области базы данных, сохранив уровень совместимости базы данных 140 или выше. Обратная связь по временно предоставляемому буферу памяти в пакетном режиме — одна из возможностей [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md), представленная в [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
+
+> [!NOTE]
+> Для уровня совместимости базы данных 130 или более низкого эта конфигурация области баз данных не оказывает влияния.
+
+BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
+
+**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+Позволяет включить или отключить адаптивные соединения в пакетном режиме в области базы данных, сохранив уровень совместимости базы данных 140 или выше. Адаптивные соединения в пакетном режиме — одна из возможностей [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md), представленная в [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
+
+> [!NOTE]
+> Для уровня совместимости базы данных 130 или более низкого эта конфигурация области баз данных не оказывает влияния.
+
+TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
+
+**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (компонент в общедоступной предварительной версии)
+
+Позволяет включить или отключить встраивание скалярных определяемых пользователем функций для T-SQL в области базы данных, сохранив уровень совместимости базы данных 150 или выше. Встраивание скалярных определяемых пользователем функций для T-SQL — одна из возможностей семейства функций [адаптивной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md).
+
+> [!NOTE] 
+> Для уровня совместимости базы данных 140 или более низкого эта конфигурация области баз данных не оказывает влияния.
+
+ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**Применимо к**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (компонент в общедоступной предварительной версии)
+
+Позволяет выбирать параметры, предписывающие ядру автоматически переводить поддерживаемые операции в режим "в сети". Значение по умолчанию — OFF. Оно означает, что операции не будут переводиться в режим "в сети", если это явно не указано в инструкции. В представлении [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) указывается текущее значение ELEVATE_ONLINE. Эти параметры применяются только к операциям, которые поддерживают режим "в сети".
+
+FAIL_UNSUPPORTED
+
+Это значение переводит все поддерживаемые операции DDL в режим "в сети". Операции, не поддерживающие выполнение в режиме "в сети", завершатся сбоем и выдадут предупреждение.
+
+WHEN_SUPPORTED
+
+Это значение изменяет режим выполнения операций, поддерживающих режим "в сети". Операции, не поддерживающие режим "в сети", будут выполняться в режиме "вне сети".
+
+> [!NOTE]
+> Переопределить значение по умолчанию можно, отправив инструкцию с параметром ONLINE.
+
+ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**Применимо к**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (компонент в общедоступной предварительной версии)
+
+Позволяет выбирать параметры, предписывающие ядру автоматически переводить поддерживаемые операции в возобновляемый режим. Значение по умолчанию — OFF. Оно означает, что операции не будут переводиться в возобновляемый режим, если это явно не указано в инструкции. В представлении [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) указывается текущее значение ELEVATE_RESUMABLE. Эти параметры применяются только к операциям, которые поддерживают возобновление.
+
+FAIL_UNSUPPORTED
+
+Это значение переводит все поддерживаемые операции DDL в возобновляемый режим. Операции, не поддерживающие возобновляемое выполнение, завершатся сбоем и выдадут предупреждение.
+
+WHEN_SUPPORTED
+
+Это значение изменяет режим выполнения операций, поддерживающих возобновляемое выполнение. Операции, не поддерживающие возобновляемый режим, будут выполняться в невозобновляемом режиме.
+
+> [!NOTE]
+> Переопределить значение по умолчанию можно, отправив инструкцию с параметром RESUMABLE.
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }
 
@@ -176,41 +250,34 @@ XTP_QUERY_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
 Дополнительные сведения о мониторинге производительности скомпилированных в собственном коде модулей [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Отслеживание производительности скомпилированных в собственном коде хранимых процедур](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md).
 
-ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+ROW_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
-**Применимо к**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (компонент в общедоступной предварительной версии)
+**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (компонент в общедоступной предварительной версии)
 
-Позволяет выбирать параметры, предписывающие ядру автоматически переводить поддерживаемые операции в режим "в сети". Значение по умолчанию — OFF. Оно означает, что операции не будут переводиться в режим "в сети", если это явно не указано в инструкции. В представлении [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) указывается текущее значение ELEVATE_ONLINE. Эти параметры применяются только к операциям, которые поддерживают режим "в сети".
-
-FAIL_UNSUPPORTED
-
-Это значение переводит все поддерживаемые операции DDL в режим "в сети". Операции, не поддерживающие выполнение в режиме "в сети", завершатся сбоем и выдадут предупреждение.
-
-WHEN_SUPPORTED
-
-Это значение изменяет режим выполнения операций, поддерживающих режим "в сети". Операции, не поддерживающие режим "в сети", будут выполняться в режиме "вне сети".
+Позволяет включить или отключить обратную связь по временно предоставляемому буферу памяти в построчном режиме в области базы данных, сохранив уровень совместимости базы данных 150 или выше. Обратная связь по временно предоставляемому буферу памяти в режиме строк — одна из возможностей [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md), представленная в [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] (режим строк поддерживается в [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
 
 > [!NOTE]
-> Переопределить значение по умолчанию можно, отправив инструкцию с параметром ONLINE.
+> Для уровня совместимости базы данных 140 или более низкого эта конфигурация области баз данных не оказывает влияния.
 
-ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+BATCH_MODE_ON_ROWSTORE **=** { **ON** | OFF}
 
-**Область применения**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] в общедоступной предварительной версии.
+**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (компонент в общедоступной предварительной версии)
 
-Позволяет выбирать параметры, предписывающие ядру автоматически переводить поддерживаемые операции в возобновляемый режим. Значение по умолчанию — OFF. Оно означает, что операции не будут переводиться в возобновляемый режим, если это явно не указано в инструкции. В представлении [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) указывается текущее значение ELEVATE_RESUMABLE. Эти параметры применяются только к операциям, которые поддерживают возобновление.
-
-FAIL_UNSUPPORTED
-
-Это значение переводит все поддерживаемые операции DDL в возобновляемый режим. Операции, не поддерживающие возобновляемое выполнение, завершатся сбоем и выдадут предупреждение.
-
-WHEN_SUPPORTED
-
-Это значение изменяет режим выполнения операций, поддерживающих возобновляемое выполнение. Операции, не поддерживающие возобновляемый режим, будут выполняться в невозобновляемом режиме.
+Позволяет включить или отключить пакетный режим для данных rowstore в области базы данных, сохранив уровень совместимости базы данных 150 или выше. Пакетный режим для данных rowstore — одна из возможностей семейства функций [адаптивной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md).
 
 > [!NOTE]
-> Переопределить значение по умолчанию можно, отправив инструкцию с параметром RESUMABLE.
+> Для уровня совместимости базы данных 140 или более низкого эта конфигурация области баз данных не оказывает влияния.
 
-GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+DEFERRED_COMPILATION_TV **=** { **ON** | OFF}
+
+**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (компонент в общедоступной предварительной версии)
+
+Позволяет включить или отключить отложенную компиляцию табличных переменных в области базы данных, сохранив уровень совместимости базы данных 150 или выше. Отложенная компиляция табличных переменных — одна из возможностей семейства функций [адаптивной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md).
+
+> [!NOTE]
+> Для уровня совместимости базы данных 140 или более низкого эта конфигурация области баз данных не оказывает влияния.
+
+GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
 **Применимо к**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (компонент в общедоступной предварительной версии)
 
@@ -219,47 +286,11 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 - В отдельных базах данных и эластичных пулах [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] этот параметр можно задать для отдельных баз данных пользователей сервера Базы данных SQL.
 - В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и управляемом экземпляре [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] этот параметр задается в `TempDB` и не учитывается на уровне отдельных пользовательских баз данных.
 
-DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
+LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
-Позволяет включить или отключить выполнение с чередованием для функций с табличным значением и множеством инструкций в области базы данных или инструкции, сохранив уровень совместимости базы данных 140 или выше. Выполнение с чередованием — одна из возможностей адаптивной обработки запросов в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Дополнительные сведения см. в статье [Интеллектуальная обработка запросов](../../relational-databases/performance/intelligent-query-processing.md).
-
-DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
-
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
-
-Позволяет включить или отключить адаптивные соединения в области базы данных или инструкции, сохранив уровень совместимости базы данных 140 или выше. Адаптивные соединения — одна из возможностей [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md), представленная в [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
-
-ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
-
-**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (компонент в общедоступной предварительной версии)
-
-Позволяет включить или отключить обратную связь по временно предоставляемому буферу памяти в построчном режиме в области базы данных, сохранив уровень совместимости базы данных 150 или выше. Обратная связь по временно предоставляемому буферу памяти в построчном режиме — одна из возможностей [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md), представленная в SQL Server 2017 (построчный режим поддерживается в SQL Server 2019 и Базе данных SQL Azure).
-
-BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
-
-**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
-
-Позволяет включить или отключить обратную связь по временно предоставляемому буферу памяти в пакетном режиме в области базы данных, сохранив уровень совместимости базы данных 140 или выше. Обратная связь по временно предоставляемому буферу памяти в пакетном режиме — одна из возможностей [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md), представленная в SQL Server 2017.
-
-BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
-
-**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
-
-Позволяет включить или отключить адаптивные соединения в пакетном режиме в области базы данных, сохранив уровень совместимости базы данных 140 или выше. Адаптивные соединения в пакетном режиме — одна из возможностей [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md), представленная в SQL Server 2017.
-
-BATCH_MODE_ON_ROWSTORE = { ON | OFF}
-
-**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (компонент в общедоступной предварительной версии)
-
-Позволяет включить или отключить пакетный режим для данных rowstore в области базы данных, сохранив уровень совместимости базы данных 150 или выше. Пакетный режим для данных rowstore — одна из возможностей семейства функций [адаптивной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md).
-
-DEFERRED_COMPILATION_TV = { ON | OFF}
-
-**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (компонент в общедоступной предварительной версии)
-
-Позволяет включить или отключить отложенную компиляцию табличных переменных в области базы данных, сохранив уровень совместимости базы данных 150 или выше. Отложенная компиляция табличных переменных — одна из возможностей семейства функций [адаптивной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md).
+Делает возможным включение или отключение [упрощенной инфраструктуры профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md). Упрощенная инфраструктура профилирования запросов (LWP) предоставляет более эффективные данные производительности запросов по сравнению со стандартными механизмами профилирования. По умолчанию она включена.
 
 ## <a name="Permissions"></a> Permissions
 

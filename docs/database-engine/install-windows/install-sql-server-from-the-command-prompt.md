@@ -1,7 +1,7 @@
 ---
 title: Установка SQL Server из командной строки | Документы Майкрософт
 ms.custom: ''
-ms.date: 01/17/2018
+ms.date: 03/13/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 1aa7350ca8232f0b57a8d7ecf960d69838b26d8b
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: a0aa770bfbf3486dedf045b6a6da3f88c89bbade
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662988"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57976438"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Установка SQL Server из командной строки
 
@@ -274,7 +274,7 @@ ms.locfileid: "56662988"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **Обязательно**|Указывает стартовую учетную запись для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Обязательно](#Accounts)|Указывает пароль стартовой учетной записи для службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Необязательно**|Указывает режим [запуска](#Accounts) для службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-|Python или службы машинного обучения (в базе данных)|MPYCACHEDIRECTORY|Используйте этот параметр, чтобы указать каталог кэша для поддержки компонентов Python в службах машинного обучения или на сервере машинного обучения (изолированного) SQL Server 2017. Этот параметр обычно используется при установке компонентов Python из [командной строки на компьютере без доступа к Интернету](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
+|Python или службы машинного обучения (в базе данных)|MPYCACHEDIRECTORY|Зарезервировано для последующего использования. Используйте %TEMP% для сохранения CAB-файлов Python для установки на компьютере, где нет подключения к Интернету. |  
 |R или службы машинного обучения (в базе данных)|MRCACHEDIRECTORY|Используйте этот параметр, чтобы указать каталог кэша для поддержки Microsoft R Open, служб R в SQL Server 2016, SQL Server 2016 R Server (изолированного) или для компонентов R в службах машинного обучения и на сервере Machine Learning Server (изолированном) SQL Server 2017. Этот параметр обычно используется при установке компонентов R из [командной строки на компьютере без доступа к Интернету](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
   
 ###### <a name="sample-syntax"></a>Образец синтаксиса  

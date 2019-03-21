@@ -1,10 +1,8 @@
 ---
 title: Настройка стоп-слов и списков стоп-слов для полнотекстового поиска и управление ими | Документация Майкрософт
-ms.custom: ''
 ms.date: 02/02/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,16 +13,17 @@ helpviewer_keywords:
 - full-text search [SQL Server], stopwords
 - stopwords [full-text search]
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 328f313630286f3ef2a67fc7c27455e411d3d294
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 717eee6067ae024465b68fd2e4a0d8a174e77d10
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658913"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973704"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Настройка и управление стоп-словами и списками стоп-слов для полнотекстового поиска
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +97,7 @@ ms.locfileid: "51658913"
   
 5.  В диалоговом окне [Свойства полнотекстового списка стоп-слов](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) выполните указанные ниже действия.  
   
-    1.  В списке **Действия** выберите одно из следующих действий: **Добавить стоп-слово**, **Удалить стоп-слово**, **Удалить все стоп-слова**или **Очистить список стоп-слов**.  
+    1.  В списке **Действие** выберите одно из следующих действий: **Добавить стоп-слово**, **Удалить стоп-слово**, **Удалить все стоп-слова** или **Очистить список стоп-слов**.  
   
     2.  Если для выбранного действия доступно текстовое поле **Стоп-слово** , введите одно стоп-слово. Это стоп-слово должно быть уникальным; иными словами, оно еще не должно присутствовать в списке стоп-слов для выбранного языка.  
   

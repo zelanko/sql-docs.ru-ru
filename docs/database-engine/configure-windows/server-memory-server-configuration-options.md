@@ -22,12 +22,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b1342d023b1edc828105dbbda2e18b0ca09877de
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 4eb114e5309b1733e90b417517c885e23ec09a42
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591648"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072213"
 ---
 # <a name="server-memory-server-configuration-options"></a>Параметры конфигурации сервера «Server Memory»
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -121,26 +121,29 @@ ms.locfileid: "53591648"
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>Выделение максимального объема памяти для SQL Server  
 Для всех выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] память можно выделять вплоть до предела виртуального адресного пространства процесса. Дополнительные сведения см. в разделе [Предельный объем памяти для выпусков Windows и Windows Server](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016).
-  
-## <a name="examples"></a>Примеры  
-  
-### <a name="example-a"></a>Пример A  
- В следующем примере параметр `max server memory` устанавливается равным 4 ГБ.  
-  
-```sql  
-sp_configure 'show advanced options', 1;  
-GO  
-RECONFIGURE;  
-GO  
-sp_configure 'max server memory', 4096;  
-GO  
-RECONFIGURE;  
-GO  
-```  
-  
+
+## <a name="examples"></a>Примеры
+
+### <a name="example-a-set-the-max-server-memory-option-to-4-gb"></a>Пример A. Задание параметра max server memory равным 4 ГБ.
+ В следующем примере параметр `max server memory` устанавливается равным 4 ГБ.  Обратите внимание, что, несмотря на то что `sp_configure` указывает имя параметра как `max server memory (MB)`, в примере демонстрируется пропуск `(MB)`.
+
+```sql
+sp_configure 'show advanced options', 1;
+GO
+RECONFIGURE;
+GO
+sp_configure 'max server memory', 4096;
+GO
+RECONFIGURE;
+GO
+```
+При этом будет выведена инструкция, похожая на следующую:
+
+> Параметр конфигурации "max server memory" (в МБ) изменился с 2147483647 на 4096. Выполните инструкцию RECONFIGURE для установки.
+
 ### <a name="example-b-determining-current-memory-allocation"></a>Пример Б. Определение текущего распределения памяти  
  Следующий запрос возвращает информацию о текущем распределении памяти.  
-  
+
 ```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
@@ -155,6 +158,14 @@ SELECT
     process_virtual_memory_low AS sql_process_virtual_memory_low
 FROM sys.dm_os_process_memory;  
 ```  
+
+### <a name="example-c-determining-value-for-max-server-memory-mb"></a>Пример В. Определение значения параметра "max server memory" (в МБ).
+Следующий запрос возвращает сведения о настроенном сейчас значении и значении, которое используется в SQL Server.  Этот запрос возвратит результаты независимо от того, имеет ли параметр "show advanced options" значение true.
+
+```sql
+SELECT c.value, c.value_in_use
+FROM sys.configurations c WHERE c.[name] = 'max server memory (MB)'
+```
   
 ## <a name="see-also"></a>См. также:  
  [Руководство по архитектуре управления памятью](../../relational-databases/memory-management-architecture-guide.md)   

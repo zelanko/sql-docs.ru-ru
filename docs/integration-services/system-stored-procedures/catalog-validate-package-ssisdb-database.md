@@ -14,12 +14,12 @@ ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06fa7266cf88cacae049df1c9bf98a2979e3fa0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: befdec64de1b12370eea84a64cb8502172a4d3b3
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766492"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974083"
 ---
 # <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ catalog.validate_package [ @folder_name = ] folder_name
     , [ @package_name = ] package_name  
     , [ @validation_id = ] validation_id OUTPUT  
  [  , [ @use32bitruntime = ] use32bitruntime ]  
- [  , [ @target_environment = ] target_environment ]  
+ [  , [ @environment_scope = ] environment_scope ]  
  [  , [ @reference_id = ] reference_id ]  
 ```  
   
@@ -55,7 +55,7 @@ catalog.validate_package [ @folder_name = ] folder_name
  Указывает, должна ли использоваться 32-разрядная среда выполнения для запуска этого пакета в 64-разрядной операционной системе. Используйте значение `1` для выполнения пакета в 32-разрядной среде выполнения при его запуске в 64-разрядной операционной системе. Используйте значение `0` для выполнения пакета в 64-разрядной среде выполнения при его запуске в 64-разрядной операционной системе. Этот параметр является необязательным. Параметр *use32bitruntime* имеет тип **bit**.  
   
  [ @environment_scope = ] *environment_scope*  
- Указывает ссылки на среду, которые учитываются при проверке. Если это значение равно `A`, то в проверку включены все ссылки на среду, связанные с проектом. Если это значение равно `S`, то включена лишь единственная ссылка на среду. Если это значение равно `D`, то никакие ссылки на среду не включены и каждый параметр, чтобы пройти проверку, должен иметь литеральное значение по умолчанию. Этот параметр является необязательным. По умолчанию используется знак `D`. Параметр *environment_scope* имеет тип **Char(1)**.  
+ Указывает ссылки на среду, которые учитываются при проверке. Если это значение равно `A`, то в проверку включены все ссылки на среду, связанные с проектом. Если это значение равно `S`, то включена лишь единственная ссылка на среду. Если это значение равно `D`, то никакие ссылки на среду не включены и каждый параметр, чтобы пройти проверку, должен иметь литеральное значение по умолчанию. Этот параметр является необязательным. По умолчанию используется знак `D`. Параметр *environment_scope* имеет тип **char(1)**.  
   
  [ @reference_id = ] *reference_id*  
  Уникальный идентификатор ссылки на среду. Этот параметр является обязательным, только если в проверку включена единственная ссылка на среду, при том что *environment_scope* имеет значение `S`. Параметр *reference_id* имеет тип **bigint**.  

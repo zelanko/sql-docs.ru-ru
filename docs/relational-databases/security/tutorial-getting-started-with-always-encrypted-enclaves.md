@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a4d833d132a0b4928d021beaa4cd9fcdd695d6c6
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 14b086c18dab363ca1c9afe7816d802d5a5262f3
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046584"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072318"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Учебник. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -139,11 +139,11 @@ ms.locfileid: "54046584"
 На этом шаге выполняется включение функции Always Encrypted с использованием анклавов в экземпляре SQL Server.
 
 1. Откройте SSMS, подключитесь к экземпляру SQL Server как системный администратор и откройте окно создания запроса.
-2. Настройте безопасный тип анклава для анклавов VBS.
+2. Задайте в качестве типа безопасного анклава безопасность на основе виртуализации (VBS).
 
    ```sql
-   EXEC sys.sp_configure 'column encryption enclave type', 1
-   RECONFIGURE
+   EXEC sys.sp_configure 'column encryption enclave type', 1;
+   RECONFIGURE;
    ```
 
 3. Перезапустите экземпляр SQL Server, чтобы предыдущее изменение вступило в силу. Можно перезапустить этот экземпляр в SSMS, щелкнув его правой кнопкой мыши в обозревателе объектов и выбрав "Перезапуск". После перезагрузки экземпляра снова подключитесь к нему.
@@ -152,10 +152,10 @@ ms.locfileid: "54046584"
 
    ```sql
    SELECT [name], [value], [value_in_use] FROM sys.configurations
-   WHERE [name] = 'column encryption enclave type'
+   WHERE [name] = 'column encryption enclave type';
    ```
 
-    Запрос должен вернуть строку, которая выглядит следующим образом:  
+    По результатам запроса должен возвращаться следующий результат:  
 
     | name                           | value | value_in_use |
     | ------------------------------ | ----- | -------------- |
@@ -164,7 +164,7 @@ ms.locfileid: "54046584"
 5. Чтобы активировать полнофункциональные вычисления в зашифрованных столбцах, выполните следующий запрос:
 
    ```sql
-   DBCC traceon(127,-1)
+   DBCC traceon(127,-1);
    ```
 
     > [!NOTE]
@@ -177,7 +177,7 @@ ms.locfileid: "54046584"
 2. Создайте новую базу данных с именем ContosoHR.
 
     ```sql
-    CREATE DATABASE [ContosoHR] COLLATE Latin1_General_BIN2
+    CREATE DATABASE [ContosoHR];
     ```
 
 3. Убедитесь, что подключение к только что созданной базе данных установлено. Создайте новую таблицу с именем Employees.
@@ -190,8 +190,7 @@ ms.locfileid: "54046584"
         [FirstName] [nvarchar](50) NOT NULL,
         [LastName] [nvarchar](50) NOT NULL,
         [Salary] [money] NOT NULL
-    ) ON [PRIMARY]
-    GO
+    ) ON [PRIMARY];
     ```
 
 4. Добавьте несколько записей о сотрудниках в таблицу Employees.
@@ -206,9 +205,8 @@ ms.locfileid: "54046584"
             ('795-73-9838'
             , N'Catherine'
             , N'Abel'
-            , $31692)
-    GO
-
+            , $31692);
+ 
     INSERT INTO [dbo].[Employees]
             ([SSN]
             ,[FirstName]
@@ -218,8 +216,7 @@ ms.locfileid: "54046584"
             ('990-00-6818'
             , N'Kim'
             , N'Abercrombie'
-            , $55415)
-    GO
+            , $55415);
     ```
 
 ## <a name="step-5-provision-enclave-enabled-keys"></a>Шаг 5. Подготовка ключей с поддержкой анклава
@@ -238,7 +235,7 @@ ms.locfileid: "54046584"
     7. Нажмите кнопку **ОК**.
 
         ![Разрешение вычислений анклава](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
-
+    
 4. Создайте новый ключ шифрования столбцов с поддержкой анклава:
 
     1. Щелкните правой кнопкой мыши **Ключи Always Encrypted** и выберите **Создать ключ шифрования столбца**.
@@ -254,40 +251,40 @@ ms.locfileid: "54046584"
     1. В SSMS откройте окно создания запроса.
     2. Щелкните правой кнопкой мыши в любом месте окна создания запроса.
     3. Выберите "Подключение" \> "Изменить подключение".
-    4. Выберите **Параметры**. Перейдите на вкладку **Always Encrypted**, выберите **Включить Always Encrypted** и укажите URL-адрес аттестации анклава.
+    4. Выберите **Параметры**. Перейдите на вкладку **Always Encrypted**, выберите **Включить Always Encrypted** и укажите URL-адрес аттестации анклава (например, ht<span>tp://</span>hgs.bastion.local/Attestation).
     5. Выберите **Подключиться**.
-2. В SSMS настройте другое окно создания запроса с выключенным Always Encrypted для подключения к базе данных.
+    6. Измените контекст базы данных на ContosoHR.
+1. В SSMS настройте другое окно создания запроса с выключенным Always Encrypted для подключения к базе данных.
     1. В SSMS откройте окно создания запроса.
     2. Щелкните правой кнопкой мыши в любом месте окна создания запроса.
     3. Выберите "Подключение" \> "Изменить подключение".
     4. Выберите **Параметры**. Перейдите на вкладку **Always Encrypted** и убедитесь, что флажок **Включить Always Encrypted** не установлен.
     5. Выберите **Подключиться**.
-3. Зашифруйте столбцы SSN и Salary. Вставьте в окно запроса с включенным Always Encrypted следующие инструкции и выполните их.
+    6. Измените контекст базы данных на ContosoHR.
+1. Зашифруйте столбцы SSN и Salary. Вставьте в окно запроса с включенным Always Encrypted следующий скрипт и выполните его.
 
     ```sql
     ALTER TABLE [dbo].[Employees]
-    ALTER COLUMN [SSN] [char] (11)
+    ALTER COLUMN [SSN] [char] (11) COLLATE Latin1_General_BIN2
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
-    (ONLINE = ON)
-    GO
-    DBCC FREEPROCCACHE
-    GO
-
+    (ONLINE = ON);
+     
     ALTER TABLE [dbo].[Employees]
     ALTER COLUMN [Salary] [money]
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
-    (ONLINE = ON)
-    GO
-    DBCC FREEPROCCACHE
-    GO
+    (ONLINE = ON);
+ 
+    ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
     ```
+    > [!NOTE]
+    > Обратите внимание на инструкцию ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE для очистки кэша планов запросов в базе данных в приведенном выше скрипте. Изменив таблицу, необходимо очистить планы всех пакетов и хранимых процедур, которые обращаются к таблице, чтобы обновить сведения о параметрах шифрования. 
 
 4. Чтобы проверить, зашифрованы ли теперь столбцы SSN и Salary, вставьте в окно запроса с выключенным Always Encrypted следующую инструкцию и выполните ее. Окно запроса должно возвратить зашифрованные значения столбцов SSN и Salary. В окне запроса с включенным Always Encrypted выполните тот же запрос, чтобы просмотреть расшифрованные данные.
 
     ```sql
-    SELECT * FROM [dbo].[Employees]
+    SELECT * FROM [dbo].[Employees];
     ```
 
 ## <a name="step-7-run-rich-queries-against-encrypted-columns"></a>Шаг 7. Выполнение полнофункциональных запросов к зашифрованным столбцам
@@ -298,13 +295,13 @@ ms.locfileid: "54046584"
     1. В главном меню SSMS выберите **Запрос**.
     2. Щелкните **Параметры запроса...**.
     3. Выберите **Выполнение** > **Дополнительно**.
-    4. Установите или снимите флажок "Enable Parameterization for Always Encrypted" (Включить параметризацию для Always Encrypted).
-    5. Нажмите кнопку "ОК".
+    4. Выберите пункт **Включить определение параметров для Always Encrypted**.
+    5. Нажмите кнопку **ОК**.
 2. Вставьте в окно запроса с включенным Always Encrypted следующий запрос и выполните его. Запрос должен возвратить соответствующие заданным условиям поиска значения и строки в виде открытого текста.
 
     ```sql
-    DECLARE @SSNPattern [char](11) = '%6818'
-    DECLARE @MinSalary [money] = $1000
+    DECLARE @SSNPattern [char](11) = '%6818';
+    DECLARE @MinSalary [money] = $1000;
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```

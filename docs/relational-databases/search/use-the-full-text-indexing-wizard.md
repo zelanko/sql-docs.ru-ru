@@ -1,10 +1,8 @@
 ---
 title: Использование мастера полнотекстового индексирования | Документация Майкрософт
-ms.custom: ''
 ms.date: 08/19/2016
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 f1_keywords:
@@ -21,16 +19,17 @@ helpviewer_keywords:
 - Full-Text Indexing Wizard
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fcbe86b8a0deb419854e3ec364317872507a20e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 250334bceefa2a3cac6226d32792a8be5ef89206
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731762"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973853"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Использование мастера полнотекстового индексирования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "47731762"
 4. **Язык для средства разбиения по словам.** Выберите язык из раскрывающегося списка. Выбранный язык будет использоваться для идентификации правильных средств разбиения текста на слова для индекса. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует средства разбиения по словам для определения границ слов в данных, подвергаемых полнотекстовому индексированию.  
   
 5.  **Столбец типа.** Выберите имя столбца, содержащего тип документа столбца, подвергаемого полнотекстовому индексированию.  
-> **ПРИМЕЧАНИЕ.** Параметр  **Столбец типа** доступен только в случае, если столбец, указанный в столбце **Доступные столбцы** , принадлежит типу **varbinary(max)** или **image**.  
+> **ПРИМЕЧАНИЕ.** Параметр **Столбец типа** доступен только в случае, если столбец, указанный в столбце **Доступные столбцы**, принадлежит типу **varbinary(max)** или **image**.  
   
 6. **Статистическая семантика.** Укажите, следует ли включить статистическое семантическое индексирование для выбранного столбца. Дополнительные сведения см. в разделе [Семантический поиск (SQL Server)](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -79,7 +78,7 @@ ms.locfileid: "47731762"
   
 9.  **Выбрать полнотекстовый каталог**  
 
-     **Выберите каталог:** выбор полнотекстового каталога из списка. Каталогом по умолчанию для базы данных будет выбранный по умолчанию элемент в списке. Если нет доступных каталогов, список будет недоступен, а также будет установлен и недоступен флажок **Создать новый каталог** .  
+     **Выберите каталог:** Выбор полнотекстового каталога из списка. Каталогом по умолчанию для базы данных будет выбранный по умолчанию элемент в списке. Если нет доступных каталогов, список будет недоступен, а также будет установлен и недоступен флажок **Создать новый каталог** .  
   
   OR
   

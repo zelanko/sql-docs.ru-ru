@@ -1,6 +1,5 @@
 ---
 title: Установка SQL Server с помощью файла конфигурации | Microsoft Docs
-ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 1c52536b52fa63b61b24247f9df3854b712d86c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5127fd5aec582db4f8e574f29cab5cec3809252
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672262"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072218"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Установка SQL Server с помощью файла конфигурации
 
@@ -24,7 +23,7 @@ ms.locfileid: "47672262"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Программа установки предоставляет возможность создать файл конфигурации на основе системных значений по умолчанию и значений, вводимых во время выполнения. Файл конфигурации может быть использован для развертывания [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на всем предприятии с одной и той же конфигурацией. Стандартизировать установки в ручном режиме на территории предприятия также можно, создав пакетный файл, запускающий файл Setup.exe. 
  
-Эта статья обновлена специально для SQL Server 2016 и SQL Server 2017. Сведения о более ранних версиях SQL Server см. в разделе [Установка SQL Server 2014 с помощью файла конфигурации](install-sql-server-2016-using-a-configuration-file.md).
+Эта статья поддерживается для SQL Server 2016 и более поздних версий. Сведения о более ранних версиях SQL Server см. в разделе [Установка SQL Server 2014 с помощью файла конфигурации](/../../2014/database-engine/install-windows/install-sql-server-using-a-configuration-file.md).
  
 Программа установки поддерживает использование файлов конфигурации только через командную строку. Порядок обработки параметров при использовании файла конфигурации описывается ниже.  
   

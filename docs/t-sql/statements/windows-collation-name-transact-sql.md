@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49f84b9e41116dd235f219a0487b48770ef4f81f
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: 1816363425276ec532e5cc04433630e8e6b9bcac
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572847"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974353"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Имя параметров сортировки Windows (Transact-SQL)
 
@@ -42,8 +42,9 @@ ms.locfileid: "57572847"
 CollationDesignator_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ]
+{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ] 
 }
+| { _UTF8 }
 | { _BIN | _BIN2 }
 ```
 
@@ -72,9 +73,14 @@ CollationDesignator_<ComparisonStyle>
 **Omitted** определяет нечувствительность к ширине символов, **WS** определяет чувствительность к ширине символов.
 
 *VariationSelectorSensitivity*  
-**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+**Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
 **Omitted** определяет нечувствительность к знакам выбора варианта, **VSS** определяет чувствительность к знакам выбора варианта.
+
+**UTF8**  
+**Область применения**: Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+
+Указывает кодировку UTF-8, используемую для допустимых типов данных. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
 
 **BIN**  
 Указывает подлежащий использованию двоичный порядок сортировки, применяющийся для обеспечения обратной совместимости.
@@ -83,7 +89,6 @@ CollationDesignator_<ComparisonStyle>
 Определяет двоичный порядок сортировки, использующий семантику сравнения кодовых точек.
 
 ## <a name="remarks"></a>Remarks
-
 В зависимости от версии параметров сортировки для некоторых кодовых точек могут быть не определены веса сортировки или соответствия прописных и строчных букв. Например, сравните выходные данные функции `LOWER`, когда в нее передается один и тот же символ, но в разных версиях параметров сортировки:
 
 ```sql
