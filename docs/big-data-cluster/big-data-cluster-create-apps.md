@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8d784b82c56ca99027491bf257c90dddf4eb9b6b
-ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
+ms.openlocfilehash: 8f661acacf17a8977f437abdcefcd3763305229b
+ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57756639"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58222066"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Развертывание приложения в кластере SQL Server 2019 больших данных (Предварительная версия)
 
@@ -33,7 +33,7 @@ ms.locfileid: "57756639"
 Поддерживаются следующие типы приложений:
 - R и Python приложений (функции, моделей и приложения)
 - MLeap обслуживания
-- Службы SQL Server Integration Services
+- Службы SQL Server Integration Services (SSIS)
 
 ## <a name="prerequisites"></a>предварительные требования
 
@@ -253,7 +253,7 @@ spec.yaml
 
 ## <a name="describe-an-app"></a>Описание приложения
 
-Команда describe содержит подробные сведения о приложении, включая конечную точку в кластере. Обычно это используется, разработчик приложения для создания приложения с помощью клиента swagger и использование веб-службы для взаимодействия с приложением в RESTful-образом.
+Команда describe содержит подробные сведения о приложении, включая конечную точку в кластере. Обычно это используется, разработчик приложения для создания приложения с помощью клиента swagger и использование веб-службы для взаимодействия с приложением в RESTful-образом. См. в разделе [использовать приложения, в кластерах больших данных](big-data-cluster-consume-apps.md) Дополнительные сведения.
 
 ```json
 {
@@ -293,6 +293,6 @@ mssqlctl app delete --name add-app --version v1
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Вы можете также проверить Дополнительные примеры по [примеры развертывания приложений](https://aka.ms/sql-app-deploy).
+Узнайте, как интегрировать приложения, развернутые на сервере SQL Server, больших данных кластеров под управлением Windows в собственных приложениях в [использовать приложения, в кластерах больших данных](big-data-cluster-consume-apps.md) Дополнительные сведения. Вы можете также проверить Дополнительные примеры по [примеры развертывания приложений](https://aka.ms/sql-app-deploy).
 
 Дополнительные сведения о больших данных кластеров SQL Server, см. в разделе [Каковы кластеров SQL Server 2019 больших данных?](big-data-cluster-overview.md).

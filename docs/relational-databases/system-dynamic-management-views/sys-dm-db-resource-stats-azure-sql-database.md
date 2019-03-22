@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_resource_stats (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/14/2018
+ms.date: 03/21/2019
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b05472f52bf182768740c8c01e8b60021dc898f6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f3b8defbb43cd07afe38915c6a0c14cb226fbf2c
+ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030155"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58325507"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "56030155"
 |avg_cpu_percent|**Decimal (5,2)**|Средний уровень использования вычислительных мощностей в процентах от предела для уровня службы.|  
 |avg_data_io_percent|**Decimal (5,2)**|Среднее использование ввода-вывода в процентах от предела для уровня службы данных.|  
 |avg_log_write_percent|**Decimal (5,2)**|Среднее использование пропускной способности ввода-вывода в процентах от предела для уровня службы записи.|  
-|avg_memory_usage_percent|**Decimal (5,2)**|Средний уровень использования памяти в процентах от предела для уровня службы.<br /><br /> Это включает память, используемая для хранения объектов OLTP в памяти.|  
+|avg_memory_usage_percent|**Decimal (5,2)**|Средний уровень использования памяти в процентах от предела для уровня службы.<br /><br /> Это включает память, используемую для страниц в буферном пуле и хранения объектов OLTP в памяти.|  
 |xtp_storage_percent|**Decimal (5,2)**|Использование хранилища для In-Memory OLTP в процентах от предела для уровня службы (в конце интервала отчетности). Это включает память, используемая для хранения следующих объектов In-Memory OLTP: оптимизированные для памяти таблицы, индексы и табличные переменные. Она также включает память, используемая для обработки операции ALTER TABLE.<br /><br /> Возвращает 0, если не используется In-Memory OLTP в базе данных.|  
 |max_worker_percent|**Decimal (5,2)**|Максимальное количество одновременных рабочих ролей (запросов) в процентах от предела для уровня службы базы данных.|  
 |max_session_percent|**Decimal (5,2)**|Максимальное число одновременных сеансов в процентах от предела для уровня службы базы данных.|  
