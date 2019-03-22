@@ -5,18 +5,18 @@ description: Дополнительные сведения о кластерах
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 06/14/2017
+ms.date: 03/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: c498a9ef5422f82671000d6c0e82756df85947cb
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 44d39a44597a789c031ee10b862bffa2af6da883
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160609"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305633"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Настройка кластера RHEL для группы доступности SQL Server
 
@@ -89,7 +89,7 @@ ms.locfileid: "53160609"
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-Дополнительные сведения см. в разделе [высокий уровень доступности кластера Pacemaker - Open Source,](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
+Дополнительные сведения см. в разделе [высокий уровень доступности кластера Pacemaker - Open Source,](https://clusterlabs.org/pacemaker/). 
 
 После настройки подписки, выполните следующие действия, чтобы настроить Pacemaker.
 
@@ -111,7 +111,7 @@ ms.locfileid: "53160609"
 
 Сведения о STONITH и ограждения см. в разделе со следующими статьями:
 
-* [Pacemaker кластеры с нуля](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
+* [Pacemaker кластеры с нуля](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/index.html)
 * [Ограждения и STONITH](https://clusterlabs.org/doc/crm_fencing.html)
 * [Red Hat надстройку высокого уровня доступности с Pacemaker: Ограждения](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
@@ -143,10 +143,10 @@ sudo pcs property set cluster-recheck-interval=2min
 sudo pcs property set start-failure-is-fatal=true
 ```
 
-Чтобы обновить `ag1` свойство ресурса `failure-timeout` для `60s` запуска:
+Чтобы обновить `ag_cluster` свойство ресурса `failure-timeout` для `60s` запуска:
 
 ```bash
-pcs resource update ag1 meta failure-timeout=60s
+pcs resource update ag_cluster meta failure-timeout=60s
 ```
 
 
