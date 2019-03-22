@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.reviewer: rothja
-ms.openlocfilehash: 3ebebd290788511682098f2300d41dc0e9908517
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: bc55e90ad8aced555858008bc77715299a064b2a
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222253"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342837"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Использовать приложение, развернутое в кластере SQL Server больших данных, с помощью веб-службу RESTful
 
@@ -67,8 +67,8 @@ mssqlctl app describe --name addpy --version v1
     }
   ],
   "links": {
-    "app": "https://10.1.1.3:30777/api/app/add-app/v1",
-    "swagger": "https://10.1.1.3:30777/api/app/add-app/v1/swagger.json"
+    "app": "https://10.1.1.3:30777/api/app/addpy/v1",
+    "swagger": "https://10.1.1.3:30777/api/app/addpy/v1/swagger.json"
   },
   "name": "add-app",
   "output_param_defs": [
@@ -86,7 +86,7 @@ mssqlctl app describe --name addpy --version v1
 
 ## <a name="generate-a-jwt-access-token"></a>Создать маркер доступа JWT
 
-Чтобы получить доступ к веб-службу RESTful для развернутого приложения, откройте следующий URL-адрес в браузере: `https://[IP]:[PORT]/api/docs/swagger.json` IP-адрес и порт, вы получили работает `describe` команды выше. Необходимо войти, используя те же учетные данные, используемые для `mssqlctl login`.
+Чтобы получить доступ к веб-службу RESTful для приложения развертывания необходимо сначала создать маркер доступа JWT. Откройте в браузере следующий URL-адрес: `https://[IP]:[PORT]/api/docs/swagger.json` IP-адрес и порт, вы получили работает `describe` команды выше. Необходимо войти, используя те же учетные данные, используемые для `mssqlctl login`.
 
 Вставить содержимое буфера `swagger.json` в [редактор Swagger](https://editor.swagger.io) чтобы понять, какие методы доступны:
 
@@ -101,9 +101,9 @@ mssqlctl app describe --name addpy --version v1
 ## <a name="execute-the-app-using-the-restful-web-service"></a>Выполнение приложения с помощью веб-службу RESTful
 
 > [!NOTE]
-> Если требуется, можно открыть URL-адрес для `swagger` , который был возвращен при запуске `mssqlctl app describe --name addpy --version [version]` в браузере. Необходимо войти, используя те же учетные данные, используемые для `mssqlctl login`. Содержание `swagger.json` можно вставить в [редактор Swagger](https://editor.swagger.io). Вы увидите, что веб-служба предоставляет `run` метод.
+> Если требуется, можно открыть URL-адрес для `swagger` , который был возвращен при запуске `mssqlctl app describe --name [appname] --version [version]` в браузере, который должен быть аналогичен `https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`. Необходимо войти, используя те же учетные данные, используемые для `mssqlctl login`. Содержание `swagger.json` можно вставить в [редактор Swagger](https://editor.swagger.io). Вы увидите, что веб-служба предоставляет `run` метод.
 
-Можно использовать для вызова одного из средств `run` метод (`https://[IP]:[PORT]/api/app/addpy/[version]/run`) с передачей параметров в тексте запроса POST как json. В этом примере мы будем использовать [Postman](https://www.getpostman.com/). Перед вызовом, вам потребуется задать `Authorization` для `Bearer Token` и вставьте в маркере, полученным ранее. Это будет значение заголовка запроса. См. на следующем снимке экрана.
+Можно использовать для вызова одного из средств `run` метод (`https://[IP]:[PORT]/api/app/[appname]/[version]/run`) с передачей параметров в тексте запроса POST как json. В этом примере мы будем использовать [Postman](https://www.getpostman.com/). Перед вызовом, вам потребуется задать `Authorization` для `Bearer Token` и вставьте в маркере, полученным ранее. Это будет значение заголовка запроса. См. на следующем снимке экрана.
 
 ![Postman запустите заголовки](media/big-data-cluster-consume-apps/postman_run_1.png)
 

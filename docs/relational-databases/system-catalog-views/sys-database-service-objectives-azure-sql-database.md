@@ -1,7 +1,7 @@
 ---
 title: sys.database_service_objectives (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/30/2016
+ms.date: 03/21/2018
 ms.service: sql-database
 ms.prod_service: sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7a073dba8a05aa6f098bdf2b2ce1666d4cc324be
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 889d8d618cf017d27e3b92ce845c8ebfee179048
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028525"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342922"
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "56028525"
   
  Сведения о ценах см. в разделе [параметры базы данных SQL и производительность: Цены на базы данных SQL](https://azure.microsoft.com/pricing/details/sql-database/) и [цены на хранилище данных SQL](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
   
- Чтобы изменить параметры службы, см. в разделе [ALTER DATABASE (база данных SQL Azure)](../../t-sql/statements/alter-database-azure-sql-database.md) и [ALTER DATABASE (хранилище данных SQL Azure)](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).  
+ Чтобы изменить параметры службы, см. в разделе [ALTER DATABASE (база данных SQL Azure)](../../t-sql/statements/alter-database-azure-sql-database.md) и [ALTER DATABASE (хранилище данных SQL Azure)](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest).  
   
  Представление sys.database_service_objectives содержит следующие столбцы.  
   
@@ -39,14 +39,14 @@ ms.locfileid: "56028525"
 |-----------------|---------------|-----------------|  
 |database_id|ssNoversion|Идентификатор базы данных, уникальный внутри экземпляра сервера базы данных SQL Azure. Присоединяемая с [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |edition|sysname|Уровень обслуживания для базы данных или хранилища данных: **Основные**, **стандартный**, **уровня "премиум"** или **хранилище данных**.|  
-|параметр service_objective|sysname|Ценовая категория базы данных. Если база данных в эластичном пуле, возвращает **ElasticPool**.<br /><br /> На **основные** tier, возвращает **основные**.<br /><br /> **Отдельная база данных в категории "стандартный"** возвращает одно из следующих: S0, S1, S2, S3, S4, S6, S7, S9 и S12.<br /><br /> **Отдельной базы данных уровня "премиум"** возвращает из следующих: P1, P2, P4, P6, P11 или P15.<br /><br /> **Хранилище данных SQL** возвращает DW100 через DW10000c.|  
+|параметр service_objective|sysname|Ценовая категория базы данных. Если база данных в эластичном пуле, возвращает **ElasticPool**.<br /><br /> На **основные** tier, возвращает **основные**.<br /><br /> **Отдельная база данных в категории "стандартный"** возвращает одно из следующих: S0, S1, S2, S3, S4, S6, S7, S9 и S12.<br /><br /> **Отдельной базы данных уровня "премиум"** возвращает из следующих: P1, P2, P4, P6, P11 или P15.<br /><br /> **Хранилище данных SQL** возвращает DW100 до DW30000c.|  
 |elastic_pool_name|sysname|Имя [эластичного пула](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) , к которой принадлежит базе данных. Возвращает **NULL** база данных находится в отдельной базы данных или warehoue данных.|  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется **dbManager** разрешений в базе данных master.  На уровне базы данных пользователь должен быть создателем или владельцем.  
   
 ## <a name="examples"></a>Примеры  
- Этот пример можно выполнить в базе данных master или для пользовательских баз данных. Запрос возвращает имя, службы и сведения об уровне производительности баз данных.  
+ Этот пример можно выполнить в базе данных master или для пользовательских баз данных базы данных SQL Azure. Запрос возвращает имя, службы и сведения об уровне производительности баз данных.  
   
 ```sql  
 SELECT  d.name,   
