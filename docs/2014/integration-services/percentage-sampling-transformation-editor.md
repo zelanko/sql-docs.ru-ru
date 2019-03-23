@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Percentage Sampling Transformation Editor
 ms.assetid: 2c40d804-26a3-4d35-809b-bc923d83d451
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 14776d4f26d324b60619aef2bfa3fad9c0deadaf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3e419dd8943aa85df1d7828ca3a5980648799013
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183624"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386692"
 ---
 # <a name="percentage-sampling-transformation-editor"></a>редактор преобразования «Процентная выборка»
   Используйте диалоговое окно **Редактор преобразования «Процентная выборка»** для выборки части входных данных по заданному проценту строк. Это преобразование разделяет входные данные на два отдельных вывода.  
@@ -43,7 +43,7 @@ ms.locfileid: "48183624"
  Задайте начальное значение выборки для генератора случайных чисел, который преобразование использует для создания выборки. Рекомендуется только для разработки и тестирования. Если начальное значение выборки не задано, преобразование использует счетчик тактов Microsoft Windows.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Преобразование "Выборка строк"](data-flow/transformations/row-sampling-transformation.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Преобразование «Выборка строк»](data-flow/transformations/row-sampling-transformation.md)  
   
   

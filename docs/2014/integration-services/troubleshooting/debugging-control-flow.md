@@ -14,18 +14,18 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 791c5955cae2b1e7fec4575f43400ced245dcef5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 1d338cc5c194b29b438af7593b80aaf580c64bca
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124124"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382351"
 ---
 # <a name="debugging-control-flow"></a>Отладка потока управления
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] и службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include features и службы tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] и [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] включают функции и инструменты, которые можно использовать для устранения неполадок потока управления в пакете [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
 -   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] поддерживают точки останова в контейнерах и задачах.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "54124124"
 |Задача или контейнер получает событие `OnTaskFailed`.|Вызывается сервером задач при возникновении ошибки.|  
 |Задача или контейнер получает событие `OnProgress`.|Вызывается для обновления информации о ходе выполнения задачи.|  
 |Задача или контейнер получает событие `OnQueryCancel`.|Вызывается в любой момент обработки задачи, когда необходимо отменить ее выполнение.|  
-|Задача или контейнер получает событие `OnVariableValueChanged`.|Вызывается средой во время выполнения служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , когда изменяется значение переменной. Свойства RaiseChangeEvent переменной должно быть присвоено `true` для порождения этого события.<br /><br /> **&#42;&#42;Предупреждение &#42; &#42;**  переменная, связанная с этой точкой останова должны быть определены в **контейнера** области. Если переменная определена в области пакета, точка останова не достигается.|  
+|Задача или контейнер получает событие `OnVariableValueChanged`.|Вызывается средой во время выполнения служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , когда изменяется значение переменной. Свойства RaiseChangeEvent переменной должно быть присвоено `true` для порождения этого события.<br /><br /> **&#42;&#42; Предупреждение. &#42;&#42;** Переменная, связанная с этой точкой останова, должна быть определена в области **контейнера**. Если переменная определена в области пакета, точка останова не достигается.|  
 |Задача или контейнер получает событие `OnCustomEvent`.|Вызывается задачей для вызова пользовательского события, определенного для данной задачи.|  
   
  В дополнение к условиям останова, доступным для всех задач и контейнеров, некоторые задачи и контейнеры имеют дополнительные условия останова для установки точек останова. Например, можно активировать условия останова в контейнере «цикл по элементам», который задает точку останова, приостанавливающую выполнение в начале каждой итерации цикла.  
@@ -83,7 +83,7 @@ ms.locfileid: "54124124"
   
  Следующая таблица описывает цвета, используемые для отображения состояния.  
   
-|Цвет|Состояние выполнения|  
+|Color|Состояние выполнения|  
 |-----------|----------------------|  
 |Серый|Ожидание выполнения|  
 |Желтый|Запущен|  

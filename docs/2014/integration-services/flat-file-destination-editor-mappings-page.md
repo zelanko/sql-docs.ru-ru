@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Destination Editor
 ms.assetid: f045410b-7190-4014-aabf-baf68fb45710
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ecdc542e8bea3717a37c40c6addb2b35b9a5f03b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f758e70c4133c28182a4d8e0019dd1e568441025
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195314"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379762"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>Редактор назначения «Неструктурированный файл» (страница «Сопоставления»)
   Страница **Сопоставления** диалогового окна **Редактор назначения «Неструктурированный файл»** используется для сопоставления входных столбцов с целевыми столбцами.  
@@ -41,7 +41,7 @@ ms.locfileid: "48195314"
  Просмотреть все доступные целевые столбцы независимо от того, сопоставлены они с входными столбцами или нет.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор назначения файлов неструктурированными &#40;страницы диспетчера соединений&#41;](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор назначения "Неструктурированный файл" (страница "Диспетчер соединений")](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
   
   

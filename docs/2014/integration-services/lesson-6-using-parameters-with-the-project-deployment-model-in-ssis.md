@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 01bcc625a02814b0c6181cad1954eb11d961f023
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d559defe1dd08f26077738cdd0aea219e8f7554b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355372"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384962"
 ---
 # <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>Урок 6. Использование параметров в модели развертывания проекта
   В SQL Server 2012 была добавлена новая модель развертывания, позволяющая развертывать проекты на сервере служб Integration Services. Сервер служб Integration Services позволяет управлять пакетами, запускать пакеты, а также настраивать значения времени выполнения для пакетов.  

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - HTTP Connection Manager Editor
 ms.assetid: 774778a0-ece6-4971-b93f-b121d8fc1fc1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5ee0b1b738ffda626fdfd761efbc766f823dd3ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 730b055542296edad39bd3a8322d1b9110b7a7b0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176414"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377952"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>Редактор диспетчера HTTP-сеансов (страница «Сервер»)
   Используйте вкладку **Сервер** диалогового окна **Редактор диспетчера HTTP-соединений** , чтобы настроить диспетчер HTTP-соединений, указав такие свойства, как URL-адрес и учетные данные безопасности. HTTP-соединение позволяет пакету получить доступ к веб-серверу через протокол HTTP, чтобы передавать или принимать файлы. После настройки диспетчера HTTP-соединений можно проверить соединение.  
@@ -64,7 +64,7 @@ ms.locfileid: "48176414"
  После настройки диспетчера HTTP-подключений проверьте работоспособность соединения, нажав кнопку **Проверить соединение**.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор диспетчера HTTP-соединений &#40;страницы прокси-сервера&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор диспетчера HTTP-сеансов (страница "Прокси-сервер")](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)  
   
   

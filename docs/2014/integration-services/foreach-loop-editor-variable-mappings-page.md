@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.mapping.f1
 ms.assetid: aa847b87-f391-48a5-9849-eeda2d6b00b9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3fc54d5b287cd71ba303d34693e815c07b9cc3b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2d95909e76c6b5c3665926783fb42ff247d1ba9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068084"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386702"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Редактор циклов по каждому элементу (страница «Сопоставления переменных»)
   Страница **Сопоставления переменных** диалогового окна **Редактор циклов по каждому элементу** используется для сопоставления переменных со значениями коллекции. Значение переменной обновляется значениями из коллекции при каждом повторе цикла.  
@@ -34,7 +34,7 @@ ms.locfileid: "48068084"
 > [!NOTE]  
 >  После установки сопоставления переменной новая строка автоматически добавится к списку **Переменная**.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md), [Добавление переменной](../../2014/integration-services/add-variable.md)  
+ **См. также**: [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [добавить переменную](../../2014/integration-services/add-variable.md)  
   
  **Index**  
  При использовании перечислителя по каждому элементу задайте индекс столбца в значении коллекции, чтобы установить сопоставление переменных. Для других типов перечислителей индекс доступен только для чтения.  
@@ -42,16 +42,16 @@ ms.locfileid: "48068084"
 > [!NOTE]  
 >  Индекс отсчитывается от 0.  
   
- **См. также:** [Просмотр файлов и таблиц Excel с помощью контейнера "цикл по каждому элементу"](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ **См. также**: [Просмотр файлов и таблиц Excel с помощью контейнера «цикл по каждому элементу»](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
  **Удаление**  
  Выберите переменную и нажмите кнопку **Удалить**.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор циклов по каждому элементу &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
  [Редактор циклов по каждому элементу &#40;страница коллекции&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
- [Страница «выражения»](expressions/expressions-page.md)   
+ [Страница «Выражения»](expressions/expressions-page.md)   
  [Контейнер «цикл по элементам»](control-flow/for-loop-container.md)  
   
   

@@ -11,22 +11,22 @@ helpviewer_keywords:
 - transformations [Integration Services], about transformations
 - transforming data [Integration Services]
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f1243f3cc6e7c8d7cd3ea2078e96e0f3844a8596
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9fb4014688f1899e813d1df3e677caf9ad7bfbf1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767536"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382042"
 ---
 # <a name="transform-data-with-transformations"></a>Преобразование данных с помощью преобразований
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] включают три различных типа компонентов потока данных: источники, преобразования и назначения.  
   
  На следующей диаграмме показан простой поток данных, который имеет источник, два преобразования и назначение.  
   
- ![Data flow](../../media/mw-dts-08.gif "Data flow")  
+ ![Поток данных](../../media/mw-dts-08.gif "Поток данных")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] обеспечивают следующие функциональные возможности:  
   

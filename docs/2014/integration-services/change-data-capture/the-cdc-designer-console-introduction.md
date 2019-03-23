@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d8df088a088a68d91668978bef5761cc2b5b543f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779896"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385961"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Общие сведения о консоли конструктора CDC
   В этом разделе описаны процедуры установки конструктора отслеживания измененных данных для Oracle от Attunity.  
@@ -56,7 +56,7 @@ ms.locfileid: "52779896"
   
 -   Клиент Oracle 11.x  
   
- **Примечание**: Должна использоваться 32-разрядная или 64-разрядная версия этого программного обеспечения, соответствующая устанавливаемой версии консоли конструктора CDC Oracle.  
+ **Примечание.** Должна использоваться 32-разрядная или 64-разрядная версия этого программного обеспечения, соответствующая устанавливаемой версии консоли конструктора CDC Oracle.  
   
  Консоль конструктора CDC Oracle выполняет обмен данными с исходной базой данных Oracle через поставщик ODBC Oracle.  
   

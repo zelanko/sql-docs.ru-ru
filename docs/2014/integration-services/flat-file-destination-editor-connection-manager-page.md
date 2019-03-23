@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Destination Editor
 ms.assetid: b01571fa-bc19-4742-8eed-ac163172a919
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 188e0f645c10ba7ee52871513937a09561369a75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b8deec4f9049d7d677ff809e900e4d5f9d4fa61
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054284"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377002"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>Редактор назначения «Неструктурированный файл» (страница «Диспетчер соединений»)
   Страница **Диспетчер соединений** диалогового окна **Редактор назначения «Неструктурированный файл»** используется для выбора соединения с неструктурированными файлами для назначения, а также для указания, следует ли переписывать существующий целевой файл или добавлять данные в его конец. С помощью назначения «Неструктурированный файл» данные записываются в текстовый файл. Текстовый файл может иметь формат с разделителями, формат фиксированной ширины, фиксированной ширины с разделителями строк или формат без выключки вправо.  
@@ -48,7 +48,7 @@ ms.locfileid: "48054284"
  Осуществляйте предварительный просмотр результатов в диалоговом окне **Просмотр данных** . В окне «Предварительный просмотр» может отображаться до 200 строк.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор назначения файлов неструктурированными &#40;страница «сопоставления»&#41;](../../2014/integration-services/flat-file-destination-editor-mappings-page.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор назначения "Неструктурированный файл" (страница "Сопоставления")](../../2014/integration-services/flat-file-destination-editor-mappings-page.md)  
   
   

@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e9b1bc021ba009ffe00805c0479a6fa9d91416d2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: da763e2385c64a09279c9dd6ff537993c2cd6a30
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361796"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379081"
 ---
 # <a name="lesson-3-installing-packages"></a>Урок 3. Установка пакетов
   В [Урок 2: Cоздание пакета развертывания](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)вы создали программу развертывания и создания пакета развертывания, содержащий элементы, необходимо установить пакеты на другом компьютере. Вы также проверили список файлов в пакете развертывания и изучили содержимое файла манифеста, который был создан при сборке программы развертывания.  

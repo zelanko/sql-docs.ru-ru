@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Services Processing Task Editor
 ms.assetid: ce79d133-fbd9-4037-a033-e75cbf28a22d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e5599005737a852be6174448223b38318b218a51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 820fa0e277f2f1643c6d44d95f09a4d48546a4ab
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186754"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381862"
 ---
 # <a name="analysis-services-processing-task-editor-general-page"></a>Редактор задачи «Обработка средствами Analysis Services» (страница «Общие»)
   Используйте страницу **Общие** в диалоговом окне **Редактор задачи "Обработка средствами Analysis Services"** , чтобы задать имя и описание для задачи "Обработка средствами Analysis Services".  
@@ -28,7 +28,7 @@ ms.locfileid: "48186754"
  Дополнительные сведения об этой задаче см. в разделе [Analysis Services Processing Task](control-flow/analysis-services-processing-task.md).  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **Name**  
  Укажите уникальное имя для задачи «Обработка средствами Analysis Services». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -38,8 +38,8 @@ ms.locfileid: "48186754"
  Введите описание задачи «Обработка средствами Analysis Services».  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задачи обработки служб аналитики &#40;служб Analysis Services страницы&#41;](../../2014/integration-services/analysis-services-processing-task-editor-analysis-services-page.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "Обработка средствами Analysis Services" (страница "Службы Analysis Services")](../../2014/integration-services/analysis-services-processing-task-editor-analysis-services-page.md)   
  [Задача «Выполнение инструкции DDL служб Analysis Services»](control-flow/analysis-services-execute-ddl-task.md)  
   
   

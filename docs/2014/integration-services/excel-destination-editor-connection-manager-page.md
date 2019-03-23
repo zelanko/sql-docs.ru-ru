@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: fc13f725-963c-488e-91e2-20627133e842
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3538e768fafbf310850fecf9899e70409b7b2758
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f790e0cc9193f2f31c7f021c4d4901e7a825fb13
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157824"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387172"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Редактор назначения «Excel» (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** в диалоговом окне **Редактор назначения «Excel»** , чтобы задать сведения об источнике данных и просмотреть результаты. Назначение «Excel» загружает данные в лист или именованный диапазон в книге [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] .  
@@ -43,7 +43,7 @@ ms.locfileid: "48157824"
 |Параметр|Описание|  
 |------------|-----------------|  
 |Таблица или представление|Загружает данные в лист или именованный диапазон источника данных Excel.|  
-|Переменная, содержащая имя таблицы или представления|Укажите переменную, содержащую имя листа или диапазона.<br /><br /> **См. также**: [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)|  
+|Переменная, содержащая имя таблицы или представления|Укажите переменную, содержащую имя листа или диапазона.<br /><br /> **Сведения, связанные с**: [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)|  
 |Команда SQL|Загрузка данных в назначение «Excel» с помощью SQL-запроса.|  
   
  **Имя листа Excel**  
@@ -82,9 +82,9 @@ ms.locfileid: "48157824"
  Проверить синтаксис текста запроса.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор назначения Excel &#40;страница «сопоставления»&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
- [Редактор назначения Excel &#40;странице вывода ошибок&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор назначения "Excel" (страница "Сопоставления")](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
+ [Редактор назначения "Excel" (страница "Вывод ошибок")](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
  [Просмотр файлов и таблиц Excel с помощью контейнера «цикл по каждому элементу»](control-flow/foreach-loop-container.md)  
   
   

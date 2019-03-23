@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Lookup Transformation Editor
 ms.assetid: aaf45327-79e9-4760-9b4d-546ace91b5b4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 36c8feb7105af5b6f38b53be9e40f5ca28e752ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76bac38991d30c566c988beba7d806f35e107b23
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071364"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394472"
 ---
 # <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>Редактор преобразования «Нечеткий уточняющий запрос» (вкладка «Столбцы»)
   Вкладка **Столбцы** диалогового окна **Редактор преобразования «Нечеткий уточняющий запрос»** используется для установки свойств входных и выходных столбцов.  
@@ -47,8 +47,8 @@ ms.locfileid: "48071364"
  Введите псевдоним выхода для каждого уточняющего столбца. По умолчанию, это будет имя уточняющего столбца с присоединенным индексным значением; однако можно выбрать любое уникальное описательное имя.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Нечеткий уточняющий &#40;ссылаются на вкладке таблицы&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-reference-table-tab.md)   
- [Нечеткий уточняющий &#40;вкладка "Дополнительно"&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор преобразования "Нечеткий уточняющий запрос" (вкладка "Ссылочная таблица")](../../2014/integration-services/fuzzy-lookup-transformation-editor-reference-table-tab.md)   
+ [Редактор преобразования "Нечеткий уточняющий запрос" (вкладка "Дополнительно")](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
   

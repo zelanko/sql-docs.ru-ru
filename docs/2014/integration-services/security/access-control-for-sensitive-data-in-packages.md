@@ -15,15 +15,15 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 58927abb300bce1e6ec0b2764fccbd31bd229338
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2d59a42fa7b77e6800218f1eeca4986320c1dcef
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365946"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379942"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Контроль доступа для конфиденциальных данных в пакетах
   Для защиты данных в пакете служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно задать уровень защиты, способствующий защите или только конфиденциальных данных, или всех данных в пакете. Более того, эти данные можно зашифровать с паролем или ключом пользователя или возложить задачу шифрования данных на базу данных. Кроме того, используемый уровень защиты пакета не обязательно является статическим и изменяется в течение жизненного цикла пакета. Часто один уровень защиты устанавливается во время развертывания, а другой — сразу после развертывания пакета.  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.nomappingfile.f1
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5a45cd0e817308d3df1e82d9513e4bae18fd2096
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ea8b678731a10b483c233cdb17b394a22f647060
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789616"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374612"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>Преобразование типов без проверки (мастер импорта и экспорта SQL Server)
   Используйте **преобразование типов без проверки** страницу, чтобы просмотреть сопоставления, выполняемые мастером, когда мастеру не удается найти один или несколько [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] файлов преобразования и сопоставления типов данных. Сведения, содержащиеся на этой странице, помогут определить, какие файлы отсутствуют.  

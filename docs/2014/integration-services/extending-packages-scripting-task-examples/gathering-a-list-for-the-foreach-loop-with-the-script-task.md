@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 674ec4fc122c845b57026897aabe8816a6a585ef
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9d06a2ec19b4a84dcd0d69fb70389d68974813be
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364046"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385502"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Составление списка для цикла по каждому элементу в задаче «Скрипт»
   Перечислитель по объекту из переменной перечисляет элементы в списке, передаваемом ему в переменной, и выполняет одни и те же задачи для каждого элемента. Чтобы заполнить список, можно использовать пользовательский код в задаче «Скрипт». Дополнительные сведения о перечислителе см. в разделе [Контейнер "Цикл по каждому элементу"](../control-flow/foreach-loop-container.md).  

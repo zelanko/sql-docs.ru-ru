@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],multiple tables
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ef1b57d9c772618bb302baa50fd7f5deb793f1cf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d1549b8fa0979bba109c84485a89384722c82e7d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773006"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374999"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>Выполнение добавочной загрузки нескольких таблиц
   На диаграмме в разделе [Улучшение добавочных загрузок с помощью системы отслеживания измененных данных](change-data-capture-ssis.md)показан базовый пакет, выполняющий добавочную загрузку только для одной таблицы. Однако чаще требуется добавочная загрузка не одной, а нескольких таблиц  

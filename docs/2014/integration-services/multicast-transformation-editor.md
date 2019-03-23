@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Multicast Transformation Editor
 ms.assetid: 96155ed9-6597-4fe1-8f9f-b741b18ba2c1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 67f2c28710f44fc3e23958706c521065b7e1f0f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c6d104be53fa742494a3f7dca759df4105e32874
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207764"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379092"
 ---
 # <a name="multicast-transformation-editor"></a>редактор преобразования «Многоадресная доставка»
   Используйте диалоговое окно **Редактор преобразования «Многоадресная доставка»** , чтобы посмотреть и установить свойства для каждого выхода преобразования.  
@@ -35,7 +35,7 @@ ms.locfileid: "48207764"
  Все перечисленные выходные свойства доступны только для чтения, за исключением свойств **Имя** и **Описание**.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Преобразование "Условное разбиение"](data-flow/transformations/conditional-split-transformation.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Преобразование «Условное разбиение»](data-flow/transformations/conditional-split-transformation.md)  
   
   

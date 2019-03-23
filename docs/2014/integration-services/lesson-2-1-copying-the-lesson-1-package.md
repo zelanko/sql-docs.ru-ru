@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 87b0564ddd3fada522b70858341da4ab08c5092e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d473cdf45eebeb0a5bd6268ed79c071741e74e8c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376076"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386092"
 ---
 # <a name="step-1-copying-the-lesson-1-package"></a>Шаг 1. Копирование пакета занятия 1
   В этой задаче будет создана копия пакета Lesson 1.dtsx, созданного на занятии 1. Если вы не прошли занятие 1, можно добавить пакет задания 1, прилагаемый к учебнику по проекту, и скопировать его. Полученная копия впоследствии будет использоваться на протяжении всего занятия 2.  

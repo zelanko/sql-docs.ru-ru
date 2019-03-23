@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Services Execute DDL Task Editor
 ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a4ebac7cac4a62dde5c89aa3e37146c78eb79d19
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eb9bb4127e521300a8406786c931b9f70bd87add
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535435"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379832"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Редактор задачи «Выполнение инструкции DDL служб Analysis Services» (страница DDL)
   Используйте страницу **DDL** диалогового окна **Редактор задачи "Выполнение инструкции DDL служб аналитики"**, чтобы настроить соединение с проектом [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или базой данных [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], а также предоставить сведения об источнике инструкций языка определения данных (DDL).  
@@ -31,7 +31,7 @@ ms.locfileid: "52535435"
  **Соединение**  
  Выберите проект [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или диспетчер соединений [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] из списка или нажмите кнопку \<**Новое соединение...**> и создайте новое соединение с помощью диалогового окна **Добавление диспетчера соединений со службами Analysis Services**.  
   
- **См. также:** [Добавление службами Analysis Services диспетчер соединений диалогового окна пользовательского интерфейса в справочник](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [диспетчер соединений служб Analysis Services](connection-manager/analysis-services-connection-manager.md)  
+ **См. также:** [Диалоговое окно "Добавление диспетчера соединений со службами Analysis Services" в справочнике по пользовательскому интерфейсу](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Диспетчер соединений служб Analysis Services](connection-manager/analysis-services-connection-manager.md)  
   
  **Тип источника**  
  Указать тип источника инструкции DDL. Параметры этого свойства приведены в следующей таблице.  
@@ -52,7 +52,7 @@ ms.locfileid: "52535435"
  **Source**  
  Выберите "Соединение с файлом" из списка или нажмите кнопку \<**Новое соединение...**> и создайте новое соединение с помощью диалогового окна **Диспетчер соединения файлов**.  
   
- **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md)  
+ **См. также:** [Диспетчер соединения файлов](connection-manager/file-connection-manager.md)  
   
 ### <a name="sourcetype--variable"></a>SourceType = Переменная  
  **Source**  

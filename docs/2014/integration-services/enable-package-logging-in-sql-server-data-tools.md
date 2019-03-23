@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], enabling
 ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2a93245b97bf7c6c382f533c6d6e317b399f9e54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f878b194389f81980c924896ae4c2b97da81761
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172504"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387022"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>Включение средств ведения журналов в SQL Server Data Tools
   В этой процедуре описывается, как добавлять журналы в пакет, настраивать ведение журналов на уровне пакетов и сохранять настройку ведения журналов в XML-файле. Журнал можно добавить только на уровне пакета, однако пакеты не обязаны осуществлять ведение журналов, чтобы включить ведение журналов в контейнерах, которые содержатся в этих пакетах.  
@@ -69,7 +69,7 @@ ms.locfileid: "48172504"
 11. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
 ## <a name="see-also"></a>См. также  
- [Службы Integration Services &#40;SSIS&#41; ведение журнала](performance/integration-services-ssis-logging.md)   
+ [Ведение журналов в службах Integration Services (SSIS)](performance/integration-services-ssis-logging.md)   
  [Ведение журналов в службах Integration Services (SSIS)](performance/integration-services-ssis-logging.md)  
   
   

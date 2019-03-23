@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ec77c14fee07cc393a19f22405678f601613ad94
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 301a6b6970c03b620783af7ca176de34846557d9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767206"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377682"
 ---
 # <a name="cache-transform"></a>преобразование кэша
   Преобразование «Преобразование кэша» создает ссылочный набор данных для преобразования «Уточняющий запрос», выполняя запись из подключенного источника данных в потоке данных в диспетчер соединений с кэшем. Преобразование «Подстановка» выполняет подстановки, соединяя данные из входных столбцов подключенного источника данных и данные из столбцов в связанной базе данных.  

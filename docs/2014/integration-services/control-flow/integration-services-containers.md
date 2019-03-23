@@ -13,15 +13,15 @@ helpviewer_keywords:
 - control flow [Integration Services], containers
 - SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 572c8bbcf31c588e8e7d6b117ef8393a09cae512
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 172aa2a77293dd7e9a9ee50bfe0002a71c59cbb9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760016"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385447"
 ---
 # <a name="integration-services-containers"></a>Контейнеры служб Integration Services
   Контейнеры в службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] представляют собой объекты, содержащие структуру пакетов и службы для задач. Они поддерживают повторение потоков управления в пакетах, а также группируют задачи и контейнеры в единые рабочие объекты. Кроме задач контейнеры могут включать другие контейнеры.  

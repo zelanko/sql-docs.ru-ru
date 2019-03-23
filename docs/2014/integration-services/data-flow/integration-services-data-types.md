@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5fc0a802cc3d266cc96d8deaaeeda39056508062
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377844"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382072"
 ---
 # <a name="integration-services-data-types"></a>Типы данных служб Integration Services
   Когда данные входят в поток данных в пакете, источник, извлекающий данные, преобразовывает их в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Числовым данным назначается числовой тип данных, строковым — символьный тип данных, а датам — тип даты. Другим данным, таким как идентификатор GUID и BLOB (Binary Large Object Blocks), также назначаются соответствующие типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Если данные имеют тип, не преобразуемый в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , возникает ошибка.  
@@ -77,7 +77,7 @@ ms.locfileid: "53377844"
   
 -   Использование преобразования «Конвертация данных» для приведения типа данных столбца от одного к другому. Дополнительные сведения см. в статье [Data Conversion Transformation](transformations/data-conversion-transformation.md).  
   
--   Создание копии столбца, тип данных которого отличается от типа данных исходного столбца, с помощью преобразования «Производный столбец». Дополнительные сведения см. в разделе [Derived Column Transformation](transformations/derived-column-transformation.md).  
+-   Создание копии столбца, тип данных которого отличается от типа данных исходного столбца, с помощью преобразования «Производный столбец». Дополнительные сведения см. в статье [Derived Column Transformation](transformations/derived-column-transformation.md).  
   
 ### <a name="converting-between-strings-and-datetime-data-types"></a>Преобразование между строковым типом данных и типами данных даты-времени  
  В следующей таблице приведены результаты приведения или преобразования между строковыми типами данных и типами данных даты-времени.  
@@ -224,7 +224,7 @@ ms.locfileid: "53377844"
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
 |DT_CY|smallmoney, money|smallmoney, money|CURRENCY||||  
 |DT_DATE|||||||  
-|DT_DBDATE|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||Дата|Дата|Дата|  
+|DT_DBDATE|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||date|date|date|  
 |DT_DBTIME||||TIMESTAMP|time|time|  
 |DT_DBTIME2|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)(p)|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
 |DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  

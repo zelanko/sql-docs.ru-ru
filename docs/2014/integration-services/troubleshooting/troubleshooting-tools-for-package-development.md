@@ -13,15 +13,15 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4e1935b7ffa0acc22183f91cf5c7fe3896c9e1a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 43eed16aa9cd69d70f308c3ce397720020446fdd
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792110"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375312"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Инструменты устранения неполадок при разработке пакета
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат функции и средства, которые можно использовать для устранения неполадок в пакетах при разработке в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

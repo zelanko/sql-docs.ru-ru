@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: 24f4539f-2a9f-4acd-acc7-06228a07f7df
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 420be3d4dc236804343aa6281107e1a9c579b097
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc69475a26bde2045c06429462b5de306c4f932f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095214"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376182"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Редактор преобразования «Нечеткое группирование» (вкладка «Столбцы»)
   Используйте вкладку **Столбцы** диалогового окна **Редактор преобразования «Нечеткое группирование»** для задания столбцов, используемых при группировке строк с повторяющимися значениями.  
@@ -69,7 +69,7 @@ ms.locfileid: "48095214"
  Дополнительные сведения о параметрах сравнения строк см. в разделе [Сравнение строковых данных](data-flow/comparing-string-data.md).  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Определение подобных строк данных с помощью преобразования "Нечеткое группирование"](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Определение подобных строк данных с помощью преобразования «Нечеткое группирование»](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
   

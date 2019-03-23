@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], viewer
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8b91e91d726123a057ba6aa8850633d4d3656354
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4806d8117e2c28a18fe1ba3252334fd5fa495849
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065144"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377522"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Справка F1 средства просмотра профиля данных
   Используйте средство просмотра профиля данных для просмотра выхода задачи «Профилирование данных».  
@@ -55,10 +55,10 @@ ms.locfileid: "48065144"
  Отображает максимальную длину значений в этом столбце.  
   
  **Без учета начальных пробелов**  
- Показывает, какое этот профиль был `IgnoreLeadingSpaces` значение True или False. Это свойство задается на странице **Запросы профиля** задачи «Профилирование данных».  
+ Показывает, какое значение имело свойство `IgnoreLeadingSpaces` при вычислении этого профиля (True или False). Это свойство задается на странице **Запросы профиля** задачи «Профилирование данных».  
   
  **Без учета конечных пробелов**  
- Показывает, какое этот профиль был `IgnoreTrailingSpaces` значение True или False. Это свойство задается на странице **Запросы профиля** задачи «Профилирование данных».  
+ Показывает, какое значение имело свойство `IgnoreTrailingSpaces` при вычислении этого профиля (True или False). Это свойство задается на странице **Запросы профиля** задачи «Профилирование данных».  
   
  **Количество строк**  
  Отображает число строк в таблице или представлении.  
@@ -123,7 +123,7 @@ ms.locfileid: "48065144"
  Отображает число строк в таблице или представлении.  
   
 #### <a name="detailed-value-distribution-pane"></a>Панель «Подробное распределение значений»  
- **Value**  
+ **Значение**  
  Отображает уникальные значения, обнаруженные в профилируемом столбце.  
   
  **Count**  

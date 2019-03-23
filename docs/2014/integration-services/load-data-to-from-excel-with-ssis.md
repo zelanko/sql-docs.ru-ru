@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.custom: ''
 ms.technology: integration-services
 ms.topic: conceptual
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 90accbf1e7d5cc683b862707e0688c5b32d86242
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e2092ef7f755b9980ee29ee3d7080774d78a0094
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778316"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381392"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Импорт данных из Excel или экспорт данных в Excel с помощью служб SQL Server Integration Services (SSIS)
 
@@ -41,7 +41,7 @@ ms.locfileid: "52778316"
 
 Прежде чем импортировать данные из приложения Excel или экспортировать данные в него, вам может потребоваться скачать компоненты подключений для Excel, если они еще не установлены. По умолчанию компоненты подключений для Excel не устанавливаются.
 
-Скачайте последнюю версию компонентов подключения для Excel здесь: [Microsoft Access Database Engine 2016 распространяемый](https://www.microsoft.com/download/details.aspx?id=54920).
+Скачать последнюю версию компонентов подключения для Excel можно на следующей странице: [Распространяемый пакет ядра СУБД Microsoft Access 2016](https://www.microsoft.com/download/details.aspx?id=54920).
   
 Последняя версия компонентов позволяет открывать файлы, созданные в более ранних версиях Excel.
 
@@ -53,7 +53,7 @@ ms.locfileid: "52778316"
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-При наличии трудности с установкой распространяемого пакета версии 2016, вместо этого установите распространяемый пакет 2010 отсюда: [Microsoft Access Database Engine 2010 распространяемый](https://www.microsoft.com/download/details.aspx?id=13255). (Для Excel 2013 распространяемый пакет не предусмотрен.)
+При возникновении проблем с установкой распространяемого пакета версии 2016 установите вместо него распространяемый пакет версии 2010 со следующей страницы: [Распространяемый пакет ядра СУБД Microsoft Access 2010](https://www.microsoft.com/download/details.aspx?id=13255). (Для Excel 2013 распространяемый пакет не предусмотрен.)
 
 ## <a name="specify-excel"></a> Указание Excel
 

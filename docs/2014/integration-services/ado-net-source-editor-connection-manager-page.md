@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.connection.f1
 ms.assetid: 7de3f438-bdd6-49b5-937a-47369e754943
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 77e31f4857d056da79fb65b6f6261a1d92f016e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 553603a6f8164dd2388a551d085413cd3c253b4c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052454"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380152"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>Редактор источника данных «ADO.NET» (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор назначения «ADO.NET»** для выбора соединения [!INCLUDE[vstecado](../includes/vstecado-md.md)] применительно к источнику. На этой странице также можно выбрать таблицу или представление базы данных.  
@@ -71,8 +71,8 @@ ms.locfileid: "48052454"
  Воспользуйтесь диалоговым окном **Открыть** для выбора файла, содержащего текст SQL-запроса.  
   
 ## <a name="see-also"></a>См. также  
- [Редактор источника «ado.net» &#40;страница "столбцы"&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
- [Редактор источника «ado.net» &#40;странице вывода ошибок&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
- [Диспетчер подключений ADO.NET](connection-manager/ado-net-connection-manager.md)  
+ [Редактор источника "ADO.NET" (страница "Столбцы")](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+ [Редактор источника данных "ADO.NET" (страница "Вывод ошибок")](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [Диспетчер соединений ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

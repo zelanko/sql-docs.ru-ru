@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 163df99c54ed323d1039d50c69e812cb4c1d2286
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 127044042eed7f082b6f1f7ba7ae6918232ba9ff
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368786"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378092"
 ---
 # <a name="step-2-verifying-the-deployment-bundle"></a>Этап 2. Проверка пакета развертывания
   На занятии 1 был создан проект учебного развертывания и в него добавлены пакеты и вспомогательные файлы; в предыдущей задаче была построена программа развертывания для проекта.  
@@ -55,7 +55,7 @@ ms.locfileid: "53368786"
 5.  Закройте обозреватель Internet Explorer или текстовый редактор.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 3. Установка пакетов](../integration-services/lesson-3-install-ssis-package.md)  
+ [Занятие 3. Установка пакетов](../integration-services/lesson-3-install-ssis-package.md)  
   
 ![Значок служб Integration Services (маленький)](media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   

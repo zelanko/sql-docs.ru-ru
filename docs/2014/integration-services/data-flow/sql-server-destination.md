@@ -15,15 +15,15 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9c8e1d7c41e2caf1a3e3bc03e8278c21e4fe7b79
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 818f78cd0b38aba0a7201eb28f49eb573ba32672
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375726"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374982"
 ---
 # <a name="sql-server-destination"></a>назначение «SQL Server»
   Назначение «SQL Server» подключается к локальной базе данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и производит массовую загрузку данных в таблицы и представления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Нельзя использовать назначение «SQL Server» в пакетах, получающих доступ к базе данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на удаленном сервере. Вместо этого пакеты должны использовать назначение «OLE DB». Дополнительные сведения см. в разделе [OLE DB Destination](ole-db-destination.md).  

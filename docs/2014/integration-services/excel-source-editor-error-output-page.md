@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43218f87bb8a19fc35b3191603e9324e94145a64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a8dd63e2e3d75c1d56c7c930fe5dfc53cf67228
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106414"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386242"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Редактор источника Excel (страница «Вывод ошибок»)
   Страница **Вывод ошибок** диалогового окна **Редактор источника «Excel»** используется для выбора параметров обработки ошибок, а также для установки свойств выходных столбцов ошибок.  
@@ -52,10 +52,10 @@ ms.locfileid: "48106414"
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор источника «Excel» &#40;страницы диспетчера соединений&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
- [Редактор источника «Excel» &#40;страница "столбцы"&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
- [Диспетчер подключений Excel](connection-manager/excel-connection-manager.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор источника "Excel" (страница "Диспетчер соединений")](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
+ [Редактор источника "Excel" (страница "Столбцы")](../../2014/integration-services/excel-source-editor-columns-page.md)   
+ [Диспетчер соединений с Excel](connection-manager/excel-connection-manager.md)   
  [Просмотр файлов и таблиц Excel с помощью контейнера «цикл по каждому элементу»](control-flow/foreach-loop-container.md)  
   
   

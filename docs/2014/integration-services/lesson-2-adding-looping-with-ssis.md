@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1bb292712111a478260edc31a562ed7db4c0ac95
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a542b2828a2ea6803a6b4174396e57c7e9d3af4e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361766"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385302"
 ---
 # <a name="lesson-2-adding-looping"></a>Занятие 2. Добавление циклов
-  В [Урок 1: Создание проекта и основного пакета](lesson-1-create-a-project-and-basic-package-with-ssis.md), был создан пакет, данные извлекались из отдельного источника неструктурированного файла, преобразовывались с помощью «Уточняющий запрос» и затем загружались **FactCurrency** таблицы фактов **AdventureWorksDW2012** образца базы данных.  
+  В разделе [Занятие 1. Создание проекта и основного пакета](lesson-1-create-a-project-and-basic-package-with-ssis.md), был создан пакет, данные извлекались из отдельного источника неструктурированного файла, преобразовывались с помощью «Уточняющий запрос» и затем загружались **FactCurrency** таблицы фактов **AdventureWorksDW2012** образца базы данных.  
   
  Однако в процессе извлечения, преобразования и загрузки (ETL) редко используется отдельный неструктурированный файл. Как правило, в процессе ETL данные извлекаются из нескольких источников неструктурированного файла. Извлечение данных из нескольких источников требует итеративного потока управления. Одной из самых ожидаемых возможностей служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] является способность легко добавлять повторения или циклы в пакеты.  
   

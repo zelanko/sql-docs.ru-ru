@@ -12,15 +12,15 @@ helpviewer_keywords:
 - statements [Integration Services]
 - queries [Integration Services], about queries in packages
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7a08d1a290a1130e9c728702d63ed86df915daf3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0b4323715155ddb433012624f9d7a5df9bb0a29c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752036"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382472"
 ---
 # <a name="integration-services-ssis-queries"></a>Запросы в службах Integration Services (SSIS)
   Задача «Выполнение SQL», источник OLE DB, назначение «OLE DB» и преобразование «Уточняющий запрос» могут использовать SQL-запросы. В задаче «Выполнение SQL» инструкции SQL могут создавать, обновлять и удалять объекты базы данных и данные, запускать хранимые процедуры, выполнять инструкции SELECT. В источнике OLE DB и преобразовании «Уточняющий запрос» обычно содержатся SQL инструкции SELECT или EXEC. Последние наиболее часто выполняются хранимыми процедурами, возвращающими результирующие наборы.  

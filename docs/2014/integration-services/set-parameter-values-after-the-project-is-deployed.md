@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: c9dcca4d-f1a0-45ec-b078-f4d372589baf
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5cb12795b0aba94da115916b2b09dc0c2675e8ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f5e7248868a368ee0ea956b46b63c9c8d024393b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151810"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379932"
 ---
 # <a name="set-parameter-values-after-the-project-is-deployed"></a>Задать значения параметров после развертывания проекта
   Мастер развертывания позволяет задавать значения параметров по умолчанию сервера при развертывании проекта в каталог. После развертывания проекта в каталог задать значения по умолчанию сервера можно будет с помощью обозревателя объектов среды SQL Server Management Studio (SSMS) или Transact-SQL.  
@@ -29,7 +29,7 @@ ms.locfileid: "48151810"
   
 3.  Откройте страницу «Параметры», нажав кнопку **Параметры** в разделе **Выбор страницы**.  
   
-4.  Выберите нужный параметр в списке **Параметры** . Примечание. Столбец **Контейнер** помогает отличить параметры проекта от параметров пакета.  
+4.  Выберите нужный параметр в списке **Параметры** . Примечание. **Контейнера** столбец помогает отличить параметры проекта от параметров пакета.  
   
 5.  В столбце **Значение** укажите необходимое значение параметра по умолчанию сервера.  
   

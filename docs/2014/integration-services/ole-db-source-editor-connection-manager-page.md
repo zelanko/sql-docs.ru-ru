@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c25e36d44b4b088bb2874039d4c292d76759da73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65d762ffb798d6ec3826a41ff06c73c2011543ab
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172984"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384492"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>Редактор источника OLE DB (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор источника OLE DB** для выбора диспетчера соединений OLE DB для источника. На этой странице также можно выбрать таблицу или представление базы данных.  
@@ -56,7 +56,7 @@ ms.locfileid: "48172984"
 |Параметр|Описание|  
 |------------|-----------------|  
 |Таблица или представление|Получение данных из таблицы или представления в источнике данных OLE DB.|  
-|Переменная, содержащая имя таблицы или представления|Задайте переменную, содержащую имя таблицы или представления.<br /><br /> **См. также:** [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)|  
+|Переменная, содержащая имя таблицы или представления|Задайте переменную, содержащую имя таблицы или представления.<br /><br /> **Дополнительные сведения:** [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)|  
 |Команда SQL|Получение данных из источника данных OLE DB с использованием SQL-запроса.|  
 |Команда SQL из переменной|Задайте текст SQL-запроса в переменную.|  
   
@@ -97,10 +97,10 @@ ms.locfileid: "48172984"
  Выберите переменную, содержащую текст SQL-запроса.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор источника OLE DB &#40;страница "столбцы"&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
- [Редактор источника OLE DB &#40;странице вывода ошибок&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор источника OLE DB (страница "Столбцы")](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
+ [Редактор источника OLE DB (страница "Вывод ошибок")](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
  [Извлечение данных с помощью источника OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
- [Диспетчер подключений OLE DB](connection-manager/ole-db-connection-manager.md)  
+ [Диспетчер соединений OLE DB](connection-manager/ole-db-connection-manager.md)  
   
   

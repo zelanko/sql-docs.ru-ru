@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2c2873a6864e3ac5d55f180bfc2555d8cb471620
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c5c4226b9ee4f45d7e732044379962489ecacd0f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354485"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393632"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Резервное копирование, восстановление и перемещение каталога служб SSIS
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] включена база данных SSISDB. Создайте запрос представления в базе данных SSISDB для просмотра объектов, настроек и рабочих данных, которые хранятся в каталоге **SSISDB** . Этот раздел содержит инструкции для выполнения резервного копирования и восстановления базы данных.  
@@ -39,7 +39,7 @@ ms.locfileid: "53354485"
   
     ```  
   
-3.  Выполните резервное копирование базы данных SSISDB с помощью диалогового окна **Создание резервной копии базы данных** в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [как: Резервное копирование базы данных (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Выполните резервное копирование базы данных SSISDB с помощью диалогового окна **Создание резервной копии базы данных** в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Как создать резервную копию базы данных (среда SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
   
 4.  Создайте скрипт CREATE LOGIN для ## MS_SSISServerCleanupJobLogin ##, выполнив следующие действия. Дополнительные сведения см. в разделе [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql).  
   

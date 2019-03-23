@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: da6fd76284caf53ff6a3d46d1bbfd0f514615c2e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f7ddf838269932c19b0614d5a5219a7f03daed17
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805556"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377038"
 ---
 # <a name="transfer-database-task"></a>Задача «Передача базы данных»
   Задача «Передача базы данных» передает базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между двумя экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В отличие от других задач, передающих объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только путем копирования, задача «Передача базы данных» может копировать или перемещать базу данных. Эту задачу можно также использовать для копирования базы данных в пределах того же сервера.  

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4aaf14095eab05110845178f4115fc87ea19947a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db633e9afa480d03b31cf02a84db2813b1e30516
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224464"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378042"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>Редактор преобразования «Статистическая обработка» (вкладка «Агрегаты»)
   На вкладке **Агрегаты** диалогового окна **Редактор преобразования «Статистическая обработка»** можно указать столбцы для статистической обработки и свойства статистических выражений. Можно применять одновременно нескольких агрегатов. Это преобразование не приводит к формированию вывода ошибок.  
@@ -85,7 +85,7 @@ ms.locfileid: "48224464"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|Не указано|`CountDistinctScale` Свойство не используется.|  
+|Не указано|Свойство `CountDistinctScale` не используется.|  
 |Низкий|Статистическая функция может записывать примерно 500 000 уникальных ключей.|  
 |Средний|Агрегат может записывать примерно 5 000 000 различных значений.|  
 |Высокий|Агрегат может записывать более 25 000 000 различающихся ключей.|  
@@ -94,8 +94,8 @@ ms.locfileid: "48224464"
  При необходимости можно указать точное количество различающихся значений, которое может записывать агрегат. Если оба `CountDistinctScale` и **CountDistinctKeys** указаны, **CountDistinctKeys** имеет более высокий приоритет.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Статистическая обработка редактор преобразования &#40;вкладка "Дополнительно"&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор преобразований "Статистическая обработка" (вкладка "Дополнительно")](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
  [Статистическая обработка значений в наборе данных с помощью преобразования "Статистическая обработка"](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

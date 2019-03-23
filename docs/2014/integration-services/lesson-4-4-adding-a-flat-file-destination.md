@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c43885de9e2a6945a8a24263765df8ee8e26920a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3a1dd63030601ad05e0e2f3ccce09425c5aa829c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823378"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384822"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>Шаг 4. Добавление назначения «Неструктурированный файл»
   Выход ошибок преобразования «Ключ уточняющего запроса валют» перенаправляет в преобразование «Скрипт» все строки данных, завершившиеся ошибкой в операции поиска. Для расширения сведений о возникших ошибках преобразование «Скрипт» выполняет скрипт, получающий описания ошибок.  

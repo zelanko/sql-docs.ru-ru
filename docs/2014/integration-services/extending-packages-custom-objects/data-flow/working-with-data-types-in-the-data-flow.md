@@ -11,15 +11,15 @@ helpviewer_keywords:
 - data flow components [Integration Services], mapping data types
 - data types [Integration Services], converting
 ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 41414b5a1bdfea717ddf2c22ce145596129d5234
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 731dda855fe29a4aada9469a5d7744b9e1d5c3d1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373036"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377212"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>Работа с типами данных в потоке данных
   При разработке пользовательского компонента потока данных в службах Integration Services постоянно идет работа с типами данных: копирование данных в буферы потока и из буферов потока, а также преобразование значений. Сведения, представленные в этом разделе, помогут выбрать нужные типы данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] и использовать правильные методы работы с ними.  

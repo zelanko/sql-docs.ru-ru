@@ -14,15 +14,15 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8555d2789c7466f65fd17d90282b164a068674c7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f931b6c9edd917a12d3a84cc9cd65af862f0697e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363906"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384752"
 ---
 # <a name="literals-ssis"></a>Литералы (службы SSIS)
   Выражения могут содержать числовые, строковые и логические литералы. Средство оценки выражений поддерживает различные числовые литералы, такие как целые числа, десятичные дроби и константы с плавающей точкой. Средство оценки выражений также поддерживает суффиксы для длинных чисел и чисел с плавающей точкой, указывающие, как механизм вычисления выражений обрабатывает значения, а также экспоненциальное представление чисел в числовых литералах.  

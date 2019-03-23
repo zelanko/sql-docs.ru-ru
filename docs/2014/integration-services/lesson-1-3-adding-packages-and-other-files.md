@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 83902f57b758089235abafc9f8289b6f9fdb8653
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7db3e293c95b358d78e445e6b7534f90ea7b9310
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361606"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384232"
 ---
 # <a name="step-3-adding-packages-and-other-files"></a>Шаг 3. Добавление пакетов и других файлов
   В этой задаче к проекту, созданному в предыдущей задаче учебника по развертыванию, добавляются существующие пакеты, вспомогательные файлы для поддержки отдельных пакетов, а также файл сведений. Например, будет добавлен файл XML-данных, содержащий данные для пакета, и текстовый файл Readme с данными о всех пакетах проекта.  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Integration Services, studio environments
 - tools [Integration Services], SQL Server Management Studio
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a829fbadbf45dd5267b2297a87fc5b8833a8c807
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7c8f05c1b822cc3cad81ed910b71cb46621554eb
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750446"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377091"
 ---
 # <a name="integration-services-ssis-and-studio-environments"></a>Службы Integration Services (SSIS) и среды Studio
   Службы[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] содержат две интегрированные среды для работы со службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]:  
@@ -32,7 +32,7 @@ ms.locfileid: "52750446"
   
 -   Среда[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] предназначена для управления пакетами в рабочей среде.  
   
-## <a name="sql-server-data-tools"></a>SQL Server Data Tools (SSDT)  
+## <a name="sql-server-data-tools"></a>SQL Server Data Tools  
  Работая в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], можно выполнять следующие задачи:  
   
 -   Запускать мастер импорта и экспорта [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для создания основных пакетов, которые осуществляют копирование данных из источника в место назначения.  

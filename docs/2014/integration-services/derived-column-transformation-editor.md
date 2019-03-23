@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Derived Column Transformation Editor
 ms.assetid: ff73923e-d245-43d8-bf24-af3bdc942e51
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cfeb30098a0c82f1e494575db04de639cc8401c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 947933540c992b063e88db01c6f84663483dd113
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075324"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386682"
 ---
 # <a name="derived-column-transformation-editor"></a>редактор преобразования «Производный столбец»
   Используйте диалоговое окно **Редактор преобразования «Производный столбец»** для создания выражений, которые заполняют новые или замещающие столбцы.  
@@ -45,10 +45,10 @@ ms.locfileid: "48075324"
   
  Значение этого свойства можно задать с помощью выражения свойства.  
   
- **См. также**: [Выражения служб Integration Services (SSIS)](expressions/integration-services-ssis-expressions.md), [Операторы (выражение служб SSIS)](expressions/operators-ssis-expression.md) и [Функции (выражение служб SSIS)](expressions/functions-ssis-expression.md).  
+ **См. также**: [Службы Integration Services &#40;SSIS&#41; выражения](expressions/integration-services-ssis-expressions.md), [операторы &#40;выражение служб SSIS&#41;](expressions/operators-ssis-expression.md), и [функции &#40;выражение служб SSIS&#41;](expressions/functions-ssis-expression.md)  
   
  **Тип данных**  
- При добавлении данных в новый столбец диалоговое окно **Редактор преобразования "Производный столбец"** автоматически оценивает выражение и задает соответствующий тип данных. Значение этого столбца доступно только для чтения. Дополнительные сведения см. в статье [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ При добавлении данных в новый столбец диалоговое окно **Редактор преобразования "Производный столбец"** автоматически оценивает выражение и задает соответствующий тип данных. Значение этого столбца доступно только для чтения. Дополнительные сведения см. в разделе [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
  **Длина**  
  При добавлении данных в новый столбец диалоговое окно **Редактор преобразования "Производный столбец"** автоматически оценивает выражение и задает длину столбца для строковых данных. Значение этого столбца доступно только для чтения.  
@@ -66,7 +66,7 @@ ms.locfileid: "48075324"
  Укажите способ обработки ошибок в диалоговом окне [Настройка вывода ошибок](../../2014/integration-services/configure-error-output.md) .  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Получение значений столбцов с помощью преобразования "Производный столбец"](data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Получение значений столбцов с помощью преобразования «Производный столбец»](data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f644dc95d5c137c8ee1cdb5ecf8b0e2659e28e40
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: baf066638eb8c42dbf4ba7f488c9b0c1ca9acdb2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811196"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387402"
 ---
 # <a name="--conditional-ssis-expression"></a>? , перечислены ниже. (условный) (выражение служб SSIS)
   Возвращает одно из двух выражений на основе вычисления логического выражения. Если логическое выражение принимает значение TRUE, то возвращается результат вычисления первого выражения. Если логическое выражение принимает значение FALSE, возвращается результат вычисления второго выражения.  

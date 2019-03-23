@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f06a9aecd070fe3272d665372bf374d24ed4e60f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0a2037297db3f8a303ffd08fb31241e51505aeff
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350816"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392012"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Параметры запроса профиля включения значений (задача «Профилирование данных»)
   На панели **Свойства запроса** страницы **Запросы профиля** можно задать параметры для варианта **Запрос профиля включения значений** , выбранного на панели запросов. Профиль «Включение значений» находит перекрывающиеся значения в двух столбцах или наборах столбцов. Таким образом, он также определяет, подойдет ли столбец или набор столбцов в качестве внешнего ключа для выбранных таблиц. Этот профиль также поможет выявить проблемы в данных, например наличие недопустимых значений. Так, профиль «Включение значений» можно использовать для создания профиля столбца ProductID таблицы Sales. Профиль определяет, что в столбце содержатся значения, отсутствующие в столбце ProductID таблицы Products.  

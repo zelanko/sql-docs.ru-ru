@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 105c9b66e82c4c5dee12bbe8f54d60b960032a70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8ef0cc4c24383abe3554b71cda7c462d54a924d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146324"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381058"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>Редактор задачи «Массовая вставка» (страница «Параметры»)
   Страница **Параметры** диалогового окна **Редактор задачи «Массовая вставка»** используется для установки свойств операции массовой вставки. С помощью задачи «Массовая вставка» большой объем данных копируется в таблицу или представление [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -53,7 +53,7 @@ ms.locfileid: "48146324"
 |**Запускать триггеры**|Выберите для срабатывания триггеров при вставке, обновлении или удалении в таблице.|  
   
  **SortedData**  
- Определяет предложение ORDER BY в инструкции массовой вставки. Указываемое имя столбца должно быть действительным столбцом в целевой таблице. Значение по умолчанию — `false`. Это означает, что данные не отсортированы с помощью предложения ORDER BY.  
+ Определяет предложение ORDER BY в инструкции массовой вставки. Указываемое имя столбца должно быть действительным столбцом в целевой таблице. Значение по умолчанию — `false`. Это означает, что данные не отсортированы с помощью предложения ORDER BY.  
   
  **MaxErrors**  
  Определяет максимальное количество ошибок, которое может произойти перед отменой операции массовой вставки. Значение «0» указывает на то, что допускается бесконечное количество ошибок.  
@@ -62,10 +62,10 @@ ms.locfileid: "48146324"
 >  Каждая строка, которая не может быть импортирована операцией массовой загрузки, считается за одну ошибку.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Массовая вставка редактор задачи &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
- [Массовая вставка редактор задачи &#40;страница "подключения"&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
- [Страница «выражения»](expressions/expressions-page.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "Массовая вставка" (страница "Общие")](general-page-of-integration-services-designers-options.md)   
+ [Редактор задачи "Массовая вставка" (страница "Соединение")](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
+ [Страница «Выражения»](expressions/expressions-page.md)   
  [Поток управления](control-flow/control-flow.md)  
   
   

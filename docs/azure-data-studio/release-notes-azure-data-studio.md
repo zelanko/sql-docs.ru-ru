@@ -3,7 +3,7 @@ title: Заметки о выпуске
 titleSuffix: Azure Data Studio
 description: Заметки о выпуске Azure Data Studio
 ms.custom: seodec18
-ms.date: 03/06/2019
+ms.date: 03/22/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,27 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 746f3d97ed0157f6b97128dbfdf1b88a5276062c
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: 359723a1e2d75b7cbbd3a88c9a0ba7ee89fdf420
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161631"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381592"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 
 **[Скачайте и установите последний выпуск!](download.md)**
+
+## <a name="march-2019-hotfix"></a>Марта 2019 г. (исправление)
+
+22 марта 2019 &nbsp;  /  &nbsp; версии: 1.5.2 &nbsp;  /  &nbsp; выпуска исправления
+
+&nbsp;
+
+| Изменить | Сведения |
+| :----- | :------ |
+| Исправлены некоторые проблемы, обнаруженные в 1.5.1. | См. в разделе [март выпуска исправления на сайте GitHub](https://github.com/Microsoft/azuredatastudio/milestone/28).<br/> <br/>&bull; &nbsp; Исправлена проблема, где пользователь не удалось закрыть записную книжку, открываемые из задачи «Открыть записную книжку» на панели мониторинга <br/>&bull; &nbsp; Исправлена проблема, где записной книжки JSON имеет очень} после сохранения <br/>&bull; &nbsp; Исправлена проблема, когда сетки записной книжки были не отвечает на запросы для изменения темы <br/>&bull; &nbsp; Устранена проблема, где был показан путь к полной записной книжке в заголовке вкладки. Теперь отображается только имя файла. |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2019"></a>Марта 2019 г.
 
@@ -53,7 +64,7 @@ ms.locfileid: "58161631"
 - Новые значки записной книжки и открыть записную книжку теряются. <br/> 
 **Обходное решение.** Тип устаревшего соединения является устаревшим. Мы рекомендуем использовать подключение к конечной точке SQL Server, и вы получите все действия (новой записной книжки, задание Spark), должным образом. 
 
-## <a name="february-2019"></a>Февраля 2019 г.
+## <a name="february-2019"></a>Февраль 2019 г.
 
 13 февраля 2019 &nbsp;  /  &nbsp; версии: 1.4.5
 

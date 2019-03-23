@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6136d3e8e574d476b8ebabcfb78ed10284ead334
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750576"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393092"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Шаг 7. Добавление и настройка назначения OLE DB
   Созданный пакет теперь может извлекать данные из источника «Неструктурированный файл» и преобразовывать эти данные в формат, совместимый с форматом назначения. Далее требуется загрузить преобразованные данные в указанное назначение. Чтобы загрузить данные, необходимо добавить назначение OLE DB в поток данных. Назначение OLE DB может использовать таблицу, представление или SQL-команду базы данных, чтобы загрузить данные в различные OLE DB-совместимые базы данных.  
@@ -53,7 +53,7 @@ ms.locfileid: "52750576"
 14. В окне «Свойства» убедитесь, что `LocaleID` свойству **русский (Россия)** и`DefaultCodePage` свойству **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Шаг 8. Облегчение пакета занятия 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+ [Шаг 8. Облегчение пакета занятия 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
 ## <a name="see-also"></a>См. также  
  [Назначение OLE DB](data-flow/ole-db-destination.md)  

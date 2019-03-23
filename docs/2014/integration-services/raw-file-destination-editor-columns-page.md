@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfiledestinationcolumns.f1
 ms.assetid: 37f61d0b-1269-42ee-94ab-011cbaac63e9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f833084ea5faecaa7e494397e7f1651b3086e513
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bd9b370dbe030a745eb36c475f806316a5ef270
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095873"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377557"
 ---
 # <a name="raw-file-destination-editor-columns-page"></a>Редактор назначения «Строковый файл» (страница «Столбцы»)
   Для настройки назначения «Необработанный файл» на запись необработанных данных в файл используйте редактор назначения «Необработанный файл».  

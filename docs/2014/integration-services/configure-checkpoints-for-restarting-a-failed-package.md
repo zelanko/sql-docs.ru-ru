@@ -12,15 +12,15 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9204220c7ea32c59f75785ad0b50fa050a47840f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 220440313f0a06efb4ad55156a41fee18c61ab62
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123404"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376682"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>Настройка контрольных точек для повторного запуска пакета, завершившегося с ошибкой
   Устанавливая свойства, влияющие на контрольные точки, можно настроить пакеты служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] таким образом, чтобы они перезапускались с точки сбоя вместо выполнения всего пакета с начала.  
@@ -46,7 +46,7 @@ ms.locfileid: "48123404"
         > [!IMPORTANT]  
         >  Если файл контрольных точек недоступен, то возникнет ошибка.  
   
-    -   Выберите `IfExists` для перезапуска пакета только в том случае, если доступен файл контрольных точек.  
+    -   Выберете свойство `IfExists`, чтобы перезапускать пакет, только если доступен файл контрольных точек.  
   
 8.  Настройте задачи и контейнеры, из которых пакет может быть перезапущен.  
   

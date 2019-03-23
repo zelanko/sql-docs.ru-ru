@@ -13,21 +13,21 @@ helpviewer_keywords:
 - copying packages
 - regenerating package GUID
 ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a43cb8fcadf514885397530792f54c1d3643e695
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ab572e7c0793f9d3a673698bf54a0109ad42551c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798906"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379992"
 ---
 # <a name="reuse-of-package-objects"></a>Повторное использование объектов пакета
   Функциональные возможности пакетов, которые требуется использовать повторно. Например, создан набор задач, и необходимо повторно совместно использовать элементы как группу, или необходимо повторно использовать отдельный элемент, такой как диспетчер соединений, созданный в другом проекте служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 ## <a name="copy-and-paste"></a>Копирование и вставка  
- [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] и конструктор служб [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer support copying и конструктор служб pasting package objects, which can include control flow items, data flow items, и конструктор служб connection managers. Можно выполнять копирование и вставку между проектами и пакетами. Если в решении содержится несколько проектов, можно выполнять копирование между проектами, и проекты могут принадлежать разным типам.  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] и Конструктор [!INCLUDE[ssIS](../includes/ssis-md.md)] поддерживают копирование и вставку пакетных объектов, которые могут включать элементы потоков управления и данных, а также диспетчеры соединений. Можно выполнять копирование и вставку между проектами и пакетами. Если в решении содержится несколько проектов, можно выполнять копирование между проектами, и проекты могут принадлежать разным типам.  
   
  Если решение содержит несколько пакетов, можно выполнять копирование и вставку между ними. Пакеты могут находиться в одном или разных проектах служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Однако объекты пакета могут иметь зависимости от других объектов, без которых они недействительны. Например, задача «Выполнение SQL» использует диспетчер соединений, который также необходимо скопировать, чтобы задача работала. Также некоторые объекты пакета требуют, чтобы пакет уже содержал определенный объект, а при отсутствии этого объекта успешная вставка скопированных объектов в пакет невозможна. Например, невозможно вставить поток данных в пакет, если он не содержит хотя бы одну задачу потока данных.  
   

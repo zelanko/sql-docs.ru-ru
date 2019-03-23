@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SSIS packages, saving
 - SQL Server Integration Services packages, saving
 ms.assetid: 1ba45350-dae8-437a-8984-64e6d8d180c1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 579957b3aa6c1cc34686b85564fc007dd74571dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87aabe302817a8d71a5a92058004b6e92dd95b2c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214973"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385342"
 ---
 # <a name="save-a-package-to-the-file-system"></a>Сохранение пакета в файловой системе
   Эта процедура описывает сохранение существующего пакета в файловой системе в виде файла с расширением DTSX.  
@@ -39,7 +39,7 @@ ms.locfileid: "48214973"
     >  Путь к файлу и имя, под которым был сохранен пакет, можно проверить в окне свойств.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Integration Services &#40;SSIS&#41; пакетов](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Пакеты служб Integration Services (SSIS)](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Сохранение одной копии пакета](../../2014/integration-services/save-a-copy-of-a-package.md)  
   
   

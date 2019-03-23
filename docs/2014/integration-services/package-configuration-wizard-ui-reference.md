@@ -13,15 +13,15 @@ f1_keywords:
 - sql12.dts.configwizard.finishdtsconfiguration.f1
 - sql12.dts.configwizard.welcome.f1
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f984034b21680842bdb4813f4f8d9489edb0913b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 042f1146295d0a8358a7f89a38929a77e6f761a1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160384"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376192"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>Мастер конфигурации пакетов справочника по пользовательскому интерфейсу
   **Мастер настройки пакета** используется для создания конфигураций, обновляющих свойства пакета служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и его объекты во время выполнения. Мастер запускается при добавлении новой конфигурации или изменении существующей в диалоговом окне **Организатор конфигураций пакетов** . Для открытия диалогового окна **Организатор конфигураций пакетов** выберите пункт **Конфигурации пакета** в меню **службы SSIS** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Дополнительные сведения см. в разделе [Создание конфигурации пакетов](../../2014/integration-services/create-package-configurations.md).  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.erroroutput.f1
 ms.assetid: 1a56c3cf-fb6a-416d-a62c-bb19fe441ae5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5ebae86f0973da25b47c86f1be66181bc7b26ff2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8939bd266085dc34222184c624d3115d02c320d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213446"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380062"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>Редактор назначения «ADO.NET» (страница «Вывод ошибок»)
   Страница **Вывод ошибок** диалогового окна **Редактор назначения «ADO.NET»** используется для задания параметров обработки ошибок.  
@@ -58,7 +58,7 @@ ms.locfileid: "48213446"
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
 ## <a name="see-also"></a>См. также  
- [Редактор назначения «ado.net» &#40;страницы диспетчера соединений&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [Редактор назначения «ado.net» &#40;страница «сопоставления»&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
+ [Редактор назначения ADO.NET (страница "Диспетчер соединений")](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
+ [Редактор назначения ADO.NET (страница "Сопоставления")](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
   
   

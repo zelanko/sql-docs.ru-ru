@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database Task Editor
 ms.assetid: 0f65927a-5835-45ee-9c19-e33f00d0755c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eb24699d77bda4ad1cf717592d73903084f98e5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f57f1630744a879c51cfbac37870fa0712e22ec5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186214"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378282"
 ---
 # <a name="transfer-database-task-editor-general-page"></a>Редактор задачи «Передача базы данных» (страница «Общие»)
   Страница **Общие** диалогового окна **Редактор задачи «Передача базы данных»** позволяет дать имя и описание задачи передачи базы данных. Задача «Передача базы данных» копирует или перемещает базу данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] между двумя экземплярами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Эту задачу можно также использовать для копирования базы данных в пределах того же сервера. Дополнительные сведения об этой задаче см. в разделе [Задача "Передача базы данных"](control-flow/transfer-database-task.md).  
@@ -36,9 +36,9 @@ ms.locfileid: "48186214"
  Введите описание задачи передачи базы данных.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Задачи служб Integration Services](control-flow/integration-services-tasks.md)   
- [Редактор задач базы данных передача &#40;баз данных страницы&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)   
- [Страница "Выражения"](expressions/expressions-page.md)  
+ [Редактор задачи "Передача базы данных" (страница "Базы данных")](../../2014/integration-services/transfer-database-task-editor-databases-page.md)   
+ [Страница «Выражения»](expressions/expressions-page.md)  
   
   

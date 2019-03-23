@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Connection Manager Editor
 ms.assetid: 7ff097e4-cafb-4885-a898-05b2a46628c1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 403fe52b67756a32a4229df83fdf9fa56a0bb8a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22ea5f2f087949718e5dbfc8702756e008ee721e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069494"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392922"
 ---
 # <a name="excel-connection-manager-editor"></a>редактор диспетчера соединений с Excel
   Диалоговое окно **Редактор диспетчера соединений с Excel** используется для добавления подключения к существующему или новому файлу книги [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)].  
@@ -54,7 +54,7 @@ ms.locfileid: "48069494"
  Позволяет указать, содержит ли первая строка данных выбранного листа имена столбцов. По умолчанию значение этого параметра равно **True**.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Просмотр файлов и таблиц Excel с помощью контейнера «цикл по каждому элементу»](control-flow/foreach-loop-container.md)  
   
   

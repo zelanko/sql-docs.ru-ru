@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2c0e18f728c48975aa6f09209f87aeca3e3abb2c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e9bebcc588a3ccbe522d4747bab2428f5e30973a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804996"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379422"
 ---
 # <a name="error-handling"></a>Обработка ошибок
   Экземпляр Oracle CDC извлекает изменения из одной базы данных-источника Oracle (кластер Oracle RAC считается одной базой данных) и записывает зафиксированные изменения в таблицы изменений в базе данных CDC на целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

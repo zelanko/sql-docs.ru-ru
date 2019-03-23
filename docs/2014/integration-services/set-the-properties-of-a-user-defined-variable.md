@@ -11,22 +11,22 @@ helpviewer_keywords:
 - modifying variables
 - variables [Integration Services], properties
 ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9cd85ac29d34f40e9473f28444c8b727543d6ecf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4aaac5f66e8c01364419d8d2d9d5e853bf929ef7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075606"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385532"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>Установка свойств определяемой пользователем переменной
   Чтобы задать свойства определяемой пользователем переменной в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], можно использовать один из следующих способов.  
   
 -   Окно «Переменные».  
   
--   Окно «Свойства». В окне **Свойства** указаны свойства для настройки переменных, недоступные в окне **Переменные** : Description, EvaluateAsExpression, Expression, ReadOnly, ValueType и IncludeInDebugDump.  
+-   Окно «Свойства». **Свойства** окне указаны свойства для настройки переменных, которые недоступны в **переменных** окна: Description, EvaluateAsExpression, Expression, ReadOnly, ValueType и IncludeInDebugDump.  
   
 > [!NOTE]  
 >  Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют также набор системных переменных, свойства которых нельзя обновить, за исключением свойства RaiseChangedEvent.  
@@ -53,7 +53,7 @@ ms.locfileid: "48075606"
   
  **Установка свойств имя и пространство имен**  
   
- Значения `Name` и `Namespace` свойства должно начинаться с буквы алфавита, согласно определению стандарта Юникод 2.0 или символ подчеркивания (_). Далее могут следовать буквы или цифры по определению стандарта Юникод 2.0 или символ подчеркивания (\_).  
+ Первым символом в значениях свойств `Name` и `Namespace` согласно стандарту Юникод 2.0 должна быть буква или символ подчеркивания (_). Далее могут следовать буквы или цифры по определению стандарта Юникод 2.0 или символ подчеркивания (\_).  
   
 ## <a name="using-the-variables-window-to-set-properties"></a>Использование окна «Переменные» для задания значений свойств  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48075606"
 8.  Чтобы сохранить измененный пакет, в меню **Файл** выберите команду **Сохранить выбранные элементы**.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md)   
+ [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md)   
  [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)   
  [Добавление, удаление и изменение области определяемой пользователем переменной в пакете](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Unpivot Transformation Editor
 ms.assetid: 72a36ef0-4070-4f6c-9c74-0720109617dd
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5b2476969d41acbff7496c14b43e0aa7089eb78e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8bb4a435d88ea867c2152d71afb87cdd731f452e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119332"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383879"
 ---
 # <a name="unpivot-transformation-editor"></a>Редактор преобразования «Отмена свертывания»
   Используйте диалоговое окно **Редактор преобразования «Отмена свертывания»** , чтобы выбрать столбцы для сведения в строки, а также указать столбцы данных и новый выходной столбец сведенных значений.  
@@ -34,7 +34,7 @@ ms.locfileid: "48119332"
  **Доступные входные столбцы**  
  Используя флажки, укажите столбцы, которые должны быть сведены в строки.  
   
- **Название**  
+ **Name**  
  Просмотрите имя доступного входного столбца.  
   
  **Передать**  
@@ -63,7 +63,7 @@ ms.locfileid: "48119332"
  В сценарии отмены свертывания, описанном в разделе [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md), именем столбца значений ключа сведения является **Product** , оно обозначает новый столбец **Product** , в который осуществляется отмена свертывания столбцов **Ham**, **Soda**, **Milk**, **Beer**и **Chips** .  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Преобразование "Сведение"](data-flow/transformations/pivot-transformation.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Преобразование «Сведение»](data-flow/transformations/pivot-transformation.md)  
   
   

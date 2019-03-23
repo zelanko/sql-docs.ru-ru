@@ -12,15 +12,15 @@ helpviewer_keywords:
 - scheduling packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe378671c1cb9b93ae8262869742c0b01a6d9cac
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7a4b9cd5eaad7b51f7cc3d2a0c73bea3f23fd542
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369936"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383898"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Пакеты служб из заданий агента SQL Server
   Выполнение пакетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно автоматизировать и запланировать в расписании при помощи агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Можно задать расписание выполнения пакетов, равернутых на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , хранимых в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в хранилище пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , или в файловой системе.  
@@ -54,14 +54,14 @@ ms.locfileid: "53369936"
   
  Дополнительные сведения см. в разделе [Планирование пакета с помощью агента SQL Server](../schedule-a-package-by-using-sql-server-agent.md).  
   
- Видеоролик, демонстрирующий способ использования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента для выполнения пакета, см. на домашней странице, [как: Автоматизировать выполнение пакета с помощью агента SQL Server (видеоматериал SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771), в библиотеке MSDN.  
+ Видео, в котором демонстрируется, как использовать агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для запуска пакета, см. на домашней странице в руководстве по [ автоматизации выполнения пакета с помощью агента SQL Server (видео об SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771) в библиотеке MSDN.  
   
 ##  <a name="trouble"></a> Устранение неполадок  
  Возможна ситуация, когда шаг задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не сможет запустить пакет даже в случае успешного выполнения пакета в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] или из командной строки. У этой проблемы есть несколько распространенных причин и несколько рекомендуемых решений. Для получения дополнительных сведений см. следующие ресурсы.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] , [Пакет служб SSIS не выполняется при вызове пакета из шага задания агента SQL Server](https://support.microsoft.com/kb/918760)  
   
--   Видео, [Устранение неполадок: Выполнение пакетов с помощью агента SQL Server (видеоматериал SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141772), в библиотеке MSDN.  
+-   Видео с руководством по [устранению неполадок с выполнением пакета с помощью агента SQL Server (видео об SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141772) в библиотеке MSDN.  
   
  После того как шаг задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] успешно запустил пакет, выполнение пакета может завершиться ошибкой или пакет может быть выполнен успешно, но с непредвиденными результатами. Для устранения таких неполадок можно использовать следующие средства.  
   
@@ -95,9 +95,9 @@ ms.locfileid: "53369936"
   
 -   Статья базы знаний [Пакет служб SSIS не выполняется при вызове пакета из шага задания агента SQL Server](https://support.microsoft.com/kb/918760)на веб-сайте [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
--   Видео, [Устранение неполадок: Выполнение пакетов с помощью агента SQL Server (видеоматериал SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141772), в библиотеке MSDN  
+-   Видео с руководством по [устранению неполадок с выполнением пакета с помощью агента SQL Server (видео об SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141772) в библиотеке MSDN.  
   
--   Видео, [как: Автоматизировать выполнение пакета с помощью агента SQL Server (видеоматериал SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771), в библиотеке MSDN  
+-   Видео с руководством по [ автоматизации выполнения пакета с помощью агента SQL Server (видео об SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771) в библиотеке MSDN.  
   
 -   Техническая статья [Checking SQL Server Agent jobs using Windows PowerShell (на английском языке)](https://go.microsoft.com/fwlink/?LinkId=165675)на сайте mssqltips.com  
   

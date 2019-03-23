@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dts.designer.resolvereferences.mapper.F1
 - sql12.dts.designer.resolvereferences.preview.F1
 ms.assetid: bb3ee33c-79c4-4c76-a82f-71581b4a60f1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d007e9bd3b4822cb09bdae8f3736bbd76f26009e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 63d14790e0690882dd23527d52d5de282637d2d3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771206"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386965"
 ---
 # <a name="resolve-column-reference-editor"></a>Редактор разрешения ссылок на столбцы
   Если входной путь отсоединен или если в нем присутствуют несопоставленные столбцы, напротив соответствующего пути данных будет отображен значок ошибки. Чтобы упростить разрешение ошибок ссылок на столбцы, новый редактор разрешения ссылок позволяет связывать несопоставленные входные и выходные столбцы для всех путей в дереве выполнения. Редактор разрешения ссылок также выделяет пути, чтобы указать, какие из них разрешаются в данный момент.  

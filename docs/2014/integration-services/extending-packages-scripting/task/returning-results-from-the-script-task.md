@@ -15,15 +15,15 @@ helpviewer_keywords:
 - TaskResult property
 - SSIS Script task, status information
 ms.assetid: ac06805b-c2db-44bd-af5c-5a0debe36dd7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d1bd490bb176ba1883786e2aa1c8cd16a3474d13
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 77839c8b9e937e180ad188bd8aadb9792a35dfa2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360396"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387772"
 ---
 # <a name="returning-results-from-the-script-task"></a>Возврат результатов из задачи «Скрипт»
   Задача «Скрипт» использует свойство <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A> и дополнительное свойство <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A> для возвращения сведений о состоянии в среду выполнения служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], которые могут быть использованы для определения пути рабочего процесса по завершении задачи «Скрипт».  
