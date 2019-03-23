@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 09ec22504cce0439d6d3f23360586fb0b41ee0c8
-ms.sourcegitcommit: f8fced37f3fe5c45b2b97219d378137afd68cf76
+ms.openlocfilehash: 3ab6f627c096326ce5c56828777bb9baf386e81a
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58198193"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356457"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "58198193"
 |error_id|**nvarchar(36)**|Уникальный идентификатор ошибку, связанную с запросом, если таковые имеются.|См. в разделе [sys.dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); значение NULL, если не возникло ошибок.|  
 |database_id|**int**|Идентификатор базы данных, используемой явный контекст (например, используйте DB_X).|См. в разделе с кодом в [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |command|**nvarchar(4000)**|Содержит полный текст запроса, предоставленных пользователю.|Любой допустимый текст, запроса или запроса. Запросы, в которых превышает 4 000 байт, усекаются.|  
-|resource_class|**nvarchar(20)**|Класс ресурсов для данного запроса. См. связанные **concurrency_slots_used** в [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  Дополнительные сведения о классах ресурсов см. в разделе [ресурсов классов и управление рабочими нагрузками](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |Статические классы ресурсов</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br></br>Динамические классы ресурсов</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
+|resource_class|**nvarchar(20)**|Класс ресурсов для данного запроса. См. связанные **concurrency_slots_used** в [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  Дополнительные сведения о классах ресурсов см. в разделе [ресурсов классов и управление рабочими нагрузками](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |Статические классы ресурсов</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Динамические классы ресурсов</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
 |важность (Предварительная версия для SQL DW Gen2)|**nvarchar(32)**|Отправлено важность запроса. Запросы с низким важности останется в очереди в приостановленном состоянии, если выше важности запросы отправляются.  Запросы с высокой важностью будет выполняться до нижней важность запросов, отправленных ранее.  Дополнительные сведения о важности, см. в разделе [важность рабочих нагрузок](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>low</br>below_normal</br>Норм.</br>above_normal</br>high|
   
  Сведения о максимальное число строк, которые хранятся в этом представлении см. в разделе «Минимальное и максимальное значения» в [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
