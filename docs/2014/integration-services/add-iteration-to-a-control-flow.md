@@ -15,15 +15,15 @@ helpviewer_keywords:
 - iterations [Integration Services]
 - For Loop containers
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4093d5ce5feb9a5498fbc6213e5c63cc8bf83536
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26c555b22ae219eeec9e0b1670f407c2504ac7f7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047845"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389252"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>Добавление итерации к потоку управления
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] включает в себя контейнер "Цикл по элементам" — элемент потока управления, который позволяет легко использовать циклы, в зависимости от определенных условий повторяющие поток управления в пакете. Дополнительные сведения см. в статье [For Loop Container](control-flow/for-loop-container.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "48047845"
   
  Контейнер «цикл по элементам» не добавляет новых функций, а только предоставляет структуру, в которой можно построить повторяемый поток управления. Чтобы контейнер заработал, необходимо включить в контейнер «цикл по элементам» как минимум одну задачу. Дополнительные сведения см. в разделе [Integration Services Tasks](control-flow/integration-services-tasks.md).  
   
- Контейнер «цикл по элементам» может включать поток управления с несколькими задачами и может содержать другие контейнеры. Добавление задач и контейнеров в контейнер «цикл по элементам» сходно с добавлением их к пакету, только перетаскивание происходит в контейнер «цикл по элементам», а не в пакет. Если контейнер «цикл по элементам» содержит более одной задачи или контейнера, их можно соединить с использованием объектов управления очередностью, как и в пакете. Дополнительные сведения см. в разделе [Precedence Constraints](control-flow/precedence-constraints.md).  
+ Контейнер «цикл по элементам» может включать поток управления с несколькими задачами и может содержать другие контейнеры. Добавление задач и контейнеров в контейнер «цикл по элементам» сходно с добавлением их к пакету, только перетаскивание происходит в контейнер «цикл по элементам», а не в пакет. Если контейнер «цикл по элементам» содержит более одной задачи или контейнера, их можно соединить с использованием объектов управления очередностью, как и в пакете. Дополнительные сведения см. в статье [Precedence Constraints](control-flow/precedence-constraints.md).  
   
 ## <a name="using-expressions-in-for-loop-configuration"></a>Использование выражений в конфигурации цикла по элементам  
  При конфигурировании контейнера «цикл по элементам» указанием условия выполнения, начального значения или присваиваемого значения можно использовать или константы, или выражения.  
@@ -58,7 +58,7 @@ ms.locfileid: "48047845"
 4.  Задайте параметры контейнера «цикл по элементам». Дополнительные сведения см. в разделе [Настройка контейнера "цикл по элементам"](../../2014/integration-services/configure-a-for-loop-container.md).  
   
 ## <a name="see-also"></a>См. также  
- [Добавление или удаление задачи или контейнера в поток управления](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [Добавление задачи или контейнера в поток управления или удалить их из него](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Группирование и разгруппирование компонентов](group-or-ungroup-components.md)   
  [Соединение задач и контейнеров с помощью элементов управления очередностью по умолчанию](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Добавление перечисления к потоку управления](../../2014/integration-services/add-enumeration-to-a-control-flow.md)   

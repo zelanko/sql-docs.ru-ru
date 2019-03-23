@@ -11,15 +11,15 @@ helpviewer_keywords:
 - deploying packages [Integration Services], deployment utility
 - deployment utility [Integration Services]
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe7bd725bc7fc9be7289c4834a3df8f44e36c41b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c725218ac66be169d59f2b32f42e156361b13a51
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102204"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392871"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   Первый шаг в развертывании пакетов — это создание программы развертывания для проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Программа развертывания — это папка, которая содержит файлы, требуемые для развертывания пакетов проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на другом сервере. Программа развертывания создается на компьютере, где хранится проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -50,7 +50,7 @@ ms.locfileid: "48102204"
   
 4.  Для обновления конфигураций пакета после развертывания пакетов установите **AllowConfigurationChanges** для `True`.  
   
-5.  Задайте `CreateDeploymentUtility` для `True`.  
+5.  Присвойте параметру `CreateDeploymentUtility` значение `True`.  
   
 6.  При необходимости обновите расположение программы развертывания посредством изменения свойства `DeploymentOutputPath`.  
   

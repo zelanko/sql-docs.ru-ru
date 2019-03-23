@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 62f9e015-6fe0-4396-ad90-3ad51bf00025
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6e87ebbf69eaaee40c42344a8334a0309300ddd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7be72475f5aa6db32b65d4a9f542cd9fe82756c0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203754"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393602"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>Редактор задачи «Запрос интеллектуального анализа данных» (вкладка «Вывод»)
   Используйте вкладку **Выход** окна **Редактор задачи «Запрос интеллектуального анализа данных»** , чтобы указать назначение прогнозирующего запроса.  
@@ -28,7 +28,7 @@ ms.locfileid: "48203754"
  Сведения об интеллектуальном анализе данных в пакетах см. в разделах [Задача "Запрос интеллектуального анализа данных"](control-flow/data-mining-query-task.md) и [Решения для интеллектуального анализа данных](../analysis-services/data-mining/data-mining-solutions.md).  
   
 ## <a name="general-options"></a>Общие параметры  
- **Название**  
+ **Name**  
  Задайте уникальное имя для задачи «Запрос интеллектуального анализа данных». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -51,9 +51,9 @@ ms.locfileid: "48203754"
  Укажите, должен ли прогнозирующий запрос перезаписывать содержимое целевой таблицы путем ее удаления и повторного создания.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задачи запроса интеллектуального анализа данных &#40;вкладка модели интеллектуального анализа данных&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [Редактор задачи запроса интеллектуального анализа данных &#40;запроса вкладку&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "Запрос интеллектуального анализа данных" (вкладка "Модель интеллектуального анализа данных")](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [Редактор задачи "Запрос интеллектуального анализа данных" (вкладка "Запрос")](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
  [Конструктор интеллектуального анализа данных](../analysis-services/data-mining/data-mining-designer.md)  
   
   

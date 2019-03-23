@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Destination Editor
 ms.assetid: 423e1654-54af-47c6-ab6f-98670534557d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73f175bc92c49423cd58bc65ce67712f916b1ab5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 506ed2c0f672d769d5ffb739b1f5109f7a19cf51
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229424"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383987"
 ---
 # <a name="sql-destination-editor-connection-manager-page"></a>Редактор назначения «SQL» (страница «Диспетчер соединений»)
   Страница **Диспетчер соединений** диалогового окна **Редактор назначения «SQL»** используется для задания сведений об источнике данных и для предварительного просмотра результатов. Назначение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] загружает данные в таблицы или представления в базе данных [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -47,9 +47,9 @@ ms.locfileid: "48229424"
  Просмотрите предварительные результаты, используя диалоговое окно **Предварительный просмотр результатов запроса** . В окне «Предварительный просмотр» может отображаться до 200 строк.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор назначения SQL &#40;страница «сопоставления»&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
- [Редактор назначения SQL &#40;страница "Дополнительно"&#41;](../../2014/integration-services/sql-destination-editor-advanced-page.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор назначения "SQL" (страница "Сопоставления")](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
+ [Редактор назначения SQL (страница "Дополнительно")](../../2014/integration-services/sql-destination-editor-advanced-page.md)   
  [Выполнение массовой загрузки данных с помощью назначения «SQL Server»](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

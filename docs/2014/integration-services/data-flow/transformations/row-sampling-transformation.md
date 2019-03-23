@@ -17,15 +17,15 @@ helpviewer_keywords:
 - packages [Integration Services], samples
 - datasets [Integration Services], sample
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b49cd9482fb54a3d292842cd174904078e3b1ab1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 954e8b2a2f36ccab1cff97174089560913291074
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805466"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391242"
 ---
 # <a name="row-sampling-transformation"></a>преобразование «Выборка строк»
   Преобразование «Выборка строк» используется для получения случайно выбранного подмножества входного набора данных. Можно указать точный размер получаемого образца и задать начальное значение для генератора случайных чисел.  

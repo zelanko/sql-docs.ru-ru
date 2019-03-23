@@ -13,15 +13,15 @@ helpviewer_keywords:
 - event handlers [Integration Services], variables
 - variables [Integration Services], system
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f0798b78aebb308d76585df0e5c7e6e9200e20b6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792319"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391262"
 ---
 # <a name="system-variables"></a>Системные переменные
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют набор системных переменных, в которые записываются данные о запуске пакета и его объектах. Эти переменные можно использовать в выражениях и в выражениях свойств для настройки пакетов, контейнеров, задач и обработчиков событий.  

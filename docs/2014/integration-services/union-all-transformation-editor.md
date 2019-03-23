@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Union All Transformation Editor
 ms.assetid: 32fbc1c1-da83-4684-9479-31fc3e2df98c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f34b73358bf9a268e4a2eef14f51800b0c9fea94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: def728a5b32970553d8bf639f58d4cfba96fc31e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138804"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391112"
 ---
 # <a name="union-all-transformation-editor"></a>редактор преобразования «Объединить все»
   Для объединения нескольких входных наборов строк в один выходной набор строк используется диалоговое окно **Редактор преобразования «Объединить все»** . Включив преобразование «Объединить все» в поток данных, можно осуществлять слияние данных из нескольких потоков данных, создавать сложные наборы данных путем вложения преобразований «Объединить все» и повторно объединять строки после исправления ошибок данных.  
@@ -38,9 +38,9 @@ ms.locfileid: "48138804"
  Выберите из списка доступных входных столбцов во втором и дополнительных входных параметрах. Метаданные сопоставляемых столбцов должны совпадать.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Объединение данных с помощью Union All Transformation](data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Выполнение слияния данных с помощью преобразования «Объединить все»](data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)   
  [Преобразование «Слияние»](data-flow/transformations/merge-transformation.md)   
- [Преобразование "Соединение слиянием"](data-flow/transformations/merge-join-transformation.md)  
+ [Преобразование «Соединение слиянием»](data-flow/transformations/merge-join-transformation.md)  
   
   

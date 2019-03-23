@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Model Training Editor
 ms.assetid: 098fbb1a-2a26-4288-9f68-d6233cb388ad
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 635e98ed9ad3f365f30f96653ad77a906ca0d81a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b88616b096557f0c27255669d4f5fab1f646f5f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201296"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390202"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>Редактор обучения модели интеллектуального анализа данных (вкладка «Соединение»)
   Страница **Соединение** диалогового окна **Редактор сценариев обучения модели интеллектуального анализа данных** позволяет выбрать обучаемую модель интеллектуального анализа данных.  
@@ -44,7 +44,7 @@ ms.locfileid: "48201296"
  Просмотр списка моделей интеллектуального анализа данных, связанных с выбранной структурой интеллектуального анализа данных.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор обучения модели интеллектуального анализа &#40;вкладка "столбцы"&#41;](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор обучения модели интеллектуального анализа данных (вкладка "Столбцы")](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
   
   

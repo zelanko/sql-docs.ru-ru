@@ -22,15 +22,15 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb9f243d05b741fcc803f29f5703c1e02a6244d3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1d0660fba12f2c83cd7e97b80ac863d8d05eda18
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353701"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380182"
 ---
 # <a name="dtutil-utility"></a>dtutil, программа
   Программа командной строки **dtutil** предназначена для управления пакетами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Программа может копировать, перемещать, удалять пакет или проверять его существование. Эти действия могут выполняться с любым из пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] , который хранится в любом из трех мест: база данных [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , хранилище пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] и файловая система. Если программа имеет доступ к пакету, хранимому в **msdb**, в командной строке может быть необходимо ввести имя пользователя и пароль. Если экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , в командной строке необходимо ввести и имя пользователя, и пароль. Если имя пользователя отсутствует, **dtutil** попытается войти на сервер [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , используя проверку подлинности Windows. Тип хранилища пакета определяется параметрами `/SQL`, `/FILE` и `/DTS`.  

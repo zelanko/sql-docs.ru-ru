@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Integration Services service, configuring
 - services [Integration Services], configuring
 ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d6b8ea946def4811332e6783e881e968c5a91f4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f6251ac85fe76d775fd84b6463d20532615d28c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193404"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375132"
 ---
 # <a name="manage-the-integration-services-service"></a>Управление службой Integration Services
     
@@ -29,17 +29,17 @@ ms.locfileid: "48193404"
  При установке компонента служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]также устанавливается служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . По умолчанию запускается служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и устанавливается ее автоматический запуск. Однако необходимо также установить среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , чтобы использовать эту службу для управления хранимыми и эксплуатируемыми пакетами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 > [!NOTE]  
->  Не удается подключиться к экземпляру [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] службы из [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] версии [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. То есть, в диалоговом окне **Соединение с сервером** нельзя вводить имя сервера, на котором работает только служба [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] версии [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Однако можно изменить файл конфигурации для этой службы и тем самым обеспечить управление пакетами, хранящимися на экземпляре [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] , из среды [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] версии [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Дополнительные сведения см. в разделе [Configuring the Integration Services Service &#40;SSIS Service&#41;](service/integration-services-service-ssis-service.md).  
+>  Не удается подключиться к экземпляру [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] службы из [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] версии [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. То есть, в диалоговом окне **Соединение с сервером** нельзя вводить имя сервера, на котором работает только служба [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] версии [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Однако можно изменить файл конфигурации для этой службы и тем самым обеспечить управление пакетами, хранящимися на экземпляре [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] , из среды [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] версии [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Дополнительные сведения см. в разделе [Настройка служб Integration Services (службы SSIS)](service/integration-services-service-ssis-service.md).  
   
  Предусмотрена возможность установить только единственный экземпляр службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на отдельном компьютере. Эта служба не относится к конкретному экземпляру компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]. Подключение к этой службе осуществляется с использованием имени компьютера, на котором она эксплуатируется.  
   
- Для управления службой [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] может применяться одна из следующих оснасток консоли управления (MMC): "Диспетчер конфигурации SQL Server" или "Службы". Прежде чем появится возможность управлять пакетами в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], необходимо убедиться, что служба запущена.  
+ Для управления службой [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] может применяться одна из следующих оснасток консоли управления (MMC): «Диспетчер конфигурации SQL Server» или «Службы». Прежде чем появится возможность управлять пакетами в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], необходимо убедиться, что служба запущена.  
   
- По умолчанию служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] настроена для управления пакетами в базе данных msdb экземпляра компонента [!INCLUDE[ssDE](../includes/ssde-md.md)], который установлен одновременно со службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Если экземпляр компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] не установлен в то же время, служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] будет настроена для управления пакетами базы данных msdb локального экземпляра по умолчанию компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]. Чтобы управлять пакетами, которые хранятся в именованном или удаленном экземпляре компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]либо в нескольких экземплярах компонента [!INCLUDE[ssDE](../includes/ssde-md.md)], необходимо изменить файл конфигурации для службы. Дополнительные сведения см. в разделе [Configuring the Integration Services Service &#40;SSIS Service&#41;](service/integration-services-service-ssis-service.md).  
+ По умолчанию служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] настроена для управления пакетами в базе данных msdb экземпляра компонента [!INCLUDE[ssDE](../includes/ssde-md.md)], который установлен одновременно со службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Если экземпляр компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] не установлен в то же время, служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] будет настроена для управления пакетами базы данных msdb локального экземпляра по умолчанию компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]. Чтобы управлять пакетами, которые хранятся в именованном или удаленном экземпляре компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]либо в нескольких экземплярах компонента [!INCLUDE[ssDE](../includes/ssde-md.md)], необходимо изменить файл конфигурации для службы. Дополнительные сведения см. в разделе [Настройка служб Integration Services (службы SSIS)](service/integration-services-service-ssis-service.md).  
   
  По умолчанию служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] настроена таким образом, чтобы прекращать выполнение пакетов по завершении работы службы. Однако служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] не ожидает прекращения выполнения пакетов, и некоторые пакеты могут продолжать выполняться по завершении работы службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
- Если работа службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] остановлена, можно продолжить выполнение пакетов с помощью мастера импорта и экспорта [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)], программы выполнения пакетов и программы командной строки **dtexec**(dtexec.exe). Однако контролировать выполнение пакетов невозможно.  
+ Если работа службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] остановлена, можно продолжить выполнение пакетов с помощью мастера импорта и экспорта [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , программы выполнения пакетов и программы командной строки **dtexec** (dtexec.exe). Однако контролировать выполнение пакетов невозможно.  
   
  По умолчанию служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] выполняется в контексте учетной записи NETWORK SERVICE.  
   
@@ -51,12 +51,12 @@ ms.locfileid: "48193404"
   
 ### <a name="to-view-service-events-for-integration-services-service"></a>Просмотр событий службы, относящихся к службе Integration Services  
   
--   [Просмотр событий службы Integration Services](../../2014/integration-services/view-events-for-the-integration-services-service.md)  
+-   [просмотреть события службы Integration Services](../../2014/integration-services/view-events-for-the-integration-services-service.md)  
   
 ## <a name="see-also"></a>См. также  
- [Службе Integration Services &#40;службы SSIS&#41;](service/integration-services-service-ssis-service.md)   
- [Настройка интеграции службы служб &#40;службы SSIS&#41;](configuring-the-integration-services-service-ssis-service.md)   
- [Мастер SQL Server импорта и экспорта](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
+ [Службы Integration Services (службы SSIS)](service/integration-services-service-ssis-service.md)   
+ [Настройка служб Integration Services (службы SSIS)](configuring-the-integration-services-service-ssis-service.md)   
+ [мастер импорта и экспорта SQL Server](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [Программа dtexec](packages/dtexec-utility.md)   
  [Запуск проектов и пакетов](packages/run-integration-services-ssis-packages.md)  
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - containers [Integration Services], Sequence
 - subset control flow [Integration Services]
 ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7c66b78b6e6e8af245b71994c92d505b3f85ef9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ec92f58f4dcd44fc39bfc34968a7883cb9c4cb4e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772976"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388282"
 ---
 # <a name="sequence-container"></a>контейнер последовательности
   Контейнер последовательности определяет поток управления, являющийся подмножеством потока управления пакета. Контейнер последовательности группирует пакет в несколько отдельных потоков управления, каждый из которых содержит одну или более задач и контейнеров, выполняющихся в общем потоке управления.  

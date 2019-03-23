@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.columns.f1
 ms.assetid: 8fa05dd4-316c-44ed-8383-e6e9ea1d3994
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e39bb53ab0333f11d916f24d7dff3a00b78a6dce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4237a49fe6c49078bf2ee8f1f1558092f9747ea
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150754"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380761"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>Редактор назначения ODBC (страница «Сопоставления»)
   Страница **Сопоставления** диалогового окна **Редактор назначения ODBC** используется для сопоставления входных столбцов с целевыми столбцами.  
@@ -40,7 +40,7 @@ ms.locfileid: "48150754"
  Просмотрите все доступные целевые столбцы, сопоставленные и несопоставленные.  
   
 ## <a name="see-also"></a>См. также  
- [Редактор назначения ODBC &#40;страницы диспетчера соединений&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
- [Редактор назначения ODBC &#40;странице вывода ошибок&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
+ [Редактор назначения ODBC (страница "Диспетчер соединений")](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
+ [Редактор назначения ODBC (страница "Вывод ошибок")](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   
   

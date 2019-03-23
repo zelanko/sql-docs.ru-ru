@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Add Variable dialog box
 ms.assetid: d09b5d31-433f-4f7c-8c68-9df3a97785d5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2e48c55f7aa303ed4f0842a48bd0796fef543221
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5bf8cce4fec8bb0156155d5e2cb3ef6d7a9ea5a8
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092217"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389952"
 ---
 # <a name="add-variable"></a>Добавить переменную
   Используйте диалоговое окно **Добавление переменной** , чтобы указать свойства новой переменной.  
@@ -45,7 +45,7 @@ ms.locfileid: "48092217"
  Выберите этот пункт, чтобы сделать переменную доступной только для чтения.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md)   
+ [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md)   
  [Типы данных служб Integration Services](data-flow/integration-services-data-types.md)   
  [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)  
   

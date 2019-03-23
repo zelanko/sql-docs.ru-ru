@@ -10,18 +10,18 @@ f1_keywords:
 - sql12.dts.designer.afpblobdest.f1
 - sql11.dts.designer.afpblobdest.f1
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f114f39d76a5ec764e9bab814123a668a522dbe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7e20e18f2e4395720c4e895d53c9a78a75d38dee
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756866"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391740"
 ---
 # <a name="azure-blob-destination"></a>Назначение больших двоичных объектов Azure
-  Компонент **Назначение больших двоичных объектов Azure** позволяет пакету SSIS записывать данные в BLOB-объект Azure. Ниже приведены поддерживаемые форматы файлов: CSV и AVRO. Перетащите компонент **назначение больших двоичных объектов Azure** в конструктор потока данных и дважды щелкните его, чтобы отобразить редактор).  
+  Компонент **Назначение больших двоичных объектов Azure** позволяет пакету SSIS записывать данные в BLOB-объект Azure. Поддерживаемые форматы файлов: CSV и AVRO. Перетащите компонент **назначение больших двоичных объектов Azure** в конструктор потока данных и дважды щелкните его, чтобы отобразить редактор).  
   
 1.  В поле **Диспетчер подключений службы хранилища Azure** укажите существующий диспетчер подключений службы хранилища Azure или создайте новый, который ссылается на учетную запись хранения Azure.  
   

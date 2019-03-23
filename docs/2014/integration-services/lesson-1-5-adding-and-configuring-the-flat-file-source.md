@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bfca1c78bdc0c11b3aac18bf6e6b0b2b0344b109
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 32b95a5d156ae52394b7128b024c86b9a7e308b1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815216"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392002"
 ---
 # <a name="step-5-adding-and-configuring-the-flat-file-source"></a>Шаг 5. Добавление и настройка источника неструктурированных файлов
   В этой задаче рассматривается добавление к пакету и настройка источника неструктурированных файлов. Источник неструктурированных файлов представляет собой компонент потока данных, использующий метаданные, определенные диспетчером соединений с  неструктурированными файлами для описания формата и структуры данных, извлекаемых из неструктурированного файла в процессе преобразования. Источник неструктурированных файлов можно настроить для получения данных из единичного неструктурированного файла путем определения формата этого файла, который предоставляется диспетчером соединений с неструктурированными файлами.  
@@ -47,6 +47,6 @@ ms.locfileid: "52815216"
   
 ## <a name="see-also"></a>См. также  
  [Источник «Неструктурированный файл»](data-flow/flat-file-source.md)   
- [Редактор диспетчера соединений с неструктурированными файлами (страница "Общие")](general-page-of-integration-services-designers-options.md)  
+ [Редактор диспетчера подключений к неструктурированным файлам (страница "Общие")](general-page-of-integration-services-designers-options.md)  
   
   

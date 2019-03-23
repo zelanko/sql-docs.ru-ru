@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Execute Process Task Editor
 ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 62cd98e586e5bd57f846b0203aa41c6a3efd50bb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 543ab9724f44e5db1f4532eeadcce79b36de52b5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530639"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374502"
 ---
 # <a name="execute-process-task-editor-process-page"></a>Редактор задачи «Выполнение процесса» (страница «Процесс»)
   Страница **Процесс** диалогового окна **Редактор задачи «Выполнение процесса»** позволяет настраивать параметры выполнения процесса. Эти параметры включают исполняемый объект, его расположение, аргументы командной строки и переменные для входных и выходных данных.  

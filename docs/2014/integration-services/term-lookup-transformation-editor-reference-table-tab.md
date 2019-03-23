@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: 86ccec6d-615b-4f84-9226-ff80d8012f17
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 69ab9ccde1d3f14a4cf3d28c856350aef4c80b56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b74ef55a8b957a7cc8503a56601162060d0749c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071669"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378054"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>Редактор преобразования «Уточняющий запрос терминов» (вкладка «Ссылочная таблица»)
   Вкладка **Ссылочная таблица** диалогового окна **Редактор преобразования "Уточняющий запрос термина"** используется для установки соединения со ссылочной таблицей (таблицей уточняющих запросов).  
@@ -40,10 +40,10 @@ ms.locfileid: "48071669"
  **Настройка вывода ошибок**  
  Используйте диалоговое окно [Настройка вывода ошибок](../../2014/integration-services/configure-error-output.md) для указания параметров обработки ошибок для строк, вызвавших ошибку.  
   
-## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор преобразования Уточняющий запрос термина &#40;вкладке Уточняющий запрос термина&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
- [Редактор преобразования Уточняющий запрос термина &#40;вкладка "Дополнительно"&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор преобразований "Уточняющий запрос термина" (вкладка "Уточняющий запрос термина")](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
+ [Редактор преобразования "Уточняющий запрос термина" (вкладка "Дополнительно")](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
  [Преобразование "Извлечение терминов"](data-flow/transformations/term-extraction-transformation.md)  
   
   

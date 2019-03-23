@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - File System Task Editor
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e6778bd585d84601d35846cafca3822a81a3bb60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b010d4c532db61d65fb312cdf9b02a1684332c3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208754"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377282"
 ---
 # <a name="file-system-task-editor-general-page"></a>Редактор задачи «Файловая система» (страница «Общие»)
   Используйте страницу **Общие** диалогового окна **Редактор задачи «Файловая система»** для настройки операции файловой системы, выполняемой задачей.  
@@ -49,7 +49,7 @@ ms.locfileid: "48208754"
  **OverwriteDestination**  
  Укажите, может ли операция перезаписывать файлы в каталоге назначения.  
   
- **Название**  
+ **Name**  
  Введите уникальное имя для задачи «Файловая система». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -70,8 +70,8 @@ ms.locfileid: "48208754"
 |**Удалить содержимое каталога**|Удалите содержимое каталога. При выборе этого значения отображаются динамические параметры для источника.|  
 |**Удалить файл**|Удалите файл. При выборе этого значения отображаются динамические параметры для источника.|  
 |**Переместить каталог**|Переместите каталог. При выборе этого значения отображаются динамические параметры для источника и места назначения.|  
-|**Переместить файл**|Переместите файл. При выборе этого значения отображаются динамические параметры для источника и места назначения.<br /><br /> Примечание: При перемещении файла, не включают имя файла в путь к каталогу, введенного в качестве места назначения.|  
-|**Переименовать файл**|Переименуйте файл. При выборе этого значения отображаются динамические параметры для источника и места назначения.<br /><br /> Примечание: При переименовании файла, включите новое имя файла в каталоге, укажите для назначения.|  
+|**Переместить файл**|Переместите файл. При выборе этого значения отображаются динамические параметры для источника и места назначения.<br /><br /> Примечание. При перемещении файла не включайте его имя в путь назначения.|  
+|**Переименовать файл**|Переименуйте файл. При выборе этого значения отображаются динамические параметры для источника и места назначения.<br /><br /> Примечание. При переименовании файла, включите новое имя файла в путь назначения.|  
 |**Задать атрибуты**|Задайте атрибуты файла или каталога. При выборе этого значения отображаются динамические параметры для источника и операции.|  
   
  `IsSourcePathVariable`  
@@ -88,13 +88,13 @@ ms.locfileid: "48208754"
  **DestinationVariable**  
  Выберите имя переменной в списке или щелкните \<**Создать переменную...**> для создания переменной.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md), [Добавление переменной](../../2014/integration-services/add-variable.md)  
+ **См. также:** [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [добавить переменную](../../2014/integration-services/add-variable.md)  
   
 ### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  `DestinationConnection`  
  Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="issourcepathvariable-dynamic-options"></a>Динамические параметры IsSourcePathVariable  
   
@@ -102,13 +102,13 @@ ms.locfileid: "48208754"
  **SourceVariable**  
  Выберите имя переменной в списке или щелкните \<**Создать переменную...**> для создания переменной.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md), [Добавление переменной](../../2014/integration-services/add-variable.md)  
+ **См. также:** [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [добавить переменную](../../2014/integration-services/add-variable.md)  
   
 ### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  `SourceConnection`  
  Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="operation-dynamic-options"></a>Динамические параметры операции  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48208754"
  Указывает, использует ли операция **Создать каталог** существующий каталог с указанным именем вместо создания нового каталога.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Страница "Выражения"](expressions/expressions-page.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Страница «Выражения»](expressions/expressions-page.md)  
   
   

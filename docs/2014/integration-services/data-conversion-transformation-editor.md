@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Conversion Transformation Editor
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73360a385cfe4c9f44dd2be5296c7d2144b3439d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad50b2ecf95daa7abb4c9aaef420b4dbfd14c8e7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129804"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376143"
 ---
 # <a name="data-conversion-transformation-editor"></a>редактор преобразования «Конвертация данных»
   Используйте диалоговое окно **Редактор преобразования «Конвертация данных»** , чтобы выбрать столбцы, подлежащие преобразованию, выбрать тип данных, в который должен быть преобразован столбец, и установить атрибуты преобразования.  
@@ -38,10 +38,10 @@ ms.locfileid: "48129804"
  Выберите столбцы, подлежащие преобразованию, из списка доступных входных столбцов. Выбранные пункты отражены набором установленных выше флажков.  
   
  **Псевдоним вывода**  
- Введите псевдоним для каждого нового столбца. По умолчанию используется `Copy of` за которым следует имя входного столбца, однако можно выбрать любое уникальное описательное имя.  
+ Введите псевдоним для каждого нового столбца. Значением по умолчанию является `Copy of`, за которым следует имя входного столбца, однако можно выбрать любое уникальное описательное имя.  
   
  **Тип данных**  
- Выберите доступный тип данных из списка. Дополнительные сведения см. в статье [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ Выберите доступный тип данных из списка. Дополнительные сведения см. в разделе [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
  **Длина**  
  Установите ширину столбца для строковых данных.  
@@ -59,7 +59,7 @@ ms.locfileid: "48129804"
  Укажите способ обработки ошибок уровня строк в диалоговом окне [Настройка вывода ошибок](../../2014/integration-services/configure-error-output.md) .  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Преобразование данных в другой тип данных с помощью преобразования "Конвертация данных"](data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Преобразование данных в другой тип данных с помощью преобразования «Конвертация данных»](data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)  
   
   

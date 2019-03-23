@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: ceaf172fc36ee92d15be326d4356061ea1674df1
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 5189d997e0408ead627556f5dc3a2b8f0c975fa3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58162200"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392722"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Использование записных книжек в Azure Data Studio
 
@@ -85,7 +85,7 @@ ms.locfileid: "58162200"
 
 |Ядра|Описание
 |:-----|:-----
-| Ядро SQL | Напишите код SQL для SQL Server.
+| Ядро SQL | Напишите код SQL, предназначенные для реляционной базы данных.
 |PySpark3 и ядро PySpark| Пишите код Python, используя Spark вычислений из кластера.
 |Ядро Spark|Напишите код для Scala и R с помощью Spark вычислений из кластера.
 |Ядро Python|Напишите код Python для локальной разработки.

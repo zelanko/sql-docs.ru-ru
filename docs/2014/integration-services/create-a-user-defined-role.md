@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: c4128993-2333-48c7-84b1-e51cdcea393d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac839255a5c065d312852de582607de4ae0c2949
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 255d805d9fa7a36203f6791da3b01d93174d4268
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199191"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392164"
 ---
 # <a name="create-a-user-defined-role"></a>Создание пользовательской роли
     
@@ -28,7 +28,7 @@ ms.locfileid: "48199191"
   
 3.  На панели инструментов обозревателя объектов нажмите кнопку **Соединить**и выберите **Компонент Database Engine**.  
   
-4.  В диалоговом окне **Соединение с сервером** введите имя сервера и выберите режим проверки подлинности. Можно использовать точку (.), (local), или `localhost` для указания локального сервера.  
+4.  В диалоговом окне **Соединение с сервером** введите имя сервера и выберите режим проверки подлинности. Для указания локального сервера можно использовать точку (.), (local) или `localhost`.  
   
 5.  Нажмите кнопку **Соединить**.  
   

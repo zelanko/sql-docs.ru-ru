@@ -12,15 +12,15 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - error outputs [Integration Services]
 ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 983d83c8724db0e517175f120b20a3f2ff197487
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e06ee3d9bdd3f987fb03701e56fdb5db133d0bc
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136964"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384192"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>Настройка вывода ошибок в компоненте потока данных
   Многие компоненты потока данных поддерживают вывод ошибок. Основываясь на компоненте, конструктор [!INCLUDE[ssIS](../includes/ssis-md.md)] предлагает различные пути настройки вывода ошибок. Кроме настройки вывода ошибок, можно также настроить его столбцы. Сюда входит настройка столбцов **ErrorCode** и **ErrorColumn** , добавляемых этим компонентом.  
@@ -36,7 +36,7 @@ ms.locfileid: "48136964"
   
 #### <a name="to-configure-an-error-output-using-the-configure-error-output-dialog-box"></a>Настройка вывода ошибок с помощью диалогового окна «Настроить вывод ошибок»  
   
-1.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
+1.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] откройте проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], содержащий необходимый пакет.  
   
 2.  Чтобы открыть пакет, дважды щелкните его в обозревателе решений.  
   

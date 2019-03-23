@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 058010d0e32fb26cf4c12e720342af04bd784768
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fd64fe5cad5f85c41830d25dce279ba09915626b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804786"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391532"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
   Эта процедура описывает управление операциями экземпляра CDC во время выполнения с помощью консоли конструктора CDC.  
@@ -40,11 +40,11 @@ ms.locfileid: "52804786"
   
     -   **Сброс**: Нажмите кнопку **Сброс** , чтобы перевести экземпляр CDC в первоначальное (пустое) состояние. Этот параметр доступен только тогда, когда экземпляр CDC остановлен. Все изменения в таблицах изменений, а также внутреннее состояние экземпляра CDC будут удалены. При последующем запуске экземпляра CDC отслеживание изменений начнется с этого момента и будет содержать только те транзакции, выполнение которых началось после запуска экземпляра CDC.  
   
-    -   **Удалить**: Удалить экземпляр CDC.  
+    -   **Удалить**. Удалить экземпляр CDC.  
   
     -   **Скрипт журналирования Oracle**: Нажмите кнопку **скрипт журналирования Oracle** для отображения Oracle диалоговое окно со вспомогательным скриптом журналирования Oracle. Сведения о том, что можно сделать в этом диалоговом окне, см. в разделе [Oracle Supplemental Logging Script](oracle-supplemental-logging-script.md).  
   
-         **Примечание**: При выполнении скриптов дополнительного журналирования открывается диалоговое окно «Учетные данные Oracle для выполнения скриптов», в которое необходимо ввести допустимые имя пользователя Oracle и пароль. Сведения об указании надлежащих учетных данных Oracle см. в разделе [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md).  
+         **Примечание.** При выполнении скриптов дополнительного журналирования открывается диалоговое окно «Учетные данные Oracle для выполнения скриптов», в которое необходимо ввести допустимые имя пользователя Oracle и пароль. Сведения об указании надлежащих учетных данных Oracle см. в разделе [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md).  
   
     -   **Развертывание экземпляра CDC**: Создать скрипт развертывания для экземпляра CDC. Сведения об этом диалоговом окне см. в разделе [CDC Instance Deployment Script](cdc-instance-deployment-script.md).  
   

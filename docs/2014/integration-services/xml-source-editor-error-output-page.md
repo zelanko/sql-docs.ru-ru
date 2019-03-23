@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: 2ddb97c2-1e43-478f-8872-b6efd41b931e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3126888e0e2d64d2091ace450c276881c408259b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8369b2cb34c6355d9957e2a41ed382b25b11f537
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111751"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389532"
 ---
 # <a name="xml-source-editor-error-output-page"></a>Редактор источника «XML» (страница «Вывод ошибок»)
   Используйте страницу **Вывод ошибок** диалогового окна **Редактор источника «XML»** для выбора параметров обработки ошибок и задания свойств выходных столбцов ошибок.  
@@ -52,9 +52,9 @@ ms.locfileid: "48111751"
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор источника XML &#40;страницы диспетчера соединений&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
- [Редактор источника XML &#40;страница "столбцы"&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор источника "XML" (страница "Диспетчер подключений")](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
+ [Редактор источника "XML" (страница "Столбцы")](../../2014/integration-services/xml-source-editor-columns-page.md)   
  [Извлечение данных с помощью XML-источника](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

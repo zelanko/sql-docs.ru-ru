@@ -12,15 +12,15 @@ helpviewer_keywords:
 - data flow components [Integration Services], synchronous and asynchronous
 - synchronous transformations [Integration Services]
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 334e8f064d3db60b0c1540ab0f5a173ec8c659cf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8d0ae065c411214a1b86aff29917a34cdcff0e0a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369136"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389832"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Основные сведения о синхронных и асинхронных преобразованиях
   Чтобы понять разницу между синхронным и асинхронным преобразованием в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], проще всего начать с основных сведений о синхронном преобразовании. Если синхронное преобразование соответствует требованиям пользователя, может потребоваться асинхронное преобразование.  

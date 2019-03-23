@@ -1,5 +1,5 @@
 ---
-title: Шаг 4. Добавление задачи потока данных в пакет | Документация Майкрософт
+title: Шаг 4. Добавление задачи потока данных в пакет | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 06c80bc188937ef66f72fef003a5f8c27830ad10
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 542b7e3ffcc4a1db5b2053c840b785f775384fe1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793946"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381192"
 ---
 # <a name="step-4-adding-a-data-flow-task-to-the-package"></a>Шаг 4. Добавление задачи потока данных в пакет
   После того как были созданы диспетчеры соединений для исходных и целевых данных, предстоит добавить в пакет задачу потока данных. Задача потока данных включает в себя подсистему обработки потока данных, которая осуществляет передачу данных между источниками и назначениями, а также преобразует, очищает и изменяет данные при их перемещении. В задаче потока данных сосредоточена большая часть работы в процессе извлечения, преобразования и загрузки.  

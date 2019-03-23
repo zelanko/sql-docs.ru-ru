@@ -12,21 +12,21 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins Task Edito
 ms.assetid: 738989b6-7ec0-432c-9cc1-714486124d20
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 54a2f38cee150a545562ca976ff83a2806b0b60a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 559347a0e092797732a4f3bffe424aac7dfe360f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084474"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377076"
 ---
 # <a name="transfer-logins-task-editor-general-page"></a>Редактор задачи «Передача имен входа» (страница «Общие»)
   Используйте страницу **Общие** диалогового окна **Редактор задачи «Передача имен входа»** , чтобы задать имя и описание для задачи «Передача имен входа». Дополнительные сведения об этой задаче см. в разделе [Transfer Logins Task](control-flow/transfer-logins-task.md).  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **Name**  
  Введите уникальное имя для задачи «Передача имен входа». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -36,9 +36,9 @@ ms.locfileid: "48084474"
  Введите описание для задачи «Передача имен входа».  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Задачи служб Integration Services](control-flow/integration-services-tasks.md)   
  [Редактор задачи "Передача имен входа" (страница "Имена входа")](../../2014/integration-services/transfer-logins-task-editor-logins-page.md)   
- [Страница "Выражения"](expressions/expressions-page.md)  
+ [Страница «Выражения»](expressions/expressions-page.md)  
   
   

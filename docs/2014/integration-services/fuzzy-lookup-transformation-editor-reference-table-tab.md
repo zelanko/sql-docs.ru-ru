@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Lookup Transformation Editor
 ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 37477215cbc13b17b903c58179d6ffa6026b35af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e2a9a349435c48c3f9c4a9ea4672ec52e83ce01d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057956"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380772"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Редактор преобразования «Нечеткий уточняющий запрос» (вкладка «Ссылочная таблица»)
   Вкладка **Ссылочная таблица** в диалоговом окне **Редактор преобразования «Нечеткий уточняющий запрос»** позволяет указать исходную таблицу и индекс поиска. Эталонный источник данных должен быть таблицей в базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -67,8 +67,8 @@ ms.locfileid: "48057956"
  Выберите из списка ранее созданный индекс уточняющего запроса.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор преобразования "Нечеткий уточняющий запрос" (вкладка "Столбцы")](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)   
- [Нечеткий уточняющий &#40;вкладка "Дополнительно"&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
+ [Редактор преобразования "Нечеткий уточняющий запрос" (вкладка "Дополнительно")](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
   

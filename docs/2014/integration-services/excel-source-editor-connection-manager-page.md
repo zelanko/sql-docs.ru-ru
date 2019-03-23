@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a247233157dbf83fe29089eff9c67442e00b8809
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1f2389946ac8780fb15fb5708138883ac0219369
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157734"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388071"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Редактор источника Excel (страница «Диспетчер соединений»)
   Используйте раздел **Диспетчер соединений** диалогового окна **Редактор источника «Excel»** , чтобы выбрать используемую рабочую книгу [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] . Источник Excel считывает данные из рабочего листа или из именованного диапазона в существующей рабочей книге.  
@@ -43,7 +43,7 @@ ms.locfileid: "48157734"
 |Значение|Описание|  
 |-----------|-----------------|  
 |Таблица или представление|Получение данных из электронной таблицы или именованного диапазона файла Excel.|  
-|Переменная, содержащая имя таблицы или представления|Укажите переменную, содержащую имя листа или диапазона.<br /><br /> **См. также:** [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)|  
+|Переменная, содержащая имя таблицы или представления|Укажите переменную, содержащую имя листа или диапазона.<br /><br /> **Дополнительные сведения:** [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)|  
 |Команда SQL|Получение данных из файла Excel с использованием SQL-запроса. Дополнительные сведения о синтаксисе запросов см. в разделе [Excel Source](data-flow/excel-source.md).|  
 |Команда SQL из переменной|Задайте текст SQL-запроса в переменную.|  
   
@@ -81,9 +81,9 @@ ms.locfileid: "48157734"
  Выберите переменную, содержащую текст SQL-запроса.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор источника «Excel» &#40;страница "столбцы"&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
- [Редактор источника «Excel» &#40;странице вывода ошибок&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор источника "Excel" (страница "Столбцы")](../../2014/integration-services/excel-source-editor-columns-page.md)   
+ [Редактор источника "Excel" (страница "Вывод ошибок")](../../2014/integration-services/excel-source-editor-error-output-page.md)   
  [Диспетчер подключений Excel](connection-manager/excel-connection-manager.md)   
  [Просмотр файлов и таблиц Excel с помощью контейнера «цикл по каждому элементу»](control-flow/foreach-loop-container.md)  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - counters [Integration Services]
 - logs [Integration Services], data flow counters
 ms.assetid: b500d166-33ba-4b82-a92d-b0a333924e8d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c59b8ece981452dd439a8d68d14e6b5553c19df8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9d22bbe58ac04786186a4b8cca7e51a61ea5b66e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132204"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379122"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>Добавление журнала для счетчиков производительности потока данных
   В этой процедуре описывается добавление журнала для счетчиков производительности, поставляемых подсистемой обработки потока данных.  
@@ -65,6 +65,6 @@ ms.locfileid: "48132204"
   
 ## <a name="see-also"></a>См. также  
  [Счетчики производительности](performance/performance-counters.md)   
- [Просмотр записей журнала в окне "Регистрация событий"](../../2014/integration-services/view-log-entries-in-the-log-events-window.md)  
+ [Просмотр записей журнала в окне «Регистрация событий»](../../2014/integration-services/view-log-entries-in-the-log-events-window.md)  
   
   

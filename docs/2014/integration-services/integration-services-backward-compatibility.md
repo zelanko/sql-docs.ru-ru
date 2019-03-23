@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Integration Services, backward compatibility
 - backward compatibility [Integration Services]
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5f49a3d44a3e13b6a95b78b695f39519ceea401f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 262a6404ced039e629aa7e507c211949dab7bad2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748866"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391282"
 ---
 # <a name="integration-services-backward-compatibility"></a>Обратная совместимость служб Reporting Services
   В этом разделе описаны различия между разными версиями служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Здесь рассмотрены функции, которые больше не доступны или запланированы к удалению в следующем выпуске. Кроме того, описываются внесенные в продукт изменения, которые могут вызвать изменения в поведении или привести к неработоспособности существующих приложений, использующих функции служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - datasets [Integration Services], normalized data
 - less normalized data set [Integration Services]
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4dd6e2b6fad2ea40c3a536b8b89eecbba441ecfd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4bf9e58296b70f29e3e328782b463ecbbf7f6aab
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771886"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376462"
 ---
 # <a name="pivot-transformation"></a>преобразование «Сведение»
   Преобразование «Сведение» делает нормализованный набор данных менее нормализованным, но более компактным, выполняя сведение входных данных по значению столбца. Например, нормализованный набор данных **Orders** , содержащий имя клиента, продукт и количество приобретенных единиц продукта, обычно содержит множество строк для клиента, купившего несколько наименований продуктов. Каждая строка содержит подробности о различных продуктах. Выполнив сведение набора данных по столбцу продукта, можно получить набор данных, который содержит по одной строке для каждого клиента. Каждая строка будет содержать все покупки одного клиента, причем наименования продуктов будут именами столбцов, а количество приобретенных единиц каждого продукта будет значением соответствующих столбцов. Так как не каждый клиент приобретает все виды продукции, многие столбцы могут содержать значения NULL.  

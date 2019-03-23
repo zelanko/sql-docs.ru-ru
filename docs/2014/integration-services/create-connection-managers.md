@@ -16,15 +16,15 @@ helpviewer_keywords:
 - connection managers [Integration Services], creating
 - SQL Server Integration Services packages, connections
 ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 807241aec9544c8a6366b8d12c0aaddb4b0d228a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef2ea7fa43556f0c4f12ee41101aedf396a23382
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074471"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374092"
 ---
 # <a name="create-connection-managers"></a>Создание диспетчеров соединений
   Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] включают набор диспетчеров соединений для соответствия нуждам задач, подключающихся к разным серверам и источникам данных. Диспетчеры соединений используются компонентами потока данных, которые извлекают и загружают данные в разные типы хранилищ данных, и поставщиками журналов, которые записывают журналы на сервер, в таблицу [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или в файл. Например, пакет с задачей «Отправка почты» использует тип диспетчера соединений SMTP, чтобы подключиться к SMTP-серверу. Пакет с заданием «Выполнение SQL» может использовать диспетчер соединений OLE DB, чтобы подключиться к базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Соединения в службах Integration Services (SSIS)](connection-manager/integration-services-ssis-connections.md).  
@@ -58,6 +58,6 @@ ms.locfileid: "48074471"
 ## <a name="see-also"></a>См. также  
  [Поток управления](control-flow/control-flow.md)   
  [Поток данных](data-flow/data-flow.md)   
- [Службы Integration Services &#40;SSIS&#41; обработчики событий](integration-services-ssis-event-handlers.md)  
+ [Обработчики событий в службах Integration Services (SSIS)](integration-services-ssis-event-handlers.md)  
   
   

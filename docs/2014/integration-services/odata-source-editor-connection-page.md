@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connection.f1
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 98ec9c8960696a2a933d9c2358d35df32c716999
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85ac46b918918f7e9dac715e11909ffeb9c46a29
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203974"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390477"
 ---
 # <a name="odata-source-editor-connection-page"></a>Редактор источника OData (страница «Подключение»)
   Страница **Диспетчер соединений** диалогового окна **Редактор источника OData** служит для выбора диспетчера соединений OData для источника. На этой странице также можно задать путь к коллекции или ресурсу, а также параметры запроса, чтобы указать, какие данные нужно получить из источника OData. Дополнительные сведения об источнике OData см. в разделе [OData Source](data-flow/odata-source.md).  
@@ -55,11 +55,11 @@ ms.locfileid: "48203974"
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>Использование пути к коллекции или ресурсу = путь к ресурсу  
  **Resource path**  
- Введите путь к ресурсу. Например: Employees  
+ Введите путь к ресурсу. Пример: Employees  
   
 ## <a name="see-also"></a>См. также  
- [Редактор источника OData &#40;страница "столбцы"&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
- [Редактор источника OData &#40;странице вывода ошибок&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
- [Диспетчер подключений OData](connection-manager/odata-connection-manager.md)  
+ [Редактор источника OData (страница "Столбцы")](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [Редактор источника OData (страница "Вывод ошибок")](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+ [OData Connection Manager](connection-manager/odata-connection-manager.md)  
   
   

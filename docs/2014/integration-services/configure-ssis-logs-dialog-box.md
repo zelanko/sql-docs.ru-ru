@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure SSIS Logs dialog box
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4730b52983c778fd71f778412552913d2ee6cbef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dbba1b7712bcbdccc821e419b3101065c3164913
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120572"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375221"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>Диалоговое окно «Конфигурация журналов служб SSIS»
   Используйте диалоговое окно **Настройка журналов служб SSIS** для настройки параметров ведения журнала для пакета.  
@@ -76,7 +76,7 @@ ms.locfileid: "48120572"
  **Configuration**  
  Выберите диспетчер подключений из списка или щелкните \<**Создать соединение...**>, чтобы создать его. В зависимости от типа регистратора можно настраивать диспетчер соединений OLE DB или диспетчер соединений файлов. Регистратору журнала событий [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows не требуется соединение.  
   
- См. также диспетчер [Диспетчер соединений OLE DB](connection-manager/ole-db-connection-manager.md) , [диспетчер подключения файлов](connection-manager/file-connection-manager.md)  
+ См. также: [Диспетчер соединений OLE DB](connection-manager/ole-db-connection-manager.md) диспетчере [диспетчер подключения файлов](connection-manager/file-connection-manager.md)  
   
  **Удаление**  
  Выберите регистратор и нажмите **Удалить**.  

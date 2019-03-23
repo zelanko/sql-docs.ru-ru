@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 463dd8395fd8cd4b696ef54c0a4b0523da0fadd8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9b5da9ff28dc658f870033a02fe88b14ea442c51
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360376"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391420"
 ---
 # <a name="bulk-insert-task"></a>задача «Массовая вставка»
   Задача «Массовая вставка» обеспечивает наиболее эффективный способ копирования больших объемов данных в таблицу или представление [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Предположим, что компания хранит список продуктов объемом в миллион строк в головном компьютере, но система электронной коммерции компании использует для заполнения веб-страниц сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Необходимо обновлять таблицу продуктов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по ночам в соответствии с главным списком продуктов, хранящимся в головном компьютере. Для обновления таблицы список продуктов сохраняется в формате с символами табуляции в качестве разделителей и используется задача «Массовая вставка» для копирования данных напрямую в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

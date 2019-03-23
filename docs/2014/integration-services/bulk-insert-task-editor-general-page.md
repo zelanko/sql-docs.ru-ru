@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b6eb576f-7a56-4fa0-a97c-5f7ab9d0f44d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1eff4034dfb3f7bf7120ec5976a398427d0cd207
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12f4cd15127d1b4adef4439d7d6081d8bcd15a97
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152774"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392653"
 ---
 # <a name="bulk-insert-task-editor-general-page"></a>Редактор задачи «Массовая вставка» (страница «Общие»)
   Страница **Общие** диалогового окна **Редактор задачи «Массовая вставка»** используется для наименования и описания задачи «Массовая вставка».  
@@ -38,10 +38,10 @@ ms.locfileid: "48152774"
  Введите описание задачи «Массовая вставка».  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Массовая вставка редактор задачи &#40;страница "подключения"&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
- [Массовая вставка редактор задачи &#40;страница параметров&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
- [Страница «выражения»](expressions/expressions-page.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "Массовая вставка" (страница "Соединение")](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
+ [Редактор задачи "Массовая вставка" (страница "Параметры")](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
+ [Страница «Выражения»](expressions/expressions-page.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [Поток управления](control-flow/control-flow.md)  
   

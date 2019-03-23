@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer SQL Server Objects Task Editor
 ms.assetid: dedd85df-8f6a-40a4-ba28-ca35cdfa3982
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c626f2bf1f1c886b432091636f37554720e9969c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa17cef1fddd5d131424dc645763683d59b75325
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142844"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375362"
 ---
 # <a name="transfer-sql-server-objects-task-editor-general-page"></a>Редактор задачи «Передача объектов SQL Server» (страница «Общие»)
   На странице **Общие** диалогового окна **Редактор задачи «Передача объектов SQL Server»** можно задать имя и описание задачи «Передача объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ». Дополнительные сведения об этой задаче см. в разделе [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "48142844"
 >  Пользователь, создающий задачу "Передача объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ", должен иметь необходимые разрешения на исходные объекты сервера, чтобы выбирать их для копирования, а также разрешения на доступ к базе данных целевого сервера, куда будут передаваться объекты.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **Name**  
  Введите уникальное имя задачи «Передача объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -39,9 +39,9 @@ ms.locfileid: "48142844"
  Введите описание для задачи «Передача объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ».  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Задачи служб Integration Services](control-flow/integration-services-tasks.md)   
  [Редактор задачи "Передача объектов SQL Server" (страница "Объекты")](../../2014/integration-services/transfer-sql-server-objects-task-editor-objects-page.md)   
- [Страница "Выражения"](expressions/expressions-page.md)  
+ [Страница «Выражения»](expressions/expressions-page.md)  
   
   

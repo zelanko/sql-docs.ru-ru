@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: b2f6866c-db07-4cb3-9f38-889f8d2b03e6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1bf6d22a2cbe6111f9cce1a3be446c507969ca82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 804431fea189d0dbe8e236591453571a5546cd5c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158424"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394502"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>Редактор источника «ODBC» (страница «Вывод ошибок»)
   Страница **Вывод ошибок** диалогового окна **Редактор источника ODBC** используется для выбора параметров обработки ошибок.  
@@ -70,7 +70,7 @@ ms.locfileid: "48158424"
  Строка, вызывающая ошибку или усечение, направляется на вывод ошибок источника ODBC. Дополнительные сведения см. в статье [ODBC Source](data-flow/odbc-source.md).  
   
 ## <a name="see-also"></a>См. также  
- [Редактор источника ODBC &#40;страницы диспетчера соединений&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
- [Редактор источника ODBC &#40;страница "столбцы"&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)  
+ [Редактор источника ODBC (страница "Диспетчер соединений")](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
+ [Редактор источника ODBC (страница "Столбцы")](../../2014/integration-services/odbc-source-editor-columns-page.md)  
   
   

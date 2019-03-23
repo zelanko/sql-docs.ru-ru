@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 04c63477a53de07777806aa8efb1fda78ef44264
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791106"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390480"
 ---
 # <a name="use-a-recordset-destination"></a>использовать назначение «Набор записей»
   Назначение «Набор записей» не сохраняет данные во внешнем источнике данных. Наоборот, назначение «Набор записей» сохраняет данные в памяти в наборе записей, который хранится в переменной пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], относящейся к типу данных `Object`. После сохранения данных назначением «Набор записей», как правило, используется контейнер «цикл по каждому элементу» с перечислителем ADO по каждой строке для обработки одной строки набора записей за раз. Перечислитель ADO по каждой строке сохраняет значение из каждого столбца текущей строки в отдельной переменной пакета. Затем настроенные в контейнере «цикл по каждому элементу» задания считывают эти значения из переменных и выполняют с ними ряд действий.  

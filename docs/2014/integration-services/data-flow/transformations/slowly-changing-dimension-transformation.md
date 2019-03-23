@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2fae586ee68a75127d5085b57f5f200498967d1d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 18c269bfa245135e95a101d725ed4a592889e7a4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352137"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388250"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>преобразование «Медленно изменяющееся измерение»
   Преобразование «Медленно изменяющееся измерение» согласует обновление и вставку записей в таблицы измерения хранилища данных. Например, это преобразование можно использовать для настройки выходов преобразования, которые вставляют и обновляют записи в таблице DimProduct базы данных [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] данными из таблицы Production.Products OLTP-базы данных.  

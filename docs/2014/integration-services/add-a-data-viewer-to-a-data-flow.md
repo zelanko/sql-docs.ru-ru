@@ -12,15 +12,15 @@ helpviewer_keywords:
 - data flow [Integration Services], data viewers
 - adding data viewers
 ms.assetid: 5e573274-a170-4132-bfc8-a8ff3a8411e4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ab1e8476a7ddb05ff129417ba0493aae90a12852
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40e4b4bdab9772f5af95de8f23053b4b060ffdcc
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059934"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382720"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>Добавление средства просмотра данных к потоку данных
   В данном разделе рассматриваются добавление средства просмотра данных к потоку данных и настройка этого средства. Средство просмотра данных отображает данные, перемещаемые между двумя компонентами потока данных. Например, средство просмотра данных может отображать данные, извлеченные из источника данных до того, как преобразование в потоке данных изменит данные.  

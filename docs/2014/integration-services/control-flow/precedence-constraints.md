@@ -14,15 +14,15 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d4376967ea1d21e1022a21b9df836e1be3d66858
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: da27e10af2a5483583976a13e54bf9087c20e9b2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349665"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394482"
 ---
 # <a name="precedence-constraints"></a>Управление очередностью
   Элементы управления очередностью связывает исполняемые объекты, контейнеры и задачи в пакетах в поток управления и задают условия, которые определяют, выполняются ли исполняемые объекты. В качестве исполняемого объекта могут быть контейнеры «цикл по элементам» и «цикл по каждому элементу», контейнеры последовательности, задача или обработчик события. Обработчики событий также используют управление очередностью для связывания своих исполняемых объектов в поток управления.  

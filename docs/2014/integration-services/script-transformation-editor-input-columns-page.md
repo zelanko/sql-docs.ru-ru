@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: d6e4ce84-3335-48e6-82d3-1c359ed87f63
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d467606c562b0fd9b5f1176ecbe14322aa634a24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b71f12c9f36f74799c47538b30a058b529fdfa6d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164894"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391712"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>Редактор преобразования «Скрипт» (страница «Входные столбцы»)
   Страница **Входные столбцы** диалогового окна **Редактор преобразования «Скрипт»** используется для установки свойств входных столбцов.  
@@ -47,11 +47,11 @@ ms.locfileid: "48164894"
  Указывает, будет ли преобразование «Скрипт» рассматривать каждый столбец как `ReadOnly` или `ReadWrite`.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Выбор типа компонента скрипта](../../2014/integration-services/select-script-component-type.md)   
- [Редактор преобразования "скрипт" &#40;входных и выходных данных страницы&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [Редактор преобразования "скрипт" &#40;страница "сценарий"&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
- [Редактор преобразования "скрипт" &#40;страница «Диспетчеры соединений»&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [Редактор преобразования "Скрипт" (страница "Входы и выходы")](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [Редактор преобразования "Скрипт" (страница "Скрипт")](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [Редактор преобразования "Скрипт" (страница "Диспетчеры соединений")](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [Дополнительные примеры компонента скрипта](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

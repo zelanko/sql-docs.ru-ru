@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a7aed741e639fe76fe1565c10e203e0871929863
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3dec5abe4cee6165b0bf9cecb99e26552b5854b3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123886"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374652"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>Редактор диспетчера соединений с неструктурированными файлами (страница «Столбцы»)
   Страница **Столбцы** диалогового окна **Редактор диспетчера соединений с неструктурированными файлами** используется для задания данных о строках и столбцах и для предварительного просмотра файла.  
@@ -116,9 +116,9 @@ ms.locfileid: "48123886"
  При нажатии кнопки **Сбросить столбцы**удаляются все столбцы, кроме исходных.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор диспетчера соединений с неструктурированными &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
- [Редактор диспетчера соединений с неструктурированными &#40;страница "Дополнительно"&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
- [Редактор диспетчера подключений к неструктурированным файлам (страница "Предварительный просмотр")](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор диспетчера подключений с неструктурированными файлами (страница "Общие")](general-page-of-integration-services-designers-options.md)   
+ [Редактор диспетчера подключений с неструктурированными файлами (страница "Дополнительно")](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
+ [Редактор диспетчера подключений с неструктурированными файлами (страница "Предварительный просмотр")](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
   
   

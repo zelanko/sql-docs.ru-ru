@@ -12,15 +12,15 @@ helpviewer_keywords:
 - mapping result sets to variables [Integration Services]
 - variables [Integration Services], mapping result sets to
 ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a166c760ecb3dafabbfaa8e131f1a8948429dc61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c6114fac83862198b37647f6350d657df878ca5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069664"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379641"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Сопоставление результирующих наборов с переменными в задаче "Выполнение SQL"
   В этом разделе описывается создание сопоставления между результирующими наборами и переменной в задаче «Выполнение SQL». Сопоставление между результирующим набором и переменной делает результирующий набор доступным для других элементов пакета. Например, скрипт в задаче «Скрипт» может считать переменную, а потом использовать значения из результирующего набора, или источник XML может использовать результирующий набор, сохраненный в переменной. Если результирующий набор создан родительским пакетом, его можно сделать доступным дочернему пакету, вызываемому задачей «Выполнение пакета», сопоставив результирующий набор с переменной в родительском пакете, а затем для хранения значения родительской переменной создав конфигурацию переменных родительского пакета в дочернем пакете.  
@@ -67,6 +67,6 @@ ms.locfileid: "48069664"
  [Конфигурации пакетов](../../2014/integration-services/package-configurations.md)   
  [Создание конфигурации пакетов](../../2014/integration-services/create-package-configurations.md)   
  [Используйте значения переменных и параметров в дочернем пакете](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
- [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md)  
+ [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md)  
   
   

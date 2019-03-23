@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 87118281-6e3c-499e-bac4-fa4c24bb12c6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ce44e2709013a6d56d47ad30c90ecf5d92825503
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea6582aacefc7c17450e59689bec29c260a38d07
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185334"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385042"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>Редактор преобразования «Извлечение терминов» (вкладка «Дополнительно»)
   Вкладка **Дополнительно** диалогового окна **Редактор преобразования «Извлечение терминов»** используется для задания свойств извлечения, таких как частота, длина и предмет извлечения (слова или фразы).  
@@ -41,7 +41,7 @@ ms.locfileid: "48185334"
  Указывает, что целевой функцией является частота термина.  
   
  **TFIDF**  
- Указывает, что целевой функцией является значение TFIDF термина. Функция TFIDF расшифровывается как "частота термина и обратная частота документа" (Term Frequency and Inverse Document Frequency) и определяется формулой: TFIDF термина T = (частота_T) * log (#число_строк_во_входных_данных) / (#число_строк_включающих_T)  
+ Указывает, что целевой функцией является значение TFIDF термина. Функция TFIDF расшифровывается как «частота термина и обратная частота документа» (Term Frequency and Inverse Document Frequency) и определяется формулой: TFIDF термина T = (частота_T) * log( (#число_строк_во_входных_данных) / (#число_строк_включающих_T)   
   
  **Порог частоты**  
  Позволяет задать число вхождений слова или фразы, необходимое для их извлечения. Значение по умолчанию — 2.  
@@ -50,15 +50,15 @@ ms.locfileid: "48185334"
  Позволяет задать максимальную длину фразы или слова. Этот параметр затрагивает только субстантивные словосочетания. Значение по умолчанию — 12.  
   
  **Учитывать регистр при извлечении терминов**  
- Указывает, будет ли учитываться регистр при извлечении. Значение по умолчанию — `False`.  
+ Указывает, будет ли учитываться регистр при извлечении. Значение по умолчанию — `False`.  
   
  **Настройка вывода ошибок**  
  Используйте диалоговое окно [Настройка вывода ошибок](../../2014/integration-services/configure-error-output.md) для указания метода обработки ошибок для строк, вызвавших ошибку.  
   
-## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор преобразования извлечения терминов &#40;вкладке извлечения терминов&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
- [Редактор преобразования извлечения терминов &#40;вкладка "исключение"&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
- [Преобразование "Уточняющий запрос термина"](data-flow/transformations/lookup-transformation.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор преобразования "Извлечение терминов" (вкладка "Извлечение терминов")](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
+ [Редактор преобразования "Извлечение терминов" (вкладка "Исключение")](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
+ [Преобразование «Уточняющий запрос термина»](data-flow/transformations/lookup-transformation.md)  
   
   

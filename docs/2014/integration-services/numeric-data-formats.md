@@ -13,21 +13,21 @@ helpviewer_keywords:
 - locale-sensitive parsing [Integration Services]
 - fast parse [Integration Services]
 ms.assetid: fa3975ce-9d21-408a-857d-f85e30af27b0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 92dc9782a00a55a9409bd5e87dd00a423002d200
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a89b37f2210b2a80d22747a816e4f937cbc54ee1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105444"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375642"
 ---
 # <a name="numeric-data-formats"></a>Форматы числовых данных
   Быстрый синтаксический анализ предоставляет набор простых, не зависящих от локалей процедур синтаксического анализа данных. Он поддерживает только ограниченный набор форматов числовых типов данных.  
   
 ## <a name="integer-data-types"></a>Целочисленные типы данных  
- Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют следующие целочисленные типы данных: DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 и DT_UI8. Дополнительные сведения см. в статье [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют следующие целочисленные типы данных: DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 и DT_UI8. Дополнительные сведения см. в разделе [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
  Быстрый синтаксический анализ поддерживает следующие форматы целочисленных типов данных:  
   

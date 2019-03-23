@@ -13,25 +13,25 @@ helpviewer_keywords:
 - security [Integration Services],protection levels
 - protection level for packages [Integration Services]
 ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 766a0c03bc47527d27fec6e50f2525284a6bdd0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e700eed316e9dce3e5d87f6014913505376f535f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204154"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388112"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>Установка и изменение уровня защиты пакетов
   Для управления доступом к содержимому пакетов и конфиденциальным данным в них, таким как пароли, необходимо задать значение свойства `ProtectionLevel`. Пакеты, которые содержатся в проекте, должны обладать тем же уровнем защиты, что и сам проект. Это необходимо для создания проекта. При изменении настройки свойства `ProtectionLevel` в проекте потребуется вручную обновить настройку свойства для пакетов.  
   
  Сведения о том, как определить `ProtectionLevel` параметры, подходящие для пакетов на различных этапах жизненного цикла пакета, см. в разделе [контроль доступа для конфиденциальных данных в пакетах](security/access-control-for-sensitive-data-in-packages.md). Общие сведения о средствах безопасности в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] см. в разделе [Общие сведения о безопасности (службы Integration Services)](security/security-overview-integration-services.md).  
   
- В этом разделе описано, как использовать [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] или средства командной dtutil для изменения `ProtectionLevel` свойство.  
+ В приведенной в данном разделе процедуре описано использование [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] или средства командной dtutil для изменения свойства `ProtectionLevel`.  
   
 > [!NOTE]  
->  Помимо процедуры, описанные в этом разделе, обычно можно задать или изменить `ProtectionLevel` свойство пакета при импорте или экспорте пакета. Если сохранение пакета производится с помощью мастера импорта и экспорта [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], то можно также изменить свойство `ProtectionLevel`.  
+>  В дополнение к приведенной в этом разделе процедуре можно, как правило, задать или изменить свойство пакета `ProtectionLevel` при импорте или экспорте пакета. Если сохранение пакета производится с помощью мастера импорта и экспорта [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], то можно также изменить свойство `ProtectionLevel`.  
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>Установка или изменение уровня защиты пакета в SQL Server Data Tools  
   
@@ -57,13 +57,13 @@ ms.locfileid: "48204154"
   
 3.  Откройте окно командной строки.  
   
-4.  В командной строке перейдите к папке, содержащей пакет или пакеты, для которых требуется задать `ProtectionLevel` свойства.  
+4.  В командной строке перейдите к папке с пакетом или пакетами, для которых требуется задать свойство `ProtectionLevel`.  
   
      В примерах синтаксиса в следующем шаге предполагается, что эта папка является текущей папкой.  
   
 5.  Установите или измените уровень защиты пакета или пакетов при помощи команды, подобно показанной в одном из следующих примеров.  
   
-    -   Следующая команда задает `ProtectionLevel` свойства отдельного пакета в файловой системе равным уровню 2 – «Шифровать конфиденциальные данные паролем», с паролем «strongpassword»:  
+    -   Следующая команда задает свойство `ProtectionLevel` отдельного пакета в файловой системе равным уровню 2 – «Шифровать конфиденциальные данные паролем» с паролем «strongpassword»:  
   
          `dtutil.exe /file "C:\Package.dtsx" /encrypt file;"C:\Package.dtsx";2;strongpassword`  
   
@@ -74,6 +74,6 @@ ms.locfileid: "48204154"
          Если подобную команду использовать в пакетном файле, то в него необходимо включить заполнитель «%f» в виде «%%f».  
   
 ## <a name="see-also"></a>См. также  
- [Программа dtutil](dtutil-utility.md)  
+ [dtutil Utility](dtutil-utility.md)  
   
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.erroroutput.f1
 ms.assetid: 4dd9d129-a95c-4d3a-bbbf-e84a39089950
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9440400dde3605bbd60049290bc6546eb47ea3e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d033401c87b2cd4e9fe7047ab7a19f474a3ae156
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191264"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388702"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>Редактор источника данных «ADO.NET» (страница «Вывод ошибок»)
   Страница **Вывод ошибок** диалогового окна **Редактор источника «ADO.NET»** используется для выбора параметров обработки ошибок, а также для установки свойств выходных столбцов ошибок.  
@@ -58,8 +58,8 @@ ms.locfileid: "48191264"
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
 ## <a name="see-also"></a>См. также  
- [Редактор источника «ado.net» &#40;страницы диспетчера соединений&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [Редактор источника «ado.net» &#40;страница "столбцы"&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+ [Редактор источника "ADO.NET" (страница "Диспетчер подключений")](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
+ [Редактор источника "ADO.NET" (страница "Столбцы")](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
  [Диспетчер подключений ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

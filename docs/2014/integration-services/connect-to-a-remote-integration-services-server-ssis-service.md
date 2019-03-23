@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Integration Services service, remote instance
 - service [Integration Services], connecting
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eff4eb190c8225cf1d45f184515ccc5244a3a7ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d2e64744ea39296d16fbe88ad20993e8909988d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222774"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375282"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>Подключение к удаленному серверу служб Integration Services (службы SSIS Service)
     
@@ -31,13 +31,13 @@ ms.locfileid: "48222774"
  Соединение с экземпляром служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на удаленном сервере из среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] или другого управляющего приложения требует определенного набора прав на сервере для пользователей этого приложения.  
   
 > [!IMPORTANT] 
-> Чтобы управлять пакетами, которые хранятся на удаленном сервере, не нужно соединятся с экземпляром службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на этом удаленном сервере. Вместо этого измените файл конфигурации для службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] таким образом, чтобы среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] отображала пакеты, хранимые на удаленном сервере. Дополнительные сведения см. в разделе [Configuring the Integration Services Service &#40;SSIS Service&#41;](service/integration-services-service-ssis-service.md).  
+> Чтобы управлять пакетами, которые хранятся на удаленном сервере, не нужно соединятся с экземпляром службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на этом удаленном сервере. Вместо этого измените файл конфигурации для службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] таким образом, чтобы среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] отображала пакеты, хранимые на удаленном сервере. Дополнительные сведения см. в разделе [Настройка служб Integration Services (службы SSIS)](service/integration-services-service-ssis-service.md).  
   
 ## <a name="connecting-to-integration-services-on-a-remote-server"></a>Подключение к службам Integration Services на удаленном сервере  
   
 #### <a name="to-connect-to-integration-services-on-a-remote-server"></a>Подключение к службам Integration Services на удаленном сервере  
   
-1.  Откройте [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Откройте среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  В меню **Файл**выберите пункт **Подключить к обозревателю объектов** , чтобы вывести диалоговое окно **Подключение к серверу** .  
   

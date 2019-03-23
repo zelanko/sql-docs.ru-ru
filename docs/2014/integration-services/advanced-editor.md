@@ -13,22 +13,22 @@ f1_keywords:
 - sql12.dts.designer.advancededitor.componentproperties.f1
 - sql12.dts.designer.advancededitor.connections.f1
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43cf4ea4b228226bb12be8a47befd6f55513c40d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fe860a52cb847aec473763c02f24348701766478
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756796"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387182"
 ---
 # <a name="advanced-editor"></a>Расширенный редактор
   Используйте диалоговое окно **Расширенный редактор** для настройки свойств компонентов для выбранного объекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  **Расширенный редактор** доступен для большинства объектов служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] с настраиваемыми свойствами. Это единственный редактор, доступный для объектов, не показывающих настраиваемый пользовательский интерфейс.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] обладают свойствами, которые могут быть заданы на уровне компонентов, на уровне ввода и вывода и на уровне входных и выходных столбцов. **Расширенный редактор** перечисляет все общие и пользовательские свойства выбранного объекта и показывает их на одной-четырех вкладках из пяти следующих вкладок:  
+ Объекты потока данных [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] обладают свойствами, которые могут быть заданы на уровне компонентов, на уровне ввода и вывода и на уровне входных и выходных столбцов. **Расширенный редактор** перечисляет все общие и пользовательские свойства выбранного объекта и показывает их на одной-четырех вкладках из пяти следующих вкладок:  
   
 -   **Диспетчеры соединений** — эта вкладка используется для настройки свойств подключения.  
   

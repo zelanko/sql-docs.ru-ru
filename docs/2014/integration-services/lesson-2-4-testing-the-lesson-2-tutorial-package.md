@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5fd9233061b51da56b036526c3cac55c96a4e7fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1a9b8361c83201fa2e3c6aa0c6a091e09f7c12f3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802846"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385922"
 ---
 # <a name="step-4-testing-the-lesson-2-tutorial-package"></a>Шаг 4. Проверка учебного пакета, созданного на занятии 2
   Используя настроенный контейнер «цикл по каждому элементу» и диспетчер соединений с неструктурированными файлами, можно в пакете, созданном на занятии 2, поочередно обрабатывать коллекцию из 14 неструктурированных файлов в папке образцов данных. Каждый раз при обнаружении имени файла, отвечающего указанным критериям имен файлов, в контейнере «цикл по каждому элементу» это имя подставляется в определенную пользователем переменную. В переменной, в свою очередь, обновляется свойство ConnectionString диспетчера соединений с неструктурированными файлами, после чего выполняется соединение с новым неструктурированным файлом. Затем в контейнере «цикл по каждому элементу» выполняется задача неизмененного потока данных по данным нового неструктурированного файла, после чего устанавливается соединение со следующим файлом в папке.  
@@ -45,7 +45,7 @@ ms.locfileid: "52802846"
 2.  После окончания работы пакета выберите в меню **Отладка** пункт **Остановить отладку**.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 5. Добавление конфигураций пакетов в модель развертывания пакетов](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+ [Занятие 5. Добавление конфигураций пакетов в модель развертывания пакетов](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
   
 ## <a name="see-also"></a>См. также  
  [Запуск проектов и пакетов](packages/run-integration-services-ssis-packages.md)  

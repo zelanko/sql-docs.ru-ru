@@ -10,15 +10,15 @@ helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6a65ec13f342dc890511e7b99258a41456cd989b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 391bf9204beeb6222a6e736125e5630bd5b1565e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362396"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375884"
 ---
 # <a name="change-data-capture-ssis"></a>Система отслеживания измененных данных (SSIS)
   В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]система отслеживания измененных данных предоставляет эффективное решение для проблемы проведения добавочных загрузок из исходных таблиц в киоски и хранилища данных.  
@@ -61,14 +61,14 @@ ms.locfileid: "53362396"
   
      **Дополнительные сведения см. в следующих разделах:**  [Подготовка к запросу информации об изменениях данных](prepare-to-query-for-the-change-data.md)  
   
- **Шаг 2. Настройка запроса информации об изменениях**  
+ **Шаг 2. Настройка запроса для получения информации об изменениях**  
  Создайте возвращающую табличное значение функцию, которая будет запрашивать данные.  
   
  Для разработки и сохранения запроса используйте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
  **Дополнительные сведения см. в следующих разделах:**  [Получение и интерпретация информации об изменениях данных](retrieve-and-understand-the-change-data.md)  
   
- **Шаг 3. Конструирование потока данных**  
+ **Шаг 3. Проектирование потока данных**  
  В потоке данных пакета необходимо определить следующие задачи.  
   
 -   Получение измененных данных из таблиц изменений.  

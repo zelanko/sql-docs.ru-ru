@@ -15,15 +15,15 @@ helpviewer_keywords:
 - combining constraints
 - expressions [Integration Services], constraints
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fee423c1000d2be7ebc70f2cfb40e3d83ba24150
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f06bd12161065c6961581a2a29a2c02af6e27dcb
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370986"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377352"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>Добавление выражений к элементам управления очередностью
   Элементы управления очередностью могут использовать выражение для определения зависимости между двумя исполняемыми объектами: приоритетным исполняемым объектом и исполняемым объектом с ограничением. Исполняемыми объектами могут быть задачи или контейнеры. Выражение может быть использовано само по себе или в сочетании с результатом выполнения приоритетного исполняемого объекта. Выполнение любого исполняемого объекта может закончиться успешно или со сбоем. При настройке результата выполнения управления очередностью доступны варианты `Success`, `Failure` или `Completion`. Для варианта `Success` требуется успешное выполнение ограничивающего исполняемого объекта, для `Failure` — его неудачное выполнение, а `Completion` означает, что ограничивающий исполняемый объект должен запускаться независимо от успешности выполнения приоритетной задачи. Дополнительные сведения см. в статье [Precedence Constraints](control-flow/precedence-constraints.md).  

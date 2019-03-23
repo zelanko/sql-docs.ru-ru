@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d22be3bc8d99edd5d8b799e4121e2a591977b255
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767233"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389002"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Параметры запроса профиля шаблона столбцов (задача «Профилирование данных»)
   Для установки параметров режима **Запрос профиля шаблона столбца** , выделенного в панели запросов, используется панель **Свойства запроса** страницы **Запросы профиля** . Профиль шаблона столбцов описывает набор регулярных выражений, которые покрывают указанный процент значений в строковом столбце. Этот профиль может помочь выявить проблемы в данных, например недопустимые строки, а также предложить регулярные выражения, которые можно использовать в будущем для проверки новых данных. Так, профиль шаблона столбца почтовых индексов США может дать регулярные выражения \d{5}-\d{4}, \d{5} и \d{9}. Если имеются другие регулярные выражения, то вероятно, что данные содержат недопустимые или представленные в неверном формате значения.  

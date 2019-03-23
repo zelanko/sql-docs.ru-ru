@@ -13,15 +13,15 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f2a8dba54a8e638da5777456341321d38abbb01f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2a9d7fe2f1f65f0a698e727e5bad6df392c91546
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352321"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376245"
 ---
 # <a name="integration-services-ssis-expressions"></a>Выражения служб Integration Services (SSIS)
   Выражение — это сочетание символов (идентификаторов, литералов, функций и операторов), которое дает одно значение данных. Простые выражения могут включать одну константу, переменную или функцию. Чаще встречаются сложные выражения, включающие несколько операторов и функций и ссылающиеся на несколько столбцов и переменных. В службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]выражения могут использоваться для определения условий в инструкциях CASE, создания и обновления значений в столбцах данных, присвоения значений переменным, обновления или заполнения свойств во время выполнения, определения ограничений в управлении очередностью и указания выражений, используемых контейнером «цикл по элементам».  

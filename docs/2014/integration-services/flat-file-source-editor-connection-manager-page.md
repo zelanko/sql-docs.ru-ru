@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5ff623b3a360cf1a77962135fe288e03b3b83d2d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e486f089ca261cbe5ea09cf7c9d38bc8fcdedbc9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147184"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379740"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>Редактор источника «Неструктурированный файл» (страница «Диспетчер соединений»)
   Для выбора диспетчера соединений, который будет использоваться источником «Неструктурированный файл», используется страница **Диспетчер соединений** диалогового окна **Редактор источника «Неструктурированный файл»** . Источник «Неструктурированный файл» считывает данные из текстового файла, который может содержать разделители, поля фиксированной ширины или иметь смешанный формат.  
@@ -41,15 +41,15 @@ ms.locfileid: "48147184"
  Создайте новый диспетчер соединений с помощью диалогового окна **Редактор диспетчера соединений с неструктурированными файлами** .  
   
  **Оставлять значения NULL из источника в потоке данных**  
- Укажите, нужно ли сохранять значения NULL при извлечении данных. Значение по умолчанию этого свойства равно **false**. Если это значение равно f`alse`, источник неструктурированных файлов заменяет значения null из данных источника соответствующими значениями по умолчанию для каждого столбца, например пустыми строками для строковых столбцов и нулями для числовых столбцов.  
+ Укажите, нужно ли сохранять значения NULL при извлечении данных. Значение по умолчанию этого свойства равно **false**. Когда значение равно f`alse`, источник неструктурированных файлов заменяет значения NULL из данных источника соответствующими значениями по умолчанию для каждого столбца, например пустыми строками для строковых столбцов и нулями для числовых столбцов.  
   
  **Предварительный просмотр**  
  Осуществляйте предварительный просмотр результатов в диалоговом окне **Просмотр данных** . В окне «Предварительный просмотр» может отображаться до 200 строк.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор источника «файл» с плоскими &#40;страница "столбцы"&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
- [Редактор источника «файл» с плоскими &#40;странице вывода ошибок&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор источника "Неструктурированный файл" (страница "Столбцы")](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
+ [Редактор источника "Неструктурированный файл" (страница "Вывод ошибок")](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
  [Диспетчер подключений неструктурированных файлов](connection-manager/file-connection-manager.md)  
   
   

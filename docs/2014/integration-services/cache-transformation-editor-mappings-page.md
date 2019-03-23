@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetransmap.f1
 ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: af8dd4e4671f808f762d5044fd261047386fe2d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7d38fa3d3e6631f4284f9572f98a0dac1d05e61
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157424"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391162"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>Редактор преобразования «Кэш» (страница «Сопоставления»)
   Используйте страницу **Сопоставления** **Редактора преобразования «Кэш»** , чтобы сопоставить входные столбцы в преобразовании «Преобразование кэша» с целевыми столбцами в диспетчере соединений с кэшем.  
@@ -48,6 +48,6 @@ ms.locfileid: "48157424"
  Просмотр каждого доступного целевого столбца.  
   
 ## <a name="see-also"></a>См. также  
- [Редактор преобразований кэша &#40;страницы диспетчера соединений&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
+ [Редактор преобразования "Кэш" (страница "Диспетчер соединений")](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
   
   

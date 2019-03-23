@@ -20,22 +20,22 @@ helpviewer_keywords:
 - JPEG format [Integration Services]
 - .jpeg files
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e1fc2e587f38f13730f8455b04d0542079158da9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354636"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389862"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Работа с изображениями в задаче «Скрипт»
   База данных продуктов или пользователи часто содержат изображения в дополнение к тексту и числовым данным. Пространство имен `System.Drawing` платформы Microsoft .NET Framework предоставляет классы для управления изображениями.  
   
- [Пример 1. Преобразование изображений в формате JPEG](#example1)  
+ [Пример 1. Преобразование изображений в формате JPEG](#example1)  
   
- [Пример 2. Создание и сохранение уменьшенных представлений изображений](#example2)  
+ [Пример 2. Создание и сохранение уменьшенных представлений изображений](#example2)  
   
 > [!NOTE]  
 >  Если нужно создать задачу, которую будет удобно использовать в нескольких пакетах, рекомендуется начать разработку пользовательской задачи с этого образца задачи «Скрипт». Дополнительные сведения см. в разделе [Разработка пользовательской задачи](../extending-packages-custom-objects/task/developing-a-custom-task.md).  

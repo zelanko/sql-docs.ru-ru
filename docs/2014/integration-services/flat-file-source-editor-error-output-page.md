@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f36c00689d372f407fd4f1d062a937be390f5f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a47ce85dbd2979fe5ff9c1a048c60d0720ae32f2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121064"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377112"
 ---
 # <a name="flat-file-source-editor-error-output-page"></a>Редактор источника «Неструктурированный файл» (страница «Вывод ошибок»)
   На странице **Вывод ошибок** диалогового окна **Редактор источника "Неструктурированный файл"** можно задать параметры обработки ошибок и определить свойства столбцов для вывода ошибок.  
@@ -52,9 +52,9 @@ ms.locfileid: "48121064"
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор источника «файл» с плоскими &#40;страницы диспетчера соединений&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
- [Редактор источника «файл» с плоскими &#40;страница "столбцы"&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор источника "Неструктурированный файл" (страница "Диспетчер соединений")](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
+ [Редактор источника "Неструктурированный файл" (страница "Столбцы")](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
  [Диспетчер подключений неструктурированных файлов](connection-manager/file-connection-manager.md)  
   
   

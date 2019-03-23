@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e362438b12c103dd6210766da888086da79df126
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1b59ebbf4bb56d23009351f4a8fb7f193a59fa66
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785466"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379381"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Создание и изменение службы CDC Oracle
   Новые службы Windows для Oracle CDC создаются и изменяются из консоли конфигурации службы CDC.  
@@ -61,7 +61,7 @@ ms.locfileid: "52785466"
  **Authentication**  
  Выберите один из следующих вариантов:  
   
--   **Проверка подлинности Windows**: В этом случае служба Oracle CDC будет подключаться к целевому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используя учетную запись службы. Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает на другом компьютере, проверку подлинности Windows необходимо использовать с учетными записями домена.  
+-   **Проверка подлинности Windows**. В этом случае служба Oracle CDC будет подключаться к целевому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используя учетную запись службы. Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает на другом компьютере, проверку подлинности Windows необходимо использовать с учетными записями домена.  
   
 -   **Проверка подлинности SQL Server**: Если этот флажок установлен, необходимо ввести **имя пользователя** и **пароль** для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вы хотите использовать имя входа. Служба Oracle CDC использует эти учетные данные при подключении к целевому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

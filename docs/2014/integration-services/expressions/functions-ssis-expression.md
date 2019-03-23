@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9a3b62c843508d100623549097b670487dd16641
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f70cde85aca7b08003d27ee3bd2fc61cbc0a45f1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801936"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391252"
 ---
 # <a name="functions-ssis-expression"></a>Функции (выражение служб SSIS)
   Язык выражений включает набор функций, которые можно использовать в выражениях. Выражение может использовать только одну функцию, но обычно в выражении используется комбинация операторов и нескольких функций.  

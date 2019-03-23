@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.mappings.f1
 ms.assetid: 842d075f-8b7a-457c-a1a1-a7acbe10e9b7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8df784ef4601cac9d6fbb574deda90cc6828c122
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d538d3417e464df770415fb487ca7b2261a02317
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102938"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392172"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>Редактор назначения «ADO.NET» (страница «Сопоставления»)
   Страница **Сопоставления** диалогового окна **Редактор назначения «ADO.NET»** используется для сопоставления входных столбцов с целевыми.  
@@ -47,7 +47,7 @@ ms.locfileid: "48102938"
  Позволяет просмотреть каждый из доступных целевых столбцов без учета наличия или отсутствия сопоставления.  
   
 ## <a name="see-also"></a>См. также  
- [Редактор назначения «ado.net» &#40;страницы диспетчера соединений&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [Редактор назначения «ado.net» &#40;странице вывода ошибок&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
+ [Редактор назначения ADO.NET (страница "Диспетчер соединений")](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
+ [Редактор назначения ADO.NET (страница "Вывод ошибок")](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
   
   

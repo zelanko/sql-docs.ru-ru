@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 04614b8d54815e4286a55b7501187e8ed218db0f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 390fb10287ff88ec5f7a0220dea6dd677e8e36cd
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750624"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393122"
 ---
 # <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>Шаг 8. Облегчение чтения пакета, созданного на занятии 1
   После завершения настройки пакета, созданного на занятии 1, можно приступить к приведению его макета в порядок. Если фигуры в макетах элементов управления и потока данных имеют случайные размеры или если эти элементы не упорядочены или не сгруппированы, то функциональность пакета трудно понять.  
@@ -51,6 +51,6 @@ ms.locfileid: "52750624"
      Если в окне заметки не введен никакой текст, то окно закрывается при щелчке за его пределами.  
   
 ## <a name="next-steps"></a>Следующие шаги  
- [Шаг 9. Проверка учебного пакета занятия 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+ [Шаг 9. Проверка учебного пакета занятия 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   

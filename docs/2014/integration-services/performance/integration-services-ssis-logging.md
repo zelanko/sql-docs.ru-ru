@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 244efd95d67f36ae77efb15a6fa62684606db746
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369776"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394315"
 ---
 # <a name="integration-services-ssis-logging"></a>Ведение журналов в службах Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат регистраторы, которые могут использоваться для реализации ведения журналов в пакетах, контейнерах и задачах. При ведении журнала можно записать текущие сведения о пакете, что поможет при каждом выполнении пакета проводить его аудит и устранять неисправности. Например, журнал может записать имя оператора, запускающего пакет, и время, в которое пакет был начат или завершен.  

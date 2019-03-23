@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer SQL Server Objects task [Integration Services]
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 163418048c50b35bd831174d6cd516d301dfa53f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 01b985a1bb818e7b3d3612596bb4e2b7fa6fd393
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761876"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394552"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Задача «Передача объектов SQL Server»
   Задача передачи объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] производит перемещение одного или нескольких типов объектов базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Например, с помощью этой задачи можно выполнить копирование таблиц и хранимых процедур. В зависимости от версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , являющейся источником копирования, можно копировать различные типы объектов. Например, схемы и пользовательские статистические функции содержатся только в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

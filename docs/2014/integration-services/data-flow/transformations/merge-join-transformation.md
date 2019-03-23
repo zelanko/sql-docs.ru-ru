@@ -15,15 +15,15 @@ helpviewer_keywords:
 - joining datasets [Integration Services]
 - joins [SQL Server], SSIS
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e1a581536bb4f2a07dbbdf3d6ca187ac4a6f5250
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0ef70f4f9d28fc23c0ac0a168447cc1b8867cd27
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767186"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374162"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
   Преобразование «Соединение слиянием» предоставляет выход, формируемый объединением двух отсортированных наборов данных при помощи соединения FULL, LEFT или INNER. Например, соединение LEFT может использоваться для объединения таблицы, содержащей данные о товарах, с таблицей, в которой перечисляются страны или регионы, в которых эти товары были произведены. Результатом является таблица, в которой перечисляются все товары и страны или регионы их происхождения.  

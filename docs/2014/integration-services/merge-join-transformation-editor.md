@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Merge Join Transformation Editor
 ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f6f584d49bfa238a5eda76b18f0dccb59db303f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0eff54a87d3b38f1cf027d272d75c36d2e15316
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186834"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380892"
 ---
 # <a name="merge-join-transformation-editor"></a>редактор преобразования «Cоединение слиянием»
   Диалоговое окно **Редактор преобразования «Соединение слиянием»** используется для задания типа соединения, столбцов соединения и выходных столбцов для слияния двух входных наборов с помощью соединения.  
@@ -49,10 +49,10 @@ ms.locfileid: "48186834"
  Введите псевдоним для каждого выходного столбца. По умолчанию, используется имя входного столбца, однако можно выбрать любое уникальное описательное имя.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Сортировка данных для слияния и преобразования соединения слиянием](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
- [Расширение набора данных с помощью преобразования «Соединение слиянием»](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
+ [Расширение набора данных при помощи преобразования «Соединение слиянием»](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
  [Преобразование «Слияние»](data-flow/transformations/merge-transformation.md)   
- [Преобразование "Объединить все"](data-flow/transformations/union-all-transformation.md)  
+ [Преобразование «Объединить все»](data-flow/transformations/union-all-transformation.md)  
   
   

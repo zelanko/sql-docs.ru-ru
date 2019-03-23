@@ -11,15 +11,15 @@ helpviewer_keywords:
 - redeploying packages [Integration Services]
 - deploying packages [Integration Services], redeploying
 ms.assetid: 86806efb-8cf4-4f9d-9824-1152cb4c495c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2612fa2930147c5a655ec13bd3adbdf3c4bd7cd0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 15d41b9c0e31fe4bfd86349888071721b7493661
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195605"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378957"
 ---
 # <a name="redeployment-of-packages"></a>Повторное развертывание пакетов
   После развертывания проекта может понадобится обновить или расширить функциональные возможности пакета и затем повторно развернуть проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , содержащий обновленные пакеты. В рамках процесса повторного развертывания пакетов необходимо просмотреть свойства конфигурации, включенные в программу развертывания. Например, можно запретить изменение конфигурации после повторного развертывания пакета.  

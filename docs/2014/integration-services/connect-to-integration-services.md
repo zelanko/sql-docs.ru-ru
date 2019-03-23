@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 2effee7d-16bc-46e1-913c-28470faea345
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5959d49f6bc9c2ac140da6b16e7926cfa94634e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02ab48e21ff7c0f881cb0d0b830ce03207666c7c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155924"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389202"
 ---
 # <a name="connect-to-integration-services"></a>Подключение к службам Integration Services
   Для подключения к службе [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] необходимо, чтобы администратор предоставил к ней доступ. Дополнительные сведения см. в статье [Grant Permissions to Integration Services Service](../../2014/integration-services/grant-permissions-to-integration-services-service.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "48155924"
   
 3.  На панели инструментов обозревателя объектов нажмите кнопку **Соединить**и выберите **Службы Integration Services**.  
   
-4.  В диалоговом окне **Соединение с сервером** введите имя сервера. Можно использовать точку (.), (local), или `localhost` для указания локального сервера.  
+4.  В диалоговом окне **Соединение с сервером** введите имя сервера. Для указания локального сервера можно использовать точку (.), (local) или `localhost`.  
   
 5.  Нажмите кнопку **Соединить**.  
   

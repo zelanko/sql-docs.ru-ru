@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 756c6ce9c57b314ddd9f9e821df7c391af5fa84a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f652519efc4b77bd785cdded468fe114f6499200
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805804"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375662"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Шаг 6. Добавление и настройка преобразований «Уточняющий запрос»
   После того как источник неструктурированных файлов настроен для извлечения данных из файла источника, следует определить преобразования «Уточняющий запрос», необходимые для получения значений **CurrencyKey** и **DateKey**. Преобразование «Уточняющий запрос» выполняет поиск, соединяя данные указанного входного столбца со столбцом эталонного набора данных. Эталонным набором данных может быть таблица или представление, новая таблица или результат инструкции SQL. В этом учебнике преобразование «Уточняющий запрос» использует диспетчер соединений OLE DB, чтобы подключиться к базе данных, содержащей данные, служащие источником для эталонного набора данных.  
@@ -131,7 +131,7 @@ ms.locfileid: "52805804"
 12. В окне «Свойства» убедитесь, что `LocaleID` свойству **русский (Россия)** и **DefaultCodePage** свойству **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Шаг 7. Добавление и Настройка назначения OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+ [Шаг 7. Добавление и Настройка назначения OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## <a name="see-also"></a>См. также  
  [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.destdbfiles.f1
 ms.assetid: f6f90417-86fb-4b8c-a790-0b215c344ef6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fb6f834ab26fb6d5cc7535d217745af92e97c2a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4911084929f3ff69657a6d5e51c557f35929b45b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135282"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379922"
 ---
 # <a name="destination-database-files"></a>Файлы базы данных-назначения
   Используйте диалоговое окно **Файлы целевой базы данных** для просмотра или изменения имен файлов базы данных и местоположений на целевом сервере, или для определения положения в сети файла для задачи «Передача базы данных». Дополнительные сведения об этой задаче см. в разделе [Задача "Передача базы данных"](control-flow/transfer-database-task.md).  
@@ -44,8 +44,8 @@ ms.locfileid: "48135282"
  При передаче базы данных в режиме вне сети файлы базы данных копируются в **Сетевую общую папку** перед тем, как они переданы в расположение **Целевая папка** .  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задач базы данных передача &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
- [Редактор задач базы данных передача &#40;баз данных страницы&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "Передача базы данных" (страница "Общие")](general-page-of-integration-services-designers-options.md)   
+ [Редактор задачи "Передача базы данных" (страница "Базы данных")](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

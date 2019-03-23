@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 87205984-507a-49f3-b27c-36a0075c234d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 046e1c9d97cf7f508fa69e67bfe7369e7186e137
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e07bd6ead9ce0dfc20249f5db50a8b0b78ba242a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768466"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378102"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>Параметры запроса профиля статистики столбцов (задача «Профилирование данных»)
   Для установки параметров режима **Запрос профиля статистики столбцов** , выделенного на панели запросов, используется панель **Свойства запроса** страницы **Запросы профиля** . Профиль статистики столбцов описывает статистические показатели, такие как минимальное, максимальное, среднее и стандартное отклонение для числовых столбцов, а также минимальное и максимальное отклонение для столбцов типа `datetime`. Этот профиль поможет выявить проблемы в данных, например наличие недопустимых дат. Например, во время профилирования столбца исторических дат обнаружена самая поздняя дата, расположенная в будущем.  

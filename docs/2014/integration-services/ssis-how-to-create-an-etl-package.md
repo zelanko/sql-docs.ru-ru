@@ -14,15 +14,15 @@ helpviewer_keywords:
 - logs [Integration Services], tutorials
 - walkthroughs [Integration Services]
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2a99169168eb21f0a7d42f133e7e882141c776e6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e25c90b3baa4e718f40dc3a3f84b6dc221d54c33
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357915"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379952"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>Учебник по службам SSIS. Создание простого ETL-пакета
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) представляют собой платформу для построения высокопроизводительных решений интеграции данных, включая извлечения, преобразования и загрузки (ETL) пакетов для хранилищ данных. Службы SSIS содержат графические инструменты и мастера для построения и отладки пакетов; задачи для выполнения функций рабочего процесса, таких как операции FTP, выполнение инструкций SQL и отправка сообщений электронной почты; источники данных и назначения для извлечения и загрузки данных; преобразования для очистки, статистической обработки, слияния и копирования данных; службу управления, службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для администрирования выполнения и хранения пакетов, а также API-интерфейсы для программирования объектной модели служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -61,13 +61,13 @@ ms.locfileid: "53357915"
  [Занятие 2. Добавление циклов](lesson-2-adding-looping-with-ssis.md)  
  На этом занятии будет расширен пакет, созданный на занятии 1, что позволит использовать новые возможности циклической обработки для извлечения нескольких неструктурированных файлов в едином процессе потока данных.  
   
- [Занятие 3. Добавление журнала](lesson-3-add-logging-with-ssis.md)  
+ [Занятие 3. Добавление журнала](lesson-3-add-logging-with-ssis.md)  
  На этом занятии созданный на занятии 2 пакет будет расширен, чтобы использовать новые возможности ведения журнала.  
   
  [Занятие 4. Добавление перенаправления потока ошибок](lesson-4-add-error-flow-redirection-with-ssis.md)  
  На этом занятии созданный на занятии 3 пакет будет расширен, что позволит использовать новые конфигурации вывода ошибок.  
   
- [Занятие 5. Добавление конфигураций пакетов в модель развертывания пакетов](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+ [Занятие 5. Добавление конфигураций пакетов в модель развертывания пакетов](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
  На этом занятии созданный на занятии 4 пакет будет расширен, что позволит использовать новые параметры конфигурации пакета.  
   
  [Занятие 6. Использование параметров в модели развертывания проекта](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

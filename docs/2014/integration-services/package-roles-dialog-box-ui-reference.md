@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Package Roles dialog box
 ms.assetid: 63f13416-c0aa-4480-a336-ef1e6e31a860
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d45ea589ee41aa5895acf0ee1c475aea19bbaeed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abdbf8215b782f5db4343365a26d479542fc2dad
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225214"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374582"
 ---
 # <a name="package-roles-dialog-box-ui-reference"></a>Диалоговое окно «Роли пакета» справочника по пользовательскому интерфейсу
   Используйте диалоговое окно **Роли пакетов** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], чтобы указать роли на уровне базы данных, которые обладают правами на считывание пакета, и роли на уровне базы данных, которые имеют права на запись пакета. Роли на уровне баз данных определяют права только для пакетов, хранящихся в базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **msdb**.  
@@ -43,6 +43,6 @@ ms.locfileid: "48225214"
   
 ## <a name="see-also"></a>См. также  
  [Роли уровня базы данных](../relational-databases/security/authentication-access/database-level-roles.md)   
- [Общие сведения о безопасности &#40;служб Integration Services&#41;](security/security-overview-integration-services.md)  
+ [Общие сведения о безопасности (службы Integration Services)](security/security-overview-integration-services.md)  
   
   

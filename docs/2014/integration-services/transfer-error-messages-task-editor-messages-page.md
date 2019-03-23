@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Error Messages Task Editor
 ms.assetid: cb2226a0-3037-4fdf-966f-81eabc0da9cf
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d83edf8ee65b638525c0ddd5ee994a26cfcfbd70
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e9d9d0d7f03b52b2ea82d555b6cbe9127128e83f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545800"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391882"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>Редактор задачи «Передача сообщений об ошибках» (страница «Сообщения»)
   Используйте страницу **Сообщения** диалогового окна **Редактор задачи "Передача сообщений об ошибках"**, чтобы указать свойства копирования одного или более определенных пользователем сообщений об ошибках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] из одного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в другой. Дополнительные сведения об этой задаче см. в разделе [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  

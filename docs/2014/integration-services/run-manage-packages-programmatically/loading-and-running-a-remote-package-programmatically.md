@@ -11,15 +11,15 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - remote packages [Integration Services]
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b0cefe1fa46cda13a177f07ebcbf19c02efa8337
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d1cc7358a7058af9feb3f0540085ab140cfd8a7b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370396"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379112"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Программная загрузка и запуск удаленного пакета
   Чтобы выполнить удаленные пакеты с локального компьютера, на котором не установлены службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], запустите пакеты таким образом, чтобы они выполнялись на удаленном компьютере, на котором установлены службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Чтобы запустить пакеты на удаленном компьютере с локального компьютера, понадобится агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], веб-служба или удаленный компонент. Если попытаться запустить удаленные пакеты непосредственно с локального компьютера, пакеты будут загружены на локальный компьютер и будут запущены оттуда. Если на локальном компьютере не установлены службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], запуск пакетов окажется невозможен.  
@@ -420,7 +420,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Видео, [как: Автоматизировать выполнение пакета служб SSIS с помощью агента SQL Server (видеоматериал SQL Server)](https://technet.microsoft.com/sqlserver/ff686764.aspx), на сайте technet.microsoft.com  
+-   Видео с руководством по [ Автоматизировать выполнение пакета служб SSIS с помощью агента SQL Server (видеоматериал SQL Server)](https://technet.microsoft.com/sqlserver/ff686764.aspx), на сайте technet.microsoft.com  
   
 ![Значок служб Integration Services (маленький)](../media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   

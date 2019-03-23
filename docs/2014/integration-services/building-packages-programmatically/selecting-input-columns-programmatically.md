@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data flow [Integration Services], column mapping
 - data flow [Integration Services], components
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d0a7316f78bcc26bfd8b939ab555519780af25df
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d7c1592058776246ad3df657c3340303a60df296
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375666"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390917"
 ---
 # <a name="selecting-input-columns-programmatically"></a>Выбор входных столбцов программным образом
   После соединения компонентов программным способом, выберите столбцы из вышестоящих компонентов, которые должны быть преобразованы или переданы нижестоящим компонентам. Если не выбрать входные столбцы для компонента, компонент не получит строк от задачи потока данных.  

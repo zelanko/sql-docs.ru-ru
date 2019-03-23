@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 04d5c60c925fd97c3b8b823ec42c2e065a3d0596
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 72b426c504532f9c112eaaa1222b0349f3e5d814
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790746"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374592"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>Параметры запроса профиля соотношения значений NULL в столбцах (задача «Профилирование данных»)
   При помощи панели **Свойства запроса** страницы **Запросы профиля** можно задать параметры для варианта **Запрос соотношения значений NULL в столбцах** , выбранного на панели запросов. Профиль «Соотношение значений NULL в столбцах» сообщает процент значений NULL в выбранном столбце. Этот профиль поможет выявить проблемы в данных, например появление непредвиденно высокого процента значений NULL в некотором столбце. Например, с помощью профиля «Соотношение значений NULL в столбцах» можно профилировать столбец «Почтовый индекс» и обнаружить неприемлемо высокий процент отсутствующих почтовых индексов.  

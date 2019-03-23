@@ -13,15 +13,15 @@ helpviewer_keywords:
 - date data types
 - date and time formats for fast parse
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d84f3158b41f2cff79572ad7a65c3033a4d2ca77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2f7e59f10b7a54e46e259fff8a4f60b42803a19
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112750"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377512"
 ---
 # <a name="date-and-time-formats"></a>Форматы даты и времени
   Быстрый синтаксический анализ обеспечивает быстрый и простой набор процессов для анализа данных. Быстрый синтаксический анализ поддерживает следующие форматы даты и времени.  
@@ -53,7 +53,7 @@ ms.locfileid: "48112750"
   
  Быстрый синтаксический анализ выводит данные как DT_DBDATE. Значения даты в усеченных форматах дополняются справа. Например, ГГГГ становится ГГГГ0101.  
   
- Дополнительные сведения см. в статье [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ Дополнительные сведения см. в разделе [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
 ## <a name="time-data-type"></a>Тип данных времени  
  Быстрый синтаксический анализ поддерживает следующие строковые форматы времени.  
@@ -81,7 +81,7 @@ ms.locfileid: "48112750"
     |-ЧЧ|Усеченный формат, показывающий часы, которые следует вычесть из времени в формате UTC, чтобы получить местное время.|  
     |Z|Значение 0, показывающее, что время представлено в формате UTC.|  
   
-     Все форматы времени и даты-времени могут включать элемент часового пояса. Однако система не будет учитывать значение часового пояса, если только данные не имеют тип DT_DBTIMESTAMPOFFSET. Дополнительные сведения см. в статье [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+     Все форматы времени и даты-времени могут включать элемент часового пояса. Однако система не будет учитывать значение часового пояса, если только данные не имеют тип DT_DBTIMESTAMPOFFSET. Дополнительные сведения см. в разделе [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
      В форматах, включающих элемент часового пояса, между элементами времени и часового пояса нет пробелов, как показано в следующем примере.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48112750"
   
  Быстрый синтаксический анализ выводит строки как DT_DBTIME и DT_DBTIME2. Значения времени в усеченных форматах дополняются справа. Например, ЧЧ:ММ превращается в ЧЧ:ММ:00.000.  
   
- Дополнительные сведения см. в статье [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ Дополнительные сведения см. в разделе [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
 ## <a name="datetime-data-type"></a>Тип данных дата-время  
  Быстрый синтаксический анализ поддерживает следующие строковые форматы даты-времени.  
@@ -129,6 +129,6 @@ ms.locfileid: "48112750"
 |День|Добавляется 01 в качестве дня месяца.|  
 |Месяц|Добавляется 01 вместо месяца года.|  
   
- Дополнительные сведения см. в статье [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ Дополнительные сведения см. в разделе [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
   

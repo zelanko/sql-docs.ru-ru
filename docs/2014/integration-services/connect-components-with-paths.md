@@ -12,22 +12,22 @@ helpviewer_keywords:
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 05633e4c-1370-4b05-802b-f36b07dd71c8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43b975d5eeb7177e417f385c3b4de89f75030704
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 776e3d8c8b8731fb56d51213ffe085c857066cd7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069954"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374361"
 ---
 # <a name="connect-components-with-paths"></a>Соединение компонентов с путями
   Поток данных пакета проектируется в области конструктора на вкладке **Поток данных** конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Если поток данных содержит два компонента потока данных, можно соединить их, подключив выход источника или преобразования ко входу преобразования или назначения. Соединитель компонентов потока данных называется путем.  
   
  На следующей диаграмме показан простой поток данных с компонентом источника, двумя преобразованиями, целевым компонентом и путями, которые их соединяют.  
   
- ![Поток данных](media/mw-dts-08.gif "потока данных")  
+ ![Поток данных](media/mw-dts-08.gif "Поток данных")  
   
  После соединения двух компонентов можно просматривать метаданные тех данных, которые перемещаются по пути, и свойства пути в **Редакторе пути потока данных**. Дополнительные сведения см. в статье [Integration Services Paths](data-flow/integration-services-paths.md).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48069954"
   
 ### <a name="to-view-path-metadata"></a>Просмотр метаданных пути  
   
--   [Добавление средства просмотра данных в поток данных](../../2014/integration-services/add-a-data-viewer-to-a-data-flow.md)  
+-   [Добавление средства просмотра данных к потоку данных](../../2014/integration-services/add-a-data-viewer-to-a-data-flow.md)  
   
 ## <a name="see-also"></a>См. также  
  [Задача потока данных](control-flow/data-flow-task.md)   

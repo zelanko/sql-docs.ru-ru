@@ -16,15 +16,15 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: ff92a96a-8af6-4532-82cc-c0bbff92401b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 04ad9b053e337ff9c32498ff3f735c9a58148c27
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 92cd83935ef4cb76c40aae0964100c7b88d847e4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374356"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378262"
 ---
 # <a name="discovering-data-flow-components-programmatically"></a>Программный поиск компонентов потока данных
   После добавления задачи потока данных в пакет может возникнуть необходимость определить, какие компоненты потока данных доступны для использования. Можно программным способом выявить источники, преобразования и назначения потока данных, установленные и доступные на локальном компьютере. Сведения о добавлении задачи потока данных в пакет см. в разделе [Добавление задачи потока данных программным образом](../building-packages-programmatically/adding-the-data-flow-task-programmatically.md).  

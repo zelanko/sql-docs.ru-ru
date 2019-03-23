@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ee169caab78d3b83d647a1a9cd20a2e88507fde2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 324ed64290b85c03401d3add09e773b69c841bdd
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377626"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381382"
 ---
 # <a name="integration-services-ssis-packages"></a>Пакеты служб Integration Services (SSIS)
   Пакет — это организованная коллекция соединений, элементов потока управления, элементов потока данных, обработчиков событий, переменных, параметров и конфигураций, которая собирается либо с помощью графических средств проектирования, предоставляемых службами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , либо программно.  Затем собранный пакет сохраняется в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], хранилище пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] или в файловую систему. Также вы можете развернуть проект служб ssISnoversion на сервере [!INCLUDE[ssIS](../includes/ssis-md.md)] . Пакет — это рабочий блок, который можно получить, выполнить и сохранить.  

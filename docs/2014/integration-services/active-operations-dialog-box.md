@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.ssis.ssms.isoperations.executions.f1
 - sql12.ssis.ssms.isoperations.general.f1
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d20e7102df982f961aed770aedc19812c5aca949
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efb8341b4e7124e244b5994aa2f83c664348b865
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185884"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388022"
 ---
 # <a name="active-operations-dialog-box"></a>Диалоговое окно «Активные операции»
   Воспользуйтесь диалоговым окном **Активные операции** , чтобы просмотреть состояние выполняемых в настоящий момент операций [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сервере служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , таких как развертывание, проверка и выполнение пакетов. Эти данные хранятся в каталоге SSISDB.  
@@ -28,13 +28,13 @@ ms.locfileid: "48185884"
   
  **Выбор действия**  
   
-1.  [Откройте диалоговое окно «активные операции»](#open_dialog)  
+1.  [Открытие диалогового окна «Активные операции»](#open_dialog)  
   
 2.  [Настройка параметров](#options)  
   
 ##  <a name="open_dialog"></a> Открытие диалогового окна «Активные операции»  
   
-1.  Откройте [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
+1.  Откройте [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
 2.  Подключение компонента Microsoft SQL Server Database Engine  
   

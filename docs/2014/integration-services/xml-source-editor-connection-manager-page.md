@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7c10a7febfcb5df1f2702498fe30148f1794095b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52933b6bc560ecf2e1d7efda8b54502bafe72a6b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096054"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393892"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>Редактор источника «XML» (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** компонента **Редактор источника «XML»** для указания XML-файла и XSD-схемы, выполняющей преобразование XML-данных.  
@@ -34,7 +34,7 @@ ms.locfileid: "48096054"
 |Значение|Описание|  
 |-----------|-----------------|  
 |Расположение XML-файла|Извлечь данные из XML-файла.|  
-|XML-файл из переменной|Указать имя XML-файла в переменной.<br /><br /> **См. также**: [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)|  
+|XML-файл из переменной|Указать имя XML-файла в переменной.<br /><br /> **Сведения, связанные с**: [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)|  
 |XML-данные из переменной|Извлечь XML-данные из значения переменной.|  
   
  **Использовать встроенную схему**  
@@ -67,9 +67,9 @@ ms.locfileid: "48096054"
  Выберите переменную, содержащую XML-данные.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор источника XML &#40;страница "столбцы"&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
- [Редактор источника XML &#40;странице вывода ошибок&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор источника "XML" (страница "Столбцы")](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [Редактор источника "XML" (страница "Вывод ошибок")](../../2014/integration-services/xml-source-editor-error-output-page.md)   
  [Извлечение данных с помощью XML-источника](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

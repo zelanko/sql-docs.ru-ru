@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.columns.f1
 ms.assetid: d640e9e4-86c3-4cb7-a6c2-e82624303696
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a00e3658d64723b0d1e120d95f76ccec4d5a5f52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c3b66b5b2a9595deffce79ed0e23e03a65fdeaf
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149574"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391542"
 ---
 # <a name="odata-source-editor-columns-page"></a>Редактор источника OData (страница «Столбцы»)
   На странице **Столбцы** диалогового окна **Редактор источника OData** можно выбрать внешние (исходные) столбцы, которые должны быть включены в выходные данные, и сопоставить их с выходными столбцами.  
@@ -34,9 +34,9 @@ ms.locfileid: "48149574"
  Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца, однако можно выбрать любое уникальное описательное имя.  
   
 ## <a name="see-also"></a>См. также  
- [Редактор источника OData &#40;страница "подключения"&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
- [Редактор источника OData &#40;странице вывода ошибок&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+ [Редактор источника OData (страница "Подключение")](../../2014/integration-services/odata-source-editor-connection-page.md)   
+ [Редактор источника OData (страница "Вывод ошибок")](../../2014/integration-services/odata-source-editor-error-output-page.md)   
  [Источник OData](data-flow/odata-source.md)   
- [Диспетчер подключений OData](connection-manager/odata-connection-manager.md)  
+ [Диспетчер соединений OData](connection-manager/odata-connection-manager.md)  
   
   

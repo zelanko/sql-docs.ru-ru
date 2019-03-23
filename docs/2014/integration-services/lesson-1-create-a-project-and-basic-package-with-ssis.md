@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8ff1883c8940e791d35dfe97c33acc1fe4f4a0e8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 77812ef81d77be668a449af6c79e833ffc4d81aa
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359376"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390152"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>Урок 1. Создание проекта и основного пакета
   На этом занятии будет рассмотрено создание простого ETL-пакета, который будет извлекать данные из отдельного источника неструктурированных файлов, преобразовывать полученные данные при помощи двух компонентов преобразования «Уточняющий запрос», а затем записывать эти данные в таблицу фактов **FactCurrency** , находящуюся в базе данных **AdventureWorksDW2012**. На этом занятии предстоит узнать, как создавать новые пакеты, добавлять и настраивать соединения с источниками данных и назначениями, а также работать с новыми компонентами потока управления и потока данных.  
@@ -74,7 +74,7 @@ ms.locfileid: "53359376"
 |----------------------|----------------|-----------------|---------------|  
 |0|FactCurrency|AverageRate|float|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
-|2|DimDate|FullDateAlternateKey|Дата|  
+|2|DimDate|FullDateAlternateKey|date|  
 |3|FactCurrency|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>Задачи занятия  
@@ -92,11 +92,11 @@ ms.locfileid: "53359376"
   
 -   [Шаг 6. Добавление и Настройка преобразований «Уточняющий запрос»](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [Шаг 7. Добавление и Настройка назначения OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+-   [Шаг 7. Добавление и Настройка назначения OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Шаг 8. Облегчение пакета занятия 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Шаг 8. Облегчение пакета занятия 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [Шаг 9. Проверка учебного пакета занятия 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [Шаг 9. Проверка учебного пакета занятия 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Начало занятия  
  [Шаг 1. Создание нового проекта служб Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  

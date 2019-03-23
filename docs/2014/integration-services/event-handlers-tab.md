@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.eventhandlerwindow.f1
 ms.assetid: 94fc8916-8032-490c-b9d5-ded8b6217e49
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a258c768f46e2310095c6aadc0c57c65cea2bac6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2f13aa09f7b424da63348c5363bc6d5077ed9f2c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131144"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380742"
 ---
 # <a name="event-handlers-tab"></a>Вкладка «Обработчики событий»
   Используйте вкладку **Обработчики событий** конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , чтобы сформировать поток управления в пакете служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Обработчик события запускается в ответ на событие, инициированное либо пакетом, либо задачей или контейнером в пакете.  
@@ -44,6 +44,6 @@ ms.locfileid: "48131144"
  [Обработчики событий в службах Integration Services (SSIS)](integration-services-ssis-event-handlers.md)   
  [Поток управления](control-flow/control-flow.md)   
  [Конструктор служб SSIS](ssis-designer.md)   
- [Службы Integration Services &#40;SSIS&#41; обработчики событий](integration-services-ssis-event-handlers.md)  
+ [Обработчики событий в службах Integration Services (SSIS)](integration-services-ssis-event-handlers.md)  
   
   

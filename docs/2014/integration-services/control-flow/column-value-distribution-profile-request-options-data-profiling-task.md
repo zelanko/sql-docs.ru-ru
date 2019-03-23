@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6768eba62eec59bc37ce360014d9c000aa01c724
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5a79ba9f2ff211ed4bf56e749acba7f1d4601643
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375206"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394572"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Параметры запроса профиля распределения значений в столбцах (задача «Профилирование данных»)
   Для установки параметров **запроса профиля распределения значений столбцов** , выделенного на панели запросов, используется панель **Свойства запроса** страницы **Запросы профиля** . Профиль распределения значений столбцов описывает все различные значения в выделенном столбце и указывает выраженную в процентах долю строк таблицы, представляемых каждым значением. Этот профиль может также указывать значения, превышающие указанную процентную долю строк в таблице. Этот профиль поможет выявить проблемы в данных, например неверное число уникальных значений в столбце. Например, при профилировании столбца штатов США можно обнаружить более 50 различных значений.  

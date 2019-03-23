@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 867ecaedcdcbafb972ccd289b5257fc73b353a5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50153d56b7818e0855710a651a51ce70d7e7bd06
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092374"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391212"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>Редактор задачи «Выполнение SQL» (страница «Сопоставление параметров»)
   Используйте страницу **Сопоставление параметров** диалогового окна **Редактор задачи «Выполнение SQL»** для сопоставления переменных с параметрами в инструкции SQL.  
@@ -31,7 +31,7 @@ ms.locfileid: "48092374"
  **Имя переменной**  
  После добавления сопоставления параметров нажатием кнопки **Добавить** выберите системную или пользовательскую переменную в списке или щелкните \<**Создать переменную...**> для добавления новой переменной с помощью диалогового окна **Добавление переменной**.  
   
- **См. также:** [Переменные в службах Integration Services](integration-services-ssis-variables.md)  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md)  
   
  **Направление**  
  Выбор направления для параметра. Сопоставьте каждую переменную с входным параметром, выходным параметром или кодом возврата.  
@@ -58,7 +58,7 @@ ms.locfileid: "48092374"
  Выберите сопоставление параметра из списка, затем нажмите **Удалить**.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задач SQL Выполнение &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
  [Редактор задач SQL Выполнение &#40;результирующий набор страниц&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)   
  [Справочник по Transact-SQL (компонент Database Engine)](/sql/t-sql/language-reference)  

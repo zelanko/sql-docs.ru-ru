@@ -15,15 +15,15 @@ helpviewer_keywords:
 - roles [Integration Services]
 - db_ssisltduser role
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9c6f7ef38c779b07b9cbeffc2b9300360620e350
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 43c1c932565ae3df666be10a1b89794ecd720135
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792884"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393032"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Роли служб Integration Services (службы SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат три предопределенные роли уровня базы данных, `db_ssisadmin`, **db_ssisltduser**, и **db_ssisoperator**, для управления доступом к пакетам. Роли могут быть реализованы только для пакетов, сохраненных в `msdb` базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. С помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]можно назначить роль пакету. Назначения ролей сохраняются в `msdb` базы данных.  

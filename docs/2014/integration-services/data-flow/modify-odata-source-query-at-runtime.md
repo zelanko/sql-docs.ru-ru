@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0700d2893028efea5486221906636d6c749b66bd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804855"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390222"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>Изменение запроса источника OData во время выполнения
   Можно изменить запрос источника OData во время выполнения, добавив выражение в свойство **[OData Source].[Query]** задачи потока данных.  

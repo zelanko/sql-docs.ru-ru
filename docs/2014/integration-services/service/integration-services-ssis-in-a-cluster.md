@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1785363fd89092f286080f44e210bb6b35cb6a16
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b70dbab14424335fe210f5a9b1ddbdbda4f90deb
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758756"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392870"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Службы Integration Services (SSIS) в кластере
   Кластеризация служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не рекомендуется, так как службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не являются кластеризованными, не ориентируются на использование кластеров и не поддерживают отработку отказа между узлами кластера. Следовательно, в кластерной среде службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] должны быть установлены и запущены в качестве изолированной службы на каждом узле кластера.  

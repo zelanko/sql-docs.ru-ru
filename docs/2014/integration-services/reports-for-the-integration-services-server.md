@@ -10,18 +10,18 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 224345a2dc32f12e925a6f97299c91a5e2f7e9b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6be914812be9d58fb59316b1b4793eb5d9e07043
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096174"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394092"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Отчеты для сервера служб Integration Services
-  В текущем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], стандартные отчеты, доступные в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для наблюдения за [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] проекты, которые были развернуты [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] сервера. Эти отчеты позволяют просмотреть состояние пакета и журнал, а также, если необходимо, определить причину сбоев при выполнении пакетов.  
+  Для текущего выпуска служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] предусмотрены стандартные отчеты, помогающие отслеживать проекты служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , развернутые на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Эти отчеты позволяют просмотреть состояние пакета и журнал, а также, если необходимо, определить причину сбоев при выполнении пакетов.  
   
  На любой странице отчета в верхней части имеется значок возврата на предыдущую страницу, значок обновления сведений, отображаемых на странице, и значок печати, который позволяет распечатать текущую страницу.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48096174"
   
 |Раздел|Описание|  
 |-------------|-----------------|  
-|Фильтр|Отображает текущий фильтр, применяемый к отчету, например диапазон времени начала.|  
+|Filter|Отображает текущий фильтр, применяемый к отчету, например диапазон времени начала.|  
 |Сведения о выполнении|Показывает время начала, время окончания и длительность каждого выполнения пакета. Вы можете просмотреть список значений параметров, которые использовались при выполнении пакета, например значения, переданные в дочерний пакет с помощью задачи «Выполнение пакета». Для просмотра списка параметров нажмите кнопку «Общие сведения».|  
   
  Дополнительные сведения об использовании задачи «Выполнение пакета» для передачи значений в дочерний пакет см. в разделе [Execute Package Task](control-flow/execute-package-task.md).  

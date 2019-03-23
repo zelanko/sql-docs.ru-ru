@@ -17,15 +17,15 @@ helpviewer_keywords:
 - files [Integration Services], security
 - SQL Server Integration Services packages, security
 ms.assetid: 2e3ddea9-5289-4289-a70e-11c018f34977
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6b6e78e04a64f9bddeeb4f24ba2f90919b9d228c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eed6f09197585e7eb8575c43146ed730497af8a0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214994"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378492"
 ---
 # <a name="access-to-files-used-by-packages"></a>Доступ к файлам, используемым пакетами
   Уровень защиты пакета не способен защитить файлы, хранимые вне пределов пакета. Эти файлы включают в себя:  
@@ -44,7 +44,7 @@ ms.locfileid: "48214994"
  Дополнительные сведения см. в разделах [Конфигурации пакетов](../../2014/integration-services/package-configurations.md), [Создание конфигураций пакетов](../../2014/integration-services/create-package-configurations.md)и [Вопросы безопасности при установке SQL Server](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
 ## <a name="checkpoint-files"></a>файлы контрольных точек  
- Таким же образом, если используемый пакетом файл контрольных точек содержит конфиденциальные сведения, то следует использовать список управления доступом (ACL) для защиты расположения или папки, где хранится этот файл. Файлы контрольных точек сохраняют данные как о текущем состоянии пакета, так и о текущих значениях переменных. Например, пакет может включать в себя пользовательскую переменную, содержащую номер телефона. Дополнительные сведения см. в разделе [Перезапуск пакетов с помощью контрольных точек](packages/restart-packages-by-using-checkpoints.md).  
+ Таким же образом, если используемый пакетом файл контрольных точек содержит конфиденциальные сведения, то следует использовать список управления доступом (ACL) для защиты расположения или папки, где хранится этот файл. Файлы контрольных точек сохраняют данные как о текущем состоянии пакета, так и о текущих значениях переменных. Например, пакет может включать в себя пользовательскую переменную, содержащую номер телефона. Дополнительные сведения см. в разделе [Restart Packages by Using Checkpoints](packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="log-files"></a>Файлы журналов  
  Записи журнала, сохраненные в файловой системе, также должны быть защищены с использованием списка управления доступом (ACL). Записи журнала также могут храниться в таблицах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и быть защищены системой безопасности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Записи журнала могут содержать конфиденциальные сведения, например если пакет содержит задачу «Выполнение SQL», которая создает инструкцию SQL, ссылающуюся на номер телефона, то запись журнала для инструкции SQL содержит и номер телефона. Инструкция SQL также может раскрыть закрытые данные об именах таблиц и столбцов данных. Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](performance/integration-services-ssis-logging.md).  

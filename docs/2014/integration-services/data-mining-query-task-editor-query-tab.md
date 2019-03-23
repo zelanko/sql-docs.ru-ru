@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac3a7fd31f13ec513c1590d265b1984969ae8e12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 361c1c06afb8c599e983751ea7d7deef656631e6
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193064"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377233"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Редактор задачи «Запрос интеллектуального анализа данных» (вкладка «Запрос»)
   Используйте вкладку **Запрос** диалогового окна **Задача «Запрос интеллектуального анализа данных»** , чтобы создать запросы прогноза, основанные на модели интеллектуального анализа данных. В этом диалоговом окне также можно привязать параметры и результирующие наборы к переменным.  
@@ -28,7 +28,7 @@ ms.locfileid: "48193064"
  Сведения об интеллектуальном анализе данных в пакетах см. в разделах [Задача "Запрос интеллектуального анализа данных"](control-flow/data-mining-query-task.md) и [Решения для интеллектуального анализа данных](../analysis-services/data-mining/data-mining-solutions.md).  
   
 ## <a name="general-options"></a>Общие параметры  
- **Название**  
+ **Name**  
  Задайте уникальное имя для задачи «Запрос интеллектуального анализа данных». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -41,12 +41,12 @@ ms.locfileid: "48193064"
  **Запрос интеллектуального анализа данных**  
  Введите запрос интеллектуального анализа данных.  
   
- **См. также:** [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](/sql/dmx/data-mining-extensions-dmx-reference)  
+ **См. также:**  [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](/sql/dmx/data-mining-extensions-dmx-reference)  
   
  **Создать новый запрос**  
  Создать запрос интеллектуального анализа данных, используя графическое средство.  
   
- **См. также:** [Data Mining Query](control-flow/data-mining-query.md)  
+ **См. также:** [Запрос интеллектуального анализа данных](control-flow/data-mining-query.md)  
   
 ## <a name="parameter-mapping-tab-options"></a>Параметры вкладки «Сопоставление параметров»  
  **Имя параметра**  
@@ -80,9 +80,9 @@ ms.locfileid: "48193064"
  Выберите результат, а затем нажмите кнопку **Удалить**.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор задачи запроса интеллектуального анализа данных &#40;вкладка модели интеллектуального анализа данных&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [Редактор задачи запроса интеллектуального анализа данных &#40;вывода вкладку&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [Конструктор интеллектуального анализа данных](../analysis-services/data-mining/data-mining-designer.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор задачи "Запрос интеллектуального анализа данных" (вкладка "Модель интеллектуального анализа данных")](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [Редактор задачи "Запрос интеллектуального анализа данных" (вкладка "Вывод")](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [конструктор интеллектуального анализа данных](../analysis-services/data-mining/data-mining-designer.md)  
   
   

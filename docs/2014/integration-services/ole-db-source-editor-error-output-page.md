@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 7737c6ae-c16b-4856-aa6e-5882640093b7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 05ba0c0d3ac25a30bbc823fb23e8f09f3cdf5d93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df4932604a6de27c2205ad0f619939587d02b916
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185004"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393863"
 ---
 # <a name="ole-db-source-editor-error-output-page"></a>Редактор источника «OLE DB» (страница «Вывод ошибок»)
   Используйте страницу **Вывод ошибок** диалогового окна **Редактор источника «OLE DB»** , чтобы выбрать параметры обработки ошибок и установить свойства столбцов вывода ошибок.  
@@ -52,10 +52,10 @@ ms.locfileid: "48185004"
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
 ## <a name="see-also"></a>См. также  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Редактор источника OLE DB &#40;страницы диспетчера соединений&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
- [Редактор источника OLE DB &#40;страница "столбцы"&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
+ [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Редактор источника OLE DB (страница "Диспетчер соединений")](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
+ [Редактор источника OLE DB (страница "Столбцы")](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
  [Извлечение данных с помощью источника OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
- [Диспетчер подключений OLE DB](connection-manager/ole-db-connection-manager.md)  
+ [Диспетчер соединений OLE DB](connection-manager/ole-db-connection-manager.md)  
   
   
