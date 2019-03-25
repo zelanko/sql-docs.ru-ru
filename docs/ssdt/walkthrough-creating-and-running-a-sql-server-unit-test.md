@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8eb48a0c3147b61eb57b6a8035765ed73850efa
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: fde8f649921ebd1410b8b19d8f4883502e56f640
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143594"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305962"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Пошаговое руководство. Создание и запуск модульного теста SQL Server
 С помощью этого пошагового руководства вы создадите модульный тест создать, который проверяет работу нескольких хранимых процедур. Модульные тесты SQL Server создаются для выявления ошибок кода, которые могут вызвать неверную работу приложения. Модульные тесты SQL Server и тесты приложений можно запускать в одном автоматизированном наборе тестов.  
@@ -968,7 +968,7 @@ ms.locfileid: "54143594"
     Необходимо указать, что ожидается определенное исключение. Можно дополнительно указать номер ошибки. Если не добавить этот атрибут, модульный тест завершится ошибкой и в окне «Результаты теста» появится сообщение.  
   
     > [!IMPORTANT]  
-    > Сейчас Visual Studio 2012 не поддерживает атрибут ExpectedSqlException. Сведения о том, как обойти это ограничение, см. в разделе [Невозможно выполнить модульный тест базы данных типа «Ожидаемый сбой»](https://social.msdn.microsoft.com/Forums/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
+    > Сейчас Visual Studio 2012 не поддерживает атрибут ExpectedSqlException. Сведения о том, как обойти это ограничение, см. в разделе [Невозможно выполнить модульный тест базы данных типа «Ожидаемый сбой»](https://social.msdn.microsoft.com/Forums/en-US/e74e06ad-e3c9-4cb0-97ad-a6f235a52345/unable-to-run-quotexpected-failurequot-database-unit-test).  
   
 3.  В меню «Файл» выберите команду «Сохранить SqlServerUnitTests1.cs».  
   

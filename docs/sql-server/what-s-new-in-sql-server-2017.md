@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a8e2aabc262eae4f25bf1cc5056955b58b874d0
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 3d2881dfbb1e8b764c28e0ee9e5cd35ab6ba2087
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579364"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306052"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Новые возможности в SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ SQL Server Analysis Services 2017 включает множество улуч
 - Редактор DAX для SSDT. (CTP 2.0)
 - Подсказки по кодированию — продвинутая функция для оптимизации обновления данных больших табличных моделей в памяти. (CTP 1.3)
 - Поддержка **уровня совместимости 1400** для табличных моделей. Чтобы создать новый проект табличной модели с уровнем совместимости 1400 или перевести уже существующий проект на этот уровень, загрузите и установите [SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939). (CTP 1.1)
-- Современный интерфейс **получения данных** для табличных моделей с уровнем совместимости 1400. См. [блог команды разработчиков Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-2017-on-windows-ctp-1-1-for-analysis-services/). (CTP 1.1)
+- Современный интерфейс **получения данных** для табличных моделей с уровнем совместимости 1400. См. [блог команды разработчиков Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/). (CTP 1.1)
 - Свойство **Скрыть члены** скрывает пустые элементы в неоднородных иерархиях. (CTP 1.1)
 - Новое действие **Строки детализации** для конечного пользователя, позволяющее **Показать подробности** по статистических данным. Функции [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) и **DETAILROWS** для создания выражений со строками детализации. (CTP 1.1)
 - DAX-оператор **IN** для указания множества значений. (CTP 1.1)
