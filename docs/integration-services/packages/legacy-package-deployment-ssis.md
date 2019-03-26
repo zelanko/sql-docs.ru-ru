@@ -29,15 +29,15 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8830f5984bed8b18c82d18e724c608d6730eb643
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 21cdac79f4c610bf2fe6ebe483650dc1a16a24db
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204733"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276760"
 ---
 # <a name="legacy-package-deployment-ssis"></a>Устаревшее развертывание пакетов (службы SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают в себя средства и мастера, которые упрощают развертывание пакетов с компьютера разработчика на рабочий сервер или другие компьютеры.  
@@ -148,7 +148,7 @@ ms.locfileid: "53204733"
   
  Если выбран тип конфигурации **Запись реестра** , необходимо ввести имя раздела реестра в соответствующее поле. Формат — \<раздел реестра>. Если нужно использовать раздел реестра, корневым разделом которого является не HKEY_CURRENT_USER, то для его задания используйте формат \<Раздел реестра\раздел реестра\\...>. Например, чтобы использовать раздел MyPackage, расположенный в разделе SSISPackages, введите **SSISPackages\MyPackage**.  
   
-#### <a name="sql-server"></a>SQL Server  
+#### <a name="sql-server"></a>SQL Server  
  При выборе типа конфигурации **SQL Server** задается соединение с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в которой необходимо хранить конфигурации. Можно сохранить конфигурации в существующей таблице или создать новую в указанной базе данных.  
   
  Следующая инструкция SQL показывает применяемую по умолчанию инструкцию CREATE TABLE, которую предоставляет мастер настройки пакета.  
