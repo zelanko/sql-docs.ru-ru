@@ -1,7 +1,7 @@
 ---
 title: PowerPivot доступности и аварийное восстановление (SQL Server 2014) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 03/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -11,12 +11,12 @@ ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ca6fb72455683ee3c98d1911d75840e5f7dcaf3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8f64fa8d79f3f44a1f7c62dfe13c931509408d42
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352643"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434495"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>Доступность и аварийное восстановление PowerPivot (SQL Server 2014)
   Планы доступности и аварийного восстановления для [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] зависят главным образом от проекта фермы SharePoint, продолжительности простоя, приемлемой для различных компонентов, а также средств и методов работы, которые используются для поддержания доступности SharePoint. В этом разделе содержатся сведения о технологии и диаграммы с примерами топологий, которые следует рассматривать при планировании доступности и аварийного восстановления для развертывания [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
@@ -99,8 +99,6 @@ ms.locfileid: "53352643"
 -   [Поддерживаемые варианты обеспечения высокого уровня доступности и аварийного восстановления для баз данных SharePoint (SharePoint 2013)](https://technet.microsoft.com/library/jj841106.aspx)  
   
 -   [Планирование аварийного восстановления (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628971\(v=office.14\).aspx)  
-  
--   [Технический документ по резервному копированию и восстановлению облака SQL Server](https://www.microsoft.com/server-cloud/solutions/cloud-backup-recovery.aspx?WT.srch=1&WT.mc_ID=SEM_BING_USEvergreenSearch_Unassigned&CR_CC=Unassigned#fbid=RjU2Nbzu2dT)  
   
 -   [Microsoft® SQL Server Backup to Microsoft Windows® Azure®Tool](https://www.microsoft.com/download/details.aspx?id=40740)  
   

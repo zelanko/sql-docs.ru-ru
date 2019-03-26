@@ -18,15 +18,15 @@ helpviewer_keywords:
 - flat files
 - Flat File source
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea4388b453043cb380e7247d6688597300d51366
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b1a7e2f0320790959df4f29bfd586f70acec9de7
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639692"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271047"
 ---
 # <a name="flat-file-source"></a>источник «Неструктурированный файл»
   Источник «Неструктурированный файл» считывает данные из текстового файла. Текстовый файл может иметь разделители, фиксированную ширину полей или смешанный формат.  
@@ -59,7 +59,7 @@ ms.locfileid: "51639692"
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства неструктурированного файла](../../integration-services/data-flow/flat-file-custom-properties.md)  
   

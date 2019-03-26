@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MERGE statement [SQL Server]
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1e8a7300f2b3a006ade820831f682eb379e9e200
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 95a771a7eb5f8f77f7ee7e869c0a434b1b604d26
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393977"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282398"
 ---
 # <a name="merge-in-integration-services-packages"></a>Предложение MERGE в пакетах служб Integration Services
   Для текущего выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]инструкция SQL в задаче "Выполнить SQL" может содержать инструкцию MERGE. Эта инструкция MERGE позволяет выполнять несколько операций INSERT, UPDATE и DELETE в единой инструкции.  
@@ -51,7 +51,7 @@ ms.locfileid: "52393977"
  Предположим, что в хранилище данных существует таблица FactBuyingHabits, в которой отслеживаются последние даты покупки каждым клиентом определенного товара. Таблица состоит из столбцов ProductID, CustomerID и PurchaseDate. Каждую неделю транзакционная база данных создает таблицу PurchaseRecords, куда входят покупки этой недели. Цель — применить единственную инструкцию MERGE для добавления данных из таблицы PurchaseRecords в таблицу FactBuyingHabits. Для пар товар-заказчик, которые не существовали, инструкция MERGE добавляет новые строки. Для существующих пар товар-заказчик инструкция MERGE изменяет дату последней покупки.  
   
 ###### <a name="track-price-history"></a>Отслеживание журнала цен  
- Таблица DimBook представляет собой список книг на складе продавца книг. В ней содержится журнал цен на каждую книгу. Эта таблица содержит следующие столбцы: ISBN, ProductID, Price, Shelf и IsCurrent. Таблица содержит по одной строке на каждую цену, которая когда-либо была у книги. Одна из строк содержит текущую цену. Чтобы указать, какая именно строка содержит текущую цену, столбец IsCurrent этой строки содержит значение 1.  
+ Таблица DimBook представляет собой список книг на складе продавца книг. В ней содержится журнал цен на каждую книгу. В этой таблице имеются следующие столбцы: ISBN, ProductID, Price, Shelf и IsCurrent. Таблица содержит по одной строке на каждую цену, которая когда-либо была у книги. Одна из строк содержит текущую цену. Чтобы указать, какая именно строка содержит текущую цену, столбец IsCurrent этой строки содержит значение 1.  
   
  Еженедельно база данных создает таблицу WeeklyChanges, в которой содержатся изменения цен за неделю и новые книги, добавленные за эту неделю. С помощью единственной инструкции MERGE можно перенести изменения таблицы WeeklyChanges в таблицу DimBook. Инструкция MERGE добавляет новые строки для вновь добавленных книг и изменяет столбец IsCurrent на 0 для строк существующих книг, у которых изменились цены. Инструкция MERGE также добавляет новые строки для книг, у которых изменились цены, и устанавливает для столбца IsCurrent этих строк значение 1.  
   

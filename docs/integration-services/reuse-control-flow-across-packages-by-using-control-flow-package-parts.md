@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.dts.designer.addcopyexistingpackagepart.f1
 - sql13.dts.designer.packagepart.general.f1
 ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 11b6d7d881a034fa79315c37345d7845d868fc2b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 867822310e1eaef3bd1d715d2f026609d72d0272
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542643"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282718"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>Повторное использование потока управления для нескольких пакетов с помощью частей пакета потока управления
   Можно сохранить часто используемую задачу или контейнер потока управления в отдельный файл части (DTSXP-файл) и повторно использовать их несколько раз в одном или нескольких пакетах с помощью частей пакета потока управления. Такая возможность повторного использования упрощает разработку и обслуживание пакетов служб SSIS.  

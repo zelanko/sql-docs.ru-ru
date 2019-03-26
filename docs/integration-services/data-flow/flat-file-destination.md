@@ -17,15 +17,15 @@ helpviewer_keywords:
 - text file writing [Integration Services]
 - destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6e6fa3edeeff19f7ddf9fde79114586ba7588324
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 96badece6d707558fa9fcda87bdf9f71af64255e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641321"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290440"
 ---
 # <a name="flat-file-destination"></a>назначение «Неструктурированный файл»
   Назначение «Неструктурированный файл» записывает данные в текстовый файл. Текстовый файл может быть в следующих форматах: с разделителями, фиксированной ширины, фиксированной ширины с разделителем строки и без выравнивания текста справа.  
@@ -47,7 +47,7 @@ ms.locfileid: "51641321"
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства неструктурированного файла](../../integration-services/data-flow/flat-file-custom-properties.md)  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - POWER function
 ms.assetid: db48ae65-bfa6-4db1-8d3c-d0d4f8a399bc
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4748de700d229d03058154b5b46e15aa66ba27f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f75364a019bbf6f4827d060cfd1daa7076137ea
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595362"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58269990"
 ---
 # <a name="power-ssis-expression"></a>POWER (выражение служб SSIS)
   Возвращает результат возведения числового выражения в степень. Показатель степени должен быть целым числом.  
@@ -41,7 +41,7 @@ POWER(numeric_expression,power)
  DT_R8  
   
 ## <a name="remarks"></a>Remarks  
- Перед выполнением операции возведения в степень аргументы *numeric_expression* и *power* приводятся к типу DT_R8. Дополнительные сведения см. в статье [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Перед выполнением операции возведения в степень аргументы *numeric_expression* и *power* приводятся к типу DT_R8. Дополнительные сведения см. в разделе [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  В случае если результатом *numeric_expression* является ноль, а *power* меньше ноля, средство оценки выражений возвращает ошибку, а выходному параметру присваивается значение NULL.  
   

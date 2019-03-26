@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 35a8af1e63172dd678a85a612a09d922759373fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e03e2deced99be885ee5b0982fd8d3b3ed0f367
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658452"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271191"
 ---
 # <a name="create-infosource-for-transaction-data"></a>Создание InfoSource для данных транзакции
   Используйте диалоговое окно **Создание InfoSource для данных транзакции** , чтобы создать новый InfoSource для данных транзакции в системе SAP Netweaver BW.  
@@ -94,6 +94,6 @@ ms.locfileid: "47658452"
   
 ## <a name="see-also"></a>См. также:  
  [Создание InfoSource](../../integration-services/data-flow/create-infosource.md)   
- [Справка F1 по соединителю с SAP BW (Microsoft)](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Справка F1 по Microsoft Connector для SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

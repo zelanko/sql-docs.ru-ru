@@ -12,15 +12,15 @@ helpviewer_keywords:
 - dates [Integration Services]
 - DATEADD function
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 585b97e644be39048d832f55067be5661430131c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 146d9be6b10acf2fbe27db2ef540ebd0dae3beea
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602492"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279338"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (выражение служб SSIS)
   Возвращает новое значение DT_DBTIMESTAMP после добавления числа, представляющего дату или интервал времени, к указанной части даты. Числовой параметр должен выражаться целым числом, а параметр даты — допустимой датой.  
@@ -66,7 +66,7 @@ DATEADD(datepart, number, date)
   
  Аргумент *datepart* необходимо заключать в кавычки.  
   
- Литерал даты должен быть явно приведен к одному из типов данных даты. Дополнительные сведения см. в статье [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Литерал даты должен быть явно приведен к одному из типов данных даты. Дополнительные сведения см. в разделе [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Функция DATEADD возвращает результат NULL, если значением аргумента является NULL.  
   

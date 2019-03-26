@@ -13,15 +13,15 @@ helpviewer_keywords:
 - statements [Integration Services]
 - OLE DB Command transformation
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4710cf3a1c89a87d5dbe12b5579ca7aaa3489f0a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 027c7c142a825b6ebed8bac35f38779a6ac4bd12
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506560"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279838"
 ---
 # <a name="ole-db-command-transformation"></a>преобразование «Команда OLE DB»
   Преобразование «Команда OLE DB» выполняет инструкцию SQL для каждой строки потока данных. Например, можно выполнить инструкцию SQL, с помощью которой создаются, обновляются или удаляются строки в таблице базы данных.  

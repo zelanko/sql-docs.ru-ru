@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 3bdc541e919e9a30d4ab043ef9c13d78a2f4b445
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: d25a38a0c7bd274e07d0932d6b8ef451a22dda06
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327355"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306082"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Расширенное управление ключами SQL Server TDE с помощью Azure Key Vault (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -176,7 +176,7 @@ ms.locfileid: "54327355"
  
     1. Создайте ключ шифрования локально на локальном устройстве HSM. (Это должен быть асимметричный ключ RSA 2048, так как SQL Server поддерживает только такие ключи.)
     2. Импортируйте ключ шифрования в хранилище ключей Azure. Ниже эта процедура описана более подробно.
-    3. Перед первым использованием ключа в хранилище ключей Azure создайте резервную копию ключа из хранилища ключей Azure. См. дополнительные сведения о команде [Backup-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) .
+    3. Перед первым использованием ключа в хранилище ключей Azure создайте резервную копию ключа из хранилища ключей Azure. См. дополнительные сведения о команде [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) .
     4. При каждом внесении изменений в ключ (например, при добавлении списков управления доступом, тегов, ключевых атрибутов) снова создайте резервную копию ключа из Azure Key Vault.
 
         > [!NOTE]  

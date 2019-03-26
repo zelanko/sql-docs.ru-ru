@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c3a062cd23809db8edf5439f252dabcc6d905dad
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 7fdf13c7a0a2d318846b1140b26c6e56c2290024
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641191"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271182"
 ---
 # <a name="cdc-flow-components"></a>Компоненты потока CDC
   Компоненты отслеживания измененных данных Attunity для служб Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] позволяют разработчикам служб SSIS работать с CDC и уменьшают сложность пакетов CDC.  
@@ -170,7 +170,7 @@ ms.locfileid: "51641191"
 ## <a name="cdc-state"></a>CDC State  
  С каждой группой CDC связано состояние, которое представляется строкой особого формата. Дополнительные сведения см. в разделе [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md). В следующей таблице показаны возможные значения состояния CDC.  
   
-|Состояние|Описание|  
+|Штат|Описание|  
 |-----------|-----------------|  
 |0-(INITIAL)|Состояние, которое имеет место до выполнения пакетов в текущей группе CDC. Это состояние также имеет место, если состояние CDC пусто.<br /><br /> Дополнительные сведения об операциях задачи «Управление CDC» см. в разделе [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
 |1-ILSTART (начало начальной загрузки)|Это состояние, которое имеет место при запуске пакета начальной загрузки. Это происходит после вызова операции **MarkInitialLoadStart** в задаче «Управление CDC».<br /><br /> Дополнительные сведения об операциях задачи «Управление CDC» см. в разделе [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  

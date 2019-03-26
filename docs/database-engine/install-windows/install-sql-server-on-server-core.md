@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 932f2384b24b55a6516fe84cd16f608a1a8e2d0e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c8cc018a1c9fddd35c80f73ce4f141b0b526ad4f
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533343"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306222"
 ---
 # <a name="install-sql-server-on-server-core"></a>Установка SQL Server в Server Core
 
@@ -333,7 +333,7 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
  [Выпуски и поддерживаемые функции SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)   
  [Установка Server Core](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
  [Настройка установки Server Core системы Windows Server 2016 с помощью Sconfig.cmd](https://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
- [Командлеты отказоустойчивого кластера в Windows PowerShell](https://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   
+ [Командлеты отказоустойчивого кластера в Windows PowerShell](/powershell/module/failoverclusters/)
 
   
   

@@ -6,15 +6,15 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 06a8c045c9bd8e51a1ae924ec81cbdebcbf040da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 483a36678484dca38a0321fc539330fb34725d7e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605942"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281778"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>Развертывание проекта служб SSIS с помощью SQL Server Management Studio (SSMS)
 В этом кратком руководстве показано, как подключиться к базе данных каталога SSIS с помощью SQL Server Management Studio (SSMS) и развернуть проект SSIS в каталоге SSIS с помощью мастера развертывания служб Integration Services. 

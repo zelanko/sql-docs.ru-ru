@@ -10,18 +10,18 @@ ms.topic: reference
 helpviewer_keywords:
 - Script component [Integration Services], using variables
 ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 51dddf0e5fd971aeb2aa1229bb1af2faae744b6e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c267518f15bb87dddfd1139e80c3c7922bdf37c1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638531"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278063"
 ---
 # <a name="using-variables-in-the-script-component"></a>Использование переменных в компоненте скрипта
-  Переменные хранят значения, которые пакет и его контейнеры, задачи и обработчики событий могут использовать во время выполнения. Дополнительные сведения см. в разделе [Переменные в службах Integration Services (SSIS)](../../../integration-services/integration-services-ssis-variables.md).  
+  Переменные хранят значения, которые пакет и его контейнеры, задачи и обработчики событий могут использовать во время выполнения. Дополнительные сведения см. в разделе [Переменные служб Integration Services (SSIS)](../../../integration-services/integration-services-ssis-variables.md).  
   
  Существующие переменные можно сделать доступными только для чтения или чтения и записи с помощью пользовательского скрипта, введя список значений, разделенных запятыми, в поля **ReadOnlyVariables** и **ReadWriteVariables** на странице **Скрипт** в окне **Редактор преобразования "Скрипт"**. Помните, что в именах переменных учитывается регистр. Используйте свойство **Value**, чтобы считывать значения отдельных переменных и записывать значения в них. Компонент скрипта обрабатывает любые необходимые блокировки в фоновом режиме, пока скрипт во время выполнения обрабатывает переменные.  
   

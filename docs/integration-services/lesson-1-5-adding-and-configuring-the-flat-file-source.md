@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2a02f4e9a2d27ea827f312ee47b80d93635baa29
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: c28ee5f1ca3e5202cb62cef3b1a0f79ee3fcd69b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143244"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280028"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>Занятие 1-5. Добавление и настройка источника "Неструктурированный файл"
 В этой задаче рассматривается добавление к пакету и настройка источника неструктурированных файлов. Источник неструктурированных файлов представляет собой компонент потока данных, использующий метаданные, определенные диспетчером подключений с неструктурированным файлом. Эти метаданные описывают формат и структуру данных, извлекаемых из неструктурированного файла в процессе преобразования. Источник неструктурированных файлов извлекает данные из единичного неструктурированного файла, используя определения формата в диспетчере подключений с неструктурированным файлом.  

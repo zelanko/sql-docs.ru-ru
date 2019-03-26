@@ -19,15 +19,15 @@ helpviewer_keywords:
 - inserting data
 - truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0505215ab152f9941870f5ee5d2d884750288a04
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0d0b7124909a7759f61d97fc748a527c31237e33
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639601"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289801"
 ---
 # <a name="export-column-transformation"></a>Преобразование «Экспорт столбца»
   Преобразование «Экспорт столбца» считывает данные из потока и вставляет их в файл. Например, если поток данных содержит сведения о продукте, такие как изображения каждого продукта, можно применить преобразование «Экспорт столбца» для сохранения изображений в файлы.  

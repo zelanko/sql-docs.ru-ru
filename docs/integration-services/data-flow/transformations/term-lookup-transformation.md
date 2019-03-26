@@ -21,15 +21,15 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d3d52a5a1f63933bc383601a650bf8e044d22dc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fc197ee015ac6ca35613bbb54dd48bbca67b2faa
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522711"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290310"
 ---
 # <a name="term-lookup-transformation"></a>преобразование «Уточняющий запрос термина»
   Преобразование «Уточняющий запрос термина» сопоставляет термины, извлеченные из текста во входном столбце преобразования, с терминами, содержащимися в ссылочной таблице. Затем оно подсчитывает количество найденных терминов в таблице уточняющих запросов входного набора данных и записывает количество повторений вместе с термином из ссылочной таблицы в столбец на выходе преобразования. Это преобразование полезно для создания пользовательского списка слов на основе входного текста, дополненного статистикой повторяемости слова.  

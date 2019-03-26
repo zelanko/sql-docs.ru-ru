@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9eefa5a7120f64f5dc6f621a2a74956a461619d9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 86da716e81c9bcf499c09d28a55c92e3b6f6eebd
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394034"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305972"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -64,7 +64,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  Число событий, сохраняемых в представлении. Например, если задано значение 100, в сеансе диагностики сохраняются 100 последних событий, соответствующих условию фильтра. Если обнаружено менее 100 соответствующих событий, сеанс диагностики будет содержать менее 100 событий. Значение *max_item_count_num* должно находиться в диапазоне от 100 до 100 000.  
   
  *event_name*  
- Определяет фактические события, которые должны собираться в рамках сеанса диагностики.  Значение *event_name* — это одно из событий, перечисленных в представлении [sys.pdw_diag_events](https://msdn.microsoft.com/d813aac0-cea1-4f53-b8e8-d26824bc2587), где `sys.pdw_diag_events.is_enabled='True'`.  
+ Определяет фактические события, которые должны собираться в рамках сеанса диагностики.  Значение *event_name* — это одно из событий, перечисленных в представлении [sys.pdw_diag_events](../../relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md), где `sys.pdw_diag_events.is_enabled='True'`.  
   
  *filter_property_name*  
  Имя свойства, по которому ограничиваются результаты. Например, чтобы ограничить результаты по идентификатору сеанса, аргументу *filter_property_name* следует присвоить значение *SessionId*. Список возможных значений аргумента *filter_property_name* см. в описании аргумента *property_name* ниже.  
@@ -90,7 +90,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |SPID|Идентификатор процесса службы.|  
   
 ## <a name="remarks"></a>Remarks  
- Каждый пользователь может одновременно открывать до 10 сеансов диагностики. Список текущих сеансов можно получить в представлении [sys.pdw_diag_sessions](https://msdn.microsoft.com/ca111ddc-2787-4205-baf0-1a242c0257a9). Ненужные сеансы можно удалить с помощью инструкции `DROP DIAGNOSTICS SESSION`.  
+ Каждый пользователь может одновременно открывать до 10 сеансов диагностики. Список текущих сеансов можно получить в представлении [sys.pdw_diag_sessions](../../relational-databases/system-catalog-views/sys-pdw-diag-sessions-transact-sql.md). Ненужные сеансы можно удалить с помощью инструкции `DROP DIAGNOSTICS SESSION`.  
   
  Сеансы диагностики продолжают собирать метаданные, пока не будут удалены.  
   

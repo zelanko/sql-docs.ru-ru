@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2910ab9222608f69754538ac0adfb15f5f7f25e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16bb157e9917d2538542df525b2ad523c88bfc01
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618113"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280938"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>Разработка компонентов потоков данных с несколькими входами
   Компонент потока данных с несколькими входами может использовать чрезмерное количество ресурсов памяти в случае неравномерного поступления данных из нескольких входов этого потока. При разработке пользовательского компонента потока данных, поддерживающего два или более входов, нагрузку на ресурсы памяти можно контролировать с помощью следующих элементов в пространстве имен Microsoft.SqlServer.Dts.Pipeline:  

@@ -9,17 +9,17 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 6afbf85f5e141736ac4a78dc381205228bd5ddaa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a2361c8a2e8cbc709d50a9139678a08e2e850e2d
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527100"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305922"
 ---
 # <a name="idle-connection-resiliency"></a>Устойчивость соединения в режиме ожидания
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Устойчивость подключения](https://msdn.microsoft.com/library/dn632678.aspx) — принцип, что разорванное соединение простоя будет переустановлена, в рамках определенных ограничений. В случае сбоя подключения к Microsoft SQL Server, устойчивость подключения позволяет клиентскому компьютеру автоматически пытаются восстановить подключение. Устойчивость подключений — это свойство источника данных. только SQL Server 2014 и более поздней версии и базы данных SQL Azure поддерживает устойчивость подключений.
+[Устойчивость подключения](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) — принцип, что разорванное соединение простоя будет переустановлена, в рамках определенных ограничений. В случае сбоя подключения к Microsoft SQL Server, устойчивость подключения позволяет клиентскому компьютеру автоматически пытаются восстановить подключение. Устойчивость подключений — это свойство источника данных. только SQL Server 2014 и более поздней версии и базы данных SQL Azure поддерживает устойчивость подключений.
 
 Устойчивость подключений реализуется с помощью двух ключевых слов подключения, которые могут быть добавлены строки подключения: **ConnectRetryCount** и **ConnectRetryInterval**.
 
@@ -131,4 +131,4 @@ Statement 2 successful.
 ```
 
 ## <a name="see-also"></a>См. также:
-[Устойчивость подключения в драйвере ODBC в Windows](https://docs.microsoft.com/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)
+[Устойчивость подключения в драйвере ODBC в Windows](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)

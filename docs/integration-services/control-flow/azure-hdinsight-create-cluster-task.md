@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dts.designer.afpcreatecltask.f1
 - sql14.dts.designer.afpcreatecltask.f1
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4687c4508bea34e9435bbfe6d33ad47b1c6a9a45
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f258d985f9265349d0e3bc5f3db74c89922acc68
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638101"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279818"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Задача создания кластера Azure HDInsight
 **Задача создания кластера Azure HDInsight** позволяет пакету служб SSIS создать кластер Azure HDInsight в указанной подписке и группе ресурсов Azure.

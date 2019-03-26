@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - oraProp
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5aa23c62ecf5a171a7b440ef73a61f60d620b301
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd8979186639a840c3fa7721d8f94ed98b35ca39
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727252"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280118"
 ---
 # <a name="edit-the-oracle-database-properties"></a>Изменение свойств базы данных Oracle
   На вкладке Oracle в редакторе свойств можно изменить описание, которое было введено на странице создания базы данных CDC мастера создания экземпляра, а также изменить данные для подключения к базе данных интеллектуального анализа журналов Oracle.  
@@ -39,7 +39,7 @@ ms.locfileid: "47727252"
   
 -   **Проверка подлинности Windows**. Выберите этот параметр, чтобы использовать учетные данные текущего пользователя Windows. Этот параметр можно использовать только в том случае, если в базе данных Oracle настроено использование проверки подлинности Windows.  
   
--   **Проверка подлинности Oracle**. При выборе этого варианта необходимо ввести **Имя пользователя** и **Пароль** пользователя в базе данных Oracle, с которой устанавливается соединение.  
+-   **Проверка подлинности Oracle**. Если выбран этот вариант, то нужно будет ввести **Имя пользователя** и **Пароль пользователя** в базе данных Oracle, с которой устанавливается соединение.  
   
  Свойства базы данных Oracle можно просмотреть в средстве просмотра. При использовании средства просмотра отображаемые в нем данные доступны только для чтения. В средстве просмотра отображается также список отслеживаемых столбцов из таблицы. Дополнительные сведения о доступе к средству просмотра см. в разделе [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
   

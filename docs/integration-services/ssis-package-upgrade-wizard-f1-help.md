@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.is.upgradewizard.completewizard.f1
 - sql13.is.upgradewizard.upgradingpackage.f1
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4c1d1da13379b9a273ca3b5e0c1809434c7ed165
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e51589ee33e03fca23167357f7022d817f808981
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829492"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290000"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Справка F1 мастера обновления пакетов служб SSIS
   Воспользуйтесь мастером обновления пакетов SSIS, чтобы обновить пакеты, созданные в более ранних версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], до формата пакета текущего выпуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -148,7 +148,7 @@ ms.locfileid: "47829492"
   
 -   Поставщик OLE DB для служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Собственный клиент  
   
  Мастер обновления пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] обновляет только те строки подключения, которые хранятся в диспетчерах соединений. Мастер не обновляет строки соединения, которые формируются динамически с помощью языка выражений служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] или программно в задаче «Скрипт».  
   

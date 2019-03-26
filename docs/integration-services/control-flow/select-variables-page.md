@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Select variables
 - Variable selection
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d75e66a4641ae5624a99b6c4bea88d14f93bbc1a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7e28a0043cef8fc26dc5b98c255d516c5dd523b0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528215"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270459"
 ---
 # <a name="select-variables-page"></a>Страница «Выбор переменных»
   При помощи диалогового окна **Выбор переменных** во время настройки задачи «Скрипт» или компонента скрипта можно выбрать одну или несколько переменных для свойств **ReadOnlyVariables** и **ReadWriteVariables** .  

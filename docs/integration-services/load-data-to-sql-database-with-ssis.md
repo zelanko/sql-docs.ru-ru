@@ -8,15 +8,15 @@ ms.technology: integration-services
 ms.topic: conceptual
 ms.custom: loading
 ms.date: 08/20/2018
-ms.author: douglasl
+ms.author: janinez
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: e4d5dbd9f7b419437481acb3306fc88a237fcc5d
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: cc1ab9280843aee163054bace5463e39bd35990d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732071"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290480"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Загрузка данных в SQL Server или базу данных SQL Azure с помощью SQL Server Integration Services (SSIS)
 
@@ -173,9 +173,9 @@ Visual Studio открывает и создает проект служб Integ
 
 ## <a name="next-steps"></a>Следующие шаги
 
-- Сведения об отладке пакетов и устранении их неполадок прямо в среде разработки. Начните здесь: [инструменты устранения неполадок при разработке пакета][Troubleshooting Tools for Package Development].
+- Сведения об отладке пакетов и устранении их неполадок прямо в среде разработки. Начните здесь: [Инструменты устранения неполадок при разработке пакета][Troubleshooting Tools for Package Development].
 
-- Сведения о развертывании пакетов и проектов служб SSIS на сервере служб Integration Services или в другом хранилище. Начните здесь: [развертывание проектов и пакетов][Deployment of Projects and Packages].
+- Сведения о развертывании пакетов и проектов служб SSIS на сервере служб Integration Services или в другом хранилище. Начните здесь: [Развертывание проектов и пакетов][Deployment of Projects and Packages].
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-database-with-ssis/ssis-designer-01.png

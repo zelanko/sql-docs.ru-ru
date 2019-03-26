@@ -8,20 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 91460ffacc5712daecac31073434dcd6a11225a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e5d0ac61e65618527d5da8c7a8bcf2b5808b143
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753522"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290770"
 ---
 # <a name="create-new-infoobject"></a>Создание InfoObject
   Используйте диалоговое окно **Создание нового InfoObject** для создания нового InfoObject в системе SAP Netweaver BW.  
   
- Диалоговое окно **Создать InfoObject** можно открыть на странице **Диспетчер соединений** **Редактора назначений SAP BW**. Дополнительные сведения о назначении SAP BW см. в статье [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
+ Диалоговое окно **Создать InfoObject** можно открыть на странице **Диспетчер соединений** **Редактора назначений SAP BW**. Дополнительные сведения о назначении SAP BW см. в разделе [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
   
 > [!IMPORTANT]  
 >  Документация по Microsoft Connector 1.1 для SAP BW предполагает, что читатель знаком со средой SAP Netweaver BW. Дополнительные сведения о SAP Netweaver BW или сведения о настройке объектов и процессов SAP Netweaver BW см. в документации SAP.  
@@ -158,6 +158,6 @@ ms.locfileid: "47753522"
  [Создание InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [Создание InfoSource для данных транзакции](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [Создание InfoSource для основных данных](../../integration-services/data-flow/create-infosource-for-master-data.md)   
- [Справка F1 по соединителю с SAP BW (Microsoft)](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Справка F1 по Microsoft Connector для SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

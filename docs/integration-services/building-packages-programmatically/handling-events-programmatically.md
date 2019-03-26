@@ -22,15 +22,15 @@ helpviewer_keywords:
 - tasks [Integration Services], events
 - IDTSEvents interface
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 535dd25aa1d5f282261510100a0abb35518db8b4
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 7212793dd926878a8e7de3172ed3798499d90185
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641611"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270853"
 ---
 # <a name="handling-events-programmatically"></a>Программная обработка событий
   В среде выполнения служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] имеется коллекция событий, возникающих до, во время и после проверки и выполнения пакета. Эти события можно зафиксировать двумя способами. Первый метод включает реализацию интерфейса <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> в классе и указание класса в качестве параметра для методов **Execute** и **Validate** пакета. Второй метод включает создание объектов <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>, которые могут содержать другие объекты служб [!INCLUDE[ssIS](../../includes/ssis-md.md)], например задачи и циклы, выполняемые при возникновении события <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. В данном разделе описаны эти два метода и приведены примеры кода, иллюстрирующие их использование.  

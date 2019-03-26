@@ -11,15 +11,15 @@ helpviewer_keywords:
 - DAY function
 - dates [Integration Services], DAY
 ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4ee30af3fd031401fdb1565dcda96905b776aaa7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f85a19231a7d3e3adaf514ef304f459357c5ec0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789012"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271946"
 ---
 # <a name="day-ssis-expression"></a>DAY (выражение служб SSIS)
   Возвращает целое число, представляющее день указанной даты.  
@@ -41,7 +41,7 @@ DAY(date)
 ## <a name="remarks"></a>Remarks  
  Функция DAY возвращает значение NULL, если значение аргумента NULL.  
   
- Литерал даты должен быть явно приведен к одному из типов данных даты. Дополнительные сведения см. в статье [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Литерал даты должен быть явно приведен к одному из типов данных даты. Дополнительные сведения см. в разделе [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 > [!NOTE]  
 >  Проверка выражения завершается ошибкой при явном приведении литерала даты к одному из следующих типов данных: DT_DBTIMESTAMPOFFSET и DT_DBTIMESTAMP2.  

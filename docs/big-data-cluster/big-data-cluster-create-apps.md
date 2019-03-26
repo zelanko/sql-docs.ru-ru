@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8f661acacf17a8977f437abdcefcd3763305229b
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 83dc07ed6336c637aaf17fdcfc1075854fe542b7
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58222066"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434435"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Развертывание приложения в кластере SQL Server 2019 больших данных (Предварительная версия)
 
@@ -137,6 +137,9 @@ output: #output parameter the app expects and the type
 ```bash
 mssqlctl app create --spec ./addpy
 ```
+
+> [!NOTE]
+> `spec.yaml` Файл указывает оба ключевых слова `poolsize` и ряд `replicas`. Количество `replicas` указывает количество копий службы должны быть развернуты. `poolsize` Указывает количество пулов, которые вы хотите создать в одной реплики. Эти параметры оказывают влияние на количество запросов, которые можно обрабатывать развертывания в параллельном режиме. Максимальное количество запросов в один момент времени — equals для `replicas` раз `poolsize`, т. е. Если у вас есть 5 реплик и 2 пулов в каждой реплике развертывания может обрабатывать 10 запросов в параллельном режиме. См. на рисунке ниже для графическое представление `replicas` и `poolsize`: ![Poolsize и реплик](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 
 Вы можете проверить, если приложение развертывается с помощью команды списка:
 

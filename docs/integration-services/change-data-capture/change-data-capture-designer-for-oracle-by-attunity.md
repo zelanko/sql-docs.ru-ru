@@ -10,20 +10,20 @@ ms.topic: conceptual
 f1_keywords:
 - desCons
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3acfc4beeb64631a1c8bc00fe5e4a6ca2c31f470
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bb127d4c413a4b08927b0dca57dbea3b62039b2a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641241"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280858"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Конструктор системы отслеживания измененных данных для Oracle компании Attunity
   Консоль конструктора CDC служит для разработки и обслуживания экземпляров Oracle CDC. Консоль конструктора CDC ― это надстройка консоли управления (MMC), состоящая из следующих элементов.  
   
--   Мастер создания экземпляра. Этот мастер создает экземпляр CDC Oracle. Дополнительные сведения об использовании мастера создания экземпляра см. в разделе [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md).  
+-   Мастер создания экземпляра. Этот мастер создает новый экземпляр CDC Oracle. Дополнительные сведения об использовании мастера создания экземпляра см. в разделе [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md).  
   
 -   Средство просмотра свойств экземпляра CDC. Это закрепленное представление, в котором отображаются состояние и конфигурация выбранного экземпляра CDC. Дополнительные сведения о средстве просмотра свойств см. в разделе [Как управлять экземпляром CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
   

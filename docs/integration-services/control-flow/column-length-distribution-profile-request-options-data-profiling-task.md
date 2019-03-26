@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 955a9ba92639151792976037eee64de4c13eb222
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef0a1d9957a4884ddd579d6bf94103c4b1c5bd6d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825882"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270773"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>Параметры запроса профиля распределения длины столбцов (задача «Профилирование данных»)
   При помощи панели **Свойства запроса** страницы **Запросы профиля** можно задать параметры для варианта **Запрос профиля распределения длины столбцов** , выбранного на панели запросов. Профиль «Распределение длины столбцов» содержит все точные значения длины строковых значений в выбранном столбце и процент строк таблицы, соответствующий каждому значению длины. Этот профиль помогает выявлять такие проблемы данных, как недопустимые значения. Например, во время профилирования столбца с кодами штатов США, состоящими из двух символов, можно выявить значения длиной более двух символов.  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6246042a70aca4edc07a36bc0dabe95be56c6d7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10af58bf19696175926090a87f87551e4738c674
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657980"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271635"
 ---
 # <a name="look-up-infoobject"></a>Поиск InfoObject
   Используйте диалоговое окно **Поиск InfoObject** для поиска InfoObject, заданного в системе SAP Netweaver BW. После открытия списка объектов InfoObject выберите нужный объект InfoObject, после чего целевой объект SAP BW заполнит связанные параметры необходимыми значениями.  
@@ -84,8 +84,8 @@ ms.locfileid: "47657980"
  [Создание InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [Создание InfoSource для данных транзакции](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [Создание InfoSource для основных данных](../../integration-services/data-flow/create-infosource-for-master-data.md)   
- [Создание InfoObject](../../integration-services/data-flow/create-new-infoobject.md)   
+ [Создание нового InfoObject](../../integration-services/data-flow/create-new-infoobject.md)   
  [Редактор назначений SAP BW (страница "Диспетчер подключений")](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
- [Справка F1 по соединителю с SAP BW (Microsoft)](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Справка F1 по Microsoft Connector для SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

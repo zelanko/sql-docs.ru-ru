@@ -15,15 +15,15 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0984613ed3fc299da60113c9701d30f6ccf36e74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d96a8f5797493dd0b6a3453eab841fd62f1ffd5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782912"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277403"
 ---
 # <a name="troubleshooting-tools-for-package-connectivity"></a>Инструменты устранения неполадок с соединением пакетов
 Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают в себя функции и средства, которые используются для устранения неполадок соединений между пакетами и источниками данных, из которых пакеты извлекают и загружают данные.  
@@ -71,6 +71,6 @@ ms.locfileid: "47782912"
   
 ## <a name="see-also"></a>См. также:  
  [Инструменты устранения неполадок при разработке пакета](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Инструменты устранения неполадок с выполнением пакетов](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Устранение неполадок инструментов с помощью отчетов](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SSIS control flow elements
 - SQL Server Integration Services control flow elements
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f8119069b08b2f84bcdf71fa50894eb2e743b88b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a023b8a1a24c8e98856d1540574e1c3c99f87c7d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640671"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282878"
 ---
 # <a name="control-flow"></a>Поток управления
   Пакет состоит из потока управления, а также, одного или нескольких потоков данных (необязательно). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют три различных типа элементов потока управления: контейнеры, которые обеспечивают структуры в пакетах; задачи, которые обеспечивают функциональность; элементы управления очередностью, соединяющие выполняемые компоненты, контейнеры и задачи в упорядоченный поток управления.  

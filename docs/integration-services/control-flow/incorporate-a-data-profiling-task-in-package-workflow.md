@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 621d19785793115c924243fd750b2d78c503c1ba
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 31e092d5913cb1cc9f4572e6ee7d5b8174b59beb
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545787"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275722"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Включение задачи «Профилирование данных» в рабочий процесс пакета
   Профилирование и очистка данных на ранних стадиях не подходят для автоматизации. В службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]выходные данные задачи профилирования данных обычно требуют визуального анализа и вмешательства человека, чтобы определить, являются ли зафиксированные нарушения реальными. Для очистки данных, даже после обнаружения проблем с их качеством, нужен хорошо продуманный план.  

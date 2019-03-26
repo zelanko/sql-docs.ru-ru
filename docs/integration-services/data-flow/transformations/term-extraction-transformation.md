@@ -26,15 +26,15 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 85a35b34610982ac4418e0e8ab05d3e1b188b968
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3ea9c1c590b9f09f1bd31b491d9b0170f59f8406
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507475"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282578"
 ---
 # <a name="term-extraction-transformation"></a>преобразование «Извлечение терминов»
   Преобразование «Извлечение терминов» извлекает термины из текста во входном столбце преобразования, а затем записывает термины в выходной столбец преобразования. Это преобразование работает только с англоязычным текстом и использует собственный словарь и лингвистические сведения об английском языке.  
@@ -238,7 +238,7 @@ ms.locfileid: "52507475"
  Указывает, что целевой функцией является частота термина.  
   
  **TFIDF**  
- Указывает, что целевой функцией является значение TFIDF термина. Функция TFIDF расшифровывается как "частота термина и обратная частота документа" (Term Frequency and Inverse Document Frequency) и определяется формулой: TFIDF термина T = (частота_T) * log (#число_строк_во_входных_данных) / (#число_строк_включающих_T)  
+ Указывает, что целевой функцией является значение TFIDF термина. Функция TFIDF расшифровывается как «частота термина и обратная частота документа» (Term Frequency and Inverse Document Frequency) и определяется формулой: TFIDF термина T = (частота_T) * log( (#число_строк_во_входных_данных) / (#число_строк_включающих_T)   
   
  **Порог частоты**  
  Позволяет задать число вхождений слова или фразы, необходимое для их извлечения. Значение по умолчанию — 2.  

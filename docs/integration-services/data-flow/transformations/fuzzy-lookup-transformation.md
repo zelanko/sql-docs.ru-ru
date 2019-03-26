@@ -31,15 +31,15 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ad931e49146aacdfcae92cca008ffce681ae5dd4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1424df38f6ff0cc091e0f71a316a60e1388d7a33
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540897"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273599"
 ---
 # <a name="fuzzy-lookup-transformation"></a>преобразование «Нечеткий уточняющий запрос»
   Преобразование «Нечеткий уточняющий запрос» выполняет задачи по очистке данных, такие как стандартизация данных, исправление данных и предоставление отсутствующих значений.  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Integration Services, what's new
 - what's new [Integration Services]
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7d5a8b82d60dcd4c2fae13af02310767e10700cd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5a747f7dea48d8c8d733e256473609f37764850a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205843"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290640"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Новые возможности служб Integration Services в SQL Server 2016
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -223,7 +223,7 @@ ms.locfileid: "53205843"
   
  Метод GetIdentificationStringByLineageID был переименован в <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>. Дополнительные сведения см. в разделе [Имена столбцов для ошибок в потоке данных](#ErrorColumn).  
   
- Дополнительные сведения об этом изменении, а также об усовершенствовании столбца ошибок см. в следующей обновленной записи блога: [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3))](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
+ Дополнительные сведения об этом изменении, а также об усовершенствовании столбца ошибок см. в следующей обновленной записи блога: [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3)](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx) (Улучшения для столбцов ошибок в потоке данных SSIS, обновлено для CTP3.3)  
   
 > [!NOTE]  
 >  (В RC0 этот метод был перемещен в новый интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> . Дополнительные сведения см. в разделе [Новый интерфейс IDTSComponentMetaData130 в API](#CMD130).)  

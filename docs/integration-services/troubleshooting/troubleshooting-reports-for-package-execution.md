@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8fc476ac-bd69-434e-9636-70776e0b3b6c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ed8aedc5ac55f933651d66826a58e7ba09f36c8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 474833e2d40e73a519ef00f1748e8a45a0fd7b44
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526046"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271696"
 ---
 # <a name="troubleshooting-reports-for-package-execution"></a>Устранение неполадок пакетов с помощью отчетов
   В текущем выпуске служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] доступны стандартные отчеты, упрощающие наблюдение за пакетами служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , развернутых в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , а также устранение неполадок с пакетами. Два из этих отчетов о пакетах позволяют просматривать состояние выполнения пакетов и выявлять причины ошибок выполнения.  

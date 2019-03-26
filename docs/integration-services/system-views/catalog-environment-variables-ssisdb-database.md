@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a7b6a4442371e59ee3324b345bee644b377119d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec7fbb111e1c5cbc8e98117d3cb3be5d2bebab30
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775392"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277883"
 ---
 # <a name="catalogenvironmentvariables-ssisdb-database"></a>catalog.environment_variables (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47775392"
 |environment_id|**bigint**|Уникальный идентификатор среды, с которой связана переменная.|  
 |name|**sysname**|Имя переменной среды.|  
 |description|**nvarchar(1024)**|Описание переменной среды.|  
-|Тип|**nvarchar(128)**|Тип данных переменной среды.|  
+|type|**nvarchar(128)**|Тип данных переменной среды.|  
 |sensitive|**bit**|Если значение равно `1`, переменная является конфиденциальной и шифруется при сохранении. Если значение равно `0`, переменная не является конфиденциальной и ее значение сохраняется в формате открытого текста.|  
 |value|**sql_variant**|Значение переменной среды. Если значение sensitive равно `0`, отображается значение в виде открытого текста. Если значение sensitive равно `1`, отображается значение **NULL**.|  
   

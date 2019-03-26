@@ -14,12 +14,12 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd08989eb41f5b5a2b1c3f677f8dcff64b25b6ea
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 34f57edd8b58476a7077f601692086c80c89d0c0
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802758"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306002"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Устранение неполадок при соединении с компонентом SQL Server Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "56802758"
 Если на данном этапе происходит ошибка, ее необходимо устранить и только затем продолжать работу. Существует целый ряд потенциальных проблем. Имя входа может не иметь разрешений для подключения. Может отсутствовать база данных по умолчанию.
 
 > [!NOTE]
->    В некоторых сообщениях об ошибках, передаваемых клиенту, намеренно отсутствуют сведения, необходимые для устранения неполадок. Это связано с обеспечением безопасности, так как в этом случае злоумышленник не может получить данные о SQL Server. Чтобы просмотреть полные сведения об ошибке, обратитесь к журналу ошибок SQL Server. Там вы найдете все подробности. Если возникает ошибка **18456 Ошибка входа пользователя**, дополнительные сведения о кодах ошибок см. в статье [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) электронной документации. Очень большой список кодов ошибок приведен в блоке Аарона Бертрана (Aaron Bertrand) в статье [Troubleshooting Error 18456](https://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx). Журнал ошибок можно просмотреть помощью среды SSMS (при наличии соединения) в разделе "Управление" обозревателя объектов. В противном случае журнал можно просмотреть с помощью программы Блокнот Windows. Расположение по умолчанию зависит от версии и может быть изменено во время установки. Расположением по умолчанию для [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] является `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
+>    В некоторых сообщениях об ошибках, передаваемых клиенту, намеренно отсутствуют сведения, необходимые для устранения неполадок. Это связано с обеспечением безопасности, так как в этом случае злоумышленник не может получить данные о SQL Server. Чтобы просмотреть полные сведения об ошибке, обратитесь к журналу ошибок SQL Server. Там вы найдете все подробности. Если возникает ошибка **18456 Ошибка входа пользователя**, дополнительные сведения о кодах ошибок см. в статье [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) электронной документации. Очень большой список кодов ошибок приведен в блоке Аарона Бертрана (Aaron Bertrand) в статье [Troubleshooting Error 18456](https://sqlblog.org/2011/01/14/troubleshooting-error-18456). Журнал ошибок можно просмотреть помощью среды SSMS (при наличии соединения) в разделе "Управление" обозревателя объектов. В противном случае журнал можно просмотреть с помощью программы Блокнот Windows. Расположение по умолчанию зависит от версии и может быть изменено во время установки. Расположением по умолчанию для [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] является `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
 
 4.   Если соединение устанавливается с помощью общей памяти, проверьте его с использованием TCP. Чтобы активировать TCP-подключение, укажите **tcp:** перед именем. Пример:
 

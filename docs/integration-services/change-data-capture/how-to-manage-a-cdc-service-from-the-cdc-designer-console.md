@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 27a9dae6ed1a05f22c2182ea3eabebd5e489db74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c5cb28e7474a78c25d82b86f7ba3b81bed90d38
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832932"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277003"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>Как управлять службой CDC из консоли конструктора CDC
   В этой процедуре описывается использование консоли конструктора CDC для управления службой CDC.  
@@ -29,7 +29,7 @@ ms.locfileid: "47832932"
   
 3.  Выберите службу, которой вы будите управлять.  
   
-     **Примечание**. Если в консоли конструктора CDC не указано ни одной службы, нужно создать новые экземпляры с помощью консоли конфигурации служб CDC. Сведения о создании службы см. в справке в Интернете консоли конфигурации служб.  
+     **Примечание.** Если в консоли конструктора CDC не указано ни одной службы, нужно создать новые экземпляры с помощью консоли конфигурации служб CDC. Сведения о создании службы см. в справке в Интернете консоли конфигурации служб.  
   
 4.  Для службы CDC можно выполнять следующие задачи:  
   

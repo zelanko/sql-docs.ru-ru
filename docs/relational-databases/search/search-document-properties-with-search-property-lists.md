@@ -19,12 +19,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5858171e3322cfbd694059cef813527dccb1168d
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 26f5f87c1df8ade01b7e2f24890990f19ee6ab52
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974203"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306212"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Поиск свойств документа с использованием списков свойств поиска
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "57974203"
   
     -   **Создание на основе существующего списка свойств поиска**  
   
-     Дополнительные сведения см. в статье [New Search Property List](https://msdn.microsoft.com/library/ffca78e9-8608-4b15-bd38-b2d78da4247a).  
+     Дополнительные сведения см. в статье [New Search Property List](/sql/database-engine/new-search-property-list).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -201,7 +201,7 @@ GO
   
     2.  Чтобы добавить свойство документа, щелкните пустую строку в конце списка, справа от **\***, и введите значения для нового свойства.  
   
-         Описание этих значений см. в разделе [Редактор списка свойств поиска](https://msdn.microsoft.com/library/0f3ced6e-0dfd-49fc-b175-82378c3d668e). Сведения о способе получения этих значений для свойств, определенных корпорацией Майкрософт, см. в разделе [Поиск идентификаторов GUID наборов свойств и целочисленных идентификаторов свойств для свойств поиска](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). Дополнительные сведения о свойствах, определенных независимыми поставщиками программного обеспечения (ISV), см. в документации по этим поставщикам.  
+         Описание этих значений см. в разделе [Редактор списка свойств поиска](/sql/database-engine/search-property-list-editor). Сведения о способе получения этих значений для свойств, определенных корпорацией Майкрософт, см. в разделе [Поиск идентификаторов GUID наборов свойств и целочисленных идентификаторов свойств для свойств поиска](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). Дополнительные сведения о свойствах, определенных независимыми поставщиками программного обеспечения (ISV), см. в документации по этим поставщикам.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

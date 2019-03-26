@@ -19,15 +19,15 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b165b4579497f28ad1b7dc2cb930daf5162941a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 19fe20d882810488e077ed1158b79c3399cc12f8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503300"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290590"
 ---
 # <a name="sql-server-destination"></a>назначение «SQL Server»
   Назначение «SQL Server» подключается к локальной базе данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и производит массовую загрузку данных в таблицы и представления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Нельзя использовать назначение «SQL Server» в пакетах, получающих доступ к базе данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на удаленном сервере. Вместо этого пакеты должны использовать назначение «OLE DB». Дополнительные сведения см. в разделе [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "52503300"
  Пользователям, выполняющим пакеты, которые содержат назначение «SQL Server», необходимо разрешение на «Создание глобальных объектов». Предоставить это разрешение пользователям можно с помощью средства политики локальной безопасности, доступного в меню **Администрирование** . Если при выполнении пакета, который использует назначение «SQL Server», получено сообщение об ошибке, убедитесь, что учетная запись, под которой был запущен пакет, имеет разрешение на «Создание глобальных объектов».  
   
 ## <a name="bulk-inserts"></a>Массовые вставки  
- При попытке использовать назначение «SQL Server» для массовой загрузки данных в удаленную базу данных SQL Server может появиться сообщение об ошибке, которое будет иметь следующий вид: «Доступна запись OLE DB». Источник: "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 Описание: "Не удалось выполнить массовую загрузку, поскольку невозможно открыть объект сопоставления файлов служб "Global\DTSQLIMPORT". Код ошибки операционной системы 2 (система не может найти указанный файл). Убедитесь, что доступ к локальному серверу осуществляется через систему безопасности Windows"».  
+ При попытке использовать назначение «SQL Server» для массовой загрузки данных в удаленную базу данных SQL Server может появиться сообщение об ошибке, похожее на следующее: «Доступна запись OLE DB. Источник: Значение Hresult собственного клиента Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: 0x80040E14 Описание: "Не удалось выполнить массовую загрузку, поскольку невозможно открыть объект сопоставления файлов служб SSIS 'Global\DTSQLIMPORT'. Код ошибки операционной системы 2 (система не может найти указанный файл). Убедитесь, что доступ к локальному серверу осуществляется через систему безопасности Windows"».  
   
  Назначение "SQL Server" предлагает такую же высокоскоростную вставку данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , что и задача "Массовая вставка". Однако используя назначение "SQL Server", пакет может применить преобразования к столбцу раньше, чем данные будут загружены в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -95,7 +95,7 @@ ms.locfileid: "52503300"
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства назначения «SQL Server»](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   

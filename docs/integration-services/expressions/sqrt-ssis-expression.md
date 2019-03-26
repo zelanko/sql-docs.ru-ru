@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SQRT function
 - square root of given expression
 ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 32d755dbf79a57552c73a79a3c8a1daad60dd208
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d0104fbb4c2778b5913b4409d69d8902d83a8e14
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608382"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290400"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT (выражение служб SSIS)
   Возвращает квадратный корень числового выражения.  
@@ -33,7 +33,7 @@ SQRT(numeric_expression)
   
 ## <a name="arguments"></a>Аргументы  
  *numeric_expression*  
- Числовое выражение любого типа числовых данных. Дополнительные сведения см. в статье [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Числовое выражение любого типа числовых данных. Дополнительные сведения см. в разделе [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="result-types"></a>Типы результата  
  DT_R8  

@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Script component [Integration Services], object model
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 54f8ff03802ca6efb96f986b0783efe793d604d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64218cb8435f7bb30fc1a1309daeb93632d2bad9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847372"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277863"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Основные сведения о модели объектов компонента скрипта
   Как описано в разделе [Кодирование и отладка компонента скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md), проект компонента скрипта содержит три элемента проекта.  

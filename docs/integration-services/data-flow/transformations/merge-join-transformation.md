@@ -17,17 +17,17 @@ helpviewer_keywords:
 - joining datasets [Integration Services]
 - joins [SQL Server], SSIS
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6fc41dc0b30164410ca1e5d770632f9866ca26c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acd1c079dbbd79b3cdedd94351cb99829d2f0339
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833538"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277743"
 ---
-# <a name="merge-join-transformation"></a>преобразование «Соединение слиянием»
+# <a name="merge-join-transformation"></a>Merge Join Transformation
   Преобразование «Соединение слиянием» предоставляет выход, формируемый объединением двух отсортированных наборов данных при помощи соединения FULL, LEFT или INNER. Например, соединение LEFT может использоваться для объединения таблицы, содержащей данные о товарах, с таблицей, в которой перечисляются страны или регионы, в которых эти товары были произведены. Результатом является таблица, в которой перечисляются все товары и страны или регионы их происхождения.  
   
  Настройка преобразования «Соединение слиянием» может производиться следующими способами.  
@@ -89,7 +89,7 @@ ms.locfileid: "47833538"
   
 ## <a name="see-also"></a>См. также:  
  [Преобразование «Слияние»](../../../integration-services/data-flow/transformations/merge-transformation.md)   
- [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+ [Преобразование «Объединить все»](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

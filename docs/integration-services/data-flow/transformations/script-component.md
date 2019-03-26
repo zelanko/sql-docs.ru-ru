@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3e46ec694b130ca684f5437e04159436a36afd44
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6e9c75fdd486c88e2f4cd0d58d7e310b44ea140a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641181"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280648"
 ---
 # <a name="script-component"></a>Компонент скрипта
   Компонент скрипта размещает скрипт и позволяет пакету включать и выполнять пользовательский код скрипта. Можно использовать компонент скрипта в пакетах для следующих целей.  
@@ -70,7 +70,7 @@ ms.locfileid: "51641181"
   
  Среда VSTA поддерживает языки программирования [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# и [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic.  
   
- Сведения по программированию компонента «Скрипт» см. в разделе [Расширение потока данных с помощью компонента скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md). Дополнительные сведения о способах настройки компонента скрипта как источника, преобразования или назначения см. в разделе [Developing Specific Types of Script Components](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md). Дополнительные примеры, например назначение «ODBC», в которых показано использование компонента скрипта, см. в разделе [Additional Script Component Examples](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md).  
+ Сведения по программированию компонента скрипта см. в разделе [Расширение потока данных с помощью компонента скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md). Дополнительные сведения о способах настройки компонента скрипта как источника, преобразования или назначения см. в разделе [Developing Specific Types of Script Components](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md). Дополнительные примеры, например назначение «ODBC», в которых показано использование компонента скрипта, см. в разделе [Additional Script Component Examples](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md).  
   
 > [!NOTE]  
 >  В отличие от предыдущих версий, где можно было указать, являются ли скрипты предварительно скомпилированными, в версии [!INCLUDE[ssISversion10](../../../includes/ssisversion10-md.md)] и более поздних версиях все скрипты компилируются заранее. Если скрипт компилируется заранее, то во время выполнения не загружается языковая подсистема и пакет выполняется быстрее. Однако заранее скомпилированные двоичные файлы занимают значительное место на диске.  
@@ -208,8 +208,8 @@ ms.locfileid: "51641181"
 |**LocaleID**|Укажите локаль, предоставляющую сведения о регионе, используемые для сортировки и преобразования даты и времени.|  
 |**Название**|Введите описательное имя компонента.|  
 |**ValidateExternalMetadata**|Укажите, будет ли преобразование «Скрипт» во время разработки проверять метаданные столбца относительно источников внешних данных. Значение **false** откладывает проверку до времени выполнения.|  
-|**ReadOnlyVariables**|Введите через запятую список переменных, доступ к которым в ходе преобразования «Скрипт» возможен только для чтения.<br /><br /> Примечание. В именах переменных учитывается регистр.|  
-|**ReadWriteVariables**|Введите через запятую список переменных, доступ к которым в ходе преобразования «Скрипт» возможен как для чтения, так и для записи.<br /><br /> Примечание. В именах переменных учитывается регистр.|  
+|**ReadOnlyVariables**|Введите через запятую список переменных, доступ к которым в ходе преобразования «Скрипт» возможен только для чтения.<br /><br /> Примечание. В именах переменных учитывается регистр букв.|  
+|**ReadWriteVariables**|Введите через запятую список переменных, доступ к которым в ходе преобразования «Скрипт» возможен как для чтения, так и для записи.<br /><br /> Примечание. В именах переменных учитывается регистр букв.|  
 |**ScriptLanguage**|Язык скрипта, используемый компонентом скрипта.<br /><br /> Чтобы установить значение по умолчанию языка скрипта для компонентов скрипта и задач «Скрипт», воспользуйтесь параметром **Язык скрипта** страницы **Общие** диалогового окна **Параметры** .|  
 |**UserComponentTypeName**|Определяет класс <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> и сборку **Microsoft.SqlServer.TxScript** , поддерживающие инфраструктуру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
   

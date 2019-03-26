@@ -11,15 +11,15 @@ helpviewer_keywords:
 - dates [Integration Services], YEAR
 - YEAR function
 ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 515a7818263105664d4f33be241e0a10c7be07a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0781278539a1c01be5aec69dd86e4d0f93e65dde
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657028"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271822"
 ---
 # <a name="year-ssis-expression"></a>YEAR (выражение служб SSIS)
   Возвращает целое число, представляющее год указанной даты.  
@@ -41,7 +41,7 @@ YEAR(date)
 ## <a name="remarks"></a>Remarks  
  Функция YEAR возвращает значение NULL, если аргумент — NULL.  
   
- Литерал даты должен быть явно приведен к одному из типов данных даты. Дополнительные сведения см. в статье [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Литерал даты должен быть явно приведен к одному из типов данных даты. Дополнительные сведения см. в разделе [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 > [!NOTE]  
 >  Проверка выражения завершается ошибкой при явном приведении литерала даты к одному из следующих типов данных: DT_DBTIMESTAMPOFFSET и DT_DBTIMESTAMP2.  

@@ -15,12 +15,12 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e6833381664fa71f61e6e021d81154afdb0945cb
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 1d130177d51dc64e5eb1d0e763cc6068a61b7123
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327775"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356487"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Учебник. Использование службы хранилища BLOB-объектов Azure с SQL Server 2016
 
@@ -147,17 +147,21 @@ ms.locfileid: "54327775"
     Код скрипта будет выглядеть следующим образом.  
   
     ```sql   
+    /* Example:
     USE master  
-    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a forward slash at the end, the general format 
-       WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.   
-       , SECRET = 'sharedaccesssignature' -- this is the shared access signature key that you obtained in section 1.   
-    GO   
-
+    CREATE CREDENTIAL [https://msfttutorial.blob.core.windows.net/containername] 
+    WITH IDENTITY='SHARED ACCESS SIGNATURE'   
+    , SECRET = 'sharedaccesssignature' 
+    GO */
+    
     USE master  
-    CREATE CREDENTIAL [https://msfttutorial.blob.core.windows.net/containername] -- this name must match the container path, start with https and must not contain a forward slash at the end, the general format 
-       WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.   
-       , SECRET = 'sharedaccesssignature' -- this is the shared access signature key that you obtained in section 1.   
-    GO   
+    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] 
+      -- this name must match the container path, start with https and must not contain a forward slash at the end
+    WITH IDENTITY='SHARED ACCESS SIGNATURE' 
+      -- this is a mandatory string and should not be changed   
+     , SECRET = 'sharedaccesssignature' 
+       -- this is the shared access signature key that you obtained in section 1.   
+    GO    
     ```  
   
 4.  Чтобы увидеть все доступные учетные данные, можно выполнить следующую инструкцию в окне запроса, подключенном к экземпляру:  

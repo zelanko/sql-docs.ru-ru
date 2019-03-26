@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b79ca6af9b0ccea0dfb1fe66b73f33cc8b9cd062
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3046b281141649746c8d93496a0ddbb8ad3607c6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639251"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282848"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Просмотр файлов и таблиц Excel с помощью контейнера "Цикл по каждому элементу"
   Процедуры в этом разделе описывают, как выполнить цикл по книгам Excel в папке или цикл по таблицам в книге Excel с помощью контейнера «цикл по каждому элементу» с соответствующим перечислителем.  

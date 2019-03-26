@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - connection managers [Integration Services], programming
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d08336c4577da996c624cb2368e70502a4136b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33b91b8545a4316bb8c7b1b3e78ea8e4d60ae1ee
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782132"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282088"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Работа с диспетчерами соединений программным образом
   В службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] метод AcquireConnection связанного класса диспетчера соединений вызывается наиболее часто при работе с диспетчерами соединений в управляемом коде. При создании управляемого кода необходимо вызвать метод AcquireConnection, чтобы воспользоваться функциональностью диспетчера соединений. Этот метод должен быть вызван вне зависимости от того, создается ли управляемый код для задачи «Скрипт», компонента скрипта, пользовательского объекта или пользовательского приложения.  
@@ -62,7 +62,7 @@ ms.locfileid: "47782132"
 |MULTIFILE|диспетчер соединений с несколькими файлами|**System.String**|Путь к одному из файлов.|  
 |MULTIFLATFILE|диспетчер соединения с несколькими неструктурированными файлами|**System.String**|Путь к одному из файлов.|  
 |SMOServer|SMO, диспетчер соединений|**Microsoft.SqlServer.Management.Smo.Server**||  
-|SMTP|Диспетчер соединений SMTP|**System.String**|Например: `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`.|  
+|SMTP|Диспетчер соединений SMTP|**System.String**|Например: `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
 |WMI|Диспетчер WMI-соединений|**System.Management.ManagementScope**||  
 |SQLMOBILE|Диспетчер соединений SQL Server Compact|**System.Data.SqlServerCe.SqlCeConnection**||  
   

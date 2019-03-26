@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 24fce778851f514d680a2701cc9c4dcc9ccb277c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2ffaf0e89e1fdbd0a1722ad038ad9e360decf237
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419075"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305892"
 ---
 # <a name="using-integrated-authentication"></a>Использование встроенной проверки подлинности
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -67,7 +67,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 Для аудита действий в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] от имени пользователей, отличных от системной учетной записи, приложение должно использовать [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**.  
   
-Для повышения производительности приложение может использовать организацию пулов соединений со встроенной проверкой подлинности и аудитом. Однако совмещение организации пулов соединений, встроенной проверки подлинности и аудита создает угрозу безопасности, так как диспетчер драйверов unixODBC позволяет различным пользователям повторно использовать подключения из пула. Дополнительные сведения см. в статье [Организация пулов соединений ODBC](https://www.unixodbc.org/doc/conn_pool.html).  
+Для повышения производительности приложение может использовать организацию пулов соединений со встроенной проверкой подлинности и аудитом. Однако совмещение организации пулов соединений, встроенной проверки подлинности и аудита создает угрозу безопасности, так как диспетчер драйверов unixODBC позволяет различным пользователям повторно использовать подключения из пула. Дополнительные сведения см. в статье [Организация пулов соединений ODBC](http://www.unixodbc.org/doc/conn_pool.html).  
 
 Перед повторным использованием приложение должно сбросить соединения в пуле, выполнив `sp_reset_connection`.  
 
@@ -83,7 +83,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 -   Сервер приложений осуществляет проверку подлинности в качестве другой базы данных и подключается к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выполняет проверку подлинности как пользователь базы данных для другой базы данных ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] проходит проверку подлинности как пользователь базы данных в другой базе данных ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 После настройки встроенной проверки подлинности учетные данные передаются связанному серверу.  
   

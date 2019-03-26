@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Cache connection manager
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 81c0f330803b5e073425ff4540f20bdd08caf8c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f68d68c9302bccd55ef01b104a592a0462fbe669
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837782"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289940"
 ---
 # <a name="cache-connection-manager"></a>диспетчер соединений с кэшем
   Диспетчер соединений с кэшем считывает данные из преобразования кэша или из файла кэша (CAW) и может сохранить эти данные в файле кэша. Данные всегда будут храниться в памяти, вне зависимости от того, был ли настроен диспетчер соединений с кэшем для использования файла кэша.  
@@ -128,6 +128,6 @@ ms.locfileid: "47837782"
  Задает кодовую страницу для столбца этого типа. Параметр **Code Page**можно изменить, если он применим к типу данных.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера подключений с кэшем](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+ [реализовать преобразование «Уточняющий запрос» в режиме полного кэширования с помощью диспетчера соединений с кэшем](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   

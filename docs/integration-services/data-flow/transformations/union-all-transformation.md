@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2b4d6dc76ba333681e14a9437c6931b21035bda0
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d9069bffba5739a7eb53c12315ba3d28702e3398
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639751"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273745"
 ---
 # <a name="union-all-transformation"></a>преобразование «Объединить все»
   Преобразование «Объединить все» объединяет несколько входов в один выход. Например, выходы из пяти различных источников неструктурированных файлов можно сделать входами для преобразования «Объединить все» и объединить в один выход.  

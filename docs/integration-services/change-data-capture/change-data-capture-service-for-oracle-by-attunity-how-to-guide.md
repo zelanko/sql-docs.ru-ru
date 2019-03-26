@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f50178e7-6d9a-45f9-bfce-61260aa882c1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a1119944ed0cc80ed8463cce0cee6b7130a0d211
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9aa86686db300a58987b842bf8457a28adf3a9fd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799282"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290058"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-how-to-guide"></a>Руководство по службе системы отслеживания измененных данных для Oracle компании Attunity
   В этом разделе приведены инструкции по выполнению задач при помощи консоли конфигурации служб CDC.  

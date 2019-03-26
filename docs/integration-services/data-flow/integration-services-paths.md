@@ -18,15 +18,15 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a5fcda8f88d1e16dc39bd4de431239a30cfd218d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3aa227c82d9481863c6cca360fdac41cec3ace13
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658628"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282458"
 ---
 # <a name="integration-services-paths"></a>Пути служб Integration Services
   Путь связывает два компонента в потоке данных при помощи соединения выхода одного компонента потока данных с входом другого. У пути есть источник и целевой объект. Например, если путь соединяет источник OLE DB и преобразование «Сортировка», то источник OLE DB является источником пути, а целевым объектом пути будет преобразование «Сортировка». Источником является начало пути, а целевым объектом — его конец.  

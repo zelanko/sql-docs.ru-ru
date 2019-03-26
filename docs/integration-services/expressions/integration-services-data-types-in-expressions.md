@@ -11,15 +11,15 @@ helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 978ec0b00cbb4954a7aa6e50e6d182857ac8338a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 72c03667c768f19569dbcce37079f24dc85ef2db
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639851"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273446"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Типы данных в выражениях служб Integration Services
   Средство оценки выражений использует типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Когда данные впервые попадают в поток данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , подсистема обработки потока данных преобразует все данные столбцов в тип данных [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , а данные столбцов, используемых выражением, уже имеют тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Выражения, используемые в преобразованиях «Условное разбиение» и «Производный столбец», могут ссылаться на столбцы, поскольку являются частью потока данных, включающего данные столбцов.  
@@ -122,7 +122,7 @@ ms.locfileid: "51639851"
   
 -   Аргументы, передаваемые математическим функциям, должны преобразовываться в числовые типы данных. В зависимости от функции или операции может потребоваться определенный тип числовых данных. Например, функция HEX требует целого числа со знаком или без знака.  
   
--   Аргументы, передаваемые строковым функциям, должны иметь символьные типы данных: DT_STR или DT_WSTR. Например, UPPER(«цветок»). Некоторые строковые функции, такие как SUBSTRING, требуют дополнительных целочисленных аргументов, указывающих начальную позицию и длину строки.  
+-   Аргументы, передаваемые строковым функциям, должны преобразовываться в символьные типы данных: DT_STR или DT_WSTR. Например, UPPER(«цветок»). Некоторые строковые функции, такие как SUBSTRING, требуют дополнительных целочисленных аргументов, указывающих начальную позицию и длину строки.  
   
 -   Аргументы, передаваемые функциям даты и времени, должны преобразовываться в допустимую дату. Например, DAY(GETDATE()). Некоторые функции, такие как DATEADD, требуют дополнительного целочисленного аргумента, указывающего число дней, которые добавляются к дате.  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - manSer
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c9437ede8627ee8fb162995cb4e02a454d42a3a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a356826385f86f3f33735e4e8b0bba7880ce9aa8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727232"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289820"
 ---
 # <a name="manage-a-cdc-service"></a>Управление службой CDC
   В консоли конструктора CDC можно просматривать службы, созданные с помощью консоли конфигурации служб CDC, а также управлять всеми экземплярами в службе CDC Oracle.  
@@ -46,6 +46,6 @@ ms.locfileid: "47727232"
 ## <a name="see-also"></a>См. также:  
  [Как создать экземпляр изменения базы данных SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Как управлять службой CDC из консоли конструктора CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
- [Использование мастера создания экземпляра](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
+ [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   

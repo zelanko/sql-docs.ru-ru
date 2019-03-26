@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SSIS custom tasks, debugging
 - debugging [Integration Services], custom tasks
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9470fdf09376f26945aae0462813921018dcb9a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eea4ee60abf1f3bda30a464f506c5ffed23f4091
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820802"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282388"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Добавление поддержки отладки в пользовательскую задачу
   Обработчик среды выполнения служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] дает возможность приостанавливать пакеты, задачи и другие типы контейнеров во время выполнения при помощи точек останова. Использование точек останова позволяет просматривать и исправлять ошибки, мешающие правильной работе приложения или задач. Архитектура точек останова позволяет оценивать во время выполнения значения объектов в пакете в определенных точках выполнения при приостановке обработки задачи.  

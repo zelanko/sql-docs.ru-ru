@@ -11,15 +11,15 @@ helpviewer_keywords:
 - associativity [Integration Services]
 - precedence [Integration Services]
 ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 86f8ef15874d9777aeb1b47481ba4f9933b13b4d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6fe2edbd0e33cf1c291365b74d3d6eb03572cfa4
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502006"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277443"
 ---
 # <a name="operator-precedence-and-associativity"></a>Очередность и ассоциативность операторов
   Каждый оператор в наборе операторов, поддерживаемом средством оценки выражений, имеет назначенный приоритет в иерархии приоритетов и содержит направление, в котором производится его вычисление. Направление вычисления для оператора — это ассоциативность оператора. Операторы с более высоким приоритетом выполняются раньше операторов с более низким приоритетом. Если выполнение выражения предполагает наличие нескольких операторов, порядок выполнения этих операторов определяется их приоритетом. Порядок исполнения может существенно повлиять на результирующее значение. Некоторые операторы имеют одинаковый приоритет. Если выражение содержит несколько операторов с одинаковым приоритетом, то операторы выполняются направленно, слева направо или справа налево.  

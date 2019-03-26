@@ -1,7 +1,7 @@
 ---
 title: Резервное копирование в SQL Server по URL-адресу — рекомендации и устранение неполадок | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 03/25/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -11,15 +11,15 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12716c1250d60cd59b9b8786c8f88dae7982473a
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: b74e4137ebb076b1cbea37ecaf3e1ae3c26f26f6
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578524"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434485"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   В этом разделе рассматриваются рекомендации и советы по устранению неполадок SQL Server при создании резервных копий и восстановлении с помощью службы хранилища больших двоичных объектов Windows Azure.  
   

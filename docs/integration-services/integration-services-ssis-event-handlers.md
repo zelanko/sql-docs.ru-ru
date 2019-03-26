@@ -19,15 +19,15 @@ helpviewer_keywords:
 - containers [Integration Services], events
 - events [Integration Services], about events
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0aab1631f282ff05af8f7e2a1089d7234325ef1e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 1bed8f1e69ca8e3590abb7fe9cf8cd226ac5be24
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642111"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281218"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Обработчики событий в службах Integration Services (SSIS)
   Во время выполнения исполняемых объектов (пакетов, контейнеров «цикл по каждому элементу», «цикл по элементам», последовательности и узлы задач) возникают события. Например, в случае ошибки возникает событие OnError. Можно создать пользовательские обработчики событий для этих событий, чтобы расширить функциональность пакетов и упростить управление пакетами во время их выполнения. Обработчики событий могут выполнять следующие задачи:  
@@ -84,7 +84,7 @@ ms.locfileid: "51642111"
 |**OnProgress**|Обработчик события **OnProgress** . Событие вызывается исполняемым объектом в процессе выполнения.|  
 |**OnQueryCancel**|Обработчик события **OnQueryCancel** . Событие вызывается исполняемым объектом, чтобы установить, следует ли ему прекратить выполнение.|  
 |**OnTaskFailed**|Обработчик события **OnTaskFailed** . Событие вызывается неудачно завершившейся задачей.|  
-|**OnVariableValueChanged**|Обработчик события **OnVariableValueChanged** . Событие вызывается исполняемым объектом при изменении значения переменной. Событие вызывается исполняемым объектом, в котором определена переменная. Событие не происходит, если свойство **RaiseChangeEvent** для этой переменной установлено в значение **False**. Дополнительные сведения см. в разделе [Переменные в службах Integration Services (SSIS)](../integration-services/integration-services-ssis-variables.md).|  
+|**OnVariableValueChanged**|Обработчик события **OnVariableValueChanged** . Событие вызывается исполняемым объектом при изменении значения переменной. Событие вызывается исполняемым объектом, в котором определена переменная. Событие не происходит, если свойство **RaiseChangeEvent** для этой переменной установлено в значение **False**. Дополнительные сведения см. в разделе [Переменные служб Integration Services (SSIS)](../integration-services/integration-services-ssis-variables.md).|  
 |**OnWarning**|Обработчик события **OnWarning** . Событие вызывается исполняемым объектом при возникновении предупреждения.|  
 
 ## <a name="add-an-event-handler-to-a-package"></a>Добавление к пакету обработчик событий

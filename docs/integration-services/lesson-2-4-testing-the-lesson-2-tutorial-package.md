@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2c17b7679a10d9273578c74dfa452b120ae2d87b
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 7524010d42675b2eb503f8b8f43205a7ef2705b6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143204"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272209"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>Занятие 2-4. Тестирование учебного пакета занятия 2
 
@@ -45,7 +45,7 @@ ms.locfileid: "54143204"
 2.  После окончания работы пакета выберите в меню **Отладка** пункт **Остановить отладку**.  
   
 ## <a name="go-to-next-lesson"></a>Переход к следующему занятию  
-[Урок 3. Добавление журналов с помощью служб SSIS](../integration-services/lesson-3-add-logging-with-ssis.md)  
+[Занятие 3. Добавление журналов с помощью служб SSIS](../integration-services/lesson-3-add-logging-with-ssis.md)  
   
 ## <a name="see-also"></a>См. также раздел  
 [Запуск проектов и пакетов](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  

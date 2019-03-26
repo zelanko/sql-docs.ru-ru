@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1cbccb0ba6fa66cba9b8e57e628bef4710414cf7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0561da6cd6877d9129a6581d2d415b3675c467a6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533396"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281818"
 ---
 # <a name="define-a-state-variable"></a>Определение переменной состояния
   Эта процедура описывает, как определить переменную пакета, в которой хранится информация состояния CDC.  

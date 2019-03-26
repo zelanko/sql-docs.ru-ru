@@ -14,15 +14,15 @@ helpviewer_keywords:
 - control flow [Integration Services], containers
 - SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 407716195293b4ff362019b3becf9887f3dffe82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c147c5fc44f8dcb96679ecc83d3b88fd474830a3
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700662"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289860"
 ---
 # <a name="integration-services-containers"></a>Контейнеры служб Integration Services
   Контейнеры в службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] представляют собой объекты, содержащие структуру пакетов и службы для задач. Они поддерживают повторение потоков управления в пакетах, а также группируют задачи и контейнеры в единые рабочие объекты. Кроме задач контейнеры могут включать другие контейнеры.  
@@ -87,13 +87,13 @@ ms.locfileid: "47700662"
  Исполняемыми объектами называются задачи уровня контейнера, а также любые контейнеры внутри контейнера. Исполняемый объект может быть одной из задач или одним из контейнеров, изначально включенных в службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , либо пользовательской задачей. Дополнительные сведения см. в статье [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md).  
   
 ### <a name="precedence-constraints"></a>Управление очередностью  
- Элементы управления очередностью связывают контейнеры и задачи из одного родительского контейнера в упорядоченный поток управления. Дополнительные сведения см. в разделах [Управление очередностью](../../integration-services/control-flow/precedence-constraints.md).  
+ Элементы управления очередностью связывают контейнеры и задачи из одного родительского контейнера в упорядоченный поток управления. Дополнительные сведения см. в статье [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
   
 ### <a name="event-handlers"></a>Обработчики событий  
  Обработчики события на уровне контейнера реагируют на события, инициируемые контейнером или объектами, содержащимися в нем. Дополнительные сведения см. в разделе [Обработчики событий в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-event-handlers.md).  
   
 ### <a name="variables"></a>Переменные  
- Переменные, используемые в контейнерах, включают системные переменные уровня контейнера, предоставляемые службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], а также пользовательские переменные, используемые контейнером. Дополнительные сведения см. в разделе [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md).  
+ Переменные, используемые в контейнерах, включают системные переменные уровня контейнера, предоставляемые службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], а также пользовательские переменные, используемые контейнером. Дополнительные сведения см. в разделе [Переменные служб Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md).  
   
 ## <a name="break-points"></a>Точки останова  
  Если задается точка останова в контейнере и условием останова является **Приостановить выполнение при получении контейнером события OnVariableValueChanged**, определите переменную в области контейнера.  
