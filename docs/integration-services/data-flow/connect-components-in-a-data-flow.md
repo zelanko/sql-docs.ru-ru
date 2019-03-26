@@ -11,15 +11,15 @@ helpviewer_keywords:
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1c3c17729abb291de48e7f9626ed13dd8f51383a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70d7ba9d1828813c71cf88baab9709c10338c82d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639162"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271277"
 ---
 # <a name="connect-components-in-a-data-flow"></a>Соединение компонентов в потоке данных
   Эта процедура описывает способ соединения выхода компонентов в потоке данных с другими компонентами того же потока.  
@@ -27,7 +27,7 @@ ms.locfileid: "47639162"
   
  На следующей диаграмме показан простой поток данных с компонентом источника, двумя преобразованиями, целевым компонентом и путями, которые их соединяют.  
   
- ![Data flow](../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
+ ![Поток данных](../../integration-services/data-flow/media/mw-dts-08.gif "Поток данных")  
   
  После соединения двух компонентов можно просматривать метаданные тех данных, которые перемещаются по пути, и свойства пути в **Редакторе пути потока данных**. Дополнительные сведения см. в статье [Integration Services Paths](../../integration-services/data-flow/integration-services-paths.md).  
   
