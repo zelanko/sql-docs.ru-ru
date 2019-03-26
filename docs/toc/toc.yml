@@ -6644,50 +6644,57 @@ items:
           href: ../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md
         - name: Добавление элемента сбора в набор элементов сбора (T-SQL)
           href: ../relational-databases/data-collection/add-a-collection-item-to-a-collection-set-transact-sql.md
-    - name: Расширенные события
+    - name: Общие сведения о расширенных событиях (XEvents)
       href: ../relational-databases/extended-events/extended-events.md
       items:
-      - name: Краткое руководство. Расширенные события в SQL Server
-        href: ../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
-      - name: Configure
+      - name: Краткие руководства
         items:
-        - name: Управление сеансами событий
-          href: ../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md
-        - name: Расширенный просмотр целевых данных
+        - name: Краткое руководство. Расширенные события в SQL Server
+          href: ../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
+      - name: Учебники
+        items:
+        - name: Расширенный просмотр целевых данных из XEvents
           href: ../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md
+        - name: Преобразование скрипта трассировки SQL в сеанс
+          href: ../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md
+      - name: Основные понятия
+        items:
         - name: Пакеты
           href: ../relational-databases/extended-events/sql-server-extended-events-packages.md
         - name: Цели
           href: ../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md
-        - name: Цель «Средство трассировки событий для Windows»
+        - name: Цель "Средство трассировки событий для Windows"
           href: ../relational-databases/extended-events/event-tracing-for-windows-target.md
         - name: Подсистема
           href: ../relational-databases/extended-events/sql-server-extended-events-engine.md
         - name: Сеансы
           href: ../relational-databases/extended-events/sql-server-extended-events-sessions.md
+        - name: Эквиваленты XEvents для классов событий трассировки SQL
+          href: ../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md
+        - name: Инструменты
+          href: ../relational-databases/extended-events/extended-events-tools.md
+      - name: Практические руководства
+        items:
+        - name: Управление сеансами XEvents
+          href: ../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md
         - name: Изменение сеанса
           href: ../relational-databases/extended-events/alter-an-extended-events-session.md
         - name: Использование SELECT и JOIN в системных представлениях
           href: ../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md
-        - name: Эквиваленты расширенных событий для классов событий трассировки SQL
-          href: ../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md
-        - name: Преобразование скрипта трассировки SQL в сеанс
-          href: ../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md
-        - name: определить запросы, удерживающие блокировки
+        - name: Определение запросов, содержащих блокировки
           href: ../relational-databases/extended-events/determine-which-queries-are-holding-locks.md
         - name: Поиск объектов, на которые наложены блокировки
           href: ../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md
         - name: Мониторинг активности системы
           href: ../relational-databases/extended-events/monitor-system-activity-using-extended-events.md
-      - name: Инструменты
-        href: ../relational-databases/extended-events/extended-events-tools.md
-        items:
-        - name: Использование профилировщика XEvent для SSMS
+        - name: Использование профилировщика XEvents для SSMS
           href: ../relational-databases/extended-events/use-the-ssms-xe-profiler.md
         - name: Использование сеанса system_health
           href: ../relational-databases/extended-events/use-the-system-health-session.md
-        - name: Использование поставщика PowerShell для расширенных событий
+        - name: Использование поставщика PowerShell для XEvents
           href: ../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md
+      - name: Ссылки
+        href: ../relational-databases/extended-events/xevents-references-system-objects.md
     - name: Трассировка SQL
       href: ../relational-databases/sql-trace/sql-trace.md
       items:
@@ -8433,8 +8440,8 @@ items:
     items:
     - name: Скачивание SSDT
       href: ../ssdt/download-sql-server-data-tools-ssdt.md
-    - name: Журнал изменений для SSDT
-      href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
+    - name: Заметки о выпуске SSDT
+      href: ../ssdt/release-notes-ssdt.md
     - name: Предыдущие выпуски SSDT и SSDT-BI
       href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
     - name: Поддержка Azure Active Directory
@@ -17219,9 +17226,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Поддержка пространств имен в XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: bde69d4b13a3ab5bf680d3816c47364b07e093a7
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: 8efef6d8d30133dff4c5ca71d37a753e0168a4e5
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356547"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417236"
