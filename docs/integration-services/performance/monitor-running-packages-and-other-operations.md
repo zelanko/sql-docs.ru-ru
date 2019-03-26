@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4ac0343ffe46613e85fc1985a836dd3f05f3d46e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 291dc0fb1be05a9818d7f351867c5c6d25276ee2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623682"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271208"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Наблюдение за выполнением пакетов и других операций
   Вы можете отслеживать выполнения пакета [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , проверки проекта и другие операции с помощью одного или нескольких из следующих средств. Такие средства, как отводы данных, доступны только для проектов, которые развертываются на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -152,7 +152,7 @@ ms.locfileid: "47623682"
   
 |Раздел|Описание|  
 |-------------|-----------------|  
-|Фильтр|Отображает текущий фильтр, применяемый к отчету, например диапазон времени начала.|  
+|Filter|Отображает текущий фильтр, применяемый к отчету, например диапазон времени начала.|  
 |Сведения о выполнении|Показывает время начала, время окончания и длительность каждого выполнения пакета. Вы можете просмотреть список значений параметров, которые использовались при выполнении пакета, например значения, переданные в дочерний пакет с помощью задачи «Выполнение пакета». Для просмотра списка параметров нажмите кнопку «Общие сведения».|  
   
  Дополнительные сведения об использовании задачи «Выполнение пакета» для передачи значений в дочерний пакет см. в разделе [Execute Package Task](../../integration-services/control-flow/execute-package-task.md).  
@@ -206,4 +206,4 @@ ms.locfileid: "47623682"
 
 ## <a name="see-also"></a>См. также:  
  [Запуск проектов и пакетов](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
- [Отчеты по устранению неполадок для выполнения пакетов](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
+ [Устранение неполадок пакетов с помощью отчетов](../troubleshooting/troubleshooting-reports-for-package-execution.md)  

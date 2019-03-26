@@ -3,22 +3,21 @@ title: Завершение работы мастера (мастер импор
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.completewizard.f1
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b7d417f2887c58e88e1bbb52c7fc171eba24030c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8a3624eeae89d520fb9e97e50af1d32de6dab55
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710132"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222048"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Завершение работы мастера (мастер импорта и экспорта SQL Server)
 После того как вы укажете, нужно ли выполнить операцию копирования незамедлительно, и при необходимости сохраните созданный мастером пакет, в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется страница **Завершение работы мастера**. На этой странице просмотрите параметры, выбранные в мастере, и нажмите кнопку **Готово** , чтобы запустить операцию копирования.

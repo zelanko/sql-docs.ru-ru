@@ -3,20 +3,19 @@ title: Подключение к источнику данных SQL Server (м
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b49d5a4bee30a8fc5b225bf12e15c29bf942631b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebdf33cf262d000af9b1604299e95883f8ab0d12
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750562"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221988"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных SQL Server (мастер импорта и экспорта SQL Server)
 В этом разделе показано, как подключаться к источникам данных **Microsoft SQL Server** со страницы **Выбор источника данных** или **Выбор назначения** в мастере импорта и экспорта SQL Server. Для подключения к SQL Server можно использовать ряд поставщиков данных.

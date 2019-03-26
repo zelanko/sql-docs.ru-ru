@@ -3,22 +3,21 @@ title: Создание базы данных (мастер импорта и э
 ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.createdatabase.f1
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3456afaeff6d8eda0ee54bac846fab00c7e35488
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3a81b45e3d744573b99d270ae7983a599e8fabf
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807292"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222018"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Создание базы данных (мастер импорта и экспорта SQL Server)
 Если на странице **Выбор назначения** выбрать вариант **Создать** для создания целевой базы данных SQL Server, мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображает диалоговое окно **Создание базы данных** . На этой странице можно указать имя новой базы данных. При необходимости можно также изменить параметры для начального размера и автоматического увеличения новой базы данных и ее файла журнала. 
