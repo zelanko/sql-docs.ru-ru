@@ -16,12 +16,12 @@ ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1e05be91125586b17dcd9fde84dbf6fa93ae9a4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 73f8b43a39f30720c6e9c8e4a4969ba350ebd8a0
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823339"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494296"
 ---
 # <a name="spaddmergepushsubscriptionagent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,53 +63,40 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication =** ] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@subscriber =** ] **"***подписчика***"**  
- Имя подписчика. *подписчик* — **sysname**, значение по умолчанию NULL.  
+`[ @subscriber = ] 'subscriber'` — Имя подписчика. *подписчик* — **sysname**, значение по умолчанию NULL.  
   
- [  **@subscriber_db =** ] **"***subscriber_db***"**  
- Имя базы данных подписки. *subscriber_db* — **sysname**, значение по умолчанию NULL.  
+`[ @subscriber_db = ] 'subscriber_db'` — Имя базы данных подписки. *subscriber_db* — **sysname**, значение по умолчанию NULL.  
   
- [  **@subscriber_security_mode =** ] *subscriber_security_mode*  
- Режим безопасности, используемый для подключения к подписчику при синхронизации. *subscriber_security_mode* — **int**, значение по умолчанию 1. Если **0**, указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. Если **1**, задает проверку подлинности Windows.  
+`[ @subscriber_security_mode = ] subscriber_security_mode` — Режим безопасности для использования при подключении к подписчику при синхронизации. *subscriber_security_mode* — **int**, значение по умолчанию 1. Если **0**, указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. Если **1**, задает проверку подлинности Windows.  
   
- [  **@subscriber_login =** ] **"***subscriber_login***"**  
- Имя входа подписчика, используемое для подключения к нему при синхронизации. *subscriber_login* является обязательным, если *subscriber_security_mode* присваивается **0**. *subscriber_login* — **sysname**, значение по умолчанию NULL.  
+`[ @subscriber_login = ] 'subscriber_login'` — Это имя входа подписчика, используемое при подключении к подписчику при синхронизации. *subscriber_login* является обязательным, если *subscriber_security_mode* присваивается **0**. *subscriber_login* — **sysname**, значение по умолчанию NULL.  
   
- [  **@subscriber_password =** ] **"***subscriber_password***"**  
- Пароль подписчика для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *subscriber_password* является обязательным, если *subscriber_security_mode* присваивается **0**. *subscriber_password* — **sysname**, значение по умолчанию NULL. Если пароль подписчика используется, он автоматически шифруется.  
+`[ @subscriber_password = ] 'subscriber_password'` Пароль подписчика для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. *subscriber_password* является обязательным, если *subscriber_security_mode* присваивается **0**. *subscriber_password* — **sysname**, значение по умолчанию NULL. Если пароль подписчика используется, он автоматически шифруется.  
   
 > [!IMPORTANT]  
 >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
- [  **@publisher_security_mode =** ] *publisher_security_mode*  
- Режим безопасности, используемый для подключения к издателю при синхронизации. *publisher_security_mode* — **int**, значение по умолчанию 1. Если **0**, указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. Если **1**, задает проверку подлинности Windows.  
+`[ @publisher_security_mode = ] publisher_security_mode` — Режим безопасности для использования при подключении к издателю при синхронизации. *publisher_security_mode* — **int**, значение по умолчанию 1. Если **0**, указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. Если **1**, задает проверку подлинности Windows.  
   
- [  **@publisher_login =** ] **"***publisher_login***"**  
- Имя входа, используемое для подключения к издателю при синхронизации. *publisher_login* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher_login = ] 'publisher_login'` — Это имя для использования при подключении к издателю при синхронизации. *publisher_login* — **sysname**, значение по умолчанию NULL.  
   
- [  **@publisher_password =** ] **"***publisher_password***"**  
- Пароль, используемый при соединении с издателем. *publisher_password* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher_password = ] 'publisher_password'` Пароль, используемый при соединении с издателем. *publisher_password* — **sysname**, значение по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
- [  **@job_login =** ] **"***job_login***"**  
- Имя входа для учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)**, со значением по умолчанию NULL. Эта учетная запись Windows всегда используется для соединений агента с распространителем и соединений с подписчиком и издателем при использовании встроенной проверки подлинности Windows.  
+`[ @job_login = ] 'job_login'` — Это имя для учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)**, со значением по умолчанию NULL. Эта учетная запись Windows всегда используется для соединений агента с распространителем и соединений с подписчиком и издателем при использовании встроенной проверки подлинности Windows.  
   
- [  **@job_password =** ] **"***job_password***"**  
- Пароль для учетной записи Windows, под которой запускается агент. *job_password* — **sysname**, не имеет значения по умолчанию.  
+`[ @job_password = ] 'job_password'` — Пароль для учетной записи Windows, под которой запускается агент. *job_password* — **sysname**, не имеет значения по умолчанию.  
   
 > [!IMPORTANT]  
 >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
- [  **@job_name =** ] **"***имя_задания***"**  
- Имя существующего задания агента. *имя_задания* — **sysname**, со значением по умолчанию NULL. Этот аргумент указывается, только если подписка будет синхронизироваться с использованием существующего задания, а не вновь созданного (выбор по умолчанию). Если вы не являетесь членом **sysadmin** предопределенной роли сервера, необходимо указать *job_login* и *job_password* при указании *имя_задания*.  
+`[ @job_name = ] 'job_name'` — Имя существующего задания агента. *имя_задания* — **sysname**, со значением по умолчанию NULL. Этот аргумент указывается, только если подписка будет синхронизироваться с использованием существующего задания, а не вновь созданного (выбор по умолчанию). Если вы не являетесь членом **sysadmin** предопределенной роли сервера, необходимо указать *job_login* и *job_password* при указании *имя_задания*.  
   
- [  **@frequency_type =** ] *frequency_type*  
- Частота планируемого запуска агента слияния. *frequency_type* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_type = ] frequency_type` Это частота запуска агента слияния. *frequency_type* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -126,8 +113,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 > [!NOTE]  
 >  Указав значение **64** агент слияния запускается в непрерывном режиме. Это соответствует вводу параметра **-непрерывной** параметром для агента. Дополнительные сведения см. в статье [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
- [  **@frequency_interval =** ] *frequency_interval*  
- Даты запуска агента слияния. *frequency_interval* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_interval = ] frequency_interval` Дни запуска агента слияния. *frequency_interval* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -143,8 +129,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**10**|По выходным дням|  
 |NULL (по умолчанию)||  
   
- [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- Дата агента слияния. Этот параметр используется при *frequency_type* присваивается **32** (относительно ежемесячно). *frequency_relative_interval* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` — Дата агента слияния. Этот параметр используется при *frequency_type* присваивается **32** (относительно ежемесячно). *frequency_relative_interval* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -155,11 +140,9 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**16**|Последняя|  
 |NULL (по умолчанию)||  
   
- [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- Коэффициент повторения, используемый аргументом *frequency_type*. *frequency_recurrence_factor* — **int**, значение по умолчанию NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Коэффициент повторения, используемый аргументом *frequency_type*. *frequency_recurrence_factor* — **int**, значение по умолчанию NULL.  
   
- [  **@frequency_subday =** ] *frequency_subday*  
- Частота повторного планирования в течение определенного периода. *frequency_subday* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_subday = ] frequency_subday` Том, как часто следует запланировать повторное выполнение в течение определенного периода. *frequency_subday* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -169,23 +152,17 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**8**|Час|  
 |NULL (по умолчанию)||  
   
- [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
- Интервал для *frequency_subday*. *frequency_subday_interval* — **int**, значение по умолчанию NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Интервал для *frequency_subday*. *frequency_subday_interval* — **int**, значение по умолчанию NULL.  
   
- [  **@active_start_time_of_day =** ] *active_start_time_of_day*  
- Время суток, на которое запланирован первый запуск агента слияния, в формате ЧЧММСС. *active_start_time_of_day* — **int**, значение по умолчанию NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Время суток, когда агент слияния впервые запланировано, в формате ЧЧММСС. *active_start_time_of_day* — **int**, значение по умолчанию NULL.  
   
- [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
- Время плановой остановки агента слияния в формате ЧЧММСС. *active_end_time_of_day* — **int**, значение по умолчанию NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Время остановки агента слияния, в формате ЧЧММСС. *active_end_time_of_day* — **int**, значение по умолчанию NULL.  
   
- [  **@active_start_date =** ] *active_start_date*  
- Дата первого планового запуска агента слияния в формате ГГГГММДД. *active_start_date* — **int**, значение по умолчанию NULL.  
+`[ @active_start_date = ] active_start_date` Дата первого запуска агента слияния запланирована, в формате ГГГГММДД. *active_start_date* — **int**, значение по умолчанию NULL.  
   
- [  **@active_end_date =** ] *active_end_date*  
- Дата плановой остановки агента слияния в формате ГГГГММДД. *active_end_date* — **int**, значение по умолчанию NULL.  
+`[ @active_end_date = ] active_end_date` Дата плановой остановки агента слияния, в формате ГГГГММДД. *active_end_date* — **int**, значение по умолчанию NULL.  
   
- [  **@enabled_for_syncmgr =** ] **"***enabled_for_syncmgr***"**  
- Указывает, может ли подписка быть синхронизирована с помощью диспетчера синхронизации Windows. *enabled_for_syncmgr* — **nvarchar(5)**, значение по умолчанию FALSE. Если **false**, подписка не зарегистрирована диспетчером синхронизации. Если **true**, подписка регистрируется диспетчером синхронизации и может быть синхронизирована без запуска [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Указывает, может ли подписка быть синхронизирована посредством диспетчера синхронизации Windows. *enabled_for_syncmgr* — **nvarchar(5)**, значение по умолчанию FALSE. Если **false**, подписка не зарегистрирована диспетчером синхронизации. Если **true**, подписка регистрируется диспетчером синхронизации и может быть синхронизирована без запуска [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -201,7 +178,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 ## <a name="see-also"></a>См. также  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
  [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
  [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   

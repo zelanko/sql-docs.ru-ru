@@ -18,12 +18,12 @@ ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f361039f611a6b7a383649fb18a4af155a0c2b28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a713687d41c21a3c99c30d6b7192d7c59e41505
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710612"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492726"
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,20 +51,15 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@database =** ] "*базы данных*"  
- Имя базы данных на сервере-источнике. *primary_database* — **sysname**, не имеет значения по умолчанию.  
+`[ @database = ] 'database'` — Имя базы данных на сервере-источнике. *primary_database* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@backup_directory =** ] "*backup_directory*"  
- Путь к папке резервного копирования на сервере-источнике. *backup_directory* — **nvarchar(500)**, не имеет значения по умолчанию и не может иметь значение NULL.  
+`[ @backup_directory = ] 'backup_directory'` — Это путь к папке резервного копирования на сервере-источнике. *backup_directory* — **nvarchar(500)**, не имеет значения по умолчанию и не может иметь значение NULL.  
   
- [  **@backup_share =** ] "*backup_share*"  
- Сетевой путь к каталогу резервного копирования на сервере-источнике. *backup_share* — **nvarchar(500)**, не имеет значения по умолчанию и не может иметь значение NULL.  
+`[ @backup_share = ] 'backup_share'` Является сетевой путь к каталогу резервного копирования на сервере-источнике. *backup_share* — **nvarchar(500)**, не имеет значения по умолчанию и не может иметь значение NULL.  
   
- [  **@backup_retention_period =** ] "*backup_retention_period*"  
- Время в минутах, в течение которого файл резервной копии журнала хранится в каталоге резервных копий на сервере-источнике. *backup_retention_period* — **int**, не имеет значения по умолчанию и не может иметь значение NULL.  
+`[ @backup_retention_period = ] 'backup_retention_period'` — Это период времени в минутах, чтобы сохранить файл резервной копии журнала в каталоге резервных копий на сервере-источнике. *backup_retention_period* — **int**, не имеет значения по умолчанию и не может иметь значение NULL.  
   
- [  **@monitor_server_security_mode =** ] "*monitor_server_security_mode*"  
- Режим безопасности, используемый для подключения к серверу мониторинга:  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Режим безопасности, используемый для подключения к серверу мониторинга.  
   
  1 = проверка подлинности Windows.  
   
@@ -72,20 +67,15 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  *monitor_server_security_mode* — **бит** и не может иметь значение NULL.  
   
- [  **@monitor_server_login =** ] "*monitor_server_login*"  
- Имя учетной записи, используемой для доступа к серверу мониторинга.  
+`[ @monitor_server_login = ] 'monitor_server_login'` — Это имя пользователя учетной записи, используемой для доступа к серверу мониторинга.  
   
- [  **@monitor_server_password =** ] "*monitor_server_password*"  
- Пароль учетной записи, используемой для доступа к серверу мониторинга.  
+`[ @monitor_server_password = ] 'monitor_server_password'` — Пароль учетной записи, используемой для доступа к серверу мониторинга.  
   
- [  **@backup_threshold =** ] "*backup_threshold*"  
- — Это продолжительность времени в минутах после последнего резервного копирования до *threshold_alert* возникает ошибка. *backup_threshold* — **int**, значение по умолчанию 60 минут.  
+`[ @backup_threshold = ] 'backup_threshold'` — Это продолжительность времени в минутах после последнего резервного копирования до *threshold_alert* возникает ошибка. *backup_threshold* — **int**, значение по умолчанию 60 минут.  
   
- [  **@threshold_alert =** ] "*threshold_alert*"  
- Предупреждение, создаваемое при превышении порогового значения. *threshold_alert* — **int** и не может иметь значение NULL.  
+`[ @threshold_alert = ] 'threshold_alert'` Предупреждение, создаваемое при превышении порогового значения. *threshold_alert* — **int** и не может иметь значение NULL.  
   
- [  **@threshold_alert_enabled =** ] "*threshold_alert_enabled*"  
- Указывает, нужно ли создавать оповещение при *backup_threshold* превышено.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Указывает, нужно ли создавать оповещение при *backup_threshold* превышено.  
   
  1 = выдается.  
   
@@ -93,11 +83,9 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  *threshold_alert_enabled* — **бит** и не может иметь значение NULL.  
   
- [  **@history_retention_period =** ] "*history_retention_period*"  
- Длительность времени в минутах, в течение которого сохраняется журнал. *history_retention_period* — **int**. Если ничего не указано, используется значение 14 420.  
+`[ @history_retention_period = ] 'history_retention_period'` — Это продолжительность времени в минутах, в которых сохраняется журнал. *history_retention_period* — **int**. Если ничего не указано, используется значение 14 420.  
   
- [ **@backup_compression**=] *backup_compression_option*  
- Указывает, использует ли конфигурация доставки журналов [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). Этот параметр поддерживается только в [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (или более поздней версии).  
+`[ @backup_compression = ] backup_compression_option` Указывает, использует ли конфигурация доставки журналов [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). Этот параметр поддерживается только в [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (или более поздней версии).  
   
  0 = отключено. Не сжимать резервные копии журналов.  
   

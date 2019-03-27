@@ -16,12 +16,12 @@ ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5356ebc173e435595315badf9a3c2abe224d186b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7918e257428fd85ddb54867ee5144f45a3bf89f1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802386"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493846"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,29 +45,21 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@xact_seqno_start =**] **"**_xact_seqno_start_**"**  
- Определяет подлежащий возврату точный порядковый номер с наименьшим значением. *xact_seqno_start* — **nchar(22)**, значение по умолчанию 0x00000000000000000000.  
+`[ @xact_seqno_start = ] 'xact_seqno_start'` Указывает минимально значениями точный порядковый номер для возврата. *xact_seqno_start* — **nchar(22)**, значение по умолчанию 0x00000000000000000000.  
   
- [  **@xact_seqno_end =**] **"**_xact_seqno_end_**"**  
- Определяет подлежащий возврату точный порядковый номер с наибольшим значением. *xact_seqno_end* — **nchar(22)**, значение по умолчанию 0xFFFFFFFFFFFFFFFFFFFF.  
+`[ @xact_seqno_end = ] 'xact_seqno_end'` Указывает наибольший точный порядковый номер для возврата. *xact_seqno_end* — **nchar(22)**, значение по умолчанию 0xFFFFFFFFFFFFFFFFFFFF.  
   
- [  **@originator_id =**] **"**_originator_id_**"**  
- Указывает, если команды с указанным *originator_id* возвращаются. *originator_id* — **int**, значение по умолчанию NULL.  
+`[ @originator_id = ] 'originator_id'` Указывает, если команды с указанным *originator_id* возвращаются. *originator_id* — **int**, значение по умолчанию NULL.  
   
- [  **@publisher_database_id =**] **"**_publisher_database_id_**"**  
- Указывает, если команды с указанным *publisher_database_id* возвращаются. *publisher_database_id* — **int**, значение по умолчанию NULL.  
+`[ @publisher_database_id = ] 'publisher_database_id'` Указывает, если команды с указанным *publisher_database_id* возвращаются. *publisher_database_id* — **int**, значение по умолчанию NULL.  
   
- [  **@article_id =**] **"**_article_id_**"**  
- Указывает, если команды с указанным *article_id* возвращаются. *article_id* — **int**, значение по умолчанию NULL.  
+`[ @article_id = ] 'article_id'` Указывает, если команды с указанным *article_id* возвращаются. *article_id* — **int**, значение по умолчанию NULL.  
   
- [  **@command_id =**] *command_id*  
- — Это расположение команды в [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) для декодирования. *command_id* — **int**, значение по умолчанию NULL. Если указан, все остальные параметры должны быть указаны также и *xact_seqno_start*должен быть идентичен *xact_seqno_end*.  
+`[ @command_id = ] command_id` — Это расположение команды в [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) для декодирования. *command_id* — **int**, значение по умолчанию NULL. Если указан, все остальные параметры должны быть указаны также и *xact_seqno_start*должен быть идентичен *xact_seqno_end*.  
   
- [  **@agent_id =**] *agent_id*  
- Указывает, что возвращены только команды для конкретного агента репликации. *agent_id* — **int**, со значением по умолчанию NULL.  
+`[ @agent_id = ] agent_id` Указывает, что возвращены только команды для конкретного агента репликации. *agent_id* — **int**, со значением по умолчанию NULL.  
   
- [  **@compatibility_level =**] *compatibility_level*  
- — Это версия [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на котором *compatibility_level* — **int**, со значением по умолчанию 9000000.  
+`[ @compatibility_level = ] compatibility_level` — Это версия [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на котором *compatibility_level* — **int**, со значением по умолчанию 9000000.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

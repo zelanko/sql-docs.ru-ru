@@ -6,20 +6,20 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 02/29/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 04f493109997d4b673a6a308de5c9ebee6eac7e4
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: 1199d8d522df83c626f04f30c8937b57a5359f5c
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57239135"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493781"
 ---
 # <a name="configure-hdfs-tiering-on-sql-server-2019-big-data-clusters"></a>Настройка HDFS, распределение по уровням в кластерах SQL Server 2019 больших данных
 
-Распределение по уровням HDFS позволяет подключать внешние, HDFS-совместимой файловой системы в HDFS. В этой статье описывается настройка HDFS, распределение по уровням для кластеров SQL Server 2019 больших данных (Предварительная версия). В настоящее время CTP-версия 2.3 поддерживает только подключение к Azure Data Lake хранилища 2-го поколения, которое рассматривается в этой статье.
+Распределение по уровням HDFS позволяет подключать внешние, HDFS-совместимой файловой системы в HDFS. В этой статье описывается настройка HDFS, распределение по уровням для кластеров SQL Server 2019 больших данных (Предварительная версия). В настоящее время CTP-версии 2.4 поддерживает только подключение к Azure Data Lake хранилища 2-го поколения, которое рассматривается в этой статье.
 
 ## <a name="hdfs-tiering-overview"></a>Обзор распределения по уровням HDFS
 
@@ -78,7 +78,7 @@ ms.locfileid: "57239135"
 1. Подключение удаленного хранилища HDFS в Azure с помощью **создать подключения хранилища mssqlctl**. Замените значения заполнителей перед выполнением следующей команды:
 
    ```bash
-   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --local-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -97,7 +97,7 @@ mssqlctl storage mount status
 Чтобы получить список состояние подключения в указанную папку в файловой системе HDFS, используйте следующую команду:
 
 ```bash
-mssqlctl storage mount status --local-path <mount-path-in-hdfs>
+mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> Удаление подключения
@@ -105,7 +105,7 @@ mssqlctl storage mount status --local-path <mount-path-in-hdfs>
 Чтобы удалить подключение, используйте **удаления подключения хранилища mssqlctl** команды и укажите путь подключения в HDFS:
 
 ```bash
-mssqlctl storage mount delete --local-path <mount-path-in-hdfs>
+mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="issues"></a> Известные проблемы и ограничения

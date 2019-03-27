@@ -5,17 +5,17 @@ description: Узнайте, как использовать портал адм
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9048de9c5f1a1241a6d7049f8eeb15efef87cabb
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 2ed73006850a5174c6df07ed09302ea48decf6d2
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017860"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492866"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>Как использовать портал администрирования кластера для мониторинга кластера больших данных SQL Server
 
@@ -35,7 +35,7 @@ ms.locfileid: "57017860"
 После запуска модуль контроллера на портале администрирования кластера можно использовать для мониторинга развертывания. Доступны на портале с помощью внешних IP-адрес и порт номер для `endpoint-service-proxy` (например: **https://\<ip адрес\>: 30777: портал**). Учетные данные для доступа к порталу администрирования являются значениями `CONTROLLER_USERNAME` и `CONTROLLER_PASSWORD` переменные среды, приведенные выше.
 
 > [!NOTE]
-> Для CTP-версии 2.3 имеется предупреждение системы безопасности при доступе к веб-страницы, поскольку оно использует SSL-сертификатов, автоматически созданный.
+> Для CTP-версии 2.4 имеется предупреждение системы безопасности при доступе к веб-страницы, поскольку оно использует SSL-сертификатов, автоматически созданный.
 
 ## <a name="overview"></a>Обзор
 

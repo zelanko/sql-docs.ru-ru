@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SSIS Designer, about SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 91099edbdbd2f1b25fd77dc1f076acd5b4647708
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 66baf6b01ecdafd87b0c748d8802dad19da928f9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397397"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290725"
 ---
 # <a name="ssis-designer"></a>конструктор служб SSIS
   [!INCLUDE[ssIS](../includes/ssis-md.md)] Конструктор служб — это графическое средство, с помощью которого можно создавать и обслуживать пакеты служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] Конструктор служб доступен из среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] в составе проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -99,7 +99,7 @@ ms.locfileid: "52397397"
 ### <a name="progressexecution-result-tab"></a>Вкладки «Выполнение» и «Результаты выполнения»  
  Во время выполнения пакета на вкладке **Выполнение** отображается ход выполнения пакета. После завершения выполнения пакета результаты будут доступны во вкладке **Результаты выполнения** .  
   
-> **ПРИМЕЧАНИЕ.** Чтобы включить или отключить отображение сообщений на вкладке **Выполнение** , установите или снимите флажок **Отчеты о состоянии** отладки в меню **Службы SSIS** .  
+> **ПРИМЕЧАНИЕ.** Чтобы включить или отключить отображение сообщений на вкладке **Выполнение** , установите или снимите флажок **Отчет о ходе отладки** в меню **Службы SSIS** .  
   
 #### <a name="connection-managers-area"></a>Область диспетчеров соединений  
  Добавление и изменение диспетчеров соединений, используемых пакетом, выполняется в области **Диспетчеры соединений** . [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] включает диспетчеры соединений, используемые для подключения к различным источникам данных, например текстовым файлам, базам данных OLE DB и поставщикам .NET.  

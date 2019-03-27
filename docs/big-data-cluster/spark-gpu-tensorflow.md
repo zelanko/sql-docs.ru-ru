@@ -1,21 +1,21 @@
 ---
-title: Поддержка GPU и TensorFlow
+title: Поддержка GPU и TensorFlow
 titleSuffix: SQL Server 2019 big data clusters
 description: Развертывание кластера больших данных с поддержкой GPU и использовать TensorFlow в записных книжках Studio данных Azure.
 author: lgongmsft
 ms.author: shivprashant
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/14/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9f766c343152fa601cc22e59e3385c454ec23879
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: f89568860fa656efbb93eb9b72eb647f88ce6089
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58162144"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494116"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>Развертывание кластера больших данных с поддержкой GPU и запустите TensorFlow
 
@@ -196,7 +196,7 @@ ms.locfileid: "58162144"
 Поместите файл соответствующие записной книжки на локальный компьютер и затем откройте и запустите его в Azure Data Studio, используя ядро PySpark3. Если у вас нет необходимости в более старой версии CUDA или TensorFlow, выберите CUDA 9 и CUDNN 7/TensorFlow 1.12.0. Дополнительные сведения о том, как использовать записные книжки с кластерами больших данных, см. в разделе [использованию записных книжек в предварительной версии SQL Server 2019](notebooks-guidance.md).
 
 > [!NOTE]
-> Обратите внимание на то, что записные книжки установки программного обеспечения в системе. Это возможно, так как записные книжки в настоящее время работает с правами привилегированного пользователя в CTP-версии 2.3.
+> Обратите внимание на то, что записные книжки установки программного обеспечения в системе. Это возможно, так как записные книжки в настоящее время работает с правами привилегированного пользователя в CTP 2.4.
 
 После установки библиотеки графического Процессора NVIDIA и TensorFlow для графического Процессора, записные книжки список доступных устройств GPU. Затем они помещаются и оценить модель TensorFlow для распознавания рукописных цифр, с помощью набора данных MNIST. После проверки доступного пространства на диске, они скачайте и запустите пример классификации изображений CIFAR 10 из [ https://github.com/tensorflow/models.git ](https://github.com/tensorflow/models.git). Выполнив пример CIFAR 10 на кластерах со разных GPU, можно наблюдать за увеличения скорости, предлагаемых каждого поколения GPU, доступных в Azure.
 

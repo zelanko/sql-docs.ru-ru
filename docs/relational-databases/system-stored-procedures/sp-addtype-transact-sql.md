@@ -18,12 +18,12 @@ ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eefd9b73f4e249df57aa03ef0453a864eab2fd77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ead23c8feb428772fcde5bcdb59f19e1a23b6cd9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838852"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492846"
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +45,9 @@ sp_addtype [ @typename = ] type,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@typename=** ] *типа*  
- Имя типа данных псевдонима. Псевдоним имена типов данных должны соответствовать правилам для [идентификаторы](../../relational-databases/databases/database-identifiers.md) и должны быть уникальными в каждой базе данных. *Тип* — **sysname**, не имеет значения по умолчанию.  
+`[ @typename = ] type` — Имя псевдонима типа данных. Псевдоним имена типов данных должны соответствовать правилам для [идентификаторы](../../relational-databases/databases/database-identifiers.md) и должны быть уникальными в каждой базе данных. *Тип* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@phystype=**] *system_data_type*  
- Физический, или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] указан, тип данных, на котором основан тип данных псевдонима. *system_data_type* — **sysname**, по умолчанию и может принимать одно из следующих значений:  
+`[ @phystype = ] system_data_type` Физический, или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] указан, тип данных, на котором основан тип данных псевдонима. *system_data_type* — **sysname**, по умолчанию и может принимать одно из следующих значений:  
   
 ||||  
 |-|-|-|  
@@ -73,8 +71,7 @@ sp_addtype [ @typename = ] type,
  *s*  
  Неотрицательное целое число, показывающее максимальное количество десятичных разрядов числа (справа от десятичного разделителя), которое не должно превышать точность. Дополнительные сведения см. в разделе [decimal и numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
- [  **@nulltype =** ] **"***null_type***"**  
- Указывает, как псевдоним типа данных обрабатывает значения NULL. *null_type* — **varchar (** 8 **)**, значение по умолчанию NULL и должен быть заключен в одинарные кавычки ('NULL', 'NOT NULL' или 'NONULL'). Если *null_type* не определяется явным образом **sp_addtype**, ему присваивается текущее допустимость значений NULL по умолчанию. Для определения текущего значения параметра возможности по умолчанию иметь значения NULL используйте системную функцию NULLGETANSINULL. Его можно настраивать с помощью инструкции SET или ALTER DATABASE. Возможность иметь значения NULL необходимо задавать в явной форме. Если **@phystype** — **бит**, и **@nulltype** не указан, по умолчанию не NULL.  
+`[ @nulltype = ] 'null_type'` Указывает способ обработки значений null типом данных псевдонима. *null_type* — **varchar (** 8 **)**, значение по умолчанию NULL и должен быть заключен в одинарные кавычки ('NULL', 'NOT NULL' или 'NONULL'). Если *null_type* не определяется явным образом **sp_addtype**, ему присваивается текущее допустимость значений NULL по умолчанию. Для определения текущего значения параметра возможности по умолчанию иметь значения NULL используйте системную функцию NULLGETANSINULL. Его можно настраивать с помощью инструкции SET или ALTER DATABASE. Возможность иметь значения NULL необходимо задавать в явной форме. Если **@phystype** — **бит**, и **@nulltype** не указан, по умолчанию не NULL.  
   
 > [!NOTE]  
 >  *Null_type* параметр только определяет допустимость значений NULL по умолчанию для этого типа данных. Если возможность иметь значения NULL явно указывается для типа данных псевдонима при создании таблицы, эта настройка имеет приоритет над возможностью по умолчанию иметь значения NULL. Дополнительные сведения см. в разделе [ALTER TABLE &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) и [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  

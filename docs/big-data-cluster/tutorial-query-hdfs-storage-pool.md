@@ -5,17 +5,17 @@ description: Этом руководстве показано, как запро
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: bb0a028f45567e967f80f11425865098265ab35a
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a8752f4879f4b03f89378e4f30c44c10dc272694
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241675"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494406"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Учебник. Запрос HDFS в кластере SQL Server больших данных
 
@@ -44,18 +44,18 @@ ms.locfileid: "54241675"
 
 1. В Azure Data Studio подключитесь к основной экземпляр SQL Server кластера больших данных. Дополнительные сведения см. в разделе [подключение к экземпляру SQL Server master](connect-to-big-data-cluster.md#master).
 
-2. Дважды щелкните подключение в **серверы** окно для отображения панели мониторинга сервера для главного экземпляра SQL Server. Выберите **новый запрос**.
+1. Дважды щелкните подключение в **серверы** окно для отображения панели мониторинга сервера для главного экземпляра SQL Server. Выберите **новый запрос**.
 
    ![Запрос главного экземпляра SQL Server](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
 
-3. Выполните следующую команду Transact-SQL, чтобы изменить контекст, чтобы **Sales** базы данных master экземпляра.
+1. Выполните следующую команду Transact-SQL, чтобы изменить контекст, чтобы **Sales** базы данных master экземпляра.
 
    ```sql
    USE Sales
    GO
    ```
 
-4. Определите формат CSV-файла для чтения из HDFS. Нажмите клавишу F5 для запуска инструкции.
+1. Определите формат CSV-файла для чтения из HDFS. Нажмите клавишу F5 для запуска инструкции.
 
    ```sql
    CREATE EXTERNAL FILE FORMAT csv_file
@@ -69,7 +69,15 @@ ms.locfileid: "54241675"
    );
    ```
 
-5. Создание внешней таблицы, который может читать `/clickstream_data` из пула носителей. **SqlStoragePool** доступен из главного экземпляра служб кластерам больших данных.
+1. Создание внешнего источника данных в пул носителей, если он еще не существует.
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+     CREATE EXTERNAL DATA SOURCE SqlStoragePool
+     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+   ```
+
+1. Создание внешней таблицы, который может читать `/clickstream_data` из пула носителей. **SqlStoragePool** доступен из главного экземпляра служб кластерам больших данных.
 
    ```sql
    CREATE EXTERNAL TABLE [web_clickstreams_hdfs]

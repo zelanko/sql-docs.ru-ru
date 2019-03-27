@@ -16,12 +16,12 @@ ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 529ad27a4ebc220f8d17a58e9c05605e785237a7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6d3671c96b73fa1fb8138a7085748704c7a38d76
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807726"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494226"
 ---
 # <a name="spchangelogreaderagent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -44,32 +44,26 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@job_login**=] **"***job_login***"**  
- — Это имя для учетной записи, под которой запускается агент. *job_login* — **nvarchar(257)**, значение по умолчанию NULL. Azure SQL управляемом экземпляре базы данных используйте учетную запись SQL Server. *Это единственно возможный отличается от* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *издателя.*  
+`[ @job_login = ] 'job_login'` — Это имя для учетной записи, под которой запускается агент. *job_login* — **nvarchar(257)**, значение по умолчанию NULL. Azure SQL управляемом экземпляре базы данных используйте учетную запись SQL Server. *Это единственно возможный отличается от* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *издателя.*  
   
- [ **@job_password**=] **"***job_password***"**  
- — Пароль для учетной записи, под которой запускается агент. *job_password* — **sysname**, значение по умолчанию NULL.  
+`[ @job_password = ] 'job_password'` — Пароль для учетной записи, под которой запускается агент. *job_password* — **sysname**, значение по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
- [ **@publisher_security_mode**=] *publisher_security_mode*  
- Режим безопасности, используемый агентом при установке соединения с издателем. *publisher_security_mode* — **smallint**, значение по умолчанию NULL. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности, и **1** задает проверку подлинности Windows.  
+`[ @publisher_security_mode = ] publisher_security_mode` Режим безопасности, используемый агентом при соединении с издателем. *publisher_security_mode* — **smallint**, значение по умолчанию NULL. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности, и **1** задает проверку подлинности Windows.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [ **@publisher_login**=] **"***publisher_login***"**  
- Имя входа, используемое для соединения с издателем. *publisher_login* — **sysname**, значение по умолчанию NULL. *publisher_login* должен быть указан, если *publisher_security_mode* — **0**. Если *publisher_login* имеет значение NULL и *publisher_security_mode* — **1**, то учетная запись Windows, указанных в *job_login* используется, если соединения с издателем.  
+`[ @publisher_login = ] 'publisher_login'` Имя входа, используемое при соединении с издателем. *publisher_login* — **sysname**, значение по умолчанию NULL. *publisher_login* должен быть указан, если *publisher_security_mode* — **0**. Если *publisher_login* имеет значение NULL и *publisher_security_mode* — **1**, то учетная запись Windows, указанных в *job_login* используется, если соединения с издателем.  
   
- [ **@publisher_password**=] **"***publisher_password***"**  
- Пароль, используемый при соединении с издателем. *publisher_password* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher_password = ] 'publisher_password'` Пароль, используемый при соединении с издателем. *publisher_password* — **sysname**, значение по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  Не используйте пустые пароли. Выбирайте надежные пароли. По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
- [ **@publisher**=] **"***издателя***"**  
- Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL. Этот аргумент поддерживается только для издателей, не являющихся издателями SQL Server.  
+`[ @publisher = ] 'publisher'` — Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL. Этот аргумент поддерживается только для издателей, не являющихся издателями SQL Server.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

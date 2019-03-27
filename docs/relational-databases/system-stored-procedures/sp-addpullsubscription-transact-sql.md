@@ -16,12 +16,12 @@ ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26ced1d422c1f47ebd88404b7cf3996df8b9c649
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: dbdd156c20378eda748cef17ec58f6ecf7129cb9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126059"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494386"
 ---
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,26 +45,19 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher=**] **"***издателя***"**  
- Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` — Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@publisher_db=**] **"***publisher_db***"**  
- Имя базы данных издателя. *publisher_db* — **sysname**, значение по умолчанию NULL. *publisher_db* обрабатывается издателями Oracle.  
+`[ @publisher_db = ] 'publisher_db'` — Имя базы данных издателя. *publisher_db* — **sysname**, значение по умолчанию NULL. *publisher_db* обрабатывается издателями Oracle.  
   
- [  **@publication=**] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@independent_agent=**] **"***independent_agent***"**  
- Показывает наличие изолированного агента распространителя для этой публикации. *independent_agent* — **nvarchar(5)**, значение по умолчанию TRUE. Если **true**, имеется изолированный агент распространителя для этой публикации. Если **false**, имеется один агент распространителя для каждой пары издатель базы данных подписчик базы данных. *independent_agent* является свойством публикации и должен иметь то же значение что и на издателе.  
+`[ @independent_agent = ] 'independent_agent'` Указывает, имеется ли для этой публикации изолированный агент распространителя. *independent_agent* — **nvarchar(5)**, значение по умолчанию TRUE. Если **true**, имеется изолированный агент распространителя для этой публикации. Если **false**, имеется один агент распространителя для каждой пары издатель базы данных подписчик базы данных. *independent_agent* является свойством публикации и должен иметь то же значение что и на издателе.  
   
- [  **@subscription_type=**] **"***subscription_type***"**  
- Тип подписки. *subscription_type* — **nvarchar(9)**, значение по умолчанию **анонимный**. Необходимо указать значение **по запросу** для *subscription_type*, только если вы хотите создать подписку без регистрации подписки на издателе. В этом случае необходимо указать значение **анонимный**. Это необходимо в тех случаях, когда невозможно установить соединение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с издателем в момент настройки подписки.  
+`[ @subscription_type = ] 'subscription_type'` — Тип подписки. *subscription_type* — **nvarchar(9)**, значение по умолчанию **анонимный**. Необходимо указать значение **по запросу** для *subscription_type*, только если вы хотите создать подписку без регистрации подписки на издателе. В этом случае необходимо указать значение **анонимный**. Это необходимо в тех случаях, когда невозможно установить соединение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с издателем в момент настройки подписки.  
   
- [  **@description=**] **"***описание***"**  
- Описание публикации. *Описание* — **nvarchar(100)**, значение по умолчанию NULL.  
+`[ @description = ] 'description'` Представляет собой описание публикации. *Описание* — **nvarchar(100)**, значение по умолчанию NULL.  
   
- [  **@update_mode=**] **"***update_mode***"**  
- Тип обновления. *update_mode* — **nvarchar(30)**, и может принимать одно из следующих значений.  
+`[ @update_mode = ] 'update_mode'` — Это тип обновления. *update_mode* — **nvarchar(30)**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -74,8 +67,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 |**отработка отказа**|Включает для подписки немедленное обновление с обновлением по очереди при переходе на другой ресурс в случае отработки отказа. Изменение данных можно выполнять на подписчике и немедленно передавать издателю. Если пропало соединение между издателем и подписчиком, изменения данных, выполненные на подписчике, сохраняются в очереди, пока связь не будет восстановлена.|  
 |**в очереди отработки отказа**|Включает подписку с обновлением по очереди в качестве обновляемой посредством очередей подписки, при этом поддерживает возможность переключения в режим немедленного обновления. Изменение данных можно выполнять у подписчика и сохранять в очереди до установления соединения между подписчиком и издателем. При установлении постоянного соединения можно переключиться в режим немедленного обновления. *Не поддерживается для издателей Oracle*.|  
   
- [  **@immediate_sync =**] *immediate_sync*  
- Указывает, выполняется ли создание (повторное создание) файлов синхронизации при каждом запуске агента моментальных снимков. *immediate_sync* — **бит** значение по умолчанию 1 и должно быть присвоено то же значение, что *immediate_sync* в **sp_addpublication**. *immediate_sync* является свойством публикации и должен иметь то же значение что и на издателе.  
+`[ @immediate_sync = ] immediate_sync` Является ли файлы синхронизации создаются или повторно создаются каждый раз при выполнении агента моментальных снимков. *immediate_sync* — **бит** значение по умолчанию 1 и должно быть присвоено то же значение, что *immediate_sync* в **sp_addpublication**. *immediate_sync* является свойством публикации и должен иметь то же значение что и на издателе.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -95,7 +87,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_addpullsubscription**.  
   
 ## <a name="see-also"></a>См. также  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Создание обновляемой подписки на публикацию транзакций](../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md) [подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
  [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   

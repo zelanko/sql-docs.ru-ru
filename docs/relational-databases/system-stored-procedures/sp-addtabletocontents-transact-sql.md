@@ -16,12 +16,12 @@ ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ad6e8fe499e3ffe57a745cfb924bdc792938dd9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 991ee7139ae4a323a1d426d1882e4f6b3a4df871
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810946"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493516"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@table_name=**] **"**_table_name_**"**  
- Имя таблицы. *TABLE_NAME* — **sysname**, не имеет значения по умолчанию.  
+`[ @table_name = ] 'table_name'` — Имя таблицы. *TABLE_NAME* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@owner_name=**] **"**_owner_name_**"**  
- Имя владельца таблицы. *owner_name* — **sysname**, значение по умолчанию NULL.  
+`[ @owner_name = ] 'owner_name'` — Это имя владельца таблицы. *owner_name* — **sysname**, значение по умолчанию NULL.  
   
- [  **@filter_clause=** ] **"**_filter_clause_**"**  
- Указывает предложение фильтра, определяющее строки вновь загруженных данных, которые следует добавить в таблицы отслеживания слияния. *filter_clause* — **nvarchar(4000)**, со значением по умолчанию NULL. Если *filter_clause* — **null**, все массового добавления загруженные строки.  
+`[ @filter_clause = ] 'filter_clause'` Указывает предложение фильтра, определяющее строки вновь загруженных данных, которые следует добавить в таблицы отслеживания слияния. *filter_clause* — **nvarchar(4000)**, со значением по умолчанию NULL. Если *filter_clause* — **null**, все массового добавления загруженные строки.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

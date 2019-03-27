@@ -4,18 +4,18 @@ description: Сведения об установке SQL Server служб ма
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 833c6f2083d9532ecc4120e5f65be81a75a86d24
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: f1ca66c5e376704737a092f21fd25401d20bbdbb
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579534"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493876"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>Установка SQL Server 2019 службы машинного обучения (R, Python, Java) на платформе Linux
 
@@ -25,9 +25,11 @@ ms.locfileid: "57579534"
 
 Расположение пакета для расширений R, Python и Java доступны в репозитории исходного SQL Server Linux. Если вы уже настроили репозиториях для установки ядра базы данных, вы можете запустить **mssql mlservices** упаковать команды установки, используя регистрацию репозитория.
 
+Службы машинного обучения также поддерживается в контейнерах Linux. Мы не предоставляем готовые контейнеры со службами машинного обучения, но можно создать один из контейнеров SQL Server, с помощью [пример шаблона доступен на сайте GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
+
 ## <a name="uninstall-previous-ctp"></a>Удаление предыдущей CTP-версии
 
-Список пакетов изменилось за последние несколько выпусков CTP, приводит к меньшим числом пакетов. Мы рекомендуем удалить CTP-версии 2.x, чтобы удалить все предыдущие пакеты перед установкой CTP-версии 2.3. Side-by-side установку нескольких версий не поддерживается.
+Список пакетов изменилось за последние несколько выпусков CTP, приводит к меньшим числом пакетов. Мы рекомендуем удалить CTP-версии 2.x, чтобы удалить все предыдущие пакеты перед установкой CTP 2.4. Side-by-side установку нескольких версий не поддерживается.
 
 ### <a name="1-confirm-package-installation"></a>1. Подтверждение установки пакета
 
@@ -37,7 +39,7 @@ ms.locfileid: "57579534"
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-ctp-20-or-21-packages"></a>2. Удаление CTP 2.0 и 2.1 пакетов
+### <a name="2-uninstall-previous-ctp-2x-packages"></a>2. Удаление предыдущих CTP-версии 2.x пакетов
 
 Удалите на самом низком уровне пакета. Любой прием пакетов вышестоящего источника зависимый от более низкого уровня пакета, автоматически удаляется.
 
@@ -61,7 +63,7 @@ ls /opt/microsoft/mssql/bin
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-23-install"></a>3. Продолжить установку CTP 2.3
+### <a name="3-proceed-with-ctp-24-install"></a>3. Продолжить установку CTP 2.4
 
 Установите на самом высоком уровне пакета, с помощью инструкций в этой статье для вашей операционной системы.
 
@@ -73,7 +75,7 @@ ls /opt/microsoft/mssql/bin
 
    + [RedHat](#RHEL)
    + [Ubuntu](#ubuntu)
-   + [SUSE](#SUSE)
+   + [SUSE](#suse)
 
 ## <a name="prerequisites"></a>предварительные требования
 

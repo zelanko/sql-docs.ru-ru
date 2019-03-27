@@ -16,12 +16,12 @@ ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: edb5fc6c24ce8e59c82b35ac10e6dddb67adeaf4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ab2d928770a8e10c04e03aa2ccb5f36374fe1227
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752156"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493607"
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,11 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@profile_id=** ] *profile_id*  
- Идентификатор, связанный с вновь вставленным профилем. *profile_id* — **int** и является необязательным ВЫХОДНЫМ параметром. Если он указан, в качестве его значения устанавливается новый идентификатор профиля.  
+`[ @profile_id = ] profile_id` Идентификатор, связанный с вновь вставленным профилем. *profile_id* — **int** и является необязательным ВЫХОДНЫМ параметром. Если он указан, в качестве его значения устанавливается новый идентификатор профиля.  
   
- [  **@profile_name=** ] **"**_profile_name_**"**  
- Имя профиля. *profile_name* — **sysname**, не имеет значения по умолчанию.  
+`[ @profile_name = ] 'profile_name'` — Имя профиля. *profile_name* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@agent_type=** ] **"**_agent_type_**"**  
- Тип агента репликации. *agent_type* — **int**, по умолчанию и может принимать одно из следующих значений.  
+`[ @agent_type = ] 'agent_type'` — Тип агента репликации. *agent_type* — **int**, по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -60,16 +57,13 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 |**4**|Агент слияния.|  
 |**9**|Агент чтения очереди.|  
   
- [  **@profile_type=** ] *profile_type*  
- — Это тип профиля. *profile_type* — **int**, значение по умолчанию **1**.  
+`[ @profile_type = ] profile_type` — Это тип профиля. *profile_type* — **int**, значение по умолчанию **1**.  
   
  **0** обозначает системный профиль. **1** обозначает пользовательский профиль. Только пользовательские профили могут создаваться с помощью этой хранимой процедуры; поэтому единственным допустимым значением является **1**. Только [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает системные профили.  
   
- [  **@description=** ] **"**_описание_**"**  
- Описание профиля. *Описание* — **nvarchar(3000)**, не имеет значения по умолчанию.  
+`[ @description = ] 'description'` — Описание профиля. *Описание* — **nvarchar(3000)**, не имеет значения по умолчанию.  
   
- [  **@default=** ] *по умолчанию*  
- Указывает, является ли профиль по умолчанию для *agent_type **.* *по умолчанию* — **бит**, значение по умолчанию **0**. **1** указывает, что при добавлении профиля станет профилем по умолчанию для агента, задаваемого аргументом *agent_type*.  
+`[ @default = ] default` Указывает, является ли профиль по умолчанию для *agent_type **.* *по умолчанию* — **бит**, значение по умолчанию **0**. **1** указывает, что при добавлении профиля станет профилем по умолчанию для агента, задаваемого аргументом *agent_type*.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

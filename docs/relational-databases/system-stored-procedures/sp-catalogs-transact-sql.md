@@ -18,12 +18,12 @@ ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25aae75151ada9ac38b35324f7c82d98f77d580b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78a7dc76bb4d37558b061b6b13b2aef16ab26166
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535788"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494196"
 ---
 # <a name="spcatalogs-transact-sql"></a>sp_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +40,14 @@ sp_catalogs [ @server_name = ] 'linked_svr'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@server_name =**] **"**_linked_svr_**"**  
- Имя связанного сервера. *linked_svr* — **sysname**, не имеет значения по умолчанию.  
+`[ @server_name = ] 'linked_svr'` — Имя связанного сервера. *linked_svr* — **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**Catalog_name**|**nvarchar (** 128 **)**|Имя каталога|  
-|**Описание**|**nvarchar (** 4000 **)**|Описание каталога|  
+|**Catalog_name**|**nvarchar(** 128 **)**|Имя каталога|  
+|**Описание**|**nvarchar(** 4000 **)**|Описание каталога|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для схемы.  

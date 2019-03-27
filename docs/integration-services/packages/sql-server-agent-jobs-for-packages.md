@@ -13,15 +13,15 @@ helpviewer_keywords:
 - scheduling packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d46d2a2fb807174b4302aeb8996d1801768c6179
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 5c7e17cd8d09e85395eaaa5d32f2ceb979a984d1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231141"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282499"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Пакеты служб из заданий агента SQL Server
   Выполнение пакетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно автоматизировать и запланировать в расписании при помощи агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Можно задать расписание выполнения пакетов, равернутых на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , хранимых в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в хранилище пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , или в файловой системе.  

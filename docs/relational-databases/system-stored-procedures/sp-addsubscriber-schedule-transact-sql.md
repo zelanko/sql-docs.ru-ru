@@ -16,12 +16,12 @@ ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86965fca878f07a93833fe04be9df702dea3050c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7d9c899f5ae956f9e434bb7374d95aaa186a2923
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204226"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493796"
 ---
 # <a name="spaddsubscriberschedule-transact-sql"></a>Хранимая процедура sp_addsubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +50,16 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@subscriber =** ] **"***подписчика***"**  
- Имя подписчика. *подписчик* — **sysname**. Имя подписчика должно быть уникальным в базе данных, не должно использоваться до этого и не может иметь значения NULL.  
+`[ @subscriber = ] 'subscriber'` — Имя подписчика. *подписчик* — **sysname**. Имя подписчика должно быть уникальным в базе данных, не должно использоваться до этого и не может иметь значения NULL.  
   
- [  **@agent_type =** ] *agent_type*  
- Тип агента. *agent_type* — **smallint**, и может принимать одно из следующих значений.  
+`[ @agent_type = ] agent_type` — Тип агента. *agent_type* — **smallint**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**0** (по умолчанию)|Агент распространителя|  
 |**1**|Агент слияния.|  
   
- [  **@frequency_type =** ] *frequency_type*  
- Частота запуска агента распространителя по расписанию. *frequency_type* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_type = ] frequency_type` Это частота запуска агента распространителя. *frequency_type* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -75,11 +72,9 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**64** (по умолчанию)|Автозапуск|  
 |**128**|Повторяющееся задание|  
   
- [  **@frequency_interval =** ] *frequency_interval*  
- — Это значение, которое применяется к частоте, задаваемой аргументом *frequency_type*. *frequency_interval* — **int**, значение по умолчанию **1**.  
+`[ @frequency_interval = ] frequency_interval` — Это значение, которое применяется к частоте, задаваемой аргументом *frequency_type*. *frequency_interval* — **int**, значение по умолчанию **1**.  
   
- [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- Дата агента распространителя. Этот параметр используется при *frequency_type* присваивается **32** (относительно ежемесячно). *frequency_relative_interval* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` — Дата агента распространителя. Этот параметр используется при *frequency_type* присваивается **32** (относительно ежемесячно). *frequency_relative_interval* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -89,11 +84,9 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**8**|Четвертая|  
 |**16**|Последняя|  
   
- [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- Коэффициент повторения, используемый аргументом *frequency_type*. *frequency_recurrence_factor* — **int**, значение по умолчанию **0**.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Коэффициент повторения, используемый аргументом *frequency_type*. *frequency_recurrence_factor* — **int**, значение по умолчанию **0**.  
   
- [  **@frequency_subday =** ] *frequency_subday*  
- Частота повторного планирования в течение определенного периода. *frequency_subday* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_subday = ] frequency_subday` Том, как часто следует запланировать повторное выполнение в течение определенного периода. *frequency_subday* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -102,23 +95,17 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**4** (по умолчанию)|Минута|  
 |**8**|Час|  
   
- [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
- Интервал для *frequency_subday*. *frequency_subday_interval* — **int**, значение по умолчанию **5**.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Интервал для *frequency_subday*. *frequency_subday_interval* — **int**, значение по умолчанию **5**.  
   
- [  **@active_start_time_of_day =** ] *active_start_time_of_day*  
- Время суток, на которое запланирован первый запуск агента распространителя, в формате ЧЧММСС. *active_start_time_of_day* — **int**, значение по умолчанию **0**.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Время суток, когда агент распространителя впервые запланировано, в формате ЧЧММСС. *active_start_time_of_day* — **int**, значение по умолчанию **0**.  
   
- [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
- Время суток, на которое запланирован останов агента распространителя, в формате ЧЧММСС. *active_end_time_of_day*— **int**, значение по умолчанию 235959, означающее 23:59:59. в 24-часовом формате.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Время суток, когда прекращается выполнение агента распространителя, в формате ЧЧММСС. *active_end_time_of_day*— **int**, значение по умолчанию 235959, означающее 23:59:59. в 24-часовом формате.  
   
- [  **@active_start_date =** ] *active_start_date*  
- Дата, когда запланирован первый запуск агента распространителя, в формате ГГГГММДД. *active_start_date* — **int**, значение по умолчанию **0**.  
+`[ @active_start_date = ] active_start_date` Дата первого запуска агента распространителя запланирована, в формате ГГГГММДД. *active_start_date* — **int**, значение по умолчанию **0**.  
   
- [  **@active_end_date =** ] *active_end_date*  
- Дата, когда запланирован останов агента распространителя, в формате ГГГГММДД. *active_end_date* — **int**, значение по умолчанию 99991231, что соответствует 31 декабря 9999 года.  
+`[ @active_end_date = ] active_end_date` Дата плановой остановки агента распространителя, в формате ГГГГММДД. *active_end_date* — **int**, значение по умолчанию 99991231, что соответствует 31 декабря 9999 года.  
   
- [  **@publisher =** ] **"***издателя***"**  
- Указывает, отличный от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает, отличный от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *издатель* не следует указывать для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  

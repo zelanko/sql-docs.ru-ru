@@ -16,12 +16,12 @@ ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ac79494bfb0d08503be6e138bce748596eb8165
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3b37e09147652e856ac0c4c8160c1d7d3caf6f6d
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819081"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493956"
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,15 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=**] **"**_публикации_**"**  
- Имя публикации, которую нужно изменить. *Публикация* — **sysname**, значение по умолчанию NULL. Публикация уже должна существовать и соответствовать правилам для идентификаторов.  
+`[ @publication = ] 'publication'` — Имя публикации, который требуется изменить. *Публикация* — **sysname**, значение по умолчанию NULL. Публикация уже должна существовать и соответствовать правилам для идентификаторов.  
   
- [  **@subscriber=**] **"**_подписчика_**"**  
- Имя подписчика. *подписчик* — **sysname**, значение по умолчанию NULL.  
+`[ @subscriber = ] 'subscriber'` — Имя подписчика. *подписчик* — **sysname**, значение по умолчанию NULL.  
   
- [  **@subscriber_db=**] **"**_subscriber_db_**"**  
- Имя базы данных подписки. *subscriber_db*— **sysname**, значение по умолчанию NULL.  
+`[ @subscriber_db = ] 'subscriber_db'` — Имя базы данных подписки. *subscriber_db*— **sysname**, значение по умолчанию NULL.  
   
- [  **@property=**] **"**_свойство_**"**  
- Свойство, изменяемое для данной публикации. *Свойство* — **sysname**, и может принимать одно из значений в таблице.  
+`[ @property = ] 'property'` — Это свойство, изменяемое для данной публикации. *Свойство* — **sysname**, и может принимать одно из значений в таблице.  
   
- [  **@value=**] **"**_значение_**"**  
- Новое значение для указанного *свойство*. *значение* — **nvarchar(255)**, и может принимать одно из значений в таблице.  
+`[ @value = ] 'value'` Новое значение для указанного *свойство*. *значение* — **nvarchar(255)**, и может принимать одно из значений в таблице.  
   
 |Свойство|Значение|Описание|  
 |--------------|-----------|-----------------|  

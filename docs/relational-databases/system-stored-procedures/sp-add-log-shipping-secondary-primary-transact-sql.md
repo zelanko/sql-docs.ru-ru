@@ -18,12 +18,12 @@ ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc2bf117e78f897102f85a7cab43295b079db12b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dcd5257aa80ca431faf3725fe20a444f1339004
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824742"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494336"
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,32 +54,23 @@ sp_add_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@primary_server** =] '*primary_server*"  
- Имя первичного экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журналов. *primary_server* — **sysname** и не может иметь значение NULL.  
+`[ @primary_server = ] 'primary_server'` Имя первичного экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журналов. *primary_server* — **sysname** и не может иметь значение NULL.  
   
- [ **@primary_database** =] '*primary_database*"  
- Имя базы данных на сервере-источнике. *primary_database* — **sysname**, не имеет значения по умолчанию.  
+`[ @primary_database = ] 'primary_database'` — Имя базы данных на сервере-источнике. *primary_database* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@backup_source_directory** =] '*backup_source_directory*"  
- Каталог, в котором хранятся файлы резервной копии журнала транзакций с сервера-источника. *backup_source_directory* — **nvarchar(500)** и не может иметь значение NULL.  
+`[ @backup_source_directory = ] 'backup_source_directory'` Каталог, где хранятся файлы резервной копии журнала транзакций с сервера-источника. *backup_source_directory* — **nvarchar(500)** и не может иметь значение NULL.  
   
- [ **@backup_destination_directory** =] '*backup_destination_directory*"  
- Каталог сервера-получателя, в который копируются файлы резервных копий. *backup_destination_directory* — **nvarchar(500)** и не может иметь значение NULL.  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` Каталог на сервере-получателе, которые будут копироваться файлы резервных копий. *backup_destination_directory* — **nvarchar(500)** и не может иметь значение NULL.  
   
- [ **@copy_job_name** =] '*copy_job_name*"  
- Имя создаваемого задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для копирования резервных копий журналов транзакций на сервер-получатель. *copy_job_name* — **sysname** и не может иметь значение NULL.  
+`[ @copy_job_name = ] 'copy_job_name'` Имя, используемое для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задание агента, создаваемой для копирования резервных копий журналов транзакций на сервер-получатель. *copy_job_name* — **sysname** и не может иметь значение NULL.  
   
- [ **@restore_job_name** =] '*restore_job_name*"  
- Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задание агента на сервере-получателе, которое восстанавливает резервные копии базы данных-получателя. *restore_job_name* — **sysname** и не может иметь значение NULL.  
+`[ @restore_job_name = ] 'restore_job_name'` Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задание агента на сервере-получателе, которое восстанавливает резервные копии базы данных-получателя. *restore_job_name* — **sysname** и не может иметь значение NULL.  
   
- [ **@file_retention_period** =] '*file_retention_period*"  
- Продолжительность времени в минутах, в которых файл резервной копии хранится на сервере-получателе в пути, указанному свойством @backup_destination_directory параметров перед их удалением. *history_retention_period* — **int**, значение по умолчанию NULL. Если ничего не указано, подразумевается значение 14420.  
+`[ @file_retention_period = ] 'file_retention_period'` Продолжительность времени в минутах, в которых файл резервной копии хранится на сервере-получателе в пути, указанному свойством @backup_destination_directory параметров перед их удалением. *history_retention_period* — **int**, значение по умолчанию NULL. Если ничего не указано, подразумевается значение 14420.  
   
- [ **@monitor_server** =] '*monitor_server*"  
- Имя сервера мониторинга. *Monitor_server* — **sysname**, не имеет значения по умолчанию и не может иметь значение NULL.  
+`[ @monitor_server = ] 'monitor_server'` — Имя сервера мониторинга. *Monitor_server* — **sysname**, не имеет значения по умолчанию и не может иметь значение NULL.  
   
- [ **@monitor_server_security_mode** =] '*monitor_server_security_mode*"  
- Режим безопасности, используемый для подключения к серверу мониторинга:  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Режим безопасности, используемый для подключения к серверу мониторинга.  
   
  1 = проверка подлинности Windows.  
   
@@ -87,20 +78,15 @@ sp_add_log_shipping_secondary_primary
   
  *monitor_server_security_mode* — **бит** и не может иметь значение NULL.  
   
- [ **@monitor_server_login** =] '*monitor_server_login*"  
- Имя учетной записи, используемой для доступа к серверу мониторинга.  
+`[ @monitor_server_login = ] 'monitor_server_login'` — Это имя пользователя учетной записи, используемой для доступа к серверу мониторинга.  
   
- [ **@monitor_server_password** =] '*monitor_server_password*"  
- Пароль учетной записи, используемой для доступа к серверу мониторинга.  
+`[ @monitor_server_password = ] 'monitor_server_password'` — Пароль учетной записи, используемой для доступа к серверу мониторинга.  
   
- [ **@copy_job_id** =] '*copy_job_id*"выходные данные  
- Идентификатор, назначенный заданию копирования на сервере-получателе. *copy_job_id* — **uniqueidentifier** и не может иметь значение NULL.  
+`[ @copy_job_id = ] 'copy_job_id' OUTPUT` Идентификатор, связанный с заданием копирования на сервере-получателе. *copy_job_id* — **uniqueidentifier** и не может иметь значение NULL.  
   
- [ **@restore_job_id** =] '*restore_job_id*"выходные данные  
- Идентификатор, назначенный заданию восстановления на сервере-получателе. *restore_job_id* — **uniqueidentifier** и не может иметь значение NULL.  
+`[ @restore_job_id = ] 'restore_job_id' OUTPUT` Идентификатор, связанный с заданием восстановления на сервере-получателе. *restore_job_id* — **uniqueidentifier** и не может иметь значение NULL.  
   
- [ **@secondary_id** =] '*secondary_id*"выходные данные  
- Идентификатор сервера-получателя в конфигурации доставки журналов. *secondary_id* — **uniqueidentifier** и не может иметь значение NULL.  
+`[ @secondary_id = ] 'secondary_id' OUTPUT` Идентификатор сервера-получателя в конфигурации доставки журналов. *secondary_id* — **uniqueidentifier** и не может иметь значение NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

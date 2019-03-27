@@ -5,17 +5,17 @@ description: Дополнительные сведения о работе в к
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: bcb5ee903ab2e5c24cdc2bc705d9b29a4299ba1b
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 1dcf390fe87239cde45e8c7fda1bc5cebd10f0ed
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017960"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494166"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Сохранение данных с кластером больших данных SQL Server в Kubernetes
 
@@ -26,7 +26,7 @@ ms.locfileid: "57017960"
 — Способ работы с большими данными кластера SQL Server использует эти постоянные тома с помощью [классы хранения](https://kubernetes.io/docs/concepts/storage/storage-classes/). Можно создать классы хранения для разных видов хранилища и указать их во время развертывания кластера больших данных. Вы можете настроить какой класс хранилища должен использоваться для какой цели (пул). Кластер SQL Server больших данных создает [утверждения постоянного тома](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) с именем класса указанное хранилище для каждого pod, требующий постоянные тома. Затем он подключает соответствующие постоянные тома в pod.
 
 > [!NOTE]
-> Для CTP-версии 2.3, только `ReadWriteOnce` поддерживается режим доступа для всего кластера.
+> Для CTP-версии 2.4, только `ReadWriteOnce` поддерживается режим доступа для всего кластера.
 
 ## <a name="deployment-settings"></a>Параметры развертывания
 

@@ -16,12 +16,12 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b7c8e0bd544815b7a26afaccd308d6898e3bc95
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cf650c095e27fe3a270ad9610e959bd6f5f1a6a3
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136134"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493116"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=**] **"**_публикации_**"**  
- Имя публикации. *Публикация* — **sysname**, значение по умолчанию %.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, значение по умолчанию %.  
   
- [  **@publisher=**] **"**_издателя_**"**  
- Имя издателя. *издатель*— **sysname**, значение по умолчанию %.  
+`[ @publisher = ] 'publisher'` — Имя издателя. *издатель*— **sysname**, значение по умолчанию %.  
   
- [  **@publisher_db=**] **"**_publisher_db_**"**  
- Имя базы данных издателя. *publisher_db*— **sysname**, значение по умолчанию %.  
+`[ @publisher_db = ] 'publisher_db'` — Имя базы данных издателя. *publisher_db*— **sysname**, значение по умолчанию %.  
   
- [  **@property=**] **"**_свойство_**"**  
- Имя свойства, которое необходимо изменить. *Свойство* — **sysname**, и может принимать одно из значений в таблице.  
+`[ @property = ] 'property'` — Имя свойства, которое необходимо изменить. *Свойство* — **sysname**, и может принимать одно из значений в таблице.  
   
- [  **@value=**] **"**_значение_**"**  
- Новое значение для указанного свойства. *значение*— **nvarchar(255)**, и может принимать одно из значений в таблице.  
+`[ @value = ] 'value'` — Это новое значение для указанного свойства. *значение*— **nvarchar(255)**, и может принимать одно из значений в таблице.  
   
 |Свойство|Значение|Описание|  
 |--------------|-----------|-----------------|  

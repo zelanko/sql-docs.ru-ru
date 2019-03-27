@@ -18,12 +18,12 @@ ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa737688a974170ece1817503b4b02de440e679a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 854edf82c32058c45df4ab4f71803933f59f2582
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604883"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494106"
 ---
 # <a name="spaddlogshippingprimarydatabase-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,57 +56,41 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@database=** ] "*базы данных*"  
- Имя базы данных-источника для доставки журналов. *База данных* — **sysname**, не имеет значения по умолчанию и не может иметь значение NULL.  
+`[ @database = ] 'database'` — Имя журнала доставки базы данных-источника. *База данных* — **sysname**, не имеет значения по умолчанию и не может иметь значение NULL.  
   
- [  **@backup_directory=** ] "*backup_directory*"  
- Путь к папке резервного копирования на сервере-источнике. *backup_directory* — **nvarchar(500)**, не имеет значения по умолчанию и не может иметь значение NULL.  
+`[ @backup_directory = ] 'backup_directory'` — Это путь к папке резервного копирования на сервере-источнике. *backup_directory* — **nvarchar(500)**, не имеет значения по умолчанию и не может иметь значение NULL.  
   
- [  **@backup_share=** ] "*backup_share*"  
- Сетевой путь к каталогу резервного копирования на сервере-источнике. *backup_share* — **nvarchar(500)**, не имеет значения по умолчанию и не может иметь значение NULL.  
+`[ @backup_share = ] 'backup_share'` Является сетевой путь к каталогу резервного копирования на сервере-источнике. *backup_share* — **nvarchar(500)**, не имеет значения по умолчанию и не может иметь значение NULL.  
   
- [  **@backup_job_name=** ] "*backup_job_name*"  
- Имя задания агента SQL Server на сервере-источнике, которое создает резервную копию в указанную папку резервного копирования. *backup_job_name* — **sysname** и не может иметь значение NULL.  
+`[ @backup_job_name = ] 'backup_job_name'` — Имя задания агента SQL Server на сервере-источнике, создает резервную копию в папке резервного копирования. *backup_job_name* — **sysname** и не может иметь значение NULL.  
   
- [  **@backup_retention_period=** ] *backup_retention_period*  
- Время в минутах, в течение которого файл резервной копии журнала хранится в каталоге резервных копий на сервере-источнике. *backup_retention_period* — **int**, не имеет значения по умолчанию и не может иметь значение NULL.  
+`[ @backup_retention_period = ] backup_retention_period` — Это период времени в минутах, чтобы сохранить файл резервной копии журнала в каталоге резервных копий на сервере-источнике. *backup_retention_period* — **int**, не имеет значения по умолчанию и не может иметь значение NULL.  
   
- [  **@monitor_server=** ] "*monitor_server*"  
- Имя сервера мониторинга. *Monitor_server* — **sysname**, не имеет значения по умолчанию и не может иметь значение NULL.  
+`[ @monitor_server = ] 'monitor_server'` — Имя сервера мониторинга. *Monitor_server* — **sysname**, не имеет значения по умолчанию и не может иметь значение NULL.  
   
- [  **@monitor_server_security_mode=** ] *monitor_server_security_mode*  
- Режим безопасности, используемый для подключения к серверу мониторинга:  
+`[ @monitor_server_security_mode = ] monitor_server_security_mode` Режим безопасности, используемый для подключения к серверу мониторинга.  
   
  1 = проверка подлинности Windows.  
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. *monitor_server_security_mode* — **бит** и не может иметь значение NULL.  
   
- [  **@monitor_server_login=** ] "*monitor_server_login*"  
- Имя учетной записи, используемой для доступа к серверу мониторинга.  
+`[ @monitor_server_login = ] 'monitor_server_login'` — Это имя пользователя учетной записи, используемой для доступа к серверу мониторинга.  
   
- [  **@monitor_server_password=** ] "*monitor_server_password*"  
- Пароль учетной записи, используемой для доступа к серверу мониторинга.  
+`[ @monitor_server_password = ] 'monitor_server_password'` — Пароль учетной записи, используемой для доступа к серверу мониторинга.  
   
- [  **@backup_threshold=** ] *backup_threshold*  
- — Это продолжительность времени в минутах после последнего резервного копирования до *threshold_alert* возникает ошибка. *backup_threshold* — **int**, значение по умолчанию 60 минут.  
+`[ @backup_threshold = ] backup_threshold` — Это продолжительность времени в минутах после последнего резервного копирования до *threshold_alert* возникает ошибка. *backup_threshold* — **int**, значение по умолчанию 60 минут.  
   
- [  **@threshold_alert=** ] *threshold_alert*  
- Предупреждение, создаваемое при превышении порогового значения. *threshold_alert* — **int**, значение по умолчанию 14 420.  
+`[ @threshold_alert = ] threshold_alert` Это предупреждение, создаваемое при превышении порогового значения. *threshold_alert* — **int**, значение по умолчанию 14 420.  
   
- [  **@threshold_alert_enabled=** ] *threshold_alert_enabled*  
- Указывает, будет ли предупреждение возникает, когда *backup_threshold* превышено. Значение по умолчанию (0) указывает, что это предупреждение отключено и не будет активизироваться. *threshold_alert_enabled* — **бит**.  
+`[ @threshold_alert_enabled = ] threshold_alert_enabled` Указывает, будет ли предупреждение возникает, когда *backup_threshold* превышено. Значение по умолчанию (0) указывает, что это предупреждение отключено и не будет активизироваться. *threshold_alert_enabled* — **бит**.  
   
- [  **@history_retention_period=** ] *history_retention_period*  
- Отрезок времени в минутах, в течение которого сохраняются данные журнала. *history_retention_period* — **int**, значение по умолчанию NULL. Если ничего не указано, подразумевается значение 14420.  
+`[ @history_retention_period = ] history_retention_period` — Это продолжительность времени в минутах, в которых сохраняются данные журнала. *history_retention_period* — **int**, значение по умолчанию NULL. Если ничего не указано, подразумевается значение 14420.  
   
- [  **@backup_job_id=** ] *backup_job_id* выходных данных  
- Идентификатор задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], связанный с заданием резервного копирования на сервере-источнике. *backup_job_id* — **uniqueidentifier** и не может иметь значение NULL.  
+`[ @backup_job_id = ] backup_job_id OUTPUT` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Идентификатор задания агента, связанный с заданием резервного копирования на сервере-источнике. *backup_job_id* — **uniqueidentifier** и не может иметь значение NULL.  
   
- [  **@primary_id=** ] *primary_id* выходных данных  
- Идентификатор базы данных-источника в конфигурации доставки журналов. *primary_id* — **uniqueidentifier** и не может иметь значение NULL.  
+`[ @primary_id = ] primary_id OUTPUT` Идентификатор базы данных-источника для конфигурации доставки журналов. *primary_id* — **uniqueidentifier** и не может иметь значение NULL.  
   
- [ **@backup_compression**=] *backup_compression_option*  
- Указывает, использует ли конфигурация доставки журналов [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). Этот параметр поддерживается только в [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (или более поздней версии).  
+`[ @backup_compression = ] backup_compression_option` Указывает, использует ли конфигурация доставки журналов [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). Этот параметр поддерживается только в [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (или более поздней версии).  
   
  0 = отключено. Не сжимать резервные копии журналов.  
   

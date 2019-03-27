@@ -18,12 +18,12 @@ ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f04aefa642e21901a3070d71164f50f01cbc2ec7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4102c272fe9d880e6213917091b6078a413aebf8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732848"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494306"
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,16 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@job_id=** ] *job_id*  
- Идентификационный номер задания, добавляемого в расписание. *job_id*— **uniqueidentifier**, значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания, к которому добавляется расписание. *job_id*— **uniqueidentifier**, значение по умолчанию NULL.  
   
- [  **@job_name =** ] **"***имя_задания***"**  
- Имя задания, к которому добавляется расписание. *имя_задания*— **sysname**, значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания, к которому добавляется расписание. *имя_задания*— **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
- [  **@schedule_id =** ] *schedule_id*  
- Идентификационный номер расписания, задаваемого для задания. *schedule_id*— **int**, значение по умолчанию NULL.  
+`[ @schedule_id = ] schedule_id` Идентификационный номер удаляемого расписания, задаваемого для задания. *schedule_id*— **int**, значение по умолчанию NULL.  
   
- [  **@schedule_name =** ] **"***schedule_name***"**  
- Имя элемента расписания, задаваемого для задания. *schedule_name*— **sysname**, значение по умолчанию NULL.  
+`[ @schedule_name = ] 'schedule_name'` Имя расписания, задаваемого для задания. *schedule_name*— **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Либо *schedule_id* или *schedule_name* должен быть указан, но не оба аргумента одновременно.  

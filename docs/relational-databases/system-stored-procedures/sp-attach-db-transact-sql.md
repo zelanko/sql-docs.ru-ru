@@ -18,12 +18,12 @@ ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b0a6fdf71643f438201aae39010f25d2e43d15c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: cc0ab6b4dc44d14b375b13da971c0849eb42b0b3
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588838"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494356"
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,9 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@dbname=** ] **"**_dbnam_ **"**  
- Имя базы данных, присоединяемой к серверу. Имя должно быть уникальным. *DBName* — **sysname**, значение по умолчанию NULL.  
+`[ @dbname = ] 'dbnam_ '` — Имя базы данных, подключенные к серверу. Имя должно быть уникальным. *DBName* — **sysname**, значение по умолчанию NULL.  
   
- [  **@filename1=** ] **"**_filename_n_**"**  
- Это физическое имя файла базы данных, содержащее путь к каталогу. *filename_n* — **nvarchar(260)**, значение по умолчанию NULL. Можно указать до 16 имен файлов. Имена параметров начинаются с **@filename1** и возрастают до **@filename16**. Список имен файлов должен включать хотя бы первичный файл. Первичный файл содержит системные таблицы, указывающие на другие файлы базы данных. Список также должен включать все файлы, перемещенные после отключения базы данных.  
+`[ @filename1 = ] 'filename_n'` Это физическое имя, включая путь файла базы данных. *filename_n* — **nvarchar(260)**, значение по умолчанию NULL. Можно указать до 16 имен файлов. Имена параметров начинаются с **@filename1** и возрастают до **@filename16**. Список имен файлов должен включать хотя бы первичный файл. Первичный файл содержит системные таблицы, указывающие на другие файлы базы данных. Список также должен включать все файлы, перемещенные после отключения базы данных.  
   
 > [!NOTE]  
 >  Этот аргумент сопоставляется с параметром FILENAME инструкции CREATE DATABASE. Дополнительные сведения см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  

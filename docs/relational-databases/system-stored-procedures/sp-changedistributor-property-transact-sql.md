@@ -16,12 +16,12 @@ ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12ba78e62b0441a76cea2b10ebaf13caec767443
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0c637755741332800a1c3eca2b80c9c001b550d3
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133904"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492686"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,16 +39,14 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@property=**] **"**_свойство_**"**  
- Свойство конкретного распространителя. *Свойство* — **sysname**, и может принимать одно из следующих значений.  
+`[ @property = ] 'property'` Является свойство конкретного распространителя. *Свойство* — **sysname**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**heartbeat_interval**|Максимальное время работы агента (в минутах) без регистрации сообщения о ходе выполнения.|  
 |NULL (по умолчанию)|Все доступные *свойство* выводятся значения.|  
   
- [  **@value=**] **"**_значение_**"**  
- Значение конкретного свойства распространителя. *значение* — **varchar(255)**, значение по умолчанию NULL.  
+`[ @value = ] 'value'` Значение для конкретного свойства распространителя. *значение* — **varchar(255)**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

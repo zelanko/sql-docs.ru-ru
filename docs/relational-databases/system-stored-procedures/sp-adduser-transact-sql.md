@@ -18,12 +18,12 @@ ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 73859064fc8a56a53fd5ea6cb1295d81ed0e4150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46b1548f1eb587aa62c0d0427661d97d97bf3cc7
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766532"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492942"
 ---
 # <a name="spadduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@loginame =** ] **"***входа***"**  
- Имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Windows. *Имя входа* — **sysname**, не имеет значения по умолчанию. *Имя входа* должен быть существующим [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа или имя входа Windows.  
+`[ @loginame = ] 'login'` Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа или имя входа Windows. *Имя входа* — **sysname**, не имеет значения по умолчанию. *Имя входа* должен быть существующим [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа или имя входа Windows.  
   
- [  **@name_in_db =** ] **"***пользователя***"**  
- Имя нового пользователя базы данных. *пользователь* — **sysname**, значение по умолчанию NULL. Если *пользователя* не указан, по умолчанию используется имя нового пользователя базы данных *входа* имя. Указание *пользователя* задает имя для нового пользователя в базе данных, отличное от имени входа уровня сервера.  
+`[ @name_in_db = ] 'user'` — Это имя для нового пользователя базы данных. *пользователь* — **sysname**, значение по умолчанию NULL. Если *пользователя* не указан, по умолчанию используется имя нового пользователя базы данных *входа* имя. Указание *пользователя* задает имя для нового пользователя в базе данных, отличное от имени входа уровня сервера.  
   
- [  **@grpname =** ] **"***роли***"**  
- Роль базы данных, членом которой становится новый пользователь. *роль* — **sysname**, значение по умолчанию NULL. *роль* должна быть допустимая роль в текущей базе данных.  
+`[ @grpname = ] 'role'` Представляет роль базы данных, членом которой становится новый пользователь. *роль* — **sysname**, значение по умолчанию NULL. *роль* должна быть допустимая роль в текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

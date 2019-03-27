@@ -16,12 +16,12 @@ ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 031fc14eba8cdea8cdbff41d18d6e6ab6bc42a68
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2966a784f647d402b849d5899b76b0614122b932
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133854"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492497"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@database=**] **"**_базы данных_**"**  
- Имя базы данных распространителя. *База данных* — **sysname**, не имеет значения по умолчанию.  
+`[ @database = ] 'database'` — Имя базы данных распространителя. *База данных* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@property=**] **"**_свойство_**"**  
- Свойство, изменяемое для данной базы данных. *Свойство* — **sysname**, и может принимать одно из следующих значений.  
+`[ @property = ] 'property'` — Это свойство, изменяемое для данной базе данных. *Свойство* — **sysname**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -53,8 +51,7 @@ sp_changedistributiondb [ @database= ] 'database'
 |**min_distretention**|Минимальный срок хранения распространения.|  
 |NULL (по умолчанию)|Все доступные *свойство* выводятся значения.|  
   
- [  **@value=**] **"**_значение_**"**  
- Новое значение для указанного свойства. *значение* — **nvarchar(255)**, значение по умолчанию NULL.  
+`[ @value = ] 'value'` — Это новое значение для указанного свойства. *значение* — **nvarchar(255)**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

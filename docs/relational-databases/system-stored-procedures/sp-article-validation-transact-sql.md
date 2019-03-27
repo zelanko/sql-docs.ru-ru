@@ -16,12 +16,12 @@ ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 849564fcda37c022413d9e0758abe50279497a0b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be3ccf8b0c85b61f536c381e4a42d1b5e37fbacf
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125114"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493275"
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_article_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=**] **"**_публикации_**"**  
- Имя публикации, в которой находится статья. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` — Имя публикации, в которой находится статья. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@article=**] **"**_статье_**"**  
- Имя проверяемой статьи. *статья* — **sysname**, не имеет значения по умолчанию.  
+`[ @article = ] 'article'` — Имя статьи для проверки. *статья* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@rowcount_only=**] *type_of_check_requested*  
- Указывает, что возвращается только число строк таблицы. *type_of_check_requested* — **smallint**, значение по умолчанию **1**.  
+`[ @rowcount_only = ] type_of_check_requested` Указывает, если возвращается только число строк для таблицы. *type_of_check_requested* — **smallint**, значение по умолчанию **1**.  
   
  Если **0**, выполнить вычисление количества строк и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 контрольной суммы, совместимой.  
   
@@ -60,8 +57,7 @@ sp_article_validation [ @publication = ] 'publication'
   
  Если **2**, количество строк и двоичной контрольной суммы.  
   
- [  **@full_or_fast=**] *full_or_fast*  
- Метод, применяемый для подсчета числа строк. *full_or_fast* — **tinyint**, и может принимать одно из следующих значений.  
+`[ @full_or_fast = ] full_or_fast` Метод, используемый для вычисления количества строк. *full_or_fast* — **tinyint**, и может принимать одно из следующих значений.  
   
 |**Значение**|**Описание**|  
 |---------------|---------------------|  
@@ -69,17 +65,13 @@ sp_article_validation [ @publication = ] 'publication'
 |**1**|Выполняет быстрый подсчет из **sysindexes.rows**. Подсчет строк в **sysindexes** выполняется быстрее, чем подсчет строк в фактической таблице. Тем не менее **sysindexes** обновляется в фоновом режиме, и количество строк может оказаться неточным.|  
 |**2** (по умолчанию)|Выполняет условный быстрый подсчет, при котором сначала применяется быстрый метод, Если быстрый метод дает неточные результаты, переключается на полный подсчет. Если *expected_rowcount* имеет значение NULL и хранимая процедура используется для получения значения, полная функция COUNT(*) всегда используется.|  
   
- [  **@shutdown_agent=**] *shutdown_agent*  
- Указывает, будет ли агент распространителя завершен немедленно после завершения проверки. *shutdown_agent* — **бит**, значение по умолчанию **0**. Если **0**, агент распространителя не завершает работу. Если **1**, агент распространителя завершает работу после проверки статьи.  
+`[ @shutdown_agent = ] shutdown_agent` Указывает, если агент распространителя завершен немедленно после завершения проверки. *shutdown_agent* — **бит**, значение по умолчанию **0**. Если **0**, агент распространителя не завершает работу. Если **1**, агент распространителя завершает работу после проверки статьи.  
   
- [  **@subscription_level=**] *уровень_подписки*  
- Указывает, будет ли проверка применяться к части подписчиков. *уровень_подписки* — **бит**, значение по умолчанию **0**. Если **0**, проверка применяется для всех подписчиков. Если **1**, проверка применяется только к части подписчиков, определяемой вызовами **sp_marksubscriptionvalidation** в текущую открытую транзакцию.  
+`[ @subscription_level = ] subscription_level` Указывает, выбирается ли проверка с помощью набора подписчиков. *уровень_подписки* — **бит**, значение по умолчанию **0**. Если **0**, проверка применяется для всех подписчиков. Если **1**, проверка применяется только к части подписчиков, определяемой вызовами **sp_marksubscriptionvalidation** в текущую открытую транзакцию.  
   
- [  **@reserved=**] *зарезервированные*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@publisher**=] **"**_издателя_**"**  
- Указывает, отличный от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает, отличный от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *издатель* не следует использовать при запросе проверки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  

@@ -5,17 +5,17 @@ description: Этом руководстве показано, как прием
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 28a151f00683455b582bb29a5d141a76f237caf1
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 1611a8b0513e8f1a9e50d3cc612b114c88698df5
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017740"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491907"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Учебник. Прием данных в пул данных SQL Server с помощью заданий Spark
 
@@ -49,7 +49,15 @@ ms.locfileid: "57017740"
 
    ![Запрос главного экземпляра SQL Server](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
-1. Создайте внешнюю таблицу с именем **web_clickstreams_spark_results** пула данных. `SqlDataPool` Источником данных является типом источника данных, можно использовать из главного экземпляра служб кластера больших данных.
+1. Создание внешнего источника данных в пул данных, если он еще не существует.
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+   ```
+
+1. Создайте внешнюю таблицу с именем **web_clickstreams_spark_results** пула данных.
 
    ```sql
    USE Sales
@@ -64,7 +72,7 @@ ms.locfileid: "57017740"
       );
    ```
   
-1. В CTP-версии 2.3 Создание данных пула является асинхронным, но нет способа определить, когда сеть будет еще. Подождите 2 минуты, чтобы убедиться в том, что при создании пула данных, прежде чем продолжить.
+1. В CTP-версии 2.4 Создание данных пула является асинхронным, но нет способа определить, когда сеть будет еще. Подождите 2 минуты, чтобы убедиться в том, что при создании пула данных, прежде чем продолжить.
 
 ## <a name="start-a-spark-streaming-job"></a>Запустить задание потоковой передачи Spark
 

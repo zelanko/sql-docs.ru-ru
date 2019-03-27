@@ -16,12 +16,12 @@ ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c49ade60bdbdbdc04fe7ec5b2ec221c10037982
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 5859d7e4c026375d5e9ade69628b9cf9e4a76ed0
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256539"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494366"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
@@ -91,83 +91,64 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@name =** ] **"***имя***"**  
- Имя агента. *имя* — **sysname**, значение по умолчанию NULL.  
+`[ @name = ] 'name'` — Имя агента. *имя* — **sysname**, значение по умолчанию NULL.  
   
- [  **@publisher =** ] **"***издателя***"**  
- Имя сервера издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` — Имя сервера издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@publisher_db =** ] **'***publisher_db***'**  
- Имя базы данных издателя. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` — Имя базы данных издателя. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@publication =** ] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@publisher_security_mode =** ] *publisher_security_mode*  
- Режим безопасности, используемый для подключения к издателю при синхронизации. *publisher_security_mode* — **int**, значение по умолчанию 1. Если **0**, указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. Если **1**, задает проверку подлинности Windows.  
+`[ @publisher_security_mode = ] publisher_security_mode` — Режим безопасности для использования при подключении к издателю при синхронизации. *publisher_security_mode* — **int**, значение по умолчанию 1. Если **0**, указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. Если **1**, задает проверку подлинности Windows.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [ **@publisher_login =** ] **'***publisher_login***'**  
- Имя входа, используемое для подключения к издателю при синхронизации. *publisher_login* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher_login = ] 'publisher_login'` — Это имя для использования при подключении к издателю при синхронизации. *publisher_login* — **sysname**, значение по умолчанию NULL.  
   
- [ **@publisher_password =** ] **'***publisher_password***'**  
- Пароль, используемый при соединении с издателем. *publisher_password* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher_password = ] 'publisher_password'` Пароль, используемый при соединении с издателем. *publisher_password* — **sysname**, значение по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] При возможности предлагать пользователю ввод учетных данных безопасности во время выполнения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
- [  **@publisher_encrypted_password =** ]*publisher_encrypted_password*  
- Установка *publisher_encrypted_password* больше не поддерживается. Попытка присвоить этому **бит** параметр **1** приведет к ошибке.  
+`[ @publisher_encrypted_password = ]publisher_encrypted_password` Установка *publisher_encrypted_password* больше не поддерживается. Попытка присвоить этому **бит** параметр **1** приведет к ошибке.  
   
- [  **@subscriber =** ] **"***подписчика***"**  
- Имя подписчика. *подписчик* — **sysname**, значение по умолчанию NULL.  
+`[ @subscriber = ] 'subscriber'` — Имя подписчика. *подписчик* — **sysname**, значение по умолчанию NULL.  
   
- [ **@subscriber_db =** ] **'***subscriber_db***'**  
- Имя базы данных подписки. *subscriber_db* — **sysname**, значение по умолчанию NULL.  
+`[ @subscriber_db = ] 'subscriber_db'` — Имя базы данных подписки. *subscriber_db* — **sysname**, значение по умолчанию NULL.  
   
- [ **@subscriber_security_mode =** ] *subscriber_security_mode*  
- Режим безопасности, используемый для подключения к подписчику при синхронизации. *subscriber_security_mode* — **int**, значение по умолчанию 1. Если **0**, указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. Если **1**, задает проверку подлинности Windows.  
+`[ @subscriber_security_mode = ] subscriber_security_mode` — Режим безопасности для использования при подключении к подписчику при синхронизации. *subscriber_security_mode* — **int**, значение по умолчанию 1. Если **0**, указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. Если **1**, задает проверку подлинности Windows.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Агент слияния всегда подключается к локальному подписчику с использованием проверки подлинности Windows. Если для этого аргумента указано значение, оно не будет учитываться и будет возвращено предупреждающее сообщение.  
   
- [ **@subscriber_login =** ] **'***subscriber_login***'**  
- Имя входа подписчика, используемое для подключения к нему при синхронизации. *subscriber_login* является обязательным, если *subscriber_security_mode* присваивается **0**. *subscriber_login* — **sysname**, значение по умолчанию NULL.  
+`[ @subscriber_login = ] 'subscriber_login'` — Это имя входа подписчика, используемое при подключении к подписчику при синхронизации. *subscriber_login* является обязательным, если *subscriber_security_mode* присваивается **0**. *subscriber_login* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Если для этого аргумента указано значение, оно не будет учитываться и будет возвращено предупреждающее сообщение.  
   
- [ **@subscriber_password =** ] **'***subscriber_password***'**  
- Пароль подписчика для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *subscriber_password* является обязательным, если *subscriber_security_mode* присваивается **0**. *subscriber_password* — **sysname**, значение по умолчанию NULL.  
+`[ @subscriber_password = ] 'subscriber_password'` Пароль подписчика для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. *subscriber_password* является обязательным, если *subscriber_security_mode* присваивается **0**. *subscriber_password* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Если для этого аргумента указано значение, оно не будет учитываться и будет возвращено предупреждающее сообщение.  
   
- [  **@distributor =** ] **"***распространителя***"**  
- Имя распространителя. *распространитель* — **sysname**, значение по умолчанию *издателя*; то есть издатель является и распространителем.  
+`[ @distributor = ] 'distributor'` — Имя распространителя. *распространитель* — **sysname**, значение по умолчанию *издателя*; то есть издатель является и распространителем.  
   
- [ **@distributor_security_mode =** ] *distributor_security_mode*  
- Режим безопасности, используемый для подключения к распространителю при синхронизации. *distributor_security_mode* — **int**, значение по умолчанию 0. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. **1** задает проверку подлинности Windows.  
+`[ @distributor_security_mode = ] distributor_security_mode` — Режим безопасности для использования при подключении к распространителю при синхронизации. *distributor_security_mode* — **int**, значение по умолчанию 0. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. **1** задает проверку подлинности Windows.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@distributor_login =** ] **"***distributor_login***"**  
- Имя входа распространителя, используемое для подключения к нему при синхронизации. *distributor_login* является обязательным, если *distributor_security_mode* присваивается **0**. *distributor_login* — **sysname**, значение по умолчанию NULL.  
+`[ @distributor_login = ] 'distributor_login'` — Это имя входа распространителя для использования при подключении к распространителю при синхронизации. *distributor_login* является обязательным, если *distributor_security_mode* присваивается **0**. *distributor_login* — **sysname**, значение по умолчанию NULL.  
   
- [  **@distributor_password =** ] **"***distributor_password***"**  
- Пароль распространителя. *distributor_password* является обязательным, если *distributor_security_mode* присваивается **0**. *distributor_password* — **sysname**, значение по умолчанию NULL.  
+`[ @distributor_password = ] 'distributor_password'` — Пароль распространителя. *distributor_password* является обязательным, если *distributor_security_mode* присваивается **0**. *distributor_password* — **sysname**, значение по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] При возможности предлагать пользователю ввод учетных данных безопасности во время выполнения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
- [  **@encrypted_password =** ] *encrypted_password*  
- Установка *encrypted_password* больше не поддерживается. Попытка присвоить этому **бит** параметр **1** приведет к ошибке.  
+`[ @encrypted_password = ] encrypted_password` Установка *encrypted_password* больше не поддерживается. Попытка присвоить этому **бит** параметр **1** приведет к ошибке.  
   
- [ **@frequency_type =** ] *frequency_type*  
- Частота планируемого запуска агента слияния. *frequency_type* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_type = ] frequency_type` Это частота запуска агента слияния. *frequency_type* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -184,8 +165,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!NOTE]  
 >  Указав значение **64** агент слияния запускается в непрерывном режиме. Это соответствует вводу параметра **-непрерывной** параметром для агента. Дополнительные сведения см. в статье [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
- [  **@frequency_interval =** ] *frequency_interval*  
- День или дни запуска агента слияния. *frequency_interval* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_interval = ] frequency_interval` День или дни запуска агента слияния. *frequency_interval* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -201,8 +181,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**10**|По выходным дням|  
 |NULL (по умолчанию)||  
   
- [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- Дата агента слияния. Этот параметр используется при *frequency_type* присваивается **32** (относительно ежемесячно). *frequency_relative_interval* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` — Дата агента слияния. Этот параметр используется при *frequency_type* присваивается **32** (относительно ежемесячно). *frequency_relative_interval* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -213,11 +192,9 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**16**|Последняя|  
 |NULL (по умолчанию)||  
   
- [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- Коэффициент повторения, используемый аргументом *frequency_type*. *frequency_recurrence_factor* — **int**, значение по умолчанию NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Коэффициент повторения, используемый аргументом *frequency_type*. *frequency_recurrence_factor* — **int**, значение по умолчанию NULL.  
   
- [ **@frequency_subday =** ] *frequency_subday*  
- Частота повторного планирования в течение определенного периода. *frequency_subday* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_subday = ] frequency_subday` Том, как часто следует запланировать повторное выполнение в течение определенного периода. *frequency_subday* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -227,92 +204,68 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**8**|Час|  
 |NULL (по умолчанию)||  
   
- [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
- Интервал для *frequency_subday*. *frequency_subday_interval* — **int**, значение по умолчанию NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Интервал для *frequency_subday*. *frequency_subday_interval* — **int**, значение по умолчанию NULL.  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- Время суток, на которое запланирован первый запуск агента слияния, в формате ЧЧММСС. *active_start_time_of_day* — **int**, значение по умолчанию NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Время суток, когда агент слияния впервые запланировано, в формате ЧЧММСС. *active_start_time_of_day* — **int**, значение по умолчанию NULL.  
   
- [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
- Время плановой остановки агента слияния в формате ЧЧММСС. *active_end_time_of_day* — **int**, значение по умолчанию NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Время остановки агента слияния, в формате ЧЧММСС. *active_end_time_of_day* — **int**, значение по умолчанию NULL.  
   
- [  **@active_start_date =** ] *active_start_date*  
- Дата первого планового запуска агента слияния в формате ГГГГММДД. *active_start_date* — **int**, значение по умолчанию NULL.  
+`[ @active_start_date = ] active_start_date` Дата первого запуска агента слияния запланирована, в формате ГГГГММДД. *active_start_date* — **int**, значение по умолчанию NULL.  
   
- [ **@active_end_date =** ] *active_end_date*  
- Дата плановой остановки агента слияния в формате ГГГГММДД. *active_end_date* — **int**, значение по умолчанию NULL.  
+`[ @active_end_date = ] active_end_date` Дата плановой остановки агента слияния, в формате ГГГГММДД. *active_end_date* — **int**, значение по умолчанию NULL.  
   
- [  **@optional_command_line =** ] **"***optional_command_line***"**  
- Дополнительная командная строка, предоставляемая для агента слияния. *optional_command_line* — **nvarchar(255)**, значение по умолчанию "". Может использоваться для передачи агенту слияния дополнительных параметров. Следующий пример иллюстрирует увеличение времени ожидания выполнения запроса по умолчанию до `600` секунд.  
+`[ @optional_command_line = ] 'optional_command_line'` — Это дополнительная Командная строка, предоставляемая для агента слияния. *optional_command_line* — **nvarchar(255)**, значение по умолчанию "". Может использоваться для передачи агенту слияния дополнительных параметров. Следующий пример иллюстрирует увеличение времени ожидания выполнения запроса по умолчанию до `600` секунд.  
   
 ```  
 @optional_command_line = N'-QueryTimeOut 600'  
 ```  
   
- [  **@merge_jobid =** ] *merge_jobid*  
- Выходной параметр идентификатора задания. *merge_jobid* — **binary(16)**, значение по умолчанию NULL.  
+`[ @merge_jobid = ] merge_jobid` — Это выходной параметр идентификатора задания. *merge_jobid* — **binary(16)**, значение по умолчанию NULL.  
   
- [ **@enabled_for_syncmgr =** ] **'***enabled_for_syncmgr***'**  
- Указывает, может ли подписка быть синхронизирована с помощью диспетчера синхронизации Windows. *enabled_for_syncmgr* — **nvarchar(5)**, значение по умолчанию FALSE. Если **false**, подписка не зарегистрирована диспетчером синхронизации. Если **true**, подписка регистрируется диспетчером синхронизации и может быть синхронизирована без запуска [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Указывает, может ли подписка быть синхронизирована посредством диспетчера синхронизации Windows. *enabled_for_syncmgr* — **nvarchar(5)**, значение по умолчанию FALSE. Если **false**, подписка не зарегистрирована диспетчером синхронизации. Если **true**, подписка регистрируется диспетчером синхронизации и может быть синхронизирована без запуска [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- [ **@ftp_address =** ] **'***ftp_address***'**  
- Только для обратной совместимости.  
+`[ @ftp_address = ] 'ftp_address'` Только для обратной совместимости.  
   
- [ **@ftp_port =** ] *ftp_port*  
- Только для обратной совместимости.  
+`[ @ftp_port = ] ftp_port` Только для обратной совместимости.  
   
- [ **@ftp_login =** ] **'***ftp_login***'**  
- Только для обратной совместимости.  
+`[ @ftp_login = ] 'ftp_login'` Только для обратной совместимости.  
   
- [ **@ftp_password =** ] **'***ftp_password***'**  
- Только для обратной совместимости.  
+`[ @ftp_password = ] 'ftp_password'` Только для обратной совместимости.  
   
- [  **@alt_snapshot_folder =** ] **"***alternate_snapshot_folder***"**  
- Указывает расположение, откуда извлекаются файлы моментальных снимков. *alternate_snapshot_folder* — **nvarchar(255)**, значение по умолчанию NULL. При значении NULL файлы моментальных снимков считываются из местонахождения по умолчанию, определяемого издателем.  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` Указывает расположение, откуда извлекаются файлы моментальных снимков. *alternate_snapshot_folder* — **nvarchar(255)**, значение по умолчанию NULL. При значении NULL файлы моментальных снимков считываются из местонахождения по умолчанию, определяемого издателем.  
   
- [  **@working_directory =** ] **"***working_directory***"**  
- Имя рабочего каталога, используемого для временного хранения файлов данных и схем публикации при использовании для передачи файлов моментальных снимков протокола FTP. *working_directory* — **nvarchar(255)**, значение по умолчанию NULL.  
+`[ @working_directory = ] 'working_directory'` Это имя рабочего каталога, используемого для временного хранения файлов данных и схем публикации при использовании протокола FTP для передачи файлов моментальных снимков. *working_directory* — **nvarchar(255)**, значение по умолчанию NULL.  
   
- [ **@use_ftp =** ] **'***use_ftp***'**  
- Указывает на использование протокола FTP вместо обычного протокола для получения моментальных снимков. *use_ftp* — **nvarchar(5)**, значение по умолчанию FALSE.  
+`[ @use_ftp = ] 'use_ftp'` Указывает использование протокола FTP вместо обычного протокола для получения моментальных снимков. *use_ftp* — **nvarchar(5)**, значение по умолчанию FALSE.  
   
- [  **@reserved =** ] **"***зарезервированные***"**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@use_interactive_resolver =** ] **'***use_interactive_resolver***'** ]  
- Использует интерактивный арбитр конфликтов для всех статей, для которых применим интерактивный арбитр конфликтов. *use_interactive_resolver* — **nvarchar(5)**, значение по умолчанию FALSE.  
+`[ @use_interactive_resolver = ] 'use_interactive_resolver' ]` Использует интерактивный арбитр конфликтов для всех статей, которые допускают интерактивное разрешение. *use_interactive_resolver* — **nvarchar(5)**, значение по умолчанию FALSE.  
   
- [ **@offloadagent =** ] **'***remote_agent_activation***'**  
+`[ @offloadagent = ] 'remote_agent_activation'`
  > [!NOTE]  
 >  Удаленная активация агента является устаревшей и больше не поддерживается. Этот аргумент поддерживается только для обратной совместимости скриптов. Установка *remote_agent_activation* на значение, отличное от **false** приведет к ошибке.  
   
- [  **@offloadserver =** ] **"***remote_agent_server_name***"**  
+`[ @offloadserver = ] 'remote_agent_server_name'`
  > [!NOTE]  
 >  Удаленная активация агента является устаревшей и больше не поддерживается. Этот аргумент поддерживается только для обратной совместимости скриптов. Установка *remote_agent_server_name* любое значение, отличное от NULL, будут вызывать ошибку.  
   
- [  **@job_name =** ] **"***имя_задания***"** ]  
- Имя существующего задания агента. *имя_задания* — **sysname**, со значением по умолчанию NULL. Этот аргумент указывается только тогда, когда подписка будет синхронизироваться с использованием существующего задания, а не вновь создаваемого задания (выбор по умолчанию). Если вы не являетесь членом **sysadmin** предопределенной роли сервера, необходимо указать *job_login* и *job_password* при указании *имя_задания*.  
+`[ @job_name = ] 'job_name' ]` — Имя существующего задания агента. *имя_задания* — **sysname**, со значением по умолчанию NULL. Этот аргумент указывается только тогда, когда подписка будет синхронизироваться с использованием существующего задания, а не вновь создаваемого задания (выбор по умолчанию). Если вы не являетесь членом **sysadmin** предопределенной роли сервера, необходимо указать *job_login* и *job_password* при указании *имя_задания*.  
   
- [ **@dynamic_snapshot_location =** ] **'***dynamic_snapshot_location***'** ]  
- Путь к папке, из которой будут считываться файлы моментальных снимков, при использовании моментального снимка фильтруемых данных. *dynamic_snapshot_location* — **nvarchar(260)**, значение по умолчанию NULL. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` Путь к папке, в которой файлы моментальных снимков будут считываться из Если моментального снимка отфильтрованных данных будет использоваться. *dynamic_snapshot_location* — **nvarchar(260)**, значение по умолчанию NULL. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
- [ **@use_web_sync =** ] *use_web_sync*  
- Указывает, включена ли веб-синхронизация. *use_web_sync* — **бит**, значение по умолчанию 0. **1** указывает, что подписки по запросу могут синхронизироваться через Интернет по протоколу HTTP.  
+`[ @use_web_sync = ] use_web_sync` Указывает, что веб-синхронизация разрешена. *use_web_sync* — **бит**, значение по умолчанию 0. **1** указывает, что подписки по запросу могут синхронизироваться через Интернет по протоколу HTTP.  
   
- [ **@internet_url =** ] **'***internet_url***'**  
- Расположение прослушивателя репликации (REPLISAPI.DLL) для веб-синхронизации. *internet_url* — **nvarchar(260)**, значение по умолчанию NULL. *internet_url* — это полный URL-адрес в формате `http://server.domain.com/directory/replisapi.dll`. Если сервер настроен для прослушивания порта, отличного от 80-го, необходимо также задать номер порта в формате `http://server.domain.com:portnumber/directory/replisapi.dll`, где `portnumber` указывает номер порта.  
+`[ @internet_url = ] 'internet_url'` — Это расположение средства прослушивания репликации (REPLISAPI. Библиотека DLL) для веб-синхронизации. *internet_url* — **nvarchar(260)**, значение по умолчанию NULL. *internet_url* — это полный URL-адрес в формате `http://server.domain.com/directory/replisapi.dll`. Если сервер настроен для прослушивания порта, отличного от 80-го, необходимо также задать номер порта в формате `http://server.domain.com:portnumber/directory/replisapi.dll`, где `portnumber` указывает номер порта.  
   
- [  **@internet_login =** ] **"***internet_login***"**  
- Имя входа, используемое агентом слияния при подключении к веб-серверу, на котором размещены службы веб-синхронизации с обычной проверкой подлинности HTTP. *internet_login* — **sysname**, значение по умолчанию NULL.  
+`[ @internet_login = ] 'internet_login'` Имя входа, используемое агентом слияния при подключении к веб-сервера, на котором размещается веб-синхронизации используется обычная проверка подлинности HTTP. *internet_login* — **sysname**, значение по умолчанию NULL.  
   
- [ **@internet_password =** ] **'***internet_password***'**  
- Пароль, используемый агентом слияния при подключении к веб-серверу, на котором размещены службы веб-синхронизации, с обычной проверкой подлинности HTTP. *internet_password* — **nvarchar(524)**, со значением по умолчанию NULL.  
+`[ @internet_password = ] 'internet_password'` Пароль, используемое агентом слияния при подключении к веб-сервера, на котором размещается веб-синхронизации используется обычная проверка подлинности HTTP. *internet_password* — **nvarchar(524)**, со значением по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
- [ **@internet_security_mode =** ] *internet_security_mode*  
- Способ проверки подлинности, используемый агентом слияния при подключении к веб-серверу во время веб-синхронизации по протоколу HTTPS. *internet_security_mode* — **int** и может принимать одно из следующих значений.  
+`[ @internet_security_mode = ] internet_security_mode` Метод проверки подлинности, используемый агентом слияния при подключении к веб-сервер во время веб-синхронизации с помощью HTTPS. *internet_security_mode* — **int** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -322,17 +275,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!NOTE]  
 >  При веб-синхронизации рекомендуется использовать обычную проверку подлинности. Для использования веб-синхронизации необходимо подключиться к веб-серверу с использованием шифруемого соединения SSL. Дополнительные сведения см. в разделе [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
   
- [  **@internet_timeout =** ] *internet_timeout*  
- Время в секундах до истечения срока действия запроса на веб-синхронизацию. *internet_timeout* — **int**, значение по умолчанию **300** секунд.  
+`[ @internet_timeout = ] internet_timeout` — Это продолжительность времени в секундах до истечения срока действия запроса синхронизации веб-узла. *internet_timeout* — **int**, значение по умолчанию **300** секунд.  
   
- [  **@hostname =** ] **"***hostname***"**  
- Заменяет значение, возвращаемое функцией HOST_NAME() при использовании этой функции в предложении WHERE параметризованного фильтра. *Имя узла* — **sysname**, значение по умолчанию NULL.  
+`[ @hostname = ] 'hostname'` Переопределяет значение, возвращаемое функцией HOST_NAME() при использовании этой функции в предложении WHERE параметризованного фильтра. *Имя узла* — **sysname**, значение по умолчанию NULL.  
   
- [ **@job_login =** ] **'***job_login***'**  
- Имя входа для учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)**, не имеет значения по умолчанию. Эта учетная запись Windows всегда используется при соединениях агента с подписчиком и соединениях с распространителем и издателем, когда применяется встроенная проверка подлинности Windows.  
+`[ @job_login = ] 'job_login'` — Это имя для учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)**, не имеет значения по умолчанию. Эта учетная запись Windows всегда используется при соединениях агента с подписчиком и соединениях с распространителем и издателем, когда применяется встроенная проверка подлинности Windows.  
   
- [ **@job_password =** ] **'***job_password***'**  
- Пароль для учетной записи Windows, под которой запускается агент. *job_password* — **sysname**, не имеет значения по умолчанию.  
+`[ @job_password = ] 'job_password'` — Пароль для учетной записи Windows, под которой запускается агент. *job_password* — **sysname**, не имеет значения по умолчанию.  
   
 > [!IMPORTANT]  
 >  Не храните данные проверки подлинности в файлах скриптов. Для обеспечения лучшей защиты имена входа и пароли должны вводиться в ходе выполнения.  

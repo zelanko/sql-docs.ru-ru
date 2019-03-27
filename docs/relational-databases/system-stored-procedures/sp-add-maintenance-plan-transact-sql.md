@@ -18,12 +18,12 @@ ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18467e53e2edec21ab91e91a0fe912e9382b35d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dea1ce298f9c032b785ced601a0d50d52fbb6f96
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642403"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492906"
 ---
 # <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,9 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@plan_name =**] **"***plan_name***"**  
- Указывает имя добавляемого плана обслуживания. *plan_name* — **varchar(128)**.  
+`[ @plan_name = ] 'plan_name'` Указывает имя добавляемого плана обслуживания. *plan_name* — **varchar(128)**.  
   
- **@plan_id = "** *plan_id* **"**  
+ **@plan_id = '** *plan_id* **'**  
  Указывает идентификатор плана обслуживания. *plan_id* — **uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

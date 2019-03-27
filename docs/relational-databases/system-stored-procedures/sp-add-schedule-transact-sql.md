@@ -18,12 +18,12 @@ ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6fc52fd7af36d2238c53d8cbd877b7a6d43cd1dd
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 16468053ee1e0d09b5be37c034800c122c1d16c9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591488"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493295"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,14 +55,11 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@schedule_name =** ] **"**_schedule_name_**"**  
- Имя расписания. *schedule_name* — **sysname**, не имеет значения по умолчанию.  
+`[ @schedule_name = ] 'schedule_name'` Имя расписания. *schedule_name* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@enabled =** ] *включена*  
- Отображает текущее состояние расписания. *включить* — **tinyint**, значение по умолчанию **1** (включено). Если **0**, расписание не включено. Когда расписание не включено, никакие задания не будут запускаться по расписанию.  
+`[ @enabled = ] enabled` Указывает текущее состояние расписания. *включить* — **tinyint**, значение по умолчанию **1** (включено). Если **0**, расписание не включено. Когда расписание не включено, никакие задания не будут запускаться по расписанию.  
   
- [ **@freq_type =** ] *freq_type*  
- Значение, указывающее, когда должно выполняться задание. *freq_type* — **int**, значение по умолчанию **0**, и может принимать одно из следующих значений.  
+`[ @freq_type = ] freq_type` Значение, указывающее, когда задание для выполнения. *freq_type* — **int**, значение по умолчанию **0**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -74,8 +71,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**64**|Запустить, когда запускается служба SQLServerAgent|  
 |**128**|Запускать, когда компьютер простаивает|  
   
- [  **@freq_interval =** ] *freq_interval*  
- Дни, когда выполняется задание. *freq_interval* — **int**, значение по умолчанию **1**и зависит от значения *freq_type*.  
+`[ @freq_interval = ] freq_interval` Дни, в которые выполняется задание. *freq_interval* — **int**, значение по умолчанию **1**и зависит от значения *freq_type*.  
   
 |Значение атрибута *freq_type*|Воздействие на *freq_interval*|  
 |---------------------------|--------------------------------|  
@@ -87,8 +83,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**64** (когда запускается служба SQLServerAgent)|*freq_interval* не используется.|  
 |**128**|*freq_interval* не используется.|  
   
- [ **@freq_subday_type =** ] *freq_subday_type*  
- Указывает единицы измерения для *freq_subday_interval*. *freq_subday_type* — **int**, значение по умолчанию **0**, и может принимать одно из следующих значений.  
+`[ @freq_subday_type = ] freq_subday_type` Указывает единицы измерения для *freq_subday_interval*. *freq_subday_type* — **int**, значение по умолчанию **0**, и может принимать одно из следующих значений.  
   
 |Значение|Описание (единица измерения)|  
 |-----------|--------------------------|  
@@ -97,11 +92,9 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x4**|Минуты|  
 |**0x8**|Часы|  
   
- [  **@freq_subday_interval =** ] *freq_subday_interval*  
- Число *freq_subday_type* периодов должно пройти между выполнениями задания. *freq_subday_interval* — **int**, значение по умолчанию **0**. Примечание. Интервал должен составлять более 10 секунд. *freq_subday_interval* учитывается в тех случаях, где *freq_subday_type* равен **1**.  
+`[ @freq_subday_interval = ] freq_subday_interval` Число *freq_subday_type* периодов должно пройти между выполнениями задания. *freq_subday_interval* — **int**, значение по умолчанию **0**. Примечание. Интервал должен составлять более 10 секунд. *freq_subday_interval* учитывается в тех случаях, где *freq_subday_type* равен **1**.  
   
- [  **@freq_relative_interval =** ] *freq_relative_interval*  
- Появления задания *freq_interval* в каждом месяце, если *freq_interval* — 32 (ежемесячное относительное расписание). *freq_relative_interval* — **int**, значение по умолчанию **0**, и может принимать одно из следующих значений. *freq_relative_interval* учитывается в тех случаях, где *freq_type* не равен 32.  
+`[ @freq_relative_interval = ] freq_relative_interval` Появления задания *freq_interval* в каждом месяце, если *freq_interval* — 32 (ежемесячное относительное расписание). *freq_relative_interval* — **int**, значение по умолчанию **0**, и может принимать одно из следующих значений. *freq_relative_interval* учитывается в тех случаях, где *freq_type* не равен 32.  
   
 |Значение|Описание (единица измерения)|  
 |-----------|--------------------------|  
@@ -111,36 +104,27 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**8**|Четвертая|  
 |**16**|Последняя|  
   
- [  **@freq_recurrence_factor =** ] *freq_recurrence_factor*  
- Число недель или месяцев между запланированными выполнениями задания. *freq_recurrence_factor* используется только в том случае, если *freq_type* — **8**, **16**, или **32**. *freq_recurrence_factor* — **int**, значение по умолчанию **0**.  
+`[ @freq_recurrence_factor = ] freq_recurrence_factor` Число недель или месяцев между запланированными выполнениями задания. *freq_recurrence_factor* используется только в том случае, если *freq_type* — **8**, **16**, или **32**. *freq_recurrence_factor* — **int**, значение по умолчанию **0**.  
   
- [  **@active_start_date =** ] *active_start_date*  
- Дата, когда может начаться выполнение задания. *active_start_date* — **int**, значение по умолчанию NULL, который указывает на сегодняшнюю дату. Формат даты: ГГГГMMДД. Если *active_start_date* не равно NULL, дата должна быть больше или равна 19900101.  
+`[ @active_start_date = ] active_start_date` Дата, когда может начаться выполнение задания. *active_start_date* — **int**, значение по умолчанию NULL, который указывает на сегодняшнюю дату. Формат даты: ГГГГMMДД. Если *active_start_date* не равно NULL, дата должна быть больше или равна 19900101.  
   
  После создания расписания проверьте дату начала и убедитесь, что она задана правильно. Дополнительные сведения см в разделе «Планирование даты начала» [Создание и присоединение расписаний к заданиям](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
  При обработке еженедельных или ежемесячных расписаний агент пропускает значение active_start_date, если оно в прошлом, и использует вместо него текущую дату. Когда расписание агента SQL Server создается с использованием хранимой процедуры sp_add_schedule, можно указать параметр active_start_date, который определяет дату начала выполнения задания. Если это еженедельное или ежемесячное расписание, а параметру active_start_date задана дата в прошлом, параметр active_start_date пропускается и в качестве его значения используется текущая дата.  
   
- [  **@active_end_date =** ] *active_end_date*  
- Дата, когда может быть остановлено выполнение задания. *active_end_date* — **int**, значение по умолчанию **99991231**, означающее 31 декабря 9999 года. Используется формат ГГГГММДД.  
+`[ @active_end_date = ] active_end_date` Дата, на котором может быть остановлено выполнение задания. *active_end_date* — **int**, значение по умолчанию **99991231**, означающее 31 декабря 9999 года. Используется формат ГГГГММДД.  
   
- [  **@active_start_time =** ] *active_start_time*  
- Время в любой день между *active_start_date* и *active_end_date* начинается выполнение задания. *active_start_time* — **int**, значение по умолчанию **000000**, что означает 12:00:00 по в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
+`[ @active_start_time = ] active_start_time` Время в любой день между *active_start_date* и *active_end_date* начинается выполнение задания. *active_start_time* — **int**, значение по умолчанию **000000**, что означает 12:00:00 по в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
   
- [  **@active_end_time =** ] *active_end_time*  
- Время в любой день между *active_start_date* и *active_end_date* завершения выполнения задания. *active_end_time* — **int**, значение по умолчанию **235959**, означающее 23:59:59. в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
+`[ @active_end_time = ] active_end_time` Время в любой день между *active_start_date* и *active_end_date* завершения выполнения задания. *active_end_time* — **int**, значение по умолчанию **235959**, означающее 23:59:59. в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
   
- [ **@owner_login_name**=] **"**_аргумента_**"**  
- Имя сервера-участника, владеющего расписанием. *том* — **sysname**, и по умолчанию NULL, которое указывает, что владельцем расписания является создателем.  
+`[ @owner_login_name = ] 'owner_login_name'` Имя сервера-участника, владеющего расписанием. *том* — **sysname**, и по умолчанию NULL, которое указывает, что владельцем расписания является создателем.  
   
- [ **@schedule_uid**=] _schedule_uid_**выходных данных**  
- Уникальный идентификатор для расписания. *schedule_uid* является переменной типа **uniqueidentifier**.  
+`[ @schedule_uid = ] _schedule_uidOUTPUT` Уникальный идентификатор расписания. *schedule_uid* является переменной типа **uniqueidentifier**.  
   
- [ **@schedule_id**=] _schedule_id_**выходных данных**  
- Идентификатор расписания. *schedule_id* является переменной типа **int**.  
+`[ @schedule_id = ] _schedule_idOUTPUT` Идентификатор расписания. *schedule_id* является переменной типа **int**.  
   
- [ **@originating_server**= ] *server_name*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @originating_server = ] server_name` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

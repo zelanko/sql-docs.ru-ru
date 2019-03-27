@@ -16,12 +16,12 @@ ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a36f49bb392d8f29ff52bb574f1dff9c9813eccd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f72ed9339522d3cce0936ca2f6143fb35ce3252e
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764674"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494016"
 ---
 # <a name="spaddagentparameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@profile_id=** ] *profile_id*  
- Идентификатор профиля из **MSagent_profiles** в таблицу **msdb** базы данных. *profile_id* — **int**, не имеет значения по умолчанию.  
+`[ @profile_id = ] profile_id` Идентификатор профиля из **MSagent_profiles** в таблицу **msdb** базы данных. *profile_id* — **int**, не имеет значения по умолчанию.  
   
  Чтобы узнать тип агента, это *profile_id* представляет, найти *profile_id* в [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) таблицы и обратите внимание, *agent_type* значение поля. Возможны следующие значения.  
   
@@ -53,8 +52,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 |**4**|Агент слияния.|  
 |**9**|Агент чтения очереди.|  
   
- [  **@parameter_name=** ] **"***parameter_name***"**  
- Имя параметра. *имя_параметра* — **sysname**, не имеет значения по умолчанию. Список аргументов, уже определенных в системных профилях, см. в разделе [профили агента репликации](../../relational-databases/replication/agents/replication-agent-profiles.md). Полные списки допустимых аргументов каждого агента см. в следующих разделах.  
+`[ @parameter_name = ] 'parameter_name'` — Имя параметра. *имя_параметра* — **sysname**, не имеет значения по умолчанию. Список аргументов, уже определенных в системных профилях, см. в разделе [профили агента репликации](../../relational-databases/replication/agents/replication-agent-profiles.md). Полные списки допустимых аргументов каждого агента см. в следующих разделах.  
   
 -   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -66,8 +64,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 -   [Replication Queue Reader Agent](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
- [  **@parameter_value=**] **"***parameter_value***"**  
- Значение, присваиваемое параметру. *parameter_value* — **nvarchar(255)**, не имеет значения по умолчанию.  
+`[ @parameter_value = ] 'parameter_value'` Значение, присваиваемое параметру. *parameter_value* — **nvarchar(255)**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

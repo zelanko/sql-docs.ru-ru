@@ -18,12 +18,12 @@ ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bb19049185ab79178213b1dc042a1c23f8978374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7c6e4531597faf9cacb883cf3ea3432b6e8ff9f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704602"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492524"
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@alert_name=** ] **"***предупреждение***"**  
- Предупреждение для этого уведомления. *Предупреждение* — **sysname**, не имеет значения по умолчанию.  
+`[ @alert_name = ] 'alert'` Предупреждение для этого уведомления. *Предупреждение* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@operator_name=** ] **"***оператор***"**  
- Оператор, которому будут отправляться уведомления о предупреждении. *оператор* — **sysname**, не имеет значения по умолчанию.  
+`[ @operator_name = ] 'operator'` Оператор, чтобы получать уведомления при возникновении предупреждения. *оператор* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@notification_method=** ] *notification_method*  
- Метод уведомления оператора. *notification_method* — **tinyint**, не имеет значения по умолчанию. *notification_method* может иметь одно или несколько из следующих значений в сочетании с **OR** логический оператор.  
+`[ @notification_method = ] notification_method` Метод уведомления оператора. *notification_method* — **tinyint**, не имеет значения по умолчанию. *notification_method* может иметь одно или несколько из следующих значений в сочетании с **OR** логический оператор.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -77,7 +74,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="examples"></a>Примеры  
  Следующий код добавляет уведомление по электронной почте для предупреждения `Test Alert`.  
   
-> **Примечание:** в этом примере предполагается, что `Test Alert` уже существует и что `François Ajenstat` имеет допустимое имя оператора.  
+> **ПРИМЕЧАНИЕ.** В этом примере предполагается, что предупреждение `Test Alert` уже существует и что `François Ajenstat` — допустимое имя оператора.  
   
 ```  
 USE msdb ;  

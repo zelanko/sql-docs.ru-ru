@@ -16,12 +16,12 @@ ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 486faeb7d46ee32b40923cd54a018c2005c44621
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5599370f892d174336411573883e2feffa27b886
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760516"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492657"
 ---
 # <a name="spaddmergepartition-transact-sql"></a>sp_addmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_addmergepartition [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@publication**=] **"***публикации***"**  
- Публикация слиянием, на которой создается секция. *Публикация* — **sysname**, не имеет значения по умолчанию. Если *suser_sname* указан, значение *hostname* должен иметь значение NULL.  
+`[ @publication = ] 'publication'` — Это на публикацию слиянием, в которой создается секция. *Публикация* — **sysname**, не имеет значения по умолчанию. Если *suser_sname* указан, значение *hostname* должен иметь значение NULL.  
   
- [ **@suser_sname**=] **"***suser_sname***"**  
- Значение, используемое при создании секции для подписки, которая фильтруется по значению [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) на стороне подписчика. *SUSER_SNAME* — **sysname**, не имеет значения по умолчанию.  
+`[ @suser_sname = ] 'suser_sname'` Значение, используемое при создании секции для подписки, которая фильтруется по значению [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) на стороне подписчика. *SUSER_SNAME* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@host_name**=] **"***host_name***"**  
- Значение, используемое при создании секции для подписки, которая фильтруется по значению [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) на стороне подписчика. *HOST_NAME* — **sysname**, не имеет значения по умолчанию.  
+`[ @host_name = ] 'host_name'` Значение, используемое при создании секции для подписки, которая фильтруется по значению [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) на стороне подписчика. *HOST_NAME* — **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

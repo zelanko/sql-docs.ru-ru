@@ -16,12 +16,12 @@ ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9424228f5f1bd70c17ebb0f4f421f4f0f923930c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5ce192a0d3510f6034ff223f6573bf1e058516e9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822328"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494326"
 ---
 # <a name="spaddqreaderagent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +41,16 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@job_login**=] **"***job_login***"**  
- Имя входа для учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, под которой запускается агент. *job_login* — **nvarchar(257)**, не имеет значения по умолчанию. Для соединения агента с распространителем всегда используется эта учетная запись Windows.  
+`[ @job_login = ] 'job_login'` Имя входа для [!INCLUDE[msCoName](../../includes/msconame-md.md)] учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)**, не имеет значения по умолчанию. Для соединения агента с распространителем всегда используется эта учетная запись Windows.  
   
- [ **@job_password**=] **"***job_password***"**  
- Пароль для учетной записи Windows, под которой запускается агент. *job_password* — **sysname**, не имеет значения по умолчанию.  
+`[ @job_password = ] 'job_password'` — Пароль для учетной записи Windows, под которой запускается агент. *job_password* — **sysname**, не имеет значения по умолчанию.  
   
 > [!IMPORTANT]  
 >  Не храните данные проверки подлинности в файлах скриптов. Для обеспечения лучшей защиты имена входа и пароли должны вводиться в ходе выполнения.  
   
- [ **@job_name**=] **"***имя_задания***"**  
- Имя существующего задания агента. *имя_задания* — **sysname**, со значением по умолчанию NULL. Этот аргумент указывается, только если агент создается с использованием существующего, а не вновь созданного задания (выбор по умолчанию).  
+`[ @job_name = ] 'job_name'` — Имя существующего задания агента. *имя_задания* — **sysname**, со значением по умолчанию NULL. Этот аргумент указывается, только если агент создается с использованием существующего, а не вновь созданного задания (выбор по умолчанию).  
   
- [  **@frompublisher=** ] *frompublisher*  
- Указывает, выполняется ли процедура на сервере издателя. *frompublisher* имеет тип bit и значение по умолчанию **0**. Значение **1** означает, что процедура выполняется из издателя в базе данных публикации.  
+`[ @frompublisher = ] frompublisher` Указывает, выполняется ли процедура на издателе. *frompublisher* имеет тип bit и значение по умолчанию **0**. Значение **1** означает, что процедура выполняется из издателя в базе данных публикации.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

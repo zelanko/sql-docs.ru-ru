@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: bcebae572cb6704051712e44fd0dcf71a2eff5ea
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 4db08a718f834d03ddef103b2a4dc16a2c3733b8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018080"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494396"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Настройка SQL Server в Linux с помощью средства mssql-conf
 
@@ -511,8 +511,8 @@ sudo systemctl restart mssql-server
 
 | mssql-conf setting | Описание |
 |---|---|
-| distributedtransaction.allowonlysecurerpccalls | Настройте безопасный rpc только вызовы для распределенных транзакций |
-| distributedtransaction.fallbacktounsecurerpcifnecessary | Настройка безопасности вызовы rpc только для распределенных |транзакции
+| distributedtransaction.allowonlysecurerpccalls | Настройка безопасного вызовы RPC только для распределенных транзакций |
+| distributedtransaction.fallbacktounsecurerpcifnecessary | Настройка безопасности только вызовы RPC для распределенных |транзакции
 | distributedtransaction.maxlogsize | DTC размером файла журнала транзакций в МБ. Значение по умолчанию — 64 МБ |
 | distributedtransaction.memorybuffersize | Размер циклического буфера, в которой хранятся трассировок. Этот размер является в МБ, и значение по умолчанию — 10 МБ |
 | distributedtransaction.servertcpport | MSDTC rpc-порт сервера |
@@ -664,7 +664,7 @@ outboundnetworkaccess = 1
    sudo /opt/mssql/bin/mssql-conf unset network.tcpport
    ```
 
-1. Перезапустите службу SQL Server.
+1. Перезапустите службу SQL Server.
 
    ```bash
    sudo systemctl restart mssql-server

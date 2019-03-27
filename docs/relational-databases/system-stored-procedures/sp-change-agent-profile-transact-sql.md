@@ -16,12 +16,12 @@ ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc01fcc8e614235894b46813da3162064e1c28d3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ee80fbdac31d58cdb4b4b4b60c61be01670ad65a
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783276"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492242"
 ---
 # <a name="spchangeagentprofile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@profile_id=** ] *profile_id*  
- Идентификатор профиля. *profile_id* — **int**, не имеет значения по умолчанию.  
+`[ @profile_id = ] profile_id` — Идентификатор профиля. *profile_id* — **int**, не имеет значения по умолчанию.  
   
- [  **@property=** ] **"***свойство***"**  
- Имя свойства. *Свойство* — **sysname**, не имеет значения по умолчанию.  
+`[ @property = ] 'property'` — Имя свойства. *Свойство* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@value=** ] **'***value***'**  
- Новое значение свойства. *значение* — **nvarchar(3000)**, не имеет значения по умолчанию.  
+`[ @value = ] 'value'` — Это новое значение свойства. *значение* — **nvarchar(3000)**, не имеет значения по умолчанию.  
   
  В приведенной ниже таблице описаны изменяемые свойства.  
   

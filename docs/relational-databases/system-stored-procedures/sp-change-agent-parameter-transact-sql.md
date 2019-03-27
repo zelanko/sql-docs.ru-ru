@@ -16,12 +16,12 @@ ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30b9216b2c33998b45a07c0b16d58f1b9c1139be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 16de7ceaae80a2aebcf2ed40d2b06b9a6ccf0dc4
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819124"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493466"
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>Хранимая процедура sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@profile_id=**] *profile_id*,  
- Идентификатор профиля. *profile_id* — **int**, не имеет значения по умолчанию.  
+`[ @profile_id = ] profile_id,` — Идентификатор профиля. *profile_id* — **int**, не имеет значения по умолчанию.  
   
- [  **@parameter_name=**] **"***parameter_name***"**  
- Имя параметра. *имя_параметра* — **sysname**, не имеет значения по умолчанию. Для системных профилей параметры, которые могут быть изменены, зависят от типа агента. Чтобы узнать, какой тип агента, это *profile_id* представляет, найдите *profile_id* столбца в **Msagent_profiles** таблицы и запишите *agent_type*  значение.  
+`[ @parameter_name = ] 'parameter_name'` — Имя параметра. *имя_параметра* — **sysname**, не имеет значения по умолчанию. Для системных профилей параметры, которые могут быть изменены, зависят от типа агента. Чтобы узнать, какой тип агента, это *profile_id* представляет, найдите *profile_id* столбца в **Msagent_profiles** таблицы и запишите *agent_type*  значение.  
   
 > [!NOTE]  
 >  Если параметр поддерживается для данного *agent_type*, но не был определен в профиле агента, будет возвращена ошибка. Чтобы добавить параметр к профилю агента, необходимо выполнить [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
@@ -243,8 +241,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
  Чтобы узнать, какие параметры определены для данного профиля, выполните **sp_help_agent_profile** и обратите внимание, *profile_name* связанные с *profile_id*. С соответствующим *profile_id*, следующий запуск **sp_help_agent_parameters** , используя *profile_id* для просмотра параметров, связанных с профилем. Параметры могут добавляться к профилю, выполнив [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
- [  **@parameter_value=**] **"***parameter_value***"**  
- Новое значение параметра. *parameter_value* — **nvarchar(255)**, не имеет значения по умолчанию.  
+`[ @parameter_value = ] 'parameter_value'` — Это новое значение параметра. *parameter_value* — **nvarchar(255)**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

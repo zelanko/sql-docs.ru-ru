@@ -18,12 +18,12 @@ ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 40e397bd63d8018d2043a1aced4824f48e4ddc9a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 11d0115c1f8bea82385d7c69365489a93351a5c5
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135874"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493136"
 ---
 # <a name="spaddapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +43,11 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@rolename =** ] **"**_роли_**"**  
- Указывает имя новой роли приложения. *роль* — **sysname**, не имеет значения по умолчанию. *роль* должен быть допустимым идентификатором и не может уже существовать в текущей базе данных.  
+`[ @rolename = ] 'role'` — Имя новой роли приложения. *роль* — **sysname**, не имеет значения по умолчанию. *роль* должен быть допустимым идентификатором и не может уже существовать в текущей базе данных.  
   
  Имена ролей приложения могут содержать от 1 до 128 символов, включая любые буквы, специальные символы и цифры. Имена ролей, не может содержать обратную косую черту (\\) не может иметь значение NULL или пустая строка ("«).  
   
- [  **@password =** ] **"**_пароль_**"**  
- Пароль, который требуется для активации роли приложения. *пароль* — **sysname**, не имеет значения по умолчанию. *пароль* не может иметь значение NULL.  
+`[ @password = ] 'password'` — Пароль, необходимый для активации роли приложения. *пароль* — **sysname**, не имеет значения по умолчанию. *пароль* не может иметь значение NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

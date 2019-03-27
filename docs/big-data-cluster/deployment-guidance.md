@@ -5,17 +5,17 @@ description: Дополнительные сведения о развертыв
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: fb09a5b13adc7f673c83a91635451435e4a8c945
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 5efefd5bc94aa8d1842ee244c947e48e90604834
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477699"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493736"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Развертывание кластеров больших данных SQL Server в Kubernetes
 
@@ -87,7 +87,7 @@ kubectl config view
 | **ACCEPT_EULA** | Да | Н/Д | Примите лицензионное соглашение SQL Server (например, «Да»).  |
 | **CLUSTER_NAME** | Да | Н/Д | Имя пространства имен Kubernetes для развертывания кластера больших данных в SQLServer. |
 | **CLUSTER_PLATFORM** | Да | Н/Д | Платформы, на которой развернут кластер Kubernetes. Может быть `aks`, `minikube`, `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | Нет | 1 | Число реплик пула вычислений, чтобы выстроить. В CTP-версии 2.3 только табличные значения допускается-1. |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | Нет | 1 | Число реплик пула вычислений, чтобы выстроить. В CTP-версии 2.4 только табличные значения допускается-1. |
 | **CLUSTER_DATA_POOL_REPLICAS** | Нет | 2 | Количество данных пула реплик, чтобы выстроить. |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | Нет | 2 | Число реплик пула хранения, чтобы выстроить. |
 | **DOCKER_REGISTRY** | Да | TBD | Частный реестр, где хранятся образы, используемые для развертывания кластера. |
@@ -278,13 +278,13 @@ kubectl get svc -n <your-cluster-name>
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
    ```
 
    **Linux:**
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

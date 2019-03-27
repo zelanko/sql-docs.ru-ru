@@ -16,12 +16,12 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 079e2591323b60ea86f93c3cbaedc423cc85d420
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c01d00362dc55deb1fa9da8df49beebdaf82b170
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135045"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492776"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -48,55 +48,44 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher=**] **"**_издателя_**"**  
- Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` — Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@distribution_db=**] **"**_distribution_db_**"**  
- Имя базы данных распространителя. *distributor_db* — **sysname**, не имеет значения по умолчанию. Он используется агентами репликации для подключения к издателю.  
+`[ @distribution_db = ] 'distribution_db'` — Имя базы данных распространителя. *distributor_db* — **sysname**, не имеет значения по умолчанию. Он используется агентами репликации для подключения к издателю.  
   
- [  **@security_mode=**] *security_mode*  
- Реализованный режим обеспечения безопасности. Этот параметр используется только агентами репликации для подключения к издателю для очереди обновляемых подписок или с не поддерживающими [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *security_mode* — **int**, и может принимать одно из следующих значений.  
+`[ @security_mode = ] security_mode` — Это Реализованный режим безопасности. Этот параметр используется только агентами репликации для подключения к издателю для очереди обновляемых подписок или с не поддерживающими [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *security_mode* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**0**|Агенты репликации на распространителе используют для подключения к издателю проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**1** (по умолчанию)|Агенты репликации на распространителе используют для подключения к издателю проверку подлинности Windows.|  
   
- [  **@login=**] **"**_входа_**"**  
- Имя входа. Этот параметр является обязательным, если *security_mode* — **0**. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. Он используется агентами репликации для подключения к издателю.  
+`[ @login = ] 'login'` — Это имя. Этот параметр является обязательным, если *security_mode* — **0**. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. Он используется агентами репликации для подключения к издателю.  
   
- [  **@password=**] **"**_пароль_**"**]  
- Пароль. *пароль* — **sysname**, значение по умолчанию NULL. Он используется агентами репликации для подключения к издателю.  
+`[ @password = ] 'password']` — Пароль. *пароль* — **sysname**, значение по умолчанию NULL. Он используется агентами репликации для подключения к издателю.  
   
 > [!IMPORTANT]  
 >  Не используйте пустые пароли. Выбирайте надежные пароли.  
   
- [  **@working_directory=**] **"**_working_directory_**"**  
- Имя рабочего каталога, используемого для хранения файлов данных и схем для публикации. *working_directory* — **nvarchar(255)** и значения по умолчанию папке ReplData текущего для данного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`. Имя должно быть задано в формате UNC.  
+`[ @working_directory = ] 'working_directory'` Это имя рабочего каталога, используемого для хранения файлов данных и схем для публикации. *working_directory* — **nvarchar(255)** и значения по умолчанию папке ReplData текущего для данного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`. Имя должно быть задано в формате UNC.  
 
  Для базы данных SQL Azure, используйте `\\<storage_account>.file.core.windows.net\<share>`.
 
- [  **@storage_connection_string =**] **"**_storage_connection_string_**"**  
- Является обязательным для базы данных SQL. Используйте ключ доступа из портала Azure в группе хранения > Параметры.
+`[ @storage_connection_string = ] 'storage_connection_string'` Является обязательным для базы данных SQL. Используйте ключ доступа из портала Azure в группе хранения > Параметры.
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 
- [  **@trusted=**] **"**_доверенных_**"**  
- Этот параметр устарел и поддерживается только для обеспечения обратной совместимости. *доверенный* — **nvarchar(5)** и получает только значение **false** приведет к ошибке.  
+`[ @trusted = ] 'trusted'` Этот параметр является устаревшим и предоставляется только для обратной совместимости. *доверенный* — **nvarchar(5)** и получает только значение **false** приведет к ошибке.  
   
- [  **@encrypted_password=**] *encrypted_password*  
- Установка *encrypted_password* больше не поддерживается. Попытка присвоить этому **бит** параметр **1** приведет к ошибке.  
+`[ @encrypted_password = ] encrypted_password` Установка *encrypted_password* больше не поддерживается. Попытка присвоить этому **бит** параметр **1** приведет к ошибке.  
   
- [  **@thirdparty_flag =**] *thirdparty_flag*  
- Этот аргумент показывает, является ли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателем. *thirdparty_flag* — **бит**, и может принимать одно из следующих значений.  
+`[ @thirdparty_flag = ] thirdparty_flag` Если издатель является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *thirdparty_flag* — **бит**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**0** (по умолчанию)|База данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**1**|База данных, отличная от базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
- [ **@publisher_type**=] **"**_publisher_type_**"**  
- Указывает тип издателя, если издатель не является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* имеет тип sysname и может принимать одно из следующих значений.  
+`[ @publisher_type = ] 'publisher_type'` Указывает тип издателя, если издатель не является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* имеет тип sysname и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  

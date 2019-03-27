@@ -16,12 +16,12 @@ ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c326a8e3a5fa2bd95f536d434ff9782952ba70d3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: e44891f5a16625cb6c3176fac8188fa568822add
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590899"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493187"
 ---
 # <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,29 +50,22 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@artid=** ] **"**_artid_**"**  
- Имя идентификатора статьи. *artid* — **int**, не имеет значения по умолчанию  
+`[ @artid = ] 'artid'` Имя идентификатора статьи. *artid* — **int**, не имеет значения по умолчанию  
   
- [  **@article=**] **"**_статье_**"**  
- Имя статьи, для которой создается скрипт. *статья* — **sysname**, не имеет значения по умолчанию  
+`[ @article = ] 'article'` — Имя статьи для включения в скрипт. *статья* — **sysname**, не имеет значения по умолчанию  
   
- [  **@publisher=**] **"**_издателя_**"**  
- Имя сервера издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` — Имя сервера издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@publisher_db=**] **"**_publisher_db_**"**  
- Имя базы данных издателя. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` — Имя базы данных издателя. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@publication=**] **"**_публикации_**"**  
- Имя публикации, для которой создается скрипт. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` — Имя публикации, для которой создается сценарий. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@dest_table=** ] _"dest_table_**"**  
- Имя целевой таблицы. *dest_table* — **sysname**, не имеет значения по умолчанию.  
+`[ @dest_table = ] _'dest_table'` — Имя целевой таблицы. *dest_table* — **sysname**, не имеет значения по умолчанию.  
   
  [ **@owner =** ] **"**_владельца_**"**  
  Владелец подписки. *владелец* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@cft_table=** ] **"**_cft_table_**"**  
- Имя таблицы конфликтов обновления посредством очереди для данной статьи. *cft_table*— **sysname**, не имеет значения по умолчанию.  
+`[ @cft_table = ] 'cft_table'` Имя таблицы конфликтов в очереди обновления в этой статье. *cft_table*— **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

@@ -3,18 +3,18 @@ title: Пример Java и руководство по SQL Server 2019 - слу
 description: Запустите пример кода Java на SQL Server 2019 дополнительные действия по использованию расширения языка Java с данными SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 86a379191033f49ab6a5d06ceda2d1ed7a747c12
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: a2fd078d0b9c61678a83cc1b3b5da70adbd69779
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018040"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493429"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>Пошаговое руководство по примеру SQL Server Java
 
@@ -205,9 +205,22 @@ public class OutputRow {
 
 Если вы планируете упаковки классов и зависимости в JAR-файлы, укажите полный путь к JAR-файлу в параметр CLASSPATH sp_execute_external_script. Например, если JAR-файл называется «ngram.jar», путь к КЛАССУ будет "/ home/myclasspath/ngram.jar" в Linux.
 
-## <a name="6---set-permissions"></a>6 - Установка разрешений
+## <a name="6---create-external-library"></a>6 - Создание внешней библиотеки
 
-Выполнение скрипта завершается успешно, только если удостоверения процесса нет доступа к коду. 
+Создание внешней библиотеки, SQL Server автоматически получат доступ к JAR-файл и не обязательно для задания специальных разрешений для пути к классам.
+
+```sql 
+CREATE EXTERNAL LIBRARY ngram
+FROM (CONTENT = '<path>/ngram.jar') 
+WITH (LANGUAGE = 'Java'); 
+GO
+```
+
+## <a name="7---set-permissions-skip-if-you-performed-step-6"></a>7 - разрешения (пропустить, если вы выполнили шаг 6)
+
+Этот шаг не требуется, если вы используете внешние библиотеки. Рекомендуемый способ работы является создание внешней библиотеки из вы JAR-файл. 
+
+Если вы не хотите использовать внешние библиотеки, вам потребуется задать необходимые разрешения. Выполнение скрипта завершается успешно, только если удостоверения процесса нет доступа к коду. 
 
 ### <a name="on-linux"></a>В Linux
 
@@ -232,7 +245,7 @@ public class OutputRow {
 
 <a name="call-method"></a>
 
-## <a name="7---call-getngrams"></a>7 - вызов *getNgrams()*
+## <a name="8---call-getngrams"></a>8 - вызов *getNgrams()*
 
 Чтобы вызвать код из SQL Server, укажите метод Java **getNgrams()** в параметре «скрипт» sp_execute_external_script. Этот метод принадлежит пакета, который называется «pkg» и файл класса с именем **Ngram.java**.
 
@@ -246,8 +259,6 @@ public class OutputRow {
 DECLARE @myClassPath nvarchar(50)
 DECLARE @n int 
 --This is where you store your classes or jars.
---Update this to your own classpath
-SET @myClassPath = N'/home/myclasspath/'
 --This is the size of the ngram
 SET @n = 3
 EXEC sp_execute_external_script
@@ -255,8 +266,7 @@ EXEC sp_execute_external_script
 , @script = N'pkg.Ngram.getNGrams'
 , @input_data_1 = N'SELECT id, text FROM reviews'
 , @parallel = 0
-, @params = N'@CLASSPATH nvarchar(30), @param1 INT'
-, @CLASSPATH = @myClassPath
+, @params = N'@param1 INT'
 , @param1 = @n
 with result sets ((ID int, ngram varchar(20)))
 GO
@@ -270,11 +280,7 @@ GO
 
 ### <a name="if-you-get-an-error"></a>Если отобразится сообщение об ошибке
 
-Исключить возможные проблемы, связанные с пути к классам. 
-
-+ Путь к классу должен состоять из родительской папки и вложенные папки, но не вложенной папке «pkg». Хотя вложенная папка pkg должен существовать, он не должен быть в пути к классам значение, указанное в хранимой процедуре.
-
-+ Во вложенную папку «pkg» должен содержать скомпилированный код для всех трех классов.
++ При компиляции классов, во вложенную папку «pkg» должен содержать скомпилированный код для всех трех классов.
 
 + Длина пути к классам, не может превышать объявленное значение (`DECLARE @myClassPath nvarchar(50)`). В этом случае путь будет усечено до первые 50 символов и не будет загружен в скомпилированный код. Можно сделать `SELECT @myClassPath` для проверки значения. Увеличение длины, если недостаточно 50 символов. 
 

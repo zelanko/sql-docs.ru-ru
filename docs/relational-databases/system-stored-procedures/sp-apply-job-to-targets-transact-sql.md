@@ -18,12 +18,12 @@ ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1583f6de4938451b03eabfb7c9425120fa37f2fc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f293e906d647d318bca5d730d0164b75cc88fc6f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537832"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494096"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,18 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@job_id =**] *job_id*  
- Идентификационный номер задания, которое следует применить к указанным целевым серверам и группам целевых серверов. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания, применяемого к указанным целевым серверам или группам целевых серверов. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [  **@job_name =**] **"**_имя_задания_**"**  
- Имя указания, которое следует применить к связанным целевым серверам и группам целевых серверов. *имя_задания* — **sysname**, значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания, применяемого к указанным целевым серверам или группам целевых серверов. *имя_задания* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
- [  **@target_server_groups =**] **"**_target_server_groups_**"**  
- Список групп целевых серверов с разделителями-запятыми, к которым следует применить указанное задание. *target_server_groups* — **nvarchar(2048)**, значение по умолчанию NULL.  
+`[ @target_server_groups = ] 'target_server_groups'` Список разделенных запятыми групп целевых серверов, на которые имеет указанное задание, для применения. *target_server_groups* — **nvarchar(2048)**, значение по умолчанию NULL.  
   
- [  **@target_servers=** ] **"**_target_servers_**"**  
- Список целевых серверов с разделителями-запятыми, к которым следует применить указанное задание. *target_servers*— **nvarchar(2048)**, значение по умолчанию NULL.  
+`[ @target_servers = ] 'target_servers'` Разделенный запятыми список целевых серверов, на которые имеет указанное задание, для применения. *target_servers*— **nvarchar(2048)**, значение по умолчанию NULL.  
   
- [  **@operation=** ] **"**_операции_**"**  
- Определяет, должно ли указанное задание быть применено или удалено с указанных целевых серверов или групп целевых серверов. *Операция*— **varchar(7)**, значение по умолчанию APPLY. Допустимы следующие операции: **применить** и **удалить**.  
+`[ @operation = ] 'operation'` Является ли указанное задание следует применить к или удалено с указанных целевых серверов или групп целевых серверов. *Операция*— **varchar(7)**, значение по умолчанию APPLY. Допустимы следующие операции: **применить** и **удалить**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

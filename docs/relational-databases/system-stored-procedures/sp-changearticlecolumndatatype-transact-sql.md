@@ -16,12 +16,12 @@ ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07213247345280e992c2fbd5552d5cdfb96747ab
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 31895afacaee167bccf5144f1ab94e344a36be5f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133564"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492474"
 ---
 # <a name="spchangearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,26 +48,19 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=** ] **"**_публикации_**"**  
- Имя публикации Oracle. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` — Имя публикации Oracle. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@article =** ] **"**_статье_**"**  
- Имя статьи. *статья* — **sysname**, не имеет значения по умолчанию.  
+`[ @article = ] 'article'` — Имя статьи. *статья* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@column**=] **"**_столбец_**"**  
- Имя столбца, для которого изменяется сопоставление типа данных. *столбец* — **sysname**, не имеет значения по умолчанию.  
+`[ @column = ] 'column'` Имя столбца, для которого необходимо изменить тип данных и сопоставить. *столбец* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@type** =] **"**_тип_**"**  
- Имя [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных в целевом столбце. *Тип* — **sysname**, значение по умолчанию NULL.  
+`[ @type = ] 'type'` Имя [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных в целевом столбце. *Тип* — **sysname**, значение по умолчанию NULL.  
   
- [ **@length** =] *длина*  
- Длина типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в целевом столбце. *Длина* — **bigint**, значение по умолчанию NULL.  
+`[ @length = ] length` Задает длину [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных в целевом столбце. *Длина* — **bigint**, значение по умолчанию NULL.  
   
- [ **@precision**=] *точности*  
- Точность типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в целевом столбце. *точность* — **bigint**, значение по умолчанию NULL.  
+`[ @precision = ] precision` Точность [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных в целевом столбце. *точность* — **bigint**, значение по умолчанию NULL.  
   
- [ **@publisher**=] **"**_издателя_**"**  
- Указывает, отличный от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает, отличный от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

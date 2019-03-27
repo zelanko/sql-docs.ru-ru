@@ -14,15 +14,15 @@ helpviewer_keywords:
 - counters [Integration Services]
 - data flow engine [Integration Services]
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 488043cb3ffb4288d8f3b240d4dd78a7c08f6b83
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 374e977eafce0dcb679997e85655302aa7de0b4d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641161"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271008"
 ---
 # <a name="performance-counters"></a>Счетчики производительности
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливают набор счетчиков производительности, предназначенных для наблюдения за производительностью подсистемы обработки потока данных. Например, наблюдая за счетчиком «Выгружено буферов», можно определить, записываются ли временно на диск буфера данных при выполнении пакета. Такая выгрузка снижает производительность и указывает на недостаточный объем памяти компьютера.  

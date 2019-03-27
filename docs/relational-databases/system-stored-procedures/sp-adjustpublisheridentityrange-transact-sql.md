@@ -16,12 +16,12 @@ ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 508eaa25657393dba0d84e0bda6eb0582b3f90fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 399fe5322cb8cb5c3d20a486aac3baa810439ce7
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822078"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492357"
 ---
 # <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=**] **"***публикации***"**  
- Имя публикации, в которой повторно размещается диапазон идентификаторов. *Публикация* — **sysname**, значение по умолчанию NULL.  
+`[ @publication = ] 'publication'` — Имя публикации, в которой размещается новые диапазоны идентификаторов. *Публикация* — **sysname**, значение по умолчанию NULL.  
   
- [  **@table_name=**] **"***table_name***"**  
- Имя таблицы, в которой повторно размещается диапазон идентификаторов. *TABLE_NAME* — **sysname**, значение по умолчанию NULL.  
+`[ @table_name = ] 'table_name'` — Имя таблицы, в которой размещается новые диапазоны идентификаторов. *TABLE_NAME* — **sysname**, значение по умолчанию NULL.  
   
- [  **@table_owner=**] **"***table_owner***"**  
- Владелец исходной таблицы на стороне издателя. *TABLE_OWNER* — **sysname**, значение по умолчанию NULL. Если *table_owner* не указан, используется имя текущего пользователя.  
+`[ @table_owner = ] 'table_owner'` Является владельцем таблицы на издателе. *TABLE_OWNER* — **sysname**, значение по умолчанию NULL. Если *table_owner* не указан, используется имя текущего пользователя.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

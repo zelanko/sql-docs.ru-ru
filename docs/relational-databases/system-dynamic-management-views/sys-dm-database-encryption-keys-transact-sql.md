@@ -1,7 +1,7 @@
 ---
 title: sys.dm_database_encryption_keys (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/20/2017
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3a6624182bdaafac45a01c90c4aba39dd6d64a5a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c041ea8aff23a3b601695236681fda3081def1fa
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669573"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494083"
 ---
 # <a name="sysdmdatabaseencryptionkeys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,16 +37,20 @@ ms.locfileid: "51669573"
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Идентификатор базы данных.|  
 |encryption_state|**int**|Указывает, является ли база данных зашифрованной или незашифрованной.<br /><br /> 0 = нет ключа шифрования базы данных, нет шифрования<br /><br /> 1 = не зашифрована<br /><br /> 2 = выполняется шифрование<br /><br /> 3 = зашифрована<br /><br /> 4 = выполняется изменение ключа<br /><br /> 5 = выполняется расшифровка<br /><br /> 6 = производится изменение защиты (изменился сертификат или асимметричный ключ, которым зашифрован ключ шифрования базы данных).|  
-|create_date|**datetime**|Отображает дату создания ключа шифрования.|  
-|regenerate_date|**datetime**|Отображает дату повторного создания ключа шифрования.|  
-|modify_date|**datetime**|Отображает дату изменения ключа шифрования.|  
-|set_date|**datetime**|Отображает дату применения ключа шифрования к базе данных.|  
-|opened_date|**datetime**|Показывает, когда ключ базы данных был открыт в последний раз.|  
+|create_date|**datetime**|Дата (в формате UTC) создания ключа шифрования.|  
+|regenerate_date|**datetime**|Дата (в формате UTC) был повторно создан ключ шифрования.|  
+|modify_date|**datetime**|Дата (в формате UTC) изменения ключа шифрования.|  
+|set_date|**datetime**|Дата (в формате UTC) ключ шифрования была применена к базе данных.|  
+|opened_date|**datetime**|Показано, когда (в формате UTC) последнего открытия ключа базы данных.|  
 |key_algorithm|**nvarchar(32)**|Отображает алгоритм, используемый для ключа.|  
 |key_length|**int**|Отображает длину ключа.|  
 |encryptor_thumbprint|**varbinary(20)**|Показывает отпечаток шифратора.|  
-|encryptor_type|**nvarchar(32)**|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Описывает шифратор.|  
-|percent_complete|**real**|Процент выполнения шифрования базы данных. Значение 0, если изменения состояния не было.|  
+|encryptor_type|**nvarchar(32)**|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Описывает шифратор.|  
+|percent_complete|**real**|Процент выполнения шифрования базы данных. Значение 0, если изменения состояния не было.|
+|encryption_state_desc|**nvarchar(32)**|**Применяется к**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий.<br><br> Строка, которая указывает, зашифрован ли базы данных или не шифруются.<br><br>None<br><br>БЕЗ ШИФРОВАНИЯ<br><br>ШИФРОВАНИЕ<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
+|encryption_scan_state|**int**|**Применяется к**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий.<br><br>Указывает текущее состояние сканирования шифрования. <br><br>0 = нет запускается проверка, прозрачное шифрование данных не включена<br><br>1 = проверка выполняется.<br><br>2 = Проверка выполняется, но было приостановлено, пользователь может возобновить.<br><br>3 = успешного завершения проверки, включено прозрачное шифрование данных и шифрования завершена.<br><br>4 = сканирование прекращено по какой-либо причине, требуется ручное вмешательство. Для получения дополнительной помощи обратитесь в службу поддержки Майкрософт.|
+|encryption_scan_state_desc|**nvarchar(32)**|**Применяется к**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий.<br><br>Строка, указывающая текущее состояние сканирования шифрования.<br><br> None<br><br>RUNNING<br><br>SUSPENDED<br><br>ЗАВЕРШИТЬ<br><br>ABORTED|
+|encryption_scan_modify_date|**datetime**|**Применяется к**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий.<br><br> Дата (в формате UTC) последнего изменения состояния сканирования шифрования.|
   
 ## <a name="permissions"></a>Разрешения
 

@@ -16,12 +16,12 @@ ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9cd00d75a8afd2fae06868fd4b44320865f239f2
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 47e1eec1aaa8162565f481b2d82982781e1a3c8c
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126374"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493597"
 ---
 # <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,65 +54,51 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@dbname=** ] **"***dbname***"**  
- Строка, которая указывает целевую базу данных подписки по имени. *DBName* — **sysname**, не имеет значения по умолчанию.  
+`[ @dbname = ] 'dbname'` — Строка, которая указывает целевую базу данных подписки по имени. *DBName* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@filename=** ] **"***filename***"**  
- Имя и физическое расположение первичного файла MDF (**master** файла данных). *Имя файла* — **nvarchar(260)**, не имеет значения по умолчанию.  
+`[ @filename = ] 'filename'` Имя и физическое расположение первичного файла MDF (**master** файла данных). *Имя файла* — **nvarchar(260)**, не имеет значения по умолчанию.  
   
- [  **@subscriber_security_mode=** ] **"***subscriber_security_mode***"**  
- Режим безопасности, используемый подписчиком для подключения к нему при синхронизации. *subscriber_security_mode* — **int**, значение по умолчанию NULL.  
+`[ @subscriber_security_mode = ] 'subscriber_security_mode'` — Режим безопасности подписчика для использования при подключении к подписчику при синхронизации. *subscriber_security_mode* — **int**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Необходимо использовать проверку подлинности Windows. Если *subscriber_security_mode* не **1** (проверка подлинности Windows), будет возвращена ошибка.  
   
- [  **@subscriber_login=** ] **"***subscriber_login***"**  
- Имя входа подписчика, используемое для подключения к нему при синхронизации. *subscriber_login* — **sysname**, значение по умолчанию NULL.  
+`[ @subscriber_login = ] 'subscriber_login'` — Это имя входа подписчика, используемое при подключении к подписчику при синхронизации. *subscriber_login* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Если *subscriber_security_mode* не **1** и *subscriber_login* будет указано, будет возвращена ошибка.  
   
- [  **@subscriber_password=** ] **"***subscriber_password***"**  
- Пароль подписчика. *subscriber_password* — **sysname**, значение по умолчанию NULL.  
+`[ @subscriber_password = ] 'subscriber_password'` — Пароль подписчика. *subscriber_password* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Если *subscriber_security_mode* не **1** и *subscriber_password* будет указано, будет возвращена ошибка.  
   
- [  **@distributor_security_mode=** ] *distributor_security_mode*  
- Режим безопасности, используемый для подключения к распространителю при синхронизации. *distributor_security_mode* — **int**, значение по умолчанию **0**. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. **1** задает проверку подлинности Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @distributor_security_mode = ] distributor_security_mode` — Режим безопасности для использования при подключении к распространителю при синхронизации. *distributor_security_mode* — **int**, значение по умолчанию **0**. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. **1** задает проверку подлинности Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@distributor_login=** ] **"***distributor_login***"**  
- Имя входа распространителя, используемое для подключения к нему при синхронизации. *distributor_login* является обязательным, если *distributor_security_mode* присваивается **0**. *distributor_login* — **sysname**, значение по умолчанию NULL.  
+`[ @distributor_login = ] 'distributor_login'` — Это имя входа распространителя для использования при подключении к распространителю при синхронизации. *distributor_login* является обязательным, если *distributor_security_mode* присваивается **0**. *distributor_login* — **sysname**, значение по умолчанию NULL.  
   
- [  **@distributor_password=** ] **"***distributor_password***"**  
- Пароль распространителя. *distributor_password* является обязательным, если *distributor_security_mode* присваивается **0**. *distributor_password* — **sysname**, значение по умолчанию NULL. Значение *distributor_password* должно содержать менее 120 символов Юникода.  
+`[ @distributor_password = ] 'distributor_password'` — Пароль распространителя. *distributor_password* является обязательным, если *distributor_security_mode* присваивается **0**. *distributor_password* — **sysname**, значение по умолчанию NULL. Значение *distributor_password* должно содержать менее 120 символов Юникода.  
   
 > [!IMPORTANT]  
 >  Не используйте пустые пароли. Выбирайте надежные пароли. По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
- [  **@publisher_security_mode=** ] *publisher_security_mode*  
- Режим безопасности, используемый для подключения к издателю при синхронизации. *publisher_security_mode* — **int**, значение по умолчанию **1**. Если **0**, указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. Если **1**, задает проверку подлинности Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode` — Режим безопасности для использования при подключении к издателю при синхронизации. *publisher_security_mode* — **int**, значение по умолчанию **1**. Если **0**, указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. Если **1**, задает проверку подлинности Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@publisher_login=** ] **"***publisher_login***"**  
- Имя входа, используемое для подключения к издателю при синхронизации. *publisher_login* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher_login = ] 'publisher_login'` — Это имя для использования при подключении к издателю при синхронизации. *publisher_login* — **sysname**, значение по умолчанию NULL.  
   
- [  **@publisher_password=** ] **"***publisher_password***"**  
- Пароль, используемый при соединении с издателем. *publisher_password* — **sysname**, значение по умолчанию NULL. Значение *publisher_password* должно содержать менее 120 символов Юникода.  
+`[ @publisher_password = ] 'publisher_password'` Пароль, используемый при соединении с издателем. *publisher_password* — **sysname**, значение по умолчанию NULL. Значение *publisher_password* должно содержать менее 120 символов Юникода.  
   
 > [!IMPORTANT]  
 >  Не используйте пустые пароли. Выбирайте надежные пароли. По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
- [  **@job_login=** ] **"***job_login***"**  
- Имя входа для учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)**, не имеет значения по умолчанию. Для соединения агента с распространителем всегда используется эта учетная запись Windows.  
+`[ @job_login = ] 'job_login'` — Это имя для учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)**, не имеет значения по умолчанию. Для соединения агента с распространителем всегда используется эта учетная запись Windows.  
   
- [  **@job_password=** ] **"***job_password***"**  
- Пароль для учетной записи Windows, под которой запускается агент. *job_password* — **sysname**, не имеет значения по умолчанию. Значение *job_password* должно содержать менее 120 символов Юникода.  
+`[ @job_password = ] 'job_password'` — Пароль для учетной записи Windows, под которой запускается агент. *job_password* — **sysname**, не имеет значения по умолчанию. Значение *job_password* должно содержать менее 120 символов Юникода.  
   
 > [!IMPORTANT]  
 >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
- [  **@db_master_key_password=** ] **"***db_master_key_password***"**  
- Пароль определяемого пользователем главного ключа базы данных. *db_master_key_password* — **nvarchar(524)**, со значением по умолчанию NULL. Если *db_master_key_password* не указан, существующий главный ключ базы данных будет удалена и создана заново.  
+`[ @db_master_key_password = ] 'db_master_key_password'` — Пароль для определяемого пользователем главного ключа базы данных. *db_master_key_password* — **nvarchar(524)**, со значением по умолчанию NULL. Если *db_master_key_password* не указан, существующий главный ключ базы данных будет удалена и создана заново.  
   
 > [!IMPORTANT]  
 >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  

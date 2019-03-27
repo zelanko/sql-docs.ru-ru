@@ -18,12 +18,12 @@ ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: df800e141a922250cea37eee1aeee5af6f373f7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a84ed0105558772752f4d9871ad28a5bffde6bec
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650232"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493076"
 ---
 # <a name="spchangelogshippingsecondaryprimary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,33 +48,25 @@ sp_change_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@primary_server** =] '*primary_server*"  
- Имя первичного экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журналов. *primary_server* — **sysname** и не может иметь значение NULL.  
+`[ @primary_server = ] 'primary_server'` Имя первичного экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журналов. *primary_server* — **sysname** и не может иметь значение NULL.  
   
- [ **@primary_database** =] '*primary_database*"  
- Имя базы данных на сервере-источнике. *primary_database* — **sysname**, не имеет значения по умолчанию.  
+`[ @primary_database = ] 'primary_database'` — Имя базы данных на сервере-источнике. *primary_database* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@backup_source_directory** =] '*backup_source_directory*"  
- Каталог, в котором хранятся файлы резервной копии журнала транзакций с сервера-источника. *backup_source_directory* — **nvarchar(500)** и не может иметь значение NULL.  
+`[ @backup_source_directory = ] 'backup_source_directory'` Каталог, где хранятся файлы резервной копии журнала транзакций с сервера-источника. *backup_source_directory* — **nvarchar(500)** и не может иметь значение NULL.  
   
- [ **@backup_destination_directory** =] '*backup_destination_directory*"  
- Каталог сервера-получателя, в который копируются файлы резервных копий. *backup_destination_directory* — **nvarchar(500)** и не может иметь значение NULL.  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` Каталог на сервере-получателе, которые будут копироваться файлы резервных копий. *backup_destination_directory* — **nvarchar(500)** и не может иметь значение NULL.  
   
- [ **@file_retention_period** =] '*file_retention_period*"  
- Отрезок времени в минутах, в течение которого сохраняются данные журнала. *history_retention_period* — **int**, значение по умолчанию NULL. Если ничего не указано, подразумевается значение 14420.  
+`[ @file_retention_period = ] 'file_retention_period'` — Это продолжительность времени в минутах, в которых сохраняются данные журнала. *history_retention_period* — **int**, значение по умолчанию NULL. Если ничего не указано, подразумевается значение 14420.  
   
- [ **@monitor_server_security_mode** =] '*monitor_server_security_mode*"  
- Режим безопасности, используемый для подключения к серверу мониторинга:  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Режим безопасности, используемый для подключения к серверу мониторинга.  
   
  1 = проверка подлинности Windows.  
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. *monitor_server_security_mode* — **бит** и не может иметь значение NULL.  
   
- [ **@monitor_server_login** =] '*monitor_server_login*"  
- Имя учетной записи, используемой для доступа к серверу мониторинга.  
+`[ @monitor_server_login = ] 'monitor_server_login'` — Это имя пользователя учетной записи, используемой для доступа к серверу мониторинга.  
   
- [ **@monitor_server_password** =] '*monitor_server_password*"  
- Пароль учетной записи, используемой для доступа к серверу мониторинга.  
+`[ @monitor_server_password = ] 'monitor_server_password'` — Пароль учетной записи, используемой для доступа к серверу мониторинга.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

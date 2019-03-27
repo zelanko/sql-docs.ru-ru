@@ -18,12 +18,12 @@ ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35bd51c2c2d1d9e3ed82cd06cd4a4524b9f7e422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c7dab148af9d8c3db8a9b1503ad33975c790120
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635912"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493226"
 ---
 # <a name="spaddlogshippingsecondarydatabase-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,23 +54,17 @@ sp_add_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@secondary_database** =] '*secondary_database*"  
- Имя базы данных-получателя. *secondary_database* — **sysname**, не имеет значения по умолчанию.  
+`[ @secondary_database = ] 'secondary_database'` — Имя базы данных-получателя. *secondary_database* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@primary_server** =] '*primary_server*"  
- Имя первичного экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журналов. *primary_server* — **sysname** и не может иметь значение NULL.  
+`[ @primary_server = ] 'primary_server'` Имя первичного экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журналов. *primary_server* — **sysname** и не может иметь значение NULL.  
   
- [ **@primary_database** =] '*primary_database*"  
- Имя базы данных на сервере-источнике. *primary_database* — **sysname**, не имеет значения по умолчанию.  
+`[ @primary_database = ] 'primary_database'` — Имя базы данных на сервере-источнике. *primary_database* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@restore_delay** =] '*restore_delay*"  
- Время ожидания (в минутах), по истечении которого сервер-получатель восстанавливает данный файл резервной копии. *restore_delay* — **int** и не может иметь значение NULL. Значение по умолчанию — 0.  
+`[ @restore_delay = ] 'restore_delay'` Количество времени, в минутах, которое сервер-получатель ожидает перед восстановлением данного файла резервной копии. *restore_delay* — **int** и не может иметь значение NULL. Значение по умолчанию — 0.  
   
- [ **@restore_all** =] '*restore_all*"  
- Если значение этого аргумента равно 1, сервер-получатель восстанавливает все доступные резервные копии журналов транзакций при выполнении задания восстановления. В противном случае он останавливается после восстановления одного файла. *restore_all* — **бит** и не может иметь значение NULL.  
+`[ @restore_all = ] 'restore_all'` Если задано значение 1, сервер-получатель восстанавливает все доступные резервные копии журналов, при выполнении задания восстановления. В противном случае он останавливается после восстановления одного файла. *restore_all* — **бит** и не может иметь значение NULL.  
   
- [ **@restore_mode** =] '*restore_mode*"  
- Режим восстановления базы данных-получателя.  
+`[ @restore_mode = ] 'restore_mode'` Режим восстановления базы данных-получателя.  
   
  0 = восстановление журнала с аргументом NORECOVERY.  
   
@@ -78,29 +72,21 @@ sp_add_log_shipping_secondary_database
   
  *восстановление* — **бит** и не может иметь значение NULL.  
   
- [ **@disconnect_users** =] '*disconnect_users*"  
- Если значение этого аргумента равно 1, пользователи отключаются от базы данных-получателя при выполнении операции восстановления. По умолчанию равно 0. *Отключение* пользователей: **бит** и не может иметь значение NULL.  
+`[ @disconnect_users = ] 'disconnect_users'` Если задано значение 1, пользователи отключаются от базы данных-получателя при выполнении операции восстановления. По умолчанию равно 0. *Отключение* пользователей: **бит** и не может иметь значение NULL.  
   
- [ **@block_size** =] '*block_size*"  
- Размер блока (в байтах) устройства резервного копирования. *block_size* — **int** со значением по умолчанию-1.  
+`[ @block_size = ] 'block_size'` Размер в байтах, используемый в качестве размера блока для устройства резервного копирования. *block_size* — **int** со значением по умолчанию-1.  
   
- [ **@buffer_count** =] '*buffer_count*"  
- Общее число буферов, используемых операцией создания резервной копии или восстановления. *buffer_count* — **int** со значением по умолчанию-1.  
+`[ @buffer_count = ] 'buffer_count'` Общее число буферов, используемых при операции резервного копирования или восстановления. *buffer_count* — **int** со значением по умолчанию-1.  
   
- [ **@max_transfer_size** =] '*max_transfer_size*"  
- Размер (в байтах) максимального входного или выходного запроса, который [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выдает на устройство резервного копирования. *max_transfersize* — **int** и может иметь значение NULL.  
+`[ @max_transfer_size = ] 'max_transfer_size'` Размер в байтах максимального входного или выходного запроса, который выдает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на устройство резервного копирования. *max_transfersize* — **int** и может иметь значение NULL.  
   
- [ **@restore_threshold** =] '*restore_threshold*"  
- Время (в минутах), которое может пройти между операциями восстановления, прежде чем сформируется предупреждение. *restore_threshold* — **int** и не может иметь значение NULL.  
+`[ @restore_threshold = ] 'restore_threshold'` Количество минут, может пройти между операциями восстановления до формирования предупреждения. *restore_threshold* — **int** и не может иметь значение NULL.  
   
- [ **@threshold_alert** =] '*threshold_alert*"  
- Предупреждение, создаваемое при превышении порогового значения. *threshold_alert* — **int**, значение по умолчанию 14 420.  
+`[ @threshold_alert = ] 'threshold_alert'` Это предупреждение, создаваемое при превышении порогового значения. *threshold_alert* — **int**, значение по умолчанию 14 420.  
   
- [ **@threshold_alert_enabled** =] '*threshold_alert_enabled*"  
- Указывает, нужно ли создавать оповещение при *backup_threshold* превышено. При значении, равном единице (1), устанавливаемом по умолчанию, предупреждение будет инициировано. *threshold_alert_enabled* — **бит**.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Указывает, нужно ли создавать оповещение при *backup_threshold* превышено. При значении, равном единице (1), устанавливаемом по умолчанию, предупреждение будет инициировано. *threshold_alert_enabled* — **бит**.  
   
- [ **@history_retention_period** =] '*history_retention_period*"  
- Длительность времени в минутах, в течение которого сохраняется журнал. *history_retention_period* — **int**, значение по умолчанию NULL. Если ничего не указано, используется значение 14 420.  
+`[ @history_retention_period = ] 'history_retention_period'` — Это продолжительность времени в минутах, в которых сохраняется журнал. *history_retention_period* — **int**, значение по умолчанию NULL. Если ничего не указано, используется значение 14 420.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
