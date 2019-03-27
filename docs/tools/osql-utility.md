@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2a6762f20c05a66c597474d33bd98e9bb8f2c5f4
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 88e309d5a7d2f0b1464298ebd1ded5ae31139e78
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589998"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356467"
 ---
 # <a name="osql-utility"></a>Программа osql
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -262,7 +262,7 @@ osql -E -i titles.qry -o titles.res
 >  Если при использовании программы **osql**в файле скрипта SQL содержится разделитель пакетов GO, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] воспринимает его как синтаксическую ошибку.  
   
 ## <a name="inserting-comments"></a>Вставка примечаний  
- В инструкцию Transact-SQL, отправляемую программой [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **в**, можно включать комментарии. Допускаются два типа стиля комментариев: -- и /*…\*/.  
+ В инструкцию Transact-SQL, отправляемую программой [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **в**, можно включать комментарии. Допускаются два типа стиля комментариев: `--` и `/*...*/`.  
   
 ## <a name="using-exit-to-return-results-in-osql"></a>Использование инструкции EXIT для возвращения результатов программы osql  
  Результат выполнения инструкции SELECT можно использовать в качестве возвращаемого программой **osql**значения. Если тип числовой, то последний столбец последней строки результатов преобразуется в 4-байтовое целое число (long). В MS-DOS младший байт передается родительскому процессу или уровню ошибки операционной системы. Windows передает все 4-байтовое целое число. Синтаксис:  
