@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 272f10cfed8f7cd1b07633b81642323a8c74b6d7
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: d9189c6533563a44b597dddc99e263d78750aa6a
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227136"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477869"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-2019-big-data-cluster"></a>Что такое пулы вычислительных в кластере SQL Server 2019 больших данных?
 
@@ -31,6 +31,7 @@ ms.locfileid: "57227136"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о кластерах больших данных SQL Server, см. в разделе приведены общие:
+Дополнительные сведения о кластерах больших данных SQL Server, см. следующие ресурсы:
 
 - [Что такое кластеры SQL Server 2019 больших данных?](big-data-cluster-overview.md)
+- [Семинар: Кластерами больших данных Microsoft SQL Server архитектуры](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

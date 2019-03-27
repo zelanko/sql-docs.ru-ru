@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e9fc73e9e95e2a69871d55e6ce00d14b8f29f0e6
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 8f9a8a82315f98f6013f70a7bc7aa38443849edc
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017870"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478059"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>Что такое контроллер в кластере SQL Server 2019 больших данных?
 
@@ -67,6 +67,7 @@ mssqlctl cluster create --name <name of your cluster>
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о кластерах больших данных SQL Server, см. в разделе приведены общие:
+Дополнительные сведения о кластерах больших данных SQL Server, см. следующие ресурсы:
 
 - [Что такое кластеры SQL Server 2019 больших данных?](big-data-cluster-overview.md)
+- [Семинар: Кластерами больших данных Microsoft SQL Server архитектуры](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

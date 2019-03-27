@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 996913979669aa85088d6d640436b5610293eb35
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 20ee32b445a7509967b18c51a8e661527585f291
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072129"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477649"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>Что такое кластеры SQL Server 2019 больших данных?
 
@@ -100,6 +100,9 @@ Kubernetes — это оркестратор контейнеров открыт
 ### <a id="dataplane"></a> Плоскость данных
 
 Плоскости данных используется для постоянного хранения и кэширования. Он содержит пул данных SQL и пул носителей.  Пул данных SQL содержит один или несколько модулей SQL Server на платформе Linux. Он используется для приема данных из SQL-запросы или заданий Spark. Большие данные SQL Server кластер киосков сохраняются в пуле данных. Пул носителей состоит из модулей пула хранения, состоящая из SQL Server в Linux, Spark и HDFS. Все узлы хранилища в кластере SQL Server больших данных являются членами кластера HDFS.
+
+> [!TIP]
+> Дополнительные сведения об архитектуре кластера больших данных и установки, см. в разделе [семинар: Архитектура кластерами больших данных Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
 
 ## <a name="next-steps"></a>Следующие шаги
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8ad12de9456fef0d4803ae83479e615bffa0edcc
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 5e440a3502e5062013ac5e3b716036f107a13c6a
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241425"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477989"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>Основные понятия безопасности для работы с большими данными кластеров SQL Server
 
@@ -53,16 +53,16 @@ ms.locfileid: "54241425"
 При подготовке кластера, ряд пароли для конечных пользователей необходимо задать переменные среды. Ниже приведены паролей, которые SQL Администраторы и Администраторы кластера используются для доступа к службам.
 
 Имя пользователя контроллера:
- + CONTROLLER_USERNAME = < controller_username >
+ + CONTROLLER_USERNAME=<controller_username>
 
 Пароля для контроллера:  
  + CONTROLLER_PASSWORD = < controller_password >
 
 Пароль системного Администратора SQL Master: 
- + MSSQL_SA_PASSWORD = < controller_sa_password >
+ + MSSQL_SA_PASSWORD=<controller_sa_password>
 
 Пароль для доступа к конечной точке HDFS/Spark:
- + KNOX_PASSWORD = < knox_password >
+ + KNOX_PASSWORD=<knox_password>
 
 ### <a name="intra-cluster-authentication"></a>Проверка подлинности внутри кластера
 
@@ -81,7 +81,7 @@ ms.locfileid: "54241425"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о кластерах больших данных SQL Server, см. в разделе со следующими статьями:
+Дополнительные сведения о кластерах больших данных SQL Server, см. следующие ресурсы:
 
 - [Что такое кластеры SQL Server 2019 больших данных?](big-data-cluster-overview.md)
-- [Краткое руководство. Развертывание кластера больших данных SQL Server в Kubernetes](quickstart-big-data-cluster-deploy.md)
+- [Семинар: Кластерами больших данных Microsoft SQL Server архитектуры](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

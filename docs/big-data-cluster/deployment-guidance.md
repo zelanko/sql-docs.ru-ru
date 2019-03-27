@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 817ffcc1ea17a8526304b4bc9064c1becfff90f9
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: fb09a5b13adc7f673c83a91635451435e4a8c945
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161649"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477699"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Развертывание кластеров больших данных SQL Server в Kubernetes
 
@@ -347,4 +347,7 @@ kubectl get svc -n <your-cluster-name>
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Ознакомьтесь с некоторыми новыми возможностями и узнайте [использованию записных книжек в предварительной версии SQL Server 2019](notebooks-guidance.md).
+Дополнительные сведения о кластерах больших данных SQL Server, см. следующие ресурсы:
+
+- [Что такое кластеры SQL Server 2019 больших данных?](big-data-cluster-overview.md)
+- [Семинар: Кластерами больших данных Microsoft SQL Server архитектуры](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

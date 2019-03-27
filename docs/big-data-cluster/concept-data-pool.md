@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c3df07da100bf0bbfc0b2238cb4154b4c3a363e3
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 906b27c186668518702c7ab3a757e6eeb4e5b278
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241615"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478229"
 ---
 # <a name="what-are-data-pools-in-a-sql-server-2019-big-data-cluster"></a>Что такое пулы данных в кластере SQL Server 2019 больших данных?
 
@@ -33,6 +33,7 @@ ms.locfileid: "54241615"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о кластерах больших данных SQL Server, см. в разделе приведены общие:
+Дополнительные сведения о кластерах больших данных SQL Server, см. следующие ресурсы:
 
 - [Что такое кластеры SQL Server 2019 больших данных?](big-data-cluster-overview.md)
+- [Семинар: Кластерами больших данных Microsoft SQL Server архитектуры](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
