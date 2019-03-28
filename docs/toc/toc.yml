@@ -6894,6 +6894,7 @@ items:
     - name: Вопросы использования тестовых серверов
       href: ../relational-databases/performance/considerations-for-using-test-servers.md
     - name: Интеллектуальная обработка запросов
+      displayName: adaptive
       href: ../relational-databases/performance/intelligent-query-processing.md
     - name: Центр производительности
       href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
@@ -9791,12 +9792,12 @@ items:
         href: ../ssms/user-assistance-in-sql-server-management-studio.md
       - name: Анонимные данные об использовании
         href: ../ssms/sql-server-management-studio-telemetry-ssms.md
-  - name: sqlpackage
+  - name: SqlPackage.exe
     items:
     - name: Установка sqlpackage
       href: ../tools/sqlpackage-download.md
     - name: Заметки о выпуске
-      href: ../tools/sqlpackage-release-notes.md
+      href: ../tools/release-notes-sqlpackage.md
     - name: Справочник по sqlpackage
       href: ../tools/sqlpackage.md
   - name: Приложение SQL Server Profiler
@@ -12704,7 +12705,7 @@ items:
     - name: Система отслеживания измененных данных
       href: ../relational-databases/system-functions/change-data-capture-functions-transact-sql.md
       items:
-      - name: cdc.fn_cdc_get_all_changes_<экземпляр_отслеживания>
+      - name: cdc.fn_cdc_get_all_changes_<capture_instance>
         href: ../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md
       - name: cdc.fn_cdc_get_net_changes_<capture_instance>
         href: ../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md
@@ -16182,19 +16183,19 @@ items:
             href: ../t-sql/language-elements/equals-transact-sql.md
           - name: '> (больше)'
             href: ../t-sql/language-elements/greater-than-transact-sql.md
-          - name: < (меньше)
+          - name: < (Меньше)
             href: ../t-sql/language-elements/less-than-transact-sql.md
           - name: '>= (больше или равно)'
             href: ../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md
-          - name: <= (Меньше или равно)
+          - name: <= (меньше или равно)
             href: ../t-sql/language-elements/less-than-or-equal-to-transact-sql.md
-          - name: <> (Не равно)
+          - name: <> (не равно)
             href: ../t-sql/language-elements/not-equal-to-transact-sql-traditional.md
           - name: '!< (не меньше)'
             href: ../t-sql/language-elements/not-less-than-transact-sql.md
           - name: '!= (не равно)'
             href: ../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md
-          - name: '!> (не больше)'
+          - name: '!> (не больше чем)'
             href: ../t-sql/language-elements/not-greater-than-transact-sql.md
         - name: Составные
           href: ../t-sql/language-elements/compound-operators-transact-sql.md
@@ -17226,9 +17227,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Поддержка пространств имен в XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 8efef6d8d30133dff4c5ca71d37a753e0168a4e5
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: 31c97681d909e7179c9376e187cabea94afe20d3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417236"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538686"

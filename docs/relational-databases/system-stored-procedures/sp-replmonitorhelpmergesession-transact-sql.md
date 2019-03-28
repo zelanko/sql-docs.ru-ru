@@ -16,12 +16,12 @@ ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e08a08bbd3343386ed4b07749bde5216ae23c8b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 224d304a44c3e66eb8f2c18f4c581bf271f926f9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789196"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538506"
 ---
 # <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@agent_name** =] **"***agent_name***"**  
- Имя агента. *agent_name* — **nvarchar(100)** не имеет значения по умолчанию.  
+`[ @agent_name = ] 'agent_name'` — Имя агента. *agent_name* — **nvarchar(100)** не имеет значения по умолчанию.  
   
- [ **@hours** =] *часов*  
- Интервал времени в часах, в течение которого выполняется возврат сведений о сеансе агента истории. *часы* — **int**, который может принимать одно из следующих интервалов.  
+`[ @hours = ] hours` Это интервал времени, в часах, для которых возвращаются сведения о сеансе агента истории. *часы* — **int**, который может принимать одно из следующих интервалов.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -55,22 +53,18 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**0** (по умолчанию)|Возвращает сведения обо всех последних запусках агента.|  
 |> **0**|Возвращает сведения о агента запусков, произошедших за последние *часов* количество часов.|  
   
- [ **@session_type** =] *session_type*  
- Фильтрует результирующий набор на основе результата завершения сеанса. *session_type* — **int**, и может принимать одно из следующих значений.  
+`[ @session_type = ] session_type` Фильтрует результирующий набор, в зависимости от результата завершения сеанса. *session_type* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**1** (по умолчанию)|Сеанс агента с успешным результатом или с требованием повторения.|  
 |**0**|Сеанс агента с неудачным результатом.|  
   
- [ **@publisher** =] **"***издателя***"**  
- Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL. Этот параметр используется при выполнении **sp_replmonitorhelpmergesession** на подписчике.  
+`[ @publisher = ] 'publisher'` — Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL. Этот параметр используется при выполнении **sp_replmonitorhelpmergesession** на подписчике.  
   
- [ **@publisher_db** =] **"***publisher_db***"**  
- Имя базы данных публикации. *publisher_db* — **sysname**, значение по умолчанию NULL. Этот параметр используется при выполнении **sp_replmonitorhelpmergesession** на подписчике.  
+`[ @publisher_db = ] 'publisher_db'` — Имя базы данных публикации. *publisher_db* — **sysname**, значение по умолчанию NULL. Этот параметр используется при выполнении **sp_replmonitorhelpmergesession** на подписчике.  
   
- [  **@publication=** ] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, значение по умолчанию NULL. Этот параметр используется при выполнении **sp_replmonitorhelpmergesession** на подписчике.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, значение по умолчанию NULL. Этот параметр используется при выполнении **sp_replmonitorhelpmergesession** на подписчике.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   

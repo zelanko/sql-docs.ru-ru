@@ -18,12 +18,12 @@ ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc6538cbc62be98414b180d44725d987e660ff99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0cd3573c108cdd5a57bbb2cf6d542415710f24c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742442"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530266"
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,11 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@action=** ] **"***действие***"**  
- Действие, предпринимаемое для указанного имени входа. *Действие* — **varchar(10)**, не имеет значения по умолчанию. Когда *действие*— **удалить**, **sp_manage_jobs_by_login** удаляет все задания, принадлежащие *current_owner_login_name*. Когда *действие* — **ПЕРЕНАЗНАЧИТЬ**, все задания назначаются *new_owner_login_name*.  
+`[ @action = ] 'action'` Действие, выполняемое для указанного имени входа. *Действие* — **varchar(10)**, не имеет значения по умолчанию. Когда *действие*— **удалить**, **sp_manage_jobs_by_login** удаляет все задания, принадлежащие *current_owner_login_name*. Когда *действие* — **ПЕРЕНАЗНАЧИТЬ**, все задания назначаются *new_owner_login_name*.  
   
- [ **@current_owner_login_name=** ] **'***current_owner_login_name***'**  
- Имя входа текущего владельца задания. *current_owner_login_name* — **sysname**, не имеет значения по умолчанию.  
+`[ @current_owner_login_name = ] 'current_owner_login_name'` Имя входа текущего владельца задания. *current_owner_login_name* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@new_owner_login_name=** ] **'***new_owner_login_name***'**  
- Имя входа нового владельца задания. Используйте этот параметр только в том случае, если *действие* — **ПЕРЕНАЗНАЧИТЬ**. *new_owner_login_name* — **sysname**, значение по умолчанию NULL.  
+`[ @new_owner_login_name = ] 'new_owner_login_name'` Имя входа нового владельца задания. Используйте этот параметр только в том случае, если *действие* — **ПЕРЕНАЗНАЧИТЬ**. *new_owner_login_name* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

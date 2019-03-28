@@ -18,12 +18,12 @@ ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b043b71ca3f0349ce8ed7ac7accf136f4b7eff60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3461d6f80bb1ac693cca78954e5165fb7f012436
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595232"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529746"
 ---
 # <a name="sphelplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@LoginNamePattern =** ] **"***входа***"**  
- Имя входа. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. *Имя входа* должен существовать, если задано. Если *входа* является не указан, возвращаются сведения обо всех имен входа.  
+`[ @LoginNamePattern = ] 'login'` — Имя входа. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. *Имя входа* должен существовать, если задано. Если *входа* является не указан, возвращаются сведения обо всех имен входа.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -56,7 +55,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |**DefDBName**|**sysname**|По умолчанию базы данных, которые **LoginName** при подключении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**DefLangName**|**sysname**|Язык, используемый по умолчанию **LoginName**.|  
 |**Auser**|**char(5)**|Yes = **LoginName** имеет связанное имя пользователя в базе данных.<br /><br /> Нет = **LoginName** не имеет связанного имени пользователя.|  
-|**Возможность**|**символ(7)**|Yes = **LoginName** имеет связанного имени для удаленного входа.<br /><br /> Нет = **LoginName** не имеет связанного имени для входа.|  
+|**Возможность**|**char(7)**|Yes = **LoginName** имеет связанного имени для удаленного входа.<br /><br /> Нет = **LoginName** не имеет связанного имени для входа.|  
   
  Второй отчет содержит данные о пользователях, сопоставленных с каждым из имен входа, а также ролях, членом которых является каждое имя входа, как показано в следующей таблице.  
   
@@ -65,7 +64,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |**LoginName**|**sysname**|Имя входа.|  
 |**DBName**|**sysname**|По умолчанию базы данных, которые **LoginName** при подключении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**UserName**|**sysname**|Учетная запись пользователя, **LoginName** сопоставляется в **DBName**и роли, **LoginName** входит в **DBName**.|  
-|**UserOrAlias**|**значение типа char(8)**|MemberOf = **UserName** — это роль.<br /><br /> Пользователь = **UserName** является учетной записью пользователя.|  
+|**UserOrAlias**|**char(8)**|MemberOf = **UserName** — это роль.<br /><br /> Пользователь = **UserName** является учетной записью пользователя.|  
   
 ## <a name="remarks"></a>Примечания  
  Прежде чем удалить имя входа, используйте **sp_helplogins** для идентификации учетных записей пользователей, сопоставленных с именем входа.  
