@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 24f5bb65aa7c9545bbe1842f97e8f43546c14848
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3c1ee4bf54117a9b2b29aa2e892186d61b44683c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411491"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271223"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (выражение служб SSIS)
   Возвращает несколько токенов в строке, в которой они разделены указанными символами.  
@@ -51,7 +51,7 @@ TOKENCOUNT(character_expression, delimiter_string)
 -   Переменные и столбцы могут использоваться в качестве аргументов для этого выражения.  
   
 ## <a name="expression-examples"></a>Примеры выражений  
- В следующем примере функция TOKENCOUNT возвращает значение 3, потому что строка содержит три токена: "01", "12", "2011".  
+ В следующем примере функция TOKENCOUNT возвращает 3, потому что строка содержит 3 токена. "01", "12", "2011".  
   
 ```  
 TOKENCOUNT("01/12/2011", "/")  

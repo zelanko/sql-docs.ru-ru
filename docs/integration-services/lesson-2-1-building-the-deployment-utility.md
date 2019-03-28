@@ -1,5 +1,5 @@
 ---
-title: Шаг 1. Построение программы развертывания | Документы Майкрософт
+title: Шаг 1. Создание программы развертывания | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 24aeaa696a55feb7ad4e60889e2853a71f81f08b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6655e4fcf33b66e4bef4025f69c91ec3c13bc79e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677662"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280898"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Занятие 2–1. Построение программы развертывания
 В этой задаче будет настроена и построена программа развертывания для проекта «Учебник по развертыванию».  
@@ -49,7 +49,7 @@ ms.locfileid: "47677662"
   
 4.  В окне «Вывод» проверьте следующее.  
   
-    Запущена сборка: проект служб SQL Server Integration Services: добавочная...  
+    Запущено построение проекта «Службы SQL Integration Services». Добавочное ...  
   
     Создание программы развертывания...  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47677662"
   
     Построение завершено — 0 ошибок, 0 предупреждений  
   
-    ========== Сборка: 0 достигнуто, 0 сбоев, 1 обновленный, 0 пропущено ==========  
+    ========== Номер сборки: 0 достигнуто, 0 сбоев, 1 обновленный, 0 пропущено ==========  
   
 5.  В меню **Файл** выберите пункт **Выход**. Если программа предложит сохранить изменения объектов учебника по развертыванию, нажмите кнопку **Да**.  
   

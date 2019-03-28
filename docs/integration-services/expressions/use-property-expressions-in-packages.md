@@ -17,15 +17,15 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b55b675cf28bd0e61dd74b011aad9c50cd8325fa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 273199612b1cf358ff82192c126b33c3fd2a94fd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531615"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277663"
 ---
 # <a name="use-property-expressions-in-packages"></a>Использование выражений свойств в пакетах
   Выражение свойства — это выражение, связанное со свойством для обеспечения динамического обновления во время выполнения. Например, выражение свойства может обновить строку «Кому», в которую задача «Отправка почты» вставляет хранящийся в переменной адрес электронной почты.  

@@ -1,5 +1,5 @@
 ---
-title: Шаг 3. Тестирование развернутых пакетов | Документы Майкрософт
+title: Шаг 3. Тестирование развернутых пакетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f3461277f86e7d8aa8466b5d56cce7a54ed82852
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 751480be76b38ff10f0c71fbde12bcc6765e6ef6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836232"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277261"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>Занятие 3–3. Тестирование развернутых пакетов
 В этой задаче вы проверите пакеты, развернутые на экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

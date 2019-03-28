@@ -21,15 +21,15 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b7f269e0cbbc3e5f98667e49b7db6987c692c881
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4e3de21943f0bdd50e05cb30a1d9b1774f41ab37
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639661"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273293"
 ---
 # <a name="lookup-transformation"></a>Преобразование «Уточняющий запрос»
   Преобразование «Уточняющий запрос» выполняет уточняющие запросы, объединяя данные во входных столбцах со столбцами в ссылочном наборе данных. Уточняющие запросы используются для доступа к дополнительной информации в связанной таблице, основанной на значениях в общих столбцах.  
@@ -131,11 +131,11 @@ ms.locfileid: "51639661"
   
 ## <a name="related-content"></a>См. также  
   
--   Видеоролик [Как реализовать преобразование «Уточняющий запрос» в режиме полного кэширования](https://go.microsoft.com/fwlink/?LinkId=131031)на сайте msdn.microsoft.com  
+-   Видео с руководством по [ реализации преобразования "Уточняющий запрос" в режиме полного кэширования](https://go.microsoft.com/fwlink/?LinkId=131031) на сайте msdn.microsoft.com.  
   
 -   Запись в блоге, [Рекомендации по использованию режимов кэширования для преобразования «Уточняющий запрос»](https://go.microsoft.com/fwlink/?LinkId=146623), на сайте blogs.msdn.com  
   
--   Запись в блоге [Шаблон уточняющего запроса: без учета регистра символов](https://go.microsoft.com/fwlink/?LinkId=157782)на сайте blogs.msdn.com  
+-   Запись в блоге [Lookup Pattern: Case Insensitive](https://go.microsoft.com/fwlink/?LinkId=157782) (Шаблон уточняющего запроса: без учета регистра символов) на сайте blogs.msdn.com.  
   
 -   Образец, [Преобразование «Уточняющий запрос»](https://go.microsoft.com/fwlink/?LinkId=267528), на сайте msftisprodsamples.codeplex.com.  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],processing data
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 485618b3e013d1abff0c52d2625357c2ed9951ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31dd335814a54e44b7db90c26a13b4417734a384
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722542"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289650"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>Обработка операций вставки, обновления и удаления
   В потоке данных пакета служб Integration Services, выполняющего добавочную загрузку информации об измененных данных, второй задачей является разделение вставок, обновлений и удалений. Затем можно использовать соответствующие команды, чтобы применить их к назначению.  
@@ -68,10 +68,10 @@ select
 ## <a name="next-step"></a>Следующий шаг  
  Когда строки разбиты для обработки, следующим шагом является применение изменений к назначению.  
   
- **Следующий раздел:** [Применение изменений в назначении](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
+ **Следующая статья:** [Применение изменений в назначении](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Преобразование «Условное разбиение»](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
- [Разбиение набора данных с помощью преобразования "Условное разбиение"](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+ [Разбиение набора данных с помощью преобразования «Условное разбиение»](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

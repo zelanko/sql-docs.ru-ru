@@ -18,15 +18,15 @@ helpviewer_keywords:
 - deployment utility [Integration Services]
 - deploying packages [Integration Services], configurations
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2c92d803dd38015950123501743d6a0e0cdfa8fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6238c07e4da7aa9b19a5264282a1c7c2733ecad
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739612"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277283"
 ---
 # <a name="deploy-packages-with-ssis"></a>Развертывание пакетов с помощью служб SSIS
 Службы[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] содержат средства, облегчающие развертывание пакетов на другом компьютере. Средства развертывания управляют любыми зависимостями, такими как конфигурации или требуемые пакету файлы. В данном учебнике демонстрируется, как с помощью этих средств устанавливать пакеты и их зависимости на целевом компьютере.    
@@ -43,13 +43,13 @@ ms.locfileid: "47739612"
     
 Целью данного учебника является демонстрация сложности некоторых вопросов развертывания, с которыми пользователю приходится сталкиваться при работе. Если по каким-либо причинам у пользователя нет возможности развернуть пакеты на другом компьютере, этот учебник можно выполнить, установив пакеты на локальном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]в базе данных msdb и запустив их в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] на этом же экземпляре.    
 
-**Предполагаемое время для выполнения заданий этого учебника:** 2 часа
+**Предполагаемое время для выполнения заданий данного учебника:** 2 часа
 
 ## <a name="what-you-learn"></a>Что вы узнаете    
 Новые средства, элементы управления и возможности служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] лучше всего изучать на практике. С помощью данного учебника шаг за шагом создается проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , куда затем добавляются пакеты и другие необходимые файлы. Когда проект полностью завершен, пользователь создает комплект развертывания и копирует его на целевой компьютер, куда затем устанавливаются пакеты.    
     
 ## <a name="prerequisites"></a>предварительные требования    
-Этот учебник предназначен для пользователей, знакомых с основными операциями файловой системы, но имеющих ограниченное представление о новых возможностях служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Для лучшего понимания основных понятий служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , с которыми знакомит этот учебник, может пригодиться предварительное изучение следующего учебника по использованию служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] : [Службы SSIS: создание пакета ETL](../integration-services/ssis-how-to-create-an-etl-package.md).    
+Этот учебник предназначен для пользователей, знакомых с основными операциями файловой системы, но имеющих ограниченное представление о новых возможностях служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Для лучшего понимания основных понятий служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], с которыми знакомит данный учебник, может пригодиться предварительное изучение следующего учебника по использованию служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]: [Службы SSIS: создание пакета ETL](../integration-services/ssis-how-to-create-an-etl-package.md).    
     
 ### <a name="on-the-source-computer"></a>Исходный компьютер
 
@@ -86,13 +86,13 @@ ms.locfileid: "47739612"
 Если развертывание пакетов предполагается на том же самом компьютере, где создается комплект развертывания, этот компьютер должен удовлетворять требованиям как компьютера-источника, так и целевого компьютера.    
         
 ## <a name="lessons-in-this-tutorial"></a>Занятия этого учебника    
-[Занятие 1. Подготовка к созданию пакета развертывания](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
+[Занятие 1. Подготовка к созданию пакета развертывания](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  .  
 На этом занятии требуется развернуть ETL-решение путем создания нового проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и добавления пакетов и других необходимых файлов.    
     
 [Занятие 2. Создание пакета развертывания в службах SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
 На этом занятии требуется создать программу развертывания и убедиться, что в комплекте развертывания содержатся необходимые файлы.    
     
-[Занятие 3. Установка пакетов SSIS](../integration-services/lesson-3-install-ssis-packages.md)    
+[Занятие 3. Установка пакетов SSIS](../integration-services/lesson-3-install-ssis-packages.md)    
 На этом занятии требуется скопировать пакет развертывания на целевой компьютер, установить пакеты и запустить их.    
     
 

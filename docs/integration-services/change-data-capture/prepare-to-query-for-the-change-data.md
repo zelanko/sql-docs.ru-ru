@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c4052b68e5266d063a17bd613d33c5732bc23348
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b57e5b2bf98b60e80bf4eddbf1583a7abd24802
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793456"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279998"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>Подготовка к запросу информации об изменениях
   В потоке управления пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , который выполняет добавочную загрузку измененных данных, третья и последняя задача состоит в том, чтобы подготовить запрос для измененных данных и добавить задачу потока данных.  
@@ -199,6 +199,6 @@ ms.locfileid: "47793456"
 ## <a name="next-step"></a>Следующий шаг  
  Завершив подготовку строки запроса и настройку задачи потока данных, приступайте к следующему шагу — созданию функции с табличным значением для получения измененных данных из базы данных.  
   
- **Следующий раздел:** [Создание функции для получения измененных данных](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
+ **Следующая статья:** [Создание функции для получения информации об изменениях данных](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
   
   

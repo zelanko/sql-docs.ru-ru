@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 141810965960031cf004f9c9999943760bc6c810
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 00ed915265b9b3c19e7bafdcf7d6c41208e8319a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532076"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280468"
 ---
 # <a name="package-management-ssis-service"></a>Управление пакетами (службы SSIS)
   Управление пакетами включает в себя операции мониторинга, управления, импорта и экспорта пакетов.  
@@ -55,7 +55,7 @@ ms.locfileid: "52532076"
   
  В папке **Выполняемые пакеты** нет вложенных папок, и она не может быть расширена.  
   
- По умолчанию папка **Сохраненные пакеты** содержит две вложенные папки: **Файловая система** and **MSDB**. В папке **Файловая система** перечислены пакеты, которые сохранены в файловой системе. Расположение этих файлов указано в файле конфигурации службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . По умолчанию это папка «Пакеты», расположенная в папке %Program Files%\Microsoft SQL Server\100\DTS. В папке **MSDB** находятся пакеты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , которые были сохранены на сервере в базе данных msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сервера. Таблица sysssispackages содержит пакеты, сохраненные в базе данных msdb.  
+ По умолчанию папка **Сохраненные пакеты** содержит две вложенные папки: **Файловая система** и **MSDB**. В папке **Файловая система** перечислены пакеты, которые сохранены в файловой системе. Расположение этих файлов указано в файле конфигурации службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . По умолчанию это папка «Пакеты», расположенная в папке %Program Files%\Microsoft SQL Server\100\DTS. В папке **MSDB** находятся пакеты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , которые были сохранены на сервере в базе данных msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сервера. Таблица sysssispackages содержит пакеты, сохраненные в базе данных msdb.  
   
  Для просмотра списка пакетов в хранилище пакетов следует открыть среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и подключиться к службам [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   

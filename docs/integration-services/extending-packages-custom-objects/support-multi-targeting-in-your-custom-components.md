@@ -8,20 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 49252f4743f3235275c93f504b44f4419941029d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 67005532329ebdda27f0c86985604fb8a63babe1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797472"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273554"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>Поддержка многоплатформенного нацеливания в пользовательских компонентах
  Теперь можно использовать конструктор SSIS в SQL Server Data Tools (SSDT), чтобы создавать, обслуживать и выполнять пакеты, ориентированные на SQL Server 2014, SQL Server 2012 или SQL Server 2012. Процедуру получения SSDT для Visual Studio 2015 см. в разделе [Скачивание последней версии SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md). 
 
- В обозревателе решений щелкните правой кнопкой мыши проект служб Integration Services и выберите пункт **Свойства** , чтобы открыть страницу свойств проекта. На вкладке **Общие** окна **Свойства конфигурации**выберите свойство **TargetServerVersion** и затем SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
+ В обозревателе решений щелкните правой кнопкой мыши проект служб Integration Services и выберите пункт **Свойства**, чтобы открыть страницу свойств проекта. На вкладке **Общие** окна **Свойства конфигурации** выберите свойство **TargetServerVersion** и затем SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
    
  ![Свойство TargetServerVersion в диалоговом окне свойств проекта](../../integration-services/media/targetserverversion2.png "Свойство TargetServerVersion в диалоговом окне свойств проекта")  
  
@@ -94,7 +94,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 ### <a name="invalidcastexception"></a>InvalidCastException
 
-**Сообщение об ошибке.** Невозможно привести COM-объект типа "System.__ComObject" к интерфейсному типу "Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100". Операция завершилась со сбоем, поскольку вызов QueryInterface COM-компонента для интерфейса с IID "{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}" возвратил ошибку: Интерфейс не поддерживается (Исключение из HRESULT: 0x80004002 (E_NOINTERFACE)). (Microsoft.SqlServer.DTSPipelineWrap).
+**Сообщение об ошибке.** Невозможно привести COM-объект типа "System.__ComObject" к интерфейсному типу "Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100". Операция завершилась со сбоем, так как вызов QueryInterface COM-компонента для интерфейса с IID "{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}" возвратил ошибку: "Интерфейс не поддерживается (Исключение из HRESULT: 0x80004002 (E_NOINTERFACE))". (Microsoft.SqlServer.DTSPipelineWrap).
 
 **Решение.** Если ваше настраиваемое расширение ссылается на сборки взаимодействия служб SSIS, такие как Microsoft.SqlServer.DTSPipelineWrap или Microsoft.SqlServer.DTSRuntimeWrap, задайте для свойства **Внедрить типы взаимодействия** значение **False**.
 

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4aca92b322d3eb0a3b987300d88a877d29cf3cda
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e0ee84933cf0644ac4759639c5ce6e2b3f183f04
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639031"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290130"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Устранение неполадок инструментов с помощью отчетов
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают функции и инструменты, которые можно использовать для устранения неполадок пакетов после их завершения и развертывания.  
@@ -39,7 +39,7 @@ ms.locfileid: "51639031"
   
 -   **Обеспечивайте целостность данных с помощью транзакций**. Дополнительные сведения см. в разделе [Транзакции служб Integration Services](../../integration-services/integration-services-transactions.md).  
   
--   **Перезапускайте пакеты с точки сбоя, используя контрольные точки**. Дополнительные сведения см. в разделе [Перезапуск пакетов с помощью контрольных точек](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+-   **Перезапускайте пакеты с точки сбоя, используя контрольные точки**. Дополнительные сведения см. в разделе [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>Перехват и обработка ошибок пакетов с помощью обработчиков событий  
  Обработчики событий могут реагировать на многие события, вызванные пакетами и объектами в них.  
@@ -82,10 +82,10 @@ ms.locfileid: "51639031"
   
     3.  **Рассмотрите возможность захвата данных счетчика строк**. Создайте отдельную таблицу для данных счетчика строк, в которой каждый экземпляр выполнения пакета определяется идентификатором ExecutionID. Используйте преобразование «Счетчик строк» для сохранения числа строк в последовательность переменных в критических точках потока данных. После окончания потока данных используйте задачу «Выполнение SQL» для вставки этой последовательности значений в строку таблицы для последующего анализа и отчета.  
   
-     Дополнительные сведения об этом подходе см. в статье "ETL Auditing and Logging" (ETL: аудит и ведение журналов), входящей в технический документ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602) (Проект REAL: методы разработки бизнес-аналитики ETL).  
+     Дополнительные сведения об этом подходе см. в статье "ETL Auditing and Logging" (ETL: аудит и ведение журналов), входящей в технический документ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602) (Project REAL. Рекомендации по разработке ETL-решения для бизнес-аналитики).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Устранение неполадок выполнения пакетов с помощью отладочных файлов дампа  
- Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]позволяют создавать отладочные файлы дампа с информацией о выполнении пакета. Дополнительные сведения см. в статье [Создание файлов дампа для выполнения пакетов](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
+ Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]позволяют создавать отладочные файлы дампа с информацией о выполнении пакета. Дополнительные сведения см. в статье [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
   
 ## <a name="troubleshoot-run-time-validation-issues"></a>Устранение неполадок проверки во время выполнения  
  Иногда невозможно подключиться к источникам данных или проверить компоненты пакета, пока не будут выполнены предыдущие задачи пакета. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предусмотрены следующие возможности для предотвращения ошибок проверки, которые в противном случае возникли бы в этих условиях.  

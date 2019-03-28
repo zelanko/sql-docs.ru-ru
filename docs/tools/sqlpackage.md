@@ -2,31 +2,31 @@
 title: SqlPackage.exe | Документация Майкрософт
 ms.prod: sql
 ms.technology: ssdt
-ms.date: 06/27/2018
+ms.date: 06/28/2018
 ms.reviewer: alayu; sstein
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: d9a3dc9088c833b3448927c1455052c40f185ec7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033611"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527596"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
 Программа командной строки **SqlPackage.exe** автоматизирует следующие задачи разработки баз данных.  
   
-- [Extract](#help-for-the-extract-action): создает файл моментального снимка базы данных (DACPAC) из активной Базы данных SQL Server или SQL Azure.  
+- [Extract](#help-for-the-extract-action): создает файл моментального снимка базы данных (DACPAC) из активной базы данных SQL Server или SQL Azure.  
   
 - [Publish](#publish-parameters-properties-and-sqlcmd-variables): выполняет добавочное обновление схемы базы данных в соответствии со схемой исходного DACPAC-файла. Если база данных не существует на сервере, операция публикации создаст ее. В противном случае обновления существующей базы данных.  
   
-- [Export](#export-parameters-and-properties): экспортирует активную базу данных, включая схему базы данных и пользовательские данные, из Базы данных SQL Azure или SQL Server в пакет BACPAC (BACPAC-файл).  
+- [Export](#export-parameters-and-properties): экспортирует активную базу данных, включая схему базы данных и пользовательские данные, из базы данных SQL Azure или SQL Server в пакет BACPAC (BACPAC-файл).  
   
-- [Import](#import-parameters-and-properties): импортирует данные схемы и таблиц из пакета BACPAC в новую пользовательскую базу данных в экземпляре Базы данных SQL Server или SQL Azure.  
+- [Import](#import-parameters-and-properties): импортирует данные схемы и таблиц из пакета BACPAC в новую пользовательскую базу данных в экземпляре базы данных SQL Server или SQL Azure.  
   
 - [DeployReport](#deployreport-parameters-and-properties): создает XML-отчет по изменениям, которые должны быть внесены в результате публикации.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "56033611"
   
 Программа командной строки **SqlPackage.exe** позволяет указывать эти действия вместе с соответствующими параметрами и свойствами.  
 
-**[Скачать последнюю версию](sqlpackage-download.md)**. Дополнительные сведения о последнем выпуске см. в разделе [заметки о выпуске](sqlpackage-release-notes.md).
+**[Скачать последнюю версию](sqlpackage-download.md)**. Дополнительные сведения о последнем выпуске см. в разделе [заметки о выпуске](release-notes-sqlpackage.md).
   
 ## <a name="command-line-syntax"></a>Синтаксис командной строки
 

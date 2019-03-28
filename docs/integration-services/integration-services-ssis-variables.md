@@ -16,15 +16,15 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 35b990e553116d88764f4fa995935bc4ba90b22d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 06924024dca7eef1b6d1ff7f2ada916a84143628
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512904"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281878"
 ---
 # <a name="integration-services-ssis-variables"></a>Переменные в службах Integration Services (SSIS)
   Переменные хранят значения, которые могут использоваться пакетом служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , а также его контейнерами, задачами и обработчиками событий во время выполнения. Скрипты в задаче «Скрипт» и компоненте скрипта также могут использовать переменные. Управления очередностью, которые упорядочивают задачи и контейнеры в рабочий процесс, могут использовать переменные, если связанные с ними определения ограничений включают в себя выражения.  
@@ -248,7 +248,7 @@ ms.locfileid: "52512904"
   
 -   Окно «Переменные».  
   
--   Окно «Свойства». В окне **Свойства** указаны свойства для настройки переменных, недоступные в окне **Переменные** : Description, EvaluateAsExpression, Expression, ReadOnly, ValueType и IncludeInDebugDump.  
+-   Окно «Свойства». В окне **Свойства** указаны свойства для настройки переменных, которые недоступны в окне **Переменные**: Description, EvaluateAsExpression, Expression, ReadOnly, ValueType и IncludeInDebugDump.  
   
 > [!NOTE]  
 >  Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют также набор системных переменных, свойства которых нельзя обновить, за исключением свойства RaiseChangedEvent.  

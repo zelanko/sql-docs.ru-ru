@@ -17,15 +17,15 @@ helpviewer_keywords:
 - columns [Integration Services], derivations
 - Derived Column transformation
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1d842af4f5e9245836e595c02a8adebfeaae3dba
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6b03494d1c74313eb6e0698e96062869b9e08cfa
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639331"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270990"
 ---
 # <a name="derived-column-transformation"></a>Преобразование «Производный столбец»
   Преобразованием «Производный столбец» создаются новые значения столбцов путем применения выражений к входным столбцам преобразования. Выражения могут содержать любые сочетания переменных, функций, операторов и столбцов из входа преобразования. Результат добавляется в новый столбец или вставляется в существующий как замещающее значение. При преобразовании «Производный столбец» может быть определено несколько производных столбцов, и любая переменная или входные столбцы могут присутствовать в нескольких выражениях.  
@@ -95,7 +95,7 @@ ms.locfileid: "51639331"
   
  Значение этого свойства можно задать с помощью выражения свойства.  
   
- **См. также**: [Выражения служб Integration Services (SSIS)](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Операторы (выражение служб SSIS)](../../../integration-services/expressions/operators-ssis-expression.md) и [Функции (выражение служб SSIS)](../../../integration-services/expressions/functions-ssis-expression.md).  
+ **См. также:** [Выражения служб Integration Services (SSIS)](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Операторы (выражение служб SSIS)](../../../integration-services/expressions/operators-ssis-expression.md) и [Функции (выражение служб SSIS)](../../../integration-services/expressions/functions-ssis-expression.md).  
   
  **Тип данных**  
  При добавлении данных в новый столбец диалоговое окно **Редактор преобразования "Производный столбец"** автоматически оценивает выражение и задает соответствующий тип данных. Значение этого столбца доступно только для чтения. Дополнительные сведения см. в разделе [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  

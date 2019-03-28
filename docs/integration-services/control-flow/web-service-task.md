@@ -15,15 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f6dde11eba11acc7e0136c34025e74fead99f9e1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c59a55f8ccb713024394ecf611299f71a5cf733c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502610"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271966"
 ---
 # <a name="web-service-task"></a>Задача «Веб-служба»
   Задача «Веб-служба» выполняет метод веб-службы. Возможно использование задачи «Веб-служба» в следующих целях:  
@@ -89,7 +89,7 @@ ms.locfileid: "52502610"
 > [!IMPORTANT]  
 >  Диспетчер HTTP-соединений поддерживает только анонимную проверку подлинности и обычную проверку подлинности. Проверка подлинности Windows не поддерживается.  
   
- **См. также**: [Диспетчер HTTP-соединений](../../integration-services/connection-manager/http-connection-manager.md), [Редактор диспетчера HTTP-соединений](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+ **См. также:**  подробные сведения о [диспетчере HTTP-подключений](../../integration-services/connection-manager/http-connection-manager.md) и о [редакторе диспетчера HTTP-подключений &#40;страница "Сервер"&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md).  
   
  **WSDLFile**  
  Введите полный путь к локальному WSDL-файлу на компьютере или нажмите кнопку обзора **(...)** и выберите файл.  
@@ -172,13 +172,13 @@ ms.locfileid: "52502610"
  **Файл**  
  Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../integration-services/connection-manager/file-connection-manager-editor.md).  
   
 #### <a name="outputtype--variable"></a>OutputType = Переменная  
  **Переменная**  
  Выберите переменную в списке или щелкните \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также**: [Переменные в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также:**  подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>См. также  
- Видео [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=259642)(Как вызвать веб-службы с помощью задачи "Веб-служба" — видеоматериал SQL Server) на technet.microsoft.com.  
+ Видео с руководством по [ вызвать веб-службу с помощью задачи "Веб-служба" (видеоматериал по SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642) на портале technet.microsoft.com.  

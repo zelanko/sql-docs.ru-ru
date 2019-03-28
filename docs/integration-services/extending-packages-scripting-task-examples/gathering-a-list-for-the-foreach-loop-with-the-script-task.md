@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: be748729eeb9a50a5e206a5778e20420f4137177
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 82856b272e4799fc06929fe4f2d153320f879f0e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640051"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270782"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Составление списка для цикла по каждому элементу в задаче «Скрипт»
   Перечислитель по объекту из переменной перечисляет элементы в списке, передаваемом ему в переменной, и выполняет одни и те же задачи для каждого элемента. Чтобы заполнить список, можно использовать пользовательский код в задаче «Скрипт». Дополнительные сведения о перечислителе см. в разделе [Контейнер "Цикл по каждому элементу"](../../integration-services/control-flow/foreach-loop-container.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "51640051"
  В следующем примере для получения списка книг Excel на компьютере, которые новее или старше, чем указанное пользователем в переменной число дней, используются методы из пространства имен **System.IO**. В примере выполняется рекурсивный поиск в каталогах на диске С для нахождения файлов, имеющих расширение XLS, и проверяется дата последнего изменения каждого файла, чтобы определить, должен ли файл быть в списке. В примере файлы добавляются в массив **ArrayList**, и массив **ArrayList** сохраняется в переменной для дальнейшего использования в контейнере "Цикл по каждому элементу". Контейнер «цикл по каждому элементу» настроен для использования перечислителя по объекту из переменной.  
   
 > [!NOTE]  
->  Переменная, используемая с перечислителем по объекту из переменной, должна иметь тип **Object**. Объект, который помещается в переменную, должен реализовывать один из следующих интерфейсов: **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** или **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Как правило, используется **Array** или **ArrayList**. Для **ArrayList** требуются ссылка и инструкция **Imports** для пространства имен **System.Collections**.  
+>  Переменная, используемая с перечислителем по объекту из переменной, должна иметь тип **Object**. Объект, помещаемый в переменную, должен реализовывать один из следующих интерфейсов: **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** или **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Как правило, используется **Array** или **ArrayList**. Для **ArrayList** требуются ссылка и инструкция **Imports** для пространства имен **System.Collections**.  
   
  Можно поэкспериментировать с этой задачей, используя различные положительные и отрицательные значения для переменной пакета `FileAge`. Например, можно ввести 5 для поиска файлов, созданных за последние пять дней, или ввести -3 для поиска файлов, созданных более трех дней назад. Для этой задачи потребуется минута или две, чтобы выполнить поиск на диске с большим количеством папок.  
   
@@ -248,6 +248,6 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
   
 ## <a name="see-also"></a>См. также:  
  [Контейнер "Цикл по каждому элементу"](../../integration-services/control-flow/foreach-loop-container.md)   
- [Настройка контейнера "цикл по каждому элементу"](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
+ [Настройка контейнера «цикл по каждому элементу»](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
   
   

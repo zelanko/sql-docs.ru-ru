@@ -16,15 +16,15 @@ helpviewer_keywords:
 - destinations [Integration Services], Excel
 - Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 319f9b06605ab95dca6885fc08bbab6b7d5bf9c9
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ab8a7da7e45d9d623fd436ac3b6c0e8b3d945536
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638461"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289830"
 ---
 # <a name="excel-destination"></a>Назначение Excel
   Назначение «Excel» загружает данные в листы или диапазоны в книгах [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -50,7 +50,7 @@ ms.locfileid: "51638461"
   
  Диалоговое окно **Расширенный редактор** содержит все свойства, которые могут устанавливаться программными средствами. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства Excel](../../integration-services/data-flow/excel-custom-properties.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "51638461"
 |Параметр|Описание|  
 |------------|-----------------|  
 |Таблица или представление|Загружает данные в лист или именованный диапазон источника данных Excel.|  
-|Переменная, содержащая имя таблицы или представления|Укажите переменную, содержащую имя листа или диапазона.<br /><br /> **См. также**: [Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Переменная, содержащая имя таблицы или представления|Укажите переменную, содержащую имя листа или диапазона.<br /><br /> **Дополнительные сведения** [Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |Команда SQL|Загрузка данных в назначение «Excel» с помощью SQL-запроса.|  
   
  **Имя листа Excel**  

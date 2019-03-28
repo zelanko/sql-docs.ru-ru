@@ -1,5 +1,5 @@
 ---
-title: Учебник. Использование источника OData | Документы Майкрософт
+title: Учебник. Использование источника OData | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 841892faace82677df0bbd8939a147d2c65b363f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 91b03ca49059ea12898420eea2abff6326fa7d0e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512998"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272770"
 ---
 # <a name="tutorial-using-the-odata-source"></a>Учебник. Использование источника OData
   Этот учебник содержит процедуру извлечения коллекции **Employees** из образца **Northwind** службы OData (https://services.odata.org/V3/Northwind/Northwind.svc/)) и последующей ее загрузки в неструктурированный файл.  

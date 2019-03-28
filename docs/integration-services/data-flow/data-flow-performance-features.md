@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8b172eb0635c54bf6b9e0289ac220676eb08fd9c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b20f9d2d48452d95ff0c219f7c291a2a5b1cd887
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411991"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275501"
 ---
 # <a name="data-flow-performance-features"></a>Возможности для повышения производительности потока данных
   В этом разделе приведены советы по проектированию пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , помогающие избежать общих проблем с производительностью. Кроме того, в этом разделе содержатся сведения по функциям и средствам, позволяющим устранить неполадки с производительностью пакетов.  
@@ -77,7 +77,7 @@ ms.locfileid: "52411991"
  Не увеличивайте размер буфер до такого размера, при котором он начнет записываться на диск. При записи буфера на диск производительность ниже, чем при неоптимизированном буфере. Чтобы определить, происходит ли запись на диск, наблюдайте за счетчиком производительности "Выгружено буферов" в оснастке "Производительность" консоли управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MMC).  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>Настройка пакета для параллельного выполнения  
- Параллельное выполнение повышает производительность на компьютерах с несколькими физическими или логическими процессорами. Для поддержки параллельного выполнения различных задач в пакете в службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] используются два свойства **MaxConcurrentExecutables** и **EngineThreads**.  
+ Параллельное выполнение повышает производительность на компьютерах с несколькими физическими или логическими процессорами. Для поддержки параллельного выполнения различных задач в пакете в службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] используются два свойства: **MaxConcurrentExecutables** и **EngineThreads**.  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>Свойство MaxConcurrentExcecutables  
  Свойство **MaxConcurrentExecutables** является свойством самого пакета. Оно определяет число одновременно работающих задач. По умолчанию оно имеет значение –1, что означает число физических или логических процессоров +2.  
@@ -148,7 +148,7 @@ ms.locfileid: "52411991"
   
  Как правило, самые медленные компоненты преобразования «Медленно изменяющееся измерение» — преобразования «Команда OLE DB», выполняющие инструкции UPDATE одновременно только для одной строки. Таким образом, самым эффективным способом повысить производительность преобразования «Медленно изменяющееся измерение» — замена преобразований «Команда OLE DB». Эти преобразования можно заменить целевыми компонентами, сохраняющими все строки для обновления в промежуточной таблице. Затем можно добавить задачу «Выполнение SQL», которая выполняет одну инструкцию Transact-SQL UPDATE одновременно для всех строк.  
   
- Опытные пользователи могут сконструировать пользовательский поток данных для обработки медленно изменяющегося измерения, оптимизированного для больших измерений. Обсуждение и примеры по решению этой задачи см. в разделе "Сценарий уникального измерения" в техническом документе [Проект REAL: методики извлечения, преобразования и загрузки бизнес-аналитики](https://go.microsoft.com/fwlink/?LinkId=96602).  
+ Опытные пользователи могут сконструировать пользовательский поток данных для обработки медленно изменяющегося измерения, оптимизированного для больших измерений. Обсуждение и примеры такого подхода см. в разделе "Unique dimension scenario" (Сценарий уникального измерения) в техническом документе [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602) (Project REAL. Рекомендации по разработке ETL-решения для бизнес-аналитики).  
   
 ### <a name="destinations"></a>Назначения  
  Чтобы добиться максимальной производительности при работе с назначениями, рассмотрите возможность использовать назначения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и проверьте их производительность.  
@@ -171,9 +171,9 @@ ms.locfileid: "52411991"
 ## <a name="related-content"></a>См. также  
  **Статьи и сообщения в блогах**  
   
--   Техническая статья [Службы SQL Server 2005 Integration Services: стратегия повышения производительности](https://go.microsoft.com/fwlink/?LinkId=98899)на сайте technet.microsoft.com  
+-   Техническая статья [SQL Server 2005 Integration Services: A Strategy for Performance](https://go.microsoft.com/fwlink/?LinkId=98899) (SQL Server 2005 Integration Services — стратегия максимальной производительности) на портале technet.microsoft.com.  
   
--   Техническая статья [Службы Integration Services: методы настройки производительности](https://go.microsoft.com/fwlink/?LinkId=98900)на сайте technet.microsoft.com  
+-   Техническая статья [Integration Services: Performance Tuning Techniques](https://go.microsoft.com/fwlink/?LinkId=98900) (Службы Integration Services — способы настройки производительности) на портале technet.microsoft.com.  
   
 -   Техническая статья [Increasing Throughput of Pipelines by Splitting Synchronous Transformations into Multiple Tasks (на английском языке)](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)на сайте sqlcat.com  
   

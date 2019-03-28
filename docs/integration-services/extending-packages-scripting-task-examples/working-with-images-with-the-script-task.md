@@ -21,22 +21,22 @@ helpviewer_keywords:
 - JPEG format [Integration Services]
 - .jpeg files
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: de5aa91ae884b8aef977c47a2fa288f179a086fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dee6d377d6b099a89dcbc2b12e93dc4aa7d86874
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595713"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270586"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Работа с изображениями в задаче «Скрипт»
   База данных продуктов или пользователи часто содержат изображения в дополнение к тексту и числовым данным. Пространство имен **System.Drawing** платформы Microsoft .NET Framework предоставляет классы для управления изображениями.  
   
  [Пример 1. Преобразование изображений в формат JPEG](#example1)  
   
- [Пример 2. Создание и сохранение уменьшенных представлений изображений](#example2)  
+ [Пример 2. Создание и сохранение эскизов](#example2)  
   
 > [!NOTE]  
 >  Если нужно создать задачу, которую будет удобно использовать в нескольких пакетах, рекомендуется начать разработку пользовательской задачи с этого образца задачи «Скрипт». Дополнительные сведения см. в разделе [Разработка пользовательской задачи](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  

@@ -13,27 +13,27 @@ helpviewer_keywords:
 - transformations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 46b020f7ad63e38d283de993606109dadd3f6a5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b97d6051c46ab7c898e953c78704c99b6370d57
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645852"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277813"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Синтаксический анализ текстовых файлов нестандартного формата в компоненте скрипта
   Если исходные данные организованы в нестандартном формате, может оказаться удобнее объединить всю логику синтаксического анализа в единый скрипт вместо создания цепочки преобразований служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], приводящих к тому же результату.  
   
- [Пример 1. Синтаксический анализ записей, разделенных на строки](#example1)  
+ [Пример 1. Синтаксический анализ записей, разделенных на строки](#example1)  
   
- [Пример 2. Разделение родительских и дочерних записей](#example2)  
+ [Пример 2. Разделение родительских и дочерних записей](#example2)  
   
 > [!NOTE]  
 >  Если нужно создать компонент, который будет полезен в нескольких задачах потока данных и нескольких пакетах, рекомендуется в качестве основы использовать этот образец компонента скрипта. Дополнительные сведения см. в разделе [Разработка пользовательского компонента потока данных](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
-##  <a name="example1"></a> Пример 1. Синтаксический анализ записей, разделенных на строки  
+##  <a name="example1"></a> Пример 1. Синтаксический анализ записей, разделенных на строки  
  В этом примере берется текстовый файл, в котором каждый столбец данных размещается на новой строке, и с помощью синтаксического анализа, реализованного в компоненте скрипта, преобразуется в целевую таблицу.  
   
  Дополнительные сведения о том, как настроить компонент скрипта для использования в качестве преобразования в потоке данных см. в разделах [Создание синхронного преобразования с помощью компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) и [Создание асинхронного преобразования с помощью компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
@@ -188,7 +188,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example2"></a> Пример 2. Разделение родительских и дочерних записей  
+##  <a name="example2"></a> Пример 2. Разделение родительских и дочерних записей  
  В этом примере берется текстовый файл, в котором за строкой-разделителем следует родительская строка, а за ней — неопределенное количество дочерних строк, и с помощью синтаксического анализа, реализованного в компоненте скрипта, преобразуется в две правильным образом нормализованные целевые таблицы — родительскую и дочернюю. Этот простой пример легко адаптировать для исходных файлов, использующих несколько строк или столбцов для каждой родительской и дочерней записи: главное, чтобы начало и конец каждой записи были как-то обозначены.  
   
 > [!CAUTION]  

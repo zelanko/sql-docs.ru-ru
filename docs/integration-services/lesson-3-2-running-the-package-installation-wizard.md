@@ -1,5 +1,5 @@
 ---
-title: Шаг 2. Запуск мастера установки пакета | Документы Майкрософт
+title: Этап 2. Запуск мастера установки пакета | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0a346d55b84b115a7a128d02fdedd1ff7f6b800d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 740b85a52908437d2cdbca5e47e0797c1e0ba08b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527145"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290290"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Занятие 3–2. Запуск мастера установки пакета
 В этой задаче мастер установки пакета используется для развертывания пакетов из проекта Deployment Tutorial в экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. В таблицу sysssispackages базы данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb можно установить только пакеты; файлы поддержки, включенные в пакет развертывания, будут развернуты в файловой системе.  
@@ -82,11 +82,11 @@ ms.locfileid: "52527145"
   
     Поскольку значения переменных среды на целевом компьютере отличаются от значений переменных среды на компьютере разработчика, на странице проверки пакетов отображается несколько предупреждений. Следует ожидать следующих предупреждений.  
   
-    -   Файл конфигурации C:\DeploymentTutorial\DataTransferConfig.dtsConfig недопустим. Проверьте имя файла конфигурации.  
+    -   Недопустимый файл конфигурации  «C:\DeploymentTutorial\DataTransferConfig.dtsConfig». Проверьте имя файла конфигурации.  
   
     -   Не удалось загрузить по крайней мере одну запись конфигурации в пакете. Проверьте записи конфигурации и предыдущие предупреждения, чтобы увидеть, какая из них ошибочна.  
   
-    -   Файл конфигурации C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig недопустим. Проверьте имя файла конфигурации.  
+    -   Недопустимый файл конфигурации  «C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig». Проверьте имя файла конфигурации.  
   
     -   Не удалось загрузить по крайней мере одну запись конфигурации в пакете. Проверьте записи конфигурации и предыдущие предупреждения, чтобы увидеть, какая из них ошибочна.  
   

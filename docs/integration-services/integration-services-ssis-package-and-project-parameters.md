@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.ssis.designer.parameter.f1
 - sql13.dts.designer.parameterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 27af358d3d6fb5feb1bd5d10fb194beb52df011e
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.openlocfilehash: 529bc6a4568ad9979da984607602c2a014b02743
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858704"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281318"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Параметры пакета и проекта Integration Services (SSIS)
   Параметры служб[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) могут быть использованы для присвоения значений свойствам внутри пакетов во время выполнения пакетов. Можно создать *параметры проекта* на уровне проекта и *параметры пакета* на уровне пакета. Параметры проекта используются для предоставления любых внешних данных, получаемых проектом, одному пакету в проекте или более. Параметры пакета позволяют изменить выполнение пакета. При этом изменять пакет и развертывать его повторно не придется.  
@@ -103,7 +103,7 @@ ms.locfileid: "51858704"
 ## <a name="create-parameters"></a>Create Parameters
 В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] можно создавать параметры проектов и пакетов. Следующие процедуры содержат пошаговые инструкции для создания параметров пакета (проекта).  
   
-> **ПРИМЕЧАНИЕ.** Если выполняется преобразование проекта, созданного с помощью предыдущей версии служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], в модель развертывания проекта, то для создания параметров на основе конфигураций можно запустить **Мастер преобразования проектов служб Integration Services**. Дополнительные сведения см. в разделе [Развертывание проектов и пакетов служб Integration Services (SSIS)](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+> **ПРИМЕЧАНИЕ.** Если выполняется преобразование проекта, созданного с помощью предыдущей версии служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , в модель развертывания проекта, то для создания параметров на основе конфигураций можно запустить **Мастер преобразования проекта служб Integration Services** . Дополнительные сведения см. в разделе [Развертывание проектов и пакетов служб Integration Services (SSIS)](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
 ### <a name="create-package-parameters"></a>Создание параметров пакета  
   
@@ -126,7 +126,7 @@ ms.locfileid: "51858704"
     |Обязательно|Требует указать значение, отличное от значения по умолчанию проекта, перед выполнением пакета.|  
     |Описание|Для удобства обслуживания — описание параметра. В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]задайте описание параметра в окне свойств среды Visual Studio, когда параметр выделен в соответствующем окне параметров.|  
   
-    > **ПРИМЕЧАНИЕ.** При развертывании проекта в каталоге с ним будут связаны еще несколько свойств. Чтобы просмотреть все свойства для всех параметров в каталоге, используйте представление [catalog.object_parameters (база данных SSISDB)](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md).  
+    > **ПРИМЕЧАНИЕ.** При развертывании проекта в каталог с ним будут связаны еще несколько свойств. Чтобы просмотреть все свойства для всех параметров в каталоге, используйте представление [catalog.object_parameters (база данных SSISDB)](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md).  
   
 4.  Сохраните проект для сохранения изменений, внесенных в параметры. Значения параметров хранятся в файле проекта.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "51858704"
  **Описание**  
  Задайте описание параметра.  
   
- **Value**  
+ **Значение**  
  Задайте значение параметра по умолчанию. Оно также называется значением по умолчанию проекта, которое может быть переопределено позднее во время развертывания.  
   
  **Область действия**  
@@ -214,6 +214,6 @@ ms.locfileid: "51858704"
  Чтобы установить параметры по умолчанию сервера с использованием Transact-SQL, используйте хранимую процедуру [catalog.set_object_parameter_value (база данных SSISDB)](../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md). Для просмотра текущих значений по умолчанию сервера используйте запрос к представлению [catalog.object_parameters (база данных SSISDB)](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md). Чтобы удалить значение по умолчанию сервера, используйте хранимую процедуру, используйте хранимую процедуру [catalog.clear_object_parameter_value (база данных SSISDB)](../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md).  
   
 ## <a name="related-content"></a>См. также  
- Запись в блоге [SSIS Quick Tip: Required Parameters](https://go.microsoft.com/fwlink/?LinkId=239781)(Краткая рекомендация по службам SSIS. Необходимые параметры) на mattmasson.com.  
+ Запись в блоге [SSIS Quick Tip: Required Parameters](https://go.microsoft.com/fwlink/?LinkId=239781) (Краткие рекомендации по службам SSIS. Необходимые параметры) на сайте mattmasson.com.  
   
   

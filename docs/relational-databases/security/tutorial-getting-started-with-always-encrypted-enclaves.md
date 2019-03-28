@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 14b086c18dab363ca1c9afe7816d802d5a5262f3
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: a24f7577a5ac01b3bc035bd68056de3a95fa156c
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58072318"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417156"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Учебник. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -92,18 +92,19 @@ ms.locfileid: "58072318"
 >[!NOTE]
 >Рекомендуется использовать аттестацию ключа узла только в тестовых средах. Для рабочих сред следует использовать аттестацию доверенного платформенного модуля (TPM).
 
-1. Войдите на компьютер SQL Server с правами администратора, откройте консоль Windows PowerShell с повышенными привилегиями и установите компонент Guarded Host (Защищенный узел); при этом будет также установлена технология Hyper-V (если она еще не установлена).
+1. Войдите на компьютер SQL Server с правами администратора, откройте консоль Windows PowerShell с повышенными привилегиями и найдите имя компьютера, указанное в переменной computername.
+
+   ```powershell
+   $env:computername 
+   ```
+
+2. Установите компонент Guarded Host (Защищенный узел). При этом будет также установлена технология Hyper-V (если она еще не установлена).
 
    ```powershell
    Enable-WindowsOptionalFeature -Online -FeatureName HostGuardian -All
    ```
 
-2. При появлении запроса на завершение установки Hyper-V перезагрузите компьютер SQL Server.
-3. Получите значение ниже переменной, показанной ниже, чтобы определить имя компьютера SQL Server.
-
-   ```powershell
-   $env:computername 
-   ```
+3. При появлении запроса на завершение установки Hyper-V перезагрузите компьютер SQL Server.
 
 4. Снова войдите на компьютер SQL Server с правами администратора, откройте консоль Windows PowerShell с повышенными привилегиями, создайте уникальный ключ узла и экспортируйте полученный открытый ключ в файл.
 
@@ -112,14 +113,15 @@ ms.locfileid: "58072318"
    Get-HgsClientHostKey -Path $HOME\Desktop\hostkey.cer
    ```
 
-5. Скопируйте файл ключа узла, созданный на предыдущем шаге, на компьютер HGS. В следующих инструкциях подразумевается, что файл называется hostkey.cer и он скопирован на рабочий стол компьютера HGS.
+5. Скопируйте вручную файл ключа узла, созданный на предыдущем шаге, на компьютер HGS. В следующих инструкциях подразумевается, что файл называется hostkey.cer и он скопирован на рабочий стол компьютера HGS.
+
 6. На компьютере HGS откройте консоль Windows PowerShell с повышенными привилегиями и зарегистрируйте ключ узла вашего компьютера SQL Server с помощью HGS:
 
    ```powershell
    Add-HgsAttestationHostKey -Name <your SQL Server computer name> -Path $HOME\Desktop\hostkey.cer
    ```
 
-7. На компьютере SQL Server в консоли Windows PowerShell с повышенными привилегиями выполните следующую команду, чтобы сообщить компьютеру SQL Server, где должна выполняться аттестация. Убедитесь, что указали IP-адрес или DNS-имя своего компьютера HGS. 
+7. На компьютере SQL Server в консоли Windows PowerShell с повышенными привилегиями выполните следующую команду, чтобы сообщить компьютеру SQL Server, где должна выполняться аттестация. Обязательно укажите IP-адрес или DNS-имя своего компьютера HGS в качестве обоих значений адреса. 
 
    ```powershell
    # use http, and not https
@@ -183,6 +185,9 @@ ms.locfileid: "58072318"
 3. Убедитесь, что подключение к только что созданной базе данных установлено. Создайте новую таблицу с именем Employees.
 
     ```sql
+    USE [ContosoHR];
+    GO
+    
     CREATE TABLE [dbo].[Employees]
     (
         [EmployeeID] [int] IDENTITY(1,1) NOT NULL,
@@ -305,6 +310,7 @@ ms.locfileid: "58072318"
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```
+3. Попробуйте выполнить тот же запрос еще раз в окне запроса с отключенной функцией Always Encrypted и запишите код возникшей ошибки.
 
 ## <a name="next-steps"></a>Next Steps
 Другие варианты использования см. в разделе [Настройка Always Encrypted с безопасными анклавами](encryption/configure-always-encrypted-enclaves.md). Также можно попытаться выполнить следующее.

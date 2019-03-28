@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Публикация пакета служб SSIS в представлении SQL | Документы Майкрософт
+title: Пошаговое руководство. Публикация пакета SSIS в виде представления SQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 968ae6356d2f9d9b84b8cf2d5bf6b012b000b7b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0096e6ff64267e6568abd22729f250a4c76adc03
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521231"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281868"
 ---
-# <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Пошаговое руководство. Публикация пакета служб SSIS в представлении SQL
+# <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Пошаговое руководство. Публикация пакета служб SSIS в качестве представления SQL
   В этом пошаговом руководстве приводятся подробные инструкции для публикации пакета служб SSIS в качестве представления SQL в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="prerequisites"></a>предварительные требования  
@@ -30,7 +30,7 @@ ms.locfileid: "52521231"
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   
-## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Шаг 1. Построение и развертывание проекта служб SSIS в каталоге служб SSIS  
+## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Шаг 1. Создание и развертывание проекта SSIS в каталоге SSIS  
  На этом шаге создается пакет служб SSIS, который извлекает данные из поддерживаемого источника данных SSIS (в данном примере будет использоваться база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) и выводит данные с помощью компонента назначения потоковой передачи данных. Затем будет выполнено построение и развертывание проекта служб SSIS в каталоге служб SSIS.  
   
 1.  Запустите **SQL Server Data Tools**. В меню **Пуск** последовательно укажите пункты **Все программы**, **Microsoft SQL Server**и выберите **SQL Server Data Tools**.  
@@ -55,7 +55,7 @@ ms.locfileid: "52521231"
   
 5.  Перетащите **исходный компонент** из области элементов в **Конструктор потоков данных** и настройте его на извлечение данных из источника данных.  
   
-    1.  Для пошагового руководства создайте тестовую базу данных **TestDB** с таблицей **Сотрудник**. Создайте таблицу с тремя столбцами: **Идентификатор**, **FirstName** и **LastName**.  
+    1.  Для работы с пошаговым руководством создайте тестовую базу данных **TestDB** с таблицей **Сотрудник**. Создайте таблицу с тремя столбцами: **Идентификатор**, **FirstName** и **LastName**.  
   
     2.  Задайте **Идентификатор** в качестве первичного ключа.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "52521231"
   
     2.  В соответствии с инструкциями мастера разверните проект в каталоге служб SSIS на локальном сервере базы данных. В следующем примере используется **Power BI** в качестве имени папки и **SSISPackagePublishing** в качестве имени проекта в каталоге служб SSIS.  
   
-## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>Шаг 2. Использование мастера публикации веб-канала данных служб SSIS для публикации пакета служб SSIS в виде представления SQL  
+## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>Этап 2. Публикация пакета SSIS в виде представления SQL с помощью мастера публикации веб-канала данных SSIS  
  На этом шаге используется мастер публикации веб-канала данных служб SQL Server Integration Services (SSIS) для публикации пакета служб SSIS в виде представления в базе данных SQL Server. Выходные данные пакета могут быть востребованы посредством запроса этого представления.  
   
  Мастер публикации веб-канала данных служб SSIS создает связанный сервер с помощью поставщика OLE DB для служб SSIS (SSISOLEDB), а затем создает представление SQL, состоящее из запроса на связанном сервере. Этот запрос содержит имя папки, имя проекта и имя пакета в каталоге служб SSIS.  
@@ -101,7 +101,7 @@ ms.locfileid: "52521231"
   
          ![Мастер публикации веб-канала данных — страница параметров пакета](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Мастер публикации веб-канала данных — страница параметров пакета")  
   
-    2.  Щелкните **Обзор** рядом с полем "Путь", перейдите в каталог служб SSIS, выберите пакет служб SSIS, который требуется опубликовать (например, **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**), и нажмите кнопку **ОК**.  
+    2.  Щелкните **Обзор** рядом с полем "Путь", перейдите к каталогу SSIS, выберите пакет SSIS, который требуется опубликовать (например, **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**), и нажмите кнопку **ОК**.  
   
          ![Мастер публикации веб-канала данных — обзор пакета](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Мастер публикации веб-канала данных — обзор пакета")  
   
@@ -147,7 +147,7 @@ ms.locfileid: "52521231"
   
      ![Мастер публикации веб-канала данных — страница сводки](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "Мастер публикации веб-канала данных — страница сводки")  
   
-     Теперь выходные данные пакета можно запрашивать путем выполнения следующей инструкции SQL для базы данных SELECT * FROM [SSISPackageView].  
+     Теперь выходные данные пакета можно запрашивать с помощью следующей инструкции SQL для базы данных: SELECT * FROM [SSISPackageView].  
   
 9. Нажмите кнопку **Сохранить отчет**, чтобы сохранить этот отчет в виде XML-файла.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "52521231"
   
 4.  Убедитесь, что это результаты из пакета служб SSIS.  
   
-## <a name="step-4-verify-the-ssis-package-execution"></a>Шаг 4. Проверка выполнение пакета служб SSIS  
+## <a name="step-4-verify-the-ssis-package-execution"></a>Шаг 4. Проверка выполнения пакета SSIS  
  На этом шаге проверяется выполнение пакета служб SSIS.  
   
 1.  В SQL Server Management Studio разверните **Каталоги служб Integration Services**, **SSISDB**, далее разверните **папку** , в которой находится проект служб SSIS, разверните **Проекты**, узел проекта, а затем **Пакеты**.  

@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Документация Майкрософт
 description: Создание синтаксиса базы данных для SQL Server, Базы данных SQL Azure, Хранилища данных SQL Azure и Analytics Platform System
 ms.custom: ''
-ms.date: 03/08/2019
+ms.date: 03/18/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6283f95a8d3dc34964d13a21b75097ab5f51a56d
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: d63faad8a29853354e6187d963dc23ccd78b0252
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974553"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222148"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -1317,7 +1317,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 Максимально допустимый размер данных rowstore в базе данных. Размер данных, хранящихся в таблицах rowstore, разностном хранилище индекса columnstore или некластеризованном индексе на базе кластеризованного индекса columnstore не может превышать значение MAXSIZE. Ограничения по размеру (значение MAXSIZE) не применяются к данным, сжатым в формат columnstore.
 
 SERVICE_OBJECTIVE     
-Определяет уровень производительности. Дополнительные сведения о целевых уровнях служб для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] см. на странице [Уровни производительности](https://azure.microsoft.com/documentation/articles/performance-tiers/).
+Определяет уровень производительности. Подробные сведения о целях служб для Хранилища данных SQL см. в статье о [единицах использования хранилища данных (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## <a name="general-remarks"></a>Общие замечания
 Используйте [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md), чтобы просмотреть свойства базы данных.

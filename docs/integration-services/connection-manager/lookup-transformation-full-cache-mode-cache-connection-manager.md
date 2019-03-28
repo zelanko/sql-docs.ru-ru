@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b44eaab3266d75663458572af238f5a15bd35b5e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c30fcacb779a9656b70edad79e976bde575537de
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642291"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290600"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Преобразование "Уточняющий запрос" в режиме полного кэширования — диспетчер подключений кэша
   Можно настроить преобразование «Уточняющий запрос», чтобы использовать режим полного кэширования и диспетчер соединений с кэшем. В режиме полного кэширования эталонный набор данных загружается в кэш еще до запуска преобразования «Уточняющий запрос».  
@@ -62,7 +62,7 @@ ms.locfileid: "51642291"
   
 -   [Контейнер последовательности](../../integration-services/control-flow/sequence-container.md)  
   
- Видеоматериал, в котором показано, как реализовать преобразование "Уточняющий запрос" в режиме полного кэширования с помощью диспетчера подключений с кэшем, см. в статье [Как реализовать преобразование "Уточняющий запрос" в режиме полного кэширования (видеоматериал по SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
+ Видео, в котором показано, как реализовать преобразование "Уточняющий запрос" в режиме полного кэширования с помощью диспетчера подключений к кэшу, см. в статье [Как реализовать преобразование "Уточняющий запрос" в режиме полного кэширования (видеоматериал по SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>Реализация преобразования «Уточняющий запрос» в режиме полного кэширования в одном пакете с использованием диспетчера соединений с кэшем и источника данных в потоке данных  
   

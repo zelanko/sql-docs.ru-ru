@@ -16,15 +16,15 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 184f3337f706d2a19210a8304d6b351b352ea309
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3e2e77caa45d704c1ecaccb1bb85b6bf6845dd47
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639901"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281968"
 ---
 # <a name="data-mining-query-task"></a>Задача «Запрос интеллектуального анализа данных»
   Задача «Запрос интеллектуального анализа данных» запускает прогнозирующие запросы, основанных на моделях интеллектуального анализа данных, встроенных в службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Прогнозирующий запрос создает прогноз для новых данных с использованием моделей интеллектуального анализа данных. Например, прогнозирующий запрос может предсказать, сколько яхт может быть продано в летние месяцы, или сформировать список предполагаемых клиентов, которые могут купить яхту.  
@@ -84,12 +84,12 @@ ms.locfileid: "51639901"
  **Соединение**  
  Выберите из списка диспетчер соединений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или нажмите кнопку **Создать** для создания нового диспетчера соединений.  
   
- **См. также:**  [Добавление диспетчера соединений служб Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+ **См. также:**  [Диспетчер подключений служб Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
  **Создать**  
  Создает новый диспетчер соединений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- **См. также:** [Добавление диалогового окна "Диспетчер соединений со службами Analysis Services" в справочнике по пользовательскому интерфейсу](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **См. также:** [Справочник по пользовательскому интерфейсу: диалоговое окно "Добавление диспетчера подключений служб Analysis Services"](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Структура интеллектуального анализа данных**  
  Выберите структуру интеллектуального анализа из данного списка.  
@@ -116,12 +116,12 @@ ms.locfileid: "51639901"
  **Запрос интеллектуального анализа данных**  
  Введите запрос интеллектуального анализа данных.  
   
- **См. также:** [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../../dmx/data-mining-extensions-dmx-reference.md)  
+ **См. также:**  [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../../dmx/data-mining-extensions-dmx-reference.md)  
   
  **Создать новый запрос**  
  Создать запрос интеллектуального анализа данных, используя графическое средство.  
   
- **См. также:** [Data Mining Query](../../integration-services/control-flow/data-mining-query.md)  
+ **См. также:** [Запрос интеллектуального анализа данных](../../integration-services/control-flow/data-mining-query.md)  
   
 ### <a name="parameter-mapping-tab-options"></a>Параметры вкладки «Сопоставление параметров»  
  **Имя параметра**  

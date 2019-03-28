@@ -19,15 +19,15 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d100819807cd669803ef698d4614373b0b997905
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e2c7ac89c705c8825a87cfeee381190a6becfa90
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503994"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282368"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   Задача "Очередь сообщений" позволяет использовать службу очередей сообщений Майкрософт для отправки и получения сообщений между пакетами служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] или для отправления сообщений в очередь приложений, которая обрабатывается пользовательским приложением. Эти сообщения могут принимать форму простого текста, файлов или переменных и их значений.  
@@ -119,7 +119,7 @@ ms.locfileid: "52503994"
  **MSMQConnection**  
  Выберите существующий диспетчер подключений MSMQ или щелкните \<**Создать соединение...**>, чтобы создать диспетчер.  
   
- **См. также**: [Диспетчер FTP-соединений](../../integration-services/connection-manager/msmq-connection-manager.md), [Редактор диспетчера FTP-соединений](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
+ **См. также**: [Диспетчер FTP-соединений](../../integration-services/connection-manager/msmq-connection-manager.md), [Редактор диспетчера FTP-соединений](../../integration-services/connection-manager/msmq-connection-manager-editor.md).  
   
  **Сообщение**  
  Указывает, будет ли задача «Очередь сообщений» отправлять или получать сообщения. При выборе режима **Отправить сообщение**на левой панели диалогового окна появляется страница «Отправка», при выборе режима **Получить сообщение**появляется страница «Получение». По умолчанию, устанавливается режим **Отправить сообщение**.  
@@ -215,7 +215,7 @@ ms.locfileid: "52503994"
  **Идентификатор**  
  Если выбрано применение фильтра, следует ввести уникальный идентификатор пакета, из которого могут быть получены сообщения, или нажать кнопку с многоточием **(…)** и указать пакет.  
   
- **См. также:** [Выбор переменных](../../integration-services/control-flow/select-a-package.md)  
+ **См. также:** [Выбор пакета](../../integration-services/control-flow/select-a-package.md)  
   
 #### <a name="messagetype--variable-message"></a>MessageType = Сообщение с переменными  
  **Filter**  
@@ -229,7 +229,7 @@ ms.locfileid: "52503994"
  **Переменная**  
  Введите имя переменной либо выберите \<**Создать переменную…**> и затем настройте новую переменную.  
   
- **См. также:** [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также:** [Добавить переменную](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="filter-dynamic-options"></a>Динамические параметры фильтра  
   
@@ -241,7 +241,7 @@ ms.locfileid: "52503994"
  **Идентификатор**  
  Если выбрано применение фильтра, следует ввести уникальный идентификатор пакета, из которого могут быть получены сообщения, или нажать кнопку с многоточием **(…)** и указать пакет.  
   
- **См. также:** [Выбор переменных](../../integration-services/control-flow/select-a-package.md)  
+ **См. также:** [Выбор пакета](../../integration-services/control-flow/select-a-package.md)  
   
 #### <a name="messagetype--string-message"></a>MessageType = Строковое сообщение  
  **Сравнить**  
@@ -274,7 +274,7 @@ ms.locfileid: "52503994"
  **Переменная**  
  Введите имя переменной, в которой должно храниться полученное сообщение, либо выберите \<**Создать переменную…**> и затем настройте новую переменную.  
   
- **См. также:** [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также:** [Добавить переменную](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="select-variables"></a>Выбор переменных
   Используйте диалоговое окно **Выбор переменных** для указания переменных, которые следует использовать при выполнении операции отправки сообщения в задаче «Очередь сообщений». Список **Доступные переменные** включает системные и пользовательские переменные, находящиеся в области действия задачи "Очередь сообщений" или ее родительского контейнера. Задача использует переменные, перечисленные в списке **Выбранные переменные** .  
@@ -295,7 +295,7 @@ ms.locfileid: "52503994"
  **Создать переменную**  
  Создать новую переменную.  
   
- **См. также:** [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также:** [Добавить переменную](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
 ## <a name="see-also"></a>См. также:  
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Поток управления](../../integration-services/control-flow/control-flow.md)  

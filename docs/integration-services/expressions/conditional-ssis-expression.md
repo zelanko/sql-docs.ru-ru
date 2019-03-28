@@ -1,5 +1,5 @@
 ---
-title: '? : (условный) (выражение служб SSIS) | Документы Майкрософт'
+title: '? , перечислены ниже. (условный) (выражение служб SSIS) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cd01f26f7c57ebe5b2c17b342b77ffc5add7e150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43ba631d4b93e3f748afa0c64ff95d42609bd545
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626022"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272101"
 ---
-# <a name="--conditional-ssis-expression"></a>? : (условный) (выражение служб SSIS)
+# <a name="--conditional-ssis-expression"></a>? , перечислены ниже. (условный) (выражение служб SSIS)
   Возвращает одно из двух выражений на основе вычисления логического выражения. Если логическое выражение принимает значение TRUE, то возвращается результат вычисления первого выражения. Если логическое выражение принимает значение FALSE, возвращается результат вычисления второго выражения.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -58,9 +58,9 @@ boolean_expression?expression1:expression2
   
 -   **Числовой** Как *expression1* , так и *expression2* должны иметь числовой тип данных. В соответствии с правилами неявных числовых преобразований, выполняемых средством оценки выражений, пересечением типов данных должен быть числовой тип данных. NULL не может быть значением пересечения двух числовых типов данных. Дополнительные сведения см. в разделе [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
--   **Строковый** . Значения выражений *expression1* и *expression2* должны иметь строковый тип: DT_STR или DT_WSTR. Вычисленные значения этих двух выражений могут иметь различные строковые типы данных. Результат будет иметь тип данных DT_WSTR с длиной более длинного аргумента.  
+-   **Строковый**. Значения выражений *expression1* и *expression2* должны иметь строковый тип: DT_STR или DT_WSTR. Вычисленные значения этих двух выражений могут иметь различные строковые типы данных. Результат будет иметь тип данных DT_WSTR с длиной более длинного аргумента.  
   
--   **Дата, время или дата-время** . Значения выражений *expression1* и *expression2* должны иметь один из следующих типов данных: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET и DT_FILETIME.  
+-   **Дата, время или дата и время**. Значения выражений *expression1* и *expression2* должны иметь один из следующих типов данных: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET или DT_FILETIME.  
   
     > [!NOTE]  
     >  Система не поддерживает сравнения выражений, значения которых имеют тип данных даты, времени или даты-времени. Возникнет ошибка.  

@@ -11,18 +11,18 @@ f1_keywords:
 - sql13.dts.designer.afpstorageconn.f1
 - sql14.dts.designer.afpstorageconn.f1
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 31440d6479353467d687467466f9c838a49d5252
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a46945b7c7725d680fb303a451327dc2733642aa
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724152"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277833"
 ---
 # <a name="azure-storage-connection-manager"></a>Диспетчер подключений службы хранилища Azure
-  **Диспетчер подключений службы хранилища Azure** позволяет использовать пакет SSIS для подключения к учетной записи хранения Azure с помощью указываемых значений свойств: имени учетной записи хранения и ключа учетной записи.  
+  **Диспетчер подключений службы хранилища Azure** позволяет пакету служб SSIS подключаться к подписке Azure с помощью указываемых вами значений свойств: имени учетной записи хранения и ключа учетной записи.  
    
  **Диспетчер подключений службы хранилища Azure** входит в состав пакета дополнительных компонентов [SQL Server Integration Services (SSIS) для Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md). 
   

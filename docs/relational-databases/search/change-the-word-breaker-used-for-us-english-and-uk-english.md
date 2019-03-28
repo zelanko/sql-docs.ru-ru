@@ -1,27 +1,26 @@
 ---
 title: Изменение средства разбиения текста на слова, используемого для английского языка (США и Великобритания) | Документация Майкрософт
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e6d1ec3aff285b91e1099187f53b904cad7368c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9f26af2d630270428aec6affa0d633eeac86194b
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670874"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305462"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Change the Word Breaker Used for US English and UK English
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливает новую версию (версию 14.0.4999.1038) средства разбиения по словам и парадигматического модуля для английского языка, заменяя предыдущую версию этих компонентов (версию 12.0.6828.0). Дополнительные сведения об изменениях в поведении новых компонентов см. в статье [Изменения в функциях полнотекстового поиска](https://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f). В этом разделе описывается способ переключения из новой версии этих компонентов в предыдущую версию или обратно из предыдущей версии в новую версию. При работе с кластерными установками эти изменения необходимо вносить на всех основных и пассивных узлах.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливает новую версию (версию 14.0.4999.1038) средства разбиения по словам и парадигматического модуля для английского языка, заменяя предыдущую версию этих компонентов (версию 12.0.6828.0). Дополнительные сведения об изменениях в поведении новых компонентов см. в статье [Изменения в функциях полнотекстового поиска](/sql/database-engine/behavior-changes-to-full-text-search). В этом разделе описывается способ переключения из новой версии этих компонентов в предыдущую версию или обратно из предыдущей версии в новую версию. При работе с кластерными установками эти изменения необходимо вносить на всех основных и пассивных узлах.  
   
  В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использовались другие средства разбиения по словам, представленные другими идентификаторами CLSID для английского языка (США) (LCID 1033) и английского языка (Великобритания) (LCID 2057). В этом выпуске оба идентификатора LCID используют одни и те же компоненты с общими идентификаторами CLSID, как показано в следующей таблице.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "51670874"
   
     4.  Обновите данные (по умолчанию) значения этого раздела до **infosoft.dll**.  
   
-3.  Перейдите к следующему узлу: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<корень_экземпляра\>\MSSearch\Language\enu**.  
+3.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\enu**.  
   
 4.  Обновите значение раздела **WBreakerClass** до **{188D6CC5-CB03-4C01-912E-47D21295D77E}**.  
   
@@ -72,7 +71,7 @@ ms.locfileid: "51670874"
   
     4.  Обновите данные (по умолчанию) значения этого раздела до **infosoft.dll**.  
   
-3.  Перейдите к следующему узлу: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<корень_экземпляра\>\MSSearch\Language\eng**.  
+3.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
   
 4.  Обновите значение раздела **WBreakerClass** до **{173C97E2-AEBE-437C-9445-01B237ABF2F6}**.  
   
@@ -96,7 +95,7 @@ ms.locfileid: "51670874"
   
     4.  Обновите данные (по умолчанию) значения этого раздела до **MsWb7.dll**.  
   
-3.  Перейдите к следующему узлу: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<корень_экземпляра\>\MSSearch\Language\eng**.  
+3.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
   
 4.  Обновите значение раздела **WBreakerClass** до **{9faed859-0b30-4434-ae65-412e14a16fb8}**.  
   
@@ -118,7 +117,7 @@ ms.locfileid: "51670874"
   
     4.  Обновите данные (по умолчанию) значения этого раздела до **MsWb7.dll**.  
   
-3.  Перейдите к следующему узлу: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<корень_экземпляра\>\MSSearch\Language\eng**.  
+3.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
   
 4.  Обновите значение раздела **WBreakerClass** до **{9faed859-0b30-4434-ae65-412e14a16fb8}**.  
   
@@ -128,6 +127,6 @@ ms.locfileid: "51670874"
   
 ## <a name="see-also"></a>См. также:  
  [Перевод средств разбиения по словам, используемых поиском, на предыдущую версию](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
- [Изменения в функциях полнотекстового поиска](https://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
+ [Изменения в функциях полнотекстового поиска](/sql/database-engine/behavior-changes-to-full-text-search)  
   
   

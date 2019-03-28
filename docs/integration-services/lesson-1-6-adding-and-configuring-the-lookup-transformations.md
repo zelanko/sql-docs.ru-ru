@@ -1,22 +1,21 @@
 ---
 title: Шаг 6. Добавление и настройка преобразований "Уточняющий запрос" | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/03/2019
+ms.date: 03/19/2019
 ms.prod: sql
-ms.prod_service: integration-services
-ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 82db40d3b3fd61129823b3e745d097b47bd6973b
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.reviewer: ''
+ms.openlocfilehash: b64cddbe6c786e488c1ba9b9d289e9e48f786cf3
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143380"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221967"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>Занятие 1-6. Добавление и настройка преобразований "Уточняющий запрос"
 
@@ -98,7 +97,7 @@ ms.locfileid: "54143380"
   
 8.  На вкладке **Столбцы** задайте следующие параметры.  
   
-    1.  На панели **Доступные входные столбцы** перетяните **CurrencyDate** на панель **Доступные столбцы подстановки** и поместите его на элемент **FullDateAlternateKey**.  
+    1.  На панели **Доступные входные столбцы** перетяните **CurrencyDate** на панель **Доступные столбцы подстановки** и поместите его на элемент **FullDateAlternateKey**.  Если отобразится сообщение о несоответствии типов данных, измените тип данных для CurrencyDate на [DT_DBDATE].
   
     2.  В списке **Доступные столбцы подстановки** установите флажок слева от столбца **DateKey**.  
   
@@ -115,6 +114,3 @@ ms.locfileid: "54143380"
   
 ## <a name="see-also"></a>См. также раздел  
 [Преобразование "Уточняющий запрос"](../integration-services/data-flow/transformations/lookup-transformation.md)  
-  
-  
-  

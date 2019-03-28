@@ -18,15 +18,15 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 674dd31df5acbe93fd48ad9b0b3ab504cebbc98a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ff217e16fb9d153872d00074ff2f5d672be056d0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504066"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273905"
 ---
 # <a name="execute-sql-task"></a>Задача "Выполнение SQL"
   Задача «Выполнение SQL» выполняет инструкции SQL или хранимые процедуры из пакета. Задача может содержать одну инструкцию SQL или несколько инструкций, запускаемых последовательно. Задача «Выполнение SQL» может быть использована для следующих целей:  
@@ -142,7 +142,7 @@ ms.locfileid: "52504066"
  **ConnectionType**  
  Выберите тип, используемый диспетчером соединений для соединения с источником данных. В качестве возможных типов соединения могут быть: **OLE DB**, **ODBC**, **ADO**, **ADO.NET** и **SQLMOBILE**.  
   
- **См. также:** [Диспетчер соединений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md), [Диспетчер соединений ODBC](../../integration-services/connection-manager/odbc-connection-manager.md), [Диспетчер соединений ADO](../../integration-services/connection-manager/ado-connection-manager.md), [Диспетчер соединений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [Диспетчер соединений SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **См. также:** подробные сведения о [диспетчере подключений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md), [диспетчере подключений ODBC](../../integration-services/connection-manager/odbc-connection-manager.md), [диспетчере подключений ADO](../../integration-services/connection-manager/ado-connection-manager.md), [диспетчере подключений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [диспетчере подключений SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md).  
   
  **Соединение**  
  Выберите соединение из списка определенных диспетчеров соединений. Для создания соединения выберите \<**Создать соединение...**>.  
@@ -189,13 +189,13 @@ ms.locfileid: "52504066"
  **FileConnection**  
  Выберите существующий диспетчер подключений файлов или нажмите кнопку \<**Создать подключение...**>, чтобы создать новый диспетчер подключений.  
   
- **См. также:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../integration-services/connection-manager/file-connection-manager-editor.md).  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = Переменная  
  **SourceVariable**  
  Выберите существующую переменную или щелкните \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>Страница "Сопоставление параметров" — редактор задачи "Выполнение SQL"
 Используйте страницу **Сопоставление параметров** диалогового окна **Редактор задачи «Выполнение SQL»** для сопоставления переменных с параметрами в инструкции SQL.  
@@ -204,7 +204,7 @@ ms.locfileid: "52504066"
  **Имя переменной**  
  После добавления сопоставления параметров нажатием кнопки **Добавить** выберите системную или пользовательскую переменную в списке или щелкните \<**Создать переменную...**> для добавления новой переменной с помощью диалогового окна **Добавление переменной**.  
   
- **См. также:** [Переменные в службах Integration Services](../../integration-services/integration-services-ssis-variables.md)  
+ **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md)  
   
  **Направление**  
  Выбор направления для параметра. Сопоставьте каждую переменную с входным параметром, выходным параметром или кодом возврата.  

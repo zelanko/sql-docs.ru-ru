@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5c1348023145749b6762327b6fc1ad9bc7483075
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42cc80b22f5daae0deeaa355b4c8d23d2c888455
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598966"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289850"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>Как изменить свойства экземпляра CDC
   Следующая процедура описывает изменение свойств конфигурации экземпляра CDC с помощью консоли конструктора CDC.  
@@ -35,19 +35,19 @@ ms.locfileid: "47598966"
   
 5.  В редакторе свойств измените свойства на следующих вкладках:  
   
-    -   **Oracle**. На вкладке **Oracle** в редакторе свойств можно изменить описание, которое было введено на странице создания базы данных CDC в мастере создания экземпляра, а также изменить данные для соединения с базой данных интеллектуального анализа журналов Oracle.  
+    -   **Oracle**: на вкладке **Oracle** в редакторе свойств можно изменить описание, которое было введено на странице создания базы данных CDC мастера создания экземпляра, а также изменить данные для подключения к базе данных интеллектуального анализа журналов Oracle.  
   
          Сведения о том, что можно изменить на этой вкладке, приведены в разделе [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md).  
   
-    -   **Таблицы**. На вкладке **Таблицы** можно изменять таблицы и столбцы, выбранные в базе данных-источнике Oracle.  
+    -   **Таблицы**: На вкладке **Таблицы** можно изменять таблицы и столбцы, выбранные в базе данных-источнике Oracle.  
   
          Сведения о том, что можно изменить на этой вкладке, приведены в разделе [Edit Tables](../../integration-services/change-data-capture/edit-tables.md).  
   
-    -   **Скрипты**. Вкладка **Скрипты** служит для обычного или повторного запуска скрипта в базе данных-источнике Oracle, который настраивает дополнительное журналирование.  
+    -   **Скрипты**: вкладка **Скрипты** служит для запуска или повторного запуска скрипта в базе данных-источнике Oracle, которая задает дополнительное журналирование.  
   
          Сведения о том, что можно сделать на этой вкладке, приведены в разделе [Review and Generate Supplemental Logging Scripts](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md).  
   
-    -   **Дополнительно**. На вкладке **Дополнительно** можно добавлять особые свойства к экземпляру CDC.  
+    -   **Дополнительно**: На вкладке **Дополнительно** можно добавлять особые свойства к экземпляру CDC.  
   
          Сведения о том, что можно сделать на этой вкладке, приведены в разделе [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md).  
   

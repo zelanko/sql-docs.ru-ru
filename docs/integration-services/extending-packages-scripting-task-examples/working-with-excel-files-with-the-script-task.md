@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 69771260dbffe33583e300942548a69fd21a5258
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e39c96672016f19ecc6506d48266da70e0edf1b5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529586"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274882"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Работа с файлами Excel в задаче "Скрипт"
   Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют диспетчер соединений Excel, источник «Excel» и назначение «Excel» для работы с данными, хранящимися в электронных таблицах в формате [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Технологии, описанные в этом разделе, используют задачу «Скрипт» для получения сведений о доступных базах данных Excel (файлах книги) и таблицах (листах и именованных диапазонах).
@@ -66,7 +66,7 @@ ms.locfileid: "52529586"
   
 5.  Установите язык скрипта по умолчанию для компонента скрипта, воспользовавшись параметром **Язык скрипта** страницы **Общие** диалогового окна **Параметры**. Дополнительные сведения см. в разделе [General Page](../general-page-of-integration-services-designers-options.md).  
   
-##  <a name="example1"></a> Описание примера 1. Проверка существования файла Excel  
+##  <a name="example1"></a> Описание примера 1. Проверка существования файла Excel  
  В этом примере определяется, существует ли файл книги Excel, указанной в переменной `ExcelFile`, а затем присваивается логическое значение переменной `ExcelFileExists` в соответствии с результатом. С помощью этого логического значения можно реализовать ветвление в рабочем процессе пакета.  
   
 ### <a name="to-configure-this-script-task-example"></a>Настройка этого образца задачи «Скрипт»  
@@ -136,7 +136,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a> Описание примера 2. Проверка существования таблицы Excel  
+##  <a name="example2"></a> Описание примера 2. Проверка существования таблицы Excel  
  В этом примере определяется, существует ли лист или именованный диапазон Excel, указанный в переменной `ExcelTable`, в книге Excel, указанной в переменной `ExcelFile`, а затем присваивается логическое значение переменной `ExcelTableExists` в соответствии с результатом. С помощью этого логического значения можно реализовать ветвление в рабочем процессе пакета.  
   
 ### <a name="to-configure-this-script-task-example"></a>Настройка этого образца задачи «Скрипт»  
@@ -243,7 +243,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> Описание примера 3. Получение списка файлов Excel в папке  
+##  <a name="example3"></a> Описание примера 3. Получение списка файлов Excel в папке  
  В этом примере массив заполняется списком файлов Excel, найденных в папке, которая была указана в качестве значения переменной `ExcelFolder`, а затем этот массив копируется в переменную `ExcelFiles`. Можно использовать перечислитель по объекту из переменной, чтобы выполнить итерацию по файлам в массиве.  
   
 ### <a name="to-configure-this-script-task-example"></a>Настройка этого образца задачи «Скрипт»  
@@ -315,7 +315,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>Альтернативное решение  
  Вместо того чтобы использовать задачу «Скрипт» для сбора списка файлов Excel в массив, можно применить перечислитель с циклом по каждому файлу для выполнения итерации по всем файлам Excel в папке. Дополнительные сведения см. в разделе [Просмотр файлов и таблиц Excel с помощью контейнера "цикл по каждому элементу"](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
   
-##  <a name="example4"></a> Описание примера 4. Получение списка таблиц в файле Excel  
+##  <a name="example4"></a> Описание примера 4. Получение списка таблиц в файле Excel  
  В этом примере массив заполняется списком листов и именованных диапазонов, найденных в файле книги Excel, которая была указана в переменной `ExcelFile`, а затем этот массив копируется в переменную `ExcelTables`. Можно использовать перечислитель по объекту из переменной, чтобы выполнить итерацию по таблицам в массиве.  
   
 > [!NOTE]  

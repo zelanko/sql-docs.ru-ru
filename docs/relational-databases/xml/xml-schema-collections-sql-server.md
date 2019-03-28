@@ -1,7 +1,7 @@
 ---
 title: Коллекции схем XML (SQL Server) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8a69b903fefb85b30ee6cd0a0019466c279fd0e
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d1b1110877d4735dee8606805f78a891c4a4b950
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255719"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375292"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Коллекции XML-схем (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "54255719"
   
  Например, рассмотрим следующую схему:  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             targetNamespace="uri:Cust_Orders2"  
@@ -130,6 +130,7 @@ ms.locfileid: "54255719"
 |**blockDefault**|Атрибут **block** применяется ко всем объявлениям элементов и определениям типов в схеме, где его еще нет. Ему присваивается значение, равное значению атрибута **blockDefault** .|  
 |**finalDefault**|Атрибут **final** применяется ко всем объявлениям элементов и определениям типов в схеме, где его еще нет. Ему присваивается значение, равное значению атрибута **finalDefault** .|  
 |**targetNamespace**|Сведения о компонентах, принадлежащих целевому пространству имен, хранятся в метаданных.|  
+| &nbsp; | &nbsp; |
   
 ##  <a name="perms"></a> Разрешения на коллекцию схем XML  
  При этом требуется иметь соответствующие разрешения на выполнение следующих операций:  
@@ -163,7 +164,7 @@ ms.locfileid: "54255719"
 ##  <a name="info"></a> Получение информации о схемах XML и коллекциях схем  
  Коллекции XML-схем перечислены в представлении каталога sys.xml_schema_collections. Коллекция XML-схем «sys» определяется системой. Она содержит предопределенные пространства имен, которые можно использовать во всех пользовательских коллекциях XML-схем, не загружая их явно. Этот список содержит пространства имен xml, xs, xsi, fn и xdt. Двумя другими представлениями каталога являются sys.xml_schema_namespaces, в котором перечислены все пространства имен каждой коллекции XML-схем и sys.xml_components, в котором перечислены все компоненты каждой XML-схемы.  
   
- Встроенная функция **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri*, позволяет получить экземпляр типа данных **xml** . Этот экземпляр содержит фрагменты для XML-схем, содержащихся в коллекции XML-схем, за исключением предопределенных XML-схем.  
+ Встроенная функция **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri* позволяет получить экземпляр типа данных **xml**. Этот экземпляр содержит фрагменты для XML-схем, содержащихся в коллекции XML-схем, за исключением предопределенных XML-схем.  
   
  Перечислить содержимое коллекции XML-схем можно двумя способами:  
   
@@ -176,7 +177,7 @@ ms.locfileid: "54255719"
 ### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Пример Перечисление пространств имен XML, входящих в коллекцию XML-схем  
  Выполните следующий запрос для коллекции XML-схем «myCollection»:  
   
-```  
+```sql
 SELECT XSN.name  
 FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN  
     ON (XSC.xml_collection_id = XSN.xml_collection_id)  
@@ -186,18 +187,18 @@ WHERE    XSC.name = 'myCollection'
 ### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Пример Перечисление содержимого коллекции XML-схем  
  Следующая инструкция перебирает содержимое коллекции XML-схем «myCollection» реляционной схемы dbo.  
   
-```  
+```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
  Отдельные XML-схемы из коллекции можно получить как экземпляры типа данных **xl** , указав целевое пространство имен в качестве третьего аргумента функции **XML_SCHEMA_NAMESPACE()**. Это показано в следующем примере.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Пример Вывод конкретной схемы из коллекции XML-схем  
- Следующая инструкция выводит XML-схему с целевым пространством имен "<https://www.microsoft.com/books>" из коллекции XML-схем "myCollection" реляционной схемы dbo.  
+ Следующая инструкция выводит XML-схему с _симулированным_ целевым пространством имен https/\/www.microsoft.com/was-books из коллекции XML-схем myCollection реляционной схемы dbo.  
   
-```  
+```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
-N'https://www.microsoft.com/books')  
+N'https://www.microsoft.com/was-books')  
 ```  
   
 ### <a name="querying-xml-schemas"></a>Запросы XML-схем  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 16801a8865260a1175fe4786869272774ed8b2c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c0ea69dd7aca4d8fea8499b59577dc3d507ad4a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596202"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272129"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Определение готовности информации об  изменениях данных
   В потоке управления пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , который выполняет добавочную загрузку измененных данных, вторая задача состоит в том, чтобы убедиться, что изменения данных за выбранный интервал времени подготовлены. Этот шаг необходим потому, что процесс асинхронной записи, возможно, еще не дошел до выбранной конечной точки.  
@@ -335,6 +335,6 @@ ms.locfileid: "47596202"
 ## <a name="next-step"></a>Следующий шаг  
  Убедившись, что информация об изменениях готова, выполните следующий шаг — подготовьте запрос для получения измененных данных.  
   
- **Следующий раздел:** [Подготовка к запросу информации об изменениях](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
+ **Следующая статья:** [Подготовка к запросу информации об изменениях данных](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
   
