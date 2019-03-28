@@ -12,12 +12,12 @@ ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fe1a3a45ce60ae4678b1b146ff41714db33bf69d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 83a9816afeae77036616bec4e850c09f613f0f74
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368876"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531316"
 ---
 # <a name="string-utility-functions-sample"></a>Пример функций программы работы со строками
   Образец String Utilities содержит потоковую возвращающую функцию с табличным значением, написанную на языках Visual C# и Visual Basic, которая разбивает разделенную запятыми строку на таблицу с одним столбцом. Он также содержит агрегатную функцию, преобразующую строковый столбец в разделенную запятыми строку.  Также реализованы скалярная функция и функции с табличными значениями, предоставляющие возможность поиска и замены с помощью регулярных выражений.  
@@ -27,7 +27,7 @@ ms.locfileid: "53368876"
 ## <a name="prerequisites"></a>предварительные требования  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
 -   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](https://go.microsoft.com/fwlink/?linkid=62796).  
   
@@ -885,7 +885,7 @@ GO
   
  Это файл `test.sql`, который проверяет образец, выполняя его функции.  
   
-```tsql  
+```sql  
 USE AdventureWorks  
 GO  
   

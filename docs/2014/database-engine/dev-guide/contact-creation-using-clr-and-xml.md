@@ -12,12 +12,12 @@ ms.assetid: b5185c1e-56de-41a8-a9c3-eec663750cde
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20a59cf2ac94b060c917a4cea2bbbb69dd877120
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c96b5b5f7ae92dd85f2c93dcb0423dcc342c5152
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371356"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534616"
 ---
 # <a name="contact-creation-using-clr-and-xml"></a>Создание контакта с использованием среды CLR и XML-кода
   Образец Contact для SQL Server содержит ряд полезных программ, образующих дополнительный функциональный слой поверх базового образца базы данных AdventureWorks2012. Первая программа создает контактные записи для разных групп людей, включенных в базу данных AdventureWorks2012. Контактные данные описываются в формате XML и передаются хранимой процедуре на языке C# или VB, которая создает XML-код и помещает его в нужные таблицы базы данных.  
@@ -25,7 +25,7 @@ ms.locfileid: "53371356"
 ## <a name="prerequisites"></a>предварительные требования  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
 -   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](https://go.microsoft.com/fwlink/?linkid=62796).  
   
@@ -1386,7 +1386,7 @@ End Class
   
  Это скрипт установки [!INCLUDE[tsql](../../includes/tsql-md.md)] (`Install.sql`), который выполняет развертывание сборки и создает в базе данных хранимую процедуру.  
   
-```tsql  
+```sql  
 use AdventureWorks  
 GO  
   

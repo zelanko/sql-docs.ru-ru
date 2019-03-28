@@ -18,12 +18,12 @@ ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 522dcff230177b807299d1647e0333517f93d8bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bca9c53780bb3258f73a274240c0bb5e63e126c3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728972"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538466"
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,20 +44,15 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@alert_name =**] **'***alert_name***'**  
- Имя предупреждения. *имя_предупреждения* — **nvarchar(128)**. Если *имя_предупреждения* является не указан, возвращаются сведения обо всех предупреждениях.  
+`[ @alert_name = ] 'alert_name'` Имя оповещения. *имя_предупреждения* — **nvarchar(128)**. Если *имя_предупреждения* является не указан, возвращаются сведения обо всех предупреждениях.  
   
- [  **@order_by =**] **"***order_by***"**  
- Порядок сортировки, в котором выдаются результаты. *order_by*— **sysname**, значение по умолчанию N '*имя*".  
+`[ @order_by = ] 'order_by'` Порядок сортировки, выдаются результаты. *order_by*— **sysname**, значение по умолчанию N '*имя*".  
   
- [  **@alert_id =**] *alert_id*  
- Идентификационный номер предупреждения, о котором запрашиваются сведения. *alert_id*— **int**, значение по умолчанию NULL.  
+`[ @alert_id = ] alert_id` Идентификационный номер предупреждения, о котором предоставляются данные. *alert_id*— **int**, значение по умолчанию NULL.  
   
- [  **@category_name =**] **"***категории***"**  
- Категория предупреждения. *Категория* — **sysname**, значение по умолчанию NULL.  
+`[ @category_name = ] 'category'` Категория предупреждения. *Категория* — **sysname**, значение по умолчанию NULL.  
   
- [ **@legacy_format**=] *legacy_format*  
- Указывает, следует ли выдавать результирующий набор в старом формате. *legacy_format* — **бит**, значение по умолчанию **0**. Когда *legacy_format* — **1**, **sp_help_alert** возвращает результирующий набор, возвращаемый **sp_help_alert** в Microsoft SQL Server 2000.  
+`[ @legacy_format = ] legacy_format` Является ли создают устаревших результирующий набор. *legacy_format* — **бит**, значение по умолчанию **0**. Когда *legacy_format* — **1**, **sp_help_alert** возвращает результирующий набор, возвращаемый **sp_help_alert** в Microsoft SQL Server 2000.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -68,8 +63,8 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**int**|Присвоенный системой уникальный целочисленный идентификатор.|  
-|**name**|**sysname**|Имя предупреждения (например, Демонстрация: полный **msdb** журнала).|  
-|**event_source**|**Nvarchar(100)**|Источник события. Всегда будет иметь **MSSQLServer** для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0|  
+|**name**|**sysname**|Имя предупреждения (например, «Demo: Полная **msdb** журнала).|  
+|**event_source**|**nvarchar(100)**|Источник события. Всегда будет иметь **MSSQLServer** для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Код ошибки сообщения, который определен для предупреждения (Обычно соответствует номеру ошибки в **sysmessages** таблицы). Если уровень серьезности используется для определения предупреждения, **message_id** — **0** или значение NULL.|  
@@ -83,7 +78,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**notification_message**|**nvarchar(512)**|Необязательное дополнительное сообщение, отправляемое оператору по электронной почте или на пейджер.|  
 |**include_event_description**|**tinyint**|Указывает, следует ли включить в текст уведомления описание ошибки SQL Server из журнала приложений Microsoft Windows.|  
 |**database_name**|**sysname**|База данных, ошибка в которой приводит к появлению предупреждения. Если имя базы данных равно значению NULL, предупреждение появляется независимо от места возникновения ошибки.|  
-|**event_description_keyword**|**Nvarchar(100)**|Описание ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в журнале приложений Windows, которое должно соответствовать указанной последовательности символов.|  
+|**event_description_keyword**|**nvarchar(100)**|Описание ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в журнале приложений Windows, которое должно соответствовать указанной последовательности символов.|  
 |**occurrence_count**|**int**|Количество раз возникновения предупреждения.|  
 |**count_reset_date**|**int**|Дата **occurrence_count** последнего сброса.|  
 |**count_reset_time**|**int**|Время **occurrence_count** последнего сброса.|  
@@ -102,8 +97,8 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**int**|Присвоенный системой уникальный целочисленный идентификатор.|  
-|**name**|**sysname**|Имя предупреждения (например, Демонстрация: полный **msdb** журнала).|  
-|**event_source**|**Nvarchar(100)**|Источник события. Всегда будет иметь **MSSQLServer** для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0|  
+|**name**|**sysname**|Имя предупреждения (например, «Demo: Полная **msdb** журнала).|  
+|**event_source**|**nvarchar(100)**|Источник события. Всегда будет иметь **MSSQLServer** для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Код ошибки сообщения, который определен для предупреждения (Обычно соответствует номеру ошибки в **sysmessages** таблицы). Если уровень серьезности используется для определения предупреждения, **message_id** — **0** или значение NULL.|  
@@ -117,7 +112,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**notification_message**|**nvarchar(512)**|Необязательное дополнительное сообщение, отправляемое оператору по электронной почте или на пейджер.|  
 |**include_event_description**|**tinyint**|Указывает, следует ли включить в текст сообщения уведомления описание ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из журнала приложений Windows.|  
 |**database_name**|**sysname**|База данных, ошибка в которой приводит к появлению предупреждения. Если имя базы данных равно значению NULL, предупреждение появляется независимо от места возникновения ошибки.|  
-|**event_description_keyword**|**Nvarchar(100)**|Описание ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в журнале приложений Windows, которое должно соответствовать указанной последовательности символов.|  
+|**event_description_keyword**|**nvarchar(100)**|Описание ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в журнале приложений Windows, которое должно соответствовать указанной последовательности символов.|  
 |**occurrence_count**|**int**|Количество раз возникновения предупреждения.|  
 |**count_reset_date**|**int**|Дата **occurrence_count** последнего сброса.|  
 |**count_reset_time**|**int**|Время **occurrence_count** последнего сброса.|  
@@ -126,7 +121,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**has_notification**|**int**|Ненулевое значение, если один или более операторов уведомлены данным предупреждением. Значение является результатом логической операции OR над одним или несколькими следующими значениями:<br /><br /> **1**= уведомлен по электронной почте<br /><br /> **2**= уведомлен по пейджеру<br /><br /> **4**= имеет **команды net send** уведомлений.|  
 |**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
 |**performance_condition**|**nvarchar(512)**|Если **тип** — **2**, в этом столбце отображается определение условия производительности. Если **тип** — **3**, в этом столбце отображается запрос WMI-события. В противном случае столбец содержит значение NULL.|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Всегда будет "**[[Некатегоризированные]**" для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Всегда будет "**[Некатегоризированные]**" для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.|  
 |**type**|**int**|Тип предупреждения:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждение о событии<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждения о производительности<br /><br /> **3** = предупреждение о событии WMI|  
   
 ## <a name="remarks"></a>Примечания  
