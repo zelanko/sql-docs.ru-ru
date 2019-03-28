@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8e9090e92baba8f67ee7ad0303103f41c66ace9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0aa6dbd766f842b4c923d98702fd2780fc2652fb
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532171"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306232"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -458,7 +458,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 ### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>О. Использование метки и указания запроса с инструкцией DELETE  
- Этот запрос показывает базовый синтаксис для использования указания на соединение с запросом с инструкцией INSERT. Дополнительные сведения об указаниях по соединению и использованию предложения OPTION см. в разделе [OPTION (SQL Server PDW)](https://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
+ Этот запрос показывает базовый синтаксис для использования указания на соединение с запросом с инструкцией INSERT. Дополнительные сведения об указаниях соединения и использовании предложения OPTION см. в статье [Предложение OPTION (Transact-SQL)](../queries/option-clause-transact-sql.md).
   
 ```sql
 -- Uses AdventureWorks  

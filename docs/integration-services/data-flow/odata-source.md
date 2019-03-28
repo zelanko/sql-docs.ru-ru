@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 820541da1699e2e74a9ec0b9a5f00f094a14f38c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f5ba8afdf4acadd114363280501f29e1616349ae
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638662"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290620"
 ---
 # <a name="odata-source"></a>Источник OData
 Компонент источника OData используется в пакете служб SSIS для получения данных от служб OData.
@@ -86,7 +86,7 @@ ms.locfileid: "51638662"
 |Путь к ресурсу|Извлечение данных из источника OData с помощью пути к ресурсу.|  
   
  **Параметры запроса**  
- Укажите параметры запроса. Например: `$top=5`. 
+ Укажите параметры запроса. Например: `$top=5` 
   
  **URL-адрес канала**  
  Отображает доступный только для чтения URL-адрес веб-канала на основе параметров, выбранных в этом диалоговом окне.  
@@ -102,7 +102,7 @@ ms.locfileid: "51638662"
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>Использование пути к коллекции или ресурсу = путь к ресурсу  
  **Resource path**  
- Введите путь к ресурсу. Например: Employees  
+ Введите путь к ресурсу. Пример: Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>Редактор источника OData (страница «Столбцы»)
   На странице **Столбцы** диалогового окна **Редактор источника OData** можно выбрать внешние (исходные) столбцы, которые должны быть включены в выходные данные, и сопоставить их с выходными столбцами.  
