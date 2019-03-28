@@ -19,12 +19,12 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf38282332f1cf8c3a5d3dd7716f9adc21e7bd8f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1b5dfd9cf062e5767606d83c3beb8a25b36387f1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201913"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538226"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +46,13 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@dbname =** ] **"***имя_базы_данных***"**  
- Имя отсоединяемой базы данных. *database_name* — **sysname** значение со значением по умолчанию NULL.  
+`[ @dbname = ] 'database_name'` — Имя базы данных для отсоединения. *database_name* — **sysname** значение со значением по умолчанию NULL.  
   
- [  **@skipchecks =** ] **"***параметром skipchecks***"**  
- Указывает, выполнять или нет инструкцию UPDATE STATISTIC. *параметром skipchecks* — **nvarchar(10)** значение со значением по умолчанию NULL. Чтобы выполнять инструкцию UPDATE STATISTICS, укажите **true**. Чтобы явно запустить инструкцию UPDATE STATISTICS, укажите **false**.  
+`[ @skipchecks = ] 'skipchecks'` Указывает, следует ли пропустить, или выполните обновление СТАТИСТИКИ. *параметром skipchecks* — **nvarchar(10)** значение со значением по умолчанию NULL. Чтобы выполнять инструкцию UPDATE STATISTICS, укажите **true**. Чтобы явно запустить инструкцию UPDATE STATISTICS, укажите **false**.  
   
  По умолчанию инструкция UPDATE STATISTICS запускается для обновления информации о данных в таблицах и индексах. Выполнение UPDATE STATISTICS имеет смысл для тех баз данных, которые планируется переместить на постоянные носители информации.  
   
- [  **@keepfulltextindexfile=** ] **"***KeepFulltextIndexFile***"**  
- Указывает, что файл полнотекстового индекса, связанный с отсоединяемой базой данных, не будет удален во время операции отсоединения базы данных. *KeepFulltextIndexFile* — **nvarchar(10)** значение по умолчанию **true**. Если *KeepFulltextIndexFile* — **false**, все файлы полнотекстового индекса, связанные с базой данных и метаданные полнотекстового индекса удаляются, если она доступна только для чтения. Если значение равно NULL или **true**, связанного с полнотекстовым поиском, хранятся в метаданных.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` Указывает, что файл полнотекстового индекса, связанный с, отключаемой базы данных не будет удален во время базы данных операции отсоединения. *KeepFulltextIndexFile* — **nvarchar(10)** значение по умолчанию **true**. Если *KeepFulltextIndexFile* — **false**, все файлы полнотекстового индекса, связанные с базой данных и метаданные полнотекстового индекса удаляются, если она доступна только для чтения. Если значение равно NULL или **true**, связанного с полнотекстовым поиском, хранятся в метаданных.  
   
 > [!IMPORTANT]
 >  **@keepfulltextindexfile** Параметр будет удален в будущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не используйте его при работе над новыми приложениями и как можно быстрее измените приложения, в которых он в настоящее время используется.  

@@ -18,12 +18,12 @@ ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6df698f13298bf290ad1a0cb9e94ccac0bfce3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15e30a28a816b8105762e9f4cbfc4a0892cae1be
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596422"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538576"
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,9 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@IndexNamePattern=**] **"***table_or_index_name***"**  
- Уточненное или неуточненное имя пользовательской таблицы или индекса. *table_or_index_name* — **nvarchar(1035)**, не имеет значения по умолчанию. Кавычки требуются, только если указан уточненный индекс или таблица. Если указано полное имя таблицы, включая имя базы данных, в качестве последнего должно использоваться имя текущей базы данных. Если имя таблицы указано без индекса, то значение указанного аргумента устанавливается во все индексы этой таблицы и в саму таблицу, если не существует кластеризованных индексов.  
+`[ @IndexNamePattern = ] 'table_or_index_name'` — Уточненное или неуточненное имя пользовательской таблицы или индекса. *table_or_index_name* — **nvarchar(1035)**, не имеет значения по умолчанию. Кавычки требуются, только если указан уточненный индекс или таблица. Если указано полное имя таблицы, включая имя базы данных, в качестве последнего должно использоваться имя текущей базы данных. Если имя таблицы указано без индекса, то значение указанного аргумента устанавливается во все индексы этой таблицы и в саму таблицу, если не существует кластеризованных индексов.  
   
- [  **@OptionName =**] **"***option_name***"**  
- Имя параметра индекса. *option_name* — **varchar(35)**, не имеет значения по умолчанию. *option_name* может иметь одно из следующих значений.  
+`[ @OptionName = ] 'option_name'` — Это имя параметра индекса. *option_name* — **varchar(35)**, не имеет значения по умолчанию. *option_name* может иметь одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -60,8 +58,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 |**DisAllowRowLocks**|Если TRUE, то блокировка строк не используется. Если FALSE, то допустимы блокировки строк при доступе к индексу. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] определяет, когда используются блокировки строки.|  
 |**DisAllowPageLocks**|Если TRUE, то блокировка страниц не используется. Если FALSE, то допустимы блокировки страниц при доступе к индексу. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] определяет, когда используются блокировки страниц.|  
   
- [  **@OptionValue =**] **"***значение***"**  
- Указывает ли *option_name* параметр будет включен (TRUE, ON, yes или 1) или выключен (FALSE, OFF, no или 0). *значение* — **varchar(12)**, не имеет значения по умолчанию.  
+`[ @OptionValue = ] 'value'` Указывает ли *option_name* параметр будет включен (TRUE, ON, yes или 1) или выключен (FALSE, OFF, no или 0). *значение* — **varchar(12)**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или больше чем 0 (неуспешное завершение)  

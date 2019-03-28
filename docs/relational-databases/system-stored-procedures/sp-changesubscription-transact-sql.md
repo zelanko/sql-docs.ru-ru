@@ -18,12 +18,12 @@ ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a293be4b745f30f4ee4a9bff6226e4e2ef80676f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c81843220b9613bfc59f03d197f369e77a850f84
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209843"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534046"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,23 +49,17 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@publication**=] **"**_публикации_**"**  
- Имя публикации, которую нужно изменить. *Публикация*— **sysname**, не имеет значения по умолчанию  
+`[ @publication = ] 'publication'` — Имя публикации, который требуется изменить. *Публикация*— **sysname**, не имеет значения по умолчанию  
   
- [ **@article** =] **"**_статье_**"**  
- Имя изменяемой статьи. *статья* — **sysname**, не имеет значения по умолчанию.  
+`[ @article = ] 'article'` — Имя статьи, которую следует изменить. *статья* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@subscriber** =] **"**_подписчика_**"**  
- Имя подписчика. *подписчик* — **sysname**, не имеет значения по умолчанию.  
+`[ @subscriber = ] 'subscriber'` — Имя подписчика. *подписчик* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@destination_db** =] **"**_destination_db_**"**  
- Имя базы данных подписки. *destination_db* — **sysname**, не имеет значения по умолчанию.  
+`[ @destination_db = ] 'destination_db'` — Имя базы данных подписки. *destination_db* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@property=**] **"**_свойство_**"**  
- Свойство, изменяемое для данной подписки. *Свойство* — **nvarchar(30)**, и может принимать одно из значений в таблице.  
+`[ @property = ] 'property'` — Это свойство, изменяемое для данной подписки. *Свойство* — **nvarchar(30)**, и может принимать одно из значений в таблице.  
   
- [  **@value=**] **"**_значение_**"**  
- Новое значение для указанного *свойство*. *значение* — **nvarchar(4000)**, и может принимать одно из значений в таблице.  
+`[ @value = ] 'value'` Новое значение для указанного *свойство*. *значение* — **nvarchar(4000)**, и может принимать одно из значений в таблице.  
   
 |Свойство|Значение|Описание|  
 |--------------|-----------|-----------------|  
@@ -85,8 +79,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**3**|Поставщик OLE DB|  
 |**memory_optimized**|**bit**|Указывает, что данная подписка поддерживает оптимизированные для памяти таблицы. *memory_optimized* — **бит**, где 1 соответствует true (данная подписка поддерживает оптимизированные для памяти таблицы).|  
   
- [  **@publisher =** ] **"**_издателя_**"**  
- Указывает, отличный от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает, отличный от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *издатель* не следует указывать для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  

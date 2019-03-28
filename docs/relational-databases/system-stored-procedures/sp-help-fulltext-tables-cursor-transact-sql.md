@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87566a816638e38e9adbf4e2dd6ebfef1f741e3c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d43903af7a4626c7d9645e1b750696b15cc692ec
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852002"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534576"
 ---
 # <a name="sphelpfulltexttablescursor-transact-sql"></a>sp_help_fulltext_tables_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -46,14 +46,11 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@cursor_return=** ] *@cursor_variable* ВЫХОДНЫХ ДАННЫХ  
- Выходная переменная типа **курсор**. Этот курсор является динамическим, прокручиваемым и доступным только для чтения.  
+`[ @cursor_return = ] @cursor_variable OUTPUT` Выходная переменная типа **курсор**. Этот курсор является динамическим, прокручиваемым и доступным только для чтения.  
   
- [  **@fulltext_catalog_name=** ] **"***fulltext_catalog_name***"**  
- Имя полнотекстового каталога. *fulltext_catalog_name* — **sysname**, значение по умолчанию NULL. Если *fulltext_catalog_name* опущен или имеет значение NULL, возвращаются все таблицы индексированных полнотекстового поиска, связанный с базой данных. Если *fulltext_catalog_name* указан, но *table_name* опущен или имеет значение NULL, данные полнотекстового индекса извлекаются для каждой таблицы индексом полнотекстового поиска, связанный с этим каталогом. Если оба *fulltext_catalog_name* и *table_name* указаны, строка возвращается в том случае, если *table_name* связан с *fulltext_catalog_name*; в противном случае возникает ошибка.  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` — Имя полнотекстового каталога. *fulltext_catalog_name* — **sysname**, значение по умолчанию NULL. Если *fulltext_catalog_name* опущен или имеет значение NULL, возвращаются все таблицы индексированных полнотекстового поиска, связанный с базой данных. Если *fulltext_catalog_name* указан, но *table_name* опущен или имеет значение NULL, данные полнотекстового индекса извлекаются для каждой таблицы индексом полнотекстового поиска, связанный с этим каталогом. Если оба *fulltext_catalog_name* и *table_name* указаны, строка возвращается в том случае, если *table_name* связан с *fulltext_catalog_name*; в противном случае возникает ошибка.  
   
- [  **@table_name=**] **"***table_name***"**  
- Одно- или двухкомпонентное имя таблицы, для которой запрашиваются полнотекстовые метаданные. *TABLE_NAME* — **nvarchar(517)**, со значением по умолчанию NULL. Если только *table_name* указано, только строка, соответствующая аргументу *table_name* возвращается.  
+`[ @table_name = ] 'table_name'` — Это одно - или двухкомпонентное имя таблицы, для которой запрашиваются полнотекстовые метаданные. *TABLE_NAME* — **nvarchar(517)**, со значением по умолчанию NULL. Если только *table_name* указано, только строка, соответствующая аргументу *table_name* возвращается.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -63,7 +60,7 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|Владелец таблицы. Это имя пользователя базы данных, создавшего таблицу.|  
-|**ИМЯ_ТАБЛИЦЫ**|**sysname**|Имя таблицы.|  
+|**TABLE_NAME**|**sysname**|Имя таблицы.|  
 |**FULLTEXT_KEY_INDEX_NAME**|**sysname**|Индекс, налагающий ограничение UNIQUE на столбец, помеченный как уникальный ключевой столбец.|  
 |**FULLTEXT_KEY_COLID**|**int**|Идентификатор столбца уникального индекса, задаваемого параметром FULLTEXT_KEY_NAME.|  
 |**FULLTEXT_INDEX_ACTIVE**|**int**|Указывает, можно ли использовать в запросах столбцы, помеченные для полнотекстового индексирования в этой таблице.<br /><br /> 0 = неактивно.<br /><br /> 1= активно.|  

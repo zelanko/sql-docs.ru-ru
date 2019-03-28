@@ -16,12 +16,12 @@ ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 866df9e4ad124c031eab3068ac9156f0628dbca4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5706ea4c1fab79735afe9f9ec4873f112c9114cd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135703"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531095"
 ---
 # <a name="spvalidatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +42,7 @@ sp_validatemergepublication [@publication=] 'publication'
  [**@publication=**] **"***публикации***"**  
  Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@level=** ] *уровень*  
- Тип выполняемой проверки. *уровень* — **tinyint**, не имеет значения по умолчанию. Уровень может быть одним из значений.  
+`[ @level = ] level` — Тип выполняемой проверки. *уровень* — **tinyint**, не имеет значения по умолчанию. Уровень может быть одним из значений.  
   
 |Значение уровня|Описание|  
 |-----------------|-----------------|  

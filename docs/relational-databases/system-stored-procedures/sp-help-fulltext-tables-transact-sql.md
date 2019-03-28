@@ -18,12 +18,12 @@ ms.assetid: 86e24a5f-a869-43f6-b83e-c52b7b01b5ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cfd733d24d36b733dcefed3eea89b7be9342cd93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09cbcf4fca5fefa14dd435e5e91b27c8460194db
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608823"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537066"
 ---
 # <a name="sphelpfulltexttables-transact-sql"></a>sp_help_fulltext_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@fulltext_catalog_name=**] **'***fulltext_catalog_name***'**  
- Имя полнотекстового каталога. *fulltext_catalog_name* — **sysname**, значение по умолчанию NULL. Если *fulltext_catalog_name* опущен или имеет значение NULL, возвращаются все таблицы индексированных полнотекстового поиска, связанный с базой данных. Если *fulltext_catalog_name* указан, но *table_name* опущен или имеет значение NULL, данные полнотекстового индекса извлекаются для каждой таблицы индексом полнотекстового поиска, связанный с этим каталогом. Если оба *fulltext_catalog_name* и *table_name* указаны, строка возвращается в том случае, если *table_name* связан с *fulltext_catalog_name*; в противном случае возникает ошибка.  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` — Имя полнотекстового каталога. *fulltext_catalog_name* — **sysname**, значение по умолчанию NULL. Если *fulltext_catalog_name* опущен или имеет значение NULL, возвращаются все таблицы индексированных полнотекстового поиска, связанный с базой данных. Если *fulltext_catalog_name* указан, но *table_name* опущен или имеет значение NULL, данные полнотекстового индекса извлекаются для каждой таблицы индексом полнотекстового поиска, связанный с этим каталогом. Если оба *fulltext_catalog_name* и *table_name* указаны, строка возвращается в том случае, если *table_name* связан с *fulltext_catalog_name*; в противном случае возникает ошибка.  
   
- [  **@table_name=**] **"***table_name***"**  
- Одно- или двухкомпонентное имя таблицы, для которой запрашиваются полнотекстовые метаданные. *TABLE_NAME* — **nvarchar(517)**, со значением по умолчанию NULL. Если только *table_name* указано, только строка, соответствующая аргументу *table_name* возвращается.  
+`[ @table_name = ] 'table_name'` — Это одно - или двухкомпонентное имя таблицы, для которой запрашиваются полнотекстовые метаданные. *TABLE_NAME* — **nvarchar(517)**, со значением по умолчанию NULL. Если только *table_name* указано, только строка, соответствующая аргументу *table_name* возвращается.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -58,7 +56,7 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|Владелец таблицы. Это имя пользователя базы данных, создавшего таблицу.|  
-|**ИМЯ_ТАБЛИЦЫ**|**sysname**|Имя таблицы.|  
+|**TABLE_NAME**|**sysname**|Имя таблицы.|  
 |**FULLTEXT_KEY_INDEX_NAME**|**sysname**|Индекс, налагающий ограничение UNIQUE на столбец, помеченный как уникальный ключевой столбец.|  
 |**FULLTEXT_KEY_COLID**|**int**|Идентификатор столбца уникального индекса, задаваемого параметром FULLTEXT_KEY_NAME.|  
 |**FULLTEXT_INDEX_ACTIVE**|**int**|Указывает, можно ли использовать в запросах столбцы, помеченные для полнотекстового индексирования в этой таблице.<br /><br /> 0 = неактивно.<br /><br /> 1= активно.|  

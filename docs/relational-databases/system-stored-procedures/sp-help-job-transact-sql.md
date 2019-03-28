@@ -18,12 +18,12 @@ ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18dde2c47f1da8c20457a9a0fbdd86c7adfe6e56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818086"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528146"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,17 +53,14 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@job_id =**] *job_id*  
- Идентификационный номер задания. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [  **@job_name =**] **"***имя_задания***"**  
- Имя задания. *имя_задания* — **sysname**, значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания. *имя_задания* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Для просмотра конкретного задания, либо *job_id* или *имя_задания* должен быть указан.  Пропускают как *job_id* и *имя_задания* для возврата сведений обо всех заданиях.
   
- [  **@job_aspect =**] **"***job_aspect***"**  
- Отображаемое задание атрибута. *job_aspect* — **varchar(9)**, значение по умолчанию NULL, и может принимать одно из следующих значений.  
+`[ @job_aspect = ] 'job_aspect'` Отображаемое задание атрибута. *job_aspect* — **varchar(9)**, значение по умолчанию NULL, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -73,23 +70,17 @@ sp_help_job { [ @job_id = ] job_id
 |**ДЕЙСТВИЯ**|Сведения об шаге задания|  
 |**ЦЕЛЕВЫЕ ОБЪЕКТЫ**|Сведения о цели|  
   
- [ **@job_type =**] **'***job_type***'**  
- Тип заданий, включаемых в отчет. *job_type* — **varchar(12)**, значение по умолчанию NULL. *job_type* может быть **ЛОКАЛЬНОГО** или **МНОГОСЕРВЕРНОЙ**.  
+`[ @job_type = ] 'job_type'` Тип заданий для включения в отчет. *job_type* — **varchar(12)**, значение по умолчанию NULL. *job_type* может быть **ЛОКАЛЬНОГО** или **МНОГОСЕРВЕРНОЙ**.  
   
- [  **@owner_login_name =**] **"***login_name***"**  
- Имя входа владельца задания. *login_name* — **sysname**, значение по умолчанию NULL.  
+`[ @owner_login_name = ] 'login_name'` Имя входа владельца задания. *login_name* — **sysname**, значение по умолчанию NULL.  
   
- [  **@subsystem =**] **"***подсистемы***"**  
- Имя подсистемы. *Подсистема* — **nvarchar(40)**, значение по умолчанию NULL.  
+`[ @subsystem = ] 'subsystem'` Имя подсистемы. *Подсистема* — **nvarchar(40)**, значение по умолчанию NULL.  
   
- [  **@category_name =**] **"***категории***"**  
- Имя категории. *Категория* — **sysname**, значение по умолчанию NULL.  
+`[ @category_name = ] 'category'` Имя категории. *Категория* — **sysname**, значение по умолчанию NULL.  
   
- [  **@enabled =**] *включена*  
- Номер, указывающий, для каких заданий отображаются сведения — включенных или отключенных. *включить* — **tinyint**, значение по умолчанию NULL. **1** указывает на включенные задания и **0** — на отключенные.  
+`[ @enabled = ] enabled` Число, указывающее, отображается ли сведения для включена заданий или отключенных. *включить* — **tinyint**, значение по умолчанию NULL. **1** указывает на включенные задания и **0** — на отключенные.  
   
- [  **@execution_status =**] *состояния*  
- Состояние выполнения заданий. *состояние* — **int**, значение по умолчанию NULL, и может принимать одно из следующих значений.  
+`[ @execution_status = ] status` Состояние выполнения заданий. *состояние* — **int**, значение по умолчанию NULL, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -101,17 +92,13 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Приостановленные.|  
 |**7**|Выполняющие завершающие действия.|  
   
- [  **@date_comparator =**] **"***date_comparison***"**  
- Оператор сравнения для использования в сравнениях *date_created* и *date_modified*. *date_comparison* — **char(1)** и может быть =, \<, или >.  
+`[ @date_comparator = ] 'date_comparison'` Оператор сравнения для использования в сравнениях *date_created* и *date_modified*. *date_comparison* — **char(1)** и может быть =, \<, или >.  
   
- [  **@date_created =**] *date_created*  
- Дата создания задания. *date_created*— **datetime**, значение по умолчанию NULL.  
+`[ @date_created = ] date_created` Дата создания задания. *date_created*— **datetime**, значение по умолчанию NULL.  
   
- [  **@date_last_modified =**] *date_modified*  
- Дата последнего изменения задания. *date_modified* — **datetime**, значение по умолчанию NULL.  
+`[ @date_last_modified = ] date_modified` Дата последнего изменения задания. *date_modified* — **datetime**, значение по умолчанию NULL.  
   
- [  **@description =**] **"***description_pattern***"**  
- Описание задания. *description_pattern* — **nvarchar(512)**, значение по умолчанию NULL. *description_pattern* может включать символы-шаблоны SQL Server для сопоставления шаблонов.  
+`[ @description = ] 'description_pattern'` Описание задания. *description_pattern* — **nvarchar(512)**, значение по умолчанию NULL. *description_pattern* может включать символы-шаблоны SQL Server для сопоставления шаблонов.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

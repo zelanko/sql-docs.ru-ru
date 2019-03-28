@@ -16,12 +16,12 @@ ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4829928bbf1f8e13483de69a749e748bd9dd095
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2221762934011c2268a40d0162bde7e62dbcf256
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779066"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528226"
 ---
 # <a name="sphelpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=**] **"***публикации***"**  
- — Имя публикации. *публикации* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` — Имя публикации. *публикации* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@article=**] **"***статье***"**  
- — Имя таблицы или представления, являющейся статьей необходимо получить сведения. *статье* — **sysname**, не имеет значения по умолчанию.  
+`[ @article = ] 'article'` — Имя таблицы или представления, являющейся статьей необходимо получить сведения. *статье* — **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   

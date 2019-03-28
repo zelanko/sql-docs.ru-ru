@@ -18,12 +18,12 @@ ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c025f6f1e7652e9b60ad8f8e9aea65aca112af81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f23d8766a89619654ba89bc6d70cec342b11b8fe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821842"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534646"
 ---
 # <a name="spsrvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@srvrolename =** ] **"***роли***"**  
- Имя предопределенной роли сервера, для которой добавляются разрешения. *роль* — **sysname**, значение по умолчанию NULL. Если роль не указана, возвращаются разрешения для всех предопределенных ролей сервера. *роль* может иметь одно из следующих значений.  
+`[ @srvrolename = ] 'role'` — Имя фиксированной серверной роли, для которого возвращаются разрешения. *роль* — **sysname**, значение по умолчанию NULL. Если роль не указана, возвращаются разрешения для всех предопределенных ролей сервера. *роль* может иметь одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -64,7 +63,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**"Роли сервера"**|**sysname**|Имя предопределенной роли сервера|  
+|**ServerRole**|**sysname**|Имя предопределенной роли сервера|  
 |**Разрешение**|**sysname**|Разрешение, связанное с **ServerRole**|  
   
 ## <a name="remarks"></a>Примечания  

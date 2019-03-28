@@ -16,12 +16,12 @@ ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3785eb45e8ecca7a573f499d8c48b184a22e6efc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 668233ad7ee79617caa60933a9eef33c5a810164
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779366"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534706"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>Хранимая процедура sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=**] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@article=**] **"***статье***"**  
- Имя статьи. *статья* — **sysname**, значение по умолчанию **%**, которое возвращает имена всех статей.  
+`[ @article = ] 'article'` — Имя статьи. *статья* — **sysname**, значение по умолчанию **%**, которое возвращает имена всех статей.  
   
- [  **@filtername=**] **"***filtername***"**  
- Имя фильтра, для которого возвращаются данные. *FilterName* — **sysname**, значение по умолчанию **%**, которое возвращает сведения обо всех фильтрах, определенных для статьи или публикации.  
+`[ @filtername = ] 'filtername'` — Имя фильтра, для которого возвращаются сведения. *FilterName* — **sysname**, значение по умолчанию **%**, которое возвращает сведения обо всех фильтрах, определенных для статьи или публикации.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   

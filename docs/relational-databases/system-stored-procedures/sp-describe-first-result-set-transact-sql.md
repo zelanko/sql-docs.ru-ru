@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62abd4d684c809e9dbf3f2863091f1f103808d87
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1063facd150c6dfd6273f1fd78b6f507d062788e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400637"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528166"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -43,16 +43,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **\@tsql =** ] **"***Transact SQL_batch***"**  
- Одна или несколько инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Transact SQL_batch* может быть **nvarchar (***n***)** или **nvarchar(max)**.  
+`[ \@tsql = ] 'Transact-SQL_batch'` Один или несколько [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций. *Transact SQL_batch* может быть **nvarchar (***n***)** или **nvarchar(max)**.  
   
- [  **\@params =** ] **N "***параметры***"**  
- \@params обеспечивает строку объявления параметров для [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета, который схожего с sp_executesql. Параметры могут быть **nvarchar(n)** или **nvarchar(max)**.  
+`[ \@params = ] N'parameters'` \@params обеспечивает строку объявления параметров для [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета, который схожего с sp_executesql. Параметры могут быть **nvarchar(n)** или **nvarchar(max)**.  
   
  Строка, содержащая определения всех параметров, внедренных в [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* — заполнитель, указывающий Дополнительные определения параметра. Каждый параметр, указанный в инструкции должен быть определен в \@params. Если [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция или пакет в инструкции не содержит параметров, \@params не является обязательным. Значением по умолчанию для этого аргумента является NULL.  
   
- [  **\@browse_information_mode =** ] *tinyint*  
- Указывает, происходит ли возврат дополнительных ключевых столбцов и сведений об исходной таблице. Если он имеет значение 1, то каждый запрос анализируется аналогично анализу запроса с параметром FOR BROWSE. Возвращаются дополнительные ключевые столбцы и сведения об исходной таблице.  
+`[ \@browse_information_mode = ] tinyint` Указывает, если возвращаются дополнительные ключевые столбцы и сведения об исходной таблице. Если он имеет значение 1, то каждый запрос анализируется аналогично анализу запроса с параметром FOR BROWSE. Возвращаются дополнительные ключевые столбцы и сведения об исходной таблице.  
   
 -   Если задано значение 0, то данные не возвращаются.  
   

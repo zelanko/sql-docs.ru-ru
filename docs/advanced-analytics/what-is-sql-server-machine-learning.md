@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/06/2018
 ms.topic: overview
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fb98f2dad8f16ac7f9e06920d56bd225962dca7b
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: cf7d8a7cddcfbe0d47d4808f82abc0a47efade2c
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161851"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512460"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>Службы машинного обучения (R, Python) в SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,11 +68,11 @@ SQL Server 2017 поддерживает R и Python. В следующей т
 
 ## <a name="how-to-get-started"></a>Как приступить к работе
 
-### <a name="step-1-install-the-software"></a>Шаг 1. Установить программное обеспечение
+### <a name="step-1-install-the-software"></a>Шаг 1. Установить программное обеспечение
 
 + [SQL Server службы машинного обучения (в базе данных)](install/sql-machine-learning-services-windows-install.md)
  
-### <a name="step-2-configure-a-development-tool"></a>Этап 2. Настройка средства разработки
+### <a name="step-2-configure-a-development-tool"></a>Шаг 2. Настройка средства разработки
 
 Обычно, обработке и анализу данных использовать свои собственные ноутбук или разработки, на рабочей станции R или Python исследовать данные и сборка, и также настройка прогнозные модели, пока не получает хорошую прогнозную модель. С помощью аналитики в базе данных в SQL Server нет необходимости изменять этот процесс. После завершения установки можно запустить кодом R или Python на сервере SQL Server локально и удаленно.
 

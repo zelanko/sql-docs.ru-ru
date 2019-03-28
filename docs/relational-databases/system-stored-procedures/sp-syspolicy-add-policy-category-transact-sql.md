@@ -18,12 +18,12 @@ ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ff44121317827976f65db8ebb49bc2eda37d42bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b223f8429d010382e444dd2e57a6fa7735200151
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779892"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526096"
 ---
 # <a name="spsyspolicyaddpolicycategory-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@name=** ] **"***имя***"**  
- Имя категории политики. *имя* — **sysname**и является обязательным. *имя* не может быть NULL или пустую строку.  
+`[ @name = ] 'name'` — Имя категории политики. *имя* — **sysname**и является обязательным. *имя* не может быть NULL или пустую строку.  
   
- [  **@mandate_database_subscriptions =** ] *mandate_database_subscriptions*  
- Определяет, является ли подписка базы данных обязательной для категории политики. *mandate_database_subscriptions* — **бит** значение по умолчанию 1 (включено).  
+`[ @mandate_database_subscriptions = ] mandate_database_subscriptions` Определяет, является ли подписка базы данных обязательной для категории политики. *mandate_database_subscriptions* — **бит** значение по умолчанию 1 (включено).  
   
- [  **@policy_category_id=** ] *policy_category_id*  
- Идентификатор категории политики. *policy_category_id* — **int**и возвращается как OUTPUT.  
+`[ @policy_category_id = ] policy_category_id` Является идентификатором для категории политики. *policy_category_id* — **int**и возвращается как OUTPUT.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -61,7 +58,7 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
  Требуется членство в предопределенной роли базы данных PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Возможно повышение учетных данных: пользователи в роли PolicyAdministratorRole могут создавать триггеры сервера и планировать выполнение политик, влияющих на работу экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Например, пользователи в роли PolicyAdministratorRole могут создать политику, которая может запретить создание большинства объектов в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Вследствие возможного повышения прав учетных данных роль PolicyAdministratorRole должна предоставляться только пользователям, имеющим право изменять конфигурацию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Возможное повышение прав учетных данных. Пользователи с ролью PolicyAdministratorRole могут создавать триггеры сервера и планировать выполнение политик, влияющих на работу экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Например, пользователи в роли PolicyAdministratorRole могут создать политику, которая может запретить создание большинства объектов в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Вследствие возможного повышения прав учетных данных роль PolicyAdministratorRole должна предоставляться только пользователям, имеющим право изменять конфигурацию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается категория политики, где подписка на категорию не является обязательной. Это значит, что участие в политиках этой категории можно включить или отключить для отдельных баз данных.  

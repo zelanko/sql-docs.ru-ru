@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/10/2018
 ms.topic: overview
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f3575d91122badac6fcba2e1ca7463114a08c26b
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 14be74e19219fee834a4ab82e74c004a4e426483
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596515"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510531"
 ---
 # <a name="r-services-in-sql-server-2016"></a>Службы R в SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,16 +54,16 @@ SQL Server 2016 — R только. Ниже перечислены функци
 
 Начните с установки, присоединить двоичные файлы привычного средства разработки и написанию первого скрипта.
 
-**Шаг 1.** Установите и настройте программное обеспечение. 
+**Шаг 1**. Установите и настройте программное обеспечение. 
 
 + [Установка служб R SQL Server 2016 (в базе данных)](../install/sql-r-services-windows-install.md)
 
-**Шаг 2.** Получите практический опыт работы, используя один из следующих руководств:
+**Шаг 2**. Получите практический опыт работы, используя один из следующих руководств:
 
 + [Учебник. Дополнительные аналитические функции в базе данных с помощью языка R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 + [Учебник. End-to-end пошаговом руководстве с помощью R](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 
-**Шаг 3.** Добавьте избранные пакеты R и использовать их вместе с пакетами, предоставляемые корпорацией Майкрософт
+**Шаг 3**. Добавьте избранные пакеты R и использовать их вместе с пакетами, предоставляемые корпорацией Майкрософт
 
 + [Управление пакетами R для SQL Server](install-additional-r-packages-on-sql-server.md)
 

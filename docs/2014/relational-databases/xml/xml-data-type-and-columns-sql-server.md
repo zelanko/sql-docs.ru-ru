@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df5d06478e5e48de00efcbdb7b872a7a1907eec0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 755685601bb97f7e0b8980024df07e27967f3cd3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370006"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530826"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Столбцы и типы XML-данных (SQL Server)
   В этом разделе описаны преимущества и ограничения `xml` типа данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и позволяет выбрать способ хранения XML-данных.  

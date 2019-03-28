@@ -18,12 +18,12 @@ ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f61002319606a199354022a3fc33ce13a170539d
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: dd46309ebd44bdd16da132b9aef1c903ad1f4b78
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590249"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528346"
 ---
 # <a name="sprenamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@dbname=**] **"***старое_имя***"**  
- Текущее имя базы данных. *старое_имя* — **sysname**, не имеет значения по умолчанию.  
+`[ @dbname = ] 'old_name'` — Имя текущей базы данных. *старое_имя* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@newname=**] **"***новое_имя***"**  
- Новое имя базы данных. *новое_имя* должны соответствовать правилам для идентификаторов. *новое_имя* — **sysname**, не имеет значения по умолчанию.  
+`[ @newname = ] 'new_name'` — Это новое имя базы данных. *новое_имя* должны соответствовать правилам для идентификаторов. *новое_имя* — **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или ненулевое значение (неуспешное завершение)  

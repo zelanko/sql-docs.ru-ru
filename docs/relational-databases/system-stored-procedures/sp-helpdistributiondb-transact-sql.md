@@ -16,12 +16,12 @@ ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df84387d42a0f4d2f5cd74ac6b821f8b01ddb06b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5d143889672754be353b5868e955841d9e2869bc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818916"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533344"
 ---
 # <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@database=**] **"***имя_базы_данных***"**  
- Имя базы данных, для которой возвращаются свойства. *database_name* — **sysname**, значение по умолчанию **%** для всех баз данных, связанным с распространителем, для которых пользователь имеет разрешения.  
+`[ @database = ] 'database_name'` — Имя базы данных, для которого возвращаются свойства. *database_name* — **sysname**, значение по умолчанию **%** для всех баз данных, связанным с распространителем, для которых пользователь имеет разрешения.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -56,7 +55,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**data_file**|**nvarchar(255)**|Имя файла базы данных.|  
 |**data_file_size**|**int**|Исходный размер файла данных в мегабайтах.|  
 |**log_folder**|**nvarchar(255)**|Имя каталога, в котором размещается файл журнала базы данных.|  
-|**файл_журнала**|**nvarchar(255)**|Имя файла журнала.|  
+|**log_file**|**nvarchar(255)**|Имя файла журнала.|  
 |**log_file_size**|**int**|Исходный размер файла журнала в мегабайтах.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

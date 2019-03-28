@@ -10,17 +10,17 @@ ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f5d3a9786f2971abebd96624c5214f7717c450a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e70ab55fedcc5053cf82a78c040c850a23824eb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154724"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536676"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Собственная компиляция таблиц и хранимых процедур
   В In-Memory OLTP введено понятие компиляции в собственном коде. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет возможность компиляции в собственном коде хранимых процедур, которые обращаются к оптимизированным для памяти таблицам. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может также скомпилировать в собственном коде оптимизированные для памяти таблицы. Компиляция в собственном коде обеспечивает повышение скорости доступа к данным и более эффективное выполнение запросов по сравнению с интерпретируемыми (традиционными) командами [!INCLUDE[tsql](../../includes/tsql-md.md)]. Компиляция таблиц и хранимых процедур в собственном коде создает библиотеки DLL.  
   
- Кроме того, поддерживается компиляция в собственном коде оптимизированных для памяти табличных типов. Дополнительные сведения см. в разделе [оптимизированных для памяти табличные переменные](../../database-engine/memory-optimized-table-variables.md).  
+ Кроме того, поддерживается компиляция в собственном коде оптимизированных для памяти табличных типов. Дополнительные сведения см. в статье [Memory-Optimized Table Variables](../../database-engine/memory-optimized-table-variables.md).  
   
  Компиляцией в собственном коде называется процесс преобразования программных конструкций в машинный код, состоящий из процессорных инструкций, без необходимости их дальнейшей компиляции или интерпретации.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48154724"
 ## <a name="maintenance-of-in-memory-oltp-dlls"></a>Обслуживание библиотек DLL базы данных In-Memory OLTP  
  Следующий запрос отображает все библиотеки DLL таблиц и хранимых процедур, загруженных на данный момент в память сервера:  
   
-```tsql  
+```sql  
 SELECT name, description FROM sys.dm_os_loaded_modules  
 where description = 'XTP Native DLL'  
 ```  
@@ -50,7 +50,7 @@ where description = 'XTP Native DLL'
   
  Рассмотрим следующий пример скрипта, который создает базу данных и оптимизированную для памяти таблицу:  
   
-```tsql  
+```sql  
 use master  
 go  
 create database db1  
@@ -84,7 +84,7 @@ go
   
  Рассмотрим следующий пример хранимой процедуры, которая вставляет строки в таблицу t1 из предыдущего примера:  
   
-```tsql  
+```sql  
 create procedure dbo.native_sp  
 with native_compilation, schemabinding, execute as owner  
 as  
@@ -134,6 +134,6 @@ go
   
 ## <a name="see-also"></a>См. также  
  [Таблицы, оптимизированные для памяти](memory-optimized-tables.md)   
- [Скомпилированные в собственном коде хранимые процедуры](natively-compiled-stored-procedures.md)  
+ [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)  
   
   

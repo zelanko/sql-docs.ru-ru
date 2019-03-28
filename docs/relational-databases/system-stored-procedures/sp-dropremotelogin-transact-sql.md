@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fa52c7e66a690b54c33330e09fe4373962ea2f9b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 910f4f02c17ba0f6524648b9ac1eb201d735b238
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589318"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527926"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,11 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@remoteserver =** ] **"**_remoteserver_**"**  
- Имя удаленного сервера, сопоставленного с удаляемым именем входа. *удаленный сервер* — **sysname**, не имеет значения по умолчанию. *удаленный сервер* должен уже существовать.  
+`[ @remoteserver = ] 'remoteserver'` — Имя удаленного сервера, сопоставленного для удаленного имени входа, который должен быть удален. *удаленный сервер* — **sysname**, не имеет значения по умолчанию. *удаленный сервер* должен уже существовать.  
   
- [  **@loginame =** ] **"**_входа_**"**  
- Необязательное имя входа на локальном сервере, которое связано с удаленным сервером. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. *Имя входа* должен уже существовать, если задано.  
+`[ @loginame = ] 'login'` — Это необязательное имя входа на локальном сервере, который связан с удаленным сервером. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. *Имя входа* должен уже существовать, если задано.  
   
- [  **@remotename =** ] **"**_remote_name_**"**  
- Необязательное имя удаленного имени входа, которое сопоставляется с *входа* при входе в систему с удаленного сервера. *remote_name* — **sysname**, значение по умолчанию NULL.  
+`[ @remotename = ] 'remote_name'` Необязательное имя удаленного имени входа, которое сопоставляется с *входа* при входе в систему с удаленного сервера. *remote_name* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

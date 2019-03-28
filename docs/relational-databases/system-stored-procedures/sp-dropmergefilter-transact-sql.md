@@ -16,12 +16,12 @@ ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7de6c03b133746156f414687fd661f70b40e842e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 76d83e2d36307280249ccd886c464e8cd484c296
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128121"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533226"
 ---
 # <a name="spdropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,24 +40,19 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=**] **"**_публикации_**"**  
- Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@article=**] **"**_статье_**"**  
- Имя статьи. *статья* — **sysname**, не имеет значения по умолчанию.  
+`[ @article = ] 'article'` — Имя статьи. *статья* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@filtername=**] **"**_filtername_**"**  
- Имя фильтра, который необходимо удалить. *FilterName* — **sysname**, не имеет значения по умолчанию.  
+`[ @filtername = ] 'filtername'` — Имя фильтра для удаления. *FilterName* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@force_invalidate_snapshot=** ] *подписки потребуют*  
- Определяет возможность недействительности моментального снимка. *подписки потребуют* — **бит**, значение по умолчанию **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Включает или отключает возможность наличия недействительных моментальных снимков. *подписки потребуют* — **бит**, значение по умолчанию **0**.  
   
  **0** указывает, что изменения статьи слияния не приводят к недействительности моментального снимка.  
   
  **1** означает, что изменения статьи слияния могут привести к недействительности моментального снимка. Если это так, значение **1** дает разрешение нового моментального снимка.  
   
- [ **@force_reinit_subscription**=] *этот*  
- Включает или отключает возможность отметки подписки как недействительной. *Этот* — **бит**, значение по умолчанию **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Включает или отключает возможность отметки подписки как не является допустимым. *Этот* — **бит**, значение по умолчанию **0**.  
   
  **0** указывает, что изменения в фильтре статьи слияния не приводят к недействительности подписок.  
   

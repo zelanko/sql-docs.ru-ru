@@ -18,12 +18,12 @@ ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 886f63ad94921451ca7136064f2148b46eeaba17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04874761ce88069f35c75d5e2ac3b6354a5af5fe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729729"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531327"
 ---
 # <a name="spdeletejobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,14 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@job_id=** ] *job_id*  
- Идентификационный номер задания, из которого удаляется указанный целевой сервер. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания, из которого удаляется указанный целевой сервер. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [  **@job_name=** ] **"***имя_задания***"**  
- Имя задания, из которого удаляется указанный целевой сервер. *имя_задания* — **sysname**, значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания, из которого удаляется указанный целевой сервер. *имя_задания* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Либо *job_id* или *имя_задания* должен быть указан, нельзя указать одновременно.  
   
- [ **@server_name=** ] **'***server***'**  
- Имя целевого сервера, с которого следует удалить указанное задание. *сервер* — **nvarchar(30)**, не имеет значения по умолчанию. *сервер* может быть **(LOCAL)** или имя удаленного целевого сервера.  
+`[ @server_name = ] 'server'` Имя целевого сервера для удаления из указанного задания. *сервер* — **nvarchar(30)**, не имеет значения по умолчанию. *сервер* может быть **(LOCAL)** или имя удаленного целевого сервера.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

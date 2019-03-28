@@ -16,12 +16,12 @@ ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 151e990e6a6f353b6b35eb669300f305fd562f2b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f15e5104c03e271b72f6b61dc40077aabdea4e76
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812996"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526506"
 ---
 # <a name="spdropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=**] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, значение по умолчанию NULL. Этот параметр является обязательным. Укажите значение **все** для удаления подписок на все публикации  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, значение по умолчанию NULL. Этот параметр является обязательным. Укажите значение **все** для удаления подписок на все публикации  
   
- [  **@publisher=**] **"***издателя***"**  
- Имя издателя. *издатель*— **sysname**, значение по умолчанию NULL. Этот параметр является обязательным.  
+`[ @publisher = ] 'publisher'` — Имя издателя. *издатель*— **sysname**, значение по умолчанию NULL. Этот параметр является обязательным.  
   
- [  **@publisher_db=**] **"***publisher_db***"**  
- Имя базы данных издателя. *publisher_db*— **sysname**, значение по умолчанию NULL. Этот параметр является обязательным.  
+`[ @publisher_db = ] 'publisher_db'` — Имя базы данных издателя. *publisher_db*— **sysname**, значение по умолчанию NULL. Этот параметр является обязательным.  
   
- [  **@reserved=**] **"***зарезервированные***"**  
- Зарезервировано для использования в будущем. *зарезервированные* — **бит**, значение по умолчанию **0**.  
+`[ @reserved = ] 'reserved'` Зарезервировано для использования в будущем. *зарезервированные* — **бит**, значение по умолчанию **0**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

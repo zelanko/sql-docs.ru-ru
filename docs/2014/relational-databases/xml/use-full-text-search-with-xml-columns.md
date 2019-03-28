@@ -10,15 +10,15 @@ helpviewer_keywords:
 - xml columns [full-text search]
 - indexes [full-text search]
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 345b7324b66e10a8117e24d4a573c2011c47abda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 897002d437dcee8a6c64750f964c957c18a077f3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190944"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530906"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>Полнотекстовый поиск в XML-столбцах
   Для XML-столбцов можно создавать полнотекстовые индексы, индексирующие XML-значения, но игнорирующие XML-разметку. Теги элементов используются в качестве границ токенов. Индексируются следующие элементы:  
@@ -33,7 +33,7 @@ ms.locfileid: "48190944"
   
 2.  Затем запросите XML-значения, которые используют XML-индекс, связанный с XML-столбцом.  
   
-## <a name="example-combining-full-text-search-with-xml-querying"></a>Пример. Комбинирование полнотекстового поиска с XML-запросами  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>Пример Комбинирование полнотекстового поиска с запросами XML-данных  
  После создания полнотекстового индекса для XML-столбца следующий запрос проверяет, что название книги содержит слово «custom»:  
   
 ```  
@@ -49,7 +49,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
   
  Кроме того, при полнотекстовом поиске выполняется лемматизация, а метод **contains()** языка XQuery осуществляет буквальное сопоставление. Это различие поясняет следующий пример.  
   
-## <a name="example-full-text-search-on-xml-values-using-stemming"></a>Пример. Полнотекстовый поиск XML-значений с использованием выделения корней  
+## <a name="example-full-text-search-on-xml-values-using-stemming"></a>Пример Полнотекстовый поиск XML-значений с использованием парадигматического модуля  
  Проверку **contains()** языка XQuery, выполненную в предыдущем примере, обычно устранить нельзя. Рассмотрим следующий запрос:  
   
 ```  

@@ -18,12 +18,12 @@ ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fd6986a245d960a96592c8c63c9744b741fa5ff
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: c12e078505c8049511e59973c26d6a1417c7eae0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119691"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537856"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,34 +57,25 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@job_id =**] *job_id*  
- Идентификатор обновляемого задания. *job_id*— **uniqueidentifier**.  
+`[ @job_id = ] job_id` Идентификационный номер задания, чтобы обновить. *job_id*— **uniqueidentifier**.  
   
- [  **@job_name =**] **"***имя_задания***"**  
- Имя задания. *имя_задания* — **nvarchar(128)**.  
+`[ @job_name = ] 'job_name'` Имя задания. *имя_задания* — **nvarchar(128)**.  
   
-> **Примечание:** либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
+> **ПРИМЕЧАНИЕ.** Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
- [  **@new_name =**] **"***новое_имя***"**  
- Новое имя задания. *новое_имя* — **nvarchar(128)**.  
+`[ @new_name = ] 'new_name'` Новое имя для задания. *новое_имя* — **nvarchar(128)**.  
   
- [  **@enabled =**] *включена*  
- Указывает, включено ли задание (**1**) или не включено (**0**). *включить* — **tinyint**.  
+`[ @enabled = ] enabled` Указывает, включено ли задание (**1**) или не включено (**0**). *включить* — **tinyint**.  
   
- [  **@description =**] **"***описание***"**  
- Описание задания. *Описание* — **nvarchar(512)**.  
+`[ @description = ] 'description'` Описание задания. *Описание* — **nvarchar(512)**.  
   
- [  **@start_step_id =**] *step_id*  
- Идентификатор первого этапа, выполняемого в ходе задания. *step_id* — **int**.  
+`[ @start_step_id = ] step_id` Идентификационный номер первого этапа, выполняемого в ходе задания. *step_id* — **int**.  
   
- [  **@category_name =**] **"***категории***"**  
- Категория задания. *Категория* — **nvarchar(128)**.  
+`[ @category_name = ] 'category'` Категория задания. *Категория* — **nvarchar(128)**.  
   
- [  **@owner_login_name =**] **"***входа***"**  
- Имя входа, которое владеет заданием. *Имя входа* — **nvarchar(128)** только членами **sysadmin** предопределенной роли сервера можно изменить владельца задания.  
+`[ @owner_login_name = ] 'login'` Имя учетной записи владельца задания. *Имя входа* — **nvarchar(128)** только членами **sysadmin** предопределенной роли сервера можно изменить владельца задания.  
   
- [ **@notify_level_eventlog =**] *eventlog_level*  
- Указывает, следует ли помещать запись в журнал приложений Microsoft Windows для данного задания. *eventlog_level*— **int**, и может принимать одно из следующих значений.  
+`[ @notify_level_eventlog = ] eventlog_level` Указывает, следует ли помещать запись в журнал приложений Microsoft Windows для этого задания. *eventlog_level*— **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание (действие)|  
 |-----------|----------------------------|  
@@ -93,29 +84,21 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 |**2**|При сбое|  
 |**3**|Всегда|  
   
- [ **@notify_level_email =**] *email_level*  
- Указывает, нужно ли отправить сообщение электронной почты по завершении этого задания. *email_level*— **int**. *email_level*использует те же значения, что *eventlog_level*.  
+`[ @notify_level_email = ] email_level` Указывает, нужно ли отправить сообщение электронной почты по завершении этого задания. *email_level*— **int**. *email_level*использует те же значения, что *eventlog_level*.  
   
- [ **@notify_level_netsend =**] *netsend_level*  
- Указывает, нужно ли отправить сетевое сообщение по завершении этого задания. *netsend_level*— **int**. *netsend_level*использует те же значения, что *eventlog_level*.  
+`[ @notify_level_netsend = ] netsend_level` Указывает, нужно ли отправить сетевое сообщение по завершении этого задания. *netsend_level*— **int**. *netsend_level*использует те же значения, что *eventlog_level*.  
   
- [ **@notify_level_page =**] *page_level*  
- Указывает, необходимо ли отправить страницу по завершении этого задания. *page_level* — **int**. *page_level*использует те же значения, что *eventlog_level*.  
+`[ @notify_level_page = ] page_level` Указывает, нужно ли послать страницу по завершении этого задания. *page_level* — **int**. *page_level*использует те же значения, что *eventlog_level*.  
   
- [  **@notify_email_operator_name =**] **"***имя_оператора***"**  
- Имя оператора, которому отправляется сообщение электронной почты при *email_level* достижения. *имя_электронной_почты* — **nvarchar(128)**.  
+`[ @notify_email_operator_name = ] 'operator_name'` Имя оператора, которому отправляется сообщение электронной почты при *email_level* достижения. *имя_электронной_почты* — **nvarchar(128)**.  
   
- [  **@notify_netsend_operator_name =**] **"***netsend_operator***"**  
- Имя оператора, которому отправляется сетевое сообщение. *netsend_operator* — **nvarchar(128)**.  
+`[ @notify_netsend_operator_name = ] 'netsend_operator'` Имя оператора, которому отправляется сетевое сообщение. *netsend_operator* — **nvarchar(128)**.  
   
- [  **@notify_page_operator_name =**] **"***page_operator***"**  
- Имя оператора, которому отправляется страница. *page_operator* — **nvarchar(128)**.  
+`[ @notify_page_operator_name = ] 'page_operator'` Имя оператора, которому посылается страница. *page_operator* — **nvarchar(128)**.  
   
- [ **@delete_level =**] *delete_level*  
- Указывает, когда необходимо удалить задание. *delete_value*— **int**. *delete_level*использует те же значения, что *eventlog_level*.  
+`[ @delete_level = ] delete_level` Указывает, нужно ли удалять задание. *delete_value*— **int**. *delete_level*использует те же значения, что *eventlog_level*.  
   
- [  **@automatic_post =**] *automatic_post*  
- Зарезервировано.  
+`[ @automatic_post = ] automatic_post` Зарезервировано.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

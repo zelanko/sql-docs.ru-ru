@@ -1,5 +1,5 @@
 ---
-title: 'Примеры: использование режима AUTO | Документация Майкрософт'
+title: 'Примеры: Использование режима AUTO | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,20 +9,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 969721724f3d2dd171c56d5d62e56b41ec0ece73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081974"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538456"
 ---
-# <a name="examples-using-auto-mode"></a>Примеры. Использование режима AUTO
+# <a name="examples-using-auto-mode"></a>Примеры: Использование режима AUTO
   В следующем примере иллюстрируется применение режима AUTO. Многие из этих запросов являются запросами к XML-документам с инструкциями по производству велосипедов, хранящимся в столбце Instructions таблицы ProductModel образца базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Пример. Извлечение данных о заказчике, заказе и подробных сведений о заказе  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Пример Извлечение данных о заказчике, заказе и подробных сведений о заказе  
  Следующий запрос получает данные о заказчике, заказе и подробные данные о заказе определенного заказчика.  
   
 ```  
@@ -93,7 +93,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## <a name="example-specifying-group-by-and-aggregate-functions"></a>Пример. Использование предложения GROUP BY и агрегатных функций  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>Пример Использование предложения GROUP BY и агрегатных функций  
  Следующий запрос возвращает отдельные идентификаторы заказчиков и номера заказов, запрашиваемых заказчиками.  
   
 ```  
@@ -113,7 +113,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>Пример. Задание вычисляемых столбцов в режиме AUTO  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>Пример Задание вычисляемых столбцов в режиме AUTO  
  Этот запрос возвращает сцепленные имена заказчиков и данные для заказа. Так как вычисляемый столбец назначен самому внутреннему уровню, встретившемуся на данный момент, в этом примере — элементу <`SOH`>, сцепленные имена заказчиков добавляются в результат как атрибуты элемента <`SOH`>.  
   
 ```  
@@ -166,7 +166,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
   
  `...`  
   
-## <a name="example-returning-binary-data"></a>Пример. Возврат двоичных данных  
+## <a name="example-returning-binary-data"></a>Пример Возврат двоичных данных  
  Запрос возвращает фотографию продукта из таблицы `ProductPhoto` . `ThumbNailPhoto` является столбцом `varbinary(max)` в таблице `ProductPhoto`. По умолчанию режим `AUTO` возвращает ссылку на двоичные данные, являющуюся относительным URL-адресом виртуального корня базы данных, в которой выполняется запрос. Для идентификации изображения необходимо указать ключевой атрибут `ProductPhotoID` . Как показано в этом примере, при поиске изображения для однозначной идентификации строки в предложении `SELECT` необходимо также указать первичный ключ таблицы.  
   
 ```  
@@ -176,7 +176,7 @@ WHERE ProductPhotoID=70
 FOR XML AUTO;  
 ```  
   
- Результат:  
+ Это результат:  
   
  `-- result`  
   
@@ -195,7 +195,7 @@ WHERE ProductPhotoID=70
 FOR XML AUTO, BINARY BASE64;  
 ```  
   
- Результат:  
+ Это результат:  
   
  `-- result`  
   
@@ -212,7 +212,7 @@ WHERE  ProductPhotoID=70
 FOR XML AUTO;  
 ```  
   
- Результат:  
+ Это результат:  
   
  `<Production.PRODUCTPHOTO`  
   
@@ -222,7 +222,7 @@ FOR XML AUTO;
   
  Это может быть проблемой, особенно если запросы на объекты базы данных выполняются для базы данных с учетом регистра. Во избежание этого регистр задаваемого в запросах имени таблицы или столбца должен соответствовать регистру имени таблицы или столбца в базе данных.  
   
-## <a name="example-understanding-the-encoding"></a>Пример. Основные сведения о кодировке  
+## <a name="example-understanding-the-encoding"></a>Пример Основные сведения о кодировке  
  В этом примере демонстрируется использование различных кодировок, которые могут применяться в результате.  
   
  Создайте такую таблицу:  
@@ -243,7 +243,7 @@ INSERT INTO [Special Chars] VALUES ('&', 0x20), ('#', 0x20);
 SELECT * FROM [Special Chars] FOR XML AUTO;  
 ```  
   
- Результат:  
+ Это результат:  
   
  `<Special_x0020_Chars`  
   

@@ -18,12 +18,12 @@ ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18408265b75503bc73905eb561f118e4ea950fa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba2120b4c48ac9df9cc901b4ee789d95f9fc0357
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729902"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533296"
 ---
 # <a name="sphelpjobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,14 @@ sp_help_jobserver
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@job_id=** ] *job_id*  
- Идентификационный номер задания, для которого возвращаются сведения. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания, для которого возвращаются сведения. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [  **@job_name=** ] **"***имя_задания***"**  
- Имя задания, для которого возвращаются сведения. *имя_задания* — **sysname**, значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания, для которого возвращаются сведения. *имя_задания* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
- [ **@show_last_run_details=** ] *show_last_run_details*  
- Включать ли сведения о выполнении последнего запуска в результирующий набор. *show_last_run_details* — **tinyint**, значение по умолчанию **0**. **0** отсутствуют сведения последнего запуска и **1** does.  
+`[ @show_last_run_details = ] show_last_run_details` Является ли сведения о выполнении последнего запуска частью результирующего набора. *show_last_run_details* — **tinyint**, значение по умолчанию **0**. **0** отсутствуют сведения последнего запуска и **1** does.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

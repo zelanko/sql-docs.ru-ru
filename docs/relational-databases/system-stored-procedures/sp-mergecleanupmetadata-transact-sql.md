@@ -16,12 +16,12 @@ ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3ae8edeff1792cf3a1c70d4e80dea638402e30d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210963"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529006"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication =** ] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%**, которого очищаются метаданные для всех публикаций. При явном указании публикации она должна существовать.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%**, которого очищаются метаданные для всех публикаций. При явном указании публикации она должна существовать.  
   
- [  **@reinitialize_subscriber =** ] **"***подписчика***"**  
- Указывает, необходимо ли повторно инициализировать подписчик. *подписчик* — **nvarchar(5)**, может быть **TRUE** или **FALSE**, значение по умолчанию **TRUE**. Если **TRUE**, подписки помечаются для повторной инициализации. Если **FALSE**, подписки не помечаются для повторной инициализации.  
+`[ @reinitialize_subscriber = ] 'subscriber'` Указывает, следует ли повторно инициализировать подписчик. *подписчик* — **nvarchar(5)**, может быть **TRUE** или **FALSE**, значение по умолчанию **TRUE**. Если **TRUE**, подписки помечаются для повторной инициализации. Если **FALSE**, подписки не помечаются для повторной инициализации.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

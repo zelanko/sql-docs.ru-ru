@@ -16,12 +16,12 @@ ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0343855bbc3d82e58a0a0252109dee6255ee766f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2afa58b9fe8844aa4bb74187ef77393f0bc5681f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134054"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527537"
 ---
 # <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher=** ] **"**_издателя_**"**  
- Имя удаленного сервера. *издатель* — **sysname**, не имеет значения по умолчанию. Если **все**, подписка удаляется на всех издателях.  
+`[ @publisher = ] 'publisher'` Это имя удаленного сервера. *издатель* — **sysname**, не имеет значения по умолчанию. Если **все**, подписка удаляется на всех издателях.  
   
- [  **@publisher_db=** ] **"**_publisher_db_**"**  
- Имя базы данных издателя. *publisher_db* — **sysname**, не имеет значения по умолчанию. **все** означает все базы данных издателя.  
+`[ @publisher_db = ] 'publisher_db'` — Имя базы данных издателя. *publisher_db* — **sysname**, не имеет значения по умолчанию. **все** означает все базы данных издателя.  
   
- [  **@publication=** ] **"**_публикации_**"**  
- Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию. Если **все**, удаляется подписка на все публикации.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию. Если **все**, удаляется подписка на все публикации.  
   
- [  **@reserved=** ] *зарезервированные*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

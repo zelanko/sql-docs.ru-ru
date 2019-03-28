@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8194c74acb14a78482cc1e1de8fae38682699d3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a35880dd299cc9eff81643dd5d955101c5eec68
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679642"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532486"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **\@tsql =** ] **"**_Transact-SQL\_пакета_**"**  
- Одна или несколько инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Transact SQL_batch* может быть **nvarchar (**_n_**)** или **nvarchar(max)**.  
+`[ \@tsql = ] 'Transact-SQL\_batch'` Один или несколько [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций. *Transact SQL_batch* может быть **nvarchar (**_n_**)** или **nvarchar(max)**.  
   
- [  **\@params =** ] **N "**_параметры_**"**  
- \@params обеспечивает строку объявления параметров для [!INCLUDE[tsql](../../includes/tsql-md.md)] работы пакетной службы, точно так же в хранимой процедуре sp_executesql. *Параметры* может быть **nvarchar (**_n_**)** или **nvarchar(max)**.  
+`[ \@params = ] N'parameters'` \@params обеспечивает строку объявления параметров для [!INCLUDE[tsql](../../includes/tsql-md.md)] работы пакетной службы, точно так же в хранимой процедуре sp_executesql. *Параметры* может быть **nvarchar (**_n_**)** или **nvarchar(max)**.  
   
  Строка, содержащая определения всех параметров, внедренных в *Transact SQL_batch*. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. n — заполнитель, указывающий дополнительные определения параметра. Если выполнение инструкции Transact-SQL или пакета в инструкции не содержит параметров, \@params не является обязательным. Этот аргумент по умолчанию принимает значение NULL.  
   

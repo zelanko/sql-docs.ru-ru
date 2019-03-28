@@ -18,12 +18,12 @@ ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ec2fe4ba5ad90d044a9407be04acc850ae16b73
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 257e91babf98fcbd7a2a54e8b9d14134a7446d6b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591498"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537845"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,18 +41,15 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@schedule_id=** ] *schedule_id*  
- Идентификационный номер удаляемого расписания. *schedule_id* — **int**, значение по умолчанию NULL.  
+`[ @schedule_id = ] schedule_id` Идентификационный номер расписания, следует удалить. *schedule_id* — **int**, значение по умолчанию NULL.  
   
 > **ПРИМЕЧАНИЕ.** Либо *schedule_id* или *schedule_name* должен быть указан, но не оба аргумента одновременно.  
   
- [  **@schedule_name=** ] **"**_schedule_name_**"**  
- Имя удаляемого расписания. *schedule_name* — **sysname**, значение по умолчанию NULL.  
+`[ @schedule_name = ] 'schedule_name'` Имя расписания. *schedule_name* — **sysname**, значение по умолчанию NULL.  
   
 > **ПРИМЕЧАНИЕ.** Либо *schedule_id* или *schedule_name* должен быть указан, но не оба аргумента одновременно.  
   
- [ **@force_delete** =] *force_delete*  
- Указывает, будет ли процедура завершаться с ошибкой, если расписание прикреплено к заданию. *Force_delete* имеет тип bit и значение по умолчанию **0**. Когда *force_delete* — **0**, хранимая процедура завершается неудачей, если расписание прикреплено к заданию. Когда *force_delete* — **1**, расписание удаляется независимо от того, прикреплено ли оно к заданию.  
+`[ @force_delete = ] force_delete` Указывает, является ли процедура завершаться с ошибкой, если расписание прикреплено к заданию. *Force_delete* имеет тип bit и значение по умолчанию **0**. Когда *force_delete* — **0**, хранимая процедура завершается неудачей, если расписание прикреплено к заданию. Когда *force_delete* — **1**, расписание удаляется независимо от того, прикреплено ли оно к заданию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

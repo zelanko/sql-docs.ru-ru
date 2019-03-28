@@ -16,12 +16,12 @@ ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b7ebae98b83c743fa2ea111a2809b3d1a043005
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 93462a0f9529b20b3a74d37a3b844eb643e9f7b3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774136"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526646"
 ---
 # <a name="spmschangedistributionagentproperties-transact-sql"></a>sp_MSchange_distribution_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +44,19 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@publisher** =] **"***издателя***"**  
- Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` — Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@publisher_db=** ] **"***publisher_db***"**  
- Имя базы данных публикации. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` — Имя базы данных публикации. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@publication =** ] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@subscriber=** ] **"***подписчика***"**  
- Имя подписчика. *подписчик* — **sysname**, не имеет значения по умолчанию.  
+`[ @subscriber = ] 'subscriber'` — Имя подписчика. *подписчик* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@subscriber_db=** ] **"***subscriber_db***"**  
- Имя базы данных подписки. *subscriber_db* — **sysname**, не имеет значения по умолчанию.  
+`[ @subscriber_db = ] 'subscriber_db'` — Имя базы данных подписки. *subscriber_db* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@property =** ] **"***свойство***"**  
- Изменяемое свойство публикации. *Свойство* — **sysname**, не имеет значения по умолчанию.  
+`[ @property = ] 'property'` Представляет изменяемое свойство публикации. *Свойство* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@value =** ] **"***значение***"**  
- Новое значение свойства. *значение* — **nvarchar(524)**, значение по умолчанию NULL.  
+`[ @value = ] 'value'` — Это новое значение свойства. *значение* — **nvarchar(524)**, значение по умолчанию NULL.  
   
  В следующей таблице приводятся свойства задания агента распространителя, доступные для изменения, а также ограничения на значения этих свойств.  
   

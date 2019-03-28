@@ -10,12 +10,12 @@ ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4238e512975d2f333ac066e6b0183c60ead7d97d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118174"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536536"
 ---
 # <a name="collations-and-code-pages"></a>Параметры сортировки и кодовые страницы
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] имеет ограничения на поддерживаемые кодовые страницы для столбцов (var)char в оптимизированных для памяти таблицах и на параметры сортировки, используемые в индексах и скомпилированные в собственном коде в хранимых процедурах.  
@@ -31,7 +31,7 @@ ms.locfileid: "48118174"
 > [!IMPORTANT]  
 >  Нельзя использовать функции упорядочивания и группировки в столбцах строк индекса, в которых не используются параметры сортировки BIN2.  
   
-```tsql  
+```sql  
 CREATE DATABASE IMOLTP  
   
 ALTER DATABASE IMOLTP ADD FILEGROUP IMOLTP_mod CONTAINS MEMORY_OPTIMIZED_DATA  
@@ -60,7 +60,7 @@ GO
   
 -   Столбцы (var)char в таблицах, оптимизированных для памяти, должны использовать параметры сортировки кодовой страницы 1252. Данное ограничение не относится к столбцам n(var)char. Следующий код извлекает все параметры сортировки 1252:  
   
-    ```tsql  
+    ```sql  
     -- all supported collations for (var)char columns in memory-optimized tables  
     select * from sys.fn_helpcollations()  
     where collationproperty(name, 'codepage') = 1252;  
@@ -70,7 +70,7 @@ GO
   
 -   Индексы столбцов (n)var(char) могут быть определены только с параметрами сортировки BIN2 (см. первый пример). Следующий запрос получает все поддерживаемые параметры сортировки BIN2:  
   
-    ```tsql  
+    ```sql  
     -- all supported collations for indexes on memory-optimized tables and   
     -- comparison/sorting in natively compiled stored procedures  
     select * from sys.fn_helpcollations() where name like '%BIN2'  
@@ -84,7 +84,7 @@ GO
   
 -   Усечение данных UTF-16, неподдерживаемых внутри хранимых процедур, скомпилированных в собственном коде. Это означает, что n (var) char (*n*) не удается преобразовать значения в тип n (var) char (*я*), если *я* < *n*, если параметры сортировки имеют свойство _SC. Например, следующее выражение не поддерживается:  
   
-    ```tsql  
+    ```sql  
     -- column definition using an _SC collation  
      c2 nvarchar(200) collate Latin1_General_100_CS_AS_SC not null   
     -- assignment to a smaller variable, requiring truncation  
@@ -98,7 +98,7 @@ GO
   
  В следующем примере показаны некоторые последствия и решения для ограничений параметров сортировки в OLTP в памяти. В примере используется приведенная выше таблица Employees. Это образец списка всех сотрудников. Обратите внимание, что для LastName вследствие параметров двоичной сортировки имена в верхнем регистре варианта сортируются раньше имен в нижнем регистре. Поэтому «Thomas» предшествует «nolan», так как символы в верхнем регистре имеют более низкие кодовые точки. FirstName имеет параметры сортировки без учета регистра. Поэтому сортировка выполняется по буквам алфавита, а не кодовым точкам символов.  
   
-```tsql  
+```sql  
 -- insert a number of values  
 INSERT Employees VALUES (1,'thomas', 'john')  
 INSERT Employees VALUES (2,'Thomas', 'rupert')  

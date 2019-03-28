@@ -11,12 +11,12 @@ ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b25bd1ad06b92aa3d9e1ba9cb4be4caa5d587d1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38d807fae60099022e847e4799196305ccfbadf8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207924"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534446"
 ---
 # <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>Занятие 9. Восстановление базы данных из хранилища Windows Azure
   На этом занятии вы узнаете, как восстановить файл резервной копии базы данных из хранилища Windows Azure в базу данных, которая находится на локальном компьютере или на виртуальной машине в Windows Azure. Для прохождения этого занятия не требуется завершать занятия 4, 5, 6, 7 и 8.  
@@ -43,9 +43,9 @@ ms.locfileid: "48207924"
   
 3.  Скопируйте и вставьте следующий полный скрипт в окно запроса. При необходимости измените скрипт.  
   
-     **Примечание:** запуском `RESTORE` инструкцию для восстановления резервной копии базы данных (BAK-файл) в хранилище Windows Azure в экземпляр базы данных на другом компьютере.  
+     **Примечание.** Инструкция `RESTORE` выполняется для восстановления резервной копии базы данных (BAK) из хранилища Windows Azure в экземпляр базы данных, находящийся на другом компьютере.  
   
-    ```tsql  
+    ```sql  
   
     USE master   
     GO   
@@ -96,6 +96,6 @@ ms.locfileid: "48207924"
   
     ```  
   
- **Конец учебника: SQL Server Data Files в службе хранилища Windows Azure**  
+ **Конец учебника. SQL Server Data Files в службе хранилища Windows Azure**  
   
   

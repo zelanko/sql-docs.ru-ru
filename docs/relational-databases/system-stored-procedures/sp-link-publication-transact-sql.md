@@ -16,12 +16,12 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c713b4efcfd37c245f340769a4725b0792d7528b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 94d074985848bb510c15907f6b17dc492904f5c0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210062"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537844"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,17 +50,13 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@publisher**=] **"***издателя***"**  
- Имя издателя для связи. *издатель* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` — Имя издателя для связи. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@publisher_db**=] **"***publisher_db***"**  
- Имя базы данных издателя для связи. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` — Имя базы данных издателя для связи. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@publication**=] **"***публикации***"**  
- Имя публикации для связи. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` — Имя публикации для связи. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@security_mode**=] *security_mode*  
- Режим безопасности, который подписчик использует для подключения к удаленному издателю для немедленного обновления. *security_mode* — **int**, и может принимать одно из следующих значений. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] security_mode` Режим безопасности, используемый подписчиком для подключения к удаленному издателю для немедленного обновления. *security_mode* — **int**, и может принимать одно из следующих значений. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -68,14 +64,11 @@ sp_link_publication [ @publisher = ] 'publisher'
 |**1**|Использует контекст безопасности (проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Windows) пользователя, редактирующего подписчика.<br /><br /> Примечание. Эта учетная запись должна существовать также и на издателе с соответствующими правами доступа. В случае использования проверки подлинности Windows должно поддерживаться делегирование учетной записи безопасности.|  
 |**2**|Используется существующее, определенное пользователем связанного сервера имя для входа создан с помощью **sp_link_publication**.|  
   
- [ **@login**=] **"***входа***"**  
- Имя входа. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. Этот параметр должен быть указан при *security_mode* — **0**.  
+`[ @login = ] 'login'` — Это имя. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. Этот параметр должен быть указан при *security_mode* — **0**.  
   
- [ **@password**=] **"***пароль***"**  
- Пароль. *пароль* — **sysname**, значение по умолчанию NULL. Этот параметр должен быть указан при *security_mode* — **0**.  
+`[ @password = ] 'password'` — Пароль. *пароль* — **sysname**, значение по умолчанию NULL. Этот параметр должен быть указан при *security_mode* — **0**.  
   
- [  **@distributor=** ] **"***распространителя***"**  
- Имя распространителя. *распространитель* — **sysname**, значение по умолчанию NULL.  
+`[ @distributor = ] 'distributor'` — Имя распространителя. *распространитель* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

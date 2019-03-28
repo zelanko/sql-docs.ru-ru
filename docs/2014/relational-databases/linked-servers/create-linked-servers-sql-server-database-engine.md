@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eebda510e90c499a0bae774d1288d3b886896d25
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766616"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527849"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Создание связанных серверов (компонент SQL Server Database Engine)
   В этом разделе описано, как создать связанный сервер и производить доступ к данным из другого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Путем создания связанного сервера вы можете работать с данными из нескольких источников. Связанный сервер не обязательно должен быть другим экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], хотя такой вариант часто встречается.  
@@ -199,7 +199,7 @@ ms.locfileid: "52766616"
   
 1.  В редакторе запросов введите следующую команду [!INCLUDE[tsql](../../includes/tsql-md.md)] , чтобы установить связь с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с именем `SRVR002\ACCTG`:  
   
-    ```tsql  
+    ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
@@ -211,7 +211,7 @@ ms.locfileid: "52766616"
   
 2.  Выполните следующий код, чтобы настроить связанный сервер для использования учетных данных домена для имени входа, которое использует связанный сервер.  
   
-    ```tsql  
+    ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
@@ -220,13 +220,13 @@ ms.locfileid: "52766616"
   
     ```  
   
-##  <a name="FollowUp"></a> Дальнейшие действия: Действия, выполняемые после создания связанного сервера  
+##  <a name="FollowUp"></a> Дальнейшие действия. Действия, выполняемые после создания связанного сервера  
   
 #### <a name="to-test-the-linked-server"></a>Проверка связанного сервера  
   
 -   Выполните следующий код, чтобы проверить соединение со связанным сервером. Этот пример возвращает имена баз данных на связанном сервере.  
   
-    ```tsql  
+    ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
     GO  
   
@@ -236,7 +236,7 @@ ms.locfileid: "52766616"
   
 -   Для ссылки на объект, расположенный на связанном сервере, используйте четырехкомпонентные имена. Выполните следующий код, чтобы получить список всех имен входа на локальном сервере и соответствующих имен входа на связанном сервере.  
   
-    ```tsql  
+    ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
     FROM master.sys.server_principals AS local  
     LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  

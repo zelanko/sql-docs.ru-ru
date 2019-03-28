@@ -18,12 +18,12 @@ ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c1e161a678b6834123aabf1eb5126445927a7fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a8549d33b000744f4d8430ee306e0083455894c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650787"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531766"
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@sent_before=** ] **"***sent_before***"**  
- Удаляет сообщения электронной почты до даты и времени, указанных *sent_before* аргумент. *sent_before* — **datetime** и значение по умолчанию NULL. Значение NULL соответствует всем датам.  
+`[ @sent_before = ] 'sent_before'` Удаляет сообщения электронной почты до даты и времени, указанных *sent_before* аргумент. *sent_before* — **datetime** и значение по умолчанию NULL. Значение NULL соответствует всем датам.  
   
- [ **@sent_status=** ] **'***sent_status***'**  
- Удаляет сообщения электронной почты типа, заданного параметром *sent_status*. *sent_status* — **varchar(8)** не имеет значения по умолчанию. Допустимыми значениями являются **отправленных**, **неотправленных**, **повторная попытка**, и **сбой**. Значение NULL соответствует всем состояниям.  
+`[ @sent_status = ] 'sent_status'` Удаляет сообщения электронной почты типа, заданного параметром *sent_status*. *sent_status* — **varchar(8)** не имеет значения по умолчанию. Допустимыми значениями являются **отправленных**, **неотправленных**, **повторная попытка**, и **сбой**. Значение NULL соответствует всем состояниям.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

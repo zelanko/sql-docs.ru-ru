@@ -18,12 +18,12 @@ ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22cb6ac1283c0ad8e7b423d73f6ec768c90af11c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 58cab4235a0b0199540179250fc5358ff6a525b6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670522"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528860"
 ---
 # <a name="spupdatecategory-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@class =**] **"***класс***"**  
- Класс обновляемой категории. *Класс*— **varchar(8)**, по умолчанию и может принимать одно из следующих значений.  
+`[ @class = ] 'class'` Класс категории. *Класс*— **varchar(8)**, по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -52,11 +51,9 @@ sp_update_category
 |**JOB**|Обновляет категорию заданий.|  
 |**ОПЕРАТОР**|Обновляет категорию операторов.|  
   
- [  **@name =**] **"***старое_имя***"**  
- Текущее имя категории. *старое_имя*— **sysname**, не имеет значения по умолчанию.  
+`[ @name = ] 'old_name'` Текущее имя категории. *старое_имя*— **sysname**, не имеет значения по умолчанию.  
   
- [  **@new_name =**] **"***новое_имя***"**  
- Новое имя категории. *новое_имя*— **sysname**, не имеет значения по умолчанию.  
+`[ @new_name = ] 'new_name'` Новое имя категории. *новое_имя*— **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

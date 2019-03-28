@@ -20,12 +20,12 @@ ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2e39a456e9d6c6479f6dab95270dcbd2d549c986
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 0d682c839b8fa51ac8671d190e9fbb5ab322aa6b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589158"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535516"
 ---
 # <a name="sysspcdcstopjob-transact-sql"></a>sys.sp_cdc_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +42,7 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [[  **@job_type=** ] **"**_job_type_"]  
- Тип добавляемого задания. *job_type* — **nvarchar(20)** значение по умолчанию **записи**. Допустимыми входными значениями являются **захвата** и **очистки**.  
+`[ [ @job_type = ] 'job_type_' ]` Тип добавляемого задания. *job_type* — **nvarchar(20)** значение по умолчанию **записи**. Допустимыми входными значениями являются **захвата** и **очистки**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

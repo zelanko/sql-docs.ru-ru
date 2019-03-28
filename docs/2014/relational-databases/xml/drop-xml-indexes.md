@@ -11,23 +11,23 @@ helpviewer_keywords:
 - dropping indexes
 - XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82fd8836bb4fda85a7fdadd6345826cf432485cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4b1706f81808d90e02df32df7e56828b054bd05
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194154"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535506"
 ---
 # <a name="drop-xml-indexes"></a>Удаление XML-индексов
   Инструкция [DROP INDEX (Transact-SQL)](/sql/t-sql/statements/drop-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет удалить существующие первичные и вторичные XML-индексы и индексы других типов. Однако к XML-индексам не применяется ни один из параметров DROP INDEX. Если удаляется первичный XML-индекс, то вместе с ним удаляются также и все имеющиеся вторичные индексы.  
   
  Синтаксис инструкции DROP для *TableName.IndexName* постепенно вытесняется и для XML-индексов не поддерживается.  
   
-## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Пример. Создание и удаление первичного XML-индекса  
- В следующем примере создается XML-индекса на `xml` столбец типа.  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Пример Создание и удаление первичного XML-индекса  
+ В следующем примере создается XML-индекс для столбца типа `xml`.  
   
 ```  
 DROP TABLE T  
@@ -51,7 +51,7 @@ DROP INDEX PIdx_T_XmlCol ON T
   
  При удалении таблицы автоматически удаляются все созданные для нее XML-индексы. Однако столбец XML не может быть удален из таблицы, если для него существует XML-индекс.  
   
- В следующем примере создается XML-индекса на `xml` столбец типа. Дополнительные сведения см. в статье [Сравнение типизированного и нетипизированного XML](../xml/compare-typed-xml-to-untyped-xml.md).  
+ В следующем примере создается XML-индекс для столбца типа `xml`. Дополнительные сведения см. в статье [Сравнение типизированного и нетипизированного XML](../xml/compare-typed-xml-to-untyped-xml.md).  
   
 ```  
 CREATE TABLE TestTable(  
@@ -68,7 +68,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>Пример. Создание XML-индекса с помощью параметра DROP_EXISTING  
+## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>Пример Создание XML-индекса с помощью параметра DROP_EXISTING  
  В следующем примере XML-индекс создается для столбца`XmlColx`. Затем для другого столбца (`XmlColy`) создается другой XML-индекс с тем же именем. Так как задан параметр `DROP_EXISTING` , существующий XML-индекс для столбца (`XmlColx)` ) удаляется и вместо него создается новый XML-индекс для столбца (`XmlColy`).  
   
 ```  

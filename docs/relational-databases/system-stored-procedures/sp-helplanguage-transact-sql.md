@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c70e32de4ad1c44f5d38262573a075e81417ec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1b567b7d20f4d588fe0ca70f68be4318ce24398
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756542"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531676"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,8 +42,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@language=** ] **"***языка***"**  
- Имя альтернативного языка, для которого следует отображать сведения. *Язык* — **sysname**, значение по умолчанию NULL. Если *языка* будет указан, возвращаются сведения о соответствующем языке. Если язык не указан, сведения обо всех языках из **sys.syslanguages** возвращается Просмотр в режиме совместимости.  
+`[ @language = ] 'language'` — Имя альтернативного языка, для которого необходимо отобразить сведения. *Язык* — **sysname**, значение по умолчанию NULL. Если *языка* будет указан, возвращаются сведения о соответствующем языке. Если язык не указан, сведения обо всех языках из **sys.syslanguages** возвращается Просмотр в режиме совместимости.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -54,14 +53,14 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |-----------------|---------------|-----------------|  
 |**LangID**|**smallint**|Идентификационный номер языка.|  
 |**DATEFORMAT**|**nchar(3)**|Формат даты.|  
-|**DATEFIRST**|**tinyint**|Первый день недели: 1 — понедельник, 2 — вторник и так далее до 7 — воскресенье.|  
+|**DATEFIRST**|**tinyint**|Первый день недели: 1 — понедельник, 2 — вторник и т. д. до 7 — воскресенье.|  
 |**Обновление**|**int**|Версия последнего обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для данного языка.|  
 |**name**|**sysname**|Имя языка.|  
 |**alias**|**sysname**|Альтернативное имя языка.|  
 |**месяцев**|**nvarchar(372)**|Названия месяцев.|  
 |**shortmonths**|**nvarchar(132)**|Сокращенные названия месяцев.|  
 |**дней**|**nvarchar(217)**|Названия дней.|  
-|**код языка**|**int**|Код данной локали в Windows.|  
+|**lcid**|**int**|Код данной локали в Windows.|  
 |**msglangid**|**smallint**|Идентификатор группы сообщений компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="permissions"></a>Разрешения  

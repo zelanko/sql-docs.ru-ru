@@ -16,12 +16,12 @@ ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e2bde09ee15af5ebf6ef48cfd52222fe030a937
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8f1a1baec088af48cd18972c177463fbb3f574eb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783016"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530686"
 ---
 # <a name="spdropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,15 +39,13 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@no_checks=**] *no_checks*  
- Показывает, нужно ли проверять зависимые объекты перед удалением распространителя. *no_checks* — **бит**, значение по умолчанию 0.  
+`[ @no_checks = ] no_checks` Указывает, следует ли проверять зависимые объекты перед удалением распространителя. *no_checks* — **бит**, значение по умолчанию 0.  
   
  Если **0**, **sp_dropdistributor** проверок, чтобы убедиться в том, что все объекты публикации и распространения вместе с распространителем, был удален.  
   
  Если **1**, **sp_dropdistributor** удаляет все объекты публикации и распространения перед удалением распространителя.  
   
- [  **@ignore_distributor=**] *ignore_distributor*  
- Указывает, исполняется ли данная хранимая процедура без подключения к распространителю. *ignore_distributor* — **бит**, значение по умолчанию **0**.  
+`[ @ignore_distributor = ] ignore_distributor` Указывает, выполняется ли данная хранимая процедура без подключения к распространителю. *ignore_distributor* — **бит**, значение по умолчанию **0**.  
   
  Если **0**, **sp_dropdistributor** подключается к распространителю и удаляет все объекты репликации. Если **sp_dropdistributor** не удалось соединиться с распространителем, хранимая процедура завершается ошибкой.  
   

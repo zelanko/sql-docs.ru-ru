@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9a24c843ed45a42fe4072b47c5642d81520a75e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f483c6fe53ab980893ba8e1104b46e073336b027
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214143"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533986"
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -47,11 +47,9 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>Аргументы
 
-[  **@name =** ] **"***module_name***"**   
-Имя хранимой процедуры, определяемой пользователем функции, представления, триггера DML, триггера DDL уровня базы данных или триггера DDL уровня сервера. *module_name* не может быть общеязыковая среда выполнения (CLR) хранимая процедура или функция среды CLR. *module_name* не может быть привязана к схеме. *module_name* является `nvarchar`, не имеет значения по умолчанию. *module_name* может быть составным идентификатором, но может ссылаться только на объекты в текущей базе данных.
+`[ @name = ] 'module_name'` — Имя хранимой процедуры, определяемой пользователем функции, представления, триггера DML, триггер DDL уровня базы данных или триггера DDL уровня сервера. *module_name* не может быть общеязыковая среда выполнения (CLR) хранимая процедура или функция среды CLR. *module_name* не может быть привязана к схеме. *module_name* является `nvarchar`, не имеет значения по умолчанию. *module_name* может быть составным идентификатором, но может ссылаться только на объекты в текущей базе данных.
 
-[  **@namespace =** ] **"** < класс > **"**   
-Класс указанного модуля. Когда *module_name* является триггером DDL, `<class>` является обязательным. Параметр `<class>` равен `nvarchar(20)`. Допустимыми входными значениями являются `DATABASE_DDL_TRIGGER` и `SERVER_DDL_TRIGGER`.    
+`[ @namespace = ] ' < class > '` — Класс указанного модуля. Когда *module_name* является триггером DDL, `<class>` является обязательным. Параметр `<class>` равен `nvarchar(20)`. Допустимыми входными значениями являются `DATABASE_DDL_TRIGGER` и `SERVER_DDL_TRIGGER`.    
 
 ## <a name="return-code-values"></a>Значения кода возврата  
 

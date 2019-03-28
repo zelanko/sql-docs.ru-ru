@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 42af33d78a13961b7a85ae408a3c693edf759e75
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 57fd1d8c90a9d5b24d0d4cbea6eb0491006f89da
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408871"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527116"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Настройка общего диска кластера SLES для SQL Server
 
@@ -53,7 +53,7 @@ ms.locfileid: "52408871"
     ```
     Подключение к базе данных master SQL Server с учетной записью «sa» и выполните следующую команду:
 
-    ```tsql
+    ```sql
     USE [master]
     GO
     CREATE LOGIN [<loginName>] with PASSWORD= N'<loginPassword>'

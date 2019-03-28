@@ -18,12 +18,12 @@ ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0274c825b18e1377e337b614068db7fc75c7a917
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 604feac612c2c937593cdd484a05d45462396823
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732032"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537206"
 ---
 # <a name="sphelpjobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_help_jobcount
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@schedule_id=** ] *schedule_id*  
- Идентификатор расписания, сведения о котором следует возвратить. *schedule_id* — **int**, не имеет значения по умолчанию. Либо *schedule_id* или *schedule_name* может быть указан.  
+`[ @schedule_id = ] schedule_id` Идентификатор расписания, к списку. *schedule_id* — **int**, не имеет значения по умолчанию. Либо *schedule_id* или *schedule_name* может быть указан.  
   
- [  **@schedule_name=** ] **"***schedule_name***"**  
- Имя расписания, сведения о котором следует возвратить. *schedule_name* — **sysname**, не имеет значения по умолчанию. Либо *schedule_id* или *schedule_name* может быть указан.  
+`[ @schedule_name = ] 'schedule_name'` Имя расписания, которые следует возвратить. *schedule_name* — **sysname**, не имеет значения по умолчанию. Либо *schedule_id* или *schedule_name* может быть указан.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

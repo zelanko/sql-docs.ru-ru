@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5eb82ba893b39da389640f7b139279f8caf70da6
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 51fd5471ac678a1d61986aaa9219eec923c38485
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586247"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535767"
 ---
 # <a name="spupdatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,8 +45,7 @@ sp_updatestats [ [ @resample = ] 'resample']
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@resample** =] **'resample'**  
- Указывает, что **sp_updatestats** будет использовать параметр RESAMPLE [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) инструкции. Если **'resample'** не указан, **sp_updatestats** обновляет статистику с помощью выборки по умолчанию. **Повторить выборку** — **varchar(8)** со значением по умолчанию "Нет".  
+`[ @resample = ] 'resample'` Указывает, что **sp_updatestats** будет использовать параметр RESAMPLE [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) инструкции. Если **'resample'** не указан, **sp_updatestats** обновляет статистику с помощью выборки по умолчанию. **Повторить выборку** — **varchar(8)** со значением по умолчанию "Нет".  
   
 ## <a name="remarks"></a>Примечания  
  **sp_updatestats** выполняет `UPDATE STATISTICS`, указав `ALL` ключевое слово, для всех пользовательских и внутренних таблиц в базе данных. sp_updatestats выводит сообщения о ходе своего выполнения. По завершении обновления выдается отчет о том, что обновление статистики произведено для всех таблиц.  

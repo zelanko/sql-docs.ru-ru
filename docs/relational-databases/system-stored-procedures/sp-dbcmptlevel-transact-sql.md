@@ -18,17 +18,17 @@ ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 094235cd508f4265a68861de60e9e4c2d35ee4b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96bd1aa87dba90963588db74935294c0dcdd8f0b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841795"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527433"
 ---
 # <a name="spdbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Настраивает определенное поведение баз данных для обеспечения совместимости с указанной версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Определяет поведение конкретных баз данных для совместимости с указанной версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте [уровень совместимости ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)вместо этого.  
@@ -44,11 +44,9 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@dbname=** ] *имя*  
- Имя базы данных, для которой должен быть изменен уровень совместимости. Имена баз данных должны соответствовать правилам для идентификаторов. *имя* — **sysname**, значение по умолчанию NULL.  
+`[ @dbname = ] name` — Имя базы данных, для которого необходимо изменить уровень совместимости. Имена баз данных должны соответствовать правилам для идентификаторов. *имя* — **sysname**, значение по умолчанию NULL.  
   
- [  **@new_cmptlevel=** ] *версии*  
- Версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], с которой необходимо обеспечить совместимость базы данных. *версия* — **tinyint**, значение по умолчанию NULL. Это должно быть одно из следующих значений.  
+`[ @new_cmptlevel = ] version` — Это версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с которой необходимо обеспечить совместимость базы данных. *версия* — **tinyint**, значение по умолчанию NULL. Это должно быть одно из следующих значений.  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   

@@ -16,12 +16,12 @@ ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e9ab98dc5beb4f2e07ac7fa62386f9fd44703ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 77a0e3f1795545e553347ae699e719af2ad506b4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823337"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531583"
 ---
 # <a name="spivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@viewname**=] **"***view_name***"**  
- Имя представления, для которого требуется проверка. *view_name* — **sysname**, не имеет значения по умолчанию.  
+`[ @viewname = ] 'view_name'` — Имя представления для проверки. *view_name* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@fhasnullcols**=] *field_has_null_columns* выходных данных  
- Флаг, указывающий, имеются ли в индексе представления столбцы, допускающие значение NULL. *view_name* — **sysname**, не имеет значения по умолчанию. Возвращает значение **1** Если в индексе представления есть столбцы, допускающие значение NULL. Возвращает значение **0** Если представление не содержит столбцов, допускающих значения NULL.  
+`[ @fhasnullcols = ] field_has_null_columns OUTPUT` Флаг, указывающий, имеются ли в индексе представления столбцы, допускающие значение NULL. *view_name* — **sysname**, не имеет значения по умолчанию. Возвращает значение **1** Если в индексе представления есть столбцы, допускающие значение NULL. Возвращает значение **0** Если представление не содержит столбцов, допускающих значения NULL.  
   
 > [!NOTE]  
 >  Если сама хранимая процедура возвращает код возврата **1**, то есть выполнение хранимой процедуры завершилось ошибкой, то это значение равно **0** и его следует игнорировать.  

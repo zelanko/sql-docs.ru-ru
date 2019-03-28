@@ -10,15 +10,15 @@ helpviewer_keywords:
 - FOR XML query
 - queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 491c0a0084e334cabe7b0eb7648b50aed46a3abc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3cccb676574fe4b767d567fbe48cdb887baddf8c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545573"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530583"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Сравнение запросов FOR XML и вложенных запросов FOR XML
   В этом разделе сравнивается одноуровневый запрос FOR XML с вложенным запросом FOR XML. Одним из преимуществ вложенных запросов FOR XML является то, что в них для результатов запроса можно задать сочетание XML-данных по атрибутивной или элементной модели. Это демонстрируется в примере.  

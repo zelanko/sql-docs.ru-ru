@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 758eadb1d5b3724bd829c556ca93ce8ae4a3bfa0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206244"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534586"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Выборочный XML-индекс (SXI)
   Селективные XML-индексы — это еще один тип XML-индексов, доступный наряду с обычными XML-индексами. Селективный XML-индекс используется в следующих целях.  
@@ -78,7 +78,7 @@ ms.locfileid: "48206244"
   
  Если запросы к данным выполняются только по путям `/book/title` и `/book/subjects` , вы можете создать следующий селективный XML-индекс.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX SXI_index  
 ON Tbl(xmlcol)  
 FOR   
@@ -123,7 +123,7 @@ FOR
   
 -   Индексирование узлов с двоичными типами XS: например, base64Binary и hexBinary.  
   
--   Указание узлов для индексирования с помощью выражений XPath, которые содержат подстановочный знак `*` в конце: например,  `/a/b/c/*`, `/a//b/*`или `/a/b/*:c`.  
+-   Указание узлов для индексирования с выражениями Xpath, которые содержат символ-шаблон `*` в конце. Например `/a/b/c/*`, `/a//b/*`, или `/a/b/*:c`.  
   
 -   Индексирование любых осей, отличных от осей дочерних элементов, атрибутов или объектов-потомков. Вариант `//<step>` допускается как исключение.  
   

@@ -11,12 +11,12 @@ ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9a75375ae8636cd3c8861030131ce08c63832460
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 46d4018e125633319ed6d235873f56720fbe6bc2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404286"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534686"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Урок 6. Перенос базы данных с исходного локального компьютера на целевой компьютер в Windows Azure
   Для этого занятия предполагается, что у вас уже есть другой экземпляр SQL Server, который может находиться на другом локальном компьютере или на виртуальной машине Windows Azure. Сведения о том, как создать виртуальную машину SQL Server в Windows Azure, см. в разделе [подготовки виртуальной машины с SQL Server в Windows Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). После провизионирования виртуальной машины SQL Server в Windows Azure необходимо подключиться к экземпляру SQL Server на этой виртуальной машине с помощью среды SQL Server Management Studio, работающей на другом компьютере.  
@@ -53,7 +53,7 @@ ms.locfileid: "52404286"
   
         3.  Скопируйте и вставьте следующий пример в окно запроса (при необходимости измените). Следующая инструкция создает учетные данные SQL Server для хранения сертификата общего доступа контейнера хранилища.  
   
-            ```tsql  
+            ```sql  
   
             USE master   
             GO   
@@ -66,13 +66,13 @@ ms.locfileid: "52404286"
   
         4.  Чтобы увидеть все доступные учетные данные, можно выполнить следующую инструкцию в окне запроса:  
   
-            ```tsql  
+            ```sql  
             SELECT * from sys.credentials   
             ```  
   
         5.  После установления соединения с целевым сервером откройте окно запроса и выполните команду:  
   
-            ```tsql  
+            ```sql  
   
             -- Create a master key and a server certificate   
             USE master   
@@ -94,7 +94,7 @@ ms.locfileid: "52404286"
   
     2.  Затем с помощью параметра FOR ATTACH создайте базу данных с файлами данных и журнала, указывающими на существующие файлы в хранилище Windows Azure. В окне запроса введите следующую инструкцию:  
   
-        ```tsql  
+        ```sql  
   
         --Create a database on the destination server   
         CREATE DATABASE TestDB1onDest   
@@ -113,7 +113,7 @@ ms.locfileid: "52404286"
   
     4.  Затем в окне запроса выполните следующую инструкцию:  
   
-        ```tsql  
+        ```sql  
   
         USE TestDB1onDest   
         SELECT * FROM Table1;   

@@ -18,12 +18,12 @@ ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e56bfe08d9279408cc7bdbc4b57a9719a04946fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b5ccd47f2b702c998a9e9268db523da1bfceaec
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857062"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536686"
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,25 +43,20 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@job_id=** ] *job_id*  
- Идентификатор удаляемого задания. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
+`[ @job_id = ] job_id` — Это идентификационный номер задания для удаления. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [  **@job_name=** ] **"***имя_задания***"**  
- Имя удаляемого задания. *имя_задания* — **sysname**, значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` — Имя задания для удаления. *имя_задания* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Либо *job_id* или *имя_задания*должен быть указан, нельзя указать одновременно.  
   
- [ **@originating_server=** ] **'***server***'**  
- Для внутреннего использования.  
+`[ @originating_server = ] 'server'` Для внутреннего использования.  
   
- [  **@delete_history=** ] *delete_history*  
- Указывает, следует ли удалить журнал задания. *delete_history* — **бит**, значение по умолчанию **1**. Когда *delete_history* — **1**, удаляется журнал заданий для задания. Когда *delete_history* — **0**, журнал заданий не удаляется.  
+`[ @delete_history = ] delete_history` Указывает, следует ли удалить журнал задания. *delete_history* — **бит**, значение по умолчанию **1**. Когда *delete_history* — **1**, удаляется журнал заданий для задания. Когда *delete_history* — **0**, журнал заданий не удаляется.  
   
  Обратите внимание, что когда задание удалено, а журнал не удаляется, исторические сведения для задания не будут отображаться в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] журнал заданий агента графический пользовательский интерфейс, но эти данные по-прежнему будет находиться в **sysjobhistory**в таблицу **msdb** базы данных.  
   
- [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
- Указывает, следует ли удалить расписания, связанные с этим заданием, если они не связаны ни с одним другим заданием. *delete_unused_schedule* — **бит**, значение по умолчанию **1**. Когда *delete_unused_schedule* — **1**, расписания, связанные с этим заданием, удаляются, если нет других заданий ссылаются на расписание. Когда *delete_unused_schedule* — **0**, расписания не удаляются.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` Указывает, является ли удалить расписания связанные с этим заданием, если они не присоединены к любых других заданий. *delete_unused_schedule* — **бит**, значение по умолчанию **1**. Когда *delete_unused_schedule* — **1**, расписания, связанные с этим заданием, удаляются, если нет других заданий ссылаются на расписание. Когда *delete_unused_schedule* — **0**, расписания не удаляются.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

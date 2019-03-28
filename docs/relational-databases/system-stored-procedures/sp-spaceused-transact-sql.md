@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 036dd5fd4898f7b7abc55eba4971ce599b746423
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61cd3c5c4ba15d42c1b1fe261703cfbb67b3e24f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608813"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538556"
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,7 +47,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 
 Для [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] и [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spaceused` необходимо указать именованные параметры (например `sp_spaceused (@objname= N'Table1');` вместо того чтобы полагаться на порядковый номер параметра. 
 
- [  **@objname=**] **"***objname***"** 
+`[ @objname = ] 'objname'`
    
  Полное или неполное имя таблицы, индексированного представления или очереди, для которых были запрошены сведения по использованию места на диске. Кавычки необходимы только в том случае, если указано уточненное имя объекта. Если указано полностью уточненное имя, включающее имя базы данных, именем базы данных должно быть имя текущей базы данных.  
 Если *objname* не указан, результаты возвращаются для всей базы данных.  
@@ -55,11 +55,9 @@ sp_spaceused [[ @objname = ] 'objname' ]
 > [!NOTE]  
 > [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] и [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] поддерживают только объекты базы данных и таблицы.
   
- [  **@updateusage=**] **"***updateusage***"**  
- Указывает, что для обновления сведений об использовании места на диске следует запустить инструкцию DBCC UPDATEUSAGE. Когда *objname* — не указано, инструкция выполняется на всю базу данных; в противном случае инструкция выполняется *objname*. Значения могут быть **true** или **false**. *UPDATEUSAGE* — **varchar(5)**, значение по умолчанию **false**.  
+`[ @updateusage = ] 'updateusage'` Указывает, что следует запускать DBCC UPDATEUSAGE для обновления сведений об использовании пространства. Когда *objname* — не указано, инструкция выполняется на всю базу данных; в противном случае инструкция выполняется *objname*. Значения могут быть **true** или **false**. *UPDATEUSAGE* — **varchar(5)**, значение по умолчанию **false**.  
   
- [  **@mode=**] **"***режим***"**  
- Указывает область результатов. Для перенесенной таблицы или базы данных *режим* позволяет включить или исключить удаленного часть объекта. Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
+`[ @mode = ] 'mode'` Указывает область результатов. Для перенесенной таблицы или базы данных *режим* позволяет включить или исключить удаленного часть объекта. Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
  *Режим* аргумент может иметь следующие значения:  
   
@@ -71,8 +69,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *режим* — **varchar(11)**, значение по умолчанию **N'ALL'**.  
   
- [  **@oneresultset=**] *oneresultset*  
- Указывает, следует ли возвращать один результирующий набор. *Oneresultset* аргумент может иметь следующие значения:  
+`[ @oneresultset = ] oneresultset` Указывает, следует ли возвращать один результирующий набор. *Oneresultset* аргумент может иметь следующие значения:  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -81,7 +78,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *oneresultset* — **бит**, значение по умолчанию **0**.  
 
-[ **@include_total_xtp_storage**] **"***include_total_xtp_storage***"**  
+`[ @include_total_xtp_storage] 'include_total_xtp_storage'`
 **Применяется к:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
   
  Когда @oneresultset= 1, параметр @include_total_xtp_storage определяет, включает ли одного результирующего набора столбцов для хранилища MEMORY_OPTIMIZED_DATA. Значение по умолчанию — 0, то есть, по умолчанию, (Если этот параметр опущен) XTP столбцы не включаются в результирующий набор.  
@@ -122,7 +119,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|Имя объекта, для которого были запрошены сведения об используемом пространстве.<br /><br /> Имя схемы объекта не возвращается. Если требуется указать имя схемы, используйте [sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) или [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) динамические административные представления для получения эквивалентных сведений о размере.|  
-|**строки**|**char(20)**|Количество существующих строк в таблице. Если объект указан как очередь компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)], этот столбец указывает число сообщений в очереди.|  
+|**rows**|**char(20)**|Количество существующих строк в таблице. Если объект указан как очередь компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)], этот столбец указывает число сообщений в очереди.|  
 |**Зарезервировано**|**varchar(18)**|Общий объем пространства, зарезервированный для *objname*.|  
 |**data**|**varchar(18)**|Общий объем пространства, используемый данными *objname*.|  
 |**index_size**|**varchar(18)**|Общий объем пространства, используемый индексами *objname*.|  
@@ -253,7 +250,7 @@ GO
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC UPDATEUSAGE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units (Transact-SQL)](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   

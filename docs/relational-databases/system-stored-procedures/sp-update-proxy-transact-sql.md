@@ -19,12 +19,12 @@ ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 06520164758a50d604b2effbdae23f73dde7128c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29a95b506fbbfb5342410d8d393f0091dd98834b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763529"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534466"
 ---
 # <a name="spupdateproxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,26 +48,19 @@ sp_update_proxy
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@proxy_id**=] *идентификатор*  
- Идентификационный номер изменяемой учетной записи-посредника. *Proxy_id* — **int**, значение по умолчанию NULL.  
+`[ @proxy_id = ] id` Идентификационный номер изменяемой. *Proxy_id* — **int**, значение по умолчанию NULL.  
   
- [ **@proxy_name**=] **"***proxy_name***"**  
- Имя изменяемой учетной записи-посредника. *Proxy_name* — **sysname**, значение по умолчанию NULL.  
+`[ @proxy_name = ] 'proxy_name'` Имя прокси-сервера для изменения. *Proxy_name* — **sysname**, значение по умолчанию NULL.  
   
- [ **@credential_name** =] **"***credential_name***"**  
- Имя новых учетных данных для учетной записи-посредника. *Credential_name* — **sysname**, значение по умолчанию NULL. Либо *credential_name* или *credential_id* может быть указан.  
+`[ @credential_name = ] 'credential_name'` Имя новых учетных данных прокси-сервера. *Credential_name* — **sysname**, значение по умолчанию NULL. Либо *credential_name* или *credential_id* может быть указан.  
   
- [ **@credential_id** =] *credential_id*  
- Идентификационный номер новых учетных данных для учетной записи-посредника. *Credential_id* — **int**, значение по умолчанию NULL. Либо *credential_name* или *credential_id* может быть указан.  
+`[ @credential_id = ] credential_id` Идентификационный номер новых учетных данных прокси-сервера. *Credential_id* — **int**, значение по умолчанию NULL. Либо *credential_name* или *credential_id* может быть указан.  
   
- [ **@new_name**=] **"***новое_имя***"**  
- Новое имя учетной записи-посредника. *Новое_имя* — **sysname**, значение по умолчанию NULL. Если указано, процедура изменяет имя прокси-сервера, *новое_имя*. Если этот аргумент равен NULL, имя учетной записи-посредника остается неизменным.  
+`[ @new_name = ] 'new_name'` Новое имя прокси-сервера. *Новое_имя* — **sysname**, значение по умолчанию NULL. Если указано, процедура изменяет имя прокси-сервера, *новое_имя*. Если этот аргумент равен NULL, имя учетной записи-посредника остается неизменным.  
   
- [ **@enabled** =] *is_enabled*  
- Разрешена ли учетная запись-посредник. *Is_enabled* установлен флаг **tinyint**, значение по умолчанию NULL. Когда *is_enabled* — **0**, прокси-сервер не включен и не может использоваться шагом задания. Если этот аргумент равен NULL, состояние учетной записи-посредника остается неизменным.  
+`[ @enabled = ] is_enabled` Определяет, активна ли прокси-сервер. *Is_enabled* установлен флаг **tinyint**, значение по умолчанию NULL. Когда *is_enabled* — **0**, прокси-сервер не включен и не может использоваться шагом задания. Если этот аргумент равен NULL, состояние учетной записи-посредника остается неизменным.  
   
- [ **@description**=] **"***описание***"**  
- Новое описание учетной записи-посредника. *Описание* — **nvarchar(512)**, значение по умолчанию NULL. Если этот аргумент равен NULL, описание учетной записи-посредника остается неизменным.  
+`[ @description = ] 'description'` Новое описание прокси-сервера. *Описание* — **nvarchar(512)**, значение по умолчанию NULL. Если этот аргумент равен NULL, описание учетной записи-посредника остается неизменным.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

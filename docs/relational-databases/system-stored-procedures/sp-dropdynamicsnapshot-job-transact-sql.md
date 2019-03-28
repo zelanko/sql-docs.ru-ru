@@ -16,12 +16,12 @@ ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4612c7b20e448eecbd6c83a3d09d0796dcff542
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 04564b2d2830a6bd925a1c334c8026b376d0894f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126264"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526386"
 ---
 # <a name="spdropdynamicsnapshotjob-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +41,16 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=**] **"**_публикации_**"**  
- Имя публикации, из которой удаляется отфильтрованное задание моментального снимка данных. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` — Имя публикации, из которого удаляется задание моментального снимка отфильтрованных данных. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@dynamic_snapshot_jobname**=] **"**_dynamic_snapshot_jobname_**"**  
- Имя удаляемого отфильтрованного задания моментального снимка данных. *dynamic_snapshot_jobname*имеет тип sysname, и если это не указаны значения по умолчанию для любого задания имени будет связан с *dynamic_snapshot_jobid*.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Имя задания моментального снимка отфильтрованных данных удаляется. *dynamic_snapshot_jobname*имеет тип sysname, и если это не указаны значения по умолчанию для любого задания имени будет связан с *dynamic_snapshot_jobid*.  
   
- [ **@dynamic_snapshot_jobid**=] **"**_dynamic_snapshot_jobid_**"**  
- Идентификатор созданного задания моментального снимка удаляемых данных. *dynamic_snapshot_jobid*— **uniqueidentifier**, по умолчанию NULL.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` Удаляется идентификатор задания моментального снимка отфильтрованных данных. *dynamic_snapshot_jobid*— **uniqueidentifier**, по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  Только *dynamic_snapshot_jobid*или *dynamic_snapshot_jobname* можно указать. Если значения не заданы для любого *dynamic_snapshot_jobid*или *dynamic_snapshot_jobname*, удаление всех заданий динамического моментального снимка для публикации.  
   
- [  **@ignore_distributor =**] *ignore_distributor*  
- *ignore_distributor* — **бит**, значение по умолчанию **0**. Этот аргумент может использоваться для удаления динамического задания моментального снимка, не выполняя задачи очистки на распространителе.  
+`[ @ignore_distributor = ] ignore_distributor` *ignore_distributor* — **бит**, значение по умолчанию **0**. Этот аргумент может использоваться для удаления динамического задания моментального снимка, не выполняя задачи очистки на распространителе.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

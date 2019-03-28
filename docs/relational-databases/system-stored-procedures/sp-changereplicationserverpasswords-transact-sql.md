@@ -16,12 +16,12 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: bfe5d9f7bc5c95055af06b0582f2ddcf88ae7cdf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6fa6606d7daf4a1b61ff986d1d7c5675b5ae5f1f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125714"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531816"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,24 +41,20 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@login_type** =] *login_type*  
- Тип проверки подлинности для предоставленных учетных данных. *Аргумент LOGIN_TYPE* — **tinyint**, не имеет значения по умолчанию.  
+`[ @login_type = ] login_type` — Тип проверки подлинности для предоставленных учетных данных. *Аргумент LOGIN_TYPE* — **tinyint**, не имеет значения по умолчанию.  
   
  **1** = встроенная проверка подлинности Windows  
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности  
   
- [ **@login** =] **"**_входа_**"**  
- Имя учетной записи Windows или имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которое необходимо изменить. *Имя входа* — **nvarchar(257)**, не имеет значения по умолчанию  
+`[ @login = ] 'login'` Имя учетной записи Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] изменяемое имя входа. *Имя входа* — **nvarchar(257)**, не имеет значения по умолчанию  
   
- [ **@password** =] **"**_пароль_**"**  
- Новый пароль должен быть сохранен для указанного *входа*. *пароль* — **sysname**, не имеет значения по умолчанию.  
+`[ @password = ] 'password'` Новый пароль должен быть сохранен для указанного *входа*. *пароль* — **sysname**, не имеет значения по умолчанию.  
   
 > [!NOTE]  
 >  После изменения пароля репликации необходимо остановить и перезапустить каждый агент, пользующийся этим паролем, прежде чем изменение вступит в силу для этого агента.  
   
- [ **@server** =] **"**_server_**"**  
- Серверное соединение, для которого изменяется сохраненный пароль. *сервер* — **sysname**, и может принимать одно из следующих значений:  
+`[ @server = ] 'server'` — Это соединение с сервером, для которого изменяется сохраненный пароль. *сервер* — **sysname**, и может принимать одно из следующих значений:  
   
 |Значение|Описание|  
 |-----------|-----------------|  

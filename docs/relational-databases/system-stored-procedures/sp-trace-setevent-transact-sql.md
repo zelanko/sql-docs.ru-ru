@@ -18,12 +18,12 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cae733bf78928ccd83550adc8a4b525f6a996189
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: 54f36b46f75bf943ecf08aafd93a6b861c2da90a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266105"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538586"
 ---
 # <a name="sptracesetevent-transact-sql"></a>Хранимая процедура sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@traceid=** ] *trace_id*  
- Идентификатор изменяемой трассировки. *trace_id* — **int**, не имеет значения по умолчанию. Пользователь применяет это *trace_id* значение для определения, изменения и управления трассировкой.  
+`[ @traceid = ] trace_id` — Идентификатор изменяемой трассировки. *trace_id* — **int**, не имеет значения по умолчанию. Пользователь применяет это *trace_id* значение для определения, изменения и управления трассировкой.  
   
- [  **@eventid=** ] *event_id*  
- Идентификатор включаемого события. *Идентификатор event_id* — **int**, не имеет значения по умолчанию.  
+`[ @eventid = ] event_id` — Идентификатор события, которые требуется включить. *Идентификатор event_id* — **int**, не имеет значения по умолчанию.  
   
  Эта таблица содержит список событий, которые можно добавить или удалить из трассировки.  
   
@@ -239,8 +237,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Plan Guide Unsuccessful|Указывает, что SQL Server не удалось создать план выполнения для запроса или пакета, в котором содержится структура плана. SQL Server выполнил попытку создать план выполнения для этого запроса или пакета без применения структуры плана. Эту проблему могла вызвать недопустимая структура плана. Структуры планов можно проверить при помощи системной функции sys.fn_validate_plan_guide.|  
 |235|Audit Fulltext||  
   
- [  **@columnid=** ] *column_id*  
- Идентификатор столбца, добавляемого к событию. *Идентификатор column_id* — **int**, не имеет значения по умолчанию.  
+`[ @columnid = ] column_id` Это идентификатор столбца, добавляемого события. *Идентификатор column_id* — **int**, не имеет значения по умолчанию.  
   
  В следующей таблице приводится список столбцов, которые могут добавляться для события.  
   

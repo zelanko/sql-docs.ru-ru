@@ -16,12 +16,12 @@ ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 88cf393ac488f6e6f4c078b9bd346a3e6cb53204
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0576f180809a4432af022d278867d847c8087dd4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823058"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526216"
 ---
 # <a name="sprestoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@publication** =] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, значение по умолчанию **все**. Если он указан, восстанавливаются диапазоны идентификаторов только для соответствующей публикации.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, значение по умолчанию **все**. Если он указан, восстанавливаются диапазоны идентификаторов только для соответствующей публикации.  
   
- [ **@article** =] **"***статье***"**  
- Имя статьи. *статья* — **sysname**, со значением по умолчанию **все**. Если он указан, восстанавливаются диапазоны идентификаторов только для соответствующей статьи.  
+`[ @article = ] 'article'` — Имя статьи. *статья* — **sysname**, со значением по умолчанию **все**. Если он указан, восстанавливаются диапазоны идентификаторов только для соответствующей статьи.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

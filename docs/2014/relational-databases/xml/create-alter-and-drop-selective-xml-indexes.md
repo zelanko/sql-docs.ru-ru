@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4bdab531db5e426b13f470b30d90eb16bfd6f93e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a95fa1c010197d0107c757198d9db7eaf8d3c42e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070189"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533756"
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>Создание, изменение и удаление селективных XML-индексов
   Описывает способы создания нового селективного XML-индекса, изменения или удаления существующего селективного XML-индекса.  
@@ -24,7 +24,7 @@ ms.locfileid: "48070189"
   
 ##  <a name="create"></a> Создание селективного XML-индекса  
   
-### <a name="how-to-create-a-selective-xml-index"></a>Инструкции. Создание селективного XML-индекса  
+### <a name="how-to-create-a-selective-xml-index"></a>Практическое руководство. создать селективный XML-индекс  
  **Создание нового селективного XML-индекса с помощью Transact-SQL**  
  Создание селективного XML-индекса путем вызова инструкции CREATE SELECTIVE XML INDEX. Дополнительные сведения см. в разделе [CREATE SELECTIVE XML INDEX (Transact-SQL)](/sql/t-sql/statements/create-selective-xml-index-transact-sql).  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48070189"
   
  В следующем примере показан синтаксис для создания селективного XML-индекса. Он также содержит несколько вариантов синтаксиса для описания индексируемых путей с указаниями по оптимизации.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX sxi_index  
 ON Tbl(xmlcol)  
   
@@ -48,7 +48,7 @@ FOR(
   
 ##  <a name="alter"></a> Изменение селективного XML-индекса  
   
-### <a name="how-to-alter-a-selective-xml-index"></a>Инструкции. Изменение селективного XML-индекса  
+### <a name="how-to-alter-a-selective-xml-index"></a>Практическое руководство. изменить селективный XML-индекс  
  **изменить селективный XML-индекс с помощью Transact-SQL**  
  Измените существующий селективный XML-индекс с помощью инструкции ALTER INDEX. Дополнительные сведения см. в разделе [ALTER INDEX (селективные XML-индексы)](../indexes/indexes.md).  
   
@@ -56,7 +56,7 @@ FOR(
   
  В следующем примере показана инструкция ALTER INDEX. Эта инструкция добавляет путь `'/a/b/m'` в часть XQuery индекса и удаляет путь `'/a/b/e'` из части SQL индекса, созданного в примере в разделе [CREATE SELECTIVE XML INDEX (Transact-SQL)](/sql/t-sql/statements/create-selective-xml-index-transact-sql). Путь для удаления определяется по имени, указанному при его создании.  
   
-```tsql  
+```sql  
 ALTER INDEX sxi_index  
 ON Tbl  
 FOR   
@@ -70,7 +70,7 @@ FOR
   
 ##  <a name="drop"></a> Удаление селективного XML-индекса  
   
-### <a name="how-to-drop-a-selective-xml-index"></a>Инструкции. Удаление селективного XML-индекса  
+### <a name="how-to-drop-a-selective-xml-index"></a>Практическое руководство. удалить селективный XML-индекс  
  **Удаление селективного XML-индекса с помощью Transact-SQL**  
  Удалите селективный XML-индекс с помощью инструкции DROP INDEX. Дополнительные сведения см. в разделе [DROP INDEX (селективные XML-индексы)](/sql/t-sql/statements/drop-index-selective-xml-indexes).  
   
@@ -78,7 +78,7 @@ FOR
   
  В следующем примере показана инструкция DROP INDEX.  
   
-```tsql  
+```sql  
 DROP INDEX sxi_index ON tbl  
 ```  
   

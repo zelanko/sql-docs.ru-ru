@@ -18,12 +18,12 @@ ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 496515aaf8abc1e9f5eec313655199e97b5a5bcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a5e3db87aedd9a13ac7af90284362bb82ab3a13
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658962"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526706"
 ---
 # <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +43,15 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
- Идентификатор для обновляемой подписки на категорию политики. *policy_category_subscription_id* — **int**и является обязательным.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` — Идентификатор для подписки на категорию политики, вам необходимо обновить. *policy_category_subscription_id* — **int**и является обязательным.  
   
- [  **@target_type=** ] **"** target_type **"**  
- Целевой тип подписки на категорию. *target_type* — **sysname**, значение по умолчанию NULL.  
+`[ @target_type = ] 'target_type'` — Это тип объекта подписки на категорию. *target_type* — **sysname**, значение по умолчанию NULL.  
   
  Если указать *target_type*, должен иметь значение «DATABASE».  
   
- [  **@target_object=** ] **"** target_object **"**  
- — Имя базы данных, которая подписывается на категорию политики. *target_object* — **sysname**, значение по умолчанию NULL.  
+`[ @target_object = ] 'target_object'` — Имя базы данных, которая подписывается на категорию политики. *target_object* — **sysname**, значение по умолчанию NULL.  
   
- [  **@policy_category=** ] **"** policy_category **"**  
- Имя категории политики, на которую подписывается база данных. *policy_category* — **sysname**, значение по умолчанию NULL.  
+`[ @policy_category = ] 'policy_category'` Это имя категории политики, на которую база данных, необходимо подписаться. *policy_category* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -77,7 +73,7 @@ ON a.policy_category_id = b.policy_category_id;
  Требуется членство в предопределенной роли базы данных PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Возможно повышение учетных данных: пользователи в роли PolicyAdministratorRole могут создавать триггеры сервера и планировать выполнение политик, влияющих на работу экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Например, пользователи в роли PolicyAdministratorRole могут создать политику, которая может запретить создание большинства объектов в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Вследствие возможного повышения прав учетных данных роль PolicyAdministratorRole должна предоставляться только пользователям, имеющим право изменять конфигурацию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Возможное повышение прав учетных данных. Пользователи с ролью PolicyAdministratorRole могут создавать триггеры сервера и планировать выполнение политик, влияющих на работу экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Например, пользователи в роли PolicyAdministratorRole могут создать политику, которая может запретить создание большинства объектов в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Вследствие возможного повышения прав учетных данных роль PolicyAdministratorRole должна предоставляться только пользователям, имеющим право изменять конфигурацию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере существующая подписка на категорию политики обновляется таким образом, что база данных AdventureWorks2012 подписывается на категорию политики Finance.  

@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68e3cd191dc397574e739faa62f315f018bcb466
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8cdd1fd6120f74030875dbe1d624f3b5b162c3d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836672"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529946"
 ---
 # <a name="spvalidname-transact-sql"></a>sp_validname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_validname [@name =] 'name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@name=** ] **"***имя***"**  
- Имя [идентификаторы](../../relational-databases/databases/database-identifiers.md) для которого выполняется проверка допустимости. *имя* — **sysname**, не имеет значения по умолчанию. *имя* не может иметь значение NULL, не может быть пустой строкой и не может содержать двоичные или нулевые символы.  
+`[ @name = ] 'name'` Имя [идентификаторы](../../relational-databases/databases/database-identifiers.md) для которого выполняется проверка допустимости. *имя* — **sysname**, не имеет значения по умолчанию. *имя* не может иметь значение NULL, не может быть пустой строкой и не может содержать двоичные или нулевые символы.  
   
- [  **@raise_error=** ] *raise_error*  
- Указывает, формировать ли ошибку. *raise_error* — **бит**, значение по умолчанию 1. Это означает, что ошибки будут отображаться. 0 приводит к тому, что сообщения об ошибках появляться не будут.  
+`[ @raise_error = ] raise_error` Указывает, следует ли вызывать ошибку. *raise_error* — **бит**, значение по умолчанию 1. Это означает, что ошибки будут отображаться. 0 приводит к тому, что сообщения об ошибках появляться не будут.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

@@ -20,12 +20,12 @@ ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7eaa167c46937d48bd760d29bd17828a2d555538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e7651c6df4a277d72a71c0cdb8a5910ae19ba76
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763085"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536786"
 ---
 # <a name="sysspcdcscan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +45,13 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@maxtrans=** ] *max_trans*  
- Максимальное количество транзакций, обрабатываемое в каждом цикле просмотра. *max_trans* — **int** значение по умолчанию 500.  
+`[ @maxtrans = ] max_trans` Максимальное количество транзакций, обрабатываемое в каждом цикле просмотра. *max_trans* — **int** значение по умолчанию 500.  
   
- [  **@maxscans=** ] *max_scans*  
- Максимальное количество циклов просмотра, выполняемых для извлечения всех строк из журнала. *max_scans* — **int** значение по умолчанию 10.  
+`[ @maxscans = ] max_scans` Максимальное число циклов просмотра, выполняемых для извлечения всех строк из журнала. *max_scans* — **int** значение по умолчанию 10.  
   
- [  **@continuous=** ] *непрерывной*  
- Указывает, следует ли хранимая процедура завершиться после выполнения одного цикла просмотра (0) или выполняться непрерывно, времени, заданного параметром *polling_interval* перед останавливаясь цикла просмотра (1). *Непрерывная* — **tinyint** значение по умолчанию 0.  
+`[ @continuous = ] continuous` Указывает, следует ли хранимая процедура завершиться после выполнения одного цикла просмотра (0) или выполняться непрерывно, времени, заданного параметром *polling_interval* перед останавливаясь цикла просмотра (1). *Непрерывная* — **tinyint** значение по умолчанию 0.  
   
- [  **@pollinginterval=** ] *polling_interval*  
- Число секунд между циклами просмотра журнала. *polling_interval* — **bigint** значение по умолчанию 0.  
+`[ @pollinginterval = ] polling_interval` Число секунд между циклами просмотра журнала. *polling_interval* — **bigint** значение по умолчанию 0.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

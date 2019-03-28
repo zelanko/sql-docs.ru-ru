@@ -18,12 +18,12 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c9ed0ee742d1562d8b573b71e5d62b7d10bc7d02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c214c8b061e2530c4dcf4b178b6028cbdca01fa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843832"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530026"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,12 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@acctname =** ] **"***account_name***"**  
- Имя пользователя или группы Windows, которым предоставляется доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* — **sysname**, значение по умолчанию NULL. Если *account_name* не указан, все группы Windows и пользователей Windows, которым было явно предоставлено разрешение на вход выводятся. *account_name* должно быть полным. Например, 'ADVWKS4\macraes' или 'BUILTIN\Administrators'.  
+`[ @acctname = ] 'account_name'` Имя пользователя Windows или группы, к предоставлен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* — **sysname**, значение по умолчанию NULL. Если *account_name* не указан, все группы Windows и пользователей Windows, которым было явно предоставлено разрешение на вход выводятся. *account_name* должно быть полным. Например, 'ADVWKS4\macraes' или 'BUILTIN\Administrators'.  
   
  **«all»** | **«members»**  
  Указывает, следует ли доставлять данные обо всех путях разрешений для данной учетной записи или только сведения о членах группы Windows. **@option** — **varchar(10)**, значение по умолчанию NULL. Если не **все** указано, отображается только путь для первого разрешения.  
   
- [  **@privilege =** ] *имя_переменной*  
- Выходной параметр, возвращающий уровень прав доступа для указанной учетной записи Windows. *имя_переменной* — **varchar(10)**, значение по умолчанию «Not wanted». Возвращаемый уровень прав доступа **пользователя**, **администратора**, или **null**.  
+`[ @privilege = ] variable_name` Является выходным параметром, возвращающий уровень прав доступа для указанной учетной записи Windows. *имя_переменной* — **varchar(10)**, значение по умолчанию «Not wanted». Возвращаемый уровень прав доступа **пользователя**, **администратора**, или **null**.  
   
  OUTPUT  
  Если указано, то *имя_переменной* в выходном параметре.  
@@ -62,7 +60,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**Имя учетной записи**|**sysname**|Полностью уточненное имя учетной записи Windows.|  
-|**type**|**значение типа char(8)**|Тип учетной записи Windows. Допустимые значения: **пользователя** или **группы**.|  
+|**type**|**char(8)**|Тип учетной записи Windows. Допустимые значения: **пользователя** или **группы**.|  
 |**привилегий**|**char(9)**|Права доступа к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Допустимые значения: **администратора**, **пользователя**, или **null**.|  
 |**Сопоставленное имя входа**|**sysname**|Для учетных записей пользователей с пользовательскими привилегиями столбец **сопоставить имя входа** показано сопоставленное имя входа, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается использовать при добавлении входа с использованием этой учетной записи с помощью правил сопоставления с доменным именем перед ним.|  
 |**Путь разрешения**|**sysname**|Членство в группе, разрешающее доступ к учетной записи.|  

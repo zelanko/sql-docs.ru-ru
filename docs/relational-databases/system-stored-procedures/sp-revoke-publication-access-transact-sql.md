@@ -16,12 +16,12 @@ ms.assetid: 84ed9e77-991f-4fa5-a21f-7c6bfec1b3e3
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3e2a52ca65288fa6dc00160ab36be5faf1f4aed6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8237924bc87fb12b08f49154f15a835dc6fc269b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808406"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533776"
 ---
 # <a name="sprevokepublicationaccess-transact-sql"></a>sp_revoke_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,9 @@ sp_revoke_publication_access [ @publication = ] 'publication' , [ @login = ] 'lo
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=**] **"***публикации***"**  
- Имя публикации, к которой осуществляется обращение. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` — Имя для доступа к публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@login=**] **"***входа***"**  
- Идентификатор входа. *Имя входа* — **sysname**, не имеет значения по умолчанию.  
+`[ @login = ] 'login'` Идентификатор входа. *Имя входа* — **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

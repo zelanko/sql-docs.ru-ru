@@ -18,12 +18,12 @@ ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 358918d91a13cf879d56ff5afd23d9aea0c8d81f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16d5c1815e42e419940223b7f25a565e04ab0508
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627942"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533256"
 ---
 # <a name="spmsxsetaccount-transact-sql"></a>sp_msx_set_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@credential_name=** ] **"***credential_name***"**  
- Учетное имя, используемое для записи журнала на главном сервере. Указанное имя должно быть именем существующей учетной записи. Либо *credential_name* или *credential_id* должен быть указан.  
+`[ @credential_name = ] 'credential_name'` Имя учетные данные, используемые для входа на главный сервер. Указанное имя должно быть именем существующей учетной записи. Либо *credential_name* или *credential_id* должен быть указан.  
   
- [  **@credential_id=** ] *credential_id*  
- Идентификатор для учетной записи, используемый для записи журнала на главном сервере. Идентификатор должен быть идентификатором существующей учетной записи. Либо *credential_name* или *credential_id* должен быть указан.  
+`[ @credential_id = ] credential_id` Идентификатор учетные данные, используемые для входа на главный сервер. Идентификатор должен быть идентификатором существующей учетной записи. Либо *credential_name* или *credential_id* должен быть указан.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

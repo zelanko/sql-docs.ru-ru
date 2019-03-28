@@ -10,12 +10,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 37931bd25b0a2024e555a7881397fd558d2f260a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 15b3b27f859b2ea2ed3008d33f19a682aeef833b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509230"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533477"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Оценка требований к объему памяти для таблиц, оптимизированных для памяти
   При создании нового [!INCLUDE[hek_2](../../includes/hek-2-md.md)] оптимизированной для памяти таблицы или переносе существующей таблицы на диске в оптимизированных для памяти таблицу, важно иметь оценку требований к памяти для каждой таблицы, поэтому можно оставить на сервере достаточно объем памяти. В этом разделе описывается, как определить объем памяти, необходимый для хранения данных в таблице, оптимизированной для памяти.  
@@ -39,7 +39,7 @@ ms.locfileid: "52509230"
 ##  <a name="bkmk_ExampleTable"></a> Пример оптимизированной для памяти таблицы  
  Рассмотрим следующую схему таблицы, оптимизированной для памяти:  
   
-```tsql  
+```sql  
   
 CREATE TABLE t_hk (  
 col1 int NOT NULL PRIMARY KEY NONCLUSTERED,  
@@ -86,7 +86,7 @@ GO
   
  В хэш-индексах скорость поиска совпадений очень высока:  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 = 3  
@@ -95,7 +95,7 @@ SELECT * FROM t_hk
   
  Некластеризованные индексы будут быстрее при поиске диапазона, например:  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 >= 3  
@@ -104,7 +104,7 @@ SELECT * FROM t_hk
   
  При переносе дисковой таблицы можно использовать следующий критерий для определения количества уникальных значений в индексе t1c2_index.  
   
-```tsql  
+```sql  
   
 SELECT COUNT(DISTINCT [Col2])  
   FROM t_hk  
@@ -144,7 +144,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  Некластеризованные индексы наилучшим образом подходят для поиска по диапазону, как показано в примере следующего запроса:  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE c2 > 5  

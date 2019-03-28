@@ -18,12 +18,12 @@ ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0bef77291c0a719b9cdc96106d3c173dff652da1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1904b1549613e53c685d784628696e84b134a03
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644682"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534716"
 ---
 # <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +45,14 @@ sp_password [ [ @old = ] 'old_password' , ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@old=** ] **"***old_password***"**  
- Старый пароль. *old_password* — **sysname**, значение по умолчанию NULL.  
+`[ @old = ] 'old_password'` — Старый пароль. *old_password* — **sysname**, значение по умолчанию NULL.  
   
- [  **@new=** ] **"***новый_пароль***"**  
- Новый пароль. *новый_пароль* — **sysname**, не имеет значения по умолчанию. *old_password* должен быть указан, если именованные параметры не используются.  
+`[ @new = ] 'new_password'` — Новый пароль. *новый_пароль* — **sysname**, не имеет значения по умолчанию. *old_password* должен быть указан, если именованные параметры не используются.  
   
 > [!IMPORTANT]  
 >  Не используйте пароль со значением NULL. Выбирайте надежные пароли. Дополнительные сведения см. в разделе [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
- [  **@loginame=** ] **"***входа***"**  
- Имя учетной записи, к которой применяется смена пароля. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. *Имя входа* уже должен существовать и может быть указан только членами **sysadmin** или **securityadmin** предопределенных ролей сервера.  
+`[ @loginame = ] 'login'` — Это имя входа, затрагиваемый изменением пароля. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. *Имя входа* уже должен существовать и может быть указан только членами **sysadmin** или **securityadmin** предопределенных ролей сервера.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

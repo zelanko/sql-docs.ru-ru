@@ -18,12 +18,12 @@ ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a17ec458ffe1094691932fee6661e38551012b54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c2e25b51998d863809a57654b245b1cb63027b5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749453"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534676"
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,37 +56,27 @@ sp_create_removable
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@dbname=** ] **"***dbname***"**  
- Имя базы данных, создаваемой для использования на съемных носителях. *DBName* — **sysname**.  
+`[ @dbname = ] 'dbname'` — Имя базы данных, создаваемой для использования на съемных носителях. *DBName* — **sysname**.  
   
- [  **@syslogical=** ] **"***syslogical***"**  
- Логическое имя файла, содержащего таблицы системных каталогов. *syslogical* — **sysname**.  
+`[ @syslogical = ] 'syslogical'` — Это логическое имя файла, содержащего таблицы системных каталогов. *syslogical* — **sysname**.  
   
- [  **@sysphysical=** ] **"***sysphysical***"**  
- Физическое имя. Включает в себя полный путь к файлу, содержащему таблицы системных каталогов. *sysphysical* — **nvarchar(260)**.  
+`[ @sysphysical = ] 'sysphysical'` Это физическое имя. Включает в себя полный путь к файлу, содержащему таблицы системных каталогов. *sysphysical* — **nvarchar(260)**.  
   
- [  **@syssize=** ] *syssize*  
- Размер файла, содержащего таблицы системных каталогов (в мегабайтах). *syssize* — **int**. Минимальное *syssize* -1.  
+`[ @syssize = ] syssize` — Это размер в мегабайтах, файла, содержащему системных таблицах каталога. *syssize* — **int**. Минимальное *syssize* -1.  
   
- [  **@loglogical=** ] **"***loglogical***"**  
- Логическое имя файла, содержащего журнал транзакций. *loglogical* — **sysname**.  
+`[ @loglogical = ] 'loglogical'` — Это логическое имя файла, содержащего журнал транзакций. *loglogical* — **sysname**.  
   
- [  **@logphysical=** ] **"***logphysical***"**  
- Физическое имя. Включает в себя полный путь к файлу, содержащему журнал транзакций. *logphysical* — **nvarchar(260)**.  
+`[ @logphysical = ] 'logphysical'` Это физическое имя. Включает в себя полный путь к файлу, содержащему журнал транзакций. *logphysical* — **nvarchar(260)**.  
   
- [  **@logsize=** ] *logsize*  
- Размер файла, содержащего журнал транзакций (в мегабайтах). *logsize* — **int**. Минимальное *logsize* -1.  
+`[ @logsize = ] logsize` — Это размер в мегабайтах, файла, содержащего журнал транзакций. *logsize* — **int**. Минимальное *logsize* -1.  
   
- [  **@datalogical1=** ] **"***datalogical***"**  
- Логическое имя файла, содержащего таблицы данных. *datalogical* — **sysname**.  
+`[ @datalogical1 = ] 'datalogical'` — Это логическое имя файла, содержащего таблицы данных. *datalogical* — **sysname**.  
   
  Можно создать от 1 до 16 файлов данных. Обычно создание более одного файла данных требуется для больших баз данных, распространяемых на нескольких дисках.  
   
- [  **@dataphysical1=** ] **"***dataphysical***"**  
- Физическое имя. Включает в себя полный путь к файлу, содержащему таблицы данных. *dataphysical* — **nvarchar(260)**.  
+`[ @dataphysical1 = ] 'dataphysical'` Это физическое имя. Включает в себя полный путь к файлу, содержащему таблицы данных. *dataphysical* — **nvarchar(260)**.  
   
- [  **@datasize1=** ] **"***datasize***"**  
- Размер файла, содержащего таблицы данных (в мегабайтах). *DataSize* — **int**. Минимальное *datasize* -1.  
+`[ @datasize1 = ] 'datasize'` — Это размер в мегабайтах, файла, содержащего таблицы данных. *DataSize* — **int**. Минимальное *datasize* -1.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

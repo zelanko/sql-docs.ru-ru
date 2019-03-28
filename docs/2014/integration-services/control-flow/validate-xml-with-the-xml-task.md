@@ -13,12 +13,12 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b18834a7ac8c4eb45ba76001a45a7f5bbaa020c6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 76d84c3ea8da6d564db01fba3d02ac15a72fffc3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386222"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526336"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   Активировав в задаче XML свойство `ValidationDetails`, вы сможете получить подробные результаты проверки XML-документа.  
@@ -80,7 +80,7 @@ ms.locfileid: "58386222"
 ## <a name="analyze-xml-validation-output-with-a-transact-sql-query"></a>Анализ выходных данных проверки XML с помощью запроса Transact-SQL  
  Если результат проверки XML содержит большое количество ошибок, можно использовать запрос [!INCLUDE[tsql](../../../includes/tsql-md.md)] , чтобы загрузить выходные данные в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Затем можно проанализировать список ошибок, используя все возможности языка T-SQL, включая предложения WHERE, GROUP BY, ORDER BY, JOIN и т. д.  
   
-```tsql  
+```sql  
 DECLARE @xml XML;  
   
 SELECT @xml = XmlDoc     

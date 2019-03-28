@@ -18,12 +18,12 @@ ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d5f307fca906d138428fe9852752d3f718633181
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44dc2d5341e536179fe0bf6ef152ef7d39afe966
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729862"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532106"
 ---
 # <a name="sysmailaddprofileaccountsp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@profile_id** =] *profile_id*  
- Идентификатор профиля, в который добавляется учетная запись. *profile_id* — **int**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* должен быть указан.  
+`[ @profile_id = ] profile_id` Идентификатор профиля, чтобы добавить учетную запись. *profile_id* — **int**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* должен быть указан.  
   
- [ **@profile_name** =] **"***profile_name***"**  
- Имя профиля, в который добавляется учетная запись. *profile_name* — **sysname**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* должен быть указан.  
+`[ @profile_name = ] 'profile_name'` Имя профиля, чтобы добавить учетную запись. *profile_name* — **sysname**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* должен быть указан.  
   
- [ **@account_id** =] *account_id*  
- Идентификатор учетной записи для добавления в профиль. *account_id* — **int**, значение по умолчанию NULL. Либо *account_id* или *account_name* должен быть указан.  
+`[ @account_id = ] account_id` Идентификатор учетной записи для добавления к профилю. *account_id* — **int**, значение по умолчанию NULL. Либо *account_id* или *account_name* должен быть указан.  
   
- [ **@account_name** =] **"***account_name***"**  
- Имя учетной записи для добавления к профилю. *account_name* — **sysname**, значение по умолчанию NULL. Либо *account_id* или *account_name* должен быть указан.  
+`[ @account_name = ] 'account_name'` Имя учетной записи, добавляемой к профилю. *account_name* — **sysname**, значение по умолчанию NULL. Либо *account_id* или *account_name* должен быть указан.  
   
- [ **@sequence_number** =] *sequence_number*  
- Порядковый номер учетной записи в профиле. *sequence_number* — **int**, не имеет значения по умолчанию. Порядковый номер определяет порядок, в соответствии с которым учетные записи используются в профиле.  
+`[ @sequence_number = ] sequence_number` Порядковый номер учетной записи в профиле. *sequence_number* — **int**, не имеет значения по умолчанию. Порядковый номер определяет порядок, в соответствии с которым учетные записи используются в профиле.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1384c2cd84505df59bc458274d0b33071e926f18
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365736"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526667"
 ---
 # <a name="examples-using-path-mode"></a>Примеры: Использование режима PATH
   В следующих примерах показано использование режима PATH при формировании XML из запроса SELECT. Многие из этих запросов являются запросами к XML-документам с инструкциями по производству велосипедов, хранящимся в столбце Instructions таблицы ProductModel.  
@@ -200,7 +200,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- Частичный результат. Поскольку в данном запросе имя столбца указано как ManuInstr, XML-данные, возвращенные методом `query()`, помещаются в тег <`ManuInstr`>, как показано ниже.  
+ Частичный результат. Поскольку в запросе имя столбца указано как ManuInstr, XML, возвращенный функцией `query()` метод заключается в <`ManuInstr`> тег, как показано в следующем:  
   
  `<Root>`  
   

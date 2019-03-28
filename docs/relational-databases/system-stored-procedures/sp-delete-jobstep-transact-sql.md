@@ -18,12 +18,12 @@ ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9408fe7939b5a34a18ecde2b1a98f68ac19e49a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84b1e2840240d0d02a3193ecc592a13331719c7a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628543"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527826"
 ---
 # <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,16 +42,13 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@job_id=** ] *job_id*  
- Идентификационный номер задания, из которого удаляется этап. *job_id*— **uniqueidentifier**, значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания, из которого будет удален шаг. *job_id*— **uniqueidentifier**, значение по умолчанию NULL.  
   
- [  **@job_name=** ] **"***имя_задания***"**  
- Имя задания, из которого удаляется этап. *имя_задания*— **sysname**, значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания, из которого будет удален шаг. *имя_задания*— **sysname**, значение по умолчанию NULL.  
   
-> **Примечание:** либо *job_id* или *имя_задания* должен быть указан, нельзя указать одновременно.  
+> **ПРИМЕЧАНИЕ.** Либо *job_id* или *имя_задания* должен быть указан, нельзя указать одновременно.  
   
- [  **@step_id=** ] *step_id*  
- Идентификатор удаляемого этапа задания. *step_id*— **int**, не имеет значения по умолчанию.  
+`[ @step_id = ] step_id` Идентификационный номер удаляемого шага. *step_id*— **int**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -64,7 +61,7 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  Дополнительные сведения об этапах, связанных с конкретными заданиями, выполните **sp_help_jobstep**.  
   
-> **Примечание:** вызова **sp_delete_jobstep** с *step_id* нулевое значение удаляет все шаги задания для задания.  
+> **ПРИМЕЧАНИЕ.** Вызов **sp_delete_jobstep** с *step_id* нулевое значение удаляет все шаги задания для задания.  
   
  Среда Microsoft SQL Server Management Studio предоставляет простой наглядный способ управления заданиями и рекомендуется для создания заданий и работы с ними.  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5972f4dfb9ad47b4017acf36df45098c11eceb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086386"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533036"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Использование режима EXPLICIT совместно с предложением FOR XML
   Как описано в подразделе [Конструирование XML используя FOR XML](../xml/for-xml-sql-server.md), режимы RAW и AUTO не предоставляют больших возможностей контроля формы XML, порождаемого из результата запроса. Однако режим EXPLICIT предоставляет наибольшую гибкость при формировании желаемого XML из результатов запроса.  
@@ -153,13 +153,13 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [Пример. Задание директивы ELEMENTXSINIL](../xml/example-specifying-the-elementxsinil-directive.md)  
   
--   [Пример: конструирование одноуровневых элементов в режиме EXPLICIT](../xml/example-constructing-siblings-with-explicit-mode.md)  
+-   [Пример. Конструирование одноуровневых элементов в режиме EXPLICIT](../xml/example-constructing-siblings-with-explicit-mode.md)  
   
 -   [Пример. Указание директив ID и IDREF](../xml/example-specifying-the-id-and-idref-directives.md)  
   
 -   [Пример. Указание директив ID и IDREFS](../xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [Примеры. Указание директивы HIDE](../xml/example-specifying-the-hide-directive.md)  
+-   [Пример. Указание директивы HIDE](../xml/example-specifying-the-hide-directive.md)  
   
 -   [Пример. Указание директивы ELEMENT и кодировка сущности](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   

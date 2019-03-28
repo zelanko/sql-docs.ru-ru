@@ -18,19 +18,19 @@ ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cce91def9566105550788a8a46ea6c2b6bb959aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a24bb05e8f10e2920bd206531723c228d6c1734
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826552"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529356"
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Создает пользовательское событие в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
->**Примечание:** — Эта хранимая процедура **не** устарело. Все остальные хранимые процедуры, связанные с трассировкой, являются устаревшими.  
+>**ПРИМЕЧАНИЕ.**  Эта хранимая процедура является **не** устарело. Все остальные хранимые процедуры, связанные с трассировкой, являются устаревшими.  
   
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -45,14 +45,11 @@ sp_trace_generateevent [ @eventid = ] event_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@eventid=**] *event_id*  
- Идентификатор включаемого события. *Идентификатор event_id* — **int**, не имеет значения по умолчанию. Идентификатор должен быть один из номеров событий от 82 до 91, которые представляют пользовательские события, задаются с помощью [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+`[ @eventid = ] event_id` — Идентификатор события, которые требуется включить. *Идентификатор event_id* — **int**, не имеет значения по умолчанию. Идентификатор должен быть один из номеров событий от 82 до 91, которые представляют пользовательские события, задаются с помощью [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
- [ **@userinfo**= ] **'***user_info***'**  
- Необязательное, определяемое пользователем имя для идентификации сеанса событий. *user_info* — **nvarchar(128)**, значение по умолчанию NULL.  
+`[ @userinfo = ] 'user_info'` Необязательный определенная пользователем строка, определяющая причину события. *user_info* — **nvarchar(128)**, значение по умолчанию NULL.  
   
- [ **@userdata**=] *user_data*  
- Необязательные, указываемые пользователем данные события. *user_data* — **varbinary(8000)**, значение по умолчанию NULL.  
+`[ @userdata = ] user_data` — Это необязательные пользовательские данные для события. *user_data* — **varbinary(8000)**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  В следующей таблице описаны значения кодов, которые могут быть возвращены пользователю при завершении хранимой процедуры.  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a804585f215b7328890d2f0400c77307af7b1b4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211144"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528476"
 ---
 # <a name="use-nested-for-xml-queries"></a>Использование вложенных запросов FOR XML
   `xml` Тип данных и [директива TYPE в запросах FOR XML](type-directive-in-for-xml-queries.md) включить XML-Документы, возвращаемые запросами FOR XML обрабатываться на сервере, а также на стороне клиента.  
@@ -39,7 +39,7 @@ SELECT @x
 --<row ProductModelID="119" Name="Bike Wash" />  
 ```  
   
- Можно дополнительно обработать XML, возвращаемые в переменной, `@x`, с помощью одного из `xml` методов типа данных. Например, с помощью метода `ProductModelID` value() [можно получить значение атрибута](/sql/t-sql/xml/value-method-xml-data-type).  
+ XML-данные, возвращаемые в переменной `@x`, можно дополнительно обработать с применением методов типа данных `xml`. Например, с помощью метода `ProductModelID` value() [можно получить значение атрибута](/sql/t-sql/xml/value-method-xml-data-type).  
   
 ```  
 DECLARE @i int;  
@@ -57,7 +57,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
   
 ```  
   
- Результат:  
+ Это результат:  
   
 ```  
 <myRoot>  
@@ -66,7 +66,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
 </myRoot>  
 ```  
   
- Поскольку результат имеет `xml` типа, можно указать один из `xml` методы непосредственно к НЕМУ, типа данных, как показано в следующем запросе. В запросе [метод query() (тип данных xml)](/sql/t-sql/xml/query-method-xml-data-type) используется для получения первого дочернего элемента <`row`> элемента <`myRoot`>.  
+ Поскольку результат имеет тип `xml`, непосредственно к нему можно применить один из методов типа данных `xml`, как показано в следующем запросе. В запросе [метод query() (тип данных xml)](/sql/t-sql/xml/query-method-xml-data-type) используется для получения первого дочернего элемента <`row`> элемента <`myRoot`>.  
   
 ```  
 SELECT  (SELECT ProductModelID, Name  
@@ -76,14 +76,14 @@ SELECT  (SELECT ProductModelID, Name
   
 ```  
   
- Результат:  
+ Это результат:  
   
 ```  
 <row ProductModelID="122" Name="All-Purpose Bike Stand" />  
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>Передача результатов внутреннего запроса FOR XML внешним запросам в виде экземпляров типа xml  
- Можно создать вложенные `FOR XML` запросов, где результат внутреннего запроса возвращается в виде `xml` тип для внешнего запроса. Пример:  
+ Можно создать вложенные запросы `FOR XML`, в которых результат внутреннего запроса возвращает внешнему запросу данные типа `xml`. Пример:  
   
 ```  
 SELECT Col1,   

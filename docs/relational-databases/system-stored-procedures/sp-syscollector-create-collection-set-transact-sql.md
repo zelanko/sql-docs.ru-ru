@@ -19,12 +19,12 @@ ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3fc1e3d8db223173fcd5d9ac55f608ddeffa3aa3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be818ed92a3c5a7f9522a6142f5acc815077bd10
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688252"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536916"
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,16 +56,13 @@ sp_syscollector_create_collection_set
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@name =** ] "*имя*"  
- Имя набора элементов сбора. *имя* — **sysname** и не может быть пустой строкой или NULL.  
+`[ @name = ] 'name'` — Имя набора элементов сбора. *имя* — **sysname** и не может быть пустой строкой или NULL.  
   
  *имя* должно быть уникальным. Чтобы получить список имен текущего набора сбора, выполните запрос системного представления syscollector_collection_sets.  
   
- [  **@target =** ] "*целевой*"  
- Зарезервировано для последующего использования. *имя* — **nvarchar(128)** со значением по умолчанию NULL.  
+`[ @target = ] 'target'` Зарезервировано для будущего использования. *имя* — **nvarchar(128)** со значением по умолчанию NULL.  
   
- [  **@collection_mode =** ] *collection_mode*  
- Определяет способ, с помощью которого данные собираются и хранятся. *collection_mode* — **smallint** и может иметь одно из следующих значений:  
+`[ @collection_mode = ] collection_mode` Указывает способ, в котором данные собираются и сохраняются. *collection_mode* — **smallint** и может иметь одно из следующих значений:  
   
  0 — режим с кэшированием. Сбор и передача данных выполняются по отдельным расписаниям. Укажите кэшированный режим для непрерывного сбора.  
   
@@ -73,25 +70,19 @@ sp_syscollector_create_collection_set
   
  Значение по умолчанию для *collection_mode* равно 0. Когда *collection_mode* равно 0, *schedule_uid* или *schedule_name* должен быть указан.  
   
- [  **@days_until_expiration =** ] *days_until_expiration*  
- Число дней, в течение которых собранные данные хранятся в хранилище данных управления. *days_until_expiration* — **smallint** со значением по умолчанию 730 (два года). *days_until_expiration* должно равняться 0 или положительным целым числом.  
+`[ @days_until_expiration = ] days_until_expiration` — Число дней, в которых собранные данные хранятся в хранилище данных управления. *days_until_expiration* — **smallint** со значением по умолчанию 730 (два года). *days_until_expiration* должно равняться 0 или положительным целым числом.  
   
- [  **@proxy_id =** ] *proxy_id*  
- Уникальный идентификатор учетной записи-посредника агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *proxy_id* — **int** со значением по умолчанию NULL. Если указано, *proxy_name* должен иметь значение NULL. Для получения *proxy_id*, запрос системной таблицы sysproxies. Предопределенная роль базы данных dc_admin должна иметь разрешение на доступ к посреднику. Дополнительные сведения см. в разделе [создание прокси-агента SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
+`[ @proxy_id = ] proxy_id` Уникальный идентификатор для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетной записи-посредника агента. *proxy_id* — **int** со значением по умолчанию NULL. Если указано, *proxy_name* должен иметь значение NULL. Для получения *proxy_id*, запрос системной таблицы sysproxies. Предопределенная роль базы данных dc_admin должна иметь разрешение на доступ к посреднику. Дополнительные сведения см. в разделе [создание прокси-агента SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
- [  **@proxy_name =** ] "*proxy_name*"  
- Имя учетной записи-посредника. *proxy_name* — **sysname** со значением по умолчанию NULL. Если указано, *proxy_id* должен иметь значение NULL. Для получения *proxy_name*, запрос системной таблицы sysproxies.  
+`[ @proxy_name = ] 'proxy_name'` — Имя учетной записи-посредника. *proxy_name* — **sysname** со значением по умолчанию NULL. Если указано, *proxy_id* должен иметь значение NULL. Для получения *proxy_name*, запрос системной таблицы sysproxies.  
   
- [  **@schedule_uid =** ] "*schedule_uid*"  
- Идентификатор GUID, указывающий на расписание. *schedule_uid* — **uniqueidentifier** со значением по умолчанию NULL. Если указано, *schedule_name* должен иметь значение NULL. Для получения *schedule_uid*, запрос системной таблицы sysschedules.  
+`[ @schedule_uid = ] 'schedule_uid'` — Это GUID, указывающий на расписание. *schedule_uid* — **uniqueidentifier** со значением по умолчанию NULL. Если указано, *schedule_name* должен иметь значение NULL. Для получения *schedule_uid*, запрос системной таблицы sysschedules.  
   
  Когда *collection_mode* имеет значение 0, *schedule_uid* или *schedule_name* должен быть указан. Когда *collection_mode* имеет значение 1, *schedule_uid* или *schedule_name* учитывается, если указан.  
   
- [  **@schedule_name =** ] "*schedule_name*"  
- Имя расписания. *schedule_name* — **sysname** со значением по умолчанию NULL. Если указано, *schedule_uid* должен иметь значение NULL. Для получения *schedule_name*, запрос системной таблицы sysschedules.  
+`[ @schedule_name = ] 'schedule_name'` — Имя расписания. *schedule_name* — **sysname** со значением по умолчанию NULL. Если указано, *schedule_uid* должен иметь значение NULL. Для получения *schedule_name*, запрос системной таблицы sysschedules.  
   
- [  **@logging_level =** ] *logging_level*  
- Уровень ведения журнала. *LOGGING_LEVEL* — **smallint** с одним из следующих значений:  
+`[ @logging_level = ] logging_level` Является уровень ведения журнала. *LOGGING_LEVEL* — **smallint** с одним из следующих значений:  
   
  0 - регистрировать сведения о выполнении и события служб [!INCLUDE[ssIS](../../includes/ssis-md.md)], которые отслеживают:  
   
@@ -113,14 +104,11 @@ sp_syscollector_create_collection_set
   
  Значение по умолчанию для *logging_level* -1.  
   
- [  **@description =** ] "*описание*"  
- Описание набора элементов сбора. *Описание* — **nvarchar(4000)** со значением по умолчанию NULL.  
+`[ @description = ] 'description'` Представляет собой описание набора элементов сбора. *Описание* — **nvarchar(4000)** со значением по умолчанию NULL.  
   
- [  **@collection_set_id =** ] *collection_set_id*  
- Уникальный локальный идентификатор набора элементов сбора. *collection_set_id* — **int** с выходными данными и является обязательным.  
+`[ @collection_set_id = ] collection_set_id` — Это уникальный локальный идентификатор набора элементов сбора. *collection_set_id* — **int** с выходными данными и является обязательным.  
   
- [  **@collection_set_uid =** ] "*collection_set_uid*"  
- Идентификатор GUID набора элементов сбора. *Аргумент collection_set_uid* — **uniqueidentifier** с выходными данными со значением по умолчанию NULL.  
+`[ @collection_set_uid = ] 'collection_set_uid'` – Идентификатор GUID для набора сбора. *Аргумент collection_set_uid* — **uniqueidentifier** с выходными данными со значением по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

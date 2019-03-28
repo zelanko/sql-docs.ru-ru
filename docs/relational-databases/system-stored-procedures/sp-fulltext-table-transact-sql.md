@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ecf9b63dda28bd65912d606a69b1e188af713be9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 340d50725a13da4993ade63d890f2300ba38763b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594364"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527196"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47594364"
   Отмечает таблицу для полнотекстового индексирования или снимает эту отметку.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md), и [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) вместо этого.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)и [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,11 +50,9 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@tabname=**] **"***таблицы не собирались***"**  
- Имя таблицы, состоящее из одной или двух частей. Таблица должна существовать в текущей базе данных. *таблицы не собирались* — **nvarchar(517)**, не имеет значения по умолчанию.  
+`[ @tabname = ] 'qualified_table_name'` — Это одно - или двухкомпонентное имя таблицы. Таблица должна существовать в текущей базе данных. *таблицы не собирались* — **nvarchar(517)**, не имеет значения по умолчанию.  
   
- [  **@action=**] **"***действие***"**  
- Действие, которое должно быть выполнено. *Действие* — **nvarchar(50)**, по умолчанию и может принимать одно из следующих значений.  
+`[ @action = ] 'action'` — Это действие, которое должно быть выполнено. *Действие* — **nvarchar(50)**, по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -71,11 +69,9 @@ sp_fulltext_table
 |**start_incremental**|Начинает добавочное заполнение полнотекстового индекса.|  
 |**Остановить**|Прекращает добавочное заполнение.|  
   
- [ **@ftcat=**] **'***fulltext_catalog_name***'**  
- — Это имя допустимой, существующий полнотекстовый каталог для **создать** действие. Для всех других действий этот параметр должен быть равен NULL. *fulltext_catalog_name* — **sysname**, значение по умолчанию NULL.  
+`[ @ftcat = ] 'fulltext_catalog_name'` — Это имя допустимой, существующий полнотекстовый каталог для **создать** действие. Для всех других действий этот параметр должен быть равен NULL. *fulltext_catalog_name* — **sysname**, значение по умолчанию NULL.  
   
- [ **@keyname=**] **'***unique_index_name***'**  
- Является индексом допустимым один ключевой столбец, уникальным не допускающий значения NULL в *таблицы не собирались* для **создать** действие. Для всех других действий этот параметр должен быть равен NULL. *unique_index_name* — **sysname**, значение по умолчанию NULL.  
+`[ @keyname = ] 'unique_index_name'` Является индексом допустимым один ключевой столбец, уникальным не допускающий значения NULL в *таблицы не собирались* для **создать** действие. Для всех других действий этот параметр должен быть равен NULL. *unique_index_name* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -88,7 +84,7 @@ sp_fulltext_table
   
  Если таблица активирована вновь, но индекс не заполняется снова, старый индекс доступен для запросов к остававшимся, но не новым столбцам, для которых включено полнотекстовое индексирование. Данные из удаленных столбцов используются в запросах поиска по всем столбцам полнотекстового индекса.  
   
- После таблицы был определен для полнотекстового индексирования, переключение полнотекстового уникального ключевого столбца из одного типа в другой, либо путем изменения типа данных этого столбца или изменения полнотекстового уникального ключа из одного столбца в другой, не начать новое полное заполнение может привести к сбою при последующем запросе и возвращает сообщение об ошибке: «преобразование в тип *data_type* не удалась для значения ключа полнотекстового поиска *key_value*.» Чтобы избежать этого, удалите определение полнотекстового поиска для этой таблицы с помощью **drop** действие **sp_fulltext_table** и переопределите его с помощью **sp_fulltext_table** и **sp_fulltext_column**.  
+ Если после определения таблицы для полнотекстового индексирования изменить тип данных полнотекстового уникального ключевого столбца с одного на другой путем изменения типа данных этого столбца или смены собственно ключевого столбца и при этом не начать новое полное заполнение, последующие запросы могут возвращать ошибку: «Преобразование в тип *data_type* не удалась для значения ключа полнотекстового поиска *key_value*.» Чтобы избежать этого, удалите определение полнотекстового поиска для этой таблицы с помощью **drop** действие **sp_fulltext_table** и переопределите его с помощью **sp_fulltext_table** и **sp_fulltext_column**.  
   
  Полнотекстовый ключевой столбец должен содержать значения размером не более 900 байт. Из соображений производительности рекомендуется делать размер ключевого столбца как можно меньшим.  
   

@@ -18,12 +18,12 @@ ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4382dc4de4010944e60cb37640759e91a0fc2727
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be900d6b8295aae5871e9162c5e07ae5bed6516c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851562"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528980"
 ---
 # <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@agent_id=** ] **"***agent_id***"**  
- Первичный идентификатор для резервирования или вторичный идентификатор для копирования или восстановления. *agent_id* — **uniqueidentifier** и не может иметь значение NULL.  
+`[ @agent_id = ] 'agent_id'` Первичный идентификатор для резервирования или вторичный идентификатор для копирования или восстановления. *agent_id* — **uniqueidentifier** и не может иметь значение NULL.  
   
- [ **@agent_type=** ] **'***agent_type***'**  
- Тип задания доставки журналов:  
+`[ @agent_type = ] 'agent_type'` Тип задания доставки журналов.  
   
  0 = резервирование;  
   
@@ -58,11 +56,9 @@ sp_refresh_log_shipping_monitor
   
  *agent_type* — **tinyint** и не может иметь значение NULL.  
   
- [  **@database=** ] **"***базы данных***"**  
- База данных-источник или база данных-получатель, используемые для ведения журнала агентами резервного копирования или восстановления.  
+`[ @database = ] 'database'` Первичный или вторичный база данных, используемые для ведения журнала агентами резервного копирования или восстановления.  
   
- [ **@mode** ] *n*  
- Указывает необходимость обновления или очистки данных мониторинга. Тип данных *m* имеет тип tinyint и поддерживаемые значения:  
+`[ @mode ] n` Указывает, следует ли обновить данные монитора или очистить его. Тип данных *m* имеет тип tinyint и поддерживаемые значения:  
   
  1 = обновление (значение по умолчанию);  
   

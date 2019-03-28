@@ -15,12 +15,12 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e4756834e28ad07e42f57235a30e59fd924da22
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f66cb56380f0e027d08e53154c05b7ad1e3be89f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202113"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533016"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Включение и отключение отслеживания измененных данных (SQL Server)
   В этом разделе описано, как включить или отключить систему отслеживания измененных данных для базы данных и таблицы.  
@@ -37,7 +37,7 @@ ms.locfileid: "53202113"
 > [!IMPORTANT]  
 >  Найти шаблоны в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]можно, открыв меню **Вид**, щелкнув пункт **Обозреватель шаблонов**, а затем выбрав **Шаблоны SQL Server**. **Система отслеживания измененных данных** — это вложенная папка. В этой папке можно найти все шаблоны, упоминаемые в данном разделе. Значок **Обозреватель шаблонов** также присутствует на панели инструментов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
-```tsql  
+```sql  
 -- ====  
 -- Enable Database for CDC template   
 -- ====  
@@ -57,7 +57,7 @@ GO
 > [!IMPORTANT]  
 >  Чтобы найти шаблоны в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], перейдите к элементу **Просмотр**, нажмите кнопку **Обозреватель шаблонов**, а затем нажмите кнопку **Шаблоны SQL Server**. **Система отслеживания измененных данных** — это подпапка, в которой можно найти все шаблоны, упомянутые в этом разделе. Значок **Обозреватель шаблонов** также присутствует на панели инструментов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
-```tsql  
+```sql  
 -- =======  
 -- Disable Database for Change Data Capture template   
 -- =======  
@@ -80,7 +80,7 @@ GO
   
  По умолчанию таблица изменений расположена в файловой группе по умолчанию для базы данных. Если владельцы базы данных хотят управлять расположением отдельных таблиц изменений, то они могут использовать параметр *@filegroup_name* , чтобы указать файловую группу для таблицы изменений, с которой будет связан экземпляр системы отслеживания. Именованная файловая группа уже должна существовать. Обычно рекомендуется, чтобы таблицы изменений располагались не в той файловой группе, где содержатся исходные таблицы. См. в разделе `Enable a Table Specifying Filegroup Option` шаблона пример, показывающий использование *@filegroup_name* параметра.  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Specifying Filegroup Option Template  
 -- =========  
@@ -102,7 +102,7 @@ GO
   
  Если использовать шлюзовую роль нежелательно, необходимо явно присвоить параметру *@role_name* значение NULL. Пример включения таблицы без шлюзовой роли см. в шаблоне `Enable a Table Without Using a Gating Role`.  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Without Using a Gating Role template   
 -- =========  
@@ -127,7 +127,7 @@ GO
   
  Пример создания экземпляра системы отслеживания с обеими функциями см. в шаблоне `Enable a Table for All and Net Changes Queries`.  
   
-```tsql  
+```sql  
 -- =============  
 -- Enable a Table for All and Net Changes Queries template   
 -- =============  
@@ -151,7 +151,7 @@ GO
   
  Пример отключения таблицы см. в шаблоне отключения экземпляра системы отслеживания для таблицы.  
   
-```tsql  
+```sql  
 -- =====  
 -- Disable a Capture Instance for a Table template   
 -- =====  

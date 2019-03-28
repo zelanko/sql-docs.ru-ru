@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0e620d178ae22a9572497b32f19348b5d027e30f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: def5041286ade754020a5c84e8d2ac91fc79afa3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703402"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535406"
 ---
 # <a name="spgrantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +42,7 @@ sp_grantlogin [@loginame=] 'login'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@loginame =** ] **"***входа***"**  
- Имя пользователя или группы Windows. Windows пользователь или группа должны быть дополнены именем домена Windows в виде *домена*\\*пользователя*, например **London\Joeb**. *Имя входа* — **sysname**, не имеет значения по умолчанию.  
+`[ @loginame = ] 'login'` — Имя пользователя Windows или группы. Windows пользователь или группа должны быть дополнены именем домена Windows в виде *домена*\\*пользователя*, например **London\Joeb**. *Имя входа* — **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

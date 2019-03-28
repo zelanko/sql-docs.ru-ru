@@ -16,12 +16,12 @@ ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57866bdc46e88587d0d8b3db27a416c8153b6003
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 85f9104d9a9bb634dd10dfb588cf07e01d1c1fb1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773906"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535925"
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>Процедура sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@type** =] **"***тип***"**  
- Тип регистрируемой пользовательской хранимой процедуры или скрипта. *Тип* — **varchar(16)**, по умолчанию и может принимать одно из следующих значений.  
+`[ @type = ] 'type'` Тип пользовательской хранимой процедуры или скрипта регистрируется. *Тип* — **varchar(16)**, по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -51,19 +50,16 @@ sp_register_custom_scripting [ @type  = ] 'type'
 |**delete**|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции DELETE.|  
 |**custom_script**|Скрипт, выполняющийся в конце триггера языка DDL.|  
   
- [ **@value**=] **"***значение***"**  
- Имя хранимой процедуры или имя и полностью определенный путь к файлу скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] для регистрации. *значение* — **nvarchar(1024)**, не имеет значения по умолчанию.  
+`[ @value = ] 'value'` Имя хранимой процедуры или имя и полный путь к [!INCLUDE[tsql](../../includes/tsql-md.md)] файл скрипта регистрации. *значение* — **nvarchar(1024)**, не имеет значения по умолчанию.  
   
 > [!NOTE]  
 >  Указав значение NULL для *значение*параметр отменяет регистрацию зарегистрированного ранее сценарий, который является таким же, как работает [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  
   
  Если значение *тип* — **custom_script**, имя и полный путь к [!INCLUDE[tsql](../../includes/tsql-md.md)] ожидается, что файл скрипта. В противном случае *значение* должно быть именем регистрируемой хранимой процедуры.  
   
- [ **@publication**=] **"***публикации***"**  
- Имя публикации, для которой регистрируется пользовательская хранимая процедура или скрипт. *Публикация* — **sysname**, значение по умолчанию **NULL**.  
+`[ @publication = ] 'publication'` Имя публикации, для которой регистрируется пользовательская хранимая процедура или скрипт. *Публикация* — **sysname**, значение по умолчанию **NULL**.  
   
- [ **@article**=] **"***статье***"**  
- Имя статьи, для которой регистрируется пользовательская хранимая процедура или скрипт. *статья* — **sysname**, значение по умолчанию **NULL**.  
+`[ @article = ] 'article'` Имя статьи, для которой регистрируется пользовательская хранимая процедура или скрипт. *статья* — **sysname**, значение по умолчанию **NULL**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

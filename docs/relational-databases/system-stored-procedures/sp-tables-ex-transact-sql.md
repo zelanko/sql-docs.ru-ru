@@ -18,12 +18,12 @@ ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f034b1247f9865b83077ed11f644d6fdbbc4cecd
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 5d135b3b4b0f9d63ccd89db04be259f3c7031b7e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589389"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538496"
 ---
 # <a name="sptablesex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +45,15 @@ sp_tables_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@table_server=** ] **"**_table_server_**"**  
- Имя связанного сервера, для которого необходимо вернуть сведения о таблице. *table_server* — **sysname**, не имеет значения по умолчанию.  
+`[ @table_server = ] 'table_server'` — Имя связанного сервера, для которой возвращаются сведения о таблице. *table_server* — **sysname**, не имеет значения по умолчанию.  
   
- [ **,** [  **@table_name=** ] **"**_table_name_**"**]  
- Имя таблицы, для которой необходимо вернуть сведения о типе данных. *TABLE_NAME*— **sysname**, значение по умолчанию NULL.  
+``[ , [ @table_name = ] 'table_name']`` — Имя таблицы, для которой возвращаются сведения о типе данных. *TABLE_NAME*— **sysname**, значение по умолчанию NULL.  
   
- [  **@table_schema=** ] **"**_table_schema_**"**]  
- Схема таблицы. *table_schema*— **sysname**, значение по умолчанию NULL.  
+`[ @table_schema = ] 'table_schema']` Представляет схему таблицы. *table_schema*— **sysname**, значение по умолчанию NULL.  
   
- [  **@table_catalog=** ] **"**_значениям table_catalog_**"**  
- Имя базы данных, в котором указанный *table_name* находится. *значениям table_catalog* — **sysname**, значение по умолчанию NULL.  
+`[ @table_catalog = ] 'table_catalog'` Имя базы данных, в котором указанный *table_name* находится. *значениям table_catalog* — **sysname**, значение по умолчанию NULL.  
   
- [  **@table_type=** ] **"**_table_type_**"**  
- Возвращаемый тип таблицы. *TABLE_TYPE* — **sysname**, значение по умолчанию NULL и может иметь одно из следующих значений.  
+`[ @table_type = ] 'table_type'` — Тип таблицы. *TABLE_TYPE* — **sysname**, значение по умолчанию NULL и может иметь одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -71,8 +66,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE**|Имя пользовательской таблицы.|  
 |**VIEW**|Имя представления.|  
   
- [  **@fUsePattern=** ] **"**_шаблонов_**"**  
- Определяет, является ли символы **_**, **%**, **[**, и **]** интерпретируются как символы-шаблоны. Допустимые значения: 0 (сопоставление с шаблоном отключено) и 1 (сопоставление с шаблоном включено). *Шаблонов* — **бит**, значение по умолчанию 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Определяет, является ли символы **_**, **%**, **[**, и **]** интерпретируются как символы-шаблоны. Допустимые значения: 0 (сопоставление с шаблоном отключено) и 1 (сопоставление с шаблоном включено). *Шаблонов* — **бит**, значение по умолчанию 1.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  None  
@@ -82,8 +76,8 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|Имя квалификатора таблицы. Различные продукты СУБД поддерживают трехкомпонентные имена таблиц (_квалификатор_**.** _владельца_**.** _имя_). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых других СУБД он представляет имя сервера в среде баз данных, где находится таблица. Это поле может иметь значение NULL.|  
-|**ПО ЗНАЧЕНИЯМ TABLE_SCHEM**|**sysname**|Имя владельца таблицы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя пользователя базы данных, создавшего таблицу. Это поле всегда возвращает значение.|  
-|**ИМЯ_ТАБЛИЦЫ**|**sysname**|Имя таблицы. Это поле всегда возвращает значение.|  
+|**TABLE_SCHEM**|**sysname**|Имя владельца таблицы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя пользователя базы данных, создавшего таблицу. Это поле всегда возвращает значение.|  
+|**TABLE_NAME**|**sysname**|Имя таблицы. Это поле всегда возвращает значение.|  
 |**TABLE_TYPE**|**varchar(32)**|Таблица, системная таблица или представление.|  
 |**"ПРИМЕЧАНИЯ"**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
   

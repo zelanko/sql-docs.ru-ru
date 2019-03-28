@@ -1,19 +1,19 @@
 ---
 title: Набор данных IRIS Демонстрация учебники Python и R - машинного обучения SQL Server
-Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
+Description: Создание базы данных, содержащей набор данных Iris и таблицу для хранения моделей. Этот набор данных используется в упражнения, в котором показано, как программы-оболочки для языка R или Python код в хранимую процедуру SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: ce0469b5625af3f38047233737f3afbd209e11b9
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: f4a57f89a89ed8d5cbf81cc3d63fc1f19b42e51a
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046574"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510101"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Демонстрационных данных IRIS учебники Python и R в SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

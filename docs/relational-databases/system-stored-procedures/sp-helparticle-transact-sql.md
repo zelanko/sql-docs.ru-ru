@@ -16,12 +16,12 @@ ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ebb3f1e81fbace678d281116643e1fcd97c3dc1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 43eada100fb1de531c0d16082bdf0977e479ccfb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212512"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536155"
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,23 +42,18 @@ sp_helparticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication =**] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@article=**] **"***статье***"**  
- Имя статьи в публикации. *статья* — **sysname**, значение по умолчанию **%**. Если *статье* является не указан, возвращаются данные по всем статьям публикации.  
+`[ @article = ] 'article'` — Имя статьи в публикации. *статья* — **sysname**, значение по умолчанию **%**. Если *статье* является не указан, возвращаются данные по всем статьям публикации.  
   
- [  **@returnfilter=**] *returnfilter*  
- Указывает, должен ли происходить возврат предложения фильтра. *returnfilter* — **бит**, значение по умолчанию **1**, котором предложение фильтра возвращается.  
+`[ @returnfilter = ] returnfilter` Указывает, должны ли возвращаться предложение фильтра. *returnfilter* — **бит**, значение по умолчанию **1**, котором предложение фильтра возвращается.  
   
- [ **@publisher**=] **"***издателя***"**  
- Указывает, отличный от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает, отличный от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *издатель* не следует указывать при требуемые данные по статье были опубликованы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  
   
- [  **@found=** ] *найти* выходных данных  
- Только для внутреннего применения.  
+`[ @found = ] found OUTPUT` Только для внутреннего использования.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   

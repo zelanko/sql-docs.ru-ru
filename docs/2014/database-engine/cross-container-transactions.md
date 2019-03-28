@@ -10,12 +10,12 @@ ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40420db76ee8ce5b1fcf1d085a78d7b17690105d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538595"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528305"
 ---
 # <a name="cross-container-transactions"></a>Транзакции между контейнерами
   Транзакции между контейнерами представляют собой неявные или явные пользовательские транзакции, включающие вызовы хранимых процедур, скомпилированных в собственном коде, или операции над оптимизированными для памяти таблицами.  
@@ -32,7 +32,7 @@ ms.locfileid: "52538595"
 ### <a name="specifying-the-isolation-level-of-individual-operations"></a>Задание уровня изоляции отдельных операций  
  Чтобы задать другой уровень изоляции для набора инструкций в транзакции, можно использовать `SET TRANSACTION ISOLATION LEVEL`. В следующем примере транзакции по умолчанию используется уровень изоляции SERIALIZABLE. Операции вставки и выбора над t3, t2 и t1 выполняются при использовании уровня изоляции REPEATABLE READ.  
   
-```tsql  
+```sql  
 set transaction isolation level serializable  
 go  
   
@@ -49,7 +49,7 @@ commit
   
  Чтобы задать уровень изоляции для отдельных операций чтения, отличный от назначаемого транзакции по умолчанию, можно использовать табличное указание (например, SERIALIZABLE). Каждый выбор соответствует операции считывания, а каждое обновление и каждое удаление соответствуют чтению, поскольку строку всегда необходимо прочитать, прежде чем ее можно будет обновить или удалить. Операции вставки не имеют уровня изоляции, поскольку запись всегда изолирована в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. В следующем примере уровень изоляции по умолчанию для транзакций — READ COMMITTED, но доступ к таблице t1 происходит в режиме изоляции SERIALIZABLE, а к таблице t2 — в режиме изоляции SNAPSHOT.  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   
@@ -103,7 +103,7 @@ commit
   
  Рассмотрим следующую транзакцию:  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   
@@ -149,7 +149,7 @@ commit
   
  Оптимизированные для памяти сторона транзакции может достигать одного из двух уровней: Если Условие1 имеет значение true, то достигается сериализуемый, если он имеет значение false, оптимизированная для памяти сторона достигает только режим изоляции моментального снимка.  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   

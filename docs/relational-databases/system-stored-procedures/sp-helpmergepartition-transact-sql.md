@@ -16,12 +16,12 @@ ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 673baf1b41e3ffcceaa635191352af376008313e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ddf87e08b113d3512a8d824ff4abdf1359476e32
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779356"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530162"
 ---
 # <a name="sphelpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,17 +40,14 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=** ] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@suser_sname=** ] **"***suser_sname***"**  
- Значение SUSER_SNAME, определяющее секцию. *SUSER_SNAME* — **sysname**, со значением по умолчанию NULL. Введите этот аргумент для ограничения результирующего набора. При этом будут отображаться только те секции, в которых SUSER_SNAME разрешается в указанное значение.  
+`[ @suser_sname = ] 'suser_sname'` Значение SUSER_SNAME, используемое для определения секции. *SUSER_SNAME* — **sysname**, со значением по умолчанию NULL. Введите этот аргумент для ограничения результирующего набора. При этом будут отображаться только те секции, в которых SUSER_SNAME разрешается в указанное значение.  
   
 > [!NOTE]  
 >  Когда *suser_sname* предоставляется, *host_name* должен иметь значение NULL  
   
- [  **@host_name=** ] **"***host_name***"**  
- Значение HOST_NAME, определяющее секцию. *HOST_NAME* — **sysname**, со значением по умолчанию NULL. Введите этот аргумент для ограничения результирующего набора. При этом будут отображаться только те секции, в которых HOST_NAME разрешается в указанное значение.  
+`[ @host_name = ] 'host_name'` Значение HOST_NAME, используемое для определения секции. *HOST_NAME* — **sysname**, со значением по умолчанию NULL. Введите этот аргумент для ограничения результирующего набора. При этом будут отображаться только те секции, в которых HOST_NAME разрешается в указанное значение.  
   
 > [!NOTE]  
 >  Когда *suser_sname* предоставляется, *host_name* должен иметь значение NULL  

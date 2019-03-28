@@ -10,12 +10,12 @@ ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2adbcc07134b80e78dbc73691e275d56b6f90c6
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: e347d942bf6541de9c16f34075e2d66817c3e347
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356575"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527806"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Реализация LOB Columns в таблице, оптимизированной для памяти
   Оптимизированные для памяти таблицы не имеют хранилище вне строки или больших объектов (LOB) (это ограничение было снято в SQL Server 2016 и более поздних версий — см. в разделе [поддерживаемые типы данных для выполняющейся в памяти OLTP](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)), а максимальный размер строки составляет 8060 байт. Хранить большие двоичные значения (LOB) и символьные строки можно двумя способами.  
@@ -80,7 +80,7 @@ go</code></pre>
   
  Можно также задать дисковую таблицу для LOB-столбцов. Каждая строка в таблице, оптимизированной для памяти, будет иметь соответствующую строку в дисковой таблице со всеми LOB-значениями для этой строки. В следующем примере данные о сотрудниках хранятся в таблице, оптимизированной для памяти, а фотография каждого сотрудника хранится в таблице на диске.  
   
-```tsql  
+```sql  
 CREATE TABLE EmployeePhoto (  
 EmployeeId int NOT NULL PRIMARY KEY CLUSTERED,  
 Photo varbinary(max))  

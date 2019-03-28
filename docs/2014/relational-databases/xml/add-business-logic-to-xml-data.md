@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d548353668aadbf67f2c0bc39c7e69eea756c041
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca0953b9ac191dfb765992f79988f3cc1502dfa4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078504"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529126"
 ---
 # <a name="add-business-logic-to-xml-data"></a>Добавление бизнес-логики для XML-данных
   Бизнес-логику можно добавить в XML-данные несколькими способами.  
@@ -30,7 +30,7 @@ ms.locfileid: "48078504"
   
 -   Можно создать хранимые процедуры и функции Transact-SQL, инициирующие обработку XML-столбца в соответствии с бизнес-потребностями.  
   
-## <a name="example-applying-xsl-transformation"></a>Пример. Применение преобразования XSL  
+## <a name="example-applying-xsl-transformation"></a>Пример Применение преобразования XSL  
  Рассмотрим функцию CLR **TransformXml()** , принимающий `xml` данных введите экземпляр и хранится в файле преобразование XSL, применяет преобразование к XML-данные и возвращает преобразованные данные XML в результат. Вот ее основа, написанная на C#:  
   
 ```  

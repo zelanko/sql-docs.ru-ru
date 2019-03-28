@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0173c89273d208824bd945fa7c073ddd7940067e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 782f480ad0ae9f2342180ae1f2a44e32c44b9022
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615012"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537274"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -48,31 +48,26 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@tabname=** ] **"***таблицы не собирались***"**  
- Имя таблицы, состоящее из одной или двух частей. Таблица должна существовать в текущей базе данных. Таблица должна содержать полнотекстовый индекс. *таблицы не собирались* — **nvarchar(517)**, не имеет значения по умолчанию.  
+`[ @tabname = ] 'qualified_table_name'` — Это одно - или двухкомпонентное имя таблицы. Таблица должна существовать в текущей базе данных. Таблица должна содержать полнотекстовый индекс. *таблицы не собирались* — **nvarchar(517)**, не имеет значения по умолчанию.  
   
- [  **@colname=** ] **"***column_name***"**  
- Имя столбца в *таблицы не собирались*. Столбец должен иметь символьный тип, **varbinary(max)** или **изображение** столбца и не может быть вычисляемым столбцом. *column_name* — **sysname**, не имеет значения по умолчанию.  
+`[ @colname = ] 'column_name'` Имя столбца в *таблицы не собирались*. Столбец должен иметь символьный тип, **varbinary(max)** или **изображение** столбца и не может быть вычисляемым столбцом. *column_name* — **sysname**, не имеет значения по умолчанию.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно создавать полнотекстовые индексы текстовых данных, хранящихся в столбцах, которые имеют **varbinary(max)** или **изображение** тип данных. Изображения и рисунки не индексируются.  
   
- [  **@action=** ] **"***действие***"**  
- Действие, которое должно быть выполнено. *Действие* — **varchar(20)**, не значение по умолчанию и может принимать одно из следующих значений.  
+`[ @action = ] 'action'` — Это действие, которое должно быть выполнено. *Действие* — **varchar(20)**, не значение по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**add**|Добавляет *column_name* из *таблицы не собирались* для неактивного полнотекстового индекса таблицы. Это действие активирует полнотекстовое индексирование столбца.|  
 |**DROP**|Удаляет *column_name* из *таблицы не собирались* из неактивного полнотекстового индекса таблицы.|  
   
- [  **@language=** ] **"***language_term***"**  
- Язык данных, хранящихся в столбце. Список языков, включенных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+`[ @language = ] 'language_term'` — Это язык данных, хранящихся в столбце. Список языков, включенных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
 > [!NOTE]  
 >  Указывайте значение «Neutral», если столбец содержит данные на нескольких языках или на языке, который не поддерживается. Значение по умолчанию задается параметром конфигурации «default full-text language».  
   
- [  **@type_colname =** ] **"***type_column_name***"**  
- Имя столбца в *таблицы не собирались* , содержащий тип документа *column_name*. Этот столбец должен быть **char**, **nchar**, **varchar**, или **nvarchar**. Он используется, только если тип данных столбца *column_name* имеет тип **varbinary(max)** или **изображение**. *type_column_name* — **sysname**, не имеет значения по умолчанию.  
+`[ @type_colname = ] 'type_column_name'` Имя столбца в *таблицы не собирались* , содержащий тип документа *column_name*. Этот столбец должен быть **char**, **nchar**, **varchar**, или **nvarchar**. Он используется, только если тип данных столбца *column_name* имеет тип **varbinary(max)** или **изображение**. *type_column_name* — **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

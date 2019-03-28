@@ -15,12 +15,12 @@ ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: be3f9c61d3c035959def4a46f91eff605e475569
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c9d0deb3567daa64afb46c96a4e93c9da9c0972a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808806"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528256"
 ---
 # <a name="manage-change-tracking-sql-server"></a>Управление отслеживанием изменений (SQL Server)
   В этом разделе описывается процесс управления отслеживанием изменений. А также процесс настройки безопасности и определение влияния отслеживания изменений на хранение данных и производительность.  
@@ -96,7 +96,7 @@ ms.locfileid: "52808806"
   
  Как для других внутренних таблиц, место, занимаемое таблицами отслеживания изменений, можно определить с помощью хранимой процедуры [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) . Названия внутренних таблиц можно определить с помощью представления каталога [sys.internal_tables](/sql/relational-databases/system-catalog-views/sys-internal-tables-transact-sql) , как показано в следующем примере.  
   
-```tsql  
+```sql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  

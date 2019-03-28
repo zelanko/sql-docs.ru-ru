@@ -15,15 +15,15 @@ helpviewer_keywords:
 - RAW mode
 - XMLDATA option
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d074ad6fe9dcd3a26a9c9be84a326291df9f5aed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084245"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537046"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Использование с RAW Mode для FOR XML
   Режим RAW преобразует каждую строку из результирующего набора запроса в элемент XML и присваивает ему универсальный идентификатор \<row> или необязательное имя элемента. По умолчанию каждое значение столбца в наборе строк, отличное от NULL, сопоставляется с определенным атрибутом элемента \<row>. Если директива ELEMENTS добавляется в предложение FOR XML, то каждому значению столбца сопоставляется дочерний элемент элемента \<row>. Вместе с директивой ELEMENTS можно дополнительно определить параметр XSINIL для сопоставления значений NULL столбца в результирующем наборе с элементом, обладающим атрибутом xsi:nil=`"`true`"`.  
@@ -35,17 +35,17 @@ ms.locfileid: "48084245"
 ## <a name="in-this-section"></a>в этом разделе  
  Этот раздел содержит следующие примеры.  
   
--   [Пример. Получение сведений о модели продукта в формате XML](example-retrieving-product-model-information-as-xml.md)  
+-   [Пример. Получение сведений о модели продукта как XML](example-retrieving-product-model-information-as-xml.md)  
   
 -   [Пример. Указание XSINIL с директивой ELEMENTS](example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [Пример: запросы к схемам как к результатам с помощью параметров XMLDATA и XMLSCHEMA](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [Пример. Запросы к схемам как к результатам с помощью параметров XMLDATA и XmlSchema](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
 -   [Пример. Получение двоичных данных](example-retrieving-binary-data.md)  
   
--   [Пример. Переименование элемента &#60;row&#62;](example-renaming-the-row-element.md)  
+-   [Пример. Переименование &#60;строки&#62; элемент](example-renaming-the-row-element.md)  
   
--   [Пример. Задание корневого элемента для XML-документа, сформированного предложением FOR XML](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [Пример. Задание корневого элемента для XML, сформированного предложением FOR XML](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
 -   [Пример. Запросы к столбцам XMLType](example-querying-xmltype-columns.md)  
   

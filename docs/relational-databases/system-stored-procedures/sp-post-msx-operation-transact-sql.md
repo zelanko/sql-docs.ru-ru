@@ -18,12 +18,12 @@ ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa0293daf2c7dacf65450d8d3b9323b2903e77ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f36ad40a2b16401218fe2a5927407464fe6ac11b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832702"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536133"
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +46,7 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@operation =**] **"***операции***"**  
- Тип операции для отправленной операции. *Операция*— **varchar(64)**, не имеет значения по умолчанию. Допустимость операций зависит *object_type*.  
+`[ @operation = ] 'operation'` Тип операции для отправленной операции. *Операция*— **varchar(64)**, не имеет значения по умолчанию. Допустимость операций зависит *object_type*.  
   
 |Тип объекта|Операция|  
 |-----------------|---------------|  
@@ -55,20 +54,15 @@ sp_post_msx_operation
 |**СЕРВЕР**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**РАСПИСАНИЕ**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
- [  **@object_type =**] **"***объект***"**  
- Тип объекта, для которого отправляется операция. Допустимые типы: **задания**, **SERVER**, и **РАСПИСАНИЕ**. *Объект* — **varchar(64)**, значение по умолчанию **задания**.  
+`[ @object_type = ] 'object'` Тип объекта, для которого отправляется операция. Допустимые типы: **задания**, **SERVER**, и **РАСПИСАНИЕ**. *Объект* — **varchar(64)**, значение по умолчанию **задания**.  
   
- [  **@job_id =**] *job_id*  
- Идентификационный номер задания, к которому применяется операция. *job_id* — **uniqueidentifier**, не имеет значения по умолчанию. **0x00** подразумевает все задания. Если *объект* — **SERVER**, затем *job_id*не является обязательным.  
+`[ @job_id = ] job_id` Идентификационный номер задания, к которому применяется операция. *job_id* — **uniqueidentifier**, не имеет значения по умолчанию. **0x00** подразумевает все задания. Если *объект* — **SERVER**, затем *job_id*не является обязательным.  
   
- [ **@specific_target_server =**] **'***target_server***'**  
- Имя целевого сервера, к которому применяется заданная операция. Если *job_id* указан, но *target_server* не указан, то операции направляются на все серверы задания. *target_server* — **nvarchar(30)**, значение по умолчанию NULL.  
+`[ @specific_target_server = ] 'target_server'` Имя целевого сервера, для которого применяется заданная операция. Если *job_id* указан, но *target_server* не указан, то операции направляются на все серверы задания. *target_server* — **nvarchar(30)**, значение по умолчанию NULL.  
   
- [  **@value =**] *значение*  
- Интервал опроса (в секундах). Аргумент*value* имеет тип **int**и значение по умолчанию NULL. Укажите этот параметр только в том случае, если *операции* — **SET-POLL**.  
+`[ @value = ] value` Интервал опроса в секундах. Аргумент*value* имеет тип **int**и значение по умолчанию NULL. Укажите этот параметр только в том случае, если *операции* — **SET-POLL**.  
   
- [  **@schedule_uid=** ] *schedule_uid*  
- Уникальный идентификатор расписания, к которому применяется операция. *schedule_uid* — **uniqueidentifier**, не имеет значения по умолчанию.  
+`[ @schedule_uid = ] schedule_uid` Уникальный идентификатор расписания, к которому применяется операция. *schedule_uid* — **uniqueidentifier**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

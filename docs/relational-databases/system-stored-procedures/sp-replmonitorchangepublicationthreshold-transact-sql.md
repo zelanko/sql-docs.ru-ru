@@ -16,12 +16,12 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d557fccc94c6502bb664f8345d1d7a6bd982124
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 587c66322a7d40f42f81bceb48e1c0d422322d46
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789336"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538476"
 ---
 # <a name="spreplmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,17 +46,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@publisher** =] **"***издателя***"**  
- Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` — Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@publisher_db** =] **"***publisher_db***"**  
- Имя опубликованной базы данных. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` — Имя опубликованной базы данных. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@publication** =] **"***публикации***"**  
- Имя публикации, для которой изменяются пороговые атрибуты наблюдения. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` — Имя публикации, для которой изменяются пороговые атрибуты наблюдения. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@publication_type** =] *publication_type*  
- Тип публикации. *publication_type* — **int**, и может принимать одно из следующих значений.  
+`[ @publication_type = ] publication_type` Если тип публикации. *publication_type* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -65,8 +61,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |**2**|Публикация слиянием.|  
 |NULL (по умолчанию)|Репликация пытается определить тип публикации.|  
   
- [ **@metric_id** =] *metric_id*  
- Идентификатор публикации, изменяемой пороговый показатель. *metric_id* — **int**, со значением по умолчанию NULL и может принимать одно из следующих значений.  
+`[ @metric_id = ] metric_id` Изменяется идентификатор пороговой метрики публикации. *metric_id* — **int**, со значением по умолчанию NULL и может принимать одно из следующих значений.  
   
 |Значение|Имя метрики|  
 |-----------|-----------------|  
@@ -80,17 +75,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
  Необходимо указать либо *metric_id* или *thresholdmetricname*. Если *thresholdmetricname* указан, то *metric_id* должен иметь значение NULL.  
   
- [ **@thresholdmetricname** =] **"***thresholdmetricname***"**  
- Имя изменяемого порогового показателя публикации. *thresholdmetricname* — **sysname**, со значением по умолчанию NULL. Необходимо указать либо *thresholdmetricname* или *metric_id*. Если *metric_id* указан, то *thresholdmetricname* должен иметь значение NULL.  
+`[ @thresholdmetricname = ] 'thresholdmetricname'` Изменено имя пороговой метрики публикации. *thresholdmetricname* — **sysname**, со значением по умолчанию NULL. Необходимо указать либо *thresholdmetricname* или *metric_id*. Если *metric_id* указан, то *thresholdmetricname* должен иметь значение NULL.  
   
- [ **@value** =] *значение*  
- Новое значение для пороговой метрики публикации. *значение* — **int**, со значением по умолчанию NULL. Если **null**, а затем значение метрики не обновляется.  
+`[ @value = ] value` — Это новое значение пороговой метрики публикации. *значение* — **int**, со значением по умолчанию NULL. Если **null**, а затем значение метрики не обновляется.  
   
- [ **@shouldalert** =] *shouldalert*  
- Указывает, создается ли предупреждение при достижении пороговой метрики публикации. *shouldalert* — **бит**, значение по умолчанию NULL. Значение **1** означает, что предупреждение создается и значение **0** означает, что предупреждение не создается.  
+`[ @shouldalert = ] shouldalert` — Если оповещение при достижении пороговой метрики публикации. *shouldalert* — **бит**, значение по умолчанию NULL. Значение **1** означает, что предупреждение создается и значение **0** означает, что предупреждение не создается.  
   
- [ **@mode** =] *режим*  
- Определяет, активна ли метрика порогового показателя публикации. *режим* — **tinyint**, значение по умолчанию **1**. Значение **1** означает, что включено наблюдение за данной метрикой и значением **2** означает, что наблюдение за данной метрикой отключен.  
+`[ @mode = ] mode` Определяет, активна ли порогового показателя публикации. *режим* — **tinyint**, значение по умолчанию **1**. Значение **1** означает, что включено наблюдение за данной метрикой и значением **2** означает, что наблюдение за данной метрикой отключен.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

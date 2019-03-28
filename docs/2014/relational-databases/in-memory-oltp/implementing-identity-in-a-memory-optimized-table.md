@@ -10,19 +10,19 @@ ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c774e0b69565c21a7ba794712212e3b79bcc66e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 591d86011ee769d054c069db98a40e2765b1ec27
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204044"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538136"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>Реализация IDENTITY в таблице, оптимизированной для памяти
   IDENTITY(1, 1) поддерживается для таблицы, оптимизированной для памяти. Однако столбцы идентификаторов с определением IDENTITY(x, y), где x != 1 или y != 1 для таблиц, оптимизированных для памяти, не поддерживаются. Для обхода этой проблемы значения IDENTITY используют объект SEQUENCE ([Sequence Numbers](../sequence-numbers/sequence-numbers.md)).  
   
  Вначале удалите свойство IDENTITY из таблицы, которая преобразуется в OLTP в памяти. Затем определите новый объект SEQUENCE для столбца таблицы. Объекты SEQUENCE как столбцы идентификаторов зависят от возможности создания для столбцов значений DEFAULT, которые используют синтаксис NEXT VALUE FOR для получения нового значения идентификатора. Поскольку значения DEFAULT не поддерживаются в OLTP в памяти, необходимо передать вновь созданное значение SEQUENCE в инструкцию INSERT или в скомпилированную хранимую процедуру, которая выполняет вставку. Следующий пример демонстрирует этот подход.  
   
-```tsql  
+```sql  
 -- Create a new In-Memory OLTP table to simulate IDENTITY insert  
 -- Here the column C1 was the identity column in the original table  
 --  

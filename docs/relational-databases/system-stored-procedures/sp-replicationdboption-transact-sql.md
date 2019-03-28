@@ -16,12 +16,12 @@ ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a3228fc41c571aae60d6609131680162400a310f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 153c2e2b8c75c21451dca3b673129a059d78e3a6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747806"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527336"
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,14 +55,11 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |**подписаться**|База данных является базой данных подписки.|  
 |**Синхронизация с резервной копией**|База данных доступна для скоординированного создания резервных копий. Дополнительные сведения см. в разделе [Включение скоординированного резервного копирования для репликации транзакций &#40;программирование репликации Transact-SQL&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
- [  **@value=**] **"***значение***"**  
- Указывает, следует ли включить или выключить данный параметр репликации базы данных. *значение* — **sysname**и может быть **true** или **false**. Если это значение равно **false** и *optname* — **публикации слиянием**, подписки слиянием опубликованной базы данных также удаляются.  
+`[ @value = ] 'value'` Это, следует ли включить или отключить параметр данной репликации базы данных. *значение* — **sysname**и может быть **true** или **false**. Если это значение равно **false** и *optname* — **публикации слиянием**, подписки слиянием опубликованной базы данных также удаляются.  
   
- [  **@ignore_distributor=**] *ignore_distributor*  
- Указывает, исполняется ли данная хранимая процедура без подключения к распространителю. *ignore_distributor* — **бит**, значение по умолчанию **0**, это означает распространителя должны подключения и обновления состояния публикуемой базы данных. Значение **1** должно указываться, только если распространитель недоступен и **sp_replicationdboption** , используется для отключения публикации.  
+`[ @ignore_distributor = ] ignore_distributor` Указывает, выполняется ли данная хранимая процедура без подключения к распространителю. *ignore_distributor* — **бит**, значение по умолчанию **0**, это означает распространителя должны подключения и обновления состояния публикуемой базы данных. Значение **1** должно указываться, только если распространитель недоступен и **sp_replicationdboption** , используется для отключения публикации.  
   
- [  **@from_scripting=**] *from_scripting*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

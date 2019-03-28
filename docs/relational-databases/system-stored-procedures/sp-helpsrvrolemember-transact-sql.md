@@ -18,12 +18,12 @@ ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa5df082287f0ddf3e37bc246d53bd31fac2a510
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 618ec7d83ab8abce8cf201cb0b59033b808178c0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723772"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533496"
 ---
 # <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@srvrolename =** ] **"***роли***"**  
- Имя предопределенной роли сервера. *роль* — **sysname**, значение по умолчанию NULL. Если *роли*не задан, результирующий набор включает сведения о всех предопределенных ролей сервера.  
+`[ @srvrolename = ] 'role'` — Имя предопределенной роли сервера. *роль* — **sysname**, значение по умолчанию NULL. Если *роли*не задан, результирующий набор включает сведения о всех предопределенных ролей сервера.  
   
  *роль* может быть любым из следующих значений.  
   

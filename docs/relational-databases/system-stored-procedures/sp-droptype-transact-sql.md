@@ -18,12 +18,12 @@ ms.assetid: e78464ac-2370-4c4e-9cc0-06aebc07cec5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00062834702d9d9610994e59bdc5c0f77b85e37d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5004bbdefe29ec13142c66d333f346643261aeb2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856942"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527906"
 ---
 # <a name="spdroptype-transact-sql"></a>sp_droptype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_droptype [ @typename = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@typename=**] **"***тип***"**  
- Имя принадлежащего пользователю псевдонима типа данных. *Тип* — **sysname**, не имеет значения по умолчанию.  
+`[ @typename = ] 'type'` — Имя псевдонима типа данных, вы являетесь владельцем. *Тип* — **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-type"></a>Тип кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

@@ -18,12 +18,12 @@ ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5223c0d48d1baacdd8660a4fcc006d13115f1f4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6ec60d6b11f9d17a6f5446e2840688fd1e4cb75
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732222"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536836"
 ---
 # <a name="spremovejobfromtargets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,13 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@job_id =**] *job_id*  
- Идентификационный номер задания, из которого следует удалить указанные целевые серверы и группы целевых серверов. Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания, из которого следует удалить указанные целевые серверы и группы целевых серверов. Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [  **@job_name =**] **"***имя_задания***"**  
- Имя указания, из которого следует удалить указанные целевые серверы и группы целевых серверов. Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно. *имя_задания* — **sysname**, значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания, из которого следует удалить указанные целевые серверы и группы целевых серверов. Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно. *имя_задания* — **sysname**, значение по умолчанию NULL.  
   
- [ **@target_server_groups =**] **'***target_server_groups***'**  
- Список разделенных запятыми групп целевых серверов, которые следует удалить из указанного задания. *target_server_groups* — **nvarchar(1024)**, значение по умолчанию NULL.  
+`[ @target_server_groups = ] 'target_server_groups'` Список разделенных запятыми групп целевых серверов, удаляемый из указанного задания. *target_server_groups* — **nvarchar(1024)**, значение по умолчанию NULL.  
   
- [ **@target_servers =**] **'***target_servers***'**  
- Список разделенных запятыми целевых серверов, которые следует удалить из указанного задания. *target_servers* — **nvarchar(1024)**, значение по умолчанию NULL.  
+`[ @target_servers = ] 'target_servers'` Разделенный запятыми список целевых серверов, которые следует удалить из указанного задания. *target_servers* — **nvarchar(1024)**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

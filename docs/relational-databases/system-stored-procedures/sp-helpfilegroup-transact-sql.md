@@ -18,12 +18,12 @@ ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d6e7c28e628254fd33269ab4ee200fee0067870
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a01132d30a293bca084669a733834c7d034048e4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741052"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538186"
 ---
 # <a name="sphelpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@filegroupname =** ] **"***имя***"**  
- Логическое имя любой файловой группы в текущей базе данных. *имя* — **sysname**, значение по умолчанию NULL. Если *имя* не указан, перечисляются все файловые группы в текущей базе данных и отображается только первый результирующий набор, показанный в разделе «результирующие наборы».  
+`[ @filegroupname = ] 'name'` — Это логическое имя любой файловой группы в текущей базе данных. *имя* — **sysname**, значение по умолчанию NULL. Если *имя* не указан, перечисляются все файловые группы в текущей базе данных и отображается только первый результирующий набор, показанный в разделе «результирующие наборы».  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

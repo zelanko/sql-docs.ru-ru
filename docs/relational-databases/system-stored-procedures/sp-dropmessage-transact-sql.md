@@ -18,12 +18,12 @@ ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3eae9eeceec6d32ca616244f2ebd77f96d23e614
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b36c576fb5bb3bb3cc168430902223802ca937a3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124154"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535176"
 ---
 # <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@msgnum =** ] *message_number*  
- Номер удаляемого сообщения. *message_number* должно быть определенное пользователем сообщение с номером более 50000. *message_number* — **int**, значение по умолчанию NULL.  
+`[ @msgnum = ] message_number` — Это номер удаляемого сообщения. *message_number* должно быть определенное пользователем сообщение с номером более 50000. *message_number* — **int**, значение по умолчанию NULL.  
   
- [  **@lang =** ] **"**_языка_**"**  
- Язык удаляемого сообщения. Если **все** указан, все языковые версии *message_number* удаляются. *Язык* — **sysname**, значение по умолчанию NULL.  
+`[ @lang = ] 'language'` — Это язык сообщения. Если **все** указан, все языковые версии *message_number* удаляются. *Язык* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

@@ -16,12 +16,12 @@ ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af247734b941a0d9fd7010d4699f9ddb296c890e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 1de46c12b0e05b592489e557a80138996ad9767f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589168"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528796"
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=**] **"**_публикации_**"**  
- Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%**. Если указана публикация, возвращаются все конфликты, определенные этой публикацией. Например если **MSmerge_conflict_Customers** таблица имеет конфликтующие строки для **WA** и **ЦС** публикаций, передавая имя публикации в **ЦС**  извлечены конфликты, которые относятся к **ЦС** публикации.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%**. Если указана публикация, возвращаются все конфликты, определенные этой публикацией. Например если **MSmerge_conflict_Customers** таблица имеет конфликтующие строки для **WA** и **ЦС** публикаций, передавая имя публикации в **ЦС**  извлечены конфликты, которые относятся к **ЦС** публикации.  
   
- [  **@conflict_table=**] **"**_conflict_table_**"**  
- Имя таблицы конфликтов. *conflict_table* — **sysname**, не имеет значения по умолчанию. В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях таблицам конфликтов присваиваются имена форматов с помощью **MSmerge_conflict\__публикации\_статье_**, с одна таблица для каждой опубликованной статьи.  
+`[ @conflict_table = ] 'conflict_table'` — Имя таблицы конфликтов. *conflict_table* — **sysname**, не имеет значения по умолчанию. В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях таблицам конфликтов присваиваются имена форматов с помощью **MSmerge_conflict\__публикации\_статье_**, с одна таблица для каждой опубликованной статьи.  
   
- [  **@publisher=**] **"**_издателя_**"**  
- Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` — Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
- [  **@publisher_db=**] **"**_publisher_db_**"**  
- — Имя базы данных издателя. *publisher_db* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher_db = ] 'publisher_db'` — Имя базы данных издателя. *publisher_db* — **sysname**, значение по умолчанию NULL.  
   
- [  **@logical_record_conflicts=** ] *logical_record_conflicts*  
- Указывает, содержит ли результирующий набор сведения о конфликтах логических записей. *logical_record_conflicts* — **int**, со значением по умолчанию 0. **1** означает, что возвращаются сведения о конфликтах логических записей.  
+`[ @logical_record_conflicts = ] logical_record_conflicts` Указывает, содержит ли результирующий набор сведения о конфликтах логических записей. *logical_record_conflicts* — **int**, со значением по умолчанию 0. **1** означает, что возвращаются сведения о конфликтах логических записей.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  **sp_helpmergeconflictrows** возвращает результирующий набор, состоящий из структуры базовой таблицы и следующих дополнительных столбцов.  

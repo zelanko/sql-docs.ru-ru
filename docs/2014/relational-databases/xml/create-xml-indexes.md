@@ -10,15 +10,15 @@ helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3685674df21d909d88779d1aa82030b8ee3cc283
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142724"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527522"
 ---
 # <a name="create-xml-indexes"></a>Создание XML-индексов
   В данном разделе описано создание первичных и вторичных XML-индексов.  
@@ -46,7 +46,7 @@ ms.locfileid: "48142724"
   
  Не удается создать XML-индекса на `xml` введите столбец в представлении, на **таблицы** переменной со `xml` типа столбцов или `xml` переменных типа.  
   
--   Чтобы изменить `xml` столбец типа с нетипизированного на типизированный XML, или наоборот, с помощью параметра ALTER TABLE ALTER COLUMN не XML-индекс по столбцу должна существовать. Если такой индекс существует, он должен быть сначала удален.  
+-   Для изменения столбца типа `xml` с помощью параметра ALTER TABLE ALTER COLUMN с нетипизированного на типизированный XML (или наоборот) для этого столбца не должно быть определено никаких XML-индексов. Если такой индекс существует, он должен быть сначала удален.  
   
 -   При создании XML-индекса параметр ARITHABORT должен быть установлен в значение ON. Для запроса, вставки, удаления или обновления значений в столбце XML методами типа данных XML этот параметр должен быть установлен для соединения. В противном случае методы типа данных XML будут завершаться ошибкой.  
   
@@ -99,7 +99,7 @@ FROM    sys.xml_indexes;
   
  Столбец **secondary_type_desc** может возвращать значения NULL, PATH, VALUE или PROPERTY. Для первичного XML-индекса всегда возвращается значение NULL.  
   
-### <a name="example-creating-secondary-xml-indexes"></a>Пример. Создание вторичных XML-индексов  
+### <a name="example-creating-secondary-xml-indexes"></a>Пример Создание вторичных XML-индексов  
  В следующем примере иллюстрируется создание вторичных XML-индексов. Здесь также выводятся сведения о созданных XML-индексах.  
   
 ```  

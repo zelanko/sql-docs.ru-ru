@@ -13,12 +13,12 @@ ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b72f500a425b7a55cab285a881c3ff915b9fb82
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5174b5c859fa76ceeccdb99b7a46f510fd62d923
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358706"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530436"
 ---
 # <a name="native-compilation-advisor"></a>Помощник по собственной компиляции
   Средство создания отчетов о производительности транзакций (см. [Определение, должна ли таблица или хранимая процедура быть перенесена в In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) информирует о том, какие интерпретируемые хранимые процедуры в базе данных смогут воспользоваться преимуществами перехода на компиляцию в собственном коде. После определения хранимой процедуры, для которой вы собираетесь использовать собственную компиляцию, можно запустить помощник по собственной компиляции, который облегчит миграцию интерпретированной хранимой процедуры для собственной компиляции. Дополнительные сведения о скомпилированных в собственном коде хранимых процедурах см. в разделе [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "53358706"
 ## <a name="code-sample"></a>Образец кода  
  В следующем примере показана интерпретированная хранимая процедура и эквивалентная хранимая процедура для собственной компиляции. В примере подразумевается каталог c:\data.  
   
-```tsql  
+```sql  
 CREATE DATABASE Demo  
 ON  
 PRIMARY(NAME = [Demo_data],  

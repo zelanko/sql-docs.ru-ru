@@ -16,12 +16,12 @@ ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84fa72ff11ffb97d736dcd5ed194064367c3a5ba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 812ddd803d2a41695429902d6d8fc470ccef9576
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748337"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529223"
 ---
 # <a name="spreplmonitorhelppublication-transact-sql"></a>sp_replmonitorhelppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,13 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@publisher** =] **"***издателя***"**  
- Имя издателя, состояние которого отслеживается. *издатель* — **sysname**, со значением по умолчанию NULL. Если **null**, возвращаются сведения обо всех издателях, использующих распространитель.  
+`[ @publisher = ] 'publisher'` — Имя издателя, состояние которого отслеживается. *издатель* — **sysname**, со значением по умолчанию NULL. Если **null**, возвращаются сведения обо всех издателях, использующих распространитель.  
   
- [ **@publisher_db** =] **"***publisher_db***"**  
- Имя опубликованной базы данных. *publisher_db* — **sysname**, со значением по умолчанию NULL. Если значение равно NULL, возвращаются сведения для всех баз данных, публикуемых данным издателем.  
+`[ @publisher_db = ] 'publisher_db'` — Имя опубликованной базы данных. *publisher_db* — **sysname**, со значением по умолчанию NULL. Если значение равно NULL, возвращаются сведения для всех баз данных, публикуемых данным издателем.  
   
- [ **@publication** =] **"***публикации***"**  
- Имя отслеживаемой публикации. *Публикация* — **sysname**, со значением по умолчанию NULL.  
+`[ @publication = ] 'publication'` Имя публикации, который отслеживается. *Публикация* — **sysname**, со значением по умолчанию NULL.  
   
- [ **@publication_type** =] *publication_type*  
- Тип публикации. *publication_type* — **int**, и может принимать одно из следующих значений.  
+`[ @publication_type = ] publication_type` Если тип публикации. *publication_type* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -61,8 +57,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 |**2**|Публикация слиянием.|  
 |NULL (по умолчанию)|Репликация пытается определить тип публикации.|  
   
- [  **@refreshpolicy=** ] *refreshpolicy*  
- Только для внутреннего применения.  
+`[ @refreshpolicy = ] refreshpolicy` Только для внутреннего использования.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   

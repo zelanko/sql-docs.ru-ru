@@ -18,12 +18,12 @@ ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc4acac420f31735a446f3cdff3e687fa5f3efef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7ddacb0951b25469404b96d41ec81d2eaaba9cc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740532"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530585"
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,18 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@job_id =**] **'***job_id***'**  
- Идентификационный номер задачи, для которого возвращаются сведения о задании. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
+`[ @job_id = ] 'job_id'` Идентификационный номер задания, для которого возвращаются сведения о задании. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [  **@job_name =**] **"***имя_задания***"**  
- Имя задания. *имя_задания* — **sysname**, значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания. *имя_задания* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
- [  **@step_id =**] *step_id*  
- Идентификатор этапа задания. Если не указан, включаются все этапы задания. *step_id* — **int**, значение по умолчанию NULL.  
+`[ @step_id = ] step_id` Идентификационный номер шага задания. Если не указан, включаются все этапы задания. *step_id* — **int**, значение по умолчанию NULL.  
   
- [  **@step_name =**] **"***step_name***"**  
- Имя шага задания. *step_name* — **sysname**, значение по умолчанию NULL.  
+`[ @step_name = ] 'step_name'` Имя шага задания. *step_name* — **sysname**, значение по умолчанию NULL.  
   
- [  **@suffix =**] *суффикс*  
- Флаг, указывающий, добавляется ли текстовое описание **флаги** столбца в выходных данных. *суффикс*— **бит**, значение по умолчанию **0**. Если *суффикс* — **1**, то добавляется описание.  
+`[ @suffix = ] suffix` Флаг, указывающий, добавляется ли текстовое описание **флаги** столбца в выходных данных. *суффикс*— **бит**, значение по умолчанию **0**. Если *суффикс* — **1**, то добавляется описание.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -84,7 +79,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_attempts**|**int**|Максимальное количество повторных попыток выполнения команды (в случае сбоев).|  
 |**retry_interval**|**int**|Интервал (в минутах) между повторными попытками.|  
 |**os_run_priority**|**int**|Зарезервировано.|  
-|**output_file_name**|**Nvarchar(200)**|Файл, чтобы какая команда выходные данные должны записываться ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, и **PowerShell** только для шагов).|  
+|**output_file_name**|**nvarchar(200)**|Файл, чтобы какая команда выходные данные должны записываться ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, и **PowerShell** только для шагов).|  
 |**last_run_outcome**|**int**|Результат последнего запуска этапа:<br /><br /> **0** = ошибка<br /><br /> **1** = выполнено успешно<br /><br /> **2** = повторение<br /><br /> **3** = отменено<br /><br /> **5** = неизвестно|  
 |**last_run_duration**|**int**|Продолжительность этапа в секундах при последнем запуске.|  
 |**last_run_retries**|**int**|Число повторов команды при последнем запуске этапа.|  

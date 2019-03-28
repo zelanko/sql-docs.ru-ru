@@ -18,12 +18,12 @@ ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ccc926844f6d3c054a69cb51f3156dc8e186a98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d003b1f15500b1f6d0b8490d9e712a6a34b100a3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833582"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538636"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@object_type =**] **"***object_type***"**  
- Возвращаемый тип информации. *object_type*— **char(9)**, не имеет значения по умолчанию. *object_type* может принимать значение ALERTS, перечисляя предупреждения, назначенные указанному имени оператора *,* или OPERATORS, перечисляя операторов, ответственных за указанное имя предупреждения *.*  
+`[ @object_type = ] 'object_type'` Тип возвращаемых данных. *object_type*— **char(9)**, не имеет значения по умолчанию. *object_type* может принимать значение ALERTS, перечисляя предупреждения, назначенные указанному имени оператора *,* или OPERATORS, перечисляя операторов, ответственных за указанное имя предупреждения *.*  
   
- [  **@name =**] **"***имя***"**  
- Имя оператора (если *object_type* имеет значение OPERATORS) или имя предупреждения (если *object_type* имеет значение ALERTS). *имя* — **sysname**, не имеет значения по умолчанию.  
+`[ @name = ] 'name'` Имя оператора (если *object_type* имеет значение OPERATORS) или имя предупреждения (если *object_type* имеет значение ALERTS). *имя* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@enum_type =**] **"***enum_type***"**  
- *Object_type*сведений, возвращаемых. *enum_type* в большинстве случаев имеет значение ACTUAL. *enum_type*— **char(10)**, по умолчанию и может принимать одно из следующих значений.  
+`[ @enum_type = ] 'enum_type'` *Object_type*сведений, возвращаемых. *enum_type* в большинстве случаев имеет значение ACTUAL. *enum_type*— **char(10)**, по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -60,8 +57,7 @@ sp_help_notification
 |ALL|Перечисляет все*object_types* включая те, которые не связаны с *имя*.|  
 |TARGET|Перечисляет только *object_types* совпадающие с предоставленным *target_name*, независимо от ассоциации с*имя*.|  
   
- [  **@notification_method =**] *notification_method*  
- Числовое значение, которое определяет метод уведомления возвращаемых столбцов. *notification_method* — **tinyint**, и может принимать одно из следующих значений.  
+`[ @notification_method = ] notification_method` Числовое значение, которое определяет метод уведомления для возврата столбцов. *notification_method* — **tinyint**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -70,8 +66,7 @@ sp_help_notification
 |**4**|NetSend: возвращает только **use_netsend** столбца.|  
 |**7**|Все: возвращает все столбцы.|  
   
- [  **@target_name =**] **"***target_name***"**  
- Имя искомого предупреждения (если *object_type* имеет значение ALERTS) или имя искомого оператора (если *object_type* имеет значение OPERATORS). *target_name* требуется только в том случае, если *enum_type* является целевым ОБЪЕКТОМ. *target_name* — **sysname**, значение по умолчанию NULL.  
+`[ @target_name = ] 'target_name'` Имя искомого предупреждения (если *object_type* имеет значение ALERTS) или имя искомого оператора (если *object_type* имеет значение OPERATORS). *target_name* требуется только в том случае, если *enum_type* является целевым ОБЪЕКТОМ. *target_name* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="return-code-valves"></a>Значения кодов возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

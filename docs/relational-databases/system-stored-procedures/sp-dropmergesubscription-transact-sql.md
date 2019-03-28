@@ -16,12 +16,12 @@ ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34ba40387c246fe5f7f2de8dd74197b7cd43c0f5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 1b360eed1619317e7ca3092bc47da086c520bf04
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130744"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535556"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,13 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=** ] **"**_публикации_**"**  
- Имя публикации. *Публикация* — **sysname**, значение по умолчанию NULL. Публикация уже должна существовать и соответствовать правилам идентификаторов.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, значение по умолчанию NULL. Публикация уже должна существовать и соответствовать правилам идентификаторов.  
   
- [  **@subscriber=**] **"**_подписчика_**"**  
- Имя подписчика. *подписчик* — **sysname**, значение по умолчанию NULL.  
+`[ @subscriber = ] 'subscriber'` — Имя подписчика. *подписчик* — **sysname**, значение по умолчанию NULL.  
   
- [  **@subscriber_db=** ] **"**_subscriber_db_**"**  
- Имя базы данных подписки. *subscription_database*— **sysname**, значение по умолчанию NULL.  
+`[ @subscriber_db = ] 'subscriber_db'` — Имя базы данных подписки. *subscription_database*— **sysname**, значение по умолчанию NULL.  
   
- [  **@subscription_type=** ] **"**_subscription_type_**"**  
- Тип подписки. *subscription_type*— **nvarchar(15)**, и может принимать одно из следующих значений.  
+`[ @subscription_type = ] 'subscription_type'` — Тип подписки. *subscription_type*— **nvarchar(15)**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -63,11 +59,9 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 |**По запросу**|Подписка по запросу.|  
 |**оба** (по умолчанию)|Как принудительная подписка, так и подписка по запросу.|  
   
- [  **@ignore_distributor =** ] *ignore_distributor*  
- Указывает, исполняется ли данная хранимая процедура без подключения к распространителю. *ignore_distributor* — **бит**, значение по умолчанию **0**. Этот аргумент может использоваться для удаления подписки без выполнения задач очистки на распространителе. Это полезно и в тех случаях, когда требуется переустановить распространитель.  
+`[ @ignore_distributor = ] ignore_distributor` Указывает, выполняется ли данная хранимая процедура без подключения к распространителю. *ignore_distributor* — **бит**, значение по умолчанию **0**. Этот аргумент может использоваться для удаления подписки без выполнения задач очистки на распространителе. Это полезно и в тех случаях, когда требуется переустановить распространитель.  
   
- [  **@reserved=** ] *зарезервированные*  
- Зарезервировано для использования в будущем. *зарезервированные* — **бит**, значение по умолчанию **0**.  
+`[ @reserved = ] reserved` Зарезервировано для использования в будущем. *зарезервированные* — **бит**, значение по умолчанию **0**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

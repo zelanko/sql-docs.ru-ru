@@ -1,19 +1,19 @@
 ---
 title: Набор данных demo рейсов авиакомпании учебники SQL Server Python и R - машинного обучения SQL Server
-Description: Create a database containing the Airline dataset from R and Python. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
+Description: Создание базы данных, содержащей набор данных Airline из R и Python. Этот набор данных используется в упражнения, в котором показано, как программы-оболочки для языка R или Python код в хранимую процедуру SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/22/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 10d2f013c103dee3de02335ca2acf82d4320b623
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 69f95876a880684ee09b83ad32341a781bc4f5cf
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596985"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510191"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Авиакомпания рейсов прибытия демонстрационных данных для SQL Server Python и R руководств
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

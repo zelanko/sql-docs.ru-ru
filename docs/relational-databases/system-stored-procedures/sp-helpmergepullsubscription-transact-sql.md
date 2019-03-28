@@ -16,12 +16,12 @@ ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e037842d6be6ae08bc35ac9827ebd6931503f89e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 899846e0868b6381c019281c432c014144e6354c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802026"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535336"
 ---
 # <a name="sphelpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>Аргумент  
- [  **@publication=**] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%**. Если *публикации* — **%**, возвращаются сведения обо всех публикациях слиянием и подписках текущей базы данных.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%**. Если *публикации* — **%**, возвращаются сведения обо всех публикациях слиянием и подписках текущей базы данных.  
   
- [  **@publisher=**] **"***издателя***"**  
- Имя издателя. *издатель*— **sysname**, значение по умолчанию **%**.  
+`[ @publisher = ] 'publisher'` — Имя издателя. *издатель*— **sysname**, значение по умолчанию **%**.  
   
- [  **@publisher_db=**] **"***publisher_db***"**  
- Имя базы данных издателя. *publisher_db*— **sysname**, значение по умолчанию **%**.  
+`[ @publisher_db = ] 'publisher_db'` — Имя базы данных издателя. *publisher_db*— **sysname**, значение по умолчанию **%**.  
   
- [  **@subscription_type=**] **"***subscription_type***"**  
- Указывает, следует ли показывать подписки по запросу. *subscription_type*— **nvarchar(10)**, значение по умолчанию **'pull'**. Допустимые значения: **«push»**, **'pull'**, или **«both»**.  
+`[ @subscription_type = ] 'subscription_type'` Является ли показывать подписки по запросу. *subscription_type*— **nvarchar(10)**, значение по умолчанию **'pull'**. Допустимые значения: **«push»**, **'pull'**, или **«both»**.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   

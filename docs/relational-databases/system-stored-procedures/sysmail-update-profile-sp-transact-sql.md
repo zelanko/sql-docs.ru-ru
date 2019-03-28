@@ -18,12 +18,12 @@ ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c979104c30ec9b134f2d73acb2d85ecd22490371
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2b1616fdf7b690d61c6a2605cc15da2508a3fb9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854212"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534666"
 ---
 # <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@profile_id** =] *profile_id*  
- Идентификатор профиля для обновления. *profile_id* — **int**, значение по умолчанию NULL. Хотя бы один из *profile_id* или *profile_name* должен быть указан. Если заданы оба параметра, процедура изменяет имя профиля.  
+`[ @profile_id = ] profile_id` Идентификатор профиля для обновления. *profile_id* — **int**, значение по умолчанию NULL. Хотя бы один из *profile_id* или *profile_name* должен быть указан. Если заданы оба параметра, процедура изменяет имя профиля.  
   
- [ **@profile_name** =] **"***profile_name***"**  
- Имя обновляемого профиля или новое имя профиля. *profile_name* — **sysname**, значение по умолчанию NULL. Хотя бы один из *profile_id* или *profile_name* должен быть указан. Если заданы оба параметра, процедура изменяет имя профиля.  
+`[ @profile_name = ] 'profile_name'` Имя профиля или новое имя для профиля. *profile_name* — **sysname**, значение по умолчанию NULL. Хотя бы один из *profile_id* или *profile_name* должен быть указан. Если заданы оба параметра, процедура изменяет имя профиля.  
   
- [ **@description** =] **"***описание***"**  
- Введите новое описание профиля. *Описание* — **nvarchar(256)**, значение по умолчанию NULL.  
+`[ @description = ] 'description'` Новое описание для профиля. *Описание* — **nvarchar(256)**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

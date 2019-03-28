@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dea24689dc1dad9836c6ef2a53cf5e40f078c47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077134"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538626"
 ---
 # <a name="create-instances-of-xml-data"></a>Создание экземпляров XML-данных
   В этом разделе описывается формирование XML-экземпляров.  
@@ -79,7 +79,7 @@ set @x = '<root>      <child/>     </root>'
 select @x   
 ```  
   
- Результат:  
+ Это результат:  
   
 ```  
 <root><child/></root>  
@@ -93,7 +93,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  Если параметр *style* не используется или его значение установлено в 0, незначащий пробел не сохраняется для преобразования экземпляра xml DT. Дополнительные сведения о том, как использовать оператор CONVERT и его параметр *style* при преобразовании строковых данных в экземпляр xml DT, см. в статье [CAST и CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Пример: приведение строкового значения к типизированному значению xml и присваивание его столбцу  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Пример приведение строкового значения в типизированный XML и назначение его в столбец  
  Следующий пример приводит строковую переменную, содержащую фрагмент XML для `xml` данных введите и затем сохраняет его в `xml` столбец типа:  
   
 ```  
@@ -121,7 +121,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Пример: преобразование строкового значения в типизированное значение xml и присваивание его переменной  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Пример преобразование строкового значения в типизированный XML и присвоение его переменной  
  В следующем примере строка преобразовывается в `xml` и присваивается переменной `xml` тип данных:  
   
 ```  
@@ -157,7 +157,7 @@ SET @xmlDoc = (SELECT ProductModelID, Name
 SELECT @xmlDoc  
 ```  
   
- Результат:  
+ Это результат:  
   
 ```  
 <Production.ProductModel ProductModelID="19" Name="Mountain-100" />...  
@@ -180,7 +180,7 @@ go
  Дополнительные сведения о предложении FOR XML см. в статье [FOR XML (SQL Server)](for-xml-sql-server.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает экземпляры типа данных `xml` клиенту в результате выполнения различных серверных конструкций, таких как запросы FOR XML с директивой TYPE или запросы, в которых тип данных `xml` используется для возвращения XML из столбцов, переменных и выходных параметров SQL. В коде клиентского приложения поставщик ADO.NET требует, это `xml` данные будут отправляться в двоичной кодировке с сервера. Однако в запросах FOR XML без директивы TYPE XML-данные возвращаются в строковом формате. В любом случае поставщик клиента всегда будет иметь возможность обрабатывать XML-данные в любом из форматов.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает экземпляры типа данных `xml` клиенту в результате выполнения различных серверных конструкций, таких как запросы FOR XML с директивой TYPE или запросы, в которых тип данных `xml` используется для возвращения XML из столбцов, переменных и выходных параметров SQL. В коде клиентского приложения поставщик ADO.NET требует, чтобы информация типа данных `xml` отправлялась сервером в двоичном представлении. Однако в запросах FOR XML без директивы TYPE XML-данные возвращаются в строковом формате. В любом случае поставщик клиента всегда будет иметь возможность обрабатывать XML-данные в любом из форматов.  
   
 ## <a name="using-constant-assignments"></a>Использование постоянных назначений  
  Строковая константа может использоваться там, где экземпляр `xml` ожидается тип данных. Это то же самое, что и неявное приведение (CAST) строки в XML. Пример:  

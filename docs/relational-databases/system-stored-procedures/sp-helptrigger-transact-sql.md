@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dfb494c7b25d3a580059e4d1ad3250abbe91ee54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d59f7e05180ce2f0528159d64b0199ae8975464a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828982"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528596"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@tabname=** ] **"***таблицы***"**  
- Имя таблицы в текущей базе данных, для которой необходимо вернуть сведения о триггерах. *Таблица* — **nvarchar(776)**, не имеет значения по умолчанию.  
+`[ @tabname = ] 'table'` — Имя таблицы в текущей базе данных, для которого необходимо вернуть сведения о триггерах. *Таблица* — **nvarchar(776)**, не имеет значения по умолчанию.  
   
- [  **@triggertype=** ] **"***тип***"**  
- Тип триггера DML, о котором необходимо вернуть сведения. *Тип* — **char(6)**, значение по умолчанию NULL, и может принимать одно из следующих значений.  
+`[ @triggertype = ] 'type'` — Это тип триггера DML для получения информации о. *Тип* — **char(6)**, значение по умолчанию NULL, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -69,7 +67,7 @@ sp_helptrigger [ @tabname = ] 'table'
 |**isinsert**|**int**|1=триггер INSERT<br /><br /> 0=не триггер INSERT|  
 |**isafter**|**int**|1=триггер AFTER<br /><br /> 0=не триггер AFTER|  
 |**isinsteadof**|**int**|1=триггер INSTEAD OF<br /><br /> 0=не триггер INSTEAD OF|  
-|**столбец trigger_schema**|**sysname**|Имя схемы, к которой принадлежит триггер.|  
+|**trigger_schema**|**sysname**|Имя схемы, к которой принадлежит триггер.|  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется [Настройка видимости метаданных](../../relational-databases/security/metadata-visibility-configuration.md) разрешение на таблицу.  

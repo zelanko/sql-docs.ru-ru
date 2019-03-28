@@ -10,12 +10,12 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56999c5e74648ecd36adea3ee941627c1e2e607b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 42fe996b3521316279caf3fcf7adb3e155a83dbd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377904"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536696"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Определение правильного числа контейнеров для хэш-индексов
   Необходимо указать значение для параметра `BUCKET_COUNT` при создании оптимизированной для памяти таблицы. Этот раздел содержит рекомендации по определению соответствующего значения для параметра `BUCKET_COUNT`. Если не удается определить нужное число контейнеров, пользуйтесь вместо этого некластеризованным индексом.  Неверное значение `BUCKET_COUNT`, особенно слишком низкое, может значительно повлиять на производительность рабочей нагрузки, а также на время восстановления базы данных. Рекомендуется пересмотреть число контейнеров.  
@@ -38,7 +38,7 @@ ms.locfileid: "53377904"
 ### <a name="primary-key-and-unique-indexes"></a>Первичный ключ и уникальные индексы  
  Так как индекс первичного ключа является уникальным, число различающихся значений в ключе соответствует числу строк в таблице. Для примера первичный ключ включен (SalesOrderID, SalesOrderDetailID) в таблицу Sales.SalesOrderDetail базы данных AdventureWorks; выполните следующий запрос, чтобы вычислить число различающихся значений первичного ключа, которое соответствует количеству строк в таблице.  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [row count]   
 FROM Sales.SalesOrderDetail  
 ```  
@@ -48,7 +48,7 @@ FROM Sales.SalesOrderDetail
 ### <a name="non-unique-indexes"></a>Неуникальные индексы  
  Для других индексов, например для индекса с несколькими столбцами (SpecialOfferID, ProductID), создайте следующий запрос для определения числа значений уникального индекса:  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [SpecialOfferID_ProductID index key count]  
 FROM   
    (SELECT DISTINCT SpecialOfferID, ProductID   
@@ -65,7 +65,7 @@ FROM
 ## <a name="troubleshooting-the-bucket-count"></a>Диагностика и устранение неполадок с числом контейнеров  
  Чтобы устранить неполадки число контейнеров в таблицах, оптимизированных для памяти, используйте [sys.dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) поможет получить статистику о пустых контейнерах и длине цепочек строк. Следующий запрос может быть использован для получения статистики обо всех хэш-индексах в текущей базе данных. При наличии больших таблиц в базе данных выполнение запроса может занять несколько минут.  
   
-```tsql  
+```sql  
 SELECT   
    object_name(hs.object_id) AS 'object name',   
    i.name as 'index name',   
@@ -99,7 +99,7 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
   
  В качестве примера рассмотрим следующую таблицу и скрипт для вставки образцов строк в таблицу.  
   
-```tsql  
+```sql  
 CREATE TABLE [Sales].[SalesOrderHeader_test]  
 (  
    [SalesOrderID] [uniqueidentifier] NOT NULL DEFAULT (newid()),  

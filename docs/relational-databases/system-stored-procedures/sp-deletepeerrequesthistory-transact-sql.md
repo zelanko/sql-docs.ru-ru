@@ -16,12 +16,12 @@ ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f5bb18d06fd8ab9545825174cba0723f0d553ee
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e3c4797478b114918ce2bd79abb9e4671a0dd022
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791526"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529936"
 ---
 # <a name="spdeletepeerrequesthistory-transact-sql"></a>sp_deletepeerrequesthistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=** ] **"***публикации***"**  
- Имя публикации, запрос состояния которой был создан. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации, для которого был выполнен запрос состояния. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@request_id=** ] *request_id*  
- Указывает отдельный запрос состояния, так что все ответы на этот запрос будут удалены. *Идентификатор request_id* — **int**, со значением по умолчанию NULL.  
+`[ @request_id = ] request_id` Указывает отдельный запрос состояния, так что все ответы на этот запрос будут удалены. *Идентификатор request_id* — **int**, со значением по умолчанию NULL.  
   
- [  **@cutoff_date=** ] *cutoff_date*  
- Указывает начальную дату, до которой все более ранние записи ответов удаляются. *cutoff_date* — **datetime**, со значением по умолчанию NULL.  
+`[ @cutoff_date = ] cutoff_date` Указывает начальную дату, до которой все более ранние записи ответов удаляются. *cutoff_date* — **datetime**, со значением по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

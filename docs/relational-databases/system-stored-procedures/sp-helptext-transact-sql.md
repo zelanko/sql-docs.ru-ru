@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95316400d336a13304f1da0850ecdcc9565fe5bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b518c7b79ca6a054b5d6435ea7cb2fe10e419b7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707332"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536326"
 ---
 # <a name="sphelptext-transact-sql"></a>sp_helptext (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@objname =** ] **"***имя***"**  
- Полное или неполное имя определенного пользователем объекта с видимостью в пределах схемы. Кавычки требуются, только если определяется уточненный объект. Если предоставлено полное имя таблицы, включая имя базы данных, в качестве последнего должно использоваться имя текущей базы данных. Объект должен находиться в текущей базе данных. *имя* — **nvarchar(776)**, не имеет значения по умолчанию.  
+`[ @objname = ] 'name'` — Полное или неполное имя объекта области схемы, определяемые пользователем. Кавычки требуются, только если определяется уточненный объект. Если предоставлено полное имя таблицы, включая имя базы данных, в качестве последнего должно использоваться имя текущей базы данных. Объект должен находиться в текущей базе данных. *имя* — **nvarchar(776)**, не имеет значения по умолчанию.  
   
- [  **@columnname =** ] **"***computed_column_name***"**  
- Имя вычисляемого столбца, для которого отображают информацию об определении. Таблицы, содержащей столбец должен быть указан как *имя*. *column_name* — **sysname**, не имеет значения по умолчанию.  
+`[ @columnname = ] 'computed_column_name'` — Имя вычисляемого столбца, для которого необходимо отобразить сведения об определении. Таблицы, содержащей столбец должен быть указан как *имя*. *column_name* — **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -54,7 +52,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**Текст**|**nvarchar(255)**|Определение объекта|  
+|**Text**|**nvarchar(255)**|Определение объекта|  
   
 ## <a name="remarks"></a>Примечания  
  Процедура sp_helptext отображает определение, которое используется для создания объекта во множестве строк. Каждая строка содержит 255 символов определения на языке [!INCLUDE[tsql](../../includes/tsql-md.md)]. Определение размещено в **определение** столбца в [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) представления каталога.  

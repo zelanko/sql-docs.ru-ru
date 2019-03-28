@@ -16,12 +16,12 @@ ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf771f02ec63260dcda1f8b7fa633f9fb6bf9a07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bb4874233f85a2565c3d30546749fa9bffe79ebb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817776"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58525776"
 ---
 # <a name="spmergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,9 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@source_object=**] **"***source_object***"**  
- Имя исходного объекта. *source_object*— **nvarchar(386)**, не имеет значения по умолчанию.  
+`[ @source_object = ] 'source_object'` — Имя исходного объекта. *source_object*— **nvarchar(386)**, не имеет значения по умолчанию.  
   
- [  **@rowguid=**] **"***rowguid***"**  
- Идентификатор строки. *ROWGUID* — **uniqueidentifier**, не имеет значения по умолчанию.  
+`[ @rowguid = ] 'rowguid'` — Это идентификатор строки. *ROWGUID* — **uniqueidentifier**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

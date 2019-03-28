@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d8d5493c63b48c627dbc2cb192d8e10f8bfc4a43
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533989"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528806"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Задайте путь и указания по оптимизации для селективных XML-индексов
   В данном разделе описывается настройка путей узла для индексирования и задание указаний по оптимизации для индексирования при создании или изменении селективных XML-индексов.  
@@ -61,7 +61,7 @@ ms.locfileid: "52533989"
   
  Ниже приведен пример селективного XML-индекса, созданного с сопоставлениями по умолчанию. Для всех трех методов используется тип узла (**xs:untypedAtomic**) и количество элементов по умолчанию.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_default  
 ON Tbl(xmlcol)  
 FOR  
@@ -92,7 +92,7 @@ mypath03 = '/a/b/d'
   
  Отображенный селективный XML-индекс вы можете оптимизировать следующим образом:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_optimized  
 ON Tbl(xmlcol)  
 FOR  
@@ -116,7 +116,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
  Обратите внимание на следующий запрос:  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/d)[1]', 'NVARCHAR(200)')  
 FROM myXMLTable T  
@@ -124,7 +124,7 @@ FROM myXMLTable T
   
  Указанный запрос возвращает значение из пути `/a/b/d` , упакованного в тип данных NVARCHAR(200), поэтому тип данных, указываемый для узла, является очевидным. Однако нет схемы, в которой можно было бы указать количество элементов узла в нетипизированном XML. Чтобы указать, что узел `d` должен встречаться не более одного раза в родительском узле `b`, создайте селективный XML-индекс, в котором подсказка оптимизации SINGLETON используется следующим образом:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_US  
 ON Tbl(xmlcol)  
 FOR  
@@ -223,7 +223,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
      Рассмотрим следующий простой запрос к [образцу XML-документа](#sample) в данном разделе:  
   
-    ```tsql  
+    ```sql  
     SELECT T.record FROM myXMLTable T  
     WHERE T.xmldata.exist('/a/b[./c = "43"]') = 1  
     ```  
@@ -238,7 +238,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
  Для улучшения производительности инструкции SELECT, описанной выше, вы можете создать следующий селективный XML-индекс.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX simple_sxi  
 ON Tbl(xmlcol)  
 FOR  
@@ -251,7 +251,7 @@ FOR
 ### <a name="indexing-identical-paths"></a>Индексирование одинаковых путей  
  Невозможно повысить уровень одинаковых путей в качестве того же типа данных с другими именами пути. Например, следующий запрос формирует ошибку, поскольку пути `pathOne` и `pathTwo` идентичны:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -262,7 +262,7 @@ FOR
   
  Однако вы можете повысить уровень одинаковых путей в качестве различных типов данных с разными именами. Например, следующий запрос теперь является допустимым, поскольку типы данных отличаются:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -278,7 +278,7 @@ FOR
   
  Вот простой запрос Xquery, в котором используется метод exist():  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1  
 ```  
@@ -293,7 +293,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1
   
  Вот более сложный вариант предыдущего запроса XQuery с примененным предикатом:  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1  
 ```  
@@ -309,7 +309,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1
   
  Вот более сложный запрос с предложением value():  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/c/d/e[./f = "SQL"]/g)[1]', 'nvarchar(100)')  
 FROM myXMLTable T  
@@ -327,7 +327,7 @@ FROM myXMLTable T
   
  Вот запрос, в котором предложение FLWOR используется внутри предложения exist(). (Имя FLWOR образуется из 5 предложений, которые могут составлять выражение FLWOR в XQuery: for, let, where, order by и return.)  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('  
   For $x in /a/b/c/d/e  
@@ -380,7 +380,7 @@ WHERE T.xmldata.exist('
   
  Рассмотрим следующий пример:  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b[./c=5]') = 1  
 ```  

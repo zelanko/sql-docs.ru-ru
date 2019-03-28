@@ -16,12 +16,12 @@ ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec8d4086d1733d91692565d4d6ff112b8f264d35
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c791fedcd483024c2bc6d564ce3f774fa2fded77
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773716"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530196"
 ---
 # <a name="spresetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@verbose_level**=] *verbose_level*  
- Указывает объем возвращаемых сведений. *verbose_level*— **int**, значение по умолчанию **1**. Значение **1** означает, что ошибка возвращается, если не удается получить необходимые блокировки на **MSsnapshotdeliveryprogress** таблицы, и **0** означает, что никакие ошибки не возвращаются.  
+`[ @verbose_level = ] verbose_level` Указывает объем возвращаемых сведений. *verbose_level*— **int**, значение по умолчанию **1**. Значение **1** означает, что ошибка возвращается, если не удается получить необходимые блокировки на **MSsnapshotdeliveryprogress** таблицы, и **0** означает, что никакие ошибки не возвращаются.  
   
- [ **@drop_table**=] **"***drop_table***"**  
- Является ли удалить или усечь таблицу, содержащую сведения о ходе выполнения моментального снимка. *drop_table* — **nvarchar(5)**, значение по умолчанию **FALSE**. FALSE означает, что таблица усекается, а TRUE означает, что таблица удаляется.  
+`[ @drop_table = ] 'drop_table'` Является ли удалить или усечь таблицу, содержащую сведения о ходе выполнения моментального снимка. *drop_table* — **nvarchar(5)**, значение по умолчанию **FALSE**. FALSE означает, что таблица усекается, а TRUE означает, что таблица удаляется.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

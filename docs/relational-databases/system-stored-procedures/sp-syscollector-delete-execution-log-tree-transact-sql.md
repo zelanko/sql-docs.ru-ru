@@ -19,12 +19,12 @@ ms.assetid: 0a9a7c5b-c3cc-40ca-b524-e948a8cce4e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b234caaa0de9f111c047cf54aeafca6d4fdce8b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be3f468db321f1e8ba7af3d7b5b80c97803a0b4b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730432"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531246"
 ---
 # <a name="spsyscollectordeleteexecutionlogtree-transact-sql"></a>sp_syscollector_delete_execution_log_tree (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_syscollector_delete_execution_log_tree[ @log_id = ] log_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@log_id =** ] *log_id*  
- Уникальный идентификатор набора элементов сбора. *log_id* — **int**.  
+`[ @log_id = ] log_id` Уникальный идентификатор для коллекции набора журналов. *log_id* — **int**.  
   
- [  **@from_collection_set =** ] *from_collection_set*  
- Идентификатор набора элементов сбора. *from_collection_set* — **бит = 1**.  
+`[ @from_collection_set = ] from_collection_set` — Идентификатор набора элементов сбора. *from_collection_set* — **бит = 1**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

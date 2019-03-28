@@ -22,12 +22,12 @@ ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b797301b5b778bea34ad1552152e7e3e147dde37
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 0b1c2f30758987c902e5610ef3fa9f8b26809889
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169174"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533747"
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,18 +47,15 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@source_schema=** ] **"**_источника\_схемы_**"**  
- Имя схемы, в которой содержится исходная таблица. *source_schema* — **sysname**, не имеет значения по умолчанию и не может иметь значение NULL.  
+`[ @source_schema = ] 'source\_schema'` — Это имя схемы, в которой содержится исходная таблица. *source_schema* — **sysname**, не имеет значения по умолчанию и не может иметь значение NULL.  
   
  *source_schema* должен существовать в текущей базе данных.  
   
- [  **@source_name=** ] **"**_источника\_имя_**"**  
- Имя исходной таблицы, из которой можно отключить систему отслеживания измененных данных. *source_name* — **sysname**, не имеет значения по умолчанию и не может иметь значение NULL.  
+`[ @source_name = ] 'source\_name'` — Имя исходной таблицы, из которой система отслеживания измененных данных требуется отключить. *source_name* — **sysname**, не имеет значения по умолчанию и не может иметь значение NULL.  
   
  *source_name* должен существовать в текущей базе данных.  
   
- [  **@capture_instance=** ] **"**_захвата\_экземпляр_**"** | **"** все **"**  
- Имя экземпляра системы отслеживания, отключаемого в указанной исходной таблице. *capture_instance* — **sysname** и не может иметь значение NULL.  
+`[ @capture_instance = ] 'capture\_instance' | 'all'` — Имя экземпляра отслеживания, чтобы отключить для указанной исходной таблице. *capture_instance* — **sysname** и не может иметь значение NULL.  
   
  Если выбрано «все», все экземпляры, определенные для отслеживания *source_name* отключены.  
   

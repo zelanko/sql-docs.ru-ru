@@ -16,12 +16,12 @@ ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30e0828c7d116c2c48c398ecdee78899ad8913db
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fa6ce6b4e0d1c3fbefe7256f3ca96c84d59e664d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818886"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535416"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@tablename =**] **"***tablename***"**  
- Имя таблицы. *TableName* — **sysname**, не имеет значения по умолчанию. Таблица должна быть частью очереди подписок.  
+`[ @tablename = ] 'tablename'` — Имя таблицы. *TableName* — **sysname**, не имеет значения по умолчанию. Таблица должна быть частью очереди подписок.  
   
- [  **@owner =**] **"***владельца***"**  
- Владелец подписки. *владелец* — **sysname**, значение по умолчанию NULL.  
+`[ @owner = ] 'owner'` Является владельцем подписки. *владелец* — **sysname**, значение по умолчанию NULL.  
   
- [  **@tranid =** ] **"***transaction_id***"**  
- Позволяет осуществлять фильтрацию вывода по идентификатору транзакции. *transaction_id* — **nvarchar(70)**, значение по умолчанию NULL. Если указан, будет отображен идентификатор транзакции, связанный с командой в очереди. Если указать значение NULL, будут отображены все команды в очереди.  
+`[ @tranid = ] 'transaction_id'` Позволяет выходные данные, чтобы отфильтровать по идентификатору транзакции. *transaction_id* — **nvarchar(70)**, значение по умолчанию NULL. Если указан, будет отображен идентификатор транзакции, связанный с командой в очереди. Если указать значение NULL, будут отображены все команды в очереди.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -60,7 +57,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 |**Действие**|**nvarchar(10)**|Тип операции для выполнения при синхронизации.<br /><br /> INS= вставка.<br /><br /> DEL = удаление.<br /><br /> UPD = обновление.|  
 |**tranid**|**nvarchar(70)**|Идентификатор транзакции, под которым выполнялась команда.|  
 |**Таблица column1... n**||Значение для каждого столбца таблицы, указанной в *tablename*.|  
-|**MSrepl_tran_version**|**uniqueidentifier**|Этот столбец используется для отслеживания изменений для реплицируемых данных и для обнаружения конфликтов на издателе. Этот столбец добавлен к таблице автоматически.|  
+|**msrepl_tran_version**|**uniqueidentifier**|Этот столбец используется для отслеживания изменений для реплицируемых данных и для обнаружения конфликтов на издателе. Этот столбец добавлен к таблице автоматически.|  
   
 ## <a name="remarks"></a>Примечания  
  **sp_getqueuedrows** используется на подписчиках, участвующих в очереди обновлений.  

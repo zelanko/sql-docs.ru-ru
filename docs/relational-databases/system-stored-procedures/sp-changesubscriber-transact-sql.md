@@ -16,12 +16,12 @@ ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 466b2c0316cb5de9b38200fd643d0302c5b1ae93
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1f31a00e0c42bc56dffac191ff9a934bb77b95df
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203103"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534536"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,29 +57,21 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@subscriber=**] **"***подписчика***"**  
- Имя подписчика, на котором изменяется параметр. *подписчик* — **sysname**, не имеет значения по умолчанию.  
+`[ @subscriber = ] 'subscriber'` Это имя подписчика, на котором изменяется параметр. *подписчик* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@type=**] *типа*  
- Тип подписчика. *Тип* — **tinyint**, значение по умолчанию NULL. **0** указывает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчика. **1** указывает, отличный от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другой сервер источника данных ODBC подписчика.  
+`[ @type = ] type` — Тип подписчика. *Тип* — **tinyint**, значение по умолчанию NULL. **0** указывает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчика. **1** указывает, отличный от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другой сервер источника данных ODBC подписчика.  
   
- [  **@login=**] **"***входа***"**  
- Идентификатор входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL.  
+`[ @login = ] 'login'` Является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] идентификатора входа проверки подлинности. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL.  
   
- [  **@password=**] **"***пароль***"**  
- Пароль для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *пароль* — **sysname**, значение по умолчанию **%**. **%** Указывает, что никак не изменяется, чтобы свойство пароля.  
+`[ @password = ] 'password'` Является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пароль для проверки подлинности. *пароль* — **sysname**, значение по умолчанию **%**. **%** Указывает, что никак не изменяется, чтобы свойство пароля.  
   
- [  **@commit_batch_size=**] *commit_batch_size*  
- Поддерживается только для обеспечения обратной совместимости.  
+`[ @commit_batch_size = ] commit_batch_size` Поддерживается только для обратной совместимости.  
   
- [  **@status_batch_size=**] *status_batch_size*  
- Поддерживается только для обеспечения обратной совместимости.  
+`[ @status_batch_size = ] status_batch_size` Поддерживается только для обратной совместимости.  
   
- [  **@flush_frequency=**] *flush_frequency*  
- Поддерживается только для обеспечения обратной совместимости.  
+`[ @flush_frequency = ] flush_frequency` Поддерживается только для обратной совместимости.  
   
- [  **@frequency_type=**] *frequency_type*  
- Частота запуска задачи распространения по расписанию. *frequency_type* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_type = ] frequency_type` Это частота, с которой необходимо планировать задачу распространения. *frequency_type* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -92,11 +84,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**64**|Автозапуск|  
 |**128**|Повторяющееся задание|  
   
- [  **@frequency_interval=**] *frequency_interval*  
- Интервал для *frequency_type*. *frequency_interval* — **int**, значение по умолчанию NULL.  
+`[ @frequency_interval = ] frequency_interval` Интервал для *frequency_type*. *frequency_interval* — **int**, значение по умолчанию NULL.  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- Дата задачи распределения. Этот параметр используется при *frequency_type* присваивается **32** (относительно ежемесячно). *frequency_relative_interval* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` — Дата задачи распределения. Этот параметр используется при *frequency_type* присваивается **32** (относительно ежемесячно). *frequency_relative_interval* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -106,11 +96,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**8**|Четвертая|  
 |**16**|Последняя|  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- — Как часто задача распространения должна выполняться за время заданного *frequency_type*. *frequency_recurrence_factor* — **int**, значение по умолчанию NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` — Как часто задача распространения должна выполняться за время заданного *frequency_type*. *frequency_recurrence_factor* — **int**, значение по умолчанию NULL.  
   
- [  **@frequency_subday=**] *frequency_subday*  
- Частота повторного планирования в течение определенного периода. *frequency_subday* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_subday = ] frequency_subday` Том, как часто следует запланировать повторное выполнение в течение определенного периода. *frequency_subday* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -119,34 +107,26 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**4**|Минута|  
 |**8**|Час|  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- Интервал для *frequence_subday*. *frequency_subday_interval* — **int**, значение по умолчанию NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Интервал для *frequence_subday*. *frequency_subday_interval* — **int**, значение по умолчанию NULL.  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- Время суток, на которое запланирован первый запуск задачи распространения в формате ЧЧММСС. *active_start_time_of_day* — **int**, значение по умолчанию NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Время суток, когда впервые задачи распространения запланирована, в формате ЧЧММСС. *active_start_time_of_day* — **int**, значение по умолчанию NULL.  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- Время, когда будет прекращено выполнение задачи распространения по расписанию, в формате ЧЧММСС. *active_end_time_of_day*— **int**, значение по умолчанию NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Время суток, когда прекращается выполнение задачи распространения, в формате ЧЧММСС. *active_end_time_of_day*— **int**, значение по умолчанию NULL.  
   
- [  **@active_start_date=**] *active_start_date*  
- Дата, когда запланирован первый запуск задачи распространения, в формате ГГГГММДД. *active_start_date* — **int**, значение по умолчанию NULL.  
+`[ @active_start_date = ] active_start_date` Дата первого запуска задачи распространения запланирована, в формате ГГГГММДД. *active_start_date* — **int**, значение по умолчанию NULL.  
   
- [  **@active_end_date=**] *active_end_date*  
- Дата, когда запланирован останов задачи распространения в формате ГГГГММДД. *active_end_date*— **int**, значение по умолчанию NULL.  
+`[ @active_end_date = ] active_end_date` Дата, когда запуск задачи распространения, в формате ГГГГММДД. *active_end_date*— **int**, значение по умолчанию NULL.  
   
- [  **@description=**] **"***описание***"**  
- Необязательное текстовое описание. *Описание* — **nvarchar(255)**, значение по умолчанию NULL.  
+`[ @description = ] 'description'` — Это необязательное текстовое описание. *Описание* — **nvarchar(255)**, значение по умолчанию NULL.  
   
- [  **@security_mode=**] *security_mode*  
- Реализованный режим обеспечения безопасности. *security_mode* — **int**, и может принимать одно из следующих значений.  
+`[ @security_mode = ] security_mode` — Это Реализованный режим безопасности. *security_mode* — **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности|  
 |**1**|Проверка подлинности Windows|  
   
- [ **@publisher**=] **"***издателя***"**  
- Указывает, отличный от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает, отличный от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *издатель* не следует использовать при изменении свойств статьи на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  

@@ -15,12 +15,12 @@ ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ccd9e2be26c8d514e17a4aa03af422cd648fe426
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 31afdbb14229fa7c0eaf13f1b3a215e31356945f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666603"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528816"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Хранимые процедуры — аргументы и свойства пространственного индекса
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,13 @@ ms.locfileid: "51666603"
 -   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@tabname =**] **"***tabname***"**  
- Полное или неполное имя определенной таблицы, для которой был указан пространственный индекс.  
+`[ @tabname = ] 'tabname'` — Полное или неполное имя таблицы, для которого был указан пространственный индекс.  
   
  Кавычки требуются, только если определяется уточненная таблица. Если предоставлено полное имя таблицы, включая имя базы данных, в качестве последнего должно использоваться имя текущей базы данных. *tabname* — **nvarchar**(776) и не имеет значения по умолчанию.  
   
- [  **@indexname =** ] **"***indexname***"**  
- Имя указанного пространственного индекса. *имя_индекса* — **sysname** не имеет значения по умолчанию.  
+`[ @indexname = ] 'indexname'` — Имя указанного пространственного индекса. *имя_индекса* — **sysname** не имеет значения по умолчанию.  
   
- [  **@verboseoutput =** ] **"***verboseoutput***"**  
- Диапазон возвращаемых имен свойств и значений.  
+`[ @verboseoutput = ] 'verboseoutput'` — Это диапазон имена свойств и значений должны быть возвращены.  
   
  0 = основные свойства  
   
@@ -58,11 +55,9 @@ ms.locfileid: "51666603"
   
  *verboseoutput* — **tinyint** не имеет значения по умолчанию.  
   
- [  **@query_sample =** ] **"***query_sample***"**  
- Это репрезентативный образец запроса, который можно использовать для проверки ценности индекса. Это может быть репрезентативный объект или окно запроса. *query_sample* — **geometry** не имеет значения по умолчанию.  
+`[ @query_sample = ] 'query_sample'` Это образец репрезентативного запроса, который может использоваться для проверки ценности индекса. Это может быть репрезентативный объект или окно запроса. *query_sample* — **geometry** не имеет значения по умолчанию.  
   
- [  **@xml_output =** ] **"***xml_output***"**  
- Этот выходной параметр возвращает результирующий набор во фрагменте XML. *xml_output* — **xml** не имеет значения по умолчанию.  
+`[ @xml_output = ] 'xml_output'` Выходной параметр, который возвращает результат, задан в XML-фрагмент. *xml_output* — **xml** не имеет значения по умолчанию.  
   
 ## <a name="properties"></a>Свойства  
  Задайте **@verboseoutput** = 0 для возврата основных свойств, как показано в таблице ниже; **@verboseoutput** > 0 для возврата всех свойств пространственного индекса.  

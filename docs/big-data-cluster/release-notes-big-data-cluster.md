@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2adf081f68ec0941b287102f515da2cabbfbbe18
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2502396dba4b88a9750aa3bfc62c4153711e1426
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494186"
+ms.locfileid: "58510341"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Заметки о выпуске для кластеров больших данных в SQL Server
 
@@ -29,7 +29,7 @@ ms.locfileid: "58494186"
 
 ### <a name="whats-new"></a>What's New
 
-| Новые функции или обновления | Сведения |
+| Новые средства или обновления | Сведения |
 |:---|:---|
 | Руководство по GPU поддерживает для выполнения глубокого обучения с TensorFlow в Spark. | [Развертывание кластера больших данных с поддержкой GPU и запустите TensorFlow](spark-gpu-tensorflow.md) |
 | **SqlDataPool** и **SqlStoragePool** источники данных больше не создаются по умолчанию. | Создайте их вручную, при необходимости. См. в разделе [известные проблемы](#externaltablesctp24). |
@@ -80,19 +80,44 @@ ms.locfileid: "58494186"
       KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
       ```
 
+#### <a name="delete-cluster-fails"></a>Удаление кластера происходит сбой
+
+При попытке удалить кластер с **mssqlctl**, она завершается сбоем со следующей ошибкой:
+
+```
+2019-03-26 20:38:11.0614 UTC | INFO | Deleting cluster ...
+Error processing command: "TypeError"
+delete_namespaced_service() takes 3 positional arguments but 4 were given
+Makefile:61: recipe for target 'delete-cluster' failed
+make[2]: *** [delete-cluster] Error 1
+Makefile:223: recipe for target 'deploy-clean' failed
+make[1]: *** [deploy-clean] Error 2
+Makefile:203: recipe for target 'deploy-clean' failed
+make: *** [deploy-clean] Error 2
+```
+
+Новый клиент Python Kubernetes (версия 9.0.0) изменен удаления пространства имен API, который в данный момент запрещает **mssqlctl**. Это происходит только при наличии более новой версии клиента python Kubernetes установлен. Эту проблему можно обойти, непосредственно удалив кластер с помощью **kubectl** (`kubectl delete ns <ClusterName>`), или можно установить более старой версией с помощью `sudo pip install kubernetes==8.0.1`.
+
 #### <a id="externaltablesctp24"></a> Внешние таблицы
 
 - Развертывание кластера больших данных больше не создает **SqlDataPool** и **SqlStoragePool** внешних источников данных. Можно создать эти источники данных вручную для поддержки виртуализации данных к пулу данных и пула носителей.
 
    ```sql
-   -- Create data sources for SQL Big Data Cluster
+   -- Create the SqlDataPool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
      WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
 
+   -- Create the SqlStoragePool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-     CREATE EXTERNAL DATA SOURCE SqlStoragePool
-     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+   BEGIN
+     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+   END
    ```
 
 - Это позволяет создать внешнюю таблицу пула данных для таблицы, которая имеет неподдерживаемые типы столбцов. При выполнении запроса внешней таблицы, вы получите сообщение следующего вида:
@@ -137,9 +162,9 @@ ms.locfileid: "58494186"
 
 Новые возможности и известные проблемы с кластерами больших данных в SQL Server 2019 CTP 2.3 в следующих разделах.
 
-### <a name="new-features"></a>Новые возможности
+### <a name="whats-new"></a>What's New
 
-| Новая функция | Сведения |
+| Новые средства или обновления | Сведения |
 | :---------- | :------ |
 | Отправка заданий Spark в кластерах больших данных в IntelliJ. | [Отправка заданий Spark в кластерах больших данных SQL Server в IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
 | Общий интерфейс командной строки для приложения развертывания и управления кластерами. | [Развертывание приложения в кластере SQL Server 2019 больших данных (Предварительная версия)](big-data-cluster-create-apps.md) |

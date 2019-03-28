@@ -16,12 +16,12 @@ ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74aa782a7dcf6abdc71ca82dc104406948f21989
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 74b5ff58db964bff29e863eec39e76313220f556
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802306"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533096"
 ---
 # <a name="spdropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=**] **"***публикации***"**  
- Имя публикации, которую требуется удалить. *Публикация* — **sysname**, не имеет значения по умолчанию. Если **все**, а также задание агента моментальных снимков, связанных с ними удаляются все существующие публикации слиянием. Если указать определенное значение для *публикации*, удаляется только указанная публикация и его связанное задание агента моментальных снимков.  
+`[ @publication = ] 'publication'` — Имя публикации, для удаления. *Публикация* — **sysname**, не имеет значения по умолчанию. Если **все**, а также задание агента моментальных снимков, связанных с ними удаляются все существующие публикации слиянием. Если указать определенное значение для *публикации*, удаляется только указанная публикация и его связанное задание агента моментальных снимков.  
   
- [  **@ignore_distributor =**] *ignore_distributor*  
- Используется для удаления публикации без выполнения задач очистки на распространителе. *ignore_distributor* — **бит**, значение по умолчанию **0**. Данный аргумент также используется при переустановке распространителя.  
+`[ @ignore_distributor = ] ignore_distributor` Используется для удаления публикации без выполнения задач очистки на распространителе. *ignore_distributor* — **бит**, значение по умолчанию **0**. Данный аргумент также используется при переустановке распространителя.  
   
- [  **@reserved=**] *зарезервированные*  
- Зарезервировано для использования в будущем. *зарезервированные* — **бит**, значение по умолчанию **0**.  
+`[ @reserved = ] reserved` Зарезервировано для использования в будущем. *зарезервированные* — **бит**, значение по умолчанию **0**.  
   
- [  **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
- Только для внутреннего применения.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` Только для внутреннего использования.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

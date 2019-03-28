@@ -10,12 +10,12 @@ ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aced288e62fefe46777993fd46130b8dd65e8d1b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510025"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527796"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Рекомендации для уровней изоляции транзакций с таблицами, оптимизированными для памяти
   Во многих сценариях необходимо указать уровень изоляции транзакции. Уровень изоляции транзакции для таблиц, оптимизированных для памяти, отличается от уровня для таблиц, сохраняемых на диске.  
@@ -62,7 +62,7 @@ ms.locfileid: "52510025"
   
  В следующем примере транзакции с автоматической фиксацией показано соединение между таблицей Customers с оптимизацией для памяти и обычной таблицей [Order History] в составе нерегламентированного пакета:  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
 GO  
 SELECT *   
@@ -73,7 +73,7 @@ LEFT JOIN dbo.[Order History] AS oh
   
  Далее в примере с явными и неявными транзакциями представлено то же соединение, но в этот раз в составе явной пользовательской транзакции. Доступ к оптимизированной для памяти таблице Customers осуществляется с уровнем изоляции SNAPSHOT (табличное указание WITH (SNAPSHOT)), а к обычной таблице [Order History] — с уровнем изоляции READ COMMITTED:  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED  
 GO  
 BEGIN TRAN  
@@ -105,7 +105,7 @@ COMMIT
   
  Обратите внимание, что логика опроса должна быть вне области транзакции, так как она использует уровень изоляции SNAPSHOT для получения доступа к таблице t1. Использование логики опроса внутри области транзакции может привести к созданию длительной транзакции, что является нежелательным.  
   
-```tsql  
+```sql  
 -- poll table  
 WHILE NOT EXISTS (SELECT 1 FROM dbo.t1)  
 BEGIN   

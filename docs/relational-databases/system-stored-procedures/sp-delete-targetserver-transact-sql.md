@@ -18,12 +18,12 @@ ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 63b8fdb66b868d7fc0c1c7a83d574bafb92224b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 194395728e60f31c689293191be2cedca4d549f3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692252"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528916"
 ---
 # <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@server_name=** ] **'***server***'**  
- Имя сервера, который необходимо удалить в качестве доступного целевого сервера. *сервер* — **nvarchar(30)**, не имеет значения по умолчанию.  
+`[ @server_name = ] 'server'` Имя сервера, необходимо удалить в качестве доступного целевого сервера. *сервер* — **nvarchar(30)**, не имеет значения по умолчанию.  
   
- [  **@clear_downloadlist=** ] *clear_downloadlist*  
- Указывает, очистить ли список загрузки для целевого сервера. *clear_downloadlist* является типом **бит**, значение по умолчанию **1**. Когда *clear_downloadlist* — **1**, процедура очищает список загрузки для сервера перед удалением сервера. Когда *clear_downloadlist* — **0**, список загрузки не очищается.  
+`[ @clear_downloadlist = ] clear_downloadlist` Указывает, очистить ли список загрузки для целевого сервера. *clear_downloadlist* является типом **бит**, значение по умолчанию **1**. Когда *clear_downloadlist* — **1**, процедура очищает список загрузки для сервера перед удалением сервера. Когда *clear_downloadlist* — **0**, список загрузки не очищается.  
   
- [  **@post_defection=** ] *post_defection*  
- Указывает, следует ли отправлять инструкцию отключения на целевой сервер. *post_defection* является типом **бит**, значение по умолчанию 1. Когда *post_defection* — **1**, процедура посылает инструкцию отключения на целевой сервер перед удалением сервера. Когда *post_defection* — **0**, процедура не отправлять инструкцию отключения на целевой сервер.  
+`[ @post_defection = ] post_defection` Указывает, следует ли отправлять инструкцию отключения на целевой сервер. *post_defection* является типом **бит**, значение по умолчанию 1. Когда *post_defection* — **1**, процедура посылает инструкцию отключения на целевой сервер перед удалением сервера. Когда *post_defection* — **0**, процедура не отправлять инструкцию отключения на целевой сервер.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

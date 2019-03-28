@@ -11,12 +11,12 @@ ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bb40218b2547f14634c060f2c242318101d0ea7b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 05afd5377ee1d64a28349b46fbc79a9f048c5577
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524922"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529866"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>Урок 3. Создание учетных данных SQL Server
   На этом занятии вы создадите учетные данные для хранения сведений о безопасности, которые будут использоваться для доступа к учетной записи хранения Windows Azure.  
@@ -38,7 +38,7 @@ ms.locfileid: "52524922"
   
 4.  Скопируйте и вставьте следующий пример в окно запроса (при необходимости измените). Следующая инструкция создаст учетные данные SQL Server для хранения сертификата общего доступа контейнера хранилища.  
   
-    ```tsql  
+    ```sql  
   
     USE master  
     CREATE CREDENTIAL credentialname - this name should match the container path and it must start with https.   
@@ -52,7 +52,7 @@ ms.locfileid: "52524922"
   
 5.  Чтобы увидеть все доступные учетные данные, можно выполнить следующую инструкцию в окне запроса:  
   
-    ```tsql  
+    ```sql  
     SELECT * from sys.credentials  
     ```  
   

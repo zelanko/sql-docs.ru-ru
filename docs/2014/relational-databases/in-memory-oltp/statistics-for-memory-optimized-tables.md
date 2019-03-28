@@ -10,12 +10,12 @@ ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee7c3d44f3575fd1bf25a6e304a379ca6ca6391b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136074"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530836"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Статистика для таблиц, оптимизированных для памяти
   Оптимизатор запросов использует статистику о столбцах для создания планов запросов, которые повышают производительность запросов. Статистические данные собираются из таблиц в базе данных и сохраняются в метаданных этой базы.  
@@ -41,7 +41,7 @@ ms.locfileid: "48136074"
 ## <a name="guidelines-for-statistics-when-deploying-memory-optimized-tables"></a>Рекомендации по использованию статистики при развертывании оптимизированных для памяти таблиц  
  Чтобы убедиться, что оптимизатор запросов имеет актуальную статистику при создании планов запросов, разверните оптимизированные для памяти таблицы, выполнив следующие пять действий.  
   
-1.  Создайте таблицы и индексы. Индексы указываются встроенными в `CREATE TABLE` инструкций.  
+1.  Создайте таблицы и индексы. Индексы указываются встроенными в инструкциях `CREATE TABLE`.  
   
 2.  Загрузите данные в таблицы.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48136074"
   
 4.  Создайте хранимые процедуры, обращающиеся к таблицам.  
   
-5.  Запустите рабочую нагрузку, которая может содержать сочетание скомпилированных и интерпретируемых [!INCLUDE[tsql](../../../includes/tsql-md.md)] хранимых процедур, а также нерегламентированных пакетов.  
+5.  Запустите рабочую нагрузку, которая может содержать сочетание скомпилированных и интерпретируемых хранимых процедур [!INCLUDE[tsql](../../../includes/tsql-md.md)] , а также нерегламентированных пакетов.  
   
  Создание скомпилированных хранимых процедур после загрузки данных и обновления статистики гарантирует то, что оптимизатор имеет статистические данные для оптимизированных для памяти таблиц. Это обеспечит формирование эффективных планов запросов при компиляции процедуры.  
   
@@ -64,9 +64,9 @@ ms.locfileid: "48136074"
   
  Обновление статистики:  
   
--   Используйте [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для [Создание плана обслуживания](../maintenance-plans/create-a-maintenance-plan.md) с [задачей обновления статистики](../maintenance-plans/update-statistics-task-maintenance-plan.md)  
+-   Используйте [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для [Create a Maintenance Plan](../maintenance-plans/create-a-maintenance-plan.md) c [задачей обновления статистики](../maintenance-plans/update-statistics-task-maintenance-plan.md)  
   
--   Или обновите статистику с помощью скрипта [!INCLUDE[tsql](../../../includes/tsql-md.md)], как описано ниже.  
+-   Или обновите статистику с помощью скрипта [!INCLUDE[tsql](../../../includes/tsql-md.md)] , как описано ниже.  
   
  Чтобы обновить статистику для отдельной таблицы, оптимизированной для памяти (*myschema*. *Mytable*), выполните следующий скрипт:  
   
@@ -76,7 +76,7 @@ UPDATE STATISTICS myschema.Mytable WITH FULLSCAN, NORECOMPUTE
   
  Чтобы обновить статистику для всех оптимизированных для памяти таблиц текущей базы данных, выполните следующий скрипт:  
   
-```tsql  
+```sql  
 DECLARE @sql NVARCHAR(MAX) = N''  
   
 SELECT @sql += N'  
@@ -90,7 +90,7 @@ EXEC sp_executesql @sql
   
  В следующем примере сообщается, когда статистика по оптимизированным для памяти таблицам обновлялась последний раз. Эти сведения помогут решить, нужно ли обновить статистику.  
   
-```tsql  
+```sql  
 select t.object_id, t.name, sp.last_updated as 'stats_last_updated'  
 from sys.tables t join sys.stats s on t.object_id=s.object_id cross apply sys.dm_db_stats_properties(t.object_id, s.stats_id) sp  
 where t.is_memory_optimized=1  

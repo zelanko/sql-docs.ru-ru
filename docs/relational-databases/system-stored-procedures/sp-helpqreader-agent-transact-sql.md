@@ -16,12 +16,12 @@ ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 772dc410690a4a29811e2a1bd84ec1ac6d12b3fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f40856b20a76abdb7a3788f2564c02fe2e090619
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779656"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529346"
 ---
 # <a name="sphelpqreaderagent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,15 +38,14 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@frompublisher=** ] *frompublisher*  
- Указывает, где была вызвана хранимая процедура: на издателе или на распространителе. *frompublisher* имеет тип bit и значение по умолчанию 0. **1** означает, что хранимая процедура вызывается на издателе, и **0** означает, что хранимая процедура вызывается из распространителя.  
+`[ @frompublisher = ] frompublisher` Указывает, была вызвана хранимая процедура на издателе или распространителе. *frompublisher* имеет тип bit и значение по умолчанию 0. **1** означает, что хранимая процедура вызывается на издателе, и **0** означает, что хранимая процедура вызывается из распространителя.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**int**|Идентификатор агента.|  
-|**name**|**Nvarchar(100)**|Имя агента.|  
+|**name**|**nvarchar(100)**|Имя агента.|  
 |**job_id**|**uniqueidentifier**|Уникальный идентификатор задания агента.|  
 |**job_login**|**nvarchar(512)**|Учетная запись Windows, под которой запускается агент распространителя, который возвращается в формате *домена*\\*username*.|  
 |**job_password**|**sysname**|По соображениям безопасности значение **\* \* \* \* \* \* \* \* \* \*** всегда возвращается.|  

@@ -18,12 +18,12 @@ ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0fc8552157e9864ed45306ec268fefb4eec87bf
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: af2441fadc30254871a5d74209d645fc93a99456
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589953"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533826"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,26 +46,19 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@table_server =** ] **"**_table_server_**"**  
- Имя связанного сервера, для которого необходимо вернуть сведения о таблице. *table_server* — **sysname**, не имеет значения по умолчанию.  
+`[ @table_server = ] 'table_server'` — Имя связанного сервера, для которой возвращаются сведения о таблице. *table_server* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@pktab_name =** ] **"**_pktab_name_**"**  
- Имя таблицы с первичным ключом. *pktab_name* — **sysname**, значение по умолчанию NULL.  
+`[ @pktab_name = ] 'pktab_name'` — Имя таблицы с первичным ключом. *pktab_name* — **sysname**, значение по умолчанию NULL.  
   
- [  **@pktab_schema =** ] **"**_pktab_schema_**"**  
- Имя схемы с первичным ключом. *pktab_schema*— **sysname**, значение по умолчанию NULL. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] здесь содержится имя владельца.  
+`[ @pktab_schema = ] 'pktab_schema'` — Имя схемы с первичным ключом. *pktab_schema*— **sysname**, значение по умолчанию NULL. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] здесь содержится имя владельца.  
   
- [  **@pktab_catalog =** ] **"**_pktab_catalog_**"**  
- Имя каталога с первичным ключом. *pktab_catalog*— **sysname**, значение по умолчанию NULL. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] здесь содержится имя базы данных.  
+`[ @pktab_catalog = ] 'pktab_catalog'` — Имя каталога с первичным ключом. *pktab_catalog*— **sysname**, значение по умолчанию NULL. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] здесь содержится имя базы данных.  
   
- [  **@fktab_name =** ] **"**_fktab_name_**"**  
- Имя таблицы с внешним ключом. *fktab_name*— **sysname**, значение по умолчанию NULL.  
+`[ @fktab_name = ] 'fktab_name'` — Имя таблицы с внешним ключом. *fktab_name*— **sysname**, значение по умолчанию NULL.  
   
- [  **@fktab_schema =** ] **"**_fktab_schema_**"**  
- Имя схемы с внешним ключом. *fktab_schema*— **sysname**, значение по умолчанию NULL.  
+`[ @fktab_schema = ] 'fktab_schema'` — Имя схемы с внешним ключом. *fktab_schema*— **sysname**, значение по умолчанию NULL.  
   
- [  **@fktab_catalog =** ] **"**_fktab_catalog_**"**  
- Имя каталога с внешним ключом. *fktab_catalog*— **sysname**, значение по умолчанию NULL.  
+`[ @fktab_catalog = ] 'fktab_catalog'` — Имя каталога с внешним ключом. *fktab_catalog*— **sysname**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  None  

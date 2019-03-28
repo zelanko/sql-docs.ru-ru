@@ -10,12 +10,12 @@ ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 05706bf69cb0f607810808c9185647c10404d582
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 927a89c36019ebc7232a110f5a10fcbf2cfa74af
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056591"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530036"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Создание таблиц, оптимизированных для памяти, и хранимых процедур, скомпилированных в собственном коде
   В этом разделе представлен пример, описывающий использование синтаксиса In-Memory OLTP.  
@@ -36,7 +36,7 @@ ms.locfileid: "48056591"
   
  Для выполнения следующего примера кода нужен каталог с именем c:\Data.  
   
-```tsql  
+```sql  
 -- create a database with a memory-optimized filegroup and a container.  
 CREATE DATABASE imoltp   
 GO  

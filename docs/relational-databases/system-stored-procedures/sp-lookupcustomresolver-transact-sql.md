@@ -16,12 +16,12 @@ ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 128efbfb754508cf3ad395c89b2085f7f8b6297e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b7f1bfc868b34ac16e1c38aedc9193002d35d5b8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783037"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532736"
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,17 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@article_resolver =** ] **"***article_resolver***"**  
- Задает имя пользовательской бизнес-логики, для которой проводится отмена регистрации. *article_resolver* — **nvarchar(255)**, не имеет значения по умолчанию. Если удаляемая бизнес-логика является компонентом COM, то этим аргументом является понятное имя компонента. Если бизнес-логика представляет собой сборку [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, то этим аргументом является имя сборки.  
+`[ @article_resolver = ] 'article_resolver'` Задает имя пользовательской бизнес-логики, в которой проводится Отмена регистрации. *article_resolver* — **nvarchar(255)**, не имеет значения по умолчанию. Если удаляемая бизнес-логика является компонентом COM, то этим аргументом является понятное имя компонента. Если бизнес-логика представляет собой сборку [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, то этим аргументом является имя сборки.  
   
- [ **@resolver_clsid**=] **"***resolver_clsid***"** выходных данных  
- Значение идентификатора CLSID объекта COM, связанного с именем пользовательской бизнес-логики, указанной в *article_resolver* параметра. *resolver_clsid* — **nvarchar(50)**, значение по умолчанию NULL.  
+`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` Значение идентификатора CLSID объекта COM, связанного с именем пользовательской бизнес-логики, указанной в *article_resolver* параметра. *resolver_clsid* — **nvarchar(50)**, значение по умолчанию NULL.  
   
- [  **@is_dotnet_assembly=** ] **"***is_dotnet_assembly***"** выходных данных  
- Указывает тип регистрируемой пользовательской бизнес-логики. *is_dotnet_assembly* — **бит**, значение по умолчанию 0. **1** указывает, что регистрируемая пользовательских бизнес-логика обработчика бизнес-логики сборкой. **0** означает, что COM-компонента.  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` Указывает тип пользовательской бизнес-логики регистрируется. *is_dotnet_assembly* — **бит**, значение по умолчанию 0. **1** указывает, что регистрируемая пользовательских бизнес-логика обработчика бизнес-логики сборкой. **0** означает, что COM-компонента.  
   
- [  **@dotnet_assembly_name=** ] **"***dotnet_assembly_name***"** выходных данных  
- Имя сборки, в которой реализован обработчик бизнес-логики. *dotnet_assembly_name* — **nvarchar(255)**, со значением по умолчанию NULL.  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` — Имя сборки, реализующей обработчик бизнес-логики. *dotnet_assembly_name* — **nvarchar(255)**, со значением по умолчанию NULL.  
   
- [  **@dotnet_class_name=** ] **"***dotnet_class_name***"** выходных данных  
- Имя класса, который замещает класс <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> для реализации обработчика бизнес-логики. *dotnet_class_name* — **nvarchar(255)**, со значением по умолчанию NULL.  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` Имя класса, переопределяющего <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> для реализации обработчика бизнес-логики. *dotnet_class_name* — **nvarchar(255)**, со значением по умолчанию NULL.  
   
- [  **@publisher=** ] **"***издателя***"**  
- Имя издателя. *издатель* — **sysname**, со значением по умолчанию NULL. Используйте данный аргумент, если хранимая процедура не вызвана из издателя. Если этот аргумент не указан, то издателем считается локальный сервер.  
+`[ @publisher = ] 'publisher'` — Имя издателя. *издатель* — **sysname**, со значением по умолчанию NULL. Используйте данный аргумент, если хранимая процедура не вызвана из издателя. Если этот аргумент не указан, то издателем считается локальный сервер.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

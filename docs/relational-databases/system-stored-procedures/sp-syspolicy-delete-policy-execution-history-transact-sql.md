@@ -18,12 +18,12 @@ ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f5ffa31a27809412e2882b410e6745ba475fcb69
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6660eba76675fbe261af33f647d60456ced839d2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658852"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536966"
 ---
 # <a name="spsyspolicydeletepolicyexecutionhistory-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@policy_id=** ] *policy_id*  
- Идентификатор политики, для которой удаляется журнал выполнения. *policy_id* — **int**и является обязательным. Может иметь значение NULL.  
+`[ @policy_id = ] policy_id` — Идентификатор политики, для которого вы хотите удалить журнал выполнения. *policy_id* — **int**и является обязательным. Может иметь значение NULL.  
   
- [  **@oldest_date=** ] **"***oldest_date***"**  
- Самая ранняя дата, для которой сохраняется журнал выполнения политики. Все данные журнала выполнения до этой даты удаляются. *oldest_date* — **datetime**и является обязательным. Может иметь значение NULL.  
+`[ @oldest_date = ] 'oldest_date'` Самая ранняя дата, для которого вы хотите сохранить журнал выполнения политик. Все данные журнала выполнения до этой даты удаляются. *oldest_date* — **datetime**и является обязательным. Может иметь значение NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -76,7 +74,7 @@ ON a.policy_id = b.policy_id
  Требуется членство в предопределенной роли базы данных PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Возможно повышение учетных данных: пользователи в роли PolicyAdministratorRole могут создавать триггеры сервера и планировать выполнение политик, влияющих на работу экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Например, пользователи в роли PolicyAdministratorRole могут создать политику, которая может запретить создание большинства объектов в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Вследствие возможного повышения прав учетных данных роль PolicyAdministratorRole должна предоставляться только пользователям, имеющим право изменять конфигурацию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Возможное повышение прав учетных данных. Пользователи с ролью PolicyAdministratorRole могут создавать триггеры сервера и планировать выполнение политик, влияющих на работу экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Например, пользователи в роли PolicyAdministratorRole могут создать политику, которая может запретить создание большинства объектов в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Вследствие возможного повышения прав учетных данных роль PolicyAdministratorRole должна предоставляться только пользователям, имеющим право изменять конфигурацию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере удаляется журнал выполнения для политики с идентификатором 7 до определенной даты.  

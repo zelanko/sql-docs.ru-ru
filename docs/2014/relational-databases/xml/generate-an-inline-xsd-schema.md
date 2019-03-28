@@ -15,15 +15,15 @@ helpviewer_keywords:
 - inline XSD schema generation [SQL Server]
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad003060588215c0d5a218ade5103f5748e5ebfc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9b6c8233b95f3f95235bb4f618358d4680d3088f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369566"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529336"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Создание встроенных схем XSD
   В предложении FOR XML можно запросить, чтобы запрос возвращал встроенную схему вместе с результатами запроса. Если нужно получить XDR-схему, то в предложении FOR XML следует использовать ключевое слово XMLDATA. Если нужно получить XSD-схему, то тогда следует использовать ключевое слово XMLSCHEMA.  
@@ -221,7 +221,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
 ## <a name="element-name-clashes"></a>Конфликты имен элементов  
  В предложении FOR XML одинаковые имена иногда соответствуют различным подэлементам. Например, следующий запрос получает значения продуктов ListPrice и DealerPrice, но определяет для этих двух столбцов один и тот же псевдоним Price. Поэтому в результирующем наборе строк будут присутствовать два столбца с одинаковым именем.  
   
-### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Вариант 1. Оба подэлемента являются неключевыми столбцами одинакового типа и могут иметь значение NULL  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Вариант 1. Оба подэлемента являются неключевыми столбцами одинакового типа и могут иметь значение NULL  
  В следующем запросе оба подэлемента являются неключевыми столбцами одинакового типа и могут иметь значение NULL.  
   
 ```  
@@ -313,7 +313,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Вариант 2. Один ключевой столбец и один неключевой столбец одинакового типа  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Вариант 2. Один ключевой столбец и один неключевой столбец одинакового типа  
  В следующем запросе находится один ключевой столбец и один неключевой столбец одинакового типа.  
   
 ```  

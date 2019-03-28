@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 7f655c94d0c77747a4e64c93bf7ad880419aacb4
-ms.sourcegitcommit: 05bb10710489bef16bb2c53b3803e9b8eea1429a
+ms.openlocfilehash: f3ce2327034a9c7197e754dac01dfb9e6f9dc3e5
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57988758"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509591"
 ---
 # <a name="sysworkloadmanagementworkloadclassifiers-transact-sql-preview"></a>sys.workload_management_workload_classifiers (Transact-SQL) (Предварительная версия)
 
@@ -28,7 +28,7 @@ ms.locfileid: "57988758"
 |Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|Уникальный идентификатор классификатора. Не допускает значение NULL.||
-group_name|**sysname**|Имя группы рабочей нагрузки, которой назначен классификатора. Не допускает значение NULL. |Статические классы ресурсов</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br>Динамические классы ресурсов</br>smallrc</br>mediumrc</br>Largerc</br>xlargerc|
+group_name|**sysname**|Имя группы рабочей нагрузки, которой назначен классификатора. Не допускает значение NULL. |Статические классы ресурсов</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br> </br>Динамические классы ресурсов</br>smallrc</br>mediumrc</br>largerc</br>xlargerc|
 name|**sysname**|Имя классификатора. Должно быть уникальным в экземпляре. Не допускает значение NULL.||
 |importance|**sysname**|— Это относительная важность запроса в данной группе рабочей нагрузки и группы рабочей нагрузки для общих ресурсов.  Важность, указанный в классификаторе переопределяет параметр важности группы рабочей нагрузки.|низкий, below_normal "," Обычная "," above_normal, высокий |
 |create_time|**datetime**|Время создания классификатора. Не допускает значение NULL.||

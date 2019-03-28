@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5bc2b11f8f724be2f53777db3d87be99bbdbf23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d0130fb0c01f69b5bb7c7f6de73e7aad2054a67
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652092"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531696"
 ---
 # <a name="spquerystoreforceplan-transact-sql"></a>sp_query_store_force_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@query_id =** ] *query_id*  
- Это идентификатор запроса. *query_id* — **bigint**, не имеет значения по умолчанию.  
+`[ @query_id = ] query_id` Это идентификатор запроса. *query_id* — **bigint**, не имеет значения по умолчанию.  
   
- [  **@plan_id =** ] *plan_id*  
- — Идентификатор принудительного плана запроса. *plan_id* — **bigint**, не имеет значения по умолчанию.  
+`[ @plan_id = ] plan_id` — Идентификатор принудительного плана запроса. *plan_id* — **bigint**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

@@ -16,12 +16,12 @@ ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ded79b417b868cc82cb1a59e34d72c3a5bf9f045
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0f72558a573e0cee0ab7fb2ab9b762246964a884
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748206"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526186"
 ---
 # <a name="spreplsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@server_name=**] **"***имя_сервера***"**  
- Имя сервера, на котором применяется транзакция. *originating_server* — **sysname**, не имеет значения по умолчанию.  
+`[ @server_name = ] 'server_name'` — Это имя сервера, на котором применяется транзакция. *originating_server* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@database_name=**] **"***имя_базы_данных***"**  
- Имя базы данных, в которой применяется транзакция. *originating_db* — **sysname**, не имеет значения по умолчанию.  
+`[ @database_name = ] 'database_name'` — Имя базы данных, в котором применяется транзакция. *originating_db* — **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

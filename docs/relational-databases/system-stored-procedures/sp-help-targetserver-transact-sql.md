@@ -18,12 +18,12 @@ ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aacb30e4c809f965635b9d8640d8fcd690cd340f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c809679694811d23b01dee426aa1afdd7d5cf06
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747432"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529696"
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@server_name=** ] **'***server_name***'**  
- Имя сервера, сведения о котором требуются. *имя_сервера* — **nvarchar(30)**, значение по умолчанию NULL.  
+`[ @server_name = ] 'server_name'` Имя сервера, для которого возвращаются сведения. *имя_сервера* — **nvarchar(30)**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -54,14 +53,14 @@ sp_help_targetserver
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Идентификационный номер сервера.|  
 |**server_name**|**nvarchar(30)**|Имя сервера.|  
-|**расположение**|**Nvarchar(200)**|Расположение указанного сервера.|  
+|**расположение**|**nvarchar(200)**|Расположение указанного сервера.|  
 |**time_zone_adjustment**|**int**|Настройка временной зоны в часах, от среднего времени по Гринвичу.|  
 |**enlist_date**|**datetime**|Дата прикрепления указанного сервера.|  
 |**last_poll_date**|**datetime**|Дата последнего опроса сервером заданий.|  
 |**status**|**int**|Состояние указанного сервера.|  
 |**unread_instructions**|**int**|Наличие на сервере непрочитанных инструкций. Если все строки были загружены, этот столбец имеет **0**.|  
 |**local_time**|**datetime**|Локальная дата и время на целевом сервере, которые основаны на локальном времени целевого сервера после последнего опроса главного сервера.|  
-|**enlisted_by_nt_user**|**Nvarchar(100)**|Пользователь Microsoft Windows, который прикрепил целевой сервер.|  
+|**enlisted_by_nt_user**|**nvarchar(100)**|Пользователь Microsoft Windows, который прикрепил целевой сервер.|  
 |**poll_interval**|**int**|Частота в секундах, с которой целевой сервер опрашивает службу Master SQLServerAgent, чтобы загрузить задания и выгрузить состояние заданий.|  
   
 ## <a name="permissions"></a>Разрешения  

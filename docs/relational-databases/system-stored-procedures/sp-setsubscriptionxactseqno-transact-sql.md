@@ -16,12 +16,12 @@ ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 409f79007479fabe82b1c904f3bc0db943e3c116
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bfc49e712e75a862c9c43ce99cc35b56c014cebc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817866"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534656"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,24 +44,20 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher=** ] **"***издателя***"**  
- Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` — Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@publisher_db=** ] **"***publisher_db***"**  
- Имя базы данных публикации. *publisher_db* — **sysname**, не имеет значения по умолчанию. Для SQL Server издателем, *publisher_db* — имя базы данных распространителя.  
+`[ @publisher_db = ] 'publisher_db'` — Имя базы данных публикации. *publisher_db* — **sysname**, не имеет значения по умолчанию. Для SQL Server издателем, *publisher_db* — имя базы данных распространителя.  
   
- [  **@publication=** ] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию. Если агент распространителя является общим для нескольких публикаций, необходимо указать значение ALL для *публикации*.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию. Если агент распространителя является общим для нескольких публикаций, необходимо указать значение ALL для *публикации*.  
   
- [  **@xact_seqno=** ] *xact_seqno*  
- Номер LSN следующей транзакции на распространителе, которая должна быть применена на подписчике. *xact_seqno* — **varbinary(16)**, не имеет значения по умолчанию.  
+`[ @xact_seqno = ] xact_seqno` — Это номер LSN следующей транзакции на распространителе, чтобы применить на подписчике. *xact_seqno* — **varbinary(16)**, не имеет значения по умолчанию.  
   
 ## <a name="result-set"></a>Результирующий набор  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**ИСХОДНЫЙ XACT_SEQNO**|**varbinary(16)**|Исходный номер LSN следующей транзакции, которая должна быть применена на подписчике.|  
-|**ОБНОВЛЕННЫЕ XACT_SEQNO**|**varbinary(16)**|Обновленный номер LSN следующей транзакции, которая должна быть применена на подписчике.|  
+|**ORIGINAL XACT_SEQNO**|**varbinary(16)**|Исходный номер LSN следующей транзакции, которая должна быть применена на подписчике.|  
+|**UPDATED XACT_SEQNO**|**varbinary(16)**|Обновленный номер LSN следующей транзакции, которая должна быть применена на подписчике.|  
 |**ЧИСЛО ПОТОКА ПОДПИСКИ**|**int**|Количество потоков подписки, используемых во время последней синхронизации.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

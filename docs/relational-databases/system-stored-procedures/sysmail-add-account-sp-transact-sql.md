@@ -18,12 +18,12 @@ ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a388fb39082ec936b473afd7fc96ff99e7d92350
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b41b0c0ae805923a10d0ee9c4fd066b1202fa94
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830022"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537896"
 ---
 # <a name="sysmailaddaccountsp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,44 +52,31 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@account_name** =] **"***account_name***"**  
- Имя добавляемой учетной записи. *account_name* — **sysname**, не имеет значения по умолчанию.  
+`[ @account_name = ] 'account_name'` Имя учетной записи для добавления. *account_name* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@email_address** =] **"***email_address***"**  
- Адрес электронной почты, от имени которого посылается сообщение. Этот адрес должен быть адресом электронной почты Интернета. *email_address* — **nvarchar(128)**, не имеет значения по умолчанию. Например, учетная запись для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента позволяет отправлять сообщения с адреса **SqlAgent@Adventure-Works.com**.  
+`[ @email_address = ] 'email_address'` Адрес электронной почты для отправки сообщений. Этот адрес должен быть адресом электронной почты Интернета. *email_address* — **nvarchar(128)**, не имеет значения по умолчанию. Например, учетная запись для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента позволяет отправлять сообщения с адреса **SqlAgent@Adventure-Works.com**.  
   
- [ **@display_name** =] **"***display_name***"**  
- Отображаемое имя, которое используется в сообщениях электронной почты, отправляемых от имени этой учетной записи. *display_name* — **nvarchar(128)**, значение по умолчанию NULL. Например, учетная запись для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента могут отображаться имя **SQL Server Agent Automated Mailer** в сообщениях электронной почты.  
+`[ @display_name = ] 'display_name'` Отображаемое имя для использования в сообщениях электронной почты с этой учетной записи. *display_name* — **nvarchar(128)**, значение по умолчанию NULL. Например, учетная запись для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента могут отображаться имя **SQL Server Agent Automated Mailer** в сообщениях электронной почты.  
   
- [ **@replyto_address** =] **"***replyto_address***"**  
- Адрес, на который отправляются ответы на сообщения данной учетной записи. *replyto_address* — **nvarchar(128)**, значение по умолчанию NULL. Например, ответы учетной записи для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента может перейти к администратору базы данных, **danw@Adventure-Works.com**.  
+`[ @replyto_address = ] 'replyto_address'` Адрес, на который отправляются ответы на сообщения из этой учетной записи. *replyto_address* — **nvarchar(128)**, значение по умолчанию NULL. Например, ответы учетной записи для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента может перейти к администратору базы данных, **danw@Adventure-Works.com**.  
   
- [ **@description** =] **"***описание***"**  
- Описание учетной записи. *Описание* — **nvarchar(256)**, значение по умолчанию NULL.  
+`[ @description = ] 'description'` — Описание для учетной записи. *Описание* — **nvarchar(256)**, значение по умолчанию NULL.  
   
- [ **@mailserver_name** = ] **'***server_name***'**  
- Имя или IP-адрес почтового SMTP-сервера, который используется для этой учетной записи. На компьютере под управлением [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен быть способен Разрешить *имя_сервера* IP-адресу. *имя_сервера* — **sysname**, не имеет значения по умолчанию.  
+`[ @mailserver_name = ] 'server_name'` Имя или IP-адрес почтового SMTP-сервера для этой учетной записи. На компьютере под управлением [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен быть способен Разрешить *имя_сервера* IP-адресу. *имя_сервера* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@mailserver_type** =] '*server_type*"  
- Тип сервера электронной почты. *server_type* — **sysname**, значение по умолчанию **'SMTP'**...  
+`[ @mailserver_type = ] 'server_type'` Тип сервера электронной почты. *server_type* — **sysname**, значение по умолчанию **'SMTP'**...  
   
- [ **@port** =] *номер_порта*  
- Номер порта сервера электронной почты. *номер_порта* — **int**, значение по умолчанию 25.  
+`[ @port = ] port_number` Номер порта сервера электронной почты. *номер_порта* — **int**, значение по умолчанию 25.  
   
- [ **@username** =] **"***username***"**  
- Имя пользователя, используемое при входе на сервер электронной почты. *имя пользователя* — **nvarchar(128)**, значение по умолчанию NULL. Если этот параметр установлен в NULL, компонент Database Mail не использует проверку подлинности для этой учетной записи. Если почтовый сервер не требует проверки подлинности, используйте NULL в качестве имени пользователя.  
+`[ @username = ] 'username'` Имя пользователя для входа сервер электронной почты. *имя пользователя* — **nvarchar(128)**, значение по умолчанию NULL. Если этот параметр установлен в NULL, компонент Database Mail не использует проверку подлинности для этой учетной записи. Если почтовый сервер не требует проверки подлинности, используйте NULL в качестве имени пользователя.  
   
- [ **@password** =] **"***пароль***"**  
- Пароль, используемый при входе на сервер электронной почты. *пароль* — **nvarchar(128)**, значение по умолчанию NULL. Нет необходимости указывать пароль, если не указано имя пользователя.  
+`[ @password = ] 'password'` Пароль, используемый для входа на сервер электронной почты. *пароль* — **nvarchar(128)**, значение по умолчанию NULL. Нет необходимости указывать пароль, если не указано имя пользователя.  
   
- [ **@use_default_credentials** =] use_default_credentials  
- Указывает, посылать ли почту серверу SMTP с помощью учетных данных компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** имеет тип bit и значение по умолчанию 0. Если этот аргумент равен 1, компонент Database Mail использует учетные данные компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Если этот параметр равен 0, компонент Database Mail посылает **@username** и **@password** параметров, если он имеется, в противном случае отправляет электронную почту без **@username**и **@password** параметров.  
+`[ @use_default_credentials = ] use_default_credentials` Указывает, следует ли отправить почту на SMTP-сервер, используя учетные данные [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** имеет тип bit и значение по умолчанию 0. Если этот аргумент равен 1, компонент Database Mail использует учетные данные компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Если этот параметр равен 0, компонент Database Mail посылает **@username** и **@password** параметров, если он имеется, в противном случае отправляет электронную почту без **@username**и **@password** параметров.  
   
- [ **@enable_ssl** =] enable_ssl  
- Определяет, шифрует ли компонент Database Mail передаваемые данные с помощью протокола Secure Sockets Layer. **Enable_ssl** имеет тип bit и значение по умолчанию 0.  
+`[ @enable_ssl = ] enable_ssl` Указывает, шифрует ли компонент Database Mail соединение с помощью протокола SSL. **Enable_ssl** имеет тип bit и значение по умолчанию 0.  
   
- [ **@account_id** =] *account_id* выходных данных  
- Возвращает идентификатор новой учетной записи. *account_id* — **int**, значение по умолчанию NULL.  
+`[ @account_id = ] account_id OUTPUT` Возвращает идентификатор новой учетной записи. *account_id* — **int**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

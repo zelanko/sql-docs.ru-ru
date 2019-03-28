@@ -18,12 +18,12 @@ ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b6a0d2c93c5ce00897136fc1c40611a1ef94e0fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5247959cacb4df4fd51275c3f826280bffbb9fd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717542"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538486"
 ---
 # <a name="spcleanuplogshippinghistory-transact-sql"></a>sp_cleanup_log_shipping_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_cleanup_log_shipping_history
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@agent_id =** ] "*agent_id*",  
- Первичный идентификатор для резервирования или вторичный идентификатор для копирования или восстановления. *agent_id* — **uniqueidentifier** и не может иметь значение NULL.  
+`[ @agent_id = ] 'agent_id',` Первичный идентификатор для резервирования или вторичный идентификатор для копирования или восстановления. *agent_id* — **uniqueidentifier** и не может иметь значение NULL.  
   
- [  **@agent_type =** ] "*agent_type*"  
- Тип задания доставки журналов: 0 = резервное копирование, 1 = копирование, 2 = восстановление. *agent_type* — **tinyint** и не может иметь значение NULL.  
+`[ @agent_type = ] 'agent_type'` Тип задания доставки журналов. 0 = резервное копирование, 1 = копирование, 2 = восстановление. *agent_type* — **tinyint** и не может иметь значение NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

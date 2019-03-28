@@ -16,12 +16,12 @@ ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba9320a155ca0af5750ca66cf10564227a3197d3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 67377f638459a37f25fbc78b9acff395192a2f3f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818816"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537336"
 ---
 # <a name="spmarkpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_markpendingschemachange [@publication = ] 'publication'
  [**@publication=** ] **"***публикации***"**  
  Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@schemaversion=** ] *schemaversion*  
- Идентифицирует отложенное изменение схемы. *schemaversion* — **int**, со значением по умолчанию **0**. Используйте [sp_enumeratependingschemachanges &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) Чтобы получить список отложенные изменения схемы для публикации.  
+`[ @schemaversion = ] schemaversion` Идентифицирует отложенное изменение схемы. *schemaversion* — **int**, со значением по умолчанию **0**. Используйте [sp_enumeratependingschemachanges &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) Чтобы получить список отложенные изменения схемы для публикации.  
   
- [  **@status=** ] **"***состояние***"**  
- Обозначает, будет ли пропущено отложенное изменение схемы. *состояние* — **nvarchar(10)** со значением по умолчанию **active**. Если значение *состояние* — **пропущено**, то выбранное изменение схемы не будут реплицированы.  
+`[ @status = ] 'status'` Обозначает, будет ли пропущено отложенное изменение схемы. *состояние* — **nvarchar(10)** со значением по умолчанию **active**. Если значение *состояние* — **пропущено**, то выбранное изменение схемы не будут реплицированы.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

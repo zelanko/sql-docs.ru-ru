@@ -16,12 +16,12 @@ ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d75fde4ff1ccabd56243e1a1ccdff8051923fefb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 35e0ace5f88e15ce4afc0da797d949039398e898
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794896"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535922"
 ---
 # <a name="sphelpagentprofile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +39,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@agent_type=**] *agent_type*  
- Тип агента. *agent_type* — **int**, значение по умолчанию **0**, и может принимать одно из следующих значений.  
+`[ @agent_type = ] agent_type` — Тип агента. *agent_type* — **int**, значение по умолчанию **0**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -50,8 +49,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**4**|Агент слияния.|  
 |**9**|Агент чтения очереди.|  
   
- [  **@profile_id=**] *profile_id*  
- Идентификатор отображаемого профиля. *profile_id* — **int**, значение по умолчанию **-1**, который возвращает все профили в **MSagent_profiles** таблицы.  
+`[ @profile_id = ] profile_id` — Идентификатор профиля для отображения. *profile_id* — **int**, значение по умолчанию **-1**, который возвращает все профили в **MSagent_profiles** таблицы.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   

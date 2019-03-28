@@ -16,12 +16,12 @@ ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 19fafb4b3ef3737018aaae21992f0b6a859c7ef3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f733740b062983f14379f71a48b77f73392aceae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796436"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529536"
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>Хранимая процедура sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,19 +42,15 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher=**] **"***издателя***"**  
- Имя издателя, участвующего в обновлении этого подписчика. *издатель* — **sysname**, не имеет значения по умолчанию. Издатель уже должен быть настроен для публикации.  
+`[ @publisher = ] 'publisher'` — Имя издателя, участвующего в обновлении этого подписчика. *издатель* — **sysname**, не имеет значения по умолчанию. Издатель уже должен быть настроен для публикации.  
   
- [  **@publisher_db =**] **"***publisher_db***"**  
- Имя базы данных публикации. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` — Имя базы данных публикации. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@publication=**] **"***публикации***"**  
- Имя публикации, участвующей в обновлении этого подписчика. *Публикация*— **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` — Имя публикации, участвующей в обновлении этого подписчика. *Публикация*— **sysname**, не имеет значения по умолчанию.  
   
- [  **@failover_mode_id=**] **"***failover_mode_id***" выходные данные**  
- Возвращает целочисленное значение режима отработки отказа и является **ВЫВОДА** параметра. *failover_mode_id* — **tinyint** значение по умолчанию **0**. Он возвращает **0** для немедленного обновления и **1** обновления посредством очередей.  
+`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` Возвращает целочисленное значение режима отработки отказа и является **ВЫВОДА** параметра. *failover_mode_id* — **tinyint** значение по умолчанию **0**. Он возвращает **0** для немедленного обновления и **1** обновления посредством очередей.  
   
- [**@failover_mode=**] **"***failover_mode***" выходные данные**  
+ [**@failover_mode=**] **'***failover_mode***'OUTPUT**  
  Возвращает режим, в котором выполняются изменения данных на подписчике. *failover_mode* — **nvarchar(10)** значение по умолчанию NULL. — **ВЫВОДА** параметра.  
   
 |Значение|Описание|  

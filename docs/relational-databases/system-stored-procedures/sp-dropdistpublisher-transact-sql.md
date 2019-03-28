@@ -16,12 +16,12 @@ ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 93124cff94bdf9df97cc1cbb0cf55c40414f1819
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8acc73e057ff8b91987406e74a28563fecfc9278
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127564"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526456"
 ---
 # <a name="spdropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,18 +40,15 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher=** ] **"**_издателя_**"**  
- Издатель, которого следует удалить. *издатель* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` Является издателем для удаления. *издатель* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@no_checks=** ] *no_checks*  
- Указывает, является ли **sp_dropdistpublisher** проверяет, что издатель отменил установку сервера в качестве распространителя. *no_checks* — **бит**, значение по умолчанию **0**.  
+`[ @no_checks = ] no_checks` Указывает, является ли **sp_dropdistpublisher** проверяет, что издатель отменил установку сервера в качестве распространителя. *no_checks* — **бит**, значение по умолчанию **0**.  
   
  Если **0**, репликация проверяет, что удаленный издатель отменил установку локального сервера в качестве распространителя. Если издатель является локальным, репликация проверит отсутствие на локальном сервере объектов публикации или распространителя.  
   
  Если **1**, удаляются все объекты репликации, связанные с распространяющим издателем, даже если удаленный издатель недоступен. После этого удаленный издатель должен удалить репликацию при помощи [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) с **@ignore_distributor**  =  **1**.  
   
- [  **@ignore_distributor=** ] *ignore_distributor*  
- Указывает, остались ли на распространителе объекты распространения после удаления издателя. *ignore_distributor* — **бит** и может принимать одно из следующих значений:  
+`[ @ignore_distributor = ] ignore_distributor` Указывает, остаются ли на распространителе объекты распространения, при удалении издателя. *ignore_distributor* — **бит** и может принимать одно из следующих значений:  
   
  **1** = объекты распространения, принадлежащие *издателя* остаются на распространителе.  
   

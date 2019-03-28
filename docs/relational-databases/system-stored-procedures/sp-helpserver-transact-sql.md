@@ -18,12 +18,12 @@ ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a543aa923d892e12bc3baea0e3aa9d1f9c3e7504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31caafde6ea3cdd93355910f244ed5872b6990ff
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827682"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534396"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@server =** ] **'***server***'**  
- Сервер, о котором возвращаются сведения. Когда *server* не указан, обо всех серверах в **master.sys.servers**. *сервер* — **sysname**, значение по умолчанию NULL.  
+`[ @server = ] 'server'` — Это сервер, о которой сообщается информация. Когда *server* не указан, обо всех серверах в **master.sys.servers**. *сервер* — **sysname**, значение по умолчанию NULL.  
   
- [  **@optname =** ] **"***параметр***"**  
- Параметр, описывающий сервер. *параметр* — **varchar (** 35 **)**, значение по умолчанию NULL, и должен иметь одно из следующих значений.  
+`[ @optname = ] 'option'` Параметр, описывающий сервер. *параметр* — **varchar (** 35 **)**, значение по умолчанию NULL, и должен иметь одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -62,8 +60,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**Системы**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**использовать удаленные параметры сортировки**|Применение параметров сортировки удаленного столбца вместо параметров сортировки локального сервера.|  
   
- [  **@show_topology =** ] **"***значение аргумента show_topology***"**  
- Связь указанного сервера с другими серверами. *значение аргумента show_topology* — **varchar (** 1 **)**, значение по умолчанию NULL. Если *значение аргумента show_topology* не равно **t** или имеет значение NULL, **sp_helpserver** возвращает столбцы, перечисленные в разделе «результирующие наборы». Если *значение аргумента show_topology* равен **t**, помимо столбцов, перечисленных в результирующих наборах, **sp_helpserver** также возвращает **topx** и **topy** сведения.  
+`[ @show_topology = ] 'show_topology'` — Это связь указанного сервера на другие серверы. *значение аргумента show_topology* — **varchar (** 1 **)**, значение по умолчанию NULL. Если *значение аргумента show_topology* не равно **t** или имеет значение NULL, **sp_helpserver** возвращает столбцы, перечисленные в разделе «результирующие наборы». Если *значение аргумента show_topology* равен **t**, помимо столбцов, перечисленных в результирующих наборах, **sp_helpserver** также возвращает **topx** и **topy** сведения.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -74,7 +71,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Имя сервера.|  
 |**сетевое_имя**|**sysname**|Сетевое имя сервера.|  
-|**status**|**varchar (** 70 **)**|Состояние сервера.|  
+|**status**|**varchar(** 70 **)**|Состояние сервера.|  
 |**идентификатор**|**char (** 4 **)**|Идентификационный номер сервера.|  
 |**collation_name**|**sysname**|Параметры сортировки сервера.|  
 |**connect_timeout**|**int**|Значение времени ожидания для подключения к связанному серверу.|  

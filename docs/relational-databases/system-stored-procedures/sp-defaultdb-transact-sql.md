@@ -18,12 +18,12 @@ ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 65b9187c5b3f0ba05301bb944ee2ddc8a78c4866
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc9703b4310870105d3a0961c430699449da7ff3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625052"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532986"
 ---
 # <a name="spdefaultdb-transact-sql"></a>sp_defaultdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@loginame=**] **"***входа***"**  
- Имя входа. *Имя входа* — **sysname**, не имеет значения по умолчанию. *Имя входа* может представлять собой существующее [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа или пользователя Windows или группы. Если имя входа для пользователя или группы Windows не существует в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], оно добавляется автоматически.  
+`[ @loginame = ] 'login'` — Имя входа. *Имя входа* — **sysname**, не имеет значения по умолчанию. *Имя входа* может представлять собой существующее [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа или пользователя Windows или группы. Если имя входа для пользователя или группы Windows не существует в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], оно добавляется автоматически.  
   
- [  **@defdb=**] **"***базы данных***"**  
- Имя новой базы данных по умолчанию. *База данных* — **sysname**, не имеет значения по умолчанию. *База данных* уже должен существовать.  
+`[ @defdb = ] 'database'` — Имя новой базы данных по умолчанию. *База данных* — **sysname**, не имеет значения по умолчанию. *База данных* уже должен существовать.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

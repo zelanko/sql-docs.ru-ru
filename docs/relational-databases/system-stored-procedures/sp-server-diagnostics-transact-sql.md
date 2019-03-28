@@ -18,19 +18,19 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a15e965cef7109d42383d1a4dc4750c5dfef7374
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: fb0923c57006041c8d01fd0beecbc7cef08c1135
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213773"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535266"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Записывает диагностические данные и сведения о работоспособности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выявления потенциальных неполадок. Процедура работает в повторяющемся режиме и периодически отправляет результаты. Ее можно вызывать из обычного соединения или соединения приложения уровня данных.  
   
-**Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,8 +41,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@repeat_interval** =] **"***repeat_interval_in_seconds***"**  
- Указывает интервал времени, с которым хранимая процедура повторно выполняется для отправки сведений о работоспособности.  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'` Указывает интервал времени, по которому хранимая процедура повторно выполняется для отправки сведений о работоспособности.  
   
  *repeat_interval_in_seconds* — **int** имеет значения по умолчанию 0. Допустимыми значениями для параметра являются 0 и любые значения, которые больше или равны 5. Чтобы вернуть полные данные, хранимая процедура должна работать не менее 5 секунд. Минимальное значение для выполнения хранимой процедуры в режиме повтора равно 5 секундам.  
   

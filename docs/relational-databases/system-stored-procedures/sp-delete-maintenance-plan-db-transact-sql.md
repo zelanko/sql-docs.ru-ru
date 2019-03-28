@@ -21,12 +21,12 @@ ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81631efabd541ace5dd7296b54d806ec3750d327
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 8a260e68064b0a9218da07a8a65cf6b584382b4b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169065"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528646"
 ---
 # <a name="spdeletemaintenanceplandb-transact-sql"></a>Хранимая процедура sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,11 +49,9 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@plan_id =**] **"**_план\_идентификатор_**"**  
- Указывает идентификатор плана обслуживания. *plan_id* — **uniqueidentifier**.  
+`[ @plan_id = ] 'plan\_id'` Указывает идентификатор плана обслуживания. *plan_id* — **uniqueidentifier**.  
   
- [  **@db_name =**] **"**_базы данных\_имя_**"**  
- Указывает имя базы данных, которая должна быть удалена из плана обслуживания. Аргумент *database_name* имеет тип **sysname**.  
+`[ @db_name = ] 'database\_name'` Указывает имя базы данных должна быть удалена из плана обслуживания. Аргумент *database_name* имеет тип **sysname**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

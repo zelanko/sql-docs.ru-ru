@@ -16,12 +16,12 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a0e823731ff80c714bc31a54210dbcd0e0fea18
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d6f2760d225848503d93ea361a54a0069ce16c14
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205213"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532976"
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication =** ] **"***публикации***"**  
- Имя просматриваемой публикации. *Публикация* имеет тип sysname и значение по умолчанию **%**, который возвращает сведения обо всех публикациях.  
+`[ @publication = ] 'publication'` — Имя просматриваемой публикации. *Публикация* имеет тип sysname и значение по умолчанию **%**, который возвращает сведения обо всех публикациях.  
   
- [  **@found =** ] **"***найти***"** выходных данных  
- Флаг для указания возвращаемых строк. *найти*— **int** и ВЫХОДНОЙ параметр, значение по умолчанию **23456**. **1** указывает, что публикация найдена. **0** указывает, что публикация не найдена.  
+`[ @found = ] 'found' OUTPUT` — Это флаг для указания возвращаемых строк. *найти*— **int** и ВЫХОДНОЙ параметр, значение по умолчанию **23456**. **1** указывает, что публикация найдена. **0** указывает, что публикация не найдена.  
   
- [ **@publisher** =] **"***издателя***"**  
- Указывает, отличный от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* имеет тип sysname и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает, отличный от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* имеет тип sysname и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *издатель* не следует указывать при запросе сведений о публикации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  

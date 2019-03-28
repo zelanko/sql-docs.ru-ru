@@ -16,12 +16,12 @@ ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ac0fe99f835dae638cb65b24e569857fb77b098
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ef51624f3d14ef12be1c37b17727b70f5f31df10
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759966"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526426"
 ---
 # <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +53,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 |**DEL**|триггер DELETE|  
 |NULL (по умолчанию)||  
   
- [  **@fonpublisher =** ] *fonpublisher*  
- Указывает место выполнения хранимой процедуры. *fonpublisher* — **бит**, со значением по умолчанию 0. Если значение равно 0, тогда выполнение происходит на подписчике, а если 1, то выполнение происходит на издателе.  
+`[ @fonpublisher = ] fonpublisher` Указывает место выполнения хранимой процедуры. *fonpublisher* — **бит**, со значением по умолчанию 0. Если значение равно 0, тогда выполнение происходит на подписчике, а если 1, то выполнение происходит на издателе.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 указывает на то, что хранимая процедура не вызывается внутри контекста немедленно обновляющегося триггера. 1 указывает, что он вызывается внутри контекста немедленно обновляющегося триггера и тип триггера записывается в аргументе *@trigger_op*.  

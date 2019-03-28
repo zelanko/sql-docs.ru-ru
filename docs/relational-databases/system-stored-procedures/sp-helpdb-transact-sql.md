@@ -18,12 +18,12 @@ ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6d514adfed27693456338ece6fa58638e319475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d47f8d8ebd0e37f106e7610937af8f6585820cce
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629812"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533436"
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@dbname=** ] **"***имя***"**  
- Имя базы данных, для которой выводятся сведения. *имя* — **sysname**, не имеет значения по умолчанию. Если *имя* не указан, **sp_helpdb** сообщает обо всех базах данных в **sys.databases** представления каталога.  
+`[ @dbname = ] 'name'` — Имя базы данных, для которого будет отражено. *имя* — **sysname**, не имеет значения по умолчанию. Если *имя* не указан, **sp_helpdb** сообщает обо всех базах данных в **sys.databases** представления каталога.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -51,12 +50,12 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Имя базы данных.|  
-|**значение db_size**|**nvarchar(13)**|Общий размер базы данных.|  
+|**db_size**|**nvarchar(13)**|Общий размер базы данных.|  
 |**Владелец**|**sysname**|Владелец базы данных, таких как **sa**.|  
 |**dbid**|**smallint**|Идентификатор базы данных.|  
 |**Создан**|**nvarchar(11)**|Дата создания базы данных.|  
 |**status**|**nvarchar(600)**|Разделенный запятыми список значений параметров базы данных, которые в данный момент установлены для базы данных.<br /><br /> Перечислены только включенные параметры с логическими значениями. Не являющиеся логическими параметры перечислены с соответствующими значениями в виде *option_name*=*значение*.<br /><br /> Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).|  
-|**compatibility_level**|**tinyint**|Уровень совместимости базы данных: 60, 65, 70, 80 и 90.|  
+|**compatibility_level**|**tinyint**|Уровень совместимости базы данных: 60, 65, 70, 80 или 90.|  
   
  Если *имя* указано, есть дополнительный результирующий набор, который показывает распределение файлов для указанной базы данных.  
   

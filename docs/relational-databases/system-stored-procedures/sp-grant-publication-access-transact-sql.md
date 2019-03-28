@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 64a1e4f2b1d7b31461cbcc23b21e996aea060b4a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c86bf467eb83e372b7c90375ae95d659c98532a4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791696"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534013"
 ---
 # <a name="spgrantpublicationaccess-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +38,11 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@publication**=] **"***публикации***"**  
- Имя публикации, к которой осуществляется обращение. **"***публикации***"** — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` — Имя для доступа к публикации. **"***публикации***"** — **sysname**, не имеет значения по умолчанию.  
   
- [ **@login**=] **"***входа***"**  
- Идентификатор входа. **"***входа***"** — **sysname**, не имеет значения по умолчанию.  
+`[ @login = ] 'login'` Идентификатор входа. **"***входа***"** — **sysname**, не имеет значения по умолчанию.  
   
- [  **@reserved =**] **"***зарезервированные***"**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

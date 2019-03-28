@@ -18,12 +18,12 @@ ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c292ba89a3b79dc19ca038672cf5cc587a55ed4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae63fabdca36e70daa6da28daa136a5dfcec8e1f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673182"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527786"
 ---
 # <a name="sysmaildeleteprincipalprofilesp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@principal_id** =] *principal_id*  
- Идентификатор пользователя базы данных или роли в **msdb** базы данных для удаляемой взаимосвязи. *principal_id* — **int**, значение по умолчанию NULL. Чтобы сделать открытый профиль частным, укажите идентификатор участника **0** или имя участника- **'public'**. Либо *principal_id* или *principal_name* должен быть указан.  
+`[ @principal_id = ] principal_id` Идентификатор пользователя базы данных или роли в **msdb** базы данных для удаляемой взаимосвязи. *principal_id* — **int**, значение по умолчанию NULL. Чтобы сделать открытый профиль частным, укажите идентификатор участника **0** или имя участника- **'public'**. Либо *principal_id* или *principal_name* должен быть указан.  
   
- [ **@principal_name** =] **"***principal_name***"**  
- Имя пользователя базы данных или роли в **msdb** базы данных для удаляемой взаимосвязи. *principal_name* — **sysname**, значение по умолчанию NULL. Чтобы сделать открытый профиль частным, укажите идентификатор участника **0** или имя участника- **'public'**. Либо *principal_id* или *principal_name* должен быть указан.  
+`[ @principal_name = ] 'principal_name'` Имя пользователя базы данных или роли в **msdb** базы данных для удаляемой взаимосвязи. *principal_name* — **sysname**, значение по умолчанию NULL. Чтобы сделать открытый профиль частным, укажите идентификатор участника **0** или имя участника- **'public'**. Либо *principal_id* или *principal_name* должен быть указан.  
   
- [ **@profile_id** =] *profile_id*  
- Идентификатор профиля для удаляемой взаимосвязи. *profile_id* — **int**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* должен быть указан.  
+`[ @profile_id = ] profile_id` — Идентификатор профиля для удаляемой взаимосвязи. *profile_id* — **int**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* должен быть указан.  
   
- [ **@profile_name** =] **"***profile_name***"**  
- Имя профиля для удаляемой взаимосвязи. *profile_name* — **sysname**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* должен быть указан.  
+`[ @profile_name = ] 'profile_name'` — Имя профиля для удаляемой взаимосвязи. *profile_name* — **sysname**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* должен быть указан.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

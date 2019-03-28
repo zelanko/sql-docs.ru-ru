@@ -18,12 +18,12 @@ ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d38c9727995b20cd23087a0f944ccbfa28bf019d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57642ccd61a13379495b934f5b52cce7f7f77404
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788092"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535566"
 ---
 # <a name="spupdatetargetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_update_targetservergroup
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@name =**] **"***current_name***"**  
- Имя группы целевых серверов. *current_name* — **sysname**, не имеет значения по умолчанию.  
+`[ @name = ] 'current_name'` Имя группы целевых серверов. *current_name* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@new_name =**] **"***новое_имя***"**  
- Новое имя группы целевых серверов. *новое_имя* — **sysname**, не имеет значения по умолчанию.  
+`[ @new_name = ] 'new_name'` Новое имя для группы целевых серверов. *новое_имя* — **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

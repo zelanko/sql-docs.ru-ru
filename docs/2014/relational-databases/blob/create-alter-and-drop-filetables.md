@@ -14,12 +14,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 373cee8bf85815db18c50eb2919600ffec258f0b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c5348d022c5921a34280e9f9b608017035ebc4fc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516501"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530666"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Создание, изменение и удаление таблиц FileTables
   Описывает способы создания новых таблиц FileTable и изменения или удаления существующих таблиц FileTable.  
@@ -67,7 +67,7 @@ ms.locfileid: "52516501"
   
  В следующем примере рассмотрено создание новой таблицы FileTable с указанием значений, определяемых пользователем, для **FILETABLE_DIRECTORY** и **FILETABLE_COLLATE_FILENAME**.  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable  
     WITH (   
           FileTable_Directory = 'DocumentTable',  
@@ -78,7 +78,7 @@ GO
   
  В следующем примере также создается новый FileTable. Определяемые пользователем значения не заданы, поэтому значение **FILETABLE_DIRECTORY** становится именем таблицы FileTable, значение **FILETABLE_COLLATE_FILENAME** становится равным database_default, а первичный ключ и ограничения уникальности принимают значения, сформированные системой.  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable;  
 GO  
 ```  
@@ -113,7 +113,7 @@ GO
   
  **Пример**  
   
-```tsql  
+```sql  
 ALTER TABLE filetable_name  
     SET ( FILETABLE_DIRECTORY = N'directory_name' );  
 GO  
@@ -144,7 +144,7 @@ GO
 ##  <a name="BasicsOtherObjects"></a> другие объекты базы данных, создаваемые при создании таблицы FileTable  
  При создании новой таблицы FileTable также создаются некоторые системные индексы и ограничения. Эти объекты нельзя изменять или удалять, они исчезают только после удаления самой таблицы FileTable. Чтобы просмотреть список этих объектов, отправьте запрос представлению каталога [sys.filetable_system_defined_objects (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql).  
   
-```tsql  
+```sql  
 --View all objects for all filetables, unsorted  
 SELECT * FROM sys.filetable_system_defined_objects;  
 GO  

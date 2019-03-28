@@ -10,20 +10,20 @@ helpviewer_keywords:
 - XML [SQL Server]
 - XML [SQL Server], about XML
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9c07abd9f7c9ce9ed03bb571a4dc25a77b3c497
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da462979ee21e09a55015f9c9d30d72edd1ce67d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226412"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530236"
 ---
 # <a name="xml-data-sql-server"></a>XML-данные (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет эффективную платформу для разработки многофункциональных приложений для управления частично структурированными данными. Поддержка языка XML встроена во все компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и включает следующее:  
   
--   `xml` Тип данных. Значения XML можно естественным образом хранить в столбце типа `xml`, который можно типизировать в соответствии с коллекцией схем XML или оставить нетипизированным. XML-столбец можно индексировать.  
+-   Тип данных `xml`. Значения XML можно естественным образом хранить в столбце типа `xml`, который можно типизировать в соответствии с коллекцией схем XML или оставить нетипизированным. XML-столбец можно индексировать.  
   
 -   возможность указывать запросы XQuery к XML-данным, хранящимся в столбцах и переменных типа `xml`;  
   

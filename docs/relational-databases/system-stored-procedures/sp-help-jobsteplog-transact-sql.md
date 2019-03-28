@@ -18,12 +18,12 @@ ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 905386a1e346ed982c3ad84baf57f532aa5b020f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6480c498914c4ec0bc02ba21552615bbdd28f6e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828362"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535696"
 ---
 # <a name="sphelpjobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,16 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@job_id =**] **'***job_id***'**  
- Идентификационный номер задачи, для которого возвращаются сведения из журнала шагов задания. *job_id* — **int**, значение по умолчанию NULL.  
+`[ @job_id = ] 'job_id'` Идентификационный номер задания, для которого возвращаются сведения из журнала шагов задания. *job_id* — **int**, значение по умолчанию NULL.  
   
- [  **@job_name =**] **"***имя_задания***"**  
- Имя задания. *имя_задания* — **sysname**, значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания. *имя_задания* — **sysname**, значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
- [  **@step_id =**] *step_id*  
- Идентификатор этапа задания. Если не указан, включаются все этапы задания. *step_id* — **int**, значение по умолчанию NULL.  
+`[ @step_id = ] step_id` Идентификационный номер шага задания. Если не указан, включаются все этапы задания. *step_id* — **int**, значение по умолчанию NULL.  
   
- [  **@step_name =**] **"***step_name***"**  
- Имя шага задания. *step_name* — **sysname**, значение по умолчанию NULL.  
+`[ @step_name = ] 'step_name'` Имя шага задания. *step_name* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

@@ -16,12 +16,12 @@ ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2559c69e5857bbc5796d68d19b7d760476594b87
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 31755bb0ca1ba00d8d9b6f61b6091ce2e997f58e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589198"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528356"
 ---
 # <a name="spgetdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +52,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@source_dbms**=] **"**_source_dbms_**"**  
- Это имя СУБД, с которой сопоставлены типы данных. *source_dbms* — **sysname**, и может принимать одно из следующих значений:  
+`[ @source_dbms = ] 'source_dbms'` — Имя СУБД, из которой сопоставляются типы данных. *source_dbms* — **sysname**, и может принимать одно из следующих значений:  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -62,26 +61,19 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  Необходимо указать значение для этого параметра.  
   
- [  **@source_version=** ] **"**_source_version_**"**  
- Номер версии исходной СУБД. *source_version* — **varchar(10)**, со значением по умолчанию NULL.  
+`[ @source_version = ] 'source_version'` — Номер версии исходной СУБД. *source_version* — **varchar(10)**, со значением по умолчанию NULL.  
   
- [ **@source_type**=] **"**_source_type_**"**  
- Тип данных в исходной СУБД. *source_type* — **sysname**, не имеет значения по умолчанию.  
+`[ @source_type = ] 'source_type'` — Тип данных в исходной СУБД. *source_type* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@source_length=** ] *source_length*  
- Длина типа данных в исходной СУБД. *source_length* — **bigint**, со значением по умолчанию NULL.  
+`[ @source_length = ] source_length` — Длина типа данных в исходной СУБД. *source_length* — **bigint**, со значением по умолчанию NULL.  
   
- [  **@source_precision=** ] *source_precision*  
- Точность типа данных в исходной СУБД. *source_precision* — **bigint**, со значением по умолчанию NULL.  
+`[ @source_precision = ] source_precision` — Это точность типа данных в исходной СУБД. *source_precision* — **bigint**, со значением по умолчанию NULL.  
   
- [  **@source_scale=** ] *source_scale*  
- Масштаб типа данных в исходной СУБД. *source_scale* — **int**, со значением по умолчанию NULL.  
+`[ @source_scale = ] source_scale` Является масштаб типа данных в исходной СУБД. *source_scale* — **int**, со значением по умолчанию NULL.  
   
- [  **@source_nullable=** ] *source_nullable*  
- Показывает, что тип данных в исходной СУБД поддерживает значение NULL. *source_nullable* — **бит**, со значением по умолчанию **1**, что означает, что значения NULL допустимы.  
+`[ @source_nullable = ] source_nullable` Показывает тип данных в исходной СУБД поддерживает значение NULL. *source_nullable* — **бит**, со значением по умолчанию **1**, что означает, что значения NULL допустимы.  
   
- [ **@destination_dbms** =] **"**_destination_dbms_**"**  
- Название целевой СУБД. *destination_dbms* — **sysname**, и может принимать одно из следующих значений:  
+`[ @destination_dbms = ] 'destination_dbms'` — Имя целевой СУБД. *destination_dbms* — **sysname**, и может принимать одно из следующих значений:  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -92,26 +84,19 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  Необходимо указать значение для этого параметра.  
   
- [ **@destination_version**=] **"**_destination_version_**"**  
- Версия продукта целевой СУБД. *destination_version* — **varchar(10)**, со значением по умолчанию NULL.  
+`[ @destination_version = ] 'destination_version'` Версия продукта целевой СУБД. *destination_version* — **varchar(10)**, со значением по умолчанию NULL.  
   
- [ **@destination_type**=] **"**_destination_type_**"** выходных данных  
- Тип данных, приведенных в списке целевой СУБД. *destination_type* — **sysname**, со значением по умолчанию NULL.  
+`[ @destination_type = ] 'destination_type' OUTPUT` Тип данных, приведенных в целевой СУБД. *destination_type* — **sysname**, со значением по умолчанию NULL.  
   
- [  **@destination_length=** ] *destination_length* выходных данных  
- Длина типа данных в целевой СУБД. *destination_length* — **bigint**, со значением по умолчанию NULL.  
+`[ @destination_length = ] destination_length OUTPUT` — Длина типа данных в целевой СУБД. *destination_length* — **bigint**, со значением по умолчанию NULL.  
   
- [  **@destination_precision=** ] *destination_precision* выходных данных  
- Точность типа данных в целевой СУБД. *destination_precision* — **bigint**, со значением по умолчанию NULL.  
+`[ @destination_precision = ] destination_precision OUTPUT` — Это точность типа данных в целевой СУБД. *destination_precision* — **bigint**, со значением по умолчанию NULL.  
   
- [  **@destination_scale=** ] _destination_scale_**выходных данных**  
- Масштаб типа данных в целевой СУБД. *destination_scale* — **int**, со значением по умолчанию NULL.  
+`[ @destination_scale = ] _destination_scaleOUTPUT` Является масштаб типа данных в целевой СУБД. *destination_scale* — **int**, со значением по умолчанию NULL.  
   
- [  **@destination_nullable=** ] _destination_nullable_**выходных данных**  
- Показывает, что тип данных в целевой СУБД поддерживает значение NULL. *destination_nullable* — **бит**, со значением по умолчанию NULL. **1** означает, что значения NULL допустимы.  
+`[ @destination_nullable = ] _destination_nullableOUTPUT` Показывает тип данных в целевой СУБД поддерживает значение NULL. *destination_nullable* — **бит**, со значением по умолчанию NULL. **1** означает, что значения NULL допустимы.  
   
- [  **@dataloss=** ] _потерю данных_**выходных данных**  
- Показывает, что при сопоставлении возможна потеря данных. *потери данных* — **бит**, со значением по умолчанию NULL. **1** означает, что есть вероятность потери данных.  
+`[ @dataloss = ] _datalossOUTPUT` — Это, что при сопоставлении возможна потеря данных. *потери данных* — **бит**, со значением по умолчанию NULL. **1** означает, что есть вероятность потери данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

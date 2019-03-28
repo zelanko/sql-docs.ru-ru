@@ -16,12 +16,12 @@ ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14357c7700980a1e3cc241d2e6b300e830aa4319
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b125eeaab0ea833a801123ea4540f076696894d0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818896"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535896"
 ---
 # <a name="sphelpreplicationoption-transact-sql"></a>Хранимая процедура sp_helpreplicationoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@optname =**] **"***option_name***"**  
- Имя параметра репликации для запроса. *option_name* — **sysname**, значение по умолчанию NULL.  
+`[ @optname = ] 'option_name'` — Имя параметра репликации для запроса. *option_name* — **sysname**, значение по умолчанию NULL.  
   
 |Значение|Описание|  
 |-----------|-----------------|  

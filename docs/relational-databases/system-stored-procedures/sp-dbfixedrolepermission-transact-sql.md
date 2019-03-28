@@ -18,12 +18,12 @@ ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e7305e73d1f2f35d5cb4666e68114c9ee8f58e7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 41c84c97027c8bfae82d3ac457c454f6a4d497e6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126214"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533366"
 ---
 # <a name="spdbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@rolename =** ] **"**_роли_**"**  
- Имя допустимой предопределенной роли базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *роль* — **sysname**, значение по умолчанию NULL. Если *роли* не указан, отображаются разрешения для всех предопределенных ролей базы данных.  
+`[ @rolename = ] 'role'` Имя является допустимым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предопределенной роли базы данных. *роль* — **sysname**, значение по умолчанию NULL. Если *роли* не указан, отображаются разрешения для всех предопределенных ролей базы данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

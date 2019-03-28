@@ -20,12 +20,12 @@ ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 345584f406830689c4f0bec2a563314d798595a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37b4a53461b2ebd485941ecad89e3672e7c31b62
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073134"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532586"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently-full-recovery-model"></a>Использование помеченных транзакций для согласованного восстановления связанных баз данных (модель полного восстановления)
   Этот раздел относится только к тем базам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые используют модель полного восстановления или модель восстановления с неполным протоколированием.  
@@ -89,7 +89,7 @@ ms.locfileid: "48073134"
 ### <a name="examples"></a>Примеры  
  В следующем примере журнал транзакций восстанавливается до метки в помеченной транзакции с именем `ListPriceUpdate`.  
   
-```tsql  
+```sql  
 USE AdventureWorks  
 GO  
 BEGIN TRANSACTION ListPriceUpdate  
@@ -127,7 +127,7 @@ RESTORE LOG AdventureWorks
   
  Например, рассмотрим секционированную базу данных, существующую в нескольких экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В каждом экземпляре находится база данных под названием `coyote`. Во-первых, необходимо создать хранимую процедуру, например `sp_SetMark`, в каждой базе данных.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_SetMark  
 @name nvarchar (128)  
 AS  
@@ -139,7 +139,7 @@ GO
   
  Затем необходимо создать хранимую процедуру `sp_MarkAll` , которая содержит транзакцию, размещающую отметку в каждой базе данных. `sp_MarkAll` может быть запущена из любого экземпляра.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_MarkAll  
 @name nvarchar (128)  
 AS  

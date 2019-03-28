@@ -16,12 +16,12 @@ ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c81f2878c5573174b7f50f15f2ef2adf9329021a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a39fe7efd35094330b6885094145b5340bd7f2b8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808286"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527476"
 ---
 # <a name="sphelpsubscriptionproperties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher=**] **"***издателя***"**  
- Имя издателя. *издатель* — **sysname**, значение по умолчанию **%**, котором возвращаются сведения обо всех издателях.  
+`[ @publisher = ] 'publisher'` — Имя издателя. *издатель* — **sysname**, значение по умолчанию **%**, котором возвращаются сведения обо всех издателях.  
   
- [  **@publisher_db=**] **"***publisher_db***"**  
- Имя базы данных издателя. *publisher_db* — **sysname**, значение по умолчанию **%**, котором возвращаются сведения обо всех базах данных издателя.  
+`[ @publisher_db = ] 'publisher_db'` — Имя базы данных издателя. *publisher_db* — **sysname**, значение по умолчанию **%**, котором возвращаются сведения обо всех базах данных издателя.  
   
- [  **@publication=**] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%**, которое возвращает сведения обо всех публикациях.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%**, которое возвращает сведения обо всех публикациях.  
   
- [  **@publication_type=**] *publication_type*  
- — Тип публикации. *publication_type* — **int**, значение по умолчанию NULL. Если указано, *publication_type* должен принимать одно из следующих значений:  
+`[ @publication_type = ] publication_type` — Тип публикации. *publication_type* — **int**, значение по умолчанию NULL. Если указано, *publication_type* должен принимать одно из следующих значений:  
   
 |Значение|Описание|  
 |-----------|-----------------|  

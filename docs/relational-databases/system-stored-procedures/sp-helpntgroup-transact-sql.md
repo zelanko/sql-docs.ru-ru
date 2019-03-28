@@ -18,12 +18,12 @@ ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c23e80cf3024b238595785f0976f52ae41c8defc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee2dc4474bb2949aba396674da19fcd1e197a042
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739772"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531572"
 ---
 # <a name="sphelpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@ntname =** ] **"***имя***"**  
- Имя группы Windows. *имя* — **sysname**, значение по умолчанию NULL. *имя* должен быть допустимой группе Windows с доступом к текущей базе данных. Если *имя* не указан, все группы Windows с доступом к текущей базе данных, включаются в выходные данные.  
+`[ @ntname = ] 'name'` — Имя группы Windows. *имя* — **sysname**, значение по умолчанию NULL. *имя* должен быть допустимой группе Windows с доступом к текущей базе данных. Если *имя* не указан, все группы Windows с доступом к текущей базе данных, включаются в выходные данные.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

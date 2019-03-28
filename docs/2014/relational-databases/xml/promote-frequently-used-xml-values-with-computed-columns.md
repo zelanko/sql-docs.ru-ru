@@ -10,15 +10,15 @@ helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bcd6d8cb39405e525b779678e0b203ca1246e1af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5b2d167ca9bb2f5a39802bacceb3dd0eb3c96d5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065314"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533316"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Продвижение часто используемых XML-значений с помощью вычисляемых столбцов
   Если часто запрашивается небольшое количество значений элементов и атрибутов, можно выполнить их продвижение до реляционных столбцов. Это полезно, если запрос выполняется для небольшой части XML-данных, тогда как извлекается весь экземпляр XML. Создавать XML-индекс для XML-столбца не требуется. Вместо этого можно проиндексировать столбец, созданный на основе свойства. В запросах необходимо использовать этот столбец, потому что оптимизатор запросов не перенаправляет запросы XML-столбца столбцу, созданному на основе свойства.  
@@ -28,7 +28,7 @@ ms.locfileid: "48065314"
 ## <a name="computed-column-based-on-the-xml-data-type"></a>Вычисляемый столбец, основанный на типе данных xml  
  Вычисляемый столбец можно создать с помощью определяемой пользователем функции, который вызывает `xml` методов типа данных. Вычисляемый столбец может иметь любой тип SQL, в том числе XML. Это продемонстрировано в следующем примере.  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Пример: вычисляемый столбец, основанный на методе типа данных xml  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Пример Вычисляемый столбец, основанный на методе типа данных xml  
  Создание пользовательской функции, возвращающей ISBN-номер книги:  
   
 ```  
@@ -50,7 +50,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  Теперь вычисляемый столбец можно проиндексировать обычным способом.  
   
-### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>Пример: запросы данных из вычисляемого столбца на основе методов типа данных xml  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>Пример Запросы данных из вычисляемого столбца на основе методов типа данных xml  
  Чтобы получить элемент <`book`> с ISBN-номером 0-7356-1588-2, можно выполнить следующее:  
   
 ```  
@@ -84,14 +84,14 @@ WHERE  ISBN = '0-7356-1588-2'
   
     -   Напишите запросы, осуществляющие основанный на SQL доступ к таблицам свойств и основанный на XML доступ к XML-столбцу базовой таблицы, соединяя таблицы с использованием их первичного ключа.  
   
-### <a name="example-create-a-property-table"></a>Пример: создание таблицы свойств  
+### <a name="example-create-a-property-table"></a>Пример создание таблицы свойств  
  Предположим, что требуется выполнить продвижение свойства, представляющего имена авторов. У книги может быть несколько авторов, поэтому данное свойство является многозначным. Каждое имя хранится в отдельной строке таблицы свойств. Первичный ключ базовой таблицы дублируется в таблице свойств ради обратного соединения таблиц.  
   
 ```  
 create table tblPropAuthor (propPK int, propAuthor varchar(max))  
 ```  
   
-### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>Пример: создание пользовательской функции для формирования набора строк на основе экземпляра XML  
+### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>Пример создание пользовательской функции для создания набора строк на основе экземпляра XML  
  Следующая возвращающая табличное значение функция, udf_XML2Table, принимает значение первичного ключа и экземпляр XML. Она извлекает имена всех авторов из элемента <`book`> и возвращает набор строк, состоящий из пар (первичный ключ / имя).  
   
 ```  
@@ -107,7 +107,7 @@ begin
 end  
 ```  
   
-### <a name="example-create-triggers-to-populate-a-property-table"></a>Пример: создание триггеров для заполнения таблицы свойств  
+### <a name="example-create-triggers-to-populate-a-property-table"></a>Пример создание триггеров для заполнения таблицы свойств  
  Триггер вставки вставляет строки в таблицу свойств:  
   
 ```  
@@ -154,7 +154,7 @@ begin
 end  
 ```  
   
-### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Пример: поиск экземпляров XML, включающих авторов с одним и тем же именем  
+### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Пример поиск экземпляров XML, включающих авторов с именем «David»  
  Можно составить такой запрос для XML-столбца или найти в таблице свойств записи с именами David и выполнить обратное соединение с базовой таблицей для возврата экземпляра XML. Пример:  
   
 ```  
@@ -163,7 +163,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Пример: решение, основанное на использовании потоковой функции CLR, возвращающей табличное значение  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Пример решение, основанное на использовании потоковой возвращающей табличное значение функции CLR  
  Данное решение состоит из следующих шагов:  
   
 1.  определение CLR-класса SqlReaderBase, реализующего интерфейс ISqlReader и формирующего потоковый возвращающий табличное значение выход путем применения выражения пути к экземпляру XML;  

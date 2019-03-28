@@ -16,12 +16,12 @@ ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a103f309067b5e78024a1687c24bb37bf5c3a8b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: eec9be936a14b0d5c78b5bc183516a8118c339a2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779756"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533446"
 ---
 # <a name="sphelpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publication=**] **"***публикации***"**  
- Имя публикации, о которой будут получены данные. *Публикация*— **sysname**, значение по умолчанию **%**, которое возвращает сведения обо всех статьях публикации слиянием, содержащихся во всех публикациях в текущей базе данных.  
+`[ @publication = ] 'publication'` — Имя публикации, о котором будут получены данные. *Публикация*— **sysname**, значение по умолчанию **%**, которое возвращает сведения обо всех статьях публикации слиянием, содержащихся во всех публикациях в текущей базе данных.  
   
- [  **@article=**] **"***статье***"**  
- Имя статьи, для которой возвращаются сведения. *статья*— **sysname**, значение по умолчанию **%**, которое возвращает сведения обо всех статьях публикации слиянием в данной публикации.  
+`[ @article = ] 'article'` — Имя статьи, для которого возвращаются сведения. *статья*— **sysname**, значение по умолчанию **%**, которое возвращает сведения обо всех статьях публикации слиянием в данной публикации.  
   
 ## <a name="result-set"></a>Результирующий набор  
   

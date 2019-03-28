@@ -18,12 +18,12 @@ ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 794a7c9013fff188500c26232a597a7dd4c6283d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf12b97028d3d98f7d5cc5ab034db95411d913dc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756280"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528506"
 ---
 # <a name="sysmailaddprincipalprofilesp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@principal_id** =] *principal_id*  
- Идентификатор пользователя базы данных или роли в **msdb** базы данных для ассоциации. *principal_id* — **int**, значение по умолчанию NULL. Либо *principal_id* или *principal_name* должен быть указан. Объект *principal_id* из **0** профиль становится общедоступной, предоставив этому пользователю доступ всем участникам в базе данных.  
+`[ @principal_id = ] principal_id` Идентификатор пользователя базы данных или роли в **msdb** базы данных для ассоциации. *principal_id* — **int**, значение по умолчанию NULL. Либо *principal_id* или *principal_name* должен быть указан. Объект *principal_id* из **0** профиль становится общедоступной, предоставив этому пользователю доступ всем участникам в базе данных.  
   
- [ **@principal_name** =] **"***principal_name***"**  
- Имя пользователя базы данных или роли в **msdb** базы данных для ассоциации. *principal_name* — **sysname**, значение по умолчанию NULL. Либо *principal_id* или *principal_name* должен быть указан. Объект *principal_name* из **'public'** профиль становится общедоступной, предоставив этому пользователю доступ всем участникам в базе данных.  
+`[ @principal_name = ] 'principal_name'` Имя пользователя базы данных или роли в **msdb** базы данных для ассоциации. *principal_name* — **sysname**, значение по умолчанию NULL. Либо *principal_id* или *principal_name* должен быть указан. Объект *principal_name* из **'public'** профиль становится общедоступной, предоставив этому пользователю доступ всем участникам в базе данных.  
   
- [ **@profile_id** =] *profile_id*  
- Идентификатор профиля для взаимосвязи. *profile_id* — **int**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* должен быть указан.  
+`[ @profile_id = ] profile_id` Идентификатор профиля для взаимосвязи. *profile_id* — **int**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* должен быть указан.  
   
- [ **@profile_name** =] **"***profile_name***"**  
- Имя профиля для взаимосвязи. *profile_name* — **sysname**, не имеет значения по умолчанию. Либо *profile_id* или *profile_name* должен быть указан.  
+`[ @profile_name = ] 'profile_name'` Имя профиля для взаимосвязи. *profile_name* — **sysname**, не имеет значения по умолчанию. Либо *profile_id* или *profile_name* должен быть указан.  
   
- [ **@is_default** =] *is_default*  
- Этот аргумент показывает, является ли данный профиль для участника профилем по умолчанию. Участник должен иметь ровно один профиль по умолчанию. *is_default* — **бит**, не имеет значения по умолчанию.  
+`[ @is_default = ] is_default` Указывает, является ли этот профиль для участника профилем по умолчанию. Участник должен иметь ровно один профиль по умолчанию. *is_default* — **бит**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

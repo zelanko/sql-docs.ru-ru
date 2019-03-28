@@ -16,12 +16,12 @@ ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8eb21085625c7f2f0071c18da80501774088fdc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3f174940b27adbaba75efd6660f09140c403bf8b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789376"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529886"
 ---
 # <a name="spreplqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,13 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@publisher** =] **"***издателя***"**  
- Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL. На этом сервере должна быть настроена публикация. Значение NULL означает для всех издателей.  
+`[ @publisher = ] 'publisher'` — Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL. На этом сервере должна быть настроена публикация. Значение NULL означает для всех издателей.  
   
- [ **@publisherdb** =] **"***publisher_db***"** ]  
- Имя базы данных публикации. *publisher_db* — **sysname**, значение по умолчанию NULL. Значение NULL означает для всех баз данных публикаций.  
+`[ @publisherdb = ] 'publisher_db' ]` — Имя базы данных публикации. *publisher_db* — **sysname**, значение по умолчанию NULL. Значение NULL означает для всех баз данных публикаций.  
   
- [ **@publication** =] **"***публикации***"** ]  
- Имя публикации. *Публикация*— **sysname**, значение по умолчанию NULL. Значение NULL означает для всех публикаций.  
+`[ @publication = ] 'publication' ]` — Имя публикации. *Публикация*— **sysname**, значение по умолчанию NULL. Значение NULL означает для всех публикаций.  
   
- [ **@tranid** =] **"***tranid***"** ]  
- Идентификатор транзакции. *tranid*— **sysname**, значение по умолчанию NULL. Значение NULL означает для всех транзакций.  
+`[ @tranid = ] 'tranid' ]` Идентификатор транзакции. *tranid*— **sysname**, значение по умолчанию NULL. Значение NULL означает для всех транзакций.  
   
  [**@queuetype=** ] **"***значение queuetype***"** ]  
  Тип очереди, в которой хранятся транзакции. *значение queuetype* — **tinyint** значение по умолчанию **0**, и может принимать одно из следующих значений.  

@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0228a3f0719bd6a56142e571323fdf809e534337
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61301b0c6916ba11cb54cc0c8d8ab961cc3ae659
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635694"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534326"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -46,8 +46,7 @@ sp_help_fulltext_system_components
  'all'  
  Возвращает сведения для всех полнотекстовых компонентов.  
   
- [  **@component_type=** ] *component_type*  
- Указывает тип компонента. *component_type* может принимать одно из следующих:  
+`[ @component_type = ] component_type` Указывает тип компонента. *component_type* может принимать одно из следующих:  
   
 -   **средство разбиения по словам**  
   
@@ -59,8 +58,7 @@ sp_help_fulltext_system_components
   
  Если указан полный путь, в аргументе *param* необходимо также указать полный путь к DLL-библиотеке компонента. В противном случае будет возвращено сообщение об ошибке.  
   
- [  **@param=** ] *param*  
- В зависимости от типа компонента указывается одно из следующих значений: идентификатор локали (LCID), расширение файла с префиксом ".", полное имя компонента обработчика протокола или полный путь к DLL-компоненту.  
+`[ @param = ] param` В зависимости от типа компонента, это одно из следующих: идентификатор локали (LCID), расширение файла с «.» префикса, полное имя компонента обработчика протокола или полный путь к DLL-компоненту.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -141,7 +139,7 @@ GO
 ## <a name="see-also"></a>См. также  
  [Просмотр или изменение зарегистрированных фильтров и разбиения по словам](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [Настройка поисковых фильтров и управление ими](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
+ [Настройка и управление фильтрами для поиска](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
  [Компонент Full-Text Search и семантический поиск хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

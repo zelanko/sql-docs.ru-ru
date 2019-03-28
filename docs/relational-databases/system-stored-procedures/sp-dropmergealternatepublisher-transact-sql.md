@@ -16,12 +16,12 @@ ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 722a8092a799695be0ab5e4f6925cd7416b7c1b9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 368f16597a8060b5c1b9f2eb7fca5759bf8226b3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134724"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532456"
 ---
 # <a name="spdropmergealternatepublisher-transact-sql"></a>Хранимая процедура sp_dropmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,23 +38,17 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@publisher=**] **"**_издателя_**"**  
- Имя текущего издателя. *издатель*— **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` — Имя текущего издателя. *издатель*— **sysname**, не имеет значения по умолчанию.  
   
- [  **@publisher_db=**] **"**_publisher_db_**"**  
- Имя текущей базы данных публикации. *publisher_db*— **sysname**, не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` — Имя текущей базы данных публикации. *publisher_db*— **sysname**, не имеет значения по умолчанию.  
   
- [  **@publication =**] **"**_публикации_**"**  
- Имя текущей публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` — Имя текущей публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@alternate_publisher=**] **"**_alternate_publisher_**"**  
- Имя альтернативного издателя, который будет удален как альтернативный участник синхронизации. *alternate_publisher*— **sysname**, не имеет значения по умолчанию.  
+`[ @alternate_publisher = ] 'alternate_publisher'` — Имя альтернативного издателя, которая будет удалена как альтернативного участника синхронизации. *alternate_publisher*— **sysname**, не имеет значения по умолчанию.  
   
- [  **@alternate_publisher_db=**] **"**_alternate_publisher_db_**"**  
- Имя базы данных публикации, которая будет удалена как база данных публикации альтернативного участника синхронизации. *alternate_publisher_db*— **sysname**, не имеет значения по умолчанию.  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'` — Имя базы данных публикации, которая будет удалена как базы данных публикации альтернативного партнера. *alternate_publisher_db*— **sysname**, не имеет значения по умолчанию.  
   
- [  **@alternate_publication=**] **"**_alternate_publication_**"**  
- Имя публикации, которая будет удалена как публикация альтернативного участника синхронизации. *alternate_publication*— **sysname**, не имеет значения по умолчанию.  
+`[ @alternate_publication = ] 'alternate_publication'` — Имя публикации, которая будет удалена как публикация альтернативного участника синхронизации. *alternate_publication*— **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

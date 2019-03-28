@@ -19,12 +19,12 @@ ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 909f85ee78348ac81822b5ebbd09a98b121bb76d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7f36eb20b4a5f72ce980f8e35cb39580f4f5142
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738322"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537186"
 ---
 # <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@collector_type_uid =** ] **"***аргумент collector_type_uid***"**  
- Идентификатор GUID типа сборщика. *Аргумент collector_type_uid* — **uniqueidentifier** и должен иметь значение, если *имя* имеет значение NULL.  
+`[ @collector_type_uid = ] 'collector_type_uid'` – Идентификатор GUID типа сборщика. *Аргумент collector_type_uid* — **uniqueidentifier** и должен иметь значение, если *имя* имеет значение NULL.  
   
- [  **@name =** ] **"***имя***"**  
- Имя типа сборщика. *имя* — **sysname** и должен иметь значение, если *аргумент collector_type_uid* имеет значение NULL.  
+`[ @name = ] 'name'` — Имя типа сборщика. *имя* — **sysname** и должен иметь значение, если *аргумент collector_type_uid* имеет значение NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

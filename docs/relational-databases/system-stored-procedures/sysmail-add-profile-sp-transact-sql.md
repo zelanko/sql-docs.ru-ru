@@ -18,12 +18,12 @@ ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce8549b95348085699694c17027c2dd393f5b1f5
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: b00e0eed5a27c9d795de027f82b01763c44ab80e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169184"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526486"
 ---
 # <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@profile_name** =] **"**_профиль\_имя_**"**  
- Имя нового профиля. *profile_name* — **sysname**, не имеет значения по умолчанию.  
+`[ @profile_name = ] 'profile\_name'` Имя нового профиля. *profile_name* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@description** =] **"**_описание_**"**  
- Необязательное описание нового профиля. *Описание* — **nvarchar(256)**, не имеет значения по умолчанию.  
+`[ @description = ] 'description'` Необязательное описание нового профиля. *Описание* — **nvarchar(256)**, не имеет значения по умолчанию.  
   
- [ **@profile_id** =] _новый\_профиль\_идентификатор_**выходных данных**  
- Возвращает идентификатор нового профиля. *new_profile_id* — **int**, значение по умолчанию NULL.  
+`[ @profile_id = ] _new\_profile\_idOUTPUT` Возвращает идентификатор нового профиля. *new_profile_id* — **int**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
