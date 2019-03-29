@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ae8a8b2869a46a9157c805edcb8c6d74ca49e3d0
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: ac8632c3966da750e9eb7d7053dad1d102760c8c
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018000"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618241"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>Настройка службы Azure Kubernetes для развертывания кластера (Предварительная версия) SQL Server 2019 больших данных
 
@@ -39,9 +39,9 @@ AKS позволяет легко создавать, настраивать и 
 - Минимальная 1.10 версия для сервера Kubernetes. Для AKS, необходимо использовать `--kubernetes-version` параметр, чтобы указать версию стандарта не по умолчанию.
 
 - Для оптимальной производительности при проверке основных сценариев в AKS используйте следующую команду:
-   - Не менее 3 виртуальных машин агента
-   - 4 виртуальных ЦП на виртуальную Машину
+   - 8 виртуальных ЦП на всех узлах
    - 32 ГБ памяти на виртуальную Машину
+   - 24 или более подключенных дисков на всех узлах
 
    > [!TIP]
    > Инфраструктура Azure предлагает несколько вариантов размера для виртуальных машин, см. в разделе [здесь](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) для выбранных элементов в регионе, который вы планируете развернуть.
@@ -76,18 +76,18 @@ AKS позволяет легко создавать, настраивать и 
 
 ## <a name="create-a-kubernetes-cluster"></a>Создание кластера Kubernetes
 
-1. Создание кластера Kubernetes в AKS при помощи [создать az aks](https://docs.microsoft.com/cli/azure/aks) команды. В следующем примере создается кластер Kubernetes с именем *kubcluster* с тремя узлами агентов Linux. Убедитесь, что вы создаете кластер AKS в той же группе ресурсов, который использовался в предыдущих разделах.
+1. Создание кластера Kubernetes в AKS при помощи [создать az aks](https://docs.microsoft.com/cli/azure/aks) команды. В следующем примере создается кластер Kubernetes с именем *kubcluster* с одним узлом агента Linux размера **Standard_L8s**. Убедитесь, что вы создаете кластер AKS в той же группе ресурсов, который использовался в предыдущих разделах.
 
     ```azurecli
    az aks create --name kubcluster \
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
-    --node-vm-size Standard_L4s \
-    --node-count 3 \
+    --node-vm-size Standard_L8s \
+    --node-count 1 \
     --kubernetes-version 1.10.9
     ```
 
-   Можно увеличить или уменьшить количество узлов агентов Kubernetes, изменив `--node-count <n>` где `<n>` — количество узлов агентов, которые вы хотите использовать. Сюда не входят главном узле Kubernetes, который управляется в фоновом AKS. Поэтому в примере выше, существуют **3** виртуальных машин размера **Standard_L4s** используемые для узлов агента из кластера AKS.
+   Можно увеличить или уменьшить количество узлов агентов Kubernetes, изменив `--node-count <n>` где `<n>` — количество узлов агентов, которые вы хотите использовать. Сюда не входят главном узле Kubernetes, который управляется в фоновом AKS. Предыдущий пример использует только один узел для ознакомительных целей.
 
    Через несколько минут команда завершается и возвращает информацию о кластере в формате JSON.
 

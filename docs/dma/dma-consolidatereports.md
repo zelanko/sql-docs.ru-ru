@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 35b90cec967f60f0adfc4d9720f3aec809006f8c
-ms.sourcegitcommit: f8fced37f3fe5c45b2b97219d378137afd68cf76
+ms.openlocfilehash: fac9636b336c2571e159c72c79d482768bf2fbe6
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58198203"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618181"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Оценка предприятия и объединять оценки с помощью DMA
 
@@ -72,7 +72,11 @@ ms.locfileid: "58198203"
 
 ### <a name="if-using-a-csv-file"></a>Если в CSV-файле
 > [!IMPORTANT]
+>
 > Убедитесь, что файл инвентаризации сохраняется как файл с разделителями запятыми (CSV).
+>
+> Для экземпляров по умолчанию присвоено имя экземпляра MSSQLServer.
+>
 
 При использовании CSV-файл для импорта данных, убедитесь, существует только два столбца данных — **имя экземпляра** и **имя базы данных**, и что у столбцов нет строки заголовка.
  

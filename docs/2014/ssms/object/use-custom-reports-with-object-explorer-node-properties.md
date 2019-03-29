@@ -12,18 +12,16 @@ ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09f3cf66d28a70eecd82adde490d02b521fd80ed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374406"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618231"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Использование пользовательских отчетов совместно со свойствами узлов обозревателя объектов
   Пользовательские отчеты могут выполняться в контексте выбранного узла обозревателя объектов, если они ссылаются на параметры отчета этого узла. Это позволяет пользовательскому отчету использовать текущий контекст, например текущей базы данных либо объекта базы данных или сервера.  
   
-## <a name="report-samples"></a>Образцы отчетов  
- [Образцы отчетов](https://go.microsoft.com/fwlink/?LinkId=81792), включая стандартные отчеты, созданные [!INCLUDE[msCoName](../../includes/msconame-md.md)], доступны для скачивания. Эти образцы можно изменять с помощью среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="object-explorer-node-report-parameters"></a>Параметры отчета узла обозревателя объектов  
   

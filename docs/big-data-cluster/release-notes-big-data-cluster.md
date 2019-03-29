@@ -5,17 +5,17 @@ description: В этой статье описываются последние 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2502396dba4b88a9750aa3bfc62c4153711e1426
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c7c80b69ac7120f2cd88500d3c276a313ef34390
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510341"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618311"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Заметки о выпуске для кластеров больших данных в SQL Server
 
@@ -31,8 +31,11 @@ ms.locfileid: "58510341"
 
 | Новые средства или обновления | Сведения |
 |:---|:---|
-| Руководство по GPU поддерживает для выполнения глубокого обучения с TensorFlow в Spark. | [Развертывание кластера больших данных с поддержкой GPU и запустите TensorFlow](spark-gpu-tensorflow.md) |
+| Руководство по GPU поддерживает для выполнения глубокого обучения с TensorFlow в Spark. | [Развертывание кластера больших данных с поддержкой GPU и запустите TensorFlow](spark-gpu-tensorflow.md). |
 | **SqlDataPool** и **SqlStoragePool** источники данных больше не создаются по умолчанию. | Создайте их вручную, при необходимости. См. в разделе [известные проблемы](#externaltablesctp24). |
+| `INSERT INTO SELECT` Поддержка пула данных. | Например, см. в разделе [руководства: Прием данных в пул данных SQL Server с помощью Transact-SQL](tutorial-data-pool-ingest-sql.md). |
+| `FORCE SCALEOUTEXECUTION` и `DISABLE SCALEOUTEXECUTION` параметр. | Принудительно или отключает использование вычислительных ресурсов пула для запросов во внешних таблицах. Например, `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
+| Обновленные рекомендации по развертыванию AKS. | В ходе анализа больших данных кластеров в AKS, теперь рекомендуется использовать один узел размера **Standard_L8s**. |
 | Обновление среды выполнения Spark к Spark 2.4. | |
 
 ### <a name="known-issues"></a>Известные проблемы
