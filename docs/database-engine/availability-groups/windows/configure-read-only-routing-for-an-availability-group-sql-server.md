@@ -18,12 +18,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6b6ce28ed249565e051a987ddffbb04d683f9e43
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: b5c910872b342d8d1bd9dc15ed2796eea76edfc8
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974243"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305532"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Настройка маршрутизации только для чтения в группе доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,6 +66,8 @@ ms.locfileid: "57974243"
 -   Одна или несколько реплик доступности должны быть настроены для принятия запросов только для чтения во вторичной роли (то есть являться [предназначенными для чтения вторичными репликами](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)). Дополнительные сведения см. в разделе [Настройка доступа только для чтения в реплике доступности (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
 -   Необходимо подключиться к экземпляру сервера, на котором размещена текущая первичная реплика.  
+
+-   Если вы используете вход SQL, убедитесь, что учетная запись настроена корректно. Подробные сведения см. в статье [Управление именами входа для заданий, использующих базы данных в группе доступности Always On](logins-and-jobs-for-availability-group-databases.md).
   
 ###  <a name="RORReplicaProperties"></a> Какие свойства реплики необходимо настроить для поддержки маршрутизации только для чтения?  
   
