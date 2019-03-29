@@ -13,9 +13,9 @@ items:
   items:
   - name: Microsoft ADO.NET для SQL Server
     href: ../connect/ado-net/microsoft-ado-net-for-sql-server.md
-  - name: Шаг 1. Настройка среды разработки для разработки в ADO.NET
+  - name: Шаг 1. Настройка среды разработки для разработки в ADO.NET
     href: ../connect/ado-net/step-1-configure-development-environment-for-ado-net-development.md
-  - name: Этап 2. Создание базы данных SQL для разработки в ADO.NET
+  - name: Шаг 2. Создание базы данных SQL для разработки в ADO.NET
     href: ../connect/ado-net/step-2-create-a-sql-database-for-ado-net-development.md
   - name: Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью ADO.NET
     href: ../connect/ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md
@@ -2363,9 +2363,9 @@ items:
   - name: Начало работы с драйвером JDBC
     href: ../connect/jdbc/getting-started-with-the-jdbc-driver.md
     items:
-    - name: Шаг 1. Настройка среды разработки для разработки на Java
+    - name: Шаг 1. Настройка среды разработки для разработки на Java
       href: ../connect/jdbc/step-1-configure-development-environment-for-java-development.md
-    - name: Этап 2. Создание базы данных SQL для разработки на Java
+    - name: Шаг 2. Создание базы данных SQL для разработки на Java
       href: ../connect/jdbc/step-2-create-a-sql-database-for-java-development.md
     - name: 'Шаг 3. Подтверждение концепции: подключение к SQL с помощью Java'
       href: ../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md
@@ -2523,6 +2523,8 @@ items:
         href: ../connect/jdbc/using-parameter-metadata.md
       - name: Использование базовых типов данных
         href: ../connect/jdbc/using-basic-data-types.md
+      - name: Использование данных типа sql_variant
+        href: ../connect/jdbc/using-sql-variant-datatype.md
       - name: Использование пространственных типов данных
         href: ../connect/jdbc/use-spatial-datatypes.md
       - name: Основные сведения о транзакциях
@@ -2617,17 +2619,20 @@ items:
         href: ../connect/jdbc/using-sql-escape-sequences.md
       - name: Использование инструкций с хранимыми процедурами
         href: ../connect/jdbc/using-statements-with-stored-procedures.md
-      - name: Пример Azure Key Vault версии 6.0.0
-        href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
-      - name: Пример Azure Key Vault версии 6.2.2
-        href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
+      - name: Примеры для Azure Key Vault 7.0 и более поздних версий
+        href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
+        items:
+        - name: Пример Azure Key Vault версии 6.2.2
+          href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
+        - name: Пример Azure Key Vault версии 6.0.0
+          href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
 - name: Node.js
   items:
   - name: Драйвер Node.js для SQL Server
     href: ../connect/node-js/node-js-driver-for-sql-server.md
-  - name: Шаг 1.  Настройка среды разработки для разработки на Node.js
+  - name: Шаг 1.  Настройка среды разработки для разработки на Node.js
     href: ../connect/node-js/step-1-configure-development-environment-for-node-js-development.md
-  - name: Этап 2. Создание базы данных SQL для разработки на Node.js
+  - name: Шаг 2. Создание базы данных SQL для разработки на Node.js
     href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
   - name: Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью Node.js
     href: ../connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md
@@ -2904,9 +2909,9 @@ items:
           - name: Общие шаги по работе с приложением ODBC
             href: ../odbc/reference/develop-app/basic-odbc-application-steps.md
             items:
-            - name: Шаг 1. Установка подключения к источнику данных
+            - name: Шаг 1. Установка подключения к источнику данных
               href: ../odbc/reference/develop-app/step-1-connect-to-the-data-source.md
-            - name: Этап 2. Инициализация приложения
+            - name: Шаг 2. Инициализация приложения
               href: ../odbc/reference/develop-app/step-2-initialize-the-application.md
             - name: Шаг 3. Построение и выполнение инструкции SQL
               href: ../odbc/reference/develop-app/step-3-build-and-execute-an-sql-statement.md
@@ -5318,9 +5323,9 @@ items:
   - name: Приступая к работе
     href: ../connect/php/getting-started-with-the-php-sql-driver.md
     items:
-    - name: Шаг 1. Настройка среды разработки для разработки на PHP
+    - name: Шаг 1. Настройка среды разработки для разработки на PHP
       href: ../connect/php/step-1-configure-development-environment-for-php-development.md
-    - name: Этап 2. Создание базы данных SQL для разработки на PHP
+    - name: Шаг 2. Создание базы данных SQL для разработки на PHP
       href: ../connect/php/step-2-create-a-sql-database-for-php-development.md
     - name: Шаг 3. Подтверждение концепции путем подключения к SQL Server с помощью PHP
       href: ../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md
@@ -5598,18 +5603,18 @@ items:
   - name: Драйвер SQL Python — pyodbc
     href: ../connect/python/pyodbc/python-sql-driver-pyodbc.md
     items:
-    - name: Шаг 1. Настройка среды разработки для использования pyodbc в Python
+    - name: Шаг 1. Настройка среды разработки для использования pyodbc в Python
       href: ../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md
-    - name: Этап 2. Создание базы данных SQL для разработки с помощью Python pyodbc
+    - name: Шаг 2. Создание базы данных SQL для разработки с помощью Python pyodbc
       href: ../connect/python/pyodbc/step-2-create-a-sql-database-for-pyodbc-python-development.md
     - name: Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью pyodbc
       href: ../connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md
   - name: Драйвер SQL Python — pymssql
     href: ../connect/python/pymssql/python-sql-driver-pymssql.md
     items:
-    - name: Шаг 1. Настройка среды разработки для разработки на Python в pymssql
+    - name: Шаг 1. Настройка среды разработки для разработки на Python в pymssql
       href: ../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md
-    - name: Этап 2. Создание базы данных SQL для разработки на Python в pymssql
+    - name: Шаг 2. Создание базы данных SQL для разработки на Python в pymssql
       href: ../connect/python/pymssql/step-2-create-a-sql-database-for-pymssql-python-development.md
     - name: Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью pymssql
       href: ../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md
@@ -5617,9 +5622,9 @@ items:
   items:
   - name: Драйвер Ruby для SQL Server
     href: ../connect/ruby/ruby-driver-for-sql-server.md
-  - name: Шаг 1. Настройка среды разработки для разработки на языке Ruby
+  - name: Шаг 1. Настройка среды разработки для разработки на языке Ruby
     href: ../connect/ruby/step-1-configure-development-environment-for-ruby-development.md
-  - name: Этап 2. Создание базы данных SQL для разработки на языке Ruby
+  - name: Шаг 2. Создание базы данных SQL для разработки на языке Ruby
     href: ../connect/ruby/step-2-create-a-sql-database-for-ruby-development.md
   - name: Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью PHP
     href: ../connect/ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md
@@ -5945,9 +5950,9 @@ items:
       - name: Сценарий публикации в Интернете
         href: ../ado/guide/data/internet-publishing-scenario.md
         items:
-        - name: Шаг 1. Настройка проекта Visua Basic
+        - name: Шаг 1. Настройка проекта Visua Basic
           href: ../ado/guide/data/step-1-set-up-the-visual-basic-project.md
-        - name: Этап 2. Инициализация главного списка
+        - name: Шаг 2. Инициализация главного списка
           href: ../ado/guide/data/step-2-initialize-the-main-list-box.md
         - name: Шаг 3. Заполнение списка полей
           href: ../ado/guide/data/step-3-populate-the-fields-list-box.md
@@ -6008,9 +6013,9 @@ items:
   - name: Учебник по RDS
     href: ../ado/guide/remote-data-service/rds-tutorial.md
     items:
-    - name: Шаг 1. Укажите программу сервера (учебник по RDS)
+    - name: Шаг 1. Укажите программу сервера (учебник по RDS)
       href: ../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md
-    - name: Этап 2. Вызовите программу сервера (учебник по RDS)
+    - name: Шаг 2. Вызовите программу сервера (учебник по RDS)
       href: ../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md
     - name: Шаг 3. Сервер получает набор записей (учебник по RDS)
       href: ../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md
@@ -7644,9 +7649,9 @@ items:
     href: ../ado/reference/ado-programmer-s-reference.md
   - name: Глоссарий по объектам ADO
     href: ../ado/ado-glossary.md
-ms.openlocfilehash: 67cfc70b3bdd5744c91ace414dc04d4b9090f4d7
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: f55c9266746f452d2592d7d0ded5993ebb4fab80
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478309"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566643"

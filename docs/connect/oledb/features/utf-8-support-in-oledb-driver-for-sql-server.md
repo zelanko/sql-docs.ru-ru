@@ -2,7 +2,7 @@
 title: Поддержка UTF-8 в драйвере OLE DB для SQL Server | Документация Майкрософт
 description: Поддержка UTF-8 в драйвере OLE DB для SQL Server
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: v-kaywon
 ms.author: v-kaywon
-ms.openlocfilehash: f410ddf4e3843936da6f93f488f379feea863e59
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: b7f138438d522c9da1b7ef74acbaf963e17d6144
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744858"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492606"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>Поддержка UTF-8 в драйвере OLE DB для SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "56744858"
 
 Драйвер Microsoft OLE DB для SQL Server (версия 18.2.1) добавлена поддержка серверная кодировка UTF-8. Сведения о поддержке SQL Server UTF-8 см. в разделе:
 - [Поддержка параметров сортировки и Юникода](../../../relational-databases/collations/collation-and-unicode-support.md)
-- [Поддержка UTF-8 (CTP 2.2)](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-22)
+- [Поддержка UTF-8](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-23)
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>Вставка данных в UTF-8 в кодировке CHAR или VARCHAR столбца
 При создании буфера входного параметра для вставки, буфер описан с помощью массив [структуры DBBINDING](https://go.microsoft.com/fwlink/?linkid=2071182). Каждая структура DBBINDING связывает отдельный параметр в буфере потребителя и содержит сведения, такие как длина и тип значения данных. Для буфера входного параметра типа CHAR *wType* из DBBINDING структуры должно быть присвоено DBTYPE_STR. Для буфера входного параметра типа WCHAR *wType* из DBBINDING структуры должно быть присвоено DBTYPE_WSTR.
