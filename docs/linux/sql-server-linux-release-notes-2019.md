@@ -4,18 +4,18 @@ description: Эта статья содержит заметки о выпуск
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/11/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: c0a14531fb2ad82e4dcab31022f55d5726064c4a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9c3ee750afe0af5971f571a2a0352397ed8c4f40
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271839"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566573"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Заметки о выпуске для предварительной версии SQL Server 2019 в Linux
 
@@ -48,6 +48,7 @@ ms.locfileid: "58271839"
 
 | Выпуск               | Версия       | Дата выпуска |
 |-----------------------|---------------|--------------|
+| [CTP 2.4](#CTP24)     | 15.0.1400.75  | 2019-3-27    |
 | [CTP-ВЕРСИИ 2.3](#CTP23)     | 15.0.1300.359 | 2019-3-01    |
 | [CTP-ВЕРСИИ 2.2](#CTP22)     | 15.0.1200.24  | 2018-12-11   |
 | [CTP-ВЕРСИИ 2.1](#CTP21)     | 15.0.1100.94  | 2018-11-06   |
@@ -65,7 +66,27 @@ ms.locfileid: "58271839"
 - [Установка предварительной версии SQL Server 2019 R для служб машинного обучения и поддержки Python в Linux](sql-server-linux-setup-machine-learning.md)
 - [Включить агент SQL Server](sql-server-linux-setup-sql-agent.md)
 
-## <a id="CTP23"></a> CTP-версии 2.3 (марта 2019 г.)
+## <a id="CTP24"></a> CTP 2.4 (марта 2019 г.)
+
+В следующих разделах приведены расположения пакетов и известные проблемы для CTP 2.4 выпуске. Дополнительные сведения о новых возможностях для Linux на SQL Server 2019, см. в разделе [новые возможности в SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+
+### <a name="package-details"></a>Сведения о пакете
+
+Для установки пакетов вручную или автономном режиме вы можете скачать пакеты RPM и Debian с информацией в следующей таблице:
+
+| Пакет | Версия пакета | Файлы для загрузки |
+|-----|-----|-----|
+| Пакет Red Hat RPM | 15.0.1400.75-2 | [Пакет RPM ядра](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1400.75-2.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1400.75-2.x86_64.rpm)</br>[Пакет RPM поиска полнотекстового поиска](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1400.75-2.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1400.75-2.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1400.75-2.x86_64.rpm)|
+| Пакет SLES RPM | 15.0.1400.75-2 | [пакет RPM ядра MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1400.75-2.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1400.75-2.x86_64.rpm)</br>[Пакет RPM поиска полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1400.75-2.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1400.75-2.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1400.75-2.x86_64.rpm)|
+| Пакет Debian Ubuntu 16.04 | 15.0.1400.75-2 | [Пакет Debian ядра](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1400.75-2_amd64.deb)</br>[Высокий уровень доступности Debian пакета](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1400.75-2_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1400.75-2_amd64.deb)</br>[Пакет Debian расширяемости](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1400.75-2_amd64.deb)</br>[Debian пакета расширения Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1400.75-2_amd64.deb)|
+
+### <a name="known-issues"></a>Известные проблемы
+
+#### <a id="msdtc"></a> Служба координатора распределенных транзакций
+
+В настоящее время MSDTC требует транзакции должны быть без проверки подлинности. Например если используется связанный сервер с SQL Server на Windows для SQL Server в Linux или использовать клиентское приложение Windows для запуска распределенной транзакции в SQL Server в Linux, MSDTC в Windows server или клиента, то требуется использовать параметр «No Требуется проверка подлинности».
+
+## <a id="CTP23"></a> CTP-версии 2.3 (февраля 2019 г.)
 
 В следующих разделах приведены расположения пакетов и известные проблемы для CTP-версия 2.3 выпуске. Дополнительные сведения о новых возможностях для Linux на SQL Server 2019, см. в разделе [новые возможности в SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
 

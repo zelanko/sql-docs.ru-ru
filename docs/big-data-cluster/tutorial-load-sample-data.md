@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 68fe779dbdc99bd3eca1870a4e8ff1ee0fa7d95f
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: f8e5cc5b3da7bf8c571a1f4b3febd9ef45e44d9e
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017850"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566523"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>Учебник. Загрузка образца данных в кластере SQL Server 2019 больших данных
 
@@ -115,4 +115,18 @@ ms.locfileid: "57017850"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-После выполнения начальной загрузки сценария, кластер больших данных содержит образцы баз данных и данные из HDFS. Чтобы приступить к изучению этих данных и кластеры больших данных, см. в разделе [учебники](tutorial-query-hdfs-storage-pool.md) в этом разделе.
+После выполнения начальной загрузки сценария, кластер больших данных содержит образцы баз данных и данные из HDFS. Следующие учебники использовать образцы данных для демонстрации возможностей кластера больших данных:
+
+Виртуализация данных.
+
+- [Учебник. Запрос HDFS в кластере SQL Server больших данных](tutorial-query-hdfs-storage-pool.md)
+- [Учебник. Запрос Oracle из больших данных кластера SQL Server](tutorial-query-oracle.md)
+
+Прием данных:
+
+- [Учебник. Прием данных в пул данных SQL Server с помощью Transact-SQL](tutorial-data-pool-ingest-sql.md)
+- [Учебник. Прием данных в пул данных SQL Server с помощью заданий Spark](tutorial-data-pool-ingest-spark.md)
+
+Записные книжки:
+
+- [Учебник. Запуск записной книжки образец в кластере SQL Server 2019 больших данных](tutorial-notebook-spark.md)

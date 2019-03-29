@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b17f232fc9dfb2c9d1ac663e831b8e9f78aaa3bb
-ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
+ms.openlocfilehash: e0f1b8a425e3b21ac1e36e0f301f3b380d791d1a
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54457667"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566583"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server в Linux, часто задаваемые вопросы (FAQ)
 
@@ -107,7 +107,7 @@ ms.locfileid: "54457667"
 
 1. **Есть ли это средство, как среда SSMS, под управлением Linux?**
 
-   Новый Studio данных Azure (Предварительная версия) — это кросс платформенного средства управления SQL Server. Дополнительные сведения см. в разделе [что такое студия данных Azure (Предварительная версия)](../azure-data-studio/what-is.md).
+   Новый Studio данных Azure — это кросс платформенного средства управления SQL Server. Дополнительные сведения см. в разделе [что такое Azure Data Studio](../azure-data-studio/what-is.md).
 
 1. **Команды sqlcmd и bcp доступны на платформе Linux?**
 

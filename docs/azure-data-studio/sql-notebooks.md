@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 5189d997e0408ead627556f5dc3a2b8f0c975fa3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9aad778475649280e5472f80ad96973d09803375
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392722"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566383"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Использование записных книжек в Azure Data Studio
 
@@ -47,7 +47,7 @@ ms.locfileid: "58392722"
 
 Установка записной книжки в Azure Data Studio изначально поддерживает ядра SQL. Если вы являетесь разработчиком SQL и хотели бы использовать записные книжки, то это будет выбранного ядра. 
 
-Ядро SQL также может использоваться для подключения к экземплярам сервера PostgreSQL. Если вы являетесь разработчиком PostgreSQL и хотите подключиться к серверу PostgreSQL скачайте [ **расширения PostgreSQL** ](postgres-extension.md) в marketplace с расширениями Studio данных Azure.
+Ядро SQL также может использоваться для подключения к экземплярам сервера PostgreSQL. Если вы являетесь разработчиком PostgreSQL и хотите подключиться к серверу PostgreSQL, загрузите [ **расширения PostgreSQL** ](postgres-extension.md) в marketplace с расширениями Studio данных Azure.
 
 ![image7](media/sql-notebooks/sql-kernel-dropdown.png)
 
@@ -90,7 +90,7 @@ ms.locfileid: "58392722"
 |Ядро Spark|Напишите код для Scala и R с помощью Spark вычислений из кластера.
 |Ядро Python|Напишите код Python для локальной разработки.
 
-`Attach to` предоставляет контекст для ядра для присоединения. Если вы используете ядро SQL, вы можете `Attach to` любой из экземпляров SQL Server.
+`Attach to` предоставляет контекст для ядра для присоединения. Если вы используете ядро SQL, то вы можете `Attach to` любой из экземпляров SQL Server.
 
 Если вы используете ядро Python3 `Attach to` является `localhost`. Это ядро можно использовать для локальной разработки Python.
 
@@ -116,7 +116,7 @@ ms.locfileid: "58392722"
 
 Открыть в Studio данных Azure для записных книжек, по умолчанию **надежные**.
 
-Если открыть записную книжку из другого источника он будет открываться в **не доверенный** режиме, а затем сделать его **надежные**.
+Если открыть записную книжку из другого источника, он будет открываться в **не доверенный** режиме, а затем сделать его **надежные**.
 
 ### <a name="save"></a>Сохранять 
 
