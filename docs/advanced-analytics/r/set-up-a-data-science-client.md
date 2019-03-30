@@ -3,17 +3,17 @@ title: Настройка клиента обработки и анализа д
 description: Установка локального библиотеки и средства R на рабочей станции разработки для удаленных подключений к SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/17/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 12fefddcc01caeb9705c823a4e7283169dda1cc3
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b46ce112af08fca4c8986be51ba11a15d277fb4f
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510441"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645536"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Настройка клиента обработки и анализа данных для средств разработки R на сервере SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,9 +27,6 @@ ms.locfileid: "58510441"
 ![Клиент серверные компоненты](media/sqlmls-r-client-revo.png "локальных и удаленных сеансов R и библиотеки")
 
 Чтобы проверить установку, можно воспользоваться встроенным **RGUI** средство, как описано в этой статье или [привязывать библиотеки](#install-ide) RStudio или любой другой интегрированной среде разработки, которое вы обычно используете.
-
-> [!Tip]
-> Видеозапись с демонстрацией упражнений, см. в разделе [выполнения R и Python удаленно в SQL Server из записных книжек Jupyter](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
 
 > [!Note]
 > Вместо установки библиотеки клиента использует [изолированный сервер](../install/sql-machine-learning-standalone-windows-install.md) качестве полнофункционального клиента, что некоторые клиенты предпочитают для более глубокого работы сценария. Автономный сервер полностью отделен от SQL Server, но так как он имеет те же библиотеки R, можно использовать его как клиент для анализа в базе данных SQL Server. Вы также можно использовать для работы, не относящиеся к SQL, включая возможность импортировать и моделирование данных с других платформ данных. При установке изолированного сервера, можно найти исполняемый файл R в этом месте: `C:\Program Files\Microsoft SQL Server\140\R_SERVER`. Проверить установку, [открытие приложения консоли R](#R-tools) для выполнения команд, с помощью R.exe в этом расположении.

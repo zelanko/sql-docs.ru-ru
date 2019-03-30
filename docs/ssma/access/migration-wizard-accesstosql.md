@@ -19,12 +19,12 @@ ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 62ef99767be3f228702a06d89ba52f5c3a9821fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: acb05f10772ebdf77355b78e1f4ce998cc6c8056
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664823"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657018"
 ---
 # <a name="migration-wizard-accesstosql"></a>Мастер миграции (AccessToSQL)
 Мастер миграции поможет выполнить перенос один или несколько баз данных с доступом к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. С помощью мастера, будет создание проекта, добавьте в проект базы данных, выберите объекты для переноса и подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Также будет преобразовать, загрузить и перенести схем доступа и данные. При необходимости вы можете связать доступа к таблицам для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблиц или SQL Azure.  
@@ -76,7 +76,7 @@ ms.locfileid: "51664823"
 Дополнительные сведения о фильтрации см. в раздел Options [Расширенный выбор объектов (SSMA распространено)](https://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c).  
   
 ## <a name="connect-to-sql-server-page"></a>Подключение к странице SQL Server  
-На странице подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] странице Укажите свойства соединения, а затем подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [подключение к SQL Server](https://msdn.microsoft.com/00e0432e-ec26-4ab4-af64-c9ca760e3541)  
+На странице подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] странице Укажите свойства соединения, а затем подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [подключение к SQL Server](connect-to-sql-server-accesstosql.md).
   
 > [!IMPORTANT]  
 > Возникает сразу после успешного подключения **связь с таблицами** страницы, где предусмотрена возможность связывания в таблицах. Нажмите кнопку **Далее** и запускает миграции.  

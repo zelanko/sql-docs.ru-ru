@@ -2,17 +2,17 @@
 title: 'Жизненный цикл и процесс группы: службы SQL Server машинного обучения машинного обучения'
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4d19c103f2e90220bc7d80a1da65eb0352252ad6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c06155a433718a068bc914b071f0f738cd236613
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511291"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645436"
 ---
 # <a name="machine-learning-lifecycle-and-personas"></a>Жизненный цикл машины обучения и пользователей
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -21,7 +21,7 @@ ms.locfileid: "58511291"
 
 > [!TIP]
 > 
-> Перед началом работы над проектом машинного обучения, мы рекомендуем ознакомиться с средства и рекомендации, предоставляемые [процесса обработки и анализа данных группы Microsoft](https://blogs.technet.microsoft.com/machinelearning/2017/10/09/the-microsoft-team-data-science-process-tdsp-recent-updates/), или TDSP. Этот процесс был создан консультанты корпорации Microsoft для консолидации практических рекомендаций по планированию и итерации по проектов машинного обучения в машинном обучении. TDSP впервые появилась в отраслевых стандартах, таких как CRISP-DM, но включает последние методики, такие как DevOps и визуализации.
+> Перед началом работы над проектом машинного обучения, мы рекомендуем ознакомиться с средства и рекомендации, предоставляемые [процесса обработки и анализа данных группы Microsoft](https://docs.microsoft.com/azure/machine-learning/team-data-science-process/overview), или TDSP. Этот процесс был создан консультанты корпорации Microsoft для консолидации практических рекомендаций по планированию и итерации по проектов машинного обучения в машинном обучении. TDSP впервые появилась в отраслевых стандартах, таких как CRISP-DM, но включает последние методики, такие как DevOps и визуализации.
 
 ## <a name="machine-learning-life-cycle"></a>Жизненный цикл машины обучения
 

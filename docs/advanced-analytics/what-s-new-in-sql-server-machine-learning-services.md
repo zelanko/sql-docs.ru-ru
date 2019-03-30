@@ -1,7 +1,7 @@
 ---
 title: Новые возможности - служб машинного обучения SQL Server | Документация Майкрософт
 description: Объявления новых функций для каждого выпуска SQL Server 2016 R Services, R Server, службы машинного обучения SQL Server 2017.
-ms.date: 03/27/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a41844fb7cd9c7e638d42fe9edbbb05ef0b81be1
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 64fbf68f09f685223ba42d9d2b79d5a8454f7125
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509831"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645526"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Новые возможности в службах машинного обучения SQL Server
 
@@ -47,7 +47,7 @@ ms.locfileid: "58509831"
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2017"></a>В SQL Server 2017
 
-В этом выпуске добавлена [поддержка Python и ведущими в отрасли алгоритмов машинного обучения](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Переименован в соответствии с новой областью, SQL Server 2017 помечает появлением [службы машинного обучения из состава SQL Server (в базе данных)](what-is-sql-server-machine-learning.md), поддержка языка Python и R. 
+В этом выпуске добавлена [поддержка Python и ведущими в отрасли алгоритмов машинного обучения](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Переименован в соответствии с новой областью, SQL Server 2017 помечает появлением [службы машинного обучения из состава SQL Server (в базе данных)](what-is-sql-server-machine-learning.md), поддержка языка Python и R. 
 
 Функция объявлений комплексная, см. в разделе [новые возможности в SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 

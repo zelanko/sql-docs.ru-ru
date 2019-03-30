@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 85ea90343ebf1cac9ba04a4b9252a6dd9fb748bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b93e48c20645da68ed53d98775a4cc57760abc77
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533068"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658411"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Основные сведения о доступности SQL Server для Linux развертываний
 
@@ -58,7 +58,7 @@ ms.locfileid: "52533068"
 Копирование файлов с одного сервера на другой — это задача, необходимая любому пользователю с помощью [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] в Linux должен иметь возможность сделать. Эта задача очень важно для конфигураций группы Доступности.
 
 Например проблем с разрешениями могут существовать в Linux, а также на установок на основе Windows. Тем не менее если вы знакомы с тем, как копировать с одного сервера на Windows может не быть знакомы с как это делается в Linux. Распространенный способ — использовать программу командной строки `scp`, который обозначает безопасного копирования. На самом деле `scp` использует OpenSSH. SSH — это безопасное оболочки. В зависимости от дистрибутива Linux OpenSSH, сам не могут быть установлены. Если это не так, необходимо сначала установить OpenSSH. Дополнительные сведения о настройке OpenSSH см. сведения в статье приведены ссылки на каждое распределение:
--   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-OpenSSH.html)
+-   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
@@ -117,7 +117,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **Документации по брандмауэру:**
--   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Установка [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] пакетов для обеспечения доступности

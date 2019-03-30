@@ -3,17 +3,17 @@ title: Оценка с помощью sp_rxPredict хранимой процед
 description: Создание прогнозов с помощью sp_rxPredict, оценка входных данных к предварительно обученной модели, написанные на языке R на SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a7e55ac47fdb28a18c8a41b3535e67fc8886cfea
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 22f6c48aec0c9434b17ceda0a2b729f6e63bf136
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509631"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645476"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Оценка с sp_rxPredict в SQL Server машинного обучения в реальном времени
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,9 +32,6 @@ ms.locfileid: "58509631"
 2. Загрузите предварительно обученной модели в двоичном формате.
 3. Вы предоставить новые входные данные для оценки, табличном, так и для одной строки, в качестве входных данных в модели.
 4. Для формирования оценок, вызовите [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) хранимой процедуры.
-
-> [!TIP]
-> Пример оценки в реальном времени в действии, см. в разделе [сквозное окончания ссуды списания кредита прогноза построен с помощью Azure HDInsight кластеров Spark и служба SQL Server 2016 R](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
 
 ## <a name="prerequisites"></a>предварительные требования
 
@@ -201,7 +198,5 @@ EXEC sp_rxPredict
 Чтобы отключить функцию в режиме реального времени оценки, откройте командную строку с повышенными привилегиями и выполните следующую команду: `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
 ## <a name="next-steps"></a>Следующие шаги
-
-Пример того, как rxPredict может использоваться для оценки, см. в разделе [сквозное окончания ссуды списания кредита прогноза построен с помощью Azure HDInsight кластеров Spark и служба SQL Server 2016 R](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/).
 
 Дополнительные сведения об оценке в SQL Server см. в разделе [как для создания прогнозов машинного обучения SQL Server](r/how-to-do-realtime-scoring.md).

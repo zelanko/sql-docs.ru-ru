@@ -10,12 +10,12 @@ ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 716aea984073d557e45dc30c1972b2151173fd58
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377122"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658398"
 ---
 # <a name="the-oracle-cdc-databases"></a>Базы данных CDC Oracle
   Экземпляр CDC Oracle связан с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тем же именем на целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта база данных называется базой данных Oracle (или базой данных CDC).  
@@ -73,7 +73,7 @@ ms.locfileid: "58377122"
   
 -   [cdc.xdbcdc_staged_transactions](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_staged_transactions)  
   
-###  <a name="BKMK_Change_Tables_CT"></a> Таблицы изменений (_CT)  
+###  <a name="bkmk_change_tables_ct"></a> Таблицы изменений (_CT)  
  Таблицы изменений создаются на основе зеркальных таблиц. Они содержат информацию об изменениях, которые отслеживаются в базе данных Oracle. Имена этих таблиц формируются в соответствии со следующим соглашением:  
   
  **[cdc].[\<экземпляр_отслеживания>_CT]**  
@@ -82,14 +82,14 @@ ms.locfileid: "58377122"
   
  Запись в таблицы изменений выполняется экземпляром CDC Oracle. Чтение из этих таблиц выполняется специальными функциями с табличными значениями, создаваемыми [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] во время создания экземпляра отслеживания. Например, `fn_cdc_get_all_changes_HR_EMPLOYEES`. Дополнительные сведения об этих функциях CDC см. в разделе [Функции отслеживания измененных данных (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152).  
   
-###  <a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
+###  <a name="bkmk_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  Таблица **[cdc].[lsn_time_mapping]** создается компонентом CDC SQL Server. Ее использование при работе с CDC Oracle отличается от обычного.  
   
  Значения LSN для CDC Oracle, хранящиеся в этой таблице, основаны на значении номера SCN Oracle, связанном с изменением. Первые 6 байтов значения LSN — это исходный номер Oracle SCN.  
   
  Кроме того, при использовании CDC Oracle столбцы времени (`tran_begin_time` и `tran_end_time`) хранят время UTC изменения, а не локальное время, которое используется при выполнении CDC SQL Server. Это гарантирует, что переход на летнее время не оказывает влияния на данные, хранящиеся в lsn_time_mapping.  
   
-###  <a name="BKMK_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
+###  <a name="bkmk_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
  Эта таблица содержит данные конфигурации для экземпляра CDC Oracle. Она обновляется с помощью консоли конструктора CDC. Эта таблица содержит только одну строку.  
   
  В следующей таблице приводится описание столбцов таблицы **cdc.xdbcdc_config** .  
@@ -132,7 +132,7 @@ ms.locfileid: "58377122"
 |CDC_stop_on_breaking_schema_changes|False|-|-|False|Логическое. Значение**True** указывает, что при обнаружении изменения, нарушающего схему, будет произведен останов.<br /><br /> Значение**False** указывает, что необходимо удалить зеркальную таблицу и экземпляр отслеживания.|  
 |source_oracle_home||-|-|False|Может быть задан определенный путь Oracle Home или имя Oracle Home Name, которое экземпляр CDC будет использовать для соединения с Oracle.|  
   
-###  <a name="BKMK_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
+###  <a name="bkmk_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
  Эта таблица содержит сведения о сохраненном состоянии экземпляра CDC Oracle. Состояние отслеживания используется при восстановлении и отработке отказа для мониторинга исправности.  
   
  В следующей таблице описаны столбцы таблицы **cdc.xdbcdc_state** .  
@@ -157,7 +157,7 @@ ms.locfileid: "58377122"
 |read_changes|Количество записей об изменениях, считанных в исходном журнале транзакций Oracle.|  
 |staged_transactions|Число активных в данный момент транзакций, которые занесены в таблицу **cdc.xdbcdc_staged_transactions** .|  
   
-###  <a name="BKMK_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
+###  <a name="bkmk_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
  Эта таблица содержит сведения об операции экземпляра CDC. Сведения, хранящиеся в этой таблице, включают в себя записи об ошибках, важные изменения состояния и записи трассировки. Сведения об ошибках также записываются в журнал событий Windows для обеспечения доступа к ним в том случае, если таблица **cdc.xcbcdc_trace** будет недоступна.  
   
  В следующей таблице приводится описание столбцов таблицы cdc.xdbcdc_trace.  
@@ -172,7 +172,7 @@ ms.locfileid: "58377122"
 |status_message|Сообщение состояния, которое используется в таблице состояний.|  
 |.|Дополнительные данные в тех случаях, когда запись ошибки или трассировки содержит полезную информацию (например, запись о поврежденном журнале).|  
   
-###  <a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
+###  <a name="bkmk_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
  В этой таблице хранятся записи об изменениях для больших и длительных транзакциях до того момента, как будет обнаружено событие фиксации или отката транзакции. Служба CDC Oracle упорядочивает отслеживаемые записи журналов по времени фиксации транзакции, а затем в хронологическом порядке для каждой транзакции. Записи журнала для одной транзакции хранятся в памяти до завершения транзакции, а затем записываются в целевую таблицу изменений или удаляются (в случае отката). Поскольку объем памяти ограничен, большие транзакции записываются в таблицу **cdc.xdbcdc_staged_transactions** , где и хранятся до их завершения. Транзакции также записываются в промежуточную таблицу, когда они выполняются в течение длительного времени. Поэтому при перезапуске экземпляра CDC Oracle не придется повторно считывать старые изменения из журналов транзакций Oracle.  
   
  В следующей таблице приводится описание столбцов таблицы **cdc.xdbcdc_staged_transactions** .  
@@ -187,5 +187,3 @@ ms.locfileid: "58377122"
   
 ## <a name="see-also"></a>См. также:  
  [Конструктор системы отслеживания измененных данных для Oracle компании Attunity](change-data-capture-designer-for-oracle-by-attunity.md)  
-  
-  

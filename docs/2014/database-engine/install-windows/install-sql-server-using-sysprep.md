@@ -10,12 +10,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8ba3763c9ccf28286c61e87f4105c3d3293351dd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371056"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658345"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Установка SQL Server 2014 с помощью SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, доступны в центре установки. На странице **Дополнительно** **центра установки** имеется два параметра: **Подготовка образа изолированного экземпляра[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** и **Завершение образа подготовленного изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. В разделах [Подготовка](#prepare) и [Завершение](#complete) подробно описывается процесс установки. Дополнительные сведения см. в разделе [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
@@ -48,9 +48,9 @@ ms.locfileid: "53371056"
   
 -   [Удаление компонентов из подготовленного экземпляра SQL Server](#RemoveFeatures)  
   
--   [Удаление подготовленного экземпляра](install-sql-server-using-sysprep.md#uninstall)  
+-   [Удаление подготовленного экземпляра](install-sql-server-using-sysprep.md#Uninstall)  
   
--   [Изменение и удаление завершенного экземпляра SQL Server](install-sql-server-using-sysprep.md#bk_modifying_uninstalling)  
+-   [Изменение и удаление завершенного экземпляра SQL Server](install-sql-server-using-sysprep.md#bk_Modifying_Uninstalling)  
   
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
  Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SysPrep поддерживает кластеризованные экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в установке из командной строки. Дополнительные сведения см. в разделе [Что такое Sysprep?](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx).  
@@ -325,5 +325,3 @@ ms.locfileid: "53371056"
 ## <a name="see-also"></a>См. также:  
  [Что такое Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143546)   
  [Как работает Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143547)  
-  
-  

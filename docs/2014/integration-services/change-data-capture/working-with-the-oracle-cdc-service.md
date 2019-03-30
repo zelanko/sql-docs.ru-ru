@@ -10,12 +10,12 @@ ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 90659977d3183108b5d97fe0bc92894f5277bb85
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 2f8854dba3c1d998d572481c285ee75dc933e480
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394413"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658058"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Работа со службой CDC Oracle
   В этом разделе описываются некоторые важные понятия, относящиеся к службе Oracle CDC Service. В разделе описываются следующие понятия.  
@@ -24,7 +24,7 @@ ms.locfileid: "58394413"
   
      В данном разделе описываются таблицы, включаемые в эту базу данных, и их значение для CDC.  
   
--   [Базы данных CDC](#BKMK_CDCdatabas)  
+-   [Базы данных CDC](#BKMK_CDCdatabase)  
   
      В этом разделе приведено краткое описание баз данных CDC. Эти базы данных создаются с помощью консоли конструктора Oracle CDC. Для получения дополнительных сведений о базах данных CDC ознакомьтесь с документацией по консоли конструктора CDC.  
   
@@ -263,5 +263,3 @@ ms.locfileid: "58394413"
 ## <a name="see-also"></a>См. также  
  [Как использовать интерфейс командной строки службы CDC](how-to-use-the-cdc-service-command-line-interface.md)   
  [Как подготовить SQL Server для CDC](prepare-sql-server-for-cdc.md)  
-  
-  

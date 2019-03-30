@@ -10,12 +10,12 @@ ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 52a1bcb820d444e33ab034a09ee486592540e50c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9e1d315ca23b379238a19baf09ac2591d0085fad
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020145"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658088"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Открытие проектов служб Integration Services в клиенте DQS
   Службы [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] позволяют запускать проект очистки в пакетном режиме. Но иногда полезно просмотреть результаты очистки в пакете служб Integration Services, подобно тому, как вы можете просмотреть результаты очистки на вкладке **Просмотр результатов и управление ими** операции очистки в проекте служб DQS. Службы DQS позволяют открывать проекты служб Integration Services в [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] точно так же, как любой другой проект служб DQS, с экрана **Открытие проекта** и интерактивно обрабатывать результаты очистки в проекте служб Integration Services.  
@@ -38,8 +38,6 @@ ms.locfileid: "56020145"
 ####  <a name="Permissions"></a> Permissions  
  Для управления проектом служб Integration Services необходимо иметь роль dqs_kb_editor или dqs_kb_operator в базе данных DQS_MAIN.  
   
- ![Значок стрелки, используемый для ссылки возврата в начало](../2014-toc/media/uparrow16x16.gif "значок стрелки, используемый для ссылки возврата в начало") [в этом разделе](#Intro)  
-  
 ##  <a name="Open"></a> Открытие проекта служб Integration Services  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
@@ -60,10 +58,6 @@ ms.locfileid: "56020145"
   
 6.  После экспорта данных нажмите кнопку **Готово** , чтобы закрыть проект служб Integration Services.  
   
- ![Значок стрелки, используемый для ссылки возврата в начало](../2014-toc/media/uparrow16x16.gif "значок стрелки, используемый для ссылки возврата в начало") [в этом разделе](#Intro)  
-  
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Преобразование "Очистка DQS"](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
  [Проекты служб Integration Services (SSIS)](../integration-services/integration-services-ssis-projects-and-solutions.md)  
-  
-  

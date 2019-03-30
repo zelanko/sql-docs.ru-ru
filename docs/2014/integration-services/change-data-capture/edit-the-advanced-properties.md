@@ -12,12 +12,12 @@ ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0f6922172a21ac41e3afe003d5f7307a5424bf13
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 320530eeb7bad37f7fd40bab5df9a9af8e9b1d82
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381602"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657718"
 ---
 # <a name="edit-the-advanced-properties"></a>Изменение дополнительных свойств
   На вкладке **Дополнительно** можно добавлять особые свойства к экземпляру CDC.  
@@ -31,10 +31,8 @@ ms.locfileid: "58381602"
     > [!NOTE]  
     >  Дополнительные свойства можно просмотреть в средстве просмотра. При использовании средства просмотра отображаемые в нем данные доступны только для чтения. В средстве просмотра отображается также список отслеживаемых столбцов из таблицы.  
   
- Описание свойств, которые можно ввести, приведены в таблице доступных свойств в разделе [cdc.xdbcdc_config](the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config).  
+ Описание свойств, которые можно ввести, приведены в таблице доступных свойств в разделе [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config).  
   
 ## <a name="see-also"></a>См. также  
  [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [Как изменить свойства экземпляра CDC](how-to-edit-the-cdc-instance-properties.md)  
-  
-  

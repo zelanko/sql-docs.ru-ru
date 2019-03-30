@@ -3,17 +3,17 @@ title: SQL Server R и Python руководств - машинного обуч
 description: Примеры и руководства по R и Python, создание сценариев в службах машинного обучения SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2b30daadd23cbea244576c461ec783e67b2189cf
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6d68d7f36ea6539142bab0ea0e4b50ef6dca8444
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511051"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645406"
 ---
 # <a name="sql-server-machine-learning-tutorials-in-r-and-python"></a>Руководства машинного обучения SQL Server в R и Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -72,7 +72,6 @@ ms.locfileid: "58511051"
 | [Выполнение клиента кластеризации с помощью Python и SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | Узнайте, как использовать алгоритм методом k-средних для выполнения без учителя кластеризации клиентов. В этом примере используется Python языка в базе данных.| SQL Server 2017 |
 | [Создание прогнозной модели с помощью R и SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | Узнайте, как ski использование машинного обучения для прогнозирования будущих проката, что позволяет бизнес-плана и сотрудников для удовлетворения будущего спроса. В этом примере используются алгоритмы Майкрософт для создания модели логистической регрессии и модели дерева принятия решений. | 
 | [Создание прогнозной модели с помощью Python и SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | Построено ski аренды анализа с помощью Python, которые помогут в планировании для будущего спроса. В этом примере использует новую библиотеку Python, **revoscalepy**, для создания модели линейной регрессии. | 
-| [Как использовать Tableau со службами машинного обучения SQL Server](https://blogs.msdn.microsoft.com/mlserver/2017/12/14/how-to-use-tableau-with-sql-server-machine-learning-services-with-r-and-python/) | Анализ социальных и создание диаграмм Tableau, с помощью SQL Server и R. | 
 
 <a name="bkmk_solutions"></a>
 
@@ -86,6 +85,4 @@ ms.locfileid: "58511051"
 + [прогнозирование ухода клиентов;](https://gallery.cortanaanalytics.com/Tutorial/Customer-Churn-Prediction-Template-with-SQL-Server-R-Services-1)
 + [профилактическое обслуживание.](https://gallery.cortanaanalytics.com/Tutorial/Predictive-Maintenance-Template-with-SQL-Server-R-Services-1)
 + [Спрогнозировать продолжительность госпитализации в больнице](https://gallery.cortanaintelligence.com/Solution/Predicting-Length-of-Stay-in-Hospitals-1)
-
-Дополнительные сведения см. на странице [Шаблоны машинного обучения для служб SQL Server 2016 R Services](https://blogs.technet.microsoft.com/machinelearning/2016/03/23/machine-learning-templates-with-sql-server-2016-r-services/).
 

@@ -10,12 +10,12 @@ ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 823967123c459112c77fb460eb10b011895110e8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 07f438f86a22b866351a0b83ee7634338f3ad2cd
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374557"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657848"
 ---
 # <a name="install-sql-server-2014-servicing-updates"></a>Установка обновлений для обслуживания SQL Server 2014
   В этом разделе описывается установка обновлений для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. В разделе рассматриваются следующие вопросы.  
@@ -46,7 +46,7 @@ ms.locfileid: "53374557"
   
 ## <a name="see-also"></a>См. также  
  [Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41;](install-sql-server-from-the-installation-wizard-setup.md)   
- [Добавление компонентов к экземпляру SQL Server 2014 &#40;установки&#41;](add-features-to-an-instance-of-sql-server-setup.md)   
+ [Установка обновлений из командной строки](installing-updates-from-the-command-prompt.md) [Добавление компонентов в экземпляр SQL Server 2014 &#40;установки&#41;](add-features-to-an-instance-of-sql-server-setup.md)   
  [Удаление установки SQL Server 2014](repair-a-failed-sql-server-installation.md)  
   
   

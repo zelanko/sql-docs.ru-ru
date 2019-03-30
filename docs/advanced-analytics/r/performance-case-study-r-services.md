@@ -2,17 +2,17 @@
 title: Производительность служб R SQL Server — результаты и ресурсы — SQL Server службы машинного обучения
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4b71afb8f373eed4f49bc2cf0ea1c6086b6f121d
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 392a6da09827355e6bc9a901b0e4580e5eb72bf5
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510761"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645556"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Производительность для служб R: результаты и ресурсы
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -337,10 +337,8 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 По этим причинам не существует не один решения по устранению рисков на этот раз начальной загрузки как влияние на производительность существенно изменяется в зависимости от задачи. Например кэширование выполняется для одной строки оценки в пакетах; Таким образом последовательные операции оценки выполняется гораздо быстрее и среды выполнения R, ни модель загружается. Можно также использовать [собственной оценки](../sql-native-scoring.md) следует избегать загрузки среды выполнения R полностью.
 
-Для обучаете большие модели или оценки в больших пакетах, могут определяться мала по сравнению с выигрыш без перемещения данных или потоковой передачи и параллельной обработки. Ознакомьтесь с этими последние записи блогов и примеры для увеличения производительности рекомендации:
+Для обучаете большие модели или оценки в больших пакетах, могут определяться мала по сравнению с выигрыш без перемещения данных или потоковой передачи и параллельной обработки. См. в записи блога Дополнительные сведения:
 
-+ [Классификация кредита, с помощью SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
-+ [Раннее клиент сталкивается со службами R](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
 + [С помощью языка R для обнаружения мошенничества в 1 миллион транзакций в секунду](https://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## <a name="resources"></a>Ресурсы

@@ -12,12 +12,12 @@ ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1a6257a4f99637fd3be8d11f2848741806c10f2a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9f9969630f8fe9f665a04575af8670ddb1af1b3c
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387812"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657708"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
   Можно использовать консоль настройки службы CDC для управления конкретной службой CDC.  
@@ -28,7 +28,7 @@ ms.locfileid: "58387812"
   
 2.  Выберите службу CDC, с которой требуется выполнить действия.  
   
-     Также можно щелкнуть правой кнопкой мыши службу CDC, с которой требуется начать работу, и выбрать нужное действие. См. раздел [Что можно сделать с помощью службы CDC Service](manage-an-oracle-cdc-service.md#bkmk_whatcandowithcdcservice).  
+     Также можно щелкнуть правой кнопкой мыши службу CDC, с которой требуется начать работу, и выбрать нужное действие. См. раздел [Что можно сделать с помощью службы CDC Service](manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
   
  **OR**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "58387812"
   
 2.  В средней части консоли настройки службы CDC выберите службу, с которой требуется начать работу.  
   
-     Также можно щелкнуть правой кнопкой мыши службу CDC, с которой требуется начать работу, и выбрать нужное действие. См. раздел [Что можно сделать с помощью службы CDC Service](manage-an-oracle-cdc-service.md#bkmk_whatcandowithcdcservice).  
+     Также можно щелкнуть правой кнопкой мыши службу CDC, с которой требуется начать работу, и выбрать нужное действие. См. раздел [Что можно сделать с помощью службы CDC Service](manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
   
 ##  <a name="BKMK_WhatcandowithCDCService"></a> Что можно сделать с помощью службы CDC Service  
  При работе со службой CDC можно выполнять следующие действия.  
@@ -59,5 +59,3 @@ ms.locfileid: "58387812"
   
 ## <a name="see-also"></a>См. также:  
  [Как управлять локальной службой CDC](how-to-manage-a-local-cdc-service.md)  
-  
-  

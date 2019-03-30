@@ -11,12 +11,12 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 98801ffe8ea0066bc425622a0f62e7306a217ff2
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 35ba90efe3233c34f710dda0e35b7108352df421
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305942"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658208"
 ---
 # <a name="reference-data-services-in-dqs"></a>Службы эталонных данных в DQS
 
@@ -35,7 +35,7 @@ ms.locfileid: "58305942"
 -   Поддерживает использование эталонных данных из Windows Azure Marketplace, а также непосредственно от сторонних поставщиков эталонных данных.  
   
 ##  <a name="Marketplace"></a> Использование эталонных данных из Windows Azure Marketplace  
- DQS поддерживает использование эталонных данных из Windows Azure Marketplace, позволяя поставщикам содержания предоставлять службы эталонных данных через Marketplace. Marketplace — это служба Microsoft, которая предоставляет отдельный рынок и канал доставки для высококачественных данных и приложений в виде облачных служб. Дополнительные сведения о Marketplace см. в статье [Сведения о Windows Azure Marketplace](https://go.microsoft.com/fwlink/?LinkId=211291) (https://go.microsoft.com/fwlink/?LinkId=211291)).  
+ DQS поддерживает использование эталонных данных из Windows Azure Marketplace, позволяя поставщикам содержания предоставлять службы эталонных данных через Marketplace. Marketplace — это служба Microsoft, которая предоставляет отдельный рынок и канал доставки для высококачественных данных и приложений в виде облачных служб. Дополнительные сведения о Marketplace см. в разделе [сведения о Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/about) (https://azuremarketplace.microsoft.com/about).
   
  Органичная интеграция между Marketplace и DQS упрощает шаги, связанные с обнаружением, исследованием и получением информации для проектов служб DQS из среды служб DQS. Данные из DQS обрабатываются, что помогает пользователям DQS обеспечивать высокое качество данных за счет нового подхода — использования DQS, Marketplace и поставщиков служб ссылочных данных вместе друг с другом.  
   

@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: cab40f66976677fee78e79de2f2996653aee9446
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 72ca07a14495261d61601c4acd503790697ce6a4
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160632"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658098"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Настройка кластера SLES для группы доступности SQL Server
 
@@ -221,7 +221,7 @@ crm configure property cluster-recheck-interval=2min
 
 Узел уровня ограждения гарантирует, что узел не все ресурсы. Это делается путем сброса параметров узла и его реализация Pacemaker вызывается STONITH (что означает «устранение неисправностей другой узел в заголовке»). Pacemaker поддерживает разнообразные полезные ограждения устройств, таких как источник бесперебойного питания питания или управления картами для серверов.
 
-Дополнительные сведения см. в разделе [кластеров Pacemaker с нуля](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [ограждения и Stonith](https://clusterlabs.org/doc/crm_fencing.html) и [SUSE HA документации: Ограждения и STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+Дополнительные сведения см. в разделе [кластеров Pacemaker с нуля](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/), [ограждения и Stonith](https://clusterlabs.org/doc/crm_fencing.html) и [SUSE HA документации: Ограждения и STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
 
 Во время инициализации кластера STONITH будет отключен, если конфигурация не обнаруживается. Его можно включить позже, выполнив следующую команду:
 
