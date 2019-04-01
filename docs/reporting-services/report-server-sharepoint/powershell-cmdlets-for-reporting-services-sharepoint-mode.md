@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b9ae80895fa2cfd316e455e5084e5c1330365a62
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: b584c7fc3ffee49bf2d63fd95c8a8e23f0b09013
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504292"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657689"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Командлеты PowerShell для режима интеграции служб Reporting Services с SharePoint
 
@@ -34,7 +34,7 @@ ms.locfileid: "52504292"
 
 ## <a name="cmdlet-summary"></a>Обзор командлетов
 
- Для выполнения командлетов необходимо открыть консоль управления SharePoint. Можно также использовать редактор графического пользовательского интерфейса, который включен в Microsoft Windows, **интегрированная среда скриптов Windows PowerShell (ISE)**. Дополнительные сведения см. в разделе [Запуск Windows PowerShell на Windows Server](https://technet.microsoft.com/library/hh847814.aspx). В следующих сводках по командлетам упоминания "баз данных" приложения службы относятся ко всем базам данных, созданным и используемым приложением службы Reporting Services. Это включает базы данных конфигурации, предупреждений и временные базы данных.  
+ Для выполнения командлетов необходимо открыть консоль управления SharePoint. Можно также использовать редактор графического пользовательского интерфейса, который включен в Microsoft Windows, **интегрированная среда скриптов Windows PowerShell (ISE)**. Дополнительные сведения см. в разделе [Запуск Windows PowerShell на Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). В следующих сводках по командлетам упоминания "баз данных" приложения службы относятся ко всем базам данных, созданным и используемым приложением службы Reporting Services. Это включает базы данных конфигурации, предупреждений и временные базы данных.  
   
  Если при вводе примеров PowerShell отображается сообщение об ошибке следующего вида:  
   
@@ -94,7 +94,7 @@ ms.locfileid: "52504292"
 |Mount-SPRSDatabase|Подключает базы данных для приложения служб Reporting Services.|  
 |New-SPRSDatabase|Создает базы данных приложения службы для указанного приложения служб Reporting Services.|  
 |Get-SPRSDatabaseCreationScript|Выводит на экран скрипт создания базы данных для приложения служб Reporting Services. Затем скрипт можно запустить в среде SQL Server Management Studio.|  
-|Get-SPRSDatabase|Возвращает одну или несколько баз данных приложения службы Reporting Services. Используйте команду для получения идентификатора базы данных служебного приложения, чтобы вы могли использовать Set-SPRSDatabase comdlet для изменения параметров, например `querytimeout`. Смотрите примеры в разделе [Получение и задание свойств базы данных приложения служб Reporting Services](#bkmk_example_db_properties).|  
+|Get-SPRSDatabase|Возвращает одну или несколько баз данных приложения службы Reporting Services. Используйте команду для получения идентификатора базы данных служебного приложения, чтобы вы могли использовать Set-SPRSDatabase comdlet для изменения параметров, например `querytimeout`. Смотрите примеры в разделе [Получение и задание свойств базы данных приложения служб Reporting Services](#get-and-set-properties-of-the-reporting-service-application-database).|  
 |Get-SPRSDatabaseRightsScript|Выводит на экран скрипт определения прав базы данных для приложения служб Reporting Services. Запрашивает необходимые сведения о пользователе и базе данных, а затем возвращает код Transact-SQL, который можно выполнить для изменения разрешений. Затем этот скрипт можно запустить в среде SQL Server Management Studio.|  
 |Get-SPRSDatabaseUpgradeScript|Выводит скрипт обновления базы данных на экран. Скрипт обновит базы данных приложения служб Reporting Services до версии текущей установки служб Reporting Services.|  
   

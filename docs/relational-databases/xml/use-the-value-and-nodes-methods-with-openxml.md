@@ -12,15 +12,15 @@ helpviewer_keywords:
 - value method [XML in SQL Server]
 - nodes method [XML in SQL Server]
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f57a3a564318a0564b80596cc2220fce6d8fafd9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dabca94aba07a2d41a70bbee5343fe1eeb61658
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749732"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509901"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>Использование методов value() и nodes() совместно с OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47749732"
   
  Метод **nodes()** позволяет получать экземпляры специального типа данных **xml**, для каждого из которых контекст сопоставлен с другим выбранным узлом. Этот вид экземпляра XML поддерживает методы **query()**, **value()**, **nodes()** и **exist()** и может быть использован в статистических функциях **count(\*)**. Все другие способы его использования приводят к ошибке.  
   
-## <a name="example-using-nodes"></a>Пример. Использование nodes()  
+## <a name="example-using-nodes"></a>Пример использование метода nodes()  
  Предположим, что требуется извлечь имена и фамилии авторов, которых зовут не «David». Кроме того, требуется извлечь эту информацию как набор строк, содержащий два столбца: FirstName и LastName. Используя методы **nodes()** и **value()** , можно сделать это следующим образом:  
   
 ```  
@@ -42,7 +42,7 @@ WHERE  nref.exist('first-name[. != "David"]') = 1
   
  SQL Server 2000 позволяет создать набор строк на основе экземпляра XML при помощи метода **OpenXml()**. При этом можно указать реляционную схему набора строк и способ сопоставления значений экземпляра XML со столбцами набора строк.  
   
-## <a name="example-using-openxml-on-the-xml-data-type"></a>Пример. Использование OpenXml() с типом данных xml  
+## <a name="example-using-openxml-on-the-xml-data-type"></a>Пример использование метода OpenXml() с типом данных xml  
  Запрос из предыдущего примера можно переписать с методом **OpenXml()** так, как показано ниже. С этой целью создается курсор, считывающий каждый экземпляр XML в переменную XML и вызывающий для нее метод OpenXml():  
   
 ```  

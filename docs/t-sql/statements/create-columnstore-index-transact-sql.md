@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c25ae621c281e0bafd3c2c7e683a05cfc55746b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 15688c3767b691e8a59568143db390eb82dd3993
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128374"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658428"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -735,7 +735,7 @@ WITH ( DROP_EXISTING = ON);
 ```  
   
 ### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>Д. Преобразование таблицы columnstore обратно в кучу rowstore  
- Используйте [DROP INDEX (SQL Server PDW)](https://msdn.microsoft.com/f59cab43-9f40-41b4-bfdb-d90e80e9bf32), чтобы удалить кластеризованный индекс columnstore и преобразовать таблицу в кучу rowstore. В этом примере таблица cci_xDimProduct преобразуется в кучу rowstore. Таблица остается распределенной, но хранится в виде кучи.  
+ Используйте [DROP INDEX (SQL Server PDW)](drop-index-transact-sql.md), чтобы удалить кластеризованный индекс columnstore и преобразовать таблицу в кучу rowstore. В этом примере таблица cci_xDimProduct преобразуется в кучу rowstore. Таблица остается распределенной, но хранится в виде кучи.  
   
 ```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  

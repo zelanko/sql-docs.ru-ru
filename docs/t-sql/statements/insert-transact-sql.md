@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71e72818b9ab5269d898f00a4110936478da35af
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: e3a4da06849b245ba72d3ac87d5db04309f10823
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802370"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658388"
 ---
 # <a name="insert-transact-sql"></a>Инструкция INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -999,7 +999,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 #### <a name="y-using-a-label-and-a-query-hint-with-the-insert-statement"></a>Ш. Использование метки и указания запроса с инструкцией INSERT  
- Этот запрос показывает базовый синтаксис для использования метки и указания на соединение с запросом с инструкцией INSERT. После отправки запроса к узлу управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполняющемуся на вычислительных узлах, будет применена стратегия хэш-соединения при создании плана запроса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения об указаниях по соединению и использованию предложения OPTION см. в разделе [OPTION (SQL Server PDW)](https://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
+ Этот запрос показывает базовый синтаксис для использования метки и указания на соединение с запросом с инструкцией INSERT. После отправки запроса к узлу управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполняющемуся на вычислительных узлах, будет применена стратегия хэш-соединения при создании плана запроса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения об указаниях по соединению и использованию предложения OPTION см. в разделе [OPTION (SQL Server PDW)](../../t-sql/queries/option-clause-transact-sql.md).  
   
 ```sql
 -- Uses AdventureWorks  

@@ -23,15 +23,15 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1a8113ba4f9df20fcf11a7f4662abb1f2a24b5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8e4679cb4627f5366327c02f6b30db32d3b2610
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841288"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510921"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Сравнение типизированного и нетипизированного XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,14 +69,14 @@ ms.locfileid: "47841288"
   
  В следующих примерах для указания имени коллекции XML-схем используется обозначение, состоящее из двух частей. Первая часть — это имя схемы, вторая часть — имя коллекции XML-схем.  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Пример. Связывание коллекции схем с переменными типа xml  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Пример Связывание коллекции схем с переменными типа xml  
  В приведенном ниже примере создается переменная типа **xml**, с которой затем связывается коллекция схем. Коллекция схем, указанная в примере, уже импортирована в базу данных **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Пример. Указание схемы для столбца типа xml  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Пример Указание схемы для столбца типа xml  
  В приведенном ниже примере создается таблица со столбцом типа **xml** и указывается схема для этого столбца.  
   
 ```  
@@ -85,7 +85,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Пример. Передача параметра типа xml в хранимую процедуру  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Пример Передача параметра типа xml в хранимую процедуру  
  В приведенном ниже примере параметр типа **xml** передается хранимой процедуре и указывается схема для переменной.  
   
 ```  
@@ -107,7 +107,7 @@ AS
   
  В иерархии типов данных данные **xml** отображаются ниже **sql_variant** и определенных пользователем типов, но выше всех встроенных типов.  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Пример. Указание аспектов для ограничения типизированного XML-столбца  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Пример Указание аспектов для ограничения типизированного XML-столбца  
  На типизированные столбцы **xml** можно наложить ограничение, допускающее в них только отдельные элементы высшего уровня для каждого сохраненного в них экземпляра. , для указания дополнительного аспекта `DOCUMENT` при создании таблицы, как показано в следующем примере:  
   
 ```  
@@ -159,7 +159,7 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
 ## <a name="see-also"></a>См. также:  
  [Создание экземпляров XML-данных](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [методов типа данных xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [Методы типа данных XML](../../t-sql/xml/xml-data-type-methods.md)   
  [Язык модификации XML-данных (XML DML)](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   
  [Данные XML (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)  
   

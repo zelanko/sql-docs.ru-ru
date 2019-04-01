@@ -11,12 +11,12 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3335e474819d43854bc3cf59158d04a78649c130
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 083eda191d51ec7043f24511d03c90beff9bfe84
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974363"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657739"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Заметки о выпуске для драйвера Microsoft JDBC
 
@@ -213,7 +213,7 @@ Microsoft JDBC Driver 6.2 для SQL Server полностью соответс�
 >
 > Еще одно улучшение обновляется версия зависимые библиотеки Azure Key Vault 1.0.0 и новый JAR-файлы (версии 6.2.2) были выпущены на 19 октября 2017 г.
 >
-> Загрузите последние обновления для JDBC Driver 6.2 из [центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2), и [центрального репозитория Maven](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Обновите ваши проекты для использования 6.2.2 выпуска JAR-файлы. Дополнительные сведения см. заметки о выпуске [6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) и [6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2).
+> Загрузите последние обновления для JDBC Driver 6.2 из [центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2), и [центрального репозитория Maven](https://search.maven.org/search?q=g:com.microsoft.sqlserver). Обновите ваши проекты для использования 6.2.2 выпуска JAR-файлы. Дополнительные сведения см. заметки о выпуске [6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) и [6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2).
 
 ### <a name="azure-ad-support-for-linux"></a>Поддержка Azure AD для Linux
 

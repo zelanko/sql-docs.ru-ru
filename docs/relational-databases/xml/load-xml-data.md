@@ -11,15 +11,15 @@ helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ca351da87aaead7fb4a7829b0cc28d16babb373
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eaf25e09c5f7c8706c685875ebc7eb39bce95fcf
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538372"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511041"
 ---
 # <a name="load-xml-data"></a>Загрузка XML-данных
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52538372"
 ## <a name="bulk-loading-xml-data"></a>Массовая загрузка XML-данных  
  Массовую загрузку XML-данных на сервер можно осуществить при помощи реализованных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]средств массовой загрузки, таких как bcp. Инструкция OPENROWSET позволяет загрузить данные в XML-столбец из файлов. Это показано в следующем примере.  
   
-##### <a name="example-loading-xml-from-files"></a>Пример. Загрузка XML-данных из файлов  
+##### <a name="example-loading-xml-from-files"></a>Пример загрузка XML-данных из файлов  
  Следующий пример показывает, как вставить строку в таблицу T. Значение XML-столбца загружается из файла «C:\MyFile\xmlfile.xml» как объект CLOB, а целочисленному столбцу назначается значение 10.  
   
 ```  
@@ -54,7 +54,7 @@ FROM    (SELECT *
   
 -   Чтобы явно задать кодировку, воспользуйтесь типом **varbinary()** , который не зависит от кодовых страниц, либо символьным типом для соответствующей кодовой страницы. После этого назначьте данные XML-столбцу, переменной или параметру.  
   
-### <a name="example-explicitly-specifying-an-encoding"></a>Пример. Явное указание кодировки  
+### <a name="example-explicitly-specifying-an-encoding"></a>Пример явное указание кодировки  
  Предположим, что есть XML-документ vcdoc, хранящийся как **varchar(max)** , который не объявлен явно как XML. Приведенная ниже инструкция добавляет объявление XML с кодировкой "iso8859-1", присоединяет к нему XML-документ, приводит результат к типу **varbinary(max)** (чтобы сохранить двоичное представление) и, наконец, приводит его к типу XML. Это позволяет процессору XML выполнять синтаксический анализ данных в соответствии с указанной кодировкой «iso8859-1» и создавать для строковых значений соответствующее представление UTF-16.  
   
 ```  

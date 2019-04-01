@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7745fd3b583a1044e670487570bdf97f3a85673f
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.openlocfilehash: 464ad33fd322226d68c79b364a72bd55de0d62b2
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434458"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657958"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Создание и хранение главных ключей столбцов (постоянное шифрование)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "58434458"
 
 ### <a name="create-a-self-signed-certificate-using-powershell"></a>Создание самозаверяющего сертификата с помощью PowerShell
 
-Для создания самозаверяющего сертификата используется командлет [New-SelfSignedCertificate](https://technet.microsoft.com/library/hh848633.aspx) . В примере ниже показано создание сертификата, который можно использовать в качестве главного ключа столбца для постоянного шифрования.
+Для создания самозаверяющего сертификата используется командлет [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) . В примере ниже показано создание сертификата, который можно использовать в качестве главного ключа столбца для постоянного шифрования.
 
 ```
 # New-SelfSignedCertificate is a Windows PowerShell cmdlet that creates a self-signed certificate. The below examples show how to generate a certificate that can be used as a column master key for Always Encrypted.
@@ -94,7 +94,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 Если главный ключ столбца является сертификатом, хранящимся в расположении хранилища сертификатов под учетной записью *текущего пользователя* , необходимо экспортировать сертификат с закрытым ключом и импортировать его в расположение хранилища сертификатов для всех учетных записей пользователей, где размещены приложения, которые будут шифровать или расшифровывать данные, хранящиеся в зашифрованных столбцах, или средства для настройки постоянного шифрования и для управления ключами постоянного шифрования (на всех компьютерах с этими приложениями или средствами). Настройка разрешений не требуется — после входа в систему пользователь может обращаться ко всем сертификатам в расположении хранилища сертификатов текущего пользователя.
 
 #### <a name="using-powershell"></a>Использование PowerShell
-Для импорта и экспорта сертификата используются командлеты [Import-PfxCertificate](https://msdn.microsoft.com/library/hh848625.aspx) и [Export-PfxCertificate](https://msdn.microsoft.com/library/hh848635.aspx) .
+Для импорта и экспорта сертификата используются командлеты [Import-PfxCertificate](/powershell/module/pkiclient/import-pfxcertificate) и [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) .
 
 #### <a name="using-microsoft-management-console"></a>Использование консоли управления (MMC) 
 

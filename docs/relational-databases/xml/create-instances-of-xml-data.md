@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9a377c8ba73ed505db56c83704099aa0f7b9aac
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9ac472b720f8c4262b657c35e2c363bae73687ab
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670453"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511551"
 ---
 # <a name="create-instances-of-xml-data"></a>Создание экземпляров XML-данных
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  Если параметр *style* не используется или его значение установлено в 0, незначащий пробел не сохраняется для преобразования экземпляра xml DT. Дополнительные сведения о том, как использовать оператор CONVERT и его параметр *style* при преобразовании строковых данных в экземпляр xml DT, см. в статье [CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Пример: приведение строкового значения к типизированному значению xml и присваивание его столбцу  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Пример приведение строкового значения в типизированный XML и назначение его в столбец  
  Следующий пример приводит строковую переменную, содержащую фрагмент XML, в тип данных **xml** и затем сохраняет его в **xml** -столбец:  
   
 ```  
@@ -123,7 +123,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Пример: преобразование строкового значения в типизированное значение xml и присваивание его переменной  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Пример преобразование строкового значения в типизированный XML и присвоение его переменной  
  В следующем примере строка преобразовывается в тип **xml** и присваивается переменной типа **xml** :  
   
 ```  

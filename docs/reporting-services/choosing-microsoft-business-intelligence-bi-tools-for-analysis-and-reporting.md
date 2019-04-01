@@ -9,12 +9,12 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 586a8623e202674cdab644ac882be3ed45adc62a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+ms.openlocfilehash: 3acb11029c767efb3be21274d27ab271a5140793
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293999"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658078"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Средства Microsoft Business Intelligence (BI) для анализа и отчетности
 
@@ -22,7 +22,7 @@ ms.locfileid: "56293999"
 
 В следующей таблице показано сопоставление рабочих нагрузок для анализа и отчетов со средствами бизнес-аналитики Майкрософт, которые лучше всего подходят для этих рабочих нагрузок. Дополнительные сведения о продукте, щелкните приведенную в таблице ссылку на продукт.  
   
- Чтобы ознакомиться с кратким описанием этих средств и решить, какие из них подходят для вас, см. раздел [Общие сведения о средствах бизнес-аналитики Майкрософт](https://msdn.microsoft.com/library/dn655131.aspx).  
+ Чтобы ознакомиться с кратким описанием этих средств и решить, какие из них подходят для вас, см. раздел [Общие сведения о средствах бизнес-аналитики Майкрософт](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Introducing_Microsoft_BI_Tools.docx).
   
 |Рабочие нагрузки|Пользователь|||Средства бизнес-аналитики|||  
 |---------------|----------|-|-|--------------|-|-|  

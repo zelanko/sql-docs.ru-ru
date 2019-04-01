@@ -1,7 +1,7 @@
 ---
 title: Обзор драйверов Майкрософт для PHP для SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a879746757f7c5c1f9692d0341ddc5bedb4e5bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2129745a8732fba882da6da1caf22e80df11f47
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682382"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645486"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Обзор драйверов Майкрософт для PHP для SQL Server
 
@@ -31,16 +31,19 @@ ms.locfileid: "47682382"
 |Раздел|Описание|  
 |---------|---------------|  
 | ![Загрузки стрелка вниз обведены](../../ssdt/media/download.png)[выполнять загрузку драйверов для PHP для SQL Server](download-drivers-php-sql-server.md) | Ссылки на загрузку драйверов Майкрософт для PHP для SQL Server. |
-|[Заметки о выпуске драйверов Майкрософт для PHP для SQL Server](../../connect/php/release-notes-for-the-php-sql-driver.md)|Содержит список функций, которые были добавлены для версий 4.0, 3.2, 3.1, 3.0 и 2.0.|  
+|[Заметки о выпуске драйверов Майкрософт для PHP для SQL Server](../../connect/php/release-notes-php-sql-driver.md)|Содержит список функций, которые были добавлены для версий 4.0, 3.2, 3.1, 3.0 и 2.0.|  
 |[Ресурсы поддержки по драйверам Майкрософт для PHP для SQL Server](../../connect/php/support-resources-for-the-php-sql-driver.md)|Содержит ссылки на ресурсы, которые могут оказаться полезными при разработке приложений, использующих [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|  
 |[Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)|Содержит информацию, которая может оказаться полезной при запуске примеров кода, приведенных в этой документации.|  
-  
-## <a name="reference"></a>Справочник  
+| &nbsp; | &nbsp; |
+
+## <a name="reference"></a>Справочник
+
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 [Справочник по драйверу PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  
 [Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-  
-## <a name="see-also"></a>См. также:  
+
+## <a name="see-also"></a>См. также:
+
 [Приступая к работе с драйверами Майкрософт для PHP для SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)

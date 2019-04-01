@@ -16,14 +16,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 450e93877ecabb524e5307a5ec940de32859ead6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d12e2afd2e2cf7e7558b832d97a986ad9c8ad943
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656954"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478119"
 ---
 # <a name="event-tracing-for-windows-target"></a>Цель «Средство трассировки событий для Windows»
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Прежде чем использовать средство трассировки событий для Windows (ETW) в качестве назначения, рекомендуется сначала попрактиковаться в работе с данным средством. Трассировка событий Windows используется совместно с расширенными событиями или в качестве потребителя расширенных событий. Следующие внешние ссылки помогут получить начальные сведения о трассировке событий Windows.  

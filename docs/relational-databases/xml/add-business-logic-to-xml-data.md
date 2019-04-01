@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c7198701d6a31f657be1a79f78f03a0641642ace
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd30df2ef65fcbdfa2118321b5e7c723b56316e7
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656812"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511561"
 ---
 # <a name="add-business-logic-to-xml-data"></a>Добавление бизнес-логики для XML-данных
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47656812"
   
 -   Можно создать хранимые процедуры и функции Transact-SQL, инициирующие обработку XML-столбца в соответствии с бизнес-потребностями.  
   
-## <a name="example-applying-xsl-transformation"></a>Пример. Применение преобразования XSL  
+## <a name="example-applying-xsl-transformation"></a>Пример Применение преобразования XSL  
  Рассмотрим функцию CLR **TransformXml()** , которая принимает экземпляр типа данных **xml** и находящееся в файле преобразование XSL, применяет преобразование к XML-данным и возвращает результат преобразования. Вот ее основа, написанная на C#:  
   
 ```  

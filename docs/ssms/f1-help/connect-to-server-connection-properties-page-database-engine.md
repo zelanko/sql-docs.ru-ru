@@ -14,12 +14,12 @@ ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 534691457d3365ca8fe676b5fba0fbcef97da46e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0f0ac1d6f89a5612144037e83db3e548f9140a66
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695699"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657509"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Соединение с сервером (страница "Свойства подключения") ядра СУБД
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51695699"
   
 При соединении с экземпляром ядра СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]необходимо использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указать базу данных в диалоговом окне **Соединение с сервером** на вкладке **Свойства соединения** . Обязательно установите флажок **Шифрование соединения** .  
   
-По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соединяется с базой данных **master**. Если при подключении к [!INCLUDE[ssSDS](../../includes/sssds-md.md)] указать пользовательскую базу данных, то в обозревателе объектов будет показана только эта база данных и ее объекты. Если же подключиться к **master**, можно будет увидеть все базы данных. Дополнительные сведения см. в разделе [Общие сведения о базе данных SQL Windows Azure](https://go.microsoft.com/fwlink/?LinkId=163948).  
+По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соединяется с базой данных **master**. Если при подключении к [!INCLUDE[ssSDS](../../includes/sssds-md.md)] указать пользовательскую базу данных, то в обозревателе объектов будет показана только эта база данных и ее объекты. Если же подключиться к **master**, можно будет увидеть все базы данных. Дополнительные сведения см. в статье [Общие сведения о Базе данных SQL Microsoft Azure](/azure/sql-database/sql-database-technical-overview).  
   
 **Сетевой протокол**  
 Выберите протокол из списка. Доступные клиентские протоколы настраиваются в разделе "Управление компьютером" — "Конфигурации клиентской сети".  

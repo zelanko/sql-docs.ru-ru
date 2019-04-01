@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3d911c26eee5893d6817fe98b7a982e2ce25316f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 185c03ef5c5ffdd35a1d32df6fecb29568d5ab82
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133214"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657808"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Соединение с компонентом Database Engine с использованием расширенной защиты
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "54133214"
   
 -   [Интегрированная проверка подлинности Windows с расширенной защитой](https://msdn.microsoft.com/library/dd639324.aspx)  
   
--   [Советы по безопасности от Microsoft (973811), расширенная защита для проверки подлинности](https://www.microsoft.com/technet/security/advisory/973811.mspx)  
+-   [Советы по безопасности от Microsoft (973811), расширенная защита для проверки подлинности](/security-updates/SecurityAdvisories/2009/973811)
   
 ## <a name="settings"></a>Настройки  
  Имеются три параметра соединения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , влияющие на привязку служб и привязку каналов. Эти параметры можно настроить с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или с помощью WMI, для их просмотра можно воспользоваться аспектом **Параметры протокола сервера** управления на основе политик.  

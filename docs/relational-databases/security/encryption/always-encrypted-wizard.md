@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 696d3bfc454e396f8cc590d3178f8ae54b89128a
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
+ms.openlocfilehash: 5007955504a0eb6501ee32600e9d4e86bc9e1feb
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805720"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657649"
 ---
 # <a name="always-encrypted-wizard"></a>Мастер постоянного шифрования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "54805720"
  
    - **Хранение главного ключа в AKV** : дополнительные сведения см. в статье [Приступая к работе с хранилищем ключей Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).  
  
- - Чтобы создать главный ключ столбца в хранилище ключей Azure, у пользователя должны быть разрешения **WrapKey**, **UnwrapKey**, **Verify**и **Sign** для хранилища ключей. Также могут потребоваться разрешения **Get**, **List**, **Create**, **Delete**, **Update**, **Import**, **Backup**и **Restore** . См. дополнительные сведения об [Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) и [Set-AzKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx).  
+ - Чтобы создать главный ключ столбца в хранилище ключей Azure, у пользователя должны быть разрешения **WrapKey**, **UnwrapKey**, **Verify**и **Sign** для хранилища ключей. Также могут потребоваться разрешения **Get**, **List**, **Create**, **Delete**, **Update**, **Import**, **Backup**и **Restore** . См. дополнительные сведения об [Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) и [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy).  
  
  - Мастер поддерживает только два варианта. Аппаратные модули безопасности и клиентские хранилища должны быть настроены с помощью инструкции [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)].  
  
