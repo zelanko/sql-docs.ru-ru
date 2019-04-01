@@ -31,7 +31,7 @@ ms.locfileid: "57973493"
   
  Следующие примеры демонстрируют возможности семантического поиска. В то же время эти примеры демонстрируют три функции набора строк языка Transact-SQL, которые можно использовать для запроса семантических индексов и получения результатов в виде структурированных данных.  
   
-###  <a name="find1"></a> Find the key phrases in a document  
+###  <a name="find1"></a> Найти ключевые фразы в документе  
  Следующий запрос получает ключевые фразы, которые были определены в образце документа. Он возвращает список результаты в порядке убывания показателя, обозначающего статистическую значимость каждой ключевой фразы.
  
  Этот запрос вызывает функцию [semantickeyphrasetable](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md).  
@@ -69,7 +69,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
 ```  
   
-###  <a name="find3"></a> Find the key phrases that make documents similar or related  
+###  <a name="find3"></a> Найти ключевые фразы, делающие документы схожими или связанными  
  Следующий запрос возвращает ключевые фразы, которые делают два документа схожими или связанными. Он возвращает результаты в порядке убывания показателя, обозначающего вес каждой ключевой фразы.
  
  Этот запрос вызывает функцию [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md).  

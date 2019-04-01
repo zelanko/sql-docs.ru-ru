@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fe27d4c05978e39c6d8558fc273fc294a256b09f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f507e21cb04a479f6aa5e6905bd89b93f837d677
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666973"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657898"
 ---
 # <a name="sqlps-utility"></a>программа sqlps
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ sqlps
  **-**  
  **-Command** — указывает, что служебная программа **sqlps** считывает входные данные с помощью стандартного ввода.  
   
- *блок_скрипта* [ **- args**_аргумент\_массива_ ]  
+ *script_block* [ **-args**_argument\_array_ ]  
  Указывает блок команд PowerShell для выполнения, который должен быть заключен в фигурные скобки: {}. Параметр*блок_скрипта* можно указывать только в случае вызова служебной программы **sqlps** из **PowerShell** или другого сеанса служебной программы **sqlps** . Параметр *массив_аргументов* представляет собой массив переменных PowerShell, содержащий аргументы для команд PowerShell из параметра *блок_скрипта*.  
   
  *string* [ *параметры_команды* ]  
@@ -98,7 +98,7 @@ sqlps
   
 -   Использовать пути поставщика служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для передвижения по иерархии объектов среды служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- По умолчанию служебная программа **sqlps** запускается с политикой выполнения сценариев со значением **Ограничено**. Это предотвращает запуск любых скриптов PowerShell. Командлет **Set-ExecutionPolicy** обеспечивает возможность запуска как подписанных, так и любых других скриптов. Запускать следует только скрипты из надежных источников, а также рекомендуется защитить все входные и выходные файлы соответствующими разрешениями NTFS. Дополнительные сведения о включении скриптов PowerShell см. в разделе [Запуск скриптов Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=103166).  
+ По умолчанию служебная программа **sqlps** запускается с политикой выполнения сценариев со значением **Ограничено**. Это предотвращает запуск любых скриптов PowerShell. Командлет **Set-ExecutionPolicy** обеспечивает возможность запуска как подписанных, так и любых других скриптов. Запускать следует только скрипты из надежных источников, а также рекомендуется защитить все входные и выходные файлы соответствующими разрешениями NTFS. Дополнительные сведения о включении скриптов PowerShell см. в разделе [Запуск скриптов Windows PowerShell](/previous-versions/system-center/virtual-machine-manager-2008-r2/cc917925(v=technet.10)).  
   
  Версия программы **sqlps** в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] была реализована как мини-оболочка Windows PowerShell 1.0. Мини-оболочки имеют определенные ограничения, такие как запрет на загрузку пользователями других оснасток, помимо загруженных мини-оболочкой. Эти ограничения не относятся к [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] и более поздним версиям программы, где изменилось использование модуля **sqlps** .  
   
