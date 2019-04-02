@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_buffer_pool_extension_configuration (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 09/08/2017
+ms.date: 09/09/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -19,28 +19,30 @@ ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef0eea139b491c565b8635daf69cefff61492688
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6d647fc2a1a4d5f88a85ec5917125527004570c
+ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755842"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58788061"
 ---
 # <a name="sysdmosbufferpoolextensionconfiguration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Возвращает сведения о конфигурации расширения буферного пула в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Возвращает по одной строке для каждого файла расширения буферного пула.  
   
 
   
-|Имя столбца|Тип данных|Описание|  
-|-----------------|---------------|-----------------|  
+| Имя столбца | Тип данных | Описание |
+| :---------- | :-------- | :---------- |
 |path|**nvarchar**(256)|Путь и имя файла кэша расширения буферного пула. Допускает значение NULL.|  
 |file_id|**int**|Идентификатор файла расширения буферного пула. Не допускает значение NULL.|  
 |state|**int**|Состояние расширения буферного пула. Не допускает значение NULL.<br /><br /> 0 = расширение буферного пула выключено<br /><br /> 1 = отключение расширения буферного пула<br /><br /> 2 = зарезервировано для использования в будущем<br /><br /> 3 = включение расширения буферного пула<br /><br /> 4 = зарезервировано для использования в будущем<br /><br /> 5 = расширение буферного пула включено|  
-|state_description|**nvarchar**(60)|Описывает состояние расширения буферного пула. Допускает значение NULL.<br /><br /> 0 = РАСШИРЕНИЕ БУФЕРНОГО ПУЛА ВЫКЛЮЧЕНО<br /><br /> 1 = РАСШИРЕНИЕ БУФЕРНОГО ПУЛЯ ВКЛЮЧЕНО|  
-|current_size_in_kb|**bigint**|Текущий размер файла расширения буферного пула. Не допускает значение NULL.|  
-  
+|state_description|**nvarchar**(60)|Описывает состояние расширения буферного пула. Допускает значение NULL.<br /><br /> 0 = РАСШИРЕНИЕ БУФЕРНОГО ПУЛА ВЫКЛЮЧЕНО<br /><br /> 5 = РАСШИРЕНИЕ БУФЕРНОГО ПУЛА ВКЛЮЧЕНО|
+|current_size_in_kb|**bigint**|Текущий размер файла расширения буферного пула. Не допускает значение NULL.|
+| &nbsp; | &nbsp; | &nbsp; |
+
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
