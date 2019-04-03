@@ -1,6 +1,6 @@
 ---
 title: Сохранение данных в Kubernetes
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Дополнительные сведения о работе в кластере SQL Server 2019 больших данных постоянного хранения.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1dcf390fe87239cde45e8c7fda1bc5cebd10f0ed
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: f8cddaeca6c6bcc7eb32c28fa852566bb7dcf331
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494166"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860280"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Сохранение данных с кластером больших данных SQL Server в Kubernetes
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [Постоянные тома](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) предоставляют модель подключаемого модуля для хранения в Kubernetes, где, как предоставляется хранилища завершается не зависит от его потребления. Таким образом можно использовать собственное хранилище высокой доступности и подключить его к кластеру кластера SQL Server больших данных. Это дает полный контроль над тип хранилища, доступности и производительности, которые нужны. Kubernetes поддерживает различные типы решений хранения, включая Azure диски и файлы, NFS, локальное хранилище и многое другое.
 

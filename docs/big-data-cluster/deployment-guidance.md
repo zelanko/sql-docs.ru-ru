@@ -1,6 +1,6 @@
 ---
 title: Развертывание
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Дополнительные сведения о развертывании кластеров SQL Server 2019 больших данных (Предварительная версия) на платформе Kubernetes.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5efefd5bc94aa8d1842ee244c947e48e90604834
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: c991181fc79627aee1f2c2e397ad7d9b1aaf953f
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493736"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860596"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Развертывание кластеров больших данных SQL Server в Kubernetes
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Кластер SQL Server больших данных могут развертываться как контейнеры docker в кластере Kubernetes. Это этапы установки и настройки:
 
@@ -42,9 +44,9 @@ ms.locfileid: "58493736"
 
 | Развертывание Kubernetes на: | Описание | Ссылка |
 |---|---|---|
-| **Minikube** | Кластер Kubernetes одного узла на виртуальной Машине. | [Инструкции](deploy-on-minikube.md) |
-| **Службы Azure Kubernetes (AKS)** | Управляемой службы контейнеров Kubernetes в Azure. | [Инструкции](deploy-on-aks.md) |
-| **Несколько компьютеров** | Кластер Kubernetes, развернутых на физических компьютерах или виртуальных машин с помощью **kubeadm** | [Инструкции](deploy-with-kubeadm.md) |
+| **Minikube** | Кластер Kubernetes одного узла на виртуальной Машине. | [Instructions](deploy-on-minikube.md) |
+| **Службы Azure Kubernetes (AKS)** | Управляемой службы контейнеров Kubernetes в Azure. | [Instructions](deploy-on-aks.md) |
+| **Несколько компьютеров** | Кластер Kubernetes, развернутых на физических компьютерах или виртуальных машин с помощью **kubeadm** | [Instructions](deploy-with-kubeadm.md) |
   
 > [!TIP]
 > Пример скрипта python, выполняющий развертывание больших данных кластера AKS и SQL Server, см. в разделе [развертывание SQL Server, большие данные кластера в службе Azure Kubernetes (AKS)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
@@ -85,7 +87,7 @@ kubectl config view
 | Переменная среды | Обязательно | Значение по умолчанию | Описание |
 |---|---|---|---|
 | **ACCEPT_EULA** | Да | Н/Д | Примите лицензионное соглашение SQL Server (например, «Да»).  |
-| **CLUSTER_NAME** | Да | Н/Д | Имя пространства имен Kubernetes для развертывания кластера больших данных в SQLServer. |
+| **ИМЯ_КЛАСТЕРА** | Да | Н/Д | Имя пространства имен Kubernetes для развертывания кластера больших данных в SQLServer. |
 | **CLUSTER_PLATFORM** | Да | Н/Д | Платформы, на которой развернут кластер Kubernetes. Может быть `aks`, `minikube`, `kubernetes`|
 | **CLUSTER_COMPUTE_POOL_REPLICAS** | Нет | 1 | Число реплик пула вычислений, чтобы выстроить. В CTP-версии 2.4 только табличные значения допускается-1. |
 | **CLUSTER_DATA_POOL_REPLICAS** | Нет | 2 | Количество данных пула реплик, чтобы выстроить. |
@@ -335,10 +337,10 @@ kubectl get svc -n <your-cluster-name>
 
    | Служба | Описание |
    |---|---|
-   | **endpoint-master-pool** | Предоставляет доступ к основной экземпляр.<br/>(**EXTERNAL-IP, 31433** и **SA** пользователя) |
+   | **Конечная точка master-pool** | Предоставляет доступ к основной экземпляр.<br/>(**EXTERNAL-IP, 31433** и **SA** пользователя) |
    | **Конечная точка контроллер** | Поддержка средств и клиентов, управления кластером. |
-   | **endpoint-service-proxy** | Предоставляет доступ к [портал администрирования кластера](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**: 30777: портал)|
-   | **endpoint-security** | Предоставляет доступ к шлюзу HDFS или Spark.<br/>(**EXTERNAL-IP** и **корневой** пользователя) |
+   | **Конечная точка службы прокси-сервера** | Предоставляет доступ к [портал администрирования кластера](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**: 30777: портал)|
+   | **безопасности конечных точек** | Предоставляет доступ к шлюзу HDFS или Spark.<br/>(**EXTERNAL-IP** и **корневой** пользователя) |
 
 1. Используйте [портал администрирования кластера](cluster-admin-portal.md) мониторинге развертывания на **развертывания** вкладки. Вам придется ждать для **конечная точка службы прокси-сервера** службы для запуска до доступа к этому порталу, поэтому он не будет доступен в начале развертывания.
 

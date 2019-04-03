@@ -1,6 +1,6 @@
 ---
 title: Моделей машинного Обучения Train/Create с помощью Spark
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Используйте PySpark для обучения и создания моделей машинного обучения с помощью Spark в кластерах больших данных SQL Server (Предварительная версия).
 author: lgongmsft
 ms.author: shivprashant
@@ -11,14 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1ef8f66d220561407c0bcafedde8a402f871924a
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: b9217b56da2e00ba50288f1643df809f482c2517
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578114"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860565"
 ---
 # <a name="train-and-create-machine-learning-models-with-spark"></a>Обучение и создание моделей машинного обучения Spark
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Spark в кластере SQL Server больших данных позволяет искусственного Интеллекта и машинного обучения. В примере показано, как для обучения модели машинного обучения с помощью Python в Spark (PySpark) с помощью данных, хранимых в HDFS. 
 
