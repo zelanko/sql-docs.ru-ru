@@ -1,23 +1,26 @@
 ---
 title: Развертывание приложений с помощью mssqlctl
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Разверните скрипт Python или R в качестве приложения в кластере SQL Server 2019 больших данных (Предварительная версия).
-author: TheBharath
-ms.author: bharaths
+author: jeroenterheerdt
+ms.author: jterh
+ms.reviewer: jroth
 manager: craigg
 ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: acd7bef7219827eb7a4666d33d6e8477a522e268
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 6cdedc7eac7b9faa2d266b1a32c299d8b7f5fe73
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492806"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872004"
 ---
-# <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Развертывание приложения в кластере SQL Server 2019 больших данных (Предварительная версия)
+# <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Развертывание приложения в кластере SQL Server больших данных (Предварительная версия)
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 В этой статье описывается развертывание и управление ими скрипт R и Python, как приложение в кластере SQL Server 2019 больших данных (Предварительная версия).
 
@@ -63,7 +66,7 @@ mssqlctl app create --help
 
 Эти команды, более подробно в следующих разделах.
 
-## <a name="log-in"></a>Войти
+## <a name="sign-in"></a>Вход
 
 Перед развертыванием или взаимодействия с приложениями, сначала войдите в кластер для обработки больших данных с использованием SQL Server `mssqlctl login` команды. Укажите внешний IP-адрес `endpoint-service-proxy` службы (например: `https://ip-address:30777`), а также имя пользователя и пароль для кластера.
 
@@ -95,51 +98,49 @@ kubectl get node --selector='node-role.kubernetes.io/master'
 Чтобы создать новое приложение в кластере большие данные, используйте следующий синтаксис:
 
 ```bash
-mssqlctl app create -n <app_name> -v <version_number> --spec <directory containing spec file>
+mssqlctl app create --spec <directory containing spec file>
 ```
 
 Следующая команда является примером как может выглядеть эта команда:
-
-Это предполагает, что у вас есть файл с именем `spec.yaml` в `addpy` папку.
-`addpy` Папка содержит `add.py` и `spec.yaml` `spec.yaml` — это файл спецификации для `add.py` приложения.
-
-
-`add.py` создает следующие приложения python:
-
-```py
-#add.py
-def add(x,y):
-        result = x+y
-        return result
-result=add(x,y)
-```
-
-Следующий сценарий — пример содержимого для `spec.yaml`:
-
-```yaml
-#spec.yaml
-name: add-app #name of your python script
-version: v1  #version of the app
-runtime: Python #the language this app uses (R or Python)
-src: ./add.py #full path to the location of the app
-entrypoint: add #the function that will be called upon execution
-replicas: 1  #number of replicas needed
-poolsize: 1  #the pool size that you need your app to scale
-inputs:  #input parameters that the app expects and the type
-  x: int
-  y: int
-output: #output parameter the app expects and the type
-  result: int
-```
-
-Чтобы попробовать сделать это, скопируйте приведенный выше код в два файла в каталоге `addpy` как `add.py` и `spec.yaml` и выполните следующую команду:
 
 ```bash
 mssqlctl app create --spec ./addpy
 ```
 
-> [!NOTE]
-> `spec.yaml` Файл указывает оба ключевых слова `poolsize` и ряд `replicas`. Количество `replicas` указывает количество копий службы должны быть развернуты. `poolsize` Указывает количество пулов, которые вы хотите создать в одной реплики. Эти параметры оказывают влияние на количество запросов, которые можно обрабатывать развертывания в параллельном режиме. Максимальное количество запросов в один момент времени равен `replicas` раз `poolsize`, т. е. Если у вас есть 5 реплик и 2 пулов в каждой реплике развертывания может обрабатывать 10 запросов в параллельном режиме. См. на рисунке ниже для графическое представление `replicas` и `poolsize`: ![Poolsize и реплик](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
+Это предполагает, что у вас есть приложение, хранятся в `addpy` папку. Эта папка также должен содержать файл спецификации для приложения, называется вызываемой `spec.yaml`. См. в разделе [странице развертывание приложения](concept-application-deployment.md) Дополнительные сведения о `spec.yaml` файл.
+
+Чтобы развернуть этот пример приложения, создайте следующие файлы в каталог с именем `addpy`:
+
+- `add.py`. Скопируйте следующий код Python в этот файл:
+   ```py
+   #add.py
+   def add(x,y):
+        result = x+y
+        return result
+    result=add(x,y)
+   ```
+- `spec.yaml`. Скопируйте следующий код в этот файл:
+   ```yaml
+   #spec.yaml
+   name: add-app #name of your python script
+   version: v1  #version of the app
+   runtime: Python #the language this app uses (R or Python)
+   src: ./add.py #full path to the location of the app
+   entrypoint: add #the function that will be called upon execution
+   replicas: 1  #number of replicas needed
+   poolsize: 1  #the pool size that you need your app to scale
+   inputs:  #input parameters that the app expects and the type
+     x: int
+     y: int
+   output: #output parameter the app expects and the type
+     result: int
+   ```
+
+Затем выполните следующую команду:
+
+```bash
+mssqlctl app create --spec ./addpy
+```
 
 Вы можете проверить, если приложение развертывается с помощью команды списка:
 

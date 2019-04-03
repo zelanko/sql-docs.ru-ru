@@ -1,22 +1,26 @@
 ---
-title: Запуск заданий Spark в наборе средств Azure для IntelliJ в кластере SQL Server больших данных
-titleSuffix: SQL Server Big Data Clusters
-description: Отправка заданий Spark на кластерах SQL Server больших данных в наборе средств Azure для IntelliJ.
+title: Запуск заданий Spark в наборе средств Azure для IntelliJ больших данных в кластере SQL Server
+titleSuffix: SQL Server big data clusters
+description: Отправка заданий Spark в кластерах SQL Server больших данных в наборе средств Azure для IntelliJ.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
-ms.openlocfilehash: 672898e93331fdcf65b1fe978a5ebb47956fdb5b
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.prod: sql
+ms.technology: big-data-cluster
+ms.openlocfilehash: e48aebbb15b9bd684b2ed3f5d4d314191a55ba42
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683624"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860326"
 ---
-# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>Отправка заданий Spark на кластерах SQL Server больших данных в IntelliJ
+# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>Отправка заданий Spark в кластерах больших данных SQL Server в IntelliJ
 
-Одним из основных сценариев для больших кластеров данных SQL Server является возможность отправки заданий Spark. Функция отправки задания Spark позволяет отправить локальные файлы JAR-файл или Py со ссылками на кластерах больших данных SQL Server. Он также позволяет выполнять JAR-файл или копировать файлы, которые уже находятся в файловой системе HDFS. 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+Одним из основных сценариев для работы с большими данными кластеров SQL Server является возможность отправки заданий Spark. Функция отправки задания Spark позволяет отправить локальные файлы JAR-файл или Py со ссылками на больших данных кластеров SQL Server. Он также позволяет выполнять JAR-файл или копировать файлы, которые уже находятся в файловой системе HDFS. 
 
 ## <a name="prerequisites"></a>предварительные требования
 
@@ -25,21 +29,21 @@ ms.locfileid: "57683624"
 - IntelliJ IDEA. Его можно установить с [веб-сайте JetBrains](https://www.jetbrains.com/idea/download/).
 - Набор средств Azure для IntelliJ расширения. Инструкции по установке см. в разделе [установка набора средств Azure для IntelliJ](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation).
 
-## <a name="link-sql-server-big-data-cluster"></a>Большие данные кластера связи SQL Server
+## <a name="link-sql-server-big-data-cluster"></a>Кластера больших данных связи SQL Server
 1. Откройте средство IntelliJ IDEA.
 
 2. Если вы используете самозаверяющий сертификат, отключите проверку SSL-сертификата из **средства** меню, выберите **Azure**, **проверки SSL-сертификат кластера Spark**, а затем  **Отключить**.
 
-    ![Связывание кластера больших данных SQL Server — отключить протокол SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![Связывание кластера больших данных в SQL Server — отключить протокол SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 3. Откройте Azure Explorer из **представление** меню, выберите **средство Windows**, а затем выберите **Azure Explorer**.
-4. Щелкните правой кнопкой мыши **кластера больших данных SQL Server**выберите **кластера больших данных связи SQL Server**. Введите **Server**, **имя пользователя**, и **пароль**, затем нажмите кнопку **ОК**.
+4. Щелкните правой кнопкой мыши **кластера больших данных в SQL Server**выберите **кластера больших данных связи SQL Server**. Введите **Server**, **имя пользователя**, и **пароль**, затем нажмите кнопку **ОК**.
 
     ![Связывание кластера больших данных - диалоговое окно](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-dialog.png)
 
 5. Когда откроется диалоговое окно сертификата недоверенном сервера, щелкните **Accept**. Можно управлять сертификатом, в более поздней версии, см. в разделе [сертификаты сервера](https://www.jetbrains.com/help/idea/settings-tools-server-certificates.html).
 
-6. Связанный кластер перечислены в разделе **кластера больших данных SQL Server**. Можно отслеживать задания spark, открыв пользовательский Интерфейс журнала spark и пользовательский Интерфейс Yarn, может также удалить связь, щелкнув правой кнопкой мыши в кластере.
+6. Связанный кластер перечислены в разделе **кластера больших данных в SQL Server**. Можно отслеживать задания spark, открыв пользовательский Интерфейс журнала spark и пользовательский Интерфейс Yarn, может также удалить связь, щелкнув правой кнопкой мыши в кластере.
 
     ![Связывание кластера больших данных — контекстное меню](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-contextmenu.png)
 
@@ -87,8 +91,8 @@ ms.locfileid: "57683624"
       ![Сведения об артефакте в диалоговом окне](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
 
-## <a name="submit-application-to-sql-server-big-data-cluster"></a>Отправьте приложение в кластере SQL Server больших данных
-После компоновки больших данных кластера SQL Server вы можете отправить в приложение.
+## <a name="submit-application-to-sql-server-big-data-cluster"></a>Отправьте приложение в кластер SQL Server больших данных
+После связи кластера больших данных SQL Server можно отправить в приложение.
 
 1. Настройте конфигурацию в **конфигураций запуска и отладки** окно, нажмите кнопку + "->"**Apache Spark в SQL Server**, выберите вкладку **удаленно запускать в кластере**, задайте параметры как следующие, затем нажмите кнопку ОК.
 

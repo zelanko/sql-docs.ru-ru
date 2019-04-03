@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 9f88178450fb5ca19e52703ad02e29d107ca562a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 95e9ae2bd77bc3042a44b0322ac9a607be3725e8
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201963"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872204"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Настройка SQL Server группы доступности AlwaysOn для обеспечения высокой доступности в Linux
 
@@ -72,7 +72,7 @@ ms.locfileid: "53201963"
 
 Для конфигурации высокого уровня доступности, которая обеспечивает автоматическую отработку отказа группы Доступности требуется по крайней мере три реплики. Одно из следующих конфигураций может поддерживать высокий уровень доступности:
 
-- [Три синхронных реплик](sql-server-linux-availability-group-ha.md#threeSynch)
+- [Три синхронные реплики](sql-server-linux-availability-group-ha.md#threeSynch)
 
 - [Два синхронных реплик, а также конфигурации реплики](sql-server-linux-availability-group-ha.md#twoSynch)
 
@@ -132,6 +132,7 @@ ms.locfileid: "53201963"
    >[!IMPORTANT]
    >После того, как приведенный выше сценарий, чтобы создать группу Доступности с тремя синхронными репликами не выполните следующий сценарий:
 
+<a name="configOnly"></a>
 - Создание группы Доступности с двумя репликами синхронной и конфигурации реплики:
 
    >[!IMPORTANT]

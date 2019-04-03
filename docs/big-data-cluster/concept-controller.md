@@ -1,23 +1,26 @@
 ---
 title: Что такое контроллер?
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: В этой статье описывается контроллер кластера SQL Server 2019 больших данных (Предварительная версия).
 author: mihaelablendea
 ms.author: mihaelab
+ms.reviewer: jroth
 manager: craigg
 ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 25afe48d2191bf77301331ed30850bf0af0baff0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 3677a2a68799ab1cfa7b6101893fe2b799b5b04a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58491797"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860075"
 ---
-# <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>Что такое контроллер в кластере SQL Server 2019 больших данных?
+# <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>Что такое контроллер в кластере SQL Server больших данных?
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 На контроллере размещены основную логику для развертывания и управления ими кластерам больших данных. Она отвечает за все взаимодействия с помощью Kubernetes, экземпляры SQL Server, которые являются частью кластера и другие компоненты, такие как HDFS и Spark. 
 

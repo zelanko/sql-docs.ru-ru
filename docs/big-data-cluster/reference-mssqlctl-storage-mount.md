@@ -1,6 +1,6 @@
 ---
 title: Справочник по подключения хранилища mssqlctl
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Справочная статья по mssqlctl команды хранилища.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f8336c59ffc11ff1a2b7842c393f3387298b832a
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: 3ad8a97bac1f708dcf01612368c76d584fa39f5c
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527187"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860295"
 ---
-# <a name="mssqlctl-storage-mount"></a>mssqlctl подключения хранилища
+# <a name="mssqlctl-storage-mount"></a>Подключение хранилища mssqlctl
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 В следующей статье приведены ссылки для **подключения хранилища** команды в **mssqlctl** средство. Дополнительные сведения о других **mssqlctl** команды, см. в разделе [mssqlctl ссылку](reference-mssqlctl.md).
 
@@ -24,8 +26,8 @@ ms.locfileid: "57527187"
 
 |||
 |---|---|
-| [Создание](#create) | Создайте подключение удаленных хранилищ в HDFS. |
-| [delete](#delete) | Удалите подключение удаленных хранилищ в HDFS. |
+| [создание](#create) | Создайте подключение удаленных хранилищ в HDFS. |
+| [удалить](#delete) | Удалите подключение удаленных хранилищ в HDFS. |
 | [status](#status) | Состояние mount(s). |
 
 ## <a id="create"></a> Создание подключения хранилища mssqlctl

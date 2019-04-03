@@ -1,6 +1,6 @@
 ---
 title: Управление записных книжек в Azure Data Studio
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Сведения об управлении записных книжек в Azure Data Studio. Это включает в себя Открытие записных книжек, их сохранение и изменение подключения кластера больших данных.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 107a567da4727fa5786b0b913f1c75706a23a9b7
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: ab731e3f657a629dbb1b4058bd94b32677c2def0
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241930"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860515"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Как управлять записных книжек в Azure Data Studio
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 В этой статье показано, как открывать и сохранять файлы записной книжки в Azure Data Studio с предварительной версией SQL Server 2019. Также показано, как изменить подключение к кластеру больших данных SQL Server.
 

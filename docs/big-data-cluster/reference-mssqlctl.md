@@ -1,6 +1,6 @@
 ---
 title: Справочник по mssqlctl
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Справочная статья по mssqlctl команды.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d15b4149fe336b173452030ec67fb7f229e6ae3d
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: b050638ee0ca600c5df0ecdbe5616b801f41e7a8
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527287"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860356"
 ---
 # <a name="mssqlctl"></a>mssqlctl
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 В следующей статье приведены ссылки для **mssqlctl** средство для [кластеров SQL Server 2019 больших данных (Предварительная версия)](big-data-cluster-overview.md). Дополнительные сведения об установке **mssqlctl** инструмент, см. в разделе [установить mssqlctl для управления кластерами больших данных SQL Server 2019](deploy-install-mssqlctl.md).
 
@@ -25,10 +27,10 @@ ms.locfileid: "57527287"
 |||
 |---|---|
 | [Приложение](reference-mssqlctl-app.md) | Создание, удаление, запуска и управления приложениями. |
-| [Кластера](reference-mssqlctl-cluster.md) | Выберите, управление и работу кластеров. |
-| [Имя входа](#login) | Войдите кластер. |
+| [кластер](reference-mssqlctl-cluster.md) | Выберите, управление и работу кластеров. |
+| [login](#login) | Войдите кластер. |
 | [Выход из системы](#logout) | Выйдите из кластера. |
-| [Хранилища](reference-mssqlctl-storage.md) | Управление хранилищем кластера. |
+| [хранение](reference-mssqlctl-storage.md) | Управление хранилищем кластера. |
 
 ## <a id="login"></a> Имя входа mssqlctl
 
@@ -46,7 +48,7 @@ mssqlctl login
 | Параметр | Описание |
 |---|---|
 |**--конечной точки -e**| Кластер узла и порта (ex) `http://host:port"`. |
-|**--пароль -p**| Пароль учетных данных. |
+|**--password -p**| Пароль учетных данных. |
 |**--username -u**| Учетная запись пользователя. |
 
 ### <a name="examples"></a>Примеры

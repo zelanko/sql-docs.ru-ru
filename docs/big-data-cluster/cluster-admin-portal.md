@@ -1,23 +1,26 @@
 ---
 title: Портал администрирования кластера
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Узнайте, как использовать портал администрирования кластера для мониторинга кластеров SQL Server 2019 больших данных (Предварительная версия).
 author: yualan
 ms.author: alayu
+ms.reviewer: jroth
 manager: craigg
 ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2ed73006850a5174c6df07ed09302ea48decf6d2
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: c83ad67b6d76ddf43762a814c26d2037594b78de
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492866"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860505"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>Как использовать портал администрирования кластера для мониторинга кластера больших данных SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Если вы хотите отслеживать или Устранение неполадок кластера SQL Server 2019 больших данных (Предварительная версия), используйте портал администрирования кластера.
 

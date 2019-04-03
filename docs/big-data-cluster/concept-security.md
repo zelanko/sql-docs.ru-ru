@@ -1,23 +1,26 @@
 ---
 title: Основные понятия безопасности
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: В этой статье описываются основные понятия безопасности для кластера SQL Server 2019 больших данных (Предварительная версия). Сюда входят, описывающие конечные точки кластера и аутентификация в кластере.
 author: nelgson
 ms.author: negust
+ms.reviewer: jroth
 manager: craigg
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5e440a3502e5062013ac5e3b716036f107a13c6a
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: ebe1ef0a9a0337af29a09018bcc2e0150d676879
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477989"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860115"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>Основные понятия безопасности для работы с большими данными кластеров SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Кластер защиты больших данных подразумевает согласованное и согласованным поддержка сценариев проверки подлинности и авторизации, как в SQL Server, так и в HDFS или Spark. Проверка подлинности — это процесс проверки удостоверения пользователя или службы и убедиться, что кого они Заявленная. Авторизация подразумевает набор для предоставления или отзыва доступа к определенным ресурсам на основе удостоверения пользователя. Этот шаг выполняется после пользователя определяется с помощью проверки подлинности.
 

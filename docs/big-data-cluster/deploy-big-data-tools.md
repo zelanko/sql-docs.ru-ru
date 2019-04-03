@@ -1,6 +1,6 @@
 ---
 title: Установка инструментов для больших данных
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Сведения об установке средств, используемых с кластерами SQL Server 2019 больших данных (Предварительная версия).
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 0413da85b4f213eb75a1b9ed5d80852663870c74
-ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
+ms.openlocfilehash: dc53bdfb71efeafd55752686ff136355bc79bd34
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898960"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860485"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Установка средств SQL Server 2019 больших данных
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 В этой статье описываются клиентские средства, которые должны быть установлены для создания, управления, и больших данных с помощью SQL Server 2019 кластеров (Предварительная версия). Следующий раздел содержит список инструментов и ссылки на инструкции по установке. Перед развертыванием кластера больших данных, настройте средства, необходимые на Windows или Linux.
 

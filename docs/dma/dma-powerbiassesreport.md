@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 786e86fb6f0326e2f8ea568f4c069828ff1ff4c6
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: c00196468b846174bb73c8d82c691f482aa8b21e
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974123"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872075"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Анализ оценки консолидированные отчеты, созданные помощник по миграции данных с помощью Power BI
 
@@ -34,23 +34,23 @@ ms.locfileid: "57974123"
 
 Доступны следующие отчеты: 
 
-- [Панель мониторинга](#dashboard--details)
+- [Панель мониторинга](#dashboard-report)
 
   Включает статистику моментального снимка и подробный отчет.
 
-- [Проверка готовности к обновлению на предприятии](#on-premises-upgrade-readiness--details)
+- [Проверка готовности к обновлению на предприятии](#on-premises-upgrade-readiness-report)
 
   Источником данных является представление UpgradeSuccessRanking DMAReporting базы данных.  Этот отчет показывает процент обновление выполнено успешно для оценки баз данных.
 
-- [Сходные функции на предприятии](#on-premise-feature-parity--details)
+- [Сходные функции на предприятии](#on-premises-feature-parity-report)
 
   Показывает рекомендации функций для целевой версии SQL Server.
 
-- [Azure SQL DB проверка готовности к обновлению](#azure-sql-db-upgrade-readiness--details)
+- [Azure SQL DB проверка готовности к обновлению](#azure-sql-db-upgrade-readiness-report)
 
   Источником данных является представление UpgradeSuccessRanking DMAReporting базы данных.  Этот отчет показывает процент успешность обновления для баз данных, оценивается ли для миграции базы данных SQL Azure.
 
-- [Компоненты Azure SQL DB не поддерживается](#azure-sql-db-unsupported-features--details)
+- [Компоненты Azure SQL DB не поддерживается](#azure-sql-db-unsupported-features-report)
 
   Отображаются функции в существующих баз данных, которые не поддерживаются в базе данных SQL Azure (V12).
 

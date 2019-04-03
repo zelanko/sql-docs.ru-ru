@@ -1,6 +1,6 @@
 ---
 title: Использовать sparklyr из RStudio
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Подключитесь к кластеру больших данных с помощью sparklyr из RStudio.
 author: jejiang
 ms.author: jejiang
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 83980f9d08a3894b0fbf7871cf899483e06702c4
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 30b8ddccd01c0e8d9a4eac34f2f504b0d8971af6
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018360"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860195"
 ---
-# <a name="use-sparklyr-in-sql-server-2019-big-data-cluster"></a>Использовать Sparklyr в кластере SQL Server 2019 больших данных
+# <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Использовать Sparklyr в кластере SQL Server больших данных
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Sparklyr интерфейс R для Apache Spark. Sparklyr — предпочтительный способ разработчикам R использовать Spark. В этой статье описывается использование sparklyr в кластере большие данные SQL Server 2019 (Предварительная версия), с помощью RStudio.
 
@@ -27,7 +29,7 @@ Sparklyr интерфейс R для Apache Spark. Sparklyr — предпочт
 
 ## <a name="connect-to-spark-in-ss19-big-data-cluster"></a>Подключение к spark в кластере SS19 больших данных
 
-В RStudio Создание RScript и подключение к Spark, следующим образом. Кластер Spark больших данных подключается через Livy, который может быть достигнут с [HDFS/Spark шлюза](connect-to-big-data-cluster.md#hdfs). Для проверки подлинности используйте имя пользователя и пароль, указанные во время развертывания.
+В RStudio Создание RScript и подключение к Spark, следующим образом. Кластер Spark больших данных подключается через Livy, который можно связаться с [HDFS/Spark шлюза](connect-to-big-data-cluster.md#hdfs). Для проверки подлинности используйте имя пользователя и пароль, указанные во время развертывания.
 
 ```r
 library(sparklyr)

@@ -1,6 +1,6 @@
 ---
 title: Настроить распределение по уровням HDFS
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: В этой статье описывается настройка HDFS, распределение по уровням для монтажа внешней системы хранилище Azure Data Lake файл в HDFS в кластере SQL Server 2019 больших данных (Предварительная версия).
 author: nelgson
 ms.author: negust
@@ -10,14 +10,16 @@ ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1199d8d522df83c626f04f30c8937b57a5359f5c
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2542c7c05b222517ae9f4a4c05152f21a5ba293b
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493781"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859646"
 ---
-# <a name="configure-hdfs-tiering-on-sql-server-2019-big-data-clusters"></a>Настройка HDFS, распределение по уровням в кластерах SQL Server 2019 больших данных
+# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Настройка HDFS, распределение по уровням в кластерах больших данных в SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Распределение по уровням HDFS позволяет подключать внешние, HDFS-совместимой файловой системы в HDFS. В этой статье описывается настройка HDFS, распределение по уровням для кластеров SQL Server 2019 больших данных (Предварительная версия). В настоящее время CTP-версии 2.4 поддерживает только подключение к Azure Data Lake хранилища 2-го поколения, которое рассматривается в этой статье.
 

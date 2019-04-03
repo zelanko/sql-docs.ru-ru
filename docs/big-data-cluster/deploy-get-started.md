@@ -1,6 +1,6 @@
 ---
 title: Начало работы
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Дополнительные шаги и ресурсы для развертывания кластеров SQL Server 2019 больших данных (Предварительная версия).
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 05ba81fd45bc44db9c23530fb594c5d2e291e05d
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 69b5d9b69536243d371cb45c1c46620f5194657d
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58567650"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860435"
 ---
-# <a name="get-started-with-sql-server-2019-big-data-clusters"></a>Начало работы с кластерами SQL Server 2019 больших данных
+# <a name="get-started-with-sql-server-big-data-clusters"></a>Начало работы с кластерами больших данных в SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 В этой статье представлен обзор развертывания [кластера SQL Server 2019 больших данных (Предварительная версия)](big-data-cluster-overview.md). Он предназначен для вам разобраться с основными понятиями и предоставляет основу для понимания того, в других статьях развертывания в этом разделе. Ваши конкретные этапы развертывания различаются в зависимости от вашего выбора платформы для клиента и сервера.
 

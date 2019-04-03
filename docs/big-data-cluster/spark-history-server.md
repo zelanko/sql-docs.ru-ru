@@ -1,6 +1,6 @@
 ---
 title: Отладка и диагностика приложений Spark
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Используйте сервер журнала Spark для отладки и диагностики приложений Spark, Spark в кластерах SQL Server 2019 больших данных.
 author: jejiang
 ms.author: jejiang
@@ -11,14 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6b3cac808386d2341e1c22b18999009f7d72a43f
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: e7444a9f5bcdc480425ba02c8a068831c081b47a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241795"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860336"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>Отладка и диагностика приложений Spark в кластерах больших данных SQL Server в сервер журнала Spark
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Статья содержит рекомендации о том, как использовать расширенные сервер журнала Spark для отладки и диагностики приложений Spark в кластере SQL Server 2019 (Предварительная версия) больших данных. Эти возможности отладки и диагностики встроенные в сервер журнала Spark и на платформе Майкрософт. Расширение включает в себя, вкладка "данные" и вкладки graph и диагностики. На вкладке "данные" пользователям можно проверить входные и выходные данные задания Spark. На вкладке "диаграммы" позволяет проверить поток данных и воспроизвести графа задания. На вкладке "Диагностика" пользователь может ссылаться неравномерное распределение данных, разница во времени и анализ сведений об использовании исполнителя.
 

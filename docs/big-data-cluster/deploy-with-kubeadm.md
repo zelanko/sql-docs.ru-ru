@@ -1,6 +1,6 @@
 ---
 title: Настройка Kubernetes с помощью kubeadm
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Сведения о настройке Kubernetes на несколько Ubuntu 16.04 или 18.04 компьютеров (физических или виртуальных) для развертывания кластера (Предварительная версия) SQL Server 2019 больших данных.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 56eb95042199298be2728c475d26cb52bea993e2
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 0432f590af92befa845af819269b1111da28251c
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017990"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860625"
 ---
-# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-big-data-cluster-preview-deployments"></a>Настройка Kubernetes на несколько компьютеров для развертывания кластера (Предварительная версия) SQL Server 2019 больших данных
+# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Настройка Kubernetes на несколько компьютеров для развертывания кластера больших данных в SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 В этой статье приведен пример использования **kubeadm** Настройка Kubernetes на несколько компьютеров для развертывания кластера (Предварительная версия) SQL Server 2019 больших данных. В этом примере несколько Ubuntu 16.04 или 18.04 LTS компьютеров (физических или виртуальных) являются целью. При развертывании на другую платформу Linux, необходимо изменить некоторые из команд в соответствии с вашей системы.  
 

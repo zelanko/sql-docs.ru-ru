@@ -1,22 +1,25 @@
 ---
 title: Расширение развертывания приложения
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Разверните скрипт Python или R в качестве приложения в кластере SQL Server 2019 больших данных (Предварительная версия).
-author: TheBharath
-ms.author: bharaths
+author: jeroenterheerdt
+ms.author: jterh
+ms.reviewer: jroth
 manager: craigg
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 761818cd83df5db38b3877184b03b7e5d634aa63
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 10fcc71c69ecc138f78cd19c4661f917067ead7e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58222028"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860415"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Как использовать VS Code для развертывания приложений к кластерам больших данных в SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 В этой статье описывается развертывание приложений в кластере SQL Server больших данных, с помощью Visual Studio Code с расширением развертывания приложения. Эта возможность появилась в CTP-версии 2.3. 
 
@@ -33,7 +36,7 @@ ms.locfileid: "58222028"
 - Получить шаблон приложения из репозитория GitHub для развертывания, поддерживаемых сред выполнения.
 - Управление шаблонами открытых приложений в рабочей области пользователя.
 - Развертывание приложения с помощью спецификации в формате YAML.
-- Управление развернутых приложений в пределах кластера больших данных SQL Server.
+- Управление развернутых приложений в кластере SQL Server больших данных.
 - Просмотр всех приложений, развертываемых на боковой панели, с дополнительными сведениями.
 - Создайте спецификацию выполнения, чтобы работать с приложением или удалить приложение из кластера.
 - Использовать развернутые приложения через спецификацию выполнения YAML.

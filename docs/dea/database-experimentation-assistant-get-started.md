@@ -13,12 +13,12 @@ author: HJToland3
 ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: f0ea70ded49d37d553f5de188a4a0735f521ee66
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7630aee7ab39f98f372af7c33f277e7272042f43
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987700"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872244"
 ---
 # <a name="get-started-with-database-experimentation-assistant"></a>Начало работы с помощник базы данных службы "Экспериментирование"
 
@@ -81,7 +81,7 @@ ms.locfileid: "56987700"
 
    - **Имя воспроизведения**: Имя файла для воспроизведения трассировки.
    - **Имя компьютера контроллера**: Имя компьютера контроллера распределенного воспроизведения.
-   - **Путь к файлу источника трассировки на контроллере**: Путь к файлу для файла трассировки источника, из [записи](#Capture).
+   - **Путь к файлу источника трассировки на контроллере**: Путь к файлу для файла трассировки источника, из [записи](#capture).
    - **Имя экземпляра SQL Server**: Имя экземпляра SQL Server, на котором для воспроизведения трассировки источника.
    - **Путь для сохранения файла трассировки целевой на компьютере SQL Server**: Путь к папке для результирующий файл трассировки воспроизведения.
 

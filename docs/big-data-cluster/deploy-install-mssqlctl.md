@@ -1,6 +1,6 @@
 ---
 title: Установка mssqlctl
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Узнайте, как установить средство mssqlctl по установке и управлению кластерами больших данных SQL Server 2019 (Предварительная версия).
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8aadf4969b2232ae53b98a632b9c8220a300fe4e
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: c306ec99f0bd2aff89116e955283dd585f9d7cce
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494126"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860665"
 ---
-# <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>Установка mssqlctl для управления кластерами SQL Server 2019 больших данных
+# <a name="install-mssqlctl-to-manage-sql-server-big-data-clusters"></a>Установка mssqlctl для управления кластерами больших данных в SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 В этой статье описывается установка **mssqlctl** средства в Windows или Linux.
 

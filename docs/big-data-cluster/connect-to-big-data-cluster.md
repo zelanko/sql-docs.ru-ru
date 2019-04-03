@@ -1,6 +1,6 @@
 ---
 title: Подключения к главному узлу и HDFS
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Узнайте, как подключаться к основной экземпляр SQL Server и шлюза HDFS или Spark для кластера SQL Server 2019 больших данных (Предварительная версия).
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cb205f387fb326b1717ec65512a911b2ae244495
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: ed563fe6d0bfd69ce5dfb7484d4213bc9a47dd54
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017710"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860175"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Подключение к кластеру больших данных SQL Server с помощью Azure Data Studio
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 В этой статье описывается подключение к кластеру больших данных SQL Server 2019 (Предварительная версия) из среды Studio данных Azure. Существует два основных конечных точек, используемых для взаимодействия с кластером больших данных:
 
@@ -67,7 +69,7 @@ ms.locfileid: "57017710"
 
 - В обозревателе объектов теперь содержит новый **Data Services** узла с поддержкой щелкните правой кнопкой мыши задачи кластера больших данных, например создание новые записные книжки или отправки заданий spark. 
 - **Data Services** узел также содержит **HDFS** папки для просмотра HDFS и выполнения действий, например Create External Table или анализа в записной книжке.
-- **Панель мониторинга сервера** для соединения также содержит вкладки для **кластера больших данных SQL Server** и **2019 SQL Server (Предварительная версия)** при установке расширения.
+- **Панель мониторинга сервера** для соединения также содержит вкладки для **кластера больших данных в SQL Server** и **2019 SQL Server (Предварительная версия)** при установке расширения.
 
    ![Узел службы данных Studio данных Azure](./media/connect-to-big-data-cluster/connect-data-services-node.png)
 

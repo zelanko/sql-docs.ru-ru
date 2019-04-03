@@ -1,6 +1,6 @@
 ---
 title: Запрос внешних данных Oracle
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Этом руководстве показано, как запрашивать данные Oracle из кластера SQL Server 2019 больших данных (Предварительная версия). Создайте внешнюю таблицу данных в Oracle и выполняют запрос.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 27956603d3627f1d4a78e62fbf9c7aeaa1e55974
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 139c5dd5ade04c3d1a71412060f823d492843ecb
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241915"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859985"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Учебник. Запрос Oracle из больших данных кластера SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Этом руководстве показано, как запрашивать данные Oracle из кластера SQL Server 2019 больших данных. Для использования этого учебника, необходимо иметь доступ к серверу Oracle. Если у вас нет доступа, этот учебник поможет вам понять, как работает виртуализация данных для внешних источников данных в кластере SQL Server больших данных.
 

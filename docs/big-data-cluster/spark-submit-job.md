@@ -1,6 +1,6 @@
 ---
 title: Запуск заданий Spark в Azure Data Studio
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Отправка заданий Spark в кластерах больших данных SQL Server в Azure Data Studio.
 author: jejiang
 ms.author: jejiang
@@ -9,14 +9,16 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c1d439c13b06b305c814813eeca7cb9bf8aa53c5
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: d5354927ff0c7e1c61bf358ad73312611c18f317
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578244"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860455"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Отправка заданий Spark в кластерах больших данных SQL Server в Azure Data Studio
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Одним из основных сценариев для работы с большими данными кластеров является возможность отправки заданий Spark для предварительной версии SQL Server 2019. Функция отправки задания Spark позволяет отправить локальные файлы JAR-файл или Py со ссылками на кластер SQL Server 2019 больших данных. Он также позволяет выполнять JAR-файл или копировать файлы, которые уже находятся в файловой системе HDFS. 
 

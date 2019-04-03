@@ -1,6 +1,6 @@
 ---
 title: mssqlctl cluster reference
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Справочная статья по mssqlctl команды кластере.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 130d3019d49deb7851696f6a1db2f77040734b31
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: e4e54ac3c7206ad8a6592c8cfe0b45d9ea4b8fd8
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527217"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860475"
 ---
-# <a name="mssqlctl-cluster"></a>mssqlctl кластера
+# <a name="mssqlctl-cluster"></a>Кластер mssqlctl
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 В следующей статье приведены ссылки для **кластера** команды в **mssqlctl** средство. Дополнительные сведения о других **mssqlctl** команды, см. в разделе [mssqlctl ссылку](reference-mssqlctl.md).
 
@@ -24,9 +26,9 @@ ms.locfileid: "57527217"
 
 |||
 |---|---|
-| [Создание](#create) | Создание кластера. |
-| [delete](#delete) | Удаление кластера. |
-| [конфигурации](reference-mssqlctl-cluster-config.md) | Команды для настройки кластера. |
+| [создание](#create) | Создание кластера. |
+| [удалить](#delete) | Удаление кластера. |
+| [config](reference-mssqlctl-cluster-config.md) | Команды для настройки кластера. |
 | [debug](reference-mssqlctl-cluster-debug.md) | Команды отладки. |
 
 ## <a id="create"></a> Создание кластера mssqlctl

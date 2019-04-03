@@ -1,6 +1,6 @@
 ---
 title: Справка по mssqlctl приложений
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Справочная статья по mssqlctl команд приложения.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fa2b43c352fbab39cd00112b9646a87a2b752f5b
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: b418f1ded8d9911143b431ae9793c467c4e26eb4
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527257"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860655"
 ---
-# <a name="mssqlctl-app"></a>приложение mssqlctl
+# <a name="mssqlctl-app"></a>Приложение mssqlctl
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 В следующей статье приведены ссылки для **приложения** команды в **mssqlctl** средство. Дополнительные сведения о других **mssqlctl** команды, см. в разделе [mssqlctl ссылку](reference-mssqlctl.md).
 
@@ -24,14 +26,14 @@ ms.locfileid: "57527257"
 
 |||
 |---|---|
-| [Создание](#create) | Создайте приложение. |
-| [delete](#delete) | Для удаления приложения. |
+| [создание](#create) | Создайте приложение. |
+| [удалить](#delete) | Для удаления приложения. |
 | [описания](#describe) | Описание приложения. |
 | [init](#init) | Kickstart новый скелет приложения. |
-| [list](#list) | Список приложений. |
-| [запустить](#run) | Запустите приложение. |
-| [Обновление](#update) | Обновите приложение. |
-| [шаблон](reference-mssqlctl-app-template.md) | Шаблон команды. |
+| [Список](#list) | Список приложений. |
+| [run](#run) | Запустите приложение. |
+| [update](#update) | Обновите приложение. |
+| [template (шаблон)](reference-mssqlctl-app-template.md) | Шаблон команды. |
 
 ## <a id="create"></a> Создание приложения mssqlctl
 

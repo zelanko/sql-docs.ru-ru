@@ -1,6 +1,6 @@
 ---
 title: Что такое основной экземпляр
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: В этой статье описывается основной экземпляр SQL Server в кластере SQL Server 2019 больших данных (Предварительная версия).
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9c3809e481e00c94f01c1968a82638df3e37f80f
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 68d412e3d4b8147a2e451ff2932aa79e6dbeca5e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477950"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860686"
 ---
-# <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>Что такое основной экземпляр в кластере SQL Server 2019 больших данных?
+# <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>Что такое основной экземпляр в кластере SQL Server больших данных?
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 В этой статье описывается роль *главного экземпляра SQL Server* в кластере SQL Server 2019 больших данных. Основной экземпляр является экземпляром SQL Server работает в кластере SQL Server больших данных [плоскость управления](big-data-cluster-overview.md#controlplane).
 

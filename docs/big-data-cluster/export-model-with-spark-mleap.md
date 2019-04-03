@@ -1,6 +1,6 @@
 ---
 title: Экспорт моделей машинного Обучения Spark с MLeap
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Узнайте, как экспортировать машинного обучения моделей с MLeap Spark.
 author: lgongmsft
 ms.author: shivprashant
@@ -11,14 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ee858f66c99ff7b85e2e6c456ad509ec7deb0a6e
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a2a834ff8b841c515b9d3481a961306b721f194d
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242135"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860155"
 ---
 # <a name="export-spark-machine-learning-models-with-mleap"></a>Экспорт машинного обучения моделей с MLeap Spark
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Сценарий обычно машинного обучения включает в себя обучение в Spark и оценка модели за пределами Spark. Экспортируйте модели в формате PDF, таким образом, он может использоваться за пределами Spark. [MLeap](https://github.com/combust/mleap) – один такой формат обмена модели. Он позволяет Spark конвейеры машинного обучения и модели, экспортируемых в качестве переносимого форматов и использовать их в любой системе на основе виртуальной машины Java с `Mleap` среды выполнения.
 
