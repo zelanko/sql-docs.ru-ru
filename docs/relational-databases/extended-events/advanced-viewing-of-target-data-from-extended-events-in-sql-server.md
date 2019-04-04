@@ -6,20 +6,21 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9ce1619d4ad2d61a784ace4ea16dc4064569e09
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d80831a3a152d29d8a2f608527105c9feb23b126
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658883"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478169"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Расширенный просмотр целевых данных из расширенных событий в SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -36,7 +37,7 @@ ms.locfileid: "51658883"
 
 В данной статье предполагается, что вы уже знаете, как создать и запустить сеанс событий. Инструкции по созданию сеанса событий приводятся в следующей статье:
 
-[Краткое руководство. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+[Быстрое начало. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
 
 
 В этой статье также предполагается, что вы установили последний ежемесячный выпуск SSMS. Справочные сведения приведены в следующих статьях:
@@ -91,7 +92,7 @@ ms.locfileid: "51658883"
 
 
 - Каждый раз при запуске сеанса событий система внедряет большое целое число в новое имя файла, чтобы сделать имя файла уникальным и отличным от имени в предыдущий момент запуска сеанса.
-  - *Пример:* Checkpoint_Begins_ES_0_131103935140400000.xel
+  - *Пример.* Checkpoint_Begins_ES_0_131103935140400000.xel
 
 
 - Содержимое внутри XEL не является обычным текстом, который можно просмотреть с помощью Notepad.exe.
@@ -104,14 +105,14 @@ SSMS может отображать данные из любого целево
 - *event_file:* данные из целевого объекта event_file отображаются очень хорошо и с доступными расширенными возможностями.
 
 
-- *ring_buffer:* данные из цели кольцевого буфера ring_buffer отображаются в виде необработанного XML.
+- *ring_buffer:* данные из целевого объекта кольцевого буфера отображаются в виде необработанного кода XML.
 
 
 - Уровень отображения данных других целевых объектов находится где-то между уровнем отображения event_file и ring_buffer.
   - В число других таких целей входят event_counter, histogram и pair_matching.
 
 
-- *etw_classic_sync_target:* SSMS не может отображать данные из целевого объекта etw_classic_sync_target.
+- *etw_classic_sync_target:* в SSMS не могут отображаться данные из целевого типа etw_classic_sync_target.
 
 
 
@@ -258,9 +259,9 @@ XEL-файл также можно перетащить на панель вкл
 
 В области расширенных событий находятся два основных типа фильтров, которые можно указать.
 
-- *Фильтры для предварительной фильтрации.* Фильтры, которые сокращают объем данных, отправляемых подсистемой событий в целевой объект.
+- *Фильтры для предварительной фильтрации*. Фильтры, которые сокращают объем данных, отправляемых подсистемой событий в целевой объект.
 
-- *Фильтры для последующей фильтрации.* Фильтры, которые можно выбрать в пользовательском интерфейсе среды SSMS, чтобы исключить отображение некоторых целевых записей.
+- *Фильтры для последующей фильтрации*. Фильтры, которые можно выбрать в пользовательском интерфейсе среды SSMS, чтобы исключить отображение некоторых целевых записей.
 
 
 В среде SSMS доступны следующие фильтры отображения:

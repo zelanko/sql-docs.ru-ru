@@ -1,7 +1,7 @@
 ---
 title: TRIM (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 01/20/2017
+ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: jrasnick
@@ -18,37 +18,40 @@ ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d576147eb72e5d86a8e11719e5aab43eb405f739
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+monikerRange: =azuresqldb-current||= azure-sqldw-latest ||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ae5abf48d2cdd2325c69df1c1f680594a7d8b3eb
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342909"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566403"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 Удаляет символ пробела `char(32)` или другие заданные символы в начале или конце строки.  
  
 ## <a name="syntax"></a>Синтаксис   
-```
+``` 
+-- Syntax for SQL Server and Azure SQL Database
 TRIM ( [ characters FROM ] string ) 
 ```
 [//]: # "[ BOTH | LEADING | TRAILING ] пока не доступно."
 
-## <a name="arguments"></a>Аргументы   
+```
+-- Syntax for Azure SQL Data Warehouse
+TRIM ( string )
+```
+## <a name="arguments"></a>Аргументы
 
-characters   
-Литерал, переменная или вызов функции любого типа данных, отличного от типа большого объекта (`nvarchar`, `varchar`, `nchar` или `char`), которые содержат удаляемые символы. Типы `nvarchar(max)` и `varchar(max)` не допускаются.
+characters — литерал, переменная или вызов функции любого типа данных, отличного от типа большого объекта (`nvarchar`, `varchar`, `nchar` или `char`), которые содержат удаляемые символы. Типы `nvarchar(max)` и `varchar(max)` не допускаются.
 
-строка   
-Выражение любого символьного типа (`nvarchar`, `varchar`, `nchar` или `char`), из которого следует удалить символы.
+string — выражение любого символьного типа (`nvarchar`, `varchar`, `nchar` или `char`), из которого следует удалить символы.
 
-## <a name="return-types"></a>Типы возвращаемых данных   
+## <a name="return-types"></a>Типы возвращаемых данных
 Возвращает символьное выражение с типом аргумента string, в котором символ пробела `char(32)` или другие заданные символы удалены с обеих сторон. Возвращает `NULL`, если входная строка равна `NULL`.
 
-## <a name="remarks"></a>Remarks   
+## <a name="remarks"></a>Remarks
 По умолчанию функция `TRIM` удаляет символ пробела `char(32)` с обеих сторон. Такая реакция на событие эквивалентна `LTRIM(RTRIM(@string))`. Поведение функции `TRIM` с заданными символами идентично поведению функции `REPLACE`, которая заменяет символы в начале или конце строки пустыми строками.
 
 
@@ -81,5 +84,4 @@ SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
  [RTRIM (Transact-SQL)](../../t-sql/functions/rtrim-transact-sql.md)  
  [STRING_SPLIT (Transact-SQL)](../../t-sql/functions/string-split-transact-sql.md)  
  [SUBSTRING (Transact-SQL)](../../t-sql/functions/substring-transact-sql.md)  
- [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
-
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)

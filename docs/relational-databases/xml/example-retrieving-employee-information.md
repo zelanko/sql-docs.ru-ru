@@ -1,5 +1,5 @@
 ---
-title: Пример. Получение сведений о сотрудниках | Документация Майкрософт
+title: Пример Получение сведений о сотрудниках | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dedcea064cf71695764e1892b1fb6b7dd96bed21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1984c3c378f4408b8e1126f427a5e06560adef91
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699092"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510331"
 ---
-# <a name="example-retrieving-employee-information"></a>Пример. Получение сведений о сотрудниках
+# <a name="example-retrieving-employee-information"></a>Пример Получение сведений о сотрудниках
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   В этом примере извлекаются идентификаторы и имена всех работников. В базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] значение employeeID может быть получено из столбца BusinessEntityID таблицы Employee. Имена работников могут быть получены из таблицы Person. Столбец BusinessEntityID можно использовать для соединения этих таблиц.  
   
@@ -87,41 +87,29 @@ FOR XML EXPLICIT;
   
  Частичный результат:  
   
- `<Employee EmpID="1">`  
-  
- `<Name FName="Ken" LName="Sánchez" />`  
-  
- `</Employee>`  
-  
- `<Employee EmpID="2">`  
-  
- `<Name FName="Terri" LName="Duffy" />`  
-  
- `</Employee>`  
-  
- `...`  
+```
+<Employee EmpID="1">
+  <Name FName="Ken" LName="Sánchez" />
+</Employee>
+<Employee EmpID="2">
+  <Name FName="Terri" LName="Duffy" />
+</Employee>
+...
+```
   
  Первая инструкция `SELECT` указывает имена для столбцов в результирующем наборе строк. Эти имена образуют две группы столбцов. Группа со значением `Tag`, равным `1`, в имени столбца задает `Employee` в качестве элемента и `EmpID` в качестве атрибута. Другая группа столбцов со значением `Tag`, равным `2`, в имени столбца задает <`Name`> в качестве элемента, а `FName` и `LName` в качестве атрибутов.  
   
  Следующая таблица показывает частичный набор строк, сформированный запросом:  
   
- `Tag Parent  Employee!1!EmpID Name!2!FName Name!2!LName`  
-  
- `--- ------  ---------------- ------------ ------------`  
-  
- `1   NULL    1                NULL         NULL`  
-  
- `2   1       1                Ken          Sánchez`  
-  
- `1   NULL    2                NULL         NULL`  
-  
- `2   1       2                Terri        Duffy`  
-  
- `1   NULL    3                NULL         NULL`  
-  
- `2   1       3                Roberto      Tamburello`  
-  
- `...`  
+Тег | Parent | Employee!1!EmpID | Name!2!FName | Name!2!LName
+-|-|-|-|-
+1 | NULL | 1 | NULL | NULL 
+2 | 1 | 1 | Ken | Sánchez 
+1 | NULL | 2 | NULL | NULL 
+2 | 1 | 2 | Terri | Duffy 
+1 | NULL | 3 | NULL | NULL 
+2 | 1 | 3 | Roberto | Tamburello 
+... | ... | ... | ... | ...
   
  Вот как строки универсальной таблицы обрабатываются для создания результирующего дерева XML:  
   

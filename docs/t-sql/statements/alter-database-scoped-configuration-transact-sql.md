@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/14/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 13ad41189f1d8d1b9a7401502dec4d24e6e37c1d
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 85e4ceb8c70d6aa11ac37a8b3e8fd28c997c03dc
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974393"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493787"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -43,11 +43,12 @@ ms.locfileid: "57974393"
 - включить или выключить кэширование идентификации на уровне базы данных;
 - включить или выключить заглушку компилированного плана для сохранения в кэше при первом компилировании пакета.
 - включить или выключить сбор статистики выполнения для скомпилированных в собственном коде модулей T-SQL.
-- Включение или отключение параметров подключения по умолчанию для инструкций DDL, поддерживающих синтаксис ONLINE=.
-- Включение или отключение параметров возобновления по умолчанию для инструкций DDL, поддерживающих синтаксис RESUMABLE=.
-- Включение или отключение функции автоматического удаления глобальных временных таблиц. 
+- включить или отключить параметры подключения по умолчанию для инструкций DDL, поддерживающих синтаксис `ONLINE =`;
+- включить или отключить параметры возобновления по умолчанию для инструкций DDL, поддерживающих синтаксис `RESUMABLE =`;
+- Включение или отключение функции автоматического удаления глобальных временных таблиц.
 - Включение или отключение функции [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md).
 - Включение или отключение [упрощенной инфраструктуры профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).
+- включить или отключить новое сообщение об ошибке `String or binary data would be truncated`.
 
 ![Значок ссылки](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -83,6 +84,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | DEFERRED_COMPILATION_TV = { ON | OFF }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
+    | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
 }
 ```
 
@@ -185,11 +187,11 @@ BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
 
 TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
 
-**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (компонент в общедоступной предварительной версии)
+**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (компонент в общедоступной предварительной версии)
 
-Позволяет включить или отключить встраивание скалярных определяемых пользователем функций для T-SQL в области базы данных, сохранив уровень совместимости базы данных 150 или выше. Встраивание скалярных определяемых пользователем функций для T-SQL — одна из возможностей семейства функций [адаптивной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md).
+Позволяет включить или отключить встраивание скалярных определяемых пользователем функций для T-SQL в области базы данных, сохранив уровень совместимости базы данных 150 или выше. Встраивание скалярных определяемых пользователем функций для T-SQL — одна из возможностей семейства функций [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md).
 
-> [!NOTE] 
+> [!NOTE]
 > Для уровня совместимости базы данных 140 или более низкого эта конфигурация области баз данных не оказывает влияния.
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
@@ -291,6 +293,20 @@ LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 **Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
 Делает возможным включение или отключение [упрощенной инфраструктуры профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md). Упрощенная инфраструктура профилирования запросов (LWP) предоставляет более эффективные данные производительности запросов по сравнению со стандартными механизмами профилирования. По умолчанию она включена.
+
+VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
+
+**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+
+Позволяет включить или отключить новое сообщение об ошибке `String or binary data would be truncated`. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] добавлено новое, более конкретное сообщение об ошибке (2628) для подобного сценария:  
+
+`String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
+
+Если задано значение ON при уровне совместимости базы данных 150, для ошибок усечения выдается новое сообщение об ошибке 2628, которое содержит больше сведений о проблеме и упрощает процесс устранения неполадок.
+
+Если задано значение OFF при уровне совместимости базы данных 150, для ошибок усечения выдается прежнее сообщение об ошибке 8152.
+
+Для уровня совместимости базы данных 140 или более низкого сообщение об ошибке 2628 активируется явным образом и требует включения [флага трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460, поэтому эта конфигурация области баз данных не оказывает влияния.
 
 ## <a name="Permissions"></a> Permissions
 

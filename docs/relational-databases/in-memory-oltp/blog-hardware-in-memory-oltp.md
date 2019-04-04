@@ -1,7 +1,7 @@
 ---
 title: Оборудование для выполняющейся в памяти OLTP в SQL | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/30/2018
+ms.date: 03/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,20 +11,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 9efb08ec81de552581fd2d1d0c34bbf731dac7d7
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: 8990a7c8024ae19fa77f2635cf3134b02ea52bf6
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087594"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645446"
 ---
-# <a name="hardware-considerations-for-in-memory-oltp-in-sql-server-2014"></a>Рекомендации по использованию оборудования для выполняющейся в памяти OLTP в SQL Server 2014
+# <a name="hardware-considerations-for-in-memory-oltp-in-sql-server"></a>Рекомендации по использованию оборудования для выполняющейся в памяти OLTP в SQL Server
 
 Выполняющаяся в памяти OLTP использует память и диск иначе, чем традиционные таблицы на диске. Улучшение производительности, достигаемое в результате применения выполняющейся в памяти OLTP, зависит от используемого оборудования. В этой публикации блога рассматривается целый ряд общих вопросов, посвященных оборудованию, и приводятся универсальные рекомендации по использованию оборудования с выполняющейся в памяти OLTP.
 
 > [!NOTE]
-> Эта статья была записью блога, опубликованной 1 августа 2013 г. командой разработчиков Microsoft SQL Server 2014. Сейчас веб-страница блога выводится из числа действующих. В этой статье кратко излагается содержимое блога. Статьи документации, которые содержали ссылку на блог, теперь связаны с этой статьей. Эта статья не поддерживается. Она может быть исключена из содержания.
-> 
+> Эта статья была записью блога, опубликованной 1 августа 2013 г. командой разработчиков Microsoft SQL Server 2014. Сейчас веб-страница блога выводится из числа действующих.
+>
 > [Выполняющаяся в памяти OLTP в SQL Server](index.md)
 
 <!--
@@ -32,7 +32,7 @@ ms.locfileid: "55087594"
     https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/
     At least one pre-existing article that contained the obsolete blog link was:
         relational-databases\in-memory-oltp\sample-database-for-in-memory-oltp.md
- -->
+-->
 
 ## <a name="cpu"></a>ЦП
 
@@ -47,7 +47,7 @@ ms.locfileid: "55087594"
 Чтобы определить объем памяти, используемый таблицей, оптимизированной для памяти, выполните следующий запрос:
 
 ```sql
-select object_name(object_id), * from sys.dm_db_xtp_table_memory_stats
+select object_name(object_id), * from sys.dm_db_xtp_table_memory_stats;
 ```
 
 В выходных данных будет указан объем памяти, используемый для оптимизированных для памяти таблиц и их индексов. В состав данных таблицы входят данные пользователя, а также все предыдущие версии строк, которые по-прежнему требуются в транзакциях или еще не были удалены системой. Объем памяти, используемый хэш-индексами, является постоянным и не зависит от количества строк в таблице.
@@ -74,3 +74,6 @@ select object_name(object_id), * from sys.dm_db_xtp_table_memory_stats
 
 Рекомендуется, чтобы свободного места на диске было вдвое или втрое больше, чем для доступных оптимизированных для памяти таблиц.
 
+## <a name="see-also"></a>См. также раздел
+
+[Пример базы данных для выполняющейся в памяти OLTP](sample-database-for-in-memory-oltp.md)

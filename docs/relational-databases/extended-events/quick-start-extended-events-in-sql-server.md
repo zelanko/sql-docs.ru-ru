@@ -1,25 +1,26 @@
 ---
-title: Краткое руководство по расширенным событиям в SQL Server | Документация Майкрософт
+title: Краткое руководство. Расширенные события в SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: quickstart
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7c3718d1402ebdc6ff82bddc55172f09ff8b61a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1e32610836ab856710de35dcf24104a3e4433877
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658353"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478239"
 ---
-# <a name="quick-start-extended-events-in-sql-server"></a>Краткое руководство. Расширенные события в SQL Server
+# <a name="quickstart-extended-events-in-sql-server"></a>Краткое руководство. Расширенные события в SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -426,7 +427,7 @@ SELECT
 
 | Термин | Описание |
 | :--- | :---------- |
-| сеанс событий | Целью является конструкция, основанная на одном или нескольких событиях, а также вспомогательные элементы, такие как действия. Инструкция CREATE EVENT SESSION создает каждый сеанс событий. С помощью инструкции ALTER можно по желанию запускать и останавливать сеансы. <br/> <br/> Сеанс событий часто называется просто *сеансом*, если из контекста понятно, что имеется в виду именно *сеанс событий*. <br/> <br/> Более подробные сведения о сеансах событий см. в разделе [Сеансы расширенных событий SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
+| сеанс событий | Целью является конструкция, основанная на одном или нескольких событиях, а также вспомогательные элементы, такие как действия. Инструкция CREATE EVENT SESSION создает каждый сеанс событий. С помощью инструкции ALTER можно по желанию запускать и останавливать сеансы. <br/> <br/> Сеанс событий часто называется просто *сеансом*, если из контекста понятно, что имеется в виду именно *сеанс событий*. <br/> <br/> Более подробные сведения о сеансах событий см. в статье [Сеансы расширенных событий SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
 | event | Определенное событие в системе, наступление которого отслеживается активным сеансом событий. <br/> <br/> Например, событие *sql_statement_completed* представляет момент завершения какой-либо инструкции T-SQL. Событие может сообщать различные данные, например длительность. |
 | target; | Элемент, который получает выходные данные из регистрируемого события. Служит для вывода данных. <br/> <br/> Примерами могут служить *event_file*и его облегченная версия *ring_buffer*, хранимая в памяти. Более сложная целевая *гистограмма* выполняет ряд задач по обработке данных перед их выводом. <br/> <br/> Любой целевой объект можно использовать для любого сеанса событий. Дополнительные сведения см. в разделе [Целевые объекты для расширенных событий в SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md). |
 | действие | Поле, известное событию. Данные из этого поля отправляются в целевой объект. Поле действия тесно связано с *фильтром предиката*. |
@@ -485,7 +486,7 @@ Package-Guid = 655FD93F-3364-40D5-B2BA-330F7FFB6491
 #### <a name="sql-trace-event-classes-with-extended-events"></a>Классы событий SQL Trace с расширенными событиями
 
 
-Описание использования расширенных событий с классами событий и столбцами SQL Trace можно найти в разделе [Просмотр эквивалентов расширенных событий для классов событий трассировки SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md).
+Описание использования расширенных событий с классами событий и столбцами трассировки SQL можно найти в следующей статье: [Просмотр эквивалентов расширенных событий для классов событий трассировки SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
 
 
 
@@ -525,7 +526,7 @@ Package-Guid = 655FD93F-3364-40D5-B2BA-330F7FFB6491
 ### <a name="powershell-provider-for-extended-events"></a>Поставщик PowerShell для расширенных событий
 
 
-Управлять расширенными событиями SQL Server можно с помощью поставщика SQL Server PowerShell. Подробные сведения см. в разделе [Использование поставщика PowerShell для расширенных событий](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md).
+Управлять расширенными событиями SQL Server можно с помощью поставщика SQL Server PowerShell. Подробные сведения см. в следующем разделе: [Использование поставщика PowerShell для расширенных событий](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)
 
 
 ### <a name="system-views-for-extended-events"></a>Системные представления для расширенных событий
@@ -649,7 +650,7 @@ SELECT HAS_PERMS_BY_NAME(
 - [GRANT, предоставление разрешений на сервер (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
 - [sys.server_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms188786.aspx)
 - Для базы данных SQL Azure: [sys.database_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms187328.aspx)
-- Блог. [Эффективные разрешения для ядра СУБД](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)
+- Блог: [Эффективные разрешения для ядра СУБД](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)
 - Масштабируемый [плакат](https://aka.ms/sql-permissions-poster)в формате PDF, на котором показана иерархия всех разрешений SQL Server.
 
 

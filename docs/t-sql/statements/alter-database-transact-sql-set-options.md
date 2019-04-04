@@ -2,7 +2,7 @@
 title: Параметры ALTER DATABASE SET (Transact-SQL) | Документы Майкрософт
 description: Сведения о том, как задать параметры базы данных, например автоматическую настройку, шифрование, хранилище запросов в SQL Server и базе данных SQL Azure
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fabf89ea24461953089a3f7eb928878e600f3d6
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: 37f2dc54498e98fc6d940a014dd8db4927b38027
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356527"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494436"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL)
 
@@ -149,7 +149,7 @@ SET
     DATE_CORRELATION_OPTIMIZATION { ON | OFF }
   
 <db_encryption_option> ::=
-    ENCRYPTION { ON | OFF }
+    ENCRYPTION { ON | OFF | SUSPEND | RESUME }
 
 <db_state_option> ::=
     { ONLINE | OFFLINE | EMERGENCY }
@@ -455,11 +455,13 @@ DATE_CORRELATION_OPTIMIZATION {ON | OFF} ON. [!INCLUDE[ssNoVersion](../../incl
 
 Определяет параметры шифрования базы данных.
 
-ENCRYPTION {ON | OFF} включает шифрование базы данных (ON) или отключает его (OFF). Дополнительные сведения см. в статьях о [прозрачном шифровании данных](../../relational-databases/security/encryption/transparent-data-encryption.md) и [прозрачном шифровании данных для Базы данных SQL Azure](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
+ENCRYPTION {ON | OFF | SUSPEND | RESUME} — позволяет включить шифрование базы данных (ON) или отключить его (OFF). Дополнительные сведения см. в статьях о [прозрачном шифровании данных](../../relational-databases/security/encryption/transparent-data-encryption.md) и [прозрачном шифровании данных для Базы данных SQL Azure](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
+
+В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версиях с помощью параметров SUSPEND и RESUME можно приостанавливать и возобновлять сканирование шифрования после включения или отключения прозрачного шифрования данных либо после смены ключа шифрования.
 
 Если включить шифрование на уровне базы данных, будут зашифрованы все файловые группы. Все новые файловые группы наследуют свойство шифрования. Если любая файловая группа базы данных установлена в состояние **READ ONLY**, операция шифрования базы завершится неуспешно.
 
-Параметры шифрования базы данных можно просмотреть с помощью динамического административного представления [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md).
+Состояние шифрования базы данных и состояние сканирования шифрования можно просмотреть с помощью динамического административного представления [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md).
 
 **\<db_state_option> ::=**
 

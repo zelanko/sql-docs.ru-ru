@@ -16,15 +16,15 @@ helpviewer_keywords:
 - RAW mode
 - XMLDATA option
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 249bee21bdddacc369a99efe8c31be511e2d305a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 961f1e06cb7ba194612cf4e87f40d356096149bb
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837962"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510181"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Использование с RAW Mode для FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47837962"
   
 -   [Пример. Указание XSINIL с директивой ELEMENTS](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [Пример: запросы к схемам как к результатам с помощью параметров XMLDATA и XMLSCHEMA](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [Пример. Запросы к схемам как к результатам с помощью параметров XMLDATA и XMLSCHEMA](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
 -   [Пример. Получение двоичных данных](../../relational-databases/xml/example-retrieving-binary-data.md)  
   

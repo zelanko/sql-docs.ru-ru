@@ -1,5 +1,5 @@
 ---
-title: 'Примеры: использование режима AUTO | Документация Майкрософт'
+title: 'Примеры: Использование режима AUTO | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e246624301cdc20fab58f8a59d72a2f8416bae1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91a2e3a44ba68d280f52b35c3d62026455d4e615
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698492"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510621"
 ---
-# <a name="examples-using-auto-mode"></a>Примеры. Использование режима AUTO
+# <a name="examples-using-auto-mode"></a>Примеры: Использование режима AUTO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   В следующем примере иллюстрируется применение режима AUTO. Многие из этих запросов являются запросами к XML-документам с инструкциями по производству велосипедов, хранящимся в столбце Instructions таблицы ProductModel образца базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Пример. Извлечение данных о заказчике, заказе и подробных сведений о заказе  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Пример Извлечение данных о заказчике, заказе и подробных сведений о заказе  
  Следующий запрос получает данные о заказчике, заказе и подробные данные о заказе определенного заказчика.  
   
 ```  
@@ -95,7 +95,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## <a name="example-specifying-group-by-and-aggregate-functions"></a>Пример. Использование предложения GROUP BY и агрегатных функций  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>Пример Использование предложения GROUP BY и агрегатных функций  
  Следующий запрос возвращает отдельные идентификаторы заказчиков и номера заказов, запрашиваемых заказчиками.  
   
 ```  
@@ -115,7 +115,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>Пример. Задание вычисляемых столбцов в режиме AUTO  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>Пример Задание вычисляемых столбцов в режиме AUTO  
  Этот запрос возвращает сцепленные имена заказчиков и данные для заказа. Так как вычисляемый столбец назначен самому внутреннему уровню, встретившемуся на данный момент, в этом примере — элементу <`SOH`>, сцепленные имена заказчиков добавляются в результат как атрибуты элемента <`SOH`>.  
   
 ```  
@@ -168,7 +168,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
   
  `...`  
   
-## <a name="example-returning-binary-data"></a>Пример. Возврат двоичных данных  
+## <a name="example-returning-binary-data"></a>Пример Возврат двоичных данных  
  Запрос возвращает фотографию продукта из таблицы `ProductPhoto` . `ThumbNailPhoto` — столбец **varbinary(max)** в таблице `ProductPhoto` . По умолчанию режим `AUTO` возвращает ссылку на двоичные данные, являющуюся относительным URL-адресом виртуального корня базы данных, в которой выполняется запрос. Для идентификации изображения необходимо указать ключевой атрибут `ProductPhotoID` . Как показано в этом примере, при поиске изображения для однозначной идентификации строки в предложении `SELECT` необходимо также указать первичный ключ таблицы.  
   
 ```  
@@ -224,7 +224,7 @@ FOR XML AUTO;
   
  Это может быть проблемой, особенно если запросы на объекты базы данных выполняются для базы данных с учетом регистра. Во избежание этого регистр задаваемого в запросах имени таблицы или столбца должен соответствовать регистру имени таблицы или столбца в базе данных.  
   
-## <a name="example-understanding-the-encoding"></a>Пример. Основные сведения о кодировке  
+## <a name="example-understanding-the-encoding"></a>Пример Основные сведения о кодировке  
  В этом примере демонстрируется использование различных кодировок, которые могут применяться в результате.  
   
  Создайте такую таблицу:  

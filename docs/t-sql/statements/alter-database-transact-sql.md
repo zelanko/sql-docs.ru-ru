@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a9d870d766d7c2080b177270156cfa2428c21fc7
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: d0818f5ffbc75a296996e1cf3b5683dacbc0efa2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417246"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538666"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -624,7 +624,15 @@ REMOVE SECONDARY ON SERVER testsecondaryserver
 ALTER DATABASE db1 FAILOVER
 ```
 
-### <a name="f-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>Е. Обновление отдельной базы данных до уровня обслуживания S0 (выпуск Standard Edition, уровень производительности 0)
+### <a name="e-force-failover-to-a-geo-replication-secondary-with-data-loss"></a>Д. Принудительный переход на базу данных-получатель с георепликацией с потерей данных
+
+Принудительно повышает уровень базы данных-получателя db1 на сервере `secondaryserver` до новой базы данных-источника при выполнении на сервере `secondaryserver` в случае, если сервер-источник становится недоступен. Повышение уровня может привести к потере данных. 
+
+```sql
+ALTER DATABASE db1 FORCE_FAILOVER_ALLOW_DATA_LOSS
+```
+
+### <a name="g-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>Ж. Обновление отдельной базы данных до уровня обслуживания S0 (выпуск Standard Edition, уровень производительности 0)
 Обновляет отдельную базу данных до выпуска Standard Edition (уровня обслуживания "Стандартный") с уровнем производительности S0 и максимальным размером 250 ГБ.
 
 ```sql

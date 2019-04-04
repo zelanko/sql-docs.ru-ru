@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 481a2fe18c99621b8331ab204a99e1d7efd37f24
-ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
+ms.openlocfilehash: 221021641787564bb064f1f825da43cff4b27a32
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55889985"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645566"
 ---
 # <a name="query-profiling-infrastructure"></a>Инфраструктура профилирования запросов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,6 +123,27 @@ WITH (MAX_MEMORY=4096 KB,
 
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] включает в себя заново переработанную версию упрощенного профилирования, собирающего данные о количестве строк для всех выполнений. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] упрощенное профилирование включено по умолчанию, и флаг трассировки 7412 не оказывает влияния.
 
+Появилась новая функция динамического управления [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md), которая возвращает эквивалент последнего известного действительного плана выполнения для большинства запросов. Новое расширенное событие *query_post_execution_plan_profile* служит для сбора эквивалента действительного плана выполнения на основе упрощенного, а не стандартного профилирования, как в случае с событием *query_post_execution_showplan*. 
+
+Пример сеанса с расширенным событием *query_post_execution_plan_profile* можно настроить, как показано ниже.
+
+```sql
+CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
+ADD EVENT sqlserver.query_post_execution_plan_profile(
+  ACTION(sqlos.scheduler_id,sqlserver.database_id,sqlserver.is_system,
+    sqlserver.plan_handle,sqlserver.query_hash_signed,sqlserver.query_plan_hash_signed,
+    sqlserver.server_instance_name,sqlserver.session_id,sqlserver.session_nt_username,
+    sqlserver.sql_text))
+ADD TARGET package0.ring_buffer(SET max_memory=(25600))
+WITH (MAX_MEMORY=4096 KB,
+  EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
+  MAX_DISPATCH_LATENCY=30 SECONDS,
+  MAX_EVENT_SIZE=0 KB,
+  MEMORY_PARTITION_MODE=NONE,
+  TRACK_CAUSALITY=OFF,
+  STARTUP_STATE=OFF);
+```
+
 ## <a name="remarks"></a>Remarks
 
 > [!IMPORTANT]
@@ -130,7 +151,10 @@ WITH (MAX_MEMORY=4096 KB,
 
 Начиная с упрощенного профилирования версии 2, благодаря его низкому потреблению ресурсов, любой сервер, у которого нет перегрузки ЦП, может выполнять упрощенное профилирование **непрерывно**. Это позволяет специалистам по работе с базами данных в любое время подключаться к любому запущенному выполнению, например с помощью монитора активности или прямого запроса `sys.dm_exec_query_profiles`, и получать план запроса со статистикой времени выполнения.
 
-Дополнительные сведения о снижении потребления ресурсов профилированием запросов см. в записи блога [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Выбор разработчика: ход выполнения запроса — всегда и везде). 
+Дополнительные сведения о снижении потребления ресурсов профилированием запросов см. в записи блога [Developers Choice: Query progress - anytime, anywhere](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004) (Выбор разработчика: ход выполнения запроса — всегда и везде). 
+
+> [!NOTE]
+> Расширенные события на основе упрощенного профилирования используют данные стандартного профилирования, если инфраструктура стандартного профилирования уже включена. Допустим, имеется запущенный сеанс расширенных событий `query_post_execution_showplan`, и запускается еще один сеанс для событий `query_post_execution_plan_profile`. Во втором сеансе будут использоваться данные стандартного профилирования.
 
 ## <a name="see-also"></a>См. также:  
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
@@ -145,4 +169,4 @@ WITH (MAX_MEMORY=4096 KB,
  [Справочник по логическим и физическим операторам Showplan](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [Действительный план выполнения](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [Динамическая статистика запросов](../../relational-databases/performance/live-query-statistics.md)      
- [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Выбор разработчика: ход выполнения запроса — всегда и везде).
+ [Developers Choice: Query progress - anytime, anywhere](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004) (Выбор разработчика: ход выполнения запроса — всегда и везде).

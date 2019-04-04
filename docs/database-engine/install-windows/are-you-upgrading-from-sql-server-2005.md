@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 24c7a50845e4adb416251f25909c438d1bd4990d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27e7285fe95307c6ce6308dc27e0076146e86223
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394758"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657768"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005-2008-or-2008r2"></a>Вы выполняете обновление с версии SQL Server 2005, 2008 или 2008 R2?
 
@@ -41,7 +41,7 @@ ms.locfileid: "52394758"
   
 |Вариант реляционного хранилища|Преимущества|Другие факторы, которые следует учитывать|  
 |-------------------------------|--------------|-------------------------------|  
-|**SQL Server на локальном компьютере**<br /><br /> Этот вариант рекомендуется для приложений баз данных любого типа: от транзакционных систем до хранилищ данных.|У вас есть полный контроль над возможностями и масштабируемостью, так как вы управляете и оборудованием, и программным обеспечением.<br /><br /> Эта среда наиболее близка к среде более старого экземпляра SQL Server.|Необходимо сделать максимальные первоначальные инвестиции и обеспечить наиболее тщательное управление, поскольку необходимо приобрести собственное оборудование и программное обеспечение, поддерживать его и управлять им.<br /><br /> Дополнительные сведения см. на странице [SQL Server](https://www.microsoft.com/server-cloud/products/sql-server-2017/).|  
+|**SQL Server на локальном компьютере**<br /><br /> Этот вариант рекомендуется для приложений баз данных любого типа: от транзакционных систем до хранилищ данных.|У вас есть полный контроль над возможностями и масштабируемостью, так как вы управляете и оборудованием, и программным обеспечением.<br /><br /> Эта среда наиболее близка к среде более старого экземпляра SQL Server.|Необходимо сделать максимальные первоначальные инвестиции и обеспечить наиболее тщательное управление, поскольку необходимо приобрести собственное оборудование и программное обеспечение, поддерживать его и управлять им.<br /><br /> Дополнительные сведения см. на странице [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).|  
 |**SQL Server, размещенный на виртуальных машинах Azure**<br /><br /> Рекомендуется использовать этот вариант, если требуется следующее.<br /><br /> Преимущества миграции в размещенную среду.<br /><br /> Управление операционной средой.<br /><br /> Набор знакомых функций SQL Server.|Можно быстро выполнить развертывание из библиотеки образов виртуальных машин.<br /><br /> Вы получаете полный набор функций SQL Server.<br /><br /> Можно сэкономить на стоимости оборудования и серверного программного обеспечения. Вы платите только за почасовое использование.|Необходимо настроить программное обеспечение SQL Server и операционной системы и управлять им.<br /><br /> <br /><br /> Дополнительные сведения см. в статье [Обзор SQL Server на виртуальных машинах Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/).<br /><br /> Сведения о миграции см. в разделе [Перенос базы данных в SQL Server на виртуальной машине Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/).|  
 |**Размещенная служба базы данных SQL Azure**<br /><br /> Рекомендуется использовать этот вариант, если требуется экономичное решение с меньшим объемом обслуживания.<br /><br /> Этот вариант особенно хорошо подходит для приложений, которым не требуется постоянное выделение одинаковых мощностей или для которых необходим внешний доступ.|Можно быстро выполнить развертывание и масштабирование.<br /><br /> Вы платите только за почасовое использование.<br /><br /> Стоимость обслуживания включает не только хранилище, но и высокую доступность и автоматическое резервное копирование.|В базе данных SQL Azure отсутствуют некоторые функции SQL Server, которые не применяются в размещенной облачной среде. Дополнительные сведения см. в разделе [Сведения о Transact-SQL Базы данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/).<br /><br /> Кроме того, База данных SQL Azure имеет максимальный размер 4 ТБ, а SQL Server — 524 ПБ. Дополнительные сведения: [Ограничения ресурсов для отдельных баз данных](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)<br /><br /> Дополнительные сведения о Базе данных SQL: [Общие сведения о Базе данных SQL Azure](https://azure.microsoft.com/services/sql-database/), [Документация по Базе данных SQL Azure](https://docs.microsoft.com/azure/sql-database/).<br /><br /> Сведения о миграции см. в статье, посвященной [переносу базы данных SQL Server в базу данных Azure SQL](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/).|  
   
@@ -55,7 +55,7 @@ ms.locfileid: "52394758"
 ## <a name="plan-your-upgrade"></a>Планирование обновления  
   
 -   Запланировать обновление своего экземпляра SQL Server 2005 вам поможет следующая серия записей блога от команды разработчиков SQL Server. 
-    - Планирование эффективного обновления SQL Server 2005: [шаг 1 из 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx), [шаг 2 из 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx), [шаг 3 из 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)
+    - Планирование эффективного обновления SQL Server 2005: [шаг 1 из 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx), [шаг 2 из 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx), [шаг 3 из 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)
 - Подготовьтесь к [прекращению поддержки SQL Server 2008](https://www.microsoft.com/sql-server/sql-server-2008).
   
 -   Ознакомьтесь с требованиями и рекомендациями в разделе [Планирование установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md), включая [Требования к оборудованию и программному обеспечению для установки SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  

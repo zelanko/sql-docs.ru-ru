@@ -1,5 +1,5 @@
 ---
-title: 'Примеры: использование инструкции OPENXML | Документация Майкрософт'
+title: 'Примеры: Использование инструкции OPENXML | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,17 +24,17 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3f1b27a3889928365f727f4f85cc945f3561d8fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c072fc97536259b16938cc36dcbc21dbbbb97b57
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849852"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511271"
 ---
-# <a name="examples-using-openxml"></a>Примеры. Использование OPENXML
+# <a name="examples-using-openxml"></a>Примеры: использование инструкции OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Примеры в этом подразделе иллюстрируют использование инструкции OPENXML для создания представления наборов строк XML-документа. Дополнительные сведения о синтаксисе инструкции OPENXML см. в разделе [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md). Примеры показывают все аспекты инструкции OPENXML, но не определяют метасвойства в ней. Дополнительные сведения о том, как использовать метасвойства в OPENXML, см. в статье [Определение метасвойств в инструкции OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   

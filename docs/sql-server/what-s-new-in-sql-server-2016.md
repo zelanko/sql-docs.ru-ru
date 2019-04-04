@@ -17,12 +17,12 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 684df573eba24e9e0337f33f17b8507523b199e3
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 39be659b50c7cc068c3887a0c0139b312c46cf0b
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699451"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657988"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Что нового в SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -30,12 +30,12 @@ ms.locfileid: "51699451"
 
 На этой странице представлен краткий обзор новых возможностей и ссылки на подробные сведения о них для каждого компонента SQL Server 2016. 
 
-![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
+![SQL Server 2016](../sql-server/media/sql-server-2016.png)
 
  **Оцените SQL Server уже сегодня!** 
 - Скачайте **бесплатный** [**выпуск SQL Server 2016 Developer Edition**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers).
 - Скачайте последнюю версию [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). 
-- Есть учетная запись Azure? Запустите [виртуальную машину с уже установленным решением SQL Server 2016](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
+- Есть учетная запись Azure? Запустите [виртуальную машину с уже установленным решением SQL Server 2016](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016).
 
 ## <a name="sql-server-2016-database-engine"></a>Ядро СУБД SQL Server 2016
 - Теперь вы можете настроить **несколько файлов базы данных tempDB** во время установки и настройки SQL Server.
@@ -49,9 +49,9 @@ ms.locfileid: "51699451"
     - Поддерживаются таблицы до 2 ТБ (от 256 ГБ). 
     - Усовершенствованы индексы хранилища столбцов для сортировки и поддержки групп доступности AlwaysOn.
 - Новые функции безопасности:
-    - **Постоянное шифрование.** Если оно включено, доступ к зашифрованным конфиденциальным данным в базе данных SQL Server 2016 получают только приложения с ключом шифрования. Ключ никогда не передается в SQL Server.
-    - **Динамическое маскирование данных.** Если этот параметр указан в определении таблицы, маскированные данные будут скрыты от большинства пользователей, полностью отображаясь только для пользователей с разрешением UNMASK.
-    - **Безопасность на уровне строк.** Доступ к данным можно ограничить на уровне ядра СУБД, и для пользователей будет отображаться только релевантная информация. 
+    - **Always Encrypted**. Если включено, доступ к зашифрованным конфиденциальным данным в базе данных SQL Server 2016 получают только приложения с ключом шифрования. Ключ никогда не передается в SQL Server.
+    - **Динамическое маскирование данных**. Если этот параметр указан в определении таблицы, маскированные данные будут скрыты от большинства пользователей, полностью отображаясь только для пользователей с разрешением UNMASK.
+    - **Безопасность на уровне строк**. Доступ к данным можно ограничить на уровне ядра СУБД, и для пользователей будет отображаться только релевантная информация. 
 
 См. раздел о [ядре СУБД](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)

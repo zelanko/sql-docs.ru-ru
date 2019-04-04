@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -19,12 +19,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d75671550d6e935216fd4d265777b31c81af7675
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 49e0704f80105ef0f24cacef43dfdcfb52b053dc
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017890"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493296"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -33,7 +33,7 @@ ms.locfileid: "57017890"
 Отправляет файлы пакетов R, Python или Java в базу данных из указанного байтового потока или пути к файлу. Эта инструкция служит универсальным механизмом для администратора базы данных, с помощью которого он может отправлять артефакты, необходимые для любой новой внешней языковой среды выполнения и платформы операционной системы, поддерживаемой [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
 
 > [!NOTE]
-> В SQL Server 2017 поддерживаются язык R и платформа Windows. R, Python и Java на платформе Windows поддерживаются в SQL Server 2019 CTP 2.3. Поддержка Linux планируется в будущих выпусках.
+> В SQL Server 2017 поддерживаются язык R и платформа Windows. R, Python и Java на платформах Windows и Linux поддерживаются в SQL Server 2019 CTP 2.4.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2019"></a>Синтаксис для SQL Server 2019
@@ -48,7 +48,7 @@ WITH ( LANGUAGE = <language> )
 <file_spec> ::=  
 {  
     (CONTENT = { <client_library_specifier> | <library_bits> }  
-    [, PLATFORM = WINDOWS ])  
+    [, PLATFORM = <platform> ])  
 }  
 
 <client_library_specifier> :: = 
@@ -64,12 +64,19 @@ WITH ( LANGUAGE = <language> )
     | varbinary_expression 
 }
 
+<platform> :: = 
+{
+      WINDOWS
+    | LINUX
+}
+
 <language> :: = 
 {
       'R'
     | 'Python'
     | 'Java'
 }
+
 ```
 ::: moniker-end
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
@@ -133,13 +140,20 @@ WITH ( LANGUAGE = 'R' )
 
 Этот параметр полезен, если необходимо создать библиотеку или изменить существующую библиотеку (и у вас есть необходимые разрешения), но файловая система на сервере ограничена, и не удается скопировать файлы библиотеки в место, доступное для сервера.
 
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
 Указывает платформу для содержимого библиотеки. Является значением по умолчанию для платформы узла, на которой выполняется SQL Server. Поэтому пользователю не нужно указывать это значение. Оно необходимо в случае, когда поддерживается несколько платформ или пользователь хочет указать другую платформу. 
 
-Сейчас поддерживается только платформа Windows.
-
+В SQL Server 2017 поддерживается только платформа Windows.
+::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+**PLATFORM**
+
+Указывает платформу для содержимого библиотеки. Является значением по умолчанию для платформы узла, на которой выполняется SQL Server. Поэтому пользователю не нужно указывать это значение. Оно необходимо в случае, когда поддерживается несколько платформ или пользователь хочет указать другую платформу.
+
+В SQL Server 2019 поддерживаются платформы Windows и Linux.
+
 **language**
 
 Задает язык пакета. Значением может быть `R`, `Python` или `Java`.
@@ -147,9 +161,12 @@ WITH ( LANGUAGE = 'R' )
 
 ## <a name="remarks"></a>Remarks
 
-При использовании файла в языке R пакеты должны быть подготовлены в виде сжатых архивных файлов с расширением ZIP для Windows. В настоящее время поддерживается только платформа Windows. 
-
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+При использовании файла в языке R пакеты должны быть подготовлены в виде сжатых архивных файлов с расширением ZIP для Windows. В SQL Server 2017 поддерживается только платформа Windows. 
+::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+При использовании файла в языке R пакеты должны быть подготовлены в виде сжатых архивных файлов с расширением ZIP.  
+
 Для языка Python необходимо подготовить пакет в WHL- или ZIP-файле в виде файла с ZIP-архивом. Если пакет уже является ZIP-файлом, он должен быть включен в новый ZIP-файл. Отправка пакета в качестве WHL- или ZIP-файла напрямую в настоящее время не поддерживается.
 ::: moniker-end
 
@@ -162,6 +179,8 @@ WITH ( LANGUAGE = 'R' )
 Требуется разрешение `CREATE EXTERNAL LIBRARY`. По умолчанию любой пользователь с учетной записью **dbo**, являющийся членом роли **db_owner**, имеет разрешения на создание внешней библиотеки. Другим пользователям необходимо явным образом предоставить разрешение с помощью инструкции [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql), указав CREATE EXTERNAL LIBRARY в качестве привилегии.
 
 Для изменения библиотеки требуется отдельное разрешение `ALTER ANY EXTERNAL LIBRARY`.
+
+Чтобы создать внешнюю библиотеку, используя путь к файлу, пользователь должен иметь проверенное на подлинность имя входа Windows или быть членом предопределенной роли сервера sysadmin.
 
 ## <a name="examples"></a>Примеры
 
@@ -279,6 +298,26 @@ EXEC sp_execute_external_script
     , @script = N'customJar.MyCLass.myMethod'
     , @input_data_1 = N'SELECT * FROM dbo.MyTable'
 WITH RESULT SETS ((column1 int))
+```
+
+### <a name="f-add-an-external-package-for-both-windows-and-linux"></a>Е. Добавление внешнего пакета одновременно для Windows и Linux
+
+Вы можете указать два параметра `<file_spec>`: один для Windows, а другой для Linux.
+
+```sql
+CREATE EXTERNAL LIBRARY lazyeval 
+FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\packageA.zip', PLATFORM = WINDOWS),
+(CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\packageA.tar.gz', PLATFORM = LINUX)
+WITH (LANGUAGE = 'R')
+```
+
+При установке пакета с помощью процедуры `sp_execute_external_script` используется содержимое библиотеки для той платформы, на которой выполняется экземпляр SQL Server.
+
+```sql
+EXECUTE sp_execute_external_script 
+    @LANGUAGE = N'R',
+    @SCRIPT = N'
+library(packageA)
 ```
 ::: moniker-end
 

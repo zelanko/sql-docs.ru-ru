@@ -24,12 +24,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b20f9d2d48452d95ff0c219f7c291a2a5b1cd887
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 045053757464667c4455a652e1eb2081ab63d7b8
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275501"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657888"
 ---
 # <a name="data-flow-performance-features"></a>Возможности для повышения производительности потока данных
   В этом разделе приведены советы по проектированию пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , помогающие избежать общих проблем с производительностью. Кроме того, в этом разделе содержатся сведения по функциям и средствам, позволяющим устранить неполадки с производительностью пакетов.  
@@ -175,7 +175,7 @@ ms.locfileid: "58275501"
   
 -   Техническая статья [Integration Services: Performance Tuning Techniques](https://go.microsoft.com/fwlink/?LinkId=98900) (Службы Integration Services — способы настройки производительности) на портале technet.microsoft.com.  
   
--   Техническая статья [Increasing Throughput of Pipelines by Splitting Synchronous Transformations into Multiple Tasks (на английском языке)](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)на сайте sqlcat.com  
+-   Техническая статья [Повышение пропускной способности конвейеров путем разделения синхронных преобразований на несколько задач](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf) в _руководстве SQLCAT по бизнес-аналитике и анализу_
   
 -   Техническая статья [Руководство по производительности загрузки данных](https://go.microsoft.com/fwlink/?LinkId=220816)на сайте msdn.microsoft.com.  
   

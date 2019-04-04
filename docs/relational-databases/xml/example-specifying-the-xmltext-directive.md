@@ -1,5 +1,5 @@
 ---
-title: Пример. Указание директивы XMLTEXT | Документация Майкрософт
+title: Пример Указание директивы XMLTEXT | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c20ecd2ea4df8ea3e3a22138473ec1de48fc7a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e22a94fef64ac6b31d4a7609c01a50f11d5020bf
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806820"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511941"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>Пример. Указание директивы XMLTEXT
+# <a name="example-specifying-the-xmltext-directive"></a>Пример Задание директивы XMLTEXT
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Этот пример иллюстрирует, как обращение к данным переполненного столбца осуществляется при помощи директивы **XMLTEXT** в инструкции `SELECT` , использующей режим EXPLICIT.  
   

@@ -1,7 +1,7 @@
 ---
 title: DROP EXTERNAL LIBRARY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -17,12 +17,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 129aafce2e270f85506d056d5d083d34176aa8a0
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 86609c0cb3e66397c4c8c8f3a09fba64b14089e4
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018020"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492826"
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "57018020"
 Удаляет существующую библиотеку пакета. Библиотеки пакетов используются поддерживаемыми внешними средами выполнения, например R, Python или Java.
 
 > [!NOTE]
-> В SQL Server 2017 поддерживаются язык R и платформа Windows. R, Python и Java на платформе Windows поддерживаются в SQL Server 2019 CTP 2.3. Поддержка Linux планируется в будущих выпусках.
+> В SQL Server 2017 поддерживаются язык R и платформа Windows. R, Python и Java на платформах Windows и Linux поддерживаются в SQL Server 2019 CTP 2.4. 
 
 ## <a name="syntax"></a>Синтаксис
 
