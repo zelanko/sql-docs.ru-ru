@@ -20,39 +20,34 @@ author: ''
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 37c334f5c5107b2716601916517e888d90164226
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 2246abe2343622f2aece785a31e1e31f7166822b
+ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732081"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58899720"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Возвращает сведения о странице в базе данных.  Функция возвращает одну строку, содержащим данные заголовков со страницы, включая `object_id`, `index_id`, и `partition_id`.  В большинстве случаев эта функция заменяет потребность в использовании `DBCC PAGE`.
 
-## <a name="syntax"></a>Синтаксис  
-  
+## <a name="syntax"></a>Синтаксис   
 ```  
 sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )  
 ``` 
 
 ## <a name="arguments"></a>Аргументы  
- *DatabaseId* | NULL | ПО УМОЛЧАНИЮ  
-
- Идентификатор базы данных. *DatabaseId* — **smallint**. Допустимые входные данные — номер идентификатора базы данных. Значение по умолчанию имеет значение NULL, однако Отправка значение NULL для этого параметра приведет к ошибке.
+*DatabaseId* | NULL | ПО УМОЛЧАНИЮ     
+Идентификатор базы данных. *DatabaseId* — **smallint**. Допустимые входные данные — номер идентификатора базы данных. Значение по умолчанию имеет значение NULL, однако Отправка значение NULL для этого параметра приведет к ошибке.
  
-*FileId* | NULL | ПО УМОЛЧАНИЮ
-
+*FileId* | NULL | ПО УМОЛЧАНИЮ   
 Идентификатор файла. *FileId* — **int**.  Допустимые входные данные — номер идентификатора файла в базы данных, указанной *DatabaseId*. Значение по умолчанию имеет значение NULL, однако Отправка значение NULL для этого параметра приведет к ошибке.
 
-*Идентификатор страницы* | NULL | ПО УМОЛЧАНИЮ
-
+*Идентификатор страницы* | NULL | ПО УМОЛЧАНИЮ   
 Это идентификатор страницы.  *Идентификатор страницы* — **int**.  Допустимые входные данные — номер идентификатора страницы в файл, указанный параметром *FileId*. Значение по умолчанию имеет значение NULL, однако Отправка значение NULL для этого параметра приведет к ошибке.
 
-*режим* | NULL | ПО УМОЛЧАНИЮ
-
+*режим* | NULL | ПО УМОЛЧАНИЮ   
 Определяет уровень детализации в выходных данных функции. «ОГРАНИЧЕННЫЙ» будут возвращать значения NULL для всех столбцов, описание, «ПОДРОБНЫЙ» заполнит описание столбцов.  Значение по умолчанию — «ОГРАНИЧЕННЫЙ».
 
 ## <a name="table-returned"></a>Возвращаемая таблица  
@@ -63,11 +58,11 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 |file_id |ssNoversion |Идентификатор файла |
 |page_id |ssNoversion |Идентификатор страницы |
 |page_type |ssNoversion |Тип страницы |
-|page_type_desc |Nvarchar(64) |Описание типа страницы |
-|page_flag_bits |Nvarchar(64) |Флаговые биты в заголовке страницы |
+|page_type_desc |nvarchar(64) |Описание типа страницы |
+|page_flag_bits |nvarchar(64) |Флаговые биты в заголовке страницы |
 |page_flag_bits_desc |nvarchar(256) |Описание bits флаг в заголовке страницы |
-|page_type_flag_bits |Nvarchar(64) |Введите флаговые биты в заголовке страницы |
-|page_type_flag_bits_desc |Nvarchar(64) |Описание bits флаг типа в заголовке страницы |
+|page_type_flag_bits |nvarchar(64) |Введите флаговые биты в заголовке страницы |
+|page_type_flag_bits_desc |nvarchar(64) |Описание bits флаг типа в заголовке страницы |
 |object_id |ssNoversion |Идентификатор объекта, получившего страницы |
 |index_id |ssNoversion |Идентификатор индекса (0 для страниц данных кучи) |
 |partition_id |BIGINT |Идентификатор секции |
@@ -81,35 +76,35 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 |pfs_file_id |smallint |Идентификатор файла соответствующий PFS-страницы |
 |pfs_page_id |ssNoversion |Идентификатор соответствующего PFS-страницы |
 |pfs_alloc_percent |ssNoversion |Процент распределения, как указано в PFS байтов |
-|pfs_status |Nvarchar(64) |PFS байтов |
-|pfs_status_desc |Nvarchar(64) |Описание PFS байта |
+|pfs_status |nvarchar(64) |PFS байтов |
+|pfs_status_desc |nvarchar(64) |Описание PFS байта |
 |gam_file_id |smallint |Идентификатор файла, соответствующей страницы GAM |
 |gam_page_id |ssNoversion |Идентификатор страницы, соответствующей страницы GAM |
 |gam_status |bit |Чтобы указать, если бит выделенный в GAM |
-|gam_status_desc |Nvarchar(64) |Описание состояния бита на карте GAM |
+|gam_status_desc |nvarchar(64) |Описание состояния бита на карте GAM |
 |sgam_file_id |smallint |Идентификатор файла, соответствующий SGAM-страницы |
 |sgam_page_id |ssNoversion |Идентификатор страницы, соответствующий SGAM-страницы |
 |sgam_status |bit |Чтобы указать, если бит выделенных в SGAM |
-|sgam_status_desc |Nvarchar(64) |Описание состояния соответствующий бит SGAM |
+|sgam_status_desc |nvarchar(64) |Описание состояния соответствующий бит SGAM |
 |diff_map_file_id |smallint |Идентификатор соответствующей страницы битовой карте разностного файла |
 |diff_map_page_id |ssNoversion |Идентификатор страницы, соответствующей страницы разностная битовая карта |
 |diff_status |bit |Бит, чтобы указать, если изменяется состояние копирования |
-|diff_status_desc |Nvarchar(64) |Описание состояния бита diff |
+|diff_status_desc |nvarchar(64) |Описание состояния бита diff |
 |ml_file_id |smallint |Идентификатор файла на соответствующей странице точечного рисунка минимальное протоколирование |
 |ml_page_id |ssNoversion |Идентификатор страницы, соответствующей страницы точечного рисунка минимальное протоколирование |
 |ml_status |bit |Бит, чтобы указать, если страницы минимальный журнал |
-|ml_status_desc |Nvarchar(64) |Описание состояния минимальное протоколирование бит |
+|ml_status_desc |nvarchar(64) |Описание состояния минимальное протоколирование бит |
 |free_bytes |smallint |Количество свободных байт на страницу |
 |free_data_offset |ssNoversion |Смещение свободного места в конце области данных |
 |reserved_bytes |smallint |Количество свободных байт, зарезервированной с помощью все транзакции (Если куча) <br> Количество фантомных строк (если конечный индекс) |
 |reserved_xdes_id |smallint |Пространство, порожденного m_xdesID для m_reservedCnt <br> Только для отладки |
-|xdes_id |Nvarchar(64) |Последняя транзакция, порожденного m_reserved <br> Только для отладки |
+|xdes_id |nvarchar(64) |Последняя транзакция, порожденного m_reserved <br> Только для отладки |
 |prev_page_file_id |smallint |Предыдущий идентификатор файла страницы |
 |prev_page_page_id |ssNoversion |Предыдущей страницы, идентификатор страницы |
 |next_page_file_id |smallint |Следующий идентификатор файла страницы |
 |next_page_page_id |ssNoversion |Следующая страница идентификатор страницы |
 |min_len |smallint |Длина строки фиксированного размера |
-|lsn |Nvarchar(64) |Регистрационный номер / метки времени |
+|lsn |nvarchar(64) |Регистрационный номер / метки времени |
 |header_version |ssNoversion |Версия заголовка страницы |
 
 ## <a name="remarks"></a>Примечания
@@ -149,6 +144,7 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS pag
 ## <a name="see-also"></a>См. также  
 [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Динамические административные представления, относящиеся к базе данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
+[sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)
 
 
