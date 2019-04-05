@@ -12,12 +12,12 @@ ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4d346379cf0aeb945187b18f7eb1fd7a868b33e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 19eae2e3ace3859d61048536be9b70bf58ad66f5
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518104"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042433"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>Обновление доставки журналов до SQL Server 2014 (Transact-SQL)
   При обновлении с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]конфигурацию доставки журналов можно сохранить. В этом разделе описаны альтернативные сценарии и рекомендации по обновлению конфигурации доставки журналов.  
@@ -130,7 +130,7 @@ ms.locfileid: "52518104"
   
     5.  Убедитесь, чтобы журнал транзакций базы данных-получателя не заполнялся, когда база данных находится в режиме «в сети». Чтобы предотвратить заполнение журнала транзакций, можно создать его резервную копию. То есть рекомендуется сохранить его резервную копию в общем расположении, *общей папке резервных копий*, чтобы резервные копии были доступны для восстановления из копии на другом экземпляре сервера.  
   
-#####  <a name="Procedure2 "></a> Процедура 2. Обновите исходный экземпляр сервера-источника до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#####  <a name="Procedure2"></a> Процедура 2. Обновите исходный экземпляр сервера-источника до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  После обновления экземпляра исходного экземпляра сервера-источника до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]база данных по-прежнему будет в режиме «вне сети» и в формате предыдущей версии.  
   
 #####  <a name="Procedure3"></a> Процедура 3. Настройка доставки журналов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -193,7 +193,7 @@ ms.locfileid: "52518104"
 > [!IMPORTANT]  
 >  Экземпляры сервера-получателя всегда следует обновлять раньше, чем сервер-источник.  
   
- **Для обновления с помощью отработки отказа, а затем переключиться обратно в исходный сервер-источник**  
+ **Обновление с помощью отработки отказа на сервер-получатель и обратного переключения на исходный сервер-источник**  
   
 1.  Обновите все экземпляры сервера-получателя (сервер B и сервер C).  
   
@@ -224,6 +224,4 @@ ms.locfileid: "52518104"
 ## <a name="see-also"></a>См. также  
  [Резервные копии журналов транзакций (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [Применение резервных копий журналов транзакций (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [Таблицы доставки журналов и хранимые процедуры](log-shipping-tables-and-stored-procedures.md)  
-  
-  
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  

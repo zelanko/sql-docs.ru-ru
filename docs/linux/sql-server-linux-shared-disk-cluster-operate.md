@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e84fc2a6032e5886c4d82d630dc36a5bde338ed1
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: d3db11a8ace49a206ffaff106814e87b64948cce
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044510"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042363"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Работа экземпляра отказоустойчивого кластера — SQL Server на Linux
 
@@ -31,8 +31,8 @@ ms.locfileid: "55044510"
 
 Способ отработки отказа зависит от дистрибутива Linux. Следуйте инструкциям для дистрибутива linux.
 
-- [RHEL или Ubuntu](#rhelFailover)
-- [SLES](#slesFailover)
+- [RHEL или Ubuntu](#-manual-failover-rhel-or-ubuntu)
+- [SLES](#-manual-failover-sles)
 
 ## <a name = "#rhelFailover"></a> На другой ресурс вручную (RHEL или Ubuntu)
 

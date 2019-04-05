@@ -3,17 +3,17 @@ title: 'Краткое руководство для выполнения код
 description: Краткое руководство по R-скриптов SQL Server. Ознакомиться с основами вызов сценария R в упражнении Здравствуй, мир при помощи системной хранимой процедуры sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/04/2019
+ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 7517b9ab18c7448014e8c9113430b2c21047f972
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 1ec9580a533e51b7e99ea0ac34c1d322a27da452
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046907"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042283"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>Краткое руководство. R-сценарий «Hello world» в SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,8 @@ ms.locfileid: "54046907"
     b <- 2
     c <- a/b
     d <- a*b
-    print(c, d)'
+    print(c(c, d))'
+    '
     ```
 
 2. Предположим, что у вас есть все настроено правильно правильный результат вычисляется и R `print` функция возвращает результат **сообщений** окна.
@@ -90,4 +91,4 @@ GO
 Теперь, когда вы запустили несколько простые скрипты R, внимательно ознакомьтесь структурирование входные и выходные данные.
 
 > [!div class="nextstepaction"]
-> [Краткое руководство. Обрабатывать входные и выходные данные](quickstart-r-inputs-and-outputs.md)
+> [Краткое руководство. Работа с входными и выходными данными](quickstart-r-inputs-and-outputs.md)
