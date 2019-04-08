@@ -14,12 +14,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 047adc4654d4e0104aa0fab79ba2be7a002de738
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 3260abf50bf46a703a925f8ad0a7829d2d1c1315
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801048"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042353"
 ---
 # <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ DROP EXTERNAL TABLE [ database_name . [schema_name ] . | schema_name . ] table_n
   
 
 ## <a name="arguments"></a>Аргументы  
- [ *database_name* . [*schema_name*] . | *schema_name* . ] *table_name*  
+ `[ database_name . [schema_name] . | schema_name . ] table_name`  
  Состоящее из не более трех частей имя внешней таблицы для удаления. При необходимости имя таблицы может включать схему или базу данных и схему.  
   
 ## <a name="permissions"></a>Разрешения  

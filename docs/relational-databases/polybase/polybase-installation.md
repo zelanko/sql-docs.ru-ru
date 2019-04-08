@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3c08f8cb48e22ba5ca1546f9fcca63f77868b356
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6783112203e5c63aae41749f942da6240265eea3
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208803"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872304"
 ---
 # <a name="install-polybase-on-windows"></a>Установка PolyBase на компьютере по управлением Windows
 
@@ -77,7 +77,7 @@ ms.locfileid: "53208803"
    
    > [!IMPORTANT] 
    >
-   >В масштабируемой группе PolyBase служба PolyBase Engine и служба перемещения данных PolyBase должны работать на всех узлах под одной учетной записью домена. См. раздел [Масштабируемые группы PolyBase](#Enable).
+   >В масштабируемой группе PolyBase служба PolyBase Engine и служба перемещения данных PolyBase должны работать на всех узлах под одной учетной записью домена. См. раздел [Масштабируемые группы PolyBase](#enable).
    
 5. На странице конфигурации PolyBase выберите один из двух вариантов. Дополнительные сведения: [Масштабируемые группы PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  
    
@@ -105,7 +105,7 @@ ms.locfileid: "53208803"
 
 |Компонент SQL Server|Параметр и значения|Описание|  
 |--------------------------|--------------------------|-----------------|  
-|Управление программой установки SQL Server|**Обязательное**<br /><br /> /FEATURES=PolyBase|Выбирает компонент PolyBase.|  
+|Управление программой установки SQL Server|**Обязательно**<br /><br /> /FEATURES=PolyBase|Выбирает компонент PolyBase.|  
 |Компонент SQL Server PolyBase Engine|**Необязательно**<br /><br /> /PBENGSVCACCOUNT|Задает учетную запись для службы ядра. По умолчанию используется **NT Authority\NETWORK SERVICE**.|  
 |Компонент SQL Server PolyBase Engine|**Необязательно**<br /><br /> /PBENGSVCPASSWORD|Задает пароль для учетной записи службы ядра.|  
 |Компонент SQL Server PolyBase Engine|**Необязательно**<br /><br /> /PBENGSVCSTARTUPTYPE|Задает режим запуска для PolyBase Engine: Automatic (Автоматически, используется по умолчанию), Disabled (Отключено) или Manual (Вручную).|  

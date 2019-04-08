@@ -15,12 +15,12 @@ ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2e31c26430433b26eb858b967f54df4e61b103b2
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d22b59e761d499c566078e3867736d0b8b743df0
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214665"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860445"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group"></a>Добавление базы данных в группу доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "53214665"
   
 -   **Перед началом работы**  
   
-     [Требования и ограничения](#Prerequisites)    
+     [Требования и ограничения](#prerequisites-and-restrictions)    
      [Разрешения](#Permissions)    
 -   **Добавление базы данных в группу доступности с помощью:**  
   
@@ -113,7 +113,7 @@ ms.locfileid: "53214665"
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [Поставщик SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell, поставщик](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
  Полный пример см. в разделе [Пример (PowerShell)](#PSExample)ниже.  
   
@@ -144,5 +144,3 @@ Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"
  [Создание и настройка групп доступности (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
  [Отслеживание групп доступности (Transact-SQL)](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
-  
-  
