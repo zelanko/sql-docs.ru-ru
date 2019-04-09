@@ -17,12 +17,12 @@ ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f931b6c9edd917a12d3a84cc9cd65af862f0697e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9b307c48da04e32691afa12ff1b05f6a4e8c33d8
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384752"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242192"
 ---
 # <a name="literals-ssis"></a>Литералы (службы SSIS)
   Выражения могут содержать числовые, строковые и логические литералы. Средство оценки выражений поддерживает различные числовые литералы, такие как целые числа, десятичные дроби и константы с плавающей точкой. Средство оценки выражений также поддерживает суффиксы для длинных чисел и чисел с плавающей точкой, указывающие, как механизм вычисления выражений обрабатывает значения, а также экспоненциальное представление чисел в числовых литералах.  
@@ -117,6 +117,6 @@ ms.locfileid: "58384752"
 >  В выражении логические литералы должны быть разделены пробелами.  
   
 ## <a name="related-content"></a>См. также  
- Техническая статья [Памятка выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=217683)на сайте pragmaticworks.com  
+ Техническая статья [Памятка выражений служб SSIS](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)на сайте pragmaticworks.com  
   
   

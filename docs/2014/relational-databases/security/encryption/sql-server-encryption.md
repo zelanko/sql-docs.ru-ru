@@ -14,12 +14,12 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 8a9018c43ace6ebbf0a905567bb806b616530a02
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1484a32eb808e6778896a498d5a6dee525b18aed
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352192"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242462"
 ---
 # <a name="sql-server-encryption"></a>Шифрование SQL Server
   Шифрование представляет собой способ скрытия данных с помощью ключа или пароля. Это делает данные бесполезными без соответствующего ключа или пароля для дешифрования. Шифрование не решает проблемы управления доступом. Однако оно повышает защиту за счет ограничения потери данных даже при обходе системы управления доступом. Например, если компьютер, на котором установлена база данных, был настроен неправильно и злоумышленник смог получить конфиденциальные данные, то украденная информация будет бесполезна, если она была предварительно зашифрована.  
@@ -40,7 +40,7 @@ ms.locfileid: "53352192"
  Общие сведения о прозрачном шифровании данных.  
   
  [Ключи шифрования базы данных и SQL Server (компонент Database Engine)](sql-server-and-database-encryption-keys-database-engine.md)  
- Используемые в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ключи шифрования представляют собой сочетание открытых, закрытых и симметричных ключей, которые используются для защиты конфиденциальных данных. В этом разделе рассказывается о внедрении и управлении ключами шифрования.  
+ Используемые в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ключи шифрования представляют собой сочетание открытых, закрытых и симметричных ключей, которые используются для защиты конфиденциальных данных. В этом разделе рассказывается о внедрении и управлении ключами шифрования.  
   
 ## <a name="related-content"></a>См. также  
  [Обеспечение безопасности SQL Server](../securing-sql-server.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "53352192"
  Сведения об использовании сертификатов для шифрования данных.  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
- [Microsoft TechNet: технический центр SQL Server: Защита и обеспечение безопасности SQL Server 2005](https://www.microsoft.com/technet/prodtechnol/sql/2005/library/security.mspx)  
+ [10 шагов к безопасности SQL Server 2005](https://www.itprotoday.com/sql-server/10-steps-sql-server-2005-security)  
  Текущие сведения о безопасности в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>См. также  

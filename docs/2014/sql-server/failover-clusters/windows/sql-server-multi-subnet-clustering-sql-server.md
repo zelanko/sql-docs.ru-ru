@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7773774d15cb6d6bdfd9e2335eac40bbf00652e8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: be4125f417b6333bfcb3002b15f1319f484d22a1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349210"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241612"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Кластеры SQL Server с несколькими подсетями [SQL Server]
   Отказоустойчивый кластер с узлами в нескольких подсетях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] представляет собой конфигурацию, в которой узлы отказоустойчивого кластера подключены к разным подсетям или разным наборам подсетей. Эти подсети могут находиться в одном месте или на географически распределенных сайтах. Кластеры географически распределенных сайтов иногда называют растянутыми. Поскольку не существует общедоступного для всех узлов хранилища, существует необходимость в репликации данных между хранилищами данных, расположенных в разных подсетях. При репликации данных в наличии имеется несколько копий данных. Поэтому, отказоустойчивый кластер с узлами, расположенными в нескольких подсетях, обеспечивает не только высокий уровень доступности, но и является решением для аварийного восстановления данных.  
@@ -82,7 +82,7 @@ ms.locfileid: "53349210"
 |Установка отказоустойчивого кластера SQL Server|[Создание отказоустойчивого кластера SQL Server (программа установки)](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Обновление существующего отказоустойчивого кластера SQL Server на месте|[Обновление экземпляра отказоустойчивого кластера SQL Server (программа установки)](upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |Обслуживание существующего отказоустойчивого кластера SQL Server|[Добавление или удаление узлов отказоустойчивого кластера SQL Server (программа установки)](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
-|Отказоустойчивые кластеры Windows|[Windows 2008 R2 отказоустойчивые Многосайтовые кластеры](https://www.microsoft.com/windowsserver2008/en/us/failover-clustering-multisite.aspx)|  
+|Отказоустойчивые кластеры Windows|[Рекомендации для многосайтового отказоустойчивого кластера Microsoft Windows](https://secureinfra.blog/2013/11/09/microsoft-windows-multi-site-failover-cluster-best-practices/)|  
 |Используйте оснастку управления отказоустойчивым кластером для просмотра событий и журналов WSFC|[Просмотр событий и журналов для отказоустойчивого кластера](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
 |Используйте Windows PowerShell для создания файла журнала для всех узлов (или конкретного узла) в отказоустойчивом кластере WSFC|[Командлет Get-ClusterLog отказоустойчивого кластера](https://technet.microsoft.com/library/ee461045.aspx)|  
   

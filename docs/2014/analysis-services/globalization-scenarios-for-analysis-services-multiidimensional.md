@@ -19,15 +19,15 @@ ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45b0b733ccc6e42e1f4a63ba9c7a2f615d2b55eb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b12c2f4a95b2fc295aa1a3524def774e74a5ed32
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357877"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241921"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Сценарии глобализации для многомерных служб Analysis Services
-  Службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] хранят многоязычные данные и метаданные, а также управляют ими как в табличных, так и в многомерных моделях данных. Данные хранятся в Юникоде (UTF-16), в кодировках, использующих кодировку Юникод. При загрузке данных ANSI в модель данных символы хранятся с использованием эквивалентных кодовых точек Юникода.  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] хранят многоязычные данные и метаданные, а также управляют ими как в табличных, так и в многомерных моделях данных. Данные хранятся в Юникоде (UTF-16), в кодировках, использующих кодировку Юникод. При загрузке данных ANSI в модель данных символы хранятся с использованием эквивалентных кодовых точек Юникода.  
   
  Поддержка Юникода означает, что службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] могут хранить данные в любом из языков, поддерживаемых клиентскими и серверными операционными системами Windows, позволяя читать, записывать, сортировать и сравнивать данные в любой кодировке, используемой на компьютере Windows. Клиентские приложения бизнес-аналитики, использующие данные служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , могут представлять данные на выбранном пользователем языке, при условии что в модели существуют данные на этом языке.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "53357877"
   
 ## <a name="see-also"></a>См. также  
  [Интернационализация для приложений Windows](/windows/desktop/Intl/international-support)   
- [Центр разработчиков Go Global](https://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [Документация по глобализации корпорации Майкрософт](/globalization/)   
  [Запись приложений Магазина Windows с адаптивной конструкцией, основанной на языковых стандартах](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [Разработка универсальных приложений для Windows на C# и XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   

@@ -11,12 +11,12 @@ ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e51aef3d9aa06790420cec9fab0d487a68563a4a
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 56973f01112b670727cc0ffa83ba6372c45a3faa
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658268"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241582"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>PowerShell cmdlets для режима SharePoint службы Reporting Services
   При установке служб [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint инсталлируются командлеты PowerShell для поддержки серверов отчетов в режиме интеграции с SharePoint. Командлеты охватывают три категории функциональных возможностей.  
@@ -47,16 +47,18 @@ ms.locfileid: "58658268"
   
     -   [Создание приложения службы Reporting Services и прокси-сервера](#bkmk_example_create_service_application)  
   
-    -   [Проверка и обновление модуля доставки служб Reporting Services](#bkmk_example_delivery_extension)  
+    -   [Проверка и обновление модуля доставки Reporting Services](#bkmk_example_delivery_extension)  
   
-    -   [Получение и задание свойств базы данных приложения Reporting Services, например время ожидания базы данных](#bkmk_example_db_properties)  
+    -   [Получение и задание свойств базы данных приложения Reporting Services, например времени ожидания базы данных](#bkmk_example_db_properties)  
   
     -   [Список для служб reporting services расширения данных — в режиме интеграции с SharePoint](#bkmk_example_list_data_extensions)  
   
-    -   [Изменение и перечисление владельцев подписок](#bkmk_change_subscription_owner)  
+    -   [Изменение и вывод списка владельцев подписки](#bkmk_change_subscription_owner)  
   
 ##  <a name="bkmk_cmdlet_sum"></a> Обзор командлетов  
+
  Для выполнения командлетов необходимо открыть консоль управления SharePoint. Можно также использовать редактор графического пользовательского интерфейса, который включен в Microsoft Windows, **интегрированная среда скриптов Windows PowerShell (ISE)**. Дополнительные сведения см. в разделе [Запуск Windows PowerShell на Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). В следующих сводках «базы данных приложения службы», подразумеваются все базы данных, создаваемых и используемых [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] приложения службы. Это включает базы данных конфигурации, предупреждений и временные базы данных.  
+
   
  Если при вводе примеров PowerShell отображается сообщение об ошибке следующего вида:  
   
@@ -129,7 +131,7 @@ ms.locfileid: "58658268"
 |New-SPRSExtension|Регистрирует новый модуль для работы с приложением службы Reporting Services.|  
 |Set-SPRSExtension|Задает свойства существующего модуля служб Reporting Services.|  
 |Remove-SPRSExtension|Удаляет модуль из приложения службы Reporting Services.|  
-|Get-SPRSExtension|Возвращает одно или несколько расширений служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для приложения службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .<br /><br /> Допустимые значения:<br /><br /> **Доставки**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Data**<br /><br /> **безопасность**<br /><br /> **Authentication**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **Designer**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
+|Get-SPRSExtension|Возвращает одно или несколько расширений служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для приложения службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .<br /><br /> Допустимые значения:<br /><br /> **Доставка**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Данные **<br /><br /> **безопасность**<br /><br /> **Проверка подлинности**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **Конструктор**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
 |Get-SPRSSite|Возвращает сайты SharePoint с учетом того, включена ли на них функция «ReportingService». По умолчанию возвращаются сайты, на которых включена функция «ReportingService».|  
   
 ##  <a name="bkmk_basic_samples"></a> Простые примеры  
@@ -301,7 +303,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
  См. раздел [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
 ## <a name="see-also"></a>См. также  
- [Использование PowerShell для смены и перечисления владельцев подписок служб Reporting Services и запуска подписки](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
+ [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
  [Контрольный список: Использование PowerShell для проверки PowerPivot для SharePoint](../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
  [Скрипты PowerShell для управления SharePoint CodePlex](http://sharepointpsscripts.codeplex.com/)   
  [Администрирование служб SSRS с помощью PowerShell](https://curatedviews.cloudapp.net/13107/how-to-administer-ssrs-using-powershell)  

@@ -17,15 +17,15 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3883fdccb7f118ebd8954da670b968b745f36e27
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 76c4f0d89e26e620b8c557383bd130bc8940b168
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394402"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241362"
 ---
 # <a name="data-flow"></a>Поток данных
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] предоставляет три различных типа компонентов потока данных: источники, преобразования и назначения. Источники извлекают данные из хранилищ, таких как таблицы и представления реляционных баз данных, файлы и базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Преобразования изменяют, объединяют и очищают данные. Целевые объекты загружают данные в хранилища или создают наборы данных в памяти.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides three different types of data flow components: sources, предоставляют три различных типа компонентов потока данных: источники, преобразования и назначения.nИсточники извлекают данные из хранилищ, таких как таблицы и представления реляционных баз данных, файлы и базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .lПреобразования изменяют, объединяют и очищают данные.sЦелевые объекты загружают данные в хранилища или создают наборы данных в памяти.  
   
 > [!NOTE]  
 >  При использовании настраиваемых поставщиков в файл ProviderDescriptors.xml необходимо внести значения столбца метаданных.  
@@ -100,7 +100,7 @@ ms.locfileid: "58394402"
 |Source|Описание|  
 |------------|-----------------|  
 |Источник Oracle|Источник Oracle — это компонент-источник соединителя для Oracle ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ) от компании Attunity. Кроме того, в состав соединителя для Oracle ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ) от компании Attunity входят диспетчер подключений и назначение. Дополнительные сведения см. на странице скачивания [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)(Соединители Майкрософт для Oracle и Teradata от компании Attunity).|  
-|Источник SAP BI|Источник SAP BI — это компонент-источник соединителя для SAP BI ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ). Кроме того, в состав соединителя для SAP BI ([!INCLUDE[msCoName](../../../includes/msconame-md.md)]) входят диспетчер подключений и назначение. Дополнительные сведения см. на странице загрузки [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=110393)(на английском языке).|  
+|Источник SAP BI|Источник SAP BI — это компонент-источник соединителя для SAP BI ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ). Кроме того, в состав соединителя для SAP BI ([!INCLUDE[msCoName](../../../includes/msconame-md.md)]) входят диспетчер подключений и назначение. Дополнительные сведения см. на странице загрузки [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)(на английском языке).|  
 |Источник Teradata|Источник Teradata — это компонент-источник соединителя для Teradata ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ) от компании Attunity. Кроме того, в состав соединителя для Teradata ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ) от компании Attunity входят диспетчер подключений и назначение. Дополнительные сведения см. на странице загрузки [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)(на английском языке).|  
   
  Демонстрация использования средств повышения производительности соединителя для Oracle ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ) от компании Attunity приведена в видеоролике [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369)(Работа соединителя для Oracle (Майкрософт) от компании Attunity — видео по SQL Server).  
@@ -114,23 +114,23 @@ ms.locfileid: "58394402"
   
  Следующие преобразования имеют свойства, которые могут обновляться через выражения свойств.  
   
--   [Преобразование "Условное разбиение"](transformations/conditional-split-transformation.md)  
+-   [преобразование «Условное разбиение»](transformations/conditional-split-transformation.md)  
   
--   [Преобразование "Производный столбец"](transformations/derived-column-transformation.md)  
+-   [Преобразование «Производный столбец»](transformations/derived-column-transformation.md)  
   
--   [Преобразование "Нечеткое группирование"](transformations/fuzzy-grouping-transformation.md)  
+-   [преобразование «Нечеткое группирование»](transformations/fuzzy-grouping-transformation.md)  
   
--   [Преобразование "Нечеткий уточняющий запрос"](transformations/lookup-transformation.md)  
+-   [преобразование «Нечеткий уточняющий запрос»](transformations/lookup-transformation.md)  
   
--   [Преобразование "Команда OLE DB"](transformations/ole-db-command-transformation.md)  
+-   [преобразование «Команда OLE DB»](transformations/ole-db-command-transformation.md)  
   
--   [Преобразование "Процентная выборка"](transformations/percentage-sampling-transformation.md)  
+-   [преобразование «Процентная выборка»](transformations/percentage-sampling-transformation.md)  
   
--   [Преобразование "Сведение"](transformations/pivot-transformation.md)  
+-   [преобразование «Сведение»](transformations/pivot-transformation.md)  
   
--   [Преобразование "Выборка строк"](transformations/row-sampling-transformation.md)  
+-   [преобразование «Выборка строк»](transformations/row-sampling-transformation.md)  
   
--   [Преобразование "Сортировка"](transformations/sort-transformation.md)  
+-   [преобразование «Сортировка»](transformations/sort-transformation.md)  
   
 -   [Преобразование отмены свертывания](transformations/unpivot-transformation.md)  
   
@@ -151,9 +151,9 @@ ms.locfileid: "58394402"
   
  Следующие назначения обладают свойствами, которые могут обновляться через выражения свойств.  
   
--   [Назначение "Неструктурированный файл"](flat-file-destination.md)  
+-   [назначение «Неструктурированный файл»](flat-file-destination.md)  
   
--   [Назначение SQL Server Compact Edition](sql-server-compact-edition-destination.md)  
+-   [Назначение «SQL Server Compact Edition»](sql-server-compact-edition-destination.md)  
   
 ### <a name="destinations-available-for-download"></a>Назначения, доступные для загрузки  
  В следующей таблице перечислены дополнительные назначения, которые можно скачать на веб-сайте [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
@@ -189,7 +189,7 @@ ms.locfileid: "58394402"
  Дополнительные сведения см. в разделе [Обработка ошибок в данных](error-handling-in-data.md).  
   
 ### <a name="columns"></a>Столбцы  
- Входы, выходы и выходы ошибок представляют собой коллекции столбцов. Каждый столбец является настраиваемым, и в зависимости от его типа (входной, выходной или внешний) службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] предусматривают для него разные свойства. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] позволяет задавать свойства столбцов тремя различными способами: программно, с помощью специфических для компонентов диалоговых окон или с помощью диалогового окна **Расширенный редактор**.  
+ Входы, выходы и выходы ошибок представляют собой коллекции столбцов. Каждый столбец является настраиваемым, и в зависимости от его типа (входной, выходной или внешний) службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] предусматривают для него разные свойства. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] позволяют задавать свойства столбцов тремя различными способами: программно, с помощью специфических для компонентов диалоговых окон или с помощью диалогового окна **Расширенный редактор** .  
   
 ## <a name="paths"></a>Пути  
  Пути соединяют компоненты потока данных. В конструкторе [!INCLUDE[ssIS](../../../includes/ssis-md.md)] можно просматривать и изменять свойства путей, просматривать выходные метаданные для начальной точки пути и связывать средства просмотра данных с путем.  
@@ -218,6 +218,6 @@ ms.locfileid: "58394402"
 ## <a name="related-content"></a>См. также  
  Видеоролик [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369)(Работа соединителя для Oracle (Майкрософт) от компании Attunity — видео по SQL Server) на сайте technet.microsoft.com.  
   
- Курируемый ответ [How to Create a Dynamic Connection String in SSIS](https://go.microsoft.com/fwlink/?LinkId=321994)(Создание динамической строки подключения в SSIS) на curatedviews.cloudapp.net.  
+ Курируемый ответ [создание динамической строки подключения в SSIS](https://kevine323.blogspot.com/2012/04/dynamic-connection-strings-in-ssis.html).  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1e18d8058519127108b2b23a6a798fe3d37c25c0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386642"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240382"
 ---
 # <a name="xml-source"></a>XML-источник
   XML-источник считывает файл XML-данных и заполняет данными столбцы в выходе источника.  
@@ -69,7 +69,7 @@ ms.locfileid: "58386642"
   
  XML-источник поддерживает несколько обычных выходов и несколько выходов ошибок.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включает диалоговое окно **Редактор источника XML**для настройки этого источника. Это диалоговое окно доступно из конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the **XML Source Edito**r dialog box for configuring предусмотрено диалоговое окно **Редактор источника XML**для настройки этого источника.sЭто диалоговое окно доступно из конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
@@ -95,6 +95,6 @@ ms.locfileid: "58386642"
  [Извлечение данных с помощью XML-источника](xml-source.md)  
   
 ## <a name="related-content"></a>См. также  
- Курируемый ответ [Создание назначения XML для пакета служб SSIS](https://go.microsoft.com/fwlink/?LinkId=321993)на curatedviews.cloudapp.net.  
+ Техническая статья [с помощью XML-файл, чтобы настроить пакет служб SSIS](https://www.sqlshack.com/using-xml-file-configure-ssis-package/).  
   
   

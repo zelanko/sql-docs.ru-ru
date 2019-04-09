@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9d9e6f23d9e73295f34f23777c76253d27671ed8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 225e80855c0042085b35670efc0666f133806d04
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012365"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242332"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (база данных SQL Azure)
 
@@ -38,11 +38,11 @@ ms.locfileid: "56012365"
 |**database_name**|**sysname**|Имя базы данных.|  
 |**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Время всегда кратно 5 минутам. Пример:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Дата и время окончания интервала статистической обработки в формате UTC. **End_time** — всегда на 5 минут больше, чем соответствующие **start_time** в той же строке.|  
-|**success_count**|**int**|Число успешных соединений.|  
-|**total_failure_count**|**int**|Общее число неудачных попыток соединения. Это сумма **connection_failure_count**, **terminated_connection_count**, и **throttled_connection_count**и не включает события взаимоблокировки.|  
-|**connection_failure_count**|**int**|Количество сбоев входа.|  
-|**terminated_connection_count**|**int**|**_Применяется только для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11._**<br /><br /> Число прерванных соединений.|  
-|**throttled_connection_count**|**int**|**_Применяется только для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11._**<br /><br /> Число регулируемых соединений.|  
+|**success_count**|**ssNoversion**|Число успешных соединений.|  
+|**total_failure_count**|**ssNoversion**|Общее число неудачных попыток соединения. Это сумма **connection_failure_count**, **terminated_connection_count**, и **throttled_connection_count**и не включает события взаимоблокировки.|  
+|**connection_failure_count**|**ssNoversion**|Количество сбоев входа.|  
+|**terminated_connection_count**|**ssNoversion**|**_Применяется только для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11._**<br /><br /> Число прерванных соединений.|  
+|**throttled_connection_count**|**ssNoversion**|**_Применяется только для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11._**<br /><br /> Число регулируемых соединений.|  
   
 ## <a name="remarks"></a>Примечания  
   
@@ -101,6 +101,6 @@ WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';
 
 ## <a name="see-also"></a>См. также
 
- [Устранение неполадок Windows база данных Azure SQL](https://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
+ [Устранение неполадок подключения к базе данных SQL Azure](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
   
   

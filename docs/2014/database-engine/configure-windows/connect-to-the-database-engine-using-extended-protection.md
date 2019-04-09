@@ -17,12 +17,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0df4e17291e03e23cb68e984c8473064b0208a9c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366326"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241440"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Соединение с компонентом Database Engine с использованием расширенной защиты
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает **расширенную защиту** , начиная с версии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. **Расширенная защита для проверки подлинности** представляет собой функцию сетевых компонентов, реализуемую операционной системой. **Расширенная защита** поддерживается в Windows 7 и Windows Server 2008 R2. **Расширенная защита** входит в пакет обновления для более старых операционных систем [!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи **расширенную защиту**.  
@@ -55,16 +55,16 @@ ms.locfileid: "53366326"
   
 -   [Интегрированная проверка подлинности Windows с расширенной защитой](https://msdn.microsoft.com/library/dd639324.aspx)  
   
--   [Советы по безопасности от Microsoft (973811), расширенная защита для проверки подлинности](https://www.microsoft.com/technet/security/advisory/973811.mspx)  
+-   [Советы по безопасности от Microsoft (973811), расширенная защита для проверки подлинности](https://support.microsoft.com//help/973811/microsoft-security-advisory-extended-protection-for-authentication)  
   
 ## <a name="settings"></a>Настройки  
  Имеются три параметра соединения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , влияющие на привязку служб и привязку каналов. Эти параметры можно настроить с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или с помощью WMI, для их просмотра можно воспользоваться аспектом **Параметры протокола сервера** управления на основе политик.  
   
 -   **Принудительное шифрование**  
   
-     Возможные значения — **Вкл.** и **Выкл.** Для использования привязки каналов параметр **Принудительное шифрование** должен быть установлен в значение **Вкл.** и все клиенты должны принудительно выполнять шифрование. При значении **Выкл.** гарантируется только привязка служб. Параметр**Принудительное шифрование** — это один из флажков на вкладке **Свойства протоколов для MSSQLSERVER (вкладка "Флаги")** в диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Возможные значения — **Вкл.** и **Выкл.** Для использования привязки каналов параметр **Принудительное шифрование** должен быть установлен в значение **Вкл.** и все клиенты должны принудительно выполнять шифрование. При значении **Выкл.** гарантируется только привязка служб. Параметр**Принудительное шифрование** — это один из флажков на вкладке **Свойства протоколов для MSSQLSERVER (вкладка "Флаги")** в диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   **Расширенная защита**  
+-   **расширенную защиту**  
   
      Возможными значениями являются **Выкл.**, **Разрешено**и **Обязательно**. Параметр **Расширенная защита** позволяет настраивать уровень **расширенной защиты** для каждого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Параметр**Расширенная защита** находится на дополнительной вкладке **Свойства протоколов для MSSQLSERVER** в диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -100,7 +100,7 @@ ms.locfileid: "53366326"
   
  При использовании IIS для получения доступа к данным [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] по соединению с протоколами HTTP или HTTPS службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] могут использовать расширенную защиту, реализуемую IIS. Дополнительные сведения о настройке IIS для использования расширенной защиты см. в разделе [Настройка расширенной защиты в IIS 7.5](https://go.microsoft.com/fwlink/?LinkId=181105).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сетевая конфигурация сервера](server-network-configuration.md)   
  [Конфигурация клиентской сети](client-network-configuration.md)   
  [Общие сведения о расширенной защите для проверки подлинности](https://go.microsoft.com/fwlink/?LinkID=177943)   

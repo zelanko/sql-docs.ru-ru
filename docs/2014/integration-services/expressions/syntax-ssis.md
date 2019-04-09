@@ -13,12 +13,12 @@ ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79939ea5addd97833faaf1d955b72ae17e487ceb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: ed5ea8e711fcc3013a682f8c63a01dc042556f40
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389852"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240372"
 ---
 # <a name="syntax-ssis"></a>Синтаксис (службы SSIS)
   Синтаксис выражений служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] похож на синтаксис языков C и C#. Выражения содержат элементы, такие как идентификаторы (столбцы и переменные), литералы, операторы и функции. В этом разделе обобщаются особые требования синтаксиса средства оценки выражений с точки зрения различных элементов выражений.  
@@ -26,7 +26,7 @@ ms.locfileid: "58389852"
 > [!NOTE]  
 >  В предыдущих выпусках служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]действовало ограничение в 4000 символов на результат вычисления выражения, если результат имел тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DT_WSTR или DT_STR. Это ограничение снято.  
   
- Образцы выражений, использующих специальные операторы и функции, см. в разделе о каждом операторе и функции: [Операторы &#40;выражение служб SSIS&#41; ](operators-ssis-expression.md) и [функции &#40;выражение служб SSIS&#41;](functions-ssis-expression.md).  
+ Образцы выражений, использующих специальные операторы и функции, см. в разделе о каждом операторе и функции: [Операторы (выражение служб SSIS)](operators-ssis-expression.md) и [Функции (выражение служб SSIS)](functions-ssis-expression.md).  
   
  Образцы выражений, использующих несколько операторов и функций так же, как идентификаторы и литералы, см. в разделе [Примеры расширенных выражений служб Integration Services](examples-of-advanced-integration-services-expressions.md).  
   
@@ -80,7 +80,7 @@ ms.locfileid: "58389852"
   
 ## <a name="related-content"></a>См. также  
   
--   Техническая статья [Памятка выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=217683)на сайте pragmaticworks.com  
+-   Техническая статья [Памятка выражений служб SSIS](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)на сайте pragmaticworks.com  
   
 -   Техническая статья [Примеры выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
   

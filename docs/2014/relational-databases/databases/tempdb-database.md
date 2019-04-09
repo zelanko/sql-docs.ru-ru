@@ -15,12 +15,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1db606c086624610a158b6a87576188fa14aefaa
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357834"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240712"
 ---
 # <a name="tempdb-database"></a>База данных tempdb
   Системная база данных **tempdb** — это глобальный ресурс, доступный всем пользователям, подключенным к данному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в котором хранятся следующие объекты:  
@@ -142,7 +142,7 @@ ms.locfileid: "53357834"
   
  [Перемещение файлов базы данных](move-database-files.md)  
   
-## <a name="see-also"></a>См. также:  
- [Работа с базой данных tempdb в SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81216)  
+## <a name="see-also"></a>См. также  
+ [Работа с базой данных tempdb в SQL Server 2005](https://chresandro.wordpress.com/2014/09/29/working-with-tempdb-in-sql-server-2005/)  
   
   

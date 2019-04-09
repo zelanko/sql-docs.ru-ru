@@ -13,12 +13,12 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99687b8168c16b0ad1ceef5f802b3345038524fe
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378272"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241034"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Типы данных в выражениях служб Integration Services
   Средство оценки выражений использует типы данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Когда данные впервые попадают в поток данных пакета служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , подсистема обработки потока данных преобразует все данные столбцов в тип данных [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , а данные столбцов, используемых выражением, уже имеют тип данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Выражения, используемые в преобразованиях «Условное разбиение» и «Производный столбец», могут ссылаться на столбцы, поскольку являются частью потока данных, включающего данные столбцов.  
@@ -55,7 +55,7 @@ ms.locfileid: "58378272"
   
 -   [= = (равно) (выражение служб SSIS)](equal-ssis-expression.md)  
   
--   [\!= (не равно) (выражение служб SSIS)](unequal-ssis-expression.md)  
+-   [!= (не равно) (выражение служб SSIS)](unequal-ssis-expression.md)  
   
 -   [&#62; (больше чем) (выражение служб SSIS)](greater-than-ssis-expression.md)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "58378272"
   
 ## <a name="related-content"></a>См. также  
   
--   Техническая статья [Памятка выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=217683)на сайте pragmaticworks.com  
+-   Техническая статья [Памятка выражений служб SSIS](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet3)на сайте pragmaticworks.com  
   
 -   Техническая статья [Примеры выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
   

@@ -13,12 +13,12 @@ ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93f00a9544512c3c5efb63667d715c57bcf62de9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 86582634958ded57db85c0f9e732927bb639cd6a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354015"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242482"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Определение связей "многие ко многим" и свойств связей "многие ко многим"
   В этом разделе рассматривается измерения «многие ко многим» в службах Analysis Services, включая случаи их использования и способы создания.  
@@ -61,7 +61,7 @@ ms.locfileid: "53354015"
   
  Для иллюстрации шагов по созданию связи «многие ко многим» данная процедура воссоздает одну из подобных связей в кубе Adventure Works. Если у вас есть источник данных (в данном случае хранилище данных примера Adventure Works), установленный на экземпляре реляционной СУБД, вы можете выполнить следующую процедуру.  
   
-#### <a name="step-1-verify-dsv-relationships"></a>Шаг 1. Проверить связи представления источника данных  
+#### <a name="step-1-verify-dsv-relationships"></a>Шаг 1. Проверить связи представления источника данных  
   
 1.  В приложении SQL Server Data Tools для многомерного проекта создайте источник данных для реляционного хранилища данных Adventure Works DW 2012, размещенного на экземпляре SQL Server Database Engine.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "53354015"
   
      ![Представление источника данных, отображающее связанные таблицы](../media/ssas-m2m-dsvpkeys.PNG "представления источника данных, отображающее связанные таблицы")  
   
-#### <a name="step-2-create-dimensions-and-measure-groups"></a>Этап 2. Создание измерения и группы мер  
+#### <a name="step-2-create-dimensions-and-measure-groups"></a>Шаг 2. Создание измерения и группы мер  
   
 1.  В среде SQL Server Data Tools для многомерного проекта щелкните правой кнопкой мыши папку **Измерения** и выберите **Создать измерение**.  
   
@@ -180,11 +180,11 @@ ms.locfileid: "53354015"
 ##  <a name="bkmk_Learn"></a> Learn more  
  Дополнительную информацию, которая поможет в освоении данных концепций, можно получить по следующим ссылкам.  
   
- [Как определить многие ко многим измерения в службах Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324759)  
+ [Определение измерения «многие ко многим» в службах Analysis Services](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
  [Революция концепции «многие ко многим» 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [Учебник. Многие ко многим пример измерения для SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
+ [Учебник. Пример измерения «многие ко многим» для служб SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>См. также  
  [Связи измерений](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

@@ -12,18 +12,18 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad54f13fbb939b9ac65f656f37bbba94560da829
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377436"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241672"
 ---
 # <a name="create-tables-database-engine"></a>Создание таблиц (компонент Database Engine)
   Предусмотрена возможность создавать новые таблицы, присваивать им имена и добавлять к существующим базам данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , используя [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  При подключении к базе данных SQL Azure новый параметр таблицы запускает скрипт создания шаблона таблицы. Измените параметры, затем запустите скрипт для создания новой таблицы. Дополнительные сведения см. в разделе [Общие сведения о SQL Azure](https://go.microsoft.com/fwlink/?LinkId=163948).  
+>  При подключении к базе данных SQL Azure новый параметр таблицы запускает скрипт создания шаблона таблицы. Измените параметры, затем запустите скрипт для создания новой таблицы. Дополнительные сведения см. в разделе [Общие сведения о SQL Azure](https://microsoft.sharepoint.com/sites/infopedia_g01/pages/cards/azure-sql-database.aspx).  
   
  **В этом разделе**  
   
@@ -31,9 +31,9 @@ ms.locfileid: "53377436"
   
      [безопасность](#Security)  
   
--   **Чтобы создать таблицу, с помощью:**  
+-   **Создание таблицы с использованием:**  
   
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   

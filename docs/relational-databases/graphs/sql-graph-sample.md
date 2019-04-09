@@ -16,26 +16,28 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d439464e4066e395fc9e420cc0d506e5c15c1691
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 7774bec919a494ceac674b764eef2e38ca99414c
+ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512472"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59291524"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Создание базы данных графа и выполнение некоторых шаблоны запросов с помощью T-SQL
+
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 В этом примере приведено [!INCLUDE[tsql-md](../../includes/tsql-md.md)] скрипт для создания базы данных графа с узлами и краями и затем использовать новое предложение MATCH, чтобы сопоставить некоторые шаблоны и передавать через graph. Этот пример сценария будет работать на обе базы данных SQL Azure и [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
- 
-## <a name="sample-schema"></a>Образец схемы  
-Этот пример создает схему графа, как показано на рис. 1 для гипотетической социальной сети с узлами людей, ресторан и Город. Эти узлы подключены друг к другу с помощью Friends, отметок "нравится", LivesIn и LocatedIn краев. 
+
+## <a name="sample-schema"></a>Образец схемы
+
+Этот пример создает схему графа, как показано на рис. 1 для гипотетической социальной сети с узлами людей, ресторан и Город. Эти узлы подключены друг к другу с помощью Friends, отметок "нравится", LivesIn и LocatedIn краев.
 
 ![человек городов рестораны tables](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "образец базы данных Sql graph")  
-Рис. 1: Образец схемы с ресторан, Город, узлов person и LivesIn, LocatedIn, границы, отметок "нравится".
-
+Рис. 1. Образец схемы с ресторан, Город, узлов person и LivesIn, LocatedIn, границы, отметок "нравится".
 
 ## <a name="sample-script"></a>Образец скрипта
+
 ```
 -- Create a graph demo database
 CREATE DATABASE graphdemo;
@@ -46,19 +48,19 @@ go
 
 -- Create NODE tables
 CREATE TABLE Person (
-  ID INTEGER PRIMARY KEY, 
+  ID INTEGER PRIMARY KEY,
   name VARCHAR(100)
 ) AS NODE;
 
 CREATE TABLE Restaurant (
-  ID INTEGER NOT NULL, 
-  name VARCHAR(100), 
+  ID INTEGER NOT NULL,
+  name VARCHAR(100),
   city VARCHAR(100)
 ) AS NODE;
 
 CREATE TABLE City (
-  ID INTEGER PRIMARY KEY, 
-  name VARCHAR(100), 
+  ID INTEGER PRIMARY KEY,
+  name VARCHAR(100),
   stateName VARCHAR(100)
 ) AS NODE;
 
@@ -83,43 +85,43 @@ INSERT INTO City VALUES (1,'Bellevue','wa');
 INSERT INTO City VALUES (2,'Seattle','wa');
 INSERT INTO City VALUES (3,'Redmond','wa');
 
--- Insert into edge table. While inserting into an edge table, 
+-- Insert into edge table. While inserting into an edge table,
 -- you need to provide the $node_id from $from_id and $to_id columns.
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE id = 1), 
-       (SELECT $node_id FROM Restaurant WHERE id = 1),9);
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE id = 2), 
-      (SELECT $node_id FROM Restaurant WHERE id = 2),9);
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE id = 3), 
-      (SELECT $node_id FROM Restaurant WHERE id = 3),9);
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE id = 4), 
-      (SELECT $node_id FROM Restaurant WHERE id = 3),9);
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE id = 5), 
-      (SELECT $node_id FROM Restaurant WHERE id = 3),9);
+INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 1), 
+       (SELECT $node_id FROM Restaurant WHERE ID = 1),9);
+INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 2), 
+      (SELECT $node_id FROM Restaurant WHERE ID = 2),9);
+INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 3), 
+      (SELECT $node_id FROM Restaurant WHERE ID = 3),9);
+INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 4), 
+      (SELECT $node_id FROM Restaurant WHERE ID = 3),9);
+INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 5), 
+      (SELECT $node_id FROM Restaurant WHERE ID = 3),9);
 
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE id = 1),
-      (SELECT $node_id FROM City WHERE id = 1));
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE id = 2),
-      (SELECT $node_id FROM City WHERE id = 2));
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE id = 3),
-      (SELECT $node_id FROM City WHERE id = 3));
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE id = 4),
-      (SELECT $node_id FROM City WHERE id = 3));
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE id = 5),
-      (SELECT $node_id FROM City WHERE id = 1));
+INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 1),
+      (SELECT $node_id FROM City WHERE ID = 1));
+INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 2),
+      (SELECT $node_id FROM City WHERE ID = 2));
+INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 3),
+      (SELECT $node_id FROM City WHERE ID = 3));
+INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 4),
+      (SELECT $node_id FROM City WHERE ID = 3));
+INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 5),
+      (SELECT $node_id FROM City WHERE ID = 1));
 
-INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE id = 1),
-      (SELECT $node_id FROM City WHERE id =1));
-INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE id = 2),
-      (SELECT $node_id FROM City WHERE id =2));
-INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE id = 3),
-      (SELECT $node_id FROM City WHERE id =3));
+INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE ID = 1),
+      (SELECT $node_id FROM City WHERE ID =1));
+INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE ID = 2),
+      (SELECT $node_id FROM City WHERE ID =2));
+INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE ID = 3),
+      (SELECT $node_id FROM City WHERE ID =3));
 
--- Insert data into the friendof edge.
-INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 1), (SELECT $NODE_ID FROM person WHERE ID = 2));
-INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 2), (SELECT $NODE_ID FROM person WHERE ID = 3));
-INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 3), (SELECT $NODE_ID FROM person WHERE ID = 1));
-INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 4), (SELECT $NODE_ID FROM person WHERE ID = 2));
-INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 5), (SELECT $NODE_ID FROM person WHERE ID = 4));
+-- Insert data into the friendOf edge.
+INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 1), (SELECT $NODE_ID FROM Person WHERE ID = 2));
+INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 2), (SELECT $NODE_ID FROM Person WHERE ID = 3));
+INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 3), (SELECT $NODE_ID FROM Person WHERE ID = 1));
+INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 4), (SELECT $NODE_ID FROM Person WHERE ID = 2));
+INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 5), (SELECT $NODE_ID FROM Person WHERE ID = 4));
 
 
 -- Find Restaurants that John likes
@@ -138,11 +140,11 @@ AND person1.name='John';
 SELECT Person.name
 FROM Person, likes, Restaurant, livesIn, City, locatedIn
 WHERE MATCH (Person-(likes)->Restaurant-(locatedIn)->City AND Person-(livesIn)->City);
-
 ```
 
 ## <a name="clean-up"></a>Очистить  
 Удалить схему и база данных, созданная для примера.
+
 ```
 USE graphdemo;
 go
@@ -159,8 +161,6 @@ USE master;
 go
 DROP DATABASE graphdemo;
 go
-
-
 ```
 
 ## <a name="script-explanation"></a>Описание скрипта  

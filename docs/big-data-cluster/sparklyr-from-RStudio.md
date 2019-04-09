@@ -5,31 +5,48 @@ description: Подключитесь к кластеру больших дан�
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.date: 02/28/2019
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 30b8ddccd01c0e8d9a4eac34f2f504b0d8971af6
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 148e4942babafb35af2efe33eb427f9462f0a47e
+ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860195"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59291584"
 ---
-# <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Использовать Sparklyr в кластере SQL Server больших данных
+# <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Использовать sparklyr в кластере SQL Server больших данных
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Sparklyr интерфейс R для Apache Spark. Sparklyr — предпочтительный способ разработчикам R использовать Spark. В этой статье описывается использование sparklyr в кластере большие данные SQL Server 2019 (Предварительная версия), с помощью RStudio.
+Sparklyr интерфейс R для Apache Spark. Sparklyr — это популярное средство для разработчикам R использовать Spark. В этой статье описывается использование sparklyr в кластере большие данные SQL Server 2019 (Предварительная версия), с помощью RStudio.
 
 ## <a name="prerequisites"></a>предварительные требования
 
 - [Развертывание кластера больших данных SQL Server 2019](quickstart-big-data-cluster-deploy.md).
-- [Установка RStudio](https://www.rstudio.com/)
 
-## <a name="connect-to-spark-in-ss19-big-data-cluster"></a>Подключение к spark в кластере SS19 больших данных
+### <a name="install-rstudio-desktop"></a>Установка RStudio Desktop
 
-В RStudio Создание RScript и подключение к Spark, следующим образом. Кластер Spark больших данных подключается через Livy, который можно связаться с [HDFS/Spark шлюза](connect-to-big-data-cluster.md#hdfs). Для проверки подлинности используйте имя пользователя и пароль, указанные во время развертывания.
+Установка и настройка **RStudio Desktop** , сделав следующее:
+
+1. При выполнении на клиентском компьютере Windows, [загрузить и установить R 3.4.4](https://cran.rstudio.com/bin/windows/base/old/3.4.4).
+
+1. [Загрузка и установка RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
+
+1. После завершения установки выполните следующие команды в RStudio Desktop, чтобы установить необходимые пакеты:
+
+   '' "Install.packages RStudio Desktop (репозиториев" DBI"="https://cran.microsoft.com/snapshot/2019-01-01") install.packages (репозиториев" dplyr"="https://cran.microsoft.com/snapshot/2019-01-01") install.packages (репозиториев" sparklyr"="https://cran.microsoft.com/snapshot/2019-01-01")
+   ```
+
+## Connect to Spark in a big data cluster
+
+You can use sparklyr to connect from a client to the big data cluster using Livy and the HDFS/Spark gateway. 
+
+In RStudio, create an R script and connect to Spark as in the following example:
+
+> [!TIP]
+> For the `<USERNAME>` and `<PASSWORD>` values, use the username (such as root) and password you set during the big data cluster deployment. For the `<IP>` and `<PORT>` values, see the documentation on the [HDFS/Spark gateway](connect-to-big-data-cluster.md#hdfs).
 
 ```r
 library(sparklyr)
@@ -37,9 +54,9 @@ library(dplyr)
 library(DBI)
 
 #Specify the Knox username and password
-config <- livy_config(user = "***root***", password = "****")
+config <- livy_config(user = "<username>", password = "<password>")
 
-httr::set_config(httr::config(ssl_verifypeer = 0L))
+httr::set_config(httr::config(ssl_verifypeer = 0L, ssl_verifyhost = 0L))
 
 sc <- spark_connect(master = "https://<IP>:<PORT>/gateway/default/livy/v1",
                     method = "livy",
@@ -50,14 +67,24 @@ sc <- spark_connect(master = "https://<IP>:<PORT>/gateway/default/livy/v1",
 
 После подключения к Spark, можно запустить sparklyr. В следующем примере выполняется запрос на набор данных iris, с помощью sparklyr:
 
-``` r
-copy_to(sc, iris)
+```r
+iris_tbl <- copy_to(sc, iris)
 
 iris_count <- dbGetQuery(sc, "SELECT COUNT(*) FROM iris")
 
 iris_count
 ```
 
+## <a name="distributed-r-computations"></a>Распределенных вычислений на r.
+
+Одной из особенностей sparklyr является возможность [распределения вычислений R](https://spark.rstudio.com/guides/distributed-r/) с [spark_apply](https://spark.rstudio.com/reference/spark_apply/).
+
+Поскольку кластеры больших данных использовать Livy подключения, необходимо задать `packages = FALSE` в вызове **spark_apply**. Дополнительные сведения см. в разделе [Livy разделе](https://spark.rstudio.com/guides/distributed-r/#livy) sparklyr документации на распределенных вычислений R. Этот параметр можно использовать только пакеты R, которые уже установлены в кластере Spark в коде R, передаваемый **spark_apply**. В следующем примере демонстрируется эта функция:
+
+```r
+iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Species", packages = FALSE)
+```
+
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о кластерах большие данные см. в разделе [Каковы кластеров SQL Server 2019 больших данных?](big-data-cluster-overview.md).
+Дополнительные сведения о кластерах большие данные см. в разделе [что такое большие данные кластеры SQL Server 2019](big-data-cluster-overview.md).

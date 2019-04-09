@@ -11,12 +11,12 @@ ms.assetid: 1fb759ee-8172-4c4c-9f7d-49af2c731006
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4f4339b91573aad752460b71fb4cce2181c9b880
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e98dd10b670a3e6bb4f53f9b9d68f98411074ffc
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018166"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241692"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Сравнение возможностей бизнес-аналитики в разных средах Microsoft
   Средства бизнес-аналитики Майкрософт [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] могут развертываться в нескольких различных средах, в том числе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с SharePoint Server, SharePoint Online и Power BI для Office 365. В этом разделе приводится сравнение компонентов и функций, поддерживаемых в каждой среде.  
@@ -25,16 +25,16 @@ ms.locfileid: "56018166"
   
 ## <a name="author-and-manage-bi-reports-and-dashboards"></a>Создание и управление отчетами бизнес-аналитики и панелями мониторинга  
   
-||SQL Server 2014 & SharePoint Server 2013|SharePoint Online план 2|Power BI для Office 365|  
+||SQL Server 2014 и SharePoint Server 2013|SharePoint Online план 2|Power BI для Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
-|Узлы бизнес-аналитики|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]Коллекции|Нет|Сайт Power BI|  
+|Узлы бизнес-аналитики|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Коллекции|Нет|Сайт Power BI|  
 |Центральное управление данными, совместное использование запросов и управление ими|Нет|Нет|Да **<sup>1</sup>**|  
 |Интеграция с Master Data Services (MDS) и Data Quality Services (DQS)|Да|Нет|Нет|  
 |Расписание обновления данных|Да, но не поддерживает рабочие книги, содержащие данные Power Query|Нет|Да|  
-|Запрос на естественном языке (вопросы и ответы)|Нет|Нет|Да **<sup>2</sup>**|  
+|Запросов на естественном языке (Q & A)|Нет|Нет|Да **<sup>2</sup>**|  
 |Предсказуемое прогнозирование|Нет|Нет|Да **<sup>3</sup>**|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] интеграция|Да|Нет|Нет|  
-|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]Интеграция (многомерные и табличные данные)|Да|Нет|Нет|  
+|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Интеграция (многомерные и табличные данные)|Да|Нет|Нет|  
 |Экспорт интерактивных панелей мониторинга Power View в презентацию PowerPoint|Да|Нет|Нет|  
 |Создание панели мониторинга в браузере|Да|Нет|Нет|  
 |Отслеживание использования|Да|Нет|Да|  
@@ -64,9 +64,9 @@ ms.locfileid: "56018166"
   
 ## <a name="more-information"></a>Дополнительные сведения  
   
--   [Возможности бизнес-аналитики в Excel, SharePoint Online и Power BI для Office 365](https://technet.microsoft.com/en-us/library/dn198235.aspx).  
+-   [Возможности бизнес-АНАЛИТИКИ в Excel и Office 365](https://support.office.com/article/BI-capabilities-in-Excel-and-Office-365-26c0548e-124c-4fd3-aab3-5f64568cb743).  
   
--   Сведения о требованиях для использования синонимов см. в разделе [Добавление синонимов в модель данных Power Pivot Excel](https://support.office.com/Article/Add-synonyms-to-a-Power-Pivot-Excel-data-model-345f4f5b-5ec2-4998-bc46-a26bdc0810b6?ui=en-US&rs=en-US&ad=US).  
+-   Сведения о требованиях для использования синонимов см. в разделе [оптимизация Power BI Q & A синонимы и формулировки](https://blog.pragmaticworks.com/optimizing-power-bi-qa-with-synonyms-phrasing-using-cloud-modeling) на сайте pragmaticworks.com.  
   
 -   [Office Online. Выбор социальной сети предприятия: Yammer или канал новостей? ](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US).  
   
@@ -76,7 +76,7 @@ ms.locfileid: "56018166"
   
 -   [Сравнение сайт центра бизнес-аналитики с Power BI для Office 365 сайтов](https://technet.microsoft.com/library/dn394343\(v=office.15\).aspx).  
   
--   [Общие сведения о Microsoft BI Reporting и средства анализа](https://go.microsoft.com/fwlink/p/?LinkId=617093)  
+-   [Средства Microsoft Business Intelligence (BI) для анализа и отчетности](../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md)  
   
 ## <a name="community-content"></a>Содержимое сообщества  
  [Сравнение локальных и облачных средств бизнес-аналитики Майкрософт](http://businessintelligist.com/2014/02/07/microsoft-self-service-bi-on-premise-vs-could/).  

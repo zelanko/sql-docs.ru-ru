@@ -14,12 +14,12 @@ ms.assetid: 9184d344-e96d-4025-ad6f-3f75129746df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93e3ca09b1d1d20be103db8bbd92aa15e3a1ba5a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ecc6eefcf6fea5ee815190e1d4204a00cca60f0a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360436"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241242"
 ---
 # <a name="define-attribute-relationships"></a>Определение связей атрибутов
   В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]атрибуты играют роль строительных блоков, из которых создается измерение. Измерение содержит набор атрибутов, организованных на основе связей между ними.  
@@ -35,7 +35,7 @@ ms.locfileid: "53360436"
 -   Приводит к выбору более эффективных алгоритмов создания статистических схем (при условии, что пользовательские иерархии были определены по путям связей).  
   
     > [!NOTE]  
-    >  Дополнительные сведения о важности и последствиях определения и настройки связи атрибутов см. в разделе «Увеличение производительности запросов», в [2005 Analysis Services производительности руководство по SQL Server](https://go.microsoft.com/fwlink/?LinkId=81621).  
+    >  Дополнительные сведения о важности и последствиях определения и настройки связи атрибутов см. в разделе «Увеличение производительности запросов», в [2005 Analysis Services производительности руководство по SQL Server](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide).  
   
 ## <a name="attribute-relationship-considerations"></a>Сведения о связях атрибутов  
  Если базовые данные позволяют, следует задавать уникальную связь между атрибутами. Для задания уникальных связей между атрибутами используется вкладка **Связи атрибутов** конструктора измерений.  
@@ -48,6 +48,6 @@ ms.locfileid: "53360436"
 >  Если неправильно задать связь, запрос может дать неправильные результаты.  
   
 ## <a name="see-also"></a>См. также  
- [Связи атрибутов](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
+ [можно изменить расположение фигур на вкладке](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

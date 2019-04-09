@@ -10,12 +10,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d93743c90cafd83509ba4bbbd6c0f38369355be3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9e58af1c10322baae4321c62901a55000e631678
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535956"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240442"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Мониторинг и устранение неполадок с использованием памяти
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] использует память в шаблонах, отличных от дисковых таблиц. Можно контролировать объем выделенной памяти, используемый оптимизированными для памяти таблицами и индексами в базе данных, с помощью динамических административных представлений (DMV) и счетчиков производительности, предназначенных для подсистемы памяти и сборки мусора.  Это обеспечивает видимость на уровне системы и базы данных и позволяет предотвращать проблемы нехватки памяти.  
@@ -196,7 +196,7 @@ PGPOOL: 64K               0                    0                    0
 PGPOOL:  4K               0                    0                    0  
 ```  
   
- Дополнительные сведения см. в статье [sys.dm_xtp_system_memory_consumers (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql).  
+ Дополнительные сведения см. в статье [sys.dm_xtp_system_memory_consumers (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
   
 #### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>Использование памяти во время выполнения при обращении к оптимизированным для памяти таблицам  
  Следующим запросом можно определить объем памяти, занятый структурами времени выполнения, например для кэша процедур. Выполните этот запрос, чтобы получить объем памяти, используемый структурами времени выполнения, например для кэша процедур. Все структуры времени помечены как XTP.  
@@ -269,7 +269,7 @@ MEMORYCLERK_XTP      Default    64             0
   
 3.  Примите меры, чтобы избежать потенциальных проблем с памятью. Дополнительные сведения см. в статье [Устранение проблем нехватки памяти](resolve-out-of-memory-issues.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Привязка базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [Измените параметры MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT для существующего пула](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)
   

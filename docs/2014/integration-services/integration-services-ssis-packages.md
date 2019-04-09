@@ -20,12 +20,12 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 324ed64290b85c03401d3add09e773b69c841bdd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: dccae9216609e80b0eb87582a78b94cd6e7b2f0c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381382"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241662"
 ---
 # <a name="integration-services-ssis-packages"></a>Пакеты служб Integration Services (SSIS)
   Пакет — это организованная коллекция соединений, элементов потока управления, элементов потока данных, обработчиков событий, переменных, параметров и конфигураций, которая собирается либо с помощью графических средств проектирования, предоставляемых службами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , либо программно.  Затем собранный пакет сохраняется в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], хранилище пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] или в файловую систему. Также вы можете развернуть проект служб ssISnoversion на сервере [!INCLUDE[ssIS](../includes/ssis-md.md)] . Пакет — это рабочий блок, который можно получить, выполнить и сохранить.  
@@ -66,7 +66,7 @@ ms.locfileid: "58381382"
  Конфигурация сохраняется, а затем развертывается вместе с пакетом при установке пакета на другом компьютере. Для поддержки пакета в другой среде значения его конфигурации можно обновлять при установке пакета. Дополнительные сведения см. в разделе [Создание конфигурации пакетов](../../2014/integration-services/create-package-configurations.md).  
   
 ### <a name="logging-and-log-providers"></a>Ведение журналов и регистраторы  
- Журнал — это коллекция данных о пакете, собираемых во время работы пакета. Например, в журнале может быть записано время начала и окончания работы пакета. Регистратор определяет целевой тип и формат, который пакет с его контейнерами и задачами применяет для записи сведений о выполнении. Журналы связаны с пакетом, но задачи и контейнеры в пакете могут сохранять данные в журнале любого пакета. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] включают в себя различные встроенные регистраторы. Например, в состав служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] входят регистраторы для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и текстовых файлов. Кроме того, можно создавать пользовательские регистраторы и применять их для ведения журналов. Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](performance/integration-services-ssis-logging.md).  
+ Журнал — это коллекция данных о пакете, собираемых во время работы пакета. Например, в журнале может быть записано время начала и окончания работы пакета. Регистратор определяет целевой тип и формат, который пакет с его контейнерами и задачами применяет для записи сведений о выполнении. Журналы связаны с пакетом, но задачи и контейнеры в пакете могут сохранять данные в журнале любого пакета. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] входят различные встроенные регистраторы. Например, в состав служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] входят регистраторы для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и текстовых файлов. Кроме того, можно создавать пользовательские регистраторы и применять их для ведения журналов. Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](performance/integration-services-ssis-logging.md).  
   
 ### <a name="variables"></a>Переменные  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] поддерживают системные и пользовательские переменные. В системных переменных хранятся полезные сведения об объектах пакета во время выполнения, а пользовательские переменные поддерживают пользовательские сценарии в пакетах. Оба типа переменных можно использовать в выражениях, скриптах и конфигурациях.  
@@ -112,11 +112,6 @@ ms.locfileid: "58381382"
 -   [Создание пакетов в SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)  
   
 -   См. раздел **Построение пакетов программными средствами** руководства разработчика.  
-  
-## <a name="related-content"></a>См. также  
-  
--   [Реализация служб SQL Server Integration Services с Microsoft Dynamics Mobile](https://msdn.microsoft.com/library/cc563950)  
-  
--   [Как Настройте пакет SQL Server Integration Services для Microsoft Dynamics AX](https://msdn.microsoft.com/library/bb986852)  
+
   
   

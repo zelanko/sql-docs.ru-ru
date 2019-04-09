@@ -12,12 +12,12 @@ ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 906bc6f3426913adfbff94b8f8b76d641c4a04a4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1c24de94f948282772f6f08d8a4a6c62e1c952ad
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362226"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241213"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>Соединение с сервером (страница "Вход") ядра СУБД
   Используйте эту вкладку для просмотра или задания параметров при соединении с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -31,17 +31,17 @@ ms.locfileid: "53362226"
   
  При соединении с экземпляром ядра СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]необходимо использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указать базу данных в диалоговом окне **Соединение с сервером** на вкладке **Свойства соединения** . Обязательно установите флажок **Шифрование соединения** .  
   
- По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соединяется с базой данных **master**. Если указать пользовательскую базу данных, то в обозревателе объектов будет видна только эта база данных и ее объекты. Если соединиться с базой данных **master**, будут видны все базы данных. Дополнительные сведения см. в разделе [Общие сведения о базе данных SQL Windows Azure](https://go.microsoft.com/fwlink/?LinkId=163948).  
+ По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соединяется с базой данных **master**. Если указать пользовательскую базу данных, то в обозревателе объектов будет видна только эта база данных и ее объекты. Если соединиться с базой данных **master**, будут видны все базы данных. Дополнительные сведения см. в разделе [Общие сведения о базе данных SQL Windows Azure](/azure/sql-database/sql-database-technical-overview).  
   
  **Имя сервера**  
  Выберите экземпляр сервера для подключения. По умолчанию выводится экземпляр сервера, к которому подключение выполнялось в последний раз.  
   
- **Authentication**  
- При соединении с экземпляром [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]доступны два режима проверки подлинности.  
+ **Проверка подлинности**  
+ При соединении с экземпляром [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] доступны два режима проверки подлинности.  
   
  При соединении с экземпляром ядра СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через [!INCLUDE[ssSDS](../../includes/sssds-md.md)]необходимо использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указать базу данных в диалоговом окне **Соединение с сервером** на вкладке **Свойства соединения** . Обязательно установите флажок **Шифрование соединения** .  
   
- По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соединяется с базой данных **master**. Если указать пользовательскую базу данных, то в обозревателе объектов будет видна только эта база данных и ее объекты. Если соединиться с базой данных **master**, будут видны все базы данных. Дополнительные сведения см. в разделе [Общие сведения о базе данных SQL Windows Azure](https://go.microsoft.com/fwlink/?LinkId=163948).  
+ По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соединяется с базой данных **master**. Если указать пользовательскую базу данных, то в обозревателе объектов будет видна только эта база данных и ее объекты. Если соединиться с базой данных **master**, будут видны все базы данных. Дополнительные сведения см. в разделе [Общие сведения о базе данных SQL Windows Azure](/azure/sql-database/sql-database-technical-overview).  
   
  **Режим проверки подлинности Windows (проверка подлинности Windows)**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Режим проверки подлинности Windows позволяет подключаться с учетной записью Windows.  
@@ -59,12 +59,12 @@ ms.locfileid: "53362226"
  Введите имя входа для подключения. Этот параметр доступен только в том случае, если выбрано соединение с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Пароль**  
- Введите пароль для этого имени входа. Этот параметр доступен для редактирования только при подключении с проверкой подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Введите пароль для этого имени входа. Этот параметр доступен для редактирования только при подключении с проверкой подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Запомнить пароль**  
- Выберите, чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохранил введенный пароль. Этот параметр отображается только в том случае, если выбрано подключение с проверкой подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Выберите, чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохранил введенный пароль. Этот параметр отображается только в том случае, если выбрано подключение с проверкой подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Connect**  
+ **Подключение**  
  Нажмите, чтобы подключиться к выбранному выше серверу.  
   
  **Параметры**  

@@ -10,18 +10,18 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 77812ef81d77be668a449af6c79e833ffc4d81aa
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390152"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241802"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>Урок 1. Создание проекта и основного пакета
   На этом занятии будет рассмотрено создание простого ETL-пакета, который будет извлекать данные из отдельного источника неструктурированных файлов, преобразовывать полученные данные при помощи двух компонентов преобразования «Уточняющий запрос», а затем записывать эти данные в таблицу фактов **FactCurrency** , находящуюся в базе данных **AdventureWorksDW2012**. На этом занятии предстоит узнать, как создавать новые пакеты, добавлять и настраивать соединения с источниками данных и назначениями, а также работать с новыми компонентами потока управления и потока данных.  
   
 > [!IMPORTANT]  
->  Для выполнения упражнений этого учебника потребуется образец базы данных **AdventureWorksDW2012** . Дополнительные сведения об установке и развертывании **AdventureWorksDW2012**, в разделе [Образцы продуктов служб Reporting Services на сайте CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=52691).  
+>  Для выполнения упражнений этого учебника потребуется образец базы данных **AdventureWorksDW2012** . Дополнительные сведения об установке и развертывании **AdventureWorksDW2012**, см. в разделе [Microsoft SQL Server Product Samples: Службы Reporting Services](https://archive.codeplex.com/?p=msftrsprodsamples).  
   
 ## <a name="understanding-the-package-requirements"></a>Основные сведения о требованиях пакета  
  Для выполнения упражнений этого учебника требуется Microsoft SQL Server Data Tools.  
@@ -80,25 +80,25 @@ ms.locfileid: "58390152"
 ## <a name="lesson-tasks"></a>Задачи занятия  
  Это занятие содержит следующие задачи.  
   
--   [Шаг 1. Создание нового проекта служб Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [Шаг 1. Создание нового проекта служб Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Шаг 2. Добавление и настройка диспетчера соединений с неструктурированными файлами](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Шаг 2. Добавление и настройка диспетчера соединений с неструктурированными файлами](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
 -   [Шаг 3. Добавление и настройка диспетчера соединений OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [Шаг 4. Добавление в пакет задачу потока данных](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [Шаг 4. Добавление задачи потока данных в пакет](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 -   [Шаг 5. Добавление и настройка источника неструктурированных файлов](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [Шаг 6. Добавление и Настройка преобразований «Уточняющий запрос»](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [Шаг 6. Добавление и настройка преобразований «Уточняющий запрос»](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [Шаг 7. Добавление и Настройка назначения OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+-   [Шаг 7. Добавление и настройка назначения OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Шаг 8. Облегчение пакета занятия 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Шаг 8. Облегчение чтения пакета, созданного на занятии 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [Шаг 9. Проверка учебного пакета занятия 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [Шаг 9. Проверка учебного пакета, созданного на занятии 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Начало занятия  
- [Шаг 1. Создание нового проекта служб Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
+ [Шаг 1. Создание нового проекта служб Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
   
   

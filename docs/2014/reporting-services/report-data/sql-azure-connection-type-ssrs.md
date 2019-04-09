@@ -11,15 +11,15 @@ ms.assetid: c84def6c-e8cf-43d9-9912-098171a7ce79
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 73e8662d7cca01979616af0a5f9221f501d1c3a2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5a527e84535f62f9b0ef949a47001b85e71cbd2d
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034018"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242248"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Тип соединения с SQL Azure (SSRS)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] это размещаемая реляционная база данных облачного типа на базе технологий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы включить данные из базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] в отчет, необходимо иметь набор данных, основанный на источнике данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Используйте этот тип источника данных для подключения и извлечения данных из [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] is a cloud-based, hosted relational database built on это размещаемая реляционная база данных облачного типа на базе технологий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].sЧтобы включить данные из базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] в отчет, необходимо иметь набор данных, основанный на источнике данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)].UЭтот встроенный тип источника данных основан на модуле обработки данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .dИспользуйте этот тип источника данных для подключения и извлечения данных из [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Этот модуль обработки данных поддерживает многозначные параметры, серверные статистические вычисления и учетные данные, управляемые отдельно с помощью строки подключения.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "56034018"
 > [!NOTE]  
 >  При открытии соединения с [!INCLUDE[ssSDS](../../includes/sssds-md.md)]задайте время ожидания соединения равным 30 секундам.  
   
- Дополнительные сведения см. в разделе [База данных SQL Windows Azure на MSDN](https://go.microsoft.com/fwlink/?LinkId=206770).  
+ Дополнительные сведения см. в разделе [документации по базе данных SQL Azure](https://docs.microsoft.com/azure/sql-database/).  
   
  Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в разделе [Добавление и проверка подключения к данным или источнику данных &#40;построитель отчетов и службы SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
@@ -158,7 +158,7 @@ WHERE EmployeeID = (@EmpID)
 ##  <a name="HowTo"></a> Инструкции  
  В этом разделе содержатся пошаговые инструкции по работе с подключениями к данным, источниками данных и наборами данных.  
   
- [Добавление и проверка подключения к данным или источнику данных &#40;построитель отчетов и службы SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Добавление и проверка подключения к данным или источнику данных (построитель отчетов и службы SSRS)](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -169,7 +169,7 @@ WHERE EmployeeID = (@EmpID)
 ##  <a name="Related"></a> См. также  
  В этих разделах документации содержатся подробные сведения о данных отчетов, а также методические сведения об определении, настройке и использовании элементов отчетов, связанных с данными.  
   
- [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-datasets-ssrs.md)  
+ [Добавление данных в отчет (построитель отчетов и службы SSRS)](report-datasets-ssrs.md)  
  Предоставляет общие сведения о доступе к данным отчета.  
   
  [Подключения к данным, источники данных и строки подключения в построителе отчетов](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

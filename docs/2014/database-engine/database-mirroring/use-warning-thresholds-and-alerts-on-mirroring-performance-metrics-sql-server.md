@@ -17,12 +17,12 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 41044c16343ba93055815851000a1a642578e39a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5d8ef6822b623e546aa0215964ba0ae237862687
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354734"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242222"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Использование пороговых значений предупреждений и оповещений в метриках производительности зеркального отображения (SQL Server)
   В этом разделе содержатся сведения о событиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которых можно настраивать пороговые значения предупреждений и управлять ими для зеркального отображения базы данных. Это можно сделать с помощью монитора зеркального отображения баз данных или хранимых процедур **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**и **sp_dbmmonitordropalert** . В этом разделе содержатся также сведения о настройке предупреждений о событиях зеркального отображения баз данных.  
@@ -105,7 +105,7 @@ ms.locfileid: "53354734"
   
  При определении оповещений о событиях зеркального отображения базы данных рекомендуется задавать пороговые значения предупреждений и оповещения на обоих экземплярах сервера-участника. Отдельные события формируются и на основном, и на зеркальном сервере, но каждый из участников в любой момент времени может выполнять любую роль. Чтобы гарантировать работу оповещений после отработки отказа, они должны быть определены на обоих участниках.  
   
- Дополнительные сведения см. в техническом документе о событиях зеркального отображения базы данных на [веб-сайте SQL Server](https://go.microsoft.com/fwlink/?linkid=62373). В нем содержатся сведения о способах настройки предупреждений с помощью агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , о событиях зеркального отображения базы данных WMI и образцы скриптов.  
+ Дополнительные сведения см. в техническом документе о событиях зеркального отображения базы данных на [веб-сайте SQL Server](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md). В нем содержатся сведения о способах настройки предупреждений с помощью агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , о событиях зеркального отображения базы данных WMI и образцы скриптов.  
   
 > [!IMPORTANT]  
 >  Для всех сеансов зеркального отображения настоятельно рекомендуется настроить базу данных для отправки предупреждений обо всех событиях изменения состояния. Такое событие означает, что произошло нечто, способное скомпрометировать данные, если это не изменение, связанное с ручной настройкой базы данных. Чтобы защитить данные, необходимо определить и устранить причину непредвиденного изменения состояния.  
@@ -139,7 +139,7 @@ ms.locfileid: "53354734"
   
 -   [sp_dbmmonitorupdate (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Зеркальное отображение базы данных (SQL Server)](database-mirroring-sql-server.md)   
  [Наблюдение за зеркальным отображением базы данных (SQL Server)](monitoring-database-mirroring-sql-server.md)  
   

@@ -20,12 +20,12 @@ ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2fd6b938d13e880f7ec8d48d3e4ca9665ee9cd65
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: fbb609a65c70cb44c8fda81feb75927060ed289b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378602"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240422"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Свойства потока данных, которые можно задавать с помощью выражений
   Значения определенных свойств объектов потока данных можно указать с помощью выражений свойств, доступных в контейнере задачи потока данных.  
@@ -71,20 +71,20 @@ ms.locfileid: "58378602"
 |----------------------|--------------|  
 |Назначение «ADO.NET»|Свойство TableOrViewName<br /><br /> Свойство BatchSize<br /><br /> Свойство CommandTimeout|  
 |назначение «Неструктурированный файл»|Свойство Header|  
-|Назначение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact|Свойство TableName|  
-|Назначение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Свойство BulkInsertTableName<br /><br /> Свойство BulkInsertFirstRow<br /><br /> Свойство BulkInsertLastRow<br /><br /> Свойство BulkInsertOrder<br /><br /> Свойство Timeout|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact|Свойство TableName|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] назначение|Свойство BulkInsertTableName<br /><br /> Свойство BulkInsertFirstRow<br /><br /> Свойство BulkInsertLastRow<br /><br /> Свойство BulkInsertOrder<br /><br /> Свойство Timeout|  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
 -   [Добавление или изменение выражение свойства](expressions/add-or-change-a-property-expression.md)  
   
 ## <a name="related-content"></a>См. также  
- Техническая статья [Памятка выражений служб SSIS](http://pragmaticworks.com/cheatsheet/)на сайте pragmaticworks.com  
+ Техническая статья [Памятка выражений служб SSIS](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)на сайте pragmaticworks.com  
   
 ## <a name="see-also"></a>См. также  
  [Использование выражений свойств в пакетах](expressions/use-property-expressions-in-packages.md)   
- [Common Properties](../../2014/integration-services/common-properties.md)   
- [Пользовательские свойства преобразования](data-flow/transformations/transformation-custom-properties.md)   
+ [Общие свойства](../../2014/integration-services/common-properties.md)   
+ [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)   
  [Свойства пути](../../2014/integration-services/path-properties.md)  
   
   

@@ -9,12 +9,12 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 73dd4f2163169930d7766d3a287b8a5c38de0ee1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1a56eec4c2b36aba75664a34e96166b60841f89e
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289192"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241372"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Средства Microsoft Business Intelligence (BI) для анализа и отчетности
 
@@ -22,7 +22,7 @@ ms.locfileid: "56289192"
   
  Цель — помочь вам выбрать правильное средство, которое наилучшим образом удовлетворяет имеющиеся потребности. Дополнительные сведения о продукте, щелкните приведенную в таблице ссылку на продукт.  
   
- Чтобы ознакомиться с кратким описанием этих средств и решить, какие из них подходят для вас, см. раздел [Общие сведения о средствах бизнес-аналитики Майкрософт](https://msdn.microsoft.com/library/dn655131.aspx).  
+ Чтобы ознакомиться с кратким описанием этих средств и решить, какие из них подходят для вас, см. раздел [Общие сведения о средствах бизнес-аналитики Майкрософт](https://www.digitalvidya.com/blog/introduction-to-microsoft-power-bi/).  
   
 |Рабочие нагрузки|Пользователь|||Средства бизнес-аналитики|||  
 |---------------|----------|-|-|--------------|-|-|  
@@ -30,10 +30,10 @@ ms.locfileid: "56289192"
 |**Бизнес-аналитика самообслуживания**|Аналитик или пользователь||||||  
 |Простота выявления и доступа к открытым и корпоративным данным||[Power Query](https://go.microsoft.com/fwlink/p/?LinkId=391845)||[Каталог данных Azure](https://azure.microsoft.com/services/data-catalog/)<br /><br />||  
 |Создание мощных моделей данных||[Power Pivot](https://support.office.com/article/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
-|Самостоятельное выполнение прогнозной аналитики||||||[Интеллектуальный анализ данных надстройки для Excel](../analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)|  
+|Самостоятельное выполнение прогнозной аналитики||||||[Надстройки интеллектуального анализа данных для Excel](../analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)|  
 |Визуализация и анализ данных||[Power View](https://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [Power Map](https://go.microsoft.com/fwlink/p/?LinkId=391848)|||||  
 |Формирование вопросов с помощью запросов на естественном языке|||||[ВОПРОСЫ И ОТВЕТЫ](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)||  
-|Доступ к отчетам с помощью мобильных устройств||||[HTML 5 (поддерживает просмотр файлов размером до 10 МБ)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (поддерживает просмотр файлов размером до 250 МБ)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Мобильное приложение Power BI на устройствах с iOS](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Мобильное приложение Power BI на устройствах с Android](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Мобильное приложение Power BI для Windows](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
+|Доступ к отчетам с помощью мобильных устройств||||[HTML 5 (поддерживает просмотр < файлы размером 10 МБ)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (поддерживает просмотр < 250 МБ)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Мобильное приложение Power BI на устройствах iOS](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Мобильное приложение Power BI на устройствах Android](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Мобильное приложение Power BI для Windows 10](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
 |Совместная работа и общий доступ|||[Веб-сайты SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391849)|[Сайтов групп SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391850)|[Веб-сайты Power BI](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**Корпоративная бизнес-аналитика**|IT Pro||||||  
 |Создавайте многомерные или табличные корпоративные модели||||||[Службы Analysis Services](../analysis-services/analysis-services.md)|  
@@ -42,7 +42,7 @@ ms.locfileid: "56289192"
 |Создавайте рабочие отчеты||||||<sup>1</sup> [службы reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |Создавайте пользовательские и внедренные отчеты||||||<sup>1</sup> [службы reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**Дополнительные аналитические функции**|Data Scientist||||||  
-|Самостоятельное выполнение прогнозной аналитики||||||[Интеллектуальный анализ данных надстройки для Excel](https://msdn.microsoft.com/library/dn282385\(v=sql.120\).aspx)|  
+|Самостоятельное выполнение прогнозной аналитики||||||[Надстройки интеллектуального анализа данных для Excel](https://msdn.microsoft.com/library/dn282385\(v=sql.120\).aspx)|  
 |Используйте алгоритмы интеллектуального анализа данных||||||[Интеллектуальный анализ данных в службах Analysis Services](https://technet.microsoft.com/library/bb510516\(v=sql.120\).aspx)|  
   
  <sup>1</sup> службы reporting Services имеют ряд функций, которые поддерживают доставку рабочих и нестандартных отчетов, например подписок и оповещения о данных.

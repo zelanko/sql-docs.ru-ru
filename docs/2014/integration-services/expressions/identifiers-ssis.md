@@ -20,12 +20,12 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 04217451f1a330b3a9b4e4a7ff91e6c6d35574eb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380711"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242342"
 ---
 # <a name="identifiers-ssis"></a>Идентификаторы (службы SSIS)
   В выражениях идентификаторы обозначают столбцы и переменные, значения которых могут быть использованы в операциях. Выражения могут использовать обычные и сложные идентификаторы.  
@@ -121,6 +121,6 @@ ms.locfileid: "58380711"
 ```  
   
 ## <a name="related-content"></a>См. также  
- Техническая статья [Памятка выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=217683)на сайте pragmaticworks.com  
+ Техническая статья [Памятка выражений служб SSIS](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)на сайте pragmaticworks.com  
   
   

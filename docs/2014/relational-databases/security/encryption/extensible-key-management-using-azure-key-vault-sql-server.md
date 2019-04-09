@@ -16,31 +16,31 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: c2a6acd93bc711e4722f3ca437b17cba603dfcad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372766"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242212"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Соединитель для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault позволяет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] шифрования для использования службы Azure Key Vault в качестве [расширенного управления ключами &#40;расширенного управления Ключами&#41; ](extensible-key-management-ekm.md) поставщика для защиты его ключи шифрования.  
   
  Разделы данной темы  
   
--   [Использование расширенного управления Ключами](#Uses)  
+-   [Использование расширенного управления ключами](#Uses)  
   
--   [Шаг 1. Настройка хранилища ключей для использования в SQL Server](#Step1)  
+-   [Шаг 1. Настройка хранилища ключей для использования в SQL Server](#Step1)  
   
--   [Шаг 2. Установка соединителя SQL Server](#Step2)  
+-   [Шаг 2. Установка соединителя SQL Server](#Step2)  
   
 -   [Шаг 3. Настройка SQL Server для использования поставщика EKM для хранилища ключей](#Step3)  
   
--   [Пример а. Прозрачное шифрование данных с помощью асимметричного ключа из хранилища ключей](#ExampleA)  
+-   [Пример А. Прозрачное шифрование данных с помощью асимметричного ключа из хранилища ключей](#ExampleA)  
   
--   [Пример б Шифрование резервных копий с помощью асимметричного ключа из хранилища ключей](#ExampleB)  
+-   [Пример Б. Шифрование резервных копий с помощью асимметричного ключа из хранилища ключей](#ExampleB)  
   
--   [Пример в. Шифрование на уровне столбцов с помощью асимметричного ключа из хранилища ключей](#ExampleC)  
+-   [Пример В. Шифрование данных на уровне столбца с помощью асимметричного ключа из хранилища ключей](#ExampleC)  
   
 ##  <a name="Uses"></a> Использование расширенного управления Ключами  
  Организация может использовать шифрование [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для защиты конфиденциальных данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] включает шифрование [прозрачное шифрование данных &#40;TDE&#41;](transparent-data-encryption.md), [шифрование на уровне столбцов](/sql/t-sql/functions/cryptographic-functions-transact-sql) (CLE) и [шифрование резервной копии](../../backup-restore/backup-encryption.md). Во всех этих случаях данные шифруются с помощью симметричного ключа шифрования. Симметричный ключ шифрования затем шифруется иерархией ключей, хранящихся в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Или же архитектура поставщика EKM использует [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для защиты ключей шифрования данных с помощью асимметричного ключа, который хранится вне [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] во внешнем поставщике служб шифрования. Архитектура поставщика EKM добавляет дополнительный уровень безопасности и позволяет организациям разделить управление ключами и данными.  
@@ -51,8 +51,8 @@ ms.locfileid: "53372766"
   
  ![Расширенное управление ключами с помощью Azure Key Vault (SQL Server)](../../../database-engine/media/ekm-using-azure-key-vault.png "Расширенное управление ключами с помощью Azure Key Vault (SQL Server)")  
   
-##  <a name="Step1"></a> Шаг 1. Настройка хранилища ключей для использования в SQL Server  
- Выполните следующие действия, чтобы настроить хранилище ключей для использования с [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] в целях защиты ключа шифрования. Организация может уже использовать хранилище. Если хранилище не существует, администратор Azure в организации, назначенный для управления ключами шифрования, может создать хранилище, создать асимметричный ключ в хранилище и затем авторизовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для использования ключа. Ознакомьтесь со службой хранилища ключей, изучив статью [Приступая к работе с хранилищем ключей Azure](https://go.microsoft.com/fwlink/?LinkId=521402), и справочником по [командлетам PowerShell для работы с хранилищем ключей Azure](https://go.microsoft.com/fwlink/?LinkId=521403) .  
+##  <a name="Step1"></a> Шаг 1. Настройка хранилища ключей для использования в SQL Server  
+ Выполните следующие действия, чтобы настроить хранилище ключей для использования с [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] в целях защиты ключа шифрования. Организация может уже использовать хранилище. Если хранилище не существует, администратор Azure в организации, назначенный для управления ключами шифрования, может создать хранилище, создать асимметричный ключ в хранилище и затем авторизовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для использования ключа. Ознакомьтесь со службой хранилища ключей, изучив статью [Приступая к работе с хранилищем ключей Azure](https://go.microsoft.com/fwlink/?LinkId=521402), и справочником по [командлетам PowerShell для работы с хранилищем ключей Azure](/powershell/module/azurerm.keyvault/) .  
   
 > [!IMPORTANT]  
 >  Если у вас несколько подписок Azure, вы должны использовать ту подписку, которая содержит [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -100,7 +100,7 @@ ms.locfileid: "53372766"
   
     -   Справочник по [командлетам PowerShell для работы с хранилищем ключей Azure](https://go.microsoft.com/fwlink/?LinkId=521403)  
   
-##  <a name="Step2"></a> Шаг 2. Установка соединителя SQL Server  
+##  <a name="Step2"></a> Шаг 2. Установка соединителя SQL Server  
  Соединитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] будет загружен и установлен администратором компьютера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Соединитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно загрузить из [Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/p/?LinkId=521700).  Выполните поиск **соединителя SQL Server для хранилища ключей Microsoft Azure**, просмотрите подробные сведения, требования к системе и инструкции по установке, загрузите соединитель и начните установку с помощью команды **Выполнить**. Прочитайте лицензионное соглашение, примите его условия и продолжайте.  
   
  По умолчанию соединитель устанавливается в **C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault**. Эту папку можно изменить во время установки. (В этом случае измените и следующие скрипты.)  
@@ -113,7 +113,7 @@ ms.locfileid: "53372766"
   
  Установка соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] также позволяет при необходимости загрузить примеры скриптов для шифрования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-##  <a name="Step3"></a> Шаг 3. Настройка SQL Server для использования поставщика EKM для хранилища ключей  
+##  <a name="Step3"></a> Шаг 3. Настройка SQL Server для использования поставщика EKM для хранилища ключей  
   
 ###  <a name="Permissions"></a> Permissions  
  Для завершения всего процесса требуется разрешение CONTROL SERVER или членство в предопределенной роли сервера **sysadmin** . Для определенных действий необходимы следующие разрешения.  
@@ -200,7 +200,7 @@ ms.locfileid: "53372766"
   
  Дополнительные сведения см. в следующих разделах:  
   
--   [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
+-   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
 -   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
   
@@ -343,11 +343,11 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
   
 ## <a name="see-also"></a>См. также  
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
- [CREATE CREDENTIAL (Transact-SQL)](/sql/t-sql/statements/create-credential-transact-sql)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
- [Расширенное управление ключами (EKM)](extensible-key-management-ekm.md)   
- [Включение прозрачного шифрования данных с помощью расширенного управления Ключами](enable-tde-on-sql-server-using-ekm.md)   
+ [Расширенное управление ключами &#40;EKM&#41;](extensible-key-management-ekm.md)   
+ [Включение прозрачного шифрования данных с использованием расширенного управления ключами](enable-tde-on-sql-server-using-ekm.md)   
  [Шифрование резервной копии](../../backup-restore/backup-encryption.md)   
  [Создание зашифрованной резервной копии](../../backup-restore/create-an-encrypted-backup.md)  
   

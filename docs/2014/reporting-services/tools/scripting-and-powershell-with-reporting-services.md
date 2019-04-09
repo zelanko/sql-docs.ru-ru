@@ -15,12 +15,12 @@ ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7ea45b2b785666253405c579930d1f89417d4c58
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9248c80830b6ebb432629bf47d73ad44fd832c3b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024525"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240702"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Сценарии и PowerShell со службами Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] поддерживает целый ряд сценариев разработки и управления посредством скриптов, включая служебную программу командной строки rs.exe, командлеты PowerShell для серверов отчетов в режиме SharePoint и использование объектной модели [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] из PowerShell для режима SharePoint и собственного режима.  
@@ -57,7 +57,7 @@ ms.locfileid: "56024525"
   
 -   См. раздел "Доступ к классам WMI с помощью PowerShell" в статье [Доступ к поставщику WMI для служб Reporting Services](access-the-reporting-services-wmi-provider.md).  
   
--   [Администрирование служб SSRS с помощью PowerShell](http://curah.microsoft.com/13107/how-to-administer-ssrs-using-powershell).scriptin  
+-   [Администрирование служб SSRS с помощью PowerShell](https://www.sqlshack.com/how-to-administer-sql-server-reporting-services-ssrs-subscriptions-using-powershell/).scriptin  
   
 ## <a name="rsexe-scripting-samples"></a>Образцы скриптов RS.exe  
   
@@ -65,7 +65,7 @@ ms.locfileid: "56024525"
   
 -   Дополнительные примеры скриптов, приложений и расширений см. в разделе [Примеры продуктов SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Служебная программа RS.exe (SSRS)](rs-exe-utility-ssrs.md)   
  [Написание скриптов для задач развертывания и администрирования](script-deployment-and-administrative-tasks.md)   
  [Создание скриптов с помощью программы rs.exe и веб-службы](script-with-the-rs-exe-utility-and-the-web-service.md)  

@@ -1,5 +1,5 @@
 ---
-title: Создание меры и группы мер в многомерных моделях | Документы Microsoft
+title: Создание мер и групп мер в многомерных моделях | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fde4dd3ac818935319f0331448e552163a6e148f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9c963256ce1d2d0fa37c34d7ea96df60834f125f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026501"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241972"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Создание мер и групп мер в многомерных моделях
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34026501"
 |-|-|  
 |Мастер кубов|Запустите мастер кубов в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для создания куба.<br /><br /> В обозревателе решений щелкните правой кнопкой мыши узел **Кубы** и выберите команду **Создать куб**. Справку по этим действиям см. в разделе [Многомерное моделирование (учебник по Adventure Works)](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md).<br /><br /> При создании куба на основе таблиц из существующего хранилища данных определения мер и групп мер материализуются в качестве части процесса создания куба. В мастере выберите, какие факты и таблицы фактов нужно использовать в качестве основы для объектов меры и группы мер в кубе.|  
 |Диалоговое окно создания меры|Если куб уже существует в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], дважды щелкните имя куба в обозревателе решений, чтобы открыть его в конструкторе кубов. В области "Меры" щелкните правой кнопкой мыши верхний узел, чтобы создать новую группу мер или новую меру с помощью указания исходной таблицы, столбца и типа агрегирования. Этот подход требует выбора метода агрегирования из фиксированного списка готовых функций. В разделе [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) представлено описание наиболее часто используемых агрегатов.|  
-|вычисляемый элемент|Вычисляемые элементы позволяют добиться гибкости и широких возможностей анализа кубов в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , так как можно управлять временем и способом их создания. Иногда мера требуется только временно — в течение сеанса пользователя или в среде Management Studio в рамках исследования.<br /><br /> В [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте вкладку "Вычисления", чтобы создать новый вычисляемый элемент.<br /><br /> Выберите этот подход при создании меры на основе многомерного выражения. Дополнительные сведения см. в разделах [Построение мер в многомерных выражениях](../../analysis-services/multidimensional-models/mdx/mdx-building-measures.md), [Вычисления](../../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [Вычисления в многомерных моделях](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md) и [Основные принципы создания скриптов многомерных выражений (службы Analysis Services)](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md).|  
+|вычисляемый элемент|Вычисляемые элементы позволяют добиться гибкости и широких возможностей анализа кубов в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , так как можно управлять временем и способом их создания. Иногда мера требуется только временно — в течение сеанса пользователя или в среде Management Studio в рамках исследования.<br /><br /> В [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте вкладку "Вычисления", чтобы создать новый вычисляемый элемент.<br /><br /> Выберите этот подход при создании меры на основе многомерного выражения. Дополнительные сведения см. в этих статьях: [Построение мер в многомерных Выражениях](../../analysis-services/multidimensional-models/mdx/mdx-building-measures.md), [вычисления](../../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [вычисления в многомерных моделях](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md) и [основные принципы создания скриптов многомерных Выражений &#40;служб Analysis Services&#41; ](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md).|  
 |Многомерные выражения или XMLA|В SQL Server Management Studio можно выполнять многомерные выражения или XMLA, чтобы изменить базу данных для включения новой вычисляемой меры. Этот подход полезен для нерегламентированной проверки данных после развертывания решения на сервере. См. раздел [Document and Script an Analysis Services Database](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md).|  
   
 ##  <a name="bkmk_comps"></a> Компоненты меры  
@@ -66,7 +66,7 @@ ms.locfileid: "34026501"
   
 -   Столбцы мер определяют меры, которые содержатся в группе мер.  
   
- При запуске мастера кубов внешние ключи отфильтровываются. В списке оставшихся столбцов для выбора находятся столбцы мер, а также столбцы атрибутов, которые не определены как внешний ключ. В примере **FactSalesQuote** мастер предложит **CalendarYear** и **CalendarQuarter** в дополнение к **SalesAmountQuota**. Только столбец меры **SalesAmountQuota** приведет к созданию поддающейся обработке меры для многомерной модели. Для определения суммы каждой квоты существуют другие столбцы на основе даты. Следует исключить из списка мер в мастере кубов другие столбцы — **CalendarYear** и **CalendarQuarter**(или позднее удалить их из группы мер в конструкторе).  
+ При запуске мастера кубов внешние ключи отфильтровываются. В списке оставшихся столбцов для выбора находятся столбцы мер, а также столбцы атрибутов, которые не определены как внешний ключ. В **FactSalesQuota** примере мастер предложит **CalendarYear** и **CalendarQuarter** в дополнение к **SalesAmountQuota**. Только столбец меры **SalesAmountQuota** приведет к созданию поддающейся обработке меры для многомерной модели. Для определения суммы каждой квоты существуют другие столбцы на основе даты. Следует исключить из списка мер в мастере кубов другие столбцы — **CalendarYear** и **CalendarQuarter**(или позднее удалить их из группы мер в конструкторе).  
   
  Вывод из данного обсуждения: не все столбцы, предлагаемые мастером, полезны в качестве меры. Полагайтесь на собственное понимание данных и того, как они будут использоваться, при выборе столбцов для использования в качестве меры. Помните, что можно щелкнуть правой кнопкой мыши таблицу в представлении источника данных для нахождения данных, которые помогут определить, какие столбцы использовать в качестве мер. Дополнительные сведения см. в разделе [Просмотр данных в представлении источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md).  
   
@@ -84,6 +84,6 @@ ms.locfileid: "34026501"
   
 ## <a name="see-also"></a>См. также  
  [Кубы в многомерных моделях](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
- [Меры и группы мер](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
+ [Меры и их группы](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
   
   

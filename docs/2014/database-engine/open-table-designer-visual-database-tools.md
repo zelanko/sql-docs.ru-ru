@@ -15,12 +15,12 @@ ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e0ceb2ef7e152829cbb6bd33cdcb3d0812a69bf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355653"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240722"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Открытие конструктора таблиц (визуальные инструменты для баз данных)
   Конструктор таблиц является визуальным средством, позволяющим разрабатывать и отображать таблицы подключенной базы данных. С помощью конструктора таблиц можно создавать, редактировать и удалять таблицы, столбцы, ключи, индексы, связи и ограничения.  
@@ -34,7 +34,7 @@ ms.locfileid: "53355653"
      Меню **Конструктор таблиц** будет добавлено к главному меню, при этом откроются панели конструктора.  
   
 > [!NOTE]  
->  При подключении к базе данных SQL Azure новый параметр таблицы запустит скрипт создания шаблона таблицы. Измените параметры, затем запустите скрипт для создания новой таблицы. Дополнительные сведения см. в разделе [Общие сведения о SQL Azure](https://go.microsoft.com/fwlink/?LinkId=163948).  
+>  При подключении к базе данных SQL Azure новый параметр таблицы запустит скрипт создания шаблона таблицы. Измените параметры, затем запустите скрипт для создания новой таблицы. Дополнительные сведения см. в разделе [Общие сведения о SQL Azure](/azure/sql-database/sql-database-technical-overview).  
   
 ### <a name="open-an-existing-table"></a>Открытие существующей таблицы  
   
@@ -43,7 +43,7 @@ ms.locfileid: "53355653"
      Меню **Конструктор таблиц** добавляется к главному меню, а таблица открывается на панелях конструктора.  
   
 ## <a name="see-also"></a>См. также  
- [Проектирование таблиц &#40;визуальных инструментах баз данных&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
+ [Проектирование таблиц (визуальные инструменты для баз данных)](../ssms/visual-db-tools/visual-database-tools.md)   
  [Таблицы](../relational-databases/tables/tables.md)  
   
   

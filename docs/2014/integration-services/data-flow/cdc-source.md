@@ -12,12 +12,12 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 80e557d9d286040b1d145c852779a9eca5cd4e64
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382730"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241792"
 ---
 # <a name="cdc-source"></a>CDC-источник
   Источник CDC считывает диапазон информации об изменениях из таблиц изменений [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и доставляет изменения другим нижестоящим компонентам SSIS.  
@@ -45,11 +45,11 @@ ms.locfileid: "58382730"
 ## <a name="error-handling"></a>Обработка ошибок  
  Источник CDC имеет вывод ошибок. Вывод ошибок компонента включает следующие выходные столбцы.  
   
--   **Код ошибки**: Значение всегда равно -1.  
+-   **Код ошибки.** значение всегда равно 1.  
   
--   **Столбец с ошибкой**: Входной столбец, вызывающий ошибку (это относится к ошибкам преобразования).  
+-   **Столбец с ошибкой.** Входной столбец, вызывающий ошибку (это относится к ошибкам преобразования).  
   
--   **Столбцы строки с ошибкой**: Данные записи, которые вызывают ошибку.  
+-   **Столбцы строки с ошибкой.** Данные записи, которые вызывают ошибку.  
   
  В зависимости от настройки поведения в случае ошибки, источник CDC поддерживает возврат ошибок (преобразование данных, усечение), которые обнаруживаются в процессе извлечения в выводе ошибок. Дополнительные сведения см. в разделе [CDC Source Editor &#40;Error Output Page&#41;](../cdc-source-editor-error-output-page.md).  
   
@@ -88,7 +88,7 @@ use <cdc-enabled-database-name>
 #### <a name="sql-server-error-message"></a>Сообщение об ошибке SQL Server  
  Следующее сообщение может быть возвращено [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
- **Для функции или процедуры cdc.fn_cdc_get_net_changes_\<..> задано недостаточное количество аргументов.**  
+ **Указано недостаточное количество аргументов для функции или процедуры cdc.fn_cdc_get_net_changes_\<... >.**  
   
  Эта ошибка не указывает, что отсутствует какой-то аргумент. Она означает, что начало или конец диапазона значений номеров LSN в переменной состояния CDC является недопустимым.  
   
@@ -125,6 +125,6 @@ use <cdc-enabled-database-name>
   
 ## <a name="related-content"></a>См. также  
   
--   Запись в блоге [Режимы обработки для источника CDC](https://go.microsoft.com/fwlink/?LinkId=242541)на сайте mattmasson.com.  
+-   Запись в блоге [Режимы обработки для источника CDC](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)на сайте mattmasson.com.  
   
   

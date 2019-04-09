@@ -18,12 +18,12 @@ ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c3a00b9cdd386a433fa25742d575751b051d77c5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 2a2767de67eac1a0346f059e1a2c81a5698607dc
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377671"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240999"
 ---
 # <a name="derived-column-transformation"></a>Преобразование «Производный столбец»
   Преобразованием «Производный столбец» создаются новые значения столбцов путем применения выражений к входным столбцам преобразования. Выражения могут содержать любые сочетания переменных, функций, операторов и столбцов из входа преобразования. Результат добавляется в новый столбец или вставляется в существующий как замещающее значение. При преобразовании «Производный столбец» может быть определено несколько производных столбцов, и любая переменная или входные столбцы могут присутствовать в нескольких выражениях.  
@@ -64,7 +64,7 @@ ms.locfileid: "58377671"
   
 -   [Общие свойства](../../common-properties.md)  
   
--   [Пользовательские свойства преобразований](transformation-custom-properties.md)  
+-   [Transformation Custom Properties](transformation-custom-properties.md)  
   
  Дополнительные сведения о настройке свойств см. в следующих разделах.  
   
@@ -72,11 +72,11 @@ ms.locfileid: "58377671"
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
--   [Получение значений столбцов с помощью преобразования "Производный столбец"](derived-column-transformation.md)  
+-   [Получение значений столбцов с помощью преобразования «Производный столбец»](derived-column-transformation.md)  
   
 ## <a name="related-content"></a>См. также  
  Техническая статья [Примеры выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
   
- Курируемый ответ [Разбиение данных столбца с помощью SSIS](https://go.microsoft.com/fwlink/?LinkId=321995)на curatedviews.cloudapp.net.  
+ Блог, [разбиение данных столбца, с помощью служб SSIS](https://microsoft-ssis.blogspot.com/2012/10/split-multi-value-column-into-multiple.html).  
   
   

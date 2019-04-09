@@ -3,7 +3,7 @@ title: Проверка подлинности Active Directory для SQL Serve
 titleSuffix: SQL Server
 description: Статья содержит общие сведения о проверке подлинности Active Directory для SQL Server в Linux.
 author: rothja
-ms.date: 02/23/2018
+ms.date: 04/01/2019
 ms.author: jroth
 manager: craigg
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: fcc2148119634c7114d72f67b2c7143fa7d47724
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: a4411f8ff8b1eae7fa7a28615e34d0711829d081
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160403"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241024"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Проверка подлинности Active Directory для SQL Server в Linux
 
@@ -42,9 +42,11 @@ ms.locfileid: "53160403"
 
 В этом руководстве предоставляются подробные сведения о настройке проверки подлинности AD [руководства: Использовать проверку подлинности Active Directory с SQL Server в Linux](sql-server-linux-active-directory-authentication.md). В следующем списке приведены Сводка со ссылкой на каждый раздел в этом руководстве:
 
-1. [Присоединение узла SQL Server к домену Active Directory](sql-server-linux-active-directory-authentication.md#join).
+1. [Присоединение узла SQL Server к домену Active Directory](sql-server-linux-active-directory-join-domain.md).
 1. [Создание пользователя AD для SQL Server и задайте ServicePrincipalName](sql-server-linux-active-directory-authentication.md#createuser).
 1. [Настройка keytab службы SQL Server](sql-server-linux-active-directory-authentication.md#configurekeytab).
+1. [Защита файла keytab](sql-server-linux-active-directory-authentication.md#securekeytab).
+1. [Настройка SQL Server для использования файла keytab для проверки подлинности Kerberos](sql-server-linux-active-directory-authentication.md#keytabkerberos).
 1. [Создать имена входа SQL Server на основе AD в Transact-SQL](sql-server-linux-active-directory-authentication.md#createsqllogins).
 1. [Подключение к SQL Server с использованием проверки подлинности AD](sql-server-linux-active-directory-authentication.md#connect).
 

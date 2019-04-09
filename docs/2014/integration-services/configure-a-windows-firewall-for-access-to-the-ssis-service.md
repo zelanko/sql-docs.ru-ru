@@ -19,12 +19,12 @@ ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3aab23efecc139e4aaf4a4c3d6d0075cf02a7e7f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: c40d0003211c0446982f70a9c7a00c1f189808b6
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387462"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241920"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>Настройка параметров брандмауэра Windows для доступа к службам SSIS
     
@@ -36,7 +36,7 @@ ms.locfileid: "58387462"
 > [!IMPORTANT]  
 >  Чтобы управлять пакетами, которые хранятся на удаленном сервере, не нужно соединятся с экземпляром службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на этом удаленном сервере. Вместо этого измените файл конфигурации для службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] таким образом, чтобы среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] отображала пакеты, хранимые на удаленном сервере. Дополнительные сведения см. в разделе [Configuring the Integration Services Service &#40;SSIS Service&#41;](configuring-the-integration-services-service-ssis-service.md).  
   
- Служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] использует протокол DCOM. Дополнительные сведения о работе протокола DCOM с брандмауэром см. в статье[Использование протокола DСОМ с брандмауэрами](https://go.microsoft.com/fwlink/?LinkId=12490)библиотеки MSDN.  
+ Служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] использует протокол DCOM. Дополнительные сведения о работе протокола DCOM через брандмауэры, см. в статье "[с помощью использование DCOM с брандмауэром](https://manualzz.com/doc/19762578/using-distributed-com-with-firewalls-by-michael-nelson-in...)«.  
   
  Существует множество систем брандмауэров. При запуске другого брандмауэра обратитесь к конкретной документации используемого брандмауэра.  
   

@@ -13,12 +13,12 @@ ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 542225a31879c47e58893f438e3af0309a6eca88
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 939a60c8c23ee59e77f6a2f3c3a2b71a98a426bf
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298322"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241722"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Установка, удаление и поддержка построителя отчетов
   Построитель отчетов представляет собой средство разработки отчетов, позволяющее создавать, обновлять и совместно использовать отчеты, элементы отчетов и общие наборы данных. Построитель отчетов доступен в двух вариантах: как изолированная версия и как версия [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]. Изолированная версия устанавливается на компьютере пользователем или администратором. Версия [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] устанавливается автоматически вместе со службами [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] и загружается на компьютер из диспетчера отчетов или с сайта SharePoint, интегрированного со службами [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -59,7 +59,7 @@ ms.locfileid: "56298322"
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>Установка построителя отчетов версии ClickOnce на компьютер  
  Версия [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] построителя отчетов устанавливается вместе со службами [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Она устанавливается при установке служб [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]как в собственном режиме, так и в режиме интеграции с SharePoint.  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] — технология Майкрософт для развертывания приложений Windows. Технология [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] дает пользователям возможность устанавливать и запускать приложения Windows (например, построитель отчетов), щелкнув ссылку на веб-странице. Дополнительные сведения о развертывании приложений [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] , применении параметров безопасности к приложениям [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] и о выполнении приложений [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] в зоне Интернета см. в статьях «ClickOnce Deployment for Windows Forms Applications», «Security in Windows Forms Overview» или «Trusted Application Deployment Overview» (на английском языке) на веб-сайте [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network по адресу [www.microsoft.com/msdn](https://www.microsoft.com/msdn).  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] — технология Майкрософт для развертывания приложений Windows. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] дает пользователям возможность устанавливать и запускать приложения Windows (например, построитель отчетов), щелкнув ссылку на веб-странице. Дополнительные сведения о развертывании [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] приложений, применяя [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] безопасности приложений и о выполнении [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] приложений в зоне Интернета см. в разделе «ClickOnce Deployment for Windows Forms Applications», «безопасность в Windows Forms Overview» или «Trusted Application Deployment Overview» статьи на [!INCLUDE[msCoName](../includes/msconame-md.md)] разработчика веб-сайте [ https://developer.microsoft.com/ ](https://developer.microsoft.com/).  
   
  Версия построителя отчетов [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] располагается на сервере отчетов и устанавливается на компьютер при нажатии кнопки **Построитель отчетов** в диспетчере отчетов или выборе параметра **Отчет построителя отчетов** в меню **Создать документ** в библиотеке SharePoint.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "56298322"
 |1030|Danish|da-DK|  
 |1031|Немецкий|de-DE|  
 |1032|Greek|el-GR|  
-|1033|Английский|en-US|  
+|1033|Английский|ru-RU|  
 |1035|Финский|fi-FI|  
 |1036|Французский|fr-FR|  
 |1038|Венгерский|hu-HU|  
