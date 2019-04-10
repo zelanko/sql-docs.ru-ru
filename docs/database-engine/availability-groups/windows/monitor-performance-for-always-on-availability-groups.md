@@ -11,12 +11,12 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 52a1bde0da61988793463aa725a5b0a4003b2e12
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 04ccb88fd3df348b21f61b0a01d4e49ce944c81c
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203361"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872324"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Мониторинг производительности для групп доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,15 +24,15 @@ ms.locfileid: "53203361"
   
  Рассмотрены следующие вопросы:  
   
--   [Процесс синхронизации данных](#BKMK_DATA_SYNC_PROCESS)  
+-   [Процесс синхронизации данных](#data-synchronization-process)  
   
--   [Шлюзы управления потоком](#BKMK_FLOW_CONTROL_GATES)  
+-   [Шлюзы управления потоком](#flow-control-gates)  
   
--   [Оценка времени перехода на другой ресурс (RTO)](#BKMK_RTO)  
+-   [Оценка времени перехода на другой ресурс (RTO)](#estimating-failover-time-rto)  
   
--   [Оценка возможной потери данных (RPO)](#BKMK_RPO)  
+-   [Оценка возможной потери данных (RPO)](#estimating-potential-data-loss-rpo)  
   
--   [Отслеживание RTO и RPO](#BKMK_Monitoring_for_RTO_and_RPO)  
+-   [Отслеживание RTO и RPO](#monitoring-for-rto-and-rpo)  
   
 -   [Сценарии устранения неполадок с производительностью](#BKMK_SCENARIOS)  
   
@@ -46,12 +46,12 @@ ms.locfileid: "53203361"
 |||||  
 |-|-|-|-|  
 |**Последовательность**|**Описание шага**|**Комментарии**|**Полезные метрики**|  
-|1|Создание журнала|Данные журнала записываются на диск. Этот журнал должен реплицироваться на вторичные реплики. Записи журнала попадают в очередь отправки.|[SQL Server: База данных > Сброшено байтов журнала в секунду](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
+|1|Создание журнала|Данные журнала записываются на диск. Этот журнал должен реплицироваться на вторичные реплики. Записи журнала попадают в очередь отправки.|[SQL Server: База данных > Сброшено байтов журнала в секунду](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|Сбор|Журналы для каждой базы данных собираются и отправляются в соответствующую очередь партнера (по одной для каждой пары из базы данных и реплики). Этот процесс сбора выполняется непрерывно, пока реплика доступности подключена, а перемещение данных не приостановлено по какой-либо причине. При этом пара из базы данных и реплики отображается как выполняющая синхронизацию или синхронизированная. Если процессу сбора не удается достаточно быстро сканировать сообщения и ставить их в очередь, очередь отправки журнала разрастается.|[SQL Server: Реплика доступности > Отправлено в реплику, байт/с](~/relational-databases/performance-monitor/sql-server-availability-replica.md), который является агрегатом суммы всех сообщений баз данных, помещенных в очередь для этой реплики доступности.<br /><br /> [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (КБ) и [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (КБ/с) на первичной реплике.|  
 |3|Send|Сообщения в каждой очереди базы данных и реплики удаляются из очереди и через проводную сеть передаются в соответствующую вторичную реплику.|[SQL Server: Реплика доступности > Отправлено в транспорт, байт/с](~/relational-databases/performance-monitor/sql-server-availability-replica.md) и [SQL Server: Реплика доступности > Message Acknowledgement Time](~/relational-databases/performance-monitor/sql-server-availability-replica.md) (Время подтверждения сообщения, мс)|  
 |4|Получение и кэширование|Каждая вторичная реплика получает и кэширует сообщение.|Счетчик производительности [SQL Server: Реплика доступности > Получено из журнала, байт/с](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |5|Сохранение|Журнал записывается во вторичную реплику для сохранения. После записи журнала обратно в первичную реплику отправляется подтверждение.<br /><br /> После сохранения журнала потеря данных исключается.|Счетчик производительности [SQL Server: База данных > Сброшено байтов журнала в секунду](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> Тип ожидания [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
-|6|Повторить|Повторная обработка записанных страниц на вторичной реплике. Страницы хранятся в очереди повтора, так как ожидают повторной обработки.|[SQL Server: Реплика базы данных > Повторено байтов в секунду](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (КБ) и [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).<br /><br /> Тип ожидания [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
+|6|Повторить|Повторная обработка записанных страниц на вторичной реплике. Страницы хранятся в очереди повтора, так как ожидают повторной обработки.|[SQL Server: Реплика базы данных > Повторено байтов в секунду](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (КБ) и [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).<br /><br /> Тип ожидания [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
   
 ##  <a name="flow-control-gates"></a>Шлюзы управления потоком  
  Для групп доступности предусмотрены шлюзы управления потоком на первичной реплике, позволяющие предотвратить чрезмерное потребление ресурсов, например сетевых ресурсов и ресурсов памяти, на всех репликах доступности. Эти шлюзы управления потоком не влияют на состояние работоспособности синхронизации у реплик доступности, но могут повлиять на общую производительность баз данных доступности, включая RPO.  
@@ -60,7 +60,7 @@ ms.locfileid: "53203361"
   
 |||||  
 |-|-|-|-|  
-|**Level**|**Число шлюзов**|**Число сообщений**|**Полезные метрики**|  
+|**Level**|**Количество шлюзов**|**Количество сообщений**|**Полезные метрики**|  
 |Транспорт|1 на реплику доступности|8192|Расширенное событие **database_transport_flow_control_action**|  
 |База данных|1 на базу данных доступности|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Расширенное событие **hadron_database_flow_control_action**|  
   
@@ -331,7 +331,7 @@ ms.locfileid: "53203361"
 ##  <a name="monitoring-for-rto-and-rpo"></a>Отслеживание RTO и RPO  
  Этот раздел описывает, как отслеживать метрики RTO и RPO в группах доступности. Эта демонстрация аналогична приведенной в учебнике по графическому пользовательскому интерфейсу [Модель работоспособности Always On, часть 2. Расширение модели работоспособности](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).  
   
- Элементы расчетов для времени перехода на другой ресурс и возможной потери данных, описанные в разделах [Оценка времени перехода на другой ресурс (RTO)](#BKMK_RTO) и [Оценка возможной потери данных (RPO)](#BKMK_RPO), удобно предоставлены в виде метрик производительности в аспекте управления политиками **Состояние реплики базы данных** (см. раздел [Просмотр аспектов управления на основе политик в объекте SQL Server](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). Вы можете отслеживать эти две метрики по расписанию и получать оповещения, когда метрики превышают значения RTO и RPO.  
+ Элементы расчетов для времени перехода на другой ресурс и возможной потери данных, описанные в разделах [Оценка времени перехода на другой ресурс (RTO)](#estimating-failover-time-rto) и [Оценка возможной потери данных (RPO)](#estimating-potential-data-loss-rpo), удобно предоставлены в виде метрик производительности в аспекте управления политиками **Состояние реплики базы данных** (см. раздел [Просмотр аспектов управления на основе политик в объекте SQL Server](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). Вы можете отслеживать эти две метрики по расписанию и получать оповещения, когда метрики превышают значения RTO и RPO.  
   
  Приведенные скрипты создают две системные политики, выполняемые по собственным расписаниям со следующими характеристиками:  
   
@@ -361,11 +361,11 @@ ms.locfileid: "53203361"
   
     -   **Аспект**: **Состояние реплики базы данных**  
   
-    -   **Поле**: `Add(@EstimatedRecoveryTime, 60)`  
+    -   **Поле**. `Add(@EstimatedRecoveryTime, 60)`  
   
     -   **Оператор**: **<=**  
   
-    -   **Значение**: `600`  
+    -   **Значение**. `600`  
   
      Это условие не выполняется, когда потенциальное время для перехода на другой ресурс превышает 10 минут, включая дополнительные 60 секунд для обнаружения сбоя и перехода на другой ресурс.  
   
@@ -375,11 +375,11 @@ ms.locfileid: "53203361"
   
     -   **Аспект**: **Состояние реплики базы данных**  
   
-    -   **Поле**: `@EstimatedDataLoss`  
+    -   **Поле**. `@EstimatedDataLoss`  
   
     -   **Оператор**: **<=**  
   
-    -   **Значение**: `3600`  
+    -   **Значение**. `3600`  
   
      Это условие не выполняется, когда потенциальная потеря данных превышает 1 час.  
   
@@ -389,11 +389,11 @@ ms.locfileid: "53203361"
   
     -   **Аспект**: **Группа доступности**  
   
-    -   **Поле**: `@LocalReplicaRole`  
+    -   **Поле**. `@LocalReplicaRole`  
   
     -   **Оператор**: **=**  
   
-    -   **Значение**: `Primary`  
+    -   **Значение**. `Primary`  
   
      Это условие проверяет, является ли локальная реплика доступности первичной для данной группы доступности.  
   
@@ -474,5 +474,3 @@ ms.locfileid: "53203361"
 |hadr_dump_primary_progress|`alwayson`|Отладка|Первичная|  
 |hadr_dump_log_progress|`alwayson`|Отладка|Первичная|  
 |hadr_undo_of_redo_log_scan|`alwayson`|Аналитический|Вторичная|  
-  
-  

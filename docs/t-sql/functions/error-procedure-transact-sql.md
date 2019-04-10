@@ -25,12 +25,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: caae632e8e413001d57d125126bb3f8f979a8e82
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: bc0765e02958e6ec59a419933716e8485879add3
+ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617064"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58899730"
 ---
 # <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,24 +46,24 @@ ERROR_PROCEDURE ( )
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
-**nvarchar(128)**  
+**NVARCHAR(128)**  
   
 ## <a name="return-value"></a>Возвращаемое значение  
-При вызове в блоке CATCH хранимой процедуры, в которой произошла ошибка, функция `ERROR_PROCEDURE` возвращает имя этой хранимой процедуры.  
+При вызове в блоке CATCH `ERROR_PROCEDURE` возвращает имя хранимой процедуры или триггера, в которых произошла ошибка.
   
-Функция `ERROR_PROCEDURE` возвращает значение NULL, если внутри хранимой процедуры или триггера не произошла ошибка.  
+`ERROR_PROCEDURE` возвращает значение NULL, если внутри хранимой процедуры или триггера не произошла ошибка.  
   
-Функция `ERROR_PROCEDURE` возвращает значение NULL в случае вызова вне блока CATCH.  
+`ERROR_PROCEDURE` возвращает значение NULL в случае вызова вне блока CATCH.  
   
 ## <a name="remarks"></a>Remarks  
-Функцию `ERROR_PROCEDURE` можно вызывать в любом месте области действия блока CATCH.  
+`ERROR_PROCEDURE` можно вызывать в любом месте области действия блока CATCH.  
   
-Функция `ERROR_PROCEDURE` возвращает имя хранимой процедуры или триггера, в которых произошла ошибка, независимо от числа вызовов функции или места ее вызова в области действия блока `CATCH`. В этом ее отличие от таких функций, как @@ERROR, которые возвращают номер ошибки только в той инструкции, которая непосредственно следует за инструкцией, вызвавшей ошибку.  
+`ERROR_PROCEDURE` возвращает имя хранимой процедуры или триггера, в которых произошла ошибка, независимо от числа вызовов функции или места ее вызова в области действия блока `CATCH`. В этом ее отличие от таких функций, как @@ERROR, которые возвращают номер ошибки только в той инструкции, которая непосредственно следует за инструкцией, вызвавшей ошибку.  
    
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
 ### <a name="a-using-errorprocedure-in-a-catch-block"></a>A. Использование функции ERROR_PROCEDURE в блоке CATCH  
-В приведенном ниже примере показана хранимая процедура, которая создает ошибку деления на 0. Функция `ERROR_PROCEDURE` возвращает имя хранимой процедуры, в которой произошла ошибка.  
+В приведенном ниже примере показана хранимая процедура, которая создает ошибку деления на 0. `ERROR_PROCEDURE` возвращает имя хранимой процедуры, в которой произошла ошибка.  
   
 ```  
 -- Verify that the stored procedure does not already exist.  

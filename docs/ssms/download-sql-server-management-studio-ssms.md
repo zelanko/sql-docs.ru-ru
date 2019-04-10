@@ -24,12 +24,12 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 manager: craigg
-ms.openlocfilehash: ff8380e286c40f479bbc9afaea48b12feeab1694
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 9bc678f69df60ec07e1cca6eddbb337aab8ed8ff
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566543"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042031"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,9 +44,9 @@ SSMS распространяется бесплатно!
 
 ## <a name="ssms-1791-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9.1 является текущей общедоступной версией SSMS
 
-[![скачать](../ssdt/media/download.png) Скачать SQL Server Management Studio 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154)
+[![dСкачать](../ssdt/media/download.png) Скачать SQL Server Management Studio 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154)
 
-[![скачать](../ssdt/media/download.png) Скачать пакет обновления SQL Server Management Studio 17.9.1 (обновление с версии 17.x до 17.9.1)](https://go.microsoft.com/fwlink/?linkid=2043430)
+[![dСкачать](../ssdt/media/download.png) Скачать пакет обновления SQL Server Management Studio 17.9.1 (обновление с версии 17.x до 17.9.1)](https://go.microsoft.com/fwlink/?linkid=2043430)
 
 **Сведения о версии**
 
@@ -61,7 +61,7 @@ SSMS распространяется бесплатно!
 
 [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
-Дополнительные сведения о SSMS 17.9.1 см. в разделе [Журнал изменений SSMS 17.9.1](sql-server-management-studio-changelog-ssms.md#ssms-1791-latest-ga-release).
+Дополнительные сведения о SSMS 17.9.1 см. в разделе [Журнал изменений SSMS 17.9.1](release-notes-ssms.md#1791-latest-ga-release).
 
 ## <a name="ssms-installation-tips-and-issues-ssms-1791"></a>Советы по установке SSMS и связанные проблемы (SSMS 17.9.1)
 
@@ -78,7 +78,7 @@ SSMS распространяется бесплатно!
 
 **Доступен релиз-кандидат 1 (RC1) SSMS 18.0. Это новейшее поколение *SQL Server Management Studio* с поддержкой [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
 
-**[![скачать](../ssdt/media/download.png) Скачать SQL Server Management Studio 18.0 (RC1)](https://go.microsoft.com/fwlink/?linkid=2085742)**
+**[![dowСкачать](../ssdt/media/download.png) Скачать SQL Server Management Studio 18.0 (релиз-кандидат 1)](https://go.microsoft.com/fwlink/?linkid=2085742)**
 
 *RC1* — это новейшая общедоступная предварительная версия SSMS 18.0. Если на компьютере установлена предыдущая предварительная версия SSMS 18.0, перед установкой версии RC1 ее необходимо удалить.
 
@@ -111,7 +111,7 @@ SQL Server Management Studio 18.0 (RC1):<br>
 
 SSMS 18.0 (RC1) — это новейшая версия SQL Server Management Studio. Поколение 18.x среды SSMS поддерживает почти все функциональные возможности выпусков SQL Server 2008–SQL Server 2019 (предварительная версия).
 
-Дополнительные сведения о новых возможностях в этом выпуске см. в разделе [Журнал изменений SSMS](sql-server-management-studio-changelog-ssms.md).
+Дополнительные сведения о новых возможностях в этом выпуске см. в [заметках о выпуске SSMS](release-notes-ssms.md).
 
 ## <a name="supported-sql-offerings-ssms-180-rc1"></a>Поддерживаемые предложения SQL (SSMS 18.0 RC1)
 
@@ -140,7 +140,7 @@ SSMS 18.0 (RC1) — это новейшая версия SQL Server Managemen
 
 ## <a name="previous-releases"></a>Предыдущие выпуски
 
-[Предыдущие выпуски SQL Server Management Studio](../ssms/sql-server-management-studio-changelog-ssms.md#previous-ssms-releases)
+[Предыдущие выпуски SQL Server Management Studio](../ssms/release-notes-ssms.md#previous-ssms-releases)
 
 ## <a name="feedback"></a>Отзывы
 
@@ -150,7 +150,7 @@ SSMS 18.0 (RC1) — это новейшая версия SQL Server Managemen
 
 ## <a name="see-also"></a>См. также:
 
-- [Учебник. SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
+- [Учебник. SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 - [Документация по SQL Server Management Studio](sql-server-management-studio-ssms.md)
 - [Дополнительные обновления и пакеты обновления](https://technet.microsoft.com/sqlserver/ff803383.aspx)
 - [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)

@@ -12,12 +12,12 @@ ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7a1873c32cb3e1c7a512322f17e2066a88f79395
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 24f278e21564f771fc2a0f897eba24473ddeb7e6
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275038"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042063"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>Мастер импорта и экспорта SQL Server
   При запуске мастера импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] открывается страница **Мастер импорта и экспорта SQL Server**. На этой странице никакие действия не требуются.
@@ -26,7 +26,8 @@ ms.locfileid: "58275038"
 > В этом разделе описывается только **первая страница** мастера. Если вам нужны другие сведения, см. раздел [Связанные задачи и содержимое](#related).
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Предварительное требование — у вас на компьютере установлен этот мастер?
-Если вы хотите запустить мастер, но у вас нет [!INCLUDE[msCoName](../../ssdt/download-sql-server-data-tools-ssdt.md).
+
+Если вы хотите запустить мастер, но на вашем компьютере не установлен [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить с помощью SQL Server Data Tools (SSDT). Дополнительные сведения см. в разделе [Скачивание SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## <a name="screen-shot-of-the-welcome-page"></a>Снимок экрана: начальная страница  
 На следующем снимке экрана показана страница мастера **Мастер импорта и экспорта SQL Server** .  
@@ -56,8 +57,6 @@ ms.locfileid: "58275038"
 
     -   **Сведения о подключении к источникам данных и назначениям.** Сведения о подключении к данным см. на соответствующей странице, выбрав ее в списке в разделе [Подключение к источникам данных с помощью мастера импорта и экспорта SQL Server](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). Для каждого распространенного источника данных имеется отдельная страница документации.
 
--   **Запуск мастера.** Если вы готовы запустить мастер и хотите знать, как это сделать, см. раздел [Запуск мастера экспорта и импорта SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
+-   **Запустите мастер.** Если вы готовы запустить мастер и хотите знать, как это сделать, см. раздел [Запуск мастера экспорта и импорта SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
--  **Запустите мастер.**  Если вы хотите запустить мастер, но на вашем компьютере не установлен [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить с помощью SQL Server Data Tools (SSDT). Дополнительные сведения см. в разделе [Скачивание SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
-
-
+-  **Запустите мастер.**  Если вы хотите запустить мастер, но на вашем компьютере не установлен [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить с помощью SQL Server Data Tools (SSDT). Дополнительные сведения см. в разделе [Скачивание SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).

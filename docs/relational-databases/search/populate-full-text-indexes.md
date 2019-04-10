@@ -25,12 +25,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3583a5a0a4f68304bdc4cc78eadbadf3fb14b20
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: b49e8a5802152eeee8d1a2cac28ac0098057f423
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973653"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042277"
 ---
 # <a name="populate-full-text-indexes"></a>Заполнение полнотекстовых индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
 -   **Заполнение вручную**  
   
-     Если задан параметр CHANGE_TRACKING MANUAL, то средство полнотекстового поиска использует заполнение полнотекстового индекса вручную. После завершения первоначального полного заполнения изменения отслеживаются по мере изменения данных в базовой таблице. Но изменения не добавляются в полнотекстовый индекс, пока не будет выполнена инструкция ALTER FULLTEXT INDEX … START UPDATE POPULATION . Агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно использовать для периодического вызова инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+     Если задан параметр CHANGE_TRACKING MANUAL, то средство полнотекстового поиска использует заполнение полнотекстового индекса вручную. После завершения первоначального полного заполнения изменения отслеживаются по мере изменения данных в базовой таблице. Но изменения не добавляются в полнотекстовый индекс, пока не будет выполнена инструкция ALTER FULLTEXT INDEX … START UPDATE POPULATION . Агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно использовать для периодического вызова инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
      **Запуск отслеживания изменений с заполнением вручную**  
   
@@ -217,8 +217,8 @@ ALTER FULLTEXT INDEX ON Production.Document
 `SQLFT<DatabaseID><FullTextCatalogID>.LOG[<n>]`
   
 Ниже перечислены переменные части в именах файла журнала сканирования.
--   <**DatabaseID**> — идентификатор базы данных. <**dbid**> является пятизначным числом с нулями в начале.  
--   <**FullTextCatalogID**> — идентификатор полнотекстового каталога. <**catid**> является пятизначным числом с нулями в начале.  
+-   <**DatabaseID**> — идентификатор базы данных. \<**dbid**> является пятизначным числом с нулями в начале.  
+-   <**FullTextCatalogID**> — идентификатор полнотекстового каталога. \<**catid**> является пятизначным числом с нулями в начале.  
 -   <**n**> — целое число, свидетельствующее о существовании одного или нескольких журналов сканирования одного полнотекстового каталога.  
   
  Например, `SQLFT0000500008.2` является файлом журнала сканирования для базы данных с идентификатором базы данных 5 и идентификатором полнотекстового каталога 8. Двойка в конце имени файла показывает, что этой паре базы данных и каталога соответствуют два файла журналов сканирования.  

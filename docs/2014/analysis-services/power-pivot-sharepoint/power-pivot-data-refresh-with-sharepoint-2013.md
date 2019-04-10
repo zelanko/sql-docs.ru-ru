@@ -11,12 +11,12 @@ ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 250e6c0a6c7bf1f5ddeb0bb5978ca70ab3545f8a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 04c366bc668fe09d1ebf57d169587ec11476f707
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352709"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241942"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>Обновление данных PowerPivot с SharePoint 2013
   Обновление данных служб [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в SharePoint 2013 использует службы Excel в качестве основного компонента для загрузки и обновления данных модели на экземпляре [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Сервер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] работает на внешней ферме SharePoint.  
@@ -27,11 +27,11 @@ ms.locfileid: "53352709"
   
  **В этом разделе:**  
   
--   [Interactive Data Refresh](#bkmk_interactive_refresh)  
+-   [интерактивное](#bkmk_interactive_refresh)  
   
 -   [Проверка подлинности Windows с подключением к данным книги и интерактивным обновлением данных](#bkmk_windows_auth_interactive_data_refresh)  
   
--   [Scheduled Data Refresh](#bkmk_scheduled_refresh)  
+-   [плановое](#bkmk_scheduled_refresh)  
   
 -   [Архитектура планового обновления данных в SharePoint 2013](#bkmk_refresh_architecture)  
   
@@ -127,7 +127,7 @@ ms.locfileid: "53352709"
   
  ![as_interactive_data_refresh2012SP1_windowsauth](../media/as-interactive-data-refresh2012sp1-windowsauth.gif "as_interactive_data_refresh2012SP1_windowsauth")  
   
- Дополнительные сведения см. в разделе [работа в качества части операционной системы](https://technet.microsoft.com/library/cc784323\(WS.10\).aspx) (https://technet.microsoft.com/library/cc784323(WS.10).aspx).  
+ Дополнительные сведения см. в разделе [работа в качества части операционной системы](https://technet.microsoft.com/library/cc784323\(WS.10\).aspx).  
   
 ##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **Основные особенности планового обновления данных**  
@@ -233,10 +233,10 @@ ms.locfileid: "53352709"
 ##  <a name="bkmk_moreinformation"></a> Дополнительные сведения  
  [Устранение неполадок при обновлении данных PowerPivot](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
- [Службы Excel в SharePoint 2013](https://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (<https://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15>)).  
+ [Службы Excel в SharePoint 2013](https://www.enjoysharepoint.com/configure-excel-service-application-in-sharepoint-2013/). 
   
 ## <a name="see-also"></a>См. также  
- [Обновление книг и запланированное обновление данных &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
+ [Обновление книг и создание расписания обновления данных (SharePoint 2013)](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
  [Установка PowerPivot для SharePoint 2013](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

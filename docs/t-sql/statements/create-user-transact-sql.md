@@ -30,12 +30,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c43e8ae5b32753eccb42e1e706bbe13b9bf4f8d9
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: af33c0234ba1b8e6b92b5f1fee7f17f4d12dc667
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421221"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042174"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "55421221"
 
 -   Пользователь автономной базы данных с паролем. (Недоступно в [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].) `CREATE USER Mary WITH PASSWORD = '********';`   
   
-**Пользователи, соответствующие субъектам Windows, которые подключаются с помощью имени входа группы Windows**  
+**Пользователи, соответствующие участникам Windows, которые подключаются с помощью имен входа группы Windows**  
   
 -   Пользователь, соответствующий пользователю Windows, который не имеет имени входа, но может подключаться к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] за счет членства в роли Windows. `CREATE USER [Contoso\Fritz];`  
   
@@ -192,15 +192,16 @@ CREATE USER user_name
   
  Указывает субъект Azure Active Directory, для которого создается пользователь базы данных. *Azure_Active_Directory_principal* может быть пользователем Azure Active Directory, группой Azure Active Directory или приложением Azure Active Directory. (Пользователи Azure Active Directory не могут иметь имена входа для проверки подлинности Windows [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; только пользователи базы данных.) В строке подключения необходимо указать автономную базу данных в качестве исходного каталога.
 
- Для пользователей используйте полный псевдоним их субъекта домена.   
- 
--   `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
-  
--   `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
+ Для субъектов Azure AD действуют такие требования синтаксиса CREATE USER:
 
- Для групп безопасности используйте *отображаемое имя* группы безопасности. Для группы безопасности *Медсестры*:  
+- имя участника-пользователя (UserPrincipalName) объекта Azure AD для пользователей Azure AD;
+
+  - `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
+  - `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
+
+- отображаемое имя (DisplayName) объекта Azure AD для групп и приложений Azure AD. Для группы безопасности *Nurses* будет отображаться следующее:  
   
--   `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
+  - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
   
  Дополнительные сведения см. в статье [Подключение к базе данных SQL с использованием проверки подлинности Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication).  
   
@@ -303,7 +304,7 @@ GO
 -   `CREATE USER [Domain1\WindowsGroupManagers]`  
 -   `CREATE USER Barry WITH PASSWORD = 'sdjklalie8rew8337!$d'`  
   
-**Пользователи на основе субъектов Windows без подключения к базе данных master**  
+**Пользователи на основе участников Windows без подключения к базе данных master**  
   
  В следующем списке показан возможный синтаксис для пользователей, имеющих доступ к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] за счет членства в группе Windows, но не имеющих имени входа в базе данных **master**. Такой синтаксис можно использовать во всех типах базы данных. Параметры схемы и языковые параметры, задаваемые по умолчанию, не указываются.  
   
@@ -336,7 +337,7 @@ GO
   
  Создание пользователей в автономной базе данных позволяет отделить базу данных от экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], что позволяет легко переместить ее в другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделах [Автономные базы данных](../../relational-databases/databases/contained-databases.md) и [Пользователи автономной базы данных — создание переносимой базы данных](../../relational-databases/security/contained-database-users-making-your-database-portable.md). Сведения об изменении пользователя базы данных с пользователя, соответствующего имени входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на пользователя автономной базы данных с паролем см. в разделе [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
   
- В автономной базе данных пользователям не обязательно иметь имена входа в базе данных **master**. Администраторы [!INCLUDE[ssDE](../../includes/ssde-md.md)] должны учитывать, что доступ к автономной базе данных можно предоставлять на уровне базы данных, а не на уровне компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Дополнительные сведения см. в разделе [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+ В автономной базе данных пользователям не обязательно иметь имена входа в базе данных **master**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] позволяет администраторам предоставлять доступ к автономной базе данных на уровне базы данных, а не на уровне компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Дополнительные сведения см. в разделе [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
  При использовании пользователей автономной базы данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] настройте доступ с помощью правила брандмауэра уровня базы данных вместо правила брандмауэра уровня сервера. Дополнительные сведения см. в разделе [sp_set_database_firewall_rule (база данных SQL Azure)](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
@@ -468,7 +469,7 @@ WITH
 
  Чтобы создать пользователя Azure AD по имени входа Azure AD, используйте приведенный ниже синтаксис.
 
- Войдите в управляемый экземпляр, используя имя входа Azure AD с ролью `sysadmin`. Приведенная ниже инструкция создает пользователя Azure AD bob@contoso.com по имени входа bob@contoso.com. Это имя входа было создано в примере [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account).
+ Войдите в управляемый экземпляр, используя имя входа Azure AD с ролью `sysadmin`. Приведенная ниже инструкция создает пользователя Azure AD bob@contoso.com по имени входа bob@contoso.com. Это имя входа было создано в примере [CREATE LOGIN](create-login-transact-sql.md#examples).
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
@@ -510,12 +511,8 @@ GO
  [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [ALTER USER (Transact-SQL)](../../t-sql/statements/alter-user-transact-sql.md)   
  [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)   
- [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)   
+ [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [Автономные базы данных](../../relational-databases/databases/contained-databases.md)   
  [Подключение к базе данных SQL с использованием аутентификации Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
  [Приступая к работе с разрешениями Database Engine](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
-  
-  
-
-

@@ -18,12 +18,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b5c910872b342d8d1bd9dc15ed2796eea76edfc8
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 7031a7d2a3a260d9ffb29f8651d04d874cf84f76
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305532"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860425"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Настройка маршрутизации только для чтения в группе доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "58305532"
   
 -   **Перед началом работы**  
   
-     [Предварительные требования](#Prerequisites)  
+     [предварительные требования](#Prerequisites)  
   
      [Какие свойства реплики необходимо настроить для поддержки маршрутизации только для чтения?](#RORReplicaProperties)  
   
@@ -55,8 +55,6 @@ ms.locfileid: "58305532"
   
 -   [Связанные задачи](#RelatedTasks)  
   
--   [См. также](#RelatedContent)  
-  
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
 ###  <a name="Prerequisites"></a> Предварительные требования  
@@ -73,7 +71,7 @@ ms.locfileid: "58305532"
   
 -   Для каждой доступной для чтения вторичной реплики, которая поддерживает маршрутизацию только для чтения, необходимо указать *URL-адрес маршрутизации только для чтения*. Этот URL-адрес задействуется, только если локальная реплика выполняется под вторичной ролью. URL-адрес маршрутизации только для чтения должен быть указан для каждой реплики отдельно (если для реплики требуется подобная маршрутизация). Все URL-адреса маршрутизации только для чтения используются для направления запросов на соединение с намерением чтения к определенной доступной для чтения вторичной реплике. Как правило, каждой доступной для чтения вторичной реплике назначается URL-адрес маршрутизации только для чтения.  
   
-     Сведения о вычислении URL-адреса маршрутизации только для чтения для реплики доступности см. в разделе [Вычисление значения read_only_routing_url для AlwaysOn](https://web.archive.org/web/20170512023255/ https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)
+     Сведения о вычислении URL-адреса маршрутизации только для чтения для реплики доступности см. в разделе [Вычисление значения read_only_routing_url для AlwaysOn](https://web.archive.org/web/20170512023255/https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)
   
 -   Для каждой реплики доступности, которая должна поддерживать маршрутизацию только для чтения и при этом является первичной, необходимо задать *список маршрутизации только для чтения*. Определенный список маршрутизации только для чтения вступает в силу, только если локальная реплика выполняется под первичной ролью. Такой список должен указываться для тех конкретных реплик, для которых он требуется. Как правило, каждый список маршрутизации только для чтения будет содержать все URL-адреса маршрутизации только для чтения, причем URL-адрес локальной реплики будет идти в конце списка.  
   
@@ -111,9 +109,9 @@ ms.locfileid: "58305532"
          Это строка, такая как адрес системы, полное доменное имя или IP-адрес, однозначно идентифицирующий целевую компьютерную систему.  
   
          *port*  
-         Номер порта, который используется компонентом ядра СУБД экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+         Номер порта, который используется компонентом ядра СУБД экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-         Например:   `SECONDARY_ROLE (READ_ONLY_ROUTING_URL = N'TCP://COMPUTER01.contoso.com:1433')`  
+         Пример:   `SECONDARY_ROLE (READ_ONLY_ROUTING_URL = N'TCP://COMPUTER01.contoso.com:1433')`  
   
          В предложении MODIFY REPLICA параметр ALLOW_CONNECTIONS не является обязательным, если реплика уже настроена для соединений только для чтения.  
   
@@ -125,7 +123,7 @@ ms.locfileid: "58305532"
   
          Здесь *server* идентифицирует экземпляр сервера, на котором размещена вторичная реплика только для чтения в группе доступности.  
   
-         Например:   `PRIMARY_ROLE (READ_ONLY_ROUTING_LIST=('Server1','Server2'))`  
+         Пример:   `PRIMARY_ROLE (READ_ONLY_ROUTING_LIST=('Server1','Server2'))`  
   
         > [!NOTE]  
         >  Необходимо настроить URL-адрес маршрутизации только для чтения перед настройкой списка маршрутизации только для чтения.  
@@ -193,11 +191,11 @@ GO
   
     -   Чтобы настроить маршрутизацию только для чтения для вторичной роли, укажите параметр **ReadonlyRoutingConnectionUrl"**_url_**"** .  
   
-         Здесь *url* — это полное доменное имя и порт, которые используются для маршрутизации к реплике соединений только для чтения. Например:  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
+         Здесь *url* — это полное доменное имя и порт, которые используются для маршрутизации к реплике соединений только для чтения. Пример:  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
          Дополнительные сведения см. в разделе [Вычисление значения read_only_routing_url для AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
   
-    -   Чтобы настроить доступ соединения для первичной роли, укажите **ReadonlyRoutingList"**_server_**"** [ **,**...*n* ], где *server* обозначает экземпляр сервера, на котором размещена вторичная реплика только для чтения в группе доступности. Например:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   Чтобы настроить доступ соединения для первичной роли, укажите **ReadonlyRoutingList"**_server_**"** [ **,**...*n* ], где *server* обозначает экземпляр сервера, на котором размещена вторичная реплика только для чтения в группе доступности. Пример:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  Необходимо настроить URL-адрес маршрутизации только для чтения для реплики перед тем, как перейти к настройке ее списка маршрутизации.  
@@ -207,9 +205,9 @@ GO
   
 ### <a name="set-up-and-use-the-sql-server-powershell-provider"></a>Настройка и использование поставщика SQL Server PowerShell  
   
--   [Поставщик SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell, поставщик](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
--   [Получение справок по SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
 ###  <a name="PSExample"></a> Пример (PowerShell)  
  В следующем примере выполняется настройка первичной реплики и одной вторичной реплики в группе доступности с использованием маршрутизации только для чтения. С начала примера каждой реплике присваивается URL-адрес для маршрутизации только для чтения. Затем для первичной реплики задается список маршрутизации только для чтения. Соединения со свойством «ReadOnly» в строке подключения будут перенаправляться на вторичную реплику. Если такая вторичная реплика недоступна для чтения (в соответствии со значением параметра **ConnectionModeInSecondaryRole** ), подключение направляется обратно в первичную реплику.  
@@ -265,7 +263,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
 -   [Создание или настройка прослушивателя группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [Настройка доступа только для чтения в реплике доступности (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
+-   [Настройка доступа только для чтения на реплике доступности (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
 **Использование строк подключения в приложениях**  
   
@@ -277,7 +275,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
 -    [Вычисление значения read_only_routing_url для AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)  
   
--    [Блоги команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-    [Блоги команды разработчиков SQL Server Always On: официальный блог команды разработчиков SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 -    [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
@@ -291,10 +289,8 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
 
 - [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
 
-- [Активные вторичные реплики: вторичные реплики для чтения (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+- [Активные вторичные реплики: вторичные реплики для чтения (группы доступности Always On).](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
 
 - [Сведения о доступе клиентского подключения к репликам доступности (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  
 - [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
-  
-  

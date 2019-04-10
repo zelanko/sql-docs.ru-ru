@@ -15,12 +15,12 @@ ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa1465b8efb8c2e2b0f35e7dc2c6ec5e7ef766f3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9272a6c11ce226f385c0b1f79f965a2a0f55835e
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381672"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241133"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Примеры расширенных выражений служб Integration Services
   В этом разделе даются примеры расширенных выражений, объединяющих несколько операторов и функций. Если выражение использует управление очередностью или преобразование «Условное разбиение», результат его оценки должен быть логическим. Это ограничение, однако, не применяется к выражениям, используемым в выражениях свойств, переменных, преобразовании «Производный столбец» или в контейнере «цикл по элементам».  
@@ -103,6 +103,6 @@ ms.locfileid: "58381672"
  [Использование выражения в компоненте потока данных](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>См. также  
- Техническая статья [Памятка выражений служб SSIS](http://pragmaticworks.com/cheatsheet/)на сайте pragmaticworks.com  
+ Техническая статья [Памятка выражений служб SSIS](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)на сайте pragmaticworks.com  
   
   

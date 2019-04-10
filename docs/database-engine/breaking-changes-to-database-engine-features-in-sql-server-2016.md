@@ -14,12 +14,12 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 03827d700e268baf2695c23d9c9ea3021ebb74e2
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: 581f6ee7daf4a208072b560c744e680ccfc5009e
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570687"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872044"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>Критические изменения в функциях ядра СУБД в SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,17 +40,15 @@ ms.locfileid: "55570687"
 
 ## <a name="previous-versions"></a> Предыдущие версии  
 
-Сведения о критических изменениях в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] и в некоторых более ранних версиях см. в статье [Критические изменения в функциях ядра СУБД в SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md#SQL14).
+Сведения о критических изменениях в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] и в некоторых более ранних версиях см. в статье "Критические изменения в функциях ядра СУБД в SQL Server 2014".
 
 #### <a name="archived-documentation-for-very-old-versions-of-sql-server"></a>Архивная документация по очень старым версиям SQL Server
 
 [!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
 ## <a name="see-also"></a>См. также:  
- [Устаревшие функции ядра СУБД в SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- [Неподдерживаемые функции ядра СУБД в SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Обратная совместимость компонента ядра СУБД SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [Нерекомендуемые функции ядра СУБД в SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
+ [Нерекомендуемые функции ядра СУБД в SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [Обратная совместимость компонента SQL Server Database Engine](../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
  [Улучшения SQL Server 2016 или SQL Server 2017 в Windows для обработки некоторых типов данных и нестандартных операций](https://support.microsoft.com/help/4010261)   
-  
-  

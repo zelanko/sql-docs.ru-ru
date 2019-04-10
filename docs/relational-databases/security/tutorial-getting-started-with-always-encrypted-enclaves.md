@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a24f7577a5ac01b3bc035bd68056de3a95fa156c
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: b25824b52a09afd7111cacc3a1ec05969766863e
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417156"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042133"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Учебник. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -34,10 +34,18 @@ ms.locfileid: "58417156"
 - компьютер SQL Server для размещения SQL Server и SSMS;
 - компьютер HGS для запуска службы защиты узла, необходимой для аттестации анклава.
 
-### <a name="sql-server-computer-requirements"></a>Требования к компьютеру SQL Server
+### <a name="sql-server-computer-requirements"></a>Требования к компьютеру с SQL Server
 
-- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] или более поздней версии
-- Windows 10 Корпоративная версии 1809 или Windows Server 2019 DataCenter
+- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] или более поздней версии.
+- Windows 10 Корпоративная (версия 1809) или Windows Server 2019 Datacenter.
+- Если SQL Server работает на физическом компьютере, он должен соответствовать [требованиям Hyper-V к оборудованию](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements):
+   - 64-разрядный процессор с преобразованием адресов второго уровня (SLAT).
+   - Поддержка ЦП для расширения режима мониторинга виртуальной машины (технология VT-c на процессорах Intel).
+   - Включенная поддержка виртуализации (Intel VT-x или AMD-V).
+- Если SQL Server работает в виртуальной машине, такая виртуальная машина должна быть настроена для вложенной виртуализации.
+   - В Hyper-V 2016 или более поздней версии [включите расширения вложенной виртуализации](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) на процессоре виртуальной машины.
+   - В Azure убедитесь, что вы выбрали виртуальную машину нужного размера для поддержки вложенной виртуализации, например виртуальную машину серии Dv3 или Ev3. См. раздел [Create a nesting capable Azure VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm) (Создание виртуальной машины Azure с поддержкой вложения).
+   - В VMWare vSphere 6.7 или более поздней версии включите для виртуальной машины поддержку технологии Virtualization Based Security (VBS), как описано в [документации VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
 - [SQL Server Management Studio (SSMS) версии не ниже 18.0](../../ssms/download-sql-server-management-studio-ssms.md)
 
 Кроме того, можно установить SSMS на другом компьютере.
@@ -55,7 +63,7 @@ ms.locfileid: "58417156"
 >[!NOTE]
 >Компьютер HGS не должен быть присоединен к домену перед началом работы.
 
-## <a name="step-1-configure-the-hgs-computer"></a>Шаг 1. Настройка компьютера HGS
+## <a name="step-1-configure-the-hgs-computer"></a>Шаг 1. Настройка компьютера HGS
 
 На этом шаге выполняется настройка компьютера HGS для запуска службы защиты узла, поддерживающей аттестацию ключа узла.
 
@@ -87,7 +95,7 @@ ms.locfileid: "58417156"
 >[!NOTE]
 >Если же вы хотите ссылаться на этот компьютер HGS по DNS-имени, можно настроить сервер пересылки из корпоративных DNS-серверов на новый контроллер домена HGS.  
 
-## <a name="step-2-configure-the-sql-server-computer-as-a-guarded-host"></a>Этап 2. Настройка компьютера SQL Server как защищенного узла
+## <a name="step-2-configure-the-sql-server-computer-as-a-guarded-host"></a>Шаг 2. Настройка компьютера SQL Server как защищенного узла
 На этом шаге выполняется настройка компьютера SQL Server как защищенного узла, зарегистрированного в HGS с помощью аттестации ключа узла.
 >[!NOTE]
 >Рекомендуется использовать аттестацию ключа узла только в тестовых средах. Для рабочих сред следует использовать аттестацию доверенного платформенного модуля (TPM).
@@ -105,6 +113,21 @@ ms.locfileid: "58417156"
    ```
 
 3. При появлении запроса на завершение установки Hyper-V перезагрузите компьютер SQL Server.
+
+4. Если SQL Server работает в виртуальной машине или на устаревшем физическом компьютере, который не поддерживает UEFI Secure Boot или не имеет блока IOMMU, вам потребуется удалить требование VBS для функций безопасности платформы.
+    1. Удалите требование в реестре Windows.
+
+        ```powershell
+       Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
+       ```
+
+    1. Перезагрузите компьютер снова, чтобы технология VBS работала со сниженными требованиями.
+
+        ```powershell
+       Restart-Computer
+       ```
+
+
 
 4. Снова войдите на компьютер SQL Server с правами администратора, откройте консоль Windows PowerShell с повышенными привилегиями, создайте уникальный ключ узла и экспортируйте полученный открытый ключ в файл.
 
@@ -236,7 +259,7 @@ ms.locfileid: "58417156"
     3. Убедитесь, что выбрано значение **Хранилище сертификатов Windows (текущий пользователь или локальный компьютер)** или **Azure Key Vault**.
     4. Выберите **Разрешить вычисления анклава**.
     5. Если вы выбрали Azure Key Vault, войдите в Azure и выберите хранилище ключей. Дополнительные сведения о создании хранилища ключей для Always Encrypted см. в статье [Управление хранилищами ключей на портале Azure](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
-    6. Выберите свой ключ, если он уже существует, или создайте новый ключ, следуя указаниям в форме.
+    6. Выберите сертификат или ключ Azure Key Vault, если он существует, или нажмите кнопку **Создать сертификат**, чтобы создать новый сертификат.
     7. Нажмите кнопку **ОК**.
 
         ![Разрешение вычислений анклава](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
@@ -258,8 +281,8 @@ ms.locfileid: "58417156"
     3. Выберите "Подключение" \> "Изменить подключение".
     4. Выберите **Параметры**. Перейдите на вкладку **Always Encrypted**, выберите **Включить Always Encrypted** и укажите URL-адрес аттестации анклава (например, ht<span>tp://</span>hgs.bastion.local/Attestation).
     5. Выберите **Подключиться**.
-    6. Измените контекст базы данных на ContosoHR.
-1. В SSMS настройте другое окно создания запроса с выключенным Always Encrypted для подключения к базе данных.
+    6. Если отобразится запрос на включение параметризации для запросов Always Encrypted, нажмите кнопку **Включить**.
+2. В SSMS настройте другое окно создания запроса с выключенным Always Encrypted для подключения к базе данных.
     1. В SSMS откройте окно создания запроса.
     2. Щелкните правой кнопкой мыши в любом месте окна создания запроса.
     3. Выберите "Подключение" \> "Изменить подключение".
@@ -296,12 +319,12 @@ ms.locfileid: "58417156"
 
 Теперь можно выполнять полнофункциональные запросы к зашифрованным столбцам. Некоторая обработка запросов будет выполняться в анклаве на стороне сервера. 
 
-1. Включите параметризацию для Always Encrypted.
+1. Убедитесь, что параметризация для Always Encrypted включена.
     1. В главном меню SSMS выберите **Запрос**.
     2. Щелкните **Параметры запроса...**.
     3. Выберите **Выполнение** > **Дополнительно**.
-    4. Выберите пункт **Включить определение параметров для Always Encrypted**.
-    5. Нажмите кнопку **ОК**.
+    4. Убедитесь, что установлен флажок "Включить определение параметров для Always Encrypted".
+    5. Нажмите кнопку "ОК".
 2. Вставьте в окно запроса с включенным Always Encrypted следующий запрос и выполните его. Запрос должен возвратить соответствующие заданным условиям поиска значения и строки в виде открытого текста.
 
     ```sql

@@ -11,12 +11,12 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fa8c74ec8bb9c80350b537142ce27cb61354c52f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207573"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860635"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Настройка расширенных событий для групп доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
  [Расширенные события для отладки](always-on-extended-events.md#BKMK_Debugging)  
   
- [Справочник по расширенным событиям для групп доступности AlwaysOn](always-on-extended-events.md#BKMK_Reference)  
+ [Справочник по расширенным событиям для групп доступности Always On](always-on-extended-events.md#BKMK_Reference)  
   
 ##  <a name="BKMK_alwayson_health"></a> Сеанс Alwayson_health  
  Сеанс расширенных событий alwayson_health создается автоматически при создании группы доступности и фиксирует подмножество связанных с ней событий. Этот сеанс предварительно настроен в качестве удобного средства, которое поможет вам быстрее приступить к устранению неполадок для группы доступности. Мастер создания группы доступности автоматически запускает сеанс на всех участвующих репликах доступности, настроенных в мастере.  
@@ -73,7 +73,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
  [availability_replica_automatic_failover_validation](#BKMK_availability_replica_automatic_failover_validation)  
   
- [error_reported (несколько номеров ошибки): для проблем с транспортом или подключением](#BKMK_error_reported)  
+ [error_reported (несколько номеров ошибок): для проблем с транспортировкой или подключением](#BKMK_error_reported)  
   
  [data_movement_suspend_resume](#BKMK_data_movement_suspend_resume)  
   
@@ -83,7 +83,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
  [error_reported (1480): изменилась роль реплики базы данных](#BKMK_error_reported_1480)  
   
-###  <a name="BKMK_availability_replica_state_change "></a> availability_replica_state_change  
+###  <a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
  Возникает при изменении состояния реплики доступности. Создание группы доступности или присоединение к реплике доступности может вызывать это событие. Это удобно при диагностике сбоя автоматического перехода на другой ресурс. Его также можно использовать для трассировки шагов перехода на другой ресурс.  
   
 #### <a name="event-information"></a>Сведения о событии  
@@ -384,5 +384,3 @@ GO
   
 ## <a name="next-steps"></a>Следующие шаги  
  [Просмотр данных о сеансе событий](https://msdn.microsoft.com/library/hh710068(v=sql.110).aspx)   
- 
-  

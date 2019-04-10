@@ -10,12 +10,12 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73d071b0fc5724c23074c0d827f1c12466f47bab
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380722"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241732"
 ---
 # <a name="cdc-flow-components"></a>Компоненты потока CDC
   Компоненты отслеживания измененных данных Attunity для служб Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] позволяют разработчикам служб SSIS работать с CDC и уменьшают сложность пакетов CDC.  
@@ -32,7 +32,7 @@ ms.locfileid: "58380722"
   
  **Компоненты потока данных CDC**.  
   
- [Источник «CDC»](cdc-source.md)  
+ [CDC-источник](cdc-source.md)  
   
  [Разделитель CDC](cdc-splitter.md)  
   
@@ -192,7 +192,7 @@ ms.locfileid: "58380722"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Источник «CDC»](cdc-source.md)  
+-   [CDC-источник](cdc-source.md)  
   
 -   [Разделитель CDC](cdc-splitter.md)  
   
@@ -204,7 +204,7 @@ ms.locfileid: "58380722"
   
 ## <a name="related-content"></a>См. также  
   
--   Запись в блоге [CDC в SSIS для SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242543)на сайте mattmasson.com.  
+-   Запись в блоге [CDC в SSIS для SQL Server 2012](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/)на сайте mattmasson.com.  
   
 -   Запись в блоге [Служба CDC для Oracle в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=247827), касающуюся параметра службы CDC, см. на сайте blogs.msdn.com.  
   

@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 866d71333297b609642707a793b27c735d29057d
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e6e0f7bc107ae731e3eb2e7f6685e6c02914d41d
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327895"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872154"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Настройка Always Encrypted с безопасными анклавами
 
@@ -46,7 +46,7 @@ ms.locfileid: "54327895"
 
 *SQL Server*:
 
-- [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] или более поздней версии
+- [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] или более поздние версии.
 
 *Windows*:
 
@@ -144,7 +144,7 @@ ms.locfileid: "54327895"
 - Задается свойство **ENCLAVE_COMPUTATIONS** в метаданных главного ключа столбца в базе данных.
 - Значения свойств главного ключа столбца (включая свойство **ENCLAVE_COMPUTATIONS**) получают цифровую подпись. Средство добавляет в метаданные подпись, которая производится с использованием фактического главного ключа столбца. Цель подписи — запретить злонамеренным администраторам баз данных и компьютерам изменять свойство **ENCLAVE_COMPUTATIONS**. Драйверы клиента SQL проверяют подписи, прежде чем разрешить использование анклава. Это позволяет администраторам безопасности контролировать, какие данные столбцов могут быть вычислены внутри анклава.
 
-Свойство **ENCLAVE_COMPUTATIONS** главного ключа столбца является неизменяемым — его нельзя изменить после подготовки ключа. Однако можно заменить главный ключ столбца новым ключом, имеющим другое значение свойства **ENCLAVE_COMPUTATIONS**, чем исходный ключ, с помощью процесса, называемого [сменой главного ключа столбца](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key). Дополнительные сведения о свойстве **ENCLAVE_COMPUTATIONS** содержатся в статье [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md).
+Свойство **ENCLAVE_COMPUTATIONS** главного ключа столбца является неизменяемым — его нельзя изменить после подготовки ключа. Однако можно заменить главный ключ столбца новым ключом, имеющим другое значение свойства **ENCLAVE_COMPUTATIONS**, чем исходный ключ, с помощью процесса, называемого [сменой главного ключа столбца](#make-columns-enclave-enabled-by-rotating-their-column-master-key). Дополнительные сведения о свойстве **ENCLAVE_COMPUTATIONS** содержатся в статье [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md).
 
 Чтобы подготовить ключ шифрования столбцов с поддержкой анклава, необходимо убедиться, что главный ключ столбца, который шифрует ключ шифрования столбцов, также поддерживает анклав.
 
@@ -152,7 +152,7 @@ ms.locfileid: "54327895"
 
 - **Главные ключи столбцов с поддержкой анклава должны храниться в хранилище сертификатов Windows или в Azure Key Vault**. Хранение главных ключей столбцов с поддержкой анклава в других типах хранилищ ключей (аппаратных модулях безопасности или настраиваемых хранилищах ключей) в настоящее время не поддерживается.
 
-### <a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>**Подготовка ключей с поддержкой анклава с помощью SQL Server Management Studio (SSMS)**
+### **<a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>Подготовка ключей с поддержкой анклава с помощью SQL Server Management Studio (SSMS)**
 
 Ниже приведены шаги по созданию ключей с поддержкой анклава (требуется SSMS 18.0 или более поздняя версия):
 
@@ -177,7 +177,7 @@ ms.locfileid: "54327895"
     3. В раскрывающемся списке **Главный ключ столбца** выберите ключ, созданный на предыдущих шагах.
     4. Нажмите кнопку **ОК**.
 
-### <a name="provision-enclave-enabled-keys-using-powershell"></a>**Подготовка ключей с поддержкой анклава с помощью PowerShell**
+### **<a name="provision-enclave-enabled-keys-using-powershell"></a>Подготовка ключей с поддержкой анклава с помощью PowerShell**
 
 В следующих разделах приведены примеры скриптов PowerShell для подготовки ключей с поддержкой анклава. Приведены (новые) шаги, относящиеся к Always Encrypted с безопасными анклавами. Дополнительные сведения (не только для Always Encrypted с безопасными анклавами) о подготовке ключей с помощью PowerShell см. в статье [Manage your key vaults from Azure portal](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell) (Управление хранилищами ключей на портале Azure).
 
@@ -218,7 +218,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 На компьютере клиента или компьютере разработки откройте интегрированную среду сценариев Windows PowerShell и запустите следующий скрипт.
 
-**Шаг 1. Подготовка главного ключа столбца в Azure Key Vault**
+**Шаг 1. Подготовка главного ключа столбца в Azure Key Vault**
 
 Это также можно сделать с помощью портала Azure. Дополнительные сведения см. в статье [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/) (Управление хранилищами ключей на портале Azure).
 
@@ -250,7 +250,7 @@ Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
 ```
 
-**Шаг 2. Создание метаданных главного ключа столбца в базе данных, создание ключа шифрования столбцов и создание метаданных ключа шифрования столбцов в базе данных**
+**Шаг 2. Создание метаданных главного ключа столбца в базе данных, создание ключа шифрования столбцов и создание метаданных ключа шифрования столбцов в базе данных**
 
 
 ```powershell
@@ -329,7 +329,7 @@ ON cmk.column_master_key_id = cekv.column_master_key_id
 
 В таблице ниже приведены функциональные возможности для строковых столбцов с поддержкой анклава, в зависимости от типа шифрования и порядка сортировки.
 
-| **Порядок сортировки** | **Детерминированное шифрование** | **Случайное шифрование**                 |
+| **Порядок сортировки** | **Детерминированное шифрование** | **Шифрование на случайном ключе**                 |
 | ------------------------ | ---------------------------- | ----------------------------------------- |
 | **Не BIN2**             | Не поддерживается                | Шифрование на месте                       |
 | **BIN2**                 | Сравнение на равенство          | Шифрование на месте и полнофункциональные вычисления |
@@ -742,7 +742,7 @@ GO
 
 Самый быстрый способ попробовать полнофункциональные запросы к столбцам с поддержкой анклава — отправить их из окна запроса SSMS с включенным определением параметров для Always Encrypted. Дополнительные сведения об этой полезной возможности в SSMS см. в следующих ресурсах:
 
-- [Определение параметров для Always Encrypted — использование SSMS для вставки, обновления и фильтрации зашифрованных столбцов](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/)
+- [Определение параметров для Always Encrypted — использование SSMS для вставки, обновления и фильтрации зашифрованных столбцов](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/)
 - [Запрос зашифрованных столбцов](configure-always-encrypted-using-sql-server-management-studio.md#querying-encrypted-columns)
 
 

@@ -22,12 +22,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4eb114e5309b1733e90b417517c885e23ec09a42
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: e3d3a6524d0f7e791628ec664bc9b5df17a0e529
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58072213"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042193"
 ---
 # <a name="server-memory-server-configuration-options"></a>Параметры конфигурации сервера «Server Memory»
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "58072213"
 > [!IMPORTANT]  
 > Если вы зададите слишком высокое значение **Макс. памяти сервера**, одному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], возможно, придется конкурировать с другими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], размещенными на том же узле, за память. Если же задать слишком низкое значение, может возникнуть значительный дефицит памяти или проблемы с производительностью. Если присвоить параметру **Макс. памяти сервера** минимальное значение, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может не запуститься. Если не удается запустить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] после изменения этого параметра, запустите его с использованием параметра запуска **_-f_** и верните параметр **max server memory** к предыдущему значению. Дополнительные сведения см. в разделе [Параметры запуска службы Database Engine](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
     
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может использовать память динамически; но можно установить параметры памяти вручную и ограничить объем памяти, доступный для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Перед настройкой объема памяти для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определите подходящее значение путем вычитания из общего объема физической памяти того объема, который требуется операционной системе, выделениям памяти, не управляемым параметром max_server_memory, и другим экземплярам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (и для других нужд, если компьютер не выделен полностью под сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Разница — максимальный объем памяти, который можно выделить текущему экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может использовать память динамически. Но можно установить параметры памяти вручную и ограничить объем памяти, доступный для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Перед настройкой объема памяти для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определите подходящее значение путем вычитания из общего объема физической памяти того объема, который требуется операционной системе, выделениям памяти, не управляемым параметром max_server_memory, и другим экземплярам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (и для других нужд, если компьютер не выделен полностью под сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Разница — максимальный объем памяти, который можно выделить текущему экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  
 ## <a name="setting-the-memory-options-manually"></a>Настройка параметров памяти вручную  
 Можно установить для параметров сервера **Мин. памяти сервера** и **Макс. памяти сервера** значения, покрывающие весь доступный объем памяти. Этот метод полезен для системных администраторов или администраторов баз данных, когда требуется настроить экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] так, чтобы его параметры не противоречили требованиям к памяти других приложений или других экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], запущенных на этом узле.
@@ -86,7 +86,8 @@ ms.locfileid: "58072213"
 Задание этого параметра не повлияет на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [динамическое управление памятью](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management), что позволит расширить или сузить ее по запросу других клерков памяти. При использовании пользовательского права *Блокировка страниц в памяти* рекомендуется задать верхний предел для параметра **Макс. памяти сервера**, как [указано выше](#max_server_memory).
 
 > [!IMPORTANT]
-> Задавать этот параметр следует, только если он необходим, то есть при наличии признаков того, что процесс sqlservr вытесняется из памяти. В этом случае в журнале ошибок появится ошибка 17890, как в следующем примере: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
+> Задавать этот параметр следует, только если он необходим, то есть при наличии признаков того, что процесс sqlservr вытесняется из памяти. В этом случае в журнале ошибок появится ошибка 17890, как в следующем примере:
+> `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
 > Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [флаг трассировки 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) не требуется для использования заблокированных страниц в выпуске Standard Edition. 
   
 ### <a name="to-enable-lock-pages-in-memory"></a>Включение блокировки страниц в памяти  
@@ -120,7 +121,7 @@ ms.locfileid: "58072213"
  Эти настройки можно изменять без перезапуска экземпляров, поэтому можно легко экспериментировать с целью нахождения наиболее подходящих настроек для данной модели использования.  
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>Выделение максимального объема памяти для SQL Server  
-Для всех выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] память можно выделять вплоть до предела виртуального адресного пространства процесса. Дополнительные сведения см. в разделе [Предельный объем памяти для выпусков Windows и Windows Server](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016).
+Для всех выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] память можно выделять вплоть до предела виртуального адресного пространства процесса. Дополнительные сведения см. в разделе [Предельный объем памяти для выпусков Windows и Windows Server](/windows/desktop/Memory/memory-limits-for-windows-releases#physical-memory-limits-windows-server-2016).
 
 ## <a name="examples"></a>Примеры
 
@@ -168,14 +169,13 @@ FROM sys.configurations c WHERE c.[name] = 'max server memory (MB)'
 ```
   
 ## <a name="see-also"></a>См. также:  
- [Руководство по архитектуре управления памятью](../../relational-databases/memory-management-architecture-guide.md)   
+ [руководство по архитектуре управления памятью](../../relational-databases/memory-management-architecture-guide.md)   
  [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Параметры запуска службы Database Engine](../../database-engine/configure-windows/database-engine-service-startup-options.md)   
  [Выпуски и поддерживаемые функции SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md#Cross-BoxScaleLimits)   
  [Выпуски и поддерживаемые функции SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
  [Выпуски и поддерживаемые функции SQL Server 2017 в Linux](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits)   
  [Предельный объем памяти для выпусков Windows и Windows Server](/windows/desktop/Memory/memory-limits-for-windows-releases)
- 

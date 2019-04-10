@@ -13,12 +13,12 @@ author: pmasl
 ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2f7a8a738a101545a23d14f06961b53415c2b9b6
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: fc06dca68c6b6a4cedc730433401076ca07b126b
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685531"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042343"
 ---
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
+ `[ database_name . [ schema_name ] . | schema_name . ] table_name`  
  Имя отображаемой таблицы, состоящее из одной, двух или трех частей. Если имя таблицы состоит из двух или трех частей, оно должно заключаться в двойные кавычки (""). Заключать однокомпонентное имя таблицы в кавычки необязательно. Если имя таблицы не указано, выводятся сведения для текущей базы данных.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -91,7 +91,7 @@ DBCC PDW_SHOWSPACEUSED ( FactInternetSales );
 DBCC PDW_SHOWSPACEUSED;  
 ```  
  ## <a name="see-also"></a>См. также раздел
-[DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)](dbcc-pdw-showexecutionplan-transact-sql.md)  
-[DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)](dbcc-pdw-showpartitionstats-transact-sql.md)
+[DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
+[DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)
 
   

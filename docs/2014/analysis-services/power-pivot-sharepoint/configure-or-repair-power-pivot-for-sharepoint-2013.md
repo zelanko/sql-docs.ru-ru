@@ -11,15 +11,15 @@ ms.assetid: 616877e3-464a-4c97-bc74-1fa6f4faa756
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa6db168e9bcaf6fa16def53a35fc2626d6a24fb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ff7c6dba835d12ed8b05500f037ee0d4ed1361c3
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363916"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241812"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>Настройка или восстановление PowerPivot для SharePoint 2013 (средство настройки PowerPivot)
-  Для настройки или восстановления установленного экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013 используйте инструмент настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. Работа средства настройки начинается со сканирования системы, в результате которого возвращается список действий, необходимых для завершения или восстановления установки. Мастер установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] установит средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2010, а также средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013. В этом разделе описывается средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013. Дополнительные сведения о SharePoint 2010 см. в разделе [Настройка или восстановление PowerPivot для SharePoint 2010 &#40;средство настройки PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
+  Для настройки или восстановления установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013 используйте средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. Работа средства настройки начинается со сканирования системы, в результате которого возвращается список действий, необходимых для завершения или восстановления установки. Мастер установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] установит средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2010, а также средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013. В этом разделе описывается средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013. Дополнительные сведения о SharePoint 2010 см. в разделе [Настройка или восстановление PowerPivot для SharePoint 2010 &#40;средство настройки PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -27,7 +27,7 @@ ms.locfileid: "53363916"
   
  [Перед началом](#bkmk_before)  
   
- [Чтобы использовать PowerPivot для средства настройки SharePoint 2013](#bkmk_using)  
+ [Использование средства настройки PowerPivot для SharePoint 2013](#bkmk_using)  
   
  [Шаги настройки](#bkmk_steps)  
   
@@ -116,7 +116,7 @@ ms.locfileid: "53363916"
 ||Порт центра администрирования SharePoint|По умолчанию (при необходимости)|Если ферма не настроена, средство предложит варианты по ее созданию, включая создание конечной точки HTTP для центра администрирования. Для этого выбирается случайно созданный незадействованный номер порта.|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для служб Excel ([ServerName]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|Вводимые пользователем данные|Сервер [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] необходим службам Excel для поддержки базовых функций PowerPivot. Введенное на этой странице имя сервера также добавляется в список на странице **Настройка серверов PowerPivot** .|  
 |**Настройка новой фермы**|Сервер базы данных<br /><br /> Учетная запись фермы<br /><br /> Парольная фраза<br /><br /> Порт центра администрирования SharePoint|По умолчанию (при необходимости)|Настройки по умолчанию для данных, введенных на главной странице.|  
-|**Создание приложения службы PowerPivot**|Имя приложения службы|Значение по умолчанию|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Имя приложения службы, имя по умолчанию — **приложение службы PowerPivot по умолчанию**. В средстве можно указать другое значение.|  
+|**Создание приложения службы PowerPivot**|Имя приложения службы|Значение по умолчанию|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Именем по умолчанию является **Приложение службы PowerPivot по умолчанию**. В средстве можно указать другое значение.|  
 ||Сервер базы данных|Значение по умолчанию|Сервер базы данных, на котором размещается база данных приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Имя сервера по умолчанию то же, что у сервера базы данных, используемого для фермы. Можно указать другое значение, отличное от имени сервера по умолчанию.|  
 ||Имя базы данных|Значение по умолчанию|Имя базы данных, создаваемой для приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Имя базы данных по умолчанию формируется исходя из имени приложения службы, за которым следует идентификатор GUID, обеспечивающий его уникальность. В средстве можно указать другое значение.|  
 |**Создание веб-приложения по умолчанию**|Имя веб-приложения|По умолчанию (при необходимости)|Если веб-приложений не существует, то средство создает одно веб-приложение. Веб-приложение будет настроено для использования классического режима проверки подлинности и будет прослушивать порт 80. Максимальный размер файла для передачи устанавливается равным 2047, что является максимально допустимым значением в SharePoint. Большой размер файла для передачи позволяет передавать объемные файлы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на сервер.|  
@@ -192,10 +192,10 @@ ms.locfileid: "53363916"
   
 ### <a name="build-a-includessgeminiincludesssgemini-mdmd-workbook"></a>Построение книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]  
  После установки компонентов сервера на ферму можно перейти к созданию первой книги Excel 2013, в которой будут использоваться внедренные данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , а затем опубликовать ее в библиотеке SharePoint. Также можно передать или опубликовать образец книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , чтобы проверить доступ к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в SharePoint. Дополнительные сведения см. в следующих разделах:  
+
+-   [Новые возможности в PowerPivot в Excel 2013](https://www.microsoft.com/microsoft-365/blog/2012/12/13/introduction-to-powerpivot-in-excel-2013/).  
   
--   [Новые возможности в PowerPivot в Excel 2013](http://office.microsoft.com/excel-help/whats-new-in-powerpivot-in-excel-2013-HA102893837.aspx?CTT=1) (http://office.microsoft.com/excel-help/whats-new-in-powerpivot-in-excel-2013-HA102893837.aspx?CTT=1).  
-  
--   [Запуск PowerPivot в надстройке Excel 2013](http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110) (http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110).  
+-   [Запуск PowerPivot в надстройке Excel 2013](http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110).  
   
 ### <a name="add-additional-analysis-services-servers-in-sharepoint-mode"></a>Добавление серверов службы Analysis Services в режиме интеграции с SharePoint  
  В дальнейшем, если потребуются дополнительные возможности по хранению и обработке данных, в ферму можно будет добавить дополнительные серверы для работы служб Analysis Services в режиме интеграции с SharePoint. Для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013 новые серверы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] устанавливаются в режиме интеграции с SharePoint, а затем настраиваются службы Excel. Дополнительные сведения см. в разделе «действия после установки одиночного сервера» раздела [установки PowerPivot для SharePoint 2013](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
@@ -205,8 +205,8 @@ ms.locfileid: "53363916"
   
 ## <a name="see-also"></a>См. также  
  [Установка или удаление PowerPivot для SharePoint надстройка &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [Средства настройки PowerPivot](power-pivot-configuration-tools.md)   
+ [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)   
  [Настройка и администрирование сервера PowerPivot в центре администрирования](power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [Обновление книг и запланированное обновление данных (SharePoint 2013 )](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
+ [Обновление книг и создание расписания обновления данных (SharePoint 2013)](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

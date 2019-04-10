@@ -20,22 +20,21 @@ ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 22f087361a987dd423623650ea95d8d749265439
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2f33399282eb92cd2fbdb2a0a57befcf362379d1
+ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538933"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58788071"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Создает пул ресурсов регулятора ресурсов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Пул ресурсов представляет подмножество физических ресурсов (память, процессоры и ввод-вывод) экземпляра компонента Database Engine. Регулятор ресурсов позволяет администратору базы данных распределять ресурсы сервера по пулам ресурсов, используя до 64 пулов. Регулятор ресурсов доступен не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+Создает пул ресурсов регулятора ресурсов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Пул ресурсов представляет подмножество физических ресурсов (память, процессоры и ввод-вывод) экземпляра компонента Database Engine. Регулятор ресурсов позволяет администратору базы данных распределять ресурсы сервера по пулам ресурсов, используя до 64 пулов. Регулятор ресурсов доступен не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
-  
 ```  
 CREATE RESOURCE POOL pool_name  
 [ WITH  
@@ -64,29 +63,30 @@ CREATE RESOURCE POOL pool_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *pool_name*  
- Определяемое пользователем имя для пула ресурсов. Аргумент *pool_name* является алфавитно-цифровым и может содержать до 128 символов. Данный аргумент должен быть уникальным в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md).  
+*pool_name*  
+Определяемое пользователем имя для пула ресурсов. Аргумент *pool_name* является алфавитно-цифровым и может содержать до 128 символов. Данный аргумент должен быть уникальным в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md).  
   
- MIN_CPU_PERCENT =*value*  
- Указывает гарантированную среднюю пропускную способность ЦП для всех запросов в пуле ресурсов при возникновении состязания использования ЦП. *value* имеет тип integer и значение по умолчанию 0. Диапазон допустимых значений для *value* — от 0 до 100.  
+MIN_CPU_PERCENT =*value*  
+Указывает гарантированную среднюю пропускную способность ЦП для всех запросов в пуле ресурсов при возникновении состязания использования ЦП. *value* имеет тип integer и значение по умолчанию 0. Диапазон допустимых значений для *value* — от 0 до 100.  
   
- MAX_CPU_PERCENT =*value*  
- Указывает максимальную среднюю пропускную способность ЦП для всех запросов в пуле ресурсов при возникновении состязания использования ЦП. *value* имеет тип integer и значение по умолчанию 100. Диапазон допустимых значений для *value* — от 1 до 100.  
+MAX_CPU_PERCENT =*value*  
+Указывает максимальную среднюю пропускную способность ЦП для всех запросов в пуле ресурсов при возникновении состязания использования ЦП. *value* имеет тип integer и значение по умолчанию 100. Диапазон допустимых значений для *value* — от 1 до 100.  
   
- CAP_CPU_PERCENT =*value*  
- **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+CAP_CPU_PERCENT = *значение*   
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Задает жесткое ограничение пропускной способности ЦП, которая предоставляется всем запросам в пуле ресурсов. Ограничивает максимальный уровень пропускной способности ЦП заданным значением. *value* имеет тип integer и значение по умолчанию 100. Диапазон допустимых значений для *value* — от 1 до 100.  
+Задает жесткое ограничение пропускной способности ЦП, которая предоставляется всем запросам в пуле ресурсов. Ограничивает максимальный уровень пропускной способности ЦП заданным значением. *value* имеет тип integer и значение по умолчанию 100. Диапазон допустимых значений для *value* — от 1 до 100.  
   
- AFFINITY {SCHEDULER = AUTO | ( \<scheduler_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)} **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+AFFINITY {SCHEDULER = AUTO | ( \<указатель_диапазона_планировщика> ) | NUMANODE = (\<указатель_диапазона_узла_NUMA>)}      
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Подключает пул ресурсов к заданным планировщикам. Значение по умолчанию — AUTO.  
+Подключает пул ресурсов к заданным планировщикам. Значение по умолчанию — AUTO.  
   
- AFFINITY SCHEDULER = **(** \<scheduler_range_spec> **)** сопоставляет пул ресурсов с расписаниями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], обозначенными заданными идентификаторами. Эти идентификаторы сопоставляются со значениями в столбце scheduler_id представления [sys.dm_os_schedulers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
+AFFINITY SCHEDULER = **(** \<scheduler_range_spec> **)** сопоставляет пул ресурсов с расписаниями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], обозначенными заданными идентификаторами. Эти идентификаторы сопоставляются со значениями в столбце scheduler_id представления [sys.dm_os_schedulers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
   
- При использовании AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** пул ресурсов приводится в соответствие с планировщиками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые сопоставляются с физическими ЦП, соответствующими данному узлу NUMA или диапазону узлов. Вы можете использовать следующий запрос [!INCLUDE[tsql](../../includes/tsql-md.md)] для обнаружения сопоставления между конфигурацией физического узла NUMA и идентификаторами планировщиков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+При использовании AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** пул ресурсов приводится в соответствие с планировщиками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые сопоставляются с физическими ЦП, соответствующими данному узлу NUMA или диапазону узлов. Вы можете использовать следующий запрос [!INCLUDE[tsql](../../includes/tsql-md.md)] для обнаружения сопоставления между конфигурацией физического узла NUMA и идентификаторами планировщиков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
-```  
+```sql  
 SELECT osn.memory_node_id AS [numa_node_id], sc.cpu_id, sc.scheduler_id  
 FROM sys.dm_os_nodes AS osn  
 INNER JOIN sys.dm_os_schedulers AS sc   
@@ -94,51 +94,55 @@ INNER JOIN sys.dm_os_schedulers AS sc
     AND sc.scheduler_id < 1048576;  
 ```  
   
- MIN_MEMORY_PERCENT =*value*  
- Указывает минимальный объем памяти, резервируемый для данного пула ресурсов, который не подлежит использованию совместно с другими пулами ресурсов. Аргумент *value* является целым числом, значение по умолчанию — 0. Разрешенный диапазон значений *value* составляет от 0 до 100.  
+MIN_MEMORY_PERCENT = *значение*    
+Указывает минимальный объем памяти, резервируемый для данного пула ресурсов, который не подлежит использованию совместно с другими пулами ресурсов. Аргумент *value* является целым числом, значение по умолчанию — 0. Разрешенный диапазон значений *value* составляет от 0 до 100.  
   
- MAX_MEMORY_PERCENT =*value*  
- Указывает общий объем памяти сервера, который может использоваться для запросов в данном пуле ресурсов. *value* имеет тип integer и значение по умолчанию 100. Диапазон допустимых значений для *value* — от 1 до 100.  
+MAX_MEMORY_PERCENT = *значение*    
+Указывает общий объем памяти сервера, который может использоваться для запросов в данном пуле ресурсов. *value* имеет тип integer и значение по умолчанию 100. Диапазон допустимых значений для *value* — от 1 до 100.  
   
- MIN_IOPS_PER_VOLUME =*value*  
- **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+MIN_IOPS_PER_VOLUME = *значение*    
+**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Указывает минимальный объем операций ввода-вывода в секунду (IOPS) на дисковый том, который следует резервировать для пула ресурсов. Диапазон допустимых значений для *value* — от 0 до 2^31-1 (2 147 483 647). Укажите значение 0, чтобы не указывать минимальный порог для пула. Значение по умолчанию равно 0.  
+Указывает минимальный объем операций ввода-вывода в секунду (IOPS) на дисковый том, который следует резервировать для пула ресурсов. Диапазон допустимых значений для *value* — от 0 до 2^31-1 (2 147 483 647). Укажите значение 0, чтобы не указывать минимальный порог для пула. Значение по умолчанию равно 0.  
   
- MAX_IOPS_PER_VOLUME =*value*  
- **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+MAX_IOPS_PER_VOLUME = *значение*    
+**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Указывает максимальный объем операций ввода-вывода в секунду (IOPS) на дисковый том, при котором поддерживается пул ресурсов. Диапазон допустимых значений для *value* — от 0 до 2^31-1 (2 147 483 647). Укажите значение 0, чтобы задать неограниченный порог для пула. Значение по умолчанию равно 0.  
+Указывает максимальный объем операций ввода-вывода в секунду (IOPS) на дисковый том, при котором поддерживается пул ресурсов. Диапазон допустимых значений для *value* — от 0 до 2^31-1 (2 147 483 647). Укажите значение 0, чтобы задать неограниченный порог для пула. Значение по умолчанию равно 0.  
   
- Если значение параметра MAX_IOPS_PER_VOLUME для пула установлено в 0, пул не регулируется вообще и может занять все IOPS в системе, даже если для остальных пулов задан параметр MIN_IOPS_PER_VOLUME. На этот случай рекомендуется устанавливать достаточно высокое значение MAX_IOPS_PER_VOLUME для этого пула (например, максимальное значение 2^31-1), если требуется, чтобы пул регулировался на ввод-вывод.  
+Если для параметра `MAX_IOPS_PER_VOLUME` пула установлено значение 0, пул не регулируется и может занять все операции ввода-вывода в секунду в системе, даже если для остальных пулов задан параметр MIN_IOPS_PER_VOLUME. На этот случай рекомендуется устанавливать достаточно высокое значение `MAX_IOPS_PER_VOLUME` для этого пула (например, максимальное значение 2^31-1), если требуется, чтобы пул регулировался на ввод-вывод.  
   
 ## <a name="remarks"></a>Remarks  
- MIN_IOPS_PER_VOLUME и MAX_IOPS_PER_VOLUME определяют минимальное и максимальное значения для операций чтения или записи в секунду. Эти операции чтения или записи могут быть любого размера и не показывают минимальную или максимальную пропускную способность.  
+Параметры `MIN_IOPS_PER_VOLUME` и `MAX_IOPS_PER_VOLUME` позволяют задать минимальное и максимальное число операций чтения и записи в секунду. Эти операции чтения или записи могут быть любого размера и не показывают минимальную или максимальную пропускную способность.  
   
- Значения MAX_CPU_PERCENT и MAX_MEMORY_PERCENT должны быть больше или равны значениям MIN_CPU_PERCENT и MIN_MEMORY_PERCENT соответственно.  
+Значения параметров `MAX_CPU_PERCENT` и `MAX_MEMORY_PERCENT` должны быть больше или равны значениям параметров `MIN_CPU_PERCENT` и `MIN_MEMORY_PERCENT` соответственно.  
   
- CAP_CPU_PERCENT отличается от MAX_CPU_PERCENT, поскольку рабочие нагрузки, связанные с пулом, могут использовать ресурсы ЦП, превышающие значение MAX_CPU_PERCENT, если они доступны, но не могут использовать ресурсы, превышающие CAP_CPU_PERCENT.  
+Параметр `CAP_CPU_PERCENT` отличается от параметра `MAX_CPU_PERCENT` тем, что рабочие нагрузки, связанные с этим пулом, могут использовать ресурсы ЦП в объеме, который превышает значение параметра `MAX_CPU_PERCENT` (если они доступны), но без превышения значения параметра `CAP_CPU_PERCENT`.  
   
- Общий процент ЦП для каждого соответствующего компонента (планировщики или узлы NUMA) не должен превышать 100 %.  
+Общий процент загрузки ЦП для каждого соответствующего компонента (планировщики или узлы NUMA) не должен превышать 100 %.  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо разрешение CONTROL SERVER.  
+Требуется разрешение `CONTROL SERVER`.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере показано, как создать пул ресурсов с именем `bigPool`. Для этого пула используются параметры по умолчанию регулятора ресурсов.  
+### <a name="1-shows-how-to-create-a-resource-pool"></a>1. Демонстрация создания пула ресурсов
+
+В этом примере создается пул ресурсов с именем bigPool. Для этого пула используются параметры по умолчанию регулятора ресурсов.  
   
-```  
+```sql  
 CREATE RESOURCE POOL bigPool;  
 GO  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 GO  
 ```  
   
- В следующем примере `CAP_CPU_PERCENT` задает жесткое ограничение в 30%, а параметр `AFFINITY SCHEDULER` устанавливается равным диапазону от 0 до 63, от 128 до 191. 
+### <a name="2-set-the-capcpupercent-to-a-hard-cap-and-set-affinity-scheduler"></a>2. Установка жесткого ограничения для параметра CAP_CPU_PERCENT и установка значений для параметра AFFINITY SCHEDULER
+
+Задайте для параметра CAP_CPU_PERCENT жесткое ограничение 30 %, а для параметра AFFINITY SCHEDULER — диапазон 0–63, 128–191. 
   
 **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql  
 CREATE RESOURCE POOL PoolAdmin  
 WITH (  
      MIN_CPU_PERCENT = 10,  
@@ -148,31 +152,29 @@ WITH (
      MIN_MEMORY_PERCENT = 5,  
      MAX_MEMORY_PERCENT = 15  
       );  
-  
 ```  
   
- В следующем примере аргумент `MIN_IOPS_PER_VOLUME` устанавливается равным \<some value>, а `MAX_IOPS_PER_VOLUME` — равным \<some value>. Эти значения управляют физическими операциями чтения и записи при вводе-выводе, доступными для пула ресурсов.  
+### <a name="3-set-miniopspervolume-and-maxiopspervolume"></a>3. Установка значений параметров Set MIN_IOPS_PER_VOLUME и MAX_IOPS_PER_VOLUME   
+
+Задайте для параметра MIN_IOPS_PER_VOLUME значение 20, а для параметра MAX_IOPS_PER_VOLUME — 100. Эти значения управляют физическими операциями чтения и записи при вводе-выводе, доступными для пула ресурсов.  
   
 **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql  
 CREATE RESOURCE POOL PoolAdmin  
 WITH (  
     MIN_IOPS_PER_VOLUME = 20,  
     MAX_IOPS_PER_VOLUME = 100  
       );  
-  
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [ALTER RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
- [DROP RESOURCE POOL (Transact-SQL)](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
- [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)   
- [ALTER WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/alter-workload-group-transact-sql.md)   
- [DROP WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/drop-workload-group-transact-sql.md)   
- [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)   
- [Пул ресурсов регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
- [Создание пула ресурсов](../../relational-databases/resource-governor/create-a-resource-pool.md)  
+ [ALTER RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-resource-pool-transact-sql.md)     
+ [DROP RESOURCE POOL (Transact-SQL)](../../t-sql/statements/drop-resource-pool-transact-sql.md)     
+ [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)     
+ [ALTER WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/alter-workload-group-transact-sql.md)     
+ [DROP WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/drop-workload-group-transact-sql.md)     
+ [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)     
+ [Пул ресурсов регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-resource-pool.md)     
+ [Создание пула ресурсов](../../relational-databases/resource-governor/create-a-resource-pool.md)    
   
-  
-

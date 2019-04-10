@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 410cd9444cec90f5d6357e2084bab47f5ab25d37
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 2440f1b61b1b97fab41bf22e1fd466cd30b8e4cf
+ms.sourcegitcommit: 258b4aa0d431537323c5ab1307f599615c29df53
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828374"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58797044"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -54,7 +54,7 @@ ms.locfileid: "56828374"
 
 &nbsp;
 
-## <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -142,7 +142,7 @@ ASYMMETRIC KEY *asym_key_name* — определяет имя асимметр
 
 ## <a name="permissions"></a>Разрешения
 
-- Создавать имена входа могут только пользователи с разрешением **ALTER ANY LOGIN** на сервере или имеющие членство в предопределенной роли сервера **securityadmin**. Дополнительные сведения см. в разделах [Роли уровня сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) и [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
+- Создавать имена входа могут только пользователи с разрешением **ALTER ANY LOGIN** на сервере или имеющие членство в предопределенной роли сервера **securityadmin**. Дополнительные сведения см. в разделах [Роли уровня сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) и [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 - Если используется параметр **CREDENTIAL** , также необходимо разрешение **ALTER ANY CREDENTIAL** на сервере.
 
 ## <a name="after-creating-a-login"></a>После создания имени входа
@@ -311,7 +311,7 @@ SID = *sid* — используется для повторного созда
 
 ## <a name="permissions"></a>Разрешения
 
-Создавать имена входа могут только имена входа участника уровня сервера (созданного процессом подготовки) или члены роли базы данных `loginmanager` в базе данных master. Дополнительные сведения см. в разделах [Роли уровня сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) и [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>.
+Создавать имена входа могут только имена входа участника уровня сервера (созданного процессом подготовки) или члены роли базы данных `loginmanager` в базе данных master. Дополнительные сведения см. в разделах [Роли уровня сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) и [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 
 ## <a name="logins"></a>Имена входа
 
@@ -323,7 +323,7 @@ SID = *sid* — используется для повторного созда
 Созданное имя входа может подключаться к базе данных SQL, но имеет разрешения только для роли **public**. Попробуйте выполнить некоторые из приведенных ниже действий.
 
 - Чтобы подключиться к базе данных, создайте в этой базе данных пользователя для имени входа. Дополнительные сведения см. в статье об инструкции [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- Чтобы предоставить разрешения пользователю базы данных, используйте инструкцию **ALTER SERVER ROLE** ... **ADD MEMBER** для добавления пользователя в одну из встроенных ролей базы данных или пользовательскую роль либо напрямую предоставьте пользователю разрешения с помощью инструкции [GRANT](../../t-sql/statements/grant-transact-sql.md). Дополнительные сведения см. в разделах [Пользователи без прав администратора](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles и [GRANT](grant-transact-sql.md).
+- Чтобы предоставить разрешения пользователю базы данных, используйте инструкцию **ALTER SERVER ROLE** ... **ADD MEMBER** для добавления пользователя в одну из встроенных ролей базы данных или пользовательскую роль либо напрямую предоставьте пользователю разрешения с помощью инструкции [GRANT](../../t-sql/statements/grant-transact-sql.md). Дополнительные сведения см. в разделах [Пользователи без прав администратора](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Дополнительные административные роли на уровне сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) и [GRANT](grant-transact-sql.md).
 - Чтобы предоставить разрешения уровня сервера, создайте пользователя базы данных в базе данных master и с помощью инструкции **ALTER SERVER ROLE** ... **ADD MEMBER** добавьте пользователя в одну из административных ролей сервера. Дополнительные сведения см. в разделах [Роли уровня сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) и [Роли сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 - Воспользуйтесь инструкцией **GRANT**, чтобы предоставить разрешения уровня сервера новому имени входа или роли, содержащей это имя входа. Дополнительные сведения см. в статье [GRANT](../../t-sql/statements/grant-transact-sql.md).
 
@@ -418,7 +418,9 @@ SID **=** *sid* — используется для повторного соз
 - Появился новый синтаксис для создания субъектов уровня сервера, сопоставленных с учетными записями Azure AD (**FROM EXTERNAL PROVIDER**)
 - Когда указывается **FROM EXTERNAL PROVIDER**:
 
-  - значение login_name должно представлять имеющуюся учетную запись Azure AD (пользователя, группу или приложение), доступную в Azure AD для текущего управляемого экземпляра SQL Azure.
+  - значение login_name должно представлять имеющуюся учетную запись Azure AD (пользователя, группу или приложение), доступную в Azure AD для текущего управляемого экземпляра SQL Azure. Для субъектов Azure AD действуют такие требования синтаксиса CREATE LOGIN:
+    - имя участника-пользователя (UserPrincipalName) объекта Azure AD для пользователей Azure AD;
+    - отображаемое имя (DisplayName) объекта Azure AD для групп и приложений Azure AD.
   - Этот параметр невозможно использовать совместно с параметром **PASSWORD**.
   - Сейчас первое имя входа Azure AD должно создаваться стандартной учетной записью SQL Server (не относящейся к Azure AD), то есть `sysadmin`, используя приведенный выше синтаксис.
   - При создании имени входа Azure AD с участием администратора Azure AD для управляемого экземпляра Базы данных SQL возникает следующая ошибка:</br>
@@ -448,7 +450,7 @@ SID **=** *sid* — используется для повторного соз
 Созданное имя входа может подключаться к управляемому экземпляру Базы данных SQL, но c разрешениями только для роли **public**. Попробуйте выполнить некоторые из приведенных ниже действий.
 
 - Чтобы создать пользователя Azure AD по имени входа Azure AD, см. раздел [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- Чтобы предоставить разрешения пользователю базы данных, используйте инструкцию **ALTER SERVER ROLE** ... **ADD MEMBER** для добавления пользователя в одну из встроенных ролей базы данных или пользовательскую роль либо напрямую предоставьте пользователю разрешения с помощью инструкции [GRANT](../../t-sql/statements/grant-transact-sql.md). Дополнительные сведения см. в разделах [Пользователи без прав администратора](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles и [GRANT](grant-transact-sql.md).
+- Чтобы предоставить разрешения пользователю базы данных, используйте инструкцию **ALTER SERVER ROLE** ... **ADD MEMBER** для добавления пользователя в одну из встроенных ролей базы данных или пользовательскую роль либо напрямую предоставьте пользователю разрешения с помощью инструкции [GRANT](../../t-sql/statements/grant-transact-sql.md). Дополнительные сведения см. в разделах [Пользователи без прав администратора](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Дополнительные административные роли на уровне сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) и [GRANT](grant-transact-sql.md).
 - Чтобы предоставить разрешения уровня сервера, создайте пользователя базы данных в базе данных master и с помощью инструкции **ALTER SERVER ROLE** ... **ADD MEMBER** добавьте пользователя в одну из административных ролей сервера. Дополнительные сведения см. в разделах [Роли уровня сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) и [Роли сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
   - Используйте следующую команду, чтобы добавить роль `sysadmin` для имени входа Azure AD: `ALTER SERVER ROLE sysadmin ADD MEMBER [AzureAD_Login_name]`
 - Воспользуйтесь инструкцией **GRANT**, чтобы предоставить разрешения уровня сервера новому имени входа или роли, содержащей это имя входа. Дополнительные сведения см. в статье [GRANT](../../t-sql/statements/grant-transact-sql.md).
@@ -608,14 +610,14 @@ PASSWORD **='** password**'*  — указывает пароль для соз
 
 ## <a name="permissions"></a>Разрешения
 
-Создавать имена входа могут только имена входа участника уровня сервера (созданного процессом подготовки) или члены роли базы данных `loginmanager` в базе данных master. Дополнительные сведения см. в разделах [Роли уровня сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) и [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>.
+Создавать имена входа могут только имена входа участника уровня сервера (созданного процессом подготовки) или члены роли базы данных `loginmanager` в базе данных master. Дополнительные сведения см. в разделах [Роли уровня сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) и [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 
 ## <a name="after-creating-a-login"></a>После создания имени входа
 
 Созданное имя входа может подключаться к хранилищу данных SQL, но имеет разрешения только для роли **public**. Попробуйте выполнить некоторые из приведенных ниже действий.
 
 - Чтобы подключиться к базе данных, создайте пользователя базы данных для имени входа. Дополнительные сведения см. в статье об инструкции [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- Чтобы предоставить разрешения пользователю базы данных, используйте инструкцию **ALTER SERVER ROLE** ... **ADD MEMBER** для добавления пользователя в одну из встроенных ролей базы данных или пользовательскую роль либо напрямую предоставьте пользователю разрешения с помощью инструкции [GRANT](grant-transact-sql.md). Дополнительные сведения см. в разделах [Пользователи без прав администратора](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles и [GRANT](grant-transact-sql.md).
+- Чтобы предоставить разрешения пользователю базы данных, используйте инструкцию **ALTER SERVER ROLE** ... **ADD MEMBER** для добавления пользователя в одну из встроенных ролей базы данных или пользовательскую роль либо напрямую предоставьте пользователю разрешения с помощью инструкции [GRANT](grant-transact-sql.md). Дополнительные сведения см. в разделах [Пользователи без прав администратора](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Дополнительные административные роли на уровне сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) и [GRANT](grant-transact-sql.md).
 - Чтобы предоставить разрешения уровня сервера, создайте пользователя базы данных в базе данных master и с помощью инструкции **ALTER SERVER ROLE** ... **ADD MEMBER** добавьте пользователя в одну из административных ролей сервера. Дополнительные сведения см. в разделах [Роли уровня сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) и [Роли сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 
 - Воспользуйтесь инструкцией **GRANT**, чтобы предоставить разрешения уровня сервера новому имени входа или роли, содержащей это имя входа. Дополнительные сведения см. в статье [GRANT](../../t-sql/statements/grant-transact-sql.md).
@@ -730,7 +732,7 @@ WINDOWS — указывает, что имя входа сопоставлен
 
 ## <a name="permissions"></a>Разрешения
 
-Создавать имена входа могут только пользователи с разрешением **ALTER ANY LOGIN** на сервере или имеющие членство в предопределенной роли сервера **securityadmin**. Дополнительные сведения см. в разделах [Роли уровня сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) и [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>.
+Создавать имена входа могут только пользователи с разрешением **ALTER ANY LOGIN** на сервере или имеющие членство в предопределенной роли сервера **securityadmin**. Дополнительные сведения см. в разделах [Роли уровня сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) и [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 
 ## <a name="after-creating-a-login"></a>После создания имени входа
 

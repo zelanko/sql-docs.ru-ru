@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: Additional tips and tricks for using SQL Server Management Studio'
+Title: Учебник. Дополнительные советы и рекомендации по использованию SQL Server Management Studio.
 description: 'Учебник, в котором приводятся некоторые дополнительные советы и рекомендации по использованию SSMS. '
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: 2b113d701bbcd5d385303e6a36fcc603d03c0cdf
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: ab394ef046d123b461dac813b2901dfcfd02b596
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663110"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872224"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Учебник. Дополнительные советы и рекомендации по использованию SSMS
 В этом учебнике приводятся некоторые дополнительные советы по использованию SQL Server Management Studio (SSMS). В этой статье показано, как выполнить следующие действия: 
@@ -216,7 +216,7 @@ ms.locfileid: "56663110"
 Определить имя сервера SQL Server до и после подключения к SQL Server можно различными способами.  
 
 ### <a name="before-you-connect-to-sql-server"></a>До подключения к SQL Server
-1. Выполните инструкции по поиску [журнала ошибок SQL Server на диске](#finding-your-error-log-if-you-cannot-connect-to-sql). Ваш путь может отличаться от указанного на рисунке ниже.
+1. Выполните инструкции по поиску [журнала ошибок SQL Server на диске](#find-the-error-log-location-if-you-cant-connect-to-sql-server). Ваш путь может отличаться от указанного на рисунке ниже.
 2. Откройте файл errorlog.log в Блокноте.  
 3. Найдите текст *Server name is*.
     
@@ -253,5 +253,3 @@ ms.locfileid: "56663110"
 4. Просмотрите результаты запроса, чтобы определить имя сервера SQL Server, к которому вы подключены: 
     
     ![Определение имени сервера SQL Server с помощью запроса](media/ssms-tricks/queryservername.png)
-
-
