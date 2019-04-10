@@ -1602,9 +1602,9 @@ items:
       items:
       - name: Использование типа данных hierarchyid
         href: ../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md
-      - name: Урок 1. преобразование таблицы в иерархическую структуру
+      - name: Урок 1. Преобразование таблицы в иерархическую структуру
         href: ../relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md
-      - name: Занятие 2. Создание данных и управление ими в иерархической таблице
+      - name: Урок 2. Создание данных и управление ими в иерархической таблице
         href: ../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
     - name: Справочник
       items:
@@ -1828,7 +1828,7 @@ items:
         items:
         - name: Пример Получение сведений о модели продукта в формате XML
           href: ../relational-databases/xml/example-retrieving-product-model-information-as-xml.md
-        - name: Пример Указание XSINIL с директивой ELEMENTS
+        - name: Пример Определение XSINIL с директивой ELEMENTS
           href: ../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md
         - name: Пример Запросы к схемам как к результатам с помощью параметров XMLDATA и XMLSCHEMA
           href: ../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
@@ -1836,9 +1836,9 @@ items:
           href: ../relational-databases/xml/example-retrieving-binary-data.md
         - name: Пример Переименование элемента <row>
           href: ../relational-databases/xml/example-renaming-the-row-element.md
-        - name: Пример Задание корневого элемента для XML-документа, сформированного предложением FOR XML
+        - name: Пример Определение корневого элемента для XML-документа, созданного предложением FOR XML
           href: ../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
-        - name: Пример запросы к столбцам XMLType
+        - name: Пример Запросы к столбцам XMLType
           href: ../relational-databases/xml/example-querying-xmltype-columns.md
       - name: режима AUTO
         href: ../relational-databases/xml/use-auto-mode-with-for-xml.md
@@ -1854,23 +1854,23 @@ items:
         items:
         - name: Пример Получение сведений о сотрудниках
           href: ../relational-databases/xml/example-retrieving-employee-information.md
-        - name: Пример Указание директивы ELEMENT
+        - name: Пример Определение директивы ELEMENT
           href: ../relational-databases/xml/example-specifying-the-element-directive.md
-        - name: Пример Задание директивы ELEMENTXSINIL
+        - name: Пример Определение директивы ELEMENTXSINIL
           href: ../relational-databases/xml/example-specifying-the-elementxsinil-directive.md
-        - name: Пример конструирование одноуровневых элементов в режиме EXPLICIT
+        - name: Пример Конструирование одноуровневых элементов в режиме EXPLICIT
           href: ../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md
         - name: Пример Указание директив ID и IDREF
           href: ../relational-databases/xml/example-specifying-the-id-and-idref-directives.md
         - name: Пример Указание директив ID и IDREFS
           href: ../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md
-        - name: Пример Указание директивы HIDE
+        - name: Пример Определение директивы HIDE
           href: ../relational-databases/xml/example-specifying-the-hide-directive.md
         - name: Пример Указание директивы ELEMENT и кодировка сущности
           href: ../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md
-        - name: Пример Задание директивы CDATA
+        - name: Пример Определение директивы CDATA
           href: ../relational-databases/xml/example-specifying-the-cdata-directive.md
-        - name: Пример Задание директивы XMLTEXT
+        - name: Пример Определение директивы XMLTEXT
           href: ../relational-databases/xml/example-specifying-the-xmltext-directive.md
       - name: Режим PATH
         href: ../relational-databases/xml/use-path-mode-with-for-xml.md
@@ -1920,7 +1920,7 @@ items:
     - name: OPENXML
       href: ../relational-databases/xml/openxml-sql-server.md
       items:
-      - name: 'Примеры: использование инструкции OPENXML'
+      - name: 'Примеры: Использование OPENXML'
         href: ../relational-databases/xml/examples-using-openxml.md
       - name: Определение метасвойств
         href: ../relational-databases/xml/specify-metaproperties-in-openxml.md
@@ -2280,7 +2280,7 @@ items:
     - name: API экземпляра
       href: ../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md
       items:
-      - name: Программа командной строки SqlLocalDB.exe
+      - name: 'Программа командной строки: SqlLocalDB.exe'
         href: ../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md
       - name: Заголовок и сведения о версии SQL Server Express LocalDB
         href: ../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md
@@ -2802,7 +2802,7 @@ items:
           href: ../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md
         - name: Выполнение взаимной проверки подлинности Kerberos
           href: ../relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md
-        - name: Как вставить строки в столбец Geography
+        - name: Руководство. Вставка строк в столбец Geography
           href: ../relational-databases/native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
         - name: Управление столбцами text и image — использование столбцов данных времени выполнения
           href: ../relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-columns.md
@@ -3982,12 +3982,6 @@ items:
       href: ../sql-server/maximum-capacity-specifications-for-sql-server.md
     - name: Ограничения вычислительной емкости для разных выпусков
       href: ../sql-server/compute-capacity-limits-by-edition-of-sql-server.md
-    - name: Программа улучшения качества программного обеспечения (CEIP)
-      href: ../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md
-    - name: Приложение к конфиденциальности
-      href: ../sql-server/sql-server-privacy.md
-    - name: Настройка SQL Server для отправки отзывов в корпорацию Майкрософт
-      href: ../sql-server/sql-server-customer-feedback.md
   - name: Заметки о выпуске
     items:
     - name: обратная совместимость
@@ -4017,6 +4011,16 @@ items:
       href: ../sql-server/install/local-language-versions-in-sql-server.md
     - name: Местоположение файлов
       href: ../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
+    - name: Использование и сбор данных диагностики
+      items:
+      - name: Приложение к конфиденциальности
+        href: ../sql-server/sql-server-privacy.md
+      - name: Настройка использования SQL Server и данных диагностики
+        href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
+      - name: Настройка использования средств и данных диагностики
+        href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server-tools.md
+      - name: Локальный аудит для SQL Server
+        href: ../sql-server/usage-and-diagnostic-data-in-local-audit.md
   - name: Установка SQL Server
     href: ../database-engine/install-windows/installation-for-sql-server.md
     items:
@@ -4113,8 +4117,6 @@ items:
       href: ../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md
     - name: Многосетевой компьютер
       href: ../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md
-    - name: Локальный аудит для сбора отзывов об использовании
-      href: ../database-engine/install-windows/local-audit-for-sql-server-usage-feedback-collection.md
     - name: Настройка экземпляров компонента Database Engine
       href: ../database-engine/configure-windows/configure-database-engine-instances-sql-server.md
     - name: Расположения по умолчанию для файлов данных
@@ -6493,12 +6495,12 @@ items:
           href: ../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md
         - name: Проверка параметра максимального числа рабочих потоков
           href: ../relational-databases/policy-based-management/verify-max-worker-threads-setting.md
-      - name: Учебник. Администрирование серверов с помощью управления на основе политик
+      - name: Руководство. Администрирование серверов с помощью управления на основе политик
         href: ../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md
         items:
         - name: Урок 1. Создание и применение политики, отключенной по умолчанию
           href: ../relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md
-        - name: Занятие 2. Создание и применение политики стандартов именования
+        - name: Урок 2. Создание и применение политики стандартов именования
           href: ../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
       - name: Справочник
         items:
@@ -7452,7 +7454,7 @@ items:
         items:
         - name: Соединение с репозиторием MDS
           href: ../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md
-      - name: Общие сведения Экспорт данных в Excel (надстройка MDS для Excel)
+      - name: Общие сведения. Экспорт данных в Excel (надстройка MDS для Excel)
         href: ../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md
         items:
         - name: Фильтрация данных перед экспортом
@@ -7468,7 +7470,7 @@ items:
           href: ../master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md
         - name: Обновление данных
           href: ../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md
-      - name: Общие сведения Импорт данных из Excel (надстройка MDS для Excel)
+      - name: Общие сведения. Импорт данных из Excel (надстройка MDS для Excel)
         href: ../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md
         items:
         - name: Импорт данных из Excel в службы Master Data Services
@@ -7574,7 +7576,7 @@ items:
           href: ../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md
         - name: Инициирование действия на основе значения атрибута
           href: ../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md
-    - name: Общие сведения Импорт данных из таблиц
+    - name: Общие сведения. Импорт данных из таблиц
       href: ../master-data-services/overview-importing-data-from-tables-master-data-services.md
       items:
       - name: Импорт данных из таблиц
@@ -7714,7 +7716,7 @@ items:
         href: ../master-data-services/create-a-collection-master-data-services.md
       - name: Добавление элементов в коллекцию
         href: ../master-data-services/add-members-to-a-collection-master-data-services.md
-    - name: Общие сведения Exporting Data
+    - name: Общие сведения. Exporting Data
       href: ../master-data-services/overview-exporting-data-master-data-services.md
       items:
       - name: Создание представления подписки для экспорта данных
@@ -8261,7 +8263,7 @@ items:
         items:
         - name: Урок 1. Основы перемещения в помощнике по настройке ядра СУБД
           href: ../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md
-        - name: Занятие 2. Применение помощника по настройке ядра СУБД
+        - name: Урок 2. Использование помощника по настройке ядра СУБД
           href: ../tools/dta/lesson-2-using-database-engine-tuning-advisor.md
         - name: Урок 3. Использование программы командной строки dta
           href: ../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md
@@ -8496,29 +8498,29 @@ items:
         href: ../ssdt/check-for-updates-dialog-box.md
       - name: Параметры проекта базы данных
         href: ../ssdt/database-project-settings.md
-      - name: Как просмотреть объекты из проекта базы данных SQL Server
+      - name: Руководство. просмотреть объекты из проекта базы данных SQL Server
         href: ../ssdt/how-to-browse-objects-in-a-sql-server-database-project.md
       - name: Окно операций Data Tools
         href: ../ssdt/data-tools-operations-window.md
       - name: Параметры редактора T-SQL
         href: ../ssdt/transact-sql-editor-options.md
-      - name: Как создать проект базы данных
+      - name: Руководство. создать проект базы данных
         href: ../ssdt/how-to-create-a-new-database-project.md
-      - name: Как использовать сравнение схем для сопоставления различных определений баз данных
+      - name: Руководство. использовать сравнение схем для сопоставления различных определений баз данных
         href: ../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md
-      - name: Как Сборка и развертывание в локальной базе данных
+      - name: Руководство. Сборка и развертывание в локальной базе данных
         href: ../ssdt/how-to-build-and-deploy-to-a-local-database.md
-      - name: Как использовать объекты Microsoft SQL Server 2012 в своем проекте
+      - name: Руководство. использовать объекты Microsoft SQL Server 2012 в своем проекте
         href: ../ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md
-      - name: Как работать с объектами баз данных CLR
+      - name: Руководство. работать с объектами баз данных CLR
         href: ../ssdt/how-to-work-with-clr-database-objects.md
-      - name: Как создать моментальный снимок проекта
+      - name: Руководство. создать моментальный снимок проекта
         href: ../ssdt/how-to-create-a-snapshot-of-a-project.md
-      - name: Как Изменение целевой платформы и публикация проекта базы данных
+      - name: Руководство. Изменение целевой платформы и публикация проекта базы данных
         href: ../ssdt/how-to-change-target-platform-and-publish-a-database-project.md
-      - name: Как Преобразование проектов баз данных Visual Studio 2010 в проекты баз данных SQL Server с изменением целевой платформы
+      - name: Руководство. Преобразование проектов баз данных Visual Studio 2010 в проекты баз данных SQL Server с изменением целевой платформы
         href: ../ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md
-      - name: Как задать скрипты, выполняемые до или после развертывания
+      - name: Руководство. задать скрипты, выполняемые до или после развертывания
         href: ../ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md
       - name: Разработка баз, ориентированная на проекты, с помощью программ командной строки
         href: ../ssdt/project-oriented-database-development-using-command-line-tools.md
@@ -8528,53 +8530,53 @@ items:
       - name: Разработка подключенной базы данных
         href: ../ssdt/connected-database-development.md
         items:
-        - name: Как Подключение к базе данных и просмотр существующих объектов
+        - name: Руководство. Подключение к базе данных и просмотр существующих объектов
           href: ../ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md
-        - name: Как создать объекты базы данных с помощью конструктора таблиц
+        - name: Руководство. создать объекты базы данных с помощью конструктора таблиц
           href: ../ssdt/how-to-create-database-objects-using-table-designer.md
-        - name: Как обновить подключенную базу данных с помощью Power Buffer
+        - name: Руководство. обновить подключенную базу данных с помощью Power Buffer
           href: ../ssdt/how-to-update-a-connected-database-with-power-buffer.md
         - name: Диалоговое окно "Фильтрация и сортировка"
           href: ../ssdt/filter-and-sort-dialog-box.md
-        - name: Как создать объекты базы данных с помощью запросов
+        - name: Руководство. создать объекты базы данных с помощью запросов
           href: ../ssdt/how-to-create-new-database-objects-using-queries.md
-        - name: Как изменить существующую таблицу с помощью запросов
+        - name: Руководство. изменить существующую таблицу с помощью запросов
           href: ../ssdt/how-to-edit-an-existing-table-using-queries.md
-        - name: Как Просмотр и изменение данных в таблице
+        - name: Руководство. Просмотр и изменение данных в таблице
           href: ../ssdt/how-to-view-and-edit-data-in-a-table.md
-        - name: Как Удаление объектов и разрешение зависимостей
+        - name: Руководство. Удаление объектов и разрешение зависимостей
           href: ../ssdt/how-to-delete-objects-and-resolve-dependencies.md
-        - name: Как клонировать существующую базу данных
+        - name: Руководство. клонировать существующую базу данных
           href: ../ssdt/how-to-clone-an-existing-database.md
         - name: Извлечение, публикация и регистрация DACPAC-файлов
           href: ../ssdt/extract-publish-and-register-dacpac-files.md
       - name: Сравнение и синхронизация данных из одной или нескольких таблиц с данными в эталонной базе данных
         href: ../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md
         items:
-        - name: Как Сравнение и синхронизация данных в двух базах данных
+        - name: Руководство. Сравнение и синхронизация данных в двух базах данных
           href: ../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md
-        - name: Как просмотреть различия данных
+        - name: Руководство. просмотреть различия данных
           href: ../ssdt/how-to-view-data-differences.md
         - name: Изменение и выполнение скриптов с помощью редактора T-SQL
           href: ../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md
-        - name: Как Формирование структуры и добавление фрагментов кода к скриптам T-SQL
+        - name: Руководство. Формирование структуры и добавление фрагментов кода к скриптам T-SQL
           href: ../ssdt/how-to-outline-and-add-snippets-to-transact-sql-script.md
-        - name: Как переходить между скриптами
+        - name: Руководство. переходить между скриптами
           href: ../ssdt/how-to-navigate-between-scripts.md
-        - name: Как Использование переименования и рефакторинга для внесения изменений в объекты базы данных
+        - name: Руководство. Использование переименования и рефакторинга для внесения изменений в объекты базы данных
           href: ../ssdt/how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects.md
-        - name: Как выполнить частичный запрос
+        - name: Руководство. выполнить частичный запрос
           href: ../ssdt/how-to-execute-a-partial-query.md
-        - name: Как выполнить отладку хранимой процедуры
+        - name: Руководство. выполнить отладку хранимой процедуры
           href: ../ssdt/how-to-debug-stored-procedures.md
         - name: Анализ производительности скрипта
           href: ../ssdt/analyze-script-performance.md
       - name: Управление таблицами и связями, а также исправление ошибок
         href: ../ssdt/manage-tables-relationships-and-fix-errors.md
         items:
-        - name: Как Использование конструктора таблиц для управления таблицами и связями
+        - name: Руководство. Использование конструктора таблиц для управления таблицами и связями
           href: ../ssdt/how-to-use-the-table-designer-to-manage-tables-and-relationships.md
-        - name: Как исправить ошибки
+        - name: Руководство. исправить ошибки
           href: ../ssdt/how-to-fix-errors.md
       - name: Проверка кода базы данных с помощью модульных тестов SQL Server
         href: ../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md
@@ -8592,19 +8594,19 @@ items:
             href: ../ssdt/using-test-conditions-in-sql-server-unit-tests.md
           - name: Использование операторов утверждений T-SQL в модульных тестах SQL Server
             href: ../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md
-          - name: Как создать тестовый проект для модульного тестирования базы данных SQL Server
+          - name: Руководство. создать тестовый проект для модульного тестирования базы данных SQL Server
             href: ../ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md
-          - name: Как создать пустой модульный тест SQL Server
+          - name: Руководство. создать пустой модульный тест SQL Server
             href: ../ssdt/how-to-create-an-empty-sql-server-unit-test.md
-          - name: Как Создание модульных тестов SQL Server для функций, триггеров и хранимых процедур
+          - name: Руководство. Создание модульных тестов SQL Server для функций, триггеров и хранимых процедур
             href: ../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md
-          - name: Как добавить условия теста в модульные тесты SQL Server
+          - name: Руководство. добавить условия теста в модульные тесты SQL Server
             href: ../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md
-          - name: Как открыть модульный тест SQL Server для изменения
+          - name: Руководство. открыть модульный тест SQL Server для изменения
             href: ../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md
-          - name: Как написать модульный тест SQL Server, который выполняется в области действия одной транзакции
+          - name: Руководство. написать модульный тест SQL Server, который выполняется в области действия одной транзакции
             href: ../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md
-          - name: Как настроить выполнение модульного теста SQL Server
+          - name: Руководство. настроить выполнение модульного теста SQL Server
             href: ../ssdt/how-to-configure-sql-server-unit-test-execution.md
           - name: Общие сведения о строках подключения и разрешениях
             href: ../ssdt/overview-of-connection-strings-and-permissions.md
@@ -8613,11 +8615,11 @@ items:
         - name: Выполнение модульных тестов SQL Server
           href: ../ssdt/running-sql-server-unit-tests.md
           items:
-          - name: Как выполнить отладку объектов базы данных
+          - name: Руководство. выполнить отладку объектов базы данных
             href: ../ssdt/how-to-debug-database-objects.md
-          - name: Как Запуск модульных тестов SQL Server из сборки Team Foundation
+          - name: Руководство. Запуск модульных тестов SQL Server из сборки Team Foundation
             href: ../ssdt/how-to-run-sql-server-unit-tests-from-team-foundation-build.md
-          - name: Как выполнить модульные тесты SQL Server
+          - name: Руководство. выполнить модульные тесты SQL Server
             href: ../ssdt/how-to-run-sql-server-unit-tests.md
           - name: Интерпретация результатов модульного теста SQL Server
             href: ../ssdt/interpreting-sql-server-unit-test-results.md
@@ -8626,11 +8628,11 @@ items:
         - name: Пользовательские условия теста для модульных тестов SQL Server
           href: ../ssdt/custom-test-conditions-for-sql-server-unit-tests.md
           items:
-          - name: Как создать условия теста для конструктора модульных тестов SQL Server
+          - name: Руководство. создать условия теста для конструктора модульных тестов SQL Server
             href: ../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md
           - name: Пошаговое руководство. использовать пользовательское условие теста для проверки результатов выполнения хранимой процедуры
             href: ../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md
-          - name: Как обновить пользовательское условие теста Visual Studio 2010 с предыдущего выпуска до SQL Server Data Tools
+          - name: Руководство. обновить пользовательское условие теста Visual Studio 2010 с предыдущего выпуска до SQL Server Data Tools
             href: ../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md
         - name: Устранение неполадок модульных тестов базы данных SQL Server
           href: ../ssdt/troubleshooting-sql-server-database-unit-testing-issues.md
@@ -8651,7 +8653,7 @@ items:
           items:
           - name: Пошаговое руководство по созданию сборки настраиваемого правила анализа статического кода для SQL Server
             href: ../ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md
-        - name: Как Установка и администрирование расширений компонентов
+        - name: Руководство. Установка и администрирование расширений компонентов
           href: ../ssdt/how-to-install-and-manage-feature-extensions.md
       - name: Разрешения, необходимые для запуска SQL Server Data Tools
         href: ../ssdt/required-permissions-for-sql-server-data-tools.md
@@ -8671,7 +8673,7 @@ items:
         href: ../ssms/install-other-languages.md
       - name: Политика поддержки SSMS
         href: ../ssms/support-policy.md
-    - name: 'Учебники: SQL Server Management Studio'
+    - name: Руководства. SQL Server Management Studio
       href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
       items:
       - name: Подключение и отправка запроса к SQL Server с помощью SQL Server Management Studio
@@ -9973,9 +9975,9 @@ items:
     - name: Приступая к работе
       href: ../relational-databases/tutorial-getting-started-with-the-database-engine.md
       items:
-      - name: Урок 1. Соединение с компонентом Database Engine
+      - name: Урок 1. Подключение к ядру СУБД
         href: ../relational-databases/lesson-1-connecting-to-the-database-engine.md
-      - name: Занятие 2. Соединение с другого компьютера
+      - name: Урок 2. Подключение с другого компьютера
         href: ../relational-databases/lesson-2-connecting-from-another-computer.md
     - name: Резервное копирование и восстановление в службе хранилища BLOB-объектов Azure
       href: ../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
@@ -9990,7 +9992,7 @@ items:
     items:
     - name: Урок 1. Создание объектов базы данных и запросов к ним
       href: ../t-sql/lesson-1-creating-database-objects.md
-    - name: Занятие 2. Настройка разрешений для объектов базы данных
+    - name: Урок 2. Настройка разрешений для объектов базы данных
       href: ../t-sql/lesson-2-configuring-permissions-on-database-objects.md
     - name: Урок 3. Удаление объектов базы данных
       href: ../t-sql/lesson-3-deleting-database-objects.md
@@ -10088,8 +10090,8 @@ items:
           href: ../linux/sql-server-linux-configure-msdtc-docker.md
       - name: Настройка постоянной памяти PMEM
         href: ../linux/sql-server-linux-configure-pmem.md
-      - name: Отзывы пользователей
-        href: ../linux/sql-server-linux-customer-feedback.md
+      - name: Настройка отправки данных о состоянии и использовании в корпорацию Майкрософт
+        href: ../linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
     - name: Разработка
       href: ../linux/sql-server-linux-develop-overview.md
       items:
@@ -10198,10 +10200,10 @@ items:
         href: ../linux/sql-server-linux-security-get-started.md
       - name: Проверка подлинности Active Directory
         href: ../linux/sql-server-linux-active-directory-auth-overview.md
+      - name: Присоединение к домену AD
+        href: ../linux/sql-server-linux-active-directory-join-domain.md
       - name: Шифрование подключений
         href: ../linux/sql-server-linux-encrypted-connections.md
-      - name: Проверка подлинности с помощью Active Directory, представляемая сторонними разработчиками
-        href: ../linux/sql-server-linux-active-directory-third-party-providers.md
     - name: Производительность
       items:
       - name: Рекомендации
@@ -11151,7 +11153,7 @@ items:
     - name: Категория событий Progress Report
       href: ../relational-databases/event-classes/progress-report-event-category.md
       items:
-      - name: 'Класс событий Progress Report: класс события Online Index Operation'
+      - name: 'Progress Report: класс события Online Index Operation'
         href: ../relational-databases/event-classes/progress-report-online-index-operation-event-class.md
     - name: Категория событий Query Notifications
       href: ../relational-databases/event-classes/query-notifications-event-category.md
@@ -11314,25 +11316,25 @@ items:
         href: ../relational-databases/event-classes/dtctransaction-event-class.md
       - name: SQLTransaction, класс событий
         href: ../relational-databases/event-classes/sqltransaction-event-class.md
-      - name: 'События класса TM: Класс события Begin Tran Completed'
+      - name: TM. Класс события Begin Tran Completed
         href: ../relational-databases/event-classes/tm-begin-tran-completed-event-class.md
-      - name: 'События класса TM: Класс события Begin Tran Starting'
+      - name: TM. Класс события Begin Tran Starting
         href: ../relational-databases/event-classes/tm-begin-tran-starting-event-class.md
-      - name: 'События класса TM: Класс события Commit Tran Completed'
+      - name: TM. Класс события Commit Tran Completed
         href: ../relational-databases/event-classes/tm-commit-tran-completed-event-class.md
-      - name: 'События класса TM: Класс события Commit Tran Starting'
+      - name: TM. Класс события Commit Tran Starting
         href: ../relational-databases/event-classes/tm-commit-tran-starting-event-class.md
-      - name: 'События класса TM: Класс события Promote Tran Completed'
+      - name: TM. Класс события Promote Tran Completed
         href: ../relational-databases/event-classes/tm-promote-tran-completed-event-class.md
-      - name: 'События класса TM: Класс события Promote Tran Starting'
+      - name: TM. Класс события Promote Tran Starting
         href: ../relational-databases/event-classes/tm-promote-tran-starting-event-class.md
-      - name: 'События класса TM: Класс события Rollback Tran Completed'
+      - name: TM. Класс события Rollback Tran Completed
         href: ../relational-databases/event-classes/tm-rollback-tran-completed-event-class.md
-      - name: 'События класса TM: Класс события Rollback Tran Starting'
+      - name: TM. Класс события Rollback Tran Starting
         href: ../relational-databases/event-classes/tm-rollback-tran-starting-event-class.md
-      - name: 'События класса TM: Класс события Save Tran Completed'
+      - name: TM. Класс события Save Tran Completed
         href: ../relational-databases/event-classes/tm-save-tran-completed-event-class.md
-      - name: 'События класса TM: Класс события Save Tran Starting'
+      - name: TM. Класс события Save Tran Starting
         href: ../relational-databases/event-classes/tm-save-tran-starting-event-class.md
       - name: TransactionLog, класс событий
         href: ../relational-databases/event-classes/transactionlog-event-class.md
@@ -17273,9 +17275,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Поддержка пространств имен в XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: bb8074720b48ca68679d43e12a04e868e6469ea6
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: ee53aa861524c5bcf117fdaef3d857cf62a54fc7
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042493"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242362"
