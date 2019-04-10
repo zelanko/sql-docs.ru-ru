@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: b5e86d63ebfc5f842f2df8c090243fb5f311915b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9fd3ee0706e30d6a7077f22488a1f64084b5ae8a
+ms.sourcegitcommit: 258b4aa0d431537323c5ab1307f599615c29df53
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290260"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58797014"
 ---
 # <a name="sql-server-2017-release-notes"></a>Заметки о выпуске SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,8 @@ ms.locfileid: "58290260"
 ### <a name="master-data-services-mds"></a>Службы Master Data Services (MDS)
 - **Проблема и последствия для клиентов:**  когда на странице разрешений пользователя предоставляется разрешение для корневого уровня в представлении сущностей в виде дерева, отображается ошибка `"The model permission cannot be saved. The object guid is not valid"`.
 
-- **Решения.** 
+- **Решение:** 
   - Предоставьте разрешение для подузлов в представлении в виде дерева, а не для корневого уровня.
-  - или диспетчер конфигурации служб
-  - Запустите скрипт, описанный в блоге команды разработчиков MDS, посвященном [ошибке при применении разрешения на уровне сущности](https://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx).
 
 ### <a name="analysis-services"></a>Службы Analysis Services
 - **Проблема и последствия для клиентов**: соединители данных для приведенных ниже источников еще недоступны для табличных моделей на уровне совместимости 1400.
