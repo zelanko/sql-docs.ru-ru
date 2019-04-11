@@ -1,7 +1,7 @@
 ---
-title: Использование встроенной проверки подлинности | Документация Майкрософт
+title: Использование встроенной проверки подлинности | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ffaf0e89e1fdbd0a1722ad038ad9e360decf237
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 834ec3118685da8059999b3986af3edb39dc3e58
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305892"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042253"
 ---
 # <a name="using-integrated-authentication"></a>Использование встроенной проверки подлинности
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "58305892"
 Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
 ```
   
-При подключении с DSN, можно также добавить **Trusted_Connection = yes** в запись имени DSN в `odbc.ini`.
+При подключении с использованием имени DSN можно также добавить **Trusted_Connection=yes** в запись имени DSN в файле `odbc.ini`.
   
-`-E` Параметр `sqlcmd` и `-T` параметр `bcp` также может использоваться для указания встроенной проверки подлинности; см. в разделе [соединение с помощью **sqlcmd** ](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md) и [ Соединение с помощью **bcp** ](../../../connect/odbc/linux-mac/connecting-with-bcp.md) Дополнительные сведения.
+Задать встроенную проверку подлинности можно также с помощью параметра `-E` команды `sqlcmd` и параметра `-T` команды `bcp`. Дополнительные сведения см. в статьях [Соединение с помощью **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md) и [Соединение с помощью **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).
 
 Убедитесь в том, что субъект клиента, который будет соединяться с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], уже прошел проверку подлинности с помощью Kerberos KDC.
   
 **ServerSPN** и **FailoverPartnerSPN** не поддерживаются.  
   
-## <a name="deploying-a-linux-or-macos-odbc-driver-application-designed-to-run-as-a-service"></a>Развертывание Linux или macOS, драйвер ODBC приложение разработано для выполнения в качестве службы
+## <a name="deploying-a-linux-or-macos-odbc-driver-application-designed-to-run-as-a-service"></a>Развертывание приложения драйвера ODBC для Linux или macOS, предназначенного для запуска в качестве службы
 
 Системный администратор может развернуть приложение для запуска в качестве службы, которое использует проверку подлинности Kerberos для подключения к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -55,7 +55,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 -   Убедитесь в том, что вход в систему был выполнен с помощью PAM Kerberos (подключаемый модуль проверки подлинности).
 
-Когда приложение запускается в виде службы, обновляйте учетные данные Kerberos, чтобы обеспечить постоянную доступность службы, так как учетные данные намеренно имеют срок действия. Драйвер ODBC не обновляйте учетные данные. Убедитесь в наличии `cron` заданий или скрипт, который периодически выполняют обновление учетных данных до их истечения срока действия. Чтобы избежать запроса пароля для каждого обновления, можно использовать файла keytab.  
+Когда приложение запускается в виде службы, обновляйте учетные данные Kerberos, чтобы обеспечить постоянную доступность службы, так как учетные данные намеренно имеют срок действия. Драйвер ODBC не обновляет учетные данные. Убедитесь в том, что имеется задание `cron` или скрипт, которые периодически выполняют обновление учетных данных до истечения срока их действия. Чтобы избежать запроса пароля для каждого обновления, можно использовать файл keytab.  
   
 Статья[Конфигурация и использование Kerberos](https://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) содержит сведения о способах применения Kerberos для служб в Linux.
   
@@ -73,7 +73,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
 
 ## <a name="using-active-directory-to-manage-user-identities"></a>Использование Active Directory для управления удостоверениями пользователей
 
-Администратору системы приложений не требуется управлять отдельными наборами учетных данных входа для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Можно настроить Active Directory в качестве центра распространения ключей (KDC) для встроенной проверки подлинности. См. в разделе [Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos) Дополнительные сведения.
+Администратору системы приложений не требуется управлять отдельными наборами учетных данных входа для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Можно настроить Active Directory в качестве центра распространения ключей (KDC) для встроенной проверки подлинности. Дополнительные сведения см. в статье [Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos).
 
 ## <a name="using-linked-server-and-distributed-queries"></a>Использование связанного сервера и распределенных запросов
 
@@ -83,17 +83,17 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 -   Сервер приложений осуществляет проверку подлинности в качестве другой базы данных и подключается к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] проходит проверку подлинности как пользователь базы данных в другой базе данных ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выполняет проверку подлинности как пользователь базы данных для другой базы данных ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
 После настройки встроенной проверки подлинности учетные данные передаются связанному серверу.  
   
 ## <a name="integrated-authentication-and-sqlcmd"></a>Встроенная проверка подлинности и sqlcmd
-Чтобы получить доступ к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью встроенной проверки подлинности, используйте параметр `-E` программы `sqlcmd`. Убедитесь, что учетная запись, которая выполняет `sqlcmd` связан с участником клиента Kerberos по умолчанию.
+Чтобы получить доступ к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью встроенной проверки подлинности, используйте параметр `-E` программы `sqlcmd`. Убедитесь в том, что учетная запись, используемая для запуска `sqlcmd`, сопоставлена с субъектом клиента Kerberos по умолчанию.
 
 ## <a name="integrated-authentication-and-bcp"></a>Встроенная проверка подлинности и bcp
-Чтобы получить доступ к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью встроенной проверки подлинности, используйте параметр `-T` программы `bcp`. Убедитесь, что учетная запись, которая выполняет `bcp` связан с участником клиента Kerberos по умолчанию. 
+Чтобы получить доступ к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью встроенной проверки подлинности, используйте параметр `-T` программы `bcp`. Убедитесь в том, что учетная запись, используемая для запуска `bcp`, сопоставлена с субъектом клиента Kerberos по умолчанию. 
   
-Это ошибка для использования `-T` с `-U` или `-P` параметр.
+Использование параметра `-T` с параметром `-U` или `-P` является ошибкой.
   
 ## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversion-mdmd"></a>Поддерживаемый синтаксис для имени субъекта-службы, зарегистрированного [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
@@ -105,7 +105,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 ## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>Проверка подлинности компьютера Linux или macOS с помощью Active Directory
 
-Чтобы настроить протокол Kerberos, введите данные в `krb5.conf` файл. `krb5.conf` в `/etc/` , но можно сослаться на другой файл, например с помощью синтаксиса `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. Ниже представлен пример файла `krb5.conf`.  
+Чтобы настроить Kerberos, введите данные в файле `krb5.conf`. `krb5.conf` находится в папке `/etc/`, но можно сослаться на другой файл, используя такой синтаксис, как `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. Ниже представлен пример файла `krb5.conf`.  
   
 ```  
 [libdefaults]  
@@ -120,17 +120,17 @@ forwardable = yes
 .zzzz.corp.contoso.com = ZZZZ.CORP.CONTOSO.COM  
 ```  
   
-Если компьютер Linux или macOS настроен для использования конфигурации протокола DHCP (Dynamic Host) с Windows DHCP-сервера на DNS-серверы для использования, можно использовать **dns_lookup_kdc = true**. Теперь можно использовать Kerberos для входа в вашем домене, выполнив команду `kinit alias@YYYY.CORP.CONTOSO.COM`. Параметры, передаваемые `kinit` чувствительны к регистру и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] компьютер, настроенный для нахождения в домене должен иметь этот пользователь `alias@YYYY.CORP.CONTOSO.COM` добавлены для имени входа. Теперь вы можете использовать доверительные соединения (**Trusted_Connection=YES** в строке подключения, **bcp -T** или **sqlcmd -E**).  
+Если на компьютере Linux или macOS настроено использование протокола DHCP, причем DHCP-сервер Windows предоставляет DNS-серверы для использования, можно использовать **dns_lookup_kdc=true**. Теперь можно использовать Kerberos для входа в домен с помощью команды `kinit alias@YYYY.CORP.CONTOSO.COM`. В параметрах, передаваемых в `kinit`, учитывается регистр, а компьютер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], настроенный для нахождения в домене, должен использовать этот псевдоним пользователя `alias@YYYY.CORP.CONTOSO.COM` для входа в систему. Теперь вы можете использовать доверительные соединения (**Trusted_Connection=YES** в строке подключения, **bcp -T** или **sqlcmd -E**).  
   
-Время на компьютере Linux или macOS и время на Центр распространения ключей Kerberos (KDC), необходимо закрыть. Убедитесь в том, что системное время задано правильно, например с помощью протокола NTP.  
+Время на компьютере Linux или macOS и время в центре распространения ключей Kerberos (KDC) не должны слишком сильно различаться. Убедитесь в том, что системное время задано правильно, например с помощью протокола NTP.  
 
 При сбое проверки подлинности Kerberos драйвер ODBC в Linux или macOS не использует проверку подлинности NTLM.  
 
-Дополнительные сведения о проверке подлинности компьютеров Linux или macOS с помощью Active Directory, см. в разделе [проверки подлинности клиентов Linux с помощью Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) и [советы и рекомендации по интеграции OS X с Active Directory](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Дополнительные сведения о настройке Kerberos см. в разделе [MIT Kerberos документации](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
+Дополнительные сведения о проверке подлинности компьютеров Linux или macOS с помощью Active Directory см. в статьях [Проверка подлинности клиентов Linux с помощью Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) и [Рекомендации по интеграции OS X с Active Directory](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Дополнительные сведения о настройке Kerberos см. в [документации MIT Kerberos](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
 ## <a name="see-also"></a>См. также:  
 [Указания по программированию](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
-[Заметки о выпуске](../../../connect/odbc/linux-mac/release-notes.md)
+[Заметки о выпуске](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
 
 [Использование Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)

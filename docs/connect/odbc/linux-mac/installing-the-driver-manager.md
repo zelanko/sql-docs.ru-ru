@@ -1,7 +1,7 @@
 ---
 title: Установка диспетчера драйверов (драйвер ODBC для SQL Server) | Документация Майкрософт
 ms.custom: ''
-ms.date: 02/14/2018
+ms.date: 02/15/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78eaf77064fb96c024c548c320ca9feeec10ce02
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 63668ecb4ece28c27948ec3cca7991039090ec26
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305812"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041923"
 ---
 # <a name="installing-the-driver-manager"></a>Установка диспетчера драйверов
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "58305812"
   
 1.  Убедитесь, что у вас есть корневое разрешение.  
   
-2.  Перейдите в каталог, куда программа скачивания драйвера ODBC Driver [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поместила файл с именем `msodbcsql-11.0.2270.0.tar.gz`. Убедитесь в наличии файла \*.TAR.GZ, который соответствует вашей версии Linux. Чтобы извлечь файлы, выполните следующую команду: **tar xvzf msodbcsql-11.0.2270.0.tar.gz**.  
+2.  Перейдите в каталог, куда программа скачивания драйвера [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC Driver поместила файл с именем `msodbcsql-11.0.2270.0.tar.gz`. Убедитесь в наличии файла \*.TAR.GZ, который соответствует вашей версии Linux. Чтобы извлечь файлы, выполните следующую команду: **tar xvzf msodbcsql-11.0.2270.0.tar.gz**.  
 
 3.  Перейдите в каталог `msodbcsql-11.0.2270.0`, где должен находиться файл `build_dm.sh`. Можно запустить `build_dm.sh` для установки диспетчера драйверов unixODBC.
 
@@ -52,7 +52,7 @@ ms.locfileid: "58305812"
   
 5.  Когда все готово к установке, а ваш компьютер имеет доступ к внешнему сайту по протоколу FTP, выполните следующую команду: **./build_dm.sh**.
 
-Если компьютер не может получить доступ к внешнему сайту по протоколу FTP, получите `unixODBC-2.3.0.tar.gz`. Вы можете получить `unixODBC-2.3.0.tar.gz` из [ http://www.unixodbc.org ](http://www.unixodbc.org/). Щелкните ссылку **Скачать** в левой части страницы, чтобы перейти на страницу скачивания. Щелкните соответствующую ссылку для скачивания unixODBC-2.3.0 (не unixODBC-2.3.1). В этом выпуске [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версия UnixODBC-2.3.1 не поддерживается. Выполните следующую команду, чтобы начать установки диспетчера драйверов unixODBC: **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**.  
+Если компьютер не может получить доступ к внешнему сайту по протоколу FTP, получите `unixODBC-2.3.0.tar.gz`. Файл `unixODBC-2.3.0.tar.gz` можно получить на сайте [http://www.unixodbc.org](http://www.unixodbc.org/). Щелкните ссылку **Скачать** в левой части страницы, чтобы перейти на страницу скачивания. Щелкните соответствующую ссылку для скачивания unixODBC-2.3.0 (не unixODBC-2.3.1). В этом выпуске [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версия UnixODBC-2.3.1 не поддерживается. Выполните следующую команду, чтобы начать установки диспетчера драйверов unixODBC: **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**.  
 
 6.  Введите **YES**, чтобы приступить к распаковке файлов. Эта часть процесса может занять около 5 минут.  
 
@@ -85,8 +85,8 @@ ms.locfileid: "58305812"
 Теперь все готово для установки драйвера. Дополнительные сведения см. в разделе [Установка Microsoft ODBC Driver for SQL Server в Linux и macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).  
   
 ## <a name="see-also"></a>См. также:
-[Установка Microsoft ODBC Driver for SQL Server в Linux и macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+[Установка Microsoft ODBC Driver for SQL Server на Linux и macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
 [Известные проблемы в данной версии драйвера](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
-[Заметки о выпуске](../../../connect/odbc/linux-mac/release-notes.md)
+[Заметки о выпуске](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
