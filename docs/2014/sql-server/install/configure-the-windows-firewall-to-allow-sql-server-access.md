@@ -23,12 +23,12 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5d0e1d1528d9ba2f85867aa09b7314f4030dfcd9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 336cdd3d1b0de43a08cc4ea69dd072e5d0e09fe5
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357655"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860715"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
   Системы брандмауэров предотвращают несанкционированный доступ к ресурсам компьютера. Если брандмауэр включен, но настроен неправильно, попытка соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может оказаться заблокированной.  
@@ -40,11 +40,11 @@ ms.locfileid: "53357655"
   
  Пользователи, хорошо знакомые с элементом **Брандмауэр Windows** на панели управления и оснасткой "Брандмауэр Windows в режиме повышенной безопасности" консоли управления (MMC) и умеющие настраивать параметры брандмауэра, могут перейти непосредственно к разделам, приведенным в списке ниже.  
   
--   [Настройка брандмауэра Windows для доступа к ядру СУБД](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
+-   [Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
 -   [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../../2014/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [настроить брандмауэр для доступа к серверу отчетов](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
+-   [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
 
   
@@ -121,7 +121,7 @@ ms.locfileid: "53357655"
   
     -   [Использование средства Netsh.exe и параметров командной строки](https://support.microsoft.com/kb/242468)  
   
-    -   [Использование контекста netsh advfirewall firewall вместо контекста netsh firewall для управления работой брандмауэра Windows в операционной системе Windows Server 2008 или Windows Vista](https://support.microsoft.com/kb/947709)  
+    -   [Использование контекста «netsh advfirewall firewall» вместо контекста «netsh firewall» для управления работой брандмауэра Windows в Windows Server 2008 и Windows Vista](https://support.microsoft.com/kb/947709)  
   
     -   [Команда «netsh firewall» с параметром «profile=all» не настраивает открытый профиль на компьютере под управлением Windows Vista](https://support.microsoft.com/kb/947213)  
   
@@ -143,7 +143,7 @@ ms.locfileid: "53357655"
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP-порт 4022. Чтобы проверить используемый порт, выполните следующий запрос:<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|Для компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]нет порта по умолчанию, но эта конфигурация принята в электронной документации для использования в примерах.|  
 |Зеркальное отображение базы данных|Порт, выбранный администратором. Чтобы определить порт, выполните следующий запрос.<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|Для зеркального отображения базы данных нет порта по умолчанию, однако в примерах электронной документации используется TCP-порт 7022. Очень важно избегать прерывания используемой конечной точки зеркального отображения, особенно в режиме высокой безопасности с автоматической отработкой отказа. Конфигурация брандмауэра должна избегать прерывания кворума. Дополнительные сведения см. в разделе [Указание сетевого адреса сервера (зеркальное отображение базы данных)](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).|  
 |Репликация|Соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для репликации используют порты, которые обычно использует компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] (TCP-порт 1433 для экземпляра по умолчанию и т. д.)<br /><br /> Веб-синхронизация и доступ через FTP/UNC к моментальному снимку репликации потребуют открытия в брандмауэре других портов. Передачу начальных данных и схемы из одного места в другое репликация осуществляет по протоколу FTP (TCP-порт 21) либо с помощью синхронизации через HTTP (TCP-порт 80) или общего доступа к файлам. Для общего доступа к файлам используются UDP-порты 137 и 138 и TCP-порт 139 (если используется NetBIOS). Совместное использование файлов использует TCP-порт 445.|Для синхронизации по протоколу HTTP в репликации используется конечная точка IIS (порты которой являются настраиваемыми, но порт 80 применяется по умолчанию), однако процесс IIS подключается к серверу базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через стандартные порты (1433 для экземпляра по умолчанию).<br /><br /> При веб-синхронизации через FTP-порт передача данных выполняется между службами IIS и издателем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а не между подписчиком и службами IIS.|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] отладчик|TCP-порт 135<br /><br /> См. раздел [Особые замечания относительно порта 135](#BKMK_port_135)<br /><br /> Также может потребоваться исключение [IPsec](#BKMK_IPsec) .|При использовании среды [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]на [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] главном компьютере в список исключений необходимо также добавить программу **Devenv.exe** и открыть TCP-порт 135.<br /><br /> При использовании среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]на [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] главном компьютере необходимо также добавить в список исключений программу **ssms.exe** и открыть TCP-порт 135. Дополнительные сведения см. в разделе [Настройка отладчика Transact-SQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] отладчик|TCP-порт 135<br /><br /> См. раздел [Особые замечания относительно порта 135](#BKMK_port_135)<br /><br /> Также может потребоваться исключение [IPsec](#BKMK_additional_ports) .|При использовании среды [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]на [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] главном компьютере в список исключений необходимо также добавить программу **Devenv.exe** и открыть TCP-порт 135.<br /><br /> При использовании среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]на [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] главном компьютере необходимо также добавить в список исключений программу **ssms.exe** и открыть TCP-порт 135. Дополнительные сведения см. в разделе [Настройка отладчика Transact-SQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).|  
   
  Пошаговые инструкции по настройке брандмауэра Windows для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]см. в разделе [Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
@@ -324,5 +324,3 @@ ms.locfileid: "53357655"
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о службе и требования к сетевым портам в системе Windows Server](https://support.microsoft.com/kb/832017)  
-  
-  
