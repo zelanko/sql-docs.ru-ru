@@ -3,17 +3,17 @@ title: 'Краткое руководство по Python основные «Hel
 description: Краткое руководство по скрипт Python в SQL Server. Основы вызова скрипта Python, с помощью системной хранимой процедуры sp_execute_external_script в упражнении hello world.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/04/2019
+ms.date: 04/10/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f5e93ce5261d79acf5bf5a7419992c81c872d680
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 6d8da3ce90e915344f2380d4cd5cc866db6715ef
+ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042223"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "59476639"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>Краткое руководство. Скрипт Python «Hello world» в SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "59042223"
     b = 2
     c = a/b
     d = a*b
-    print(c(c, d))
+    print(c, d)
     '
     ```
 

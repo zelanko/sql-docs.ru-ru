@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: efd71653e723344e9175d9ab1529fafd610901df
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 4c1b433ae2023f544073e285cca9594c980dd83f
+ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685432"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "59476720"
 ---
 # <a name="analyze-in-excel"></a>Анализ в Excel
 
@@ -33,7 +33,7 @@ ms.locfileid: "57685432"
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>Просмотр с помощью перспектив «По умолчанию» и «Продажи через Интернет»  
 
-В этих первых задачах вы просмотрите модель как с помощью перспективы по умолчанию, которая включает все объекты модели, а также с помощью перспективы Internet Sales ранее. Перспектива «Продажи через Интернет» исключает объект таблицы «Заказчик».  
+В этих первых задачах вы просмотрите модель как с помощью перспективы по умолчанию, которая включает все объекты модели, и с помощью перспективы Internet Sales, созданной ранее. Перспектива «Продажи через Интернет» исключает объект таблицы «Заказчик».  
   
 #### <a name="to-browse-by-using-the-default-perspective"></a>Просмотр с помощью перспективы по умолчанию  
   
