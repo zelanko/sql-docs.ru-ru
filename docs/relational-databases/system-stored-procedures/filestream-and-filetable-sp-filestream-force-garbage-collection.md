@@ -19,12 +19,12 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e95110bdbbfbe0f5ca6ff453045cc4f759163036
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: c8f202dd4f383d1ed2186e589b275afc0049fb50
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973683"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542214"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,19 +37,20 @@ ms.locfileid: "57973683"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-sp_filestream_force_garbage_collection  
-    [ @dbname = ]  'database_name',  
-    [ @filename = ] 'logical_file_name' ]  
+sp_filestream_force_garbage_collection
+    [ @dbname = ]  'database_name'
+    [ , [ @filename = ] 'logical_file_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **@dbname** = *database_name* обозначает имя базы данных под управлением сборщик мусора.  
+ `[ @dbname = ]  'database_name'`  
+ Обозначает имя базы данных, в которой будет запущен сборщик мусора.  
   
 > [!NOTE]  
->  *DBName* — **sysname**. Если он не указан, предполагается текущая база данных.  
+> `@dbname` — **sysname**. Если он не указан, предполагается текущая база данных.  
   
- **@filename** = *logical_file_name*  
- Обозначает логическое имя контейнера FILESTREAM, в котором будет запущен сборщик мусора. **@filename** является необязательным. Если логическое имя файла не указан, сборщик мусора очищает все контейнеры FILESTREAM в указанной базе данных.  
+ `[ @filename = ] 'logical_file_name'`  
+ Обозначает логическое имя контейнера FILESTREAM, в котором будет запущен сборщик мусора. Аргумент `@filename` является необязательным. Если логическое имя файла не указан, сборщик мусора очищает все контейнеры FILESTREAM в указанной базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
   

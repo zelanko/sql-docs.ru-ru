@@ -11,18 +11,18 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: f45f667dc85ff3069d55fa3badb7c5c7f82f5929
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 8b7f256aec6fc01500f5c98709086a69815fd6ef
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566633"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516520"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Настройка образов контейнеров SQL Server в Docker
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этой статье объясняется, как настроить и использовать [образ контейнера mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) с помощью Docker. Этот образ содержит SQL Server, работающий в системе Linux, основанной на Ubuntu 16.04. Он может использоваться с Dосker Engine 1.8+ на Linux или Docker для Mac или Windows.
+В этой статье объясняется, как настроить и использовать [образ контейнера mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) с помощью Docker. Этот образ содержит SQL Server, работающий в системе Linux, основанной на Ubuntu 16.04. Он может использоваться с Dосker Engine 1.8+ на Linux или Docker для Mac или Windows.
 
 > [!NOTE]
 > Эта статья посвящена специально с использованием образа mssql-server-linux. Образ Windows не рассматривается, но Дополнительные сведения о нем на [странице Docker Hub mssql-server-windows](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
@@ -411,7 +411,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 
 Существуют сценарии, где может потребоваться использовать последний образ контейнера SQL Server. Для запуска определенного образа контейнера SQL Server, следуйте инструкциям ниже:
 
-1. Определить Docker **тега** к выпуску, вы хотите использовать. Чтобы просмотреть доступные теги, см. в разделе [соответствующая страница концентратора Docker mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
+1. Определить Docker **тега** к выпуску, вы хотите использовать. Чтобы просмотреть доступные теги, см. в разделе [соответствующая страница концентратора Docker mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server).
 
 2. Получите образ контейнера SQL Server с тегом. Например, чтобы извлечь образ RC1, замените `<image_tag>` в следующей команде с `rc1`.
 

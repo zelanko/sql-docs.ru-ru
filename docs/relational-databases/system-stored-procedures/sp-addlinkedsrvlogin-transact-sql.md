@@ -18,12 +18,12 @@ ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 51bc927dc252eb700825dac6e865e8932586cd07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c34d7f326c10ceebb3ee3b97c72b583e13a78ff5
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838112"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542194"
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,30 +35,29 @@ ms.locfileid: "47838112"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'   
-     [ , [ @useself = ] 'TRUE' | 'FALSE' | NULL ]   
+     [ , [ @useself = ] { 'TRUE' | 'FALSE' | NULL } ]   
      [ , [ @locallogin = ] 'locallogin' ]   
      [ , [ @rmtuser = ] 'rmtuser' ]   
      [ , [ @rmtpassword = ] 'rmtpassword' ]   
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @rmtsrvname **=** ] **"***серверу rmtsrvname***"**  
+ `[ @rmtsrvname = ] 'rmtsrvname'`  
  Имя связанного сервера, к которому применяется сопоставление имен входа. *серверу rmtsrvname* — **sysname**, не имеет значения по умолчанию.  
   
- [ @useself **=** ] **"** TRUE **"** | «FALSE» | «NULL»  
+ `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
  Определяет, следует ли подключиться к *серверу rmtsrvname* с олицетворением локального имени входа или явной отправки имени входа и пароля. Тип данных является **varchar (** 8 **)**, значение по умолчанию TRUE.  
   
  Значение TRUE указывает, что имена входа используются собственные учетные данные для подключения к *серверу rmtsrvname*, с помощью *rmtuser* и *rmtpassword* пропуская аргументы. Значение FALSE указывает, что *rmtuser* и *rmtpassword* аргументы используются для подключения к *серверу rmtsrvname* для указанного *locallogin* . Если *rmtuser* и *rmtpassword* , также задано значение NULL, без имени входа или пароль используется для подключения к связанному серверу.  
   
- [ @locallogin **=** ] **"***locallogin***"**  
+ `[ @locallogin = ] 'locallogin'`  
  Имя входа на локальный сервер. *locallogin* — **sysname**, значение по умолчанию NULL. Значение NULL указывает, что данная запись применяется для всех локальных имен входа, которые подключаются к *серверу rmtsrvname*. Если значение не NULL, *locallogin* может быть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа или имя входа Windows. Имени входа Windows должен быть предоставлен либо прямой доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо доступ через членство в группе Windows, обладающей нужными правами доступа.  
   
- [ @rmtuser **=** ] **"***rmtuser***"**  
+ `[ @rmtuser = ] 'rmtuser'`  
  Удаленное имя входа, используемый для подключения к *серверу rmtsrvname* при @useself имеет значение FALSE. Если удаленным сервером является экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , не использующий проверку подлинности Windows, *rmtuser* является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа. *rmtuser* — **sysname**, значение по умолчанию NULL.  
   
- [ @rmtpassword **=** ] **"***rmtpassword***"**  
+ `[ @rmtpassword = ] 'rmtpassword'`  
  Пароль, связанный с *rmtuser*. *rmtpassword* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

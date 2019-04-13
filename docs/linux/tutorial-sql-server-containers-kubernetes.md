@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 669d02d32642ba4723892a98a1f4d0f3bc6e51f6
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 13bd39a2d5334c2d343fdbc6c77a697a5d6a8403
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626324"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516610"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Развертывание контейнера SQL Server в Kubernetes с помощью службы Azure Kubernetes (AKS)
 
@@ -155,7 +155,7 @@ Kubernetes 1.6 и более поздних версий имеется подд
 
 В этом примере экземпляр SQL Server для размещения контейнеров описан как объект развертывания Kubernetes. В результате развертывания создается набор реплик. Реплика создается pod. 
 
-На этом шаге создайте манифест для описания контейнера на основе SQL Server [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) образа Docker. Манифеста ссылки `mssql-server` утверждение постоянного тома и `mssql` секрет, который вы уже применили к кластеру Kubernetes. В манифесте также описывается [службы](https://kubernetes.io/docs/concepts/services-networking/service/). Эта служба — это балансировщик нагрузки. Подсистема балансировки нагрузки гарантирует, что IP-адрес сохраняется после восстановления экземпляра SQL Server. 
+На этом шаге создайте манифест для описания контейнера на основе SQL Server [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) образа Docker. Манифеста ссылки `mssql-server` утверждение постоянного тома и `mssql` секрет, который вы уже применили к кластеру Kubernetes. В манифесте также описывается [службы](https://kubernetes.io/docs/concepts/services-networking/service/). Эта служба — это балансировщик нагрузки. Подсистема балансировки нагрузки гарантирует, что IP-адрес сохраняется после восстановления экземпляра SQL Server. 
 
 1. Создайте манифест (yaml-файл) для описания развертывания. В следующем примере описывается развертывание, включая контейнер, основанный на образ контейнера SQL Server.
 
@@ -253,7 +253,7 @@ Kubernetes 1.6 и более поздних версий имеется подд
    На предыдущем рисунке, модуль находится в состоянии `Running`. Это состояние указывает, что контейнер готов. Это может занять несколько минут.
 
    >[!NOTE]
-   >После создания развертывания может занять несколько минут, прежде чем модуль является видимым. Задержка — это, так как кластер извлекает [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) образ из Docker hub. После первой будет отображен образ, последующие развертывания могут выполняться быстрее, если развертывание на узел, который уже содержит изображения, кэшированные на нем. 
+   >После создания развертывания может занять несколько минут, прежде чем модуль является видимым. Задержка — это, так как кластер извлекает [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) образ из Docker hub. После первой будет отображен образ, последующие развертывания могут выполняться быстрее, если развертывание на узел, который уже содержит изображения, кэшированные на нем. 
 
 1. Убедитесь, что они работают. Выполните следующую команду:
 

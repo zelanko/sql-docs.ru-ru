@@ -18,12 +18,12 @@ ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23520ce686562e7ed2f45e87aa4717135dd1ab8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 450b1cdde9185edee5eac41f52d209e43a7ae22f
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732902"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542164"
 ---
 # <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,22 +35,21 @@ ms.locfileid: "47732902"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-sp_audit_write [ @user_defined_event_id =  ] user_defined_event_id ,   
-        [ @succeeded =  succeeded   
-    [ , [ @user_defined_information =  ] 'user_defined_information' ]   
-    [ ; ]  
+sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
+    [ , [ @succeeded = ] succeeded ]
+    [ , [ @user_defined_information = ] 'user_defined_information' ]
+    [ ; ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **@user_defined_event_id**  
+ `[ @user_defined_event_id = ] user_defined_event_id`  
  Параметр, определяемый пользователем, который заносится в **user_defined_event_id** столбец журнала аудита. *@user_defined_event_id* является типом **smallint**.  
   
- **@succeeded**  
- Параметр, переданный пользователем с целью указания, было ли событие успешным или нет. Содержится в столбце успеха журнала аудита. *@succeeded* — **бит**.  
+ `[ @succeeded = ] succeeded`  
+ Параметр, переданный пользователем с целью указания, было ли событие успешным или нет. Содержится в столбце успеха журнала аудита. `@succeeded` — **бит**.  
   
- **@user_defined_information**  
- Определяемый пользователем текст, который заносится в новый столбец user_defined_event_id журнала аудита. *@user_defined_information* — **nvarchar(4000)**.  
+ `[ @user_defined_information = ] 'user_defined_information'`  
+ Определяемый пользователем текст, который заносится в новый столбец user_defined_event_id журнала аудита. `@user_defined_information` — **nvarchar(4000)**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

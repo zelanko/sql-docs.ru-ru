@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: e951e87abf7e88502597b6a3caf6f7ca4e34e60b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9a9a3d18f1850b563882a2303db8dd28b2916ac4
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205753"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542234"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Создание и настройка группы доступности для SQL Server в Linux
 
@@ -243,7 +243,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-10.  Восстановите LinAGN1_Cert и LinAGN3_Cert на LinAGN2. 
+10. Восстановите LinAGN1_Cert и LinAGN3_Cert на LinAGN2.
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -257,8 +257,9 @@ sudo systemctl restart mssql-server
     FROM FILE = '/var/opt/mssql/data/LinAGN3_Cert.cer';
     
     GO
+    ```
     
-11.  Grant the logins associated with LinAG1 and LinAGN3 permission to connect to the endpoint on LinAGN2.
+11. Предоставьте имена, связанные с LinAG1 и LinAGN3 разрешение на подключение к конечной точке в LinAGN2.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -270,7 +271,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-12.  Создание уровня экземпляра имена входа и пользователи, связанные с LinAGN1 и LinAGN2 на LinAGN3.
+12. Создание уровня экземпляра имена входа и пользователи, связанные с LinAGN1 и LinAGN2 на LinAGN3.
     
     ```SQL
     CREATE LOGIN LinAGN1_Login WITH PASSWORD = '<StrongPassword>';
@@ -284,7 +285,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-13.  Восстановите LinAGN1_Cert и LinAGN2_Cert на LinAGN3. 
+13. Восстановите LinAGN1_Cert и LinAGN2_Cert на LinAGN3. 
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -298,8 +299,9 @@ sudo systemctl restart mssql-server
     FROM FILE = '/var/opt/mssql/data/LinAGN2_Cert.cer';
     
     GO
+    ```
     
-14.  Grant the logins associated with LinAG1 and LinAGN2 permission to connect to the endpoint on LinAGN3.
+14. Предоставьте имена, связанные с LinAG1 и LinAGN2 разрешение на подключение к конечной точке в LinAGN3.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -369,7 +371,7 @@ sudo systemctl restart mssql-server
 
 16. После завершения создания группы Доступности, нажмите кнопку **закрыть** на результаты. Теперь вы видите группы Доступности на репликах в динамических административных представлений, а также в папке высокий уровень доступности AlwaysOn в среде SSMS.
 
-### <a name="use-transact-sql"></a>С помощью Transact-SQL
+### <a name="use-transact-sql"></a>Использование Transact-SQL
 
 В этом разделе показаны примеры создания группы Доступности с помощью Transact-SQL. После создания группы Доступности можно настроить прослушиватель и маршрутизация только для чтения. Группы Доступности, сам можно изменить при помощи `ALTER AVAILABILITY GROUP`, но изменение типа кластера невозможно выполнить в [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Если вы не собираетесь создать группу Доступности с типом кластера внешних объектов, необходимо удалить и повторно создать его с типом кластера нет. Дополнительные сведения и другие параметры можно найти по следующим ссылкам:
 
@@ -416,7 +418,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-3.  В окно запроса, подключенное к реплике только конфигурации присоедините ее к группе Доступности.
+3. В окно запроса, подключенное к реплике только конфигурации присоедините ее к группе Доступности.
     
    ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -539,7 +541,7 @@ sudo systemctl restart mssql-server
 1.  В окно запроса, подключенное к первой реплике выполните следующее:
 
     ```SQL
-    CREATE LOGIN PMLogin WITH PASSWORD '<StrongPassword>';
+    CREATE LOGIN PMLogin WITH PASSWORD ='<StrongPassword>';
     
     GO
     

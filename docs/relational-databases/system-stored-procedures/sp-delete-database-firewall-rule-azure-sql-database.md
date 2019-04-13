@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: eb8ee3482868f64765e7bf90e962c9756eadbdbc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d5f16e1a1b3b3fdfd0a12083ea8e86e034f50330
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015105"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542114"
 ---
 # <a name="spdeletedatabasefirewallrule-azure-sql-database"></a>sp_delete_database_firewall_rule (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,14 +34,13 @@ ms.locfileid: "56015105"
  
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```    
 sp_delete_database_firewall_rule [@name =] [N]'name'
 [ ; ]  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@name =**] **"**_имя_**"**  
+ `[@name =] [N]'name'`  
  Имя параметра брандмауэра уровня базы данных, который будет удален. *имя* — **nvarchar(128)** без значения по умолчанию. Идентификатор Юникода `N` является необязательным для [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
 ## <a name="permissions"></a>Разрешения  

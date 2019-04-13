@@ -20,13 +20,13 @@ ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ccf638687f5022554abd6b3cf8e57445858ae4a
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6c7ab77981c329c334b22d6fd9735188882b385c
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710655"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542144"
 ---
 # <a name="sysquerycontextsettings-transact-sql"></a>sys.query_context_settings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
