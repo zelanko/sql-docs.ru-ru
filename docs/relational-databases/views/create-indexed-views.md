@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f29c5c3fbe0a0d9e3e8bb724ad2f7b2af7ad545e
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 1714cc67cae1d8f2b49117891fa5a5b060f14415
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191054"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533352"
 ---
 # <a name="create-indexed-views"></a>Создание индексированных представлений
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "52191054"
 > <sup>1</sup> Например, операции UPDATE, DELETE или INSERT.   
   
 ###  <a name="Restrictions"></a> Обязательные параметры SET для индексированных представлений  
-Если при выполнении запроса активны разные параметры SET, выполнение одного и того же выражения может дать разные результаты в [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Например, если параметр SET `CONCAT_NULL_YIELDS_NULL` равен ON, выражение `'abc' + NULL` возвращает значение `NULL`. Однако если параметр `CONCAT_NULL_YIEDS_NULL` равен OFF, то же самое выражение дает результат `'abc'`.  
+Если при выполнении запроса активны разные параметры SET, выполнение одного и того же выражения может дать разные результаты в [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Например, если параметр SET `CONCAT_NULL_YIELDS_NULL` равен ON, выражение `'abc' + NULL` возвращает значение `NULL`. Однако если параметр `CONCAT_NULL_YIELDS_NULL` равен OFF, то же самое выражение дает результат `'abc'`.  
   
 Для правильной поддержки представлений и получения согласованных результатов некоторые параметры SET индексированных представлений должны иметь определенные значения. В приведенных ниже случаях параметрам SET из следующей таблицы нужно присвоить значения, указанные в столбце **Обязательное значение** :  
   

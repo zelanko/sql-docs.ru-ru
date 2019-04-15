@@ -16,12 +16,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 729464b51af6c9450f9166bd9a3c51d35541810f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 21f9be84c86e2991a600dc340347c4ca89f519e9
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801919"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533342"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Создание полной резервной копии базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "56801919"
   
 -   По умолчанию каждая успешная операция резервного копирования добавляет запись в журнал ошибок служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и в журнал системных событий. Если резервное копирование выполняется часто, сообщения об успешном завершении операций накапливаются быстро, что приводит к стремительному увеличению журналов ошибок! Это может осложнить поиск других сообщений. Если работа существующих скриптов не зависит от записей журнала резервного копирования, то их можно отключить с помощью флага трассировки 3226. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
  Для резервной копии базы данных свойству TRUSTWORTHY присваивается значение OFF. Дополнительные сведения о том, как задать для параметра TRUSTWORTHY значение ON, см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , параметры **PASSWORD** и **MEDIAPASSWORD** не поддерживаются при создании резервных копий. Все еще вы можете восстанавливать резервные копии, созданные с паролями.  
@@ -211,19 +211,19 @@ ms.locfileid: "56801919"
 *
     5.  Выберите `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` из текстового поля **Контейнер хранилища Azure:**
 
-    6.  В текстовом поле **Файл резервной копии:** введите `Sales_stripe1of2_20160601.bak`.
+   6.  В текстовом поле **Файл резервной копии:** введите `Sales_stripe1of2_20160601.bak`.
 
-    7.  Нажмите кнопку **ОК**.
+   7.  Нажмите кнопку **ОК**.
 
-    8.  Повторите шаги **4** и **5**.
+   8.  Повторите шаги **4** и **5**.
 
-    9.  В текстовом поле **Файл резервной копии:** введите `Sales_stripe2of2_20160601.bak`.
+   9.  В текстовом поле **Файл резервной копии:** введите `Sales_stripe2of2_20160601.bak`.
 
-    10.  Нажмите кнопку **ОК**.
+   10.  Нажмите кнопку **ОК**.
 
-    11.   Нажмите кнопку **ОК**.
+   11.   Нажмите кнопку **ОК**.
 
-    **D2.  Подписанный URL-адрес уже существует, а учетные данные SQL Server — нет**
+   **D2.  Подписанный URL-адрес уже существует, а учетные данные SQL Server — нет**
   5.    Введите `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` в текстовом поле **Контейнер хранилища Azure:**
   
   6.    Введите подписанный URL-адрес в текстовом поле **Политика подписанных URL-адресов:** .

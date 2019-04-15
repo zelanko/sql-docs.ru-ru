@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39030ba95129160680782eeb88e3b4c99da622e7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: faa34ef2e1b38fe13f487574ba95d0ad015b08a4
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407871"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516590"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Кластеры SQL Server с несколькими подсетями [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52407871"
 ##  <a name="VisualElement"></a> Отказоустойчивый кластер SQL Server с несколькими подсетями (2 узла, 2 подсети)  
  На следующем рисунке показан экземпляр отказоустойчивого кластера [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], состоящий из двух узлов в двух подсетях.  
   
- ![Архитектура с несколькими подсетями с MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.gif "Архитектура с несколькими подсетями с MultiSubnetFailover")  
+ ![Архитектура с несколькими подсетями с MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "Архитектура с несколькими подсетями с MultiSubnetFailover")  
   
   
 ##  <a name="Configurations"></a> Конфигурации экземпляров отказоустойчивых кластеров с несколькими подсетями  
@@ -45,12 +45,12 @@ ms.locfileid: "52407871"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 включает в себя Узел1 и Узел2. Узел1 подключен к Подсети1 и Подсети2. Узел2 также подключен к Подсети1 и Подсети2. Для зависимости ресурса IP-адреса программой установки **устанавливается значение** AND [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-    > **ПРИМЕЧАНИЕ.** Такая конфигурация не относится к отказоустойчивым кластерам с несколькими подсетями, поскольку кластеризованные узлы находятся в одном наборе подсетей.  
+    > **ПРИМЕЧАНИЕ.** Такая конфигурация не относится к отказоустойчивым кластерам с узлами в нескольких подсетях, поскольку кластеризованные узлы находятся в одном наборе подсетей.  
   
 ##  <a name="ComponentsAndConcepts"></a> Вопросы ресурса IP-адреса  
  В конфигурации отказоустойчивого кластера с узлами в нескольких подсетях, IP-адреса не принадлежат всем узлам отказоустойчивого кластера, в момент запуска [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не все из них могут находиться в сети. Начиная с выпуска [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], можно устанавливать для зависимости ресурса IP-адреса значение **OR**. Это позволяет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] находиться в сети, если имеется хотя бы один действительный IP-адрес, к которому можно выполнить привязку.  
   
-> **ПРИМЕЧАНИЕ.** В версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] более ранних, чем [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], при создании кластерных конфигураций с несколькими подсетями использовалась технология распределенных виртуальных ЛС, которая позволяла использовать один IP-адрес для отработки отказа на нескольких объектах. Благодаря новым возможностям [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , позволяющим обеспечивать кластеризацию узлов, размещенных в разных подсетях, вы можете настраивать отказоустойчивые кластеры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на разных сайтах без внедрения технологии распределенных виртуальных ЛС.  
+> **ПРИМЕЧАНИЕ.** В версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , более ранних, чем [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], при создании кластерных конфигураций с использованием нескольких подсетей использовалась технология распределенных виртуальных ЛС, которая позволяла использовать один IP-адрес для отработки отказа на нескольких объектах. Благодаря новым возможностям [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , позволяющим обеспечивать кластеризацию узлов, размещенных в разных подсетях, вы можете настраивать отказоустойчивые кластеры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на разных сайтах без внедрения технологии распределенных виртуальных ЛС.  
   
 ### <a name="ip-address-resource-or-dependency-considerations"></a>Рекомендации по заданию зависимости ресурса IP-адреса со значением OR  
  Если для зависимости ресурса IP-адреса устанавливается значение **OR**, рекомендуется задать следующий режим отработки отказа.  

@@ -1,7 +1,7 @@
 ---
 title: Создание резервной копии журнала транзакций (SQL Server) | Документация Майкрософт
 ms.custom: ''
-ms.date: 02/01/2017
+ms.date: 02/02/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b110483faa6fd1f051cc35849858bd20b9fc1b04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d36963c5107a1a25ce25201ac38883e5c0925315
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756862"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241712"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>Создание резервной копии журнала транзакций (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,12 @@ ms.locfileid: "47756862"
 ##  <a name="Permissions"></a> Permissions  
 **Перед началом убедитесь в наличии необходимых разрешений!** 
 
-Нужные разрешения BACKUP DATABASE и BACKUP LOG назначаются по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_owner** и **db_backupoperator** .  
+Нужные разрешения BACKUP DATABASE и BACKUP LOG назначаются по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_owner** и **db_backupoperator**.  
   
  Проблемы, связанные с владельцем и разрешениями у физических файлов на устройстве резервного копирования, могут помешать операции резервного копирования. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь возможность считывать и записывать данные на устройстве; учетная запись, от имени которой выполняется служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , должна иметь разрешения на запись. Однако процедура [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), добавляющая запись для устройства резервного копирования в системные таблицы, не проверяет разрешения на доступ к файлу. Проблемы доступа к физическому файлу устройства резервного копирования могут не проявляться до обращения к [физическому ресурсу](backup-devices-sql-server.md) при попытке архивации или восстановления. Поэтому обязательно убедитесь в наличии необходимых разрешений, прежде чем начать!
-  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="back-up-using-ssms"></a>Резервное копирование с помощью SSMS  
   
 1.  После подключения к соответствующему экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]в обозревателе объектов разверните дерево сервера, щелкнув его имя.  
@@ -143,7 +144,7 @@ ms.locfileid: "47756862"
   
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
   
-> **ВАЖНО!** В этом примере используется база данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , которая опирается на простую модель восстановления. Чтобы разрешить создание резервных копий журналов, перед созданием полной резервной копии база данных должна быть настроена на использование модели полного восстановления. Дополнительные сведения см. в разделе [Просмотр или изменение модели восстановления базы данных (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
+> **ВАЖНО!** В этом примере используется база данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], которая опирается на простую модель восстановления. Чтобы разрешить создание резервных копий журналов, перед созданием полной резервной копии база данных должна быть настроена на использование модели полного восстановления. Дополнительные сведения см. в разделе [Просмотр или изменение модели восстановления базы данных (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
  В этом примере создается резервная копия журнала транзакций для базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на созданном ранее устройстве резервного копирования, имеющая имя `MyAdvWorks_FullRM_log1`.  
   
@@ -168,7 +169,7 @@ GO
   
 -   [SQL Server PowerShell, поставщик](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedTasks"></a> Связанные задачи  
+##  <a name="RelatedTasks"></a> Related tasks  
   
 -   [Восстановление резервной копии журнала транзакций (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
