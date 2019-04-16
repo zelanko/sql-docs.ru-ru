@@ -1,8 +1,8 @@
 ---
-title: Скачайте и установите sqlpackage | Документация Майкрософт
-description: Скачайте и установите sqlpackage для Windows, macOS или Linux
+title: Скачивание и установка sqlpackage | Документация Майкрософт
+description: Скачивание и установка sqlpackage для Windows, macOS или Linux
 ms.custom: tools|sos
-ms.date: 06/19/2018
+ms.date: 06/20/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.prod_service: sql-tools
@@ -10,42 +10,44 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 5a45803f4ce2a91962a5bba824a468ca436f7839
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7b909df2e97149019d70af49085cc5f1e212f5ee
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527216"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240412"
 ---
-# <a name="download-and-install-sqlpackage"></a>Скачайте и установите sqlpackage
+# <a name="download-and-install-sqlpackage"></a>Скачивание и установка sqlpackage
 
-sqlpackage выполняется в Windows, macOS и Linux.
+Программа sqlpackage выполняется в Windows, macOS и Linux.
 
-Скачайте и установите последний выпуск платформы .NET Framework и macOS и Linux предварительные версии:
+Скачайте и установите последний выпуск платформы .NET Framework, а также предварительные версии для macOS и Linux:
 
 |Платформа|Загрузить|Дата выпуска|Версия|Сборка
 |:---|:---|:---|:---|:---|
 |Windows|[Установщик MSI](https://go.microsoft.com/fwlink/?linkid=2069405)|1 февраля 2019 г.|18.1|15.0.4316.1|
-|macOS .NET Core (Предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2069126)|1 февраля 2019 г. | 18.1 |15.0.4316.1|
-|Linux .NET Core (Предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2069122)|1 февраля 2019 г. | 18.1 |15.0.4316.1|
+|macOS .NET Core (предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2069126)|1 февраля 2019 г. | 18.1 |15.0.4316.1|
+|Linux .NET Core (предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2069122)|1 февраля 2019 г. | 18.1 |15.0.4316.1|
 
-Дополнительные сведения о последнем выпуске см. в разделе [заметки о выпуске](release-notes-sqlpackage.md).
+Подробнее см. в [заметках о выпуске](release-notes-sqlpackage.md).
 
-## <a name="get-sqlpackage-for-windows"></a>Получить sqlpackage для Windows
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-Этот выпуск sqlpackage включает стандартные возможности установщика Windows и ZIP-файл: 
+## <a name="get-sqlpackage-for-windows"></a>Получение sqlpackage для Windows
 
-1. Скачайте и запустите [DacFramework.msi установщик Windows](https://go.microsoft.com/fwlink/?linkid=2069405).
-2. Откройте новое окно командной строки и запустите sqlpackage.exe
-    - sqlpackage устанавливается в ```C:\Program Files\Microsoft SQL Server\150\DAC\bin``` папки
-    - Установка x86 версии в x64 компьютере устанавливается sqlpackage ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin``` папки
+Этот выпуск sqlpackage включает стандартные средства установщика Windows и ZIP-файл: 
 
-## <a name="get-sqlpackage-preview-for-macos"></a>Получить sqlpackage (Предварительная версия) для macOS
+1. Скачайте и запустите [установщик DacFramework.msi для Windows](https://go.microsoft.com/fwlink/?linkid=2069405).
+2. Откройте новое окно командной строки и запустите файл sqlpackage.exe.
+    - Программа sqlpackage устанавливается в папку ```C:\Program Files\Microsoft SQL Server\150\DAC\bin```.
+    - При установке версии x86 на x64-разрядном компьютере sqlpackage устанавливается в папку ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin```.
+
+## <a name="get-sqlpackage-preview-for-macos"></a>Получение sqlpackage (предварительная версия) для macOS
 
 1. Скачайте [sqlpackage для macOS](https://go.microsoft.com/fwlink/?linkid=2069126).
-2. Извлеките файл и запустить sqlpackage, откройте новое окно терминала и введите следующие команды:
+2. Чтобы извлечь файл и запустить sqlpackage, откройте новое окно терминала и введите следующие команды:
 
-   **Установка ZIP:**
+   **Установка ZIP-файла:**
 
    ```bash
    mkdir sqlpackage
@@ -55,12 +57,12 @@ sqlpackage выполняется в Windows, macOS и Linux.
    sqlpackage
    ```
 
-## <a name="get-sqlpackage-preview-for-linux"></a>Получить sqlpackage (Предварительная версия) для Linux
+## <a name="get-sqlpackage-preview-for-linux"></a>Получение sqlpackage (предварительная версия) для Linux
 
 1. Скачайте [sqlpackage для Linux](https://go.microsoft.com/fwlink/?linkid=2069122) с помощью одного из установщиков или архива tar.gz:
-2. Извлеките файл и запустить sqlpackage, откройте новое окно терминала и введите следующие команды:
+2. Чтобы извлечь файл и запустить sqlpackage, откройте новое окно терминала и введите следующие команды:
 
-   **Установка ZIP:**
+   **Установка ZIP-файла:**
 
    ```bash
    cd ~
@@ -73,7 +75,7 @@ sqlpackage выполняется в Windows, macOS и Linux.
    ```
 
    > [!NOTE]
-   > В Debian, Redhat и Ubuntu возможно, отсутствуют зависимости. Чтобы установить эти зависимости, в зависимости от вашей версии Linux, используйте следующие команды:
+   > В Debian, Redhat и Ubuntu, возможно, будут отсутствовать некоторые зависимости. Чтобы установить эти зависимости с учетом вашей версии Linux, используйте следующие команды:
 
    **Debian:**
 
@@ -81,7 +83,7 @@ sqlpackage выполняется в Windows, macOS и Linux.
    sudo apt-get install libunwind8
    ```
 
-   **Redhat:**
+   **RedHat:**
 
    ```bash
    yum install libunwind
@@ -100,15 +102,15 @@ sqlpackage выполняется в Windows, macOS и Linux.
    sudo apt-get install libicu60      # for 18.x
    ```
 
-## <a name="uninstall-sqlpackage-preview"></a>Удалить sqlpackage (Предварительная версия)
+## <a name="uninstall-sqlpackage-preview"></a>Удаление sqlpackage (предварительная версия)
 
-Если вы установили sqlpackage, с помощью установщика Windows, затем удалите так же, как удалить любое приложение Windows.
+Если вы установили sqlpackage с помощью установщика Windows, удаление выполняется так же, как и для любого приложения Windows.
 
-Если вы установили sqlpackage с ZIP-файл или других архива, просто удалите файлы.
+Если вы установили sqlpackage с помощью ZIP-файла или другого архива, просто удалите файлы.
 
 ## <a name="supported-operating-systems"></a>Поддерживаемые операционные системы
 
-sqlpackage работает в Windows, macOS и Linux и поддерживается на следующих платформах:
+Программа sqlpackage выполняется в Windows, macOS и Linux, а также поддерживается на следующих платформах:
 
 ### <a name="windows"></a>Windows
 
@@ -123,8 +125,8 @@ sqlpackage работает в Windows, macOS и Linux и поддерживае
 
 ### <a name="macos"></a>macOS
 
-- macOS 10.13 High Sierra
-- macOS 10.12 Sierra
+- macOS 10.13 High Sierra
+- macOS 10.12 Sierra
 
 ### <a name="linux-x64"></a>Linux (x64)
 
@@ -135,6 +137,6 @@ sqlpackage работает в Windows, macOS и Linux и поддерживае
 
 ## <a name="next-steps"></a>Next Steps
 
-- Дополнительные сведения о [sqlpackage](sqlpackage.md)
+- См. подробнее о [sqlpackage](sqlpackage.md)
 
 [Заявление Майкрософт о конфиденциальности](https://go.microsoft.com/fwlink/?LinkId=521839)

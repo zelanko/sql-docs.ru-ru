@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 1543846ec5353f5419b12bb5747b1ced53d2b4f0
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 61f72b2676e2c3c92dd82febc70d2e00d3363baf
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556246"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506561"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Интеграция сервера отчетов с Power BI (диспетчер конфигурации)
 
@@ -34,15 +34,15 @@ ms.locfileid: "57556246"
 
 - Отчеты, элементы которых нужно закрепить, должны использовать сохраненные учетные данные. Это требование не самой интеграции [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , а процесса обновления для закрепленных элементов.  Во время закрепления элемента отчета создается подписка [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для управления расписанием обновления плиток в [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требуются сохраненные учетные данные. Если отчет не использует сохраненные учетные данные, пользователь может по-прежнему закреплять элементы отчетов, но, когда связанная подписка попытается обновить данные в [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)], появится сообщение об ошибке, аналогичное отображаемому на странице **Мои подписки** .
 
-        PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential.
+    Ошибка доставки PowerBI: панель мониторинга: образец анализа расходов на ИТ, визуальный элемент: Chart2, ошибка: невозможно завершить текущее действие. Учетные данные источника данных пользователя не соответствуют требованиям для выполнения этого отчета или общего набора данных. Введите учетные данные источника данных пользователя.
 
 Дополнительные сведения о сохранении учетных данных см. в разделе "Настройка сохраненных учетных данных для источника данных отчета" статьи [Сохраненные учетные данные в источнике данных Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).
 
 Администратор может просмотреть файлы журнала  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для получения дополнительной информации.  Будут отображены сообщения, аналогичные приведенным далее. Отличным способом проверки и отслеживания файлов журналов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] является использование [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query.  Дополнительные сведения и короткий видео ролик см. в документе [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).
 
-    subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
+- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. Учетные данные источника данных пользователя не соответствуют требованиям для выполнения этого отчета или общего набора данных. Учетные данные источника данных пользователя не сохранены в базе данных сервера отчетов или источник данных пользователя настроен не требовать учетные записи, но учетная запись автоматического выполнения не указана.
 
-    notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared data set. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
+- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. Учетные данные источника данных пользователя не соответствуют требованиям для выполнения этого отчета или общего набора данных. Учетные данные источника данных пользователя не сохранены в базе данных сервера отчетов или источник данных пользователя настроен не требовать учетные записи, но учетная запись автоматического выполнения не указана.
 
 ## <a name="bkmk_steps2integrate"></a> Интеграция и регистрация сервера отчетов
 
@@ -149,12 +149,12 @@ ms.locfileid: "57556246"
 
 ## <a name="considerations-and-limitations"></a>Рекомендации и ограничения
 
-* Viral и для государственных организаций клиенты не поддерживаются.
+* Вирусные клиенты и клиенты для государственных организаций не поддерживаются.
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Мои параметры для интеграции с Power BI (веб-портал)](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
-[Закрепление элементов служб Reporting Services на информационных панелях Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
-[информационных панелях Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
+[Мои параметры для интеграции с Power BI](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+[Закрепление элементов служб Reporting Services на панелях мониторинга Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
+[Панели мониторинга в Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
