@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 56d2eb65ca95dd4f153f3c7a6ebb00e926465687
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 4df9e266e16e2cc37ce527c19ba7be483e43d50a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046860"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582687"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>Краткое руководство. Обрабатывать входные и выходные данные с помощью языка R в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -87,8 +87,6 @@ SELECT * FROM RTestData
     ```
 
     Обратите внимание, что R учитывает регистр, поэтому регистр входных и выходных переменных в `@input_data_1_name` и `@output_data_1_name` должны соответствовать именам в код R в `@script`. 
-
-    Кроме того важен порядок параметров. Чтобы использовать необязательные параметры *@input_data_1_name* и *@output_data_1_name*, сначала необходимо указать обязательные параметры *@input_data_1* и *@output_data_1*.
 
     В качестве параметра можно передать только один входной набор данных. Возвращаться может также только один набор данных. Однако вы можете вызывать другие наборы данных из кода R, а в дополнение к набору данных могут возвращаться выходные данные других типов. Кроме того, вы можете добавить ключевое слово OUTPUT к любому параметру, чтобы он возвращался с результатами. 
 

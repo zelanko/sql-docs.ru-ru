@@ -14,15 +14,15 @@ ms.assetid: 405dfcff-a3a6-4e6d-a53a-ed77bbacdd13
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bf4f8e5c3ea23b1ab52199c884c2980bf52bc983
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8eb4dfaf6649b80bd430992d5e7ff1d35fc5d7ed
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160054"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582977"
 ---
 # <a name="table-hints-in-indexed-view-definitions-are-ignored-in-80-compatibility-mode-and-are-not-allowed-in-90-mode-or-later"></a>Табличные указания в определении индексированных представлений в режиме совместимости 80 не учитываются, а в режиме совместимости 90 недопустимы
-  Табличные указания в определении индексированных представлений не разрешены в режиме совместимости 90 и выше. Дополнительные сведения см. в следующих разделах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] документации: «Разработка индексированных представлений,» «Создание индексированных представлений,» и «указание запроса ([!INCLUDE[tsql](../../includes/tsql-md.md)]).»  
+  Табличные указания в определении индексированных представлений не разрешены в режиме совместимости 90 и выше. Дополнительные сведения см. в следующих разделах электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: «Конструирование индексированных представлений», «Создание индексированных представлений» и «Указание запроса ([!INCLUDE[tsql](../../includes/tsql-md.md)])».  
   
 ## <a name="component"></a>Компонент  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
@@ -32,6 +32,6 @@ ms.locfileid: "48160054"
   
 ## <a name="see-also"></a>См. также  
  [Проблемы обновления компонента Database Engine](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Помощник по обновлению SQL Server 2014 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Помощник по обновлению SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

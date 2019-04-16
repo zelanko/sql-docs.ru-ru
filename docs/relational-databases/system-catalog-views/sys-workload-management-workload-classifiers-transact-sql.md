@@ -12,16 +12,19 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: f3ce2327034a9c7197e754dac01dfb9e6f9dc3e5
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 3b023654728375aee76bfb0c4434a8413dc81e7d
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509591"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582567"
 ---
 # <a name="sysworkloadmanagementworkloadclassifiers-transact-sql-preview"></a>sys.workload_management_workload_classifiers (Transact-SQL) (Предварительная версия)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+
+> [!Note]
+> Классификации рабочей нагрузки доступна в предварительной версии для Gen2 хранилище данных SQL. Предварительный просмотр рабочей нагрузки управления классификации и важность — для сборок с датой выпуска от 9 апреля 2019 г. или более поздней версии.  Пользователям не следует использовать сборки до этой даты для тестирования управления рабочей нагрузки.  Чтобы определить, если построение является возможность управления рабочими нагрузками, выполните select @@version при подключении к экземпляру хранилища данных SQL.
 
  Возвращает подробные сведения о рабочей нагрузке классификаторов.  
   

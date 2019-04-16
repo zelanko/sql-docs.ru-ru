@@ -13,12 +13,12 @@ ms.assetid: fee7328f-6e8d-4005-930b-56fb6f17e0b2
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc1b7dc07b959a3ce1ff9ae4c1e82ece0c900431
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 815e4105ca65b6bcdaa36de0554b9f6e0d3b478a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175624"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583267"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>Псевдонимы столбцов в предложении ORDER BY не могут предваряться псевдонимом таблицы
   В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях псевдонимы столбцов в предложении ORDER BY не должны предваряться псевдонимами таблицы.  
@@ -73,6 +73,6 @@ ORDER BY p.LastName
   
 ## <a name="see-also"></a>См. также  
  [Проблемы обновления компонента Database Engine](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Помощник по обновлению SQL Server 2014 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Помощник по обновлению SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

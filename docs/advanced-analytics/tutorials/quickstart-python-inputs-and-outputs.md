@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a410a6f732baf79d419405e38e7e84aed86b38dd
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: a778c4a65b9e3f4cbf4ed77cff46e9061d4b6a8a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046897"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583227"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>Краткое руководство. Обрабатывать входные и выходные данные с помощью Python в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -87,8 +87,6 @@ SELECT * FROM PythonTestData
     ```
 
     Регистр входных и выходных переменных в `@input_data_1_name` и `@output_data_1_name` нужно учитывать регистр из них в коде Python в `@script`, как Python — с учетом регистра.
-
-    Кроме того важен порядок параметров. Чтобы использовать необязательные параметры *@input_data_1_name* и *@output_data_1_name*, сначала необходимо указать обязательные параметры *@input_data_1* и *@output_data_1*.
 
     В качестве параметра можно передать только один входной набор данных. Возвращаться может также только один набор данных. Тем не менее можно вызывать другие наборы данных из кода Python, и может возвращать выходные данные других типов в дополнение к набору данных. Кроме того, вы можете добавить ключевое слово OUTPUT к любому параметру, чтобы он возвращался с результатами. 
 

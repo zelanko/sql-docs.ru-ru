@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d049833897685b7998fc1168ec09398860df233b
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 72c449ee83798a99109029fc2d0b91e2b8c1e2b6
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657749"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583322"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "58657749"
 |database_id|**int**|Идентификатор базы данных, используемой явный контекст (например, используйте DB_X).|См. в разделе с кодом в [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |command|**nvarchar(4000)**|Содержит полный текст запроса, предоставленных пользователю.|Любой допустимый текст, запроса или запроса. Запросы, в которых превышает 4 000 байт, усекаются.|  
 |resource_class|**nvarchar(20)**|Класс ресурсов для данного запроса. См. связанные **concurrency_slots_used** в [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  Дополнительные сведения о классах ресурсов см. в разделе [ресурсов классов и управление рабочими нагрузками](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |Статические классы ресурсов</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Динамические классы ресурсов</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|важность (Предварительная версия для SQL DW Gen2)|**nvarchar(32)**|Отправлено важность запроса. Запросы с низким важности останется в очереди в приостановленном состоянии, если выше важности запросы отправляются.  Запросы с высокой важностью будет выполняться до нижней важность запросов, отправленных ранее.  Дополнительные сведения о важности, см. в разделе [важность рабочих нагрузок](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>low</br>below_normal</br>Обычный (по умолчанию)</br>above_normal</br>high|
+|важность (классификации рабочей нагрузки доступна в предварительной версии для Gen2 хранилище данных SQL. Предварительный просмотр рабочей нагрузки управления классификации и важность — для сборок с датой выпуска от 9 апреля 2019 г. или более поздней версии.  Пользователям не следует использовать сборки до этой даты для тестирования управления рабочей нагрузки.  Чтобы определить, если построение является возможность управления рабочими нагрузками, выполните select @@version при подключении к экземпляру хранилища данных SQL.)|**nvarchar(32)**|Отправлено важность запроса. Запросы с низким важности останется в очереди в приостановленном состоянии, если выше важности запросы отправляются.  Запросы с высокой важностью будет выполняться до нижней важность запросов, отправленных ранее.  Дополнительные сведения о важности, см. в разделе [важность рабочих нагрузок](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>low</br>below_normal</br>Обычный (по умолчанию)</br>above_normal</br>high|
   
  Сведения о максимальное число строк, сохраняемых в этом представлении см. в разделе метаданных в [ограничения емкости](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) раздела.   
   

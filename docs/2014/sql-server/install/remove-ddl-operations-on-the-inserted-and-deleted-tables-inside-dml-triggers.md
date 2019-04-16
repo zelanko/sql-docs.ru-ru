@@ -15,12 +15,12 @@ ms.assetid: e49ba7d5-787f-4052-b985-b699195d982b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fe6aa8c12e6132fa44380158585bd13a7c313548
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1113b0dd823c2479cff950233d0811f6c017afc9
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188234"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582057"
 ---
 # <a name="remove-ddl-operations-on-the-inserted-and-deleted-tables-inside-dml-triggers"></a>Удалите DDL-операции в таблицах inserted и deleted внутри триггеров DML
   Инструкции языка DDL определения данных, такие как CREATE INDEX не может выполняться в таблицах inserted и deleted внутри триггеров DML. Некоторые инструкции языка DDL для таблиц inserted и deleted допускались в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе «Использование таблиц inserted и deleted» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -33,6 +33,6 @@ ms.locfileid: "48188234"
   
 ## <a name="see-also"></a>См. также  
  [Проблемы обновления компонента Database Engine](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Помощник по обновлению SQL Server 2014 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Помощник по обновлению SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

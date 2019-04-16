@@ -5,17 +5,17 @@ description: Этом руководстве показано, как прием
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c29b6b942b797b5a58679d9d7f5cb91e68561123
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 9d49cb6af93880fe1cec391e4464b813777f7109
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860675"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582757"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Учебник. Прием данных в пул данных SQL Server с помощью заданий Spark
 

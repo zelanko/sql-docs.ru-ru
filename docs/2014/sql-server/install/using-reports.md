@@ -36,12 +36,12 @@ ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0d8ec04baf292807120ed5a26360878ac7e20442
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb2537af2539854f0f66e3f6c39c3b6e5315ec6f
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070904"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581929"
 ---
 # <a name="using-reports"></a>Использование отчетов
   Для каждого компонента и, если необходимо, для каждого экземпляра, проанализированного мастером анализа помощника по обновлению на сервере, создается свой отчет. В отчете содержатся сведения об известных проблемах, влияющих на обновление. В отчете содержатся также ссылки на сведения и предлагаются действия по решению выявленных проблем.  
@@ -83,10 +83,10 @@ ms.locfileid: "48070904"
  Если нужно передавать информацию другим лицам, можно отправить им отчет в формате XML. Или, если необходимо использовать другое приложение, можно экспортировать отчет в файл значений с разделителями-запятыми, который можно использовать, чтобы создать электронную таблицу, текстовый файл или сообщение электронной почты.  
   
 ## <a name="see-also"></a>См. также  
- [Практическое: просмотра отчетов помощника по обновлению](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
- [Практическое: экспорт отчетов](../../../2014/sql-server/install/how-to-export-reports.md)   
- [Практическое: фильтрация отчетов](../../../2014/sql-server/install/how-to-filter-reports.md)   
+ [Как Просмотреть отчет помощника по обновлению](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
+ [Как Экспорт отчетов](../../../2014/sql-server/install/how-to-export-reports.md)   
+ [Как Фильтрация отчетов](../../../2014/sql-server/install/how-to-filter-reports.md)   
  [Разрешение проблем при обновлении](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [Помощник по обновлению SQL Server 2014 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Помощник по обновлению SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

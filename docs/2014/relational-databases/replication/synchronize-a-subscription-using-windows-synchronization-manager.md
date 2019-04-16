@@ -13,15 +13,15 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8ecac95d4cad190133d54e73862d607a719ac9c1
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042203"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582367"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Синхронизация подписки с помощью диспетчера синхронизации Windows (Windows Synchronization Manager)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows можно использовать только для синхронизации подписок на публикации Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется на том же самом компьютере, что и диспетчер синхронизации (кроме того, его можно использовать для синхронизации файлов и веб-страниц в режиме «вне сети»). Чтобы использовать диспетчер синхронизации, необходимо выполнить следующие действия:  
+  Диспетчер синхронизации[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows можно использовать только для синхронизации подписок на публикации Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется на том же самом компьютере, что и диспетчер синхронизации (кроме того, его можно использовать для синхронизации файлов и веб-страниц в режиме «вне сети»). Чтобы использовать диспетчер синхронизации, необходимо выполнить следующие действия:  
   
 1.  Включите синхронизацию подписок по запросу с помощью диспетчера синхронизации Windows в диалоговом окне **Свойства подписки — \<подписчик>: \<база_данных_подписки>**. Дополнительные сведения о доступе к этому диалоговому окну см. в статье [Просмотр и изменение свойств подписки по запросу](view-and-modify-pull-subscription-properties.md).  
   
@@ -97,7 +97,7 @@ ms.locfileid: "59042203"
   
 ### <a name="to-use-the-interactive-resolver"></a>Использование интерактивного сопоставителя  
   
-1.  Включите для статьи и подписки использование интерактивного механизма разрешения конфликтов. Дополнительные сведения см. в статье [Настройка интерактивного устранения конфликтов для статей публикации слиянием](../../relational-databases/replication/publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
+1.  Включите для статьи и подписки использование интерактивного механизма разрешения конфликтов. Дополнительные сведения см. в статье [Настройка интерактивного устранения конфликтов для статей публикации слиянием](../../relational-databases/replication/publish/specify-merge-replication-properties.md#interactive-conflict-resolution).
   
 2.  После запуска синхронизации подписки в диспетчере синхронизации интерактивный сопоставитель запускается автоматически, если включено интерактивное разрешение конфликтов и возникают конфликты для одной или нескольких статей. Интерактивный сопоставитель отображает по одному конфликту за раз и предлагает для каждого конфликта вариант разрешения, основанный на механизме разрешения конфликтов, который был указан при создании публикации и подписки.  
   
@@ -117,4 +117,5 @@ ms.locfileid: "59042203"
 >  Правки применяются, только если они являются частью строки, которая выбрана для разрешения конфликта. Например, если правки вносятся от имени **Издателя**и затем выбирается **Принять вариант подписчика**, правки отклоняются.  
   
 ## <a name="see-also"></a>См. также  
- [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
+ [Интерактивное разрешение конфликтов](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
+  

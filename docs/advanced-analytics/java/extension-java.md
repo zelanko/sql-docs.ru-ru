@@ -3,18 +3,18 @@ title: Расширение языка Java в SQL Server 2019 - службы м
 description: Установка, Настройка и проверка расширение языка Java на SQL Server 2019 для систем Windows и Linux.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9b5d5fe9a3bf3b775c9d7afb1035e09120157aac
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 725aebbcd40adf0c571dd6b99b68cf1be389af8b
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494266"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582094"
 ---
 # <a name="java-language-extension-in-sql-server-2019"></a>Расширение языка Java в SQL Server 2019 
 

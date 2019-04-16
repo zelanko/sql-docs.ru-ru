@@ -14,12 +14,12 @@ ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8bef17d900fe9a823439a88b8e94eb78810e6627
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: cf154f3437ed22be932fa37470f59049aea09850
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766946"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582587"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Create a Consolidated Member (Master Data Services)
   В среде [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]объединенный элемент создается, когда нужен родительский узел для явной иерархии. Консолидированные элементы могут содержать собственные атрибуты. Они используются для группировки. Как показано в следующем примере, консолидированные элементы можно использовать для групп учетных записей, содержащих учетные записи.  
@@ -49,7 +49,7 @@ ms.locfileid: "52766946"
   
 7.  Заполните поля на панели справа.  
   
-8.  Необязательный. В поле **Заметки** введите комментарий о том, для чего добавлен элемент. Заметку могут просматривать все пользователи, которые имеют доступ к элементу.  
+8.  Необязательный параметр. В поле **Заметки** введите комментарий о том, для чего добавлен элемент. Заметку могут просматривать все пользователи, которые имеют доступ к элементу.  
   
 9. Нажмите кнопку **ОК**.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "52766946"
 ## <a name="see-also"></a>См. также  
  [Создание явной иерархии (службы Master Data Services)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [Создание конечного элемента (службы Master Data Services)](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)   
- [Загрузка или обновление членов в службы Master Data Services с помощью промежуточного процесса](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [Загрузка или обновление членов в службы Master Data Services с помощью промежуточного процесса](add-update-and-delete-data-master-data-services.md)   
  [Элементы (службы Master Data Services)](../../2014/master-data-services/members-master-data-services.md)   
  [Явные иерархии (службы Master Data Services)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   

@@ -10,12 +10,12 @@ ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 31cf50a29e9dfcc0952df7132dcbed1690aeb831
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 571f0bbd06c141173e7717e304722eb7d4bcd346
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353602"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582797"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Функциональная область управления интеграцией (диспетчер основных данных)
   В функциональной области «Управление интеграцией» администраторы могут выполнять импорт данных из промежуточных таблиц и создавать представления подписки для систем подписки. Дополнительные сведения об администраторах см. в разделе [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
@@ -23,7 +23,7 @@ ms.locfileid: "53353602"
 ## <a name="import-data"></a>Импорт данных  
  [Импорт данных &#40;службы Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
- [Загрузка или обновление членов в службы Master Data Services с помощью промежуточного процесса](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)  
+ [Загрузка или обновление членов в службы Master Data Services с помощью промежуточного процесса](add-update-and-delete-data-master-data-services.md)  
   
  [Перемещение элементов явной иерархии с помощью промежуточного процесса &#40;службы Master Data Services&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)  
   

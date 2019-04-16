@@ -10,12 +10,12 @@ ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6e66748610d648ec8e427315d2a317d26e699d06
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3c254b8b6fea8a356e80d1a7c262228725cbf49e
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758816"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582267"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>Промежуточная хранимая процедура (службы Master Data Services)
   При запуске промежуточного процесса из [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]используется одна из трех хранимых процедур.  
@@ -56,7 +56,7 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [Проверка хранимых процедур (службы Master Data Services)](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)   
- [Загрузка или обновление членов в службы Master Data Services с помощью промежуточного процесса](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [Загрузка или обновление членов в службы Master Data Services с помощью промежуточного процесса](add-update-and-delete-data-master-data-services.md)   
  [Просмотр ошибок, возникающих в ходе промежуточного процесса &#40;службы Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
   
   

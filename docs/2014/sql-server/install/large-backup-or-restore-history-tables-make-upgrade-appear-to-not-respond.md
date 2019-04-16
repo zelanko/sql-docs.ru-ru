@@ -14,12 +14,12 @@ ms.assetid: f88d86ec-324b-4518-b6d7-1af7e7265812
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0cf438c6c5ef374e6119f583ffd72a76a99d3110
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b29dc4e8f6dc32a1bda1ace7f029e77d8b1a45b9
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105794"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583127"
 ---
 # <a name="large-backup-or-restore-history-tables-make-upgrade-appear-to-not-respond"></a>Резервное копирование или восстановление больших таблиц журналов может привести к кажущемуся отсутствию ответа от процесса обновления
   В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] в некоторые таблицы журнала резервного копирования и восстановления были добавлены новые столбцы. При обновлении этих таблиц требуется изменить их для добавления новых столбцов. Если одна или несколько из этих таблиц содержит большое количество строк, обновление задержится на длительное время на инструкции ALTER TABLE, которая добавляет столбцы в эту таблицу.  
@@ -54,6 +54,6 @@ ms.locfileid: "48105794"
   
 ## <a name="see-also"></a>См. также  
  [Проблемы обновления компонента Database Engine](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Помощник по обновлению SQL Server 2014 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Помощник по обновлению SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

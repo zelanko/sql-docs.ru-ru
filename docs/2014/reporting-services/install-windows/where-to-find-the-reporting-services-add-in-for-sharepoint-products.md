@@ -1,27 +1,27 @@
 ---
 title: Где найти надстройку службы Reporting Services для продуктов SharePoint | Документы Майкрософт
-ms.custom: ''
-ms.date: 11/16/2015
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - rsSharePoint
-ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 818b927f403d5d58bef41ce1dac033549e106a4c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 11/16/2015
+ms.openlocfilehash: 7c7dc81f4599d6f532ade1914d5561d845dd193e
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041035"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582537"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Где найти надстройку службы Reporting Services для продуктов SharePoint
-  Надстройка служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) для продуктов и технологий SharePoint (rsSharePoint.msi) представляет собой загружаемый через Интернет файл, который предоставляет возможности для интеграции сервера отчетов с развернутой средой SharePoint.  
+
+Надстройка служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) для продуктов и технологий SharePoint (rsSharePoint.msi) представляет собой загружаемый через Интернет файл, который предоставляет возможности для интеграции сервера отчетов с развернутой средой SharePoint.  
   
 > [!IMPORTANT]  
 >  Список поддерживаемых сочетаний [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройки, сервер отчетов и SharePoint, см. Дополнительные сведения см. в разделе [поддерживаемые сочетания SharePoint и Reporting Services и надстройки &#40;SQL Server 2014&#41; ](supported-combinations-of-sharepoint-and-reporting-services-server.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "56041035"
 ##  <a name="bkmk_sql2008"></a> SQL Server 2008 Reporting Services надстройки для продуктов SharePoint 2007 и технологии  
  Надстройка служб Microsoft SQL Server 2008 Reporting Services для технологий Microsoft SharePoint обеспечивает возможности запуска сервера отчетов в развернутой среде служб Windows SharePoint Services 3.0 или Microsoft Office SharePoint Server 2007.  
   
- Последняя версия этого файла доступна в центре загрузки Майкрософт [!INCLUDE[msCoName](../../includes/msconame-md.md)] на странице [Надстройка служб Microsoft SQL Server 2008 Reporting Services для технологий Microsoft SharePoint](https://go.microsoft.com/fwlink/?LinkID=204813).  
+ Последняя версия этого файла доступна в центре загрузки Майкрософт [!INCLUDE[msCoName](../../includes/msconame-md.md)] на странице [Надстройка служб Microsoft SQL Server 2008 Reporting Services для технологий Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=622).  
   
 ## <a name="see-also"></a>См. также  
  [Установка или удаление Reporting Services надстройки для SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   

@@ -11,12 +11,12 @@ ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5b9e328f3abd3a53bfb4764470138d6d6b966236
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+ms.openlocfilehash: e3892d17d25980efe16acea58a0e8a93c28325c4
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617604"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581618"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Надстройка Master Data Services для Microsoft Excel
 
@@ -31,6 +31,7 @@ ms.locfileid: "52617604"
 ## <a name="downloads"></a>Файлы для загрузки 
 >*  Скачайте надстройку служб Master Data Services для Excel для пакета обновления 2 (SP2) SQL Server 2016 с [этой страницы Центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=56838). 
 >* Скачайте [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] для SQL Server 2017 с [этой страницы Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=836867).
+>*  Скачайте надстройку служб Master Data Services для Excel для SQL Server CTP 2019 из [этой страницы центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=2086948). 
  
   
 ## <a name="terms"></a>Термины  
@@ -67,13 +68,13 @@ ms.locfileid: "52617604"
   
 -   [Соединения (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/connections-mds-add-in-for-excel.md)  
   
--   [Overview: Exporting Data to Excel (MDS Add-in for Excel)](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md) (Обзор экспорта данных в Excel (надстройка MDS для Excel))  
+-   [Обзор: экспорт данных в Excel (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
 -   [Файлы ярлыков запросов (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
 -   [Обновление данных (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md)  
   
--   [Обзор импорта данных из Excel (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [Обзор: Импорт данных из Excel &#40;надстройка MDS для Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [Проверка данных (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)  
   

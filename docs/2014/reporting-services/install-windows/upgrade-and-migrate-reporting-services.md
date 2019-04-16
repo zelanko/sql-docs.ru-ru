@@ -1,9 +1,6 @@
 ---
 title: Обновление и перенос служб Reporting Services | Документы Майкрософт
-ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
@@ -12,19 +9,22 @@ helpviewer_keywords:
 - Reporting Services, upgrades
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
-ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5028e1034a7f94cc877d6164b15f6f7b925a661e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/13/2017
+ms.openlocfilehash: 77bc8ae2bb029218d79025cb97d9fb1ed281fe6c
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017185"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583077"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
-  Этот раздел содержит общие сведения о вариантах обновления и миграции для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Существуют два принципиальных подхода к обновлению развертывания [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+
+Этот раздел содержит общие сведения о вариантах обновления и миграции для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Существуют два принципиальных подхода к обновлению развертывания [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 -   **Обновление:** Обновляются компоненты [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на тех серверах и экземплярах, где они установлены в данный момент. Обычно это называется обновлением на месте. Обновление на месте с одного режима сервера [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на другой режим не поддерживается. Например, невозможно обновить сервер отчетов в собственном режиме до сервера отчетов в режиме интеграции с SharePoint. Элементы отчета можно переносить из одного режима в другой. Дополнительные сведения см. в разделе «Native миграции SharePoint» далее в этом документе и в связанном разделе [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
@@ -155,7 +155,7 @@ ms.locfileid: "56017185"
   
     3.  Другие клиентские средства, такие как среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и электронная документация, не обновляются. Получить новые версии этих средств можно путем их добавления при выполнении программы установки. Более ранние версии будут существовать наряду с версиями [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. В случае установки образцов более ранние версии сохраняются. Программа установки не поддерживает обновление образцов SQL Server.  
   
-    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] загружается отдельно. Дополнительные сведения см. в разделе [Средства Microsoft SQL Server Data Tools 2014 — бизнес-аналитика для Microsoft Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkID=325512).  
+    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] загружается отдельно. Дополнительные сведения см. в разделе [Средства Microsoft SQL Server Data Tools 2014 — бизнес-аналитика для Microsoft Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843).  
   
 6.  Программа установки повторно использует запись службы в диспетчере управления службами для службы сервера отчетов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Эта запись службы включает учетную запись службы Windows сервера отчетов.  
   

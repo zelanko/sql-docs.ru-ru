@@ -3,18 +3,18 @@ title: Как вызвать Java из SQL - службы машинного о�
 description: Узнайте, как вызывать классы Java из хранимых процедур SQL Server с помощью программирования расширение языка в SQL Server 2019 Java.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 36a949f4d046d4071ffd7d52d34233e993ee700f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 8913f471b127663f9f1be179d791a4f72a0ed6aa
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493006"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581579"
 ---
 # <a name="how-to-call-java-from-sql-server-2019-preview"></a>Как вызвать Java из предварительной версии SQL Server 2019
 
@@ -93,7 +93,7 @@ EXEC sp_execute_external_script
 
 ## <a name="external-library"></a>Внешняя библиотека
 
-В SQL Server 2019 CTP 2.4 внешние библиотеки можно использовать для языка Java в Windows и Linux. Те же функциональные возможности будут доступны на платформе Linux в следующей CTP-версии. Можно скомпилировать свои классы в JAR-файл и отправить JAR-файл и другие зависимости в базу данных при помощи [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
+В SQL Server 2019 CTP 2.4 внешние библиотеки можно использовать для языка Java в Windows и Linux. Можно скомпилировать свои классы в JAR-файл и отправить JAR-файл и другие зависимости в базу данных при помощи [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
 
 Пример того, как отправить JAR-файл с помощью внешней библиотеки.
 

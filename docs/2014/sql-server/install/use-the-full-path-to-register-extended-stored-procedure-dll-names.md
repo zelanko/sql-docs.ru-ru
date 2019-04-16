@@ -16,12 +16,12 @@ ms.assetid: f648d57c-af32-4c71-9882-47b6766f3c2b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5c171389f5d2df4ae4b6ba34abe56a9b07431dbe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ecdf37d4c7c97e8c474f5e7f08e3e6fef040723
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185274"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582647"
 ---
 # <a name="use-the-full-path-to-register-extended-stored-procedure-dll-names"></a>Используйте полный путь для регистрации имен DLL-библиотек расширенных хранимых процедур
   Расширенные хранимые процедуры, ранее зарегистрированные без указания полного пути к DLL, могут не работать в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -41,6 +41,6 @@ ms.locfileid: "48185274"
   
 ## <a name="see-also"></a>См. также  
  [Проблемы обновления компонента Database Engine](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Помощник по обновлению SQL Server 2014 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Помощник по обновлению SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

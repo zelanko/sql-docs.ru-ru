@@ -13,12 +13,12 @@ ms.assetid: 7b6fb18e-ec39-4661-88e3-977ed64e2c82
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f31308a08b177e59cad0193b6a4b15a9888d7e81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05928a02a02680acb3a2a6e32dfdf1409fad8b19
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193584"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583157"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Разделы справки (F1) диспетчера конфигурации служб Reporting Services (службы Reporting Services в собственном режиме)
   В этом разделе приводится справка F1 для диспетчера конфигурации служб Reporting Services.  
@@ -45,7 +45,7 @@ ms.locfileid: "48193584"
   
 -   [URL-адрес диспетчера отчетов](../../../2014/sql-server/install/report-manager-url-ssrs-native-mode.md)  
   
--   [Параметры электронной почты](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
+-   [Настройки электронной почты](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
 -   [Учетная запись выполнения](../../../2014/sql-server/install/execution-account-ssrs-native-mode.md)  
   
@@ -58,6 +58,6 @@ ms.locfileid: "48193584"
 -   [Конфигурации с масштабным развертыванием](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   
 ## <a name="see-also"></a>См. также  
- [Диспетчер конфигурации служб Reporting Services &#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)  
+ [Диспетчер конфигурации служб Reporting Services &#40;del&#41;](reporting-services-configuration-manager-native-mode.md)  
   
   
