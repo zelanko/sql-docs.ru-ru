@@ -19,10 +19,10 @@ ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 725d2015a186c28b48967a8f0154a76195abba6f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59242282"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Источники данных, поддерживаемые службами Reporting Services (SSRS)
@@ -73,7 +73,7 @@ ms.locfileid: "59242282"
  Требования к платформам для источников данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] различаются для системы клиента, создающего отчеты, и сервера отчетов.  
   
 ### <a name="on-the-report-authoring-client"></a>На системе клиента, создающего отчеты  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] is a 32-bit application. [!INCLUDE[ss_dtbi](../../— это 32-разрядное приложение. is not supported on an Itanium-based platform. On не поддерживается на платформе Itanium.nНа платформе x64 для изменения и предварительного просмотра отчетов в конструкторе отчетов необходимо наличие 32-разрядных версий поставщиков данных, установленных в каталоге платформы (x86).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] — это 32-разрядное приложение. [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] не поддерживается на платформе Itanium. На платформе x64 для изменения и предварительного просмотра отчетов в конструкторе отчетов необходимо наличие 32-разрядных версий поставщиков данных, установленных в каталоге платформы (x86).  
   
 ### <a name="on-the-report-server"></a>На сервере отчетов  
  При развертывании отчета в 64-разрядной версии сервера отчетов на нем должны быть установлены 64-разрядные версии поставщиков данных, скомпилированные в машинном коде. Упаковка 32-разрядной версии поставщика данных в 64-разрядные интерфейсы не поддерживается. Дополнительные сведения см. в документации по поставщику данных.  
@@ -102,11 +102,11 @@ ms.locfileid: "59242282"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реляционная база данных|[Microsoft SQL Server](#MicrosoftSQLServer)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.SqlClient|Да|Да|SQL Server 2008 и более поздней версии.|Да|Да|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реляционная база данных|OLEDB|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.OledbClient|Да|Да|SQL Server 2008 и более поздней версии.|Да|Да|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реляционная база данных|[интерфейс ODBC](#ODBC)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.OdbcClient|Да|Да|SQL Server 2008 и более поздней версии.|Да|Да|  
-|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[База данных Microsoft Azure SQL](#Azure)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.SqlClient|Недоступно|Недоступно|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|Да|Да|
-|Хранилище данных SQL|[База данных Microsoft Azure SQL](#Azure)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.SqlClient|Недоступно|Недоступно|Хранилище данных SQL|Да|Да| 
+|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[База данных SQL Microsoft Azure](#Azure)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.SqlClient|Недоступно|Недоступно|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|Да|Да|
+|Хранилище данных SQL|[База данных SQL Microsoft Azure](#Azure)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.SqlClient|Недоступно|Недоступно|Хранилище данных SQL|Да|Да| 
 |[!INCLUDE[ssDW](../../includes/ssdw-md.md)] (модуль)|[Параллельные хранилища данных Microsoft](#PWD)|Нерекомендуемый модуль обработки данных [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Недоступно|Недоступно|Недоступно|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|Нет|Нет|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (многомерная база данных)|[Службы Microsoft SQL Server Analysis Services](#AnalysisServices)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Использует ADOMD.NET|Да|Да|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и более поздние версии|Да|Да|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (многомерная база данных)|OLEDB|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.OledbClient<br /><br /> Версия 10.0|Да|Да|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Да|Да|   
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (многомерная база данных)|OLEDB|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширение класса System.Data.OledbClient<br /><br /> Версия 10.0|Да|Да|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Да|Да|   
 |Списки SharePoint|[Список Microsoft SharePoint](#SharePointList)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Возвращает данные из Lists.asmx или API-интерфейсов объектной модели SharePoint.<br /><br /> См. [примечание](#SharePointList).|Нет|Да|Продукты SharePoint 2013 и более поздних версий|Да|Да|   
 |XML|[XML](#XML)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Источники XML-данных не зависят от платформы.|Недоступно|Недоступно|[!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)] или документы|Да|Да|  
 |Модель сервера отчетов|Модель отчета|Нерекомендуемый модуль обработки данных [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для опубликованного SMDL-файла|Источники данных для модели используют встроенные модули обработки данных.<br /><br /> Для моделей на основе Oracle требуются клиентские компоненты Oracle.<br /><br /> Для моделей на основе Teradata требуется поставщик данных .NET для Teradata от Teradata.<br /><br /> См. документацию Teradata по поддержке платформ.|Недоступно|Недоступно|Источники создания моделей:[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздние версии<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Oracle 9.2.0.3 или более поздней версии<br /><br /> Teradata V14, v13, v12 и v6.2|Нет|Нет|  
@@ -150,7 +150,7 @@ ms.locfileid: "59242282"
   
  В среде [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] графическим конструктором запросов, связанным с этим модулем обработки данных, является конструктор реляционных запросов, а не визуальный конструктор инструментов для создания баз данных, который используется с типом источников данных **Microsoft SQL Server**.  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] автоматически различает типы источников данных **Microsoft Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** и **Microsoft SQL Server** и открывает графический конструктор запросов, связанный с типом источника данных.  
+ Среда [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] автоматически различает типы источников данных **Microsoft Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** и **Microsoft SQL Server** и открывает графический конструктор запросов, связанный с типом источника данных.  
   
  Если конструктор запросов используется в графическом режиме, запрос анализируется и, возможно, переписывается. Текстовый конструктор запросов также доступен для написания запросов. Текстовый конструктор запросов можно использовать при необходимости четкого управления синтаксисом [!INCLUDE[tsql](../../includes/tsql-md.md)] в запросе.   
   
@@ -297,7 +297,7 @@ ms.locfileid: "59242282"
  [Назад к таблице источников данных](#DataSourcesTable)  
   
 ###  <a name="SAPBW"></a> Модуль обработки данных SAP BW  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включает модуль обработки данных, позволяющий использовать в отчетах данные из источника данных SAP BW.
+ Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают модуль обработки данных, позволяющий использовать в отчетах данные из источника данных SAP BW.
   
  [Назад к таблице источников данных](#DataSourcesTable)  
   
@@ -313,6 +313,6 @@ ms.locfileid: "59242282"
 ## <a name="see-also"></a>См. также:  
  [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
- Остались вопросы? [Посетите форум Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+ Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   
