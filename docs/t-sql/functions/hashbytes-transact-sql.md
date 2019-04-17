@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee8626047df76aaf9186295c092623a7cee6d263
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: fb4a69420f4fc3ac7881b2798ef97fc0b202a31f
+ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570667"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429390"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
 ## <a name="arguments"></a>Аргументы  
  **'**\<algorithm>**'**  
- Указывает используемый алгоритм хэширования. Этот аргумент обязателен и не имеет значения по умолчанию. Указание одинарных кавычек (") также обязательно. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] все алгоритмы, отличные от SHA2_256 и SHA2_512, являются нерекомендуемыми. Старые алгоритмы (нерекомендуемые) по-прежнему будут работать, но будут вызывать событие нерекомендуемого алгоритма.  
+ Указывает используемый алгоритм хэширования. Этот аргумент обязателен и не имеет значения по умолчанию. Указание одинарных кавычек (") также обязательно. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] все алгоритмы, отличные от SHA2_256 и SHA2_512, являются нерекомендуемыми.  
   
  **@input**  
  Указывает переменную, содержащую хэшируемые данные. **@input** имеет тип **varchar**, **nvarchar** или **varbinary**.  
@@ -52,9 +52,9 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
  **'** *input* **'**  
  Определяет выражение, анализирующее тип хэшируемых данных (символьная или двоичная строка).  
   
- Выходные данные соответствуют стандарту алгоритма: 128 бит (16 байт) для MD2, MD4 и MD5; 160 бит (20 байт) для SHA и SHA1; 256 бит (32 байта) для SHA2_256 и 512 бит (64 байта) для SHA2_512  
+ Выходные данные соответствуют стандарту алгоритма: 128 бит (16 байт) для MD2, MD4 и MD5; 160 бит (20 байт) для SHA и SHA1; 256 бит (32 байта) для SHA2_256 и 512 бит (64 байта) для SHA2_512.  
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Применимо к**: от [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Для [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более ранних версий допустимый размер входных значений ограничен 8000 байтами.  
   
@@ -64,7 +64,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ## <a name="remarks"></a>Remarks  
 Попробуйте использовать `CHECKSUM` или `BINARY_CHECKSUM` в качестве альтернативы для вычисления хэш-значения.
 
-Алгоритмы MD2, MD4, MD5, SHA и SHA1 недоступны при уровне совместимости 130 и выше. Вместо этого используйте алгоритмы SHA2_256 или SHA2_512.
+Алгоритмы MD2, MD4, MD5, SHA и SHA1 начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] отмечены как нерекомендуемые. Вместо этого используйте алгоритмы SHA2_256 или SHA2_512. Старые алгоритмы по-прежнему будут работать, но будут вызывать событие нерекомендуемого алгоритма.
 
 ## <a name="examples"></a>Примеры  
 ### <a name="return-the-hash-of-a-variable"></a>Возвращение хэша данных в переменной  

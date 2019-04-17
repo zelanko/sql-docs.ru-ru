@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: be1de83c0b3fccab722933ef1c080d018c5b74c0
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: bbbc8122105df6a9911357734a00c7c633e63687
+ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044321"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59367242"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Настройка репликации в группах доступности Always On
 
@@ -47,7 +47,7 @@ ms.locfileid: "55044321"
 ##  <a name="step1"></a> 1. Настройка публикаций и подписок баз данных  
  **Настройка распространителя**  
   
- Базу данных распространителя нельзя поместить в группу доступности.  
+ Базу данных распространителя нельзя поместить в группу доступности с использованием SQL Server 2012 и SQL Server 2014. Размещение базы данных распространителя в группе доступности поддерживается в SQL 2016 и более поздних версий. Дополнительные сведения см. в статье о [настройке базы данных распространителя в группе доступности](../../../relational-databases/replication/configure-distribution-availability-group.md).
   
 1.  Настройка распространения на распространителе. Если хранимые процедуры используются для настройки, запустите **sp_adddistributor**. Используйте параметр *@password* для определения пароля, который будет использоваться при подключении удаленного издателя к распространителю. Кроме того, пароль понадобится для каждого удаленного издателя при настройке удаленного распространителя.  
   
@@ -200,7 +200,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 >   
 >  Сообщение 21899, уровень 11, состояние 1, процедура **sp_hadr_verify_subscribers_at_publisher**, строка 109  
 >   
->  Запрос на перенаправленном издателе «MyReplicaHostName» для определения того, были ли там записи sysserver для подписчиков оригинального издателя «MyOriginalPublisher», завершился с ошибкой «976», сообщение об ошибке «Ошибка 976, уровень 14, состояние 1, сообщение: Целевая база данных «MyPublishedDB» участвует в группе доступности и в настоящее время недоступна для запросов. Либо перемещение данных приостанавливается, либо реплика доступности не разрешена для чтения. Чтобы разрешить доступ только для чтения к этой и другим базам данных в группе доступности, задайте доступ для чтения одной или нескольким вторичным репликам доступности в группе.  Дополнительные сведения см. в описании инструкции **ALTER AVAILABILITY GROUP** в электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+>  Запрос на перенаправленном издателе "MyReplicaHostName" для определения того, были ли там записи sysserver для подписчиков оригинального издателя "MyOriginalPublisher", завершился с ошибкой "976", сообщение об ошибке "Ошибка 976, уровень 14, состояние 1, сообщение: Целевая база данных "MyPublishedDB" участвует в группе доступности и в настоящее время недоступна для запросов. Либо перемещение данных приостанавливается, либо реплика доступности не разрешена для чтения. Чтобы разрешить доступ только для чтения к этой и другим базам данных в группе доступности, задайте доступ для чтения одной или нескольким вторичным репликам доступности в группе.  Дополнительные сведения см. в описании инструкции **ALTER AVAILABILITY GROUP** в электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
 >   
 >  Произошла одна или несколько ошибок проверки издателя для узла реплики «MyReplicaHostName».  
   
@@ -222,7 +222,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Использование мастера групп доступности (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Использование диалогового окна "Создание группы доступности" (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Использование диалогового окна "Создание группы доступности" (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
 -   [Создание группы доступности (Transact-SQL)](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)  
   
@@ -234,7 +234,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Присоединение вторичной реплики к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+-   [Ручная подготовка базы данных-получателя для присоединения к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
 -   [Присоединение базы данных-получателя к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
@@ -243,7 +243,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 ## <a name="see-also"></a>См. также:  
  [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Группы доступности AlwaysOn: взаимодействие (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Группы доступности AlwaysOn взаимодействие (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Репликация SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
   
   

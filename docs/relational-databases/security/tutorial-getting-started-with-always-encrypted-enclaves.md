@@ -1,7 +1,7 @@
 ---
-title: Учебник. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS | Документация Майкрософт
+title: Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS | Документация Майкрософт
 ms.custom: ''
-ms.date: 10/04/2018
+ms.date: 04/05/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -13,14 +13,14 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b25824b52a09afd7111cacc3a1ec05969766863e
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 051123efd5c58048635bb83e43eaff73218c463e
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042133"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241542"
 ---
-# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Учебник. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS
+# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 В этом руководстве показывается, как приступить к работе с [Always Encrypted с безопасными анклавами](encryption/always-encrypted-enclaves.md). Буду рассмотрены следующие темы.
@@ -46,6 +46,7 @@ ms.locfileid: "59042133"
    - В Hyper-V 2016 или более поздней версии [включите расширения вложенной виртуализации](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) на процессоре виртуальной машины.
    - В Azure убедитесь, что вы выбрали виртуальную машину нужного размера для поддержки вложенной виртуализации, например виртуальную машину серии Dv3 или Ev3. См. раздел [Create a nesting capable Azure VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm) (Создание виртуальной машины Azure с поддержкой вложения).
    - В VMWare vSphere 6.7 или более поздней версии включите для виртуальной машины поддержку технологии Virtualization Based Security (VBS), как описано в [документации VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
+   - Другие гипервизоры и общедоступные облака могут поддерживать использование Always Encrypted с безопасными анклавами на виртуальной машине, если ей предоставлены расширения виртуализации (иногда также называются встроенной виртуализацией). Просмотрите сведения о совместимости и инструкции по настройке в документации по своему решению для виртуализации.
 - [SQL Server Management Studio (SSMS) версии не ниже 18.0](../../ssms/download-sql-server-management-studio-ssms.md)
 
 Кроме того, можно установить SSMS на другом компьютере.

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d7cc4c7aaf4dfc085bab1fbb3fd3335dda534a2f
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: dd85274454db10b0bd3415ec41aa6cedcd629d0f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257109"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241842"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Конфигурация и обеспечение безопасности PolyBase для Hadoop
 
@@ -33,6 +33,8 @@ ms.locfileid: "54257109"
      <value></value>
    </property> 
 ```
+
+Для использования конфигураций Privacy (Конфиденциальность) или Integrity (Целостность) для hadoop.rpc.protection требуется версия SQL Server не ниже SQL Server 2016 с пакетом обновления 1 (SP1) и накопительным обновлением 7, SQL Server 2016 с пакетом обновления 2 (SP2) или SQL Server 2017 с накопительным обновлением 3.
 
 ## <a name="example-xml-files-for-cdh-5x-cluster"></a>Пример XML-файла для кластера CDH 5.X
 

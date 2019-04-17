@@ -1,27 +1,27 @@
 ---
 title: Статическое маскирование данных | Документация Майкрософт
-ms.date: 11/05/2018
+ms.date: 04/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
-author: egranet
+author: aliceku
 ms.author: aliceku
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cec6c79fadb5ef2a63145fff3efe0df3c8cd0f9d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 91b0fde06d400b2c519e9e6c86854197a2aecd13
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980460"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516470"
 ---
 # <a name="static-data-masking"></a>Статическое маскирование данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Статическое маскирование данных — это компонент предварительной версии 5 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 и более поздних версий. Последнюю предварительную версию SQL Server Management Studio можно скачать [здесь](../../ssms/download-sql-server-management-studio-ssms.md). 
+Функция "Статическое маскирование данных" выпущена как компонент предварительной версии 5 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 и более поздних версий. Мы пришли к выводу, что наш текущий прототип не соответствуют требованиям клиентов. Поэтому эта возможность не будет переноситься в дальнейшие версии. Мы сообщим вам, если будем планировать ее замену.
 
 ![Статическое маскирование данных](../../relational-databases/security/media/sql-static-data-masking/static_data_masking_intro_image.PNG)
 

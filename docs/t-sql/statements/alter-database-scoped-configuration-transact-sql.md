@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 85e4ceb8c70d6aa11ac37a8b3e8fd28c997c03dc
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fddb5027da7d1b8e33ebcbc53ba403b866eadb8c
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493787"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506551"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -59,7 +59,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 {
      {  [ FOR SECONDARY] SET <set_options>}
 }
-| CLEAR PROCEDURE_CACHE
+| CLEAR PROCEDURE_CACHE  [plan_handle]
 | SET < set_options >
 [;]
 
@@ -94,9 +94,14 @@ FOR SECONDARY
 
 Задает параметры для баз данных-получателей (все базы данных-получатели должны иметь одинаковые значения).
 
-CLEAR PROCEDURE_CACHE    
+CLEAR PROCEDURE_CACHE [plan_handle]
 
 Очистка кэша процедур (планов) для базы данных. Может выполняться для баз данных-источников и баз данных-получателей.  
+
+Укажите дескриптор плана запроса, чтобы удалить отдельный план запроса из кэша планов.
+
+> [!NOTE]
+> Указать дескриптор плана запроса можно в Базе данных SQL Azure и SQL Server 2019 или более поздней версии.
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
@@ -151,7 +156,7 @@ PRIMARY
 
 IDENTITY_CACHE **=** { **ON** | OFF }
 
-**Применимо к**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Область применения:** [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Включает и выключает кэширование идентификации на уровне базы данных. Значение по умолчанию — **ON**. Кэширование идентификаторов используется для повышения производительности инструкции INSERT в таблицах со столбцами идентификаторов. Во избежание пропусков значений столбца идентификаторов в случаях, когда сервер неожиданно перезапускается или выполняет обработку отказа на сервер-получатель, отключите параметр IDENTITY_CACHE. Этот параметр похож на существующий [флаг трассировки 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) с той разницей, что его можно задать на уровне базы данных, а не только на уровне сервера.
 
@@ -160,7 +165,7 @@ IDENTITY_CACHE **=** { **ON** | OFF }
 
 INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Позволяет включить или отключить выполнение с чередованием для функций с табличным значением и множеством инструкций в области базы данных или инструкции, сохранив уровень совместимости базы данных 140 или выше. Выполнение с чередованием — одна из возможностей адаптивной обработки запросов в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Дополнительные сведения см. в статье [Интеллектуальная обработка запросов](../../relational-databases/performance/intelligent-query-processing.md).
 
@@ -169,7 +174,7 @@ INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 
 BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
-**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+**Область применения:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
 Позволяет включить или отключить обратную связь по временно предоставляемому буферу памяти в пакетном режиме в области базы данных, сохранив уровень совместимости базы данных 140 или выше. Обратная связь по временно предоставляемому буферу памяти в пакетном режиме — одна из возможностей [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md), представленная в [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
@@ -178,7 +183,7 @@ BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
 BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
 
-**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+**Область применения:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
 Позволяет включить или отключить адаптивные соединения в пакетном режиме в области базы данных, сохранив уровень совместимости базы данных 140 или выше. Адаптивные соединения в пакетном режиме — одна из возможностей [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md), представленная в [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
@@ -290,15 +295,15 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
 LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
-**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+**Область применения:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
 Делает возможным включение или отключение [упрощенной инфраструктуры профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md). Упрощенная инфраструктура профилирования запросов (LWP) предоставляет более эффективные данные производительности запросов по сравнению со стандартными механизмами профилирования. По умолчанию она включена.
 
 VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 
-**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+**Область применения:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
-Позволяет включить или отключить новое сообщение об ошибке `String or binary data would be truncated`. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] добавлено новое, более конкретное сообщение об ошибке (2628) для подобного сценария:  
+Позволяет включить или отключить новое сообщение об ошибке `String or binary data would be truncated`. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] содержит новое, более конкретное сообщение об ошибке (2628) для подобного сценария:  
 
 `String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
 
@@ -406,7 +411,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING = OFF ;
 ```
 
-В этом примере параметру PARAMETER_SNIFFING присваивается значение OFF для базы данных-источника в сценарии георепликации.
+В этом примере параметру PARAMETER_SNIFFING присваивается значение OFF для базы данных-получателя в сценарии георепликации.
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = OFF ;
@@ -468,12 +473,19 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ```
 
+### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>Л. Очистка плана запроса из кэша планов
+В этом примере конкретный план удаляется из кэша процедур 
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B7CD12C02000001000000000000000000000000000000000000000000000000000000;
+```
+
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 ### <a name="maxdop-resources"></a>Ресурсы MAXDOP
 
 - [Степень параллелизма](../../relational-databases/query-processing-architecture-guide.md#DOP)
-- [Рекомендации и инструкции по использованию параметра конфигурации "max degree of parallelism" в SQL Server](https://support.microsoft.com/kb/2806535)
+- [Рекомендации и инструкции по использованию параметра конфигурации "Максимальная степень параллелизма" в SQL Server](https://support.microsoft.com/kb/2806535)
 
 ### <a name="legacycardinalityestimation-resources"></a>Ресурсы по параметру LEGACY_CARDINALITY_ESTIMATION
 
@@ -492,11 +504,11 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 
 ### <a name="elevateonline-resources"></a>Ресурсы по ELEVATE_ONLINE
 
-[Рекомендации по операциям с индексами в оперативном режиме](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
+[Руководящие принципы для операций с индексами](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 
 ### <a name="elevateresumable-resources"></a>Ресурсы по ELEVATE_RESUMABLE
 
-[Рекомендации по операциям с индексами в оперативном режиме](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
+[Руководящие принципы для операций с индексами](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 
 ## <a name="more-information"></a>Дополнительные сведения
 
@@ -504,7 +516,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 - [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)
 - [Представления каталога баз данных и файлов](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
 - [Параметры конфигурации сервера](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
-- [Об операциях с индексами в сети](../../relational-databases/indexes/how-online-index-operations-work.md)
+- [Об операциях с индексом в сети](../../relational-databases/indexes/how-online-index-operations-work.md)
 - [Выполнение операции с индексами в сети](../../relational-databases/indexes/perform-index-operations-online.md)
 - [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)
-- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
+- [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)

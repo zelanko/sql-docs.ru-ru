@@ -14,12 +14,12 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c35aab2ebd2b31fbbe7067bc8049930f791543c3
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 6088e603405a41d5bffbc1425b9f6f5495096f18
+ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56230981"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429340"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Настройка параметра конфигурации сервера max worker threads
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "56230981"
   
 -   **Настройка параметра max worker threads с помощью различных средств.**  
   
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -77,14 +77,14 @@ ms.locfileid: "56230981"
     |\> — 64 процессора|256 + ((число логических ЦП – 4) * 32)|512 + ((число логических ЦП – 4) * 32)|
   
     > [!NOTE]  
-    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] больше нельзя устанавливать в 32-разрядной операционной системе. Значения для 32-разрядного компьютера приведены, чтобы помочь клиентам, работающим с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более ранних версий.   Для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , работающего в 32-разрядном компьютере, рекомендуется ограничить число рабочих потоков до 1024.  
+    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] больше нельзя устанавливать в 32-разрядной операционной системе. Значения для 32-разрядного компьютера приведены, чтобы помочь клиентам, работающим с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более ранних версий. Для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], работающего на 32-разрядном компьютере, рекомендуется ограничить число рабочих потоков до 1024.  
   
     > [!NOTE]  
-    >  Рекомендации по использованию процессоров в количестве, превышающем 64, см. в разделе [Рекомендации по использованию SQL Server на компьютерах, которые имеют более 64 процессоров](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus).  
+    > Рекомендации по использованию процессоров в количестве, превышающем 64, см. в разделе [Рекомендации по использованию SQL Server на компьютерах, которые имеют более 64 процессоров](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus).  
   
 -   Если все рабочие потоки заняты выполнением длительных запросов, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может не отвечать на другие запросы, пока один из потоков не завершит работу и не станет доступным. Хотя это и не ошибка, такое поведение иногда нежелательно. Если процесс не отвечает и новые запросы не могут быть обработаны, подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через выделенное административное соединение (DAC) и уничтожьте процесс. Во избежание этого увеличьте максимальное число потоков управления.  
   
- Параметр конфигурации сервера **max worker threads** не учитывает потоки, которые необходимы для всех системных задач, таких как группы доступности, компонент Service Broker, диспетчер блокировок и другие. Если число настроенных потоков превышается, то следующий запрос будет содержать сведения о системных задачах, породивших дополнительные потоки.  
+ Параметр конфигурации сервера **Максимальное количество рабочих потоков** не ограничивает все потоки, которые могут быть порождены в системе. Потоки, требуемые для групп доступности, Service Broker, диспетчера блокировок или других задач порождаются независимо от этого ограничения. Если число настроенных потоков превышается, то следующий запрос будет содержать сведения о системных задачах, породивших дополнительные потоки.  
   
  ```sql  
  SELECT  s.session_id, r.command, r.status,  
@@ -104,7 +104,7 @@ ms.locfileid: "56230981"
 ###  <a name="Security"></a> безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
- Разрешения на выполнение хранимой процедуры **sp_configure** без параметров или только с первым параметром по умолчанию предоставляются всем пользователям. Для выполнения процедуры **sp_configure** с обоими параметрами для изменения параметра конфигурации или запуска инструкции RECONFIGURE необходимо иметь разрешение ALTER SETTINGS на уровне сервера. Разрешение ALTER SETTINGS неявным образом предоставлено предопределенным ролям сервера **sysadmin** и **serveradmin** .  
+ Разрешения на выполнение хранимой процедуры **sp_configure** без параметров или только с первым параметром по умолчанию предоставляются всем пользователям. Для выполнения процедуры **sp_configure** с обоими параметрами для изменения параметра конфигурации или запуска инструкции `RECONFIGURE` необходимо иметь разрешение `ALTER SETTINGS` на уровне сервера. Разрешение `ALTER SETTINGS` неявным образом предоставлено предопределенным ролям сервера **sysadmin** и **serveradmin**.  
   
 ##  <a name="SSMSProcedure"></a> Использование [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
@@ -143,13 +143,13 @@ RECONFIGURE;
 GO  
 ```  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра max worker threads  
+##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра "Максимальное количество рабочих потоков"  
  Изменения вступят в силу сразу после выполнения [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) без необходимости перезапуска [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="see-also"></a>См. также:  
  [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Диагностическое соединение для администраторов баз данных](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)  
   
   

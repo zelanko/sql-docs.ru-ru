@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 81d9914bee2661bfc3b679898c26a0f2ec3ed112
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7adcc36bfaf41240ae5c1da0d8934ffdda67bada
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212133"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506521"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Службы Reporting Services с группами доступности AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "53212133"
     -   [Работа сервера отчетов при выполнении отработки отказа](#bkmk_failover_behavior)  
   
 ##  <a name="bkmk_requirements"></a> Требования, которые необходимо выполнить для использования служб Reporting Services и групп доступности AlwaysOn  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и Сервер отчетов Microsoft Power BI использует .NET Framework 4.0 и поддерживает свойства строки соединения для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] при работе с источниками данных.  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и Сервер отчетов Microsoft Power BI использует .NET Framework 4.0 и поддерживает свойства строки соединения для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] при работе с источниками данных.  
   
  Чтобы использовать [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в связке с  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 или более ранней версии, следует загрузить и установить исправление для .Net 3.5 SP1. Это исправление добавляет в клиент SQL Server поддержку компонентов групп доступности, а также поддержку свойств строки подключения **ApplicationIntent** и **MultiSubnetFailover**. Если не установить это исправление на все компьютеры, на которых размещен сервер отчетов, то пользователи, пытающиеся просмотреть отчеты, будут видеть сообщение об ошибке примерно следующего содержания, которое также будет записываться в журнал трассировки сервера отчетов.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "53212133"
  Дополнительные сведения о требованиях [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в статье [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] файлы конфигурации, например **RSreportserver.config**, не поддерживаются как часть функциональности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Если изменения в файл конфигурации на одном из серверов отчетов вносятся вручную, то необходимо будет вручную обновить реплики.  
+>  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , например **RSreportserver.config** , не поддерживаются как часть функциональности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Если изменения в файл конфигурации на одном из серверов отчетов вносятся вручную, то необходимо будет вручную обновить реплики.  
   
 ##  <a name="bkmk_reportdatasources"></a> Источники данных отчетов и группы доступности  
  Источники данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] на основе [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] будут работать по-разному в зависимости от того, каким образом администратор настроил среду групп доступности.  

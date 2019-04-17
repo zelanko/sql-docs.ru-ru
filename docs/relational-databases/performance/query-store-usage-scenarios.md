@@ -13,13 +13,13 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b9b0e74eebe3a1cf86af9e3bf8a9a8d4e58495b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 455530c12d498f62b367ecb7ce30d0eb34aa6c5d
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372486"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542044"
 ---
 # <a name="query-store-usage-scenarios"></a>Сценарии использования хранилища запросов
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -131,6 +131,9 @@ ms.locfileid: "53372486"
     A.  При обнаружении регрессии принудительно перейдите к предыдущему, более эффективному плану в хранилище запросов.  
   
     Б.  Если не удалось принудительно перейти к некоторым планам или если производительность по-прежнему на неприемлемом уровне, рекомендуем вернуться к предыдущему [уровню совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), а затем обратиться в службу поддержки пользователей Майкрософт.  
+    
+> [!TIP]
+> Обновите [уровень совместимости базы данных](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)с помощью задачи *обновления базы данных* [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в статье [Обновление баз данных с помощью помощника по настройке запросов](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>Определение и улучшение нерегламентированных рабочих нагрузок  
 В некоторых случаях рабочие нагрузки не содержат доминантных запросов, которые можно настроить для повышения общей производительности приложений. Обычно такие рабочие нагрузки характеризует относительно большое количество различных запросов, каждый из которых задействует часть системных ресурсов. Поскольку эти запросы уникальны, они выполняются очень редко (обычно лишь один раз, в связи с чем называются нерегламентированными), поэтому не оказывают существенного влияния на ресурсы системы. С другой стороны, учитывая, что приложение постоянно формирует новые запросы, значительная часть системных ресурсов расходуется на компиляцию запросов, а это не оптимально. Это не идеальная ситуация для хранилища запросов еще и потому, что множество запросов и планов заполняют зарезервированное вами пространство, а значит, хранилище запросов быстрее переходит в режим доступности только для чтения. Если вы активировали **политику очистки на основе размера** ([настоятельно рекомендуется](best-practice-with-the-query-store.md) для поддержания работоспособности хранилища запросов), фоновый процесс будет очищать структуры хранилища запросов большую часть времени и, таким образом, также задействовать значительную часть системных ресурсов.  
@@ -217,6 +220,7 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
   
 ## <a name="see-also"></a>См. также:  
  [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Рекомендации по хранилищу запросов](../../relational-databases/performance/best-practice-with-the-query-store.md)  
+ [Рекомендации по хранилищу запросов](../../relational-databases/performance/best-practice-with-the-query-store.md)         
+ [Обновление баз данных с помощью помощника по настройке запросов](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
   
   

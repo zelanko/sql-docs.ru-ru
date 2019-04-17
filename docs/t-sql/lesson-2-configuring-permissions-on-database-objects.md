@@ -1,7 +1,7 @@
 ---
-title: Учебник T-SQL. Настройка разрешений для объектов базы данных | Документация Майкрософт
+title: Учебник по T-SQL. Настройка разрешений для объектов базы данных | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/30/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.technology: t-sql
 ms.reviewer: ''
@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4faa36c3cbef3d0ae84ac62a6cb7e866998ee064
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 56f98831db725a04d7399a49fbe8f6803cbe510c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878137"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241402"
 ---
-# <a name="lesson-2-configure-permissions-on-database-objects"></a>Урок 2. Настройка разрешений для объектов базы данных
+# <a name="lesson-2-configure-permissions-on-database-objects"></a>Урок 2. Настройка разрешений для объектов базы данных
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 Предоставление пользователю доступа к базе данных включает три шага. Вначале создается имя входа. Имя входа дает пользователю возможность подключиться к компоненту [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Затем имя входа настраивается как пользователь в заданной базе данных. Наконец, предоставляются пользовательские разрешения на объекты базы данных. В этом занятии показаны все три шага, а также создание представления и хранимой процедуры в виде объекта.  
 
@@ -33,9 +33,11 @@ ms.locfileid: "48878137"
 - Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Если у вас нет доступа к экземпляру SQL Server, выберите свою платформу в следующих ссылках. При выборе проверки подлинности SQL используйте учетные данные SQL Server.
-- **Windows**: [скачать выпуск SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **Windows**: [Скачать выпуск SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
 - **macOS**: [скачать SQL Server 2017 для Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
-  
+
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="create-a-login"></a>Создает вход
 Чтобы получить доступ к компоненту [!INCLUDE[ssDE](../includes/ssde-md.md)], необходимо иметь имя входа. Имя входа может идентифицировать пользователя как учетную запись Windows или как члена группы Windows, или имя входа может быть именем входа [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , которое существует только в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При возможности используйте проверку подлинности Windows.  
   

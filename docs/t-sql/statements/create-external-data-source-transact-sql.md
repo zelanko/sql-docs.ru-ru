@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f3c92067adfc0469802c81d78a7267af2cd28cc
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 986a658c315241e14efd6fd10b170aaf9fb17da0
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421201"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516530"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -325,6 +325,10 @@ CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential
  Все источники данных, определенные в одном и том же расположении кластера Hadoop, должны использовать один и тот же параметр для RESOURCE_MANAGER_LOCATION или JOB_TRACKER_LOCATION. Если существует несоответствие, возникнет ошибка выполнения.  
   
  Если кластер Hadoop настроен с именем, а внешний источник данных использует для указания на расположение кластера IP-адрес, PolyBase все равно должна иметь возможность разрешить имя кластера при использовании источника данных. Чтобы разрешить имя, необходимо включить DNS-сервер пересылки.  
+ 
+Сейчас маркер SAS с типом `hadoop` не поддерживается. Маркер поддерживается только при использовании ключа доступа учетной записи хранения. Попытка создать внешний источник данных с типом `hadoop` и использованием учетных данных SAS может завершиться сбоем со следующим сообщением об ошибке:
+
+`Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
   
 ## <a name="locking"></a>Блокировка  
  Принимает совмещенную блокировку на объекте EXTERNAL DATA SOURCE.  

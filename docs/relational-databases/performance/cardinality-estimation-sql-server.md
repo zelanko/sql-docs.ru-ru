@@ -16,14 +16,15 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca1168e0e101f8d8d8c5ae75636f2923faf7e2a1
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 2b95caa318df620d91e6508d3ca0811942063fcd
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828024"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516460"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Оценка количества элементов (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Оптимизатор запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] основан на оценке стоимости. То есть оптимизатор выбирает планы запросов с наименьшей оценочной стоимостью их выполнения. Оптимизатор запросов определяет стоимость выполнения плана запроса исходя из двух основных факторов:
@@ -53,9 +54,10 @@ ms.locfileid: "56828024"
 - Запрос OLTP (оперативной обработки транзакций), который выполняется настолько часто, что несколько экземпляров этого запроса выполняются параллельно.  
 - Инструкция SELECT с существенной статистической обработкой, которая выполняется в рабочие часы OLTP.  
   
-У вас есть методы определения запроса, который с учетом новых данных CE выполняется медленнее. И у вас есть несколько способов решения проблемы производительности.     
+У вас есть методы определения запроса, который с учетом новых данных CE выполняется медленнее. И у вас есть несколько способов решения проблемы производительности.
   
-## <a name="versions-of-the-ce"></a>Версии CE  
+## <a name="versions-of-the-ce"></a>Версии CE
+
 В 1998 г. основное обновление CE входило в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0. Уровень совместимости компонента был равен 70. Эта версия модели CE основана на четырех допущениях.
 
 -  **Независимость**: предполагается, что данные, распределенные по разным столбцам, независимы друг от друга, если нет доступных или используемых сведений о корреляции.
@@ -106,7 +108,7 @@ GO
  ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
-WHERE OrderAddedDate >= '2016-05-01'; 
+WHERE OrderAddedDate >= '2016-05-01'
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
@@ -293,5 +295,6 @@ WHERE s.ticket = r.ticket AND
  [Оптимизация планов запроса с помощью средства оценки кратности SQL Server 2014](https://msdn.microsoft.com/library/dn673537.aspx)  
  [Указания запросов](../../t-sql/queries/hints-transact-sql-query.md)     
  [Указания запросов USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
+ [Обновление баз данных с помощью помощника по настройке запросов](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
  [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
  [Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md)   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 43bfe4364543adee0e63e1d123680a82bb3bae39
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: cedbd1516706191980dc7817a9bc7434def30831
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578334"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241469"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Поддержка высокого уровня доступности в Scale Out
 
@@ -43,7 +43,7 @@ ms.locfileid: "57578334"
 
 ### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2. Включите имя узла DNS для службы мастера Scale Out в список CN для сертификата мастера Scale Out.
 
-Это имя узла используется в конечной точке мастера Scale Out. (Необходимо указать имя узла DNS, а не имя сервера.)
+Это имя узла — конечная точка мастера Scale Out, которая создается как кластеризованная универсальная служба в отказоустойчивом кластере (см. шаг 7).   (Необходимо указать имя узла DNS, а не имя сервера.)
 
 ![Конфигурация мастера высокой доступности](media/ha-master-config.PNG)
 

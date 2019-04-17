@@ -47,9 +47,9 @@ ms.locfileid: "58306132"
   
 |Параметр реестра|Рекомендуемое значение|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ служб \ Tcpip \ параметры \ KeepAliveTime|30 000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ служб \ Tcpip \ параметры \ KeepAliveInterval|1000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ служб \ Tcpip \ параметры \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30 000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
   
 Перезагрузите компьютер, чтобы новые параметры вступили в силу.  
 
@@ -81,7 +81,7 @@ shutdown /r /t 1
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Для использования шифрования необходимо задать hostNameInCertificate
 
-До версии 7.2 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], при подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], следует указать **hostNameInCertificate** при указании **шифрования = true** (если имя сервера в соединении Строка является *shortName*. *domainName*, задайте **hostNameInCertificate** свойства \*. *domainName*.). Это свойство является необязательным, начиная с версии 7.2 драйвера.
+До версии 7.2 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], при подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], следует указать **hostNameInCertificate** при указании **encrypt=true** (если имя сервера в соединении Строка является *shortName*. *domainName*, задайте **hostNameInCertificate** свойства \*. *domainName*.). Это свойство является необязательным, начиная с версии 7.2 драйвера.
 
 Пример:
 

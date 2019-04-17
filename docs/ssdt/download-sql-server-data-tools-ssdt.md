@@ -1,7 +1,7 @@
 ---
 title: Загрузка SQL Server Data Tools (SSDT) | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2019
+ms.date: 04/05/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 596a32bc9942bde7a8301635150287f63a5fbeed
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: b336589f59bef9087392ff141a4bd64df1ed76c8
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58431273"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59243508"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Скачивание и установка SQL Server Data Tools (SSDT) для Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,11 +27,32 @@ ms.locfileid: "58431273"
 
 **SQL Server Data Tools** — это современное средство разработки, позволяющее создавать реляционные базы данных SQL Server, базы данных SQL Azure, модели данных Analysis Services (AS), пакеты Integration Services (IS) и отчеты Reporting Services (RS). С помощью SSDT вы можете проектировать и развертывать любые типы содержимого SQL Server так же просто, как разрабатывать приложения в Visual Studio.
 
-*Для большинства пользователей SQL Server Data Tools (SSDT) устанавливается во время установки Visual Studio. При установке SSDT с помощью установщика Visual Studio добавляется лишь базовая функциональность для SSDT, поэтому для получения средств AS, IS и RS по-прежнему необходимо запускать [автономный установщик SSDT](#ssdt-for-vs-2017-standalone-installer).*
+
+## <a name="changes-in-ssdt-for-visual-studio-2019"></a>Изменения в SSDT для Visual Studio 2019 ##
+
+С выходом Visual Studio 2019 требуемые функции для поддержки Analysis Services, Integration Services и Reporting Services перемещены в соответствующие расширения Visual Studio. Основные функции SSDT для создания проектов баз данных остаются неотъемлемой частью Visual Studio (во время установки нужно выбрать рабочую нагрузку "Хранение и обработка данных").  Теперь не нужно устанавливать SSDT отдельно. 
+
+Если у вас есть лицензия на Visual Studio 2019, сделайте следующее:
+- Для проектов Базы данных SQL установите рабочую нагрузку "Хранение и обработка данных" в Visual Studio.
+- Для проектов Analysis Services, Integration Services или Reporting Services установите соответствующие расширения из Marketplace.
+
+Если у вас нет лицензии на Visual Studio 2019, сделайте следующее:
+- Установите [Visual Studio 2019 Community](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&utm_campaign=tailored+install&utm_source=docs.microsoft.com&utm_medium=microsoft&utm_content=sqlssdt&rid=35007). 
+- При необходимости установите Analysis Services, Integration Services и Reporting Services.
+
+## <a name="changes-in-ssdt-for-visual-studio-2017"></a>Изменения в SSDT для Visual Studio 2017 ##
+
+Начиная с Visual Studio 2017, функции создания проектов баз данных входят в пакет установки Visual Studio. Не нужно устанавливать автономный установщик SSDT для использования основных возможностей SSDT. Но для создания проектов Integration Services, Analysis Services и Reporting Services по-прежнему требуется автономный установщик SSDT. 
+
+- Для проектов баз данных установите рабочую нагрузку "Хранение и обработка данных" для Visual Studio.
+- Для проектов Analysis Services, Integration Services или Reporting Services скачайте и установите [SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017).
+
+
+
 
 ## <a name="install-ssdt-with-visual-studio-2017"></a>Установка SSDT с Visual Studio 2017
 
-Чтобы установить SSDT во время [установки Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio), выберите рабочую нагрузку **Хранение и обработка данных**, а затем выберите **SQL Server Data Tools**. Если среда Visual Studio уже установлена, вы можете [изменить список рабочих нагрузок](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) для включения SSDT. ![Рабочая нагрузка хранения и обработки данных](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload.png)
+Чтобы установить SSDT во время [установки Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio), выберите рабочую нагрузку **Хранение и обработка данных**, а затем выберите **SQL Server Data Tools**. Если среда Visual Studio уже установлена, вы можете [изменить список рабочих нагрузок](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) для включения SSDT. ![Рабочая нагрузка "Хранение и обработка данных"](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload.png)
 
 ## <a name="install-analysis-services-integration-services-and-reporting-services-tools"></a>Установка средств Analysis Services, Integration Services и Reporting Services
 
@@ -45,7 +66,7 @@ ms.locfileid: "58431273"
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT для VS 2017 (автономный установщик)
 
-[![Скачать](../ssdt/media/download.png) Скачайте SSDT для Visual Studio 2017 (15.9.0)](https://go.microsoft.com/fwlink/?linkid=2052454) 
+[![dСкачать](../ssdt/media/download.png) Скачайте SSDT для Visual Studio 2017 (15.9.0)](https://go.microsoft.com/fwlink/?linkid=2052454) 
 
 > [!IMPORTANT]
 > - Перед установкой SSDT для Visual Studio 2017 (15.9.0) удалите расширения *Проекты Analysis Services* и *Проекты Reporting Services*, если они установлены, а затем закройте все экземпляры Visual Studio.
@@ -66,7 +87,7 @@ SSDT для Visual Studio 2017 имеет те же [требования к с
 
 Этот выпуск **SSDT для Visual Studio 2017** можно установить на следующих языках:
 
-- [Китайский (упрощенный)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x804)
+- [Китайский (упрощенное письмо)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x804)
 - [Китайский (традиционный)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x404)
 - [Английский (США)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x409)
 - [Французский]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x40c)
@@ -99,9 +120,9 @@ SSDT для Visual Studio 2017 имеет те же [требования к с
 1. Запустите `vs_setup.exe --NoWeb`, чтобы установить оболочку VS2017 Shell и SQL Server Data Project.
 2. В папке макетов запустите `SSDT-Setup-ENU.exe /install` и выберите SSIS/SSRS/SSAS.
 
-   - Для автоматической установки запустите `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`  
+   - Для автоматической установки выполните команду `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`  
 
-Для отображения доступных параметров запустите `SSDT-Setup-ENU.exe /help`
+Для отображения доступных параметров выполните команду `SSDT-Setup-ENU.exe /help`
 
 > [!NOTE]
 > При использовании полной версии Visual Studio 2017 создайте автономную папку только для SSDT и запустите `SSDT-Setup-ENU.exe` из нее (не добавляйте SSDT в другой автономный макет Visual Studio 2017). При добавлении макета SSDT в существующий автономный макет Visual Studio необходимые компоненты времени выполнения (.exe) не создаются.
@@ -127,7 +148,7 @@ SSDT для Visual Studio 2015 и SSDT для Visual Studio 2017 использ�
 После установки SSDT ознакомьтесь с этими руководствами, чтобы узнать, как создать базы данных, пакеты, модели данных и отчеты в SSDT:  
 
 - [Разработка базы данных вне сети с учетом проекта](project-oriented-offline-database-development.md)  
-- [Учебник по службам SSIS. Создание простого ETL-пакета](../integration-services/ssis-how-to-create-an-etl-package.md)  
+- [Руководство по службам SSIS. Создание простого ETL-пакета](../integration-services/ssis-how-to-create-an-etl-package.md)  
 - [Руководства по службам Analysis Services](../analysis-services/analysis-services-tutorials-ssas.md)  
 - [Создание простого табличного отчета (учебник по службам SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 

@@ -1,7 +1,7 @@
 ---
 title: Использование Windows PowerShell в шагах агента SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: scripting
@@ -10,37 +10,39 @@ ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ea20fbf0eb09686075c4fceeee2f3091bc244c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9034e88276192c14eb8d7008ced10b7041e40c9
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769072"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241203"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Использование Windows PowerShell в шагах агента SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Агент SQL Server применяется для запуска скриптов SQL Server PowerShell в запланированное время.  
   
-**Запуск PowerShell из агента SQL Server с помощью следующих средств:**  [шаг задания PowerShell](#PShellJob), [шаг задания командной строки](#CmdExecJob)  
+**Запуск PowerShell из агента SQL Server с помощью:**  [шагов задания PowerShell](#PShellJob), [шагов задания командной строки](#CmdExecJob).  
   
-> [!NOTE]
+> [!IMPORTANT]
 > Существует два модуля SQL Server PowerShell — **SqlServer** и **SQLPS**. Модуль **SQLPS** входит в состав установки SQL Server (для обеспечения обратной совместимости), но больше не обновляется. Самым актуальным модулем PowerShell является модуль **SqlServer**. Модуль **SqlServer** содержит обновленные версии командлетов в **SQLPS**, а также новые командлеты для поддержки последних функций SQL.  
 > Предыдущие версии модуля **SqlServer** *входили* в состав среды SQL Server Management Studio (SSMS), но только с SSMS версий 16.x. Для работы PowerShell с SSMS 17.0 и более поздних версий необходимо установить модуль **SqlServer** из коллекции PowerShell.
 > Сведения об установке модуля **SqlServer** см. в статье [Установка компонентов SQL Server PowerShell](download-sql-server-ps-module.md).
 
 
 Существует несколько типов шагов заданий агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Каждый тип связан с некоторой подсистемой, в которой реализуется определенная среда, например агент репликации или среда командной строки. Можно создавать скрипты Windows PowerShell, а затем использовать агент [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , чтобы включить скрипты в задания, которые выполняются в запланированное время или в ответ на события [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Скрипты Windows PowerShell можно запускать либо с помощью шагов задания командной строки, либо с помощью шагов задания PowerShell.  
-  
-1.  Используйте шаги задания PowerShell для запуска подсистемой агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] программы **sqlps** , запускающей PowerShell и импортирующей модуль **sqlps** .  
-  
-2.  Используйте шаг задания командной строки для запуска PowerShell.exe и укажите скрипт, импортирующий модуль **sqlps** .  
-  
-###  <a name="LimitationsRestrictions"></a> ограничения  
-  
-> [!CAUTION]  
->  Каждый шаг задания агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], запускающий PowerShell с модулем **sqlps**, запускает процесс, которому требуется приблизительно 20 МБ памяти. Одновременный запуск большого числа шагов задания Windows PowerShell может иметь негативное влияние на производительность.  
-  
+
+- Используйте шаги задания PowerShell для запуска подсистемой агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] программы **sqlps** , запускающей PowerShell и импортирующей модуль **sqlps** .
+
+- Используйте шаг задания командной строки для запуска PowerShell.exe и укажите скрипт, импортирующий модуль **sqlps** .
+
+### <a name="LimitationsRestrictions"></a> Предупреждение, касающееся потребления памяти
+
+Каждый шаг задания агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], запускающий PowerShell с модулем **sqlps**, запускает процесс, которому требуется приблизительно **20 МБ** памяти. Одновременный запуск большого числа шагов задания Windows PowerShell может иметь негативное влияние на производительность.  
+
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="PShellJob"></a> Создание шага задания PowerShell  
  **Создание шага задания PowerShell**  
   

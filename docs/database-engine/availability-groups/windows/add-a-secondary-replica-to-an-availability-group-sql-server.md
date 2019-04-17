@@ -2,7 +2,7 @@
 title: Добавление вторичной реплики к группе доступности
 description: Инструкции по удалению вторичной реплики в группе доступности Always On с помощью Transact-SQL (T-SQL), PowerShell или мастера групп доступности в SQL Server Management Studio (SSMS).
 ms.custom: seodec18
-ms.date: 05/17/2016
+ms.date: 05/18/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,12 +14,12 @@ ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ffebb3bc39d15f52aeda8e2deed54c49e011df4e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 423d9370285d3b5e7df89ee8cecb6d539b16eb47
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213013"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241862"
 ---
 # <a name="add-a-secondary-replica-to-an-always-on-availability-group"></a>Добавление вторичной реплики к группе доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,12 +31,14 @@ ms.locfileid: "53213013"
 -   Необходимо подключиться к экземпляру сервера, на котором размещена первичная реплика.  
   
  Дополнительные сведения см. в разделе [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
-  
+
 ##  <a name="Security"></a> безопасность  
   
 ###  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
-  
+
+[!INCLUDE[Freshness](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  **Добавление реплики**  
   
@@ -103,7 +105,7 @@ ms.locfileid: "53213013"
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [Поставщик SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell, поставщик](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ##  <a name="FollowUp"></a> Дальнейшие действия. После добавления вторичной реплики  
  Для добавления реплики в существующую группу доступности необходимо выполнить следующие шаги.  
@@ -127,7 +129,7 @@ ms.locfileid: "53213013"
   
 -   [Смена режима доступности для реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
   
--   [Смена режима отработки отказа для реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server.md)  
+-   [Изменение режима отработки отказа для реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
 -   [Изменение периода ожидания сеанса для реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   

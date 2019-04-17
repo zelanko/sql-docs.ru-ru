@@ -23,12 +23,12 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e64827ba35236f120f296baaaff7d01833ed6f5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9c29a6baa8948168f4fa8bc8a8099941e8b91503
+ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280548"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59291564"
 ---
 # <a name="integration-services-service-ssis-service"></a>Службы Integration Services (службы SSIS)
   В подразделах этого раздела описывается служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] — служба Windows для управления пакетами служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Эта служба не требуется для создания, сохранения и выполнения пакетов служб Integration Services. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] поддерживает службу [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для обеспечения обратной совместимости с более ранними версиями служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -74,7 +74,7 @@ ms.locfileid: "58280548"
   
  Предусмотрена возможность установить только единственный экземпляр службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на отдельном компьютере. Эта служба не относится к конкретному экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Подключение к этой службе осуществляется с использованием имени компьютера, на котором она эксплуатируется.  
   
- Для управления службой [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] может применяться одна из следующих оснасток консоли управления (MMC): «Диспетчер конфигурации SQL Server» или «Службы». Прежде чем появится возможность управлять пакетами в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], необходимо убедиться, что служба запущена.  
+ Для управления службой [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] может применяться одна из следующих оснасток консоли управления (MMC): "Диспетчер конфигурации SQL Server" или "Службы". Прежде чем появится возможность управлять пакетами в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], необходимо убедиться, что служба запущена.  
   
  По умолчанию служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] настроена для управления пакетами в базе данных msdb экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], который установлен одновременно со службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Если экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] не установлен в то же время, служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] будет настроена для управления пакетами базы данных msdb локального экземпляра по умолчанию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Чтобы управлять пакетами, которые хранятся в именованном или удаленном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]либо в нескольких экземплярах компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], необходимо изменить файл конфигурации для службы.
   
@@ -381,7 +381,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
 > [!IMPORTANT]  
 >  Чтобы управлять пакетами, которые хранятся на удаленном сервере, не нужно соединятся с экземпляром службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на этом удаленном сервере. Вместо этого измените файл конфигурации для службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] таким образом, чтобы среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] отображала пакеты, хранимые на удаленном сервере.
   
- Служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] использует протокол DCOM. Дополнительные сведения о работе протокола DCOM с брандмауэром см. в статье[Использование протокола DСОМ с брандмауэрами](https://go.microsoft.com/fwlink/?LinkId=12490)библиотеки MSDN.  
+ Служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] использует протокол DCOM.
   
  Существует множество систем брандмауэров. При запуске другого брандмауэра обратитесь к документации по нему.  
   
