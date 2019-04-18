@@ -16,12 +16,12 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7e8d3f735a096eeaf60ecdb376d02d046112a25
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 47d0f7c4eb6c78b9e551fafdc1e018a27604086e
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375366"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671370"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Реализация пользовательского арбитра конфликтов для статьи публикации слиянием
   В данном разделе описывается реализация пользовательского арбитра конфликтов для статьи публикации слиянием в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] или [Пользовательского арбитра конфликтов на основе COM](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
@@ -118,7 +118,7 @@ ms.locfileid: "53375366"
   
 #### <a name="viewing-a-sample-custom-resolver"></a>Просмотр образца пользовательского сопоставителя  
   
-1.  Пример доступен в образцах файлов SQL Server 2000. Загрузите файл **sql2000samples.cab** из [обновленных образцов для пакета обновления 3 (SP3) для SQL Server 2000](https://www.microsoft.com/download/details.aspx?id=8560). Будет загружено 8 файлов общим размером 6,9 МБ.  
+1.  Пример доступен в образцах файлов SQL Server 2000. Скачайте [ **sql2000samples.zip**](https://github.com/Microsoft/sql-server-samples/blob/master/samples/tutorials/Miscellaneous/sql2000samples.zip). Это загружает три файла, составляющей 6,9 МБ.  
   
 2.  Извлеките файлы из загруженного сжатого CAB-файла.  
   

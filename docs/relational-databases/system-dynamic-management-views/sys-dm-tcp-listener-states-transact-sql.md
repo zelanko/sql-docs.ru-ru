@@ -21,12 +21,12 @@ ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b69bfb4da1bf20a8d74f5adcda44e55954bbdf65
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f45c634b2a5ab057fd9c2ae878e544a6b7d84f7f
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409641"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671350"
 ---
 # <a name="sysdmtcplistenerstates-transact-sql"></a>sys.dm_tcp_listener_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52409641"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**listener_id**|**int**|Прослушивателя внутренний идентификатор. Не допускает значение NULL.<br /><br /> Первичный ключ.|  
-|**IP-адрес**|**nvarchar48**|IP-адрес прослушивателя, который доступен в сети и по которому в настоящее время идет прослушивание. Допустимы адреса IPv4 и IPv6. Если прослушиватель имеет адреса обоих типов, то они указываются в списке раздельно. Шаблон IPv4 отображается как «0.0.0.0». Шаблон IPv6 отображается как «::».<br /><br /> Не допускает значение NULL.|  
+|**ip_address**|**nvarchar(48)**|IP-адрес прослушивателя, который доступен в сети и по которому в настоящее время идет прослушивание. Допустимы адреса IPv4 и IPv6. Если прослушиватель имеет адреса обоих типов, то они указываются в списке раздельно. Шаблон IPv4 отображается как «0.0.0.0». Шаблон IPv6 отображается как «::».<br /><br /> Не допускает значение NULL.|  
 |**is_ipv4**|**bit**|Тип IP-адреса<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
 |**port**|**int**|Номер порта, на котором работает прослушиватель. Не допускает значение NULL.|  
 |**type**|**tinyint**|Тип прослушивателя, может принимать одно из следующих значений:<br /><br /> 0 = [!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = компонент Service Broker<br /><br /> 2 = зеркальное отображение базы данных<br /><br /> Не допускает значение NULL.|  

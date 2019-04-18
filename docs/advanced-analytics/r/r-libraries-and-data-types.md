@@ -3,19 +3,19 @@ title: Преобразование - службы машинного обуче
 description: Просмотрите тип converstions явных и неявных данных между R и SQL Server в решения машинного обучения, обработки и анализа данных.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/10/2018
+ms.date: 12/10/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cf293c0efbc5b9da8fe5338b97cb10c30f45320b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 79570a1479078234328a17d4de2a12c821c76f3d
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511541"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671120"
 ---
-# <a name="data-type-mappings-betweenr-and-sql-server"></a>Тип данных betweenR сопоставления и SQL Server
+# <a name="data-type-mappings-between-r-and-sql-server"></a>Сопоставления типов данных между R и SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Для решений R, запустите функцию интеграции R в службах машинного обучения SQL Server просмотрите список неподдерживаемых типов данных и преобразования типов данных, которые могут осуществляться неявно, когда данные передаются между библиотеки R и SQL Server.

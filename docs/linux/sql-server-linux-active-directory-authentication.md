@@ -13,12 +13,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 5e75a0315c0e632e9637ad1f1467acc90dc586cf
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: e71c4c68a7f04e5f7f33b8635e660a84f501c263
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240782"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671300"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Учебник. Использование проверки подлинности Active Directory с SQL Server в Linux
 
@@ -315,11 +315,11 @@ systemctl restart mssql-server
 Если контроллер домена поддерживает LDAPS, можно заставить все подключения из SQL Server на контроллерах домена, чтобы быть через LDAPS. Чтобы проверить, клиент может связаться с контроллером домена через ldaps, выполните следующую команду bash, `ldapsearch -H ldaps://contoso.com:3269`. Чтобы установить SQL Server на использование только LDAPS, используйте следующую команду:
 
 ```bash
-sudo mssql-conf set network.forceldaps true
+sudo mssql-conf set network.forcesecureldap true
 systemctl restart mssql-server
 ```
 
-Это будут использовать LDAPS по SSSD, если присоединение к домену AD, на узел выполнено также с помощью пакета SSSD и **disablesssd** не задано значение true. Если **disablesssd** имеет значение true вместе с **forceldaps** , равным true, то он будет использовать протокол LDAPS через вызовы библиотеки openldap, выполняемые SQL Server.
+Это будут использовать LDAPS по SSSD, если присоединение к домену AD, на узел выполнено также с помощью пакета SSSD и **disablesssd** не задано значение true. Если **disablesssd** имеет значение true вместе с **forcesecureldap** , равным true, то он будет использовать протокол LDAPS через вызовы библиотеки openldap, выполняемые SQL Server.
 
 ### <a name="post-sql-server-2017-cu14"></a>Учет CU14 SQL Server 2017
 
