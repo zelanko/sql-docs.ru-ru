@@ -26,22 +26,22 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: a6c183fc402571ab359071160d515939257f773b
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241632"
 ---
 # <a name="reporting-services-report-server"></a>Сервер отчетов служб Reporting Services
   В этом разделе приведен обзор сервера отчетов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] — центрального компонента установки [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Он состоит из пары модулей обработки, к которым прилагается коллекция модулей специального назначения, обеспечивающих выполнение операций проверки подлинности, обработки данных, подготовки отчетов и доставки. Сервер отчетов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] может работать в одном из двух режимов развертывания: в собственном режиме или в режиме интеграции с SharePoint. В разделе [Сравнение функций режима интеграции с SharePoint и собственного режима](#bkmk_featuresupport) можно найти сравнительную таблицу функций.  
   
- **Установка**. Дополнительные сведения об установке служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] см. в следующих разделах:  
+ **Установка**. Сведения о [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] установки, см. в следующем:  
   
 -   [Установка сервера отчетов служб Reporting Services в собственном режиме](install-windows/install-reporting-services-native-mode-report-server.md)  
   
 -   [Установка компонентов бизнес-Аналитики SQL Server с SharePoint &#40;PowerPivot и служб Reporting Services&#41;](../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
   
- **Windows Azure**: Дополнительные сведения об использовании [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] с виртуальными машинами Windows Azure см. в следующих разделах:  
+ **Windows Azure**: Дополнительные сведения об использовании [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] с виртуальных машинах Windows Azure, см. в следующем:  
   
 -   [SQL Server Business Intelligence в виртуальных машинах Windows Azure](https://msdn.microsoft.com//library/windowsazure/jj992719.aspx).  
   
@@ -51,19 +51,19 @@ ms.locfileid: "59241632"
   
 -   [Общие сведения о режимах сервера отчетов](#bkmk_overview)  
   
--   [Feature Comparison of SharePoint and Native Mode](#bkmk_featuresupport)  
+-   [Сравнение функций SharePoint и собственный режим](#bkmk_featuresupport)  
   
--   [Собственный режим](#bkmk_nativemode)  
+-   [Native Mode](#bkmk_nativemode)  
   
--   [Собственный режим с веб-частями SharePoint](#bkmk_nativewithwebparts)  
+-   [Собственный режим с веб-части SharePoint](#bkmk_nativewithwebparts)  
   
--   [в режиме интеграции с SharePoint](#bkmk_sharepointmode)  
+-   [режим SharePoint](#bkmk_sharepointmode)  
   
--   [Процесс и планирование отчета и процесс доставки](#bkmk_reportprocessor)  
+-   [Процесс и расписание и процесс доставки отчета](#bkmk_reportprocessor)  
   
--   [база данных сервера отчетов](#bkmk_reportdatabase)  
+-   [База данных сервера отчетов](#bkmk_reportdatabase)  
   
--   [Модули проверки подлинности, подготовки к просмотру, обработки данных и доставки](#bkmk_authentication)  
+-   [Проверка подлинности, подготовки к просмотру, данных и модули доставки](#bkmk_authentication)  
   
 -   [Связанные задачи](#bkmk_relatedtasks)  
   
@@ -84,7 +84,7 @@ ms.locfileid: "59241632"
   
 ##  <a name="bkmk_featuresupport"></a> Сравнение функций SharePoint и собственный режим  
   
-|Компонент или функция|Собственный режим|Режим интеграции с SharePoint|  
+|Компонент или функция|Собственный режим|в режиме интеграции с SharePoint|  
 |--------------------------|-----------------|---------------------|  
 |**URL-адреса**|Да|В режиме интеграции с SharePoint по-другому осуществляется работа с URL-адресами. URL-адреса SharePoint используются в качестве ссылок на отчеты, модели отчетов, общие источники данных и ресурсы. Иерархия папок сервера отчетов не используется. Если в пользовательских приложениях используется метод доступа на основе URL-адресов, поддерживаемый в собственном режиме сервера отчетов, данная функциональность оказывается недоступной, если сервер отчетов настроен для работы в режиме интеграции с SharePoint.<br /><br /> Дополнительные сведения о доступе по URL-адресу см. в разделе [Ссылка на параметр доступа по URL-адресу](url-access-parameter-reference.md).|  
 |**Настраиваемые модули безопасности**|Да|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Сервер отчетов содержит специализированный модуль безопасности, который используется при настройке сервера отчетов для работы в режиме интеграции с SharePoint. Этот модуль безопасности является внутренним компонентом, который необходим для работы в интегрированном режиме.|  
@@ -92,15 +92,15 @@ ms.locfileid: "59241632"
 |**Диспетчер отчетов**|Да|Диспетчер отчетов не может быть использован для управления в режиме интеграции с SharePoint. Используйте страницы приложения SharePoint. Дополнительные сведения см. в разделе [Служба SharePoint и приложения служб Reporting Services](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Связанные отчеты**|Да|Нет.|  
 |**Мои отчеты**|Да|нет|  
-|**Мои подписки** и методы пакетной обработки.|Да|Нет|  
-|**Предупреждения об изменении данных**|Нет|Да|  
-|**Power View**|Нет|Да<br /><br /> Требуется наличие в браузере клиента Silverlight. Дополнительные сведения о требованиях к браузеру см. в разделе [планирование служб Reporting Services и поддержки Power View в браузерах &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
+|**Мои подписки** и методы пакетной обработки.|Да|нет|  
+|**Предупреждения об изменении данных**|нет|Да|  
+|**Power View**|нет|Да<br /><br /> Требуется наличие в браузере клиента Silverlight. Дополнительные сведения о требованиях к браузеру см. в разделе [планирование служб Reporting Services и поддержки Power View в браузерах &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
 |**Отчеты RDL**|Да|Да<br /><br /> Отчеты RDL можно запускать на серверах отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в собственном режиме или в режиме интеграции с SharePoint.|  
-|**Отчеты RDLX**|Нет|Да<br /><br /> Отчеты RDLX, созданные компонентом Power View, могут выполняться только на серверах отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint.|  
-|**Учетные данные токена пользователя SharePoint для расширения списка SharePoint**|Нет|Да|  
-|**AAM-зоны для развертываний, направленных в сторону Интернета**|Нет|Да|  
-|**Резервное копирование и восстановление SharePoint**|Нет|Да|  
-|**Поддержка журналов ULS**|Нет|Да|  
+|**Отчеты RDLX**|нет|Да<br /><br /> Отчеты RDLX, созданные компонентом Power View, могут выполняться только на серверах отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint.|  
+|**Учетные данные токена пользователя SharePoint для расширения списка SharePoint**|нет|Да|  
+|**AAM-зоны для развертываний, направленных в сторону Интернета**|нет|Да|  
+|**Резервное копирование и восстановление SharePoint**|нет|Да|  
+|**Поддержка журналов ULS**|нет|Да|  
   
 ##  <a name="bkmk_nativemode"></a> Собственный режим  
  В собственном режиме сервер отчетов представляет собой изолированный сервер приложений, поддерживающий операции просмотра, управления, обработки и доставки для отчетов и моделей отчетов. Этот режим включен по умолчанию для экземпляров сервера отчетов. Можно установить сервер отчетов в собственном режиме, настроив его в процессе установки. Сервер отчетов можно также настроить для работы в собственном режиме после завершения установки.  
@@ -169,7 +169,7 @@ ms.locfileid: "59241632"
 |Ознакомьтесь с требованиями к оборудованию и программному обеспечению.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md).|  
 |Установите [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint.|[Установка служб Reporting Services в режиме SharePoint для SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
 |Веб-разработчик или пользователь, имеющий опыт создания каскадных таблиц стилей, может (на свой страх и риск) модифицировать таблицы стилей по умолчанию, чтобы изменить цвета, шрифты и макет панели инструментов или диспетчер отчетов. В этой версии не документированы ни таблицы стилей по умолчанию, ни инструкции по изменению таблиц стилей.|[Настройка таблицы стилей для средства просмотра HTML-страниц и диспетчера отчетов](../../2014/reporting-services/customize-style-sheets-for-html-viewer-and-report-manager.md)|  
-|Разработчики веб-приложений, знакомые со стилями HTML и каскадными таблицами стилей (CSS), могут использовать сведения в этом разделе, чтобы определить, какие файлы можно изменять, чтобы настроить внешний вид диспетчера отчетов.|[Настройка передачи куки-файлов для нестандартной проверки подлинности пользователя в диспетчере отчетов](security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
+|Разработчики веб-приложений, знакомые со стилями HTML и каскадными таблицами стилей (CSS), могут использовать сведения в этом разделе, чтобы определить, какие файлы можно изменять, чтобы настроить внешний вид диспетчера отчетов.|[Настройка передачи файлов cookie для пользовательской проверки подлинности в диспетчере отчетов](security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
 |Объясняется, как настроить параметры памяти для веб-службы и службы Windows сервера отчетов.|[Настройка доступной памяти для приложений сервера отчетов](report-server/configure-available-memory-for-report-server-applications.md)|  
 |Описаны рекомендованные шаги по настройке сервера отчетов для удаленного администрирования.|[настроить сервер отчетов для удаленного администрирования](report-server/configure-a-report-server-for-remote-administration.md)|  
 |Содержит инструкции по настройке доступности папки **Мои отчеты** на экземпляре сервера отчетов, работающего в собственном режиме.|[Включение и отключение папки «Мои отчеты»](report-server/enable-and-disable-my-reports.md)|  

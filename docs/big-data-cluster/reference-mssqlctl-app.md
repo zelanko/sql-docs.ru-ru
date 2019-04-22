@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b418f1ded8d9911143b431ae9793c467c4e26eb4
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860655"
 ---
 # <a name="mssqlctl-app"></a>Приложение mssqlctl
@@ -26,14 +26,14 @@ ms.locfileid: "58860655"
 
 |||
 |---|---|
-| [создание](#create) | Создайте приложение. |
-| [удалить](#delete) | Для удаления приложения. |
+| [Создание](#create) | Создайте приложение. |
+| [delete](#delete) | Для удаления приложения. |
 | [описания](#describe) | Описание приложения. |
 | [init](#init) | Kickstart новый скелет приложения. |
-| [Список](#list) | Список приложений. |
-| [run](#run) | Запустите приложение. |
-| [update](#update) | Обновите приложение. |
-| [template (шаблон)](reference-mssqlctl-app-template.md) | Шаблон команды. |
+| [list](#list) | Список приложений. |
+| [запустить](#run) | Запустите приложение. |
+| [Обновление](#update) | Обновите приложение. |
+| [шаблон](reference-mssqlctl-app-template.md) | Шаблон команды. |
 
 ## <a id="create"></a> Создание приложения mssqlctl
 

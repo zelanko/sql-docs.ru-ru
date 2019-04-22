@@ -25,10 +25,10 @@ author: dnethi
 ms.author: dinethi
 manager: craigg
 ms.openlocfilehash: 9bc678f69df60ec07e1cca6eddbb337aab8ed8ff
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042031"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
@@ -44,9 +44,9 @@ SSMS распространяется бесплатно!
 
 ## <a name="ssms-1791-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9.1 является текущей общедоступной версией SSMS
 
-[![dСкачать](../ssdt/media/download.png) Скачать SQL Server Management Studio 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154)
+[![скачать](../ssdt/media/download.png) Скачать SQL Server Management Studio 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154)
 
-[![dСкачать](../ssdt/media/download.png) Скачать пакет обновления SQL Server Management Studio 17.9.1 (обновление с версии 17.x до 17.9.1)](https://go.microsoft.com/fwlink/?linkid=2043430)
+[![скачать](../ssdt/media/download.png) Скачать пакет обновления SQL Server Management Studio 17.9.1 (обновление с версии 17.x до 17.9.1)](https://go.microsoft.com/fwlink/?linkid=2043430)
 
 **Сведения о версии**
 
@@ -78,7 +78,7 @@ SSMS распространяется бесплатно!
 
 **Доступен релиз-кандидат 1 (RC1) SSMS 18.0. Это новейшее поколение *SQL Server Management Studio* с поддержкой [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
 
-**[![dowСкачать](../ssdt/media/download.png) Скачать SQL Server Management Studio 18.0 (релиз-кандидат 1)](https://go.microsoft.com/fwlink/?linkid=2085742)**
+**[![скачать](../ssdt/media/download.png) Скачать SQL Server Management Studio 18.0 (RC1)](https://go.microsoft.com/fwlink/?linkid=2085742)**
 
 *RC1* — это новейшая общедоступная предварительная версия SSMS 18.0. Если на компьютере установлена предыдущая предварительная версия SSMS 18.0, перед установкой версии RC1 ее необходимо удалить.
 
@@ -150,7 +150,7 @@ SSMS 18.0 (RC1) — это новейшая версия SQL Server Managemen
 
 ## <a name="see-also"></a>См. также:
 
-- [Учебник. SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
+- [Учебник. SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 - [Документация по SQL Server Management Studio](sql-server-management-studio-ssms.md)
 - [Дополнительные обновления и пакеты обновления](https://technet.microsoft.com/sqlserver/ff803383.aspx)
 - [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)

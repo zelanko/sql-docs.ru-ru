@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: b78f9e6a5493d3c06dfade34833cd69ddd56b58a
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241562"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint
@@ -42,9 +42,9 @@ ms.locfileid: "59241562"
 -   [Сравнение задач в собственном режиме и разрешений SharePoint](#bkmk_compare_tasks_permissions)  
   
 ##  <a name="bkmk_compare_tools_terms"></a> Сравнение средств и терминологии, связанных с разрешениями  
- **Собственный режим.** Объекты разрешений служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в собственном режиме (роли и задачи) создаются в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и настраиваются для отдельных пользователей в диспетчере отчетов.  
+ **Собственный режим.** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Объекты разрешений в собственном режиме (роли и задачи) создаются в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и настраиваются для отдельных пользователей в диспетчере отчетов.  
   
- **Режим интеграции с SharePoint:** В режиме интеграции с SharePoint служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] используются функции разрешений SharePoint. Управление группами и разрешениями SharePoint осуществляется из следующей страницы **Параметры сайта** .  
+ **Режим интеграции с SharePoint:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Режим интеграции с SharePoint использует функции разрешений SharePoint. Управление группами и разрешениями SharePoint осуществляется из следующей страницы **Параметры сайта** .  
   
  В следующей таблице сравниваются объекты и основные понятия, связанные с разрешением, между службами [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в собственном режиме и в режиме интеграции с SharePoint.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "59241562"
 ##  <a name="bkmk_compare_roles_groups"></a> Сравнение ролей в собственном режиме и групп SharePoint  
  В следующей таблице сравниваются стандартные определения ролей служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в собственном режиме со стандартными группами SharePoint. Если группы SharePoint не соответствуют определенной необходимой роли, можно создать пользовательскую группу и назначить для нее уровни разрешений в SharePoint.  
   
- **Примечание.** Группы по умолчанию SharePoint доступны в зависимости от шаблона сайта, который использовался при создании сайта SharePoint.  
+ **Примечание.** Группы по умолчанию SharePoint доступны зависят от шаблона сайта, используемая для создания узла SharePoint.  
   
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Роль|Группы SharePoint|  
 |--------------------------------------|-----------------------|  
@@ -103,11 +103,11 @@ ms.locfileid: "59241562"
 |Просмотр свойств сервера отчетов|Система|Отсутствует (неприменимо). Сервер отчетов не проверяет, имеет ли пользователь разрешение на просмотр параметров интеграции в центре администрирования.|  
 |Просмотр общих расписаний|Система|Открытие элементов.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задание разрешений для элементов сервера отчетов на сайте SharePoint (службы Reporting Services в режиме интеграции с SharePoint)](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Задание разрешений для работы сервера отчетов в веб-приложении SharePoint](security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Определение ролей](security/role-definitions.md)   
- [Стандартные роли](security/role-definitions-predefined-roles.md)  
+ [Предопределенные роли](security/role-definitions-predefined-roles.md)  
   
   

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240382"
 ---
 # <a name="xml-source"></a>XML-источник
@@ -69,7 +69,7 @@ ms.locfileid: "59240382"
   
  XML-источник поддерживает несколько обычных выходов и несколько выходов ошибок.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the **XML Source Edito**r dialog box for configuring предусмотрено диалоговое окно **Редактор источника XML**для настройки этого источника.sЭто диалоговое окно доступно из конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включает диалоговое окно **Редактор источника XML**для настройки этого источника. Это диалоговое окно доступно из конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   

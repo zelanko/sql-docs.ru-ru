@@ -16,12 +16,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 21f9be84c86e2991a600dc340347c4ca89f519e9
-ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
+ms.openlocfilehash: 7f765607b179b9a53a32be356f1b4863c0f35988
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59533342"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671330"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Создание полной резервной копии базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -232,7 +232,7 @@ ms.locfileid: "59533342"
   
   8.    Нажмите кнопку **ОК**.
 
-    **D3.  Подписанный URL-адрес не существует**
+   **D3.  Подписанный URL-адрес не существует**
   5.    Щелкните **Создать контейнер** , чтобы открыть диалоговое окно **Соединение с подпиской Microsoft** .  
   
   6.    Выполните все действия в диалоговом окне **Соединение с подпиской Microsoft** и нажмите кнопку **ОК** , чтобы вернуться в диалоговое окно **Выбор места назначения резервной копии** .  См. дополнительные сведения в разделе [Соединение с подпиской Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) .

@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a2767de67eac1a0346f059e1a2c81a5698607dc
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240999"
 ---
 # <a name="derived-column-transformation"></a>Преобразование «Производный столбец»
@@ -64,7 +64,7 @@ ms.locfileid: "59240999"
   
 -   [Общие свойства](../../common-properties.md)  
   
--   [Transformation Custom Properties](transformation-custom-properties.md)  
+-   [Пользовательские свойства преобразований](transformation-custom-properties.md)  
   
  Дополнительные сведения о настройке свойств см. в следующих разделах.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "59240999"
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
--   [Получение значений столбцов с помощью преобразования «Производный столбец»](derived-column-transformation.md)  
+-   [Получение значений столбцов с помощью преобразования "Производный столбец"](derived-column-transformation.md)  
   
 ## <a name="related-content"></a>См. также  
  Техническая статья [Примеры выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  

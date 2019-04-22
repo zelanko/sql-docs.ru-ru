@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b050638ee0ca600c5df0ecdbe5616b801f41e7a8
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860356"
 ---
 # <a name="mssqlctl"></a>mssqlctl
@@ -27,10 +27,10 @@ ms.locfileid: "58860356"
 |||
 |---|---|
 | [Приложение](reference-mssqlctl-app.md) | Создание, удаление, запуска и управления приложениями. |
-| [кластер](reference-mssqlctl-cluster.md) | Выберите, управление и работу кластеров. |
-| [login](#login) | Войдите кластер. |
+| [Кластера](reference-mssqlctl-cluster.md) | Выберите, управление и работу кластеров. |
+| [Имя входа](#login) | Войдите кластер. |
 | [Выход из системы](#logout) | Выйдите из кластера. |
-| [хранение](reference-mssqlctl-storage.md) | Управление хранилищем кластера. |
+| [Хранилища](reference-mssqlctl-storage.md) | Управление хранилищем кластера. |
 
 ## <a id="login"></a> Имя входа mssqlctl
 
@@ -48,7 +48,7 @@ mssqlctl login
 | Параметр | Описание |
 |---|---|
 |**--конечной точки -e**| Кластер узла и порта (ex) `http://host:port"`. |
-|**--password -p**| Пароль учетных данных. |
+|**--пароль -p**| Пароль учетных данных. |
 |**--username -u**| Учетная запись пользователя. |
 
 ### <a name="examples"></a>Примеры

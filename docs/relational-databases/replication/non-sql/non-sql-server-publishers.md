@@ -16,12 +16,12 @@ ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 47c4aed72c074ee1c591bd94afbcd53d6ba9fa01
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: be6dac20a6ebc019cfd616860651a10a57aae325
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215360"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583167"
 ---
 # <a name="non-sql-server-publishers"></a>издатели, отличные от издателей SQL Server  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,10 +33,12 @@ ms.locfileid: "53215360"
 -   Публикация данных с подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на подписчики, отличные от[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
 
 -   Публикация данных в Oracle и из Oracle имеет следующие ограничения:  
-  | |2016 или более ранние версии |2017 или более поздние версии |
-  |-------|-------|--------|
+
+  |Репликация |2016 или более ранние версии |2017 или более поздние версии |
+  |:-----------|:---------------|:-------------|
   |Репликация из Oracle |Поддержка только Oracle 10g или более ранних версий |Поддержка только Oracle 10g или более ранних версий |
   |Репликация в Oracle |Версии до Oracle 12c |Не поддерживается |
+  | &nbsp; | &nbsp; | &nbsp; |
 
 
  Разнородная репликация на подписчики, отличные от подписчика SQL Server, устарела. Публикация Oracle устарела. Для перемещения данных создайте решения с помощью системы отслеживания измененных данных и служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  

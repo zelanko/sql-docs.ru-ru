@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241792"
 ---
 # <a name="cdc-source"></a>CDC-источник
@@ -47,7 +47,7 @@ ms.locfileid: "59241792"
   
 -   **Код ошибки.** значение всегда равно 1.  
   
--   **Столбец с ошибкой.** Входной столбец, вызывающий ошибку (это относится к ошибкам преобразования).  
+-   **Столбец с ошибкой.** Исходный столбец, вызывающий ошибку (к ошибкам преобразования).  
   
 -   **Столбцы строки с ошибкой.** Данные записи, которые вызывают ошибку.  
   
@@ -88,7 +88,7 @@ use <cdc-enabled-database-name>
 #### <a name="sql-server-error-message"></a>Сообщение об ошибке SQL Server  
  Следующее сообщение может быть возвращено [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
- **Указано недостаточное количество аргументов для функции или процедуры cdc.fn_cdc_get_net_changes_\<... >.**  
+ **Для функции или процедуры cdc.fn_cdc_get_net_changes_\<..> задано недостаточное количество аргументов.**  
   
  Эта ошибка не указывает, что отсутствует какой-то аргумент. Она означает, что начало или конец диапазона значений номеров LSN в переменной состояния CDC является недопустимым.  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c24de94f948282772f6f08d8a4a6c62e1c952ad
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241213"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>Соединение с сервером (страница "Вход") ядра СУБД
@@ -36,8 +36,8 @@ ms.locfileid: "59241213"
  **Имя сервера**  
  Выберите экземпляр сервера для подключения. По умолчанию выводится экземпляр сервера, к которому подключение выполнялось в последний раз.  
   
- **Проверка подлинности**  
- При соединении с экземпляром [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] доступны два режима проверки подлинности.  
+ **Authentication**  
+ При соединении с экземпляром [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]доступны два режима проверки подлинности.  
   
  При соединении с экземпляром ядра СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через [!INCLUDE[ssSDS](../../includes/sssds-md.md)]необходимо использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указать базу данных в диалоговом окне **Соединение с сервером** на вкладке **Свойства соединения** . Обязательно установите флажок **Шифрование соединения** .  
   
@@ -59,12 +59,12 @@ ms.locfileid: "59241213"
  Введите имя входа для подключения. Этот параметр доступен только в том случае, если выбрано соединение с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Пароль**  
- Введите пароль для этого имени входа. Этот параметр доступен для редактирования только при подключении с проверкой подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Введите пароль для этого имени входа. Этот параметр доступен для редактирования только при подключении с проверкой подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Запомнить пароль**  
- Выберите, чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохранил введенный пароль. Этот параметр отображается только в том случае, если выбрано подключение с проверкой подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Выберите, чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохранил введенный пароль. Этот параметр отображается только в том случае, если выбрано подключение с проверкой подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Подключение**  
+ **Connect**  
  Нажмите, чтобы подключиться к выбранному выше серверу.  
   
  **Параметры**  

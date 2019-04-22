@@ -13,10 +13,10 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 67716270a13f71e23a0294db632ef0b0d51ca76e
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241382"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Обслуживание соединителя SQL Server и устранение неполадок
@@ -100,9 +100,9 @@ ms.locfileid: "59241382"
 
 Если вы используете версию 1.0.1.0 или более новую, выполните приведенные ниже шаги для обновления до самой последней версии соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Эти инструкции позволяют избежать перезагрузки экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
  
-1. Установите последнюю версию соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] из [Центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=45344). В мастере установки сохраните новый файл библиотеки DLL в папке, отличной от той, где находится файл исходной библиотеки DLL для соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Например, можно использовать следующий новый путь: `C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll`
+1. Установите последнюю версию соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] из [Центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=45344). В мастере установки сохраните новый файл библиотеки DLL в папке, отличной от той, где находится файл исходной библиотеки DLL для соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Например, можно использовать следующий новый путь: `C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll`
  
-2. В экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выполните следующую команду Transact-SQL, чтобы указать экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на новую версию соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:
+2. В экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]выполните следующую команду Transact-SQL, чтобы указать экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на новую версию соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :
 
     ``` 
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
@@ -159,14 +159,14 @@ ms.locfileid: "59241382"
 ### <a name="on-azure-key-vault"></a>В хранилище ключей Azure  
   
 **Как выполняются основные операции с хранилищем ключей Azure?**  
- Асимметричный ключ в хранилище ключей используется для защиты ключей шифрования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Только открытая часть асимметричного ключа покидает хранилище, закрытая же часть никогда не экспортируется. Все криптографические операции, использующие асимметричный ключ, выполняются в службе хранилища ключей Azure и защищаются ее системой безопасности.  
+ Асимметричный ключ в хранилище ключей используется для защиты ключей шифрования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Только открытая часть асимметричного ключа покидает хранилище, закрытая же часть никогда не экспортируется. Все криптографические операции, использующие асимметричный ключ, выполняются в службе хранилища ключей Azure и защищаются ее системой безопасности.  
   
  **Что такое URI ключа?**  
  Каждый ключ в хранилище ключей Azure имеет универсальный код ресурса (URI), который можно использовать для ссылки на ключ из приложения. Используйте формат `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` для получения текущей версии и формат `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` для получения конкретной версии.  
   
 ### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>При настройке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-**К каким конечным точкам нужен доступ соединителю SQL Server?** Соединитель взаимодействует с двумя конечными точками, которые необходимо внести в список разрешений. Для исходящей связи с этими службами нужен только один порт: 443 (HTTPS).
+**К каким конечным точкам нужен доступ соединителю SQL Server?** Соединитель взаимодействует с двумя конечными точками, которые необходимо внести в список разрешений. Для исходящей связи с этими службами нужен только один порт: 443 (HTTPS).
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/*:443
   
@@ -253,7 +253,7 @@ ms.locfileid: "59241382"
 Версия SQL Server  |Ссылка для установки распространяемого пакета    
 ---------|--------- 
 2008, 2008 R2, 2012, 2014 | [Распространяемые пакеты Visual C++ для Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)    
-2016 | [Распространяемый пакет Visual C++ для Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)    
+2016 | [Распространяемый пакет Visual C++ для Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)    
   
   
 ## <a name="additional-references"></a>Дополнительные ссылки  
@@ -263,13 +263,13 @@ ms.locfileid: "59241382"
   
  Виды шифрования SQL с поддержкой расширенного управления ключами:  
   
--   [Enable TDE on SQL Server Using EKM (Включение прозрачного шифрования данных в SQL Server с помощью расширенного управления ключами)](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  
+-   [Включение прозрачного шифрования данных в SQL Server с помощью расширенного управления ключами](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  
   
 -   [Шифрование резервной копии](../../../relational-databases/backup-restore/backup-encryption.md)  
   
 -   [Создание зашифрованной резервной копии](../../../relational-databases/backup-restore/create-an-encrypted-backup.md)  
   
- Связанные команды [!INCLUDE[tsql](../../../includes/tsql-md.md)]:  
+ Связанные команды [!INCLUDE[tsql](../../../includes/tsql-md.md)] :  
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
@@ -279,7 +279,7 @@ ms.locfileid: "59241382"
   
 -   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-asymmetric-key-transact-sql.md)  
   
--   [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-symmetric-key-transact-sql.md)  
+-   [CREATE SYMMETRIC KEY (Transact-SQL)](../../../t-sql/statements/create-symmetric-key-transact-sql.md)  
   
 -   [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  
   
@@ -294,7 +294,7 @@ ms.locfileid: "59241382"
 -   Справочник по [командлетам PowerShell для работы с хранилищем ключей Azure](/powershell/module/azurerm.keyvault/)  
   
 ## <a name="see-also"></a>См. также:  
- [Расширенное управление ключами с помощью хранилища ключей Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Использование соединителя SQL Server с компонентами шифрования SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
+ [Расширенное управление ключами с помощью хранилища ключей Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Использование Соединителя SQL Server с компонентами шифрования SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
  [Включенный параметр конфигурации сервера поставщика расширенного управления ключами](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Этапы настройки расширенного управления ключами с использованием хранилища ключей Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
   

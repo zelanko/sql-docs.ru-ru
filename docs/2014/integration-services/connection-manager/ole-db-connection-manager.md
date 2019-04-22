@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 00d28ef5dbe2c0a19e5a464981934f2a84df7a7c
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241192"
 ---
 # <a name="ole-db-connection-manager"></a>диспетчер соединений OLE DB
@@ -61,7 +61,7 @@ ms.locfileid: "59241192"
 ## <a name="see-also"></a>См. также  
  [Источник OLE DB](../data-flow/ole-db-source.md)   
  [Назначение «OLE DB»](../data-flow/ole-db-destination.md)   
- [Задача "Выполнение SQL"](../control-flow/execute-sql-task.md)   
+ [Задача «Выполнение SQL»](../control-flow/execute-sql-task.md)   
  [Соединения в службах Integration Services (SSIS)](integration-services-ssis-connections.md)  
   
   

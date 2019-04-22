@@ -9,10 +9,10 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: d7117aa94aa2b91573f9cd3b6443bed2d212bd00
-ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59506511"
 ---
 # <a name="branding-the-web-portal"></a>Фирменная символика на веб-портале
@@ -243,4 +243,4 @@ ms.locfileid: "59506511"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

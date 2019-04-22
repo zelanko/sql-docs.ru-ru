@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbb609a65c70cb44c8fda81feb75927060ed289b
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240422"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Свойства потока данных, которые можно задавать с помощью выражений
@@ -71,8 +71,8 @@ ms.locfileid: "59240422"
 |----------------------|--------------|  
 |Назначение «ADO.NET»|Свойство TableOrViewName<br /><br /> Свойство BatchSize<br /><br /> Свойство CommandTimeout|  
 |назначение «Неструктурированный файл»|Свойство Header|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact|Свойство TableName|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] назначение|Свойство BulkInsertTableName<br /><br /> Свойство BulkInsertFirstRow<br /><br /> Свойство BulkInsertLastRow<br /><br /> Свойство BulkInsertOrder<br /><br /> Свойство Timeout|  
+|Назначение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact|Свойство TableName|  
+|Назначение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Свойство BulkInsertTableName<br /><br /> Свойство BulkInsertFirstRow<br /><br /> Свойство BulkInsertLastRow<br /><br /> Свойство BulkInsertOrder<br /><br /> Свойство Timeout|  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
@@ -83,8 +83,8 @@ ms.locfileid: "59240422"
   
 ## <a name="see-also"></a>См. также  
  [Использование выражений свойств в пакетах](expressions/use-property-expressions-in-packages.md)   
- [Общие свойства](../../2014/integration-services/common-properties.md)   
- [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)   
+ [Common Properties](../../2014/integration-services/common-properties.md)   
+ [Пользовательские свойства преобразования](data-flow/transformations/transformation-custom-properties.md)   
  [Свойства пути](../../2014/integration-services/path-properties.md)  
   
   

@@ -21,10 +21,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 225e80855c0042085b35670efc0666f133806d04
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242332"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (база данных SQL Azure)
@@ -38,11 +38,11 @@ ms.locfileid: "59242332"
 |**database_name**|**sysname**|Имя базы данных.|  
 |**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Время всегда кратно 5 минутам. Пример:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Дата и время окончания интервала статистической обработки в формате UTC. **End_time** — всегда на 5 минут больше, чем соответствующие **start_time** в той же строке.|  
-|**success_count**|**ssNoversion**|Число успешных соединений.|  
-|**total_failure_count**|**ssNoversion**|Общее число неудачных попыток соединения. Это сумма **connection_failure_count**, **terminated_connection_count**, и **throttled_connection_count**и не включает события взаимоблокировки.|  
-|**connection_failure_count**|**ssNoversion**|Количество сбоев входа.|  
-|**terminated_connection_count**|**ssNoversion**|**_Применяется только для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11._**<br /><br /> Число прерванных соединений.|  
-|**throttled_connection_count**|**ssNoversion**|**_Применяется только для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11._**<br /><br /> Число регулируемых соединений.|  
+|**success_count**|**int**|Число успешных соединений.|  
+|**total_failure_count**|**int**|Общее число неудачных попыток соединения. Это сумма **connection_failure_count**, **terminated_connection_count**, и **throttled_connection_count**и не включает события взаимоблокировки.|  
+|**connection_failure_count**|**int**|Количество сбоев входа.|  
+|**terminated_connection_count**|**int**|**_Применяется только для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11._**<br /><br /> Число прерванных соединений.|  
+|**throttled_connection_count**|**int**|**_Применяется только для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11._**<br /><br /> Число регулируемых соединений.|  
   
 ## <a name="remarks"></a>Примечания  
   

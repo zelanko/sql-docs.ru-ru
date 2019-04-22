@@ -15,22 +15,22 @@ helpviewer_keywords:
 - channel binding
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 185c03ef5c5ffdd35a1d32df6fecb29568d5ab82
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: d04f5e640f7622b5eab6106da29366f164fb6878
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657808"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774549"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Соединение с компонентом Database Engine с использованием расширенной защиты
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает **расширенную защиту** , начиная с версии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. **Расширенная защита для проверки подлинности** представляет собой функцию сетевых компонентов, реализуемую операционной системой. **Расширенная защита** поддерживается в Windows 7 и Windows Server 2008 R2. **Расширенная защита** входит в пакет обновления для более старых операционных систем [!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи **расширенную защиту**.  
   
 > [!IMPORTANT]  
->  В Windows **Расширенная защита** не включается по умолчанию. Дополнительные сведения о включении функции **Расширенная защита** в Windows см. в разделе [Расширенная защита для проверки подлинности](https://support.microsoft.com/kb/968389).  
+> В Windows **Расширенная защита** не включается по умолчанию. Дополнительные сведения о включении функции **Расширенная защита** в Windows см. в разделе [Расширенная защита для проверки подлинности](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview).
   
 ## <a name="description-of-extended-protection"></a>Описание расширенной защиты  
  **Расширенная защита** предусматривает привязку служб и каналов для предотвращения релейных атак при проверке подлинности. Во время проведения релейной атаки при проверке подлинности клиент, который может выполнить проверку подлинности NTLM (например, через проводник Windows, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, приложение .NET SqlClient и т. д.), подключается к атакующему (например, злонамеренному файловому серверу CIFS). Атакующий использует учетные данные клиента, чтобы замаскироваться под него и пройти проверку подлинности службы (например, экземпляра службы [!INCLUDE[ssDE](../../includes/ssde-md.md)]).  

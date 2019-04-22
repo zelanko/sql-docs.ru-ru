@@ -12,10 +12,10 @@ ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: 95e9ae2bd77bc3042a44b0322ac9a607be3725e8
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872204"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Настройка SQL Server группы доступности AlwaysOn для обеспечения высокой доступности в Linux
@@ -72,7 +72,7 @@ ms.locfileid: "58872204"
 
 Для конфигурации высокого уровня доступности, которая обеспечивает автоматическую отработку отказа группы Доступности требуется по крайней мере три реплики. Одно из следующих конфигураций может поддерживать высокий уровень доступности:
 
-- [Три синхронные реплики](sql-server-linux-availability-group-ha.md#threeSynch)
+- [Три синхронных реплик](sql-server-linux-availability-group-ha.md#threeSynch)
 
 - [Два синхронных реплик, а также конфигурации реплики](sql-server-linux-availability-group-ha.md#twoSynch)
 

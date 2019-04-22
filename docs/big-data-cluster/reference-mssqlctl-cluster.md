@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e4e54ac3c7206ad8a6592c8cfe0b45d9ea4b8fd8
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860475"
 ---
 # <a name="mssqlctl-cluster"></a>Кластер mssqlctl
@@ -26,9 +26,9 @@ ms.locfileid: "58860475"
 
 |||
 |---|---|
-| [создание](#create) | Создание кластера. |
-| [удалить](#delete) | Удаление кластера. |
-| [config](reference-mssqlctl-cluster-config.md) | Команды для настройки кластера. |
+| [Создание](#create) | Создание кластера. |
+| [delete](#delete) | Удаление кластера. |
+| [конфигурации](reference-mssqlctl-cluster-config.md) | Команды для настройки кластера. |
 | [debug](reference-mssqlctl-cluster-debug.md) | Команды отладки. |
 
 ## <a id="create"></a> Создание кластера mssqlctl

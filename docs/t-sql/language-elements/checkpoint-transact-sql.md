@@ -27,15 +27,15 @@ ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 7cd77a10ee161cd118b168ce2a9aaacf1bb0cc8d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 3fc30986de5a7629771b05b7fd6df8dc12ea158b
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334641"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582987"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Создает ручную контрольную точку в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], с которой в данный момент установлено соединение.  
   
@@ -60,7 +60,7 @@ CHECKPOINT [ checkpoint_duration ]
   
  Влияние на производительность использования аргумента *checkpoint_duration* зависит от количества "грязных" страниц, уровня активности в системе и фактической задаваемой длительности. Например, если обычно для завершения операции выполнения контрольной точки необходимо 120 секунд, задание для аргумента *checkpoint_duration* величины 45 секунд ведет к тому, что серверу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет необходимо выделить контрольной точке больше ресурсов, чем количество, задаваемое по умолчанию. И наоборот, в результате задания для аргумента *checkpoint_duration* значения в 180 секунд [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет выделять меньшее количество ресурсов, чем количество по умолчанию. В целом меньшее значение аргумента *checkpoint_duration* увеличивает объем ресурсов, выделяемых контрольной точке, а большее значение аргумента *checkpoint_duration* уменьшает объем выделяемых ресурсов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда, если это возможно, завершает обработку контрольной точки, а инструкция CHECKPOINT возвращает управление сразу же по завершении обработки контрольной точки. Следовательно, в некоторых случаях выполнение контрольной точки может завершиться быстрее, чем заданный период времени, или выполняться дольше этого периода.  
   
-##  <a name="Security"></a> Безопасность  
+##  <a name="Security"></a> безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Разрешения CHECKPOINT по умолчанию предоставляются членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_backupoperator**, и эти разрешения передаваться не могут.  

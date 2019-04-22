@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bc44d24631454e792b150750508647019411631
-ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
+ms.openlocfilehash: 230a3cb352dca689ee891eca6c6bfd6f516b6ebc
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59533362"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774579"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Интеллектуальная обработка запросов в базах данных SQL
 
@@ -26,7 +26,7 @@ ms.locfileid: "59533362"
 
 Семейство функций интеллектуальной обработки запросов включает средства, которые значительно повышают производительность существующих рабочих нагрузок и требуют минимальных усилий при реализации для внедрения. 
 
-![Интеллектуальная обработка запросов](./media/3_iqpfeaturefamily.png)
+![Интеллектуальная обработка запросов](./media/iqp-feature-family.png)
 
 Рабочие нагрузки можно автоматически сделать подходящими для интеллектуальной обработки запросов, включив для базы данных соответствующий уровень совместимости. Это можно сделать с помощью Transact-SQL. Пример:  
 

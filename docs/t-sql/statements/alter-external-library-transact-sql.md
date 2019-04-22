@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 03/27/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -17,12 +17,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc590bb618f9a95a0fbe7b0a9c173a64698cdf1e
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 33270c8ccc490a400db45b6525d8c6002d974f3a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017970"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583177"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -31,7 +31,7 @@ ms.locfileid: "57017970"
 Изменяет содержимое существующей внешней библиотеки пакетов.
 
 > [!NOTE]
-> В SQL Server 2017 поддерживаются язык R и платформа Windows. R, Python и Java на платформе Windows поддерживаются в SQL Server 2019 CTP 2.3. Поддержка Linux планируется в будущих выпусках.
+> В SQL Server 2017 поддерживаются язык R и платформа Windows. R, Python и Java на платформах Windows и Linux поддерживаются в SQL Server 2019 CTP 2.4. 
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2019"></a>Синтаксис для SQL Server 2019
@@ -46,7 +46,7 @@ WITH ( LANGUAGE = <language> )
 <file_spec> ::=
 {
     (CONTENT = { <client_library_specifier> | <library_bits> | NONE}
-    [, PLATFORM = WINDOWS )
+    [, PLATFORM = <platform> )
 }
 
 <client_library_specifier> :: =
@@ -60,6 +60,12 @@ WITH ( LANGUAGE = <language> )
 { 
       varbinary_literal 
     | varbinary_expression 
+}
+
+<platform> :: = 
+{
+      WINDOWS
+    | LINUX
 }
 
 <language> :: = 
@@ -129,11 +135,17 @@ WITH ( LANGUAGE = 'R' )
 
 Вместо этого можно передать содержимое пакета в качестве переменной в двоичном формате.
 
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
-Указывает платформу для содержимого библиотеки. Это значение является обязательным при изменении существующей библиотеки для добавления другой платформы. Поддерживается только платформа Windows.
+Указывает платформу для содержимого библиотеки. Это значение является обязательным при изменении существующей библиотеки для добавления другой платформы. В SQL Server 2017 поддерживается только платформа Windows.
 
+::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+**PLATFORM**
+
+Указывает платформу для содержимого библиотеки. Это значение является обязательным при изменении существующей библиотеки для добавления другой платформы. В SQL Server 2019 поддерживаются платформы Windows и Linux.
+
 **language**
 
 Задает язык пакета. Может иметь значение **R**, **Python** или **Java**.
@@ -141,9 +153,13 @@ WITH ( LANGUAGE = 'R' )
 
 ## <a name="remarks"></a>Remarks
 
-В языке R пакеты должны быть подготовлены в виде сжатых архивных файлов с расширением ZIP для Windows. В настоящее время поддерживается только платформа Windows.  
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+В языке R пакеты должны быть подготовлены в виде сжатых архивных файлов с расширением ZIP для Windows. В SQL Server 2017 поддерживается только платформа Windows.  
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+При использовании файла в языке R пакеты должны быть подготовлены в виде сжатых архивных файлов с расширением ZIP. 
+
 Для языка Python необходимо подготовить пакет в WHL- или ZIP-файле в виде файла с ZIP-архивом. Если пакет уже является ZIP-файлом, он должен быть включен в новый ZIP-файл. Отправка пакета в качестве WHL- или ZIP-файла напрямую в настоящее время не поддерживается.
 ::: moniker-end
 

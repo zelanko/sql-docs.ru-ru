@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 56973f01112b670727cc0ffa83ba6372c45a3faa
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241582"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>PowerShell cmdlets для режима SharePoint службы Reporting Services
@@ -47,13 +47,13 @@ ms.locfileid: "59241582"
   
     -   [Создание приложения службы Reporting Services и прокси-сервера](#bkmk_example_create_service_application)  
   
-    -   [Проверка и обновление модуля доставки Reporting Services](#bkmk_example_delivery_extension)  
+    -   [Проверка и обновление модуля доставки служб Reporting Services](#bkmk_example_delivery_extension)  
   
-    -   [Получение и задание свойств базы данных приложения Reporting Services, например времени ожидания базы данных](#bkmk_example_db_properties)  
+    -   [Получение и задание свойств базы данных приложения Reporting Services, например время ожидания базы данных](#bkmk_example_db_properties)  
   
     -   [Список для служб reporting services расширения данных — в режиме интеграции с SharePoint](#bkmk_example_list_data_extensions)  
   
-    -   [Изменение и вывод списка владельцев подписки](#bkmk_change_subscription_owner)  
+    -   [Изменение и перечисление владельцев подписок](#bkmk_change_subscription_owner)  
   
 ##  <a name="bkmk_cmdlet_sum"></a> Обзор командлетов  
 
@@ -62,7 +62,7 @@ ms.locfileid: "59241582"
   
  Если при вводе примеров PowerShell отображается сообщение об ошибке следующего вида:  
   
--   Install-SPRSService: термин «Install-SPRSService» не опознан как  
+-   Install-SPRSService: Термин «Install-SPRSService» не является  
     имя командлета, функции, файла скрипта или действующей программы. Проверьте правильность написания имени, а если включен путь, то проверьте правильность пути и повторите попытку.  
   
  Возникает одна из следующих проблем.  
@@ -94,7 +94,7 @@ ms.locfileid: "59241582"
   
 |Командлет|Описание|  
 |------------|-----------------|  
-|Install-SPRSService|Устанавливает и регистрирует, либо удаляет общую службу [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Это можно сделать только на компьютере, где имеется установка служб SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint. При установке выполняются две операции.<br /><br /> (1) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] служба установлена в ферме.<br /><br /> (2) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] на текущем компьютере установлен экземпляр службы.<br /><br /> При удалении выполняются две операции.<br />(1) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] службы удаляются с текущего компьютера.<br />(2) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] службы удаляются из фермы.<br /><br /> <br /><br /> Примечание. Если в ферме присутствуют другие компьютеры, на которых установлены службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], или если в ферме все еще выполняются приложения службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], будет отображено сообщение с предупреждением.|  
+|Install-SPRSService|Устанавливает и регистрирует, либо удаляет общую службу [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Это можно сделать только на компьютере, где имеется установка служб SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint. При установке выполняются две операции.<br /><br /> (1) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] служба установлена в ферме.<br /><br /> (2) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] на текущем компьютере установлен экземпляр службы.<br /><br /> При удалении выполняются две операции.<br />(1) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] службы удаляются с текущего компьютера.<br />(2) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] службы удаляются из фермы.<br /><br /> <br /><br /> Примечание. Если присутствуют другие компьютеры в ферме, имеющих [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] служба установлена, или если все еще существуют [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] приложений служб, работающих в ферме, отображается предупреждающее сообщение.|  
 |Install-SPRSServiceProxy|Устанавливает и регистрирует или удаляет прокси-сервер службы Reporting Services на ферме SharePoint.|  
 |Get-SPRSProxyUrl|Возвращает URL-адреса для доступа к службе [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .|  
 |Get-SPRSServiceApplicationServers|Возвращает все серверы в локальной ферме SharePoint, на которых имеется установка общей службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Этот командлет полезен при обновлении служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , чтобы определить, на каких серверах выполняется общая служба, в связи с чем требуется обновление.|  
@@ -105,7 +105,7 @@ ms.locfileid: "59241582"
 |Командлет|Описание|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|Возвращает один или больше объектов служебного приложения [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .|  
-|New-SPRSServiceApplication|Создание нового приложения службы Reporting Services и связанных баз данных.<br /><br /> Параметр LogonType Указывает, использует ли сервер отчетов учетную запись пула приложений служб SSRS или имя входа SQL Server для доступа к базе данных сервера отчетов. Может принимать одно из следующих значений:<br /><br /> 0 Проверка подлинности Windows<br /><br /> 1 SQL Server<br /><br /> 2 Учетная запись пула приложений (по умолчанию)|  
+|New-SPRSServiceApplication|Создание нового приложения службы Reporting Services и связанных баз данных.<br /><br /> Параметр LogonType Указывает, использует ли сервер отчетов, учетная запись пула приложений служб SSRS или имя входа SQL Server для доступа к базе данных сервера отчетов. Может принимать одно из следующих значений:<br /><br /> 0 Проверка подлинности Windows<br /><br /> 1 SQL Server<br /><br /> 2 Учетная запись пула приложений (по умолчанию)|  
 |Remove-SPRSServiceApplication|Удаляет указанное приложение службы Reporting Services. Также будут удалены связанные базы данных.|  
 |Set-SPRSServiceApplication|Изменяет свойства существующего приложения службы Reporting Services.|  
 |New-SPRSServiceApplicationProxy|Создание прокси-сервера приложения службы Reporting Services.|  
@@ -131,7 +131,7 @@ ms.locfileid: "59241582"
 |New-SPRSExtension|Регистрирует новый модуль для работы с приложением службы Reporting Services.|  
 |Set-SPRSExtension|Задает свойства существующего модуля служб Reporting Services.|  
 |Remove-SPRSExtension|Удаляет модуль из приложения службы Reporting Services.|  
-|Get-SPRSExtension|Возвращает одно или несколько расширений служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для приложения службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .<br /><br /> Допустимые значения:<br /><br /> **Доставка**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Данные **<br /><br /> **безопасность**<br /><br /> **Проверка подлинности**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **Конструктор**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
+|Get-SPRSExtension|Возвращает одно или несколько расширений служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для приложения службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .<br /><br /> Допустимые значения:<br /><br /> **Доставки**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Data**<br /><br /> **безопасность**<br /><br /> **Authentication**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **Designer**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
 |Get-SPRSSite|Возвращает сайты SharePoint с учетом того, включена ли на них функция «ReportingService». По умолчанию возвращаются сайты, на которых включена функция «ReportingService».|  
   
 ##  <a name="bkmk_basic_samples"></a> Простые примеры  
@@ -303,7 +303,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
  См. раздел [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
 ## <a name="see-also"></a>См. также  
- [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
+ [Использование PowerShell для смены и перечисления владельцев подписок служб Reporting Services и запуска подписки](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
  [Контрольный список: Использование PowerShell для проверки PowerPivot для SharePoint](../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
  [Скрипты PowerShell для управления SharePoint CodePlex](http://sharepointpsscripts.codeplex.com/)   
  [Администрирование служб SSRS с помощью PowerShell](https://curatedviews.cloudapp.net/13107/how-to-administer-ssrs-using-powershell)  

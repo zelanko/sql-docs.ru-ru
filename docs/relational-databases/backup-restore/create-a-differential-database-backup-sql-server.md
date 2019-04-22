@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 279047e483720f5d089325f9d9ed17467ea96804
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241415"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>Создание разностной резервной копии базы данных (SQL Server)
@@ -33,7 +33,7 @@ ms.locfileid: "59241415"
   
      [Ограничения](#Restrictions)  
   
-     [предварительные требования](#Prerequisites)  
+     [Предварительные требования](#Prerequisites)  
   
      [Рекомендации](#Recommendations)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "59241415"
   
 -   **Создание разностной резервной копии**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   

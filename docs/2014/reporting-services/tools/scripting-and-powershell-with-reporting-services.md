@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 9248c80830b6ebb432629bf47d73ad44fd832c3b
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240702"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Сценарии и PowerShell со службами Reporting Services
@@ -65,7 +65,7 @@ ms.locfileid: "59240702"
   
 -   Дополнительные примеры скриптов, приложений и расширений см. в разделе [Примеры продуктов SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Служебная программа RS.exe (SSRS)](rs-exe-utility-ssrs.md)   
  [Написание скриптов для задач развертывания и администрирования](script-deployment-and-administrative-tasks.md)   
  [Создание скриптов с помощью программы rs.exe и веб-службы](script-with-the-rs-exe-utility-and-the-web-service.md)  

@@ -8,10 +8,10 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
 ms.openlocfilehash: 61f72b2676e2c3c92dd82febc70d2e00d3363baf
-ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59506561"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Интеграция сервера отчетов с Power BI (диспетчер конфигурации)
@@ -153,8 +153,8 @@ ms.locfileid: "59506561"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Мои параметры для интеграции с Power BI](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+[Мои параметры для интеграции с Power BI (веб-портал)](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
 [Закрепление элементов служб Reporting Services на панелях мониторинга Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
 [Панели мониторинга в Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
-Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

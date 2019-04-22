@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed5ea8e711fcc3013a682f8c63a01dc042556f40
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240372"
 ---
 # <a name="syntax-ssis"></a>Синтаксис (службы SSIS)
@@ -26,7 +26,7 @@ ms.locfileid: "59240372"
 > [!NOTE]  
 >  В предыдущих выпусках служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]действовало ограничение в 4000 символов на результат вычисления выражения, если результат имел тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DT_WSTR или DT_STR. Это ограничение снято.  
   
- Образцы выражений, использующих специальные операторы и функции, см. в разделе о каждом операторе и функции: [Операторы (выражение служб SSIS)](operators-ssis-expression.md) и [Функции (выражение служб SSIS)](functions-ssis-expression.md).  
+ Образцы выражений, использующих специальные операторы и функции см. в разделе о соответствующим операторам и функциям в разделах: [Операторы (выражение служб SSIS)](operators-ssis-expression.md) и [Функции (выражение служб SSIS)](functions-ssis-expression.md).  
   
  Образцы выражений, использующих несколько операторов и функций так же, как идентификаторы и литералы, см. в разделе [Примеры расширенных выражений служб Integration Services](examples-of-advanced-integration-services-expressions.md).  
   

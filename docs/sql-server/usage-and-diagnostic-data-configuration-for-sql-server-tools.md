@@ -12,10 +12,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6c60eb8cac357fba523196385e72a1b05a2c36f4
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59243518"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools"></a>Настройка сбора данных об использовании и данных диагностики для средств SQL Server
@@ -37,7 +37,7 @@ ms.locfileid: "59243518"
   
  В предварительных версиях SQL Server 2017 участие пользователя в программе CEIP включено по умолчанию. Вы можете изменять эту настройку в соответствии с приведенными ниже инструкциями.  
   
- **В Visual Studio (применимо к Visual Studio 2017 с полными языковыми настройками)**  
+ **В Visual Studio (применимо к Visual Studio 2017 с полными языковыми настройками)**  
   
  При запуске программы установки SSDT на компьютере с Visual Studio добавляются только шаблоны проектов SQL Server и Business Intelligence. В этом случае управлять участием в программе CEIP можно с помощью элемента "Параметры отзывов пользователей" в Visual Studio.  
   

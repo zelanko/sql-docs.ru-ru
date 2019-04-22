@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 1c3ee703bca46bf46dba8225e1d28da3174dc932
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240172"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>Краткое руководство. R-сценарий «Hello world» в SQL Server 
@@ -91,4 +91,4 @@ GO
 Теперь, когда вы запустили несколько простые скрипты R, внимательно ознакомьтесь структурирование входные и выходные данные.
 
 > [!div class="nextstepaction"]
-> [Краткое руководство. Работа с входными и выходными данными](quickstart-r-inputs-and-outputs.md)
+> [Краткое руководство. Обрабатывать входные и выходные данные](quickstart-r-inputs-and-outputs.md)

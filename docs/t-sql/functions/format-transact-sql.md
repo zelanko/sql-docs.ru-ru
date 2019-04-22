@@ -18,17 +18,17 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current||>= sql-server-2016||=azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: c265582eb3cad857201fdde5f3671e46e370b00a
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: 87750e264f87b8244cb74b9d68276c85d92e5761
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342946"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670933"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 Возвращает значение, указанное в формате, языке и региональных параметрах (необязательно) в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Для выполнения форматирования значения даты, времени и чисел с учетом локали в виде строк используется функция FORMAT. Для общих преобразований типов данных продолжайте использовать CAST и CONVERT.  
   
@@ -36,11 +36,12 @@ ms.locfileid: "58342946"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```sql
 FORMAT ( value, format [, culture ] )  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+## <a name="arguments"></a>Аргументы
+
  *value*  
  Выражение поддерживаемого типа данных для форматирования. Список допустимых типов см. в таблице в последующем разделе «Примечания».  
   
@@ -54,15 +55,17 @@ FORMAT ( value, format [, culture ] )
   
  Если аргумент *culture* не указан, то используется язык текущего сеанса. Язык может быть задан неявно или явно с использованием инструкции SET LANGUAGE. В качестве аргумента *culture* принимает любой язык и региональные параметры, поддерживаемые .NET Framework; его применение не ограничивается языками, поддерживаемыми [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если аргумент *culture* недопустим, то FORMAT выдаст ошибку.  
   
-## <a name="return-types"></a>Типы возвращаемых данных  
+## <a name="return-types"></a>Типы возвращаемых данных
+
  **nvarchar** или NULL  
   
  Длина возвращаемого значения определяется аргументом *format*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
  Функция FORMAT возвращает значение NULL для ошибок, когда *culture* не является *valid*. Например, NULL возвращается, если значение, заданное в *format*, недопустимо.  
- 
- Функция FORMAT не детерминирована.   
+
+ Функция FORMAT не детерминирована.
   
  Функция FORMAT предполагает наличие среды выполнения CLR платформы .NET Framework.  
   
@@ -93,7 +96,8 @@ FORMAT ( value, format [, culture ] )
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-simple-format-example"></a>A. Простой пример функции FORMAT  
+### <a name="a-simple-format-example"></a>A. Простой пример функции FORMAT
+
  В следующем примере возвращается простой набор данных, отформатированный для различных языков и региональных параметров.  
   
 ```sql  
@@ -101,7 +105,7 @@ DECLARE @d DATETIME = '10/01/2011';
 SELECT FORMAT ( @d, 'd', 'en-US' ) AS 'US English Result'  
       ,FORMAT ( @d, 'd', 'en-gb' ) AS 'Great Britain English Result'  
       ,FORMAT ( @d, 'd', 'de-de' ) AS 'German Result'  
-      ,FORMAT ( @d, 'd', 'zh-cn' ) AS 'Simplified Chinese (PRC) Result';   
+      ,FORMAT ( @d, 'd', 'zh-cn' ) AS 'Simplified Chinese (PRC) Result';
   
 SELECT FORMAT ( @d, 'D', 'en-US' ) AS 'US English Result'  
       ,FORMAT ( @d, 'D', 'en-gb' ) AS 'Great Britain English Result'  
@@ -111,7 +115,7 @@ SELECT FORMAT ( @d, 'D', 'en-US' ) AS 'US English Result'
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```
 US English Result Great Britain English Result  German Result Simplified Chinese (PRC) Result  
 ----------------  ----------------------------- ------------- -------------------------------------  
 10/1/2011         01/10/2011                    01.10.2011    2011/10/1  
@@ -125,7 +129,8 @@ Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-format-with-custom-formatting-strings"></a>Б. Функция FORMAT с пользовательскими строками форматирования  
+### <a name="b-format-with-custom-formatting-strings"></a>Б. Функция FORMAT с пользовательскими строками форматирования
+
  В следующем примере показано форматирование числовых значений с помощью заданного пользовательского формата. В примере предполагается, что текущая дата — 27 сентября 2012 г. Дополнительные сведения об этих и других пользовательских форматах см. в статье [Пользовательские строки форматирования чисел](https://msdn.microsoft.com/library/0c899ak8.aspx).  
   
 ```sql  
@@ -136,7 +141,7 @@ SELECT FORMAT( @d, 'dd/MM/yyyy', 'en-US' ) AS 'DateTime Result'
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```
 DateTime Result  Custom Number Result  
 --------------   --------------------  
 27/09/2012       123-45-6789  
@@ -144,7 +149,8 @@ DateTime Result  Custom Number Result
 (1 row(s) affected)  
 ```  
   
-### <a name="c-format-with-numeric-types"></a>В. Функция FORMAT с числовыми типами  
+### <a name="c-format-with-numeric-types"></a>В. Функция FORMAT с числовыми типами
+
  В приведенном ниже примере возвращаются 5 строк из таблицы **Sales.CurrencyRate** в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Столбец **EndOfDateRate** в таблице хранится как тип **money**. В этом примере столбец возвращается неформатированным, затем форматируется в формате .NET Number, формате типа General и Currency. Дополнительные сведения об этих и других числовых форматах см. в статье [Стандартные строки форматирования чисел](https://msdn.microsoft.com/library/dwhawy9k.aspx).  
   
 ```sql  
@@ -182,7 +188,7 @@ FROM Sales.CurrencyRate
 ORDER BY CurrencyRateID;  
 ```  
   
-```  
+```
 CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format  
 -------------- ------------  --------------  --------------  ---------------  
 1              1.0002        1,00            1,0002          1,00 €  
@@ -194,7 +200,8 @@ CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format
  (5 row(s) affected)  
 ```  
   
-###  <a name="ExampleD"></a> Г. Использование функции FORMAT с типами данных времени  
+### <a name="ExampleD"></a> Г. Использование функции FORMAT с типами данных времени
+
  В этих случаях функция FORMAT возвращает значение NULL, так как символы `.` и `:` не экранированы.  
   
 ```sql  
@@ -209,9 +216,8 @@ SELECT FORMAT(cast('07:35' as time), N'hh\.mm');  --> returns 07.35
 SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также:
+
  [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
  [STR (Transact-SQL)](../../t-sql/functions/str-transact-sql.md)  
- [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
-  
-  
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)

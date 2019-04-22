@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860635"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Настройка расширенных событий для групп доступности Always On
@@ -30,7 +30,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
  [Расширенные события для отладки](always-on-extended-events.md#BKMK_Debugging)  
   
- [Справочник по расширенным событиям для групп доступности Always On](always-on-extended-events.md#BKMK_Reference)  
+ [Справочник по расширенным событиям для групп доступности AlwaysOn](always-on-extended-events.md#BKMK_Reference)  
   
 ##  <a name="BKMK_alwayson_health"></a> Сеанс Alwayson_health  
  Сеанс расширенных событий alwayson_health создается автоматически при создании группы доступности и фиксирует подмножество связанных с ней событий. Этот сеанс предварительно настроен в качестве удобного средства, которое поможет вам быстрее приступить к устранению неполадок для группы доступности. Мастер создания группы доступности автоматически запускает сеанс на всех участвующих репликах доступности, настроенных в мастере.  
@@ -73,7 +73,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
  [availability_replica_automatic_failover_validation](#BKMK_availability_replica_automatic_failover_validation)  
   
- [error_reported (несколько номеров ошибок): для проблем с транспортировкой или подключением](#BKMK_error_reported)  
+ [error_reported (несколько номеров ошибки): для проблем с транспортом или подключением](#BKMK_error_reported)  
   
  [data_movement_suspend_resume](#BKMK_data_movement_suspend_resume)  
   

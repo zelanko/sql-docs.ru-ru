@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c08545341e3ecfe8c82ab01723d96167412e1b03
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241342"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>Сравнение задачи «Скрипт» и компонента скрипта
@@ -31,7 +31,7 @@ ms.locfileid: "59241342"
 |Компонент|Описание|  
 |-------------|-----------------|  
 |Два режима времени разработки|Разработка задачи и компонента начинается с определения свойств в редакторе с последующим переключением в среду разработки для написания кода.|  
-|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)|И для задачи и для компонента используется одна и та же интегрированная среда разработки средств VSTA, а поддерживающий код пишется на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic либо [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.|  
+|Средства [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] для приложений (VSTA)|И для задачи и для компонента используется одна и та же интегрированная среда разработки средств VSTA, а поддерживающий код пишется на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic либо [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.|  
 |Предварительно откомпилированные скрипты|Начиная с версии служб [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], все скрипты предварительно компилируются. В более ранних версиях предусмотрена возможность указать, должны ли скрипты быть предварительно откомпилированы.<br /><br /> Предварительная компиляция скрипта приводит к получению двоичного кода, который позволяет повысить быстродействие выполнения, но за счет увеличенного размера пакета.|  
 |отладка|И в задаче и в компоненте поддерживаются точки останова и пошаговое выполнение кода во время отладки в среде разработки. Дополнительные сведения см. в разделе [кодирование и отладка задачи «скрипт»](../control-flow/script-task.md) и [кодирование и отладка компонента скрипта] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.|  
   
@@ -51,8 +51,8 @@ ms.locfileid: "59241342"
 |Ведение журнала|Задача «скрипт» использует <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> метод `Dts` объекта для ведения журналов во включенных регистраторах. Пример:<br /><br /> **[VB]**<br /><br /> `Dim bt(0) As Byte Dts.Log("Test Log Event", _     0, _     bt)`<br /><br /> <br /><br /> **[C#]**<br /><br /> `byte[] bt = new byte[0]; Dts.Log("Test Log Event", 0, bt);`|В компоненте скрипта используется метод <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> автоформирования базового класса для ведения журналов во включенных регистраторах. Пример:<br /><br /> **[VB]**<br /><br /> `Dim bt(0) As Byte`<br /><br /> `Me.Log("Test Log Event", _`<br /><br /> `0, _`<br /><br /> `bt)`<br /><br /> <br /><br /> **[C#]**<br /><br /> `byte[] bt = new byte[0]; this.Log("Test Log Event", 0, bt);`|  
 |Возвращение результатов|Задача «скрипт» использует оба <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A> и дополнительный <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A> свойство `Dts` объект для уведомления среды выполнения его результаты.|Компонент скрипта выполняется в составе задачи потока данных и не сообщает о результатах ни с одним из этих свойств.|  
   
-## <a name="see-also"></a>См. также  
- [Расширение пакета с помощью задачи «Скрипт»](task/extending-the-package-with-the-script-task.md)   
+## <a name="see-also"></a>См. также:  
+ [Расширение пакета с помощью задачи "Скрипт"](task/extending-the-package-with-the-script-task.md)   
  [Расширение потока данных с помощью компонента скрипта](data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
  [С помощью задачи «скрипт» в SQL Server Integration Services SSIS для подключения к веб-службы](https://www.mssqltips.com/sqlservertip/4288/using-a-script-task-in-sql-server-integration-services-ssis-to-connect-to-a-web-service/)  
   

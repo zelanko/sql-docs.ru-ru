@@ -17,10 +17,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: a1cc685ac2851acb52eaedff7507bd0b7997add8
-ms.sourcegitcommit: 85a7a532f35b8ea1b45e9a83bfc8529a0abed264
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480330"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Нерекомендуемые функции ядра СУБД в SQL Server 2017
@@ -79,7 +79,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Типы данных|Синтаксис**timestamp** для типа данных **rowversion** .|Синтаксис типа данных**rowversion** .|timestamp|158|  
 |Типы данных|Возможность вставлять значения NULL в столбцы типа **timestamp** .|Используйте вместо этого DEFAULT.|INSERT NULL в столбцах TIMESTAMP.|179|  
 |Типы данных|Параметр таблицы «text in row».|Используйте типы данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)**. Дополнительные сведения см. в разделе [sp_tableoption (Transact-SQL)](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Параметр таблицы «text in row»|9|  
-|Типы данных|Типы данных:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Используйте типы данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)**.|Типы данных: **text**, **ntext** или **image**|4|  
+|Типы данных|Типы данных:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Используйте типы данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)** .|Типы данных: **text**, **ntext** или **image**|4|  
 |Управление базами данных|sp_attach_db<br /><br /> sp_attach_single_file_db|Инструкция CREATE DATABASE с параметром FOR ATTACH. Чтобы перестроить несколько файлов журнала, если один или более файлов изменили расположение, используйте параметр FOR ATTACH_REBUILD_LOG.|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |Объекты базы данных|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> хранимая процедура sp_unbindefault|Ключевое слово DEFAULT в инструкциях CREATE TABLE и ALTER TABLE.|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> хранимая процедура sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |Объекты базы данных.|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|Ключевое слово CHECK в инструкциях CREATE TABLE и ALTER TABLE.|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  
@@ -131,7 +131,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |безопасность|SETUSER|EXECUTE AS|SETUSER|165|  
 |безопасность|Алгоритмы шифрования RC4 и DESX|Используйте другой алгоритм, например AES.|Алгоритм DESX|238|  
 |Задание параметров|SET FMTONLY|[sys.dm_exec_describe_first_result_set (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set (Transact-SQL)](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) и [sp_describe_undeclared_parameters (Transact-SQL)](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md).|SET FMTONLY|250|  
-|Параметры конфигурации сервера|Параметр c2 audit<br /><br /> default trace enabled, параметр|[Параметр конфигурации сервера «common criteria compliance enabled»](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [Расширенные события](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
+|Параметры конфигурации сервера|Параметр c2 audit<br /><br /> default trace enabled, параметр|[Параметр конфигурации сервера common criteria compliance enabled](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [Расширенные события](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
 |Классы модели объектов SMO|**Microsoft.SQLServer. Класс Management.Smo.Information**<br /><br /> **Microsoft.SQLServer. Класс Management.Smo.Settings**<br /><br /> **Microsoft.SQLServer.Management. Класс Smo.DatabaseOptions**<br /><br /> **Microsoft.SqlServer.Management.Smo. Свойство DatabaseDdlTrigger.NotForReplication**|**Microsoft.SqlServer.  Класс Management.Smo.Server**<br /><br /> **Microsoft.SqlServer.  Класс Management.Smo.Server**<br /><br /> **Microsoft.SqlServer. Класс Management.Smo.Database**<br /><br /> None|None|None|  
 |Агент SQL Server|уведомление**net send** .<br /><br /> Уведомление по пейджеру|Уведомление по электронной почте.<br /><br /> Уведомление по электронной почте. |None|None|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|Интеграция обозревателя решений в среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||None|None|  
@@ -140,8 +140,8 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Системные таблицы|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|None|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  
 |Системные функции|fn_virtualservernodes<br /><br /> fn_servershareddrives|sys.dm_os_cluster_nodes<br /><br /> sys.dm_io_cluster_shared_drives|fn_virtualservernodes<br /><br /> fn_servershareddrives|155<br /><br /> 156|  
 |Системные представления|sys.sql_dependencies|sys.sql_expression_dependencies|sys.sql_dependencies|198|  
-|Сжатие таблицы|Использование формата хранения vardecimal.|Формат хранения Vardecimal устарел. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] обеспечивают упаковку десятичных значений и данных других типов. Вместо формата хранения vardecimal рекомендуется использовать сжатие данных.|Формат хранения vardecimal|200|  
-|Сжатие таблицы|Используйте процедуру the sp_db_vardecimal_storage_format.|Формат хранения Vardecimal устарел. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] обеспечивают упаковку десятичных значений и данных других типов. Вместо формата хранения vardecimal рекомендуется использовать сжатие данных.|sp_db_vardecimal_storage_format|201|  
+|Сжатие таблицы|Использование формата хранения vardecimal.|Формат хранения Vardecimal устарел. Средства сжатия данных[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] обеспечивают упаковку десятичных значений и данных других типов. Вместо формата хранения vardecimal рекомендуется использовать сжатие данных.|Формат хранения vardecimal|200|  
+|Сжатие таблицы|Используйте процедуру the sp_db_vardecimal_storage_format.|Формат хранения Vardecimal устарел. Средства сжатия данных[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] обеспечивают упаковку десятичных значений и данных других типов. Вместо формата хранения vardecimal рекомендуется использовать сжатие данных.|sp_db_vardecimal_storage_format|201|  
 |Сжатие таблицы|Используйте процедуру sp_estimated_rowsize_reduction_for_vardecimal.|Вместо этого следует использовать сжатие данных и процедуру sp_estimate_data_compression_savings.|sp_estimated_rowsize_reduction_for_vardecimal|202|  
 |Табличные указания|Указание параметра NOLOCK или READUNCOMMITTED в предложении FROM инструкции UPDATE или DELETE.|Удалите табличные указания NOLOCK и READUNCOMMITTED из предложения FROM.|NOLOCK или READUNCOMMITTED в инструкции UPDATE или DELETE|1|  
 |Табличные указания|Указание табличных подсказок без ключевого слова WITH.|Использование ключевого слова WITH.|Табличное указание без ключевого слова WITH|8|  
@@ -174,6 +174,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 > Параметр **OUTPUT** куки-файла для инструкции **sp_setapprole** в настоящее время описан в документации как **varbinary(8000)** , что верно определяет его максимальную длину. Однако текущая реализация возвращает параметр **varbinary(50)**. Если разработчик выделил значение **varbinary(50)** , может потребоваться внести изменения в приложения на случай изменения размера возвращаемых куки-файлов в будущих выпусках. Хотя эта проблема не связана с устареванием, она описана в данном разделе, так как требует внесения аналогичных изменений в приложения. Дополнительные сведения см. в разделе [sp_setapprole (Transact-SQL)](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Нерекомендуемые функции ядра СУБД в SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
+ [Неподдерживаемые функции ядра СУБД в SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
 

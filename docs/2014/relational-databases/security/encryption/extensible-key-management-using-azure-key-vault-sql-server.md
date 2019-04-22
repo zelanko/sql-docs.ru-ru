@@ -17,10 +17,10 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242212"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)
@@ -28,19 +28,19 @@ ms.locfileid: "59242212"
   
  Разделы данной темы  
   
--   [Использование расширенного управления ключами](#Uses)  
+-   [Использование расширенного управления Ключами](#Uses)  
   
--   [Шаг 1. Настройка хранилища ключей для использования в SQL Server](#Step1)  
+-   [Шаг 1. Настройка хранилища ключей для использования в SQL Server](#Step1)  
   
--   [Шаг 2. Установка соединителя SQL Server](#Step2)  
+-   [Шаг 2. Установка соединителя SQL Server](#Step2)  
   
 -   [Шаг 3. Настройка SQL Server для использования поставщика EKM для хранилища ключей](#Step3)  
   
--   [Пример А. Прозрачное шифрование данных с помощью асимметричного ключа из хранилища ключей](#ExampleA)  
+-   [Пример а. Прозрачное шифрование данных с помощью асимметричного ключа из хранилища ключей](#ExampleA)  
   
--   [Пример Б. Шифрование резервных копий с помощью асимметричного ключа из хранилища ключей](#ExampleB)  
+-   [Пример б Шифрование резервных копий с помощью асимметричного ключа из хранилища ключей](#ExampleB)  
   
--   [Пример В. Шифрование данных на уровне столбца с помощью асимметричного ключа из хранилища ключей](#ExampleC)  
+-   [Пример в. Шифрование на уровне столбцов с помощью асимметричного ключа из хранилища ключей](#ExampleC)  
   
 ##  <a name="Uses"></a> Использование расширенного управления Ключами  
  Организация может использовать шифрование [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для защиты конфиденциальных данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] включает шифрование [прозрачное шифрование данных &#40;TDE&#41;](transparent-data-encryption.md), [шифрование на уровне столбцов](/sql/t-sql/functions/cryptographic-functions-transact-sql) (CLE) и [шифрование резервной копии](../../backup-restore/backup-encryption.md). Во всех этих случаях данные шифруются с помощью симметричного ключа шифрования. Симметричный ключ шифрования затем шифруется иерархией ключей, хранящихся в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Или же архитектура поставщика EKM использует [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для защиты ключей шифрования данных с помощью асимметричного ключа, который хранится вне [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] во внешнем поставщике служб шифрования. Архитектура поставщика EKM добавляет дополнительный уровень безопасности и позволяет организациям разделить управление ключами и данными.  
@@ -73,7 +73,7 @@ ms.locfileid: "59242212"
   
      Дополнительные сведения о том, как импортировать ключ в хранилище ключей или создать ключ в хранилище ключей (не рекомендуется для рабочей среды), см. в разделе **Добавление ключа или секретного кода в хранилище ключей** статьи [Приступая к работе с хранилищем ключей Azure](https://go.microsoft.com/fwlink/?LinkId=521402).  
   
-3.  **Получите Azure Active Directory субъекты-службы для SQL Server:** Когда организация регистрируется в облачной службе Майкрософт, она получает Azure Active Directory. Создайте **субъекты-службы** в Azure Active Directory для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , которые будут использоваться (для проверки подлинности в Azure Active Directory) при доступе к хранилищу ключей.  
+3.  **Получите Azure Active Directory субъекты-службы для SQL Server:** Когда организация регистрируется в облачной службе Майкрософт, он получает Azure Active Directory. Создайте **субъекты-службы** в Azure Active Directory для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , которые будут использоваться (для проверки подлинности в Azure Active Directory) при доступе к хранилищу ключей.  
   
     -   Один **субъект-служба** понадобится администратору [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для доступа к хранилищу при настройке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для шифрования.  
   
@@ -107,9 +107,9 @@ ms.locfileid: "59242212"
   
  После завершения установки на компьютер установлены следующие компоненты.  
   
--   **Microsoft.AzureKeyVaultService.EKM.dll**: это DLL-библиотека поставщика расширенного управления ключами, которую необходимо зарегистрировать в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью инструкции CREATE CRYPTOGRAPHIC PROVIDER.  
+-   **Microsoft.AzureKeyVaultService.EKM.dll**: Это поставщик служб шифрования расширенного управления Ключами DLL, должен быть зарегистрирован с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью инструкции CREATE CRYPTOGRAPHIC PROVIDER.  
   
--   **Соединитель SQL Server для хранилища ключей Azure**: это служба Windows, которая позволяет поставщику EKM взаимодействовать с хранилищем ключей.  
+-   **Соединитель SQL Server для хранилища ключей Azure**: Это служба Windows, которая позволяет поставщику EKM взаимодействовать с хранилищем ключей.  
   
  Установка соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] также позволяет при необходимости загрузить примеры скриптов для шифрования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -200,7 +200,7 @@ ms.locfileid: "59242212"
   
  Дополнительные сведения см. в следующих разделах:  
   
--   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
+-   [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
 -   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
   
@@ -343,11 +343,11 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
   
 ## <a name="see-also"></a>См. также  
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
- [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
+ [CREATE CREDENTIAL (Transact-SQL)](/sql/t-sql/statements/create-credential-transact-sql)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
- [Расширенное управление ключами &#40;EKM&#41;](extensible-key-management-ekm.md)   
- [Включение прозрачного шифрования данных с использованием расширенного управления ключами](enable-tde-on-sql-server-using-ekm.md)   
+ [Расширенное управление ключами (EKM)](extensible-key-management-ekm.md)   
+ [Включение прозрачного шифрования данных с помощью расширенного управления Ключами](enable-tde-on-sql-server-using-ekm.md)   
  [Шифрование резервной копии](../../backup-restore/backup-encryption.md)   
  [Создание зашифрованной резервной копии](../../backup-restore/create-an-encrypted-backup.md)  
   

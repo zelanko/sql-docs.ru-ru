@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 3ad8a97bac1f708dcf01612368c76d584fa39f5c
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860295"
 ---
 # <a name="mssqlctl-storage-mount"></a>Подключение хранилища mssqlctl
@@ -26,8 +26,8 @@ ms.locfileid: "58860295"
 
 |||
 |---|---|
-| [создание](#create) | Создайте подключение удаленных хранилищ в HDFS. |
-| [удалить](#delete) | Удалите подключение удаленных хранилищ в HDFS. |
+| [Создание](#create) | Создайте подключение удаленных хранилищ в HDFS. |
+| [delete](#delete) | Удалите подключение удаленных хранилищ в HDFS. |
 | [status](#status) | Состояние mount(s). |
 
 ## <a id="create"></a> Создание подключения хранилища mssqlctl

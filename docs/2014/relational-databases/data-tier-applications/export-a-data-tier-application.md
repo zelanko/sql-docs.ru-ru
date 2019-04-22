@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ceac86445154648b946148d6267f6e8949af423
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242302"
 ---
 # <a name="export-a-data-tier-application"></a>Экспорт приложения уровня данных
@@ -124,7 +124,7 @@ ms.locfileid: "59242302"
   
 3.  Используйте метод `Export` типа `Microsoft.SqlServer.Management.Dac.DacStore` для экспорта приложения уровня данных. Укажите имя экспортируемого приложения уровня данных и путь к папке, в которой будет размещен файл экспорта.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Приложения уровня данных](data-tier-applications.md)   
  [Извлечение приложения уровня данных из базы данных](extract-a-dac-from-a-database.md)  
   

@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: c67ed74750ac36d1a5c79503417414a9dd8ab6b5
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860105"
 ---
 # <a name="mssqlctl-app-template"></a>Шаблон приложения mssqlctl
@@ -26,8 +26,8 @@ ms.locfileid: "58860105"
 
 |||
 |---|---|
-| [Список](#list) | Получите поддерживаемые шаблоны. |
-| [получение по запросу](#pull) | Скачайте поддерживаемые шаблоны. |
+| [list](#list) | Получите поддерживаемые шаблоны. |
+| [По запросу](#pull) | Скачайте поддерживаемые шаблоны. |
 
 ## <a id="list"></a> Список шаблонов mssqlctl приложения
 

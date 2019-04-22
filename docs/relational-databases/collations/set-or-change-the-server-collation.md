@@ -13,12 +13,12 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 629ab86b869e36ec816dc99070f11a88147a1ca8
-ms.sourcegitcommit: e6e5da19b393f30b068552a18c911495cbc32952
+ms.openlocfilehash: 2bb8afe1e20e71245beea8f9482ff0aec4b047ba
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54443700"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671141"
 ---
 # <a name="set-or-change-the-server-collation"></a>Задание или изменение параметров сортировки сервера
 
@@ -30,7 +30,7 @@ ms.locfileid: "54443700"
   
 ## <a name="setting-the-server-collation-in-sql-server"></a>Настройка параметров сортировки сервера в SQL Server
 
-  Параметры сортировки сервера задаются во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Параметры сортировки по умолчанию — **SQL_Latin1_General_CP1_CI_AS**. Параметры сортировки только для Юникода не могут быть заданы как параметры сортировки уровня сервера. Дополнительные сведения см. в разделе [Настройка сервера — параметры сортировки](/sql/sql-server/install/server-configuration-collation.md).
+  Параметры сортировки сервера задаются во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Параметры сортировки по умолчанию — **SQL_Latin1_General_CP1_CI_AS**. Параметры сортировки только для Юникода не могут быть заданы как параметры сортировки уровня сервера. Дополнительные сведения см. в статье [Collation and Unicode Support](collation-and-unicode-support.md).
   
 ## <a name="changing-the-server-collation-in-sql-server"></a>Изменение параметров сортировки сервера в SQL Server
 

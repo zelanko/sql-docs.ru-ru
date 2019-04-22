@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 59b623076e86f3bacf5ae8c6e24b48774e33f670
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241252"
 ---
 # <a name="execute-package-task"></a>Задача «Выполнение пакета»
@@ -75,7 +75,7 @@ ms.locfileid: "59241252"
   
  Для передачи значений в дочерний пакет вы можете использовать следующие методы:  
   
--   **Конфигурации пакетов**  
+-   **Конфигурации пакета**  
   
      [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют тип конфигурации, конфигурацию переменной родительского пакета для передачи значения из родительского в дочерние пакеты. Конфигурация настраивается в дочернем пакете и использует переменные родительского пакета. Конфигурация сопоставляется c переменной в дочернем пакете или свойством объекта в дочернем пакете. Переменная может также использоваться в скриптах, используемых задачей «Скрипт» или компонентом скрипта.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "59241252"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [редактор задачи «Выполнение пакета»](../execute-package-task-editor.md)  
+-   [Execute Package Task Editor](../execute-package-task-editor.md)  
   
 -   [Страница «Выражения»](../expressions/expressions-page.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Урок 6. Добавление группирования и итогов (службы Reporting Services) | Документация Майкрософт
+title: 'Занятие 6: Добавление группирования и итогов (службы Reporting Services) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,28 +12,28 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 945cde51f7529dc31fd7018f1194de600ea1acf5
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241742"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Урок 6. Добавление группирования и итогов (службы Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Занятие 6: Добавление группирования и итогов (службы Reporting Services)
   Добавление группирования и итогов к отчету предназначено для организации и суммирования данных.  
   
  Информацию относительно добавления нарастающего итога в отчеты см. в разделе: [Добавление итогов в отчеты Reporting Services (SSRS)](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/).  
   
  **В этом разделе:**  
   
--   [Группирование данных в отчете](#bkmk_groupdata)  
+-   [Для группирования данных в отчете](#bkmk_groupdata)  
   
 -   [Добавление итогов к отчету](#bkmk_addtotals)  
   
 -   [Добавление ежедневного итога к отчету](#bkmk_adddailytotal)  
   
--   [Добавление общего итога к отчету](#bkmk_addgrandtotal)  
+-   [Добавление итога к отчету](#bkmk_addgrandtotal)  
   
--   [Публикация отчета на сервере отчетов (не обязательно)](#bkmk_publishreport)  
+-   [Публикация отчета на сервере отчетов (необязательно)](#bkmk_publishreport)  
   
 ##  <a name="bkmk_groupdata"></a> Для группирования данных в отчете  
   
@@ -129,7 +129,7 @@ ms.locfileid: "59241742"
   
      Если в окне вывода появится сообщение примерно следующего содержания, это означает, что развертывание прошло успешно.  
   
-    > ------ Build started: проект: учебник, Конфигурация: Debug ------Skipping 'Sales Orders.rdl'. Item is up to date.Build complete -- 0 errors, 0 warnings------ Deploy started: проект: учебник, Конфигурация: Отладка---развертывание http://\<имя сервера > / reportserverDeploying отчетов «/ tutorial/Sales Orders». Развертывание завершено--0 ошибок, 0 предупреждений ==== сборки: 1 succeeded or up-to-date, 0 failed, 0 skipped ==================== Deploy: 1 succeeded, 0 failed, 0 skipped ==========  
+    > ---Построение запущено: проект: учебник, Конфигурация: Отладка---пропускается «Sales Orders.rdl». Элемент в актуальном состоянии. Сборка завершена--0 ошибок, 0 предупреждений---развернуть к работе: проект: учебник, Конфигурация: Отладка---развертывание http://\<имя сервера > / reportserverDeploying отчетов «/ tutorial/Sales Orders». Развертывание завершено--0 ошибок, 0 предупреждений ==== сборки: 1, успешно или обновлен, 0 сбоев, 0 пропущено ==== развертывания: 1 — успешно, 0 сбоев, 0 пропущено ====  
   
      Если же откроется сообщение об ошибке примерно следующего содержания, удостоверьтесь в наличии разрешений на сервер отчетов, а также запустите среду [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] с правами администратора.  
   

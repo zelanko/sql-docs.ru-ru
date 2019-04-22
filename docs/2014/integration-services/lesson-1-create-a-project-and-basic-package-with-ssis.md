@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241802"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>Урок 1. Создание проекта и основного пакета
@@ -80,25 +80,25 @@ ms.locfileid: "59241802"
 ## <a name="lesson-tasks"></a>Задачи занятия  
  Это занятие содержит следующие задачи.  
   
--   [Шаг 1. Создание нового проекта служб Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [Шаг 1. Создание нового проекта служб Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Шаг 2. Добавление и настройка диспетчера соединений с неструктурированными файлами](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Шаг 2. Добавление и настройка диспетчера соединений с неструктурированными файлами](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
 -   [Шаг 3. Добавление и настройка диспетчера соединений OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [Шаг 4. Добавление задачи потока данных в пакет](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [Шаг 4. Добавление в пакет задачу потока данных](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 -   [Шаг 5. Добавление и настройка источника неструктурированных файлов](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [Шаг 6. Добавление и настройка преобразований «Уточняющий запрос»](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [Шаг 6. Добавление и Настройка преобразований «Уточняющий запрос»](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [Шаг 7. Добавление и настройка назначения OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+-   [Шаг 7. Добавление и Настройка назначения OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Шаг 8. Облегчение чтения пакета, созданного на занятии 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Шаг 8. Облегчение пакета занятия 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [Шаг 9. Проверка учебного пакета, созданного на занятии 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [Шаг 9. Проверка учебного пакета занятия 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Начало занятия  
- [Шаг 1. Создание нового проекта служб Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
+ [Шаг 1. Создание нового проекта служб Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
   
   

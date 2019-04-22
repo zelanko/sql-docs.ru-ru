@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1b6127bbc02c85276292da1ada5748fbb2d7923f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241932"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Создание резервных копий файлов и файловых групп (SQL Server)
@@ -111,7 +111,7 @@ ms.locfileid: "59241932"
   
     > **ПРИМЕЧАНИЕ.** Параметры в разделе **Журнал транзакций** доступны, только если создается резервная копия журнала транзакций (это можно указать в разделе **Тип резервной копии** вкладки **Общие**).  
   
-16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] и более поздние версии поддерживают [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). По умолчанию сжатие резервных копий зависит от значения параметра конфигурации сервера **backup-compression default**. Однако независимо от текущего значения по умолчанию на уровне сервера можно сжать резервные копии, установив параметр **Сжимать резервные копии**, или отказаться от сжатия резервных копий, установив параметр **Не сжимать резервные копии**.  
+16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] и более поздние версии поддерживают [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). По умолчанию сжатие резервных копий зависит от значения параметра конфигурации сервера **backup-compression default** . Однако независимо от текущего значения по умолчанию на уровне сервера можно сжать резервные копии, установив параметр **Сжимать резервные копии**, или отказаться от сжатия резервных копий, установив параметр **Не сжимать резервные копии**.  
   
      **Просмотр текущих значений параметров по умолчанию для сжатия резервных копий**  
   
@@ -140,7 +140,7 @@ ms.locfileid: "59241932"
   
     |Параметр|Описание|  
     |------------|-----------------|  
-    |*База данных*|База данных, журнал транзакций и часть данных или все данные, которые подвергаются резервному копированию.|  
+    |*database*|База данных, журнал транзакций и часть данных или все данные, которые подвергаются резервному копированию.|  
     |FILE _=_*логическое_имя_файла*|Указывает логическое имя файла, который необходимо включить в резервную копию.|  
     |FILEGROUP _=_*логическое_имя_файловой_группы*|Указывает логическое имя файловой группы, которую необходимо включить в резервную копию. В простой модели восстановления создание резервной копии файловой группы разрешено лишь для файловых групп, доступных только для чтения.|  
     |[ **,**...*f* ]|Заполнитель, указывающий на то, что могут быть указаны несколько файлов или файловых групп. Количество файлов или файловых групп не ограничено.|  
@@ -211,7 +211,7 @@ GO
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [SQL Server PowerShell, поставщик](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Поставщик SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ## <a name="see-also"></a>См. также раздел  
  [Общие сведения о резервном копировании (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
@@ -222,7 +222,7 @@ GO
  [Резервное копирование базы данных (страница "Параметры резервного копирования")](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)   
  [Полные резервные копии файлов (SQL Server)](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   
  [Разностные резервные копии (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
- [Восстановления файлов (модель полного восстановления)](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
+ [Файлы из резервных копий (модель полного восстановления)](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [Восстановление файлов (простая модель восстановления)](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)  
   
   

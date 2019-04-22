@@ -19,16 +19,16 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 3115624895c45585101db4d5c02ea85509d68220
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241822"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Параметры отчета (Построитель отчетов и Конструктор отчетов)
   Данная тема описывает распространенные варианты применения параметров отчета SSRS, свойства, которые вы можете установить и другую информацию относительно свойств. Параметры отчета позволяют управлять данными отчета, объединять связанные отчеты и изменять внешний вид отчетов.  
   
-[!INCLUDE[applies](../../includes/applies-md.md)] Режим SharePoint и собственный режим
+[!INCLUDE[applies](../../includes/applies-md.md)] Режим интеграции с SharePoint и собственного режима
   
  Демонстрация Добавление параметра в отчет, см. в разделе [руководства: Добавление параметров в отчет (SSRS)](https://technet.microsoft.com/library/aa337432\(v=SQL.105\).aspx)  
 
@@ -36,7 +36,7 @@ ms.locfileid: "59241822"
 ##  <a name="bkmk_Common_Uses_for_Parameters"></a> Распространенные варианты применения параметров  
  Здесь представлены некоторые из распространенных вариантов применения параметров.  
   
- **Управление данными отчета**  
+ **Управлять данными отчета**  
   
 -   Фильтруйте данные отчета в источнике данных, записывая запросы набора данных, которые содержат переменные.  
   
@@ -227,7 +227,7 @@ ms.locfileid: "59241822"
 ##  <a name="bkmk_Related_Topics"></a> См. также  
  [Настройка параметров отчета SSRS (тест)](https://www.trenovision.com/quiz/sql-server-reporting-services-ssrs-quiz/)  
   
- [Учебник. Добавление параметра к отчету &#40;построитель отчетов&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Учебник. Добавление параметра к отчету (построитель отчетов)](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
  [Раскрытие тайны исключения InvalidReportParameterException в службе Reporting Services](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
   

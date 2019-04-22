@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9f0d8c0f371d4c2bfd1ba6ce4c0ea5a0361eb25a
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59476660"
 ---
 # <a name="clr-integration-security"></a>Безопасность интеграции со средой CLR
@@ -37,14 +37,14 @@ ms.locfileid: "59476660"
   
 -   Пользовательский программный код не должен получать несанкционированный доступ к системным ресурсам только потому, что он выполняется в процессе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Теперь интегрирует модель безопасности на основе пользователя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью модели безопасности на основе доступа кода среды CLR. В этом разделе обсуждаются некоторые преимущества такого интегрированного подхода.  
+ Теперь [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] интегрирует модель безопасности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], контролирующую доступ пользователя, с моделью безопасности CLR, контролирующей доступ кода. В этом разделе обсуждаются некоторые преимущества такого интегрированного подхода.  
   
  В следующей таблице приводится список подразделов данного раздела.  
   
- [Управление доступом для кода на основе интеграции со средой CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
+ [Безопасность доступом для кода на основе интеграции со средой CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
  Обсуждается модель безопасности для управляемого кода, основанная на управлении доступом для кода (CAS).  
   
- [Атрибуты защиты узла и программирование средств интеграции со средой CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
+ [Атрибуты защиты узла и программирование интеграции со средой CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
  Содержит сведения о значениях атрибутов защиты узла (host protection attribute, HPA), запрещенных в сборках SAFE и EXTERNAL_ACCESS.  
   
  [Ссылки в средствах безопасности интеграции со средой CLR](https://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  

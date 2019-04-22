@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 732b1c979f0dbf3a346ad85fc11bb8e0c5097c4f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240402"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>Справка F1 мастера оптимизации с учетом использования
@@ -39,7 +39,7 @@ ms.locfileid: "59240402"
   
 -   Сохранение и возможность обработки секции, группы мер или куба для создания определяемых статистических схем.  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] включают мастер статистических схем, предназначенный для разработки статистических схем на основе статистического анализа структуры секции, позволяя получать статистические схемы, которые могут быть ограничены размером хранилища или ожидаемым приростом производительности. Этот мастер может быть использован для повышения общей производительности секции, однако статистическая схема не имеет своей целью удовлетворить конкретные нужды пользователей предприятия. Мастер оптимизации с учетом использования может предоставить статистические схемы, нацеленные на удовлетворение этих специфических нужд, однако он может сделать это только в том случае, когда журнал запросов экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] содержит достаточный объем данных для построения таких запросов.  
+ Службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] включают мастер статистических схем, предназначенный для разработки статистических схем на основе статистического анализа структуры секции, позволяя получать статистические схемы, которые могут быть ограничены размером хранилища или ожидаемым приростом производительности. Этот мастер может быть использован для повышения общей производительности секции, однако статистическая схема не имеет своей целью удовлетворить конкретные нужды пользователей предприятия. Мастер оптимизации с учетом использования может предоставить статистические схемы, нацеленные на удовлетворение этих специфических нужд, однако он может сделать это только в том случае, когда журнал запросов экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] содержит достаточный объем данных для построения таких запросов.  
   
  Обычно оба мастера используются совместно для повышения производительности при развертывании и при эксплуатации. При начальном развертывании секции (куба или группы мер, содержащей эту секцию) применяют мастер статистических схем, обеспечивая общий выигрыш производительности. По истечении некоторого времени, в течение которого происходит запись пользовательских запросов к секции в журнал запросов, может быть использован мастер оптимизации на основе использования для выработки специальной статистической схемы, чтобы повысить производительность и лучше удовлетворить потребности пользователей предприятия.  
   
@@ -48,24 +48,24 @@ ms.locfileid: "59240402"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Выбор секций для изменения (мастер оптимизации на основе использования)](select-partitions-to-modify-usage-based-optimization-wizard.md)  
+-   [Выбор секций для изменения &#40;мастер оптимизации с учетом использования&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
   
--   [Определение критериев запросов (мастер оптимизации с учетом использования)](specify-query-criteria-usage-based-optimization-wizard.md)  
+-   [Определение критериев запроса &#40;мастер оптимизации с учетом использования&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
--   [Просмотр оптимизируемых запросов (мастер оптимизации с учетом использования)](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
+-   [Просмотр оптимизируемых запросов &#40;мастер оптимизации с учетом использования&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
   
--   [Просмотр использования статистической обработки (мастер оптимизации с учетом использования)](review-aggregation-usage-usage-based-optimiation-wizard.md)  
+-   [Просмотр использования статистической обработки &#40;мастер оптимизации с учетом использования&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
   
--   [Задание счетчиков объектов (мастер оптимизации с учетом использования)](specify-object-counts-usage-based-optimization-wizard.md)  
+-   [Определение счетчиков объектов &#40;мастер оптимизации с учетом использования&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
   
--   [Параметры статистической обработки (мастер оптимизации с учетом использования)](set-aggregation-options-usage-based-optimization-wizard.md)  
+-   [Параметры статистической обработки &#40;мастер оптимизации с учетом использования&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
   
--   [Завершение работы мастера (мастер оптимизации на основе использования)](completing-the-wizard-usage-based-optimization-wizard.md)  
+-   [Завершение работы мастера &#40;мастер оптимизации с учетом использования&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
   
 ## <a name="see-also"></a>См. также  
- [Aggregations and Aggregation Designs](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
+ [Агрегаты и статистические схемы](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [Кубы в многомерных моделях](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Справка F1 мастера статистических схем](aggregation-design-wizard-f1-help.md)   
- [Мастера служб Analysis Services (многомерные данные)](analysis-services-wizards-multidimensional-data.md)  
+ [Мастера служб Analysis Services &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

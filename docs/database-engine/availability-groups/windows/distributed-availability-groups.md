@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9e05ab2dd5eeb0511838cd0c1540b2c1ba964d4
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860745"
 ---
 # <a name="distributed-availability-groups"></a>Распределенные группы доступности
@@ -96,9 +96,9 @@ ms.locfileid: "58860745"
 
 Ниже представлены три основных варианта применения распределенной группы доступности. 
 
-* [Аварийное восстановление и упрощенная настройка конфигураций с несколькими сайтами.](#disaster-recovery-and-multi-site-scenarios)
-* [Миграция на новое оборудование или конфигурации, включая установку нового оборудования или смену базовой операционной системы.](#migrate-by-using-a-distributed-availability-group)
-* [Увеличение количества доступных для чтения реплик (больше восьми) в одной и той же группе доступности за счет объединения нескольких групп доступности.](#scale-out-readable-replicas-with-distributed-availability-groups)
+* [Аварийное восстановление и упрощенная настройка конфигураций несколькими сайтами](#disaster-recovery-and-multi-site-scenarios)
+* [Переход на новое оборудование или конфигурации, включая установку нового оборудования или смену базовой операционной системы](#migrate-by-using-a-distributed-availability-group)
+* [Увеличение количества доступных для чтения реплик (больше восьми) в одной и той же группе доступности за счет объединения нескольких групп доступности](#scale-out-readable-replicas-with-distributed-availability-groups)
 
 ### <a name="disaster-recovery-and-multi-site-scenarios"></a>Сценарии аварийного восстановления и конфигураций с несколькими сайтами
 

@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 28a2c9bd527fb4996730630a6121d205fbaebf04
-ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59429350"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Включение зашифрованных соединений для ядра СУБД
@@ -133,4 +133,4 @@ ms.locfileid: "59429350"
   
 ## <a name="see-also"></a>См. также:
 
-[Поддержка TLS 1.2 для Microsoft SQL Server](https://support.microsoft.com/kb/3135244)
+[Поддержка TLS 1.2 для Microsoft SQL Server](https://support.microsoft.com/kb/3135244)

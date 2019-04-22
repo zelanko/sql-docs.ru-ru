@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 939a60c8c23ee59e77f6a2f3c3a2b71a98a426bf
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241722"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Установка, удаление и поддержка построителя отчетов
@@ -59,7 +59,7 @@ ms.locfileid: "59241722"
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>Установка построителя отчетов версии ClickOnce на компьютер  
  Версия [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] построителя отчетов устанавливается вместе со службами [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Она устанавливается при установке служб [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]как в собственном режиме, так и в режиме интеграции с SharePoint.  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] — технология Майкрософт для развертывания приложений Windows. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] дает пользователям возможность устанавливать и запускать приложения Windows (например, построитель отчетов), щелкнув ссылку на веб-странице. Дополнительные сведения о развертывании [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] приложений, применяя [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] безопасности приложений и о выполнении [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] приложений в зоне Интернета см. в разделе «ClickOnce Deployment for Windows Forms Applications», «безопасность в Windows Forms Overview» или «Trusted Application Deployment Overview» статьи на [!INCLUDE[msCoName](../includes/msconame-md.md)] разработчика веб-сайте [ https://developer.microsoft.com/ ](https://developer.microsoft.com/).  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] — технология Майкрософт для развертывания приложений Windows. Технология [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] дает пользователям возможность устанавливать и запускать приложения Windows (например, построитель отчетов), щелкнув ссылку на веб-странице. Дополнительные сведения о развертывании [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] приложений, применяя [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] безопасности приложений и о выполнении [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] приложений в зоне Интернета см. в разделе «ClickOnce Deployment for Windows Forms Applications», «безопасность в Windows Forms Overview» или «Trusted Application Deployment Overview» статьи на [!INCLUDE[msCoName](../includes/msconame-md.md)] разработчика веб-сайте [ https://developer.microsoft.com/ ](https://developer.microsoft.com/).  
   
  Версия построителя отчетов [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] располагается на сервере отчетов и устанавливается на компьютер при нажатии кнопки **Построитель отчетов** в диспетчере отчетов или выборе параметра **Отчет построителя отчетов** в меню **Создать документ** в библиотеке SharePoint.  
   

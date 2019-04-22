@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 336cdd3d1b0de43a08cc4ea69dd072e5d0e09fe5
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860715"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
@@ -40,11 +40,11 @@ ms.locfileid: "58860715"
   
  Пользователи, хорошо знакомые с элементом **Брандмауэр Windows** на панели управления и оснасткой "Брандмауэр Windows в режиме повышенной безопасности" консоли управления (MMC) и умеющие настраивать параметры брандмауэра, могут перейти непосредственно к разделам, приведенным в списке ниже.  
   
--   [Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
+-   [Настройка брандмауэра Windows для доступа к ядру СУБД](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
 -   [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../../2014/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
+-   [настроить брандмауэр для доступа к серверу отчетов](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
 
   
@@ -121,7 +121,7 @@ ms.locfileid: "58860715"
   
     -   [Использование средства Netsh.exe и параметров командной строки](https://support.microsoft.com/kb/242468)  
   
-    -   [Использование контекста «netsh advfirewall firewall» вместо контекста «netsh firewall» для управления работой брандмауэра Windows в Windows Server 2008 и Windows Vista](https://support.microsoft.com/kb/947709)  
+    -   [Использование контекста netsh advfirewall firewall вместо контекста netsh firewall для управления работой брандмауэра Windows в операционной системе Windows Server 2008 или Windows Vista](https://support.microsoft.com/kb/947709)  
   
     -   [Команда «netsh firewall» с параметром «profile=all» не настраивает открытый профиль на компьютере под управлением Windows Vista](https://support.microsoft.com/kb/947213)  
   

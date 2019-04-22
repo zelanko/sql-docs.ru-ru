@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 6d8da3ce90e915344f2380d4cd5cc866db6715ef
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59476639"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>Краткое руководство. Скрипт Python «Hello world» в SQL Server 
@@ -98,4 +98,4 @@ GO
 Теперь, когда вы запустили несколько простых скриптов Python, внимательно ознакомьтесь структурирование входные и выходные данные.
 
 > [!div class="nextstepaction"]
-> [Краткое руководство. Работа с входными и выходными данными](quickstart-python-inputs-and-outputs.md)
+> [Краткое руководство. Обрабатывать входные и выходные данные](quickstart-python-inputs-and-outputs.md)

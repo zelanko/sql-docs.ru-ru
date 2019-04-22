@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 639796b9abcf95c9f701d3ed88fbb5e71078eb8f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241294"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>Поиск дополнительных сведений о собственном клиенте SQL Server
@@ -26,7 +26,7 @@ ms.locfileid: "59241294"
  [Центр разработчиков систем доступа к данным и к центру их хранения](https://go.microsoft.com/fwlink?linkid=4173)  
  На этом сайте содержатся технические статьи, образцы кода и другие ресурсы, относящиеся к собственному клиенту для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и другим технологиям доступа к данным.  
   
- [Блог доступа к данным](https://go.microsoft.com/fwlink/?LinkId=48617)  
+ [Блог, посвященный доступу к данным](https://go.microsoft.com/fwlink/?LinkId=48617)  
  В этом блоге содержатся сведения о технологиях доступа к данным. Кроме того, в нем можно пообщаться непосредственно с представителями группы разработчиков.  
   
  [Компоненты доступа к данным Windows DAC](https://go.microsoft.com/fwlink/?LinkId=107907)  
