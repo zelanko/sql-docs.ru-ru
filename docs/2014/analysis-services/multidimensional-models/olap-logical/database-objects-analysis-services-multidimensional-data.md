@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - objects [Analysis Services], about objects
@@ -19,12 +17,12 @@ ms.assetid: f76d869b-fc1d-4807-9f28-da09c7be382d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04f490e5b4305b665fc38793439626e3e5f651c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 39116b4bf8c4c361dfa82ca0d8a38dc6977de217
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090764"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158960"
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>Объекты баз данных (службы Analysis Services — многомерные данные)
   Объект [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляр содержит объекты базы данных и сборки для использования с оперативной аналитической обработки (OLAP) и интеллектуального анализа данных.  
@@ -63,14 +61,14 @@ ms.locfileid: "48090764"
 |[Источники данных в многомерных моделях](../data-sources-in-multidimensional-models.md)|Содержит описание источника данных в службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Представления источников данных в многомерных моделях](../data-source-views-in-multidimensional-models.md)|Содержит описание моделей логических данных, основанных на одном или более источниках данных в службе[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Кубы в многомерных моделях](../cubes-in-multidimensional-models.md)|Содержит описание кубов и объектов кубов, включая меры, группы мер, связи использования измерений, вычисления, ключевые показатели эффективности, действия, переводы, секции и перспективы.|  
-|[Измерения &#40;службы Analysis Services — многомерные данные&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|Содержит описание измерений и объектов измерений, включая атрибуты, связи атрибутов, иерархии, уровни и элементы.|  
-|[Структуры интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../data-mining/mining-structures-analysis-services-data-mining.md)|Содержит описание структур и объектов интеллектуального анализа данных, включая модели интеллектуального анализа данных.|  
-|[Роли безопасности &#40;службы Analysis Services — многомерные данные&#41;](security-roles-analysis-services-multidimensional-data.md)|Содержит описание роли, механизма безопасности, используемого для управления доступом к объектам в службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Измерения (службы Analysis Services — многомерные данные)](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|Содержит описание измерений и объектов измерений, включая атрибуты, связи атрибутов, иерархии, уровни и элементы.|  
+|[Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../data-mining/mining-structures-analysis-services-data-mining.md)|Содержит описание структур и объектов интеллектуального анализа данных, включая модели интеллектуального анализа данных.|  
+|[Роли безопасности (службы Analysis Services — многомерные данные)](security-roles-analysis-services-multidimensional-data.md)|Содержит описание роли, механизма безопасности, используемого для управления доступом к объектам в службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Управление сборками многомерной модели](../multidimensional-model-assemblies-management.md)|Содержит описание сборки, коллекции пользовательских функций, используемой для расширения языков многомерных выражений и для расширений интеллектуального анализа данных в службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
   
 ## <a name="see-also"></a>См. также  
  [Источники данных, поддерживаемые &#40;многомерные службы SSAS&#41;](../supported-data-sources-ssas-multidimensional.md)   
- [Решения многомерной модели &#40;SSAS&#41;](../multidimensional-model-solutions-ssas.md)   
+ [Решения многомерной модели (службы SSAS)](../multidimensional-model-solutions-ssas.md)   
  [Решения для интеллектуального анализа данных](../../data-mining/data-mining-solutions.md)  
   
   

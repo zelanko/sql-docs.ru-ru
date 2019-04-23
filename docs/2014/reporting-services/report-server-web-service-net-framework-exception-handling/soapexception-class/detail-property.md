@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - Detail property
 - SoapException class
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 383e356a85597a6b6564584fc375e83f258241b9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 27d9d7ab4cd29c6eb0ea7ae1c6bddbe8c1b7ef06
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019365"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158820"
 ---
 # <a name="detail-property"></a>Свойство Detail
   Свойство **Detail** класса [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]SoapException**служб** имеет следующую структуру XML:  
@@ -48,7 +46,7 @@ ms.locfileid: "56019365"
  Имя продукта. Значение по умолчанию — **Microsoft SQL Server Reporting Services**.  
   
  **ProductVersion**  
- Версия служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Максимальная длина составляет 15 символов. Номер версии должен иметь следующий формат: 8.00.0xxx.00.  
+ Версия служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Максимальная длина составляет 15 символов. Формат номера версии должен иметь следующий вид: 8.00.0xxx.00.  
   
  **ProductLocaleId**  
  Идентификатор локали или идентификатор языка библиотеки INTL приложения (например, 0x41A).  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - hybrid OLAP
@@ -21,12 +19,12 @@ ms.assetid: 422660b2-4d80-4165-b1c9-3963bcde556b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f79c628c9c58c3fca2884cbdf330eb23178081e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c968cb8c75fc5f1fb8e77cc98d8c6a306a62115
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223434"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158650"
 ---
 # <a name="proactive-caching-partitions"></a>Упреждающее кэширование (секции)
   Упреждающее кэширование позволяет автоматически создавать кэш MOLAP для объектов OLAP, а также управлять им. Кубы мгновенно реагируют на изменения, которые происходят с данными из базы данных, благодаря уведомлениям, получаемым от базы данных. Цель упреждающего кэширования — совмещение производительности, характерной для традиционного MOLAP, со скоростью и простотой управления ROLAP.  
@@ -46,6 +44,6 @@ ms.locfileid: "48223434"
   
 ## <a name="see-also"></a>См. также  
  [Хранение измерений](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
- [Определение хранилища секции &#40;службы Analysis Services — многомерные&#41;](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
+ [Определение хранилища секции (Analysis Services — многомерные данные)](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
   
   

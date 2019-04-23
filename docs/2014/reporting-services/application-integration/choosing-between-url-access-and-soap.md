@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - SOAP [Reporting Services], vs. URL access
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - URL access [Reporting Services], vs. SOAP
 - Web service [Reporting Services], application integration
 ms.assetid: bccdc243-4366-4ce5-8e63-3dd6c463fa52
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b21a8b6f0865ae0b8b51f4923809eb3dd5f7e204
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 070d37a1e6ca210694d16ab593e9de40882611f5
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011815"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158780"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>Выбор между доступом по URL-адресу и протоколом SOAP
   Интеграция служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательские приложения может оказаться сложной задачей. При этом проблема состоит не в сложности модели программирования или интерфейсов API, а в наличии множества способов для интеграции. Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с самого начала разрабатывались в качестве платформы разработки и поэтому построены с учетом гибких возможностей программирования. Такая гибкость обуславливает необходимость принятия важных решений для интеграции функций служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] по управлению отчетами и перемещению по отчетам в существующие бизнес-приложения.  
@@ -30,7 +28,7 @@ ms.locfileid: "56011815"
  ![Службы Reporting Services, сценарии программирования](../../../2014/reporting-services/media/bk-ext-04.gif "Reporting Services, сценарии программирования")  
 Программирование служб Reporting Services поддерживается для широкого спектра ситуаций.  
   
- Существует два способа интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательские приложения: доступ по URL-адресу и по API SOAP служб Reporting Services. Используемый способ определяется несколькими факторами. В некоторых случаях для интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательские бизнес-приложения необходимо использовать и доступ по URL-адресу, и протокол SOAP. Для принятия решения следует ответить на следующие вопросы.  
+ Существует два способа интеграции [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательские приложения: URL-адресов и API SOAP служб Reporting Services. Используемый способ определяется несколькими факторами. В некоторых случаях для интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательские бизнес-приложения необходимо использовать и доступ по URL-адресу, и протокол SOAP. Для принятия решения следует ответить на следующие вопросы.  
   
 -   Какой тип функций создания отчетов в рамках предприятия необходим пользователям и администраторам? Нужно ли реализовать простой способ для запуска и просмотра отчетов или от пользовательского бизнес-решения требуются более широкие функции по управлению сервером отчетов?  
   

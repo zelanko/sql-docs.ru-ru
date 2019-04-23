@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: fac9636b336c2571e159c72c79d482768bf2fbe6
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 15513348d4a747b0335bca8dd6345070e2c84ef0
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618181"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60159010"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Оценка предприятия и объединять оценки с помощью DMA
 
@@ -71,18 +71,22 @@ ms.locfileid: "58618181"
 - Таблицы SQL Server
 
 ### <a name="if-using-a-csv-file"></a>Если в CSV-файле
+
 > [!IMPORTANT]
->
 > Убедитесь, что файл инвентаризации сохраняется как файл с разделителями запятыми (CSV).
 >
 > Для экземпляров по умолчанию присвоено имя экземпляра MSSQLServer.
->
+
 
 При использовании CSV-файл для импорта данных, убедитесь, существует только два столбца данных — **имя экземпляра** и **имя базы данных**, и что у столбцов нет строки заголовка.
  
  ![содержимое файла CSV](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
-### <a name="if-using-sql-server-table"></a>При использовании таблицы SQL Server
+### <a name="if-using-a-sql-server-table"></a>При использовании таблицы SQL Server
+
+> [!IMPORTANT]
+> Для экземпляров по умолчанию присвоено имя экземпляра MSSQLServer.
+
 Создать базу данных с именем **EstateInventory** и таблица с именем **DatabaseInventory**. Может иметь любое количество столбцов, таблица, содержащая эти данные инвентаризации, до тех пор, пока существуют следующие четыре столбца:
 - ServerName
 - InstanceName
@@ -161,8 +165,8 @@ ms.locfileid: "58618181"
 
 1. Откройте шаблон DMA отчеты Power BI в Power BI Desktop.
 2. Введите данные сервера, которые указывают на вашей **DMAWarehouse** базы данных, а затем выберите **нагрузки**.
-   
-      ![Загрузить шаблон DMA отчеты Power BI](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
+
+   ![Загрузить шаблон DMA отчеты Power BI](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
    После отчета обновляются данные из **DMAWarehouse** базы данных, вам предоставляется отчет, подобный следующему.
 

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - expressions [Reporting Services], custom assemblies
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - calling class members
 - custom assemblies [Reporting Services], expressions
 ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4e7f513cc737e50b6ad8276b550df30b8fd05be8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ba5d3ec6958cf3dbc3cca0497f08feaac094b837
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009698"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158630"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>Доступ к пользовательским сборкам посредством выражений
   После того как пользовательская сборка была создана, сделана доступной для конструктора отчетов или сервера отчетов, добавлена к подходящей политике безопасности, а также после того, как в определение отчета была добавлена ссылка на данную пользовательскую сборку, появится возможность доступа к членам классов сборки посредством выражений отчетов. Для ссылки в выражении на пользовательский код следует вызвать элемент класса этой сборки. Способ создания ссылки зависит от того, является ли метод статическим или основывается на экземпляре.  
