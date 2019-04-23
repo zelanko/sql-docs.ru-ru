@@ -17,15 +17,15 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 - Reporting Services, query designers
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 83a9233d9d5016be3307b797bb9a5a84ead276be
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 938093f87f7c6252f85c309dfbb987bd6b63cb94
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039295"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936580"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Пользовательский интерфейс графического конструктора запросов
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графический и текстовый конструкторы запросов, предназначенных для получения данных из реляционной базы данных в качестве набора данных отчета в конструкторе отчетов. Графический конструктор запросов используется для интерактивного создания запроса и для просмотра результатов при работе с источниками данных следующих типов: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB и ODBC. Текстовый конструктор запросов применяется для задания нескольких инструкций [!INCLUDE[tsql](../../../includes/tsql-md.md)] , запросов и команд со сложным синтаксисом и запросов на основе выражений. Дополнительные сведения см. в разделе [Пользовательский интерфейс текстового конструктора запросов](../text-based-query-designer-user-interface.md). Дополнительные сведения о работе с конкретными типами источников данных см. в разделе [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-datasets-ssrs.md).  

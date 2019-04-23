@@ -1,5 +1,5 @@
 ---
-title: Урок 4. Определение подключения к данным и таблицы данных для дочернего отчета | Документация Майкрософт
+title: 'Занятие 4: Определение подключения к данным и таблицы данных для дочернего отчета | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c04fdad5e53e9d50f6d910f16c8f86b0218f35be
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bb9678f56bc261edbe8450dbcc03840f8d18fc8b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012785"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933631"
 ---
-# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Урок 4. Определение подключения к данным и таблицы данных для дочернего отчета
+# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Занятие 4: Определение подключения к данным и таблицы данных для родительского отчета
   После проектирования родительского отчета далее необходимо создать подключение к данным и таблицу данных для дочернего отчета. В этом учебнике в качестве источника подключения к данным используется база данных AdventureWorks2008. Предусмотрена также возможность установить подключение к базе данных AdventureWorks2012.  
   
 ### <a name="to-define-a-data-connection-and-datatable-by-adding-a-dataset-for-child-report"></a>Определение подключения к данным и таблицы данных путем добавления набора данных (для дочернего отчета)  

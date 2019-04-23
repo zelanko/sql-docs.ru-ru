@@ -12,15 +12,15 @@ helpviewer_keywords:
 - customizing clickthrough reports
 - clickthrough reports, customizing
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: caf23eb7e7d0e06a9e79dbaa6b9a0120725a4b10
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6b86bcb059d2186254a001f59f074a40eef659fd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031055"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934510"
 ---
 # <a name="clickthrough-reports-ssrs"></a>Отчеты с дополнительной информацией (SSRS)
   Отчетом с дополнительной информацией называется отчет, в котором есть подробные сведения о данных, содержащихся в основном отчете. Отчет с дополнительной информацией выводится, когда пользователь щелкает интерактивные данные в основном отчете. Такие отчеты автоматически создаются сервером отчетов. Конструктор моделей определяет, что должно отображаться в отчетах с дополнительной информацией, устанавливая свойства `DefaultDetailAttribute` и `DefaultAggregateAttribute` сущности в модели отчета.  

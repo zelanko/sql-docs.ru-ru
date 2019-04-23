@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 591c0cc47a4f807172cbfd24b91f465144faae09
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042373"
 ---
 # <a name="programming-guidelines"></a>Указания по программированию
@@ -41,7 +41,7 @@ ms.locfileid: "59042373"
 -   [Выполнение хранимых процедур](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
 -   [Поддержка разреженных столбцов (ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
 -   [SSL-шифрование](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
--   [Параметры с табличными значениями](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
+-   [Возвращающие табличные значения параметры](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [UTF-8 и UTF-16 для команд и API данных](https://msdn.microsoft.com/library/ff878241.aspx)
 -   [Использование функций каталога](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
 

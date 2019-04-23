@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2b056119-439f-494f-83cf-ee0c05dc6487
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8a9cd8a292178d3800ecc9568fe5759b2a414f5a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fe529ac655bb9b5f0f4810ed7d0e1582693f1108
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287632"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936520"
 ---
 # <a name="add-empty-points-to-the-chart-report-builder-and-ssrs"></a>Добавление пустых точек на диаграмму (построитель отчетов и службы SSRS)
   Значения NULL отображаются на диаграмме в виде пустых мест или промежутков между точками данных в ряде. Пустые точки представляют собой точки данных, которые можно вставить в пустые места, созданные значениями NULL.  

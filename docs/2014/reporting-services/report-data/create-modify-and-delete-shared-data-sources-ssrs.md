@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], modifying properties
 - deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6ead1d37c40a1d0cd2d6ee668bb99d595554006a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 26bc12ce8c685c4aeb119f43ab594d920a6cef9f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041485"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934750"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Создание, изменение и удаление общих источников данных (SSRS)
   Общий источник данных — это набор свойств соединения с источником данных, на который могут ссылаться несколько отчетов, моделей и управляемых данными подписок, работающих на сервере отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Общие источники данных предоставляют удобный способ управления часто изменяющимися свойствами источника данных. Если изменились свойства учетной записи пользователя или пароль или база данных перенесена на другой сервер, все сведения о соединении можно изменить в одном месте.  

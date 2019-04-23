@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 59b1574f7c302a5cf3adc3bee04881eefd176080
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4347854a56e0d6cb021a3958203d94c28cb96d22
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032015"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936830"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>Запланируйте создание и развертывание отчетов (службы Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] обеспечивают несколько способов разработки и развертывания отчетов. Используйте приведенную в этом разделе информацию для планирования среды создания отчетов и сервера отчетов, которые будут работать вместе. В этом разделе приводятся общие сведения о поддержке определения отчетов компонентами служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Определение отчета — это XML-файл, написанный на языке определения отчетов (RDL) или на языке определения отчетов для клиентов (RDLC). Каждое определение отчета соответствует определенной версии схемы, указанной в начале файла.  
@@ -58,13 +58,13 @@ ms.locfileid: "56032015"
   
 -   **Конструктор отчетов:** Развертывание отчета из конструктора отчетов в среде [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
   
--   **Построитель отчетов:** Сохранение отчета из построителя отчетов на сервере отчетов.  
+-   **Построитель отчетов:** Сохранение отчета на сервере отчетов из построителя отчетов.  
   
--   **Диспетчер отчетов:** Передача отчета на сервер отчетов, работающий в собственном режиме, из диспетчера отчетов.  
+-   **Диспетчер отчетов:** Передача отчета на сервере отчетов в собственном режиме из диспетчера отчетов.  
   
--   **SharePoint:** Передача отчета на сайт SharePoint, настроенный на работу с сервером отчетов в режиме интеграции с SharePoint.  
+-   **SharePoint:** Передача отчета на сайте SharePoint, настроенной с сервера отчетов в режиме SharePoint.  
   
--   **Программным способом:** Публикация отчета на сервере отчетов программным образом с помощью API-интерфейсов SOAP. Дополнительные сведения см. в разделе [Report Server Web Service](report-server-web-service/report-server-web-service.md).  
+-   **Программным способом:** Опубликуйте отчет программным образом с помощью API-интерфейсов SOAP на сервере отчетов. Дополнительные сведения см. в разделе [Report Server Web Service](report-server-web-service/report-server-web-service.md).  
   
  В следующей таблице перечислены поддерживаемые версии RDL-схемы по версии сервера отчетов.  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - application domains [Reporting Services]
 - recycling application domains
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ef807249672d02ca06d1ac1e41392eef6ebbd912
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dd13835d00fc86b8acd98bdab33ff2612834c360
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012675"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933581"
 ---
 # <a name="application-domains-for-report-server-applications"></a>Домены приложений для приложений сервера отчетов
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]сервер отчетов реализован как единственная служба, включающая веб-службу сервера отчетов, диспетчер отчетов и приложение фоновой обработки. Каждое приложение эксплуатируется в собственном домене приложения, в составе общего процесса сервера отчетов. Создание, настройка и управление доменами приложений обычно осуществляются внутри процесса. Однако знание того, как происходят операции очистки для доменов приложений сервера отчетов, может быть полезным при исследовании проблем производительности или использования памяти и при устранении неполадок в работе службы.  
@@ -59,7 +59,7 @@ ms.locfileid: "56012675"
   
  Очистка доменов приложений для веб-службы сервера отчетов, диспетчера отчетов и приложения фоновой обработки может осуществляться вместе или отдельно, в зависимости от обстоятельств, которые приводят к выполнению очистки.  
   
--   Перезапуск операций, инициированные [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] затрагивают только [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] приложений: Веб-служба сервера отчетов и диспетчер отчетов. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] очистка доменов приложений зависит от того, имеются ли изменения в отслеживаемых файлах. Операции очистки, которые инициированы [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , как правило, являются независимыми от операций очистки, относящихся к приложениям фоновой обработки.  
+-   Перезапуск операций, инициированные [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] затрагивают только [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] приложений: Веб-сервера службы отчетов и диспетчера отчетов. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] очистка доменов приложений зависит от того, имеются ли изменения в отслеживаемых файлах. Операции очистки, которые инициированы [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , как правило, являются независимыми от операций очистки, относящихся к приложениям фоновой обработки.  
   
 -   Операции очистки, инициированные сервером отчетов, обычно затрагивают веб-службу сервера отчетов, диспетчер отчетов и приложение фоновой обработки. Операции очистки происходят в ответ на изменения значений параметров конфигурации и перезапуска службы.  
   

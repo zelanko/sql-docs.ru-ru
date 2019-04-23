@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 834ec3118685da8059999b3986af3edb39dc3e58
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042253"
 ---
 # <a name="using-integrated-authentication"></a>Использование встроенной проверки подлинности
@@ -83,7 +83,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 -   Сервер приложений осуществляет проверку подлинности в качестве другой базы данных и подключается к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выполняет проверку подлинности как пользователь базы данных для другой базы данных ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] проходит проверку подлинности как пользователь базы данных в другой базе данных ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 После настройки встроенной проверки подлинности учетные данные передаются связанному серверу.  
   
@@ -105,7 +105,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 ## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>Проверка подлинности компьютера Linux или macOS с помощью Active Directory
 
-Чтобы настроить Kerberos, введите данные в файле `krb5.conf`. `krb5.conf` находится в папке `/etc/`, но можно сослаться на другой файл, используя такой синтаксис, как `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. Ниже представлен пример файла `krb5.conf`.  
+Чтобы настроить Kerberos, введите данные в файле `krb5.conf`. `krb5.conf` находится в папке `/etc/`, но можно сослаться на другой файл, используя такой синтаксис: `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. Ниже представлен пример файла `krb5.conf`.  
   
 ```  
 [libdefaults]  

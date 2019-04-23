@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b5353afae9a07be7dcf5b5df3f1a2ec5442378a6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 838c48ec4c15d1e89a571e5cb84cf1add613a045
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041285"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936590"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Включение и отключение печати на стороне клиента для служб Reporting Services
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Элемент управления ActiveX, **RSClientPrint**, предоставляет клиентские функции печати для отчетов, просматриваемых в браузере. Данный элемент управления отображает пользовательское диалоговое окно печати, которое поддерживает функции, общие с другими диалоговыми окнами печати. Среди этих функций — предварительный просмотр, выбор страниц для указания отдельных страниц и диапазонов, поля и ориентация страниц. Хотя по умолчанию клиентская печать допускается, эту функцию можно отключить.  

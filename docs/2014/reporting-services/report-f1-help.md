@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 775706be-41a7-4ae7-bad6-349f5ebd9e4d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f4bbbdc167bac7457ed14415422bf4e362630b69
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cb40a0e2a41e638c4e7058f296badc4feeb9aa60
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285002"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936240"
 ---
 # <a name="report-f1-help"></a>Справка F1 по отчетам
   Этот раздел содержит информацию о параметрах, которые можно задать для отчета в диалоговом окне **Свойства отчета** . Чтобы открыть диалоговое окно **Свойства отчета** , щелкните правой кнопкой мыши фон в конструкторе отчетов и выберите **Свойства отчетов**.  

@@ -11,11 +11,11 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 705d3b5230faf69ca9eb9de2f7f0cc21b42a8955
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860085"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59935346"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>С помощью ускорителя кода PROSE Wrangling данных
 

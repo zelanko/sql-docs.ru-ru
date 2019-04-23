@@ -11,15 +11,15 @@ helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8d3abef04fd707681499d13246f050bc75eeda98
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 86ac5b6da861477bfd5b8e92feac97068ca5adc9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015985"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934060"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Средство просмотра HTML-страниц и панель инструментов отчета
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] есть средство просмотра HTML-страниц, которое предназначено для отображения отчетов по запросу в том виде, в каком они запрашиваются с сервера отчетов. Средство просмотра HTML-страниц обеспечивает платформу для просмотра отчетов в формате HTML. Она включает в себя панель инструментов отчета, раздел параметров, раздел учетных данных и схему документа. Панель инструментов отчета в средстве просмотра HTML-страниц предлагает функции, которые можно использовать для работы с отчетом, включая параметры экспорта, поэтому можно просмотреть отчет в форматах, отличных от HTML. Раздел параметров и схема документа появляются только тогда, когда открываются отчеты, настроенные для использования параметров и управления схемой документа.  

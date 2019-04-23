@@ -20,15 +20,15 @@ helpviewer_keywords:
 - expiration [Reporting Services]
 - snapshots [Reporting Services], caching
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e0e063b662d83655eb9c8a99b8ec1317dfffa263
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ce09e2c607600273f5b5778251c3c58fdf57f9dc
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029705"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59935550"
 ---
 # <a name="caching-reports-ssrs"></a>Кэширование отчетов (службы SSRS)
   Сервер отчетов может кэшировать копию обработанного отчета и вернуть эту копию при открытии отчета пользователем. Единственным свидетельством того, что отчет является копией сохраненного в кэш отчета, являются дата и время выполнения отчета. Если дата или время не являются текущими, и отчет представляет собой моментальный снимок, то отчет был извлечен из кэша.  
