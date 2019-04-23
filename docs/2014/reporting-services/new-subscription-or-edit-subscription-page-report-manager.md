@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e02d6529-ce67-4305-b7f0-433997e99c21
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a6194516bfc230c73df928bda5095c106776beff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 926223ad0a5a8cdb1a5ff7aacfb7fdd7f84a8c57
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030135"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940260"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>Страница "Создание подписки" или "Изменение подписки" (диспетчер отчетов)
   На странице «Создание подписки» / «Изменение подписки» можно создать новую или изменить существующую подписку на отчет. Параметры на этой странице изменяются в зависимости от назначения ролей. Пользователям с расширенными разрешениями доступно большее число параметров.  

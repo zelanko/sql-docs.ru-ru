@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - custom report items, RDL
 - RDL [Reporting Services], custom report items
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5a5586ac74b77a6019d83a451a0b94fa2aa1bca2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012545"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156090"
 ---
 # <a name="custom-report-item-class-libraries"></a>Библиотеки классов пользовательского элемента отчета
   В пользовательских элементах отчетов используются классы из пространства имен `Microsoft.ReportDesigner`. Классы, используемые для реализации пользовательского элемента отчета, можно разделить на две основные группы: уникальные классы, созданные для поддержки инфраструктуры пользовательских элементов отчетов, и управляемые классы-оболочки, инкапсулирующие функциональные возможности соответствующих элементов языка определения отчетов. Образец кода для использования этих классов см. на странице [Образцы продуктов служб SQL Server Reporting](https://go.microsoft.com/fwlink/?LinkId=177889).  
@@ -65,7 +63,7 @@ ms.locfileid: "56012545"
 |`OnPaint`|Вызывается в ответ на событие `Paint`.|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- Атрибут используется для выяснения типа пользовательского элемента отчета. Имя должно соответствовать значению атрибута <`Name`> элемента `ReportItem` в файле конфигурации конструктора отчетов.  
+ Атрибут используется для выяснения типа пользовательского элемента отчета. Имя должно соответствовать значение <`Name`> атрибут `ReportItem` элемент в файле конфигурации конструктора отчетов.  
   
 #### <a name="public-methods"></a>Открытые методы  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - URL registration
 - Report Server service, URL reservations
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fb1f04a10837088a9c427d6c0994af4334e8988f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f81ac60dbd6ea315bab70d2f65e4953b456f3034
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035105"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968290"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)
   URL-адреса для приложений служб Reporting Services определяются в качестве резервирований URL-адресов в компоненте HTTP.SYS. Резервирование URL-адресов определяет синтаксис конечной точки URL-адреса к веб-приложению. При настройке приложений на сервере отчетов резервирование URL-адресов задается как для веб-службы сервера отчетов, так и для диспетчера отчетов. Резервирование URL-адресов создается автоматически при настройке URL-адресов в программе установке или программе настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

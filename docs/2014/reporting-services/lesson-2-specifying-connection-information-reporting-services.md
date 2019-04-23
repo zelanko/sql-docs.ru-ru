@@ -1,5 +1,5 @@
 ---
-title: Занятие 2. Задание информации о соединении (службы Reporting Services) | Документация Майкрософт
+title: Урок 2. Задание информации о соединении (службы Reporting Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 67336ec0829c810a087ddfdcf79628408c045a76
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cd0c7e3bc9ece2a6eafa9de1623bfa2b641e5e64
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290182"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955580"
 ---
-# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Занятие 2. Задание информации о строке соединения (службы Reporting Services)
+# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Урок 2. Задание информации о соединении (службы Reporting Services)
   После добавления отчета к проекту Tutorial следует задать *источник данных*, который представляет собой сведения о соединении, используемые отчетом для доступа к данным, которые располагаются в реляционной базе данных, многомерной базе данных или ином ресурсе.  
   
  В этом занятии в качестве источника данных используется образец базы данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. Предполагается, что эта база данных находится в используемом по умолчанию экземпляре компонента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] , установленном на локальном компьютере.  
@@ -56,7 +56,7 @@ ms.locfileid: "56290182"
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] источник данных [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] добавляется **данные отчета** области.  
   
 ## <a name="next-task"></a>Следующая задача  
- Соединение с образцом базы данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] успешно создано. Далее предстоит создать отчет. См. в разделе [занятие 3: Определение набора данных для табличного отчета &#40;службы Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
+ Соединение с образцом базы данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] успешно создано. Далее предстоит создать отчет. См. [Занятие 3. Определение набора данных для табличного отчета (службы Reporting Services)](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
   
 ## <a name="see-also"></a>См. также  
  [Подключения данных, Источники данных и Строки подключения в службе Reporting Services](data-connections-data-sources-and-connection-strings-in-reporting-services.md)  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 56973f01112b670727cc0ffa83ba6372c45a3faa
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 79205aa8721c46f51b5e51acad326da0b7bfcc59
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241582"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59952330"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>PowerShell cmdlets для режима SharePoint службы Reporting Services
   При установке служб [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint инсталлируются командлеты PowerShell для поддержки серверов отчетов в режиме интеграции с SharePoint. Командлеты охватывают три категории функциональных возможностей.  

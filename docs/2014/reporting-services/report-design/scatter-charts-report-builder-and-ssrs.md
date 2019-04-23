@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2520ae24-0609-4890-807d-3267018aba8e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e0efa1bd8516dc066b3b3c57b716a3ff90d1158d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 81e490077db54e0e373b24885ff919ae2b3dd7ca
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294182"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947870"
 ---
 # <a name="scatter-charts-report-builder-and-ssrs"></a>Точечные диаграммы (построитель отчетов и службы SSRS)
   В точечной диаграмме ряды отображаются как наборы точек. Значения представлены расположением точки на плоскости диаграммы. Категории представлены различными маркерами. Точечные диаграммы обычно используются для сравнения агрегированных значений разных категорий. Дополнительные сведения о добавлении данных в точечные диаграммы см. в разделе [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md)  

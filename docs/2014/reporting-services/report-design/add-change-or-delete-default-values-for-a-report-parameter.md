@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.reportparameters.defaultvalues.f1
 - "10072"
 ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 433217542180350b4e2bd3b25c14a055e8efc391
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ef88ca9dc7870ad277640b40a02838c78b8dddce
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297382"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968250"
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter-report-builder-and-ssrs"></a>Добавление, изменение или удаление значения по умолчанию для параметра отчета (построитель отчетов и службы SSRS)
   После создания параметров отчета можно предоставить список значений по умолчанию. Если все параметры имеют допустимые значения по умолчанию, отчет запускается автоматически при первом просмотре.  
@@ -66,7 +66,7 @@ ms.locfileid: "56297382"
 ## <a name="see-also"></a>См. также  
  [Параметры отчета (построитель отчетов и конструктор отчетов)](report-parameters-report-builder-and-report-designer.md)   
  [Добавление каскадных параметров в отчет (построитель отчетов и службы SSRS)](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [Учебник. Добавление параметра к отчету &#40;построитель отчетов&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Учебник. Добавление параметра к отчету (построитель отчетов)](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Ссылки на коллекцию параметров (построитель отчетов и службы SSRS)](built-in-collections-parameters-collection-references-report-builder.md)   
  [Изменение порядка параметров отчета (построитель отчетов и службы SSRS)](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   

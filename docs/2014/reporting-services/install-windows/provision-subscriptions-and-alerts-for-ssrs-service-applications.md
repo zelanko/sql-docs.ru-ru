@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Reporting Services Service Application
 - SSRS service application
 ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f161edf881b4f1157a0473eeb543d780239e5909
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 09d7ffed955615aa2ddfbedc812a0c0a3da3706e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030185"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961641"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Подготовка подписок и предупреждений для приложений служб SSRS
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и предупреждения данных требуют наличия агента SQL Server, а также настройку разрешений для агента SQL Server. Если появляются сообщения об ошибках, указывающие, что необходим агент SQL Server, хотя агент SQL Server уже запущен, необходимо обновить и проверить разрешения. Этот раздел относится к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint и здесь описаны три способа обновления разрешений агента SQL Server для подписок [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Вводимые учетные данные для шагов из данного раздела должны иметь достаточные разрешения для предоставления роли RSExecRole прав на выполнение объектов из приложения службы, баз данных msdb и master.  

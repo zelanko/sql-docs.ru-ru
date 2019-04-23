@@ -13,15 +13,15 @@ helpviewer_keywords:
 - shared data sources [Reporting Services]
 - data sources [Reporting Services], managing
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8519b6dbb6c7d1fb1e72afa3f6dfcc70521df84a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 13454c9f73b54da7977dd52bbbdc7c1d2cddb28c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025655"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947990"
 ---
 # <a name="manage-report-data-sources"></a>Управление источниками данных отчета
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]отчеты, модели отчетов и управляемые данными подписки получают данные из внешних источников данных. Чтобы подключиться к внешнему источнику данных, сервер отчетов использует сведения соединения с источником данных, которые определены в отчете, модели или подписке или на которые они ссылаются. Свойства соединения с источником данных всегда определяются при создании отчета или модели, но управление ими может выполняться отдельно после публикации отчета или модели на сервере отчетов.  
@@ -40,7 +40,7 @@ ms.locfileid: "56025655"
   
  Обратите внимание, что изменение запросов в задачи управления соединениями с источниками данных не входит. Изменение запроса для отчета или модели необходимо производить при помощи средств разработки, а затем вносить изменения в определение отчета или модели.  
   
-## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>Управляемые свойства: тип источника данных, строки соединений и учетные данные  
+## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>Управляемые свойства: Тип источника данных, строки подключения и учетные данные  
  Свойства источника данных, доступные для управления на сервере отчетов:  
   
 |Свойство|Описание|Способ управления свойством|  

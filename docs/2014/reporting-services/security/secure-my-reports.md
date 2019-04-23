@@ -14,15 +14,15 @@ helpviewer_keywords:
 - security [Reporting Services], My Reports folder
 - My Reports folder [Reporting Services]
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1ff256deda15e2abdecbff4dc94cc1dcd9d2d5c4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: de90bbfad9bdd204e4eaf4c7c9afe96e6f8519f0
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035175"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966807"
 ---
 # <a name="secure-my-reports"></a>Обеспечение безопасности «Моих отчетов»
   В компоненте «Мои отчеты» представлено управляемое пользователем рабочее пространство для работы с отчетами. Чтобы обеспечить соответствие своему назначению, для папки «Мои отчеты» требуются более широкие права доступа, чем для других папок, доступных для общего пользования. Пользователям, имеющим разрешения в других папках только на просмотр и запуск отчетов, могут потребоваться дополнительные разрешения для управления их папками My Reports и содержимым, которое им принадлежит. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляет для этого специальный механизм назначения и определения ролей.  

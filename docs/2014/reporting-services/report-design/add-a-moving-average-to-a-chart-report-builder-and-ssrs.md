@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7114291f64190207a48526a42976580b09933282
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d7e25415949df060c04f4355b7895ed2085a4baf
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297210"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970070"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>Добавление скользящего среднего в диаграмму (построитель отчетов и службы SSRS)
   Скользящее среднее — это среднее по данным в ряде, вычисленное за определенный период времени. Скользящее среднее можно отобразить в диаграмме для определения существенных трендов.  

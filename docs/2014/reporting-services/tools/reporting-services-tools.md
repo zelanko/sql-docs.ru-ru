@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 144cce158e6b4f8814392a996699ddbe214ca628
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8cbe5a25ef6ca87c2ffa5fd83c8ff1ca0796fdae
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016035"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939850"
 ---
 # <a name="reporting-services-tools"></a>Инструментальные средства служб Reporting Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] содержат набор графических средств и средств для работы со скриптами, поддерживающих разработку и использование отчетов с широкими возможностями в управляемой среде. В набор средств входят средства разработки, настройки и администрирования, а также средства просмотра отчетов. В этом разделе содержится краткий обзор средств в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и способов доступа к ним.  
@@ -39,7 +39,7 @@ ms.locfileid: "56016035"
   
 |Инструмент|Описание|Способ доступа|  
 |----------|-----------------|-------------------|  
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|интерактивное средство для просмотра и визуализации данных, предназначенное для создания отчетов на основе табличных моделей служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и взаимодействия с ними.<br /><br /> Примечание. Требует наличия служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint.|Браузер с приложением Silverlight.|  
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|интерактивное средство для просмотра и визуализации данных, предназначенное для создания отчетов на основе табличных моделей служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и взаимодействия с ними.<br /><br /> Примечание. Требуется [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint.|Браузер с приложением Silverlight.|  
 |конструктор отчетов|Это средство используется для конструирования отчетов и развертывания их на сервере отчетов в собственном режиме или в режиме интеграции с SharePoint.<br /><br /> Располагается в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]<br /><br /> Область данных отчета для упорядочивания данных в отчете<br /><br /> Представления с вкладками для проектирования и предварительного просмотра для интерактивного конструирования отчета<br /><br /> Конструкторы запросов позволяют указывать, какие данные извлекать из источников данных и какие данные связаны с типами источников данных в [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)<br /><br /> Редактор выражений с поддержкой технологии IntelliSense для создания выражений [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , позволяющих настраивать содержимое и внешний вид отчетов<br /><br /> Поддерживает пользовательские элементы отчетов и пользовательские конструкторы запросов<br /><br /> <br /><br /> Дополнительные сведения см. в разделе [Службы Reporting Services в SQL Server Data Tools (службы SSDT)](reporting-services-in-sql-server-data-tools-ssdt.md).|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|  
 |построитель отчетов|Это средство используется для конструирования отчетов и развертывания их на сервере отчетов в собственном режиме или в режиме интеграции с SharePoint.<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office средой<br /><br /> Возможность сохранять элементы отчетов как части отчета<br /><br /> Мастер создания карт<br /><br /> Агрегаты агрегатов<br /><br /> Улучшенная поддержка выражений<br /><br /> Конструкторы запросов позволяют указывать, какие данные извлекать из выбранных встроенных типов источников данных<br /><br /> <br /><br /> Дополнительные сведения см. в разделе [построитель отчетов &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md).|Загрузите MSI-файл или откройте из диспетчера отчетов или SharePoint|  
   

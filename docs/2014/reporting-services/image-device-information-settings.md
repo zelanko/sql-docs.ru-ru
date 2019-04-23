@@ -11,15 +11,15 @@ helpviewer_keywords:
 - images [Reporting Services], rendering
 - device information settings [Reporting Services], IMAGE rendering
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: be32765c6d996bcc67580949176c2265a0741eed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5db9c929c736029c3731443af56d15f3615e45f1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039015"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941440"
 ---
 # <a name="image-device-information-settings"></a>Настройки сведений об устройстве вывода изображений
   В следующей таблице перечислены настройки сведений об устройстве для подготовки к просмотру в формате изображений.  
@@ -40,7 +40,7 @@ ms.locfileid: "56039015"
 |**PageWidth**|Задаваемая ширина страницы отчета, в дюймах. Необходимо включить целочисленное или десятичное значение, за которым следует строка «in» (например, `8.5in`). Это значение переопределяет исходные параметры отчета.|  
 |**PrintDpiX**|Горизонтальное разрешение изображения вывода. Значение по умолчанию — `300`. Применяется к расширенного метафайла (`EMF`) формат выходных данных.|  
 |**PrintDpiY**|Вертикальное разрешение изображения вывода. Значение по умолчанию — `300`. Применяется к расширенного метафайла (`EMF`) формат выходных данных.|  
-|`StartPage`|Первая подготавливаемая к просмотру страница отчета. Значение `0` указывает, что к просмотру подготовлены все страницы. Значение по умолчанию — `1`.|  
+|`StartPage`|Первая подготавливаемая к просмотру страница отчета. Значение `0` указывает, что к просмотру подготовлены все страницы. Значение по умолчанию — `1`.|  
   
 ## <a name="see-also"></a>См. также  
  [Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   

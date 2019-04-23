@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - query designers, Analysis Services
 ms.assetid: 7e288eee-2d37-485e-a6a0-dbba5e041e26
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0c43e1d35b390a85a6e8951e182ce5408c7dd60c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bca4cac495ab8076c46d1dc2b7da411e46eae5db
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017876"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939620"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface-report-builder"></a>Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services (построитель отчетов)
   Построитель отчетов предоставляет графический конструктор запросов для построения запросов многомерных выражений к источнику данных служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Графический конструктор запросов многомерных выражений имеет два режима: режим конструктора и режим запросов. В каждом режиме есть панель метаданных, из которой можно перетаскивать элементы с выбранного куба для построения запроса многомерных выражений, который извлекает данные в ходе обработки отчета.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dab79e4efec442a24eb9bb5d944cb52e5c9b5640
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: af8fd934206361e0abb43a84a9a036772e90fc52
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658347"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966006"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Службы Reporting Services в SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] — [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] среды с расширениями, специфичными для решений бизнес-аналитики. Среда [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] входит в состав [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -170,7 +170,7 @@ ms.locfileid: "58658347"
   
 -   **Свойства отчета** . Открытие диалогового окна **Свойства отчета** . В этом диалоговом окне задаются общие свойства отчета, например имя автора, размер шага сетки, а также такие свойства макета отчета, как число столбцов и размеры страниц. Можно также указать пользовательский код, ссылки на сборки и классы, имена выходных элементов, преобразований и схем данных.  
   
--   **Вид**. Переключение между двумя вкладками конструктора отчетов: режимом конструктора и предварительного просмотра.  
+-   **Вид**. Переключение между двумя вкладками конструктора отчетов: Разработка и предварительный просмотр.  
   
 -   **Верхний колонтитул страницы** . Добавление или удаление верхнего колонтитула страницы. При удалении верхнего колонтитула страницы удаляются также все его элементы.  
   

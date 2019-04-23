@@ -1,5 +1,5 @@
 ---
-title: Урок 6. Добавить элемент управления ReportViewer в приложение | Документация Майкрософт
+title: 'Занятие 6: Добавить элемент управления ReportViewer в приложение | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 80515317335678ae8110368d9cf840860e6b0794
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 86a68dfd8a84892ba3706250dfdde612a429c765
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037005"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940980"
 ---
-# <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Урок 6. Добавление в приложение элемента управления ReportViewer
+# <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Занятие 6: Добавить элемент управления ReportViewer в приложение
   После завершения проектирования дочернего отчета с помощью мастера отчетов далее необходимо добавить в приложение веб-сайта элемент управления ReportViewer.  
   
 ### <a name="to-add-a-reportviewer-control-to-the-application"></a>Добавление элемента управления ReportViewer в приложение  

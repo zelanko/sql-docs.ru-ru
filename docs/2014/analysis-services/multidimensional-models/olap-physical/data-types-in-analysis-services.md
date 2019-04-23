@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5c697a0bcf7c7b338169100aeac0d65b341c86f5
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146359"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155610"
 ---
 # <a name="data-types-in-analysis-services"></a>Типы данных в службах Analysis Services
   Для всех <xref:Microsoft.AnalysisServices.DataItem> объектов, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] поддерживает следующее подмножество `System.Data.OleDb.OleDbType`. Чтобы задать или прочитать тип данных, используйте [тип данных DataItem &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl).  
@@ -27,7 +25,7 @@ ms.locfileid: "50146359"
 |||  
 |-|-|  
 |BigInt|64-разрядное целое число со знаком. *BigInt* тип значения представляет целые числа со значениями в диапазоне от отрицательного числа 9223372036854775808 до 9223372036854775807 положительным.|  
-|Двоичный|Поток двоичных данных **байтов** типа. **Байтов** является типом значения, представляющий целых чисел без знака со значениями в диапазоне от 0 до 255.|  
+|Бинарный|Поток двоичных данных **байтов** типа. **Байтов** является типом значения, представляющий целых чисел без знака со значениями в диапазоне от 0 до 255.|  
 |Логическое значение|Экземпляры этого типа имеют значения либо `true`, либо `false`.|  
 |CURRENCY|Объект *валюты* значение от -922,337,203,685,477.5808 до + 922,337,203,685,477.5807 с точностью до одной десятитысячной единицы валюты (четыре знака после запятой).|  
 |Дата|Данные даты и времени, хранящиеся в виде типа double. Целая часть числа равна числу дней, прошедшему с 30 декабря 1899 г., а десятичная часть представляет долю (время) дня.|  
@@ -45,7 +43,7 @@ ms.locfileid: "50146359"
 ## <a name="amo-validations-on-data-types"></a>Проверки объектов AMO для типов данных  
  В следующей таблице перечислены дополнительные проверки, которые объекты AMO выполняют для определенных привязок.  
   
-|Объект|Binding|Допустимые типы данных|  
+|Object|Binding|Допустимые типы данных|  
 |------------|-------------|------------------------|  
 |DimensionAttribute|KeyColumns|Все, кроме Binary|  
 ||NameColumn|Только WChar|  

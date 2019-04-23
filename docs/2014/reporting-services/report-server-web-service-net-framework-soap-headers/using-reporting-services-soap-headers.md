@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - Web service [Reporting Services], SOAP
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - SOAP [Reporting Services], headers
 - XML Web service [Reporting Services], SOAP
 ms.assetid: 306d2c06-a25a-40f8-8a35-13dd32e8841e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3a9e61cc8cc546156d24c209a68c3a523a0f8a29
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f48be183398d4d441b5781c9f9467178c3011e32
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015065"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155250"
 ---
 # <a name="using-reporting-services-soap-headers"></a>Использование заголовков SOAP служб Reporting Services
   Связь с методом веб-службы по протоколу SOAP имеет стандартный формат. Данные, закодированные в XML-документе, являются частью этого формата. XML-документ состоит из корневого элемента **Envelope**, который в свою очередь состоит из обязательного элемента **Body** и дополнительного элемента **Header**. Элемент **Body** содержит данные, соответствующие сообщению. Необязательный элемент **Header** может содержать дополнительную информацию, не связанную напрямую с конкретным сообщением. Каждый дочерний элемент **Header** называется заголовком SOAP.  

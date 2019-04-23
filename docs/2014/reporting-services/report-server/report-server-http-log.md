@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9eb3cd35267075b6228df993f31dbec021b681bf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b4e7850cb0c66b6acbc7be54178cbc9ace27ce72
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031375"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961110"
 ---
 # <a name="report-server-http-log"></a>Журнал HTTP-запросов сервера отчетов
   В файлах журнала HTTP сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] хранится информация для каждого HTTP-запроса и ответа, обработанного сервером отчетов. Сообщения об ошибках, связанных с переполнением очереди запросов и временем ожидания, не достигают сервера отчетов, поэтому не регистрируются в файле журнала.  

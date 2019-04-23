@@ -1,5 +1,5 @@
 ---
-title: Урок 1. Создание проекта сервера отчетов (службы Reporting Services) | Документация Майкрософт
+title: Урок 1. Создание проекта сервера отчетов (службы Reporting Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 48ad3fd25dd842ca1f4979a6875887d6ad656508
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 52050b9513de2638cacc394309f7e87d6ba77709
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286472"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967900"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Урок 1. Создание проекта сервера отчетов (службы Reporting Services)
   Чтобы создать отчет в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], необходимо сначала создать проект сервера отчетов, в котором будет сохранен файл определения отчета (с расширением RDL) и другие файлы ресурсов, необходимые для отчета. Затем будет создан действительный файл определения отчета, определен источник данных для этого отчета, набор данных и макет отчета. При выполнении отчета происходит получение и объединение фактических данных с макетом, затем осуществляется его подготовка к просмотру на экране, после чего может быть выполнен их импорт, печать или сохранение.  
@@ -52,12 +52,12 @@ ms.locfileid: "56286472"
   
      Конструктор отчетов откроет и отобразит новый RDL-файл в конструкторе.  
   
- Конструктор отчетов является компонентом служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , запускаемым в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Он имеет два представления: **Проектирование** и **предварительной версии**. Смена представлений осуществляется посредством выбора вкладок.  
+ Конструктор отчетов является компонентом служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , запускаемым в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Он имеет два представления: **Конструктор** и **Предварительный просмотр**. Смена представлений осуществляется посредством выбора вкладок.  
   
  Данные определяются в области **Данные отчета** . Макет отчета определяется в представлении **Конструктор** . Отчет можно выполнить и посмотреть, как он выглядит, в представлении **Предварительный просмотр** .  
   
 ## <a name="next-task"></a>Следующая задача  
- Создание проекта отчета с именем «Учебник» и добавление в него файла определения отчета (с расширением RDL) успешно завершено. Далее требуется определить источник данных, который будет использован в отчете. См. в разделе [Урок 2: Задание информации о соединении &#40;службы Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md).  
+ Создание проекта отчета с именем «Учебник» и добавление в него файла определения отчета (с расширением RDL) успешно завершено. Далее требуется определить источник данных, который будет использован в отчете. См. [Занятие 2. Задание информации о соединении (службы Reporting Services)](lesson-2-specifying-connection-information-reporting-services.md).  
   
 ## <a name="see-also"></a>См. также  
  [Создание простого табличного отчета (учебник по службам SSRS)](create-a-basic-table-report-ssrs-tutorial.md)  

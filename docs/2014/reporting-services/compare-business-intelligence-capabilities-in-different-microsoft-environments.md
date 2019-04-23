@@ -4,18 +4,18 @@ ms.prod: sql-server-2014
 ms.technology:
 - reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/06/2017
-ms.openlocfilehash: 60ea737f20ba48c6ba8d441d389a124e90444a76
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 13ae9380cc3f034ace5f43d83640eea665cb3b02
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582508"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944610"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Сравнение возможностей бизнес-аналитики в разных средах Microsoft
 

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.modelitemsecurity.f1
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a89e2e627b297d5d6dc9795217b727aeb20d7c74
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 10aa1c7132126dd705986a55d5dc02d78a5263ef
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025795"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955550"
 ---
 # <a name="model-item-security-page-report-manager"></a>Страница «Безопасность элементов модели» (диспетчер отчетов)
   На этой странице можно защитить элементы модели, предоставляя или отменяя разрешения «только для чтения» в отношении определенных элементов. Безопасность элементов модели определяет порядок нерегламентированного просмотра данных во время выполнения и возможность использования элементов опубликованной модели при создании отчетов в построителе отчетов. Для использования этой функции необходимы разрешения диспетчера содержимого.  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e2e0a15c9b60faf43a7e067d696f2a6cdeb5b7b1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 00bc66f116a489858d6383d90a17e730792e6325
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031991"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941640"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>Страница «Свойства источников данных» (диспетчер отчетов)
   На странице свойств «Источники данных» можно определить, каким образом текущий отчет подключается к внешнему источнику данных. Можно принудительно изменить сведения о соединении с источником данных, которые изначально были опубликованы в отчете. Если в отчете используются несколько источников данных, у каждого источника данных есть свой подраздел на странице свойств. Источники данных приводятся в том порядке, в котором они определены в отчете.  

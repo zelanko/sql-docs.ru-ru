@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e3644de6d5a11e801e2b41d7d7aa517bad771714
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6a9b3f472d05c8d50a351323a0af794595c83f46
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033265"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954640"
 ---
 # <a name="preview-view"></a>Предварительный просмотр
   Представление **Предварительный просмотр** отображает отчет, готовый для просмотра. При предварительном просмотре отчета конструктор отчетов выполняет его локально и выводит в представлении «Предварительный просмотр». В режиме просмотра отчет обрабатывается полностью. Если отчет содержит сложный запрос или большой объем данных, при первом предварительном просмотре на его формирование может потребоваться несколько минут. При внесении последующих изменений, затрагивающих только форматирование отчета, в предварительном просмотре используются кэшированные данные.  

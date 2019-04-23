@@ -15,15 +15,15 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6870e52124d303b2e04e85158adb98872b78085f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bc152d3130d903f4b098a495451d2918abcd7329
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041255"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961140"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Администрирование базы данных сервера отчетов (службы Reporting Services в собственном режиме)
   В развертывании служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в качестве внутреннего хранилища используются две реляционные базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . По умолчанию эти базы данных имеют имена ReportServer и ReportServerTempdb. База данных ReportServerTempdb создается вместе с основной базой данных сервера отчетов и используется для хранения временных данных, сведений о сеансе и кэшированных отчетов.  

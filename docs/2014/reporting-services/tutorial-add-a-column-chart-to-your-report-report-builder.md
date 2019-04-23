@@ -1,5 +1,5 @@
 ---
-title: Учебник. Добавление гистограммы к отчету (построитель отчетов) | Документация Майкрософт
+title: Учебник. Добавление гистограммы к отчету (построитель отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: feff14049b3fa7a00d3d73bbe493aaded3748d2a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 24c8e48ef26d3db2bc7662a36d40725c84b1bbc7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287092"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936860"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Учебник. Добавление гистограммы к отчету (построитель отчетов)
   Гистограмма отображает ряды в виде набора вертикальных прямоугольников, сгруппированных по категориям. Гистограмма может быть полезна в следующих случаях:  
@@ -53,7 +53,7 @@ ms.locfileid: "56287092"
 9. [Сохранение отчета](#Save)  
   
 > [!NOTE]  
->  В этом учебнике шаги работы с мастером объединены в одну процедуру. Пошаговые инструкции по переходу к серверу отчетов, выбору источника данных и созданию набора данных см. в первом учебнике этой серии: [Учебник. Создание простого табличного отчета &#40;построитель отчетов&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  В этом учебнике шаги работы с мастером объединены в одну процедуру. Пошаговые инструкции по переходу к серверу отчетов, выбору источника данных и созданию набора данных см. в первом учебнике этой серии: [Учебник. Создание простого табличного отчета (построитель отчетов)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Предполагаемое время для выполнения заданий данного учебника: 15 минут.  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - Analysis Services, architecture
@@ -17,12 +15,12 @@ ms.assetid: 5193c976-9dcd-459c-abba-8c3c44e7a7f2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4121fb0ad30b7593fcca384235ac4990fc54979
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 138a5ec08ae7ca427352f8c0332b2012e6c0ea3d
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164784"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156240"
 ---
 # <a name="olap-engine-server-components"></a>Серверные компоненты ядра OLAP
   Серверный компонент служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] — **msmdsrv.exe** приложение, которое работает как служба Windows. Оно состоит из компонентов безопасности, компонента прослушивания XML для аналитики (XMLA), компонента обработчика запросов и множества других внутренних компонентов, выполняющих следующие функции:  
@@ -65,7 +63,7 @@ ms.locfileid: "48164784"
   
 ## <a name="see-also"></a>См. также  
  [Правила именования объектов &#40;служб Analysis Services&#41;](object-naming-rules-analysis-services.md)   
- [Физическая архитектура &#40;службы Analysis Services — многомерные данные&#41;](understanding-microsoft-olap-physical-architecture.md)   
+ [Физическая архитектура (службы Analysis Services — многомерные данные)](understanding-microsoft-olap-physical-architecture.md)   
  [Логическая архитектура &#40;службы Analysis Services — многомерные данные&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
   

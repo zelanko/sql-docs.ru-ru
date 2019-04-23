@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 84d66436-ed62-4967-bbbd-b457593ee787
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 77ff537ddac854981c79624fef84c4a2918ec7dc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e5ce3968216d0adbedb06a1aa820bb3e08228f7f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285412"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59952970"
 ---
 # <a name="add-scale-breaks-to-a-chart-report-builder-and-ssrs"></a>Добавление в диаграмму разрывов шкалы (построитель отчетов и службы SSRS)
   Разрыв шкалы представляет собой полосу, нарисованную в области построения диаграммы, обозначающую нарушение непрерывной последовательности изменения значений от малых к большим на оси значений (обычно это вертикальная ось, или ось Y). Разрыв шкалы используется, чтобы отобразить два разных диапазона в одной и той же области диаграммы.  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - report server database
 - upgrading Reporting Services
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a792b31fc02f5d3df4c339d1a18bbc8ee7aa29f2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3ee79dc617ed6fc9f49c0b2f95d4df43fcaf9eb4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039655"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968020"
 ---
 # <a name="upgrade-a-report-server-database"></a>Обновление базы данных сервера отчетов
   База данных сервера отчетов обеспечивает хранение одного или нескольких экземпляров сервера отчетов. Схема базы данных сервера отчетов с каждым новым выпуском служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]может меняться, поэтому версия базы данных должна совпадать с версией используемого экземпляра сервера отчетов. В большинстве случаев обновление базы данных сервера отчетов может быть выполнено автоматически, без необходимости выполнения каких-либо действий со стороны пользователя.  

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 49a17ff3-94e9-4969-84fc-37d49e63933b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 34e900268c42f1bc4541b1ddf6aad5901fc35480
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d4d08795351b93615954ad64e004482745f768d
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212964"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154290"
 ---
 # <a name="extending-olap-functionality"></a>Расширение функциональных возможностей OLAP
   Программист может расширять службы Analysis Services, написав сборки, персонализированные расширения и хранимые процедуры, обеспечивающие нужные функциональные возможности, которые можно использовать один или несколько раз в разнообразных приложениях базы данных. Сборки используются для расширения функциональных возможностей многомерных моделей путем добавления новых процедур и функций в язык многомерных выражений или путем встраивания персонализации.  

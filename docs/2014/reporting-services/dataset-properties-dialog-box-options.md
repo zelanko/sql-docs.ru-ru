@@ -11,15 +11,15 @@ f1_keywords:
 - "10130"
 - sql12.rtp.rptdesigner.datasetproperties.options.f1
 ms.assetid: 95299049-71ba-427f-b723-775cb696243f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a41bec8c2a4b8cb621eff84249253d18df2c34a7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3aded281e57e284253c5d0c122b377bddbe0eb0d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296632"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947490"
 ---
 # <a name="dataset-properties-dialog-box-options"></a>Диалоговое окно «Свойства набора данных» — «Настройки»
   Выберите **параметры** на **вкладку** диалоговое окно, чтобы изменить параметры данных, таких как параметры сортировки и подытогов для запроса. Дополнительные сведения см. в статье [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  

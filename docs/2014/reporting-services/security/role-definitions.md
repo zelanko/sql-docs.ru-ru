@@ -13,15 +13,15 @@ helpviewer_keywords:
 - security [Reporting Services], role definitions
 - role-based security [Reporting Services], role definitions
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 47a2cc499c9361b8d68be107cd874bebdfe74861
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ac879ad519b08ae272c8ac30dd37021123570cca
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038115"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950850"
 ---
 # <a name="role-definitions"></a>Определение ролей
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] *определение**роли* — это именованная коллекция задач, которая включает операции, доступные на сервере отчетов. Определение ролей содержит правила, которые сервер отчетов использует для обеспечения безопасности. Когда пользователь пытается выполнить задачу, например опубликовать отчет, сервер отчетов, сверяясь с назначением ролей этого пользователя, определяет, включена ли данная задача в определение роли пользователя. Запрос выполняется только в том случае, если задача включена в определение роли.  

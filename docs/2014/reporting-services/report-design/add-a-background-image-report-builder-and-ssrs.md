@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c777fefb-8695-44a7-b5cd-a18c587583f2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 26902cf236512fd93466a27fa8226773bfe6b6eb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: df5de06ef60cf22a023589efb9d67f0f521f1c40
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297732"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942710"
 ---
 # <a name="add-a-background-image-report-builder-and-ssrs"></a>Добавление фонового изображения (построитель отчетов и службы SSRS)
   Фоновое изображение можно добавлять к таким элементам отчета, как прямоугольник, текстовое поле, список, матрица, таблица и некоторые части диаграммы, либо к разделу отчета, например к верхнему и нижнему колонтитулу страницы или тексту отчета. Фоновое изображение можно указать для любого выбранного элемента в области конструктора отчета, на панели свойств которого имеется раздел **BackgroundImage** . Подобно другим изображениям, фоновое изображение может быть представлено ссылкой на URL-адрес изображения на сервере отчетов, изображением в поле набора данных или изображением, внедренным в определение отчета. Чтобы использовать изображение, внедренное в отчет, сначала необходимо добавить изображение к определению отчета, а затем добавить изображение в область конструктора.  

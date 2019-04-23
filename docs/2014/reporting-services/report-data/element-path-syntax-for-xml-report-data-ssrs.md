@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ElementPath syntax
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0cd7ef91cd1e682c7a238c029f6a072613b2efb9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 65dc39f60805cf5e3587639404be2bb19b4ea443
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025675"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958180"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Синтаксис пути к элементу для XML-данных отчета (SSRS)
   В конструкторе отчетов для определения данных из источника данных XML, которые должны использоваться в отчете, указывается путь к элементу с учетом регистра. Путь к элементу — это путь по иерархическим XML-узлам в источнике XML-данных и атрибуты этих узлов. Чтобы использовать путь к элементу по умолчанию, оставьте пустым запрос набора данных или XML `ElementPath` для XML-`Query`. При получении данных из источника XML-данных узлы элементов, которые имеют текстовые значения и атрибуты узла элемента, преобразуются в столбцы результирующего набора. При выполнении запроса значения этих узлов и атрибуты преобразуются в данные строк. Эти столбцы появляются в качестве коллекции полей набора данных в области данных отчета. В этом разделе содержится информация о синтаксисе пути к элементу.  
@@ -135,7 +135,7 @@ XMLLocalName :: =
     |8|Crystal|Hu|20|  
     |15|Wyatt|Diaz|33|  
   
-#### <a name="xml-document-customersxml"></a>XML-документ: Customers.xml  
+#### <a name="xml-document-customersxml"></a>XML-документ: Customers.XML  
  Чтобы проверить примеры пути к элементу из предыдущего раздела, можно скопировать этот XML-документ и сохранить его в URL-адресе, доступном из конструктора отчетов, а затем использовать этот XML-документ в качестве источника XML-данных, например `http://localhost/Customers.xml`.  
   
 ```  

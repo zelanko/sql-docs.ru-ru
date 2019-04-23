@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9d0343fbf3ad107b1e37dc8b11394f3135ac844f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9f95b0f545ef7c49f62f8e90a59db0bd0d877df1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292882"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959190"
 ---
 # <a name="stock-charts-report-builder-and-ssrs"></a>Биржевые диаграммы (построитель отчетов и службы SSRS)
   Биржевая диаграмма — это диаграмма, специально созданная для работы с финансовыми или научными данными, в которой на каждую точку данных приходится до четырех значений. Эти значения сравниваются со значениями максимума, минимума, открытия и закрытия, используемыми для отображения биржевых данных. В этом типе диаграммы значения открытия и закрытия отображаются с помощью маркеров (обычно это линии или треугольники). В следующем примере значения открытия помечены маркерами слева, а значения закрытия — маркерами справа.  

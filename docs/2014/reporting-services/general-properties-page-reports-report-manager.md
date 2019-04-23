@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 408d86a821d2596172570f513ee8398e43298f91
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c44bc306aaa1e55aa5005663ecfcfbf261576593
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030275"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940305"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Страница «Общие свойства», отчеты (диспетчер отчетов)
   На странице свойств отчета «Общие» можно переименовывать, удалять, перемещать или заменять определения отчета. Кроме того, на этой странице можно создавать связанные отчеты. Подробности о том, кто создал или изменил отчет, а также о том, когда были внесены изменения, отображаются в верхней части страницы.  

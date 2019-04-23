@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 846e86d0-fbbb-426c-97f9-f179cd42b390
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ca5f2b01894818680b6b760a1f2b8a342d43d8ce
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 24e41082fa274c08176a8a9cf9cbe2a53d90d4f8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022903"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964660"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>Настройка и администрирование сервера отчетов (режим интеграции с SharePoint служб Reporting Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] представляют собой платформу для создания отчетов на базе сервера, которая обеспечивает широкий спектр готовых к использованию средств и служб для создания и развертывания отчетов организации и управления ими, а также функции программирования, которые позволят расширить и настроить функциональность отчетов. Среду создания отчетов можно интегрировать с продуктами SharePoint, чтобы пользоваться всеми преимуществами среды совместной работы, которые обеспечивает сайт SharePoint.  

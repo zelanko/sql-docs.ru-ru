@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0b32bf178677b564d31182a5d23d5abda1f024cf
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 22090b659e78ac322aee9376a93f31bebfe77be0
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658038"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964250"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Экспорт в XML (построитель отчетов и службы SSRS)
   Модуль подготовки XML-отчета возвращает отчет в XML-формате. Схема для XML-документа, используемого в отчете, создается специально для этого отчета и содержит только данные. Данные макета не обрабатываются модулем подготовки XML-отчета, и разбивка на страницы не сохраняется. XML-документ, сформированный данным модулем, можно импортировать в базу данных, использовать как сообщение XML-данных или отправить пользовательскому приложению.  

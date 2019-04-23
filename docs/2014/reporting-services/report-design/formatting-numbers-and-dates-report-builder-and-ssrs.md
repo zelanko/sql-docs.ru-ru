@@ -17,15 +17,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.number.f1
 - "10285"
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2ea5a469c43ce89cb4d5f73f29b7c192fde08678
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ff184ad75c495d9f18f5e9d9e1d3aa1bdfa7132e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56284492"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950040"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Форматирование чисел и дат (построитель отчетов и службы SSRS)
   Формат чисел и дат в областях данных можно задать, выбрав формат на странице **Число** в диалоговом окне **Свойства** соответствующей области данных.  

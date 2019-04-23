@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 4b410b16-d36e-4185-bb20-922e66e5e2b7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e7656ef997ae7cd05816a24813566e8c58510719
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ffd99068db329ea8e9066c6bd9508dc13f239690
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152854"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154941"
 ---
 # <a name="connection-representation-tabular"></a>Представление соединения (табличное)
   Объект соединения определяет источник данных, который заполняет табличную модель.  
@@ -70,6 +68,6 @@ newDatasource.Update();
 ```  
   
 ## <a name="tabular-amo-2012-sample"></a>Образец «Tabular AMO 2012»  
- Чтобы получить лучшее представление об использовании объектов AMO для создания и обработки представлений подключений, ознакомьтесь с образцом исходного кода Tabular AMO 2012. В частности, обратите внимание на следующий файл: Database.cs. Этот образец доступен на сайте Codeplex. Образец кода приведен только для иллюстрации описываемых здесь логических концепций и не должен использоваться в рабочей среде.  
+ Чтобы получить представление о том, как использовать объекты AMO для создания и обработки представлений подключений, см. в статье исходный код в образце Tabular AMO 2012; в частности, проверьте в следующий файл: Database.cs. Этот образец доступен на сайте Codeplex. Образец кода приведен только для иллюстрации описываемых здесь логических концепций и не должен использоваться в рабочей среде.  
   
   

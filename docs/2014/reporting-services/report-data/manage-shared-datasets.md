@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6132a860bcac091939f10d81d9049888e8c077b5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d0d32084abfb744c2c5f9fdf6f585c7713e3057d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027695"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962900"
 ---
 # <a name="manage-shared-datasets"></a>Управление общими наборами данных
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]общие наборы данных получают данные из общих источников данных, которые подключены к внешним источникам данных. Общий набор данных предоставляет способ совместного использования запроса в целях предоставления согласованного набора данных для нескольких отчетов. Запрос к набору данных может включать параметры набора данных. Общий набор данных можно настроить для кэширования результатов запроса для конкретных сочетаний параметров при первом использовании или по расписанию. Кэширование общего набора данных можно использовать в сочетании с кэшированием отчета и потоками данных отчета в целях управления доступом к источнику данных.  

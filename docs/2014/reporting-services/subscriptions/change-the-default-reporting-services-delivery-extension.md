@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], default delivery extension
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1cba433f840f2e2284ed41ca4b87f0fd2bb1410f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 630ebd1ed531a15935fd71871608b300425feb56
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013685"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950980"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Изменение модуля доставки отчетов служб Reporting Services по умолчанию
   Вы можете изменить настройки конфигурации [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , чтобы сменить модуль доставки по умолчанию, который отображается в списке **Доставлено** , на странице определения подписки. Например, можно изменить конфигурацию так, чтобы при создании пользователями новой подписки по умолчанию выбиралась доставка в общую папку, а не доставка по почте. Можно также изменить порядок модулей доставки в пользовательском интерфейсе.  
@@ -88,7 +88,7 @@ ms.locfileid: "56013685"
   
      **Код события:** 109  
   
-     **Источник:** служба Windows сервера отчетов (имя экземпляра)  
+     **Источник:** Служба Windows сервера отчетов (имя экземпляра)  
   
      Файл RSReportServer.config был изменен.  
   

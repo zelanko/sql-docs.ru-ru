@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - storage [Analysis Services], partitions
@@ -23,12 +21,12 @@ ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ffb6331f3e02c0974320d8d9c71df9aff7602874
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507793"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157601"
 ---
 # <a name="partition-storage-modes-and-processing"></a>Режимы хранения и обработка секции
   Режим хранения секции определяет производительность выполнения запросов и обработки, требования к хранилищу и месту хранения секции, а также ее родительскую группу мер и куб. Кроме того, режим хранения влияет на выбор обработки.  
@@ -76,9 +74,9 @@ ms.locfileid: "52507793"
   
 -   Общий размер ключа индекса в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] не может превышать 900 байт. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] проверяет это условие, в зависимости от ключевых столбцов фиксированной длины при обработке инструкции CREATE INDEX. Тем не менее, если есть столбцы переменной длины в ключе индекса, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] также проверяет это условие при каждом обновлении базовых таблиц. Так как различные агрегаты имеют различные определения представлений, то обработка в режиме ROLAP с использованием индексированных представлений может быть удачной или нет, в зависимости от статистической схемы.  
   
--   В сеанс создания индексированного представления должны быть включены следующие параметры: ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING и ANSI_WARNING. Эти настройки можно произвести в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   В сеансе создания индексированного представления должен иметь значение ON следующие параметры: ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING, and ANSI_WARNING. Эти настройки можно произвести в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
--   В сеансе создания индексированного представления должны быть выключены следующие параметры: NUMERIC_ROUNDABORT. Эти настройки можно произвести в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   В сеансе создания индексированного представления должен иметь значение OFF следующий параметр: NUMERIC_ROUNDABORT. Эти настройки можно произвести в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="holap"></a>HOLAP  
  Режим хранения HOLAP объединяет атрибуты режимов MOLAP и ROLAP. Как и MOLAP, HOLAP агрегаты секции хранятся в многомерной структуре в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляра. В режиме HOLAP копия исходных данных не хранится. Для запросов, которые производят доступ только к сводным данным в агрегатах секции, режим HOLAP полностью эквивалентен режиму MOLAP. Запросы, которые обращаются к исходных данных — например, если вы хотите детализация ячейки атомарного куба для которого существует не статистической обработки данных – должен получить данные из реляционной базы данных и не будет так же быстро, как было бы, если исходные данные хранились в MOLAP structur e. В режиме хранения HOLAP пользователи, как правило, ощущают весомые различия во времени обработки запроса в зависимости от того, откуда разрешаются запросы: из кэша или из агрегатов источника данных.  

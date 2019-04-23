@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Report Server Windows service, ReportingServicesService configuration file
 - ReportingServicesService configuration file
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 15bac4bb872e1fb3fc42fb62cf355f53358442b9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 25972bd46bbf28a56a8a44bd5f8a49132eb93acf
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014575"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959300"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService, файл конфигурации
   Файл ReportingServicesService.exe.config содержит параметры, позволяющие настраивать трассировку.  
@@ -82,7 +82,7 @@ ms.locfileid: "56014575"
 |`Prefix`|Задает формируемое значение, позволяющее отличить один экземпляр журнала от другого. По умолчанию к именам файлов журнала трассировки добавляются значения отметок времени. Значение этой величины — «tid, time». Не изменяйте этот параметр.|  
 |**TraceListeners**|Задает, куда будет выводиться содержимое журнала трассировки. Можно через запятую задать несколько расположений. Допустимы следующие значения.<br /><br /> DebugWindow (по умолчанию)<br /><br /> File (по умолчанию)<br /><br /> StdOut|  
 |**TraceFileMode**|Определяет, содержат ли журналы трассировки данные за 24-часовой период. Необходимо, чтобы каждому компоненту за каждый день соответствовал один уникальный журнал трассировки. Значение этой величины — Unique (по умолчанию). Не изменяйте это значение.|  
-|**Components**|Задает компоненты, для которых создаются журналы трассировки. Значение по умолчанию — `all`. Другими допустимыми значениями этого параметра являются названия внутренних компонентов. Не изменяйте это значение.|  
+|**Components**|Задает компоненты, для которых создаются журналы трассировки. Значение по умолчанию — `all`. Другими допустимыми значениями этого параметра являются названия внутренних компонентов. Не изменяйте это значение.|  
 |**Параметры выполнения**|Задает параметры конфигурации, обеспечивающие обратную совместимость с предыдущей версией. Параметры среды выполнения используются для перенаправления запросов, обращающихся к предыдущей версии пространства имен Microsoft.ReportingServices.Interfaces, в пространство имен новой версии.<br /><br /> Все параметры конфигурации этого раздела описаны в документации по платформе [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Дополнительные сведения можно получить, выполнив поиск по строке «Runtime Schema Settings» на веб-сайте MSDN или в документации по платформе [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .|  
   
 ## <a name="see-also"></a>См. также  

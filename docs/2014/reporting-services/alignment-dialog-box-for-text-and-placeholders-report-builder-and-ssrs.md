@@ -13,15 +13,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.placeholderproperties.alignment.f1
 - sql12.rtp.rptdesigner.textproperties.alignment.f1
 ms.assetid: ea2bbcec-03d8-42e7-8f8e-3cccd9548586
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c450670f38ba1fd9b7e9b17ce697c56f37e552b2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0663bfce435187be66889858316b5ced0573f149
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039785"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953720"
 ---
 # <a name="alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs"></a>Диалоговое окно «Выравнивание» для текста и заполнителей (построитель отчетов и службы SSRS)
   Выберите вкладку **Выравнивание** , чтобы изменить расположение значений в выбранной ячейке или области данных. В текстовом поле для отдельного фрагмента текста можно форматировать только выравнивание по горизонтали. Для задания значений заполнения текстового поля и выравнивания текста по вертикали используются свойства соответствующего текстового поля. Дополнительные сведения см. в разделе [текстовое поле свойства, выравнивания &#40;построитель отчетов и службы SSRS&#41;](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md).  

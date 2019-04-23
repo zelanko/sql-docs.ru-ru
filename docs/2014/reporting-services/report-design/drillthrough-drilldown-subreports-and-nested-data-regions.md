@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 25730e3b53b6da97dee0e734853c3ab9b259aa33
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 13383c305b9e2e8f1c1ece754c55e5d0f0bd6955
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291572"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954680"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions-report-builder-and-ssrs"></a>Детализация, углубленная детализация, вложенные отчеты и вложенные области данных (построитель отчетов и службы SSRS)
   Данные можно организовать различными способами, чтобы показать отношение общего к частному.  Можно вложить все данные в отчет, но скрыть их до тех пор, пока пользователь не раскроет подробное представление; это действие называется *углубленной детализацией* . Можно отобразить данные в области данных, например таблице или диаграмме, которая *вложена* в другую область данных, например таблицу или матрицу. Можно отобразить данные во *вложенном отчете* , который содержится полностью в основном отчете. Либо можно вложить подробные данные в отчеты с *углубленной детализацией* , то есть отдельные отчеты, которые отображаются при нажатии пользователем ссылки.  

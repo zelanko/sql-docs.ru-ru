@@ -1,28 +1,26 @@
 ---
-title: Как Развертывание модуля обработки данных на сервере отчетов | Документация Майкрософт
+title: Практическое руководство. Развертывание модуля обработки данных на сервере отчетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - data processing extensions [Reporting Services], deploying
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: db03408b8ed7909f534b5dad09dbb742f7edc6c9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f0f593b2488d9bb7226edad1f8d98a244f4df191
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017976"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154220"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Как развернуть модуль обработки данных на сервере отчетов
+# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Практическое руководство. Развертывание модуля обработки данных на сервере отчетов
   Серверы отчетов используют модули обработки данных для получения и обработки данных в отчетах, готовых для просмотра. Сборка модуля обработки данных развертывается на сервере отчетов как закрытая сборка. Нужно также внести запись в файл конфигурации сервера отчетов RSReportServer.config.  
   
 ## <a name="procedures"></a>Процедуры  

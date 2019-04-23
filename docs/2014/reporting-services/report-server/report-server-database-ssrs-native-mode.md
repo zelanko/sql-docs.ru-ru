@@ -15,15 +15,15 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6e0a2d0a723629ae1e9b7e7277ff646c63a86aec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 64e8ae49b9912579d6b3b483b7cb63bcfcb8662e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043265"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940080"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>База данных сервера отчетов (службы Reporting Services в собственном режиме)
   Сервер отчетов — это сервер без сохранения состояния, который использует компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] для хранения метаданных и определений объектов. При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме используются две базы данных, чтобы реализовать различные требования к постоянному и временному хранилищу. Эти базы данных создаются одновременно и связываются по именам. По умолчанию эти базы данных имеют имена **reportserver** и **reportservertempdb**.  

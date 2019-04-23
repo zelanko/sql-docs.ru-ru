@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: df5f3be98f88e3966ccda0226e0f2f1353b1d64d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 4f3d77e65361081a2c06e9e10c25b1bf6757d5d6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286182"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949770"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>Вставка или удаление столбца (построитель отчетов и службы SSRS)
   Добавить или удалить столбцы можно в области данных табликса. Областью данных табликса может быть таблица, матрица или список. Следующие процедуры не применяются к области данных диаграммы и датчика.  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1b344449-6f7c-47d2-a737-972d88c0faf8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 990e6b8f74eb2066175bcf92a22e2478ba4ef6de
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a50b1b947ce82eb38ef7c7f6fd026bc9f83376f4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040406"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964886"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>Страница «Общие свойства», общие источники данных (диспетчер отчетов)
   На странице свойств «Общие» можно просматривать и изменять свойства общего элемента источника данных. Все изменения свойств вступают в силу для всех отчетов, обращающихся к данному элементу, после нажатия кнопки **Применить**.  

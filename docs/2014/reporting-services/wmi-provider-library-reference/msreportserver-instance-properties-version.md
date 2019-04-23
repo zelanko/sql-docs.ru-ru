@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Version property
 ms.assetid: eea6bfe9-3130-4272-b3c2-c334349a7afd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 800358195b5c9d76485626cd3d4b6ca981a2de2e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ff82109bc54fb1360df0f9280a196c547e53039b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038565"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953670"
 ---
 # <a name="version-property-wmi-msreportserverinstance"></a>Version Property (WMI MSReportServer_Instance)
   Возвращает версию сервера отчетов в формате Основной_номер.Дополнительный_номер.Номер_сборки.Номер_редакции. Только для чтения.  

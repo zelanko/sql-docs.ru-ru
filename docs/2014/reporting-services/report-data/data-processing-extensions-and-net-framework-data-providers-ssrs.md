@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 - report data [Report Builder], accessing
 ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fdbd49f103727d877efa3cefd4551666666b40ca
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5ac00587321f3a328cb9927e5ed28c26d3a8d0d2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041765"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969570"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>Модули обработки данных и поставщики данных .NET Framework (службы SSRS)
   Модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] — это компонент, устанавливаемый вместе со службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и предназначенный для получения данных из источников данных конкретного типа, а также предоставляющий дополнительную поддержку при проектировании и обработке отчетов. Модуль обработки данных служб [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] — это компонент, предоставляемый [!INCLUDE[msCoName](../../includes/msconame-md.md)] или сторонними поставщиками, который поддерживает интерфейсы <xref:System.Data> , позволяющие получать и изменять данные из источника данных определенного типа.  

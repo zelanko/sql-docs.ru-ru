@@ -21,15 +21,15 @@ helpviewer_keywords:
 - deploying [Reporting Services], reports
 - Report Designer [Reporting Services], publishing reports
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4f028a70d2f1d26f18f7940f89364c23dc5050b8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 135a736f6d0cf0cd5c51cf40b05c95a33d5c435b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021598"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967940"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Публикация отчетов на сервере отчетов
   После создания и проверки отчета или набора отчетов можно воспользоваться встроенными функциями развертывания в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для публикации отчетов на сервере отчетов. Можно опубликовать отдельные отчеты или проект «Сервер отчетов». Публикация проекта сервера отчетов — это самый простой способ публикации нескольких отчетов. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует термин *развертывание*, вместо термина *публикации*. Два этих термина взаимозаменяемы.  
@@ -41,7 +41,7 @@ ms.locfileid: "56021598"
 ## <a name="project-configurations"></a>Конфигурации проекта  
  Отчеты создаются до опубликования, что позволяет обеспечить публикацию на сервере отчетов только действительных определений отчета. Конфигурации проекта включают свойства для построения отчетов, например папку, в которой временно сохраняются отчеты о сборке и способах решения проблем сборки. Конфигурации также имеют свойства, используемые для обозначения местоположения и версии сервера отчетов, папок на сервере отчетов.  
   
- По умолчанию среда [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] предоставляет три конфигурации проекта: DebugLocal, Debug и Release. Конфигурация по умолчанию — DebugLocal. Как правило, конфигурация DebugLocal служит для просмотра отчетов в локальном окне просмотра, конфигурация Debug — для публикации отчетов на тестовом сервере, а конфигурация Release — для публикации отчетов на рабочем сервере. Раскрывающийся список конфигураций решения на стандартной панели инструментов отображает активную конфигурацию. Для использования другой конфигурации выберите ее из списка.  
+ По умолчанию [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] предоставляет три конфигурации проекта: DebugLocal, Debug и Release. Конфигурация по умолчанию — DebugLocal. Как правило, конфигурация DebugLocal служит для просмотра отчетов в локальном окне просмотра, конфигурация Debug — для публикации отчетов на тестовом сервере, а конфигурация Release — для публикации отчетов на рабочем сервере. Раскрывающийся список конфигураций решения на стандартной панели инструментов отображает активную конфигурацию. Для использования другой конфигурации выберите ее из списка.  
   
  Среда создания отчетов может иметь несколько серверов отчетов и разные установленные версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Можно создать несколько конфигураций и использовать одну из них в зависимости от сценария развертывания. Дополнительные сведения см. в разделе [развертывание и поддержка версий в SQL Server Data Tools &#40;SSRS&#41; ](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md) и [задание свойства развертывания &#40;служб Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md).  
   

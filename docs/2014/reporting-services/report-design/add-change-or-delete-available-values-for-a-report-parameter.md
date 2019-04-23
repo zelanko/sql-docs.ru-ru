@@ -12,15 +12,15 @@ f1_keywords:
 - "10455"
 - "10071"
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 804673fd5b2fa9f8ed6b08b4f7609adbb5fdf157
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e0807838468e00ea9d6a323ac5ab1542ac1e06d6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296232"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938780"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter-report-builder-and-ssrs"></a>Добавление, изменение и удаление допустимых значений параметра отчета (построитель отчетов и службы SSRS)
   После создания параметра отчета можно указать список допустимых значений, которые будут выведены для пользователя. Список допустимых значений ограничивает значения, которые может выбрать пользователь, набором допустимых значений.  
@@ -82,7 +82,7 @@ ms.locfileid: "56296232"
  [Добавление каскадных параметров в отчет (построитель отчетов и службы SSRS)](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Добавление, изменение или удаление значения по умолчанию для параметра отчета (построитель отчетов и службы SSRS)](add-change-or-delete-default-values-for-a-report-parameter.md)   
  [Ссылки на коллекцию параметров (построитель отчетов и службы SSRS)](built-in-collections-parameters-collection-references-report-builder.md)   
- [Учебник. Добавление параметра к отчету &#40;построитель отчетов&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Учебник. Добавление параметра к отчету (построитель отчетов)](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Выражения (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)  
   
   

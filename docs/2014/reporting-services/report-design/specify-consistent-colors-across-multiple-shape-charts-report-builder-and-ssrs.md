@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f88222768c3194543ec2abd5821b53c67f3b04fe
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8595050b478743b7092787acf880425b24c5b1e3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292982"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960810"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>Указание согласованных цветов для нескольких фигурных диаграмм (построитель отчетов и службы SSRS)
   На нефигурных диаграммах новые цвета выбираются из палитры, связанной с индексом рядов в диаграмме. Например, первый ряд в диаграмме сопоставлен с первым цветом палитры. Однако в фигурных диаграммах используется другой принцип. В фигурных диаграммах каждый цвет палитры сопоставлен с точкой данных в наборе данных. Так, точка данных 1 сопоставлен с первым цветом палитры, точка данных 2 — со вторым цветом палитры и т. д.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - scenarios [CLR integration]
@@ -19,12 +17,12 @@ ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 550483f71344a790225a2d22b1caf09cee16b9f3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3718a084211e7c3b2b7a14973e195a4b1c3b6b1a
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360476"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155021"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>Сценарии использования и примеры интеграции со средой CLR
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включает примеры приложений, образцы пакетов и многочисленные образцы кода, которые можно использовать для изучения возможностей программирования в условиях интеграции со средой CLR.  

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 84fcd5451bae28f1817d7cf9b874938436f3d2f4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cfd005746302bef4b8e03b520babfdef41768083
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372396"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157920"
 ---
 # <a name="udt-utilities"></a>Программы определяемых пользователем типов
   Образец программ определяемых пользователем типов содержит набор служебных функций. В их число входят функции для предоставления метаданных сборки в Transact-SQL, образцы потоковых функций, возвращающих типы в сборке в виде таблицы, и функции, возвращающие поля, методы и свойства в определяемом пользователем типе данных. При этом, в частности, демонстрируются возвращающие потоковые функции с табличным значением, отражение API-интерфейсов .NET Framework и вызов из Transact-SQL возвращающих табличные значения функций.  
@@ -25,7 +23,7 @@ ms.locfileid: "53372396"
 ## <a name="prerequisites"></a>предварительные требования  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
 -   База данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] , доступная на [веб-сайте Codeplex](https://go.microsoft.com/fwlink/?linkid=62796).  
   

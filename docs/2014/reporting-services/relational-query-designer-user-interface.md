@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4f8aa192-e6fc-4b4e-b107-5a5372ac31d9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a55d95157e3da15917e7e3b8951c682dbdd33656
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ffa01b53544d0af2ea12b146a122ff51e58cfcad
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298254"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939200"
 ---
 # <a name="relational-query-designer-user-interface"></a>Пользовательский интерфейс конструктора реляционных запросов
   Конструктор отчетов в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] предоставляет как графический конструктор запросов, так и текстовый конструктор запросов, которые используются для создания запросов, указывающих данные для получения из [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] и [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] для набора данных отчета. Графический конструктор запросов используется для просмотра метаданных, интерактивного создания запроса, а также для просмотра его результатов. Текстовый конструктор запросов используется для просмотра запроса, созданного графическим конструктором запросов, или для его изменения. Также можно импортировать существующий запрос из файла или отчета.  

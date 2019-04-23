@@ -1,5 +1,5 @@
 ---
-title: Занятие 2. Определение подключения к данным и таблицы данных для родительского отчета | Документация Майкрософт
+title: Урок 2. Определение подключения к данным и таблицы данных для родительского отчета | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0a19f5fd51cf4e1b24e898ef3016c46edc152920
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c6b7e6e38ca10cf23179872ddc3ff4476bc3657d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022885"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939860"
 ---
-# <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Занятие 2. Определение подключения к данным и таблицы данных для родительского отчета
+# <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Урок 2. Определение подключения к данным и таблицы данных для родительского отчета
   После создания нового проекта веб-сайта с использованием шаблона веб-сайта ASP.NET для Visual C# далее необходимо создать подключение к данным и таблицу данных для родительского отчета. В этом учебнике в качестве источника подключения к данным используется база данных AdventureWorks2008. Предусмотрена также возможность установить подключение к базе данных AdventureWorks2012.  
   
 ### <a name="to-define-a-data-connection-and-data-table-by-adding-a-dataset-for-parent-report"></a>Определение подключения к данным и таблицы данных путем добавления набора данных (для родительского отчета)  

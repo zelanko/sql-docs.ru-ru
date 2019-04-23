@@ -11,15 +11,15 @@ helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: adfda7de7c700959e375678a8d45b4c522b59577
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d55ef7730032c782997a75c2b85f402626a89ad8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031467"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967389"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>устанавливать разрешения на элементы сервера отчетов с помощью сайта SharePoint (службы Reporting Services в режиме интеграции с SharePoint)
   Если параметры безопасности по умолчанию не обеспечивают нужного уровня доступа, можно создать разрешения, чтобы предоставить доступ к определенным элементам или операциям сервера отчетов. Пользовательские параметры безопасности могут оказаться полезными, если требуется ограничить доступ к конкретному отчету.  

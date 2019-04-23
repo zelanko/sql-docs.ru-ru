@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e9a01a74-2f51-4b35-be3a-a6138568f6cf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 444d02709a25334893a5d5741ac08dbf9ee40dea
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: bd85296b786683176c8c05e53cd7e0c11cc7cd18
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291970"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966620"
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>Форматирование меток оси в виде значений даты или валюты (построитель отчетов и службы SSRS)
   Если на оси отображаются правильно отформатированные значения типа DateTime, диаграмма автоматически отобразит эти значения как дни. Чтобы указать интервал даты-времени для оси X, такой как интервал в месяцах или интервал в часах, необходимо отформатировать метки оси и задать в качестве типа интервала оси допустимый интервал значений даты или времени.  

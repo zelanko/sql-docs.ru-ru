@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f39555217bf847b6b8f29b8c4de0b5c349ee5e4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 13d23977aeeb6f7643fc039c23b02267d47c106f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361376"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154690"
 ---
 # <a name="clr-transactions-sample"></a>Образец транзакции среды CLR
   В этом образце демонстрируется управление транзакциями с использованием управляемых программных интерфейсов, расположенных в пространстве имен `System.Transactions` . В частности, класс `System.Transactions.TransactionScope` используется для установления границы транзакции, чтобы не допустить изменения значений запасов, кроме как при наличии достаточных запасов для выполнения запроса, а также при наличии запасов, передача которых из одного местоположения в другое происходит неразрывно. Автоматическая регистрация в распределенной транзакции демонстрируется путем записи данных об изменениях товарных запасов на складе в базу данных аудита, хранящуюся в отдельном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -25,7 +23,7 @@ ms.locfileid: "53361376"
 ## <a name="prerequisites"></a>предварительные требования  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
 -   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](https://go.microsoft.com/fwlink/?linkid=62796).  
   

@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.legendproperties.general.f1
 - "10184"
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 76577b8623639d2fa9bffb5b83d65604a5afdcbe
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ae9d8c9b156b2b7b1655c0b854a4615264e56b3c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287902"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970006"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>Диалоговое окно «Свойства условных обозначений» — «Общие» (построитель отчетов и службы SSRS)
   Используйте диалоговое окно **Условные обозначения** , чтобы определить внешний вид и макет условных обозначений на диаграмме. Дополнительные сведения см. в разделе [форматирование условных обозначений на диаграмме &#40;построитель отчетов и службы SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  

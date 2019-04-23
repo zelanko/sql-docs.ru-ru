@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1d3b2573-e29d-480d-9dde-d26379c86618
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 731d0eb5f61bd9b9002e674a9dc276db5621591a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 51ac8bee672064e07d66d924bc8efef0fc8aa1d5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030565"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946440"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>Добавление и проверка подключения к данным или источнику данных (построитель отчетов и службы SSRS)
   В построителе отчетов можно добавить общий источник данных с сервера отчетов или создать внедренный источник данных для отчета. В конструкторе отчетов можно создавать общие или внедренные источники данных и развертывать их на сервере отчетов.  
@@ -81,9 +81,9 @@ ms.locfileid: "56030565"
   
 2.  Нажмите кнопку **Проверить соединение**.  
   
-3.  Если соединение установлено успешно, отобразится следующее сообщение: «Соединение установлено успешно». [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Если подключение установлено успешно, появится следующее сообщение: «Соединение установлено успешно». [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  Если не удалось установить соединение, отобразится следующее сообщение: «Не удалось установить соединение с источником данных».  
+4.  Если подключение не установлено, появится следующее сообщение: «Не удалось подключиться к источнику данных».  
   
 5.  Нажмите кнопку **Подробные сведения**и воспользуйтесь предоставленными сведениями, чтобы исправить проблему.  
   

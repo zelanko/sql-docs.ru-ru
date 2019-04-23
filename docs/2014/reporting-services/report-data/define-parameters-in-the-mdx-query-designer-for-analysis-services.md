@@ -14,15 +14,15 @@ helpviewer_keywords:
 - MDX [Reporting Services], defining parameters
 - DMX [Reporting Services]
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bbd72a6eadac5f65d292b742885c1af957a637e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4cc72035c59aa782111776deb75ccdac55d571dc
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039685"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961900"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Определение параметров в конструкторе запросов многомерных выражений для служб Analysis Services (построитель отчетов и службы SSRS)
   Чтобы параметризовать запрос многомерных выражений для источника данных служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , необходимо добавить параметр запроса к этому запросу. В конструкторе запросов многомерных выражений параметр запроса можно добавить как в режиме конструктора, так и в режиме запроса, настроив фильтр. После определения запроса с параметром запроса, службы Reporting Services автоматически создают параметр отчета и набор данных, чтобы предоставить список допустимых значений. Это позволяет пользователю указать значение, которое передается непосредственно запросу.  

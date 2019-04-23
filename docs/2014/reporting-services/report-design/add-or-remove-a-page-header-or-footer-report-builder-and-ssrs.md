@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 409f9443e0ead1899bbd1769c77b3356c5f6c8f2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: b3b42828eab3a439cb21c6d32ff0881debc663e8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292247"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961600"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Добавление или удаление верхнего или нижнего колонтитула страницы (построитель отчетов и службы SSRS)
   К верхним или нижним колонтитулам страниц можно добавить статический текст, изображения, линии, прямоугольники и границы. Если в заголовке или нижнем колонтитуле необходимо разместить переменные или вычисляемые данные, поместите выражения и связанные с данными изображения в текстовом поле.  

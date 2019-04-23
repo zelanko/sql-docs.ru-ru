@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9138f2b27518a3b271bd14628b753ba5f729b3f6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1b958a1552bf979abfcebd16345768ea2f7f5fed
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026535"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957160"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме SharePoint (SSRS)
   Чтобы опубликовать отчеты и связанные с ними элементы в библиотеке SharePoint, можно опубликовать содержимое с помощью таких средств разработки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , как конструктор отчетов, или передать содержимое средствами сайта SharePoint.  
@@ -32,7 +32,7 @@ ms.locfileid: "56026535"
   
  Для доступа к содержимому сервера отчетов и его защите могут быть использованы следующие элементы веб-иерархии. Прочие объекты (списки, страницы и т. д.) не используются для доступа к содержимому сервера отчетов и в данной таблице не описаны.  
   
-|Объект|Описание|  
+|Object|Описание|  
 |------------|-----------------|  
 |Веб-приложение SharePoint|Веб-приложение SharePoint может быть установлено как на изолированном сервере, так и в составе фермы, содержащей коллекцию виртуальных серверов. Веб-приложение имеет URL-адрес (например, http:*//имя_сервера*) и может содержать несколько сайтов.|  
 |Сайт|Сайт является либо родительским сайтом для веб-приложения, либо вложенным сайтом.|  

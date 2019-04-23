@@ -1,7 +1,7 @@
 ---
 title: Предварительный просмотр отчетов
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services-2014, sql-server-2014
@@ -9,14 +9,14 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 7746263fc015f7cf1d398c821ce94e49c134ba0f
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: af45559f2eccfc718aa1d4ba3e986ecd3144c847
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553236"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946950"
 ---
-# <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>Просмотр отчетов в SQL Server Reporting Services (SSRS)
+# <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>Предварительный просмотр отчетов в службах SQL Server Reporting Services (SSRS)
 
   При проектировании отчета может понадобиться просмотреть его до публикации в рабочей среде. Это можно сделать несколькими способами: воспользовавшись вкладкой «Предварительный просмотр» конструктора отчетов, при помощи окна предварительного просмотра в конструкторе отчетов, а также опубликовав отчет на сервере отчетов в тестовом режиме.  
   

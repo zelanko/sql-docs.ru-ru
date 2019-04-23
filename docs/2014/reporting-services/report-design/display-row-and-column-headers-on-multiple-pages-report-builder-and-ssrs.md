@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cda91c882af3cead946a764ddd826e1291c5e18b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 40c66dfbb4ed728df49e3756af7baea17197b502
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294953"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949320"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Отображение заголовков строк и столбцов на нескольких страницах (построитель отчетов и службы SSRS)
   Пользователь может указать, следует ли повторять заголовки строк и столбцов на каждой странице области данных табликса, которая занимает несколько страниц. Областью данных табликса может быть таблица, матрица или список.  

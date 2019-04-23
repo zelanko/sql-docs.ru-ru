@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a52a828227c316c37e90f6d2ecc95b3bce85747d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1675221a4d6cfc8ad61a975610113435423ae05b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295222"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940590"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Экспорт в PDF-файл (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов в формате PDF создает отчет в файлах, которые можно открыть в Adobe Acrobat и других средствах просмотра PDF сторонних разработчиков, поддерживающих формат PDF 1.3. Хотя формат PDF версии 1.3 совместим с Adobe Acrobat 4.0 и более поздними версиями, службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживают Adobe Acrobat 6 или более поздние версии. Модуль подготовки отчетов не требует программного обеспечения Adobe для создания отчета. Однако средства просмотра PDF, например Adobe Acrobat, необходимы для просмотра или печати отчетов в формате PDF.  

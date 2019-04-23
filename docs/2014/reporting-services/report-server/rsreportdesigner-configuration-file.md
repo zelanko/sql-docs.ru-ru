@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
 - RSReportDesigner configuration file
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8c979e7ee3d3dcb2f4dba96e73b1d38c526bcb7a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b29e5020cbe552fac66f7bb4e621ce0eda6779a5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012895"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946080"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner, файл конфигурации
   Файл конфигурации RSReportDesigner.config хранит параметры подготовки отчета и модулей обработки данных, доступных конструктору отчетов. Сведения о модуле обработки данных хранятся в элементе `Data`. Сведения о модуле обработки данных хранятся в элементе `Render`. Элемент `Designer` перечисляет построители запросов, используемые в конструкторе отчетов.  
@@ -59,7 +59,7 @@ ms.locfileid: "56012895"
 |-------------|-----------------|  
 |`SecureConnectionLevel`|Определяет уровень безопасности подключения в веб-службе. Диапазон допустимых значений от 0 до 3, где 0 — минимальный уровень. Дополнительные сведения см. в статье [Using Secure Web Service Methods](../report-server-web-service/net-framework/using-secure-web-service-methods.md).|  
 |`InstanceName`|Идентификатор сервера предварительного просмотра. Не изменяйте это значение.|  
-|`SessionCookies`|Указывает, использует ли сервер отчетов куки-файлы браузера для сохранения сведений о сеансах. Допустимые значения включают `true` и `false`. Значение по умолчанию — `true`. Если значение указано как false, данные о сеансе настройки хранятся в базе данных **reportservertempdb** .|  
+|`SessionCookies`|Указывает, использует ли сервер отчетов куки-файлы браузера для сохранения сведений о сеансах. Допустимые значения включают `true` и `false`. Значение по умолчанию — `true`. Если значение указано как false, данные о сеансе настройки хранятся в базе данных **reportservertempdb** .|  
 |`SessionTimeoutMinutes`|Указывает период, в течение которого для сеанса действительны куки-файлы. Значение по умолчанию равно 3 минутам.|  
 |`PolicyLevel`|Определяет файл конфигурации политики безопасности. Допустимым значением является Rspreviewpolicy.config. Дополнительные сведения см. в разделе [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md).|  
 |`CacheDataForPreview`|При установке значения `True` конструктор отчетов сохраняет данные в кэш-файле на локальном компьютере. Допустимые значения `True` (по умолчанию) и `False`. Дополнительные сведения см. в статье [Previewing Reports](../reports/previewing-reports.md).|  

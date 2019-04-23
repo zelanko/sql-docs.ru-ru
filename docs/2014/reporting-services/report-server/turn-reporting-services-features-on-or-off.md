@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Reporting Services, configuration
 - security [Reporting Services], strategies
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 75845ddac250c70078c8ee43d885b7d2b99a69a1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f5e927e8b25097e09d3ecba67bfd3e75d9e8c9be
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031095"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954790"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Включение и отключение компонентов служб Reporting Services
   Неиспользуемые функции сервера отчетов можно отключить в рамках блокирующей стратегии, позволяющей снизить риск атак на рабочий сервер отчетов. В большинстве случаев рекомендуется использовать функции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] параллельно; это позволит использовать все функциональные возможности, предоставляемые службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Однако в зависимости от используемой модели развертывания можно отключить неиспользуемые функции. Например, если вся обработка отчетов производится с использованием операций по расписанию, то можно разрешить только фоновую обработку. Подобным же образом можно ограничиться запуском веб-службы сервера отчетов, если необходимо только интерактивное получение отчетов по требованию.  

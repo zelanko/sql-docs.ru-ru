@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - time dimensions [Analysis Services]
@@ -29,12 +27,12 @@ ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 61792f88c028ce1c011b91fb9a5ecbec97b50396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cbe1c8932c082ce537cd5dc3f2b12d98c05c3811
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212514"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158000"
 ---
 # <a name="dimension-types"></a>Типы измерений
   Настройка свойства `Type` предоставляет данные о содержимом измерения серверу и клиентским приложениям. В некоторых случаях настройка `Type` предоставляет клиентским приложениям только справочные сведения и является необязательной. В других случаях, например для измерений `Accounts` или `Time`, настройка свойства `Type` для измерения и его атрибутов определяет конкретные режимы, относящиеся к серверу, и может быть необходимой для реализации определенных режимов куба. Например, для свойства `Type` измерения можно установить значение `Accounts`, тем самым указывая клиентским приложениям, что в стандартном измерении содержатся атрибуты счетов.  Дополнительные сведения о времени, счетов и измерениях валют см. в разделе [Создание измерения типа Date](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [Создание учетной записи Finance с измерением типа родители потомки](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), и [Создание валюты Введите измерения](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
@@ -64,6 +62,6 @@ ms.locfileid: "48212514"
   
 ## <a name="see-also"></a>См. также  
  [Создание измерения с помощью существующей таблицы](../multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
- [Измерения &#40;службы Analysis Services — многомерные данные&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Измерения (службы Analysis Services — многомерные данные)](dimensions-analysis-services-multidimensional-data.md)  
   
   

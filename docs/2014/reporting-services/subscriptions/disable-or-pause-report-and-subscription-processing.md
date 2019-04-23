@@ -19,15 +19,15 @@ helpviewer_keywords:
 - roles [Reporting Services], modifying
 - shared schedules [Reporting Services], pausing
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 68d6284f7b7b832b37806d2fb39e506689a3b031
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 41b44df5fd990927c7b5a2e2a71698086a2bce61
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040685"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953890"
 ---
 # <a name="pause-report-and-subscription-processing"></a>Приостановка обработки отчета и подписки
   Приостановить обработку отчетов или подписки напрямую невозможно. Однако можно остановить обработку отчетов и подписки перед ее началом или после соединения с источником данных. Также можно предотвратить обработку отчетов или подписки, запретив пользователям доступ к этим элементам.  

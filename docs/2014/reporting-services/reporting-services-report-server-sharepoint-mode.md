@@ -4,18 +4,18 @@ ms.prod: sql-server-2014
 ms.technology:
 - reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 411929fe3f5640d385a70c45f9526a4a372ee160
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 246b0be389857e002e5c9e30cb899826234a58b7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582210"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939490"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Сервер отчетов служб Reporting Services (режим SharePoint)
 
@@ -81,7 +81,7 @@ ms.locfileid: "59582210"
   
 -   *Локальный режим*: Локальный режим позволяет подготавливать отчеты локально из библиотеки документов SharePoint без интеграции с сервером отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Надстройка служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для продуктов SharePoint является обязательной в отличие от сервера отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Надстройка может быть установлена несколькими различными способами, в том числе с помощью средства подготовки продуктов SharePoint 2010. Дополнительные сведения о локальном режиме см. в разделе [Отчеты, созданные в локальном Подключенном режиме в средстве просмотра отчетов &#40;служб Reporting Services в режиме интеграции с SharePoint&#41; ](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) и [где найти надстройку служб Reporting Services для продуктов SharePoint](install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
--   *Подключенный режим*: Подключенный режим поддерживается путем интеграции сервера отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] с фермой SharePoint с помощью центра администрирования SharePoint. Интеграция с сервером отчетов обеспечивает полные возможности работы с отчетами за счет предоставления функций совместной работы SharePoint 2010 и серверные функции сервера отчетов, в том числе: подписку, моментальные снимки и серверную обработку.  
+-   *Подключенный режим*: Подключенный режим поддерживается путем интеграции [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] сервера отчетов в ферму SharePoint, с помощью центра администрирования SharePoint. Интеграция с сервером отчетов обеспечивает полную end-to-end с отчетами, предоставляя функции совместной работы SharePoint 2010 и серверные функции сервера отчетов в том числе: Подписки, моментальные снимки и серверную обработку.  
   
 ##  <a name="bkmk_unsupportedsharepoint"></a> Неподдерживаемые функции SharePoint
 

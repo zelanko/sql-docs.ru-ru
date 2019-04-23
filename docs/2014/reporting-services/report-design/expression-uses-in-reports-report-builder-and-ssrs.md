@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 19c423a2ecb7911cd25b51cbde438cf27b870d0b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e6f77a2ecf9ed5a985efa4a36f18b9f495c7091f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289862"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954470"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Использование выражений в отчетах (построитель отчетов и службы SSRS)
   Выражения используются по всему определению отчета для указания или вычисления значений параметров, запросов, свойств элементов отчета, определений группирований и сортировки, свойств текстовых полей, закладок, схем документов, динамического содержимого заголовков и нижних колонтитулов страниц, изображений и динамических определений источников данных. В данном разделе приводится множество примеров использования выражений для внесения разнообразия в содержимое или внешний вид отчета. Этот список не является исчерпывающим. Выражение для любого свойства можно задать в диалоговом окне, содержащем кнопку выражения (**fx**), или в раскрывающемся списке, содержащем **\<выражение...>**.  

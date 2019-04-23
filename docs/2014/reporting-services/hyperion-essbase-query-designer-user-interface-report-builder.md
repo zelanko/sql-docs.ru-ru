@@ -13,18 +13,18 @@ helpviewer_keywords:
 - Hyperion Essbase query designer
 - query designers, Hyperion
 ms.assetid: d89a6773-dbe5-48e5-bda9-db0e67100696
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 78edb97c624cab763aeb1153d6f905bba7362b2b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 098d44191563ee78cd80a1b2d6d1c7ee216eee73
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293863"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945960"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Пользовательский интерфейс конструктора запросов Hyperion Essbase (построитель отчетов)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] включают графический конструктор запросов, предназначенный для создания запросов многомерных выражений к источнику данных [!INCLUDE[extEssbase](../includes/extessbase-md.md)] . Графический конструктор запросов многомерных выражений имеет два режима: режим конструктора и режим запросов. В каждом режиме есть панель «Метаданные», из которой можно перетаскивать элементы куба, определенного в источнике данных, для построения запроса многомерных выражений, получающего данные при обработке отчета.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] включают графический конструктор запросов, предназначенный для создания запросов многомерных выражений к источнику данных [!INCLUDE[extEssbase](../includes/extessbase-md.md)] . Конструктор графический конструктор запросов многомерных Выражений имеет два режима: Режим конструктора и режим запросов. В каждом режиме есть панель «Метаданные», из которой можно перетаскивать элементы куба, определенного в источнике данных, для построения запроса многомерных выражений, получающего данные при обработке отчета.  
   
 > [!IMPORTANT]  
 >  При создании и выполнении запросов пользователи получают доступ к источникам данных. Следует предоставить минимальные разрешения на источники данных, например разрешение только на чтение.  

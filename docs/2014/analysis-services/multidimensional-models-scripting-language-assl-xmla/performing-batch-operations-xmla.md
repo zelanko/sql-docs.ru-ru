@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - multiple projects
@@ -21,12 +19,12 @@ ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bca0c74ab978b6f47e68221987777f1818a95b7b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2bd661506dbb792eb55194c61d7284d619e63a5f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542584"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156810"
 ---
 # <a name="performing-batch-operations-xmla"></a>Выполнение пакетных операций (XMLA)
   Можно использовать [пакета](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla) в XML для аналитики (XMLA) для выполнения нескольких команд XMLA при помощи только одного команда [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) метод. Несколько команд, содержащихся в команде `Batch`, можно выполнить либо как одну транзакцию, либо как отдельные транзакции для каждой команды, последовательно или параллельно. Можно также указать out-привязок и другие свойства в `Batch` команды для обработки нескольких [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объектов.  
@@ -39,7 +37,7 @@ ms.locfileid: "52542584"
   
  При сбое любой команды в пакете транзакций [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] откат всех команд `Batch` команда, были выполнены до команды, завершившейся неудачей и `Batch` команда немедленно завершается. Все команды, содержащиеся в команде `Batch`, которые еще не запускались, выполняться не будут. После завершения команды `Batch` команда `Batch` сообщает обо всех ошибках, возникших при выполнении команды, завершившейся неудачей.  
   
- **Нетранзакционные**  
+ **Nontransactional**  
  Если `Transaction` атрибут имеет значение false, `Batch` команда выполняет каждую команду, содержащуюся `Batch` команду в отдельной транзакции a *нетранзакционные* пакетной службы. Если в нетранзакционном пакете одна из команд завершается ошибкой, команда `Batch` продолжает выполнение команд после той команды, которая завершилась неудачей. После того как команда `Batch` предпримет попытки выполнить все команды, содержащиеся в команде `Batch`, то команда `Batch` сообщит обо всех возникших ошибках.  
   
  Все результаты, возвращаемые командами, которые содержатся в команде `Batch`, возвращаются в том порядке, в котором эти команды расположены в команде `Batch`. В зависимости от того, является ли команда `Batch` транзакционной или нетранзакционной, команда `Batch` возвращает разные результаты.  

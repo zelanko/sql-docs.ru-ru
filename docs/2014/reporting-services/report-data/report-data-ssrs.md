@@ -1,7 +1,7 @@
 ---
 title: Данные отчета
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services-2014, sql-server-2014
@@ -9,14 +9,14 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 56da8c0b57955735d1e796ad3de7ecb9817a9b99
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 8c0a6ef25f33b5396ecea36edfd57ac3c42e8f5b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553026"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951800"
 ---
-# <a name="report-data-in-sql-server-reporting-services-ssrs"></a>Данные отчета в SQL Server Reporting Services (SSRS)
+# <a name="report-data-in-sql-server-reporting-services-ssrs"></a>Данные отчета в SQL Server Reporting Services (SSRS)
 
   Данные отчета могут поступать из нескольких источников данных в организации. Первым шагом при разработке отчета является создание источников и наборов данных, из которых берутся базовые данные отчета. Каждый источник данных содержит сведения о подключении к данным. У каждого набора данных есть команда запроса, определяющая набор полей для использования в качестве данных из источника данных. Для визуализации данных из каждого набора данных, добавьте область данных, например таблицу, матрицу, диаграмму или карту. При обработке отчета в источнике базы данных выполняются запросы и каждая область данных расширяется настолько, насколько требуется для отображения результатов для набора данных.  
   

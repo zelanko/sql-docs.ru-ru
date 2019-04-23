@@ -14,15 +14,15 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - Forms authentication
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 61d397edfe1bb9125c702ad3d568a4425f1c54e3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 687193b79cdf0bee179062bb40bd49b23ada60d1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043305"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947180"
 ---
 # <a name="authentication-with-the-report-server"></a>Проверка подлинности с использованием сервера отчетов
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) предлагает несколько настраиваемых параметров для проверки подлинности клиентов и клиентских приложений для сервера отчетов. По умолчанию сервер отчетов использует встроенную проверку подлинности Windows и предполагает доверительные связи, когда клиент и сетевые источники находятся в одном и том же домене или в надежном домене. В зависимости от топологии сети и потребностей организации можно задать протокол проверки подлинности, который применяется для встроенного средства проверки подлинности Windows, использовать обычную проверку подлинности или модуль проверки подлинности на основе пользовательских форм. Каждый способ проверки подлинности можно включать и отключать отдельно. Можно включить одновременно несколько типов проверки подлинности, если сервер отчетов должен принимать запросы разных типов.  

@@ -4,22 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 03d555f967b50b503d608244bdd4a8885cede61e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1a57fe5449deeb4445dff3853335b19a62dbc589
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025865"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156100"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Создание компонента времени разработки пользовательского элемента отчета
   Компонент времени разработки пользовательского элемента отчета ― это элемент управления, который может быть использован в конструкторе отчетов среды Visual Studio. Компонент времени разработки пользовательского элемента отчета предоставляет активную область конструктора, поддерживающую операции перетаскивания, интеграцию с браузером свойств среды [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] и возможность использования пользовательских редакторов свойств.  
@@ -194,7 +192,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   Компоненты в среде [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
--   Пошаговое руководство. Создание элемента управления Windows Forms, использующего функции времени разработки среды Visual Studio  
+-   Пошаговое руководство. Создание элемента управления Windows Forms, используются преимущества функций Visual Studio во время разработки  
   
 ## <a name="see-also"></a>См. также  
  [Архитектура пользовательских элементов отчета](custom-report-item-architecture.md)   

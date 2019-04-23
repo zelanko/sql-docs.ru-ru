@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ccd079eeda467e77c8fb8daa1d95533a5e8532b2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 53fc7b585edf852d04256c9e85fa0bd96aa7eced
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029475"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960900"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
   Приступая к работе с [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , вы можете программно передать владение подпиской [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] от одного пользователя другому. В этом разделе содержится несколько скриптов Windows PowerShell, которые можно использовать для смены владельца подписки или простого перечисления владельцев. В каждом примере содержится образец синтаксиса для собственного режима и режима SharePoint. После смены владельца подписки подписка будет выполняться в контексте безопасности нового владельца, а в отчете в поле «User!UserID» будет отображаться значение нового владельца. Дополнительные сведения об объектной модели вызовов образцов см. в разделе <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
@@ -58,21 +58,21 @@ ms.locfileid: "56029475"
   
  **Собственный режим.**  
   
--   Вывод списка подписок: (HYPERLINK "https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription в отчете и пользователь является владельцем подписки) или ReadAnySubscription  
+-   Список подписок: (HYPERLINK "https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription в отчете и пользователь является владельцем подписки) или ReadAnySubscription  
   
--   Изменение подписок: Пользователь должен входить в группу BUILTIN\Administrators  
+-   Изменение подписок: Пользователь должен быть членом группы «BUILTIN\Администраторы»  
   
--   Вывод списка дочерних элементов: Свойства ReadProperties на элементе  
+-   Список дочерних элементов: Свойства ReadProperties для элемента  
   
 -   Вызов события: GenerateEvents (System)  
   
  **Режим интеграции с SharePoint:**  
   
--   Вывод списка подписок: ManageAlerts или (гиперссылка "https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts в отчете и пользователь является владельцем подписки и подписка является подпиской по времени).  
+-   Список подписок: ManageAlerts или (гиперссылка "https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts в отчете и пользователь является владельцем подписки и подписка является подпиской по времени).  
   
 -   Изменение подписок: ManageWeb  
   
--   Вывод списка дочерних элементов: ViewListItems  
+-   Список дочерних элементов: ViewListItems  
   
 -   Вызов события: ManageWeb  
   
@@ -136,7 +136,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 > [!TIP]  
 >  Чтобы проверить URL-адреса сайтов в режиме SharePoint, воспользуйтесь командлетом SharePoint **Get-SPSite**. Дополнительные сведения см. в статье [Get-SPSite](https://technet.microsoft.com/library/ff607950\(v=office.15\).aspx).  
   
-##  <a name="bkmk_list_all_one_user"></a> Скрипт: Вывод списка подписок, принадлежащих конкретному пользователю  
+##  <a name="bkmk_list_all_one_user"></a> Скрипт: Вывод списка всех подписок, принадлежащих конкретному пользователю  
  Этот скрипт перечисляет все подписки, принадлежащие конкретному пользователю. С помощью этого скрипта можно проверить подключение или проверить путь к отчету и ИД подписки для использования в других скриптах. Этот скрипт полезен в случае, если какой-либо сотрудник увольняется из организации и необходимо проверить принадлежащие ему подписки, чтобы в дальнейшем сменить владельца или удалить подписку.  
   
  **Синтаксис собственного режима:**  
@@ -327,7 +327,7 @@ Write-Host "----- $subscriptionid's Subscription properties: "
 $subscription | select Path, report, Description, SubscriptionID, Owner, Status  
 ```  
   
-##  <a name="bkmk_run_1_subscription"></a> Скрипт: Запуск (инициация) одной подписки  
+##  <a name="bkmk_run_1_subscription"></a> Скрипт: Запуск (вызов) одной подписки  
  Этот скрипт запускает определенную подписку с помощью метода FireEvent. Независимо от настроенного для подписки расписания скрипт запустит подписку немедленно. EventType сопоставляется с известным набором событий, которые определены в файле конфигурации сервера отчетов **rsreportserver.config** . Скрипт использует следующий тип событий для стандартных подписок:  
   
  `<Event>`  

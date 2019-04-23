@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 04c097e6b38d3631d2fdb97efbd5decdac1af8d6
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: eb60f8152ad49b68723367cfb4f9f3941511954e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291971"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938930"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>Добавление, перемещение или удаление таблицы, матрицы или списка (построитель отчетов и службы SSRS)
   Область данных отображает данные из набора данных отчета. Области данных включают таблицу, матрицу, список, диаграмму и датчик. Чтобы вложить одну область данных в другую, добавьте каждую область данных по отдельности, а затем перетащите дочернюю область данных на родительскую.  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4de53c3c-c6fc-49ce-b692-3609fc0b3ec5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a7b4f0a499ccbb41e185774cac687f8a8be3c2d5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 827221a60598a6a9f4179a86783c05512072f5b0
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292602"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940840"
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>Добавление или удаление группы в области данных (построитель отчетов и службы SSRS)
   Группа добавляется к области данных для организации данных в зависимости от указанного значения или набора выражений, для отображения и вычислений. Группа имеет имя и выражение, указывающее, какие данные из набора принадлежат к этой группе. Дополнительные сведения о группах см. в разделе [Основные сведения о группах (построитель отчетов и службы SSRS)](understanding-groups-report-builder-and-ssrs.md).  

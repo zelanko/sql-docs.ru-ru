@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Delete Columns dialog box
 ms.assetid: 44587147-1013-4937-a26c-4fd023eea578
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6207c9a80ca2a18e182d57127da1fc1133086144
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7a198ad51c424b42aff71afbeb3a82952aa57a52
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026495"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964080"
 ---
 # <a name="delete-columns-dialog-box"></a>Диалоговое окно «Удаление столбцов»
   Диалоговое окно **Удаление столбцов** предназначено для удаления столбцов области данных таблицы, матрицы или списка. Для столбцов, связанных с группами, можно также удалить определение группы.  

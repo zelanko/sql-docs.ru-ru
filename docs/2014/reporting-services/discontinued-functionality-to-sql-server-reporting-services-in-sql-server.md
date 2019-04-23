@@ -1,7 +1,7 @@
 ---
 title: Неподдерживаемые возможности
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services-2014, sql-server-2014
 ms.reviewer: ''
@@ -9,14 +9,14 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: f36a55baee21f81305857ba766879d69c73bbdb5
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 3a5472859c582e026fc0c5aafac21abccdc93044
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53552976"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949970"
 ---
-# <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>Неподдерживаемые возможности в SQL Server Reporting Services (SSRS)
+# <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>Неподдерживаемая функциональность в службах SQL Server Reporting Services (SSRS)
 
   В этой статье описаны функции служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , которые больше недоступны в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Сюда не входят объявления о прекращении поддержки определенных версий операционных систем или служб [!INCLUDE[msCoName](../includes/msconame-md.md)] IIS. Дополнительные сведения об этих системных требованиях см. в разделе [оборудованию и программному обеспечению для установки SQL Server 2014](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   

@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Grouping Pane dialog box
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fc871b7dab0c3adb5aff9d2db71e90004132bc62
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fe230d9e3ed5259da9decc87e044005184b7d989
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295792"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948340"
 ---
 # <a name="grouping-pane"></a>Панель группировки
   На панели группировки отображаются группы строк и столбцов для текущей области данных табликса. Панель группирования недоступна для областей данных диаграммы и датчика. Панель группирования состоит из панелей «Группы строк» и «Группы столбцов». Панель группировки: по умолчанию и расширенный. В режиме по умолчанию отображается иерархическое представление динамических элементов групп строк и столбцов. В расширенном режиме отображаются как динамические, так и статические элементы групп строк и столбцов. Группа – это именованный набор данных из набора данных отчета, который отображается в области данных. Группы организованы в иерархии, включающие динамические и статические элементы. Дополнительные сведения см. в разделе [Основные сведения о группах (построитель отчетов и службы SSRS)](../report-design/understanding-groups-report-builder-and-ssrs.md).  

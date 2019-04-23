@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - Report Server Web service, methods
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - Report Server Web service, features
 - XML Web service [Reporting Services], methods
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 44a9c9eda59b5bfd69d8d22f81f470a4ab46c21c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 37d0031ebfb4ec6d31da6aad9a8842c0623cb75b
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014655"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158240"
 ---
 # <a name="report-server-web-service-methods"></a>Методы веб-службы сервера отчетов
   Веб-службы сервера отчетов содержат различные категории методов, основанных на функциях компонентов. Эти методы доступны через несколько конечных точек веб-служб (три для управления отчетами и одна для их выполнения), которые в свою очередь доступны как члены классов <xref:ReportService2010.ReportingService2010> и <xref:ReportExecution2005.ReportExecutionService>. Эти классы можно создать автоматически с помощью средства создания класса-посредника, например средства wsdl.exe, включенного в пакет SDK [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Дополнительные сведения об использовании веб-служб сервера отчетов и [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] см. в разделе [Построение приложений с помощью веб-службы и платформы .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  

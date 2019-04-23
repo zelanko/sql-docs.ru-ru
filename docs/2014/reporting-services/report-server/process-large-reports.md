@@ -14,15 +14,15 @@ helpviewer_keywords:
 - size [SQL Server], reports
 - distributing reports [Reporting Services], large reports
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5eee6e985a62071172a287cda2c526c9f2a0a87d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9eebb080589287839db8951bbac1e715585161e9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039675"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967780"
 ---
 # <a name="process-large-reports"></a>Обработка больших отчетов
   Обработка больших отчетов связана с определенными проблемами, и для правильного ее выполнения необходимы специальные настройки. Большие отчеты не должны выполняться по требованию, если только для них не настроена поддержка разбивки на страницы.  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6f7f10aad960e46b72b981f8546da89cb6712dc9
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: f10e941ef5acd180e8b279762e84535bad5689e4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291919"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971890"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>Круговые диаграммы (построитель отчетов и службы SSRS)
   Круговые и кольцевые диаграммы отображают данные в виде пропорциональных долей целого. Круговые диаграммы обычно используются для сравнения групп. Круговые и кольцевые диаграммы, наряду с пирамидальными и воронкообразными диаграммами, относятся к группе так называемых фигурных диаграмм. Фигурные диаграммы не имеют осей. После перетаскивания числового поля на фигурную диаграмму в этой диаграмме вычисляется процентная доля каждого значения в общей сумме. Дополнительные сведения о фигурных диаграммах см. в разделе [Фигурные диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md).  
@@ -90,7 +90,7 @@ ms.locfileid: "56291919"
  [Отображение меток точек данных за пределами круговой диаграммы (построитель отчетов и службы SSRS)](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Сбор мелких срезов на круговой диаграмме (построитель отчетов и службы SSRS)](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Отображение процентных значений на круговой диаграмме (построитель отчетов и службы SSRS)](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
- [Учебник. Добавление круговой диаграммы к отчету &#40;построитель отчетов&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Учебник. Добавление круговой диаграммы к отчету (построитель отчетов)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Форматирование условных обозначений на диаграмме (построитель отчетов и службы SSRS)](chart-legend-formatting-report-builder.md)   
  [Точки данных со значением NULL и пустые точки в диаграммах (построитель отчетов и службы SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  

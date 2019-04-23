@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - Analysis Services Scripting Language
@@ -15,12 +13,12 @@ ms.assetid: ce9aca4d-b7ad-451e-bb7f-20c2b0c03f29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1e12f03e96618a530c4f62f6a26cca904efeb43c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: dfdce0d0db35d651d12670ffd3cb1c9437961cd1
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145579"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154280"
 ---
 # <a name="developing-with-analysis-services-scripting-language-assl"></a>Разработка на языке ASSL (язык ASSL)
   Язык ASSL является расширением XML для аналитики, в котором добавлен язык определения объектов и командный язык для создания структур служб Analysis Services и управления этими структурами непосредственно на сервере. Язык ASSL можно применять в пользовательском приложении для обмена данными со службами Analysis Services по протоколу XMLA. Язык ASSL состоит из двух частей.  

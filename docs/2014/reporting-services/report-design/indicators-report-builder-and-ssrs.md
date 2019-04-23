@@ -15,15 +15,15 @@ f1_keywords:
 - "10546"
 - sql12.rtp.rptdesigner.indicatorproperties.validateandstates.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 301ed0986cdb9971e2b03bd1af76ab3d2a71d86f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 042a81dc4850c592542ca0764842b45a7756468d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293883"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948590"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Индикаторы (построитель отчетов и службы SSRS)
   Индикаторы — это минимальные датчики, обеспечивающие возможность быстрого определения состояния одиночного значения данных. Значки, которые представляют индикаторы и их состояния, просты и визуально эффективны, даже если они имеют небольшие размеры.  
@@ -44,7 +44,7 @@ ms.locfileid: "56293883"
   
  Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] содержат наборы встроенных индикаторов и значков индикаторов, которые используются в изначальном виде. При этом можно также создавать свои значки и наборы индикаторов.  
   
- Дополнительные сведения об использовании индикаторов в качестве ключевых показателей эффективности см. в разделе [руководства: Добавление ключевого показателя Эффективности к отчету &#40;построитель отчетов&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Дополнительные сведения об использовании индикаторов в качестве ключевых показателей эффективности см. в статье [Учебник. Добавление в отчет ключевого показателя эффективности (построитель отчетов)](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  Индикаторы можно публиковать отдельно от отчета в виде элементов отчета. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  

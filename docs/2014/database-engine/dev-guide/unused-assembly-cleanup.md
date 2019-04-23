@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f91f65dbe060eb11c3eeb049d069c665949dd350
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 490c8d5d3dc7c9b3dc083b61a904103092134636
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351036"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155888"
 ---
 # <a name="unused-assembly-cleanup"></a>Очистка неиспользуемой сборки
   Образец `AssemblyCleanup` содержит хранимую процедуру .NET, которая удаляет неиспользуемые сборки из текущей базы данных, выполняя запрос к каталогам метаданных. Единственный параметр этой хранимой процедуры `visible_assemblies` указывает, должны ли быть удалены неиспользуемые видимые сборки. Значение 'false' по умолчанию указывает на то, что должны быть удалены только неиспользуемые невидимые сборки. Если указано другое значение, то производится удаление всех неиспользуемых сборок. К неиспользуемым сборкам относятся те, для которых не определено ни одной точки входа (процедуры, тип и статистическая функция), а также ни одной сборки, которая ссылается на них прямо или косвенно.  
@@ -25,7 +23,7 @@ ms.locfileid: "53351036"
 ## <a name="prerequisites"></a>предварительные требования  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
 -   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](https://go.microsoft.com/fwlink/?linkid=62796).  
   

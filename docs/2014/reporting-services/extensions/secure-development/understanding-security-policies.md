@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - code groups [Reporting Services]
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - security policies [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 49a7568135604fc09d42c47d4226050b9a294096
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fb69c4b064329b53f9ab3efef62f0d1c54b897a9
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021475"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155853"
 ---
 # <a name="understanding-security-policies"></a>Основные сведения о политиках безопасности
   Любой код, выполняемый сервером отчетов, должен быть частью конкретной политики управления доступом для кода. Такие политики безопасности состоят из групп кода, которые сопоставляют свидетельство с множеством именованных наборов разрешений. Группы кода часто бывают связаны с именованным набором разрешений, который задает допустимые разрешения для кода в этой группе. Во время выполнения используется удостоверение, предоставленное доверенным узлом или загрузчиком, для определения того, к какой группе принадлежит код и какие разрешения с учетом этого должны быть предоставлены коду. Службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] придерживаются этой архитектуры политики безопасности, определенной средой CLR платформы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. В следующих разделах приведено описание различных типов кода в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и связанных с ними правил политики.  

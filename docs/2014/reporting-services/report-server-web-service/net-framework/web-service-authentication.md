@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - Web service [Reporting Services], authentication
 - XML Web service [Reporting Services], authentication
 - Report Server Web service, authentication
 ms.assetid: 852b4947-a090-4e54-8555-5a503945ceab
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a670fe4019d1bc8eebfeb385a63b0c0e58ae61d5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aaccc593ea7e4baece132b759ca920018cdbe4b4
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031450"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157420"
 ---
 # <a name="web-service-authentication"></a>Проверка подлинности веб-службы
   Для проверки подлинности запросов, поступающих веб-службе сервера отчетов, можно использовать как проверку подлинности Windows, так и обычную проверку подлинности. Любой клиент, отправляющий SOAP-запросы на сервер отчетов должен реализовать клиентскую часть одного из поддерживаемых протоколов проверки подлинности. Если используется платформа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], то для реализации проверки подлинности можно использовать классы HTTP управляемого кода. Использование данных API-интерфейсов облегчает пересылку данных проверки подлинности вместе с SOAP-запросами.  
@@ -56,7 +54,7 @@ ReportingService service = new ReportingService();
 service.Credentials = new System.Net.NetworkCredential("username", "password", "domain");  
 ```  
   
- Учетные данные следует задать до вызова любых методов веб-службы сервера отчетов. Если учетные данные не были заданы, то будет выведена «HTTP 401 Ошибка: Доступ запрещен. Перед использованием службы необходимо выполнить проверку подлинности, однако после того как учетные данные были заданы, нет необходимости задавать их повторно, пока используется та же переменная службы (например, *rs*).  
+ Учетные данные следует задать до вызова любых методов веб-службы сервера отчетов. Если вы не установите учетные данные, вы получите код ошибки HTTP 401 ошибка: Доступ запрещен. Перед использованием службы необходимо выполнить проверку подлинности, однако после того как учетные данные были заданы, нет необходимости задавать их повторно, пока используется та же переменная службы (например, *rs*).  
   
 ## <a name="custom-authentication"></a>Нестандартная проверка подлинности  
  В службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] включен API-интерфейс программирования, обеспечивающий разработчикам возможность проектирования и разработки нестандартных модулей проверки подлинности, также известных как модули безопасности. Дополнительные сведения см. в разделе [Implementing a Security Extension](../../extensions/security-extension/implementing-a-security-extension.md).  

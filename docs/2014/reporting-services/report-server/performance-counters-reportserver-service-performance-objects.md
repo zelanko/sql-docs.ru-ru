@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e63f964d61fa5f7402244186f292d6d0543b9304
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7fb15529a9547edc64ffe1a0a53d69e16a0618f4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037615"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944552"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>Счетчики производительности для объектов производительности ReportServer:Service и ReportServerSharePoint:Service
   В данном разделе описаны счетчики производительности для следующих объектов производительности [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] :  
@@ -68,7 +68,7 @@ ms.locfileid: "56037615"
 |`Logon Attempts/sec`|Число попыток входа.|  
 |`Logon Successes Total`|Число успешных входов для типов проверки подлинности RSWindows. Типы проверок подлинности RSWindows включают RSWindowsNegotiate, RSWindowsNTLM, RSWindowsKerberos и RSWindowsBasic. Нулевое значение (0) отвечает за нестандартную проверку подлинности.|  
 |`Logon Successes/sec`|Число успешных входов.|  
-|`Memory Pressure State`|Одно из следующих чисел от 1 до 5, указывающее текущее состояние памяти на сервере.<br /><br /> 1. Нет нагрузки.<br /><br /> 2. Низкая нагрузка.<br /><br /> 3. Средняя нагрузка.<br /><br /> 4. Высокая нагрузка.<br /><br /> 5. Чрезмерная нагрузка.|  
+|`Memory Pressure State`|Одно из следующих чисел от 1 до 5, указывающее текущее состояние памяти на сервере.<br /><br /> 1: Нет нагрузки<br /><br /> 2: Низкая нагрузка.<br /><br /> 3: Средняя нагрузка<br /><br /> 4: Высокая нагрузка<br /><br /> 5: Чрезмерная нагрузка.|  
 |`Memory Shrink Amount`|Число байтов, запрошенных сервером для сжатия используемой памяти.|  
 |`Memory Shrink Notifications/sec`|Число уведомлений, сформированных сервером в последнюю секунду для сжатия используемой памяти. Это число указывает, как часто сервер испытывает недостаток памяти.|  
 |`Requests Disconnected`|Число отсоединений запросов, возникших из-за сбоя в канале связи.|  

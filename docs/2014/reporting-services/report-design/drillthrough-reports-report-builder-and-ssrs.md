@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a53b1340891d539ca9aef224c7bdbbdcba9bf45d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3381439af3f5393b51fdcd88ce13f04ae4160690
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298158"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959842"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Детализированные отчеты (построитель отчетов и службы SSRS)
   Детализированный отчет — это отчет, открываемый пользователем щелчком по ссылке в другом отчете. Обычно детализированный отчет содержит подробности об элементе, содержащемся в исходном сводном отчете. Например, на этом рисунке в сводном отчете по продажам содержатся заказы на продажу и итоговые данные. Когда пользователь щелкает номер заказа в сводном списке, открывается другой отчет, содержащий подробности о заказе.  
@@ -28,7 +28,7 @@ ms.locfileid: "56298158"
 > [!NOTE]  
 >  Во время работы в построителе отчетов необходимо подключение к серверу отчетов для просмотра детализированного отчета, открывающегося при щелчке ссылки детализации в основном отчете.  
   
- Чтобы быстро приступить к работе с детализированными отчетами, см. в разделе [руководства: Создание детализированных и главных отчетов &#40;построитель отчетов&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md). Детализированных отчетов также наглядно показано в двух решений бизнес-аналитики, [BI Reporting: Отчеты и скрипты подписки](https://technet.microsoft.com/bi/ff769487.aspx) и [корпоративные панели: Решения для продаж](https://technet.microsoft.com/bi/ff643005.aspx)  
+ Чтобы быстро приступить к работе с детализированными отчетами, см. [Учебник. Создание детализированных и главных отчетов (построитель отчетов)](../tutorial-creating-drillthrough-and-main-reports-report-builder.md). Детализированных отчетов также наглядно показано в двух решений бизнес-аналитики, [BI Reporting: Отчеты и скрипты подписки](https://technet.microsoft.com/bi/ff769487.aspx) и [корпоративные панели: Решения для продаж](https://technet.microsoft.com/bi/ff643005.aspx)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

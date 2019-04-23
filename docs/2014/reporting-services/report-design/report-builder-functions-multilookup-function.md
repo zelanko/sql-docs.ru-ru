@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eb175df8d775150bb8ec7ffbbaf26866b1c07629
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1350c25450dfae5ed02b9761ed79182ccac817d5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290932"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958220"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Функция Multilookup (построитель отчетов и службы SSRS)
   Возвращает набор первых подходящих значений для указанного набора имен из набора данных, содержащего пары «имя-значение».  
@@ -111,7 +111,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="example"></a>Пример  
  Предположим, в наборе данных с именем ProductColors есть поле идентификатора цвета ColorID и поле значения цвета Color, как показано в следующей таблице.  
   
-|ColorID|Цвет|  
+|ColorID|Color|  
 |-------------|-----------|  
 |1|Красный|  
 |2|Синий|  

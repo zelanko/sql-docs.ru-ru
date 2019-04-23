@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Report Viewer Web Part [Reporting Services]
 - Documents Web Part [Reporting Services]
 ms.assetid: 6a303135-c0ef-44cd-a423-1cea8df3dcf3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4da46abbfb586a2968f92a04538f5a82e06898c6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d1d249662ef306e2b1608582b5b61271098ccf42
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031225"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966670"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>установить соединение с веб-частью «Фильтр» или с веб-частью «Документы» (службы Reporting Services в режиме интеграции с SharePoint)
   Если используется продукт SharePoint, можно создать панель мониторинга или страницу веб-частей, включающую веб-части «Фильтр» или «Документы» и веб-часть средства просмотра отчетов. Поддерживается версия [!INCLUDE[SPF2010](../includes/spf2010-md.md)] или [!INCLUDE[SPS2010](../includes/sps2010-md.md)]. Также поддерживаются версии [!INCLUDE[winSPServ3](../includes/winspserv3-md.md)] и [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007. С помощью соединения с веб-частью «Фильтр» пользователи, которые выбирают значения фильтра в веб-части «Фильтр», могут отправить значение в параметризованный отчет на той же самой странице. С помощью соединения с веб-частью «Документы» пользователи, выбравшие отчет в библиотеке «Документы», могут просмотреть его в веб-части «Средство просмотра отчетов».  

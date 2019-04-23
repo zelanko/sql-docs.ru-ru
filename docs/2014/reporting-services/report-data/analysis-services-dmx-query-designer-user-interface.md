@@ -15,20 +15,20 @@ helpviewer_keywords:
 - DMX [Analysis Services], user interface
 - query designers [DMX]
 ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1b84ac73991124ea9f90c5fe60c11e2b93154dc2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5333f3d56713d5b37ceabe92e831113a66bc491b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034685"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971970"
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Пользовательский интерфейс конструктора DMX-запросов служб Analysis Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графические конструкторы запросов для построения DMX-запросов и запросов многомерных выражений из источника данных служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . В этом разделе описан конструктор DMX-запросов. Дополнительные сведения о конструкторе запросов многомерных выражений см. в разделе [Analysis Services MDX Query Designer User Interface](analysis-services-mdx-query-designer-user-interface.md).  
   
- Графический конструктор запросов расширений интеллектуального анализа данных имеет три режима: «Конструктор», «Запрос» и «Результат». Для переключения режимов щелкните правой кнопкой мыши панель конструктора запросов и выберите режим. В каждом режиме имеется панель «Метаданные», из которой можно перетащить элементы из выбранных кубов для построения DMX-запроса, получающего данные для набора данных при обработке отчета.  
+ Расширения интеллектуального анализа данных графический конструктор запросов имеет три режима: Проектирование, запроса и результат. Для переключения режимов щелкните правой кнопкой мыши панель конструктора запросов и выберите режим. В каждом режиме имеется панель «Метаданные», из которой можно перетащить элементы из выбранных кубов для построения DMX-запроса, получающего данные для набора данных при обработке отчета.  
   
 ## <a name="graphical-dmx-query-designer-toolbar"></a>Панель инструментов графического конструктора DMX-запросов  
  На панели инструментов графического конструктора расположены кнопки, помогающие проектировать DMX-запросы с помощью графического интерфейса. В следующей таблице перечислены кнопки и описаны их функции.  

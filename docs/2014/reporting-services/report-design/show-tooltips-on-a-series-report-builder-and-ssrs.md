@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dedf1cedbfc0d829ae9e1c3b10a2f4699e35cb6b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5e9e02af6adf0e674d6af2775cb427440b4471c9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291432"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939460"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>Отображение всплывающих подсказок для ряда (построитель отчетов и службы SSRS)
   К каждой точке данных ряда диаграммы можно добавить подсказку со сведениями, относящимися к точке данных, например имя группы, значение точки данных, значение точки данных в процентах от всего ряда; она отображается при удержании указателя над точкой данных отображаемого отчета.  

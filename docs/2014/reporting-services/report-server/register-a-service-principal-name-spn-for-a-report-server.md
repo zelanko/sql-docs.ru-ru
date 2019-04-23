@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ea63ef515b1caa524ebc72a87996d1d1d610d63a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4eaee8179c874bfa19418222b03afd54dc1bd419
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023455"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960360"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>зарегистрировать имя участника-службы для сервера отчетов
   При развертывании служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в сети, где для взаимной проверки подлинности используется протокол Kerberos, а сервер отчетов настроен для запуска от учетной записи пользователя домена, необходимо создать для службы сервера отчетов имя участника-службы (SPN).  

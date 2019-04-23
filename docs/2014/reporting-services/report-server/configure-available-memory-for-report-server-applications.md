@@ -11,15 +11,15 @@ helpviewer_keywords:
 - memory [Reporting Services]
 - memory thresholds [Reporting Services]
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e3d07c9739a7c0b8989bb22f79c03f03e1f46681
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dcd685965d6a8265ac7d8cddeb4a319d0e95a338
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027899"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966900"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Настройка доступной памяти для приложений сервера отчетов
   Хотя службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] могут использовать всю доступную память, можно переопределить поведение по умолчанию, настроив верхний предел ресурсов памяти, выделяемых серверным приложениям служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Можно также задать пороговые значения, которые изменяют способ назначения приоритета и обработки запросов сервером отчетов в зависимости от дефицита свободной памяти. При малом дефиците свободной памяти сервер отчетов назначает чуть более высокий приоритет интерактивной обработке отчетов или обработке отчетов по запросу. При серьезном дефиците свободной памяти сервер отчетов использует многочисленные приемы, чтобы сохранить работоспособность в условиях ограниченных доступных ресурсов.  

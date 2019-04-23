@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2db60863c1ae8c21e391d62182cb27a52558a1e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c4bbf82d1bea70659b839405141dc7194d99951e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013185"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956990"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Включение и отключение «песочницы» для языка определения отчетов
   Функция «песочницы» для языка определения отчетов позволяет обнаруживать и ограничивать использование определенных типов ресурсов отдельными пользователями в среде с многочисленными пользователями, которые используют единственную веб-ферму серверов отчетов. Примером этого является сценарий услуг хост-сервера, в котором может поддерживаться единственная веб-ферма серверов отчетов, применяемая несколькими пользователями, а также, возможно, другими компаниями. Администратор сервера отчетов может включить эту функцию для выполнения следующих задач.  
@@ -35,10 +35,10 @@ ms.locfileid: "56013185"
   
 -   именованные параметры в выражениях.  
   
- В этом разделе описывается каждый из элементов, вложенных в элемент <`RDLSandboxing`> в файле RSReportServer.Config. Дополнительные сведения об изменении файла см. в разделе [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Операции с записями журнала трассировки сервера, связанные с функцией «песочницы» для выражений языка определения отчетов. Дополнительные сведения о журналах трассировки см. в разделе [Журнал трассировки службы сервера отчетов](report-server/report-server-service-trace-log.md).  
+ В этом разделе описывается каждый элемент <`RDLSandboxing`> в файле RSReportServer.Config. Дополнительные сведения об изменении файла см. в разделе [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Операции с записями журнала трассировки сервера, связанные с функцией «песочницы» для выражений языка определения отчетов. Дополнительные сведения о журналах трассировки см. в разделе [Журнал трассировки службы сервера отчетов](report-server/report-server-service-trace-log.md).  
   
 ## <a name="example-configuration"></a>Пример конфигурации  
- В следующем примере показаны параметры и примерные значения элемента <`RDLSandboxing`> в файле RSReportServer.Config.  
+ В следующем примере показано, параметры и примерные значения <`RDLSandboxing`> в файле RSReportServer.Config.  
   
 ```  
 <RDLSandboxing>  

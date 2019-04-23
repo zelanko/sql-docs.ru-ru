@@ -12,15 +12,15 @@ helpviewer_keywords:
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5567ee441075f015a7d6418761b30d29c591698f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d4f02a2b393cbc4b67ef36a2730a5f1eea162109
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035135"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945111"
 ---
 # <a name="predefined-roles"></a>Стандартные роли
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливаются с набором стандартных ролей, которые можно использовать для предоставления доступа к операциям сервера отчетов. Каждой стандартной ролью описывается набор взаимосвязанных задач. Можно назначить учетные записи групп и пользователей для стандартных ролей, чтобы обеспечить немедленный доступ к операциям сервера отчетов.  

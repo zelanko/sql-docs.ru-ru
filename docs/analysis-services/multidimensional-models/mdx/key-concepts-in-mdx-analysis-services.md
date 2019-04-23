@@ -1,6 +1,6 @@
 ---
 title: Основные понятия многомерных выражений (службы Analysis Services) | Документация Майкрософт
-ms.date: 05/02/2018
+ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb527f78b886154372092c128e2c2a33e1eac75c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b00478a739796d27b44899aa72099583b1d9a113
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527828"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962170"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Основные понятия многомерных выражений (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "52527828"
   
  ![Сводная таблица с всех член с именем](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot2-allmember.png "Сводная таблица с всех член с именем")  
   
- Разверните иерархию и вы увидите самый нижний уровень. Он называется **конечным элементом**. У конечного элемента в иерархии нет дочерних элементов. В этом примере таким элементом является Австралия.  
+ Разверните иерархию и вы увидите самый нижний уровень. Он называется **конечным элементом**. У конечного элемента в иерархии нет дочерних элементов. В этом примере Юго-Запад — конечный элемент.  
   
  ![Сводная таблица с вызванными конечными элементами](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot3-leafparent.PNG "Сводная таблица с вызванными конечными элементами")  
   
- Все, что выше этого элемента, называется **родительским элементом**. Родительским элементом Австралии выступает Тихоокеанский регион.  
+ Все, что выше этого элемента, называется **родительским элементом**. США является родительским для юго-запад.  
   
  **Компоненты иерархии атрибута**  
   

@@ -8,15 +8,15 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9205097462a2c9bcc08334e4d83716a224d3b786
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c923a239ad0eeb677b476665a4c99b45d430b421
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043335"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954210"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Устранение неполадок при установке служб Reporting Services
   Если службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не удалось установить из-за ошибок, возникших в процессе установки, воспользуйтесь инструкциями, приведенными в этом разделе, чтобы выяснить причины, которые, скорее всего, привели к их возникновению.  
@@ -91,11 +91,11 @@ ms.locfileid: "56043335"
 ###  <a name="bkmk_no_ssrs_service"></a> Вы не видите службу SQL Server Reporting Services в центре администрирования SharePoint после установки SQL Server 2012 SSRS в режиме интеграции с SharePoint  
  **Описание:** Если после успешной установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint и [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройки для SharePoint 2010, вы не видите «SQL Server Reporting Services» в двух следующих меню, а затем [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] служба имеет не зарегистрирована:  
   
--   Центр администрирования SharePoint 2010 -> Управление приложениями -> Страница «Управление службами на сервере»  
+-   Центр администрирования SharePoint 2010 -> «Управление приложениями» -> страница «Управление службами на сервере»  
   
--   Центр администрирования SharePoint 2010 -> Управление приложениями -> Управление приложениями службы -> меню "Создать"  
+-   Центр администрирования SharePoint 2010 -> «Управление приложениями» -> «Управление приложениями служб» меню «Создать», "->"  
   
- **Решение:** Чтобы зарегистрировать и запустить службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint, выполните следующие действия.  
+ **Решение:** Чтобы зарегистрировать и запустить [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Services, выполните следующее:  
   
 1.  На компьютере, где запущен центр администрирования SharePoint 2010  
   
@@ -116,9 +116,9 @@ ms.locfileid: "56043335"
 2.  Проверьте [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] службы отображается состояние "**Started**" на странице: Центр администрирования SharePoint 2010 -> "**управление приложениями**«->»**управление службами на сервере**"  
   
 ###  <a name="bkmk_cmdlets_not_recognized"></a> Командлеты PowerShell для служб Reporting Services недоступны, и команды не распознаются.  
- **Описание:** При попытке запуска командлета PowerShell [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выводится сообщение об ошибке следующего содержания:  
+ **Описание:** При попытке запуска [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] командлет PowerShell, вы увидите сообщение об ошибке следующего:  
   
--   Термин "Install-SPRSServiceInstall-SPRSService" **не распознан** как имя командлета, функции, файла скрипта или действующей программы. Проверьте правильность написания имени или, если указан путь, проверьте его правильность и повторите попытку. At line:1 char:39+ Install-SPRSServiceInstall-SPRSService <<<<    + CategoryInfo          : ObjectNotFound: (Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
+-   Термин "Install-SPRSServiceInstall-SPRSService" **не распознан** как имя командлета, функции, файла скрипта или действующей программы. Проверьте правильность написания имени или если был задан путь, проверьте правильность пути и повторите попытку. В строке: 1 char: 39 + Install-SPRSServiceInstall-SPRSService <<<< + CategoryInfo: ObjectNotFound: (Установить-SPRSServiceInstall-sprsservice: String) [], CommandNotFoundExcep  
   
  **Решение:** Выполните одно из следующих действий.  
   
@@ -137,13 +137,13 @@ ms.locfileid: "56043335"
 -   [Установка Reporting Services в режиме SharePoint для SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)  
   
 ###  <a name="bkmk_URL_not_configured"></a> Будет выдано сообщение об ошибке, указывающее на то, что не настроен URL-адрес  
- **Описание:** Будет выдано примерно следующее сообщение об ошибке:  
+ **Описание:** Будет см. сообщение об ошибке следующего вида:  
   
  Функциональность служб SQL Server Reporting Services (SSRS) не поддерживается. С помощью центра администрирования проверьте и исправьте одну из следующих проблем:•Не настроен URL-адрес сервера отчетов. Его можно задать на странице интеграции со службами SSRS.•Не настроен прокси-сервер службы SSRS. Ее можно задать на страницах приложения службы SSRS.•Приложение службы SSRS не сопоставлено с этим веб-приложением. На страницах приложения службы SSRS можно связать прокси-сервер приложения службы SSRS с группой прокси-серверов приложения для данного веб-приложения.  
   
  **Решение:** Сообщение об ошибке содержит три рекомендованных способа для решения этой проблемы. Первая рекомендация в сообщении «Сервер отчетов не настроен URL-адрес...» относится к случаю интеграции с версией сервера отчетов до [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Конфигурация SharePoint для предыдущих версий сервера отчетов выполнялась на странице **Общие параметры приложения** в службах **SQL Server Reporting Services (2008 и 2008 R2)**.  
   
- **Дополнительные сведения:** Это сообщение будет выдано при попытке обращения к любым функциям служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], которые потребуют соединения со службой [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. В том числе:  
+ **Дополнительные сведения:** Вы увидите следующее сообщение об ошибке при попытке использовать любой из [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] функции, которым требуется подключение к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] службы. В том числе:  
   
 -   Открытие построителя отчетов SQL Server из библиотеки документов SharePoint.  
   
@@ -152,38 +152,38 @@ ms.locfileid: "56043335"
 -   Управление приложением службы.  
   
 ###  <a name="bkmk_sharepoint_not_confiugred"></a> Программа установки завершает работу с ошибками на компьютере с установленным, но не настроенным компонентом SharePoint  
- **Описание:** Если выбрать установку служб Reporting Services в режиме интеграции с SharePoint Mode на компьютере, где SharePoint установлен, но не настроен, появится сообщение, аналогичное приведенному ниже, а программа установки завершит работу.  
+ **Описание:** При выборе для установки Reporting Services SharePoint Mode на компьютере, где SharePoint установлен, но не настроен, вы увидите сообщение, аналогичное приведенному ниже, а программа установки будет остановлена:  
   
  Программа установки SQL Server завершила работу  
   
- **Решение:** Настройте SharePoint, затем запустите установку SQL Server.  
+ **Решение:** Настройка SharePoint и затем запустите установку SQL Server.  
   
- **Дополнительные сведения:** При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в существующей установке SharePoint программа установки попытается установить и запустить службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint. Если SharePoint не настроен, установка службы завершится сбоем, в результате чего программа установки также завершится сбоем.  
+ **Дополнительные сведения:** При установке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в существующей установке SharePoint программа установки попытается установить и запустить [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] службы SharePoint. Если SharePoint не настроен, установка службы завершится сбоем, в результате чего программа установки также завершится сбоем.  
   
 ###  <a name="bkmk_central_admin_blank"></a> Страница центра администрирования SharePoint пуста.  
- **Описание:** Установка SharePoint 2010 прошла успешно без ошибок. Однако при просмотре центра администрирования отображается только пустая страница.  
+ **Описание:** Вы смогли успешно установить SharePoint 2010 без ошибок. Однако при просмотре центра администрирования отображается только пустая страница.  
   
- **Решение:** Эта проблема связана не со службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], а с глобальной конфигурацией разрешений в установке SharePoint. Ниже приведен список предлагаемых действий.  
+ **Решение:** Эта проблема не относится к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] а с глобальной конфигурацией разрешений в установке SharePoint. Ниже приведен список предлагаемых действий.  
   
 -   Просмотр раздела справки SharePoint по средам разработки. [Настройка среды разработки для SharePoint 2010 в Windows Vista, Windows 7 и Windows Server 2008](https://msdn.microsoft.com/library/ee554869\(office.14\).aspx)  
   
--   Просмотр сообщения на форуме: [Центр администрирования отображает пустую страницу после установки в Windows 7](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
+-   Для просмотра на форуме: [Центр администрирования отображает пустую страницу после установки в Windows 7](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
   
 -   Учетная запись службы, используемая для служб SharePoint, например службы центра администрирования SharePoint 2010, должна обладать правами администратора в локальной операционной системе.  
   
 ###  <a name="bkmk_reportbuilder_newreport_error"></a> При попытке создать отчет построителя отчетов отображается сообщение об ошибке  
- **Описание:** При попытке создать отчет построителя отчетов внутри библиотеки документов отображается сообщение об ошибке, похожее на приведенное ниже.  
+ **Описание:** При попытке создать отчет построителя отчетов внутри библиотеки документов, вы видите сообщение об ошибке следующего вида:  
   
  Эта функция не поддерживается, поскольку приложения служб SQL Server Reporting Services не существует либо в центре администрирования не настроен URL-адрес сервера отчетов.  
   
- **Решение:** Проверьте наличие и правильность настройки приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Дополнительные сведения см. раздел «Создание приложения службы Reporting Services» в [установить службы Reporting Services в режиме SharePoint для SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
+ **Решение:** Убедитесь в наличии [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] приложения службы и он настроен правильно. Дополнительные сведения см. раздел «Создание приложения службы Reporting Services» в [установить службы Reporting Services в режиме SharePoint для SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
   
 ###  <a name="bkmk_RS_SHP_notsupported"></a> Отображается сообщение об ошибке: RS_SHP не поддерживается для действия PREPAREIMAGE  
- **Описание:** При попытке запуска PREPAREIMAGE для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выдается сообщение об ошибке примерно следующего содержания:  
+ **Описание:** При попытке запуска PREPAREIMAGE для [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] вы видите сообщение об ошибке следующего вида:  
   
  "Указанный компонент RS_SHP не поддерживается при запуске действия PREPAREIMAGE, поскольку он не поддерживает SysPrep. Удалите компоненты, несовместимые с SysPrep, и запустите программу установки еще раз".  
   
- **Решение:** Решения нет. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не поддерживают SYSPREP (PREPAREIMAGE). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживает SYSPREP.  
+ **Решение:** Нет решения нет. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не поддерживают SYSPREP (PREPAREIMAGE). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживает SYSPREP.  
   
 ##  <a name="bkmk_tshoot_native"></a> Устранение неполадок установки в собственном режиме  
   

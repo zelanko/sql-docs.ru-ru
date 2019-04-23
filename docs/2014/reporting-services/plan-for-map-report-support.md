@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 44b196d9c8ff508e6a878d51000bea95d8011907
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 2236103c76c6af8f81b0d4004962c23adedc2eaa
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293923"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946900"
 ---
 # <a name="plan-for-map-report-support"></a>План поддержки отчетов-карт
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] поддерживают отчеты-карты, которые используются источники пространственных данных. Пространственные данные могут поступать из баз данных SQL Server, из шейп-файлов ESRI или из галереи карт, установленной в составе служб Reporting Services или построителя отчетов. На карте также может отображаться мозаичный фон Bing Maps. Автор отчета может создать отчет, указав в качестве динамических данных пространственные данные или мозаичный фон Bing Maps, извлечение которого производится во время выполнения. Эти же данные могут быть указаны как статические и быть внедрены в определение отчета.  
@@ -51,6 +51,6 @@ ms.locfileid: "56293923"
  Дополнительные сведения [Maps &#40;построитель отчетов и службы SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также  
- [Устранение неполадок в отчетах: Отчеты-карты &#40;построитель отчетов и службы SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md).  
   
   

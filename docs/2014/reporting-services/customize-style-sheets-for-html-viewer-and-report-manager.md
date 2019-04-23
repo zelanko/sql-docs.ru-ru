@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - style sheets [Reporting Services]
 ms.assetid: df805cff-b1de-4062-b2ac-423f37390fbd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 45b7973dd7711f09b6bf187f7c2798e44e91c375
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d9c4a57413db37c8f93b1a311542398417bfeff0
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017956"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969530"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>Настройка таблицы стилей для средства просмотра HTML-страниц и диспетчера отчетов
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляют файлы по умолчанию каскадных таблиц стилей (CSS), определяющие стили на **отчетов** панели инструментов в средстве просмотра HTML и для диспетчера отчетов. Веб-разработчик или пользователь, имеющий опыт создания каскадных таблиц стилей, может (на свой страх и риск) модифицировать таблицы стилей по умолчанию, чтобы изменить цвета, шрифты и макет панели инструментов или диспетчер отчетов. В этой версии не документированы ни таблицы стилей по умолчанию, ни инструкции по изменению таблиц стилей.  
@@ -39,19 +39,19 @@ ms.locfileid: "56017956"
 |ReportingServices.css|Определяет стили диспетчера отчетов.|  
   
 > [!NOTE]  
->  Следующие таблицы стилей используются в интерактивной документации диспетчера отчетов и не подлежат изменению: Sql.css и Mailto.css. Другие таблицы стилей определяют стили отчетов и диспетчера отчетов, которые открываются в веб-частях SharePoint. Эти таблицы стилей включают Rswebparts.css, Sp_full.css и Sp_small.css. Менять таблицы стилей SharePoint не рекомендуется. Дополнительные сведения об использовании веб-частей см. в разделе [Просмотр и изучение собственном режиме отчеты с помощью веб-части SharePoint &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md).  
+>  Следующие таблицы стилей используются в интерактивной документации диспетчера отчетов и не подлежат изменению: SQL.CSS и Mailto.css. Другие таблицы стилей определяют стили отчетов и диспетчера отчетов, которые открываются в веб-частях SharePoint. Эти таблицы стилей включают Rswebparts.css, Sp_full.css и Sp_small.css. Менять таблицы стилей SharePoint не рекомендуется. Дополнительные сведения об использовании веб-частей см. в разделе [Просмотр и изучение собственном режиме отчеты с помощью веб-части SharePoint &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md).  
   
 ## <a name="configuring-reporting-services-to-use-a-custom-style-sheet"></a>Настройка служб Reporting Services для использования пользовательской таблицы стилей  
  Таблица стилей должна представлять собой файл допустимой каскадной таблицы стилей (CSS), расположенный в папке Styles. По умолчанию папка Styles находится в \< *диск*>: \Program Files\Microsoft SQL Server\MSSQL. *n*\Reporting Services\ReportServer\Styles.  
   
  Чтобы использовать таблицу стилей для средства просмотра HTML-страниц в режиме реального времени, применяются следующие подходы:  
   
--   Добавьте параметр <`HTMLViewerStyleSheet`> к файлу конфигурации служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+-   Добавьте <`HTMLViewerStyleSheet`> присвоить [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] файла конфигурации.  
   
 -   Задайте таблицу стилей в URL-адресе отчета.  
   
 ### <a name="modifying-the-rsreportserverconfig-file"></a>Изменение файла RSReportServer.config  
- Чтобы задать пользовательскую таблицу стилей для средства просмотра HTML-страниц, можно изменить файл RSReportServer.config. Параметр <`HTMLViewerStyleSheet`> не включен в файл конфигурации по умолчанию. Его необходимо ввести в разделе <`Configuration`> файла RSReportServer.config и задать нужную таблицу стилей. При задании таблицы стилей не указывайте расширение файла CSS.  
+ Чтобы задать пользовательскую таблицу стилей для средства просмотра HTML-страниц, можно изменить файл RSReportServer.config. <`HTMLViewerStyleSheet`> Параметр не включен в файл по умолчанию. Необходимо ввести его в <`Configuration`> Выбор RSReportServer.config файл, а затем укажите таблицу стилей, который вы хотите использовать. При задании таблицы стилей не указывайте расширение файла CSS.  
   
  В следующем примере показан способ задания таблицы стилей:  
   

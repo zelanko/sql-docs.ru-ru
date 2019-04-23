@@ -12,15 +12,15 @@ helpviewer_keywords:
 - deleting report items
 - report items [Reporting Services], deleting
 ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bb19d703480532c66ff06de8c6885779652f8385
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 95e274940f0ab963653b95409b44cc1604dd15af
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013615"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971030"
 ---
 # <a name="delete-an-item-management-studio"></a>удалить элемент (среда Management Studio)
   При подключении к экземпляру сервера отчетов в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]можно удалять определения ролей и общие расписания. Нельзя удалять отчеты, модели и другие элементы на сервере отчетов. Для удаления содержимого сервера отчетов используется диспетчер отчетов. Если сервер отчетов настроен для работы в режиме интеграции с SharePoint, используйте функции управления в библиотеке SharePoint, в которой хранится нужное содержимое.  

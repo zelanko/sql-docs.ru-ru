@@ -13,15 +13,15 @@ helpviewer_keywords:
 - xmldp [Reporting Services]
 - XML [Reporting Services], data retrieval
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ac63791bd33d9f6f774cd1d56601a28d3683b249
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 717852ad4cb5f63ee4ac84820f1af00cfa5f2d22
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037145"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971000"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Синтаксис запроса XML для XML-данных отчета (SSRS)
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]можно создавать наборы данных для источников XML-данных. После определения источника данных можно создать запрос для получения набора данных. В зависимости от типа XML-данных, на которые указывает источник данных, этот запрос создается путем включения либо элемента XML `Query`, либо пути к элементу. XML `Query` начинается с  **\<запроса >** теги и включает пространства имен и XML-элементы, зависящие от источника данных. Путь к элементу не зависит от пространства имен и указывает необходимые узлы и атрибуты узлов в базовых XML-данных при помощи XPath-подобного синтаксиса. Дополнительные сведения о путях к элементу см. в разделе [Синтаксис пути к элементу для XML-данных отчета (службы SSRS)](report-data-ssrs.md).  

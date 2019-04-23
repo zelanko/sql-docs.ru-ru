@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e898f33545364b5ad44d4c0cbf281555638ab2e2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6b65d798c2de3cfe4b1fd14f50ea0dbb68bd624a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286228"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941450"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Создание схемы документа (построитель отчетов и службы SSRS)
   В схеме документа предоставляется набор ссылок на элементы отчета, готового к просмотру. Когда осуществляется просмотр отчета, содержащего схему документа, рядом с отчетом появляется отдельная боковая панель. Пользователи могут использовать ссылки в схеме документа для перехода к странице отчета, на которой отображен данный элемент. Разделы и группы отчета выстроены в соответствии с иерархией ссылок. При выборе элементов схемы документа отчет обновляется и отображается та его область, которая соответствует выбранному элементу.  

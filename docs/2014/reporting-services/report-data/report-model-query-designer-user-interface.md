@@ -15,15 +15,15 @@ helpviewer_keywords:
 - datasets [Reporting Services], creating
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 34ae0dfd8786d1c8c99d9a256f8ad8236055828e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9b5b63ddc613135015027eb549212a8cafb35f7c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037035"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963170"
 ---
 # <a name="report-model-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов моделей отчетов
   Конструктор отчетов содержит два конструктора запросов, которые помогают уточнить, какие именно данные из источника данных «Модель сервера отчетов» необходимо использовать в отчете. Используйте графический конструктор запросов для просмотра и выбора сущностей модели и полей сущности. Используйте текстовый редактор запросов, чтобы работать напрямую со спецификацией на языке определения семантических моделей (SMDL) в XML-формате.  

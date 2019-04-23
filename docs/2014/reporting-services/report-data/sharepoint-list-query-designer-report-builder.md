@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10016"
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fc4f228030574cbcd38acd4b42a15a5275b48d02
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7d26534094e8e21029d9836c0cad065e1a76bdd3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032745"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956850"
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>Конструктор запросов к спискам SharePoint (построитель отчетов)
   Построитель отчетов предоставляет графический и текстовый конструкторы запросов, с помощью которых можно создавать запросы, определяющие данные, получаемые с сайта SharePoint для набора данных отчета. Графический конструктор запросов используется для просмотра метаданных списка SharePoint, интерактивного создания запроса, а также для просмотра его результатов. Текстовый конструктор запросов используется для просмотра запроса, созданного графическим конструктором запросов, для его изменения или ввода команд запроса. Также можно импортировать существующий запрос из файла или отчета.  

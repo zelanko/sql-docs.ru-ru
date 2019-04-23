@@ -1,5 +1,5 @@
 ---
-title: Устранение неполадок в отчетах. Сопоставить отчеты (построитель отчетов и службы SSRS) | Документация Майкрософт
+title: 'Устранение неполадок в отчетах: Отчеты-карты (построитель отчетов и службы SSRS) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0660eb1e4e9ae682e1a7c64005a767280c441445
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 87904dc6e53bdf25739bd49267ddb1dc402186f8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296242"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950220"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Устранение неполадок в отчетах. Отчеты-карты (построитель отчетов и службы SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Устранение неполадок в отчетах: Отчеты-карты (построитель отчетов и службы SSRS)
   Проблемы с картами могут возникнуть при добавлении карты или слоя карты в отчет, при настройке существующей карты или слоя карты в отчете, при предварительном просмотре карты в отчете или при публикации отчета с картой. Этот раздел помогает устранять эти проблемы.  
   
 > [!NOTE]  

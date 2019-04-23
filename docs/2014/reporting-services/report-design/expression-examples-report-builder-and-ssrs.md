@@ -23,15 +23,15 @@ helpviewer_keywords:
 - dates [Reporting Services], expressions
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aacc2369857783043f2c114b9c0382895a118acb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3d3f42053a7bfe4c0a0d01b93a371b56321b1f7d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286623"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943090"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Примеры выражений (построитель отчетов и службы SSRS)
   Выражения часто используются в отчетах для управления содержимым и внешним видом отчета. Выражения записываются на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], и в них можно использовать встроенные функции, пользовательский код, переменные отчета, групповые переменные и определяемые пользователем переменные. Выражения начинаются со знака равенства (=). Дополнительные сведения о редакторе выражений и типах ссылок, которые могут быть включены, см. в разделах [Использование выражений в отчетах (построитель отчетов и службы SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md) и [Добавление выражения (построитель отчетов и службы SSRS)](add-an-expression-report-builder-and-ssrs.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "56286623"
   
  Дополнительные сведения о простых и сложных выражениях, о местах, где можно использовать выражения, и о типах ссылок, которые можно включать в выражения, см. в подразделах в разделе [Выражения (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md). Дополнительные сведения о контексте, в котором выражения оцениваются для вычисления статистических выражений, см. в разделе [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- Чтобы узнать, как создавать выражения, используются многие из функций и операторов, также используемых в примерах выражений в этом разделе, но в контексте создания отчета, см. в разделе [руководства: Общие сведения о выражениях](../tutorial-introducing-expressions.md).  
+ Сведения о написании выражений, в которых используются многие функции и операторы, применяемые в примерах выражений в этом разделе в контексте создания отчета, см. в статье [ Учебник. Общие сведения о выражениях](../tutorial-introducing-expressions.md).  
   
  Редактор выражений поддерживает иерархическое представление встроенных функций. Если выбрать функцию, на панели значений появится пример программного кода. Дополнительные сведения см. в разделе [Expression Dialog Box](../expression-dialog-box.md) или [Expression Dialog Box &#40;построитель отчетов&#41;](../expression-dialog-box-report-builder.md).  
   

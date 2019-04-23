@@ -17,18 +17,18 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 - Hyperion Essbase [Reporting Services], query designer
 ms.assetid: bc91b422-c6ab-4062-a300-8290fae6191b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 36577210d6279b859cd88423b436567951aef1b3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 53e262980046e01ccf7e366cdf8135c815fea1fe
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035365"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955140"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов Hyperion Essbase
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают графический конструктор запросов, предназначенный для создания запросов многомерных выражений к источнику данных [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] . Графический конструктор запросов многомерных выражений имеет два режима: режим конструктора и режим запросов. В каждом режиме есть панель «Метаданные», из которой можно перетаскивать элементы куба, определенного в источнике данных, для построения запроса многомерных выражений, получающего данные при обработке отчета.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают графический конструктор запросов, предназначенный для создания запросов многомерных выражений к источнику данных [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] . Конструктор графический конструктор запросов многомерных Выражений имеет два режима: Режим конструктора и режим запросов. В каждом режиме есть панель «Метаданные», из которой можно перетаскивать элементы куба, определенного в источнике данных, для построения запроса многомерных выражений, получающего данные при обработке отчета.  
   
 > [!IMPORTANT]  
 >  При создании и выполнении запросов пользователи получают доступ к источникам данных. Следует предоставить минимальные разрешения на источники данных, например разрешение только на чтение.  

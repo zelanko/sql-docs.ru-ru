@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.scheduleproperties.general.f1
 ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fe262291ace3828989939dd31149393808859f8b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: eaaff2a90f18a4fb7cec3c049945c87fd0a5ed8b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017765"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966140"
 ---
 # <a name="schedule-properties-general-page"></a>Свойства расписания (страница «Общие»)
   Чтобы создать или изменить общее расписание, воспользуйтесь этой страницей. Общие расписания могут использоваться вместо расписаний отчетов или подписок. Изменения, внесенные в расписания, применяются после сохранения расписания. Изменение расписания не оказывает воздействия на выполняемые задания. Если какое-то расписание изменяется во время его использования, всем выполняемым в данный момент отчетам и подпискам, запущенным на основе этого расписания, будет разрешено завершение.  

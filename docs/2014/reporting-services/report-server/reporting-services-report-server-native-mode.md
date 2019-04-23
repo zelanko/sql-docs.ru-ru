@@ -12,15 +12,15 @@ helpviewer_keywords:
 - administering [Reporting Services]
 - Reporting Services, administration
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 52d0771d07efddd949961761d90f241f146c0af4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: df1d06a3d68485576673d8d793385be97dadac55
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025835"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943590"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Сервер отчетов служб Reporting Services (собственный режим)
   Сервер отчетов, настроенный для работы в основном режиме, выполняется как сервер приложений, обеспечивающий все функции обработки и управления исключительно через компоненты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -78,7 +78,7 @@ ms.locfileid: "56025835"
   
 -   Балансирование обработки отчетов на сервере путем планирования обработки и указания отчетов, которые могут быть выполнены по требованию, и отчетов, загружаемых из кэша.  
   
- Разрешения на выполнение задач управления предоставляются с помощью следующих двух стандартных ролей: **Системный администратор** и **диспетчера содержимого**. Эффективное управление содержимым сервера отчетов требует назначения обеих ролей. Дополнительные сведения об этих стандартных ролях см. в статье [Роли и разрешения (службы Reporting Services)](../security/roles-and-permissions-reporting-services.md).  
+ Разрешение для выполнения задач управления предоставляется с использованием стандартных ролей: **Системный администратор** и **диспетчера содержимого**. Эффективное управление содержимым сервера отчетов требует назначения обеих ролей. Дополнительные сведения об этих стандартных ролях см. в статье [Роли и разрешения (службы Reporting Services)](../security/roles-and-permissions-reporting-services.md).  
   
  Инструменты для управления содержимым сервера отчетов включают среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] или диспетчер отчетов. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] позволяет задавать значения по умолчанию и включать функции. Диспетчер отчетов используется для предоставления пользователям доступа к элементам и операциям сервера отчетов, просмотра и использования отчетов и других типов содержимого, а также для просмотра и использования всех общих элементов и функций распространения отчетов.  
   

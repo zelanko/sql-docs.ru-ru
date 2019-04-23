@@ -1,7 +1,7 @@
 ---
 title: Планирование служб Reporting Services и поддержки Power View в браузерах (Reporting Services 2014)
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: sql-server-2014
@@ -9,12 +9,12 @@ ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 0f385bbdbec1072896c0b248257ef9b82d439ab2
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100939"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953960"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Планирование служб Reporting Services и поддержки Power View в браузерах (Reporting Services 2014)
   В [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] для просмотра отчетов и запуска диспетчера отчетов используется веб-браузер. Не все браузеры поддерживают полную функциональность отчетов. Этот раздел содержит справочные сведения и требования для функций управления диспетчером отчетов, просмотра отчетов и элементов управления средства просмотра отчетов в Visual Studio. В этом разделе также указаны доступные функции для поддерживаемых браузеров, требования к проверке подлинности и написанию скриптов.  
@@ -146,7 +146,7 @@ ms.locfileid: "54100939"
   
  Если поддержка скриптов отключена, появится сообщение об ошибке, похожее на следующее при открытии отчета:  
   
-- **Браузер не поддерживает выполнение скриптов, или выполнение скриптов запрещено в его настройках. Щелкните здесь для просмотра отчета без выполнения сценариев**.  
+- **Браузер не поддерживает выполнение скриптов или был настроен для запуска скриптов запрещено. Щелкните здесь для просмотра отчета без выполнения сценариев**.  
   
  При просмотре отчета без поддержки выполнения скриптов отчет готовится к просмотру в формате HTML без таких средств просмотра отчетов, как панель инструментов отчета и схема документа.  
   

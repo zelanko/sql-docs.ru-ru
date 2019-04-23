@@ -11,15 +11,15 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b5834091c16072dd143fa9ae582ea6c128331a8e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6db15f08718ef1636dcb617c95994d644582d45f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018845"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958600"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>Диспетчер предупреждений данных для пользователей SharePoint
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляется диспетчер предупреждений об изменении данных для SharePoint, позволяющий информационным работникам управлять предупреждениями об изменении данных. Они могут просматривать сведения о созданных ими предупреждениях, удалять предупреждения, открывать определения предупреждений для изменения, а также запускать предупреждения по запросу. Они могут просматривать предупреждения для одного или всех отчетов. На следующем рисунке показаны функции, доступные информационным работникам в диспетчере предупреждений об изменении данных.  

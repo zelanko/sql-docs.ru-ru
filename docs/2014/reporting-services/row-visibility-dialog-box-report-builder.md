@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10126"
 ms.assetid: 117fb20c-2fda-437e-bcc5-9010d6d4b53b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cf4ff717d5f772b8ef3d78c3cd307b9d923fea79
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 7a18291f26e348851621a9f4321106a7793ab904
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291513"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953970"
 ---
 # <a name="row-visibility-dialog-box-report-builder"></a>Диалоговое окно «Видимость строки» (построитель отчетов)
   Диалоговое окно **Видимость строки** используется, чтобы показать или скрыть выбранную строку при первом запуске отчета, а также для переключения видимости строки с помощью другого элемента отчета.  

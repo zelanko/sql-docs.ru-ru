@@ -8,22 +8,22 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 17706542014f3835cb0a100d7dbf3e579b47aa65
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 77a18098a80686fcb12aca64f5b7d1452fbff452
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010664"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964960"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>Просмотр и изучение отчетов в собственном режиме с помощью веб-части SharePoint (службы SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включено несколько веб-частей, каждая из которых предназначена для определенной версии сервера отчетов и для определенного режима развертывания.  
   
--   **Собственный режим.** Если доступ к содержимому сервера отчетов на сайте SharePoint необходимо осуществлять с помощью сервера отчетов, работающего в собственном режиме, воспользуйтесь веб-частями SharePoint 2.0 «Обозреватель отчетов» и «Средство просмотра отчетов», включенными в состав служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Инструкции по установке и использованию веб-частей 2.0 содержатся ниже в этом разделе.  
+-   **Собственный режим.** Если вы хотите получить доступ к содержимому сервера отчетов на сайте SharePoint из сервера отчетов в собственном режиме, используйте веб-частей SharePoint 2.0 отчетов обозреватель и средство просмотра отчетов, которые включены в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Инструкции по установке и использованию веб-частей 2.0 содержатся ниже в этом разделе.  
   
--   **Режим интеграции с SharePoint:** Если необходимо получить доступ к серверу отчетов, который работает в режиме интеграции с SharePoint, используйте веб-части, которые устанавливаются надстройкой служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint. Дополнительные сведения о надстройке см. в разделе [Где найти надстройку службы Reporting Services для продуктов SharePoint](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   **Режим интеграции с SharePoint:** Если требуется доступ к серверу отчетов, работающего в режиме интеграции с SharePoint, использовать веб-частей, которые устанавливаются по [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройки для продуктов SharePoint. Дополнительные сведения о надстройке см. в разделе [Где найти надстройку службы Reporting Services для продуктов SharePoint](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 -   > [!NOTE]  
     >  Веб-часть средства просмотра отчетов для собственного режима (SPViewer.dwp) отличается от веб-части ReportViewer.dwp, устанавливаемой надстройкой служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint. Веб-части имеют различные схемы и реализации, но обе они могут быть установлены на одной ферме SharePoint. Визуально эти веб-части можно различить по следующему признаку: веб-часть средства просмотра отчетов, которая устанавливается в составе надстройки, содержит на панели инструментов меню **Действия** .  

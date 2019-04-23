@@ -11,21 +11,21 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - extensions [Reporting Services], custom security
 ms.assetid: 91aeb053-149e-4562-ae4c-a688d0e1b2ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6787ec73d91b32e0bdb90f8a5f25499f0ac35620
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bff2f31eb321a24c184580a6b1565f4dbc76bb1d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034495"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955030"
 ---
 # <a name="configure-report-manager-to-pass-custom-authentication-cookies"></a>Настройка передачи куки-файлов для нестандартной проверки подлинности пользователя в диспетчере отчетов
   При использовании пользовательского модуля проверки подлинности необходимо настроить диспетчер отчетов для передачи куки-файлов для проверки подлинности пользователя. Иначе диспетчер отчетов будет передавать куки-файлы только через HTTP-запрос для сервера отчетов. Чтобы передать дополнительные куки-файлы, необходимо изменить файл RSReportServer.Config.  
   
 ## <a name="modifying-the-rsreportserverconfig-file"></a>Изменение файла RSReportServer.Config  
- Чтобы включить передачу диспетчером отчетов дополнительных куки-файлов через сервер отчетов, необходимо добавить элемент <`PassThroughCookies`> к настройкам конфигурации диспетчера отчетов в файле RSReportServer.config. Использование дополнительных куки-файлов удобно в решениях однократной проверки подлинности при входе, когда требуются не только куки-файлы проверки подлинности сервера отчетов, но также куки-файлы от сторонних систем проверки подлинности.  
+ Вы можете включить передачу дополнительных файлов cookie через сервер отчетов, добавив диспетчером отчетов <`PassThroughCookies`> элемент к настройкам конфигурации диспетчера отчетов в файле конфигурации RSReportServer.config. Использование дополнительных куки-файлов удобно в решениях однократной проверки подлинности при входе, когда требуются не только куки-файлы проверки подлинности сервера отчетов, но также куки-файлы от сторонних систем проверки подлинности.  
   
  Чтобы включить передачу дополнительных куки-файлов через HTTP-запрос при использовании диспетчера отчетов, установите следующие элементы в файле RSReportServer.config:  
   

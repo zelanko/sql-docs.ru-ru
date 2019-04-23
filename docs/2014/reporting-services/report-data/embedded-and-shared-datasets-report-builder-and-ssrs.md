@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 069c8900d5d9939567dd5e59f2f5f6547b0044af
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0335f7f7dcee0f7091cbdc47ce3ea9db24c72e77
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041715"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950990"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>Внедренные и общие наборы данных (построитель отчетов и службы SSRS)
   Набор данных в отчете представляет данные отчета, возвращаемые из запроса к внешнему источнику данных. Набор данных зависит от подключения к данным, которое содержит сведения о внешнем источнике данных. Сами по себе данные не включены в определение отчета. Набор данных содержит команду запроса, коллекцию полей, параметры, фильтры и параметры данных, включая учет регистра и параметры сортировки. Существует два типа наборов данных.  

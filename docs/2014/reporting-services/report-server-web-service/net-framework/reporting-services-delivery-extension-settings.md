@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - XML Web service [Reporting Services], delivery extension settings
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - mail [Reporting Services]
 - Web service [Reporting Services], delivery extension settings
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0bd8ee198a2627d9caaba340c4357bb0de0f30aa
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d356bc1cb981479de8a4b1baa3bdaaf45b6145ca
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014805"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157900"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Параметры модулей доставки служб Reporting Services
   В [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] включены модуль доставки по электронной почте и модуль доставки в общую папку. Доставка по электронной почте позволяет переслать отчет отдельным пользователям или группам по электронной почте. Доставка в общую папку позволяет автоматически отправлять подготовленные отчеты в сетевую папку. Любой из поддерживаемых модулей доставки можно использовать со стандартными подписками или с управляемыми данными подписок. Настройки доставки, характерные для типа модуля доставки, передаются при каждом вызове методов <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>,<xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>,<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> и <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>. Для получения списка настроек доставки программным образом можно использовать метод <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A>.  
@@ -43,9 +41,9 @@ ms.locfileid: "56014805"
 |Параметр|Значение|  
 |-------------|-----------|  
 |**Кому**|Адрес электронной почты, отображаемый в строке `To` в сообщении электронной почты. Несколько адресов разделяются точками с запятой. Обязательный.|  
-|**Копия**|Адрес электронной почты, отображаемый в строке `Cc` в сообщении электронной почты. Несколько адресов разделяются точками с запятой. Необязательный.|  
-|**Скрытая копия**|Адрес электронной почты, отображаемый в строке `Bcc` в сообщении электронной почты. Несколько адресов разделяются точками с запятой. Необязательный.|  
-|**ReplyTo**|Адрес электронной почты, отображаемый в заголовке `Reply-To` сообщения электронной почты. Значение должно быть одиночным адресом электронной почты. Необязательный.|  
+|**Копия**|Адрес электронной почты, отображаемый в строке `Cc` в сообщении электронной почты. Несколько адресов разделяются точками с запятой. Необязательный параметр.|  
+|**Скрытая копия**|Адрес электронной почты, отображаемый в строке `Bcc` в сообщении электронной почты. Несколько адресов разделяются точками с запятой. Необязательный параметр.|  
+|**ReplyTo**|Адрес электронной почты, отображаемый в заголовке `Reply-To` сообщения электронной почты. Значение должно быть одиночным адресом электронной почты. Необязательный параметр.|  
 |`IncludeReport`|Значение, показывающее, необходимо ли включать отчет в доставку по электронной почте. Значение `true` указывает, что отчет доставляется в тексте сообщения электронной почты.|  
 |**RenderFormat**|Имя модуля подготовки отчетов, используемого для создания подготовленного отчета. Имя должно соответствовать одному из видимых модулей подготовки отчетов, установленных на сервере отчетов. Данное значение необходимо, если для параметра `IncludeReport` установлено значение `true`.|  
 |**Приоритет**|Приоритет отправки сообщения электронной почты. Допустимые значения: `LOW`, `NORMAL` и `HIGH`. Значение по умолчанию — `NORMAL`.|  

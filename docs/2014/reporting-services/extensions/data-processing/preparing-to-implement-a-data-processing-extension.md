@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - interfaces [Reporting Services]
 - data processing extensions [Reporting Services], implementing
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b2d162a498550ae563c1ac8af1a2e9a574b93386
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3343823399b0500e0a329e160e5545d4dd372a54
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021465"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158230"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Подготовка к реализации модуля обработки данных
   Перед реализацией собственного модуля обработки данных служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] вам следует определить реализуемые интерфейсы. Вы можете создать зависящие от модулей реализации всего набора интерфейсов либо реализовать только ограниченное его подмножество, например интерфейсы <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> и <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand>. Используя эти интерфейсы, клиенты в основном взаимодействовали бы с результирующим набором в виде объекта **DataReader**, а модуль обработки данных служб [!INCLUDE[ssRS](../../../includes/ssrs.md)] использовался бы как посредник между результирующим набором и источником данных.  

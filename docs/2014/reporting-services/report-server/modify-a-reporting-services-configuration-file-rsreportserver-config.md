@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9ca7b2b7ed4cc66a3c47b2f2ad8044775d69c6ed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: daf92c429e8d223f29a0d0d27f4ba6afca66d905
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015005"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970080"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Изменение файла конфигурации служб Reporting Services (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сохраняют параметры приложения в наборе файлов конфигурации. Программа установки создает файлы конфигурации для каждого устанавливаемого экземпляра сервера отчетов. Значения в каждом файла задаются либо во время установки, либо при использовании средств и приложений для настройки сервера и подготовки его к работе. В некоторых случаях приходится изменять непосредственно сам файл, чтобы добавить дополнительные параметры или настроить их. Параметры конфигурации задаются либо как элементы XML, либо как атрибуты. Если вы знакомы с XML и файлами конфигурации, то можете использовать редактор текста или кода для настройки пользовательских параметров.  

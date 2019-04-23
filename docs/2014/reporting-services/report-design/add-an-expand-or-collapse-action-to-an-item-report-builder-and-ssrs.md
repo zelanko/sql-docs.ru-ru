@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 80ec9da0ce3ee4fee6ded91ad5ecb326c3f272db
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 21726a3f57db48a9dd1ec163de7ece3ba5e544c4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286562"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944300"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Добавление действия "Развернуть" или "Свернуть" к элементу (построитель отчетов и службы SSRS)
   Вы можете позволить пользователю в интерактивном режиме раскрывать или свертывать элементы отчета, а также разворачивать и сворачивать строки и столбцы, связанные с группой для таблицы или матрицы. Чтобы разрешить пользователям разворачивать и сворачивать элемент, необходимо задать свойства видимости для этого элемента. Настройка видимости работает в средстве просмотра отчетов HTML и иногда называется *углубленной детализацией* .  

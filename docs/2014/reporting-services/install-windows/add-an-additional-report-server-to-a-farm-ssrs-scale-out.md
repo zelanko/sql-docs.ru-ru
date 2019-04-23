@@ -8,15 +8,15 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 03928e651b742061e726b9c92683d9d4e9aebd08
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bb1e5555930b625a16468a34fae6e6413dc0da92
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014835"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960070"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Добавление дополнительного сервера отчетов в ферму (горизонтально масштабируемые службы SSRS)
   Добавление второго и последующих серверов отчетов в режиме интеграции с SharePoint в ферму SharePoint может улучшить производительность обработки и время ответа сервера отчетов. Если при добавлении пользователей, отчетов и приложений на сервер отчетов производительность уменьшается, добавление дополнительных серверов отчетов может улучшить ее. Второй сервер отчетов также рекомендуется добавить для повышения доступности серверов отчетов, когда обнаруживаются проблемы с оборудованием или проводится штатное обслуживание отдельных серверов в среде. Начиная с выпуска [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] действия по созданию масштабного развертывания в среде служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint соответствуют стандартам развертывания ферм SharePoint и используют возможности SharePoint по балансировке нагрузки.  

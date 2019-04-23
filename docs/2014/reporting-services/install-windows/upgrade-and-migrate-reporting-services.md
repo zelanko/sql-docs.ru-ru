@@ -9,26 +9,26 @@ helpviewer_keywords:
 - Reporting Services, upgrades
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 77bc8ae2bb029218d79025cb97d9fb1ed281fe6c
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 2ef6c53e1cb9fd11eb8cba6bb788de9b9b1fe10a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583077"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59952850"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
 Этот раздел содержит общие сведения о вариантах обновления и миграции для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Существуют два принципиальных подхода к обновлению развертывания [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
--   **Обновление:** Обновляются компоненты [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на тех серверах и экземплярах, где они установлены в данный момент. Обычно это называется обновлением на месте. Обновление на месте с одного режима сервера [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на другой режим не поддерживается. Например, невозможно обновить сервер отчетов в собственном режиме до сервера отчетов в режиме интеграции с SharePoint. Элементы отчета можно переносить из одного режима в другой. Дополнительные сведения см. в разделе «Native миграции SharePoint» далее в этом документе и в связанном разделе [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+-   **Обновление:** Обновления [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] компонентов на серверах и экземплярах, где они установлены. Обычно это называется обновлением на месте. Обновление на месте с одного режима сервера [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на другой режим не поддерживается. Например, невозможно обновить сервер отчетов в собственном режиме до сервера отчетов в режиме интеграции с SharePoint. Элементы отчета можно переносить из одного режима в другой. Дополнительные сведения см. в разделе «Native миграции SharePoint» далее в этом документе и в связанном разделе [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
--   **Перенос**: Устанавливается и настраивается новая среда SharePoint, в нее копируются элементы отчетов и ресурсы, а затем выполняется настройка новой среды для использования существующего содержимого. Более низкая форма миграции — копирование баз данных [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , файлов конфигурации и при использовании режима интеграции с SharePoint баз данных содержимого SharePoint.  
+-   **Перенос**: Установка и настраивается новая среда SharePoint, копируются элементы отчетов и ресурсов в новую среду и настройка новой среды для использования существующего содержимого. Более низкая форма миграции — копирование баз данных [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , файлов конфигурации и при использовании режима интеграции с SharePoint баз данных содержимого SharePoint.  
   
 ||  
 |-|  
@@ -113,7 +113,7 @@ ms.locfileid: "59583077"
   
 -   Создайте резервные копии всех настроек виртуальных каталогов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , существующих в IIS.  
   
--   Удалите недопустимые SSL-сертификаты.  К ним относятся сертификаты с истекшим сроком действия, которые не планируется обновлять до обновления служб Reporting Services.  Наличие недопустимых сертификатов приведет к неудаче обновления, а в файл журнала служб Reporting Services будет записано сообщение об ошибке, аналогичное следующему: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: На веб-сайте не настроен сертификат Secure Sockets Layer (SSL).** .  
+-   Удалите недопустимые SSL-сертификаты.  К ним относятся сертификаты с истекшим сроком действия, которые не планируется обновлять до обновления служб Reporting Services.  Недопустимых сертификатов приведет к неудаче обновления, а в файл журнала служб Reporting Services будет записано сообщение об ошибке следующего вида: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: На веб-сайте не настроен сертификат Secure Sockets Layer (SSL).** .  
   
  Перед обновлением рабочей среды всегда запускайте проверку обновления в предварительной рабочей среде, имеющей аналогичную конфигурацию.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "59583077"
  ![Значок стрелки, используемый для ссылки возврата в начало](../../2014-toc/media/uparrow16x16.gif "значок стрелки, используемый для ссылки возврата в начало") [в этом разделе:](#bkmk_top)  
   
 ##  <a name="bkmk_native_scenarios"></a> Обновление в собственном режиме и сценарии миграции  
- **Обновление:** Обновление на месте в собственном режиме представляет собой один процесс для каждой из поддерживаемых версий, перечисленных ранее в этом разделе. Запустите мастер установки SQL Server или процесс установки из командной строки. После установки база данных сервера отчетов автоматически обновляется до новой схемы базы данных сервера отчетов. Дополнительные сведения см. в подразделе [In-place upgrade](#bkmk_inplace_upgrade) этой статьи.  
+ **Обновление:** Обновление на месте в собственном режиме — это те же действия для каждой из поддерживаемых версий, перечисленных ранее в этом разделе. Запустите мастер установки SQL Server или процесс установки из командной строки. После установки база данных сервера отчетов автоматически обновляется до новой схемы базы данных сервера отчетов. Дополнительные сведения см. в подразделе [In-place upgrade](#bkmk_inplace_upgrade) этой статьи.  
   
  Процесс обновления начинается с выбора существующего экземпляра сервера отчетов, подлежащего обновлению.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "59583077"
   
 9. Программа установки осуществляет слияние параметров в файлах конфигурации. При использовании в качестве основы файлов конфигурации из текущей установки добавляются новые записи. Устаревшие записи не удаляются, но по завершении процесса обновления они не считываются сервером отчетов. Старые файлы регистрации, устаревший файл RSWebApplication.config и установки виртуального каталога в IIS при обновлении не удаляются. Конструктор отчетов SQL Server 2005, среда Management Studio и другие клиентские средства при обновлении не удаляются. Если они больше не нужны, позаботьтесь об удалении этих файлов и средств по завершении обновления.  
   
- **Миграция:** Миграция предыдущей версии установки в собственном режиме в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] представляет собой одну последовательность шагов для всех поддерживаемых версий, перечисленных ранее в этом разделе. Дополнительные сведения см. в статье [Перенос установки служб Reporting Services (собственный режим)](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
+ **Миграция:** Миграция предыдущей версии установки в собственном режиме в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] — это те же действия для всех поддерживаемых версий, перечисленных ранее в этом разделе. Дополнительные сведения см. в статье [Перенос установки служб Reporting Services (собственный режим)](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
   
  ![Значок стрелки, используемый для ссылки возврата в начало](../../2014-toc/media/uparrow16x16.gif "значок стрелки, используемый для ссылки возврата в начало") [в этом разделе:](#bkmk_top)  
   
@@ -204,7 +204,7 @@ ms.locfileid: "59583077"
   
  **Конечная среда:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SharePoint 2010 или SharePoint 2013.  
   
--   **SharePoint 2010.** Поддерживается обновление [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на месте, но скрипт обновления требует остановки среды SharePoint.  
+-   **SharePoint 2010.** Обновление на месте [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживается, но скрипт обновления требует остановки среды SharePoint.  
   
      Если также требуется, чтобы результирующая среда выполнения выполняла SharePoint 2013, необходимо завершить обновление присоединения базы данных SharePoint 2010 к SharePoint 2013.  
   
@@ -248,7 +248,7 @@ ms.locfileid: "59583077"
  ![Значок стрелки, используемый для ссылки возврата в начало](../../2014-toc/media/uparrow16x16.gif "значок стрелки, используемый для ссылки возврата в начало") [в этом разделе:](#bkmk_top)  
   
 ### <a name="sql-server-2005-sp2-to-includesssql14includessssql14-mdmd"></a>Пакет обновления 2 (SP2) для SQL Server 2005 в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- **Начальная среда:** SQL Server 2005 с пакетом обновления 2 (SP2), SharePoint 2007.  
+ **Начальная среда:** SQL Server 2005 SP2, SharePoint 2007.  
   
  **Конечная среда:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SharePoint 2010.  
   
@@ -283,7 +283,7 @@ ms.locfileid: "59583077"
   
 -   Режим интеграции с SharePoint: См. в разделе «Управление ключами» [управление приложения SharePoint службы Reporting Services](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
   
--   Собственный режим См. в разделе [резервное копирование и восстановление служб Reporting Services ключи шифрования](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+-   Собственный режим. См. в разделе [резервное копирование и восстановление служб Reporting Services ключи шифрования](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
  ![Значок стрелки, используемый для ссылки возврата в начало](../../2014-toc/media/uparrow16x16.gif "значок стрелки, используемый для ссылки возврата в начало") [в этом разделе:](#bkmk_top)  
   

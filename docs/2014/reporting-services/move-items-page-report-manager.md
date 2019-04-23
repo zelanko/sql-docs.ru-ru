@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 96d3310c489dea5aadc3e9b7e873dbb89ceee9bb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: acee0f51707a0535f0d6f63152cdf461ad50f46c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009689"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967750"
 ---
 # <a name="move-items-page-report-manager"></a>Страница «Перемещение элементов» (диспетчер отчетов)
   Используйте страницу «Перемещение элементов», чтобы переместить отчет, папку или другой элемент в новое местоположение на сервере отчетов. Можно ввести путь нового местоположения или использовать представление дерева для указания нового местоположения в пространстве имен сервера отчетов. Переместить можно только те элементы, на перемещение которых есть разрешение и которые хранятся на текущем сервере отчетов.  

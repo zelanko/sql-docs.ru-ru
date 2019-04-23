@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 039534e71623cf91cdd936be5e73433f216cd2d8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 86ab64006b1454e63a7ed750476ff107dd1fe992
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024875"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959701"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>Тип соединения SQL Server (службы SSRS)
   Чтобы включить в отчет данные из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо иметь набор данных, основанный на источнике данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Используйте этот тип источника данных для соединения и извлечения данных из баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] текущей версии и более ранних версий.  

@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - extending Reporting Services
 - Reporting Services, extending
 - custom report items
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 162ec67283142da27f3afb1aa4f591a232177ac3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 39860a2b147a2db392219552ebfd18cbbf7b7992
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017946"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155621"
 ---
 # <a name="custom-report-items"></a>Пользовательские элементы отчета
   Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предлагают широкий выбор средств для построения и публикации отчетов предприятия, управления безопасностью и подписками. Эти средства позволяют расширить функциональные возможности по созданию отчетов через всеобъемлющий API-интерфейс. Отчеты определяются с помощью языка, основанного на языке XML, называемого языком определения отчетов Report Definition Language (RDL). Язык определения отчетов предоставляет ясный набор инструкций, описывающих макет, сведения о запросах и типы элементов для отчетов. Язык определения отчетов возможно расширить, создав пользовательские элементы отчетов. Пользовательский элемент отчета состоит из исполняемого компонента, который вызывается обработчиком отчетов во время выполнения, и компонента времени разработки, который делает пользовательский элемент отчета доступным в конструкторе отчетов.  

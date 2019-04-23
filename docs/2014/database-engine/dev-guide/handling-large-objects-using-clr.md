@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e1dedaab57761c88487dbd3a61d359bcf0b3dd1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6c7230150807b5bdd0849ea7ad5af00dbedb4ff3
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350269"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155670"
 ---
 # <a name="handling-large-objects-using-clr"></a>Обработка больших объектов в среде CLR
   Образец `HandlingLOBUsingCLR` для SQL Server демонстрирует передачу больших объектов между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и файловой системой, доступной серверу, с использованием хранимых процедур CLR. Образец демонстрирует доступ к файлам в кодировке сервера и возможность вызова из хранимых процедур CLR динамических запросов и хранимых процедур. Также образец демонстрирует регистрацию и отмену регистрации методов среды CLR и сборок при помощи языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -25,7 +23,7 @@ ms.locfileid: "53350269"
 ## <a name="prerequisites"></a>предварительные требования  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
 -   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](https://go.microsoft.com/fwlink/?linkid=62796).  
   

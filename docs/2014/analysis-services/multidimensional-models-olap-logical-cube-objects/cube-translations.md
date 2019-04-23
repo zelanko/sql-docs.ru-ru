@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - multiple language support [Analysis Services]
@@ -19,12 +17,12 @@ ms.assetid: 4e4fd6a4-d324-4508-b75a-2a57de9ab8ff
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c32010135b534975f5ddabc86dcf23591d2d457f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c34024f61f5c7b42030e0acb848783e1acae3d6e
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126004"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154071"
 ---
 # <a name="cube-translations"></a>Переводы куба
   Перевод — это простой механизм для отображения меток и заголовков на другом языке. Каждый перевод определяется как пара значений: строка с переведенным текстом и значение с идентификатором языка. Переводы доступны для всех объектов в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Значения атрибутов измерений также можно перевести. Клиентское приложение отвечает за поиск языка, заданного пользователем, и отображения на этом языке всех меток и заголовков. Объект может иметь неограниченное число переводов.  
@@ -40,6 +38,6 @@ ms.locfileid: "48126004"
 ## <a name="see-also"></a>См. также  
  [Переводы измерений](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
  [Переводы &#40;служб Analysis Services&#41;](../translations-analysis-services.md)   
- [Глобализация, советы и рекомендации по &#40;служб Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
+ [Советы и рекомендации по глобализации (службы Analysis Services)](../globalization-tips-and-best-practices-analysis-services.md)  
   
   

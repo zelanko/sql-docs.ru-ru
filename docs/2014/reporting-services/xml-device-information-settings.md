@@ -11,15 +11,15 @@ helpviewer_keywords:
 - XML [Reporting Services], rendering
 - device information settings [Reporting Services], PDF rendering
 ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7aa0f6e28dae59d7559dbb009ce4441dd4a2119d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 404ab37f00cd738e619286a3133b906acbbcd06d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013145"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970503"
 ---
 # <a name="xml-device-information-settings"></a>Настройки сведений об устройстве XML
   В следующей таблице перечислены настройки сведений об устройстве для подготовки к просмотру в формате XML.  
@@ -34,7 +34,7 @@ ms.locfileid: "56013145"
 |`OmitSchema`|Показывает, нужно ли исключать расположение схемы из XML. Расположение атрибута SchemaLocation. Значение по умолчанию для OmitSchema зависит от значения OmitNamespace:<br /><br /> если OmitNamespace = False, то по умолчанию OmitSchema = `False`. Пользователь может переопределить значение по умолчанию, установив OmitSchema = True.<br /><br /> Если OmitNamespace = true, то OmitSchema будет функционировать как `True` независимо от значения явно заданного для OmitShema.|  
 |**Кодировка**|Определенное комитетом по цифровым адресам в Интернете (IANA) название кодировки символов, поддерживаемой платформой .NET Framework. Значение по умолчанию — `UTF-8`. В качестве примеров других значений можно привести ASCII, UTF-7 и UTF-16.|  
 |**FileExtension**|Расширение, используемое для создаваемого файла.|  
-|**Схема**|Показывает, выводится ли в XML-код схема XSD или фактические XML-данные. Значение `true` показывает, что выводится схема XML. Значение по умолчанию — `false`.|  
+|**Схема**|Показывает, выводится ли в XML-код схема XSD или фактические XML-данные. Значение `true` показывает, что выводится схема XML. Значение по умолчанию — `false`.|  
   
 ## <a name="see-also"></a>См. также  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

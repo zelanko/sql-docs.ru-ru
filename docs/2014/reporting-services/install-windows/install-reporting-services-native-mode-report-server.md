@@ -12,15 +12,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], default configurations
 - installation options [Reporting Services]
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f0c52d22f9592d149f25f6ae8a6de2813dfcba1d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9d4ed9d30be850df2ad18374790a91fd72f5e50a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043295"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59965350"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Установка сервера отчетов служб Reporting Services в собственном режиме
   Работающий в собственном режиме сервер отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно установить при помощи мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или из командной строки. В мастере установки можно выбрать либо 1) установку файлов и настройку сервера на параметры по умолчанию, либо 2) только установку файлов без настройки сервера мастером установки. В этом разделе описывается *конфигурация по умолчанию для собственного режима* , при которой программа установки устанавливает и настраивает экземпляр сервера отчетов. После завершения программы установки сервер отчетов будет запущен и готов к работе. Сервер отчетов, работающий в собственном режиме, запускается в качестве изолированного сервера приложений. Собственный режим является режимом сервера по умолчанию.  

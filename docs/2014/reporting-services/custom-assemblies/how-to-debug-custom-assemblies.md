@@ -1,29 +1,27 @@
 ---
-title: Как Отладка пользовательских сборок | Документация Майкрософт
+title: Практическое руководство. Отладка пользовательских сборок | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - custom assemblies [Reporting Services], debugging
 - debugging custom assemblies [Reporting Services]
 - troubleshooting [Reporting Services], custom assemblies
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: da4171b624fd4caf4eabae5cec50c4b6c19578b7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 64a61e044c7ff6efe051eb316cb9f653f0993b68
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011496"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154200"
 ---
-# <a name="how-to-debug-custom-assemblies"></a>Как выполнять отладку пользовательских сборок
+# <a name="how-to-debug-custom-assemblies"></a>Практическое руководство. Отладка пользовательских сборок
   В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] предусмотрен ряд средств отладки, помогающих проанализировать код пользовательской сборки и найти в нем ошибки. Выбор наиболее подходящего средства отладки зависит от того, какая цель должна быть достигнута. В этом примере используется [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  
   
  Рекомендуемый способ проектирования, разработки и тестирования пользовательских сборок для службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] состоит в создании решения, содержащего не только пользовательскую сборку, но и тестовые отчеты.  

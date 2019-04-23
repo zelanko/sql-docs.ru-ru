@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e062d516b929f436c6a255a9dfb28e69568133e5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: df69bfef4b82aa9451fb47f6169f5966090f633a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025145"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954971"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS)
   Начиная с версии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]серверы служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint могут записывать события служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в журнал трассировки единой службы ведения журнала SharePoint. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] доступны на странице «Наблюдение» центра администрирования SharePoint.  
@@ -126,7 +126,7 @@ Get-SPDiagnosticConfig
 |Поставщик для сервера отчетов||  
 |Подготовка отчетов сервера отчетов||  
 |Средство просмотра отчетов сервера отчетов||  
-|Программа ресурсов сервера отчетов|Образцы записей:<br /><br /> Начальный номер SKU служб MediumReporting Services: Ознакомительная версия<br /><br /> Копия MediumEvaluation: осталось 180|  
+|Программа ресурсов сервера отчетов|Образцы записей:<br /><br /> Начальный номер SKU служб MediumReporting Services: Ознакомительная версия<br /><br /> Копия mediumevaluation: Осталось 180|  
 |Выполняющиеся задания сервера отчетов||  
 |Выполняющиеся запросы сервера отчетов||  
 |Расписание сервера отчетов||  

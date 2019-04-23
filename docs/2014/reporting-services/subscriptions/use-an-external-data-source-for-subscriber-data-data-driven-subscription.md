@@ -15,15 +15,15 @@ helpviewer_keywords:
 - data-driven subscriptions
 - data sources [Reporting Services], subscriptions
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5b80a150bb44690bb4fbc836ba12f41fa8f82c28
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8314a1d0bdf16a7a320c8a5a7e06558a2bec62c4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043065"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969010"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Использование внешнего источника данных подписчика (управляемая данными подписка)
   В управляемой данными подписке динамические данные подписки определяются запросом или командой, которые получают данные из внешнего источника данных. Данные подписки могут быть получены из любого поддерживаемого источника данных, который удовлетворяет требованиям обработки управляемой данными подписки. Запрос или синтаксис команды должны быть верными для модуля обработки данных, установленного на сервере отчетов.  

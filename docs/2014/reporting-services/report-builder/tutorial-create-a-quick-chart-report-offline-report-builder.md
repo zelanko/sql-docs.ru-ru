@@ -1,5 +1,5 @@
 ---
-title: Учебник. Создание стандартного отчета с диаграммой автономный режим (построитель отчетов) | Документация Майкрософт
+title: Учебник. Создание стандартного отчета с диаграммой в автономном режиме (построитель отчетов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7c817f68fce5fcf561e7aac46f3d809d2213aad7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fd22b4419b8300fdaf8db6e98a3eab9683fd226e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291272"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956840"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Учебник. Создание стандартного отчета с диаграммой в режиме «вне сети» (построитель отчетов)
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Учебник. Создание стандартного отчета с диаграммой автономный режим (построитель отчетов)
   В этом учебнике будет создана круговая диаграмма с помощью мастера, а затем она будет немного изменена, чтобы получить общее представление о том, что можно сделать. Задания этого учебника вы можете выполнить двумя различными способами. Оба метода имеют же результат a круговой диаграммы как показано на следующем рисунке:  
   
  ![«Моя первая круговая диаграмма» в сеансе просмотра](../media/rs-my1stpierunview.gif "Моя первая круговая диаграмма в режиме выполнения")  

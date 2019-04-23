@@ -4,22 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - authorization [Reporting Services]
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5141ca13693d140e56700b46e030e1eb2b14e0e0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ac9f9882724e9ba0341bf11af948c948070e6774
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027005"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60153530"
 ---
 # <a name="authorization-in-reporting-services"></a>Авторизация в службах Reporting Services
   Авторизация является процессом определения, должен ли быть предоставлен идентификатору запрошенный тип доступа к конкретному ресурсу в базе данных сервера отчетов. Службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] используют архитектуру авторизации на основе ролей, которая предоставляет пользователю доступ к конкретному ресурсу на основании назначенной этому пользователю роли в данном приложении. Модули безопасности для служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] содержат реализацию компонента авторизации, который используется для предоставления доступа пользователям после прохождения ими проверки подлинности на сервере отчетов. Авторизация вызывается, когда пользователь пытается выполнить операцию в системе или на элементе сервера через API-интерфейс SOAP, либо посредством доступа по URL-адресу. Это стало возможным благодаря интерфейсу модуля безопасности **IAuthorizationExtension**. Как указывалось выше, все развертываемые модули наследуют от базового интерфейса **IExtension** . Интерфейсы**IExtension** и **IAuthorizationExtension** являются членами пространства имен **Microsoft.ReportingServices.Interfaces** .  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], managing
 ms.assetid: 7f46cbdb-5102-4941-bca2-5e0ff9012c6b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 44bf77f23724f51ddc75f708e5663b43e607df0e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f93148eed4b059a3c7f9a591b08b885c948ffd4c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023915"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953690"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Создание подписок для работающих в основном режиме серверов отчетов и управление этими подписками
   Этот раздел посвящен обработке, контролю и управлению подписками. Управление стандартными подписками и подписками, управляемыми данными, осуществляется по-разному. Стандартные подписки обычно принадлежат пользователю, который отвечает за управление ими. Подписки, управляемые данными, создаются и контролируются администратором сервера отчетов.  

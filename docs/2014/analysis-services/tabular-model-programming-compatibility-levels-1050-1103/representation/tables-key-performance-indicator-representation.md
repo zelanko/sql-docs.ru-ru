@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1af16003b73b76ea0d899ecacb19dda42aa867d9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d0981b473ef29ac709213c1e9eee1cea01f47e2b
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538695"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154186"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>Представление ключевого показателя эффективности (табличное)
   KPI служит показателем производительности значения, определяемого базовой мерой, относительно целевого значения  
@@ -223,6 +221,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>Образец AMO2Tabular  
- Однако, чтобы получить основные сведения об использовании объектов AMO для создания представлений связи и управления ими, ознакомьтесь с исходным кодом примера преобразования объектов AMO в табличную модель. В частности, обратите внимание на следующий исходный файл: AddKPIs.cs. Этот образец доступен на сайте Codeplex. Важное примечание о коде. Код предоставляется только для иллюстрации логических концепций, поясняемых в этом разделе. Его не следует использовать в рабочей среде или для других целей, за исключением учебных.  
+ Чтобы получить основные сведения об использовании объектов AMO для создания и обработки ключевой показатель эффективности представлений см. исходный код объектов AMO в табличные примера; в частности, проверьте в следующий файл: AddKPIs.cs. Этот образец доступен на сайте Codeplex. Важное примечание о коде. Код предоставляется только для иллюстрации логических концепций, поясняемых в этом разделе. Его не следует использовать в рабочей среде или для других целей, за исключением учебных.  
   
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - report parameters [Reporting Services]
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6a863eb3ce1fe549664a864aebacb756eeea87c9
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: b5be6c0698a20e9b05549ea81878c3d7929d0743
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294742"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968129"
 ---
 # <a name="set-parameters-on-a-published-report-reporting-services-in-sharepoint-integrated-mode"></a>настроить параметры опубликованного отчета (службы Reporting Services в режиме интеграции с SharePoint)
   Параметризованным называется отчет, который принимает вводимые значения, используемые для фильтрации данных при запуске отчета. Параметры определяются на этапе создания отчета. В зависимости от того, как параметр отчета определяется в определении отчета, этот параметр может принимать одно значение, несколько значений или динамические значения, изменяющиеся в ответ на предшествующий выбор (например, когда пользователь выбирает категорию продукта, его следующим шагом может быть выбор конкретного продукта из этой категории). Параметр может иметь значение по умолчанию, которое используется для запуска отфильтрованной версии отчета в автоматическом режиме и может быть заменено другим значением.  

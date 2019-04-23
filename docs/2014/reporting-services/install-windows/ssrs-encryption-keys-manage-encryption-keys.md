@@ -15,15 +15,15 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - public keys [Reporting Services]
 ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5ad01c88f549346a598a54cc0addae92d222b271
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1d02724e251bc885bc87293a81a94997f35cd079
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010946"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961568"
 ---
 # <a name="configure-and-manage-encryption-keys-ssrs-configuration-manager"></a>Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] пользуются ключами шифрования. Для защиты конфиденциальных данных в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]применяется сочетание открытого, закрытого и симметричного ключей. Симметричный ключ создается при инициализации сервера отчетов в момент его установки или настройки, и используется для шифрования конфиденциальных данных, хранящихся на сервере отчетов. Открытые и закрытые ключи создаются операционной системой, и используются для защиты симметричного ключа. Пара из открытого и закрытого ключей создается для каждого экземпляра, который сохраняет конфиденциальные данные в базе данных сервера отчетов.  

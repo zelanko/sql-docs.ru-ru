@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 574614976a9d24f6c9cedbfede2fd5a150211416
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: dcfd16ae7e49392c9ba0a001ea8d205c4fa88d1c
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525788"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156870"
 ---
 # <a name="understanding-the-tabular-object-model"></a>Основные сведения о табличной объектной модели
   Табличная модель — это логическое представление таблиц, связей, иерархий, перспектив, мер и ключевых показателей эффективности. В этом разделе представлены сведения о внутренней реализации с помощью объектов AMO. См. в разделе [Разработка объектов управления аналитикой &#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo) Если вы пользовались объектами AMO.  

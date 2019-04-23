@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: b5185c1e-56de-41a8-a9c3-eec663750cde
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c96b5b5f7ae92dd85f2c93dcb0423dcc342c5152
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d570ce785e575f607e49dcc10f5bf4aadca741ae
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534616"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157760"
 ---
 # <a name="contact-creation-using-clr-and-xml"></a>Создание контакта с использованием среды CLR и XML-кода
   Образец Contact для SQL Server содержит ряд полезных программ, образующих дополнительный функциональный слой поверх базового образца базы данных AdventureWorks2012. Первая программа создает контактные записи для разных групп людей, включенных в базу данных AdventureWorks2012. Контактные данные описываются в формате XML и передаются хранимой процедуре на языке C# или VB, которая создает XML-код и помещает его в нужные таблицы базы данных.  

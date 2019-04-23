@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10156"
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ddcf0bae98a6e07a6e3c84de1068a8f4bd93833e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 26fbda6dacd20b3ec02061b41a7e1de2f3b2d1ff
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289563"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59972040"
 ---
 # <a name="3d-bevel-and-other-effects-in-a-chart-report-builder-and-ssrs"></a>Эффекты рельефа, объемные и другие эффекты в диаграмме (построитель отчетов и службы SSRS)
   Объемные (трехмерные) эффекты можно использовать, чтобы добавить диаграмме глубину и увеличить ее визуальную привлекательность. Например, если нужно выделить отдельный срез разрезанной круговой диаграммы, можно повернуть диаграмму и изменить перспективу так, что пользователи обратят внимание на этот сегмент в первую очередь. После применения объемных эффектов к диаграмме все цвета градиента и стили штриховки отключаются.  

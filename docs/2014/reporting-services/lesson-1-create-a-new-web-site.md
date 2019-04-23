@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1a956ec3ea8aca78b87b1a728c55e878540d909e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 95bd0257deae9d06870ccb75abd8f4f8b41910bb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036965"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967410"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>Урок 1. Создание нового веб-сайта
   На этом занятии показано, как создать новый проект веб-сайта с использованием шаблона веб-сайта ASP.NET для Visual C#.  
@@ -34,6 +34,6 @@ ms.locfileid: "56036965"
  Откроется проект веб-сайта.  
   
 ## <a name="next-task"></a>Следующая задача  
- Вы успешно создали новый проект веб-сайта. Затем необходимо создать подключение к данным и таблицу данных для родительского отчета. См. в разделе [Урок 2: Определение подключения к данным и таблицы данных для родительского отчета](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+ Вы успешно создали новый проект веб-сайта. Затем необходимо создать подключение к данным и таблицу данных для родительского отчета. См. [Занятие 2. Определение подключения к данным и таблицы данных для родительского отчета](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
   
   

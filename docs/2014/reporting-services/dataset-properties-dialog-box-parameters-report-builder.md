@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10023"
 ms.assetid: 3a0672ad-c969-455b-b952-585164ce1dda
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3b4d473958e17fd67c1685e206fc02a5f5feca60
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fe7194c8a6f54da50eeef21891bc1049735ddd1e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298012"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968240"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>Диалоговое окно «Свойства набора данных» — «Настройки» (построитель отчетов)
   Выберите **параметры** на **свойства набора данных** диалоговое окно для добавления, изменения и удаления параметров запроса.  
@@ -80,7 +80,7 @@ ms.locfileid: "56298012"
  [Справка построителя отчетов для диалоговых окон, панелей и мастеров](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Диалоговое окно свойств набора данных, запрос &#40;построитель отчетов&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [Выражения (построитель отчетов и службы SSRS)](report-design/expressions-report-builder-and-ssrs.md)   
- [Учебник. Добавление параметра к отчету &#40;построитель отчетов&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Учебник. Добавление параметра к отчету (построитель отчетов)](tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Параметры отчета (построитель отчетов и конструктор отчетов)](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Конструкторы запросов (построитель отчетов)](../../2014/reporting-services/query-designers-report-builder.md)   

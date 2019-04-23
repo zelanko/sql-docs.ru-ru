@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c96bfb3e1d4298bea649ad207314f5b91ae352c5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5244d423e8e4369be7ce942fde8dbdaaf2f2e391
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293192"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963290"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Добавление каскадных параметров в отчет (построитель отчетов и службы SSRS)
   Каскадирование параметров предоставляет способ управления большими объемами данных отчета. Можно определить набор связанных параметров таким образом, чтобы список значений для одного параметра зависел от значения, выбранного в другом параметре. Например, первый параметр является независимым и может представлять список категорий продуктов. При выборе пользователем категории второй параметр зависит от значения первого параметра. Эти значения обновляются списком подкатегорий выбранной категории. При просмотре пользователем отчета значения параметров категорий и подкатегорий используются для фильтрации данных отчета.  
@@ -157,7 +157,7 @@ ms.locfileid: "56293192"
 ## <a name="see-also"></a>См. также  
  [Добавление, изменение или удаление параметра отчета (построитель отчетов и службы SSRS)](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [Параметры отчета (построитель отчетов и конструктор отчетов)](report-parameters-report-builder-and-report-designer.md)   
- [Учебник. Добавление параметра к отчету &#40;построитель отчетов&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Учебник. Добавление параметра к отчету (построитель отчетов)](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Учебники по &#40;построитель отчетов&#41;](../report-builder-tutorials.md)   
  [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

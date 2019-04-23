@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 29824d30b1fdd96c2bc847b8908b49340a05aaf3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d2d29838c371559c54163eb8e5488d198cf28345
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026905"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943920"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Страница «Мои подписки» (диспетчер отчетов)
   Используйте страницу «Мои подписки» для просмотра всех подписок. На этой странице можно открыть, изменить или удалить любую из своих подписок. Пользователь является владельцем только тех подписок, которые были им созданы. Невозможно открыть подписки других пользователей или используемые, но не принадлежащие пользователю подписки (например, если имя пользователя было добавлено к подписке, определенной другим пользователем). На этой странице невозможно создать подписку. Дополнительные сведения о создании подписок см. в разделе [новую подписку или изменить страницу подписки &#40;диспетчера отчетов&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  

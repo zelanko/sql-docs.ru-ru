@@ -14,15 +14,15 @@ helpviewer_keywords:
 - accessing data, query designer
 - relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ee69a2cd6081b83d6b4a549169cffbe86584ed31
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: efd8e80d223e75503bd034c77483d60a51ff9e1a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034075"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947700"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Пользовательский интерфейс конструктора реляционных запросов (построитель отчетов)
   Построитель отчетов предоставляет графический конструктор запросов и конструктор запросов на основе текста, которые помогают создавать запрос, указывающий данные для извлечения из [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] реляционных баз данных и [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] для набора данных отчета. Графический конструктор запросов используется для просмотра метаданных, интерактивного создания запроса, а также для просмотра его результатов. Текстовый конструктор запросов используется для просмотра запроса, созданного графическим конструктором запросов, или для его изменения. Также можно импортировать существующий запрос из файла или отчета.  

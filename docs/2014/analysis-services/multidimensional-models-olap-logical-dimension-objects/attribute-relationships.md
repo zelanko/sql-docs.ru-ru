@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - member properties [Analysis Services], attribute relationships
@@ -26,12 +24,12 @@ ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4401eea7e5c5b42c1706095e4c14aee348298bc5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 81d51c8778cfbc6e3891dfb3b6783db48f0c65a2
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512784"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158091"
 ---
 # <a name="attribute-relationships"></a>можно изменить расположение фигур на вкладке
   В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], атрибуты измерения всегда связаны прямо или косвенно с ключевым атрибутом. Когда измерение определяется по схеме «звезда», где все атрибуты измерения наследуются из одной реляционной таблицы, то связи между ключевыми и не ключевыми атрибутами определяются автоматически. Когда измерение определяется по схеме «снежинка», где атрибуты измерения наследуются от разных реляционных таблиц, связи атрибутов автоматически определяются следующим образом:  

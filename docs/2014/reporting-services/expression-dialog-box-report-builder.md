@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - expressions
 ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6f6a205c6ec89ca1cf17699e6e5a4b8cfe7b6bf3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 119ed4044fa3613e0544f0c9ee60189342bd0a63
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295782"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953560"
 ---
 # <a name="expression-dialog-box-report-builder"></a>Диалоговое окно «Выражение» (построитель отчетов)
   Используйте **выражение** диалоговое окно, чтобы написать [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] свойств элемента выражения для отчетов. Выражения можно использовать для задания многих свойств, в том числе цвета, шрифта, границ. Во время выполнения обработчик отчета вычисляет выражения и заменяет их результатами значения свойств.  
@@ -53,7 +53,7 @@ ms.locfileid: "56295782"
  **Переменные**  
  Отображает список переменных отчета. Дополнительные сведения см. в разделе [Ссылки на коллекции переменных отчета и группы (построитель отчетов и службы SSRS)](report-design/built-in-collections-report-and-group-variables-references-report-builder.md).  
   
- **Операторы**  
+ **Инструкции**  
  Отображает операторы, которые можно включить в вычисление или строковую операцию. Дополнительные сведения см. в разделе [Операторы в выражениях (построитель отчетов и службы SSRS)](report-design/operators-in-expressions-report-builder-and-ssrs.md).  
   
  **Общие функции**  

@@ -8,18 +8,18 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7eeb2396479f5258a3e50f39d6b3adc956dd44f2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 7a94b17d36429c27e2ddc9b958a4d0e8d8278f9c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288912"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943880"
 ---
 # <a name="built-in-collections-in-expressions-report-builder-and-ssrs"></a>Встроенные коллекции в выражениях (построитель отчетов и службы SSRS)
-  В выражение в отчете можно включить ссылки на следующие встроенные коллекции: ReportItems, Parameters, Fields, DataSets, DataSources, Variables и встроенные поля для общих сведений, таких как имя отчета. В диалоговом окне **Выражения** отображаются не все коллекции. Коллекции DataSets и DataSources доступны только во время выполнения для отчетов, опубликованных на сервере отчетов. Коллекция ReportItems является коллекцией текстовых полей в области отчета, например текстовых полей на странице или в верхнем колонтитуле.  
+  В выражении в отчете можно включить ссылки на следующие встроенные коллекции: ReportItems, параметры, поля, наборы данных, источников данных, переменные и встроенные поля для общих сведений, таких как имя отчета. В диалоговом окне **Выражения** отображаются не все коллекции. Коллекции DataSets и DataSources доступны только во время выполнения для отчетов, опубликованных на сервере отчетов. Коллекция ReportItems является коллекцией текстовых полей в области отчета, например текстовых полей на странице или в верхнем колонтитуле.  
   
  Дополнительные сведения см. в разделе [Выражения (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md).  
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - troubleshooting [Reporting Services], errors
 - events [Reporting Services]
 ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 907c910ebd5111b660ba99d0d6d8afcec3aee718
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: eb18f324ca3f4ed6111181d5f6ed2fd3ca58ce1f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041275"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962871"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Справочник по ошибкам и событиям (службы Reporting Services)
   Этот раздел содержит сведения об ошибках и событиях служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Файлы журналов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] также содержат сведения об ошибках. Дополнительные сведения о доступных типах файлов журналов и способах просмотра журналов см. в разделе [Файлы и источники журналов служб Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "56041275"
 ## <a name="report-server-events"></a>События сервера отчетов  
  Следующие события сервера отчетов записываются в журнал приложений [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
-|Идентификатор события|Тип|Категория|Исходный код|Описание|  
+|Идентификатор события|Тип|Категория|Source|Описание|  
 |--------------|----------|--------------|------------|-----------------|  
 |106|Ошибка|Планирование|Сервер отчетов|При определении запланированной операции (например, подписки на отчеты и доставки отчетов) агент SQL Server должен быть запущен.|  
 |[107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|Ошибка|Запуск или завершение|Сервер отчетов<br /><br /> обработчик планирования и доставки|*\<Источник>* не может подключиться к базе данных сервера отчетов. Дополнительные сведения см. в разделе [Служба Windows сервера отчетов (MSSQLServer) 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md).|  

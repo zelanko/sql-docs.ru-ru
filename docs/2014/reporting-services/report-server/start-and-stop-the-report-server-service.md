@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Report Server service, starting
 - starting Report Server service
 ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 31daaf135e2a5315cea5d71ca6ef0b61e91ff9c9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f4bd22faaa9d0f3b6ce213c37e20615492b1e95d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029185"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968340"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>Запуск и остановка службы сервера отчетов
   Сервер отчетов реализован в виде службы Windows, которая включает веб-службу сервера отчетов, диспетчер отчетов и приложение фоновой обработки. Чтобы использовать какие-либо функции сервера отчетов, эта служба должна работать. Остановка службы приводит к прекращению всех операций сервера отчетов.  

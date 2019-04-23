@@ -4,25 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- data-quality-services
-- database-engine
-- integration-services
-- master-data-services
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0652a2545f0b1e9d591777f0bcabe6395cf4feaa
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f23c3ff4d5bf55609e1dab2462b19a5fa273986f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802658"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158010"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Возможности, поддерживаемые различными выпусками SQL Server 2014
 
@@ -31,7 +24,7 @@ ms.locfileid: "56802658"
 
  > **Примечание:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] доступен в ознакомительной версии в течение 180-дневного пробного периода. Дополнительные сведения см. на [веб-сайте пробного программного обеспечения](https://go.microsoft.com/fwlink/?LinkId=190955) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 > 
-> **ПРИМЕЧАНИЕ.** Компоненты, поддерживаемые выпуском SQL Server Developer Edition и ознакомительной версией, описаны в наборе компонентов для выпуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition.  
+> **ПРИМЕЧАНИЕ.** Функции, поддерживаемые выпусками Evaluation и Developer см. в разделе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] набор функций для предприятия.  
   
  Чтобы перейти к таблице, относящейся к технологии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , щелкните ссылку на нее:  
   
@@ -381,13 +374,13 @@ ms.locfileid: "56802658"
 |Средства интеллектуального анализа данных (мастера, редакторы, построители запросов)|Да|Да|Да|||||  
 |Перекрестная проверка|Да|Да||||||  
 |Модели на фильтрованных подмножествах структур интеллектуального анализа данных|Да|Да||||||  
-|Временные ряды: произвольное сочетание методов ARTXP и ARIMA|Да|Да||||||  
-|Временные ряды: прогнозирование с новыми данными|Да|Да||||||  
+|Временные ряды: Произвольное сочетание методов ARTXP и ARIMA|Да|Да||||||  
+|Временные ряды: Прогнозирование с новыми данными|Да|Да||||||  
 |Неограниченные параллельные запросы интеллектуального анализа данных|Да|Да||||||  
-|Дополнительная настройка & параметры конфигурации для алгоритмов интеллектуального анализа данных|Да|Да||||||  
+|Расширенная конфигурация и параметры конфигурации для алгоритмов интеллектуального анализа данных|Да|Да||||||  
 |Поддержка подключаемых модулей алгоритмов|Да|Да||||||  
 |Параллельная обработка моделей|Да|Да||||||  
-|Временные ряды: прогноз перекрестных рядов|Да|Да||||||  
+|Временные ряды: Прогноз перекрестных рядов|Да|Да||||||  
 |Неограниченные атрибуты для правил взаимосвязи|Да|Да||||||  
 |Прогнозирование последовательностей|Да|Да||||||  
 |Множественные цели прогнозирования для упрощенного алгоритма Байеса, нейронной сети и логистической регрессии|Да|Да||||||  

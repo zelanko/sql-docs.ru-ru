@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 77d52ac48c46e798f16e9af2adc3b349fe86ba2d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 43864fb135faf61a2a0205199d7717d7b5c04026
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037115"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946890"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Тип соединения список SharePoint (службы SSRS)
   Для включения данных из списка Microsoft SharePoint в отчет следует добавить или создать набор данных, основанный на источнике данных отчета типа «Список Microsoft SharePoint». Это встроенный тип источника данных, основанный на модуле обработки данных «Список SharePoint служб Microsoft SQL Server Reporting Services». Используйте этот тип источника данных для подключения и извлечения данных списка с сайтов [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 и [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  

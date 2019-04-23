@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - storage [Analysis Services], partitions
@@ -22,12 +20,12 @@ ms.assetid: 63f5d9f5-c6b6-4ceb-94fe-7b6c396d10bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09231b03e784c142ab8b99ed31c2c4c88f6e72d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d092c33c8c350dc19b749fd3b31ccf1b8c73eac6
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051924"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154721"
 ---
 # <a name="remote-partitions"></a>Удаленные секции
   Данные удаленной секции хранятся на другом экземпляре Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] чем экземпляр, содержащий определения (метаданные) секции и ее родительского куба. Управление удаленной секцией выполняется на том же экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], на котором определены секция и ее родительский куб.  
@@ -45,7 +43,7 @@ ms.locfileid: "48051924"
   
 |||  
 |-|-|  
-|Тип хранения|Данные |  
+|Тип хранения|Данные|  
 |MOLAP|Статистические схемы секции и копия исходных данных секции|  
 |HOLAP|Статистические схемы секций|  
 |ROLAP|Данные секции отсутствуют|  
@@ -59,7 +57,7 @@ ms.locfileid: "48051924"
  Данные удаленных секций можно архивировать или восстанавливать, когда архивируется или восстанавливается хранящая их база данных. Если восстановление базы данных выполняется без восстановления удаленной секции, то прежде чем использовать данные секции, необходимо обработать удаленную секцию. Дополнительные сведения об архивации и восстановлении баз данных см. в разделе [резервное копирование и восстановление из базы данных Analysis Services](../multidimensional-models/backup-and-restore-of-analysis-services-databases.md).  
   
 ## <a name="see-also"></a>См. также  
- [Создание и управление удаленной секцией &#40;служб Analysis Services&#41;](../multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+ [Создание удаленной секции и управление ею (службы Analysis Services)](../multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [Обработка служб Analysis Services объектов](../multidimensional-models/processing-analysis-services-objects.md)  
   
   

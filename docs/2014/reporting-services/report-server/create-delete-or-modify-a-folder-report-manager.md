@@ -15,15 +15,15 @@ helpviewer_keywords:
 - folders [Reporting Services], deleting
 - folders [Reporting Services], modifying
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 61f1decb93244bfd2b52718dd448ac3eb016499f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b5db8ffafa6697f085d9594939d80140865efe5a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016616"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964740"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>создать, изменить или удалить папку (диспетчер отчетов)
   Для упорядочения элементов и управления элементами, публикуемыми на сервере отчетов, можно создать папки. Создание папок поможет пользователям находить интересующие их отчеты. Для диспетчеров содержимого папки обеспечивают инфраструктуру для применения разрешений. Можно создать назначения ролей для определенных папок, чтобы ограничить доступ к отчетам, которые находятся на стадии разработки или не подлежат широкому распространению.  

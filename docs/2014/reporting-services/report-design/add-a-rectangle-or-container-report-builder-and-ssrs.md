@@ -11,15 +11,15 @@ f1_keywords:
 - "10061"
 - sql12.rtp.rptdesigner.rectangleproperties.general.f1
 ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2b14c42d88354660c04955ddc20e7586fdc377f1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 21bf1d94f179f9c48fb3b00f06d98cec105c9f27
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291482"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949696"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>Добавление прямоугольника или контейнера (построитель отчетов и службы SSRS)
   Прямоугольник добавляется к отчету, если нужно разделить различные области отчета с помощью графического элемента, выделить области отчета или установить фон для одного или нескольких элементов отчета. Прямоугольники используются также в качестве контейнеров, помогающих управлять подготовкой к просмотру областей данных в отчете. Внешний вид прямоугольника можно настроить, изменяя его свойства, например цвета фона и границ. Дополнительные сведения об использовании прямоугольника как контейнера см. в разделах [Прямоугольники и линии (построитель отчетов и службы SSRS)](rectangles-and-lines-report-builder-and-ssrs.md) и [Отображение одних и тех же данных в матрице и на диаграмме (построитель отчетов)](display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).  

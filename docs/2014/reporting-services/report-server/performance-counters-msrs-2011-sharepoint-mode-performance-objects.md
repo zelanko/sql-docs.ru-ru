@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Scheduling and Delivery Processor performance object [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9154d8fe244449d38eef0f220fc1215f6bbb71cf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 77ce77a2c42944a881942d4ee953183a68f5bbd6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023475"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943080"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-sharepoint-mode-and-msrs-2014-windows-service-sharepoint-mode-performance-objects-sharepoint-mode"></a>Счетчики производительности для объектов производительности веб-службы MSRS 2014 в режиме интеграции с SharePoint и службы Windows для MSRS 2014 в режиме интеграции с SharePoint (режим SharePoint)
   В этом разделе рассматриваются счетчики производительности для объектов производительности `MSRS 2014 Web Service SharePoint Mode` и `MSRS 2014 Windows Service SharePoint Mode`, которые принадлежат к числу компонентов развертывания служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] в режиме SharePoint.  

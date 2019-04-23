@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 07b8b29bd0d7a9008d702ee147087f8bc3554c0a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cfc294f1ae01241dbcabfff954aa42c242f6aad7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294062"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943390"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>Размещение меток на диаграмме (построитель отчетов и службы SSRS)
   Поскольку формы всех типов диаграмм различны, метки точек данных помещаются в оптимальные положения, не ухудшающие удобочитаемость диаграммы. Позиции меток по умолчанию зависят от типа диаграммы:  

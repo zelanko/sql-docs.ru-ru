@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - code groups [Reporting Services]
@@ -17,18 +15,18 @@ helpviewer_keywords:
 - security configuration files [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 90a41365f249c112b7ac1c0a07bdfd1186c6a97b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ee7ba55e48f4704c912e92a4d8352e7c891c06b6
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032483"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154772"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Использование файлов политики безопасности служб Reporting Services
-  Службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] хранят сведения о политике безопасности компонентов в реестре и файлах конфигурации, которые копируются в файловую систему при установке. В этих файлах конфигурации хранится сочетание внутренней и пользовательской политики безопасности для сборок программного кода в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Три файла конфигурации соответствуют трем защищаемым компонентам служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: сервер отчетов и служба Windows, веб-приложение диспетчер отчетов и окно предварительного просмотра конструктора отчетов.  
+  Службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] хранят сведения о политике безопасности компонентов в реестре и файлах конфигурации, которые копируются в файловую систему при установке. В этих файлах конфигурации хранится сочетание внутренней и пользовательской политики безопасности для сборок программного кода в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Три файла конфигурации соответствуют трем защищаемым компонентам [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: Окно предварительного просмотра на сервере отчетов и службы Windows, диспетчер отчетов веб-приложения и конструктора отчетов.  
   
 > [!NOTE]  
 >  Для конструктора отчетов предусмотрено два режима предварительного просмотра: вкладка предварительного просмотра и всплывающее окно предварительного просмотра, которое вызывается при запуске проекта отчета в режиме **DebugLocal**. Вкладка **Просмотр** не является защищаемым компонентом, к ней не применяются параметры политики безопасности. Окно предварительного просмотра предназначено для имитации функциональной возможности сервера отчетов и поэтому имеет файл конфигурации политики безопасности, который необходимо изменить, если используются пользовательские сборки или пользовательские модули в конструкторе отчетов.  

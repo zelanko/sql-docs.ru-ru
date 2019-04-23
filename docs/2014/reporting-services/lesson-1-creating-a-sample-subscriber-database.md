@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5a754f0d81714e3f483ee5abeab1850c61592ab6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b5ecbbebd3ed29f5fc3fc8b8a47717f09ba51e43
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039245"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971690"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Урок 1. Создание образца базы данных подписчика
   Для определения управляемой данными подписки нужен источник данных, предоставляющий данные подписки. На этом этапе будет создана небольшая база данных для хранения данных подписки, используемых при работе с этим учебником. Позже, после обработки подписки, сервер отчетов получит эти данные и использует их для настройки выходных данных отчетов, параметров доставки и формата представления отчетов.  

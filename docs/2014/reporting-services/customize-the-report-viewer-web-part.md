@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Web Parts [Reporting Services]
 - Report Viewer Web Part [Reporting Services]
 ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 46873ce2a5a8ad006fafb2c0311e895c6305cd6a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b9bbccd4abf5636cb777d69b64268ffea6632e65
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017966"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947760"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Настройка веб-части средства просмотра отчетов
   Веб-часть средства просмотра отчетов можно использовать для просмотра отчетов, запущенных на сервере отчетов, настроенном для работы в режиме интеграции с SharePoint. Отчеты, которые можно отобразить, включают файлы определений отчета (файлы с расширением RDL) и отчеты построителя отчетов. Отчеты автоматически открываются в веб-части средства просмотра отчетов на отдельной странице, но веб-часть средства просмотра отчетов можно добавить и на существующую веб-страницу или сайт, если на данной странице необходимо постоянно отображать определенный отчет.  

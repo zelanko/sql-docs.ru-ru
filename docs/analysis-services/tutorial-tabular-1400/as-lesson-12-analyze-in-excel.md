@@ -11,11 +11,11 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4c1b433ae2023f544073e285cca9594c980dd83f
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59476720"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945380"
 ---
 # <a name="analyze-in-excel"></a>Анализ в Excel
 
@@ -25,11 +25,11 @@ ms.locfileid: "59476720"
   
 Для этого занятия необходимо установить Excel на том же компьютере, что и Visual Studio.
   
-Предполагаемое время выполнения данного занятия: **5 минут**  
+Предполагаемое время для выполнения этого занятия: **5 минут**  
   
 ## <a name="prerequisites"></a>предварительные требования  
 
-Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Прежде чем выполнять задания в этом занятии, необходимо завершить предыдущее занятие: [Занятие 11. Создание ролей](../tutorial-tabular-1400/as-lesson-11-create-roles.md).  
+Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Перед выполнением задач на этом занятии, необходимо завершить предыдущее занятие: [Занятие 11. Создание ролей](../tutorial-tabular-1400/as-lesson-11-create-roles.md).  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>Просмотр с помощью перспектив «По умолчанию» и «Продажи через Интернет»  
 

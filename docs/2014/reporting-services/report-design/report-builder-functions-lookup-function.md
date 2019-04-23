@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 95ce70bf8535db07eef8d45faa1d61eab2a43697
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: efed574d2fc68fc88d5352b6bb6db09e6cab4076
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292442"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963310"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Функция подстановки (построитель отчетов и службы SSRS)
   Возвращает первое совпадающее значение для заданного имени из набора данных, содержащего пары «имя-значение».  

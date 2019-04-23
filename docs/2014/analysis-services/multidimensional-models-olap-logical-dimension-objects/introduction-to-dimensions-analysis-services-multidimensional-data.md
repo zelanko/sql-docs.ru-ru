@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - dimensions [Analysis Services], about dimensions
@@ -18,12 +16,12 @@ ms.assetid: ab170fdd-4144-42db-9497-690b9189fc25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 807e02a03ada37b17a8c351ed9e535835755e6df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d60d86a333c38b1fe122d72f55ccba25653256c5
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117244"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154330"
 ---
 # <a name="introduction-to-dimensions-analysis-services---multidimensional-data"></a>Введение в измерения (службы Analysis Services — многомерные данные)
   Все Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] измерения — это группы атрибутов на основе столбцов из таблиц или представлений в представлении источника данных. Измерения существуют независимо от куба, могут использоваться в нескольких кубах или несколько раз в одном и том же кубе, а также могут быть связаны между экземплярами служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Измерение, существующее независимо от куба, называется измерением базы данных, а экземпляр измерения базы данных в кубе называется измерением куба.  

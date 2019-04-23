@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f6a6e14bbabdab808ed81011ad5877ba180055f7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a09af051826fc771f37a912f5266554f7d98fe1c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291906"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961250"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Линейчатые диаграммы (построитель отчетов и службы SSRS)
   На линейчатой диаграмме ряд отображается в виде наборов горизонтальных линий. Простая линейчатая диаграмма очень напоминает гистограмму, на которой ряд отображается в виде наборов вертикальных линий, и линейчатую диаграмму диапазонов, на которой ряд отображается в виде наборов горизонтальных линий с разными начальными и конечными точками.  
@@ -68,7 +68,7 @@ ms.locfileid: "56291906"
  [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Форматирование условных обозначений на диаграмме (построитель отчетов и службы SSRS)](chart-legend-formatting-report-builder.md)   
  [Добавление в диаграмму стилей рамки, рельефа и текстуры &#40;построитель отчетов и службы SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Учебник. Добавление линейчатой диаграммы в отчет (построитель отчетов)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Учебник. Добавление в отчет линейчатой диаграммы (построитель отчетов)](https://go.microsoft.com/fwlink/?LinkId=198052)   
  [Учебник. Добавление в отчет линейчатой диаграммы](https://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

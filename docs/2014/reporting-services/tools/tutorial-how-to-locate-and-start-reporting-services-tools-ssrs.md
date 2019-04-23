@@ -19,17 +19,17 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - Report Manager [Reporting Services]
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 60d8938b8fd74a5a62ac9b122c897dc0008d4f9f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 03fb1d70046fe784fecafd8d9b3092ce21962498
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290742"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958460"
 ---
-# <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Учебник. Инструкции по поиску и запуску средств служб Reporting Services (SSRS)
+# <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Учебник. Инструкции по поиску и запуску отчетов служб Services Tools (SSRS)
   В этом учебнике рассказывается о средствах, используемых для настройки сервера отчетов, управления содержимым и операциями сервера отчетов, создания и публикации отчетов. Этот учебник призван помочь новым пользователям понять, как найти и открыть каждый инструмент. Если вы уже знакомы с этими средствами, то можете перейти к другим учебникам, которые помогут научиться правильно использовать службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Дополнительные сведения о других учебниках см. в разделе [учебники по службам Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
   
  В этом разделе:  
@@ -59,7 +59,7 @@ ms.locfileid: "56290742"
   
 -   Настройте автоматическую обработку отчетов и доставку отчетов по электронной почте.  
   
- **Установка**. Диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] устанавливается при установке служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в собственном режиме. Дополнительные сведения см. в разделе [Установка сервера отчетов служб Reporting Services в собственном режиме](../install-windows/install-reporting-services-native-mode-report-server.md).  
+ **Установка**. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Диспетчер конфигурации устанавливается при установке [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] собственный режим. Дополнительные сведения см. в разделе [Установка сервера отчетов служб Reporting Services в собственном режиме](../install-windows/install-reporting-services-native-mode-report-server.md).  
   
 #### <a name="to-start-the-reporting-services-configuration-manager"></a>Запуск диспетчера конфигурации служб Reporting Services  
   
@@ -90,7 +90,7 @@ ms.locfileid: "56290742"
 ##  <a name="bkmk_report_manager"></a> Диспетчер отчетов (собственный режим)  
  Используйте [диспетчера отчетов &#40;собственный режим служб SSRS&#41; ](../report-manager-ssrs-native-mode.md) набор разрешений, управления подписками и расписаниями и работы с отчетами. Диспетчер отчетов также можно использовать для просмотра отчетов.  
   
- **Установка**. Диспетчер отчетов устанавливается при установке служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в собственном режиме. [Установка сервера отчетов служб Reporting Services в собственном режиме](../install-windows/install-reporting-services-native-mode-report-server.md)  
+ **Установка**. Диспетчер отчетов устанавливается при установке [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] собственный режим: [Установка сервера отчетов служб Reporting Services в собственном режиме](../install-windows/install-reporting-services-native-mode-report-server.md)  
   
  Для работы с диспетчером отчетов необходимо иметь соответствующие разрешения (изначально разрешения на доступ к функциональным возможностям диспетчера отчетов имеют только члены группы локальных администраторов). Диспетчер отчетов предоставляет различные страницы и параметры, в зависимости от назначений роли текущего пользователя. Пользователи, у которых нет разрешения, получат пустую страницу. Пользователи, которые имеют разрешения на просмотр отчетов, получат ссылки для открытия отчетов. Дополнительные сведения о разрешениях см. в разделе [Роли и разрешения &#40;службы Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md).  
   

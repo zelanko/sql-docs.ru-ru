@@ -11,15 +11,15 @@ helpviewer_keywords:
 - report models [Reporting Services], creating
 - Report Manager [Reporting Services], model creation
 ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: adbcaf8bdbae605941422a4e5b6d3df9ed7031f2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 07865f96b0e4086af346ffc076b1df6d07cda6cd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010447"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955160"
 ---
 # <a name="create-a-model-using-report-manager"></a>Создание модели с помощью диспетчера отчетов
   С помощью диспетчера отчетов можно создавать модели на основе куба служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , базы данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или базы данных Oracle. Модели отчета создаются на основе общих источников данных, опубликованных на сервере отчетов. Если еще не создано ни одного общего источника данных, то его необходимо создать.  
@@ -47,9 +47,9 @@ ms.locfileid: "56010447"
   
 8.  Выберите метод подключения, с помощью которого пользователи построителя отчетов будут подключаться к базе данных.  
   
-    -   Проверка подлинности Windows: Выберите этот параметр, если проверку подлинности пользователей [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] должна проводить операционная система. Этот параметр позволяет [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] применять для проверки подлинности пользователей функции безопасности Windows, такие как шифрование паролей. Настоятельно рекомендуется выбрать этот параметр.  
+    -   Проверка подлинности Windows: Выберите этот параметр, если нужно, чтобы в операционной системе для проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] пользователей. Этот параметр позволяет [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] применять для проверки подлинности пользователей функции безопасности Windows, такие как шифрование паролей. Настоятельно рекомендуется выбрать этот параметр.  
   
-    -   Проверка подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: Выберите этот параметр, если нужно, чтобы пользователям использовать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] созданной вами учетной записи входа. Пользователи должны вводить допустимые имена входа пользователей и пароли [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Проверка подлинности: Выберите этот параметр, если нужно, чтобы пользователям использовать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] созданной вами учетной записи входа. Пользователи должны вводить допустимые имена входа пользователей и пароли [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
         > [!CAUTION]  
         >  При возможности используйте проверку подлинности Windows.  

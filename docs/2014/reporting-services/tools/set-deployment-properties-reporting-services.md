@@ -13,15 +13,15 @@ helpviewer_keywords:
 - properties [Reporting Services], deployment
 - deploying reports [Reporting Services]
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 87768f105f1e8a2b7d1e09433106e9a25baa0a93
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ab927ca95e32f1ad2a34a6e7910dd35a498eec0e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029695"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942880"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Задание свойства развертывания (службы Reporting Services)
   В[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]необходимо задать сервер отчетов. Можно также указать папки для отчетов и общие источники данных, что позволит публиковать элементы в проекте "Сервер отчетов" на сервере отчетов. Свойства и значения, необходимые среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для построения, предварительного просмотра и развертывания отчетов, хранятся в конфигурациях проектов в проекте "Сервер отчетов". Можно создать несколько именованных наборов для этих свойств проекта, чтобы можно было просто переключаться с одного набора свойств на другой. Каждый набор свойств представляет собой конфигурацию. Например, может существовать одна конфигурация для публикации отчетов на тестовом сервере и другая конфигурация для публикации отчетов на рабочем сервере.  

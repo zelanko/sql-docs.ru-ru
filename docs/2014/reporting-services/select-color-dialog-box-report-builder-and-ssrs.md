@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 882f7ba5aed75aec20d656c5ca49da66625ec6e6
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fdd07f8c0f8fba74432a08283c76341eb2707312
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293112"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938630"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>Диалоговое окно «Выбор цвета» (построитель отчетов и службы SSRS)
   Используйте диалоговое окно **Выбор цвета** , чтобы указать параметры цвета для фона одной или нескольких ячеек в области данных или текстовом поле либо для всей диаграммы.  

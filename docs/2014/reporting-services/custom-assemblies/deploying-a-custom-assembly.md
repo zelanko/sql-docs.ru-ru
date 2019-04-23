@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - deploying custom assemblies [Reporting Services]
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - custom assemblies [Reporting Services], updating
 - updating custom assemblies
 ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 98f498ceb1f0d2d05261c08e14d7adb0b7cfd716
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: abaa60d696975616631aea210c32bfcea63f6767
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020695"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156031"
 ---
 # <a name="deploying-a-custom-assembly"></a>Развертывание пользовательской сборки
   Чтобы развернуть пользовательскую сборку в службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], поместите сборку в папки приложения и конструктора отчетов, и сервера отчетов. По умолчанию пользовательским сборкам в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляется разрешение `Execution`. Чтобы предоставить пользовательским сборкам права доступа, кроме разрешения на выполнение, необходимо изменить файл конфигурации rssrvpolicy.config для сервера отчетов и файл конфигурации rspreviewpolicy.config для окна предварительного просмотра конструктора отчетов. Также можно установить пользовательскую сборку в глобальный кэш сборок.  

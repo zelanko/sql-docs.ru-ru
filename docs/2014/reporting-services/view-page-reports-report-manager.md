@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4874ba29-429b-4dd4-a8cb-d4f087237dc2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 057d2c4c75bbc0d7070992571a80907e811d354e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d36a9e8b5e4b46283b78f07c27834a79993faeab
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031635"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969444"
 ---
 # <a name="view-page-reports-report-manager"></a>Страница «Вид», отчеты (диспетчер отчетов)
   Просмотреть отчет можно на странице «Просмотр». При первом открытии в диспетчере отчетов отчет имеет формат HTML. В верхней части HTML-отчета содержится панель инструментов, позволяющая перемещаться по страницам отчета, выполнять поиск или экспортировать отчет в другой формат. На следующей диаграмме представлена панель инструментов «Отчеты».  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b1292fffcbfbce4ba92775737eeda4326b50fdbc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 80b5920bdcf3aa3f1db9c649115613f6dca34ab5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290462"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949350"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>Печать отчетов (построитель отчетов и службы SSRS)
   После сохранения отчета на сервере отчетов его можно просмотреть и распечатать из браузера, диспетчера отчетов или любого приложения, использующегося для просмотра экспортированных отчетов. Перед сохранением отчета его можно напечатать во время просмотра.  
@@ -47,7 +47,7 @@ ms.locfileid: "56290462"
  Описывает, как напечатать отчеты, экспортированные в другое приложение.  
   
  [Печать отчета (построитель отчетов и службы SSRS)](print-a-report-report-builder-and-ssrs.md)  
- Содержит пошаговые инструкции по печати отчета, управлению полями страницы и указанию размера бумаги для отчетов, подготавливаемых к просмотру в модулях подготовки с жесткими разрывами страниц: «PDF», «Изображение» и «Печать».  
+ Содержит пошаговые инструкции по печати отчета, как управлять полями страницы и указанию размера бумаги для отчетов, подготавливаемых к просмотру с разрывами страниц: PDF, Image и Print.  
   
 ## <a name="see-also"></a>См. также  
  [Экспорт отчетов &#40;построитель отчетов и службы SSRS&#41;](export-reports-report-builder-and-ssrs.md)   

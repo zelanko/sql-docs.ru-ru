@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7511a4b6a441d00ca51eb29daed29cef616e6473
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1b35399504c840d81573366401ea8f4978f47f58
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297412"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938840"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>Вложенные области данных (построитель отчетов и службы SSRS)
   Одни области данных, например диаграмма, могут быть вложены в другие, например в матрицу. Обычно это делается для выведения сводок данных в кратком и понятном виде, или для визуального представления данных, дополняющего табличное или матричное представление.  
@@ -90,7 +90,7 @@ ms.locfileid: "56297412"
  [Датчики (построитель отчетов и службы SSRS)](gauges-report-builder-and-ssrs.md)   
  [Выражения (построитель отчетов и службы SSRS)](expressions-report-builder-and-ssrs.md)   
  [Форматирование элементов отчета (построитель отчетов и службы SSRS)](formatting-report-items-report-builder-and-ssrs.md)   
- [Учебник. Добавление ключевого показателя Эффективности к отчету &#40;построитель отчетов&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Учебник. Добавление в отчет ключевого показателя эффективности (построитель отчетов)](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [Форматирование шкал на датчике (построитель отчетов и службы SSRS)](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

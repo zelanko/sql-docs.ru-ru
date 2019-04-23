@@ -11,15 +11,15 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a788984a75a950ae822180c070200ce7cc88694d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4096d6fed3d73faffdc8798c475954bdb031dd68
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018895"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944960"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>Диспетчер предупреждений данных для оповещения администраторов
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляет диспетчер предупреждений об изменении данных, позволяющий администраторам предупреждений SharePoint управлять предупреждениями об изменении данных. Администраторы предупреждений могут просматривать сведения обо всех предупреждениях, сохраненных на сайте, и удалять предупреждения. На следующем рисунке показаны функции, предоставляемые администраторам предупреждений SharePoint в диспетчере предупреждений об изменении данных.  
@@ -48,7 +48,7 @@ ms.locfileid: "56018895"
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Лорен Джонсон|4|6/12/2011|6/1/2011|Последнее предупреждение выполнено успешно; предупреждение было отправлено.|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|Последнее предупреждение выполнено успешно, но данные остались без изменения и предупреждение не было отправлено.|  
-|InventoryCount|StockStatusByQTR|Лорен Джонсон|7|7/10/2011|7/2/2011|\<сообщение об ошибке>Файл журнала содержит подробные сведения об ошибке. Ссылается на запись журнала с идентификатором: \<ИДЕНТИФИКАТОР GUID &GT;.|  
+|InventoryCount|StockStatusByQTR|Лорен Джонсон|7|7/10/2011|7/2/2011|\<сообщение об ошибке>Файл журнала содержит подробные сведения об ошибке. См. запись журнала с идентификатором: \<ИДЕНТИФИКАТОР GUID &GT;.|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|Предупреждение создано.|  
   
  Дополнительные сведения см. в статье [Управление всеми предупреждениями данных на сайте SharePoint в диспетчере предупреждений данных](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  

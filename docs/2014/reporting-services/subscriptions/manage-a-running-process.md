@@ -25,15 +25,15 @@ helpviewer_keywords:
 - displaying jobs
 - subscriptions [Reporting Services], running processes
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 84199b2bf01101a1bcc67b6e3d0870824a116860
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 12fa851a8f524bae83017042d01a7c7733225fd7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013595"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962520"
 ---
 # <a name="manage-a-running-process"></a>Управление запущенным процессом
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] наблюдают за состоянием заданий, работающих на сервере отчетов. Через регулярные интервалы времени сервер отчетов просматривает внутрипроцессные задания и записывает сведения о состоянии в базу данных сервера отчетов или в базы данных приложения служб для режима интеграции с SharePoint. Задание находится в процессе выполнения, если запущены следующие процессы: выполнение запроса на удаленном или локальном сервере базы данных, обработка отчета и подготовка отчета к просмотру.  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 97af25216bd0f1e30531fcb43e182672cd299ac6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a43744243713fb522356814df8fa80a3e11197bd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034554"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967920"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>Создание расписания: Страница «Изменение расписания» (диспетчер отчетов)
   Используйте страницу «Создание расписания» / «Изменение расписания», чтобы создать расписание для отчета. Расписания используются с подписками для обновления кэшированных отчетов и для создания моментальных снимков в качестве отдельных элементов или в журнале отчета.  

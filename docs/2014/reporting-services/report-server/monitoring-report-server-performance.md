@@ -16,15 +16,15 @@ helpviewer_keywords:
 - performance [Reporting Services]
 - Reporting Services, performance
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6e0bebad59894c150a77dd7b8fc3036fe50029e7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a296af6a8bcb6f168d5461a6d0f36df1f6ce2339
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023655"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968140"
 ---
 # <a name="monitoring-report-server-performance"></a>Наблюдение за производительностью сервера отчетов
   Для наблюдения за производительностью сервера отчетов используются средства наблюдения за производительностью, позволяющие оценить активность сервера, наблюдать тренды, диагностировать узкие места системы и собирать данные, помогающие определить адекватность текущей конфигурации системы. Для настройки производительности сервера можно задать частоту очистки домена приложений сервера отчетов. Дополнительные сведения см. в разделе [Настройка доступной памяти для приложений сервера отчетов](../report-server/configure-available-memory-for-report-server-applications.md).  

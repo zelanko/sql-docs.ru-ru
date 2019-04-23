@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.optimization.f1
 - "10522"
 ms.assetid: 8c0310ba-eedd-4c9f-95bd-1f9e2a1a8ed3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7d9d9ff8cf279ff9a88a4c46b2ddc4b97e834b49
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 833b60a0e96cc79c136a58bebca1c69486795e2b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287163"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968910"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>Диалоговое окно «Свойства окна просмотра карты», вкладка «Оптимизация»
   Вкладка **Оптимизация** диалогового окна **Свойства окна просмотра карты** позволяет управлять разрешением при просмотре карты в отчете.  
@@ -40,6 +40,6 @@ ms.locfileid: "56287163"
   
 ## <a name="see-also"></a>См. также  
  [Карты (построитель отчетов и службы SSRS)](report-design/maps-report-builder-and-ssrs.md)   
- [Устранение неполадок в отчетах: Отчеты-карты &#40;построитель отчетов и службы SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md).  
   
   

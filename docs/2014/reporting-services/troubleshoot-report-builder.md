@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 78f9232b45be9c70a8a244ff97af7d401419d49a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0b0287d9b8533cc551f31c4c054db9bf87c5415a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297172"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958490"
 ---
 # <a name="troubleshoot-report-builder"></a>Устранение неполадок в построителе отчетов
   Построитель отчетов — это средство разработки отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , которое позволяет строить отчеты с использованием разного рода источников данных, а также публиковать отчеты на сервере отчетов или на сайте SharePoint. Созданные отчеты можно просматривать в построителе отчетов, в веб-браузере или как часть приложения [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows или сайта SharePoint.  
@@ -26,7 +26,7 @@ ms.locfileid: "56297172"
  Следующие разделы помогут устранить неполадки отчетов, с точки зрения автора отчетов или администратора сервера отчетов.  
   
 ## <a name="report-authors"></a>Авторы отчетов  
- [Устранение неполадок в отчетах: Отчеты-карты &#40;построитель отчетов и службы SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md).  
   
  [Устранение неполадок в элементах отчета &#40;построитель отчетов и службы SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   

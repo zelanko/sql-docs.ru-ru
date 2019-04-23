@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: b577568b-ecbd-44c3-be88-31dab6fc38a2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 009cce23aff5d3b3755b4eb8086bd1560a5be487
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a26b183d3024333f5792203e180df395c0301892
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289097"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948910"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>Экспорт отчета в файл другого типа (построитель отчетов и службы SSRS)
   Во время предварительного просмотра отчета с помощью построителя отчетов или конструктора отчетов можно выполнить подготовку отчета в другом формате, например CSV, Image, PDF, [!INCLUDE[ofprword](../includes/ofprword-md.md)]или [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]. Это можно сделать и при просмотре отчета на сервере отчетов. Подготовка отчета в определенном формате удобна в тех случаях, когда требуется сохранить отчет в файле другого типа сразу, не выполняя перед этим публикацию на сервере отчетов. Также это может понадобиться, если нужно проверить, как будет выглядеть отчет в том или ином формате после доставки получателям. Подготовка отчета на сервере отчетов может быть полезной, если необходимо настроить подписки или доставить отчеты по электронной почте, а также в случае, если необходимо сохранить отчет, доступный на сервере отчетов. Дополнительные сведения см. в разделе [Подписки и доставка (службы Reporting Services)](subscriptions/subscriptions-and-delivery-reporting-services.md).  

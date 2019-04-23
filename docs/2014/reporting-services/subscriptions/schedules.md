@@ -15,15 +15,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], scheduling
 - automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e0fe323460431750a6c79e181bda9e0173a31025
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 69acb3d6495ce7ec77b67feed7644945a477a86e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040845"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966220"
 ---
 # <a name="schedules"></a>Расписания
   Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют общие расписания и расписания отчетов, что позволяет управлять обработкой и распространением отчетов. Различие между двумя типами расписаний состоит в том, как они определяются, хранятся и управляются. Внутреннее строение обоих типов расписаний одинаково. В каждом расписании указывается тип повторения: ежемесячно, еженедельно или ежедневно. В пределах одного типа повторений можно указать интервалы и диапазон, определяющий частоту повторения события. Шаблон типа повторения и способ его задания одинаков при создании как общих расписаний, так и расписаний для отчетов.  

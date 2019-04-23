@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9c4b124ca7d8595962535cded369670430a4adff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d1d495f8da0d05286a80ff8bdcf2e1c10da9b909
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026465"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953450"
 ---
 # <a name="cache-a-shared-dataset"></a>кэшировать общий набор данных
   Один из способов повышения производительности состоит в настройке свойств кэширования общего набора данных. При кэшировании общего набора данных копия результатов запроса сохраняется на указанный период времени. Первый пользователь, запрашивающий отчет, в котором используется общий набор данных, должен будет дождаться получения результатов запроса и завершения всех процессов обработки до просмотра отчета. Производительность работы последующих пользователей, запрашивающих тот же отчет в пределах времени кэширования, будет значительно повышена, поскольку запрос и обработка уже выполнены. Также можно указать расписание обновления кэша для выполнения запроса и кэширования результатов до истечения указанного периода кэширования.  

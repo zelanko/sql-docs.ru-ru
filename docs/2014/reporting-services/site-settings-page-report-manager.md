@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b097b327121656cda3ff8c93ec24bfe1cb35921e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1d3e8051c246c6ec5c29df4fc49fd0f242852354
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035035"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971990"
 ---
 # <a name="site-settings-page-report-manager"></a>Страница «Настройки сайта» (диспетчер отчетов)
   Страница «Настройки сайта» позволяет изменить заголовок приложения, настроить серверные значения по умолчанию для ограничений журналов отчетов и значения времени ожидания обработки отчетов, а также управлять назначениями системных ролей и общими расписаниями. Для просмотра этой страницы требуются разрешения диспетчера содержимого или системного администратора.  
@@ -56,7 +56,7 @@ ms.locfileid: "56035035"
   
  **Сервер отчетов в собственном режиме:** В установки в собственном режиме, URL-адрес по умолчанию будет принимать форму http://\<*computername*> / reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application.  
   
- Режим интеграции с SharePoint. URL-адрес по умолчанию будет принимать форму http://\<*SharePoint_site*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application.»  
+ Режим интеграции с SharePoint: URL-адрес по умолчанию будет принимать форму http://\<*SharePoint_site*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application.»  
   
  **Применить**  
  Нажмите, чтобы сохранить изменения на сервере отчетов.  

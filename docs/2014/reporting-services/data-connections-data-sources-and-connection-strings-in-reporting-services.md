@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 - logins [Reporting Services]
 ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3323683075b99ce2ab8cbcb456240bc24323762f
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: f2b49a645866f310a7a0ff006b47cce2ff32f3c3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658127"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954160"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
   Для включения данных в отчет [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , вам необходимо сначала создать *источники данных* и *наборы данных*. Данная тема объясняет типы источников данных, как создать источники данных и предоставляет важную информацию, относящуюся к учетным данным источника данных. Источник данных включает в себя тип источника данных, информацию о подключении и используемый тип учетных данных. Существует два типа источников данных отчета: внедренные и общие. Внедренный источник данных определяется в отчете и используется только этим отчетом. Общий источник данных определяется независимо от отчета и может использоваться несколькими отчетами. Дополнительные сведения см. в разделах [Внедренные и общие подключения к данным или источники данных (построитель отчетов и службы SSRS)](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) и [Внедренные и общие наборы данных (построитель отчетов и службы SSRS)](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -77,7 +77,7 @@ ms.locfileid: "58658127"
   
 -   интерфейс ODBC  
   
--   Семантическая модель бизнес-аналитики Microsoft для Power View: На сайте SharePoint, который был настроен для галереи PowerPivot и службы [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], данный тип источника данных является доступным. Этот тип источника данных используется только для презентаций [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Дополнительную информацию смотрите в [Построение отличных семантических табличных моделей бизнес-аналитики для Power View](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
+-   Семантическая модель бизнес-Аналитики Майкрософт для Power View: На сайте SharePoint, который был настроен для работы с коллекцией PowerPivot и [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], доступен этот тип источника данных. Этот тип источника данных используется только для презентаций [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Дополнительную информацию смотрите в [Построение отличных семантических табличных моделей бизнес-аналитики для Power View](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
   
  Полный список источников данных и версий, поддерживаемых [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], см. в разделе [Источники данных, поддерживаемые службами Reporting Services (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4b194714-46f7-4f0e-9632-7f89d9600762
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9a73e75c61fe3911919ed5112a1a6afff406adcd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 353cce0aa868f1f9f657321de2eb4f5e29484a08
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016735"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963340"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>Установка сообщения об отсутствии данных для области данных (построитель отчетов и службы SSRS)
   Чтобы задать текст, который будет отображаться в подготовленном к просмотру отчете в области данных, внутри которой данных нет, задайте свойство NoRowsMessage для таблицы, матрицы или области списка данных или свойство NoDataMessage для диаграммной области данных и NoDataText для цветовой шкалы для схемы. Во время выполнения обработчик запросов производит запрос к каждому из наборов данных в отчете; такие запросы могут не вернуть результирующий набор. Если область данных привязана к пустому набору данных, то можно указать текст, который будет отображаться вместо пустой области данных. Также свойство NoRowsMessage можно задать для вложенных отчетов; сообщение будет отображаться, если во время выполнения во вложенном отчете не будет заполненных наборов данных.  

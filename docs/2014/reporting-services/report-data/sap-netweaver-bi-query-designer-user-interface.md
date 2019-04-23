@@ -15,18 +15,18 @@ helpviewer_keywords:
 - SAP NetWeaver Business Intelligence [Reporting Services], query designer
 - query designers [Reporting Services]
 ms.assetid: 102da66e-ca31-41aa-ab4b-c9b5ab752a72
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 951be7ea854bf3f4d9e10e902cfc6574e7749d51
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7d2576b091af63166df0d321e156841745ecbc6b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041815"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954560"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов BI SAP NetWeaver
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графический конструктор запросов, предназначенный для построения запросов многомерных выражений к источнику данных SAP NetWeaver® Business Intelligence. Графический конструктор запросов многомерных выражений имеет два режима: режим конструктора и режим запросов. В каждом режиме имеется панель «Метаданные», из которой можно перетащить элементы из InfoCube, MultiProvider или запроса с поддержкой веб-доступа, определенного на источнике данных, для построения запроса многомерных выражений, получающего данные при обработке отчета.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графический конструктор запросов, предназначенный для построения запросов многомерных выражений к источнику данных SAP NetWeaver® Business Intelligence. Конструктор графический конструктор запросов многомерных Выражений имеет два режима: Режим конструктора и режим запросов. В каждом режиме имеется панель «Метаданные», из которой можно перетащить элементы из InfoCube, MultiProvider или запроса с поддержкой веб-доступа, определенного на источнике данных, для построения запроса многомерных выражений, получающего данные при обработке отчета.  
   
 > [!IMPORTANT]  
 >  При создании и выполнении запросов пользователи получают доступ к источникам данных. Следует предоставить минимальные разрешения на источники данных, например разрешение только на чтение.  

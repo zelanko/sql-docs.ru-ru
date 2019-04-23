@@ -1,5 +1,5 @@
 ---
-title: Занятие 5. Форматирование отчета (службы Reporting Services) | Документация Майкрософт
+title: 'Занятие 5.: Форматирование отчета (службы Reporting Services) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0d97e0b74455e9ff7788d96303f7499001f7f3f7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 37e5ff9cd40dd8c79efcde8c7cb072493a2ff95a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292572"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958110"
 ---
-# <a name="lesson-5-formatting-a-report-reporting-services"></a>Занятие 5. Форматирование отчета (Reporting Services)
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>Занятие 5.: Форматирование отчета (службы Reporting Services)
   После добавления области данных и нескольких полей к отчету «Заказы на продажу» можно отформатировать поля дат и валют, а затем и заголовки столбцов.  
   
  В этом разделе:  
@@ -93,7 +93,7 @@ ms.locfileid: "56292572"
 5.  Чтобы сохранить отчет, в меню **Файл** выберите команду **Сохранить все** .  
   
 ## <a name="next-steps"></a>Следующие шаги  
- Заголовки столбцов, а также значения дат и денежные значения успешно отформатированы. Далее предстоит добавить в этот отчет группирование и итоги. См. в разделе [Урок 6: Добавление группирования и итогов &#40;службы Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+ Заголовки столбцов, а также значения дат и денежные значения успешно отформатированы. Далее предстоит добавить в этот отчет группирование и итоги. См. [Занятие 6. Добавление группирования и итогов (службы Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 ## <a name="see-also"></a>См. также  
  [Форматирование чисел и дат (построитель отчетов и службы SSRS)](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   

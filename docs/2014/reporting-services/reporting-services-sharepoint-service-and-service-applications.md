@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 501aa9ee-8c13-458c-bf6f-24e00c82681b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 02acf78c8f7c30172271062f090411f5fb8f2e1d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 40bfd5e68aa8c27ee0024147eeadc99f0da91ce2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037367"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954220"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Служба SharePoint и Служебные приложения службы Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] спроектирован на основе архитектуры службы SharePoint и использует службу SharePoint, а также одно или несколько приложений службы. Создание приложения службы открывает доступ к службе и формирует базу данных приложения службы. Можно создать несколько приложений службы Reporting Services, однако для большинства сценариев развертывания достаточно одного приложения службы.  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - closing reports
 - reports [Reporting Services], opening
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 41d67805a939cd6b5826dd227cc02e348e48dc32
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 11f2aa43220ef419325f64c368f80ea7691b3b65
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034404"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947880"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Открытие и закрытие отчетов (диспетчер отчетов)
   Диспетчер отчетов можно использовать для просмотра отчетов, опубликованных на сервере отчетов. По умолчанию все отчеты открываются в формате HTML. После открытия отчета, его можно экспортировать для просмотра в формате других приложений. Если отчет содержит интерактивные функции, либо разработан в построителе отчетов и содержит интерактивные данные, можно щелкать ссылки для просмотра дополнительных отчетов или данных.  

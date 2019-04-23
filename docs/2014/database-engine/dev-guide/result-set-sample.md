@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: a0590ba6-3856-4731-bb29-87b0a1c1b795
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5258e08abd322025b3f7349a6d22fdbdd046d4f0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1dd5cec5623cfca499fcd4d1eb1ce93faec1dd36
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373846"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155316"
 ---
 # <a name="result-set-sample"></a>Образец результирующего набора
   Иногда полезно выполнять команды в процессе считывания результатов запроса, не открывая новое соединение и не считывая все результаты в память. Функция режима MARS в ADO.NET 2.0 — это технология, которая может помочь в достижении этой цели. На настоящий момент режим MARS не реализован для внутрипроцессного поставщика, который используется для программирования на стороне сервера. Чтобы обойти это ограничение, можно воспользоваться серверными курсорами. Данный образец демонстрирует, каким образом они позволяют обойти проблему отсутствия поддержки режима MARS для программирования на стороне сервера.  
@@ -30,7 +28,7 @@ ms.locfileid: "53373846"
 ## <a name="prerequisites"></a>предварительные требования  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
   
 -   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](https://go.microsoft.com/fwlink/?linkid=62796).  
   
