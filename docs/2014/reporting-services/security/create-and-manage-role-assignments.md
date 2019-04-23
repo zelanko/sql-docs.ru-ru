@@ -14,15 +14,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 88c864b3e3243ab7cb380b4af5b092757585115d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2f22a5af8401a0cf16c508f805dbb38ee9970780
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023745"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932801"
 ---
 # <a name="create-and-manage-role-assignments"></a>Создание назначений ролей и управление ими
   *Назначение ролей* представляет собой политику безопасности, определяющую, может ли пользователь или группа получить доступ к определенному элементу сервера отчетов или выполнить над ним операцию. Назначение ролей состоит из одного имени учетной записи пользователя или группы пользователей и одного или более определений роли.  

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - initializing installations [Reporting Services]
 - behavior changes [Reporting Services]
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b845480863facf66ff33c5d976531118edb2d4a9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6722c72c8d6ac152697c65b2c910e1f8d29139c9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033195"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59937360"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>Изменения в работе служб SQL Server Reporting Services в выпуске SQL Server 2014
   В этом разделе описаны изменения в работе служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Изменения в работе затрагивают работу и взаимодействие компонентов в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] по сравнению с предыдущими версиями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -56,24 +56,24 @@ ms.locfileid: "56033195"
  Дополнительные сведения об уровнях разрешений в режиме интеграции с SharePoint см. в разделе [Пользовательские разрешения и уровни разрешений](https://technet.microsoft.com/library/cc721640.aspx).  
   
 ### <a name="report-server-trace-logs-are-in-a-new-location-for-sharepoint-mode-sharepoint-mode"></a>Журналы трассировки сервера отчетов имеют новое расположение для режима интеграции с SharePoint (режим интеграции с SharePoint).  
- **Новые возможности.** Журналы трассировки для сервера отчетов, установленного в режиме интеграции с SharePoint, размещаются в каталоге %Programfiles%\Common Files\Microsoft Shared\Web Server Extensions\14\Web Services\ReportServer\LogFiles.  
+ **Новые возможности.** Для сервера отчетов, установленного в режиме интеграции с SharePoint журналы трассировки сервера отчетов будет в каталоге %ProgramFiles%\common Files\Microsoft Shared\Web Server Extensions\14\Web Services\ReportServer\LogFiles.  
   
  **Возможности предыдущей версии.** Журналы трассировки сервера отчетов были найдены по пути, следующим образом: %Programfilesdir%\Microsoft SQL Server\\\Reporting Services\LogFiles < RS_instance >  
   
 ### <a name="getserverconfiginfo-soap-api-is-no-longer-supported-sharepoint-mode"></a>API-интерфейс SOAP GetServerConfigInfo больше не поддерживается (режим интеграции с SharePoint).  
  **Новое поведение**: С помощью командлета PowerShell «Get-SPRSServiceApplicationServers»  
   
- **Возможности предыдущей версии.** Клиенты могли разрабатывать код SOAP-клиента для непосредственной связи с конечной точкой [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и выполнять вызов GetReportServerConfigInfo().  
+ **Возможности предыдущей версии.** Клиенты могли разрабатывать код SOAP-клиента для взаимодействия непосредственно с [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] конечной точки и выполнять вызов GetReportServerConfigInfo().  
   
 ### <a name="report-server-configuration-and-management-tools"></a>Средства настройки и управления конфигурацией сервера отчетов  
   
 #### <a name="configuration-manager-is-not-used-for-sharepoint-mode"></a>Диспетчер конфигурации не используется в режиме интеграции с SharePoint Mode  
- **Новые возможности.** Диспетчер конфигурации [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] больше не поддерживает серверы отчетов в режиме интеграции с SharePoint. Настройка служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции SharePoint теперь может быть выполнена через центр администрирования SharePoint, поэтому диспетчер конфигурации [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] больше не поддерживает режим интеграции с SharePoint. Диспетчер конфигурации теперь используется только для серверов отчетов в собственном режиме.  
+ **Новые возможности.** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager больше не поддерживает серверы отчетов в режиме интеграции с SharePoint. Настройка служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции SharePoint теперь может быть выполнена через центр администрирования SharePoint, поэтому диспетчер конфигурации [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] больше не поддерживает режим интеграции с SharePoint. Диспетчер конфигурации теперь используется только для серверов отчетов в собственном режиме.  
   
 #### <a name="you-cannot-change-the-server-from-one-mode-to-another"></a>Изменить режим работы сервера нельзя.  
  **Новые возможности.** Нельзя изменять режимы работы сервера. Если вы установили сервер отчетов для работы в собственном режиме, то нельзя его переключить или перенастроить на работу в режиме интеграции с SharePoint. Если вы установили сервер отчетов для работы в режиме интеграции с SharePoint, то можно переключить режим работы сервера отчетов на собственный режим.  
   
- **Возможности предыдущей версии.** Клиент устанавливает сервер отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint. Если необходимо переключить сервер отчетов на собственный режим работы, клиент может открыть диспетчер конфигурации [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и изменить режим с помощью создания новой или соединения с существующей базой данных собственного режима. Клиент может также использовать диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для переключения в собственный режим из режима интеграции с SharePoint.  
+ **Возможности предыдущей версии.** Клиент устанавливает [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] сервера отчетов в режиме интеграции с SharePoint. Если необходимо переключить сервер отчетов на собственный режим работы, клиент может открыть диспетчер конфигурации [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и изменить режим с помощью создания новой или соединения с существующей базой данных собственного режима. Клиент может также использовать диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для переключения в собственный режим из режима интеграции с SharePoint.  
   
 ##  <a name="bkmk_kj"></a> SQL Server 2008 R2 Reporting Services изменения в поведении  
  В этом разделе описаны изменения в работе служб [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

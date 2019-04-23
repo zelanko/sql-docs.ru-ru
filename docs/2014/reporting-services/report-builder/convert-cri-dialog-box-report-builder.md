@@ -13,15 +13,15 @@ helpviewer_keywords:
 - CRI
 - custom report items
 ms.assetid: 2a3f2ac6-667e-4498-8b73-9c40beb993f5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 40828dd4e7767688a329b641610a65dc0f3493c1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1885d796d567d03585ae1ce0b591fb85bbf42658
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018206"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946820"
 ---
 # <a name="convert-cri-dialog-box-report-builder"></a>Диалоговое окно «Преобразование пользовательских элементов отчета» (построитель отчетов)
   Этот отчет содержит пользовательские элементы отчетов с неподдерживаемыми функциями. Пользовательские элементы отчетов представляют собой расширения языка определения отчетов, которые поддерживают пользовательские объекты, отображающие данные в отчете. Пользовательские элементы отчета включают компоненты времени разработки и времени выполнения, поставляемые сторонними поставщиками программного обеспечения.  

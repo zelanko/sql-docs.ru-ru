@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1bfcb23c4ed497d2705ece469e2949c332cdfcdf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cf5feafd69cb16e1989496de90ce9e7af4df3687
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032325"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59937480"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Страница «Выбор источника данных» (диспетчер отчетов)
   Страница «Выбор источника данных» позволяет выбрать существующий совместно используемый элемент источника данных для использования в отчете или модели отчета. Эту страницу можно также использовать для выбора другого источника данных. Чтобы просмотреть тип источника данных или строку соединения, необходимо переместиться к общему источнику данных и открыть страницы «Свойства».  

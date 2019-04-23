@@ -1,5 +1,5 @@
 ---
-title: Урок 3. Определение набора данных для табличного отчета (службы Reporting Services) | Документация Майкрософт
+title: Урок 3. Определение набора данных для табличного отчета (службы Reporting Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3ffc81b9f0d3ffe91e36e9a06711ce62443ab89c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3f57ec59753e7539107c652d60f7a00959f95cbb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294342"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932490"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Урок 3. Определение набора данных для табличного отчета (службы Reporting Services)
   После определения источника данных необходимо определить набор данных. В службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]данные, используемые в отчетах, содержатся в *наборе данных*. Набор данных содержит указатель на источник данных и запрос, используемый в отчете, а также вычисляемые поля и переменные.  
@@ -69,7 +69,7 @@ ms.locfileid: "56294342"
      Поля и набор данных **AdventureWorksDataset** появятся в области данных отчета.  
   
 ## <a name="next-task"></a>Следующая задача  
- Определен запрос, получающий данные для отчета. Далее предстоит создать макет отчета. См. в разделе [урок 4: Добавление таблицы в отчет &#40;службы Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
+ Определен запрос, получающий данные для отчета. Далее предстоит создать макет отчета. См. [Занятие 4. Добавление таблицы в отчет (службы Reporting Services)](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
 ## <a name="see-also"></a>См. также  
  [Средства проектирования в отчет конструктора SQL Server Data Tools запросов &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
