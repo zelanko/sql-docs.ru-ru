@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 7b909df2e97149019d70af49085cc5f1e212f5ee
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 809a78130c5bc015114138e678c55522fa556f01
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240412"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671170"
 ---
 # <a name="download-and-install-sqlpackage"></a>Скачивание и установка sqlpackage
 
@@ -25,9 +25,9 @@ ms.locfileid: "59240412"
 
 |Платформа|Загрузить|Дата выпуска|Версия|Сборка
 |:---|:---|:---|:---|:---|
-|Windows|[Установщик MSI](https://go.microsoft.com/fwlink/?linkid=2069405)|1 февраля 2019 г.|18.1|15.0.4316.1|
-|macOS .NET Core (предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2069126)|1 февраля 2019 г. | 18.1 |15.0.4316.1|
-|Linux .NET Core (предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2069122)|1 февраля 2019 г. | 18.1 |15.0.4316.1|
+|Windows|[Установщик MSI](https://go.microsoft.com/fwlink/?linkid=2087429)|15 апреля 2019 г.|18.2|15.0.4384.2|
+|macOS .NET Core (предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2087247)|15 апреля 2019 г. | 18.2 |15.0.4384.2|
+|Linux .NET Core (предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2087431)|15 апреля 2019 г. | 18.2 |15.0.4384.2|
 
 Подробнее см. в [заметках о выпуске](release-notes-sqlpackage.md).
 
@@ -37,17 +37,17 @@ ms.locfileid: "59240412"
 
 Этот выпуск sqlpackage включает стандартные средства установщика Windows и ZIP-файл: 
 
-1. Скачайте и запустите [установщик DacFramework.msi для Windows](https://go.microsoft.com/fwlink/?linkid=2069405).
+1. Скачайте и запустите [установщик DacFramework.msi для Windows](https://go.microsoft.com/fwlink/?linkid=2087429).
 2. Откройте новое окно командной строки и запустите файл sqlpackage.exe.
     - Программа sqlpackage устанавливается в папку ```C:\Program Files\Microsoft SQL Server\150\DAC\bin```.
     - При установке версии x86 на x64-разрядном компьютере sqlpackage устанавливается в папку ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin```.
 
 ## <a name="get-sqlpackage-preview-for-macos"></a>Получение sqlpackage (предварительная версия) для macOS
 
-1. Скачайте [sqlpackage для macOS](https://go.microsoft.com/fwlink/?linkid=2069126).
+1. Скачайте [sqlpackage для macOS](https://go.microsoft.com/fwlink/?linkid=2087247).
 2. Чтобы извлечь файл и запустить sqlpackage, откройте новое окно терминала и введите следующие команды:
 
-   **Установка ZIP-файла:**
+   **Установка ZIP:**
 
    ```bash
    mkdir sqlpackage
@@ -59,10 +59,10 @@ ms.locfileid: "59240412"
 
 ## <a name="get-sqlpackage-preview-for-linux"></a>Получение sqlpackage (предварительная версия) для Linux
 
-1. Скачайте [sqlpackage для Linux](https://go.microsoft.com/fwlink/?linkid=2069122) с помощью одного из установщиков или архива tar.gz:
+1. Скачайте [sqlpackage для Linux](https://go.microsoft.com/fwlink/?linkid=2087431) с помощью одного из установщиков или архива tar.gz:
 2. Чтобы извлечь файл и запустить sqlpackage, откройте новое окно терминала и введите следующие команды:
 
-   **Установка ZIP-файла:**
+   **Установка ZIP:**
 
    ```bash
    cd ~
@@ -83,7 +83,7 @@ ms.locfileid: "59240412"
    sudo apt-get install libunwind8
    ```
 
-   **RedHat:**
+   **Redhat:**
 
    ```bash
    yum install libunwind

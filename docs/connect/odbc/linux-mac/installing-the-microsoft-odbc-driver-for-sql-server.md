@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: 3550e17c8f4d6384ceafabb77aa9ca70cd80c44b
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042333"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Установка Microsoft ODBC Driver for SQL Server на Linux и macOS
@@ -513,7 +513,7 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
 |Компонент|Описание|  
 |---------------|-----------------|  
 |libmsodbcsql-17.X.so.X.X или libmsodbcsql-13.X.so.X.X|Общий объект (`so`) файла динамической библиотеки, содержащий все функциональные возможности драйвера. Этот файл устанавливается в папке `/opt/microsoft/msodbcsql17/lib64/` для версии 17 драйвера и в папке `/opt/microsoft/msodbcsql/lib64/` для версии 13.|  
-|`msodbcsqlr17.rll` или диспетчер конфигурации служб `msodbcsqlr13.rll`|Сопутствующий файл ресурса для библиотеки драйвера. Этот файл устанавливается в папке `[driver .so directory]../share/resources/en_US/`| 
+|`msodbcsqlr17.rll` либо `msodbcsqlr13.rll`|Сопутствующий файл ресурса для библиотеки драйвера. Этот файл устанавливается в папке `[driver .so directory]../share/resources/en_US/`.| 
 |msodbcsql.h|Файл заголовка, содержащий все новые определения, необходимые для использования драйвера.<br /><br /> **Примечание**  . Нельзя сослаться на msodbcsql.h и odbcss.h в одной программе.<br /><br /> Файл msodbcsql.h устанавливается в папке `/opt/microsoft/msodbcsql17/include/` для версии 17 драйвера и в папке `/opt/microsoft/msodbcsql/include/` для версии 13. |
 |LICENSE.txt|Текстовый файл с условиями лицензионного соглашения. Этот файл помещается в папку `/usr/share/doc/msodbcsql17/` для версии 17 драйвера и в папку `/usr/share/doc/msodbcsql/` для версии 13.|
 |RELEASE_NOTES|Текстовый файл с заметками о выпуске. Этот файл помещается в папку `/usr/share/doc/msodbcsql17/` для версии 17 драйвера и в папку `/usr/share/doc/msodbcsql/` для версии 13.|
@@ -524,7 +524,7 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
 |Компонент|Описание|  
 |---------------|-----------------|  
 |libmsodbcsql.17.dylib или libmsodbcsql.13.dylib|Файл динамической библиотеки (`dylib`), содержащий все функциональные возможности драйвера. Этот файл устанавливается в папке `/usr/local/lib/`.|  
-|`msodbcsqlr17.rll` или диспетчер конфигурации служб `msodbcsqlr13.rll`|Сопутствующий файл ресурса для библиотеки драйвера. Этот файл устанавливается в папке `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` для версии 17 драйвера и в папке `[driver .dylib directory]../share/msodbcsql/resources/en_US/` для версии 13. | 
+|`msodbcsqlr17.rll` либо `msodbcsqlr13.rll`|Сопутствующий файл ресурса для библиотеки драйвера. Этот файл устанавливается в папке `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` для версии 17 драйвера и в папке `[driver .dylib directory]../share/msodbcsql/resources/en_US/` для версии 13. | 
 |msodbcsql.h|Файл заголовка, содержащий все новые определения, необходимые для использования драйвера.<br /><br /> **Примечание**  . Нельзя сослаться на msodbcsql.h и odbcss.h в одной программе.<br /><br /> Файл msodbcsql.h устанавливается в папке `/usr/local/include/msodbcsql17/` для версии 17 драйвера и в папке `/usr/local/include/msodbcsql/` для версии 13. |
 |LICENSE.txt|Текстовый файл с условиями лицензионного соглашения. Этот файл помещается в папку `/usr/local/share/doc/msodbcsql17/` для версии 17 драйвера и в папку `/usr/local/share/doc/msodbcsql/` для версии 13. |
 |RELEASE_NOTES|Текстовый файл с заметками о выпуске. Этот файл помещается в папку `/usr/local/share/doc/msodbcsql17/` для версии 17 драйвера и в папку `/usr/local/share/doc/msodbcsql/` для версии 13. |

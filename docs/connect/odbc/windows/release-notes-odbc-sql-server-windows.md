@@ -12,10 +12,10 @@ author: v-makouz
 ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: f74d5a70325fdceb311bb3a45ba6824e64242ff0
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872014"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Заметки о выпуске ODBC для SQL Server в Windows
@@ -98,7 +98,7 @@ GeneMi (and CraigG).  2019/03/30.
 > - Создание пользовательских типов по локальным путям не поддерживается.
 > - Встроенная проверка подлинности Windows не поддерживается.
 > - DTC не поддерживается.
-> - `sa` учетная запись отсутствует (учетная запись по умолчанию называется `cloudSA`).
+> - Учетная запись `sa` отсутствует (учетная запись по умолчанию называется `cloudSA`).
 > - В ошибке токена TDS (0xAA) возвращается неправильное имя сервера.
 > - Специальные символы в имени базы данных не поддерживаются.
 > - Инструкция ALTER DATABASE [имя_БД1] MODIFY NAME = [имя_БД2] не поддерживается.

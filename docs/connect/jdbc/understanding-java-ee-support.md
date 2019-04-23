@@ -1,7 +1,7 @@
 ---
-title: Основные сведения о поддержке Java EE | Документация Майкрософт
+title: Основные сведения о поддержке Java EE | Документация Майкрософт
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae55a5bc677c70d2a1f998e235031ac9bafd5aba
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 7d7d1867c8c6d9311736124cf74e30b748a9de68
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154619"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671230"
 ---
 # <a name="understanding-java-ee-support"></a>Основные сведения о поддержке Java EE
 
@@ -28,21 +28,21 @@ ms.locfileid: "56154619"
   
 ## <a name="driver-name"></a>Имя драйвера
 
-Имя класса драйвера ― **com.microsoft.sqlserver.jdbc.SQLServerDriver**. Для драйверов JDBC 6.0, 4.1 и 4.2 драйвер содержится в **sqljdbc.jar**, **sqljdbc4.jar**, **sqljdbc41.jar**, или **sqljdbc42.jar**файлы.
+Имя класса драйвера ― **com.microsoft.sqlserver.jdbc.SQLServerDriver**. Для драйверов JDBC 4.1, 4.2 и 6.0 драйвер содержится в файле **sqljdbc.jar**, **sqljdbc4.jar**, **sqljdbc41.jar** или **sqljdbc42.jar**.
 
-Для JDBC Driver 6.2 драйвер содержится в **mssql-jdbc-6.2.2.jre7.jar** или **mssql-jdbc-6.2.2.jre8.jar**.
+Для драйвера JDBC 6.2 драйвер содержится в файле **mssql-jdbc-6.2.2.jre7.jar** или **mssql-jdbc-6.2.2.jre8.jar**.
 
-Для JDBC Driver 6.4 драйвер содержится в **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar**, или **mssql-jdbc-6.4.0.jre9.jar**.
+Для драйвера JDBC 6.4 драйвер содержится в файле **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar** или **mssql-jdbc-6.4.0.jre9.jar**.
 
-Для 7.0 драйвера JDBC, драйвер содержится в **mssql-jdbc-7.0.0.jre8.jar**, или **mssql-jdbc-7.0.0.jre10.jar**.
+Для драйвера JDBC 7.0 драйвер содержится в файле **mssql-jdbc-7.0.0.jre8.jar** или **mssql-jdbc-7.0.0.jre10.jar**.
 
-Для 7.2 драйвера JDBC, драйвер содержится в **mssql-jdbc-7.2.1.jre8.jar**, или **mssql-jdbc-7.2.1.jre11.jar**.
+Для драйвера JDBC 7.2 драйвер содержится в файле **mssql-jdbc-7.2.2.jre8.jar** или **mssql-jdbc-7.2.2.jre11.jar**.
   
 Имя класса используется каждый раз при загрузке драйвера с классом JDBC DriverManager. Оно также используется всегда, когда нужно указать имя класса драйвера в любой конфигурации драйвера. Например, имя класса драйвера может потребоваться для настройки источника данных на сервере приложений Java EE.  
   
 ## <a name="data-sources"></a>обозревателе решений
 
-Драйвер JDBC обеспечивает поддержку для источников данных Java EE/JDBC 3.0. Драйвер JDBC [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) реализуется класс `com.microsoft.sqlserver.jdbc.SQLServerXADataSource`.  
+Драйвер JDBC обеспечивает поддержку для источников данных Java EE/JDBC 3.0. Класс [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) драйвера JDBC реализуется `com.microsoft.sqlserver.jdbc.SQLServerXADataSource`.  
   
 ### <a name="datasource-names"></a>Имена источников данных
 
@@ -73,7 +73,7 @@ DataSource ds = (DataSource) ctx.lookup("MyDataSource");
 Connection c = ds.getConnection("user", "pwd");  
 ```
 
-Дополнительные сведения о свойствах источника данных, см. в разделе [задание свойств источника данных](../../connect/jdbc/setting-the-data-source-properties.md).  
+Дополнительные сведения см. в статье [Задание свойств источника данных](../../connect/jdbc/setting-the-data-source-properties.md).  
   
 ## <a name="see-also"></a>См. также:
 

@@ -1,7 +1,7 @@
 ---
 title: Область данных отчета
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services-2014, sql-server-2014
@@ -9,14 +9,14 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 1696ea3cb9fa238e3ac31418670a1d4195ab2e98
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 1ea9335986fa58159bd7bb71fc7d32ac7f655feb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553206"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959711"
 ---
-# <a name="report-data-pane-in-sql-server-reporting-services-ssrs"></a>Область данных отчета в SQL Server Reporting Services (SSRS)
+# <a name="report-data-pane-in-sql-server-reporting-services-ssrs"></a>Область данных отчета в SQL Server Reporting Services (SSRS)
 
   С помощью области **Данные отчета** можно просмотреть определенные в настоящий момент параметры, источники данных, наборы данных, коллекции полей и изображения в отчете. Область «Данные отчета» отображает иерархическое представление элементов, представляющих данные в отчете. Узлы верхнего уровня представляют встроенные поля, параметры, изображения и ссылки источника данных. Чтобы просмотреть элементы данных, раскройте соответствующие узлы. Например, если раскрывается узел источника данных, отображаются наборы данных, определенные для этого источника. Если раскрывается набор данных, отображается набор полей. Чтобы связать данные с элементами отчета на странице отчета, перетащите нужные элементы в область конструктора отчета.  
   

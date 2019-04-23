@@ -7,13 +7,14 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
+manager: kfile
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 51ef41f83e7122d0ab6fc1bc1149fd2eb257215e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 05964630691537411c54bcd74b040a5d27301134
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529742"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583357"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Сервер отчетов служб Reporting Services (режим SharePoint)
 
@@ -114,11 +115,11 @@ ms.locfileid: "52529742"
   
  Если настроить сервер отчетов для работы с развертыванием продукта SharePoint, можно получить сочетание языков. Далее описано, какой язык будут иметь пользовательский интерфейс, документация и сообщения.  
   
--   Все страницы приложений, средства, сообщения об ошибках и предупреждения, создаваемые службами Reporting Services, будут выводиться на языке, используемом экземпляром служб Reporting Services (это один из языков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
+- Все страницы приложений, средства, сообщения об ошибках и предупреждения, создаваемые службами Reporting Services, будут выводиться на языке, используемом экземпляром служб Reporting Services (это один из языков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
--   Страницы приложения, открываемые на сайте SharePoint, веб-часть средства просмотра отчетов и построитель отчетов отображаются на одном из языков, поддерживаемых для надстройки служб Reporting Services. Список поддерживаемых языков см. в [скачиваемых материалах по SQL Server](https://msdn.microsoft.com/sql/downloads/) и на странице скачивания надстройки для служб SQL Server 2016 Reporting Services.  
+- Страницы приложения, открываемые на сайте SharePoint, веб-часть средства просмотра отчетов и построитель отчетов отображаются на одном из языков, поддерживаемых для надстройки служб Reporting Services. Список поддерживаемых языков см. в [скачиваемых материалах по SQL Server](https://msdn.microsoft.com/sql/downloads/) и на странице скачивания надстройки для служб SQL Server 2016 Reporting Services.  
   
--   Сайты и центр администрирования SharePoint, справка в Интернете и сообщения доступны на языках, поддерживаемых продуктами Office Server.  
+- Сайты и центр администрирования SharePoint, справка в Интернете и сообщения доступны на языках, поддерживаемых продуктами Office Server.  
   
  Если язык, используемый продуктом или технологией SharePoint, отличается от языка сервера отчетов, службы Reporting Services будут использовать язык из той же языковой группы, который ближе всего к языку SharePoint. Если подходящий язык недоступен, сервер отчетов будет использовать английский язык.  
   
@@ -136,8 +137,7 @@ ms.locfileid: "52529742"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Установка и удаление надстройки служб Reporting Services для SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[Веб-часть "Средство просмотра отчетов" на сайте SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
-[Викторина. Настройка служб SSRS 2012 для интеграции с SharePoint](https://go.microsoft.com/fwlink/?LinkId=306443)  
+[Установка или удаление надстройки служб Reporting Services для SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
+[Веб-часть "Средство просмотра отчетов" на сайте SharePoint (службы Reporting Services)](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

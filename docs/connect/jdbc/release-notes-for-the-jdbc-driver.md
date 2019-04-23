@@ -1,7 +1,7 @@
 ---
-title: Заметки о выпуске для драйвера JDBC | Документация Майкрософт
+title: Заметки о выпуске для драйвера JDBC | Документация Майкрософт
 ms.custom: ''
-ms.date: 02/07/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,58 +11,60 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 083eda191d51ec7043f24511d03c90beff9bfe84
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 5e75f732fc44ee339cb3d9d47518627f264cb8cc
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657739"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671340"
 ---
-# <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Заметки о выпуске для драйвера Microsoft JDBC
+# <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Заметки о выпуске для драйвера Microsoft JDBC Driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-В этой статье перечислены выпуски _Microsoft JDBC Driver для SQL Server_. Для каждой версии выпуска изменения их именования и описания.
+В этой статье перечислены выпуски _Microsoft JDBC Driver для SQL Server_ . Для каждой версии выпуска названы и описаны изменения.
 
-## <a name="721"></a>7.2.1
+## <a name="722"></a>7.2.2
 
 ### <a name="compliance"></a>Соответствие
 
-11 февраля 2019 г.
+16 апреля 2019 г.
 
-| Изменения соответствия | Сведения |
+| Изменение соответствий | Сведения |
 | :---------------- | :------ |
-| Загрузите последние обновления для 7.2 драйвера JDBC. | &bull; &nbsp; [Центр загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=2063159)<br/>&bull; &nbsp; [GitHub 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
-| Полностью соответствует спецификации API JDBC 4.2. | JAR-файлы в пакете 7,2 присваиваются в соответствии с совместимость версий Java.<br/><br/>Например mssql-jdbc-7.2.1.jre11.jar файл из 7,2 пакета следует использовать с помощью Java 11. |
-| Совместимость с пакетом Java Development Kit (JDK) версии 11.0 в дополнение к JDK версии 1.8. | 7.2 драйвера Microsoft JDBC для SQL Server теперь совместимы с Java Development Kit (JDK) версии 11.0 в дополнение к JDK 1.8. |
+| Скачайте последние обновления для драйвера JDBC версии 7.2. | &bull; &nbsp; [Центр загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=2063159)<br/>&bull; &nbsp; [GitHub 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Полностью соответствует спецификации API JDBC версии 4.2. | JAR-файлам в пакете 7.2 имена присваиваются в соответствии с совместимостью версий Java.<br/><br/>Например, файл mssql-jdbc-7.2.2.jre11.jar из пакета 7.2 должен использоваться с Java 11. |
+| Совместимость с пакетом Java Development Kit (JDK) версии 11.0 в дополнение к JDK версии 1.8. | Microsoft JDBC Driver версии 7.2 для SQL Server совместим с пакетом Java Development Kit (JDK) версии 11.0 в дополнение к JDK версии 1.8. |
 | &nbsp; | &nbsp; |
 
 > [!NOTE]
-> Проблемы с синтаксический анализ инструкции SQL был найден в драйвер JDBC 7.2 выпуска для Web (RTW), выпущено 31 января 2019 г. Выполнен откат изменений, а новый JAR-файлы (версия 7.2.1) выпущенных 11 февраля 2019 г.
+> Обнаружена проблема в анализе инструкции SQL драйвера JDBC 7.2 Release To Web (RTW), выпущенного 31 января 2019 года. Выполнен откат изменений, а новые JAR-файлы (версии 7.2.1) выпущены 11 февраля 2019 года.
 >
-> Обновление проектов для использования 7.2.1 выпуска JAR-файлы. Дополнительные сведения см. заметки о выпуске [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1).
+> Чтобы устранить проблемы с ActivityID, которые не были исправлены должным образом, было создано другое обновление для драйвера. Новые JAR-файлы (версии 7.2.2) были выпущены 16 апреля 2019 года.
+> 
+> Для использования JAR-файлов выпуска 7.2.2 рекомендуется обновить проекты. Дополнительные сведения см. в заметках о выпуске [GitHub 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) и [GitHub 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2).
 
-### <a name="active-directory-managed-service-identity-msi-authentication"></a>Active Directory _управляемое удостоверение службы_ проверки подлинности (MSI)
+### <a name="active-directory-managed-service-identity-msi-authentication"></a>Проверка подлинности с помощью _Управляемого удостоверения службы_ (MSI) Active Directory
 
 | Изменение MSI | Сведения |
 | :--------- | :------ |
-| Поддерживает режим проверки подлинности Active Directory управляемого удостоверения службы (MSI). | Этот режим проверки подлинности применяется в ресурсах Azure с поддержкой включена функция «Identity».<br/><br/>Обоих типов из управляемых удостоверений системы (MSI) поддерживаются получения драйвером **accessToken** для установления безопасного соединения. |
+| Поддерживается режим проверки подлинности с помощью Управляемого удостоверения службы (MSI) Active Directory. | Этот режим проверки подлинности применяется в ресурсах Azure с поддержкой активной функции Identity.<br/><br/>Оба типа Управляемых удостоверений службы (MSI) поддерживаются драйвером для получения **accessToken** для установления безопасного соединения. |
 | Дополнительные сведения и пример приложения для использования этого режима проверки подлинности. | См. дополнительные сведения об [установке подключения с использованием аутентификации Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
 | &nbsp; | &nbsp; |
 
-### <a name="introduces-open-service-gateway-initiative-osgi-support"></a>Представляет _Open службы шлюза Initiative_ поддержки (OSGi)
+### <a name="introduces-open-service-gateway-initiative-osgi-support"></a>Представление поддержки _Open Service Gateway Initiative_ (OSGi)
 
 | Изменение OSGi | Сведения |
 | :---------- | :------ |
-| **DataSourceFactory** добавлена реализация. | &bull; &nbsp; `org.osgi.service.jdbc.DataSourceFactory`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.SQLServerDataSourceFactory` |
-| **Активатор** добавлена реализация. | &bull; &nbsp; `org.osgi.framework.BundleActivator`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.Activator` |
+| Добавлена реализация **DataSourceFactory**. | &bull; &nbsp; `org.osgi.service.jdbc.DataSourceFactory`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.SQLServerDataSourceFactory` |
+| Добавлена реализация **Activator**. | &bull; &nbsp; `org.osgi.framework.BundleActivator`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.Activator` |
 | &nbsp; | &nbsp; |
 
-### <a name="introduces-sqlservererror-apis"></a>Представляет _SQLServerError_ API-интерфейсов
+### <a name="introduces-sqlservererror-apis"></a>Представление API-интерфейсов _SQLServerError_
 
 | Изменение API ошибок | Сведения |
 | :--------------- | :------ |
-| SQLServerError API появился. | Метод получения API для получения дополнительных сведений об ошибке, созданные на сервере.<br/><br/>&bull; &nbsp; `SQLServerException.getSQLServerError()`<br/>&bull; &nbsp; `SQLServerError` |
+| Представлен API SQLServerError. | Метод получения API для извлечения дополнительных сведений об ошибке, созданной на сервере.<br/><br/>&bull; &nbsp; `SQLServerException.getSQLServerError()`<br/>&bull; &nbsp; `SQLServerError` |
 | Дополнительные сведения. | См. дополнительные сведения об [обработке ошибок](../../connect/jdbc/handling-errors.md). |
 | &nbsp; | &nbsp; |
 
@@ -70,16 +72,16 @@ ms.locfileid: "58657739"
 
 | Изменение ADAL4J | Сведения |
 | :------------ | :------ |
-| Его зависимость Maven ADAL4J обновлен до версии 1.6.3. | &nbsp; |
-| Представляет _среду выполнения клиента Java для AutoRest_ как зависимость Maven версии 1.6.5. | &nbsp; |
+| Зависимость Maven в ADAL4J обновлена до версии 1.6.3. | &nbsp; |
+| _Клиентская среда выполнения Java для AutoRest_ представлена в качестве зависимости Maven версии 1.6.5. | &nbsp; |
 | Дополнительные сведения. | См. дополнительные сведения о [зависимостях компонентов Microsoft JDBC Driver для SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
-### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>Обновить _SDK Microsoft Azure Key Vault для Java_, версии 1.2.0
+### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>_Пакет SDK для Microsoft Azure Key Vault для Java_ обновлен до версии 1.2.0
 
-| Изменение пакета SDK для хранилища ключей | Сведения |
+| Изменение пакета SDK для Key Vault | Сведения |
 | :------------------- | :------ |
-| Обновить его зависимость Maven на _SDK Microsoft Azure Key Vault для Java_ до версии 1.2.0. | &nbsp; |
+| Зависимость Maven _для пакета SDK для Microsoft Azure Key Vault для Java_ обновлена до версии 1.2.0. | &nbsp; |
 | Общие сведения о зависимости Maven версии 1.2.0 для пакета _Microsoft Azure SDK для Key Vault WebKey_. | &nbsp; |
 | Дополнительные сведения. | См. дополнительные сведения о [зависимостях компонентов Microsoft JDBC Driver для SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
@@ -88,46 +90,47 @@ ms.locfileid: "58657739"
 
 | Известные проблемы | Сведения |
 | :----------- | :------ |
-| Параметризованные запросы, в некоторых случаях. | Обновление версии 7.2, которой будет v7.2.1, будет выпущено в февраля 2019 г. Чтобы устранить эту проблему. |
+| Параметризованные запросы в некоторых случаях. | Чтобы устранить эту проблему, в феврале 2019 года было выпущено обновление версии 7.2.0 (7.2.1). |
+| Удаление из ActivityIds. | Чтобы устранить эту проблему, в апреле 2019 года было выпущено обновление версии 7.2.1 (7.2.2). |
 | &nbsp; | &nbsp; |
 
 ## <a name="70"></a>7.0
 
-7.0 драйвера Microsoft JDBC для SQL Server полностью соответствует спецификации API JDBC 4.2. JAR-файлы в пакете 7.0 присваиваются в соответствии с совместимость версий Java. Например mssql-jdbc-7.0.0.jre10.jar файл из пакета 7.0 можно использовать с помощью Java 10.
+Microsoft JDBC Driver версии 7.0 для SQL Server полностью соответствует спецификации API JDBC версии 4.2. JAR-файлам в пакете 7.0 имена присваиваются в соответствии с совместимостью версий Java. Например, файл mssql-jdbc-7.0.0.jre10.jar из пакета 7.0 должен использоваться с Java 10.
 
 ### <a name="support-for-jdk-10"></a>Поддержка JDK 10
 
-7.0 драйвера Microsoft JDBC для SQL Server теперь совместимы с Java Development Kit (JDK) версии 10.0, в дополнение к JDK 1.8. Это обновление также предоставляет возможности драйвера `Automatic-Module-Name` как `com.microsoft.sqlserver.jdbc` через файл своего МАНИФЕСТА.
+Microsoft JDBC Driver версии 7.0 для SQL Server совместим с пакетом Java Development Kit (JDK) версии 10.0 в дополнение к JDK версии 1.8. Это обновление также предоставляет `Automatic-Module-Name` драйвера в качестве `com.microsoft.sqlserver.jdbc` с помощью файла манифеста.
 
 ### <a name="support-for-spatial-datatypes"></a>Поддержка пространственных типов данных
 
-7.0 драйвера Microsoft JDBC для SQL Server теперь поддерживает SQL Server пространственных типов данных Geography и Geometry. Дополнительные сведения о пространственных типа данных API-интерфейсы и их использовании см. в разделе [с помощью пространственных типов данных](../../connect/jdbc/use-spatial-datatypes.md).
+Microsoft JDBC Driver версии 7.0 для SQL Server теперь поддерживает пространственные типы данных, такие как география и геометрия. Дополнительные сведения о пространственных типах данных API-интерфейсов и их использовании см. [здесь](../../connect/jdbc/use-spatial-datatypes.md).
 
 ### <a name="implementation-for-jdbc-43-introduced-javasqlconnection-apis-beginrequest-and-endrequest"></a>Реализация для JDBC 4.3, в которой представлены API java.sql.Connection beginRequest() и endRequest()
 
-7.0 драйвера Microsoft JDBC для SQL Server теперь реализует `beginRequest()` и `endRequest()` API из `java.sql.Connection` класса. Эти интерфейсы API были представлены в спецификации JDBC 4.3 и пакет JDK 9. Дополнительные сведения о возможности драйвера реализации этих интерфейсов API, см. в разделе [соответствие требованиям JDBC 4.3 для JDBC-драйвера](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
+Microsoft JDBC Driver версии 7.0 для SQL Server теперь реализует API `beginRequest()` и `endRequest()` из класса `java.sql.Connection`. Эти API-интерфейсы были представлены в спецификации JDBC 4.3 и JDK 9. Дополнительные сведения о возможности драйвера реализовать эти API-интерфейсы см. в статье[Соответствие требованиям JDBC 4.3 для JDBC Driver](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
 
 ### <a name="support-for-sql-data-discovery-and-classification"></a>Поддержка обнаружения и классификации данных SQL
 
-7.0 драйвера Microsoft JDBC для SQL Server обеспечивает поддержку для обнаружения данных SQL и классификации с целевой базой данных, поддерживающей эту функцию. Драйвер теперь предоставляет `SQLServerResultSet.getSensitivityClassification()` API-интерфейсы для извлечения этой информации из полученное `ResultSet`.
+Microsoft JDBC Driver версии 7.0 для SQL Server обеспечивает поддержку для обнаружения и классификации данных SQL в любой целевой базе данных, поддерживающей эту функцию. Драйвер теперь предоставляет API-интерфейсы `SQLServerResultSet.getSensitivityClassification()` для извлечения этой информации из полученного `ResultSet`.
 
-Дополнительные сведения о том, как использовать эту функцию с помощью драйвера JDBC см. пример в [SQL данных обнаружения и классификации](../../connect/jdbc/data-discovery-classification-sample.md).
+Дополнительные сведения об использовании этой функции с помощью драйвера JDBC см. в примере в статье [Обнаружение и классификация данных SQL](../../connect/jdbc/data-discovery-classification-sample.md).
 
 ### <a name="added-connection-property-usebulkcopyforbatchinsert"></a>Добавлено свойство подключения: useBulkCopyForBatchInsert
 
-7.0 драйвера Microsoft JDBC для SQL Server предоставляет новое свойство соединения, `useBulkCopyForBatchInsert`. Это свойство поддерживается только для хранилища данных SQL Azure.
+Microsoft JDBC Driver версии 7.0 для SQL Server предоставляет новое свойство соединения — `useBulkCopyForBatchInsert`. Это свойство поддерживается только Хранилищем данных SQL Azure.
 
-Это свойство отключено по умолчанию. Вы можете включить его, чтобы повысить производительность приложений пользователя во время операций большие объемы данных в хранилище данных SQL Azure. Включение этого свойства изменяет поведение операций вставки переключиться на операции массового копирования с помощью пользовательских данных. Дополнительные сведения о это свойство и его ограничения, см. в разделе [операции вставки с помощью интерфейс API массового копирования для пакета](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md).
+По умолчанию это свойство отключено. Вы можете включить его, чтобы повысить производительность пользовательских приложений при отправке больших объемов данных в Хранилище данных SQL Azure. Включение этого свойства изменяет поведение операций пакетной вставки на переход на операции массового копирования с предоставленными пользователем данными. Дополнительные сведения об этом свойстве и его ограничениях см. в статье [Использование API массового копирования для операции пакетной вставки](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md).
 
 ### <a name="added-connection-property-cancelquerytimeout"></a>Добавлено свойство подключения: cancelQueryTimeout
 
-7.0 драйвера Microsoft JDBC для SQL Server предоставляет новое свойство соединения, `cancelQueryTimeout`, чтобы отменить `queryTimeout` на `java.sql.Connection` и `java.sql.Statement` объектов.
+Microsoft JDBC Driver версии 7.0 для SQL Server предоставляет новое свойство подключения, `cancelQueryTimeout`, для отключения `queryTimeout` на объектах `java.sql.Connection` и `java.sql.Statement`.
 
-### <a name="added-azure-key-vault-provider-constructors"></a>Добавлена конструкторы поставщика хранилища ключей Azure
+### <a name="added-azure-key-vault-provider-constructors"></a>Добавлены конструкторы поставщика Azure Key Vault
 
-7.0 драйвера Microsoft JDBC для SQL Server reintroduces ранее удаленных конструктор, для `SQLServerColumnEncryptionAzureKeyVaultProvider`. Это разрешено проверки подлинности через реализованы через пользовательский метод `SQLServerKeyVaultAuthenticationCallback` для получения маркера доступа.
+Microsoft JDBC Driver версии 7.0 для SQL Server возвращает ранее удаленный конструктор для `SQLServerColumnEncryptionAzureKeyVaultProvider`. Это дало возможность при выполнении проверки подлинности с помощью пользовательского метода, реализованного через `SQLServerKeyVaultAuthenticationCallback`, получить токен доступа.
 
-Новые конструкторы имеют следующее определение:
+Новые конструкторы имеют следующее определение.
 
 ```java
 /* This constructor is added to provide backward compatibility with 6.0
@@ -146,107 +149,107 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
 
 ### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-160"></a>Обновлена версия библиотеки проверки подлинности Microsoft Azure Active Directory (ADAL4J) для Java: 1.6.0.
 
-7.0 драйвера Microsoft JDBC для SQL Server был обновлен его зависимость Maven «Microsoft Azure библиотеку аутентификации Active Directory (ADAL4J) для Java» до версии 1.6.0. Дополнительные сведения о зависимостях см. в разделе [зависимости Microsoft JDBC Driver компонентов для SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+Microsoft JDBC Driver версии 7.0 для SQL Server обновил зависимость Maven "Библиотека проверки подлинности Microsoft Azure Active Directory (ADAL4J) для Java" до версии 1.6.0. Дополнительные сведения см. в статье [Зависимости компонентов Microsoft JDBC Driver для SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ## <a name="64"></a>6.4
 
-Microsoft JDBC Driver 6.4 для SQL Server полностью соответствует спецификации JDBC 4.1 и 4.2. JAR-файлы в пакете 6,4 присваиваются в соответствии с совместимость версий Java. Например mssql-jdbc-6.4.0.jre8.jar файл из 6,4 пакета необходимо использовать с Java 8.
+Microsoft JDBC Driver версии 6.4 для SQL Server полностью соответствует спецификации JDBC версий 4.1 и 4.2. JAR-файлам в пакете 6.4 имена присваиваются в соответствии с совместимостью версий Java. Например, файл mssql-jdbc-6.4.0.jre8.jar из пакета 6.4 должен использоваться с Java 8.
 
 ### <a name="support-for-jdk-9"></a>Поддержка JDK 9
 
-Драйвер поддерживает JDK версии 9.0 в дополнение к JDK 8.0 и 7.0.
+Драйвер поддерживает JDK версии 9.0 в дополнение к версиям 8.0 и 7.0.
 
-### <a name="jdbc-43-compliance"></a>Соответствие требованиям JDBC 4.3
+### <a name="jdbc-43-compliance"></a>Соответствие требованиям JDBC 4.3
 
-Драйвер поддерживает спецификацию Java Database Connectivity API 4.3 в дополнение к версиям 4.1 и 4.2. Методы JDBC 4.3 API добавлены, но еще не реализован. Дополнительные сведения см. в статье [Соответствие требованиям JDBC 4.3 для JDBC Driver](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
+Драйвер поддерживает спецификацию Java Database Connectivity API 4.3 в дополнение к версиям 4.1 и 4.2. Методы API JDBC 4.3 добавлены, но еще не реализованы. Дополнительные сведения см. в статье [Соответствие требованиям JDBC 4.3 для JDBC Driver](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
 
 ### <a name="added-connection-property-sslprotocol"></a>Добавлено свойство подключения: sslProtocol
 
-Новое свойство соединения позволяет пользователям указывать ключевое слово протокола TLS. Возможными значениями являются: «TLS», «TLSv1», «TLSv1.1» и «TLSv1.2». Дополнительные сведения см. в разделе [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol).
+Новое свойство подключения дает пользователям возможность указывать ключевое слово протокола TLS. Возможными значениями являются TLS, TLSv1, TLSv1.1 и TLSv1.2. Дополнительные сведения см. на странице [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol).
 
-### <a name="deprecated-connection-property-fipsprovider"></a>Рекомендуется использовать свойство соединения: fipsProvider
+### <a name="deprecated-connection-property-fipsprovider"></a>Устаревшее свойство подключения: fipsProvider
 
-Свойство соединения `fipsProvider` удаляется из списка свойств принятое подключение. Дополнительные сведения см. в разделе связанных [запроса на включение внесенных изменений GitHub](https://github.com/Microsoft/mssql-jdbc/pull/460).
+Свойство подключения `fipsProvider` удалено из списка принятых свойств подключения. Дополнительные сведения см. на странице [Запрос на вытягивание GitHub](https://github.com/Microsoft/mssql-jdbc/pull/460).
 
-### <a name="added-connection-properties-for-specifying-a-custom-trustmanager"></a>Свойства соединения добавлены для Указание пользовательского TrustManager
+### <a name="added-connection-properties-for-specifying-a-custom-trustmanager"></a>Добавлены свойства подключения для указания пользовательского TrustManager
 
-Драйвер теперь поддерживает указание пользовательского TrustManager со добавлены `trustManagerClass` и `trustManagerConstructorArg` свойства соединения. Динамически, можно указать набор сертификатов, которые являются доверенными на уровне подключения без изменения глобальных параметров для среды виртуальных машин (JVM) Java.
+Теперь драйвер поддерживает указание пользовательского TrustManager с добавленными свойствами подключения `trustManagerClass` и `trustManagerConstructorArg`. Вы можете динамически указывать набор сертификатов, которые проверяются при каждом подключении, без изменения глобальных параметров среды виртуальной машины Java (JVM).
 
-### <a name="added-support-for-datetimesmalldatetime-in-table-valued-parameters"></a>Добавлена поддержка datetime или smallDatetime, возвращающих табличные значения параметры
+### <a name="added-support-for-datetimesmalldatetime-in-table-valued-parameters"></a>В параметры, возвращающие табличные значения, добавлена поддержка datetime или smallDatetime
 
-Драйвер теперь поддерживает типы данных `datetime` и `smallDatetime` при использовании возвращающих табличные значения параметров (Tvp).
+Теперь при использовании параметров, возвращающих табличные значения, драйвер поддерживает типы данных `datetime` и `smallDatetime`.
 
 ### <a name="added-support-for-the-sqlvariant-datatype"></a>Добавлена поддержка типа данных sql_variant
 
-Драйвер JDBC теперь поддерживает `sql_variant` типы данных для использования с SQL Server. `sql_variant` Тип данных также поддерживается с помощью функций, таких как возвращающие табличное значение параметры и массового копирования со следующими ограничениями:
+Теперь для использования с SQL Server драйвер JDBC поддерживает типы данных `sql_variant`. Тип данных `sql_variant` также поддерживается такими функциями, как параметры табличных значений и массовое копирование, со следующими ограничениями.
 
 * **Для значений даты**: 
 
-  При использовании возвращающего табличное значение Параметра для заполнения таблицы, содержащей `datetime`, `smalldatetime`, или `date` значений, хранящихся в `sql_variant` столбца, вызывая метод `getDateTime()`, `getSmallDateTime()`, или `getDate()` метод в результирующем наборе не работает и вызывает следующее исключение:
+  Когда вы используете параметр табличного значения для заполнения таблицы, которая содержит значения `datetime`, `smalldatetime` или `date`, хранящиеся в столбце `sql_variant`, вызывается метод `getDateTime()`, `getSmallDateTime()` или `getDate()`, когда результирующий набор не работает и выдает следующее исключение.
 
   `java java.lang.String cannot be cast to java.sql.Timestamp`
     
-  Чтобы обойти это ограничение, используйте `getString()` или `getObject()` метод вместо этого.
+  Чтобы этого избежать, используйте метод `getString()` или `getObject()`.
 
 * **Использование возвращающего табличное значение параметра с sql_variant для значений null**.
   
-  При использовании возвращающего табличное значение Параметра для заполнения таблицы и отправки значение NULL для `sql_variant` тип столбца, можно столкнуться при возникновении исключения. Вставка значения NULL с типом столбца `sql_variant` в возвращающий табличное значение параметр сейчас не поддерживается.
+  При использовании параметра табличного значения для заполнения таблицы и отправки значения NULL в столбец типа `sql_variant` будет возникать исключение. Вставка значения NULL в столбец типа `sql_variant` в параметре табличного значения в настоящее время не поддерживается.
 
 ### <a name="implemented-prepared-statement-metadata-caching"></a>Реализовано кэширование метаданных подготовленной инструкции
 
-Драйвер JDBC реализовано кэширование метаданных подготовленной инструкции для повышения производительности. Теперь драйвер поддерживает кэширование метаданных подготовленной инструкции в драйвере с `disableStatementPooling` и `statementPoolingCacheSize` свойства соединения. Эта функция по умолчанию отключена. Дополнительные сведения см. в разделе [подготовить инструкцию кэширование метаданных для драйвера JDBC](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md).
+В драйвере JDBC реализовано кэширование метаданных подготовленной инструкции для повышения производительности. Теперь драйвер поддерживает кэширование метаданных подготовленной инструкции в драйвере с использованием свойств подключения `disableStatementPooling` и `statementPoolingCacheSize`. Эта функция по умолчанию отключена. Дополнительные сведения см. в разделе [Кэширование метаданных подготовленной инструкции для JDBC Driver](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md).
 
-### <a name="added-support-for-azure-ad-integrated-authentication-on-linuxmac"></a>Добавлена поддержка интегрированная проверка подлинности Azure AD в Linux или Mac
+### <a name="added-support-for-azure-ad-integrated-authentication-on-linuxmac"></a>Добавлена ​​поддержка Azure AD Integrated в Linux и Mac
 
-Драйвер JDBC поддерживает встроенную проверку подлинности Azure Active Directory во всех поддерживаемых операционных системах (Windows, Linux, Mac) с Kerberos. Кроме того в операционных системах Windows, пользователи могут проходить проверку подлинности с sqljdbc_auth.dll.
+Драйвер JDBC поддерживает встроенную проверку подлинности Azure Active Directory во всех поддерживаемых операционных системах (Windows, Linux, Mac) с Kerberos. Кроме того, в операционных системах Windows пользователи могут проходить проверку подлинности с помощью sqljdbc_auth.dll.
 
 ### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>Обновлена версия библиотеки проверки подлинности Microsoft Azure Active Directory (ADAL4J) для Java: 1.4.0.
 
-Драйвер JDBC был обновлен его зависимость Maven «Microsoft Azure библиотеку аутентификации Active Directory (ADAL4J) для Java» до версии 1.4.0. Дополнительные сведения о зависимостях см. в разделе [зависимости Microsoft JDBC Driver компонентов для SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+В драйвере JDBC зависимость Maven "Библиотека проверки подлинности Microsoft Azure Active Directory (ADAL4J) для Java" обновлена до версии 1.4.0. Дополнительные сведения см. в статье [Зависимости компонентов Microsoft JDBC Driver для SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ## <a name="62"></a>6.2
 
-Microsoft JDBC Driver 6.2 для SQL Server полностью соответствует спецификации JDBC 4.1 и 4.2. JAR-файлы в пакете 6.2 присваиваются в соответствии с совместимость версий Java. Например mssql-jdbc-6.2.2.jre8.jar файл из 6.2 пакета рекомендуется для использования с Java 8.
+Microsoft JDBC Driver версии 6.2 для SQL Server полностью соответствует спецификации JDBC версий 4.1 и 4.2. JAR-файлам в пакете 6.2 имена присваиваются в соответствии с совместимостью версий Java. Например, файл mssql-jdbc-6.2.2.jre8.jar из пакета 6.2 должен использоваться с Java 8.
 
 > [!NOTE]  
-> Проблемы с улучшения кэширования метаданных был найден в RTW 6.2 JDBC, выпуск состоится 29 июня 2017 г. Улучшение был выполнен откат, и новый JAR-файлы (версии 6.2.1) были выпущены на 17 июля 2017 г. 
+> Проблема с улучшением кэширования метаданных была обнаружена в RTW JDBC 6.2, выпущенном 29 июня 2017 года. Выполнен откат улучшений, а новые JAR-файлы (версии 6.2.1) выпущены 17 июля 2017 года. 
 >
-> Еще одно улучшение обновляется версия зависимые библиотеки Azure Key Vault 1.0.0 и новый JAR-файлы (версии 6.2.2) были выпущены на 19 октября 2017 г.
+> С помощью еще одного улучшения версия зависимой библиотеки Azure Key Vault обновлена до версии 1.0.0, а новые файлы JAR-файлы (версии 6.2.2) были выпущены 19 октября 2017 года.
 >
-> Загрузите последние обновления для JDBC Driver 6.2 из [центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2), и [центрального репозитория Maven](https://search.maven.org/search?q=g:com.microsoft.sqlserver). Обновите ваши проекты для использования 6.2.2 выпуска JAR-файлы. Дополнительные сведения см. заметки о выпуске [6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) и [6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2).
+> Скачайте последние обновления для драйвера JDBC 6.2 из [центра загрузок Майкрософт](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) и [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver). Для использования JAR-файлов выпуска 6.2.2 обновите проекты. Дополнительные сведения см. в заметках о выпуске [6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) и [6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2).
 
 ### <a name="azure-ad-support-for-linux"></a>Поддержка Azure AD для Linux
 
-Подключение приложений Linux базу данных SQL Azure с использованием проверки подлинности Azure AD с помощью имени пользователя и пароля и доступом маркера методов.
+Подключите свои приложения Linux к базе данных SQL Azure, используя проверку подлинности Azure AD через имя пользователя и пароль, а также методы доступа к токену.
 
-### <a name="fips-enabled-jvms"></a>Виртуальных машин Java с поддержкой стандарта FIPS
+### <a name="fips-enabled-jvms"></a>Виртуальные машины Java с поддержкой стандарта FIPS
 
-Теперь драйвер JDBC можно использовать на виртуальных машин Java, работающих в режиме федеральных обработки информации Standard (FIPS) 140 соответствия в соответствии с федеральным стандартам на соответствие.
+Теперь драйвер JDBC можно использовать на виртуальных машинах Java, работающих в режиме использования федерального стандарта обработки информации (FIPS) 140 в соответствии с федеральными стандартами.
 
 ### <a name="kerberos-authentication-improvements"></a>Улучшения проверки подлинности Kerberos
 
-Драйвер JDBC теперь имеет поддержку:
+Теперь драйвер JDBC поддерживает следующее.
 
-- Метод субъекта и пароля для приложений, где конфигурации Kerberos не может быть изменен, или не удалось получить новый маркер или keytab. Этот метод можно использовать для проверки подлинности на экземпляр SQL Server, который разрешает только проверку подлинности Kerberos.
-- Проверка подлинности между областями, с использованием встроенной проверки подлинности Kerberos без явного указания имени участника-службы сервера. Драйвер теперь автоматически вычисляет области даже в том случае, если он не указан.
-- Ограниченное делегирование Kerberos, принимая олицетворение учетных данных пользователя, как объект GSS учетных данных с помощью источника данных. Затем олицетворенного учетных данных используется для установления соединения Kerberos.
+- Метод субъект/пароль для приложений, в которых конфигурация Kerberos не может быть изменена или не может получить новый токен или таблицу ключей. Этот метод можно использовать для проверки подлинности на экземпляре SQL Server, который разрешает только проверку подлинности Kerberos.
+- Проверка подлинности между областями с использованием встроенной проверки подлинности Kerberos без явного указания имени участника-службы сервера. Теперь драйвер автоматически вычисляет области, даже если они не указаны.
+- Ограниченное делегирование Kerberos путем принятия учетных данных олицетворенного пользователя в качестве объекта учетных данных GSS через источник данных. Эти олицетворенные учетные данные затем используются для установления подключения Kerberos.
 
-### <a name="added-timeouts"></a>Добавлена времени ожидания
+### <a name="added-timeouts"></a>Добавлено время ожидания
 
-Драйвер JDBC теперь поддерживает следующие настраиваемые значения времени ожидания. Можно изменить их в зависимости от потребностей вашего приложения.
+Теперь драйвер JDBC поддерживает следующие настраиваемые значения времени ожидания. Вы можете изменить их в зависимости от потребностей своего приложения.
 
-- Время ожидания запроса, чтобы контролировать количество секунд до истечения периода ожидания, при выполнении запроса.
-- Время ожидания сокета, чтобы указать число миллисекунд ожидания до начала истечения времени ожидания на сокете чтения или принять.
+- Время ожидания запроса для контроля количества секунд ожидания до истечения времени ожидания при выполнении запроса.
+- Время ожидания сокета для указания количества миллисекунд ожидания до истечения времени ожидания чтения или принятия сокета.
 
 ## <a name="61"></a>6.1
 
-Microsoft JDBC Driver 6.1 для SQL Server полностью соответствует спецификации JDBC 4.1 и 4.2. Это первоначальный выпуск драйвера JDBC открытым исходным кодом. Он содержит файлы mssql-jdbc-6.1.0.jre8.jar и mssql-jdbc-6.1.0.jre7.jar, которые соответствуют совместимость версий Java.
+Microsoft JDBC Driver версии 6.1 для SQL Server полностью соответствует спецификации JDBC версий 4.1 и 4.2. Это первоначальный выпуск драйвера JDBC с открытым исходным кодом. Он содержит файлы mssql-jdbc-6.1.0.jre8.jar и mssql-jdbc-6.1.0.jre7.jar, которые соответствуют совместимости версий Java.
 
 ## <a name="60"></a>6.0
 
-Microsoft JDBC Driver 6.0 для SQL Server полностью соответствует спецификации JDBC 4.1 и 4.2. JAR-файлы в пакете 6.0 присваиваются в соответствии с их соответствие с версией JDBC API. Например sqljdbc42.jar из пакета 6.0 он совместим с JDBC API 4.2. Аналогичным образом файл sqljdbc41.jar совместима с API JDBC 4.1.
+Microsoft JDBC Driver версии 6.0 для SQL Server полностью соответствует спецификации JDBC версий 4.1 и 4.2. JAR-файлам в пакете 6.0 имена присваиваются в соответствии с их совместимостью с версией API JDBC. Например, файл sqljdbc42.jar из пакета 6.0 совместим с API JDBC 4.2. Аналогичным образом файл sqljdbc41.jar совместим с API JDBC 4.1.
 
-Чтобы убедиться, что имеется файл sqljdbc41.jar или sqljdbc42.jar правой, выполните приведенный ниже код. Если выходные данные «версии драйвера: версией 6.0.7507.100», у вас есть пакет JDBC Driver 6.0.
+Чтобы убедиться, что у вас есть правильный файл sqljdbc42.jar или sqljdbc41.jar, запустите следующие строки кода. Если выводится сообщение "Версия драйвера: 6.0.7507.100", у вас есть пакет драйвера JDBC 6.0.
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
@@ -255,11 +258,11 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 ### <a name="always-encrypted"></a>Always Encrypted
 
-Драйвер поддерживает функцию Always Encrypted в SQL Server 2016. Эта функция гарантирует, что конфиденциальные данные никогда не отображается в виде обычного текста в экземпляре SQL Server. В основе работы Always Encrypted лежит прозрачное шифрование данных в приложении, чтобы SQL Server обрабатывал только зашифрованные данные, а не значения открытого текста. Даже в случае компрометации экземпляра SQL или хост-компьютера злоумышленник получит только зашифрованный текст конфиденциальных данных. Дополнительные сведения см. в статье [Использование функции Always Encrypted с драйвером JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).
+Драйвер поддерживает функцию постоянного шифрования в SQL Server 2016. Эта функция гарантирует, что конфиденциальные данные никогда не будут отображаться в виде открытого текста в экземпляре SQL Server. В основе работы Always Encrypted лежит прозрачное шифрование данных в приложении, чтобы SQL Server обрабатывал только зашифрованные данные, а не значения открытого текста. Даже в случае компрометации экземпляра SQL или хост-компьютера злоумышленник получит только зашифрованный текст конфиденциальных данных. Дополнительные сведения см. в статье [Использование функции Always Encrypted с драйвером JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).
 
 ### <a name="internationalized-domain-names"></a>Международное доменное имя (IDN)
 
-Драйвер поддерживает международные доменные имена (IDN) в качестве имени сервера. Дополнительные сведения см. в разделе «Использование международных доменных имен» в [функции поддержки различных языков драйвера JDBC](../../connect/jdbc/international-features-of-the-jdbc-driver.md) статьи.
+Драйвер поддерживает международные доменные имена (IDN) в качестве имен серверов. Дополнительные сведения см. в разделе "Использование международных доменных имен" в статье [Функции поддержки различных языков драйвера JDBC](../../connect/jdbc/international-features-of-the-jdbc-driver.md).
 
 ### <a name="parameterized-queries"></a>Параметризованные запросы
 
@@ -267,23 +270,23 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 ### <a name="azure-active-directory"></a>Azure Active Directory
 
-Проверка подлинности Azure AD — это механизм подключения к базе данных SQL Azure версии 12 с помощью удостоверений в Azure AD. Проверка подлинности AAD используется для централизованного управления удостоверениями пользователей базы данных и в качестве альтернативы проверке подлинности SQL Server. 
+Проверка подлинности Active Directory — это механизм подключения к базе данных Azure SQL версии 12 с помощью удостоверений в Azure AD. Проверка подлинности AAD используется для централизованного управления удостоверениями пользователей базы данных и в качестве альтернативы проверке подлинности SQL Server. 
 
-Драйвер JDBC 6.0 позволяет указать учетные данные Azure AD в строке подключения JDBC для подключения к базе данных SQL Azure. Дополнительные сведения см. в разделе свойство проверки подлинности в [заданию свойств соединения](../../connect/jdbc/setting-the-connection-properties.md) статьи.
+Вы можете использовать драйвер JDBC 6.0, чтобы указать учетные данные AAD в строке подключения JDBC для подключения к базе данных SQL Azure. Дополнительные сведения см. в разделе о свойстве проверки подлинности в статье [Задание свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).
 
 ### <a name="table-valued-parameters"></a>Возвращающие табличные значения параметры
 
-Параметры, возвращающие табличное значение, упрощают маршалинг нескольких строк данных из клиентского приложения в SQL Server, устраняя потребность в нескольких круговых путях или специальной серверной логике для обработки данных. Параметры, возвращающие табличное значение, можно использовать для инкапсуляции строк данных в клиентском приложении и их отправки на сервер единой параметризованной командой. Входящие строки данных хранятся в переменной таблицы, которая затем можно управлять с помощью Transact-SQL. Дополнительные сведения см. в разделе [использование возвращающих табличные значения параметров](../../connect/jdbc/using-table-valued-parameters.md).
+Параметры, возвращающие табличное значение, упрощают маршалинг нескольких строк данных из клиентского приложения в SQL Server, устраняя потребность в нескольких круговых путях или специальной серверной логике для обработки данных. Параметры, возвращающие табличное значение, можно использовать для инкапсуляции строк данных в клиентском приложении и их отправки на сервер единой параметризованной командой. Входящие строки данных хранятся в переменной таблицы, которой затем можно управлять с помощью Transact-SQL. Дополнительные сведения см. в разделе [Использование параметров, возвращающих табличные значения](../../connect/jdbc/using-table-valued-parameters.md).
 
 ### <a name="always-on-availability-groups"></a>Группы доступности AlwaysOn
 
-Драйвер теперь поддерживает прозрачное подключение для групп доступности AlwaysOn. Драйвер быстро обнаруживает текущую топологию групп доступности AlwaysOn серверной инфраструктуры и прозрачно подключается к текущему активному серверу.
+Теперь драйвер поддерживает прозрачное подключение к группам доступности Always On. Драйвер быстро обнаруживает текущую топологию групп доступности AlwaysOn серверной инфраструктуры и прозрачно подключается к текущему активному серверу.
 
 ## <a name="42"></a>4.2
 
-Microsoft JDBC Driver 4.2 для SQL Server полностью соответствует спецификации JDBC 4.1 и 4.2. JAR-файлы в пакете 4.2 присваиваются в соответствии с их соответствие с версией JDBC API. Например sqljdbc42.jar из пакета 4.2 он совместим с JDBC API 4.2. Аналогичным образом файл sqljdbc41.jar совместима с API JDBC 4.1.
+Microsoft JDBC Driver версии 4.2 для SQL Server полностью соответствует спецификации JDBC версий 4.1 и 4.2. JAR-файлам в пакете 4.2 имена присваиваются в соответствии с их совместимостью с версией API JDBC. Например, файл sqljdbc42.jar из пакета 4.2 совместим с API JDBC 4.2. Аналогичным образом файл sqljdbc41.jar совместим с API JDBC 4.1.
 
-Чтобы убедиться, у вас есть правой sqljdbc42.jar или файл sqljdbc41.jar, запустите приведенный ниже код. Если выходные данные «версии драйвера: 4.2.6420.100», у вас есть пакет драйвера JDBC 4.2.
+Чтобы убедиться, что у вас есть правильный файл sqljdbc42.jar или sqljdbc41.jar, запустите следующие строки кода. Если выводится сообщение "Версия драйвера: 4.2.6420.100", у вас есть пакет драйвера JDBC 4.2.
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
@@ -292,11 +295,11 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 ### <a name="support-for-jdk-8"></a>Поддержка JDK 8
 
-Драйвер поддерживает JDK версии 8.0 в дополнение к JDK 7.0, 6.0 и 5.0.
+Драйвер поддерживает JDK версии 8.0 в дополнение к версиям 7.0, 6.0 и 5.0.
 
 ### <a name="jdbc-41-and-42-compliance"></a>Соответствие JDBC 4.1 и 4.2
 
-Драйвер поддерживает спецификации Java Database Connectivity API 4.1 и 4.2 в дополнение к версии 4.0. Дополнительные сведения см. в разделе [соответствия JDBC 4.1 для драйвера JDBC](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md) и [соответствия JDBC 4.2 для драйвера JDBC](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md).
+Драйвер поддерживает спецификации Java Database Connectivity API 4.1 и 4.2 в дополнение к версии 4.0. Дополнительные сведения см. в статьях [Соответствие JDBC 4.1 для JDBC Driver](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md) и [Соответствие JDBC 4.2 для JDBC Driver](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md).
 
 ### <a name="bulk-copy"></a>Массовое копирование
 
@@ -304,7 +307,7 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 ### <a name="xa-transaction-rollback-option"></a>Возможность отката транзакций XA
 
-Добавлены новые параметры времени ожидания для существующего автоматического отката неподготовленных транзакций. Дополнительные сведения см. в разделе [транзакции XA понимание](../../connect/jdbc/understanding-xa-transactions.md).
+Добавлены новые параметры времени ожидания для существующего автоматического отката неподготовленных транзакций. Дополнительные сведения см. в статье [Основные сведения о транзакциях XA](../../connect/jdbc/understanding-xa-transactions.md).
 
 ### <a name="new-kerberos-principal-connection-property"></a>Новое свойство соединения участника Kerberos
 
@@ -314,7 +317,7 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 ### <a name="support-for-jdk-7"></a>Поддержка JDK 7
 
-Драйвер поддерживает JDK версии 7.0 в дополнение к JDK 6.0 и 5.0.
+Драйвер поддерживает JDK версии 7.0 в дополнение к версиям 6.0 и 5.0.
 
 ## <a name="itanium-not-supported-for-jdbc-driver-64-60-42-and-41-applications"></a>Itanium не поддерживается в приложениях, использующих драйвер JDBC версии 6.4, 6.0, 4.2 и 4.1.
 

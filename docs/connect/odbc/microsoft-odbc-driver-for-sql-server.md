@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e991ad5b1b88798604f4c8ba6486af3d739c96c1
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041883"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
@@ -30,7 +30,7 @@ ODBC — это основной собственный интерфейс API 
 
 В следующем примере на C++ показано, как использовать интерфейсы API ODBC для подключения и доступа к базе данных:
 
-- [Пример кода на C++, использование ODBC](../../odbc/reference/sample-odbc-program.md)
+- [Пример кода C++ с использованием ODBC](../../odbc/reference/sample-odbc-program.md)
 
 ## <a name="download"></a>Загрузить
 
@@ -46,13 +46,13 @@ ODBC — это основной собственный интерфейс API 
 - [Использование Always Encrypted](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 - [Использование Azure Active Directory](../../connect/odbc/using-azure-active-directory.md)
 - [Использование разрешения IP-адресов прозрачной сети](../../connect/odbc/using-transparent-network-ip-resolution.md)
-- [Использование транзакций XA](../../connect/odbc/use-xa-with-dtc.md)
+- [Using XA Transactions](../../connect/odbc/use-xa-with-dtc.md) (Использование транзакций XA)
 
 ### <a name="linux-and-macos"></a>Linux и macOS
 
 - [Установка драйвера](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 - [Подключение к SQL Server](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
-- [Соединение с помощью **bcp**](../../connect/odbc/linux-mac/connecting-with-bcp.md)
+- [Подключение с помощью **bcp**](../../connect/odbc/linux-mac/connecting-with-bcp.md)
 - [Соединение с помощью **sqlcmd**](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
 - [Трассировка доступа к данным](../../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
 - [Часто задаваемые вопросы](../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)

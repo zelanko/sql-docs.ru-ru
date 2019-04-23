@@ -8,20 +8,20 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 78976d3fa150fb64f3b0fe7c81a8e7591f34ad46
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5c964a2cfe70eafd08bbd1ba73373a9d7acee34e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289020"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942196"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Предварительные условия для использования учебников (построитель отчетов)
   При использовании учебников по построителю отчетов предполагается возможность просмотра и сохранения отчетов на сервере отчетов или сайте SharePoint, интегрированном с сервером отчетов. Во всех учебниках для данных используются запросы, которые необходимо обработать с помощью экземпляра [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
- Если нет доступа к серверу отчетов, сайту или источнику данных, изучить работу с построителем отчетов можно путем построения отчета вне сети. См. в разделе [руководства: Создание стандартного отчета с диаграммой автономно &#40;построитель отчетов&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Если нет доступа к серверу отчетов, сайту или источнику данных, изучить работу с построителем отчетов можно путем построения отчета вне сети. См. [Учебник. Учебник. Создание стандартного отчета с диаграммой в режиме "вне сети" (построитель отчетов)](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 ## <a name="requirements"></a>Требования  
  Чтобы завершить учебники по построителю отчетов, должны быть выполнены следующие условия.  

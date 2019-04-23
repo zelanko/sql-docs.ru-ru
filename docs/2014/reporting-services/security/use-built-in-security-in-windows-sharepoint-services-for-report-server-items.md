@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], permissions
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 44a4bb146117dd12fedb8b897811100ebd951a32
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b7d912f7f71a642fbcdad0aa4fdd5ed60305f14d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026555"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948650"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Использование встроенных средств безопасности служб Windows SharePoint Services при работе с элементами сервера отчетов
   Службы SharePoint предоставляют встроенные функции безопасности, которые можно использовать для доступа к элементам сервера отчетов с сайтов и из библиотек SharePoint. Если пользователям уже назначены разрешения на сайты и списки, они получат доступ к элементам и операциям сервера отчетов сразу после настройки параметров интеграции служб SharePoint и сервера отчетов.  

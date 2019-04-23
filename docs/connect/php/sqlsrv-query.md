@@ -1,7 +1,7 @@
 ---
-title: sqlsrv_query | Документация Майкрософт
+title: sqlsrv_query | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/01/2018
+ms.date: 04/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19d7f4d6562f64061f01bf0ff7a73fcd03a4f63c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a4c504228d94fb8642bb024128f4a8079d64a610
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606254"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582827"
 ---
 # <a name="sqlsrvquery"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -59,17 +59,11 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
     |Элемент|Описание|  
     |-----------|---------------|  
     |*$value*|Буквенное значение, переменная PHP или ссылочная переменная PHP.|  
-    |*$direction*[необязательно]|Одна из следующих констант **SQLSRV_PARAM_\*** , используемая для указания направления параметра: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Значение по умолчанию — **SQLSRV_PARAM_IN**.<br /><br />Дополнительные сведения о константах PHP см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$phpType*[необязательно]|Константа **SQLSRV_PHPTYPE_\***, указывающая тип данных PHP для возвращаемого значения.<br /><br />Дополнительные сведения о константах PHP см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$sqlType*[необязательно]|Константа **SQLSRV_SQLTYPE_\***, указывающая тип данных SQL Server для входного значения.<br /><br />Дополнительные сведения о константах PHP см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$direction*(необязательно)|Одна из следующих констант **SQLSRV_PARAM_\*** , используемая для указания направления параметра: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Значение по умолчанию — **SQLSRV_PARAM_IN**.<br /><br />Дополнительные сведения о константах PHP см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$phpType*(необязательно)|Константа **SQLSRV_PHPTYPE_\***, указывающая тип данных PHP для возвращаемого значения.<br /><br />Дополнительные сведения о константах PHP см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$sqlType*(необязательно)|Константа **SQLSRV_SQLTYPE_\***, указывающая тип данных SQL Server для входного значения.<br /><br />Дополнительные сведения о константах PHP см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
   
-*$options* (НЕОБЯЗАТЕЛЬНО): ассоциативный массив, который задает свойства запроса. Поддерживаются следующие ключи:  
-  
-|Key|Поддерживаемые значения|Описание|  
-|-------|--------------------|---------------|  
-|QueryTimeout|Положительное целое значение.|Задает время ожидания выполнения запроса в секундах. По умолчанию драйвер ожидает результаты бесконечно.|  
-|SendStreamParamsAtExec|**true** или **false**<br /><br />Значение по умолчанию — **true**|Настраивает драйвер для отправки всех потоковых данных во время выполнения (**true**) или отправки потоковых данных в виде блоков (**false**). По умолчанию устанавливается значение **true**. Дополнительные сведения см. в статье [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
-|Прокручиваемые курсоры|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|Дополнительные сведения об этих значениях см. в статье [Указание типа курсора и выбор строк](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
+*$options* (НЕОБЯЗАТЕЛЬНО): ассоциативный массив, который задает свойства запроса. Это тот же список ключей, который поддерживается [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties).
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Ресурс инструкции. Если не удается создать или выполнить инструкцию, возвращается значение **false**.  
@@ -163,7 +157,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> Рекомендуется использовать строки в качестве входных данных при привязке значения [столбца decimal или numeric](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) чтобы обеспечить точность и правильность, как PHP имеет ограниченную точность для [чисел с плавающей запятой](https://php.net/manual/en/language.types.float.php). То же применимо к столбцами bigint, особенно в том случае, если значения вне диапазона [целое число](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> Рекомендуется использовать строки в качестве входных данных при привязке значений к [десятичным или числовым столбцам](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql), чтобы обеспечить точность и правильность, поскольку PHP имеет ограниченную точность для [чисел с плавающей запятой](https://php.net/manual/en/language.types.float.php). То же касается и столбцов bigint, особенно в том случае, если значения выходят за пределы диапазона [целых чисел](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## <a name="example"></a>Пример  
 В этом примере кода показано, как привязать десятичное значение в качестве входного параметра.  
@@ -190,7 +184,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="example"></a>Пример
-В этом примере кода показано, как создать таблицу [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) типов и получения вставляемых данных.
+В этом примере кода показано, как создать таблицу типов [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) и получить внесенные данные.
 
 ```
 <?php
@@ -240,7 +234,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-Ожидаемый результат будет следующим:
+Ожидаемый результат будет следующим.
 
 ```
 First field:  1

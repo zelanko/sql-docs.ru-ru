@@ -1,7 +1,7 @@
 ---
-title: sqlsrv_prepare | Документация Майкрософт
+title: sqlsrv_prepare | Документация Майкрософт
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 04/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bae6521aa7348bcafca86a5efa54c605fc887a28
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.openlocfilehash: 8716f57c208eeb38992cf6122509a36b29b858aa
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676152"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582897"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -62,19 +62,19 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |Элемент|Описание|  
     |-----------|---------------|  
     |*&$value*|Буквенное значение или ссылка на переменную PHP.|  
-    |*$direction*[необязательно]|Одна из следующих констант **SQLSRV_PARAM_\*** , используемая для указания направления параметра: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Значение по умолчанию — **SQLSRV_PARAM_IN**.<br /><br />Дополнительные сведения о константах PHP см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$phpType*[необязательно]|Константа **SQLSRV_PHPTYPE_\***, указывающая тип данных PHP для возвращаемого значения.|  
-    |*$sqlType*[необязательно]|Константа **SQLSRV_SQLTYPE_\***, указывающая тип данных SQL Server для входного значения.|  
+    |*$direction*(необязательно)|Одна из следующих констант **SQLSRV_PARAM_\*** , используемая для указания направления параметра: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Значение по умолчанию — **SQLSRV_PARAM_IN**.<br /><br />Дополнительные сведения о константах PHP см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$phpType*(необязательно)|Константа **SQLSRV_PHPTYPE_\***, указывающая тип данных PHP для возвращаемого значения.|  
+    |*$sqlType*(необязательно)|Константа **SQLSRV_SQLTYPE_\***, указывающая тип данных SQL Server для входного значения.|  
   
-*$options* (НЕОБЯЗАТЕЛЬНО): ассоциативный массив, который задает свойства запроса. В приведенной ниже таблице содержится перечень поддерживаемых ключей и соответствующих значений.  
-  
+*$options* (необязательно): ассоциативный массив, который задает <a name="properties">свойства запроса</a>. В приведенной ниже таблице содержится перечень поддерживаемых ключей и соответствующих значений.
+
 |Key|Поддерживаемые значения|Описание|  
 |-------|--------------------|---------------|  
-|ClientBufferMaxKBSize|Положительное целое число|Задает размер буфера, который содержит результирующий набор для клиентского курсора.<br /><br />Значение по умолчанию — 10 240 КБ. Дополнительные сведения в статье [Указание типа курсора и выбор строк](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
-|DecimalPlaces|Целое число от 0 до 4 (включительно)|Указывает, что число десятичных разрядов, при форматировании извлечь денежных значений.<br /><br />Любое отрицательное целое число или значение больше 4 будет игнорироваться.<br /><br />Этот параметр работает, только если FormatDecimals являются **true**.|
-|FormatDecimals|**true** или **false**<br /><br />Значение по умолчанию — **false**.|Указывает, следует ли добавить начальные нули для десятичных строк, когда это необходимо и позволяет `DecimalPlaces` параметр для форматирования типов money.<br /><br />Дополнительные сведения см. в разделе [форматирование десятичных строк и денежные значения (драйвер SQLSRV)](../../connect/php/formatting-decimals-sqlsrv-driver.md).|
+|ClientBufferMaxKBSize|Положительное целое число|Задает размер буфера, который содержит результирующий набор для клиентского курсора.<br /><br />Значение по умолчанию — 10 240 КБ. Дополнительные сведения см. в статье [Указание типа курсора и выбор строк](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
+|DecimalPlaces|Целое число от 0 до 4 (включительно)|Указывает число десятичных знаков при форматировании полученных денежных значений.<br /><br />Любое отрицательное целое число или значение больше 4 будет игнорироваться.<br /><br />Этот параметр работает, только если параметру FormatDecimals установлено значение **true**.|
+|FormatDecimals|**true** или **false**<br /><br />Значение по умолчанию — **false**.|Указывает, следует ли добавлять начальные нули к десятичным строкам, когда это применимо, и включает параметр `DecimalPlaces` для форматирования денежных типов.<br /><br />Дополнительные сведения см. в статье [Форматирование десятичных строк и денежных значений (драйвер SQLSRV)](../../connect/php/formatting-decimals-sqlsrv-driver.md).|
 |QueryTimeout|Положительное целое число|Задает время ожидания выполнения запроса в секундах. По умолчанию драйвер ожидает результаты бесконечно.|  
-|ReturnDatesAsStrings|**true** или **false**<br /><br />Значение по умолчанию — **false**.|Настраивает инструкцию, чтобы получить типы даты и времени в виде строк (**true**). Дополнительные сведения см. в [практическом руководстве по получению типов даты и времени в виде строк с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
+|ReturnDatesAsStrings|**true** или **false**<br /><br />Значение по умолчанию — **false**.|Настраивает оператор для получения типов даты и времени в виде строк (**true**). Дополнительные сведения см. в [практическом руководстве по получению типов даты и времени в виде строк с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
 |Прокручиваемые курсоры|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|Дополнительные сведения об этих значениях см. в статье [Указание типа курсора и выбор строк](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
 |SendStreamParamsAtExec|**true** или **false**<br /><br />Значение по умолчанию — **true**|Настраивает драйвер для отправки всех потоковых данных во время выполнения (**true**) или отправки потоковых данных в виде блоков (**false**). По умолчанию устанавливается значение **true**. Дополнительные сведения см. в статье [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
   
@@ -223,7 +223,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> Рекомендуется использовать строки в качестве входных данных при привязке значения [столбца decimal или numeric](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) чтобы обеспечить точность и правильность, как PHP имеет ограниченную точность для [чисел с плавающей запятой](https://php.net/manual/en/language.types.float.php). То же применимо к столбцами bigint, особенно в том случае, если значения вне диапазона [целое число](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> Рекомендуется использовать строки в качестве входных данных при привязке значений к [десятичным или числовым столбцам](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql), чтобы обеспечить точность и правильность, поскольку PHP имеет ограниченную точность для [чисел с плавающей запятой](https://php.net/manual/en/language.types.float.php). То же касается и столбцов bigint, особенно в том случае, если значения выходят за пределы диапазона [целых чисел](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## <a name="example"></a>Пример  
 В этом примере кода показано, как привязать десятичное значение в качестве входного параметра.  
