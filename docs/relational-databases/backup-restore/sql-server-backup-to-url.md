@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ef47b518c5c2d1595458d652b1fcde7065400b79
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.openlocfilehash: 4992e50f3daeb7d131e8cfb98be3700366550f3f
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434515"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582837"
 ---
 # <a name="sql-server-backup-to-url"></a>Резервное копирование в SQL Server по URL-адресу
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "58434515"
 - выполнять резервное копирование в несколько блочных BLOB-объектов.
 
 ###  <a name="Blob"></a> Служба хранилища больших двоичных объектов Microsoft Azure  
- **Учетная запись хранения**. Учетная запись хранилища является отправной точкой для всех служб хранилища. Для доступа к службе хранилища больших двоичных объектов Microsoft Azure необходимо сначала создать учетную запись хранения Microsoft Azure. Дополнительные сведения см. в разделе [Создание учетной записи хранения](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
+ **Учетная запись хранения**. Учетная запись хранения является отправной точкой для всех служб хранилища. Для доступа к службе хранилища больших двоичных объектов Microsoft Azure необходимо сначала создать учетную запись хранения Microsoft Azure. Дополнительные сведения см. в разделе [Создание учетной записи хранения](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
   
  **Контейнер**. Контейнер обеспечивает группирование набора больших двоичных объектов и может хранить их неограниченное количество. Для создания резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в службе хранилища больших двоичных объектов Microsoft Azure необходимо как минимум создать корневой контейнер. Вы можете создать токен SAS в контейнере и предоставить доступ к объектам только в определенном контейнере.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "58434515"
  **Моментальный снимок Azure**. Снимок большого двоичного объекта Azure, сделанный в определенный момент времени. Дополнительные сведения см. в разделе [Создание моментального снимка большого двоичного объекта](https://msdn.microsoft.com/library/azure/hh488361.aspx). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] теперь поддерживает резервные копии моментальных снимков Azure файлов базы данных, хранящиеся в службе хранилища больших двоичных объектов Microsoft Azure. Дополнительные сведения см. в разделе [Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 ###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
- **URL-адрес**. URL-адрес указывает универсальный идентификатор ресурса (URI) для уникального файла резервной копии. URL-адрес используется для предоставления местоположения и имени файла резервной копии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . URL-адрес должен указывать на фактический большой двоичный объект, а не просто на контейнер. Если большой двоичный объект не существует, он создается. Если указан существующий большой двоичный объект, то команда BACKUP завершится ошибкой, если только не указан параметр WITH FORMAT для перезаписи существующего файла резервной копии в этом большом двоичном объекте.  
+ **URL-адрес**. URL-адрес определяет универсальный идентификатор ресурса (URI) для уникального файла резервной копии. URL-адрес используется для предоставления местоположения и имени файла резервной копии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . URL-адрес должен указывать на фактический большой двоичный объект, а не просто на контейнер. Если большой двоичный объект не существует, он создается. Если указан существующий большой двоичный объект, то команда BACKUP завершится ошибкой, если только не указан параметр WITH FORMAT для перезаписи существующего файла резервной копии в этом большом двоичном объекте.  
   
  Пример URL-адреса: http[s]://УЧЕТНАЯ_ЗАПИСЬ.blob.core.windows.net/\<КОНТЕЙНЕР>/\<ИМЯ_ФАЙЛА.bak>. Указывать HTTPS необязательно, но рекомендуется.  
   
@@ -323,15 +323,15 @@ New-AzStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroup
 $accountKeys = Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
 
 # Create a new storage account context using an ARM storage account  
-$storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].value 
+$storageContext = New-AzStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].value 
 
 # Creates a new container in blob storage  
-$container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
+$container = New-AzStorageContainer -Context $storageContext -Name $containerName  
 $cbc = $container.CloudBlobContainer  
 
 # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
-$policy = New-AzureStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission "rwld"
-$sas = New-AzureStorageContainerSASToken -Policy $policyName -Context $storageContext -Container $containerName
+$policy = New-AzStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission "rwld"
+$sas = New-AzStorageContainerSASToken -Policy $policyName -Context $storageContext -Container $containerName
 
 
 # Gets the Shared Access Signature for the policy  

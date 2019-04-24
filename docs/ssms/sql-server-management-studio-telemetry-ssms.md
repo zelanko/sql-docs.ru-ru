@@ -1,7 +1,7 @@
 ---
-title: Среда SQL Server Management Studio. Телеметрия (SSMS) | Документация Майкрософт
+title: SQL Server Management Studio — данные об использовании и данные диагностики (SSMS) | Документация Майкрософт
 ms.custom: ''
-ms.date: 02/20/2017
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,28 +11,29 @@ ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce4abde855b5fe6a65c3038e93eb8609f9736dc1
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: d76b2cbcab3ad156e3a8a5054429198c542c602b
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240392"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670850"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>Локальный аудит для сбора данных об использовании и данных диагностики в SSMS
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Среда SQL Server Management Studio (SSMS) содержит функции, работающие через Интернет, с помощью которых можно собирать и отправлять в корпорацию Майкрософт анонимные данные об использовании компонентов или данные диагностики. SSMS может собирать стандартные сведения о компьютере, а также сведения об использовании и производительности. Эти данные могут отправляться в корпорацию Майкрософт и использоваться для анализа в целях улучшения качества, безопасности и надежности среды SSMS. Сбор таких сведений, как имена, адреса и другие сведения личного характера, не осуществляется. Дополнительные сведения см. в [заявлении о конфиденциальности Майкрософт](https://privacy.microsoft.com/privacystatement) и [приложении к заявлению о конфиденциальности SQL Server](https://go.microsoft.com/fwlink/?LinkID=868444).
 
-## <a name="audit-feature-usage-data"></a>Данные об использовании компонентов для аудита
+## <a name="audit-feature-usage-and-diagnostic-data"></a>Аудит данных об использовании компонентов и данных диагностики
 
 Чтобы просмотреть данные об использовании компонентов, собранные SSMS, сделайте следующее:
+
 1.  Запустите среду SSMS.
 2.  Щелкните **Просмотр**, а затем выберите в главном меню **Вывод**, чтобы отобразить окно **вывода**. 
 3.  Когда появится окно **Вывод**, выберите в меню **Показать выходные данные из:** пункт **Телеметрия**.
 
 Если вы используете SSMS для взаимодействия с базами данных, в окне **Вывод** отображаются собранные данные.
 
-## <a name="enable-or-disable-usage-feedback-collection-in-ssms"></a>Включение и отключение в среде SSMS сбора информации об использовании
+## <a name="enable-or-disable-usage-and-diagnostic-data-collection-in-ssms"></a>Включение и отключение в среде SSMS сбора данных об использовании и данных диагностики
 
 Чтобы согласиться на сбор данных об использовании для SSMS или отказаться от него:
 
@@ -40,13 +41,13 @@ ms.locfileid: "59240392"
 
   `Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\14.0`
 
-  Имя RegEntry = `UserFeedbackOptIn`
+  Имя RegEntry — `UserFeedbackOptIn`.
 
   Тип записи — `DWORD`: `0` — отказаться; `1` — согласиться.
 
   Кроме того, среда SSMS 17.x основана на оболочке Visual Studio 2015, а в экземпляре Visual Studio функция сбора отзывов пользователей включена по умолчанию.  
 
-  Чтобы отключить сбор отзывов пользователей в Visual Studio на отдельных компьютерах, измените значение следующего подраздела реестра на строку `0`: `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn`
+  Чтобы отключить сбор отзывов пользователей в Visual Studio на отдельных компьютерах, измените значение следующего подраздела реестра на строку `0` — `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn`.
 
   Например, измените подраздел следующим образом:  
   `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn `=` 0`
@@ -57,7 +58,7 @@ ms.locfileid: "59240392"
 
   `Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\18.0_IsoShell`
 
-  Имя RegEntry = `UserFeedbackOptIn`
+  Имя RegEntry — `UserFeedbackOptIn`.
 
   Тип записи — `DWORD`: `0` — отказаться; `1` — согласиться.
 

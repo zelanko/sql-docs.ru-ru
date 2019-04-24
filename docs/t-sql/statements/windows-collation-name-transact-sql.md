@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1816363425276ec532e5cc04433630e8e6b9bcac
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 089c6d25d7c899db03d67a6f7d1b8c9d495c94e6
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974353"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671390"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Имя параметров сортировки Windows (Transact-SQL)
 
@@ -37,7 +37,6 @@ ms.locfileid: "57974353"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-
 <Windows_collation_name> :: =
 CollationDesignator_<ComparisonStyle>
 
@@ -50,7 +49,8 @@ CollationDesignator_<ComparisonStyle>
 
 ## <a name="arguments"></a>Аргументы
 
-*CollationDesignator* — указывает базовые правила сортировки, используемые параметрами сортировки Windows. Правила базовых параметров сортировки отвечают за следующее.
+*CollationDesignator*   
+Указывает базовые параметры сортировки, используемые параметрами сортировки Windows. Правила базовых параметров сортировки отвечают за следующее.
 
 - Правила сортировки и сравнения, применяемые, когда определена словарная сортировка. Правила сортировки основаны на алфавите или языке.
 - Кодовую страницу, используемую для хранения данных типа **varchar**.
@@ -67,20 +67,20 @@ CollationDesignator_<ComparisonStyle>
 **AI** означает, что диакритические знаки пропускаются, **AS** показывает, что они учитываются.
 
 *KanatypeSensitive*  
-**Omitted** определяет порядок следования без учета типов японской азбуки, **KS** определяет порядок следования, учитывающий тип японской азбуки.
+Пропуск этого параметра означает, что тип японской азбуки не учитывается, **KS** означает, что тип японской азбуки учитывается.
 
 *WidthSensitivity*  
-**Omitted** определяет нечувствительность к ширине символов, **WS** определяет чувствительность к ширине символов.
+Пропуск этого параметра означает, что ширина символов не учитывается, **WS** означает, что ширина символов учитывается.
 
 *VariationSelectorSensitivity*  
-**Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
-**Omitted** определяет нечувствительность к знакам выбора варианта, **VSS** определяет чувствительность к знакам выбора варианта.
+- Пропуск этого параметра означает, что знаки выбора варианта не учитываются, **VSS** означает, что знаки выбора варианта учитываются.
 
 **UTF8**  
-**Область применения**: Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **Область применения**: Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
-Указывает кодировку UTF-8, используемую для допустимых типов данных. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
+- Указывает кодировку UTF-8, используемую для допустимых типов данных. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
 
 **BIN**  
 Указывает подлежащий использованию двоичный порядок сортировки, применяющийся для обеспечения обратной совместимости.

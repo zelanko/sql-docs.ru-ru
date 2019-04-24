@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a73eda4fbb3898846894a4cf35de4253cffedbc3
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872254"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Обновление экземпляров SQL Server, работающих в кластерах Windows Server 2008, Windows Server 2008 R2 или Windows Server 2012
@@ -46,9 +46,9 @@ ms.locfileid: "58872254"
 
 |                                   | Требуются все серверные объекты и имена VNN | Требуются все серверные объекты и имена VNN | Серверные объекты и имена VNN не требуются\* | Серверные объекты и имена VNN не требуются\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
-| **_Группы доступности? (Да или нет)_**                  | **_Да_**                              | **_Нет_**                                                            | **_Да_**    | **_Нет_**    |
+| **_Группы доступности? (да или нет)_**                  | **_Да_**                              | **_Нет_**                                                            | **_Да_**    | **_Нет_**    |
 | **Кластер использует только экземпляр отказоустойчивого кластера SQL**         | [Сценарий 3](#scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups)                           | [Сценарий 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis)                                                        | [Сценарий 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Сценарий 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis) |
-| **Кластер использует автономные экземпляры** | [Сценарий 5](#scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups)                           | [Сценарий 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups)                                                         | [Сценарий 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Сценарий 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups) |
+| **Кластер использует автономные экземпляры** | [Сценарий 5](#scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups)                           | [Сценарий 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups)                                                         | [Сценарий 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Сценарий 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups) |
 
 \* Исключая имена прослушивателей группы доступности
 
@@ -123,7 +123,7 @@ ms.locfileid: "58872254"
 
 ## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>Сценарий 3. Кластер Windows с экземплярами отказоустойчивого кластера SQL и группами доступности SQL Server
 
-Если в установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не используются автономные экземпляры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а только экземпляры отказоустойчивого кластера SQL, которые включены по крайней мере в одну группу доступности, выполнить миграцию в новый кластер можно с помощью методов, схожих с применяемыми в сценарии без групп доступности и автономных экземпляров. Перед копированием системных таблиц в общие диски конечных экземпляров отказоустойчивого кластера необходимо удалить все группы доступности в исходной среде. После переноса всех баз данных на конечные компьютеры следует повторно создать группы доступности, используя ту же схему и имена прослушивателей. Благодаря этому ресурсы отказоустойчивого кластера Windows Server будут правильно сформированы в конечном кластере, и управление ими будет осуществляться корректно. **Перед миграцией необходимо включить функцию Always On в диспетчере конфигурации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на каждом компьютере в конечной среде.**
+Если в установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не используются автономные экземпляры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а только экземпляры отказоустойчивого кластера SQL, которые включены по крайней мере в одну группу доступности, выполнить миграцию в новый кластер можно с помощью методов, схожих с применяемыми в сценарии без групп доступности и автономных экземпляров. Перед копированием системных таблиц в общие диски конечных экземпляров отказоустойчивого кластера необходимо удалить все группы доступности в исходной среде. После переноса всех баз данных на конечные компьютеры следует повторно создать группы доступности, используя ту же схему и имена прослушивателей. Благодаря этому ресурсы отказоустойчивого кластера Windows Server будут правильно сформированы в конечном кластере, и управление ими будет осуществляться корректно. **Перед миграцией необходимо включить функцию AlwaysOn в диспетчере конфигурации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на каждом компьютере в конечной среде.**
 
 ### <a name="to-perform-the-upgrade"></a>Выполнение обновления
 
@@ -197,7 +197,7 @@ ms.locfileid: "58872254"
 
 ## <a name="scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups"></a>Сценарий 5. Кластер Windows с автономными экземплярами SQL Server и группами доступности
 
-Миграция кластера, в котором используются группы доступности с автономными репликами, производится аналогично миграции кластера, в котором имеются экземпляры отказоустойчивого кластера и используются группы доступности. Вам также необходимо удалить исходные группы доступности и повторно создать их в конечном кластере. Однако время простоя увеличивается из-за необходимости переносить автономные экземпляры. **Перед миграцией необходимо включить функцию Always On в каждом экземпляре отказоустойчивого кластера в целевой среде.**
+Миграция кластера, в котором используются группы доступности с автономными репликами, производится аналогично миграции кластера, в котором имеются экземпляры отказоустойчивого кластера и используются группы доступности. Вам также необходимо удалить исходные группы доступности и повторно создать их в конечном кластере. Однако время простоя увеличивается из-за необходимости переносить автономные экземпляры. **Перед миграцией необходимо включить функцию AlwaysOn в каждом экземпляре отказоустойчивого кластера в конечной среде.**
 
 ###  <a name="to-perform-the-upgrade"></a>Выполнение обновления
 
@@ -303,13 +303,13 @@ ms.locfileid: "58872254"
 
     Путь к общему ресурсу Windows зависит от ресурса имени экземпляра отказоустойчивого кластера SQL по пути `\\ServerName\ShareName`. Для переноса файлового потока необходимо, чтобы он был включен во всех узлах конечного экземпляра отказоустойчивого кластера. При использовании общего ресурса Windows для всех этих узлов должно быть настроено использование того же имени общего ресурса Windows, что и на исходном компьютере. После получения правильного имени сервера конечным экземпляром отказоустойчивого кластера общий ресурс Windows будет размещаться в нем по нужному пути.
 
--   **Данные FILESTREAM**
+-   **Данные файлового потока**
 
     Данные файлового потока включаются в резервную копию.
 
 ### <a name="integration-services"></a>Службы Integration Services
 
--   **проекты служб SSIS**
+-   **Проекты служб SSIS**
 
     Проекты служб SSIS переносятся вместе с базой данных SSIS. Пакеты могут выполняться сразу после переноса базы данных SSIS до того, как будут перемещены системные таблицы.
 
@@ -323,4 +323,4 @@ ms.locfileid: "58872254"
 - [Использование преимуществ новых функций SQL Server 2016](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
 - [Обновление экземпляра отказоустойчивого кластера SQL Server](upgrade-a-sql-server-failover-cluster-instance.md)
 - [Просмотр и чтение файлов журналов программы установки SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
-- [Добавление компонентов в экземпляр SQL Server 2016 (программа установки)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)
+- [Добавление компонентов в экземпляр SQL Server 2016 (программа установки)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)

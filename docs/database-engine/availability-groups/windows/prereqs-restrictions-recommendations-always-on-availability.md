@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dec0b9aa3c92cdefa82e3031546ea8200f70bb6e
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042443"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Предварительные требования, ограничения и рекомендации для групп доступности Always On
@@ -40,7 +40,7 @@ ms.locfileid: "59042443"
   
 ||Зависимый компонент|Исправление|Ссылка|  
 |------|-----------------------|------------|----------|  
-|![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Исправление для .Net 3.5 с пакетом обновления 1 (SP1) добавляет в клиент SQL поддержку функций AlwaysOn: Read-intent, readonly и multisubnetfailover. Это исправление необходимо установить на каждом сервере отчетов служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|KB 2654347: [Исправление для .NET 3.5 с пакетом обновления 1 (SP1), добавляющее поддержку функций Always On](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Исправление для .Net 3.5 с пакетом обновления 1 (SP1) добавляет в клиент SQL поддержку функций AlwaysOn: Read-intent, readonly и multisubnetfailover. Это исправление необходимо установить на каждом сервере отчетов служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|Статья базы знаний 2654347. [Исправление для .NET 3.5 с пакетом обновления 1 (SP1), добавляющее поддержку функций Always On](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="SystemRequirements"></a> Контрольный список. Требования (ОС Windows)  
@@ -114,11 +114,11 @@ ms.locfileid: "59042443"
   
 
 ##  <a name="ServerInstance"></a> Предварительные условия и ограничения для экземпляров SQL Server  
- Каждой группе доступности требуется набор партнеров по обеспечению отработки отказа, известных как *реплики доступности*, которые расположены в экземплярах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Данный экземпляр сервера может быть *изолированным экземпляром* или [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]*экземпляром отказоустойчивого кластера*.  
+ Каждой группе доступности требуется набор партнеров по обеспечению отработки отказа, известных как *реплики доступности*, которые расположены в экземплярах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Данный экземпляр сервера может быть *изолированным экземпляром* или [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]*экземпляром отказоустойчивого кластера* .  
   
  **В этом разделе.**  
   
--   [Контрольный список. предварительные требования](#PrerequisitesSI)  
+-   [Контрольный список. Предварительные требования](#PrerequisitesSI)  
   
 -   [Использование потока группами доступности](#ThreadUsage)  
   
@@ -133,11 +133,11 @@ ms.locfileid: "59042443"
 ||Предварительные требования|Ссылки|  
 |-|------------------|-----------|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Этот компьютер должен быть узлом кластера WSFC. Экземпляры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], на которых размещаются реплики доступности для данной группы доступности, размещаются на отдельных узлах одного кластера. При переносе в другой кластер группа доступности может временно находиться в двух кластерах. В SQL Server 2016 появились распределенные группы доступности. В распределенной группе доступности две группы доступности находятся в разных кластерах.|[Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [Распределенные группы доступности (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)|  
-|![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Если необходима группа доступности для работы с Kerberos:<br /><br /> Все экземпляры сервера, на которых размещена реплика доступности для группы доступности, должны использовать одинаковые учетные записи службы SQL Server.<br /><br /> Администратору домена необходимо вручную зарегистрировать имя участника-службы (SPN) с помощью службы каталогов Active Directory на учетной записи службы SQL Server для виртуального сетевого имени (VNN) прослушивателя группы доступности. Если имя участника-службы (SPN) зарегистрировано на учетной записи, отличной от учетной записи службы SQL Server, то проверку подлинности пройти не удастся.<br /><br /> <br /><br /> <b>\*\* Важно! \*\*</b> При изменении учетной записи службы SQL Server администратору домена необходимо вручную повторно зарегистрировать имя субъекта-службы (SPN).|[Регистрация имени участника-службы для соединений Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **Краткое описание:**<br /><br /> Kerberos и имена участников-служб обеспечивают взаимную проверку подлинности. Имя участника-службы (SPN) сопоставляется с учетной записью Windows, которая запускает службы SQL Server. Если регистрация имени участника-службы (SPN) не была выполнена должным образом или завершилась неудачно, уровень безопасности Windows не может определить учетную запись, связанную с именем участника-службы, и проверка подлинности Kerberos не может использоваться.<br /><br /> <br /><br /> Примечание. NTLM не имеет таких требований.|  
+|![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Если необходима группа доступности для работы с Kerberos:<br /><br /> Все экземпляры сервера, на которых размещена реплика доступности для группы доступности, должны использовать одинаковые учетные записи службы SQL Server.<br /><br /> Администратору домена необходимо вручную зарегистрировать имя участника-службы (SPN) с помощью службы каталогов Active Directory на учетной записи службы SQL Server для виртуального сетевого имени (VNN) прослушивателя группы доступности. Если имя участника-службы (SPN) зарегистрировано на учетной записи, отличной от учетной записи службы SQL Server, то проверку подлинности пройти не удастся.<br /><br /> <br /><br /> <b>\*\* Важно! \*\*</b> При изменении учетной записи службы SQL Server администратору домена необходимо вручную повторно зарегистрировать имя субъекта-службы (SPN).|[Регистрация имя участника-службы для соединений Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **Краткое описание:**<br /><br /> Kerberos и имена участников-служб обеспечивают взаимную проверку подлинности. Имя участника-службы (SPN) сопоставляется с учетной записью Windows, которая запускает службы SQL Server. Если регистрация имени участника-службы (SPN) не была выполнена должным образом или завершилась неудачно, уровень безопасности Windows не может определить учетную запись, связанную с именем участника-службы, и проверка подлинности Kerberos не может использоваться.<br /><br /> <br /><br /> Примечание. NTLM не предъявляет таких требований.|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Если вы планируете использовать экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для размещения реплики доступности, убедитесь, что понимаете ограничения, связанные с использованием отказоустойчивых кластеров, и что требования для создания такого кластера удовлетворены.|[Предварительные условия и ограничения, связанные с использованием экземпляра отказоустойчивого кластера SQL Server для размещения реплики доступности](#FciArLimitations) (далее в этой статье)|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|На каждом экземпляре сервера, входящем в группу доступности AlwaysOn, должна быть запущена одна и та же версия SQL Server.|Возможности, поддерживаемые различными выпусками [SQL 2014](https://docs.microsoft.com/sql/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014), [SQL 2016](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-2016), [SQL 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017?view=sql-server-2017).|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Все экземпляры сервера, на которых размещены реплики доступности для одной группы доступности, должны использовать одинаковые параметры сортировки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Задание или изменение параметров сортировки сервера](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
-|![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Необходимо включить функцию [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] на каждом экземпляре сервера, на котором будет размещена реплика доступности для группы доступности. На одном компьютере можно включить столько экземпляров серверов, поддерживающих [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], сколько поддерживает установка [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|[Включение и отключение групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\* Важно! \*\*</b> При удалении и повторном создании кластера WSFC необходимо отключить и повторно включить функцию [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в каждом экземпляре сервера, в котором была включена функция [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в исходном кластере.|  
+|![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Необходимо включить функцию [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] на каждом экземпляре сервера, на котором будет размещена реплика доступности для группы доступности. На одном компьютере можно включить столько экземпляров серверов, поддерживающих [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , сколько поддерживает установка [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Включение и отключение групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\* Важно! \*\*</b> При удалении и повторном создании кластера WSFC необходимо отключить и повторно включить функцию [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в каждом экземпляре сервера, в котором была включена функция [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в исходном кластере.|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Каждый экземпляр сервера должен иметь конечную точку зеркального отображения базы данных. Обратите внимание, что эта конечная точка совместно используется всеми репликами доступности и участниками зеркального отображения базы данных на этом экземпляре сервера.<br /><br /> Если экземпляр сервера, выбранный для размещения реплики доступности, работает под доменной учетной записью и еще не содержит конечной точки зеркального отображения базы данных, то [мастер создания группы доступности](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) (или [мастер добавления реплики в группу доступности](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) может создать конечную точку и предоставить учетной записи службы экземпляра сервера разрешение CONNECT, если этот экземпляр запускается с учетной записью службы домена. Но если служба [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] запущена от имени встроенной учетной записи, такой как «Локальная система», «Локальная служба» или «Сетевая служба», или от имени учетной записи, не входящей в домен, то для проверки подлинности конечных точек необходимо пользоваться сертификатами, а мастер не сможет создать точку зеркального отображения базы данных на этом экземпляре сервера. В этом случае рекомендуется создавать конечные точки зеркального отображения базы данных вручную до запуска мастера.<br /><br /> <br /><br /> <b>\*\* Примечание по безопасности \*\*</b> . Механизм безопасности транспорта для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] такой же, как и при зеркальном отображении базы данных.|[Конечная точка зеркального отображения базы данных (SQL Server)](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn (SQL Server)](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Если в группу доступности будут добавляться любые базы данных, использующие FILESTREAM, убедитесь, что функция FILESTREAM включена на каждом экземпляре сервера, на котором планируется разместить реплику доступности.|[Включение и настройка FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Если в группу доступности будут добавляться любые автономные базы данных, то убедитесь, что параметру сервера **contained database authentication** присвоено значение **1** на каждом экземпляре, где планируется разместить реплику доступности.|[Параметр конфигурации сервера «проверка подлинности автономной базы данных»](../../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [Параметры конфигурации сервера (SQL Server)](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)|  
@@ -187,7 +187,7 @@ ms.locfileid: "59042443"
   
 ###  <a name="RelatedContentSI"></a> См. также (экземпляр сервера)  
   
--   [Обучающая серия Always On — HADRON: использование пулов рабочих потоков для баз данных с HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Обучающая серия Always ON — HADRON. Использование рабочего пула для баз данных с HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ##  <a name="NetworkConnect"></a> Рекомендации по сетевым возможностям подключения  
  Настоятельно рекомендуется использовать одни и те же сетевые соединения для обмена данными между узлами WSFC и репликами доступности.  Использование отдельных сетевых соединений может привести к непредвиденному поведению в случае отказа даже некоторых из них.  
@@ -202,7 +202,7 @@ ms.locfileid: "59042443"
   
 -   [Ограничения](#RestrictionsFCI)  
   
--   [Контрольный список. предварительные требования](#PrerequisitesFCI)  
+-   [Контрольный список. Предварительные требования](#PrerequisitesFCI)  
   
 -   [Связанные задачи](#RelatedTasksFCIs)  
   
@@ -243,7 +243,7 @@ ms.locfileid: "59042443"
   
 -   [Отказоустойчивая кластеризация и группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Руководство по архитектуре Always On. Построение решения высокого уровня доступности и аварийного восстановления с помощью экземпляров отказоустойчивого кластера и групп доступности](https://technet.microsoft.com/library/jj215886.aspx)  
+-   [Руководство по архитектуре Always On. Построение решения для обеспечения высокого уровня доступности и аварийного восстановления с помощью экземпляров отказоустойчивого кластера и групп доступности](https://technet.microsoft.com/library/jj215886.aspx)  
   
 ##  <a name="PrerequisitesForAGs"></a> Обязательные условия и ограничения для группы доступности  
  **В этом разделе.**  
@@ -252,7 +252,7 @@ ms.locfileid: "59042443"
   
 -   [Требования](#RequirementsAG)  
   
--   [безопасность](#SecurityAG)  
+-   [Безопасность](#SecurityAG)  
   
 -   [Связанные задачи](#RelatedTasksAGs)  
   
@@ -267,7 +267,7 @@ ms.locfileid: "59042443"
   
 -   **Реплики доступности**.  Каждая группа доступности поддерживает одну первичную реплику и до восьми вторичных реплик. Все реплики могут выполняться в режиме асинхронной фиксации или до трех из них могут работать в режиме синхронной фиксации (одна первичная реплика с двумя синхронными вторичными репликами).  
   
--   **Максимальное количество групп доступности и баз данных доступности на компьютер**. Фактическое количество баз данных и групп доступности, которые можно разместить на компьютере (физической или виртуальной машине), зависит от оборудования и загрузки, но нет строгого ограничения. Корпорация Майкрософт протестировала до 10 групп доступности и 100 баз данных на физических компьютерах, но это предельное количество привязок. В зависимости от характеристик оборудования на сервере и рабочей нагрузки можно поместить больше баз данных и групп доступности в экземпляр SQL Server. К символам перегрузки систем могут относиться, помимо прочего, исчерпание ресурса рабочего потока, увеличенное время ответа для системных представлений групп доступности и динамических административных представлений или остановка дампов системы диспетчера. Обязательно проведите тщательное тестирование среды с рабочей нагрузкой, чтобы убедиться, что система в состоянии обрабатывать пиковую нагрузку в рамках соглашений об уровне обслуживания приложений. При рассмотрении соглашений об уровне обслуживания обязательно проверяйте нагрузку в условиях сбоя, а также ожидаемое время ответа.  
+-   **Максимальное количество групп доступности и баз данных доступности на компьютер**. Фактическое количество баз данных и групп доступности, которые можно разместить на компьютере (физической или виртуальной машине), зависит от оборудования и загрузки, но строгого ограничения не существует. Корпорация Майкрософт протестировала до 10 групп доступности и 100 баз данных на физических компьютерах, но это предельное количество привязок. В зависимости от характеристик оборудования на сервере и рабочей нагрузки можно поместить больше баз данных и групп доступности в экземпляр SQL Server. К символам перегрузки систем могут относиться, помимо прочего, исчерпание ресурса рабочего потока, увеличенное время ответа для системных представлений групп доступности и динамических административных представлений или остановка дампов системы диспетчера. Обязательно проведите тщательное тестирование среды с рабочей нагрузкой, чтобы убедиться, что система в состоянии обрабатывать пиковую нагрузку в рамках соглашений об уровне обслуживания приложений. При рассмотрении соглашений об уровне обслуживания обязательно проверяйте нагрузку в условиях сбоя, а также ожидаемое время ответа.  
   
 -   **Не используйте диспетчер отказоустойчивости кластеров для управления группами доступности.**  
   
@@ -292,7 +292,7 @@ ms.locfileid: "59042443"
   
     -   Полный доступ  
   
-         [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] должны обладать всеми возможностями управления, поэтому использование [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] дает ему полный контроль над кластером (через идентификатор безопасности службы).  
+         [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] должен обладать всеми возможностями управления, поэтому использование [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] дает ему полный контроль над кластером (через идентификатор безопасности службы).  
   
          Нельзя напрямую повышать или снижать уровень безопасности для экземпляра сервера средствами диспетчера кластера. Для управления сеансами безопасности кластера следует использовать диспетчер конфигураций [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или эквивалент WMI из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -377,7 +377,7 @@ ms.locfileid: "59042443"
   
 |Задача|Статья|  
 |----------|-----------|  
-|Подготовка базы данных-получателя (вручную)|[Ручная подготовка базы данных-получателя для присоединения к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)|  
+|Подготовка базы данных-получателя (вручную)|[Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)|  
 |Присоединение базы данных-получателя к группе доступности (вручную)|[Присоединение базы данных-получателя к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)|  
 |Изменение числа баз данных доступности|[Добавление базы данных в группу доступности (SQL Server)](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md)<br /><br /> [Удаление базы данных-получателя из группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md)<br /><br /> [Удаление базы данных-источника из группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)|  
   
@@ -385,9 +385,9 @@ ms.locfileid: "59042443"
   
 -   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Блог команды разработчиков SQL Server Always On: официальный блог команды разработчиков SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Блог команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [Обучающая серия Always On — HADRON: использование пулов рабочих потоков для баз данных с HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Обучающая серия Always ON — HADRON. Использование рабочего пула для баз данных с HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

@@ -11,10 +11,10 @@ ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4a7484acf7a63b5c2a6804e1f3f7914cabaf8524
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59476649"
 ---
 # <a name="configure-polybase-to-access-external-data-in-oracle"></a>Настройка PolyBase для доступа к внешним данным в Oracle
@@ -45,7 +45,7 @@ ms.locfileid: "59476649"
    ```
 
    > [!NOTE]
-   > `PASSWORD` — пароль, который использовался при шифровании главного ключа базы данных. Пароль должен соответствовать требованиям политики паролей Windows на компьютере, где размещается экземпляр SQL Server.
+   > `PASSWORD` — это пароль, который использовался при шифровании главного ключа базы данных. Пароль должен соответствовать требованиям политики паролей Windows на компьютере, где размещается экземпляр SQL Server.
 
 1. Создайте учетные данные на уровне базы данных.
 

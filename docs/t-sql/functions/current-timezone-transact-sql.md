@@ -26,10 +26,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: dcdae3ff107ad1e1e3a7bc58fde4248bb5330223
-ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59367390"
 ---
 # <a name="currenttimezone-transact-sql"></a>CURRENT_TIMEZONE (Transact-SQL)
@@ -57,7 +57,7 @@ CURRENT_TIMEZONE ( )
   
 ## <a name="remarks"></a>Remarks  
 
-`CURRENT_TIMEZONE` — недетерминированная функция. Невозможно проиндексировать представления и выражения, ссылающиеся на этот столбец.
+`CURRENT_TIMEZONE` является недетерминированной функцией. Невозможно проиндексировать представления и выражения, ссылающиеся на этот столбец.
   
 ## <a name="example"></a>Пример
 
@@ -72,4 +72,4 @@ SELECT CURRENT_TIMEZONE();
   
 ## <a name="see-also"></a>См. также раздел
 
-[Часовой пояс Управляемого экземпляра Базы данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
+[SQL Database Managed Instance Time Zone](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone) (Часовые пояса в Управляемом экземпляре Базы данных SQL)

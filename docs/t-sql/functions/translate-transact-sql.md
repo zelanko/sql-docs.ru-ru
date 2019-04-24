@@ -16,47 +16,43 @@ ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>=sql-server-2017||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eff2d9980e4036acae9f2b11a41582847b1a686b
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7734ce09ca33c1db8b0ab650509edeabe9e80a08
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342931"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670860"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 Возвращает строку, предоставленную в качестве первого аргумента, после преобразования символов, указанных во втором аргументе, в конечный набор символов, указанный в третьем аргументе.
 
 ## <a name="syntax"></a>Синтаксис
 
+```sql
+TRANSLATE ( inputString, characters, translations)
 ```
-TRANSLATE ( inputString, characters, translations) 
-```
 
-## <a name="arguments"></a>Аргументы   
+## <a name="arguments"></a>Аргументы
 
- *inputString*   
- Строковое [выражение](../../t-sql/language-elements/expressions-transact-sql.md), в котором выполняется поиск. *inputString* может быть любого символьного типа данных (nvarchar, varchar, nchar, char).
+ *inputString* — это строковое [выражение](../../t-sql/language-elements/expressions-transact-sql.md), в котором выполняется поиск. *inputString* может быть любого символьного типа данных (nvarchar, varchar, nchar, char).
 
- *characters*   
- Строковое [выражение](../../t-sql/language-elements/expressions-transact-sql.md), содержащее символы, которые следует заменить. *characters* может быть любого символьного типа данных.
+ *characters* — это строковое [выражение](../../t-sql/language-elements/expressions-transact-sql.md), содержащее символы, которые следует заменить. *characters* может быть любого символьного типа данных.
 
-*translations*   
- Строковое [выражение](../../t-sql/language-elements/expressions-transact-sql.md), содержащее заменяющие символы. *translations* должен иметь один и тот же тип данных и длину, что и *characters*.
+*translations* — это строковое [выражение](../../t-sql/language-elements/expressions-transact-sql.md), содержащее заменяющие символы. *translations* должен иметь один и тот же тип данных и длину, что и *characters*.
 
 ## <a name="return-types"></a>Типы возвращаемых данных
 
 Возвращает символьное выражение того же типа даты, что и `inputString`, в котором символы из второго аргумента заменены соответствующими символами из третьего аргумента.
 
-## <a name="remarks"></a>Remarks   
+## <a name="remarks"></a>Remarks
 
 `TRANSLATE` возвращает ошибку, если выражения *characters* и *translations* имеют разную длину. `TRANSLATE` возвращает значение NULL, если любой из аргументов имеет значение NULL.  
 
 Поведение функции `TRANSLATE` аналогично использованию нескольких функций [REPLACE](../../t-sql/functions/replace-transact-sql.md). `TRANSLATE`, однако, не заменяет символы более одного раза. Это отличает ее от нескольких функций `REPLACE`, так как каждая из них пытается заменить все соответствующие символы. 
-
 
 `TRANSLATE` всегда учитывает параметры сортировки SC.
 
@@ -105,7 +101,7 @@ REPLACE
 );
 ```
 
-###  <a name="b-convert-geojson-points-into-wkt"></a>Б. Преобразование точек GeoJSON в WKT
+### <a name="b-convert-geojson-points-into-wkt"></a>Б. Преобразование точек GeoJSON в WKT
 
 GeoJSON — это формат для кодирования различных структур географических данных. С помощью функции `TRANSLATE` разработчики могут легко преобразовывать точки GeoJSON в формат WKT, и наоборот. Следующий запрос заменяет квадратные и фигурные скобки во входной строке на обычные:
 
@@ -114,7 +110,7 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
 ```
 
-[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
 |Точка  |Координаты |  
 |---------|--------- |

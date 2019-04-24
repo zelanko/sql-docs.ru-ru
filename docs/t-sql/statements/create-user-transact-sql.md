@@ -31,10 +31,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: af33c0234ba1b8e6b92b5f1fee7f17f4d12dc667
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042174"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
@@ -57,7 +57,7 @@ ms.locfileid: "59042174"
 
 -   Пользователь автономной базы данных с паролем. (Недоступно в [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].) `CREATE USER Mary WITH PASSWORD = '********';`   
   
-**Пользователи, соответствующие участникам Windows, которые подключаются с помощью имен входа группы Windows**  
+**Пользователи, соответствующие субъектам Windows, которые подключаются с помощью имени входа группы Windows**  
   
 -   Пользователь, соответствующий пользователю Windows, который не имеет имени входа, но может подключаться к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] за счет членства в роли Windows. `CREATE USER [Contoso\Fritz];`  
   
@@ -304,7 +304,7 @@ GO
 -   `CREATE USER [Domain1\WindowsGroupManagers]`  
 -   `CREATE USER Barry WITH PASSWORD = 'sdjklalie8rew8337!$d'`  
   
-**Пользователи на основе участников Windows без подключения к базе данных master**  
+**Пользователи на основе субъектов Windows без подключения к базе данных master**  
   
  В следующем списке показан возможный синтаксис для пользователей, имеющих доступ к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] за счет членства в группе Windows, но не имеющих имени входа в базе данных **master**. Такой синтаксис можно использовать во всех типах базы данных. Параметры схемы и языковые параметры, задаваемые по умолчанию, не указываются.  
   
@@ -337,7 +337,7 @@ GO
   
  Создание пользователей в автономной базе данных позволяет отделить базу данных от экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], что позволяет легко переместить ее в другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделах [Автономные базы данных](../../relational-databases/databases/contained-databases.md) и [Пользователи автономной базы данных — создание переносимой базы данных](../../relational-databases/security/contained-database-users-making-your-database-portable.md). Сведения об изменении пользователя базы данных с пользователя, соответствующего имени входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на пользователя автономной базы данных с паролем см. в разделе [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
   
- В автономной базе данных пользователям не обязательно иметь имена входа в базе данных **master**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] позволяет администраторам предоставлять доступ к автономной базе данных на уровне базы данных, а не на уровне компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Дополнительные сведения см. в разделе [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+ В автономной базе данных пользователям не обязательно иметь имена входа в базе данных **master**. Администраторы [!INCLUDE[ssDE](../../includes/ssde-md.md)] должны учитывать, что доступ к автономной базе данных можно предоставлять на уровне базы данных, а не на уровне компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Дополнительные сведения см. в разделе [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
  При использовании пользователей автономной базы данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] настройте доступ с помощью правила брандмауэра уровня базы данных вместо правила брандмауэра уровня сервера. Дополнительные сведения см. в разделе [sp_set_database_firewall_rule (база данных SQL Azure)](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
@@ -511,7 +511,7 @@ GO
  [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [ALTER USER (Transact-SQL)](../../t-sql/statements/alter-user-transact-sql.md)   
  [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [Автономные базы данных](../../relational-databases/databases/contained-databases.md)   
  [Подключение к базе данных SQL с использованием аутентификации Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   

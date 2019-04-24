@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 777b83d5021a61ea42610680d52345ad4ca001b5
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240594"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Применение резервных копий журналов транзакций (SQL Server)
@@ -73,7 +73,7 @@ ms.locfileid: "59240594"
   
 2.  Не восстанавливайте полную резервную копию базы данных, резервной копии базы данных от 18:00. Вместо этого восстановите последнюю полную резервную копию, созданную в 18:00:00 а затем примените резервную копию журнала и резервную копию заключительного фрагмента журнала, созданные в 20:00:00.  
   
- **Вариант 2. Восстановление базы данных с использованием более ранней полной резервной копии базы данных**  
+ **Вариант 2. Восстановление базы данных с использованием более ранней полной резервной копии базы данных**  
   
 > Этот вариант можно использовать в том случае, если проблема не позволяет воспользоваться полной резервной копии базы данных от 18:00. Этот процесс занимает больше времени, чем восстановление полной резервной копии базы данных от 18:00.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "59240594"
   
 -   [Восстановление базы данных SQL Server до определенного момента времени (модель полного восстановления)](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A> (SMO);  
+-   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A> (SMO)  
   
 -   [Восстановление связанных баз данных, которые содержат помеченную транзакцию](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)  
   

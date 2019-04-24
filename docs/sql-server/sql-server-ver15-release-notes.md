@@ -1,6 +1,6 @@
 ---
 title: Заметки о выпуске SQL Server 2019 | Документация Майкрософт
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 62c637f8432fd168a9b23a92b7d50c00ea6c1e14
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 3362a03fe1437b15985fdc557fac6536db5fd2f7
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860065"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582878"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Заметки о выпуске предварительной версии SQL Server 2019
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "58860065"
 > [!NOTE]
 > Предварительные версии выпуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] публикуются для того, чтобы вы смогли опробовать возможности предстоящего выпуска. Они не являются поддерживаемыми или лицензированными для использования в рабочей среде. Явно не поддерживаются следующие сценарии.
 >
-> - Параллельная установка с другими версиями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+> - Параллельная установка с другими версиями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 > - Обновление существующего экземпляра SQL Server с любой версии
 
 **Попробуйте [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].**
@@ -37,15 +37,15 @@ ms.locfileid: "58860065"
 ## <a name="ctp-24"></a>CTP 2.4
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 — последний общедоступный выпуск [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 доступен только в виде ознакомительной версии. Другие выпуски недоступны. Поддержка выпусков CTP описана в файле `license_Eval.rtf` на установочном носителе.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]Версия CTP 2.4 доступна только в виде Evaluation Edition. Другие выпуски недоступны. Поддержка выпусков CTP описана в файле `license_Eval.rtf` на установочном носителе.
 
 Ограниченную поддержку можно найти в следующих ресурсах:
 
 - Форумы
-  - [Отзыв об SQL Server](https://aka.ms/sqlfeedback)
-  - [Начало работы с SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
+  - [Отзывы о SQL Server](https://aka.ms/sqlfeedback).
+  - [Начало работы с SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted).
   - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
-  - [Документация по SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
+  - [Документация по SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
 
 - Или опубликуйте твит [@SQLServer](https://twitter.com/SQLServer) с [#sqlhelp](https://twitter.com/search?q=%23sqlhelp).
 
@@ -62,9 +62,9 @@ ms.locfileid: "58860065"
 - **Проблема и последствия для клиентов**: Требования к оборудованию и программному обеспечению по-прежнему проверяются и не являются окончательными для выпуска продукта.
 
   - **Оборудование**
-    - [Windows — требования к процессору, памяти и операционной системе.](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#pmosr)
-    - [Linux — требования к системе.](../linux/sql-server-linux-setup.md#system)
-  - **Программное обеспечение**
+    - [Windows — требования к процессору, памяти и операционной системе](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#pmosr).
+    - [Linux — требования к системе](../linux/sql-server-linux-setup.md#system).
+  - **Программное обеспечение**.
     - Windows Server 2016 или более поздней версии. Дополнительные требования см. в статье [Требования к оборудованию и программному обеспечению для установки SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
     - Платформа Microsoft .NET Framework 4.6.2. Доступна в [Центре загрузки](https://www.microsoft.com/download/details.aspx?id=53344).
     - Для Linux обратитесь к разделу [поддерживаемых платформ](../linux/sql-server-linux-setup.md#supportedplatforms).

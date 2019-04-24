@@ -1,7 +1,7 @@
 ---
 title: Уровень совместимости инструкции ALTER DATABASE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 04/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbc27afcf47429d0c6a74b43244ba9a4f6f483a7
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: d535d50bde7c05629d23be85c2c64083dd455965
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828084"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583377"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)
 
@@ -175,6 +175,14 @@ SELECT name, compatibility_level FROM sys.databases;
 В этом разделе описываются новые возможности, обусловленные появлением уровня совместимости 150.
 
 Уровень совместимости базы данных 150 сейчас предоставляется для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] в режиме общедоступной предварительной версии. Этот уровень совместимости базы данных будет связан с новым поколением улучшений обработки запросов наряду с улучшениями, реализованными в уровне совместимости 140.
+
+|Уровень совместимости 140 и ниже|Уровень совместимости 150|
+|--------------------------------------------------|-----------------------------------------|
+|Реляционное хранилище данных и аналитические рабочие нагрузки могут не иметь возможности использовать индексы columnstore из-за ограничений OLTP, отсутствия поддержки поставщика или других ограничений.  Без индексов columnstore эти рабочие нагрузки нельзя будет выполнять в пакетном режиме.|Пакетный режим выполнения теперь доступен для аналитических рабочих нагрузок без необходимости использовать индексы columnstore. Дополнительные сведения см. в разделе [Пакетный режим для данных rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore).|
+|Запросы в построчном режиме к временному буферу памяти недостаточного объема, которые приводят к временным записям на диск, могут по-прежнему вызывать проблемы при последовательном выполнении.|Запросы в построчном режиме к временному буферу памяти недостаточного объема, которые приводят к временным записям на диск, могут выполняться эффективнее при последовательном выполнении. Дополнительные сведения см. в разделе [Обратная связь по временно предоставляемому буферу памяти в строковом режиме](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback).|
+|Запросы в построчном режиме к временному буферу памяти чрезмерного объема, которые приводят к проблемам параллелизма, могут по-прежнему вызывать проблемы при последовательном выполнении.|Запросы в построчном режиме к временному буферу памяти чрезмерного объема, которые приводят к проблемам параллелизма, могут выполняться эффективнее при последовательном выполнении. Дополнительные сведения см. в разделе [Обратная связь по временно предоставляемому буферу памяти в строковом режиме](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback).|
+|Запросы, ссылающиеся на скалярные пользовательские функции T-SQL, будут применять итеративный вызов, сокращать издержки и предусматривать принудительное последовательное выполнение. |Скалярные пользовательские функции T-SQL преобразуются в эквивалентные реляционные выражения, которые "встраиваются" в вызывающий запрос, что часто приводит к существенному повышению производительности. Дополнительные сведения см. в разделе [Встраивание скалярных пользовательских функций](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining).|
+|Табличные переменные используют фиксированную оценку для оценки кратности.  Если фактическое число строк значительно больше оценочного значения, может наблюдаться снижение производительности нисходящих операций. |Теперь планируется использовать фактическую кратность табличной переменной, обнаруженную при первой компиляции, вместо фиксированной оценки. Дополнительные сведения см. в разделе [Отложенная компиляция табличных переменных](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation).|
 
 Дополнительные сведения о функциях обработки запросов, доступных на уровне 150 совместимости базы данных, см. в статьях [Новые возможности в SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md) и [Интеллектуальная обработка запросов в базах данных SQL](https://docs.microsoft.com/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017).
 

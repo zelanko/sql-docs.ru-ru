@@ -14,10 +14,10 @@ ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 051123efd5c58048635bb83e43eaff73218c463e
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241542"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS
@@ -36,7 +36,7 @@ ms.locfileid: "59241542"
 
 ### <a name="sql-server-computer-requirements"></a>Требования к компьютеру с SQL Server
 
-- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] или более поздней версии.
+- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] или последующей версии.
 - Windows 10 Корпоративная (версия 1809) или Windows Server 2019 Datacenter.
 - Если SQL Server работает на физическом компьютере, он должен соответствовать [требованиям Hyper-V к оборудованию](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements):
    - 64-разрядный процессор с преобразованием адресов второго уровня (SLAT).
