@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 29449905da888d0f7c85b66d3731eed381dc582c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506055"
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47704712"
   
  При считывании страницы данных с диска она копируется в буферный пул [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и кэшируется для повторного использования. Каждая страница данных в кэше имеет один дескриптор буфера. Дескрипторы буфера уникально идентифицируют каждую страницу данных, кэшируемую в данный момент в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. представление sys.dm_os_buffer_descriptors возвращает страницы в кэше для всех пользовательских и системных баз данных. В их число входят страницы, связанные с базой данных Resource.  
   
-> **Примечание:** вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_os_buffer_descriptors**.  
+> **ПРИМЕЧАНИЕ.** Вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_os_buffer_descriptors**.  
 
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -44,14 +44,14 @@ ms.locfileid: "47704712"
 |page_id|**int**|Идентификатор страницы в файле. Допускает значение NULL.|  
 |page_level|**int**|Индексный уровень страницы. Допускает значение NULL.|  
 |allocation_unit_id|**bigint**|Идентификатор единицы распределения страницы. Это значение может быть использовано для соединения sys.allocation_units. Допускает значение NULL.|  
-|page_type|**nvarchar(60)**|Тип страницы, например: страница данных или страница индекса. Допускает значение NULL.|  
+|page_type|**nvarchar(60)**|Тип страницы, например: Страница данных или страница индекса. Допускает значение NULL.|  
 |row_count|**int**|Количество строк на странице. Допускает значение NULL.|  
 |free_space_in_bytes|**int**|Объем доступного свободного места, в байтах, на странице. Допускает значение NULL.|  
 |is_modified|**bit**|1 = страница была изменена после того, как она была считана с диска. Допускает значение NULL.|  
 |numa_node|**int**|Узел с неоднородным доступом к памяти для буфера. Допускает значение NULL.|  
-|read_microsec|**bigint**|Фактическое время (в миллисекундах), необходимое для считывания страницы в буфер. Счетчик сбрасывается, если буфер используется повторно. Допускает значение NULL.|  
-|is_in_bpool_extension|**bit**|1 = страница находится в расширение буферного пула. Допускает значение NULL.|  
-|pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
+|read_microsec|**bigint**|Фактическое время (в миллисекундах), необходимое для считывания страницы в буфер. Счетчик сбрасывается, если буфер используется повторно. Допускает значение NULL.|  
+|is_in_bpool_extension|**bit**|1 = страница находится в расширение буферного пула. Допускает значение NULL.|  
+|pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
   
 ## <a name="permissions"></a>Разрешения  
 
@@ -61,11 +61,11 @@ ms.locfileid: "47704712"
 ## <a name="remarks"></a>Примечания  
  представление sys.dm_os_buffer_descriptors возвращает страницы, используются ли в базе данных ресурсов. представление sys.dm_os_buffer_descriptors возвращает сведения о свободных или заимствованных страницах, или о страницах, в которых возникли ошибки при чтении.  
   
-|От|Чтобы|В|Связь|  
+|От|Чтобы|Вкл.|Связь|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|«многие к одному»|  
-|sys.dm_os_buffer_descriptors|\<UserDB >. sys.allocation_units|allocation_unit_id|«многие к одному»|  
-|sys.dm_os_buffer_descriptors|\<UserDB >. sys.database_files|file_id|«многие к одному»|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|«многие к одному»|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys.database_files|file_id|«многие к одному»|  
 |sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|«многие к одному»|  
   
 ## <a name="examples"></a>Примеры  

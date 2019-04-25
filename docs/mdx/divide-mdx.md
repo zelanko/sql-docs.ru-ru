@@ -1,5 +1,5 @@
 ---
-title: Деление (многомерные Выражения) | Документы Microsoft
+title: Деление (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 86b4d8c97996733396e3062e134b2e31d2819ec0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471315"
 ---
 # <a name="divide-mdx"></a>Деление (многомерные выражения)
 
@@ -42,6 +42,6 @@ Divide (<numerator>, <denominator> [,<alternateresult>])
  Альтернативный результат при делении на 0 должен быть константой.  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

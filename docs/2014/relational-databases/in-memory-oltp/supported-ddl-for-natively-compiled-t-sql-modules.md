@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc064eb8a4c6b206d3b690a4c4e7ca196c7475dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467878"
 ---
 # <a name="supported-constructs-on-natively-compiled-stored-procedures"></a>Поддерживаемые конструкции для хранимых процедур, скомпилированных в собственном коде
   В этом разделе перечислены поддерживаемые конструкции в хранимых процедурах, скомпилированных в собственном коде.  
@@ -40,7 +40,7 @@ ms.locfileid: "48113214"
 ## <a name="security"></a>безопасность  
  Поддерживаются следующие конструкции:  
   
--   Для процедур: выполнение AS OWNER, SELF и пользователя.  
+-   Для процедур: EXECUTE AS OWNER, SELF и пользователя.  
   
 -   Разрешения GRANT и DENY для таблиц и процедур.  
   

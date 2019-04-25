@@ -22,11 +22,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 512994ada852ea7807cc14ecd5b25d9acff56ffc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632701"
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,8 +45,8 @@ ms.locfileid: "47643162"
 |**owning_principal_id**|**int**|Идентификатор участника, являющегося владельцем данного участника. Владельцем всех участников, кроме ролей баз данных **dbo**.|  
 |**ИД безопасности**|**varbinary(85)**|SID (идентификатор защиты) участника.  NULL для SYS и INFORMATION SCHEMAS.|  
 |**is_fixed_role**|**bit**|Если значение равно 1, в данной строке представляется запись для одной из предопределенных ролей базы данных: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
-|**authentication_type**|**int**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Обозначает тип проверки подлинности. Ниже приведены возможные значения и их описания.<br /><br /> 0: без проверки подлинности<br />1: проверка подлинности экземпляра<br />2: проверка подлинности базы данных<br />3: проверка подлинности Windows|  
-|**authentication_type_desc**|**nvarchar(60)**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Описание типа проверки подлинности. Ниже приведены возможные значения и их описания.<br /><br /> NONE: Проверка подлинности<br />ЭКЗЕМПЛЯР: Проверка подлинности экземпляра<br />База данных: Проверка подлинности базы данных<br />WINDOWS: Проверка подлинности Windows|  
+|**authentication_type**|**int**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Обозначает тип проверки подлинности. Ниже приведены возможные значения и их описания.<br /><br /> 0 : Без проверки подлинности<br />1 : Проверка подлинности экземпляра<br />2 : Проверка подлинности базы данных<br />3 : Проверка подлинности Windows|  
+|**authentication_type_desc**|**nvarchar(60)**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Описание типа проверки подлинности. Ниже приведены возможные значения и их описания.<br /><br /> NONE: Без проверки подлинности<br />ЭКЗЕМПЛЯР: Проверка подлинности экземпляра<br />БАЗА ДАННЫХ: Проверка подлинности базы данных<br />WINDOWS: Проверка подлинности Windows|  
 |**default_language_name**|**sysname**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Обозначает язык по умолчанию для участника.|  
 |**default_language_lcid**|**int**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Обозначает код языка по умолчанию для участника.|  
 |**allow_encrypted_value_modifications**|**bit**|**Применимо к**: с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Отключает проверки шифрованных метаданных на сервере в операциях массового копирования. Это позволяет пользователю массово копировать данные, зашифрованные с помощью Always Encrypted, между таблицами или базами данных, не расшифровывая данные. Значение по умолчанию — OFF. |      
@@ -59,7 +59,7 @@ ms.locfileid: "47643162"
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-listing-all-the-permissions-of-database-principals"></a>А. Перечисление всех разрешений участников базы данных  
+### <a name="a-listing-all-the-permissions-of-database-principals"></a>ОТВЕТ Список всех разрешений участников базы данных  
  Следующий запрос перечисляет разрешения, явно предоставленные или отклоненные для участников базы данных.  
   
 > [!IMPORTANT]  
@@ -73,7 +73,7 @@ JOIN sys.database_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-### <a name="b-listing-permissions-on-schema-objects-within-a-database"></a>Б. список разрешений для объектов схемы в базу данных  
+### <a name="b-listing-permissions-on-schema-objects-within-a-database"></a>Б. Список разрешений для объектов схемы в базу данных  
  Следующий запрос объединяет sys.database_principals и sys.database_permissions с sys.objects и sys.schemas, чтобы перечислить разрешения, предоставленные или отклоненные для определенных объектов схемы.  
   
 ```  
@@ -91,7 +91,7 @@ JOIN sys.schemas AS s
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-listing-all-the-permissions-of-database-principals"></a>C: перечисление всех разрешений участников базы данных  
+### <a name="c-listing-all-the-permissions-of-database-principals"></a>C: Список всех разрешений участников базы данных  
  Следующий запрос перечисляет разрешения, явно предоставленные или отклоненные для участников базы данных.  
   
 > [!IMPORTANT]  
@@ -105,7 +105,7 @@ JOIN sys.database_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>D:. список разрешений для объектов схемы в базу данных  
+### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>Г. Список разрешений для объектов схемы в базу данных  
  В следующем запросе соединения `sys.database_principals` и `sys.database_permissions` для `sys.objects` и `sys.schemas` Чтобы перечислить разрешения, предоставленные или отклоненные для определенных объектов схемы.  
   
 ```  

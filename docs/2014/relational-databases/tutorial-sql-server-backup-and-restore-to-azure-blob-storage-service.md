@@ -11,13 +11,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2216674bec52dd4d4800aa1b03aa4a2834667974
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524054"
 ---
-# <a name="tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service"></a>Учебник. Резервное копирование и восстановление SQL Server с помощью службы хранилищ BLOB-объектов Windows Azure
+# <a name="tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service"></a>Учебник. SQL Server Backup and Restore для Windows Azure Blob Storage Service
   Добро пожаловать в учебник «Приступая к резервному копированию и восстановлению данных SQL Server при помощи службы хранилищ больших двоичных объектов Windows Azure». С помощью этого учебника вы научитесь создавать и восстанавливать резервные копии с помощью службы хранилища больших двоичных объектов Windows Azure.  
   
 ## <a name="what-you-will-learn"></a>Обзор учебника  
@@ -29,7 +29,7 @@ ms.locfileid: "52811246"
  [Занятие 2. Создание учетных данных SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)  
  На этом занятии вы также создадите учетные данные для хранения сведений о безопасности, которые будут использоваться для доступа к учетной записи хранения Windows Azure.  
   
- [Занятие 3. Запись полной резервной копии в Windows Azure Blob Storage Service](../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)  
+ [Занятие 3. Запись полной резервной копии в Windows Azure Blob Storage Service](../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)  
  Кроме того, на этом занятии вам предстоит выполнить инструкцию Т-SQL для записи резервной копии базы данных AdventureWorks2012 в службу хранилищ больших двоичных объектов Windows Azure.  
   
  [Занятие 4. Выполните восстановление из полной резервной копии](../tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)  

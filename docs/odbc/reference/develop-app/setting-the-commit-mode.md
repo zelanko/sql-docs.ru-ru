@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: efc999a3644a9146e7195f0bbbb07d130172d30d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445936"
 ---
 # <a name="setting-the-commit-mode"></a>Настройка режима фиксации
 Приложения указать режим транзакции с помощью атрибута соединения SQL_ATTR_AUTOCOMMIT. По умолчанию ODBC транзакции находятся в режиме автоматической фиксации (если только не **SQLSetConnectAttr** и **SQLSetConnectOption** не поддерживаются, наверняка). Переключение из режима ручной фиксации на режим автоматической фиксации автоматически фиксирует любой открытой транзакции в соединении.

@@ -1,5 +1,5 @@
 ---
-title: Перемещение объектов интеллектуального анализа данных | Документы Microsoft
+title: Перемещение объектов интеллектуального анализа данных | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: edbceb50dd1532e427c3bf5738dfe183223afc2d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509876"
 ---
 # <a name="moving-data-mining-objects"></a>Перемещение объектов интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,12 +40,12 @@ ms.locfileid: "34016631"
   
  Дополнительные сведения о развертывании решений служб Analysis Services см. в разделе [Развертывание проектов служб Analysis Services (среда SSDT)](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   
-### <a name="scripting"></a>Создание скриптов  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]предоставляет несколько языков, которые можно использовать для объектов сценария.  
+### <a name="scripting"></a>Написание скриптов  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляет несколько языков, с помощью которых можно создавать скрипты для работы с объектами.  
   
--   **XML для аналитики**: можно создать скрипт для работы с объектами с помощью XMLA, щелкнув правой кнопкой мыши соответствующие объекты в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Для выполнения скрипта откройте его в окне **Запрос XMLA** на целевом сервере.  
+-   **XML ДЛЯ АНАЛИТИКИ**: Можно создать скрипт для объектов, с помощью XMLA, щелкнув правой кнопкой мыши объекты в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Для выполнения скрипта откройте его в окне **Запрос XMLA** на целевом сервере.  
   
--   **Расширения интеллектуального анализа данных**: создать скрипты можно с помощью шаблонов или одного из построителей запросов, предоставляемых в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] и [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   **РАСШИРЕНИЯ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ**: Создать скрипты можно с помощью шаблонов или одного из построителей запросов, предоставляемых в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] и [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Однако следует иметь в виду, что наборы задач, которые можно решать с помощью разных языков скриптов, различаются.  
   
@@ -60,16 +60,16 @@ ms.locfileid: "34016631"
  Дополнительные сведения см. в разделе [Разработка на языке ASSL (язык ASSL)](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
   
 ### <a name="backup-and-restore"></a>Резервное копирование и восстановление  
- Резервное копирование и восстановление из копии всей базы данных служб Analysis Services является лучшим методом, если решение интеллектуального анализа данных зависит от объектов OLAP. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]предоставляет функциональные возможности резервного копирования и восстановления, ускоряющие и облегчающие резервное копирование баз данных.  
+ Резервное копирование и восстановление из копии всей базы данных служб Analysis Services является лучшим методом, если решение интеллектуального анализа данных зависит от объектов OLAP. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] предоставляет функции резервного копирования и восстановления, ускоряющие и облегчающие резервное копирование баз данных.  
   
  Дополнительные сведения о резервном копировании см. в разделе [Создание и восстановление резервных копий баз данных служб Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md).  
   
 ### <a name="exporting-and-importing"></a>Импорт и экспорт  
  Экспорт и последующий импорт моделей и структур интеллектуального анализа данных с помощью инструкций DMX — лучший способ перемещения или создания резервных копий отдельных реляционных объектов интеллектуального анализа данных. Дополнительные сведения о синтаксисе расширения интеллектуального анализа данных для этих операций см. в следующих разделах:  
   
--   [ЭКСПОРТИРОВАТЬ & #40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ & #41;](../../dmx/export-dmx.md)  
+-   [EXPORT (расширения интеллектуального анализа данных)](../../dmx/export-dmx.md)  
   
--   [ИМПОРТИРОВАТЬ & #40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ & #41;](../../dmx/import-dmx.md)  
+-   [IMPORT (расширения интеллектуального анализа данных)](../../dmx/import-dmx.md)  
   
  Если указывается параметр INCLUDE DEPENDENCIES, службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] также экспортируют определения всех соответствующих представлений источников данных, а при импорте модели или структуры они повторно создают представление источника данных на целевом сервере. После завершения импорта модели убедитесь, что в объекте установлены все необходимые разрешения интеллектуального анализа.  
   
@@ -77,6 +77,6 @@ ms.locfileid: "34016631"
 >  С помощью инструкций DMX нельзя экспортировать и импортировать модели OLAP. Если модель интеллектуального анализа данных основана на кубе OLAP, для резервного копирования и восстановления всей базы данных необходимо воспользоваться функциями служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] либо выполнить повторное развертывание куба и его моделей.  
   
 ## <a name="see-also"></a>См. также  
- [Управление решениями интеллектуального анализа данных и объектов](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
+ [Управление решениями и объектами интеллектуального анализа данных](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   
