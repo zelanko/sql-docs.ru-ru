@@ -12,11 +12,11 @@ ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ms.openlocfilehash: fbffcdd5de49cadd3e18ab3db0a5da7ff6a042e9
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253005"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -135,7 +135,7 @@ ms.locfileid: "56319345"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Создание скриптов</h3>
+                                                    <h3>Написание скриптов</h3>
                                                     <p>Рассматриваются различные языки сценариев, поддерживаемые SQL Server, такие как Powershell и xQuery. </p>
                                                 </div>
                                             </div>

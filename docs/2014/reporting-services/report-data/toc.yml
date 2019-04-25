@@ -83,8 +83,6 @@
               href: xml-query-syntax-for-xml-report-data-ssrs.md
             - name: Синтаксис пути к элементу для XML-данных отчета
               href: element-path-syntax-for-xml-report-data-ssrs.md
-        - name: Соединение с моделью отчета
-          href: report-model-connection-ssrs.md
         - name: Тип соединения служб Analysis Services для расширений интеллектуального анализа данных
           href: analysis-services-connection-type-for-dmx-ssrs.md
           items:

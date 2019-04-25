@@ -188,7 +188,7 @@
 - name: Категория событий Progress Report
   href: progress-report-event-category.md
   items:
-    - name: 'Класс событий Progress Report: Online Index Operation'
+    - name: 'Progress Report: класс события Online Index Operation'
       href: progress-report-online-index-operation-event-class.md
 - name: Категория событий Query Notifications
   href: query-notifications-event-category.md
@@ -349,27 +349,27 @@
   items:
     - name: 'DTCTransaction, класс событий'
       href: dtctransaction-event-class.md
-    - name: Класс событий SQLTransaction
+    - name: 'SQLTransaction, класс событий'
       href: sqltransaction-event-class.md
-    - name: 'Класс событий TM: Begin Tran Completed'
+    - name: TM. Класс события Begin Tran Completed
       href: tm-begin-tran-completed-event-class.md
-    - name: 'Класс событий TM: Begin Tran Starting'
+    - name: TM. Класс события Begin Tran Starting
       href: tm-begin-tran-starting-event-class.md
-    - name: 'Класс событий TM: Commit Tran Completed'
+    - name: TM. Класс события Commit Tran Completed
       href: tm-commit-tran-completed-event-class.md
-    - name: 'Класс событий TM: Commit Tran Starting'
+    - name: TM. Класс события Commit Tran Starting
       href: tm-commit-tran-starting-event-class.md
-    - name: 'Класс событий TM: Promote Tran Completed'
+    - name: TM. Класс события Promote Tran Completed
       href: tm-promote-tran-completed-event-class.md
-    - name: 'Класс событий TM: Promote Tran Starting'
+    - name: TM. Класс события Promote Tran Starting
       href: tm-promote-tran-starting-event-class.md
-    - name: 'Класс событий TM: Rollback Tran Completed'
+    - name: TM. Класс события Rollback Tran Completed
       href: tm-rollback-tran-completed-event-class.md
-    - name: 'Класс событий TM: Rollback Tran Starting'
+    - name: TM. Класс события Rollback Tran Starting
       href: tm-rollback-tran-starting-event-class.md
-    - name: 'Класс событий TM: Save Tran Completed'
+    - name: TM. Класс события Save Tran Completed
       href: tm-save-tran-completed-event-class.md
-    - name: 'Класс событий TM: Save Tran Starting'
+    - name: TM. Класс события Save Tran Starting
       href: tm-save-tran-starting-event-class.md
     - name: 'TransactionLog, класс событий'
       href: transactionlog-event-class.md

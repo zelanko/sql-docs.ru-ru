@@ -132,7 +132,7 @@
   items:
     - name: редактор преобразования «Слияние»
       href: ../../merge-transformation-editor.md
-- name: преобразование «Соединение слиянием»
+- name: Merge Join Transformation
   href: merge-join-transformation.md
   items:
     - name: редактор преобразования «Cоединение слиянием»

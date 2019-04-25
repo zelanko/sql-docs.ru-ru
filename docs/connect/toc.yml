@@ -1,5 +1,5 @@
 - name: "SQL Server\_++"
-  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: Программирование для взаимодействия с SQL Server
   href: ../connect/homepage-sql-connection-programming.md
 - name: Драйверы для SQL Server

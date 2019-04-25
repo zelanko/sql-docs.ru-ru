@@ -12,11 +12,11 @@ ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ms.openlocfilehash: 601bf4bdfae6b896c218d30c9b943bd1e97ba70c
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265156"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -181,7 +181,7 @@ ms.locfileid: "56319235"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>BCP;</h3>
+                                                    <h3>BCP</h3>
                                                     <p>Массовое копирование данных между файлом данных в указанном формате и базой данных SQL.</p>
                                                 </div>
                                             </div>
@@ -219,7 +219,7 @@ ms.locfileid: "56319235"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>мастер импорта и экспорта</h3>
+                                                    <h3>Мастер импорта и экспорта</h3>
                                                     <p>Мастер предоставляет простой способ скопировать данные из большого количества источников в базу данных SQL. </p>
                                                 </div>
                                             </div>
@@ -238,7 +238,7 @@ ms.locfileid: "56319235"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Службы SQL Server Integration Services</h3>
+                                                    <h3>Службы SQL Server Integration Services (SSIS)</h3>
                                                     <p>Извлечение и преобразование данных из ряда таких источников, как неструктурированные файлы и источники реляционных данных, а затем загрузка этих данных в базу данных SQL. </p>
                                                 </div>
                                             </div>

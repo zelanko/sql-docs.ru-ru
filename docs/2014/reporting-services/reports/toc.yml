@@ -33,8 +33,6 @@
   href: upload-a-file-or-report-report-manager.md
 - name: Создание связанного отчета
   href: create-a-linked-report.md
-- name: Отчеты с дополнительной информацией (SSRS)
-  href: clickthrough-reports-ssrs.md
 - name: Просмотр и изучение отчетов в собственном режиме с помощью веб-части SharePoint (службы SSRS)
   href: view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md
 - name: Справка F1 по отчетам
