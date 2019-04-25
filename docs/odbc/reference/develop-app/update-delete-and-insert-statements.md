@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632482"
 ---
 # <a name="update-delete-and-insert-statements"></a>Инструкции UPDATE, DELETE и INSERT
 Приложения на основе SQL внесения изменений в таблицы, выполнив **обновление**, **удалить**, и **вставить** инструкций. Эти инструкции являются частью уровень соответствия SQL минимум грамматики и должны поддерживаться все драйверы и источники данных.  

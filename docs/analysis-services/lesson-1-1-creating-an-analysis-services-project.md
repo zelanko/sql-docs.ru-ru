@@ -1,5 +1,5 @@
 ---
-title: Создание служб Analysis Services проекта | Документы Microsoft
+title: Создание анализа служб проекта | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f8968b56e235b4f95f8106e17daff506b13ca7b7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636458"
 ---
 # <a name="lesson-1-1---creating-an-analysis-services-project"></a>Урок 1-1-Создание проекта служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34016261"
   
 ## <a name="see-also"></a>См. также  
 [Создание многомерных моделей с помощью SQL Server Data Tools (SSDT)](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
-[Создание проекта служб Analysis Services & #40; SSDT & #41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+[Создание проекта служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   
   

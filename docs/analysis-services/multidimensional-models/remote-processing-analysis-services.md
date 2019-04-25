@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4860a890ba0443b66f9568edd05257eff7ad70b2
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472431"
 ---
 # <a name="remote-processing-analysis-services"></a>Удаленная обработка (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,10 +91,10 @@ ms.locfileid: "40395189"
 2.  В качестве последнего шага измените задание так, чтобы оно выполнялось по вашему расписанию, добавив необходимые предупреждения и уведомления. Также, возможно, потребуется доработать скрипт обработки или создать несколько этапов в задании, чтобы объекты обрабатывались независимо.  
   
 ## <a name="see-also"></a>См. также  
- [Компоненты агента SQL Server](../../ssms/agent/sql-server-agent.md)   
+ [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md)   
  [Планирование задач администрирования служб SSAS с помощью агента SQL Server](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [Пакетная обработка &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [Пакетная обработка (службы Analysis Services)](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Обработка объектов &#40;XML для Аналитики&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
+ [Обработка объектов (XMLA)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
   
   

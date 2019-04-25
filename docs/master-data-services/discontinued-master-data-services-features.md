@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: e6411a69ba754cfc06f651224391ed41cf96fe07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62517819"
 ---
 # <a name="discontinued-master-data-services-features"></a>Неподдерживаемые функции служб Master Data Services
 
@@ -29,7 +29,7 @@ ms.locfileid: "52759886"
   
  Модель метаданных уже недоступна. Теперь вы не можете просматривать метаданные в функциональной области "Обозреватель".  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Устаревшие функции Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
   
   

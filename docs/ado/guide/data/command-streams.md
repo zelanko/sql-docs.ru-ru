@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e6a5e9581a2a236eab869e74825ee97e7e289d44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472700"
 ---
 # <a name="command-streams"></a>Потоки команд
 ADO всегда поддерживал вход команды в строковом формате, определяемое **CommandText** свойство. Кроме того, с помощью ADO 2.7 или более поздней версии, также можно потока данных для ввода команды путем назначения потока **CommandStream** свойство. Вы можете назначить ADO **Stream** объекта или любым объектом, поддерживающим COM **IStream** интерфейс.  

@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524270"
 ---
 # <a name="use-the-eventdata-function"></a>Использование функции EVENTDATA
   Функция EVENTDATA позволяет получить сведения о событии, которое привело к срабатыванию триггера DDL. Эта функция возвращает значение типа `xml`. XML-схема содержит следующие сведения:  
@@ -127,7 +127,7 @@ GO
 > [!NOTE]  
 >  Для получения сведения о событиях в запросе XQuery вместо метода `value()` рекомендуется использовать метод `query()`. Метод `query()` возвращает XML-данные и символы возврата каретки и переноса строки, заэкранированные амперсандом, тогда как в выводе метода `value()` эти символы не экранируются.  
   
- Аналогичный пример триггера DDL предоставляется вместе с образцом базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Для его получения перейдите в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]в папку с триггерами базы данных, Эта папка находится в папке **Programmability** базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Щелкните правой кнопкой мыши **ddlDatabaseTriggerLog** и выберите **создать скрипт для триггера базы данных**. По умолчанию триггер DDL **ddlDatabaseTriggerLog** отключена.  
+ Аналогичный пример триггера DDL предоставляется вместе с образцом базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Для его получения перейдите в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]в папку с триггерами базы данных, Эта папка находится в папке **Programmability** базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Щелкните правой кнопкой мыши **ddlDatabaseTriggerLog** и выберите команду **Создать скрипт для триггера базы данных**. По умолчанию триггер DDL **ddlDatabaseTriggerLog** отключен.  
   
 ## <a name="see-also"></a>См. также  
  [DDL-события](../triggers/ddl-events.md)   

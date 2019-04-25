@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77187802bb57a832263ec2070564754e87f21345
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632927"
 ---
 # <a name="thread-support-visual-foxpro-odbc-driver"></a>Поддержка потоков (драйвер ODBC для Visual FoxPro)
 Драйвер ODBC для Visual FoxPro является поточно ориентированной. Доступ к дескрипторы среды (*ри*), дескрипторов соединений (*hdbc*) и дескрипторы инструкций (*hstmt*) упаковывается в соответствующие семафоры, чтобы другие процессы доступ к и потенциально изменяя драйвера внутренних структур данных.  

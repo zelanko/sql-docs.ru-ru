@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47936b5c085514fca4ecc1c81057ef78a19f05c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628467"
 ---
 # <a name="embedded-sql"></a>Embedded SQL
 Внедряется первый метод для отправки инструкций SQL для СУБД SQL. Поскольку SQL не использует переменные и инструкции управления потоком, он часто используется в качестве базы данных варианта языка, который можно добавить в программу, написанную на обычной язык программирования, таких как C или COBOL. Это центральная идея из embedded SQL: размещение инструкций SQL в программу, написанную на узел языка программирования. Коротко говоря для внедрения инструкций SQL в базовый язык используются следующие методы:  

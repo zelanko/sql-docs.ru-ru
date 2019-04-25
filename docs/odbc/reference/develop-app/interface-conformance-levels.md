@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 74d4ceb4532ee09004f035958860833aef488aaa
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62446691"
 ---
 # <a name="interface-conformance-levels"></a>Уровни соответствия интерфейса
 Выравнивание предназначена для уведомлять приложение о функциях, доступных к нему от драйвера. Схема распределения, основаны на функциях достаточно не достигнуть этой цели. В ODBC 3. *x*, драйверы классифицируются на основе функций, они имеют. Поддержка компонент мог включить вспомогательные функции; Оно также может включать поле дескриптора, атрибут инструкции, значение «Y» поддержка типа данных, возвращенных **SQLGetInfo**, и т. д.  

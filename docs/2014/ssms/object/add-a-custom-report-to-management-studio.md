@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a860db611154f9f7a130ee6be90dd43a96b50af5
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510424"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Добавление пользовательского отчета в среду Management Studio
   В данном разделе описывается процесс создания простого отчета служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , который сохраняется как файл в формате RDL, а затем добавляется в среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в качестве пользовательского отчета. [!INCLUDE[ssRS](../../includes/ssrs.md)] могут создавать разнообразные сложные отчеты. Чтобы создать отчет по материалам этого раздела, на компьютере необходимо установить среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Для запуска пользовательского отчета с помощью среды [!INCLUDE[ssRS](../../includes/ssrs.md)] устанавливать на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службы [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]не обязательно.  

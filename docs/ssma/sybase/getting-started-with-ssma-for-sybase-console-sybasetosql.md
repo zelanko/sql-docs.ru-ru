@@ -15,11 +15,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 608457b1732d2c1cc188b4b419903d20faa642c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631961"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Начало работы с SSMA для Sybase консоли (SybaseToSQL)
 В этом разделе описывается процедура для запуска и начало работы с SSMA для Sybase консольное приложение. Здесь также перечислены правила используются в типичного окна выходных данных консоли SSMA.  
@@ -61,7 +61,7 @@ ms.locfileid: "47853802"
 |---------|---------------|  
 |Красный|Неустранимая ошибка во время выполнения|  
 |Серый|Отметка даты и времени, сообщение для пользователя|  
-|White|Файл команд, тип сообщения|  
+|Белый|Файл команд, тип сообщения|  
 |Желтый|Предупреждение|  
 |Зеленый|Строка для ввода данных пользователем|  
 |Голубой|Начала, окончания и результат операции|  

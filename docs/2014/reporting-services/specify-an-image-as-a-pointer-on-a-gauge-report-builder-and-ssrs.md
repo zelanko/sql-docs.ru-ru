@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0bc4168d6e6cf786b3137713d44441be0bd3a13f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511402"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>Задание изображения для указателя на датчике (построитель отчетов и службы SSRS)
   Датчик содержит три встроенных стиля, которые используются для настройки внешнего вида указателя. Для радиального датчика существуют следующие стили: Стрелка, маркер и панель. Для линейных датчиков существуют следующие стили: маркер, черта и термометр. Если пользователю требуется особый указатель, он может создать и задать изображение, которое будет использоваться в качестве полностью функционального указателя.  

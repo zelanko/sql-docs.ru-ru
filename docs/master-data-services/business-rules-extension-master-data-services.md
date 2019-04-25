@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 49145808ae875b6c4fa66a52c4972a8f7a392a7a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637095"
 ---
 # <a name="business-rules-extension-master-data-services"></a>Расширение бизнес-правил (Master Data Services)
 
@@ -114,7 +114,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     3.  Нажмите кнопку **Сохранить**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)   
  [Условия бизнес-правил (службы Master Data Services)](../master-data-services/business-rule-conditions-master-data-services.md)   
  [Действия бизнес-правил (службы Master Data Services)](../master-data-services/business-rule-actions-master-data-services.md)  

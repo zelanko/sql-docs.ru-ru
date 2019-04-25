@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d5e4fbee458bec88461d3e2945a466c848d3345
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62446491"
 ---
 # <a name="interoperability"></a>Совместимость
 *Взаимодействие* — это способность одного приложения для работы с много разных СУБД. Потребность в написании универсальный, с возможностью взаимодействия приложений был одним из основных факторов, ведущих к разработке ODBC. Тем не менее, взаимодействие не простой путь из «не поддерживает взаимодействие» для «полностью совместим.» Путь есть много ветвей, и каждый требует плюсы и минусы функций, скорость, сложность кода и время разработки.  

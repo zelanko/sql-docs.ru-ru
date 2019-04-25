@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: cdb9f571e7bc1630ce12c0d0a4b7f57df8961907
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 92f83e1e2b3553f85301574e98f95ed7e22c1184
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469790"
 ---
 # <a name="create-hierarchies"></a>Создание иерархий
 
@@ -25,11 +25,11 @@ ms.locfileid: "57685421"
   
 Чтобы создать иерархии, используйте конструктор моделей в *представление схемы*. Создание иерархий и управление ими не поддерживается в представлении данных.  
   
-Предполагаемое время выполнения данного занятия: **20 минут**  
+Предполагаемое время для выполнения этого занятия: **20 минут**  
   
 ## <a name="prerequisites"></a>предварительные требования  
 
-Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Прежде чем выполнять задания в этом занятии, необходимо завершить предыдущее занятие: [Занятие 8. Создание перспектив](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md).  
+Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Перед выполнением задач на этом занятии, необходимо завершить предыдущее занятие: [Занятие 8. Создание перспектив](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md).  
   
 ## <a name="create-hierarchies"></a>Создание иерархий  
   

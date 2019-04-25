@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: 2967277ca109b9ee55221a7b12f5af891a5e45a2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635590"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Работать кластер общих дисков Red Hat Enterprise Linux для SQL Server
 
@@ -261,7 +261,7 @@ pacemaker: active/enabled
 
     Следующие порты должны быть открыты на разных узлах для Pacemaker иметь возможность обмениваться данными.
     
-    - ** TCP: 2224, 3121, 21064
+    - **TCP: 2224, 3121, 21064
 
 - **Pacemaker и Corosync службам**
 
