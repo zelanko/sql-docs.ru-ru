@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c2f29259028ad15605f3f71e1eba87f353e795b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62512516"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>Действия (конструктор кубов) (службы Analysis Services — многомерные данные)
   Используйте вкладку **Действия** в конструкторе кубов для просмотра и редактирования действий, включая действия для детализации и действия с отчетом, для выбранного куба.  
@@ -44,7 +44,7 @@ ms.locfileid: "48067584"
   
 ## <a name="see-also"></a>См. также  
  [Действия &#40;службы Analysis Services — многомерные данные&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
- [Основные принципы создания скриптов многомерных Выражений &#40;служб Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Основные принципы создания скриптов многомерных выражений (службы Analysis Services)](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Панель инструментов &#40;вкладка «действия», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Организатор действий &#40;вкладка «действия», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [Средства вычисления &#40;вкладка «действия», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   

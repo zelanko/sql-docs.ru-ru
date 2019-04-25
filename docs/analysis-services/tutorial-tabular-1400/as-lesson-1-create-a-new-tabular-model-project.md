@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42dbe017baa29bb241cb2fa56f4fad3f70f5e3bb
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 52e0b3f317044e25b2004512083fdcaff7a77ecf
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468021"
 ---
 # <a name="create-a-tabular-model-project"></a>Создание проекта табличной модели
 
@@ -23,7 +23,7 @@ ms.locfileid: "57685221"
 
 На этом занятии используется Visual Studio с SQL Server Data Tools (SSDT) или Visual Studio 2017 с Microsoft Analysis Services проекты VSIX для создания нового проекта табличной модели с уровнем совместимости 1400. После создания нового проекта можно начать добавление данных и созданию модели. Кроме того, это занятие содержит краткое введение в среду в Visual Studio для создания табличных моделей.  
   
-Предполагаемое время выполнения данного занятия: **10 минут**  
+Предполагаемое время для выполнения этого занятия: **10 минут**  
   
 ## <a name="prerequisites"></a>предварительные требования
 

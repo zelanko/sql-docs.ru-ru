@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6737242e5cf6cf39e846dba5e3d4b61168d8c694
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62627921"
 ---
 # <a name="sysdmostasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47785342"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary(8)**|Адрес объекта в памяти.|  
-|**task_state**|**nvarchar(60)**|Состояние задачи. Может иметь одно из следующих значений.<br /><br /> Ожидание: Ожидание рабочего потока.<br /><br /> ВОЗМОЖЕН запуск: Готов к запуску, но ожидает получения такта.<br /><br /> ВЫПОЛНЯЕТСЯ: В настоящее время выполняемых в планировщике.<br /><br /> ПРИОСТАНОВЛЕНО: У задачи есть исполнитель, но ожидает события.<br /><br /> ГОТОВО: завершено.<br /><br /> SPINLOOP: Заблокирована с ожиданием из.|  
+|**task_state**|**nvarchar(60)**|Состояние задачи. Может иметь одно из следующих значений.<br /><br /> ОЖИДАНИЕ: Ожидание потока исполнителя.<br /><br /> ГОТОВ К ЗАПУСКУ: Готово к запуску, но ожидает получения такта.<br /><br /> ПОД УПРАВЛЕНИЕМ: Выполняется в данный момент в планировщике.<br /><br /> ПРИОСТАНОВЛЕНО: У задачи есть исполнитель, но ожидает события.<br /><br /> ДОГОВОРИЛИСЬ: Завершено.<br /><br /> SPINLOOP: Заблокирована с ожиданием из.|  
 |**context_switches_count**|**int**|Число переключений контекста планировщика, которые задача уже выполнила.|  
 |**pending_io_count**|**int**|Количество физических операций ввода-вывода, выполняемых этой задачей.|  
 |**pending_io_byte_count**|**bigint**|Суммарное количество байт, обработанных в операциях ввода-вывода, выполняемых этой задачей.|  

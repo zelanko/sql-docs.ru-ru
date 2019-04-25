@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632774"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Функции даты и времени (драйвер ODBC для Visual FoxPro)
 В следующей таблице перечислены ODBC функций даты и времени поддерживаются драйвером Visual FoxPro ODBC; Если Visual FoxPro грамматики для той же функции отличается от синтаксиса ODBC, Visual FoxPro эквивалентное отображаются.  
@@ -35,11 +35,11 @@ ms.locfileid: "52538754"
 |Функция DAYNAME *(выражение_даты)*|CDOW *(выражение_даты)*|  
 |DAYOFMONTH (*выражения «выражение_даты»)*|ДЕНЬ *)*|  
 |ЧАС *(выражение_времени)*||  
-|МИНУТЫ *(выражение_времени)*||  
+|MINUTE *(time_exp)*||  
 |МЕСЯЦ *(выражение_времени)*||  
-|MONTHNAME *(выражение_даты)*|CMONTH *(выражение_даты)*|  
+|MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
 |ТЕПЕРЬ *)*|DATETIME *)*|  
-|ВТОРОЙ *(выражение_времени)*|СЕК *(выражение_времени)*|  
+|ВТОРОЙ *(выражение_времени)*|SEC *(time_exp)*|  
 |НЕДЕЛЯ *(выражение_даты)*||  
 |ГОД *(выражение_даты)*||  
   

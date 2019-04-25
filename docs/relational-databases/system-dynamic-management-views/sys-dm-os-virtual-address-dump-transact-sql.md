@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b12c9e533d404b01f896dd66ee046c9a9cd110d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628236"
 ---
 # <a name="sysdmosvirtualaddressdump-transact-sql"></a>sys.dm_os_virtual_address_dump (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -42,12 +42,12 @@ ms.locfileid: "47659684"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**region_base_address**|**varbinary(8)**|Указатель на базовый адрес области страниц. Не допускает значение NULL.|  
-|**region_allocation_base_address**|**varbinary(8)**|Указатель на базовый адрес диапазона страниц, выделенных с помощью функции Windows API VirtualAlloc. Страница, на которую указывает элемент BaseAddress, содержится внутри этого выделенного диапазона. Не допускает значение NULL.|  
-|**region_allocation_protection**|**varbinary(8)**|Атрибуты защиты при первом выделении области. Значение может быть одним из следующих:<br /><br /> -PAGE_READONLY<br />-PAGE_READWRITE<br />-PAGE_NOACCESS<br />-PAGE_WRITECOPY<br />-PAGE_EXECUTE<br />-PAGE_EXECUTE_READ<br />-PAGE_EXECUTE_READWRITE<br />-PAGE_EXECUTE_WRITECOPY<br />-PAGE_GUARD<br />-PAGE_NOCACHE<br /><br /> Не допускает значение NULL.|  
+|**region_allocation_base_address**|**varbinary(8)**|Указатель на базовый адрес диапазона страниц, выделенных с помощью функции Windows API VirtualAlloc.  Страница, на которую указывает элемент BaseAddress, содержится внутри этого выделенного диапазона. Не допускает значение NULL.|  
+|**region_allocation_protection**|**varbinary(8)**|Атрибуты защиты при первом выделении области. Значение может быть одним из следующих:<br /><br /> -PAGE_READONLY<br />-PAGE_READWRITE<br />-PAGE_NOACCESS<br />-PAGE_WRITECOPY<br />-PAGE_EXECUTE<br />-   PAGE_EXECUTE_READ<br />-   PAGE_EXECUTE_READWRITE<br />-   PAGE_EXECUTE_WRITECOPY<br />-PAGE_GUARD<br />-PAGE_NOCACHE<br /><br /> Не допускает значение NULL.|  
 |**region_size_in_bytes**|**bigint**|Размер области в байтах, начиная с базового адреса, в которой все страницы имеют одинаковые атрибуты. Не допускает значение NULL.|  
 |**region_state**|**varbinary(8)**|Текущее состояние области. Возможны следующие варианты.<br /><br /> -MEM_COMMIT<br />-MEM_RESERVE<br />-MEM_FREE<br /><br /> Не допускает значение NULL.|  
-|**region_current_protection**|**varbinary(8)**|Атрибуты защиты. Значение может быть одним из следующих:<br /><br /> -PAGE_READONLY<br />-PAGE_READWRITE<br />-PAGE_NOACCESS<br />-PAGE_WRITECOPY<br />-PAGE_EXECUTE<br />-PAGE_EXECUTE_READ<br />-PAGE_EXECUTE_READWRITE<br />-PAGE_EXECUTE_WRITECOPY<br />-PAGE_GUARD<br />-PAGE_NOCACHE<br /><br /> Не допускает значение NULL.|  
-|**region_type**|**varbinary(8)**|Определяет типы страниц в области. Значение может быть одним из следующих:<br /><br /> -MEM_PRIVATE<br />-MEM_MAPPED<br />-MEM_IMAGE<br /><br /> Не допускает значение NULL.|  
+|**region_current_protection**|**varbinary(8)**|Атрибуты защиты. Значение может быть одним из следующих:<br /><br /> -PAGE_READONLY<br />-PAGE_READWRITE<br />-PAGE_NOACCESS<br />-PAGE_WRITECOPY<br />-PAGE_EXECUTE<br />-   PAGE_EXECUTE_READ<br />-   PAGE_EXECUTE_READWRITE<br />-   PAGE_EXECUTE_WRITECOPY<br />-PAGE_GUARD<br />-PAGE_NOCACHE<br /><br /> Не допускает значение NULL.|  
+|**region_type**|**varbinary(8)**|Определяет типы страниц в области. Значение может быть одним из следующих:<br /><br /> -MEM_PRIVATE<br />-   MEM_MAPPED<br />-   MEM_IMAGE<br /><br /> Не допускает значение NULL.|  
 |**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
   
 ## <a name="permissions"></a>Разрешения  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62507316"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,12 +55,12 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  [ \@имя =] N'*plan_guide_name*"  
  Имя структуры плана. Имена структур планов ограничены областью текущей базы данных. *plan_guide_name* должны соответствовать требованиям, предъявляемым к [идентификаторы](../../relational-databases/databases/database-identifiers.md) и не может начинаться со знака номера (#). Максимальная длина *plan_guide_name* равна 124 символам.  
   
- [ \@stmt =] N'*statement_text*"  
+ [ \@stmt = ] N'*statement_text*'  
  Инструкция языка [!INCLUDE[tsql](../../includes/tsql-md.md)], для которой создается структура плана. Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запроса, оптимизатор распознает запроса, который соответствует *statement_text*, *plan_guide_name* вступает в силу. Для создания структуры плана для успешной работы *statement_text* должен указываться в контексте, определяемом \@типа, \@module_or_batch, и \@параметров params.  
   
  *statement_text* должно быть указано в виде, позволяет оптимизатору запросов сопоставить ее с соответствующей инструкцией, в рамках пакета или модуля, идентифицируемого по \@module_or_batch и \@params. Дополнительные сведения см. в разделе «Примечания». Размер *statement_text* ограничено только объемом доступной памяти сервера.  
   
- [\@тип =] N'{объект | SQL | ШАБЛОН} "  
+ [\@type = ]N'{ OBJECT | SQL | TEMPLATE }'  
  Тип сущности, в которой *statement_text* отображается. Таким образом задается контекст для сопоставления *statement_text* для *plan_guide_name*.  
   
  OBJECT  
@@ -79,7 +79,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  [*schema_name*.] *object_name* имя [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимые процедуры, скалярные функции, многооператорной функции с табличным или [!INCLUDE[tsql](../../includes/tsql-md.md)] триггера DML, содержащего *statement_text*. Если *schema_name* не указан, *schema_name* используется схема текущего пользователя. Если указано значение NULL и \@тип = «SQL», значение \@module_or_batch присваивается значение \@stmt. Если \@тип = "ШАБЛОН **"**, \@module_or_batch должен иметь значение NULL.  
   
- [ \@params =] {N "*\@parameter_name data_type* [,*.. .n* ]" | NULL}  
+ [ \@params = ]{ N'*\@parameter_name data_type* [ ,*...n* ]' | NULL }  
  Указывает определения всех параметров, внедренных в *statement_text*. \@params применяется, только если одно из следующих имеет значение true:  
   
 -   \@Тип = 'SQL' или 'TEMPLATE'. Если «TEMPLATE», \@params не должен иметь значение NULL.  
@@ -88,11 +88,11 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  *\@имя_параметра data_type* должны быть указаны в формате, так как оно передается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] либо с помощью процедуры sp_executesql или автоматической отправки после параметризации. Дополнительные сведения см. в разделе «Примечания». Если пакет не содержит параметров, необходимо указать значение NULL. Размер \@params ограничивается только доступной памяти на сервере.  
   
- [\@указания =] {N'OPTION (*query_hint* [,*.. .n* ]) "| N'*XML_showplan*"| NULL}  
- N'OPTION (*query_hint* [,*.. .n* ])  
+ [\@hints = ]{ N'OPTION (*query_hint* [ ,*...n* ] )' | N'*XML_showplan*' | NULL }  
+ N'OPTION (*query_hint* [,*... n* ])  
  Указывает предложение OPTION, чтобы присоединить к запросу, который соответствует \@stmt. \@подсказки должен синтаксически так же, как предложение OPTION в инструкции SELECT и может содержать любую допустимую последовательность указаний запроса.  
   
- N'*XML_showplan*"  
+ N'*XML_showplan*'  
  План запроса в формате XML для применения в качестве указания.  
   
  Значение аргумента XML_showplan рекомендуется присвоить переменной, иначе каждый символ одиночной кавычки необходимо предварять дополнительным символом одиночной кавычки. См. пример Д.  
@@ -113,11 +113,11 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 >  Структуру планов можно использовать не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Структуры планов видны в любом выпуске. Можно также присоединить базу данных, содержащую структуры планов, к любой версии. Структуры планов остаются нетронутыми при восстановлении или присоединении базы данных к обновленной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следует тщательно взвешивать необходимость использования структур планов в каждой базе данных после выполнения обновления сервера.  
   
 ## <a name="plan-guide-matching-requirements"></a>Требования по соответствию для структур планов  
- Для структур планов, которые указывают \@тип = 'SQL' или \@тип = 'TEMPLATE' для должного соответствия запросу, значения для *batch_text* и  *\@parameter_name data_type*[,*.. .n* ] должно быть указано в том же формате, совпадают с аналогичными приложения. Это означает, что необходимо предоставить текст пакета в точном соответствии с текстом, получаемым компилятором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для захвата действительного текста пакета и параметра используется приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Дополнительные сведения см. в разделе [использования SQL Server Profiler для создания и проверки руководств планов](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  
+ Для структур планов, которые указывают \@тип = 'SQL' или \@тип = 'TEMPLATE' для должного соответствия запросу, значения для *batch_text* и  *\@parameter_name data_type* [,*... n* ] должно быть указано в том же формате, совпадают с аналогичными приложения. Это означает, что необходимо предоставить текст пакета в точном соответствии с текстом, получаемым компилятором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для захвата действительного текста пакета и параметра используется приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Дополнительные сведения см. в разделе [использования SQL Server Profiler для создания и проверки руководств планов](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  
   
  Когда \@тип = 'SQL' и \@module_or_batch имеет значение NULL, значение \@module_or_batch присваивается значение \@stmt. Это означает, что значение *statement_text* должно быть указано в формате, символ к символу, так как оно передается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для упрощения соответствия формата внутренние преобразования не выполняются.  
   
- Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] совпадает со значением *statement_text* для *batch_text* и  *\@parameter_name data_type* [,*.. .n* ], или если \@тип = **"** объект", к тексту соответствующего запроса внутри *object_name*, не учитываются следующие элементы строки:  
+ Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] совпадает со значением *statement_text* для *batch_text* и  *\@parameter_name data_type* [,*... n* ], или если \@тип = **"** объект", к тексту соответствующего запроса внутри *object_name*, не учитываются следующие элементы строки:  
   
 -   Пробельные символы (знаки табуляции, пробелы, возвраты каретки и переводы строки) внутри строки.  
   

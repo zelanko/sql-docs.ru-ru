@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510323"
 ---
 # <a name="save-as"></a>Сохранить как
   Используйте это диалоговое окно, чтобы сохранить экземпляр текущего элемента в указанном расположении и в файле указанного формата. Чтобы отобразить это диалоговое окно, нажмите кнопку **Сохранить**  *\<файл >* **как** на **файл** меню (где  *\<файл >* — это имя текущего элемента), или нажмите сочетание клавиш ALT + F, A в редакторе кода.  

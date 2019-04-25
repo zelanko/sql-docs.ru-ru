@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 05855af1bf6809c6977b22bfdb3915e4e6dbbe03
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469820"
 ---
-# <a name="lesson-6-create-measures"></a>Занятие 6. Создание мер
+# <a name="lesson-6-create-measures"></a>Занятие 6: Создание мер
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 На этом занятии мы создадим меры, которые можно будет добавить в модель. Как и вычисляемые столбцы, которые вы создали на предыдущем занятии, мера представляет собой вычисление, созданное с помощью формулы DAX. Однако в отличие от вычисляемых столбцов меры вычисляются на основе выбранного пользователем *фильтра*, например на основе выбора пользователя, определенного столбца или среза, добавленного в поле «Метки строк» в сводной таблице. Значение для каждой ячейки в фильтре вычисляется с помощью меры. Меры — это эффективные и гибкие средства вычисления, которые требуется включить в почти в любых табличных моделях для динамических расчетов с числовыми данными. Дополнительные сведения см. в разделе [меры](../analysis-services/tabular-models/measures-ssas-tabular.md).  
@@ -27,10 +27,10 @@ ms.locfileid: "42795623"
   
 На этом занятии меры будут созданы как с помощью ввода DAX-формулы в строке формул, так и с помощью функции автосуммирования.  
   
-Предполагаемое время выполнения данного занятия: **30 минут**  
+Предполагаемое время для выполнения этого занятия: **30 минут**  
   
 ## <a name="prerequisites"></a>предварительные требования  
-Этот раздел является частью учебника по табличному моделированию, который необходимо изучать по порядку. Перед выполнением задач на этом занятии, необходимо завершить предыдущее занятие: [занятия 5: Создание вычисляемых столбцов](../analysis-services/lesson-5-create-calculated-columns.md).  
+Этот раздел является частью учебника по табличному моделированию, который необходимо изучать по порядку. Перед выполнением задач на этом занятии, необходимо завершить предыдущее занятие: [Занятие 5. Создание вычисляемых столбцов](../analysis-services/lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Создание мер  
   
@@ -87,13 +87,13 @@ ms.locfileid: "42795623"
     |Имя меры|Столбец|Автосуммирование (∑)|Формула|  
     |----------------|----------|-----------------|-----------|  
     |InternetOrderLinesCount|SalesOrderLineNumber|Count|=COUNTA([SalesOrderLineNumber])|  
-    |InternetTotalUnits|OrderQuantity|SUM|=SUM([OrderQuantity])|  
-    |InternetTotalDiscountAmount|DiscountAmount|SUM|=SUM([DiscountAmount])|  
-    |InternetTotalProductCost|TotalProductCost|SUM|=SUM([TotalProductCost])|  
-    |InternetTotalSales|SalesAmount|SUM|=SUM([SalesAmount])|  
-    |InternetTotalMargin|Маржа|SUM|=SUM([маржа])|  
-    |InternetTotalTaxAmt|TaxAmt|SUM|=SUM([TaxAmt])|  
-    |InternetTotalFreight|Freight|SUM|=SUM([фрахт])|  
+    |InternetTotalUnits|OrderQuantity|Sum|=SUM([OrderQuantity])|  
+    |InternetTotalDiscountAmount|DiscountAmount|Sum|=SUM([DiscountAmount])|  
+    |InternetTotalProductCost|TotalProductCost|Sum|=SUM([TotalProductCost])|  
+    |InternetTotalSales|SalesAmount|Sum|=SUM([SalesAmount])|  
+    |InternetTotalMargin|Маржа|Sum|=SUM([маржа])|  
+    |InternetTotalTaxAmt|TaxAmt|Sum|=SUM([TaxAmt])|  
+    |InternetTotalFreight|Freight|Sum|=SUM([фрахт])|  
   
 2.  Щелкнув пустую ячейку в сетке мер или с помощью строки формул создайте и назовите следующие меры в указанном порядке:  
   
@@ -124,6 +124,6 @@ ms.locfileid: "42795623"
 Меры, созданные для таблицы FactInternetSales может использоваться для анализа критических финансовых данных, таких как продажи, затраты и прибыли для элементов, определенных с помощью выбранного пользователем фильтра.  
   
 ## <a name="whats-next"></a>Дальнейшие действия
-Перейдите к следующему занятию: [занятии 7: Создание ключевых показателей эффективности](../analysis-services/lesson-7-create-key-performance-indicators.md).  
+Перейдите к следующему занятию: [Занятие 7. Создание ключевых показателей эффективности](../analysis-services/lesson-7-create-key-performance-indicators.md).  
 
   

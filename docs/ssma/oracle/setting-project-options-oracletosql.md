@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 7760a893082f7b4a8899e00480fc43914b1c12ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625918"
 ---
 # <a name="setting-project-options-oracletosql"></a>Настройка параметров проекта (OracleToSQL)
 Для каждого проекта SSMA можно задать параметры уровня проекта. Эти параметры задают преобразование объекта, загрузка объекта, параметры миграции интерфейсом и данными пользователя. Перед началом преобразования объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или перенести данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], убедитесь, что параметры конфигурации подходят для проекта.  
@@ -33,13 +33,13 @@ SSMA имеет пять наборов параметров проекта.
   
 -   Синхронизация  
   
--   ГРАФИЧЕСКОГО ПОЛЬЗОВАТЕЛЬСКОГО ИНТЕРФЕЙСА  
+-   Графический пользовательский интерфейс  
   
 -   Сопоставление типов  
   
 Он также имеет четыре режима для настройки этих параметров:  
   
--   По умолчанию  
+-   Значение по умолчанию  
   
 -   Optimistic  
   

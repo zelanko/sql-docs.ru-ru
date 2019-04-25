@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e9bcb19e10417c24b30b5ee6346d6d6a19d4bbcb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636783"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Диалоговое окно «Свойства сервера анализа данных» (службы Analysis Services)
   Используйте диалоговое окно **Свойства сервера анализа данных** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для задания общих свойств, языка или параметров сортировки и безопасности экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Чтобы открыть диалоговое окно **Свойства сервера анализа данных**, щелкните правой кнопкой мыши экземпляр служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в **обозревателе объектов** и выберите в контекстном меню пункт **Свойства**. Диалоговое окно **Свойства сервера анализа данных** содержит следующие свойства.  
@@ -84,7 +84,7 @@ ms.locfileid: "50145099"
   
      Если этот параметр не выбран, то службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] рассматривают символы с диакритическими знаками и без них как равнозначные.  
   
--   **С учетом типа японской азбуки** служит для сортировки и сравнения данных на основе словарных правил для соответствующего языка или алфавита, а также для различия двух типов японской азбуки: хирагана и катакана.  
+-   **С учетом типа японской** служит для и сравнения данных на основе словаря правил для соответствующего языка или алфавита, а также для различия двух типов японской азбуки: Хирагана и катакана.  
   
      Если этот параметр не выбран, то службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] рассматривают символы этих азбук как равнозначные.  
   

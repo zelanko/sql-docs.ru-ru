@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 12: Анализ в Excel | Документация Майкрософт'
+title: Занятие 12. Анализ в Excel | Документация Майкрософт
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c42a45ec20edbde61a2f1b7c5b026f3467cd2371
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468444"
 ---
 # <a name="lesson-12-analyze-in-excel"></a>Занятие 12. Анализ в Excel
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -23,10 +23,10 @@ ms.locfileid: "42795653"
   
 Для выполнения этого занятия необходимо установить Excel на том же компьютере, где находится SSDT. Дополнительные сведения см. в разделе [Анализ в Excel](../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
   
-Предполагаемое время выполнения данного занятия: **20 минут**  
+Предполагаемое время для выполнения этого занятия: **20 минут**  
   
 ## <a name="prerequisites"></a>предварительные требования  
-Этот раздел является частью учебника по табличному моделированию, который необходимо изучать по порядку. Перед выполнением задач на этом занятии, необходимо завершить предыдущее занятие: [занятие 11: Создание ролей](../analysis-services/lesson-11-create-roles.md).  
+Этот раздел является частью учебника по табличному моделированию, который необходимо изучать по порядку. Перед выполнением задач на этом занятии, необходимо завершить предыдущее занятие: [Занятие 11. Создание ролей](../analysis-services/lesson-11-create-roles.md).  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>Просмотр с помощью перспектив «По умолчанию» и «Продажи через Интернет»  
 В этих первых задачах вы просмотрите модель как с помощью перспективы по умолчанию, которая включает все объекты модели, а также с помощью перспективы Internet Sales ранее. Перспектива «Продажи через Интернет» исключает объект таблицы «Заказчик».  
@@ -71,7 +71,7 @@ ms.locfileid: "42795653"
 3.  Закройте Excel, не сохраняя книгу.  
   
 ## <a name="whats-next"></a>Дальнейшие действия
-Перейдите к следующему занятию: [занятие 13: развертывание](../analysis-services/lesson-13-deploy.md).
+Перейдите к следующему занятию: [Занятие 13. Развертывание](../analysis-services/lesson-13-deploy.md).
 
   
   

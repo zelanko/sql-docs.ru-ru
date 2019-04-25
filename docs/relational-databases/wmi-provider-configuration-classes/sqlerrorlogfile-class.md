@@ -12,11 +12,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2794e4f59b6c898b1fd956c0f9390ba9bbbd439e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62515479"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile, класс
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,11 @@ class SQLErrorLogFile
   
 |||  
 |-|-|  
-|ArchiveNumber|Тип данных: **uint32**<br /><br /> Тип доступа: только для чтения<br /><br /> <br /><br /> Номер архива для файла журнала.|  
-|InstanceName|Тип данных: **строка**<br /><br /> Тип доступа: только для чтения<br /><br /> Квалификаторы: Key<br /><br /> <br /><br /> Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором хранится файл журнала.|  
-|Дата изменения|Тип данных: **даты и времени**<br /><br /> Тип доступа: только для чтения<br /><br /> <br /><br /> Дата последнего изменения файла журнала.|  
-|LogFileSize|Тип данных: **uint32**<br /><br /> Тип доступа: только для чтения<br /><br /> <br /><br /> Размер файла журнала в байтах.|  
-|Имя|Тип данных: **строка**<br /><br /> Тип доступа: только для чтения<br /><br /> Квалификаторы: Key<br /><br /> <br /><br /> Имя файла журнала.|  
+|ArchiveNumber|Тип данных: **uint32**<br /><br /> Тип доступа: Только для чтения<br /><br /> <br /><br /> Номер архива для файла журнала.|  
+|InstanceName|Тип данных: **строка**<br /><br /> Тип доступа: Только для чтения<br /><br /> Квалификаторы: Ключ<br /><br /> <br /><br /> Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором хранится файл журнала.|  
+|Дата изменения|Тип данных: **даты и времени**<br /><br /> Тип доступа: Только для чтения<br /><br /> <br /><br /> Дата последнего изменения файла журнала.|  
+|LogFileSize|Тип данных: **uint32**<br /><br /> Тип доступа: Только для чтения<br /><br /> <br /><br /> Размер файла журнала в байтах.|  
+|Имя|Тип данных: **строка**<br /><br /> Тип доступа: Только для чтения<br /><br /> Квалификаторы: Ключ<br /><br /> <br /><br /> Имя файла журнала.|  
   
 ## <a name="remarks"></a>Примечания  
   

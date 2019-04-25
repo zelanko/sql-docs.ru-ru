@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 44e89e7c6ab10df13927247222e1f8564500fb8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759876"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Начало работы с SSMA для доступа к консоли (AccessToSQL)
 В этом разделе описывается, как запустить и приступить к работе с приложением доступа к консоли. Также в списке, в данном документе, соглашения используются в типичного окна выходных данных консоли SSMA.  
@@ -57,7 +57,7 @@ ms.locfileid: "47763082"
 |---------|---------------|  
 |Красный|Неустранимая ошибка во время выполнения|  
 |Серый|Отметка даты и времени, сообщение для пользователя|  
-|White|Файл команд, тип сообщения|  
+|Белый|Файл команд, тип сообщения|  
 |Желтый|Предупреждение|  
 |Зеленый|Строка для ввода данных пользователем|  
 |Голубой|Начала, окончания и результат операции|  

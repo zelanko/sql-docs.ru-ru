@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628906"
 ---
 # <a name="reserved-keywords"></a>Зарезервированные слова
 Следующие слова зарезервированы для использования в вызовах функций ODBC. Эти слова не ограничивают минимальную грамматику SQL; Тем не менее чтобы обеспечить совместимость с драйверами, поддерживающими базовую грамматику SQL, приложения следует избегать, с помощью любого из этих ключевых слов. #**Определить** значение SQL_ODBC_KEYWORDS содержит разделенный запятыми список из этих ключевых слов.  
@@ -49,13 +49,13 @@ ms.locfileid: "47626342"
 |BOTH|NATURAL|  
 |BY|NCHAR|  
 |CASCADE|NEXT|  
-|CASCADED|Нет|  
+|CASCADED|NO|  
 |CASE|None|  
 |CAST|NOT|  
 |CATALOG|NULL|  
 |CHAR|NULLIF|  
 |CHAR_LENGTH|NUMERIC|  
-|CHARACTER|ФУНКЦИЯ OCTET_LENGTH|  
+|CHARACTER|OCTET_LENGTH|  
 |CHARACTER_LENGTH|OF|  
 |CHECK|ON|  
 |CLOSE|ONLY|  

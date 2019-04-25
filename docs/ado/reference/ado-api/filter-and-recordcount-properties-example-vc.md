@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3aef01723a9682907ac20be42d04bb02773557e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631256"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Filter и RecordCount свойства (Visual C++)
 В этом примере используется [фильтра](../../../ado/reference/ado-api/filter-property.md) свойства, чтобы открыть новый [записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе заданного условия, устанавливается на имеющийся **записей**. Она использует [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) свойство для отображения числа записей в двух **наборы записей**. Функция FilterField является обязательным для выполнения этой процедуры.  

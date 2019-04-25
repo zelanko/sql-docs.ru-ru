@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 884c798e14964fbcaaf3ca9ba6656f4d62738fe8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445995"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>Прокрутка и выборка строк (ODBC)
 При использовании Прокручиваемый курсор, приложения вызывают **SQLFetchScroll** для позиционирования строк cursor и fetch. **SQLFetchScroll** поддерживает прокрутку относительный (следующего, предыдущего и относительно *n* строк), абсолютным прокрутка (имя, Фамилия и строки *n*) и позиционирование по закладке. *FetchOrientation* и *FetchOffset* аргументов в **SQLFetchScroll** указать какие набора строк для выборки, как показано на следующих диаграммах.  
@@ -41,4 +41,4 @@ ms.locfileid: "47642752"
  После получения набора строк, приложение может вызвать **SQLSetPos** должен быть размещен на отдельную строку в набор строк или обновления строк в наборе строк. Дополнительные сведения об использовании **SQLSetPos**, см. в разделе [обновление данных с помощью SQLSetPos](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md).  
   
 > [!NOTE]  
->  Прокрутка поддерживается в ODBC 2. *x* драйверы с **SQLExtendedFetch**. Дополнительные сведения см. в разделе [блочные курсоры, Прокручиваемые курсоры и обратная совместимость](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)в приложении G: драйвер рекомендации для обеспечения обратной совместимости.
+>  Прокрутка поддерживается в ODBC 2. *x* драйверы с **SQLExtendedFetch**. Дополнительные сведения см. в разделе [блочные курсоры, Прокручиваемые курсоры и обратная совместимость](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)в приложении G: Рекомендации по драйверов для обеспечения обратной совместимости.

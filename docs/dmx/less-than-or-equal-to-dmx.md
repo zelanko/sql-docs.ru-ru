@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 12dc7ca07dba7d36e7f65c9c6097b8b42457d3da
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62503060"
 ---
 # <a name="lt-less-than-or-equal-to-dmx"></a>&lt;= (Меньше или равно) (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

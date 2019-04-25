@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: b31739bb4db23ccd2159ec8146ef857d7a5d66e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631554"
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>Завершение подготовки тестовых случаев (SybaseToSQL)
 Последняя страница мастера находятся Описание тестового случая и сведения об объектах, задействованных в тесте. Кроме того на этой странице можно разместить тест параметры выполнения.  
