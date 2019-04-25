@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bad97bf517bee9f8c2545d5a48acc02830dc5f58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637021"
 ---
 # <a name="advanced-modeling-data-mining-add-ins-for-excel"></a>Расширенное моделирование (надстройки интеллектуального анализа данных для Excel)
   Можно использовать **Дополнительно** параметры моделирования данных для создания пользовательских структур и моделей с параметрами отличаются от тех, которые устанавливают мастера. Два мастера, описание которых содержится в этом разделе, помогут создать полностью новые структуры интеллектуального анализа данных или добавить модели интеллектуального анализа данных к уже существующим структурам интеллектуального анализа данных.  

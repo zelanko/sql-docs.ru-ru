@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629639"
 ---
 # <a name="best-practices-for-replication-administration"></a>Рекомендации по администрированию репликации
-  После настройки репликации важно разобраться, как следует управлять топологией репликации. В этом разделе предоставляются основные рекомендации по ряду вопросов со ссылками на дополнительные источники информации по рассматриваемым темам. Помимо рекомендаций, описываемых в этом разделе, ознакомьтесь с часто встречающимися вопросами и проблемами, описанными в следующем источнике информации: [Часто задаваемые вопросы о администраторам репликации](frequently-asked-questions-for-replication-administrators.md).  
+  После настройки репликации важно разобраться, как следует управлять топологией репликации. В этом разделе предоставляются основные рекомендации по ряду вопросов со ссылками на дополнительные источники информации по рассматриваемым темам. Помимо следующие рекомендации, представленные в этом разделе, ознакомьтесь с разделом часто задаваемых вопросов, знакомящие с вопросами и проблемами: [Вопросы, часто задаваемые администраторам репликации](frequently-asked-questions-for-replication-administrators.md).  
   
  Рекомендации удобно разбить на две группы:  
   
@@ -148,6 +148,6 @@ ms.locfileid: "54134746"
  Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="see-also"></a>См. также  
- [Администрирование репликации часто задаваемые вопросы](frequently-asked-questions-for-replication-administrators.md)  
+ [Вопросы и ответы об администрировании репликации](frequently-asked-questions-for-replication-administrators.md)  
   
   

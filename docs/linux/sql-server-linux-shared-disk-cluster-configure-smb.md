@@ -10,11 +10,11 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: e93f85302417674b31de0129650dbb85092f8962
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634170"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Настроить экземпляр отказоустойчивого кластера — SMB — SQL Server в Linux
 

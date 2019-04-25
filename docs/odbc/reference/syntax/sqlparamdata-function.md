@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec0038e0ec6c87dba403bbe62441815dfa6d0251
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465970"
 ---
 # <a name="sqlparamdata-function"></a>Функция SQLParamData
 **Соответствие стандартам**  
@@ -51,7 +51,7 @@ SQLRETURN SQLParamData(
  [Выход] Указатель на буфер, в которую будет возвращен адрес *ParameterValuePtr* буфера, указанного в **SQLBindParameter** (для параметра данных) или адрес *TargetValuePtr* буфера, указанного в **SQLBindCol** (для данных столбца), как в поле записи дескриптора SQL_DESC_DATA_PTR.  
   
 ## <a name="returns"></a>Возвращает  
- Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, значение SQL_NO_DATA, SQL_STILL_EXECUTING, значение SQL_ERROR, SQL_INVALID_HANDLE или SQL_PARAM_DATA_AVAILABLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR, SQL_INVALID_HANDLE, or SQL_PARAM_DATA_AVAILABLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLParamData** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, а связанное значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из SQL_ HANDLE_STMT и *обрабатывать* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые при помощи **SQLParamData** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  
