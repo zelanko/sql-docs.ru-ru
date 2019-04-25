@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0995b501bd1032cdbc067fcef6c8f59693ef9abf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466820"
 ---
 # <a name="sysfulltextdocumenttypes-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47812932"
 |**class_id**|**uniqueidentifier**|Идентификатор GUID класса IFilter, который поддерживает расширение файла.|  
 |**путь**|**nvarchar(260)**|Путь к IFilter DLL. Путь является видимым только для элементов предопределенной роли сервера **serveradmin** .|  
 |**version**|**sysname**|Версия IFilter DLL.|  
-|**Изготовитель**|**sysname**|Название производителя IFilter.<br /><br /> Примечание: Только документы с производителем как [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживаются [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
+|**Изготовитель**|**sysname**|Название производителя IFilter.<br /><br /> Примечание. Только документы с производителем как [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживаются [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  

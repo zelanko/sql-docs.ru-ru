@@ -30,11 +30,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 8de9b27a58d277191a4d40da6b34dbcbbd43e497
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51655643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760620"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Добавление и удаление файлов баз данных Access (AccessToSQL)
 Для переноса данных Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, необходимо добавить один или несколько баз данных Access проекта SSMA. Эти базы данных должны быть Access 97 или более поздней версии. При наличии баз данных из более ранней версии Access, необходимо преобразовать баз данных до более новой версии. Для этого, открытие и сохранение базы данных в Access 97 или более поздней версии, прежде чем добавить их SSMA.  
@@ -102,7 +102,7 @@ ms.locfileid: "51655643"
   
 3.  Разверните **таблиц** и затем выберите таблицу.  
   
-    Обратите внимание на то, что отображаются четыре вкладки: **таблицы**, **сопоставления типов**, **свойства**, и **данных**.  
+    Обратите внимание на то, что отображаются четыре вкладки: **Таблица**, **сопоставление типов**, **свойства**, и **данных**.  
   
 4.  Разверните таблицу, разверните **ключи**, а затем выберите ключ.  
   

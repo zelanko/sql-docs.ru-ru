@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468200"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Поддержка среды SQL Server Management Studio для In-Memory OLTP
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] — интегрированная среда для управления инфраструктурой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предоставляет средства для настройки, наблюдения и администрирования экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md).  
@@ -89,7 +89,7 @@ ms.locfileid: "48050126"
   
  Для объектов баз данных, таблиц, хранимых процедур, пользовательского табличного типа и объектов индекса были обновлены и расширены следующие функции [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для поддержки OLTP в памяти.  
   
--   Обозреватель объектов  
+-   обозревателе объектов  
   
     -   Контекстные меню  
   

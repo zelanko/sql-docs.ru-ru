@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff2db6cff725e133789804856b1913517c34ceb0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633752"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Требования к системе (драйвер ODBC для Visual FoxPro)
 Требования к системе для установки укажите Минимальная версия операционной системы и места на диске, необходимые для успешной установки драйвера. После установки драйвера, можно выбрать определенное приложение программного обеспечения, которое вы хотите использовать для доступа к данным Visual FoxPro.  

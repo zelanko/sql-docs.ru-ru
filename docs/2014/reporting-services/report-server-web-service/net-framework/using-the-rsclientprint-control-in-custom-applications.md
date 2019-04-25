@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 28f4cdf562db1b3008db239a08b76097dc5d7e46
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62519124"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Использование элемента управления RSClientPrint в пользовательских приложениях
   Элемент управления [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX **RSPrintClient** обеспечивает работу функций печати отчетов в средстве просмотра HTML-страниц на стороне клиента. Он отображает диалоговое окно **Печать**, в котором просматривается отчет, указываются номера и изменяются поля печатаемых страниц, а также запускается задание на печать. При выполнении операции печати на стороне клиента сервер отчетов подготавливает отчет с помощью модуля подготовки отчетов в графическом формате (EMF), создает задание на печать и отправляет его на принтер с помощью средств операционной системы.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1186615ccd409ba34f65d3f63dd51c76dfa2fdb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518624"
 ---
 # <a name="ado-programming-task-table"></a>Таблица задач модели ADO программирование
 В следующей таблице перечислены задачи программирования, содержащихся в *руководство по программированию объектов ADO* и предоставляет ссылки для каждой задачи. Эти ссылки могут быть текстовые описания и примеры кода, в которых можно найти сведения о компоненте ADO, который выполняет задачу.

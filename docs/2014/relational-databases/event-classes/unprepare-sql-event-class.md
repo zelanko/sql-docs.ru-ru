@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aeb6709930190017487476d0d19b105261ae7acd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473405"
 ---
 # <a name="unprepare-sql-event-class"></a>Unprepare SQL, класс событий
   Событие класса событий Unprepare SQL указывает, что приложение, использующее технологии SqlClient, ODBC, OLE DB или DB-Library, аннулировало (удалило) подготовленную инструкцию или несколько инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] .  

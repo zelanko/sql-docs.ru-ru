@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637612"
 ---
 # <a name="create-instances-of-xml-data"></a>Создание экземпляров XML-данных
   В этом разделе описывается формирование XML-экземпляров.  
@@ -93,7 +93,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  Если параметр *style* не используется или его значение установлено в 0, незначащий пробел не сохраняется для преобразования экземпляра xml DT. Дополнительные сведения о том, как использовать оператор CONVERT и его параметр *style* при преобразовании строковых данных в экземпляр xml DT, см. в статье [CAST и CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Пример приведение строкового значения в типизированный XML и назначение его в столбец  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Пример Приведение строкового значения в типизированный xml и его назначение столбца  
  Следующий пример приводит строковую переменную, содержащую фрагмент XML для `xml` данных введите и затем сохраняет его в `xml` столбец типа:  
   
 ```  
@@ -121,7 +121,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Пример преобразование строкового значения в типизированный XML и присвоение его переменной  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Пример Преобразование строкового на типизированный xml и присвоить его переменной  
  В следующем примере строка преобразовывается в `xml` и присваивается переменной `xml` тип данных:  
   
 ```  

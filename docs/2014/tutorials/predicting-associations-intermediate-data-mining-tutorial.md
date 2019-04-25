@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472849"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>Прогноз взаимосвязей (учебник по интеллектуальному анализу данных — средний уровень)
   После обработки моделей для создания прогнозов можно использовать сведения о взаимосвязях, хранящиеся в модели. В последней задаче этого занятия предстоит изучить, как создавать прогнозирующие запросы к созданным моделям взаимосвязей. В этом занятии предполагается, что вы знакомы с работой построителя прогнозирующих запросов и хотите научиться создавать прогнозирующие запросы к моделям взаимосвязей. Дополнительные сведения том, как использовать построитель прогнозирующих запросов, см. в разделе [интерфейсы запросов данных для интеллектуального анализа данных](../../2014/analysis-services/data-mining/data-mining-query-tools.md).  

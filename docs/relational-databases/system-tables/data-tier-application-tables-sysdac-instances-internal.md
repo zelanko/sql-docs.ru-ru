@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1e30db7b31a0a29a5e78e7fc5876f43764d66a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471119"
 ---
 # <a name="data-tier-application-tables---sysdacinstancesinternal"></a>Таблицы приложений уровня данных — sysdac_instances_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47827382"
 |instance_id|**uniqueidentifier**|Идентификатор экземпляра DAC.|  
 |имя_экземпляра|**sysname**|Имя экземпляра DAC, указанное при развертывании экземпляра.|  
 |type_name|**sysname**|Имя DAC, указанное при создании пакета DAC.|  
-|type_version|**Nvarchar(64)**|Версия DAC, указанная при создании пакета DAC.|  
+|type_version|**nvarchar(64)**|Версия DAC, указанная при создании пакета DAC.|  
 |description|**nvarchar(4000)**|Описание DAC, записанное при создании пакета DAC.|  
 |type_stream|**varbinary(max)**|Битовый поток, содержащий закодированное представление логических объектов (например, таблиц и представлений), которые содержатся в DAC.|  
 |date_created|**datetime**|Дата и время создания экземпляра DAC.|  

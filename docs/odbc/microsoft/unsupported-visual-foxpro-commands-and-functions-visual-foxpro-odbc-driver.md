@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6b69c8bf15b4d56872c4030725638e4b61571e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633374"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>Неподдерживаемые команды и функции Visual FoxPro (драйвер ODBC для Visual FoxPro)
 В следующей таблице перечислены FoxPro команд и функций, которые не поддерживаются драйвером ODBC для Visual FoxPro, но поддерживаемых Microsoft® Visual FoxPro.  
@@ -33,7 +33,7 @@ ms.locfileid: "47802702"
   
 ||||  
 |-|-|-|  
-|# #UNDEF DEFINE …|#IF... #ENDIF-директива препроцессора|#IFDEF &AMP;#124; #IFNDEF|  
+|#DEFINE ... #UNDEF|#IF... #ENDIF-директива препроцессора|#IFDEF &AMP;#124; #IFNDEF|  
 |#INCLUDE-директива препроцессора|:: Оператор разрешения области|! Команда (см. в разделе ВЫПОЛНЕНИЯ &#124; ! Команда)|  
 |? &#124; ?? Command|??? Command|\ &#124; \\\ Команды|  
 |@ ... ПОЛЕ команды|@ ... Класс команды|@ ... Команда «Очистить»|  
@@ -237,7 +237,7 @@ ms.locfileid: "47802702"
 |Команда подключения ПЕРЕИМЕНОВАНИЯ|ПЕРЕИМЕНОВАНИЕ таблицы команды|ВОССТАНОВЛЕНИЕ из команды|  
 |Команды ОТЧЕТА|REQUERY ()-функция|ОКНО команды RESTORE|  
 |МАКРОСЫ команды RESTORE|ЭКРАН команды RESTORE|RGBSCHEME ()-функция|  
-|Команда RESUME|RGB ()-функция|ЗАПУСТИТЕ &AMP;#124; ! Command|  
+|Команда RESUME|RGB ()-функция|RUN &#124; ! Command|  
 |RMDIR-команда|Функция ROW)||  
 |Команда функции RunScript МАРКЕРА|RDLEVEL ()-функция||  
   

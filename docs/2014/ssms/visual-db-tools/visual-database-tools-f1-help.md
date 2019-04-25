@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b893480036b607dc1e6639ed9f50232520663879
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473021"
 ---
 # <a name="visual-database-tools-f1-help"></a>Справка F1 визуальных инструментов для баз данных
   В этих разделах рассматриваются команды и параметры в диалоговых окнах и окнах свойств для элементов визуальных инструментов для баз данных, таких как окно «Свойства таблицы» или вкладка «Свойства столбца».  

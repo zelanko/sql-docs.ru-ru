@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 17a88095611a5f551708f3950359063317368757
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465923"
 ---
 # <a name="sequence-of-status-records"></a>Последовательность записей состояния
 Если два или более состояние записи, диспетчер драйверов и драйверов ранжировать согласно следующим правилам. Запись с наивысшим рангом является первой записью. Источник записи (диспетчера драйверов, драйвер, шлюза и т. д.) не считается когда ранжирование записей.  

@@ -38,11 +38,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 71a52a619ba2a3c16c372021181b90bae72ccfe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759707"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Схемы инвентаризации Access (AccessToSQL)
 В следующих разделах описаны таблицы, которые создаются с SSMA при экспорте схемы доступа к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -55,7 +55,7 @@ ms.locfileid: "47653729"
 |**DatabaseId**|**uniqueidentifier**|Идентификатор GUID, однозначно определяющий каждую базу данных. Этот столбец также является первичным ключом для таблицы.|  
 |**DatabaseName**|**nvarchar(4000)**|Имя базы данных Access.|  
 |**ExportTime**|**datetime**|Дата и время создания эти метаданные с SSMA.|  
-|**Путь к файлу**|**nvarchar(4000)**|Полный путь и имя базы данных Access.|  
+|**FilePath**|**nvarchar(4000)**|Полный путь и имя базы данных Access.|  
 |**Размер файла**|**bigint**|Размер базы данных Access, в КБ.|  
 |**FileOwner**|**nvarchar(4000)**|Учетная запись Windows, которая указана в качестве владельца базы данных Access.|  
 |**DateCreated**|**datetime**|Дата и время создания базы данных Access.|  

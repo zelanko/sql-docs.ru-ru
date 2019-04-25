@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e3d33209cd6dfe261a5deced345adac70b46961f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523898"
 ---
-# <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>Учебник. Файлы данных SQL Server в службе хранилища Windows Azure
+# <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>Учебник. SQL Server Data Files в службе хранилища Windows Azure
   Учебник по интеграции файлов данных SQL Server со службой хранилища Windows Azure. С помощью этого учебника вы научитесь напрямую сохранять файлы данных SQL Server в службе хранилища больших двоичных объектов Windows Azure.  
   
  Поддержка службы хранилища больших двоичных объектов для интеграции SQL Server стала возможной благодаря усовершенствованиям в версии SQL Server 2014. Обзор функциональных возможностей и преимуществ использования этих функций, см. в разделе [SQL Server Data Files в Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md).  

@@ -1,5 +1,5 @@
 ---
-title: Занятие 2. Создание инструкций на языке Transact-SQL | Документация Майкрософт
+title: Урок 2. Написание Transact-SQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd776a778f56831fc63fef1ea040e3f69883eff3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470031"
 ---
-# <a name="lesson-2-writing-transact-sql"></a>Занятие 2. Создание инструкций на языке Transact-SQL
+# <a name="lesson-2-writing-transact-sql"></a>Урок 2. Создание инструкций на языке Transact-SQL
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] — это интегрированная среда разработки, предназначенная для создания запросов многомерных выражений, запросов расширений интеллектуального анализа данных, запросов на языках [!INCLUDE[tsql](../../includes/tsql-md.md)]и XML, а также команд SQLCMD. Учебник демонстрирует использование редактора запросов компонента ядра СУБД для создания скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 > [!NOTE]  
->  На данном занятии основное внимание уделяется возможностям этого средства. Руководство по написанию инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделе [Учебник. Составление инструкций Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md).  
+>  На данном занятии основное внимание уделяется возможностям этого средства. Руководство по написанию [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций, см. в разделе [руководства: Составление инструкций Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md).  
   
  Это занятие содержит следующие разделы.  
   

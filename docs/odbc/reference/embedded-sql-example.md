@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eef8c87a152795d4756d05ba8a279a0d12cbc38c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628618"
 ---
 # <a name="embedded-sql-example"></a>Пример Embedded SQL
 Ниже приведен простой embedded SQL программа, написанная на языке C. Программа показаны многие, но не все, внедренные методы SQL. Программа запрашивает у пользователя номер заказа, получает номер клиента, менеджеров по продажам и состояния заказа и выводит полученные сведения на экран.  

@@ -1,6 +1,6 @@
 ---
 title: Получение числовых данных с помощью SQL_NUMERIC_STRUCT | Документация Майкрософт
-description: C/C++ с использованием ODBC извлекает тип числовых данных SQL Server с помощью помощью SQL_NUMERIC_STRUCT, связанные с SQL_C_NUMERIC.
+description: C /C++ с использованием ODBC извлекает SQL Server числовой тип данных, используя помощью SQL_NUMERIC_STRUCT, связанные с SQL_C_NUMERIC.
 editor: ''
 ms.prod: sql
 ms.technology: ''
@@ -12,11 +12,11 @@ ms.author: genemi
 authors: MightyPen
 manager: craigg
 ms.openlocfilehash: 256a8f87445dd7bcc581e1bc0e5d55e9b5700ffb
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53731941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629521"
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>Получение числовых данных с помощью SQL\_ЧИСЛОВЫХ\_СТРУКТУРЫ
 

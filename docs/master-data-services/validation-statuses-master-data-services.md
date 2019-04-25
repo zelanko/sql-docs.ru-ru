@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9428a6462efac8643fcbb5343cb5cb3c8343aff9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629886"
 ---
 # <a name="validation-statuses-master-data-services"></a>Состояния проверки (службы Master Data Services)
 
@@ -32,7 +32,7 @@ ms.locfileid: "52769756"
 |Проверка завершена с ошибкой|Элементы, не прошедшие проверку на соответствие бизнес-правилам.|  
 |Ожидание повторной проверки зависимого элемента|Обновленные консолидированные элементы, ожидающие проверки вместе с дочерними элементами.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)  
   

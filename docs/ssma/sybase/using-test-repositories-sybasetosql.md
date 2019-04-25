@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 939342a85ed657faa645c593018cbf39042031c2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625831"
 ---
 # <a name="using-test-repositories-sybasetosql"></a>Использование репозиториев тестирования (SybaseToSQL)
 Хранилище тестов SSMA хранилищами тестировщик SSMA тестовых случаев и результаты теста для последующего использования. Данные хранилища сохраняются в таблицах SQL Server **TestCaseRepository** и **RunTestCaseResultRepository** в схеме **ssma_sybase_utilities** из **ssmatesterdb_syb** базы данных.  
@@ -64,7 +64,7 @@ ms.locfileid: "52505230"
   
 -   Имя: Имя тестового случая.  
   
--   Начало: Дата выполнения тестового случая.  
+-   К работе: Дата выполнения тестового случая.  
   
 -   Результат: Краткое описание выполнения теста (данная ячейка всплывающая подсказка отображает полную сводку выполнения теста).  
   

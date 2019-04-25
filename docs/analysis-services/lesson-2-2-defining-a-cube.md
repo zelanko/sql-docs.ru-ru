@@ -1,5 +1,5 @@
 ---
-title: Определение куба | Документы Microsoft
+title: Определение куба | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 80c877341fc4ad9a952d94081d99f5a9c121fb1f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467370"
 ---
-# <a name="lesson-2-2---defining-a-cube"></a>Занятие 2-2-определение куба
+# <a name="lesson-2-2---defining-a-cube"></a>Занятие 2 – 2-определение куба
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Мастер кубов помогает определить для куба группы мер и измерения. В следующей задаче с помощью мастера кубов будет построен куб.  

@@ -1,5 +1,5 @@
 ---
-title: Интерфейс IMDEmbeddedData | Документы Microsoft
+title: Интерфейс IMDEmbeddedData | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,14 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 203eae4b3660aaf5d1f2ed3a92ba844e88a518ff
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467785"
 ---
 # <a name="imdembeddeddata-interface"></a>Интерфейс IMDEmbeddedData
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Интерфейс IMDEmbeddedData — открытый интерфейс, используемый для управления встроенный [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] базы данных или базы данных табличной модели. Этот интерфейс наследует интерфейс **IPersistStream** . Этот интерфейс позволяет выполнить следующие операции:  
+  Интерфейс IMDEmbeddedData — это открытый интерфейс, используемый для управления встроенный [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] базы данных или базы данных табличной модели. Этот интерфейс наследует интерфейс **IPersistStream** . Этот интерфейс позволяет выполнить следующие операции:  
   
 -   Получить идентификатор внедренного потока в документе-контейнере.  
   
@@ -37,8 +38,8 @@ ms.lasthandoff: 05/10/2018
   
 -   Сохранить локальную или внутрипроцессную базу данных во внедренном потоке в документе-контейнере. Наследуется от **IPersistStream**.  
   
-## <a name="reference"></a>Справочник  
- Далее приводится **IMDEmbeddedData** интерфейс, представленный в **msmd.h** файл заголовка.  
+## <a name="reference"></a>Ссылка  
+ Следующие ссылки на документы **IMDEmbeddedData** интерфейс, представленный в **msmd.h** файл заголовка.  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>Исходный файл: PXOEmbeddedData.idl  
   
@@ -97,12 +98,12 @@ HRESULT GetStreamIdentifier (
  **E_FAIL**  
  При получении доступа к идентификатору потока произошла ошибка.  
   
-#### <a name="remarks"></a>Замечания  
+#### <a name="remarks"></a>Примечания  
  Чтобы проверить, содержит ли текущее соединение внедренную базу данных, пользователь должен проверить значение свойства DBPROP_MSMD_EMBEDDED_DATA, являющееся одним из свойств соединения OLE DB.  
   
  Возможные значения для DBPROP_MSMD_EMBEDDED_DATA.  
   
-|Название|Значение|Определение|  
+|Имя|Значение|Определение|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|Доступная внедренная база данных отсутствует|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|Текущее приложение содержит внедренную базу данных|  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7c433de56ff5e171a817e8a25b9d850c0ecefa0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62447662"
 ---
 # <a name="using-the-visual-foxpro-odbc-driver"></a>Использование драйвера ODBC для Visual FoxPro
 В этом разделе в следующих разделах как использовать драйвер ODBC для Visual FoxPro® Microsoft®:  

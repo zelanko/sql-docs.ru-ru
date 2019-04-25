@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ffee06e8a6372f146996673c425a89000eda0a1d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518642"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Создание настраиваемого рабочего процесса (службы Master Data Services)
 
@@ -38,7 +38,7 @@ ms.locfileid: "52420665"
 5.  Служба SQL Server Службы Integration Services MDS направляет данные в сборку обработчика рабочих процессов.  
   
 > [!NOTE]  
->  Примечание. Служба SQL Server MDS Workflow Integration Service предназначена для запуска простых процессов. Если пользовательскому коду требуется сложная обработка, ее следует выполнить либо в отдельном потоке, либо за пределами обработки рабочего процесса.  
+>  Примечание. SQL Server MDS Workflow Integration Service предназначена для запуска простых процессов. Если пользовательскому коду требуется сложная обработка, ее следует выполнить либо в отдельном потоке, либо за пределами обработки рабочего процесса.  
   
 ## <a name="configure-master-data-services-for-custom-workflows"></a>Настройка служб Master Data Services для пользовательских рабочих процессов  
  Для создания пользовательского рабочего процесса потребуется написать определенный объем пользовательского кода и настроить веб-приложение [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] на передачу данных рабочего процесса используемому обработчику рабочих процессов. Выполните следующие действия, чтобы включить обработку пользовательских рабочих процессов.  
@@ -64,7 +64,7 @@ ms.locfileid: "52420665"
   
 3.  Добавьте строку "using Microsoft.MasterDataServices.Core.Workflow;" в файл с кодом C#.  
   
-4.  В объявлении класса установите наследование от <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. Объявление класса должно выглядеть примерно так: public class WorkflowTester : IWorkflowTypeExtender.  
+4.  В объявлении класса установите наследование от <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. Объявление класса должно выглядеть следующим образом: "открытый класс WorkflowTester: IWorkflowTypeExtender ".  
   
 5.  Реализуйте интерфейс <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. Метод <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> вызывается службами SQL Server MDS Workflow Integration Service для запуска рабочего процесса.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "52420665"
   
 1.  С помощью оснастки «Службы» остановите службу.  
   
-2.  Откройте командную строку, перейдите в каталог, в котором находится служба и запустите службу в пультовом режиме, введя следующую команду: Microsoft.MasterDataServices.Workflow.exe -console.  
+2.  Откройте командную строку, перейдите в расположение службы и запустите службу в режиме консоли, введя: Microsoft.MasterDataServices.Workflow.exe-консоли.  
   
 3.  В веб-приложении [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] обновите элемент и примените бизнес-правило еще раз. В окне консоли будут отображены подробные записи журнала.  
   

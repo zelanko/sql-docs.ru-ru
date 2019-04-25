@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 90ba6ed3a6feb163fbe1eaf39cce14ae501c232e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468380"
 ---
 # <a name="scrolling-by-bookmark"></a>Прокрутка по закладкам
 При выборке строк через **SQLFetchScroll**, приложение может использовать закладку в качестве основы для выборки начальной строки. Такой способ представляет собой форму абсолютной адресации, поскольку не зависит от текущей позиции курсора. Выполнять прокрутку в строке с закладкой, приложение вызывает **SQLFetchScroll** с *FetchOrientation* sql_fetch_bookmark аргумента. Эта операция использует закладку, на которые указывают атрибут инструкции SQL_ATTR_FETCH_BOOKMARK_PTR. Она возвращает набор строк, начинающийся со строки, определяемой закладкой. Приложение может указать смещение для этой операции в *FetchOffset* аргумент при вызове для **SQLFetchScroll**. При указании смещения первой строки возвращенного набора строк определяется сложением номер в *FetchOffset* аргумента с номером строки, определяемой закладкой. Такое использование *FetchOffset* аргумент не поддерживается при использовании ODBC 2. *x* драйверы; Если приложение вызывает **SQLFetchScroll** в ODBC 2. *x* драйвера с *FetchOrientation* присвоено sql_fetch_bookmark аргумента, *FetchOffset* аргумент должен быть задан равным 0.

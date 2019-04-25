@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a95fa1c010197d0107c757198d9db7eaf8d3c42e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637602"
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>Создание, изменение и удаление селективных XML-индексов
   Описывает способы создания нового селективного XML-индекса, изменения или удаления существующего селективного XML-индекса.  
@@ -24,7 +24,7 @@ ms.locfileid: "58533756"
   
 ##  <a name="create"></a> Создание селективного XML-индекса  
   
-### <a name="how-to-create-a-selective-xml-index"></a>Практическое руководство. создать селективный XML-индекс  
+### <a name="how-to-create-a-selective-xml-index"></a>Практическое руководство. Создание селективного XML-индекса  
  **Создание нового селективного XML-индекса с помощью Transact-SQL**  
  Создание селективного XML-индекса путем вызова инструкции CREATE SELECTIVE XML INDEX. Дополнительные сведения см. в разделе [CREATE SELECTIVE XML INDEX (Transact-SQL)](/sql/t-sql/statements/create-selective-xml-index-transact-sql).  
   
@@ -48,7 +48,7 @@ FOR(
   
 ##  <a name="alter"></a> Изменение селективного XML-индекса  
   
-### <a name="how-to-alter-a-selective-xml-index"></a>Практическое руководство. изменить селективный XML-индекс  
+### <a name="how-to-alter-a-selective-xml-index"></a>Практическое руководство. Изменить Селективный XML-индекс  
  **изменить селективный XML-индекс с помощью Transact-SQL**  
  Измените существующий селективный XML-индекс с помощью инструкции ALTER INDEX. Дополнительные сведения см. в разделе [ALTER INDEX (селективные XML-индексы)](../indexes/indexes.md).  
   
@@ -70,7 +70,7 @@ FOR
   
 ##  <a name="drop"></a> Удаление селективного XML-индекса  
   
-### <a name="how-to-drop-a-selective-xml-index"></a>Практическое руководство. удалить селективный XML-индекс  
+### <a name="how-to-drop-a-selective-xml-index"></a>Практическое руководство. Удаление селективного XML-индекса  
  **Удаление селективного XML-индекса с помощью Transact-SQL**  
  Удалите селективный XML-индекс с помощью инструкции DROP INDEX. Дополнительные сведения см. в разделе [DROP INDEX (селективные XML-индексы)](/sql/t-sql/statements/drop-index-selective-xml-indexes).  
   

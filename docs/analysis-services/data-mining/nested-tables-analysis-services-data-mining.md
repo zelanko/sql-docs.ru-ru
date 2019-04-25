@@ -1,5 +1,5 @@
 ---
-title: Вложенные таблицы (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft
+title: Вложенные таблицы (службы Analysis Services — Интеллектуальный анализ данных) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 35444ae17ac4a11bd0321e70631f45d84273e0af
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472428"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Вложенные таблицы (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  В службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]данные должны подаваться на вход алгоритма интеллектуального анализа данных в виде последовательности вариантов, содержащихся в таблице вариантов. Но не все варианты можно описать одной строкой данных. Например, некоторый вариант может быть выведен на основании двух таблиц: таблицы, содержащей данные о заказчике, и таблицы, содержащей сведения о покупках заказчика. Одному заказчику из таблицы заказчиков может соответствовать несколько элементов в таблице покупок, что усложняет описание данных в одной строке. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]предоставляют уникальный метод обработки таких случаев с помощью *вложенные таблицы*. Понятие вложенной таблицы демонстрируется на следующей схеме.  
+  В службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]данные должны подаваться на вход алгоритма интеллектуального анализа данных в виде последовательности вариантов, содержащихся в таблице вариантов. Но не все варианты можно описать одной строкой данных. Например, некоторый вариант может быть выведен на основании двух таблиц: таблицы, содержащей данные о заказчике, и таблицы, содержащей сведения о покупках заказчика. Одному заказчику из таблицы заказчиков может соответствовать несколько элементов в таблице покупок, что усложняет описание данных в одной строке. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляют уникальный метод обработки таких случаев с помощью *вложенных таблиц*. Понятие вложенной таблицы демонстрируется на следующей схеме.  
   
  ![Объединить две таблицы с помощью вложенной таблицы](../../analysis-services/data-mining/media/nested-tables.gif "двух таблиц объединяются с помощью вложенной таблицы")  
   
@@ -61,8 +61,8 @@ ms.locfileid: "34018121"
   
  Дополнительные сведения о создании и использовании фильтров для моделей см. в разделе [Фильтры для моделей интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
-## <a name="see-also"></a>См. также:  
- [Алгоритмы интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Структуры интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+## <a name="see-also"></a>См. также  
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

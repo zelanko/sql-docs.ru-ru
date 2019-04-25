@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 0224f32fde76aa406d90c98fe7280237d09a04e5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524476"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Создание, проектирование и создание запросов к экземплярам типа данных geography
   Тип пространственных данных `geography` представляет данные в системе координат круглой земли. Этот тип реализован как тип данных среды CLR .NET в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` Тип данных хранит эллипсоидальные (сферические) данные, такие как координаты широты и долготы GPS.  
@@ -105,7 +105,7 @@ ms.locfileid: "53369496"
 ###  <a name="gml"></a> Построение экземпляра географического объекта на основе входных данных в формате GML Text  
  `geography` Тип данных предоставляет метод, создающий `geography` на основе GML, XML-представление `geography` экземпляра. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает подмножество GML.  
   
- Дополнительные сведения о языке GML см. в спецификации OGC: [Спецификации OGC, географический язык разметки.](https://go.microsoft.com/fwlink/?LinkId=93629)  
+ Дополнительные сведения о языке GML см. в спецификации OGC: [Спецификации OGC, язык GML](https://go.microsoft.com/fwlink/?LinkId=93629).  
   
  **Создание экземпляра географического объекта любого типа на основе входных данных в формате GML**  
  [GeomFromGML (тип данных geography)](/sql/t-sql/spatial-geography/geomfromgml-geography-data-type)  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cd2bc95e6fe5468e88fc61dd8ed4adcd985ec052
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633019"
 ---
 # <a name="text-file-format-text-file-driver"></a>Формат текстового файла (драйвер для текстовых файлов)
 Текстовый драйвер ODBC поддерживает оба файла с разделителями и фиксированной ширины текста. Текстовый файл состоит из необязательного заголовка строки и нуль или несколько строк текста.  

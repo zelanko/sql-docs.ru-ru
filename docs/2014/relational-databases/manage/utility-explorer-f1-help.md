@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 402622033abd307d71b0dac8894ff4f6facebef9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467858"
 ---
 # <a name="utility-explorer-f1-help"></a>Справка F1 проводника служебной программы
   В следующих разделах описываются функциональные возможности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] служебной программы и связанные операции.  

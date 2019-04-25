@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 091f6d49c4cccbcba47d50bbde3b395d8ce9d260
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758566"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>Конструктор табличных моделей (SSAS Tabular)
   Конструктор табличных моделей входит в состав среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], интегрированной с Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 или более поздней версии, и содержит дополнительные шаблоны типов проектов, специально предназначенные для разработки профессиональных решений табличных моделей.  

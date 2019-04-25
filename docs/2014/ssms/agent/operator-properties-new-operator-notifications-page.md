@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a04465712667205674ddd8ea8bab7d82c3250261
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630695"
 ---
-# <a name="operator-properties-new-operator-notifications-page"></a>Свойства оператора: Создание оператора (страница "уведомления")
+# <a name="operator-properties-new-operator-notifications-page"></a>Свойства оператора: Создание оператора (страница "Уведомления")
   Используйте эту страницу, чтобы определить предупреждения и задания, уведомляющие оператора.  
   
 ## <a name="options"></a>Параметры  
@@ -47,6 +47,6 @@ ms.locfileid: "52752596"
  Уведомить этого оператора, используя **net send**.  
   
 ## <a name="see-also"></a>См. также  
- [Операторы](operators.md)  
+ [Инструкции](operators.md)  
   
   

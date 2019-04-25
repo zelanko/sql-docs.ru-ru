@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5ffde063d94f0e08ea0e82e6b5998a6d23cfaac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473185"
 ---
 # <a name="other-replication-upgrade-issues"></a>Другие проблемы при обновлении репликации
   В данном разделе описываются некоторые проблемы, которые могут возникнуть при обновлении, но не затронуты помощником по обновлению.  
@@ -50,7 +50,7 @@ ms.locfileid: "48200734"
   
 -   Все элементы управления ActiveX помечаются как небезопасные для выполнения скриптов и инициализации.  
   
--   Удален элемент управления ActiveX моментальными снимками SQL. Создавать и управлять моментальными снимками можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или программно посредством хранимых процедур репликации. Дополнительные сведения см. в разделах «как: Создание и применение исходного моментального снимка ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])» и «как: Создание исходного моментального снимка (Программирование репликации Transact-SQL)» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+-   Удален элемент управления ActiveX моментальными снимками SQL. Создавать и управлять моментальными снимками можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или программно посредством хранимых процедур репликации. Дополнительные сведения см. в разделах «как: Создание и применение исходного моментального снимка ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])» и «как: Создание исходного моментального снимка (Программирование репликации Transact-SQL)» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] документации.  
   
 -   Элементы управления ActiveX распространителя и слияния стали устаревшими. Аналогичная функциональность обеспечивается для приложений с управляемым кодом с помощью объектов RMO. Дополнительные сведения см. в разделе «Синхронизация подписок (программирование объектов RMO)» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

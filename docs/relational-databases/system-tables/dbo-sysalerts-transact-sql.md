@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7bad6fbd9229547318a060f08eeb102b21cda9bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470892"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47855046"
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**int**|Идентификатор предупреждения.|  
 |**name**|**sysname**|Имя предупреждения.|  
-|**event_source**|**Nvarchar(100)**|Источник события: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**event_source**|**nvarchar(100)**|Источник события: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**event_category_id**|**int**|Зарезервировано для последующего использования.|  
 |**event_id**|**int**|Зарезервировано для последующего использования.|  
 |**message_id**|**int**|Определяемые пользователем идентификатор сообщения или ссылка на **sysmessages** сообщение, вызвавшее это предупреждение.|  
@@ -50,7 +50,7 @@ ms.locfileid: "47855046"
 |**notification_message**|**nvarchar(512)**|Дополнительные сведения, отправляемые вместе с предупреждением.|  
 |**include_event_description**|**tinyint**|Битовая маска, определяющая ли описание события отправляется по электронной почте, пейджеру или команды Net send. См. ниже приведены значения.|  
 |**database_name**|**nvarchar(512)**|База данных, в которой должно произойти предупреждение, чтобы оно сработало.|  
-|**event_description_keyword**|**Nvarchar(100)**|Шаблон, с которым должна совпасть ошибка для срабатывания этого предупреждения.|  
+|**event_description_keyword**|**nvarchar(100)**|Шаблон, с которым должна совпасть ошибка для срабатывания этого предупреждения.|  
 |**occurrence_count**|**int**|Количество раз, когда возникало этого предупреждение.|  
 |**count_reset_date**|**int**|Число дней (дата) будет сброшен на **0**.|  
 |**count_reset_time**|**int**|Время дня счетчик будет сброшен на **0**.|  
@@ -64,7 +64,7 @@ ms.locfileid: "47855046"
 
 В следующей таблице показаны значения битовой маски include_event_description. Dbo.sysalerts возвращает десятичное значение. 
 
-|Decimal | BINARY | Значение |
+|Decimal | binary | Значение |
 |------|------|------|
 |0 |0000 |сообщение не |
 |1 |0001 |Отправить по электронной почте |

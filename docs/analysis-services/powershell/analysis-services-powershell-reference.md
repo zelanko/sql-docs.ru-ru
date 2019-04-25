@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 13ea15a23bbf6de6c50b494f709f65cae2f7c48b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509845"
 ---
 # <a name="analysis-services-powershell-reference"></a>Справочник по компоненту Analysis Services PowerShell
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "37992906"
 |[Invoke-ProcessASDatabase](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processasdatabase)|Обработка базы данных.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Командлет Invoke-ProcessCube](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processcube)|Обработка куба.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Командлет Invoke-ProcessDimension](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processdimension)|Обработка измерения.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
-|[Командлет Invoke-ProcessPartition](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processpartition)|Обработка секции.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
+|[Командлет Invoke-PolicyEvaluation](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processpartition)|Обработка секции.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Командлет Invoke-ProcessTable](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processtable)|Обработка таблицы в табличной модели, модели совместимости 1200 или выше.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Командлет Merge-Partition](https://docs.microsoft.com/powershell/module/sqlserver/merge-partition)|Слияние секций.|<xref:Microsoft.AnalysisServices.Partition.Merge%2A>|  
 |[Командлет New-RestoreFolder](https://docs.microsoft.com/powershell/module/sqlserver/new-restorefolder)|Создайте папку, в которой будет содержаться резервная копия базы данных.|<xref:Microsoft.AnalysisServices.RestoreFolder>|  

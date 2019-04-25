@@ -23,11 +23,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e822f034ff4af30fc2d8c6992544b65aaea865e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632313"
 ---
 # <a name="syssysobjects-transact-sql"></a>sys.sysobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -50,9 +50,9 @@ ms.locfileid: "47672592"
 |parent_obj|**int**|Идентификатор родительского объекта. Например, идентификатор таблицы, если это триггер или ограничение.|  
 |crdate|**datetime**|Дата создания объекта.|  
 |ftcatid|**smallint**|Идентификатор полнотекстового каталога для всех пользовательских таблиц, зарегистрированных для полнотекстового индексирования, и 0 для всех пользовательских таблиц, незарегистрированных для полнотекстового индексирования.|  
-|schema_ver|**int**|Номер версии, который увеличивается каждый раз при изменении схемы для таблицы. Всегда возвращает значение 0.|  
+|schema_ver|**int**|Номер версии, который увеличивается каждый раз при изменении схемы для таблицы. Всегда возвращает 0.|  
 |stats_schema_ver|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|Тип|**char(2)**|Тип объекта. Может использоваться одно из следующих значений:<br /><br /> AF = агрегатная функция (среда CLR)<br /><br /> C = ограничение CHECK<br /><br /> D = ограничение по умолчанию или DEFAULT<br /><br /> F = ограничение FOREIGN KEY<br /><br /> FN = скалярная функция<br /><br /> FS = скалярная функция сборки (среда CLR)<br /><br /> FT = функция сборки  с табличным значением (среда CLR) IF = подставляемая табличная функция<br /><br /> IT = внутренняя таблица<br /><br /> K = ограничение PRIMARY KEY или UNIQUE<br /><br /> L = журнал<br /><br /> P = хранимая процедура<br /><br /> PC = хранимая процедура сборки (среда CLR)<br /><br /> R = правило<br /><br /> RF = хранимая процедура фильтра репликации<br /><br /> S = системная таблица<br /><br /> SN = синоним<br /><br /> SQ = очередь обслуживания<br /><br /> TA = триггер DML сборки (среда CLR)<br /><br /> TF = табличная функция<br /><br /> TR = триггер DML SQL<br /><br /> TT = табличный тип<br /><br /> U = пользовательская таблица<br /><br /> V = представление<br /><br /> X = расширенная хранимая процедура|  
+|type|**char(2)**|Тип объекта. Может принимать одно из следующих значений:<br /><br /> AF = агрегатная функция (среда CLR)<br /><br /> C = ограничение CHECK<br /><br /> D = ограничение по умолчанию или DEFAULT<br /><br /> F = ограничение FOREIGN KEY<br /><br /> FN = скалярная функция<br /><br /> FS = скалярная функция сборки (среда CLR)<br /><br /> FT = функция сборки  с табличным значением (среда CLR) IF = подставляемая табличная функция<br /><br /> IT = внутренняя таблица<br /><br /> K = ограничение PRIMARY KEY или UNIQUE<br /><br /> L = журнал<br /><br /> P = хранимая процедура<br /><br /> PC = хранимая процедура сборки (среда CLR)<br /><br /> R = правило<br /><br /> RF = хранимая процедура фильтра репликации<br /><br /> S = системная таблица<br /><br /> SN = синоним<br /><br /> SQ = очередь обслуживания<br /><br /> TA = триггер DML сборки (среда CLR)<br /><br /> TF = табличная функция<br /><br /> TR = триггер DML SQL<br /><br /> TT = табличный тип<br /><br /> U = пользовательская таблица<br /><br /> V = представление<br /><br /> X = расширенная хранимая процедура|  
 |userstat|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |sysstat|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |indexdel|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

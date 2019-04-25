@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 23416cb067507d821701e57255fdc6f81ee607c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633009"
 ---
 # <a name="text-file-data-types"></a>Типы данных текстовых файлов
 В следующей таблице показаны как текстовые типы данных сопоставляются с типами данных ODBC SQL. Обратите внимание на то, что не все типы данных ODBC SQL поддерживаются с помощью драйвера ODBC текста.  

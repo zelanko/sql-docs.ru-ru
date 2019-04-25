@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cfbe388f6320ba81dd2be38bf315f05326008235
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632346"
 ---
 # <a name="filestream-support-odbc"></a>Поддержка FILESTREAM (ODBC)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47637752"
  Если вы вызываете SQLFetch для связанного столбца, вы получите предупреждение «данные усечены», если буфер недостаточно велик для хранения всего значения. Пропустите это предупреждение и обновите данные в этом связанном столбце с вызовами методов SQLParamData и SQLPutData. Данные FILESTREAM можно обновлять с помощью SQLSetPos, если они связаны с SQLBindCol.  
   
 ## <a name="example"></a>Пример  
- Столбцы FILESTREAM ведут себя так аналогичен **varbinary(max)** столбцов, но без размера ограничить. Они связываются как SQL_VARBINARY. (SQL_LONGVARBINARY используется со столбцами типа image, и на этот тип накладываются определенные ограничения. Так, SQL_LONGVARBINARY нельзя использовать в качестве выходного параметра). Следующие примеры показывают прямой доступ к столбцам FILESTREAM в системе NTFS. Эти примеры основываются на той посылке, что следующий код [!INCLUDE[tsql](../../../includes/tsql-md.md)] был выполнен в базе данных:  
+ Столбцы FILESTREAM ведут себя так аналогичен **varbinary(max)** столбцов, но без размера ограничить. Они связываются как SQL_VARBINARY. (SQL_LONGVARBINARY используется со столбцами типа image, и на этот тип накладываются определенные ограничения. Например SQL_LONGVARBINARY не может использоваться как выходной параметр.) Ниже приведены примеры прямого доступа NTFS для столбцов FILESTREAM. Эти примеры основываются на той посылке, что следующий код [!INCLUDE[tsql](../../../includes/tsql-md.md)] был выполнен в базе данных:  
   
 ```  
 CREATE TABLE fileStreamDocs(  

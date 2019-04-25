@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 644ee0c1ca4baee72a5fd33aeb16843dc7c59795
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472640"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>Создание и выполнение простой команды
 Простая команда — это приложения, не является параметризованным и сохраняемость не требуется. Существует три способа создания и выполнения простой команды.  

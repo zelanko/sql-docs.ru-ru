@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 560761383a06bf9e3b319546011d58c7c1bdecb4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473627"
 ---
 # <a name="full-text-search"></a>Компонент Full-text Search
   Полнотекстовый поиск в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] позволяет пользователям и приложениям выполнять полнотекстовые запросы к символьным данным в таблицах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Перед выполнением полнотекстовых запросов на данной таблице администратор базы данных должен создать в таблице полнотекстовый индекс. В полнотекстовый индекс включается один или несколько символьных столбцов в таблице. Эти столбцы могут содержать любой из следующих типов данных: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml` или `varbinary(max)` и FILESTREAM. Каждый полнотекстовый индекс индексирует один или несколько столбцов таблицы, а каждому столбцу может соответствовать определенный язык.  

@@ -1,5 +1,5 @@
 ---
-title: InStr (многомерные Выражения) | Документы Microsoft
+title: InStr (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f4bfab3bc18958a51bb05c68e90c17a1359d046
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629096"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -37,8 +37,8 @@ InStr([start, ]searched_string, search_string[, compare])
  *search_string*  
  Строковое выражение, которое необходимо найти.  
   
- *Сравнение*  
- Целочисленное значение (не обязательно). Этот аргумент никогда не учитывается. Определяется для совместимости с другими **Instr** функции на других языках.  
+ *Сравнить*  
+ Целочисленное значение (не обязательно). Этот аргумент никогда не учитывается. Он определяется для совместимости с другими **Instr** функции на других языках.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Целочисленное значение, начальная позиция *String2* в *String1*.  
@@ -60,7 +60,7 @@ InStr([start, ]searched_string, search_string[, compare])
 >  **InStr** всегда выполняет сравнение без учета регистра.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано использование метода **Instr** и различные сценарии результатов.  
+ В следующем примере показано использование **Instr** и различные сценарии результатов.  
   
 ```  
 with   

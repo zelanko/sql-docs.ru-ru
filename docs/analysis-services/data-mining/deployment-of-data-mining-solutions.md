@@ -1,5 +1,5 @@
 ---
-title: Развертывание решений интеллектуального анализа данных | Документы Microsoft
+title: Развертывание решений интеллектуального анализа данных | Документация Майкрософт
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b42d01b097483d9088bd76257cd30ac37158f889
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467410"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Развертывание решений интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "34015221"
   
  [Связанные ресурсы](#bkmk_Resources)  
   
-## <a name="in-this-section"></a>В этом разделе  
- [Развертывание решения интеллектуального анализа данных для предыдущих версий SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
+## <a name="in-this-section"></a>в этом разделе  
+ [Развертывание решения интеллектуального анализа данных в предыдущих версиях SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
   
  [Экспорт и импорт объектов интеллектуального анализа данных](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
@@ -71,13 +71,13 @@ ms.locfileid: "34015221"
   
  Если модели используют куб в качестве источника данных, дополнительные сведения о перемещении моделей и соответствующих данных куба см. в следующем разделе.  
   
- [Развертывание проектов служб Analysis Services & #40; SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Развертывание проектов служб Analysis Services (среда SSDT)](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
  Содержит общие сведения о развертывании проектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и описывает свойства, которые можно задать как часть конфигурации проекта.  
   
 ## <a name="see-also"></a>См. также  
  [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Средства запросов интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Обработка требования и рекомендации & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Требования к обработке и связанные замечания (интеллектуальный анализ данных)](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

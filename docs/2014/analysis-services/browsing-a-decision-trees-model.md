@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 257d193c84420a0c70ea99ef2a8cadfa9e11eec5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468757"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Просмотр модели дерева принятия решений
   При открытии модели классификации с помощью **Обзор**, модель отображается в интерактивных средство просмотра дерева решений, аналогичную [!INCLUDE[msCoName](../includes/msconame-md.md)] средство просмотра дерева принятия решений в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. В средстве просмотра отображаются результаты классификации в виде диаграммы, разработанной для выделения условий, которые отличают одну группу данных от другой. Также можно выполнить детализацию до отдельных подмножеств дерева и получить базовые данные.  

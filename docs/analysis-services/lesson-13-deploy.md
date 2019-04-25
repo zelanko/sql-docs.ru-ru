@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 13: Развертывание | Документация Майкрософт'
+title: Занятие 13. Развертывание | Документация Майкрософт
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6b2ed8149cef9e9886398feebf43329f962b9537
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467646"
 ---
 # <a name="lesson-13-deploy"></a>Занятие 13. Развертывание
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 На этом занятии вы настроите свойства развертывания; Указание локально или экземпляр Azure сервера и имя для модели. Затем вы развернете модель к этому экземпляру. После развертывания модели, пользователи смогут подключаться к нему с помощью клиентского приложения для создания отчетов. Дополнительные сведения о развертывании см. в разделе [развертывание решений табличной модели](../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md) и [развертывание в Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy).  
   
-Предполагаемое время выполнения этого занятия: **5 минут**.  
+Предполагаемое время для выполнения этого занятия: **5 минут**  
   
 ## <a name="prerequisites"></a>предварительные требования  
-Этот раздел является частью учебника по табличному моделированию, который необходимо изучать по порядку. Перед выполнением задач на этом занятии, необходимо завершить предыдущее занятие: [занятие 12: анализ в Excel](../analysis-services/lesson-12-analyze-in-excel.md).  
+Этот раздел является частью учебника по табличному моделированию, который необходимо изучать по порядку. Перед выполнением задач на этом занятии, необходимо завершить предыдущее занятие: [Занятие 12. Анализ в Excel](../analysis-services/lesson-12-analyze-in-excel.md).  
   
 ## <a name="deploy-the-model"></a>Развертывание модели  
   
