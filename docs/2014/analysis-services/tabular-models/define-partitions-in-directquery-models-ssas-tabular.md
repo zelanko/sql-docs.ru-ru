@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f445b32e0c580cde10f38a22b3d26270d927c5a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757319"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>Секции и режим DirectQuery (табличные службы SSAS)
-  В этом разделе объясняется использование секций в моделях DirectQuery. Дополнительные общие сведения о секциях в табличных моделях см. в разделе [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md).  
+  В этом разделе объясняется использование секций в моделях DirectQuery. Дополнительные общие сведения о секциях в табличных моделях см. в разделе [Секции (табличные службы SSAS)](partitions-ssas-tabular.md).  
   
  Инструкции о том, как изменить секцию, которая используется, или Просмотр сведений о разделе, см. в разделе [изменение секции DirectQuery &#40;табличные службы SSAS&#41;](../change-the-directquery-partition-ssas-tabular.md).  
   
@@ -49,6 +49,6 @@ ms.locfileid: "48054051"
 |InMemory с DirectQuery|Разрешить обработку секции|Если модель использует гибридный режим, то для запросов в памяти и запросов к источнику данных DirectQuery следует использовать одну и ту же секцию.|  
   
 ## <a name="see-also"></a>См. также  
- [Секции &#40;табличные службы SSAS&#41;](partitions-ssas-tabular.md)  
+ [Секции (табличные службы SSAS)](partitions-ssas-tabular.md)  
   
   

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a031466e35fef90104ab81fec17010725f8f5c0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761732"
 ---
 # <a name="optimizing-the-neworg-table"></a>Оптимизация таблицы NewOrg
   **NewOrd** таблицы, созданной в [заполнение таблицы существующими иерархическими данными](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) содержит все сведения о сотрудниках и представляет иерархическую структуру с помощью `hierarchyid`тип данных. Эта задача добавляет новые индексы для поддержки поиска по столбцу `hierarchyid`.  
@@ -72,7 +72,7 @@ ms.locfileid: "48146984"
   
      [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-     Индекс преимущественно в глубину: записи сотрудников хранятся рядом с записью их менеджера.  
+     Индекс преимущественно в глубину: Записи сотрудников хранятся рядом с записью их менеджера.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48146984"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     Индекс преимущественно по **EmployeeID**: строки хранятся в соответствии с последовательностью значений **EmployeeID**.  
+     **EmployeeID**-индекс с приоритетом: Строки хранятся в **EmployeeID** последовательности.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -160,6 +160,6 @@ ms.locfileid: "48146984"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Сводка. преобразование таблицы в иерархическую структуру](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
+ [Сводка. Преобразование таблицы в иерархическую структуру](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
   
   

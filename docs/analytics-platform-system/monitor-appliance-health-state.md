@@ -1,6 +1,6 @@
 ---
-title: Монитор работоспособности устройства - система платформы аналитики
-description: Как отслеживать состояние устройства система платформы аналитики с помощью консоли администрирования, или путем непосредственного запроса к динамическим административным представлениям Parallel Data Warehouse.
+title: Мониторинг работоспособности устройства - Analytics Platform System
+description: Как отслеживать состояние устройства система Analytics Platform System, с помощью консоли администрирования, или путем непосредственного запроса к динамическим административным представлениям Parallel Data Warehouse.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,31 +10,31 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d8616d291dcaa8afadc01c9bd237903ca6c13573
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640038"
 ---
-# <a name="monitor-appliance-health-state"></a>Монитор состояния работоспособности устройства
-В этой статье объясняется, как осуществлять мониторинг состояния устройства система платформы аналитики с помощью консоли администрирования, или путем непосредственного запроса к динамическим административным представлениям Parallel Data Warehouse. 
+# <a name="monitor-appliance-health-state"></a>Состояние работоспособности монитора устройства
+В этой статье объясняется, как осуществлять мониторинг состояния устройства система Analytics Platform System, с помощью консоли администрирования, или путем непосредственного запроса к динамическим административным представлениям Parallel Data Warehouse. 
   
 ## <a name="to-monitor-the-appliance-state"></a>Чтобы отслеживать состояние устройства  
-Системный администратор может использовать консоли администрирования или SQL Server PDW динамические административные представления (DMV), для получения полную иерархию узлов, компоненты и программного обеспечения. Следующая диаграмма представляет общее понимание компонентов, которые отслеживает SQL Server PDW.  
+Системный администратор может использовать консоль администратора или SQL Server PDW динамические административные представления (DMV) для получения полную иерархию узлов, компоненты и программного обеспечения. Следующая диаграмма представляет общее понимание компонентов, которые отслеживает SQL Server PDW.  
   
-![Обзор монитора](./media/monitor-appliance-health-state/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
+![Общие сведения о мониторинге](./media/monitor-appliance-health-state/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
   
 ### <a name="monitor-component-status-by-using-the-admin-console"></a>Мониторинг состояния компонента с помощью консоли администрирования  
-Чтобы получить состояние компонента с помощью консоли администрирования.  
+Чтобы получить состояние компонента с помощью консоли администрирования:  
   
 1.  Щелкните **состояние устройства** вкладки.  
   
-2.  На странице состояние устройства щелкните на определенном узле, чтобы просмотреть сведения об узле.  
+2.  На странице "Состояние устройства" щелкните конкретный узел, чтобы просмотреть сведения об узле.  
   
     ![PDW Admin Console State](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
   
 ### <a name="monitor-component-status-by-using-system-views"></a>Мониторинг состояния компонента с помощью системных представлений  
-Получить состояние компонента с помощью системных представлений с помощью [sys.dm_pdw_component_health_status](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md). Например следующий запрос получает сведения о состоянии для всех компонентов.  
+Чтобы получить состояние компонента с помощью системных представлений, используйте [sys.dm_pdw_component_health_status](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md). Например следующий запрос получает состояние для всех компонентов.  
   
 ```sql  
 SELECT   
@@ -67,7 +67,7 @@ ORDER BY
    p.[property_name];  
 ```  
   
-Ниже перечислены возможные возвращаемые значения для свойства Status  
+Возможные значения, возвращаемые для свойства Status::  
   
 -   ОК  
   
@@ -81,16 +81,16 @@ ORDER BY
   
 -   Недоступен  
   
--   Без возможности восстановления  
+-   Неустранимая  
   
-Чтобы увидеть все свойства для всех компонентов, удалите `WHERE  p.property_name = 'Status'` предложения.  
+Чтобы просмотреть все свойства для всех компонентов, удалите `WHERE  p.property_name = 'Status'` предложение.  
   
-**[Update_time]** отображается время последнего опроса компонента агентами работоспособности SQL Server PDW.  
+**[Update_time]** столбце указывается время последнего опроса компонент работоспособности агентов, SQL Server PDW.  
   
 > [!CAUTION]  
-> Убедитесь, что определить причину проблемы, если компонент не будет опрашиваться 5 минут или более; может быть оповещение, которое указывает на проблему с пульса программного обеспечения.  
+> Не забудьте определить причину проблемы, компонент не был опрос на 5 минут или больше; может быть оповещение, которое говорит о проблемах с пульса программного обеспечения.  
   
 ## <a name="see-also"></a>См. также  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Мониторинг устройства &#40;система платформы аналитики&#41;](appliance-monitoring.md)  
+[Мониторинг устройства &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 783bd1ba103e97e442e61891138090198a5cdd0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757843"
 ---
 # <a name="table-properties-dialog-box-ssas---tabular"></a>Диалоговое окно «Свойства таблицы» (службы SSAS — табличные модели)
   Используйте диалоговое окно **Свойства таблицы** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для просмотра свойств таблицы в базе данных с табличной моделью. Все свойства доступны только для чтения.  
@@ -29,7 +29,7 @@ ms.locfileid: "48104494"
   
 |Термин|Определение|  
 |----------|----------------|  
-|**Название**|Отображает имя таблицы.|  
+|**Name**|Отображает имя таблицы.|  
 |**Идентификатор**|Отображает идентификатор таблицы.|  
 |**Описание**|Показывает описание таблицы.|  
 |**Отметка времени создания**|Отображает дату и время создания таблицы.|  

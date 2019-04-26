@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89d92fc60e18926351cc94e6e6c21a32a7371ed5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638243"
 ---
 # <a name="sql-server-extended-events-engine"></a>Подсистема расширенных событий SQL Server
   Подсистема расширенных событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представляет собой набор служб и объектов, которые выполняют следующие действия.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad87b38ade044414062eba03e94dee415c53fc7e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637836"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Системные требования для собственного клиента SQL Server
   Чтобы использовать функции доступа к данным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например режим MARS, необходимо установить следующее программное обеспечение:  
@@ -68,11 +68,11 @@ ms.locfileid: "53365126"
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8 КБ)|определяемый пользователем тип|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|Изображение|  
-|varchar(max)|varchar|varchar|Текста|  
-|nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
-|xml|xml|xml|Ntext|  
+|varchar(max)|varchar|varchar|Text|  
+|nvarchar(max)|nvarchar|nvarchar|Ntext|  
+|Xml|Xml|Xml|Ntext|  
 |CLR UDT (> 8 КБ)|определяемый пользователем тип|varbinary|Изображение|  
-|Дата|Дата|varchar|Varchar|  
+|date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
 |time|time|varchar|Varchar|  

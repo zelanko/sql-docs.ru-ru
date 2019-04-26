@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e615df2adea50f2ee6d0d0741d6d885b87311ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757827"
 ---
 # <a name="table-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>Сведения о привязке таблицы (диалоговое окно «Источник секции») (службы Analysis Services — многомерные данные)
   Используйте параметр **Привязка таблицы** в диалоговом окне **Источник секции** , чтобы указать таблицу фактов, предоставляющую данные для этой секции. Чтобы открыть эту панель, выберите **Привязка таблицы** в параметре **Тип привязки** в диалоговом окне **Источник секции** .  

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 3c43734dbd7ef1a766f3f1258f97565ab82e175d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639855"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Мониторинг с помощью System Center Operations Manager — система Analytics Platform System
 Используйте System Center Operations Manager (SCOM) для мониторинга Analytics Platform System (APS) устройство.

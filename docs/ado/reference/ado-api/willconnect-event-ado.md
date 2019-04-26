@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22d30e389c61a66d417ad5baec99a8834a754047
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642523"
 ---
 # <a name="willconnect-event-ado"></a>Событие WillConnect (ADO)
 **WillConnect** событие вызывается до начала соединения.  
   
- **Область применения:** [объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ **Область применения:** [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,7 +40,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *connectionString*  
  Объект **строка** , содержащий сведения о соединении для ожидающего подключения.  
   
- *Идентификатор пользователя*  
+ *UserID*  
  Объект **строка** , содержащий имя пользователя для ожидающего подключения.  
   
  *Пароль*  

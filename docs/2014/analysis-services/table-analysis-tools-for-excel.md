@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 596bc66152f36c25169e4a089644042d25f8c13b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757907"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Средства анализа таблиц для Excel
   Средства интеллектуального анализа данных в **анализ** панель инструментов являются самым простым способом приступить к работе с интеллектуальным анализом данных. Каждое средство автоматически анализирует распределение и тип данных, а также задает параметры для получения допустимых результатов. Нет необходимости выбирать алгоритмы и настраивать сложные параметры.  

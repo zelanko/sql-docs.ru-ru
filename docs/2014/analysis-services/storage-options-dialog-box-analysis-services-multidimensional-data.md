@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1ad155eb0a7893b7c48fabb0ef7b8ba97373122e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758473"
 ---
 # <a name="storage-options-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Параметры хранилища» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Параметры хранилища** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для задания пользовательского режима хранения, упреждающего кэширования и параметров уведомлений для измерений, кубов, групп мер и секций. Диалоговое окно **Параметры хранилища** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] можно отобразить, перейдя на вкладку **Параметры** в диалоговом окне **Настройки хранилища** . Дополнительные сведения о диалоговом окне **Настройки хранилища** см. в разделе [Диалоговое окно "Настройки хранилища" (службы Analysis Services — многомерные данные)](storage-settings-dialog-box-analysis-services-multidimensional-data.md).  

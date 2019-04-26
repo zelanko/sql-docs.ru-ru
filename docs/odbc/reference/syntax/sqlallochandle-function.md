@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0a075b96e7a29cef4a10f034147732bf03f64b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761776"
 ---
 # <a name="sqlallochandle-function"></a>Функция SQLAllocHandle
 **Соответствие стандартам**  
@@ -59,7 +59,7 @@ SQLRETURN SQLAllocHandle(
   
 -   SQL_HANDLE_ENV  
   
--   ЗНАЧЕНИЕ SQL_HANDLE_STMT  
+-   SQL_HANDLE_STMT  
   
  Дескриптор SQL_HANDLE_DBC_INFO_TOKEN используется только для диспетчера драйверов и драйверов. Приложения не должны использовать этот тип дескриптора. Дополнительные сведения о SQL_HANDLE_DBC_INFO_TOKEN, см. в разделе [драйвера ODBC с поддержкой пула подключений разработка](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
   
@@ -95,7 +95,7 @@ SQLRETURN SQLAllocHandle(
 |HY009|Недопустимое использование пустого указателя|(DM) *OutputHandlePtr* аргумент был пустым указателем.|  
 |HY010|Ошибка последовательности функций|(DM) *HandleType* аргумент был SQL_HANDLE_DBC, и **SQLSetEnvAttr** не был вызван для установки атрибута SQL_ODBC_VERSION среды.<br /><br /> (DM) был вызван асинхронно выполняемой функции для **InputHandle** и еще выполнялась при **SQLAllocHandle** функция была вызвана с **HandleType** значение значение SQL_HANDLE_STMT или SQL_HANDLE_DESC.|  
 |HY013|Ошибка управления памятью|*HandleType* аргумент был SQL_HANDLE_DBC, имеющим значение SQL_HANDLE_STMT или SQL_HANDLE_DESC; а вызов функции не может быть обработан, так как базовые объекты памяти оказываются недоступны, возможно из-за нехватки памяти условия.|  
-|HY014 ДОСТИГНУТ|Предельное число дескрипторов|Указывает предельное число дескрипторов, которые могут быть выделены для типа дескриптора определяемые драйвером *HandleType* аргумент был достигнут.|  
+|HY014|Предельное число дескрипторов|Указывает предельное число дескрипторов, которые могут быть выделены для типа дескриптора определяемые драйвером *HandleType* аргумент был достигнут.|  
 |HY092|Недопустимый атрибут/идентификатор параметра|(DM) *HandleType* аргумент не был: SQL_HANDLE_ENV, установленным в значение sql_handle_stmt, имеющим значение SQL_HANDLE_STMT или SQL_HANDLE_DESC.|  
 |HY117|Подключение будет приостановлена из-за состояние транзакции неизвестно. Только отключиться и разрешены функции, доступные только для чтения.|(DM) Дополнительные сведения о состоянии приостановки, см. в разделе [функция SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYC00|Дополнительная возможность не реализована|*HandleType* аргумент SQL_HANDLE_DESC и драйвер ODBC 2. *x* драйвера.|  

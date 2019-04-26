@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2a01b9d9d13bf5e9135d287553beb8b87c2dcd5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638852"
 ---
 # <a name="what39s-new-in-sql-server-native-client"></a>Что&#39;возможности в SQL Server Native Client
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] устанавливает [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client отсутствует.  

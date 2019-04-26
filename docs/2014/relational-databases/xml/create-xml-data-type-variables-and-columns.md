@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637997"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Создание переменных и столбцов типа данных XML
   Тип данных `xml` — это встроенный в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных, несколько напоминающий другие встроенные типы данных, такие как `int` и `varchar`. Как и другие встроенные типы, можно использовать `xml` типа данных как тип столбца при создании таблицы как тип переменной, типа параметра, тип возвращаемого функцией значения, а также в [CAST и CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  

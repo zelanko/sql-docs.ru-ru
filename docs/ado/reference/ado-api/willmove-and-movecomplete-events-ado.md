@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47040adf2ce7be17d0540755f7fa972d7a76266f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642473"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>События WillMove и MoveComplete (ADO)
 **События WillMove** событие вызывается перед отложенная операция изменяет текущую позицию в [записей](../../../ado/reference/ado-api/recordset-object-ado.md). **MoveComplete** событие вызывается после текущей позиции в **записей** изменения.  
@@ -60,7 +60,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
  Объект [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта. **Записей** для возникновения этого события.  
   
 ## <a name="remarks"></a>Примечания  
- Объект **события WillMove** или **MoveComplete** событие может происходить из-за следующих **записей** операций: [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md), [переместить](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), и [Requery](../../../ado/reference/ado-api/requery-method.md). Эти события могут происходить из-за следующих свойств: [фильтра](../../../ado/reference/ado-api/filter-property.md), [индекс](../../../ado/reference/ado-api/index-property.md), [закладки](../../../ado/reference/ado-api/bookmark-property-ado.md), [примеры AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)и [Примеры AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md). Эти события также возникать, если дочерний элемент **записей** имеет **набор записей** события подключения и родительским **записей** перемещается.  
+ Объект **события WillMove** или **MoveComplete** событие может происходить из-за следующих **записей** операций: [Откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md), [переместить](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), и [Requery](../../../ado/reference/ado-api/requery-method.md). Эти события могут происходить из-за следующие свойства: [Фильтр](../../../ado/reference/ado-api/filter-property.md), [индекс](../../../ado/reference/ado-api/index-property.md), [закладки](../../../ado/reference/ado-api/bookmark-property-ado.md), [примеры AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), и [примеры AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md). Эти события также возникать, если дочерний элемент **записей** имеет **набор записей** события подключения и родительским **записей** перемещается.  
   
  Необходимо задать *adStatus* параметр **adStatusUnwantedEvent** для каждого возможного *adReason* значение, чтобы полностью остановить уведомления о событии для любых событий, включает в себя *adReason* параметра.  
   

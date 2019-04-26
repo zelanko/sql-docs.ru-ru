@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dd519c9cafb1358f21af30d2c9ea0522e47768b7
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757480"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>Создание и управление секциями в базе данных рабочей области (табличные службы SSAS)
   Секции разделяют таблицу на логические части. Все секции можно обработать (обновить) независимо или параллельно с другими секциями. Использование секций позволяет улучшить масштабируемость и управление базами данных большого размера. По умолчанию все таблицы содержат одну секцию, включающую все столбцы. Задачи в этом разделе демонстрируют создание секций и управление ими в базе данных рабочей области модели с помощью диалогового окна **Диспетчер секций** в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  

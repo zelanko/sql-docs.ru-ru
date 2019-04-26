@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c542edcd14da08ab58770d7706139762c9735902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757343"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>Развертывание из SQL Server Data Tools (табличные службы SSAS)
   Задания в этом разделе помогут развернуть решение табличной модели с помощью команды Deploy в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -72,7 +72,7 @@ ms.locfileid: "48054144"
  Щелкните, чтобы остановить операцию развертывания. Этот параметр полезен, если операция развертывания занимает слишком много времени либо обнаружено слишком много ошибок.  
   
 ## <a name="see-also"></a>См. также  
- [Развертывание решений табличной модели &#40;табличные службы SSAS&#41;](tabular-model-solution-deployment-ssas-tabular.md)   
- [Настройка моделирования данных по умолчанию и свойств развертывания &#40;табличные службы SSAS&#41;](properties-ssas-tabular.md)  
+ [Развертывание решений табличной модели (табличные службы SSAS)](tabular-model-solution-deployment-ssas-tabular.md)   
+ [Настройка моделирования данных по умолчанию и свойств развертывания (табличные службы SSAS)](properties-ssas-tabular.md)  
   
   

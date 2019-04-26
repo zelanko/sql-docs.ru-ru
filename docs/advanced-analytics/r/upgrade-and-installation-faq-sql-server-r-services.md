@@ -9,11 +9,11 @@ ms.author: davidph
 author: dphansen
 manager: cgronlun
 ms.openlocfilehash: 3a4a0c740268a8e2d6691e3c8a87634cc05f9ab1
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642315"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>Часто задаваемые вопросы о машинного обучения SQL Server или R Server обновлению и установке
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "58510421"
 
 Следующие версии были установлены с предварительных версий SQL Server 2016.
 
-| Версия | Сборка         |
+| Version | Сборка         |
 |---------|---------------|
 | CTP 3.0 | 13.0.xxx      |
 | CTP 3.1 | 13.0.801.12   |

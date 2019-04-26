@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 429956528484a11b26caf6c39a666ef933515314
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762374"
 ---
 # <a name="mssqlserver8651"></a>MSSQLSERVER_8651
     
@@ -42,7 +42,7 @@ ms.locfileid: "48145313"
   
 1.  Проверьте, не используют ли память данного сервера другие приложения или службы. Измените настройки таким образом, чтобы менее важные приложения или службы использовали меньший объем памяти.  
   
-2.  Начните сбор счетчиков системного монитора для **SQL Server: диспетчер буферов**, **SQL Server: диспетчер памяти**.  
+2.  Начните сбор счетчиков системного монитора для **SQL Server: Диспетчер буферов**, **SQL Server: Диспетчер памяти**.  
   
 3.  Проверьте следующие параметры конфигурации памяти [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   

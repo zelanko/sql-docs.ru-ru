@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: aaf90124cc7877b633a997a2c4f170057b965028
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639877"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Параллельное хранилище данных компонентов - Analytics Platform System
 В этой статье объясняется, программное обеспечение устройства и компоненты программного обеспечения не является специализированным Analytics Platform System.  

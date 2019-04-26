@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aef22dfdc18304591b8d556fd323ba6b851778eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757822"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>Предложение связанных столбцов (мастер интеллектуального анализа данных)
   Страница **Предложение связанных столбцов** позволяет просматривать рекомендации функции **Предложить** , выбранной на предыдущей странице данного мастера. Входные столбцы будут предварительно отобраны на основании их связи с выбранным столбцом **Прогнозируемый** . Если принять изменения в этом диалоговом окне, они будут отражены на странице **Определение обучающих данных** .  
   
- **Дополнительные сведения:** [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Создание реляционной структуры интеллектуального анализа данных](data-mining/create-a-relational-mining-structure.md)  
+ **Дополнительные сведения:** [Мастер интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Создание реляционной структуры](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Параметры  
  **Имя столбца**  

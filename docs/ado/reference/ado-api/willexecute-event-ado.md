@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 234a0eeba57958063a6f2eedb8510486df8a53a0
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642517"
 ---
 # <a name="willexecute-event-ado"></a>Событие WillExecute (ADO)
 **WillExecute** событие вызывается непосредственно перед выполняет ожидания выполнения команды для подключения.  

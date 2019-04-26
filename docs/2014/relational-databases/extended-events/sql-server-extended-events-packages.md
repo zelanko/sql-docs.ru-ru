@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638737"
 ---
 # <a name="sql-server-extended-events-packages"></a>Пакеты обработки расширенных событий SQL Server
   Пакет представляет собой контейнер для объектов средства обработки расширенных событий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Существуют три типа пакетов расширенных событий.  
@@ -147,7 +147,7 @@ where name = 'keyword_map'
   
 -   pred_compare;  
   
--   Тип  
+-   type  
   
  Дополнительные сведения см. в разделе [sys.dm_xe_objects (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql).  
   

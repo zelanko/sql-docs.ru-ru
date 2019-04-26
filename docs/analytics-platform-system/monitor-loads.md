@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: cb840c64c2235a2f3902c45633aa5471655482dc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639962"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>Монитор загружает в Parallel Data Warehouse
 Монитор, активные и Недавние [dwloader](dwloader.md) загружает с помощью консоли администрирования Analytics Platform System (APS) или Parallel Data Warehouse (PDW) [системных представлений](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
