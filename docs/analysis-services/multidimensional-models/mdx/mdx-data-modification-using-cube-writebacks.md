@@ -1,5 +1,5 @@
 ---
-title: Обратная запись в куб (многомерные Выражения) | Документы Microsoft
+title: Обратная запись в куб (многомерные Выражения) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc950c69a25ff976b8cdf1cd7cb4252c2584e0af
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740129"
 ---
-# <a name="mdx-data-modification---using-cube-writebacks"></a>Изменение данных многомерных Выражений — обратная запись в куб
+# <a name="mdx-data-modification---using-cube-writebacks"></a>Изменение данных многомерных выражений — использование обратной записи кубов
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Для обновления куба используется инструкция [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) . Эта инструкция позволяет записать в кортеж указанное значение. Для эффективного использования инструкции UPDATE CUBE необходимо понимать ее синтаксис, ситуации, в которых может возникнуть ошибка, и влияние обновления на весь куб.  
   
@@ -111,6 +111,6 @@ USE_EQUAL_ALLOCATION
 -   Изменение степени гранулярности измерения, которое содержится в обратной записи.  
   
 ## <a name="see-also"></a>См. также  
- [Изменение данных & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
+ [Изменение данных (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
   
   

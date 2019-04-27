@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 67faee86f0b5a333e406ccc2fead8b002b525e36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740094"
 ---
 # <a name="member-object-properties-methods-and-events"></a>Свойства, методы и события объекта Member
 ## <a name="propertiescollections"></a>Свойства и коллекции  
@@ -40,7 +40,7 @@ ms.locfileid: "47688062"
   
  [Родительское свойство](../../../ado/reference/ado-md-api/parent-property-ado-md.md)  
   
- [Свойство ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)  
+ [ParentSameAsPrev Property](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)  
   
  [Свойства коллекции](../../../ado/reference/ado-api/properties-collection-ado.md)  
   

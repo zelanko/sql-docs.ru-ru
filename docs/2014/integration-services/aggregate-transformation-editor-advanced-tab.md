@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 605a92e00b21d64679076fabcb41068b94921779
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771940"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>Редактор преобразований «Статистическая обработка» (вкладка «Дополнительно»)
   Вкладка **Дополнительно** диалогового окна **Редактор преобразования «Статистическая обработка»** позволяет задавать свойства компонентов, указывать агрегатные функции и задавать свойства входных и выходных столбцов.  

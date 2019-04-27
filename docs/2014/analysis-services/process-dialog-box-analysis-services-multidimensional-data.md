@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2739af6b1fdb6630b44ae56d1ab0b83ef5fa4535
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748856"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Обработка» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Обработка** в средах [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] и [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для обработки объектов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Можно вызвать диалоговое окно **Обработка** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] следующим образом:  
@@ -35,7 +35,7 @@ ms.locfileid: "48074544"
   
 ## <a name="options"></a>Параметры  
  **Список объектов**  
- Выберите объекты служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], которые должны быть обработаны, а также параметры обработки и установки, которые должны быть применены. Сетка содержит следующие столбцы:  
+ Выберите объекты служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , которые должны быть обработаны, а также параметры обработки и установки, которые должны быть применены. Сетка содержит следующие столбцы:  
   
  **Имени объекта**  
  Отображает имя объекта, который должен быть обработан. Значок слева от имени указывает тип объекта.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43be2214ce811b8b0a0855221823fa6f1bdf5984
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740794"
 ---
 # <a name="use-a-template-to-create-an-action"></a>Использование шаблона для создания действия
   В представлении **Действия** в конструкторе кубов указано количество доступных шаблонов для создания типовых операций. Доступ к конструктору кубов можно получить из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -33,6 +33,6 @@ ms.locfileid: "48154504"
 -   Заполните необходимую информацию для завершения создания операции по шаблону.  
   
 ## <a name="see-also"></a>См. также  
- [Действия &#40;службы Analysis Services — многомерные данные&#41;](actions-analysis-services-multidimensional-data.md)  
+ [Действия (службы Analysis Services — многомерные данные)](actions-analysis-services-multidimensional-data.md)  
   
   

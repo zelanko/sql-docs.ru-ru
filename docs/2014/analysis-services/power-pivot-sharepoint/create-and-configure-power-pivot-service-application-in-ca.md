@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac1b7ad9e5308437dacf51b7960822e7636ab3e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749397"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>Создание и настройка приложения службы PowerPivot в центре администрирования
   Приложение службы PowerPivot — это экземпляр общей службы PowerPivot. Каждое приложение службы имеет свое удостоверение, параметры настройки, свойства и внутреннее хранилище данных.  

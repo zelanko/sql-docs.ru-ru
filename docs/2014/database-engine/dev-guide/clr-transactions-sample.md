@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13d23977aeeb6f7643fc039c23b02267d47c106f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754072"
 ---
 # <a name="clr-transactions-sample"></a>Образец транзакции среды CLR
   В этом образце демонстрируется управление транзакциями с использованием управляемых программных интерфейсов, расположенных в пространстве имен `System.Transactions` . В частности, класс `System.Transactions.TransactionScope` используется для установления границы транзакции, чтобы не допустить изменения значений запасов, кроме как при наличии достаточных запасов для выполнения запроса, а также при наличии запасов, передача которых из одного местоположения в другое происходит неразрывно. Автоматическая регистрация в распределенной транзакции демонстрируется путем записи данных об изменениях товарных запасов на складе в базу данных аудита, хранящуюся в отдельном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

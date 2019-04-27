@@ -1,5 +1,5 @@
 ---
-title: Определяемые пользователем свойства элементов (многомерные Выражения) | Документы Microsoft
+title: Определяемые пользователем свойства элементов (многомерные Выражения) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77ae7cf92c9384b2be79048c860ef6a8b0476535
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740234"
 ---
-# <a name="mdx-member-properties---user-defined-member-properties"></a>Свойства элементов MDX - определенных пользователем свойств элементов
+# <a name="mdx-member-properties---user-defined-member-properties"></a>Свойства элементов многомерных Выражений — определяемых пользователем свойств элементов
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Определяемые пользователем свойства элементов можно добавить к конкретному именованному уровню измерения в виде связей атрибутов. Определяемые пользователем свойства элементов нельзя добавлять к уровню иерархии **(All)** или в саму иерархию.  
   
@@ -64,8 +64,8 @@ FROM [Adventure Works]
   
  Дополнительные сведения о создании вычисляемых элементов см. в разделе [Создание вычисляемых элементов в многомерных выражениях (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md).  
   
-## <a name="see-also"></a>См. также:  
- [С помощью свойства элементов & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [Свойства & #40; Многомерные Выражения & #41;](../../../mdx/properties-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Использование свойств элементов (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [Properties (многомерные выражения)](../../../mdx/properties-mdx.md)  
   
   

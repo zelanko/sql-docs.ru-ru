@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4b1f11919ab6dcc89da188601867f8a49a1aa48f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740084"
 ---
 # <a name="member-object-ado-md"></a>Объект Member (многомерные объекты ADO)
 Представляет элемент уровня в кубе, дочерние элементы элемента уровня или членом положение вдоль оси набора ячеек.  
@@ -29,7 +29,7 @@ ms.locfileid: "47633552"
 ## <a name="remarks"></a>Примечания  
  Свойства **член** различаться в зависимости от контекста, в котором оно использовано. Объект **член** из [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md) в [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) имеет [дочерние элементы](../../../ado/reference/ado-md-api/children-property-ado-md.md) свойство, которое возвращает **члены** на следующий нижний уровень в иерархии из текущего **член**. Для **член** из [позиции](../../../ado/reference/ado-md-api/position-object-ado-md.md), **дочерние элементы** всегда возвращается пустая коллекция. Кроме того [тип](../../../ado/reference/ado-md-api/type-property-ado-md.md) свойство применяется только к **члены** из **уровень**.  
   
- Объект **член** из **позиции** имеет два свойства, которые полезны при отображении [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) и [ ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Произойдет ошибка, если эти свойства доступны на **член** из **уровень**.  
+ Объект **член** из **позиции** имеет два свойства, которые полезны при отображении [набора ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) и [ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Произойдет ошибка, если эти свойства доступны на **член** из **уровень**.  
   
  С помощью коллекций и свойств **член** объект **уровень**, можно выполнять следующие:  
   

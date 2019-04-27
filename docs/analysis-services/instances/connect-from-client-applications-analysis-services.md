@@ -1,5 +1,5 @@
 ---
-title: Подключение из клиентских приложений (службы Analysis Services) | Документы Microsoft
+title: Подключение из клиентских приложений (службы Analysis Services) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d71320fad55b9a0d052ad1bb9c9fd25ab861246c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748646"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Подключение из клиентских приложений (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34019591"
   
 -   [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [Авторизацию доступа к объектам и операции & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Предоставление доступа к объектам и операциям (службы Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> Подключение с помощью среды SQL Server Management Studio (SSMS)  
  Подключение к службам Analysis Services в среде SSMS для управления экземплярами сервера и базами данных в интерактивном режиме. Можно также запустить запросы XMLA или многомерных выражений для выполнения задач администрирования или получения данных. В отличие от других средств и приложений, которые загружают базы данных, только если отправляется запрос, среда SSMS загружает все базы данных при соединении с сервером, предполагая, что разрешение на просмотр базы данных имеется. Это означает, что, если на сервере есть множество табличных баз данных, все они будут загружены в память системы при установке соединения с помощью среды SSMS.  
@@ -131,6 +131,6 @@ ms.locfileid: "34019591"
  [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Методики проверки подлинности, поддерживаемые службами Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Олицетворение](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
- [Создать источник данных & #40; Многомерные службы SSAS & #41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [Создание источника данных (многомерные службы SSAS)](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

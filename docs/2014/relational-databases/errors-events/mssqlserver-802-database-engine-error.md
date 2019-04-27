@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c1caf78bedc85f7de7a55b67daee4c227d2a8dd2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762366"
 ---
 # <a name="mssqlserver802"></a>MSSQLSERVER_802
     
@@ -40,7 +40,7 @@ ms.locfileid: "48125296"
   
 1.  Проверьте, не используют ли память данного сервера другие приложения или службы. Измените настройки таким образом, чтобы менее важные приложения или службы использовали меньший объем памяти.  
   
-2.  Начните сбор счетчиков системного монитора для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: диспетчер буферов**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: диспетчер памяти**.  
+2.  Начните сбор счетчиков системного монитора для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Диспетчер буферов**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Диспетчер памяти**.  
   
 3.  Проверьте следующие параметры конфигурации памяти [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   

@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19381b0c5dbe690a60b2c536a8da759205c08c31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643451"
 ---
 # <a name="granting-access-to-a-database-object"></a>Предоставление доступа к объекту базы данных
   Будучи администратором, можно выполнять инструкцию SELECT из таблицы **Products** и представления **vw_Names**, а также выполнять процедуру **pr_Names**; однако Mary всего этого не может. Чтобы предоставить Mary необходимые разрешения, воспользуйтесь инструкцией GRANT.  
@@ -44,6 +44,6 @@ ms.locfileid: "48209514"
   
 ## <a name="see-also"></a>См. также  
  [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)   
- [ОТОЗВАТЬ &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)  
+ [REVOKE (Transact-SQL)](/sql/t-sql/statements/revoke-transact-sql)  
   
   

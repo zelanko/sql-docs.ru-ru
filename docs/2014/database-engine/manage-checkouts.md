@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9de9a1f8ceca0fbb05ab2b6680c5fcc34c951109
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774538"
 ---
 # <a name="manage-checkouts"></a>Управление извлечениями
   После того как файл был добавлен к системе управления версиями, для изменения этого файла его нужно извлечь. Когда извлекается файл из управления версиями, поставщик управления версиями создает его последнюю версию на локальном диске и снимает с этого файла атрибут «Только для чтения». В некоторых случаях нужно изменить файл, не извлекая его. Дополнительные сведения о редактировании файла без проверки файл на выходе см. в разделе [изменение возвращенных файлов](../../2014/database-engine/edit-checked-in-files.md).  

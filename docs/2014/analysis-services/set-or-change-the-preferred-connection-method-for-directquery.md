@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5c4e2c19fb768849c3418874b4f1a831fae858c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746616"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>Установка или изменение предпочтительного метода подключения для DirectQuery
   При создании модели для использования в режиме DirectQuery необходимо сначала настроить поддержку DirectQuery в среде конструирования. Чтобы сделать это, см. в разделе [Включение режима разработки DirectQuery &#40;табличные службы SSAS&#41;](tabular-models/enable-directquery-mode-in-ssdt.md).  
@@ -33,23 +33,23 @@ ms.locfileid: "48186694"
   
 ### <a name="to-set-the-preferred-connection-method-for-a-directquery-model"></a>Настройка предпочтительного метода подключения для модели DirectQuery  
   
-1.  В [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], откройте файл решения для модели DirectQuery.  
+1.  В [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте файл решения для модели DirectQuery.  
   
 2.  В Visual Studio в меню **Проект** выберите пункт **Свойства**.  
   
 3.  На панели **Свойства** задайте для свойства **DirectQueryMode**одно из значений, обеспечивающих использование DirectQuery:  
   
-    -   **InMemory с DirectQuery**— с этим параметром модель развертывается, но необходимо обработать кэш, прежде чем к ней можно будет выполнять запросы.  
+    -   **InMemory с DirectQuery**: Если вы используете этот параметр, модель развертывается, но необходимо обработать кэш, прежде чем можно выполнять запросы к модели.  
   
-    -   **DirectQuery с InMemory**— с этим параметром кэш будет доступен для клиентов, если он уже обработан. Если выполнить развертывание модели с этим параметром и не обработать кэш, у некоторых клиентов при попытке подключения к модели будет возникать ошибка.  
+    -   **DirectQuery с InMemory**: Если вы используете этот параметр, кэш будет доступен для использования клиентами, если он уже обработан. Если выполнить развертывание модели с этим параметром и не обработать кэш, у некоторых клиентов при попытке подключения к модели будет возникать ошибка.  
   
-    -   **Только DirectQuery**— с этим параметром метаданные развертываются, но в модели нет данных. Клиенты, пытающиеся подключиться в режиме In-Memory, будут получать ошибку, указывающую, что модель не существует или не обработана.  
+    -   **Только DirectQuery**: Если вы используете этот параметр, метаданные развертываются, но модель не содержит данных в ней. Клиенты, пытающиеся подключиться в режиме In-Memory, будут получать ошибку, указывающую, что модель не существует или не обработана.  
   
 4.  При наличии ошибок откройте в Visual Studio **Список ошибок** и решите проблемы, мешающие развернуть модель в режиме DirectQuery.  
   
 ### <a name="to-verify-or-change-the-preferred-connection-method-for-a-directquery-model"></a>Проверка или изменение предпочтительного метода подключения для модели DirectQuery  
   
-1.  В [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] подключитесь к экземпляру с развернутой моделью DirectQuery.  
+1.  В [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]подключитесь к экземпляру с развернутой моделью DirectQuery.  
   
 2.  Щелкните правой кнопкой мыши шаблон базы данных и выберите пункт **Свойства**.  
   

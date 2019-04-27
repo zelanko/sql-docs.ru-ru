@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30393fd4233e0e6b1707de36fb881e97b626d1f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748216"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>Панель «Результаты» (представление прогнозирования модели интеллектуального анализа данных)
   Панель **Результаты** отображает результаты прогнозирующего запроса интеллектуального анализа данных, созданного в представлении **Проектирование** построителя прогнозирующих запросов. Можно скопировать выбранный элемент сетки или всю таблицу результатов в буфер обмена.  
@@ -37,7 +37,7 @@ ms.locfileid: "48071184"
  Обработать заново прогнозирующий запрос.  
   
 ## <a name="see-also"></a>См. также  
- [Построитель прогнозирующих запросов &#40;интеллектуального анализа данных&#41;](prediction-query-builder-data-mining.md)   
+ [Построитель прогнозирующих запросов (интеллектуальный анализ данных)](prediction-query-builder-data-mining.md)   
  [Интерфейсы запросов интеллектуального анализа данных](data-mining/data-mining-query-tools.md)   
  [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](/sql/dmx/data-mining-extensions-dmx-statements)  
   

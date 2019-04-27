@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c719b7d4bcd9b792beaa59fdbcf69783d7d3259d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745635"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Задача 4. Управление и просмотр результатов
   В этой задаче будет выполнен просмотр результатов автоматизированной очистки, а также интерактивная очистка данных поставщика. См. в разделе [этап интерактивной очистки](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) для получения дополнительных сведений.  

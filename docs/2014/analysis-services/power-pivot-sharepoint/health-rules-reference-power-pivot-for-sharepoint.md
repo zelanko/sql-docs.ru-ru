@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: acf4484f9a868556ce998e39ff417c50b1ca3304
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749439"
 ---
 # <a name="health-rules-reference-powerpivot-for-sharepoint"></a>Справочник по правилам для определения исправности (PowerPivot для SharePoint)
   В этом справочном разделе описываются правила исправности SharePoint, которые добавляются приложением PowerPivot для SharePoint. Эти правила служат для сообщения о проблемах с работоспособностью сервера, доступностью или конфигурацией приложения службы [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] или связанного с ним экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  

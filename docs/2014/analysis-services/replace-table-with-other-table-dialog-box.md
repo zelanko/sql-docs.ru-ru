@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17f87d063fd23ecc9ead9bfe097f21e74e011953
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748306"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>Диалоговое окно «Замена таблицы другой таблицей»
   Используйте диалоговое окно **Замена таблицы другой таблицей** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для замены существующей таблицы в представлении источника данных на таблицу базового источника данных, еще не включенную в представление источника данных. Диалоговое окно **Замена таблицы другой таблицей** отображается после щелчка правой кнопкой мыши по имени таблицы на панели **Диаграмма** или **Таблицы** окна **Конструктор представлений источников данных** и выбора пункта **Другой таблицей** в меню **Заменить таблицу**.  
@@ -40,6 +40,6 @@ ms.locfileid: "48173764"
   
 ## <a name="see-also"></a>См. также  
  [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Конструктор представлений источников данных &#40;службы Analysis Services — многомерные данные&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Конструктор представлений источников данных (службы Analysis Services — многомерные данные)](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

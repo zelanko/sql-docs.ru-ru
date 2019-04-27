@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 22a181aec3eaeeb50f1958f9de1380de7a8a85f7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765206"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Требования веб-приложений (службы Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] — это веб-приложение, размещенное в службах IIS. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] работает только в Internet Explorer (IE) 7 или более поздней версии. Internet Explorer 7 и более ранние версии, а также Microsoft Edge и Chrome не поддерживаются.  
@@ -57,7 +57,7 @@ ms.locfileid: "53361296"
   
 ||  
 |-|  
-|Службы IIS<br /><br /> Средства управления веб-сайтом<br /><br /> Консоль управления (IIS)<br /><br /> Веб-службы Интернета<br /><br /> Разработка приложений<br /><br /> Расширяемость платформы .NET версии 3.5<br /><br /> Расширяемость платформы .NET версии 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Расширения ISAPI<br /><br /> Фильтры ISAPI<br /><br /> Общие функции HTTP<br /><br /> Документ по умолчанию<br /><br /> Обзор каталога<br /><br /> Ошибки HTTP<br /><br /> Статическое содержимое<br /><br /> Примечание. Не устанавливайте протокол публикации WebDAV.]<br /><br /> Исправность и диагностика<br /><br /> Ведение журнала служб HTTP<br /><br /> Монитор запросов<br /><br /> Производительность<br /><br /> Сжатие статического содержимого<br /><br /> безопасность<br /><br /> Фильтрация запросов<br /><br /> Проверка подлинности Windows|  
+|Службы IIS<br /><br /> Средства управления веб-сайтом<br /><br /> Консоль управления (IIS)<br /><br /> Веб-службы Интернета<br /><br /> Разработка приложений<br /><br /> Расширяемость платформы .NET версии 3.5<br /><br /> Расширяемость платформы .NET версии 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Расширения ISAPI<br /><br /> Фильтры ISAPI<br /><br /> Общие функции HTTP<br /><br /> Документ по умолчанию<br /><br /> Обзор каталога<br /><br /> Ошибки HTTP<br /><br /> Статическое содержимое<br /><br /> [Примечание: Не устанавливайте протокол публикации WebDAV]<br /><br /> Исправность и диагностика<br /><br /> Ведение журнала служб HTTP<br /><br /> Монитор запросов<br /><br /> Производительность<br /><br /> Сжатие статического содержимого<br /><br /> безопасность<br /><br /> Фильтрация запросов<br /><br /> Проверка подлинности Windows|  
   
 ### <a name="features-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>Компоненты (операционные системы Windows Server 2008 или Windows Server 2008 R2, Windows 7)  
  В [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] или Windows Server 2008 R2 приведенные ниже компоненты можно установить с помощью **Диспетчера сервера** .  
@@ -77,7 +77,7 @@ ms.locfileid: "53361296"
   
 ||  
 |-|  
-|.NET Framework 3.5 (включая .NET 2.0 и 3.0)<br /><br /> Дополнительные службы .NET Framework 4.5 Advanced Services<br /><br /> ASP.NET 4.5<br /><br /> Службы WCF<br /><br /> HTTP-активация [Примечание. Обязательный компонент.]<br /><br /> Совместное использование TCP-порта<br /><br /> Служба активации Windows<br /><br /> Модель процесса<br /><br /> Среда .NET<br /><br /> API-интерфейсы конфигурации|  
+|.NET Framework 3.5 (включая .NET 2.0 и 3.0)<br /><br /> Дополнительные службы .NET Framework 4.5 Advanced Services<br /><br /> ASP.NET 4.5<br /><br /> Службы WCF<br /><br /> Активация HTTP [Примечание: Это необходимо.]<br /><br /> Совместное использование TCP-порта<br /><br /> Служба активации Windows<br /><br /> Модель процесса<br /><br /> Среда .NET<br /><br /> API-интерфейсы конфигурации|  
   
 ### <a name="accounts-and-permissions"></a>Учетные записи и разрешения  
   

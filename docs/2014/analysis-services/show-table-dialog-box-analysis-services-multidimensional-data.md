@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7148ac75da5ec7184c771c2411750749c15fa192
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746487"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Отображение таблицы» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Показать таблицу** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для добавления таблиц из представления источников данных, связанных с измерением, кубом или структурой интеллектуального анализа данных. Чтобы открыть это диалоговое окно в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , выполните одно из следующих действий.  

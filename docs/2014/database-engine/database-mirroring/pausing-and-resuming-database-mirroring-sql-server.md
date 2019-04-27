@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0e4f36dab5b953b1a631f4510e11bba47798bf62
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754526"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Приостановка и возобновление зеркального отображения базы данных (SQL Server)
   Владелец базы данных может приостанавливать и возобновлять сеанс зеркального отображения базы данных в любое время. Приостановление сохраняет состояние сеанса, при этом приостанавливается зеркальное отображение. Во время пиковых нагрузок приостановление может способствовать повышению производительности основного сервера.  

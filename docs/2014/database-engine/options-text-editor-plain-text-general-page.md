@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e5cac4a24abcca8c6ae17b598ed3eba5ec9c1f4e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774757"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Options (Text Editor - Plain Text - General Page)
   Используйте это диалоговое окно для смены режима изменения текстового редактора, который используется для редактирования документа, не связанного с определенным языком разработки. Для отображения этих настроек выберите пункт **Параметры** в меню **Сервис** , раскройте узел **Текстовый редактор**, щелкните **Неформатированный текст** , а затем выберите **Общие**.  

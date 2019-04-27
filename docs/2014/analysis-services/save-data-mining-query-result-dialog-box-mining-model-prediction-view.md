@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6b5c5f74ba8951bae27193b6796f09dcbdb8302
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748006"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>Диалоговое окно «Сохранение результатов запроса интеллектуального анализа данных» (представление прогноза модели интеллектуального анализа данных)
   Диалоговое окно **Сохранение результата запроса интеллектуального анализа данных** позволяет сохранить результаты запроса интеллектуального анализа в новой таблице.  

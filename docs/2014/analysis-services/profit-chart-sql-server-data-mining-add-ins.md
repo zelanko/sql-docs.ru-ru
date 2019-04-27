@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ddeafaafd816e226edff764c8e273cde6df4eaad
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748458"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>Диаграмма роста прибыли (надстройки интеллектуального анализа данных SQL Server)
   ![Кнопка диаграммы роста прибыли на ленте «Интеллектуальный анализ данных»](media/dmc-profitchart.gif "Диаграмма роста прибыли кнопки на ленте «Интеллектуальный анализ данных»")  

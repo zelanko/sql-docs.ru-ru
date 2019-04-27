@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 33302a69ab9e04930020e222699d6fd133ab63ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746396"
 ---
 # <a name="specify-a-unary-operator-dimension-business-intelligence-wizard"></a>Определение унарного оператора (измерение) (мастер бизнес-аналитики)
   Страница **Определение унарного оператора** позволяет выбрать измерение, родительский атрибут которого определен и к которому мастер бизнес-аналитики сможет применить унарные операторы. Дополнительные сведения о родительских атрибутах фильтров и атрибутах на основе домена см. в статье [Атрибуты и иерархии атрибутов](multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  

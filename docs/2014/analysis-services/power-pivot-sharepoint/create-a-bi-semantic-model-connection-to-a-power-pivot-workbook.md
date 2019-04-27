@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ad60799fa8590609cabd2e1e1fdfd8d7493c282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749562"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>Создание соединения семантической модели бизнес-аналитики с книгой PowerPivot
   Сведения, приведенные в этом разделе, помогут настроить соединение семантической модели бизнес-аналитики, которое перенаправляет на книгу PowerPivot в той же ферме.  
@@ -99,7 +99,7 @@ ms.locfileid: "48095800"
   
 ## <a name="see-also"></a>См. также  
  [Соединение семантической модели бизнес-Аналитики PowerPivot &#40;bism-файлы&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
- [Использование соединения семантической модели бизнес-Аналитики в Excel или Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
- [Создание подключения между семантической моделью бизнес-аналитики и книгой PowerPivot](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
+ [Создание соединения семантической модели бизнес-аналитики с табличным шаблоном базы данных](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
   

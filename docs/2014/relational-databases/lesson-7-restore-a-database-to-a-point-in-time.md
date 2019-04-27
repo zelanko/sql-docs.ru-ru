@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e0841c3473baf73033f298cfd3c8402ffc3aa19
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743359"
 ---
 # <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>Занятие 8. Восстановление базы данных в хранилище Windows Azure
   На этом занятии вы узнаете, как создать файл резервной копии локально, а затем восстановить его в хранилище Windows Azure. Обратите внимание, что ваша база данных может быть размещена локально или на виртуальной машине в Windows Azure. Для прохождения этого занятия не требуется завершать занятия 4, 5, 6 и 7.  

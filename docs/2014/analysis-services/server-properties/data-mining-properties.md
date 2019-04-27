@@ -59,16 +59,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80e7a793973ddbe0e55862d2e68f23e6c7e31dc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746836"
 ---
 # <a name="data-mining-properties"></a>Свойства интеллектуального анализа данных
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера интеллектуального анализа данных, перечисленные в следующих таблицах. Дополнительные сведения о дополнительных свойствах сервера и об их настройке см. в разделе [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Область применения:** только в многомерном режиме сервера  
+ **Применимо к:** Только многомерный режим сервера  
   
 ## <a name="non-specific-category"></a>Общая категория  
  `AllowSessionMiningModels`  
@@ -119,7 +119,7 @@ ms.locfileid: "48224394"
 >  В дополнение к свойствам, которые определяют доступные службы интеллектуального анализа данных на сервере, имеются свойства интеллектуального анализа данных, определяющие поведение конкретных алгоритмов. Настройка этих свойств осуществляется при создании каждой отдельной модели интеллектуального анализа данных, а не на уровне сервера. Дополнительные сведения см. в разделе [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>См. также  
- [Физическая архитектура &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../data-mining/physical-architecture-analysis-services-data-mining.md)   
+ [Физическая архитектура (службы Analysis Services — интеллектуальный анализ данных)](../data-mining/physical-architecture-analysis-services-data-mining.md)   
  [Настройка свойств сервера в службах Analysis Services](server-properties-in-analysis-services.md)   
  [Определение режима работы сервера экземпляра служб Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

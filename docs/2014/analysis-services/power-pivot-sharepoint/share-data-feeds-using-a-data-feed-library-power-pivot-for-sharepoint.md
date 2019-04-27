@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1df9d79a6e7852e331edcb2b37396283aeedccb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749203"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>Совместное использование веб-каналов данных с помощью библиотеки каналов данных (PowerPivot для SharePoint)
   Каналом данных называется поток XML-данных, создаваемый службой или приложением и представляющий данные в формате Atom. Он все чаще используется для передачи данных между приложениями и средствами просмотра на стороне клиента. В развертывании PowerPivot для SharePoint, веб-каналы данных используются для заполнения [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] источника данных с данными из приложения с поддержкой потоков Atom или службы.  

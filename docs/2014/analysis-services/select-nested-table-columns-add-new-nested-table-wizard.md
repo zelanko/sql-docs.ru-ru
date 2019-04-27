@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e569dfba5470a6c8c13bb9caa0e36c9711119634
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747286"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>Выбор столбцов вложенной таблицы (мастер добавления новой вложенной таблицы)
   Страница **Выбор столбцов вложенной таблицы** используется для выбора атрибутов и мер для включения во вложенную таблицу и для определения способа использования атрибутов и мер моделью интеллектуального анализа данных.  
   
- **Дополнительные сведения:** [Столбцы модели интеллектуального анализа данных](data-mining/mining-model-columns.md), [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Создание реляционной структуры интеллектуального анализа данных](data-mining/create-a-relational-mining-structure.md)  
+ **Дополнительные сведения:** [Столбцы модели интеллектуального анализа данных](data-mining/mining-model-columns.md), [мастер интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Создание реляционной структуры](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Параметры  
  **Столбцы**  

@@ -40,16 +40,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b854692aa00d953ebd8de783104869b784115277
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746886"
 ---
 # <a name="general-properties"></a>Общие свойства
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера, перечисленные в следующих таблицах. В этом разделе описываются свойства сервера из файла msmdsrv.ini, которые не отнесены к тому или иному определенному разделу, например Security (безопасность), Network (сеть) или ThreadPool (пул потоков). Дополнительные сведения о дополнительных свойствах сервера и об их настройке см. в разделе [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Применимо к:** Многомерный и табличный режимы сервера, если не указано иное  
+ **Применимо к:** Многомерный и Табличный режим сервера, если не указано иное  
   
 ## <a name="non-specific-category"></a>Общая категория  
  `AdminTimeout`  

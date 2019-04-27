@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a26192eb47faddfb8776fb873e9c19253969d1e8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767776"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>Мастер импорта и экспорта SQL Server
   **Мастер импорта и экспорта SQL Server** используется для копирования и преобразования данных между поддерживаемыми источниками данных и местами назначения импорта или экспорта.  

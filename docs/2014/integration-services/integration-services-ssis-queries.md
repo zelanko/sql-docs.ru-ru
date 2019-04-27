@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b4323715155ddb433012624f9d7a5df9bb0a29c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767666"
 ---
 # <a name="integration-services-ssis-queries"></a>Запросы в службах Integration Services (SSIS)
   Задача «Выполнение SQL», источник OLE DB, назначение «OLE DB» и преобразование «Уточняющий запрос» могут использовать SQL-запросы. В задаче «Выполнение SQL» инструкции SQL могут создавать, обновлять и удалять объекты базы данных и данные, запускать хранимые процедуры, выполнять инструкции SELECT. В источнике OLE DB и преобразовании «Уточняющий запрос» обычно содержатся SQL инструкции SELECT или EXEC. Последние наиболее часто выполняются хранимыми процедурами, возвращающими результирующие наборы.  

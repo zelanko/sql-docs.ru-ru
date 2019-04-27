@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2810a8738368f87651bc90d6cb15ae34195258ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774376"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>Параметры (результаты SQL Server результаты запроса на текстовую страницу)
   Используйте эту страницу, чтобы задать параметры для представления результирующего набора запроса в текстовом формате. Изменения этих параметров применяются только к новым запросам [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Для изменения установок текущих запросов выберите в меню **Запрос** пункт **Параметры запроса** или щелкните правой кнопкой мыши в окне запросов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и выберите пункт **Параметры запроса**. В области **Результаты** диалогового окна **Параметры запроса**нажмите **Текст**.  

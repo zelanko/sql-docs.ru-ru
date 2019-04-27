@@ -1,5 +1,5 @@
 ---
-title: Создать новую структуру интеллектуального анализа реляционных данных | Документы Microsoft
+title: Создать новую структуру интеллектуального анализа реляционных данных | Документация Майкрософт
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e111345276fdf2895b7eb4d056b046efe20b32e9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740524"
 ---
 # <a name="create-a-new-relational-mining-structure"></a>создать новую реляционную структуру интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,6 +56,6 @@ ms.lasthandoff: 05/10/2018
 11. На странице **Завершение работы мастера** введите имя для структуры интеллектуального анализа и соответствующей первоначальной модели интеллектуального анализа данных, которая будет создана, а затем нажмите кнопку **Готово**.  
   
 ## <a name="see-also"></a>См. также  
- [Интеллектуального анализа данных структуры задачи и инструкции](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Задачи и инструкции по структуре интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

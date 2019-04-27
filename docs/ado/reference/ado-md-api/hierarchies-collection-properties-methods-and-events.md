@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fb73349f3d22c04d46d995ec68e828c8e6f5999
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740274"
 ---
 # <a name="hierarchies-collection-properties-methods-and-events"></a>Свойства, методы и события коллекции Hierarchies
 ## <a name="properties"></a>Свойства  

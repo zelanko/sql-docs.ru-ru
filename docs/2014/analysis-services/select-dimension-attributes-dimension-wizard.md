@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7abb4560696dba21512066a7ff0ba3153ae2319a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748096"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>Выбор атрибутов измерения (мастер измерения)
   Используйте страницу **Выбор атрибутов измерения** для выбора и изменения атрибутов для создаваемых измерений.  

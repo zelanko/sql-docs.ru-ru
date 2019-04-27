@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e336031d37ab09c3a2258be3aa3f5d570bf87a6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762335"
 ---
 # <a name="mssqlserver7906"></a>MSSQLSERVER_7906
     
@@ -30,7 +30,7 @@ ms.locfileid: "48101704"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_INVALID_TOP_LEVEL_FILE|  
-|Текст сообщения|Ошибка в базе данных: файл "FILE" не является допустимым файлом Filestream.|  
+|Текст сообщения|Ошибка базы данных: Файл «ФАЙЛ» не является допустимым файлом Filestream.|  
   
 ## <a name="explanation"></a>Объяснение  
  Кроме ряда специальных файлов (например, «filestream.hdr»), никакие другие файлы входить непосредственно в пространство данных FILESTREAM не должны.  

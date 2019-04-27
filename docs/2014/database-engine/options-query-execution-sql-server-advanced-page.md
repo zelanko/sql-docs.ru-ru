@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2b2268b945b6b4eb2f82ed3d517be01bb2ec750c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774393"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>Параметры (страница "Выполнение запросов/SQL Server/Дополнительно")
   При использовании команды SET доступно несколько параметров. Данная страница используется для задания параметра **set** для запуска запросов [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в редакторе запросов SQL Server. Они не влияют на другие редакторы кода. Изменения этих параметров применяются только к новым запросам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Для изменения параметров для текущих запросов выберите пункт **Параметры запроса** в меню **Запрос** или контекстное меню в окне запроса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . В пункте **Выполнение**выберите **Дополнительно**. Дополнительные сведения о них см. в разделе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] электронной документации.  

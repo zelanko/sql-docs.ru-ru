@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3e4142a3492b37df8e161b965639bf8900570c23
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741249"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Мастер поиска баз данных (Выбор файлов) (AccessToSQL)
 Выбор файлов страницы мастера найти базы данных перечислены файлы, обнаруженные во время поиска. Чтобы выбрать файл для добавления к SSMA, выберите строку, содержащую имя файла. После завершения выбора файлов, нажмите кнопку **Далее** для просмотра на странице выбора проверки.  

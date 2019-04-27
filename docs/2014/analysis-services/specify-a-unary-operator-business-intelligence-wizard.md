@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1e50d43bc030ad3267076422b8f6610b68e447ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746517"
 ---
 # <a name="specify-a-unary-operator-business-intelligence-wizard"></a>Определение унарного оператора (мастер бизнес-аналитики)
   Страница **Определить унарный оператор** определяет связь типа "родители-потомки" для столбца, содержащего или унарный оператор (для обычных статистических функций), или значение, представляющее весовой фактор (для взвешенных статистических функций). Дополнительные сведения об обычных и взвешенных статистических функциях см. в разделе [Агрегаты и статистические схемы](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  

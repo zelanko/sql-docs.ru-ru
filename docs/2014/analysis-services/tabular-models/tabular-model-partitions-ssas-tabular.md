@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a8cfe346c56b767b2986ea929271a1ee0e601953
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756801"
 ---
 # <a name="tabular-model-partitions-ssas-tabular"></a>Секции табличных моделей (табличные службы SSAS)
   Секции разделяют таблицу на логические части. Каждая секция затем может обрабатываться (обновляться) независимо от других секций. Секции, определенные для модели во время разработки модели, дублируются в модели развертывания. После развертывания можно настроить управление секциями и создавать новые секции с помощью диалогового окна **Секции** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью скрипта. В этом разделе описываются секции в развернутой табличной модели базы данных. Дополнительные сведения о создании и управлении секциями во время разработки модели см. в разделе [Секции (табличные службы SSAS)](partitions-ssas-tabular.md).  

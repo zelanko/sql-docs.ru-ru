@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbeaebfc7eab6041bb547f18dacfc01aef3d5117
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756328"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Сведения о переводе (вкладка «Переводы», конструктор измерений) (службы Analysis Services — многомерные данные)
   Панель **Подробности перевода** на вкладке **Переводы** окна «Конструктор измерений» позволяет определять переводы для выбранного измерения и управлять ими.  
@@ -38,31 +38,31 @@ ms.locfileid: "48179024"
   
 -   Измерение  
   
-     `Caption` и `AttributeAllMember` свойства  
+     Свойства `Caption` и `AttributeAllMember`  
   
 -   attribute  
   
-     `Caption`, `AttributeHierarchyDisplayFolder`, и `NamingTemplate` свойства  
+     Свойства `Caption`, `AttributeHierarchyDisplayFolder` и `NamingTemplate`  
   
     > [!NOTE]  
     >  Свойство `NamingTemplate` доступно только для родительских атрибутов.  
   
 -   Иерархия  
   
-     `Caption` и `AllMemberName` свойства  
+     Свойства `Caption` и `AllMemberName`  
   
 -   Level  
   
-     `Caption` Свойство  
+     Свойство `Caption`  
   
  **\<Язык >**  
  Введите или выберите значение свойства данного объекта измерения на выбранном языке. Нажав кнопку с многоточием (**...**) можно открыть дополнительные диалоговые окна, в зависимости от изменяемого свойства.  
   
--   `NamingTemplate` Свойство  
+-   Свойство `NamingTemplate`  
   
      Открывает [Диалоговое окно "Шаблон именования уровней" (службы Analysis Services — многомерные данные)](level-naming-template-dialog-box-analysis-services-multidimensional-data.md).  
   
--   `Caption` свойство (для атрибутов)  
+-   Свойство `Caption` (для атрибутов)  
   
      Открывает [Диалоговое окно "Перевод данных атрибута" (службы Analysis Services — многомерные данные)](attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md).  
   

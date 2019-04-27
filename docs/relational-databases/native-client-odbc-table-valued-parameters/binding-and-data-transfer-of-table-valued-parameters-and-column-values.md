@@ -15,11 +15,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f8b291344939bcbafa7f91080837d2302efb1d0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62738560"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Привязка и передача данных возвращающих табличное значение параметров и значений столбцов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52521921"
   
  Можно назначать значение по умолчанию для целых столбцов возвращающих табличное значение параметров с помощью атрибута SQL_CA_SS_COL_HAS_DEFAULT_VALUE. Значения столбцов отдельных параметров, возвращающих табличные значения, тем не менее, нельзя назначить значения по умолчанию с помощью значения SQL_DEFAULT_PARAM параметра *StrLen_or_IndPtr* с SQLBindParameter. Возвращающие табличные значения параметров в целом не может быть присвоено значение по умолчанию с помощью значения SQL_DEFAULT_PARAM параметра *StrLen_or_IndPtr* с SQLBindParameter. Если эти правила не соблюдаются, SQLExecute или SQLExecDirect вернет значение SQL_ERROR. Будет создана диагностическая запись с SQLSTATE = 07S01 и сообщением «недопустимое использование параметра по умолчанию для параметра \<p >», где \<p > — порядковый номер возвращающего табличное значение Параметра в инструкции запроса.  
   
- После привязки возвращающего табличное значение параметра приложение должно выполнить привязку каждого столбца параметров, возвращающих табличное значение. Чтобы сделать это, приложение сначала вызывает SQLSetStmtAttr для присвоения параметру SQL_SOPT_SS_PARAM_FOCUS порядковый номер возвращающего табличное значение параметра. Затем приложение выполняет привязку столбцов возвращающих табличные значения параметров с помощью вызова следующих процедур. SQLBindParameter, SQLSetDescRec и SQLSetDescField. Присвоение атрибуту sql_sopt_ss_param_focus значения 0 восстанавливает обычное воздействие функций SQLBindParameter, SQLSetDescField и SQLSetDescRec при работе с параметры верхнего уровня.
+ После привязки возвращающего табличное значение параметра приложение должно выполнить привязку каждого столбца параметров, возвращающих табличное значение. Чтобы сделать это, приложение сначала вызывает SQLSetStmtAttr для присвоения параметру SQL_SOPT_SS_PARAM_FOCUS порядковый номер возвращающего табличное значение параметра. Затем приложение выполняет привязку столбцов возвращающих табличные значения параметра, вызовы следующих процедур: SQLBindParameter, SQLSetDescRec и SQLSetDescField. Присвоение атрибуту sql_sopt_ss_param_focus значения 0 восстанавливает обычное воздействие функций SQLBindParameter, SQLSetDescField и SQLSetDescRec при работе с параметры верхнего уровня.
  
  Примечание: для драйверов ODBC для Mac и Linux с unixODBC 2.3.1 для 2.3.4, при задании имени возвращающего табличное значение Параметра через SQLSetDescField по полю дескриптора SQL_CA_SS_TYPE_NAME, unixODBC не преобразуется автоматически ANSI в Юникод строк, в зависимости от точного функция, вызываемая (SQLSetDescFieldA / SQLSetDescFieldW). Это необходимо, чтобы всегда использовать SQLBindParameter или SQLSetDescFieldW строкой в Юникоде (UTF-16) присвойте имя возвращающего табличное значение Параметра.
   

@@ -1,5 +1,5 @@
 ---
-title: Использование агрегатных функций | Документы Microsoft
+title: Использование агрегатных функций | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4e30b5670e7a9a02fdfa9f3bbfad6889e83b562
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743090"
 ---
 # <a name="use-aggregate-functions"></a>Использование агрегатных функций
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34026041"
  Можно назначить или изменить метод агрегирования в любом определения куба через [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]или с помощью многомерных выражений. Дополнительные инструкции см. в статье [Создание мер и групп мер в многомерных моделях](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md) или [Aggregate (многомерные выражения)](../../mdx/aggregate-mdx.md).  
   
 ##  <a name="AggFunction"></a> Агрегатные функции  
- В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] есть функции для агрегирования мер по измерениям, содержащимся в группах мер. *Аддитивность* агрегата определяет, как осуществляется статистическое вычисление меры по всем измерениям в кубе. Статистические функции подразделяются на три уровня аддитивности.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] есть функции для агрегирования мер по измерениям, содержащимся в группах мер. *Аддитивность* агрегата определяет, как осуществляется статистическое вычисление меры по всем измерениям в кубе. Статистические функции подразделяются на три уровня аддитивности.  
   
  Аддитивная  
  Аддитивная мера, также называемая полностью аддитивной мерой, может быть статистически вычислена вдоль всех измерений в кубе, которые включены в группу мер, содержащую меру, без ограничений.  
@@ -64,9 +64,9 @@ ms.locfileid: "34026041"
   
  Мера числа различных объектов, которая подсчитывает элементы, основана на внешнем ключевом столбце в таблице фактов. (Т. е. свойство меры **Исходный столбец** определяет этот столбец.) Этот столбец соединяет столбец таблицы измерения, который определяет элементы, подсчитываемые мерой числа различных объектов.  
   
-## <a name="see-also"></a>См. также:  
- [Меры и группы мер](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
- [Справочник по функциям многомерных Выражений & #40; Многомерные Выражения & #41;](../../mdx/mdx-function-reference-mdx.md)   
- [Определение полуаддитивного режима](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
+## <a name="see-also"></a>См. также  
+ [Меры и их группы](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../../mdx/mdx-function-reference-mdx.md)   
+ [Define Semiadditive Behavior](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   

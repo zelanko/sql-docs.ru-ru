@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72ac6ac92da531d0f653e0fc03d88d170b7706e5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743220"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Изменение целевого времени восстановления базы данных (SQL Server)
   В этом разделе описывается изменение целевого времени восстановления базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. По умолчанию целевое время восстановления — 0, а база данных использует *автоматические контрольные точки* , задаваемые при помощи параметра сервера **интервал восстановления** . Установка значения времени восстановления &gt; 0 ведет к тому, что база данных будет использовать *непрямые контрольные точки* и установит верхнюю границу времени восстановления для этой базы данных.  
@@ -23,9 +23,9 @@ ms.locfileid: "54131454"
 > [!NOTE]  
 >  Верхняя граница, указываемая для отдельной базы данных посредством настройки целевого времени восстановления, может быть превышена из-за долгой транзакции, которая может вызвать чрезмерное время для отмены действий.  
   
--   **Перед началом работы**  [Ограничения](#Restrictions), [безопасности](#Security)  
+-   **Перед началом:**  [Ограничения](#Restrictions), [Безопасность](#Security)  
   
--   **Чтобы изменить целевой объект восстановления временем действия, используя:**  [SQL Server Management Studio](#SSMSProcedure) или [Transact-SQL](#TsqlProcedure)  
+-   **Изменение целевого времени восстановления с помощью**   [SQL Server Management Studio](#SSMSProcedure) или [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   

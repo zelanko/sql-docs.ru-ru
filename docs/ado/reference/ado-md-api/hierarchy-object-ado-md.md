@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4f1ccb441da92c19b15a7e84b0fc0e451844d0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740284"
 ---
 # <a name="hierarchy-object-ado-md"></a>Объект Hierarchy (многомерные объекты ADO)
 Представляет один из способов, в котором члены [измерения](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) может быть статистическая обработка или «накоплены.» Измерение может быть статистически вычислена вдоль одной или нескольким иерархиям.  

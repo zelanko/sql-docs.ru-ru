@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2aff15a42c8bffeb5a54e92b9ce7a09ace282ce4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774507"
 ---
 # <a name="new-search-property-list"></a>Новый список свойств поиска
   Это диалоговое окно используется для создания списка свойств поиска.  
@@ -48,7 +48,7 @@ ms.locfileid: "48195234"
  См. в разделе [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql).  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>Управление списками свойств поиска в среде SQL Server Management Studio  
- Дополнительные сведения о том, как создать, просмотреть, изменить или удалить список свойств поиска и о настройке полнотекстового индекса для поиска свойств, см. в разделе [поиск свойств документа с использованием списков свойств поиска](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
+ Сведения о создании, просмотре, изменении или удалении списка свойств поиска, а также о настройке полнотекстового индекса для поиска свойств см. в разделе [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="see-also"></a>См. также  
  [CREATE SEARCH PROPERTY LIST (Transact-SQL)](/sql/t-sql/statements/create-search-property-list-transact-sql)   

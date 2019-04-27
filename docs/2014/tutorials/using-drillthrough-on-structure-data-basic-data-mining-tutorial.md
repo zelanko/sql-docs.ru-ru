@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745545"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>Использование детализации для данных структуры (учебник по интеллектуальному анализу данных — начальный уровень)
   В рамках своей рекламной компании [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] отправляют рассылку потенциальным потребителям в 34 до 40 лет демографические. В отделе маркетинга принимается решение также отправить рассылку заказчикам, купившим велосипеды в [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] более пяти лет назад. На этом занятии будут определены заказчики, имеющие старые велосипеды, и получена их контактная информация. Такая информация не включена в модель, но включена в структуру. Чтобы получить контактные данные, прежде всего необходимо включить для структуры функцию детализации, а затем с помощью этой функции найти имена и адреса целевых заказчиков.  

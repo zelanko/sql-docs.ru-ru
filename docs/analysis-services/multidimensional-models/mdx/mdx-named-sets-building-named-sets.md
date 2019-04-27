@@ -1,5 +1,5 @@
 ---
-title: Построение именованных наборов в многомерных Выражениях (многомерные Выражения) | Документы Microsoft
+title: Построение именованных наборов в многомерных Выражениях (многомерные Выражения) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b893dcd86ffcfa68c55057796c431e694903c46a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740064"
 ---
-# <a name="mdx-named-sets---building-named-sets"></a>Многомерные Выражения именованных наборов - построение именованных наборов
+# <a name="mdx-named-sets---building-named-sets"></a>Именованные наборы - многомерных Выражений построение именованных наборов
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Выражение набора может быть длинной и сложной декларацией, которую трудно проследить и понять. Или выражение набора может использоваться настолько часто, что его повторное определение может стать утомительным. Чтобы облегчить работу с длинными, сложными или часто используемыми выражениями, в многомерных выражениях можно определить такое выражение, как *именованный набор*.  
   
@@ -32,9 +32,9 @@ ms.locfileid: "34021281"
   
      Дополнительные сведения об использовании инструкции CREATE SET для создания именованных наборов см. в разделе [Создание именованных наборов с областью действия сеанса (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md).  
   
-## <a name="see-also"></a>См. также:  
- [Инструкция SELECT & #40; Многомерные Выражения & #41;](../../../mdx/mdx-data-manipulation-select.md)   
- [СОЗДАТЬ инструкцию SET & #40; Многомерные Выражения & #41;](../../../mdx/mdx-data-definition-create-set.md)   
- [Основные принципы запросов многомерных Выражений & #40; Службы Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>См. также  
+ [Инструкция SELECT (многомерные выражения)](../../../mdx/mdx-data-manipulation-select.md)   
+ [Инструкция CREATE SET (многомерные выражения)](../../../mdx/mdx-data-definition-create-set.md)   
+ [Основные принципы запросов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

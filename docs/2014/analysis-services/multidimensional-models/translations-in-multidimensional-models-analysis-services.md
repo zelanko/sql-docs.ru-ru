@@ -14,21 +14,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f3238267021c0fd4054fb9757ea8d00cae6114dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741157"
 ---
 # <a name="translations-in-multidimensional-models"></a>Переводы в многомерных моделях
   Поддержка различных языков в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] осуществляется с помощью переводов. Перевод содержит код языка и привязки для свойств объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], которые могут быть представлены на различных языках. Например, можно задать перевод базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], чтобы представить заголовок и описание этой базы данных на некотором языке. Дополнительные сведения о переводах см. в разделе [Переводы куба](../multidimensional-models-olap-logical-cube-objects/cube-translations.md).  
   
 ## <a name="defining-translations"></a>Определение переводов  
- Можно определить переводы в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , воспользовавшись соответствующим конструктором для объекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , который нужно перевести. При определении перевода создается `Translation` объект, связанный с соответствующим [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объект с указанными явными символьными значениями, в указанный язык, для свойств связанного объекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объекта.  
+ Можно определить переводы в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , воспользовавшись соответствующим конструктором для объекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , который нужно перевести. При определении перевода создается объект `Translation`, связанный с соответствующим объектом служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и обладающий указанными явными символьными значениями (на выбранном языке) для свойств связанного объекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  Следующие объекты и свойства в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] могут обладать связанными с ними переводами.  
   
-|Объект|Свойства|Конструктор|  
+|Object|Свойства|Конструктор|  
 |------------|----------------|--------------|  
 |База данных|`Caption`, `Description`|[Общие &#40;базы данных конструктор&#41; &#40;службы Analysis Services — многомерные данные&#41;](../general-database-designer-analysis-services-multidimensional-data.md)|  
 |Cube|`Caption`, `Description`|[Переводы &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
@@ -41,7 +41,7 @@ ms.locfileid: "48218946"
 |Именованный набор|`Caption`|[Переводы &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |вычисляемый элемент|`Caption`|[Переводы &#40;конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |Измерение базы данных|`Caption`, `AttributeAllMember`|[Переводы &#40;конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
-|attribute|`Caption`, `CaptionColumn` <sup>1</sup>, `AttributeHierarchyDisplayFolder`, `NamingTemplate`, `MembersWithDataCaption`|[Переводы &#40;конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
+|attribute|`Caption`, `CaptionColumn`<sup>1</sup>, `AttributeHierarchyDisplayFolder`, `NamingTemplate`, `MembersWithDataCaption`|[Переводы &#40;конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |Иерархия|`Caption`, `AllMemberName`|[Переводы &#40;конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |Level|`Caption`|[Переводы &#40;конструктор измерений&#41; &#40;службы Analysis Services — многомерные данные&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
   
@@ -79,6 +79,6 @@ ms.locfileid: "48218946"
   
 ## <a name="see-also"></a>См. также  
  [Сценарии глобализации для многомерных служб Analysis Services](../globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [Языки и параметры сортировки &#40;служб Analysis Services&#41;](../languages-and-collations-analysis-services.md)  
+ [Языки и параметры сортировки (службы Analysis Services)](../languages-and-collations-analysis-services.md)  
   
   

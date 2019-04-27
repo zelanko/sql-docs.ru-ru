@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34f36ea3b27100510857a05cd5edffa68c5be74a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753286"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Запуск помощника по обновлению (командная строка)
   Используйте **UpgradeAdvisorWizardCmd** служебная программа для запуска помощника по обновлению из командной строки. Можно задать вывод результата в формате XML или в файле формата CSV (с разделителями-запятыми).  
@@ -46,7 +46,7 @@ where <server_info> is any combination of the following:
  **-ConfigFile** _имя файла_  
  — Это путь и имя файла XML-файл, содержащий параметры, используемые при запуске **UpgradeAdvisorWizardCmd** служебной программы.  
   
- *< сведения_о_сервере >*  
+ *<server_info>*  
  Задает анализируемый компьютер и экземпляр. Используйте эти параметры, если не применяется файл конфигурации.  
   
  *< сведения_о_сервере >* может быть любым сочетанием следующих четырех аргументов:  

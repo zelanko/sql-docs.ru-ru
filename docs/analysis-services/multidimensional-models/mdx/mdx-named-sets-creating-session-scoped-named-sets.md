@@ -1,5 +1,5 @@
 ---
-title: Создание областью действия сеанса с именем наборами (многомерные Выражения) | Документы Microsoft
+title: Создание с областью действия сеанса с именем наборами (многомерные Выражения) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fdf177cedcd73069e73c1ec7b4c7db5cfb497969
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62739994"
 ---
-# <a name="mdx-named-sets---creating-session-scoped-named-sets"></a>Именованные наборы - Создание областью действия сеанса многомерных Выражений именованных наборов
+# <a name="mdx-named-sets---creating-session-scoped-named-sets"></a>Именованные наборы многомерных Выражений, именованные наборы — создание, областью действия сеанса
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  Для создания именованного набора, доступного в сеансе многомерных выражений, используется инструкция [CREATE SET](../../../mdx/mdx-data-definition-create-set.md). Именованный набор, созданный с помощью инструкции CREATE SET, удаляется только при закрытии сеанса многомерных выражений.  
+  Для создания именованного набора, доступного в сеансе многомерных выражений, используется инструкция [CREATE SET](../../../mdx/mdx-data-definition-create-set.md) . Именованный набор, созданный с помощью инструкции CREATE SET, удаляется только при закрытии сеанса многомерных выражений.  
   
  Синтаксис ключевого слова WITH достаточно прост.  
   
@@ -50,6 +50,6 @@ select SetCities_2_3 on 0 from [Store]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Создание областью действия запроса именованных наборов & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)  
+ [Создание именованных наборов с областью действия запроса (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

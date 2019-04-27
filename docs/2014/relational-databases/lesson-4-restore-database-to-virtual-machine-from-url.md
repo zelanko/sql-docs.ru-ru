@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0850fb7b6be85f8052781ca70f97477d5cb3e403
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743310"
 ---
 # <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>Занятие 5. (Необязательно) Шифрование базы данных с помощью TDE
   В качестве дополнительного шага вы можете зашифровать созданную базу данных. Функция прозрачного шифрования данных (TDE) выполняет в реальном времени шифрование и дешифрование файлов данных и журналов в операциях ввода-вывода. При таком типе шифрования используется ключ шифрования базы данных (DEK), который хранится в загрузочной записи базы данных, чтобы он был доступен при восстановлении. Дополнительные сведения см. в разделе [прозрачное шифрование данных &#40;TDE&#41; ](security/encryption/transparent-data-encryption.md) и [перемещение базы данных защищены прозрачное шифрование данных на другой сервер SQL](security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  
@@ -92,6 +92,6 @@ GO
   
  **Следующее занятие:**  
   
- [Занятие 6. Перенос базы данных с исходного локального компьютера на целевой компьютер в Microsoft Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
+ [Занятие 6. Перенос базы данных из источника локального компьютера на целевой компьютер в Windows Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
   
   

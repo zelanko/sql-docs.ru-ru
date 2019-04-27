@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c8f5dd315e7a6a7122768d4ebc893d8d7ad5ec90
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766279"
 ---
 # <a name="term-lookup-transformation-editor-advanced-tab"></a>Редактор преобразования «Уточняющий запрос термина» (вкладка «Дополнительно»)
   Используйте вкладку **Дополнительно** диалогового окна **Редактор преобразования "Уточняющий запрос термина"** для указания, должен ли при поиске учитываться регистр.  

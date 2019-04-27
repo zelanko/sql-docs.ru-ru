@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b0b6aa04e1e4fd9d578a60a1f821e91b0f02131
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769710"
 ---
 # <a name="expression-builder-integration-services"></a>Построитель выражений (службы Integration Services)
   Диалоговое окно **Построитель выражений** обеспечивает графический пользовательский интерфейс для построения выражений, используемых выражениями свойства. Можно открыть диалоговое окно **Построитель выражений** из диалоговых окон отдельных задач конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , а также из окна **Свойства** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c68ec29c2461cb7ffddfdbd2792e1a1a191076b2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746467"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Срез исходного куба (мастер интеллектуального анализа данных)
   Можно использовать диалоговое окно **Срез исходного куба** для ограничения данных, используемых при обучении модели. Обычно куб содержит данные, относящиеся к разным измерениям и атрибутам, такие как все магазины, все регионы и все товары. Не имеет смысла обучать модель на неограниченных сочетаниях атрибутов, поэтому следует использовать это диалоговое окно в целях выбора конкретного набора для использования в обучении модели.  

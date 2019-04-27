@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a31fb2b1b4e158773e2f286ed5a3530d90c201c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766417"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>Редактор диспетчера соединений SQL Server Compact Edition (страница «Соединение»)
   Диалоговое окно **SQL Server Compact Edition Connection Manager** (Диспетчер соединений SQL Server Compact Edition) позволяет задать свойства для подключения к базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  

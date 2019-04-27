@@ -1,5 +1,5 @@
 ---
-title: Этап 2. Преобразование проекта в модель развертывания проекта | Документация Майкрософт
+title: Шаг 2. Преобразование проекта в модель развертывания проекта | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1ba6dcb7052fed3d209dd87f55789a99df24116c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767356"
 ---
-# <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>Этап 2. Преобразование проекта в модель развертывания проекта
+# <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>Шаг 2. Преобразование проекта в модель развертывания проекта
   В этой задаче будет использоваться мастер преобразования проекта служб Integration Services для преобразования проекта в модель развертывания проекта.  
   
 ### <a name="converting-the-project-to-the-project-deployment-model"></a>Преобразование проекта в модель развертывания проекта  

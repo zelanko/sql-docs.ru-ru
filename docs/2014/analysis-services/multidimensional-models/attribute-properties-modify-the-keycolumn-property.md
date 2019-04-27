@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92624d18c0e8aae6a549f0769277e5fd4fdd0c34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727288"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>Изменение свойства KeyColumn атрибута
   Свойство **KeyColumns** атрибута можно изменить. Например, в качестве ключа атрибута может потребоваться не одиночный ключ, а составной.  

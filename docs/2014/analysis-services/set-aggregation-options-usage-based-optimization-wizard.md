@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: becc1bb290d37eec7e717d9400dc0f694188eeeb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746646"
 ---
 # <a name="set-aggregation-options-usage-based-optimization-wizard"></a>Параметры статистической обработки (мастер оптимизации с учетом использования)
   Используйте страницу **Параметры статистической обработки**, чтобы начать процесс создания статистической схемы и указать ограничения объема хранилища или производительности для статистических схем, создаваемых мастером оптимизации с учетом применения.  

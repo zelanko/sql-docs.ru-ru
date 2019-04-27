@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed3b13619fa8206e9b4fa2054294c520f05ed890
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766347"
 ---
 # <a name="ssis-toolbox"></a>Область элементов служб SSIS
   Все компоненты, установленные на локальный компьютер, в том числе компоненты сторонних производителей, разработанные для SQL Server 2008 и 2008 R2, автоматически появляются на новой **панели элементов служб SSIS**. При установке дополнительных компонентов щелкните правой кнопкой мыши на панели элементов и выберите **Обновить панель элементов** для добавления этих компонентов.  

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4d8500dbe5253bddcbd71b4376050c6f3d56cdbe
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765957"
 ---
 # <a name="xml-task-editor-general-page"></a>Редактор задачи «XML» (страница «Общие»)
   Используйте **Узел «Общие»** диалогового окна **Редактор задачи «XML»** для задания типа и настройки операции.  
@@ -54,11 +54,11 @@ ms.locfileid: "58393910"
   
  Если параметр **Source** имеет значение **Соединение с файлом**, выберите диспетчер подключений файлов или нажмите кнопку \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../2014/integration-services/file-connection-manager-editor.md).  
   
  Если параметр **Source** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку **\<Создать переменную>**, чтобы создать ее.  
   
- **См. также**: [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [Добавьте переменную](../../2014/integration-services/add-variable.md).  
+ **См. также**: подробные сведения о [переменных служб Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) и о [добавлении переменной](../../2014/integration-services/add-variable.md).  
   
 ## <a name="operationtype-dynamic-options"></a>Динамические параметры OperationType  
   
@@ -74,7 +74,7 @@ ms.locfileid: "58393910"
  **Назначение**  
  Выберите существующий диспетчер подключений файлов или нажмите кнопку \<**Создать подключение...**>, чтобы создать новый диспетчер подключений.  
   
- **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../2014/integration-services/file-connection-manager-editor.md).  
   
  **DestinationType**  
  Выберите тип назначения XML-документа. Это свойство имеет параметры, указанные в следующей таблице.  
@@ -115,11 +115,11 @@ ms.locfileid: "58393910"
   
  Если параметр **SecondOperandType** имеет значение **Соединение с файлом**, выберите диспетчер подключений файлов или нажмите кнопку \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../2014/integration-services/file-connection-manager-editor.md).  
   
  Если параметр **XPathStringSourceType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также**: [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [Добавьте переменную](../../2014/integration-services/add-variable.md).  
+ **См. также**: подробные сведения о [переменных служб Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) и о [добавлении переменной](../../2014/integration-services/add-variable.md).  
   
 ### <a name="operationtype--xslt"></a>OperationType = XSLT  
  Задайте параметры для операции XSLT.  
@@ -133,11 +133,11 @@ ms.locfileid: "58393910"
  **Назначение**  
  Если параметр **DestinationType** имеет значение **Соединение с файлом**, выберите диспетчер подключений файлов или нажмите кнопку \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../2014/integration-services/file-connection-manager-editor.md).  
   
  Если параметр **DestinationType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также**: [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [Добавьте переменную](../../2014/integration-services/add-variable.md).  
+ **См. также**: подробные сведения о [переменных служб Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) и о [добавлении переменной](../../2014/integration-services/add-variable.md).  
   
  **DestinationType**  
  Выберите тип назначения XML-документа. Это свойство имеет параметры, указанные в следующей таблице.  
@@ -161,11 +161,11 @@ ms.locfileid: "58393910"
   
  Если параметр **SecondOperandType** имеет значение **Соединение с файлом**, выберите диспетчер подключений файлов или нажмите кнопку \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../2014/integration-services/file-connection-manager-editor.md).  
   
  Если параметр **XPathStringSourceType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также**: [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [Добавьте переменную](../../2014/integration-services/add-variable.md).  
+ **См. также**: подробные сведения о [переменных служб Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) и о [добавлении переменной](../../2014/integration-services/add-variable.md).  
   
 ### <a name="operationtype--xpath"></a>OperationType = XPATH  
  Задайте параметры для операции XPath.  
@@ -179,11 +179,11 @@ ms.locfileid: "58393910"
  **Назначение**  
  Если параметр **DestinationType** имеет значение **Соединение с файлом**, выберите диспетчер подключений файлов или нажмите кнопку \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../2014/integration-services/file-connection-manager-editor.md).  
   
  Если параметр **DestinationType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также**: [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [Добавьте переменную](../../2014/integration-services/add-variable.md).  
+ **См. также**: подробные сведения о [переменных служб Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) и о [добавлении переменной](../../2014/integration-services/add-variable.md).  
   
  **DestinationType**  
  Выберите тип назначения XML-документа. Это свойство имеет параметры, указанные в следующей таблице.  
@@ -207,11 +207,11 @@ ms.locfileid: "58393910"
   
  Если параметр **SecondOperandType** имеет значение **Соединение с файлом**, выберите диспетчер подключений файлов или нажмите кнопку \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../2014/integration-services/file-connection-manager-editor.md).  
   
  Если параметр **XPathStringSourceType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также**: [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [Добавьте переменную](../../2014/integration-services/add-variable.md).  
+ **См. также**: подробные сведения о [переменных служб Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) и о [добавлении переменной](../../2014/integration-services/add-variable.md).  
   
  **PutResultInOneNode**  
  Укажите, записывается ли результат в один узел.  
@@ -242,11 +242,11 @@ ms.locfileid: "58393910"
   
  Если параметр **XPathStringSourceType** имеет значение **Соединение с файлом**, выберите диспетчер подключений файлов или нажмите кнопку \<**Создать подключение...**>, чтобы создать его.  
   
- **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../2014/integration-services/file-connection-manager-editor.md).  
   
  Если параметр **XPathStringSourceType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также**: [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [добавить переменную](../../2014/integration-services/add-variable.md)  
+ **См. также**: подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) и о [добавлении переменной](../../2014/integration-services/add-variable.md)  
   
  При использовании инструкции XPath для определения места в исходном документе, куда необходимо вставить данные, ожидается, что инструкция возвратит единственный узел. Если инструкция возвращает несколько узлов, то используется только первый узел. Содержимое второго документа добавляется в первый узел, который возвращается запросом XPath.  
   
@@ -259,11 +259,11 @@ ms.locfileid: "58393910"
  **Назначение**  
  Если параметр **DestinationType** имеет значение **Соединение с файлом**, выберите диспетчер подключений файлов или нажмите кнопку \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../2014/integration-services/file-connection-manager-editor.md).  
   
  Если параметр **DestinationType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также**: [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [Добавьте переменную](../../2014/integration-services/add-variable.md).  
+ **См. также**: подробные сведения о [переменных служб Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) и о [добавлении переменной](../../2014/integration-services/add-variable.md).  
   
  **DestinationType**  
  Выберите тип назначения XML-документа. Это свойство имеет параметры, указанные в следующей таблице.  
@@ -287,11 +287,11 @@ ms.locfileid: "58393910"
   
  Если параметр **SecondOperandType** имеет значение **Соединение с файлом**, выберите диспетчер подключений файлов или нажмите кнопку \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../2014/integration-services/file-connection-manager-editor.md).  
   
  Если параметр **SecondOperandType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также**: [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [добавить переменную](../../2014/integration-services/add-variable.md)  
+ **См. также**: подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) и о [добавлении переменной](../../2014/integration-services/add-variable.md)  
   
 ### <a name="operationtype--diff"></a>OperationType = инструмент сравнения  
  Задайте параметры для операции поиска различий.  
@@ -313,11 +313,11 @@ ms.locfileid: "58393910"
 |**IgnoreXMLDeclaration**|Укажите, сравнивать ли XML-декларации.|  
 |**IgnoreDTD**|Укажите, пропускать ли обработку определения типа документа (DTD).|  
 |**IgnoreWhite Spaces**|Укажите, пропускать ли различия в количестве пробелов при сравнении документов.|  
-|**IgnoreNamespaces**|Укажите, сравнивать ли универсальный идентификатор ресурсов (URI) пространства имен элементов и имена атрибутов этих элементов.<br /><br /> Примечание. Если этот параметр имеет значение `True`, два элемента, имеющих одинаковое локальное имя, но разные пространства имен, рассматриваются как идентичные.|  
+|**IgnoreNamespaces**|Укажите, сравнивать ли универсальный идентификатор ресурсов (URI) пространства имен элементов и имена атрибутов этих элементов.<br /><br /> Примечание. Если этот параметр имеет значение `True`, два элемента, имеющие одинаковое локальное имя, но разные пространства имен, считаются идентичными.|  
 |**IgnoreProcessingInstructions**|Укажите, сравнивать ли инструкции по обработке.|  
-|**IgnoreOrderOf ChildElements**|Укажите, сравнивать ли порядок дочерних элементов.<br /><br /> Примечание. Если этот параметр имеет значение `True`, дочерние элементы, отличающиеся только положением в списке одноуровневых элементов, рассматриваются как идентичные.|  
+|**IgnoreOrderOf ChildElements**|Укажите, сравнивать ли порядок дочерних элементов.<br /><br /> Примечание. Если этот параметр имеет значение `True`, дочерние элементы, отличающиеся только положением в списке одноуровневых элементов, считаются идентичными.|  
 |**IgnoreComments**|Укажите, сравнивать ли узлы комментариев.|  
-|**IgnorePrefixes**|Укажите, сравнивать ли префиксы элементов и имена атрибутов.<br /><br /> Примечание. Если этот параметр имеет значение `True`, два элемента, имеющих одинаковое локальное имя, но разные URI-кода пространства имен и префиксы, рассматриваются как идентичные.|  
+|**IgnorePrefixes**|Укажите, сравнивать ли префиксы элементов и имена атрибутов.<br /><br /> Примечание. При выборе этого параметра `True`, два элемента, имеющие одинаковое локальное имя, но разные коды URI пространств имен и префиксы, считаются идентичными.|  
   
  **FailOnDifference**  
  Укажите, заканчивается ли задача с ошибкой, если не удается выполнить операцию поиска различий.  
@@ -334,11 +334,11 @@ ms.locfileid: "58393910"
  **Назначение**  
  Если параметр **DestinationType** имеет значение **Соединение с файлом**, выберите диспетчер подключений файлов или нажмите кнопку \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../2014/integration-services/file-connection-manager-editor.md).  
   
  Если параметр **DestinationType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также**: [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [Добавьте переменную](../../2014/integration-services/add-variable.md).  
+ **См. также**: подробные сведения о [переменных служб Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) и о [добавлении переменной](../../2014/integration-services/add-variable.md).  
   
  **DestinationType**  
  Выберите тип назначения XML-документа. Это свойство имеет параметры, указанные в следующей таблице.  
@@ -362,11 +362,11 @@ ms.locfileid: "58393910"
   
  Если параметр **SecondOperandType** имеет значение **Соединение с файлом**, выберите диспетчер подключений файлов или нажмите кнопку \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../2014/integration-services/file-connection-manager-editor.md).  
   
  Если параметр **SecondOperandType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также**: [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [добавить переменную](../../2014/integration-services/add-variable.md)  
+ **См. также**: подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) и о [добавлении переменной](../../2014/integration-services/add-variable.md)  
   
 ### <a name="operationtype--patch"></a>OperationType = Patch  
  Задайте параметры для операции обновления.  
@@ -380,11 +380,11 @@ ms.locfileid: "58393910"
  **Назначение**  
  Если параметр **DestinationType** имеет значение **Соединение с файлом**, выберите диспетчер подключений файлов или нажмите кнопку \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../2014/integration-services/file-connection-manager-editor.md).  
   
  Если параметр **DestinationType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также**: [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [Добавьте переменную](../../2014/integration-services/add-variable.md).  
+ **См. также**: подробные сведения о [переменных служб Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) и о [добавлении переменной](../../2014/integration-services/add-variable.md).  
   
  **DestinationType**  
  Выберите тип назначения XML-документа. Это свойство имеет параметры, указанные в следующей таблице.  
@@ -408,11 +408,11 @@ ms.locfileid: "58393910"
   
  Если параметр **SecondOperandType** имеет значение **Соединение с файлом**, выберите диспетчер подключений файлов или нажмите кнопку \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../2014/integration-services/file-connection-manager-editor.md).  
   
  Если параметр **SecondOperandType** имеет значение **Переменная**, выберите существующую переменную или нажмите кнопку \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также**: [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [добавить переменную](../../2014/integration-services/add-variable.md)  
+ **См. также**: подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) и о [добавлении переменной](../../2014/integration-services/add-variable.md).  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

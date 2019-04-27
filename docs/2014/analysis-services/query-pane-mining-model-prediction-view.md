@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 316b82f15c28a13a2a04bdd81683d2fdf83707bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748376"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>Панель запросов (представление прогноза модели интеллектуального анализа данных)
   Панель **Запрос** отображает инструкции выражений интеллектуального анализа данных, созданные в построителе прогнозирующих запросов. Можно изменить инструкции и затем нажать кнопку **Переключиться в режим просмотра результата запроса** для возврата результатов. Если переключиться обратно на представление **Проект** , то любые произведенные изменения инструкций будут потеряны.  
   
- **Дополнительные сведения:** [Инструкции управления данными расширений интеллектуального анализа данных](/sql/dmx/dmx-statements-data-manipulation), [Создание DMX-запроса в среде SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+ **Дополнительные сведения:** [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкций по обработке данных](/sql/dmx/dmx-statements-data-manipulation), [создать запрос расширений интеллектуального анализа данных в SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
 ## <a name="options"></a>Параметры  
  **Переключиться в режим просмотра результата запроса**  

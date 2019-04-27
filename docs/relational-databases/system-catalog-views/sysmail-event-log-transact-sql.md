@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ac38c2e54fde2beb02e009e00b9f587e9265a43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759945"
 ---
 # <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Содержит по одной строке для каждого из сообщений Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], возвращаемых компонентом Database Mail  (под сообщением подразумевается сообщение об ошибке, а не электронное письмо). Настройка **уровень ведения журнала** параметра с помощью **системных параметров** диалоговое окно мастера настройки компонента Database Mail, или [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)хранимую процедуру, чтобы определить, какие сообщения возвращаются.  
+  Содержит по одной строке для каждого из сообщений Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], возвращаемых компонентом Database Mail  (Сообщения в этом контексте ссылается на сообщение, например сообщение об ошибке, а не сообщение электронной почты). Настройка **уровень ведения журнала** параметра с помощью **системных параметров** диалоговое окно мастера настройки компонента Database Mail, или [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)хранимую процедуру, чтобы определить, какие сообщения возвращаются.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  

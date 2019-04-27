@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 54e2a0f5de93ee9f0d760adfd5a95551d19cc782
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741386"
 ---
 # <a name="set-partition-writeback"></a>Настройка обратной записи секции
   При включении возможности записи в группе мер пользователи смогут вносить изменения в данные куба при их просмотре. При этом сделанные изменения сохраняются не в данных куба или исходных данных, а в отдельной таблице, которая называется таблицей обратной записи. Конечные пользователи, просматривающие секцию, доступную для записи, видят суммарный результат всех изменений в таблице обратной записи для секции.  

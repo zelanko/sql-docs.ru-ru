@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a9a300ce29141ed0a065b4186b737c4d8c294820
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768908"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>План выполнения и выделение буферов
   Перед выполнением задача потока данных проверяет свои компоненты и формирует план выполнения для каждой последовательности компонентов. В этом разделе предоставляются сведения о плане выполнения, рассматривается, как просмотреть план и как на основании плана выполнения выделяются входной и выходной буферы.  

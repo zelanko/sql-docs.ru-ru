@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2eb1df7896cb93e72c80251786170e0a03b46a0a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772170"
 ---
 # <a name="add-a-destination-using-destination-assistant"></a>Добавление назначения с помощью помощника по назначениям
   В этом разделе приведены шаги по добавлению нового назначения с помощью помощника по назначениям, а также приведен список параметров, доступных в диалоговом окне **Добавление нового назначения**, которое отображается при перетаскивании помощника по назначениям в конструктор служб SSIS.  

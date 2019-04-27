@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c4f85a74b91a74b58847a24d04053e2b8848234d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763390"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>Функциональная область системного администрирования (диспетчер основных данных)
   В функциональной области «Администрирование системы» администраторы могут создать модель и все ее объекты. Они также могут создать бизнес-правила, создать и развернуть пакеты модели. Дополнительные сведения об администраторах см. в разделе [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6aa18a6b40f073dbccd28d82477d0b1c5e2b69fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753636"
 ---
 # <a name="installing-smo"></a>Установка SMO
   Если вы хотите разрабатывать приложения, использующего [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] управляющих объектов (SMO), следует выбрать пакет SDK клиентских средств при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы установить пакет клиентских средств пакета SDK без установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], установите общие управляющие объекты из пакета возможностей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если вы хотите убедиться, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты установлены на компьютере, который будет выполняться приложение, можно использовать MSI-файла общих управляющих объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пакет дополнительных компонентов.  

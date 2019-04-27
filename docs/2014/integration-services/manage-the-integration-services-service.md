@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6f6251ac85fe76d775fd84b6463d20532615d28c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767422"
 ---
 # <a name="manage-the-integration-services-service"></a>Управление службой Integration Services
     
@@ -33,7 +33,7 @@ ms.locfileid: "58375132"
   
  Предусмотрена возможность установить только единственный экземпляр службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на отдельном компьютере. Эта служба не относится к конкретному экземпляру компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]. Подключение к этой службе осуществляется с использованием имени компьютера, на котором она эксплуатируется.  
   
- Для управления службой [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] может применяться одна из следующих оснасток консоли управления (MMC): «Диспетчер конфигурации SQL Server» или «Службы». Прежде чем появится возможность управлять пакетами в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], необходимо убедиться, что служба запущена.  
+ Для управления службой [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] может применяться одна из следующих оснасток консоли управления (MMC): "Диспетчер конфигурации SQL Server" или "Службы". Прежде чем появится возможность управлять пакетами в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], необходимо убедиться, что служба запущена.  
   
  По умолчанию служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] настроена для управления пакетами в базе данных msdb экземпляра компонента [!INCLUDE[ssDE](../includes/ssde-md.md)], который установлен одновременно со службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Если экземпляр компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] не установлен в то же время, служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] будет настроена для управления пакетами базы данных msdb локального экземпляра по умолчанию компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]. Чтобы управлять пакетами, которые хранятся в именованном или удаленном экземпляре компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]либо в нескольких экземплярах компонента [!INCLUDE[ssDE](../includes/ssde-md.md)], необходимо изменить файл конфигурации для службы. Дополнительные сведения см. в разделе [Настройка служб Integration Services (службы SSIS)](service/integration-services-service-ssis-service.md).  
   

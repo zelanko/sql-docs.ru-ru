@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 93a664baaa81a56e45a54aa36c5f4e8e57375124
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780855"
 ---
 # <a name="odbc-table-valued-parameter-programming-examples"></a>Примеры программирования с использованием возвращающих табличное значение параметров ODBC
   В этом разделе описывается, как выполнить типичные задачи с использованием ODBC и возвращающих табличное значение параметров. Другой пример, демонстрирующий возвращающих табличные значения параметров, см. в разделе [параметров, возвращающих &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  

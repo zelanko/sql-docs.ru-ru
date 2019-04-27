@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7904e42d9ffd82d2c8a5ec7f5c9226d01c5059ef
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749126"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>Не удалось обновить данные для подключения к данным в книге. Повторите попытку или обратитесь к системному администратору. Следующие соединения не удалось обновить: Данные PowerPivot
   Применительно к книгам Excel, содержащим данные PowerPivot, службы Excel возвращают эту ошибку, если при передаче запроса на соединение серверу PowerPivot запрос завершается ошибкой.  
@@ -41,7 +41,7 @@ ms.locfileid: "53371006"
   
  Возможно книга, которую вы пытаетесь открыть, создана в другой версии PowerPivot для Excel для SQL Server 2008 R2. Наиболее вероятно, что указанный в строке подключения поставщик данных служб Analysis Services, отсутствует на компьютере, который обрабатывает этот запрос.  
   
- Если это так, в журнале ULS вы найдете следующее сообщение: «Сбой обновления для «Данные PowerPivot» в книге "\<URL-адрес книги >"», а затем «Не удалось установить соединение».  
+ Если это так, вы найдете следующее сообщение в журнале ULS: «Сбой обновления для «Данные PowerPivot» в книге "\<URL-адрес книги >"», а затем «Не удалось установить соединение».  
   
  Чтобы определить версию книги, необходимо открыть ее в Excel и проверить, какой поставщик данных указан в строке подключения. Книга SQL Server 2008 R2 использует в качестве поставщика данных MSOLAP.4.  
   

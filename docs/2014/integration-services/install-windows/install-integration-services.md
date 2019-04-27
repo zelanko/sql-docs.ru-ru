@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 678b14b224f994c834630a398767fee1ea360870
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768236"
 ---
 # <a name="install-integration-services"></a>Установка служб Integration Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет единую программу установки для всех компонентов, включая службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Она позволяет на одном компьютере устанавливать службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] как вместе с другими компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и отдельно от них.  

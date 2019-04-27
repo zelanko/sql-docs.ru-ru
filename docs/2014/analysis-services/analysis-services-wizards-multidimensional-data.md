@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d86c15a57b296572d42ef4ac6122e69d271e7e2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643715"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Мастера служб Analysis Services (многомерные данные)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] предоставляет мастеры для использования в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. В следующей таблице описаны доступные мастера.  
@@ -38,7 +38,7 @@ ms.locfileid: "48189754"
 |[Справка F1 мастера связанных объектов](linked-object-wizard-f1-help.md)|Используйте мастер связанных объектов для определения связанных измерений или групп мер и импорта дополнительных связанных объектов.|  
 |[Справка F1 мастера секционирования &#40;службы Analysis Services — многомерные данные&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)|Используйте мастер секционирования для определения или удаления секции.|  
 |[Справка F1 мастера формирования схем &#40;службы Analysis Services — многомерные данные&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)|Используйте мастер формирования схем для определения представления источников данных и дополнительно для создания скрипта переноса реляционной схемы представления источников данных из существующего объекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в источник данных.|  
-|[Справка F1 мастера оптимизации с учетом использования](usage-based-optimization-wizard-f1-help.md)|Используйте мастер оптимизации с учетом использования для определения агрегатов для статистических схем на основе запросов, которые хранятся в журнале запросов базы данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|[Справка F1 мастера оптимизации с учетом использования](usage-based-optimization-wizard-f1-help.md)|Используйте мастер оптимизации с учетом использования для определения агрегатов для статистических схем на основе запросов, которые хранятся в журнале запросов базы данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
   
 ## <a name="see-also"></a>См. также  
  [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

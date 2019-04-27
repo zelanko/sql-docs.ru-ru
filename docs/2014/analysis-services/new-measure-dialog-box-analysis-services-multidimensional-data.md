@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3124f6f173a0e232ad7943188baae0cbbb1bfcd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743670"
 ---
 # <a name="new-measure-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Создание меры» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Создание меры** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для добавления новой меры в группу мер конструктора кубов. Чтобы отобразить диалоговое окно **Создание меры** , можно:  
@@ -30,7 +30,7 @@ ms.locfileid: "48225184"
 -   Щелкнуть правой кнопкой мыши группу мер или меру на панели **Меры** вкладки **Структура куба** конструктора кубов и выбрать **Создать меру** из контекстного меню.  
   
 ## <a name="options"></a>Параметры  
- **Usage**  
+ **Использование**  
  Позволяет выбрать статистическую функцию, используемую новым мерам.  
   
  **Исходная таблица**  

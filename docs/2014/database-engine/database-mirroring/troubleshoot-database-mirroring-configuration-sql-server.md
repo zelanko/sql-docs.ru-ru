@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b99fb881fc6bf09aa848bd41a42f8254e5f3acd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754212"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Диагностика конфигурации зеркального отображения базы данных (SQL Server)
   В этом разделе приводятся сведения об устранении неполадок при установке сеанса зеркального отображения базы данных.  
@@ -28,7 +28,7 @@ ms.locfileid: "48085514"
 > [!NOTE]  
 >  Убедитесь в том, что выполняются все [предварительные условия для зеркального отображения базы данных](prerequisites-restrictions-and-recommendations-for-database-mirroring.md).  
   
-|Проблема|Сводка|  
+|Проблемы|Сводка|  
 |-----------|-------------|  
 |Сообщение об ошибке 1418|Данное сообщение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] указывает на то, что сетевой адрес сервера недоступен или не существует, и предполагает выполнение проверки имени сетевого адреса и повторное выполнение команды. Дополнительные сведения см. в разделе [MSSQLSERVER_1418](../../relational-databases/errors-events/mssqlserver-1418-database-engine-error.md) .|  
 |[Измерение счетов](#Accounts)|Обсуждаются требования к правильной настройке учетных записей, под которыми работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
@@ -126,7 +126,7 @@ ms.locfileid: "48085514"
   
  Если зеркальное отображение базы данных остановлено, то перед его повторным запуском к зеркальной базе данных необходимо применить все последующие резервные копии журналов, полученные с основной базы данных.  
   
- Дополнительные сведения см. в разделе [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md).  
+ Дополнительные сведения см. в статье [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 ##  <a name="FailedCreateFileOp"></a> Failed Create-File Operation  
  Чтобы добавление файла не повлияло на сеанс зеркального отображения, путь к файлам должен существовать на обоих серверах. Поэтому перемещение файлов базы данных во время создания зеркального отображения может привести к его ошибке или остановке при выполнении операции добавления файла.  

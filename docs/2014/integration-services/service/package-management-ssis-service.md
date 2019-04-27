@@ -25,11 +25,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e925d72b4ca4815c05e9f4ab67211a1a7ea980
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766634"
 ---
 # <a name="package-management-ssis-service"></a>Управление пакетами (службы SSIS)
   Управление пакетов требует выполнения следующих задач.  
@@ -44,7 +44,7 @@ ms.locfileid: "58375352"
 >  В данном разделе описывается компонент [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] — служба Windows для управления пакетами служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] поддерживает эту службу для обеспечения обратной совместимости с более ранними версиями служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], на сервере служб Integration Services можно управлять пакетами.  
   
 ## <a name="package-store"></a>Хранилище пакетов  
- Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют две папки верхнего уровня для доступа к пакетам служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]: **Запуск пакетов** и **хранимые пакеты**. В папке **Выполняемые пакеты** отображаются пакеты, которые в данный момент выполняются на сервере. В папке **Сохраненные пакеты** перечислены пакеты, которые сохранены в хранилище пакетов. Это только те пакеты, которыми управляет служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Хранилище пакетов может состоять либо из базы данных msdb, либо из папок файловой системы, перечисленных в файле конфигурации службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , либо как из базы данных, так и из файловой системы. В файле конфигурации указываются база данных msdb и папки файловой системы, над которыми требуется осуществлять управление. Где-либо в файловой системе могут также иметься пакеты, не управляемые службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляет две папки верхнего уровня для доступа к [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакеты: **Запуск пакетов** и **хранимые пакеты**. В папке **Выполняемые пакеты** отображаются пакеты, которые в данный момент выполняются на сервере. В папке **Сохраненные пакеты** перечислены пакеты, которые сохранены в хранилище пакетов. Это только те пакеты, которыми управляет служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Хранилище пакетов может состоять либо из базы данных msdb, либо из папок файловой системы, перечисленных в файле конфигурации службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , либо как из базы данных, так и из файловой системы. В файле конфигурации указываются база данных msdb и папки файловой системы, над которыми требуется осуществлять управление. Где-либо в файловой системе могут также иметься пакеты, не управляемые службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Пакеты, сохраняемые в базе данных msdb, хранятся в таблице с именем sysssispackages. При сохранении пакетов в базе данных msdb их можно также сгруппировать в логические папки. Использование логических папок помогает организовывать пакеты по назначению или отфильтровывать пакеты в таблице sysssispackages. Логические папки можно создавать с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. По умолчанию все логические папки, добавляемые в базу данных msdb, автоматически включаются в хранилище пакетов.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "58375352"
   
  В папке **Выполняемые пакеты** нет вложенных папок, и она не может быть расширена.  
   
- По умолчанию **сохраненные пакеты** папка содержит две папки: **Файловая система** и **MSDB**. В папке **Файловая система** перечислены пакеты, которые сохранены в файловой системе. Расположение этих файлов указано в файле конфигурации службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . По умолчанию это папка «Пакеты», расположенная в папке %Program Files%\Microsoft SQL Server\100\DTS. В папке **MSDB** находятся пакеты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , которые были сохранены на сервере в базе данных msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сервера. Таблица sysssispackages содержит пакеты, сохраненные в базе данных msdb.  
+ По умолчанию папка **Сохраненные пакеты** содержит две вложенные папки: **Файловая система** и **MSDB**. В папке **Файловая система** перечислены пакеты, которые сохранены в файловой системе. Расположение этих файлов указано в файле конфигурации службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . По умолчанию это папка «Пакеты», расположенная в папке %Program Files%\Microsoft SQL Server\100\DTS. В папке **MSDB** находятся пакеты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , которые были сохранены на сервере в базе данных msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сервера. Таблица sysssispackages содержит пакеты, сохраненные в базе данных msdb.  
   
  Для просмотра списка пакетов в хранилище пакетов следует открыть среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и подключиться к службам [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Дополнительные сведения см. в разделах [View Integration Services Packages in SQL Server Management Studio &#40;SSIS Service&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md).  
   

@@ -17,11 +17,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f45d9d2a50327259c987cd41fefc6039c629eb77
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62764708"
 ---
 # <a name="metadata-master-data-services"></a>Метаданные (службы Master Data Services)
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] определяемые пользователем метаданные — это данные, которые служат для описания объектов модели. Например, может потребоваться отслеживать владельцев определенной модели или сущности либо отслеживать системы-источники, которые поставляют данные сущности.  

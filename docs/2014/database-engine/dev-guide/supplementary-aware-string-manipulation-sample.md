@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48017f32b5c010498dc089982900b60f03371830
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60153905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780494"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>Образец операций над строками с учетом дополнений
   В данном образце для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] демонстрируется обработка строк с учетом дополнительных символов. В данном образце показана реализация пяти строковых функций Transact-SQL с такими же возможностями работы со строками, как и во встроенных функциях, но с расширенной поддержкой дополнительных символов при обработке как строк в Юникоде, так и строк дополнительных символов. Пять функций: lens(), `lefts(), rights(), subs()` и `replace_s()` которые эквивалентны встроенным функциям `LEN(), LEFT(), RIGHT(), SUBSTRING()` и `REPLACE()` строковые функции.  

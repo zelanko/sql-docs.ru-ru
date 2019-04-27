@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc0fa58c45a49c6a2f09ca3e42df395cbaf20660
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745834"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>Укажите столбец&#39;s содержимого и типа данных (мастер интеллектуального анализа данных)
   Используйте страницу **Определение содержимого и типа данных столбцов** , чтобы изменить типы данных и типы содержимого столбцов, уже установленные мастером. Мастер использует типы данных исходных столбцов и возможности выбранного алгоритма, чтобы определить данные по умолчанию и типы содержимого для каждого столбца.  
   
- **Дополнительные сведения:** [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Создание реляционной структуры интеллектуального анализа данных](data-mining/create-a-relational-mining-structure.md)  
+ **Дополнительные сведения:** [Мастер интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Создание реляционной структуры](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Параметры  
  **Столбцы**  

@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38d807fae60099022e847e4799196305ccfbadf8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743290"
 ---
 # <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>Занятие 9. Восстановление базы данных из хранилища Windows Azure
   На этом занятии вы узнаете, как восстановить файл резервной копии базы данных из хранилища Windows Azure в базу данных, которая находится на локальном компьютере или на виртуальной машине в Windows Azure. Для прохождения этого занятия не требуется завершать занятия 4, 5, 6, 7 и 8.  
@@ -43,7 +43,7 @@ ms.locfileid: "58534446"
   
 3.  Скопируйте и вставьте следующий полный скрипт в окно запроса. При необходимости измените скрипт.  
   
-     **Примечание.** Инструкция `RESTORE` выполняется для восстановления резервной копии базы данных (BAK) из хранилища Windows Azure в экземпляр базы данных, находящийся на другом компьютере.  
+     **Примечание.** Запуском `RESTORE` инструкцию для восстановления резервной копии базы данных (BAK-файл) в хранилище Windows Azure в экземпляр базы данных на другом компьютере.  
   
     ```sql  
   

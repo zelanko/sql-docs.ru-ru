@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c06fb99f8e2104e17d9f6d5f8016b3149ab62c76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745854"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>Определение обучающих данных (мастер интеллектуального анализа данных)
   Определить столбцы, которые должны быть включены в структуру интеллектуального анализа данных, можно с помощью страницы **Определение обучающих данных** . Для включения в структуру можно выбрать даже столбцы, которые не будут использоваться во всех моделях. Например, если необходимо выполнить детализацию столбцов модели интеллектуального анализа данных, можно включить их в структуру, а не в модель.  
@@ -28,7 +28,7 @@ ms.locfileid: "48149334"
 > [!NOTE]  
 >  Различные алгоритмы интеллектуального анализа используют ключи по-разному. Сведения о различных видах ключей см. в разделе [Типы содержимого (интеллектуальный анализ данных)](data-mining/content-types-data-mining.md).  
   
- **Дополнительные сведения:** [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/mining-structures-analysis-services-data-mining.md), [Столбцы модели интеллектуального анализа данных](data-mining/mining-model-columns.md), [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Создание реляционной структуры интеллектуального анализа данных](data-mining/create-a-relational-mining-structure.md)  
+ **Дополнительные сведения:** [Структуры интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [столбцы модели интеллектуального анализа данных](data-mining/mining-model-columns.md), [мастер интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [ Создание реляционной структуры](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Параметры  
  **Таблицы и столбцы**  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 131f86336c2eecb4995304fc87e15a7b910833ab
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768990"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Построение, развертывание и отладка пользовательских объектов
   После написания кода пользовательского объекта для служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] необходимо построить сборку, развернуть ее, интегрировать ее в конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)], чтобы сделать ее доступной для использования в пакетах, а затем протестировать и выполнить ее отладку.  

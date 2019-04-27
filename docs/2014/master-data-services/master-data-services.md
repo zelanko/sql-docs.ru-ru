@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 841f2383b47a40ffd4b8a5d5357b08a9504a30c2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62764938"
 ---
 # <a name="master-data-services"></a>Службы Master Data Services
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) — это решение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по управлению основными данными. Управление основными данными (master data management, MDM) включает в себя действия, предпринимаемые организацией для нахождения и определения нетранзакционных списков данных с целью компиляции управляемых главных списков. Проект MDM в основном предусматривает оценку и реструктуризацию внутренних бизнес-процессов, наряду с реализацией технологии MDM. Результатом успешно реализованного решения MDM становится получение надежных, централизованных данных, доступных для анализа, что влечет за собой принятие лучших бизнес-решений.  

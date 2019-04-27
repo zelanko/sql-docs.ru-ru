@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8fb6b68cbb30e9bbf19f854cf1dd1e7e0dd19d25
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768046"
 ---
 # <a name="import-an-integration-services-project"></a>Импорт проекта служб Integration Services
   Для создания проекта из существующего файла развертывания (ISPAC) или из проекта, развернутого в каталоге служб Integration Services, используется **Мастер импорта проекта** служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Эта функция особенно полезна в случаях, когда отсутствует исходная копия проекта, но необходимо создать ее из файла с расширением ISPAC или каталога SSISDB.  

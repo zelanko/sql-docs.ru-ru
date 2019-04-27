@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 72719595ac4a5de901c6a470f4639631cb08b10c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774358"
 ---
 # <a name="managing-services-how-to-topics-sql-server-configuration-manager"></a>Инструкции по управлению службами (диспетчер конфигурации SQL Server)
   Компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] и агент [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запускаются в операционной системе [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows в качестве служб. Дополнительные сведения о службах см. в разделе [Manage the Database Engine Services](configure-windows/manage-the-database-engine-services.md).  

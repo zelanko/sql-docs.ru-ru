@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e856d99078363ee7c756dcbc98d99cce30fd2f0f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765177"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>Разрешения функциональной области (службы Master Data Services)
   Разрешения можно назначать функциональным областям пользовательского интерфейса [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Существует пять функциональных областей:  

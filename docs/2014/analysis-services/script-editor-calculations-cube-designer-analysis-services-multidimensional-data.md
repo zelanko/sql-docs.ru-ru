@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7e1e411b8a4bb6b8b6d70bbacd783933958c70e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747828"
 ---
 # <a name="script-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Редактор скриптов (вкладка «Вычисления», конструктор кубов) (службы Analysis Services — многомерные данные)
   Используйте панель **Редактор скриптов** на вкладке **Вычисления** в конструкторе кубов для редактирования выражения команды скрипта (в представлении формы) или для редактирования текста всего скрипта куба (в представлении скрипта).  
@@ -30,7 +30,7 @@ ms.locfileid: "48197794"
 |**Выражение**|Введите выражения на языке многомерных выражений и инструкции в команду скрипта, выбранную на панели **Метаданные** (в представлении формы), или в текст скрипта куба (в представлении скрипта).<br /><br /> Перетащите выбранные элементы с панели **Средства вычисления** в данный параметр, чтобы присоединить синтаксическую структуру многомерного выражения для выбранного элемента.|  
   
 ## <a name="see-also"></a>См. также  
- [Многомерные выражения &#40;многомерных Выражений&#41; ссылки](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [Справочник по многомерным выражениям (многомерные выражения)](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [Конструктор кубов &#40;службы Analysis Services — многомерные данные&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Панель инструментов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Организатор скриптов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;службы Analysis Services — многомерные данные&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   

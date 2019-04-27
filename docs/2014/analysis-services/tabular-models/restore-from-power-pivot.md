@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 21b3c477c87861d224d72a52dcce89ceacf7bb3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756566"
 ---
 # <a name="restore-from-powerpivot"></a>Восстановление из PowerPivot
   Можно использовать функцию «Восстановление из PowerPivot» в SQL Server Management Studio для создания новой базы данных на основе табличной модели на экземпляре служб Analysis Services (выполняемых в табличном режиме) или восстановления в существующую базу данных из книги PowerPivot (XLSX).  
@@ -49,7 +49,7 @@ ms.locfileid: "48146654"
 5.  В области **Параметры**оставьте флажок **Включить сведения о безопасности** . При восстановлении из книги PowerPivot этот параметр не действует.  
   
 ## <a name="see-also"></a>См. также  
- [Базы данных табличной модели &#40;табличные службы SSAS&#41;](tabular-model-databases-ssas-tabular.md)   
+ [Базы данных табличной модели (табличные службы SSAS)](tabular-model-databases-ssas-tabular.md)   
  [Импорт из PowerPivot &#40;табличные службы SSAS&#41;](import-from-power-pivot-ssas-tabular.md)  
   
   

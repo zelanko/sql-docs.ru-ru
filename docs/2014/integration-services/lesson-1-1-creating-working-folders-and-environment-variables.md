@@ -1,5 +1,5 @@
 ---
-title: Шаг 1. Создание рабочих папок и переменных среды | Документация Майкрософт
+title: Шаг 1. Создание рабочих папок и переменных среды | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767660"
 ---
-# <a name="step-1-creating-working-folders-and-environment-variables"></a>Шаг 1. Создание рабочих папок и переменных среды
+# <a name="step-1-creating-working-folders-and-environment-variables"></a>Шаг 1. Создание рабочих папок и переменных среды
   В этой задаче предстоит создать рабочую папку (C:\DeploymentTutorial) и новые системные переменные среды (`DataTransfer` и `LoadXMLData`), которые будут использоваться в последующих задачах учебника.  
   
  Рабочая папка является корневой папкой диска C. Если необходимо, используйте другой диск или расположение. Однако необходимо обратить внимание на это расположение и использовать его в дальнейшем всегда, когда в учебнике встречается ссылка на рабочую папку DeploymentTutorial.  

@@ -26,16 +26,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00f0a142c623535d07592de8992ede24ff1caa6d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746856"
 ---
 # <a name="filestore-properties"></a>свойства хранилища файлов
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера хранилища файлов, перечисленные в следующих таблицах. Эти дополнительные свойства следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Дополнительные сведения о дополнительных свойствах сервера и об их настройке см. в разделе [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Применимо к:** многомерный и табличный режим сервера  
+ **Применимо к:** Многомерный и Табличный режим сервера  
   
 ## <a name="properties"></a>Свойства  
  `MemoryLimit`  

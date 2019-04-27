@@ -20,11 +20,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4013dbd3de9b0866aff0dd8d1256be0839299235
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62738840"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ RETCODE bcp_colfmt (
   
  *EUserDataType* перечисляется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] токенами типов данных в файле sqlncli.h, не перечислителях типов данных ODBC C. Например, можно указать символьную строку SQL_C_CHAR типа ODBC с помощью специфического для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типа SQLCHARACTER.  
   
- Чтобы задать представление данных по умолчанию для типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], установите этот параметр в значение 0.  
+ Чтобы задать представление данных по умолчанию для типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установите этот параметр в значение 0.  
   
  Для массового копирования из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в файл, когда *eUserDataType* равном SQLDECIMAL или SQLNUMERIC:  
   
@@ -89,9 +89,9 @@ RETCODE bcp_colfmt (
   
  Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] символьных и двоичных типов данных *cbUserData* может иметь значение SQL_VARLEN_DATA, SQL_NULL_DATA, 0 или любое положительное значение. Если *cbUserData* имеет значение SQL_VARLEN_DATA, система использует либо признак длины при его наличии, либо последовательность с признаком конца для определения длины данных. Если задан и признак длины, и последовательность признака конца, то при массовом копировании используется значение, применение которого вызывает копирование данных наименьшего объема. Если *cbUserData* имеет значение SQL_VARLEN_DATA, данные измеряется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] указан символ или двоичного типа и ни признак длины, ни последовательность с признаком конца, система возвращает сообщение об ошибке.  
   
- Если *cbUserData* равно 0 или положительное значение, система использует *cbUserData* как максимальную длину данных. Тем не менее если в дополнение к положительному *cbUserData*, длины или признака конца последовательность, система определяет объем данных с помощью метода, который вычисляет наименьший размер копируемых данных.  
+ Если значение *cbUserData* больше или равно 0, то система рассматривает значение *cbUserData* как максимальную длину данных. Но если в дополнение к положительному значению для *cbUserData*указан признак длины или последовательность признака конца, то система определяет объем данных методом, который приведет к копированию наименьшего объема данных.  
   
- *CbUserData* значение представляет число байтов данных. Если символьные данные представлены строкой знаков в Юникоде, то положительное *cbUserData* значение параметра представляет число символов, умноженное на размер в байтах каждого символа.  
+ Значение *cbUserData* представляет объем данных в байтах. Если символьные данные представлены строкой знаков в Юникоде, то положительное значение параметра *cbUserData* представляет количество символов, умноженное на размер символа в байтах.  
   
  *pUserDataTerm*  
  Последовательность-признак конца, используемая для этого столбца. Этот параметр предназначен главным образом для символьных типов данных, поскольку все другие типы имеют фиксированную длину или, как в случае с двоичными данными, требуют наличия признака длины, в котором записано точное число присутствующих байтов.  
@@ -140,7 +140,7 @@ RETCODE bcp_colfmt (
   
  Нет необходимости копировать все данные из пользовательского файла в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы пропустить столбец, укажите формат данных для этого столбца, задав *idxServerCol* параметра значение 0. Если требуется пропустить столбец, необходимо указать его тип.  
   
- [Bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) функция может использоваться для сохранения спецификации формата.  
+ Для сохранения спецификации формата можно воспользоваться функцией [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) .  
   
 ## <a name="bcpcolfmt-support-for-enhanced-date-and-time-features"></a>Поддержка функцией bcp_colfmt улучшенных возможностей даты и времени  
  Сведения о типах, используемых с *eUserDataType* параметров для типов даты и времени, см. в разделе [изменения массового копирования для типов усиленной даты и времени &#40;OLE DB и ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  

@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ed4ae6c15a16c3db009145f7daa995988ac04fbf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753686"
 ---
 # <a name="reporting-services-upgrade-issues-upgrade-advisor"></a>Проблемы обновления служб Reporting Services (помощник по обновлению)
   В следующих разделах описываются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] проблемы, которые могут помешать обновлению до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. В следующих разделах описаны действия, позволяющие смягчить воздействие этих изменений на рабочую среду.  

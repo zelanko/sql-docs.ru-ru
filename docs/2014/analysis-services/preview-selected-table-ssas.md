@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e0148a2997d1b0c90873be41981459ea33e845c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748757"
 ---
 # <a name="preview-selected-table-ssas"></a>Предварительный просмотр выбранной таблицы (SSAS)
   Эта страница **мастера импорта таблиц** позволяет просмотреть данные в выбранной таблице, выбрать столбцы для включения в импорт данных и отфильтровать данные в выбранных столбцах. Для доступа к мастеру из [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите пункт **Импорт из источника данных** в меню **Модель**.  

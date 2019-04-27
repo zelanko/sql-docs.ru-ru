@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1a75160826fad9df3e6a401e72cc85b5a8c8c6e7
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780961"
 ---
 # <a name="send-dataset-sample"></a>Образец отправки DataSet
   Образец Send `DataSet` показывает, как с помощью серверной хранимой процедуры, основанной на среде CLR, возвратить клиенту в виде результирующего набора элемент `DataSet` на основе ADO.NET. Данный способ используется, например, когда хранимая процедура заполняет элемент `DataSet` результатами запроса, а затем манипулирует данными, содержащимися в `DataSet`. Также подобный подход используется при создании и заполнении объекта `DataSet` при помощи хранимых процедур. Образец состоит из двух классов: `DataSetUtilities` и `TestSendDataSet`. Метод `SendDataSet`, принадлежащий к классу `DataSetUtilities`, представляет собой наиболее общий способ передачи содержимого экземпляра `DataSet` клиенту. Метод `DoTest` , определенный в классе `TestSendDataSet` , проверяет работу метода `SendDataSet` . Для этого создается экземпляр `DataSet` , который заполняется данными, поступающими из хранимой процедуры `uspGetTwoBOMTestData` Transact-SQL. Процедура `uspGetTwoBOMTestData` дважды запускает процедуру Transact-SQL `uspGetBillOfMaterials` , чтобы выполнить рекурсивный запрос счетов за материалы по двум видам продуктов, указанным в качестве параметров хранимой процедуры `usp_GetTwoBOMTestData` . Обычно после заполнения набора данных данные изменяются до вызова метода `SendDataSet` для доставки их клиенту в виде результирующего набора. В этом образце для простоты данные передаются без обработки.  

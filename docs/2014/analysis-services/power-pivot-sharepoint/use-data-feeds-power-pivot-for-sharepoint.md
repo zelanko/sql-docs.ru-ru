@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 354e1dce8bfb11f7eefc0f90df0868ebc01757e0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748995"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>использовать веб-каналы данных (PowerPivot для SharePoint)
   Канал данных — это один или несколько потоков данных, формируемых из источника данных в сети и направляемых в целевой документ или приложение. Если используется PowerPivot для Excel, веб-каналы данных позволяют получать существующие корпоративные данные или бизнес-данные из произвольных источников данных в окно PowerPivot в книге Excel 2010. После импорта веб-канала данных в книгу на него можно ссылаться в любых операциях обновления данных, планируемых на сервере SharePoint.  

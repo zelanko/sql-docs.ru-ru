@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743170"
 ---
 # <a name="control-transaction-durability"></a>Управление устойчивостью транзакций
   Фиксации транзакций[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут быть либо полностью устойчивыми, служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию, либо отложенными устойчивыми (также известные как отложенная запись).  
@@ -131,7 +131,7 @@ AS BEGIN ATOMIC WITH
 END  
 ```  
   
-### <a name="table-1-durability-in-atomic-blocks"></a>Таблица 1. Устойчивость в блоках ATOMIC  
+### <a name="table-1-durability-in-atomic-blocks"></a>Таблица 1. Устойчивость в атомарных блоках  
   
 |Параметр устойчивости блоков ATOMIC|Отсутствие существующих транзакций|Транзакция обрабатывается (полностью или отложенная устойчивая)|  
 |------------------------------------|-----------------------------|---------------------------------------------------------|  

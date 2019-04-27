@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e0d0cfd668ae945cd54df11fe6110ce59d088980
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746217"
 ---
 # <a name="specify-column-mapping-dialog-box-mining-accuracy-chart"></a>Диалоговое окно «Указание сопоставления столбцов» (диаграмма точности интеллектуального анализа данных)
   Вкладка **Указание сопоставления столбцов** позволяет выбрать таблицы из внешнего источника данных и сопоставить столбцы с моделью интеллектуального анализа данных. Затем с помощью внешних данных можно проверить точность модели интеллектуального анализа данных и представить результаты в диаграмме точности.  
   
- **Дополнительные сведения:** [Тестирование и проверка (интеллектуальный анализ данных)](data-mining/testing-and-validation-data-mining.md)  
+ **Дополнительные сведения см. в следующих разделах:** [Тестирование и проверка (интеллектуальный анализ данных)](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Параметры  
  **Структуры интеллектуального анализа данных**  

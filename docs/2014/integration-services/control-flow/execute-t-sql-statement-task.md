@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f20f64c9a26d1e9b030c01618a63157757c0b205
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831739"
 ---
 # <a name="execute-t-sql-statement-task"></a>Задача «Выполнение инструкции T-SQL»
   Задача «Выполнение инструкции T-SQL» запускает инструкции Transact-SQL. Дополнительные сведения см. в разделах [Справочник по Transact-SQL (компонент Database Engine)](/sql/t-sql/language-reference) и [Запросы в службах Integration Services (SSIS)](../integration-services-ssis-queries.md).  

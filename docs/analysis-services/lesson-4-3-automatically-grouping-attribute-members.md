@@ -1,5 +1,5 @@
 ---
-title: Автоматическое группирование элементов атрибута | Документы Microsoft
+title: Автоматическое группирование элементов атрибута | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b36977f4f55049c5e2c34f2f43f405194bac790e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737724"
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Занятие 4-3 - автоматическое группирование элементов атрибута
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -24,12 +24,12 @@ ms.locfileid: "34017721"
 Свойство **DiscretizationMethod** определяет, создают ли службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] группирования, а также определяет тип выполняемого группирования. По умолчанию в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] группирование не выполняется. При включении автоматического группирования можно настроить параметры служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] таким образом, чтобы выполнялся автоматический выбор оптимального метода группирования, основанного на структуре данного атрибута, либо выбрать один из алгоритмов группирования в следующем списке:  
   
 **EqualAreas**  
-В службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] диапазоны групп создаются таким образом, что элементы измерения распределяются по группам пропорционально.  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] диапазоны групп создаются таким образом, что элементы измерения распределяются по группам пропорционально.  
   
 **Clusters**  
-В службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] группы создаются путем проведения одномерной кластеризации входных значений, используя метод кластеризации К-средних с нормальным распределением. Эта функция применима только в отношении числовых столбцов.  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] группы создаются путем проведения одномерной кластеризации входных значений с помощью метода кластеризации К-средних с нормальным распределением. Эта функция применима только в отношении числовых столбцов.  
   
-После выбора метода группирования необходимо указать количество групп, используя свойство **DiscretizationBucketCount** . Дополнительные сведения см. в разделе [Группирование элементов атрибутов (дискретизация)](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
+После выбора метода группирования необходимо указать количество групп, используя свойство **DiscretizationBucketCount** . Дополнительные сведения см. в разделе [Группирование элементов атрибутов (дискретизация)](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
 В ходе выполнения задач данного раздела будут опробованы следующие критерии группирования: значение годового дохода в измерении **Заказчик** , количество часов отсутствия по болезни в измерении **Сотрудники** , данные о количестве часов отпуска сотрудников в измерении **Сотрудники** . Затем предстоит выполнить обработку куба учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и просмотреть результаты группирования элементов. На конечной стадии будут изменены свойства групп элементов, чтобы выявить эффект от изменения типа группирования.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "34017721"
   
     На следующем рисунке показаны измененные свойства атрибута **Yearly Income**.  
   
-    ![Изменить свойства столбца Yearly Income](../analysis-services/media/l4-discretizationmethod-1.gif "измененные свойства столбца Yearly Income")  
+    ![Измененные свойства столбца Yearly Income](../analysis-services/media/l4-discretizationmethod-1.gif "измененные свойства столбца Yearly Income")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Группирование элементов иерархии атрибута в измерении Employee  
   
@@ -95,7 +95,7 @@ ms.locfileid: "34017721"
   
     На приведенном ниже рисунке приведена зависимость объемов продаж от количества часов отпуска по болезни.  
   
-    ![Sales, разбитая на измерения по отпуска по болезни оставить часы](../analysis-services/media/l4-discretizationmethod-2.gif "Sales, разбитая на измерения по отпуска по болезни оставить часов")  
+    ![Sales, разбитая на измерения по отпуска по болезни оставьте часов](../analysis-services/media/l4-discretizationmethod-2.gif "Sales, разбитая на измерения по отпуска по болезни оставьте часов")  
   
 10. Удалите иерархию атрибута **Sick Leave Hours** из раздела столбцов панели **Данные** .  
   
@@ -126,8 +126,8 @@ ms.locfileid: "34017721"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Скрытие и отключение иерархий атрибутов](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
-## <a name="see-also"></a>См. также:  
-[Группирование элементов атрибутов & #40; дискретизации & #41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
+## <a name="see-also"></a>См. также  
+[Группирование элементов атрибутов (дискретизация)](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   
   

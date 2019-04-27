@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 067f76f0f48c11b3946476e6386788dd7b812760
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747456"
 ---
 # <a name="select-mining-structure-dialog-box-mining-accuracy-chart-view"></a>Диалоговое окно «Выбор структуры интеллектуального анализа данных» (просмотр диаграммы точности интеллектуального анализа данных)
   Используйте диалоговое окно **Выбор структуры интеллектуального анализа данных** , чтобы выбрать структуру интеллектуального анализа данных, содержащую модели, точность которых нужно сравнить или протестировать.  
@@ -33,6 +33,6 @@ ms.locfileid: "48159004"
 ## <a name="see-also"></a>См. также  
  [Конструктор диаграммы точности интеллектуального &#40;интеллектуального анализа данных&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Тестирование и проверка задачи и инструкции по &#40;интеллектуального анализа данных&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Тестирование и проверка &#40;интеллектуального анализа данных&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Тестирование и проверка (интеллектуальный анализ данных)](data-mining/testing-and-validation-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Создание областью действия запроса именованных наборов (многомерные Выражения) | Документы Microsoft
+title: Создание, областью действия запроса именованных наборов (многомерные Выражения) с | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9b30ba12d229f0c045d7a08a71c97a98de67a2bd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62739984"
 ---
-# <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>Именованные наборы - Создание областью действия запроса многомерных Выражений именованных наборов
+# <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>Именованные наборы многомерных Выражений, именованные наборы — создание, областью действия запроса
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Если именованный набор нужен только в одном запросе многомерных выражений, этот набор можно определить с помощью ключевого слова WITH. Именованный набор, созданный с использованием ключевого слова WITH, уничтожается после выполнения запроса.  
   
@@ -90,7 +90,7 @@ FROM Sales
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Инструкция SELECT & #40; Многомерные Выражения & #41;](../../../mdx/mdx-data-manipulation-select.md)   
- [Создание областью действия сеанса именованных наборов & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [Инструкция SELECT (многомерные выражения)](../../../mdx/mdx-data-manipulation-select.md)   
+ [Создание именованных наборов с областью действия сеанса (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

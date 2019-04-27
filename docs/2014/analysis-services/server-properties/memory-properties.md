@@ -25,18 +25,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea5ccba5686c9f3716fd6931909ec28a79e00b8a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747466"
 ---
 # <a name="memory-properties"></a>Свойства памяти
   Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства памяти сервера, перечисленные в следующей таблице. Инструкции по установке этих свойств см. в [Руководстве по работе со службами SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  Значения в диапазоне от 1 до 100 представляют процент **общего объема физической памяти** или **виртуального адресного пространства**в зависимости от того, какое значение меньше. Значения, превышающие 100, представляют собой ограничения памяти в байтах.  
   
- **Применимо к:** Многомерный или табличный режим сервера, если не указано иное.  
+ **Применимо к:** Многомерный и Табличный режим сервера, если не указано иное.  
   
 ## <a name="properties"></a>Свойства  
  `LowMemoryLimit`  

@@ -18,11 +18,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 49e14c0a68ad901e8d22388c7edd993744c9afc7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737540"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Применение реляционных операторов в запросах XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "56030649"
 ```  
   
 > [!NOTE]  
->  Если в шаблоне задается этот запрос, то символ < должен кодироваться в виде сущности, поскольку символ < имеет особое значение в XML-документе. В шаблоне используйте `<`, чтобы задать символ <.  
+>  Если указан этот запрос в шаблоне < символ должен быть закодированы, поскольку в сущность < символ имеет особое значение в XML-документа. В шаблоне, использовать `<` для указания < символ.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Проверка запроса XPath к схеме сопоставления  
   

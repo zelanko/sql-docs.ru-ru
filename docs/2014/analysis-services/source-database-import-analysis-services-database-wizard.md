@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d753fa58ce7b710ae406d4fc23a5745edafcec4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746578"
 ---
 # <a name="source-database-import-analysis-services-database-wizard"></a>База данных-источник (мастер импорта баз данных служб Analysis Services)
   Используйте страницу **База данных-источник** , чтобы выбрать экземпляр служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и базу данных, из которой будет создан проект служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

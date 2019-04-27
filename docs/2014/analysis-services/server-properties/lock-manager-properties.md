@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f773eb7fb512b9b1ae14b14a13717ecc8f42599f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747246"
 ---
 # <a name="lock-manager-properties"></a>Свойства диспетчера блокировок
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера диспетчера блокировок, перечисленные в следующей таблице. Дополнительные сведения о дополнительных свойствах сервера и об их настройке см. в разделе [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Область применения:** многомерный и табличный режим сервера  
+ **Применимо к:** Многомерный и Табличный режим сервера  
   
 ## <a name="properties"></a>Свойства  
  `DefaultLockTimeoutMS`  

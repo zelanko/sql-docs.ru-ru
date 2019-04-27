@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2ee56d8f285eb3e054241ac912b552e55665a552
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766906"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Результирующие наборы в задаче "Выполнение SQL"
   В пакете служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] возвращение результирующего набора задаче «Выполнение SQL» зависит от типа команды SQL, используемого задачей. Например, инструкция SELECT обычно возвращает результирующий набор, а инструкция INSERT нет.  

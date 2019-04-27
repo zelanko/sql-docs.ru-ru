@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4fe39e83507b8455fb25ba63812a75a7e9040990
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756243"
 ---
 # <a name="set-working-set-size-server-configuration-option"></a>Параметр конфигурации сервера «set working set size»
   Этот параметр все еще присутствует в хранимой процедуре **sp_configure**, хотя в [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данная функция недоступна. (Параметр не влияет на работу сервера.)  

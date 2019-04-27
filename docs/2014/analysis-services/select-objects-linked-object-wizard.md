@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3d1f7e83ebe2d1273cc2efaa5c341bfd970856fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747236"
 ---
 # <a name="select-objects-linked-object-wizard"></a>Выбор объектов (мастер связанных объектов)
   Используйте страницу **Выбор объектов** , чтобы выбрать объекты, которые должны быть связаны или импортированы.  

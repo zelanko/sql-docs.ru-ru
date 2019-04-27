@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 763561a3b13917c290794db145c6309267f9dc97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756590"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>Базы данных табличной модели (табличные службы SSAS)
   База данных табличной модели — это база данных служб Analysis Services, которая создается в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] с помощью шаблона проекта табличной модели служб Analysis Services, где таблицы и связи являются основными структурами для представления данных.  
@@ -25,20 +25,20 @@ ms.locfileid: "48190704"
  Базы данных табличной модели проще построить, чем многомерные базы данных, особенно при наличии основы в виде реляционной базы данных. Во всем прочем административные задачи схожи, если не идентичны администрированию многомерной базы данных. Применяются те же средства и подходы.  
   
 ## <a name="related-content"></a>См. также  
- [Решения табличных моделей &#40;табличные службы SSAS&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [Решения табличных моделей (табличные службы SSAS)](../tabular-model-solutions-ssas-tabular.md)  
   
  [Доступ к данным табличной модели](tabular-model-data-access.md)  
   
 ## <a name="related-tasks"></a>Связанные задачи  
  [Обработка базы данных, таблицы или секции](process-database-table-or-partition-analysis-services.md)  
   
- [Роли табличных моделей &#40;табличные службы SSAS&#41;](tabular-model-roles-ssas-tabular.md)  
+ [Роли табличных моделей (табличные службы SSAS)](tabular-model-roles-ssas-tabular.md)  
   
- [Секции табличных моделей &#40;табличные службы SSAS&#41;](tabular-model-partitions-ssas-tabular.md)  
+ [Секции табличных моделей (табличные службы SSAS)](tabular-model-partitions-ssas-tabular.md)  
   
  [Настройка доступа в памяти или доступа DirectQuery для базы данных табличной модели](enable-directquery-mode-in-ssms.md)  
   
- [Соединение с базой данных табличной модели &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
+ [Соединение с табличным шаблоном базы данных (службы SSAS)](connect-to-a-tabular-model-database-ssas.md)  
   
  [Восстановление из PowerPivot](restore-from-power-pivot.md)  
   

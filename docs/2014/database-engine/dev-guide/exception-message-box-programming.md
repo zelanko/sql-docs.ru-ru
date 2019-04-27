@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 205638b82e8d0d71a3d674bd970e4bf8d2e3ea5f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753377"
 ---
 # <a name="exception-message-box-programming"></a>Программирование окон сообщений об исключениях
   Окно сообщения об исключении представляет собой программный интерфейс, который устанавливается и используется [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] графических компонентов. Окно сообщения об исключении является поддерживаемой управляемой сборкой, которая используется в приложении, чтобы обеспечить в приложении более полное управление сообщениями и дать пользователям возможность сохранять содержимое сообщения об ошибке для последующего просмотра сообщений и получения помощи при работе с ними. Поскольку окно сообщения об исключении устанавливается всеми выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], за исключением [!INCLUDE[ssEW](../../includes/ssew-md.md)], его можно использовать без дополнительной настройки на любом компьютере, на котором установлены клиентские компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

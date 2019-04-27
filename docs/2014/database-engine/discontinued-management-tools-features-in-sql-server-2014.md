@@ -11,19 +11,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c966c3e4388588810438d7e91a9ae0356ef60c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780353"
 ---
 # <a name="discontinued-management-tools-features-in-sql-server-2014"></a>Неподдерживаемые возможности средств управления в SQL Server 2014
   В этом разделе описываются функции средств управления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , которые недоступны в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="features-removed-in-includesscurrentincludessscurrent-mdmd"></a>Компоненты, удаленные в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="features-removed-in-includesscurrentincludessscurrent-mdmd"></a>Функции, удаленные в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  None  
   
-## <a name="features-removed-in-includesssql11includessssql11-mdmd"></a>Компоненты, удаленные в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="features-removed-in-includesssql11includessssql11-mdmd"></a>Функции, удаленные в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="sql-server-compact-edition"></a>SQL Server Compact Edition  
  Редактор кода SQL Server Compact Edition исключен из среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Поддержка SQL Server Compact Edition также исключена из обозревателя объектов, обозревателя решений и обозревателя шаблонов. Вместо них используйте редакторы Transact-SQL в среде Microsoft Visual Studio 2010 с пакетом обновления 1 (SP1) или в WebMatrix.  

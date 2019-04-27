@@ -21,11 +21,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fc08bc82fa4a02b2e78479d3075357b8816874b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62744319"
 ---
 # <a name="performing-asynchronous-operations"></a>Выполнение асинхронных операций
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "47691769"
   
  Интерфейсы **IDBAsynchStatus** и **ISSAsynchStatus** могут быть получены путем запроса интерфейса множественных результатов с помощью метода **QueryInterface**.  
   
- После завершения выполнения команды **IMultipleResults** может использоваться в обычном режиме, с единственным отличием от синхронной обработки: DB_S_ASYNCHRONOUS может быть возвращен, в этом случае **IDBAsynchStatus** или **ISSAsynchStatus** может использоваться для определения, когда операция будет завершена.  
+ После завершения выполнения команды **IMultipleResults** может использоваться в обычном режиме, с единственным отличием от синхронной обработки: Операции могут быть возвращены, в этом случае **IDBAsynchStatus** или **ISSAsynchStatus** может использоваться для определения, когда операция будет завершена.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере приложение вызывает неблокирующий метод, выполняет некоторую другую обработку, а затем возвращает результаты процессу. Интерфейс **ISSAsynchStatus::WaitForAsynchCompletion** ожидает объект внутреннего события, пока не будет завершена асинхронно выполняющаяся операция или пока не истечет время, указанное в параметре *dwMilisecTimeOut*.  

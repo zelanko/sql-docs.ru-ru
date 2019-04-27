@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 156bd83662b9b6fa42eb99e8e5810bb4fc71d51a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747274"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>Вкладка «Характеристики кластера кластеризации последовательностей» (средство просмотра моделей интеллектуального анализа данных)
   На вкладке **Характеристики кластера** в **средстве просмотра кластеризации последовательностей (Майкрософт)** приводится подробный список характеристик, определяющих кластер последовательностей. Эти характеристики могут включать простые пары «атрибут-значение», а также переходы между состояниями.  

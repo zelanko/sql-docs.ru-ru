@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 733842d4119c83835feff7c71b63f28d419593ab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749282"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot для SharePoint (SSAS)
   PowerPivot для SharePoint — это сервер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], исполняемый в режиме интеграции с SharePoint. PowerPivot для SharePoint предусматривает размещение данных PowerPivot на сервере в ферме SharePoint. Данные PowerPivot представляют собой модель аналитических данных, которая создается в одной из следующих программ:  

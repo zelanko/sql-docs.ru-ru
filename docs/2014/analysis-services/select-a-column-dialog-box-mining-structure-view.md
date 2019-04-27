@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de9045d445142428810679fc5452e7627760145b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747756"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>Диалоговое окно «Выбор столбца» (представление структуры интеллектуального анализа данных)
   Используйте диалоговое окно **Выбор столбца** , чтобы добавить столбцы к структуре интеллектуального анализа данных. Диалоговое окно содержит различные параметры в зависимости от того, работает ли пользователь с моделью интеллектуального анализа данных OLAP или с реляционной моделью интеллектуального анализа данных.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f67f8d818b38387aef5723b5c6d15dc1958e145c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748186"
 ---
 # <a name="row-filters-role-designertabular-model"></a>Фильтры строк (конструктор ролей, табличная модель)
   На странице **Фильтры строк** конструктора ролей можно определить фильтры уровня строк для соответствующей роли. Фильтры строк можно определять только для ролей с разрешениями на чтение, а также на чтение и обработку.  
@@ -38,6 +38,6 @@ ms.locfileid: "48061224"
   
 ## <a name="see-also"></a>См. также  
  [Роли табличных моделей &#40;табличные службы SSAS&#41;](tabular-models/roles-ssas-tabular.md)   
- [Управление ролями с помощью SSMS &#40;табличные службы SSAS&#41;](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
+ [Управление ролями с помощью среды SSMS (табличные службы SSAS)](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
   
   

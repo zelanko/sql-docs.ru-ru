@@ -1,5 +1,5 @@
 ---
-title: 'Руководство: SQL Server Management Studio | Документация Майкрософт'
+title: Учебник. SQL Server Management Studio | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,13 +23,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6cd02b0679990e7781faf2195b17444cadb53e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753466"
 ---
-# <a name="tutorial-sql-server-management-studio"></a>Руководство: SQL Server Management Studio
+# <a name="tutorial-sql-server-management-studio"></a>Учебник. SQL Server Management Studio
   В учебнике по среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] описывается интегрированная среда для управления инфраструктурой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] представляет собой графический интерфейс для настройки экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], наблюдения за ними и управления ими. Такая среда также позволяет развертывать, наблюдать и обновлять компоненты уровня данных, используемых приложениями, например базами и хранилищами данных. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] также предоставляет редакторы [!INCLUDE[tsql](../../includes/tsql-md.md)], языка многомерных выражений, расширений интеллектуального анализа данных и XML для изменения и отладки скриптов.  
   
 ## <a name="what-you-will-learn"></a>Обзор учебника  
@@ -39,13 +39,13 @@ ms.locfileid: "48167314"
   
  Учебник разделен на три занятия.  
   
- [Занятие 1. Основные возможности перемещения в среде SQL Server Management Studio](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
+ [Занятие 1. Основные возможности перемещения в SQL Server Management Studio](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
  На этом занятии рассматривается, как использовать компоненты среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], как перенастроить макет среды и вернуться к макету, заданному по умолчанию.  
   
- [Занятие 2. Создание инструкций на языке Transact-SQL](lesson-2-writing-transact-sql.md)  
+ [Занятие 2. Создание Transact-SQL](lesson-2-writing-transact-sql.md)  
  На этом занятии рассматривается, как открывать редактор запросов, управлять кодом и использовать другие новые функции редактора запросов.  
   
- [Урок 3. Работа с шаблонами, решениями и проектами скриптов](lesson-3-working-with-templates-solutions-and-script-projects.md)  
+ [Занятие 3. Работа с шаблонами, решениями и проектами скриптов](lesson-3-working-with-templates-solutions-and-script-projects.md)  
  На этом занятии мы рассмотрим, как использовать шаблоны и организовывать скрипты в решения и проекты.  
   
 ## <a name="requirements"></a>Требования  

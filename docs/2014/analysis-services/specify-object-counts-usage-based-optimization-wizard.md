@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6f4bb5bcf2584cba8265fb175b7581b6b40ce08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746138"
 ---
 # <a name="specify-object-counts-usage-based-optimization-wizard"></a>Задание счетчиков объектов (мастер оптимизации с учетом использования)
   Для автоматического вычисления количества объектов в кубе или ввода оценочного числа вручную используется страница **Определение счетчиков объектов** . С помощью счетчиков объектов мастер оптимизации с учетом использования оценивает требования к хранилищу.  

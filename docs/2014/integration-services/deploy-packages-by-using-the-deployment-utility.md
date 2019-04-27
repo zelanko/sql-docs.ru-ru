@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0d42fe629fec13c941dc358f58f797b32df7ef09
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770103"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>Развертывание пакетов с помощью программы развертывания
   Если сборка программы развертывания, предназначенной для установки пакетов из проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , выполнена на компьютере, отличном от того, на котором находится сам проект, прежде всего необходимо скопировать папку развертывания на целевой компьютер.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 394738e72ce96b16648ece5b851e6b1974d9f076
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747686"
 ---
 # <a name="select-existing-dimensions-cube-wizard"></a>Выбор существующих измерений (мастер кубов)
   Страница **Выбор существующих измерений** позволяет выбрать существующие измерения, которые необходимо включить в куб.  

@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fed9d261f692e9c9e1eee4f7078ca69e8c74594e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760126"
 ---
 # <a name="sysdmbrokerqueuemonitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47779862"
 |**state**|**nvarchar(32)**|Состояние монитора. Допускает значение NULL. Возможны следующие варианты.<br /><br /> **НЕАКТИВНЫЕ**<br /><br /> **УВЕДОМЛЕНИЕ**<br /><br /> **RECEIVES_OCCURRING**|  
 |**last_empty_rowset_time**|**datetime**|Последний раз, когда инструкция RECEIVE из очереди возвратила пустой результат. Допускает значение NULL.|  
 |**last_activated_time**|**datetime**|Последний раз, когда монитор очереди активировал хранимую процедуру. Допускает значение NULL.|  
-|**tasks_waiting**|**int**|Количество сеансов, ожидающих в инструкции RECEIVE для этой очереди. Допускает значение NULL.<br /><br /> Примечание: Это число включает все сеансы, выполняющие инструкцию receive, независимо от того, является ли монитор очереди сеанс был. Это происходит, если вместе с RECEIVE используется инструкция WAITFOR. В основном, эти задачи ожидают прибытия сообщений в очередь.|  
+|**tasks_waiting**|**int**|Количество сеансов, ожидающих в инструкции RECEIVE для этой очереди. Допускает значение NULL.<br /><br /> Примечание. Это число включает все сеансы, выполняющие инструкцию receive, независимо от того, является ли монитор очереди сеанс был. Это происходит, если вместе с RECEIVE используется инструкция WAITFOR. В основном, эти задачи ожидают прибытия сообщений в очередь.|  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  

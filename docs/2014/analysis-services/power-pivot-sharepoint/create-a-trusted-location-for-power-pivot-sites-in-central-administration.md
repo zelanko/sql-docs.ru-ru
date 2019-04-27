@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e73468de8edd2497409c37acb2c00bfaf79ebd2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749415"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Create a trusted location for PowerPivot sites in Central Administration
   Службы Excel позволяют указать, какие расположения являются допустимыми репозиториями для книг, открываемых на сервере SharePoint. Эти расположения называются надежными. Можно использовать разные параметры конфигурации для каждого создаваемого надежного расположения. При развертывании PowerPivot для SharePoint может понадобиться создание надежных расположений для веб-сайтов, содержащих книги PowerPivot, что позволит применить параметры, наиболее подходящие для доступа к данным PowerPivot, при сохранении параметров по умолчанию для всех остальных расположений фермы.  

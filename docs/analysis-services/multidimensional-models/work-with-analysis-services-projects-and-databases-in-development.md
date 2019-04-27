@@ -1,5 +1,5 @@
 ---
-title: Работа с проектами и разработки баз данных служб Analysis Services | Документы Microsoft
+title: Работа с проектами и базами данных в разработке служб Analysis Services | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 018f937ed07c202aad17d5e7758f41a3082c4870
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743120"
 ---
-# <a name="work-with-analysis-services-projects-and-databases-in-development"></a>Работа с проектами и разработки баз данных служб Analysis Services
+# <a name="work-with-analysis-services-projects-and-databases-in-development"></a>Работа с проектами и базами данных в разработке служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   База данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может быть разработана в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] в режиме проекта или в режиме в сети.  
   

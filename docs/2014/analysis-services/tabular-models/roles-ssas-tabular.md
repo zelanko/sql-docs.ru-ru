@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d1b59b0e279d016d2fcaee9b0fcae6742c4ff87b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756896"
 ---
 # <a name="roles-ssas-tabular"></a>Роли (табличные службы SSAS)
   В табличной модели роли определяют разрешения члена для модели. В каждой роли имеются члены, различаемые по имени пользователя или группе Windows, а также разрешениям (чтение, обработка, администрирование). Члены роли могут выполнять с моделью действия, заданные в разрешении роли. Роли, которым заданы разрешения на чтение, также могут обеспечивать дополнительную защиту на уровне строк с помощью фильтров уровня строк.  

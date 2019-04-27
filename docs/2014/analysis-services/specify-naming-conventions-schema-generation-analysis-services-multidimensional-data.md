@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0cbf9d1e9a26c6a9c64cf93974ae9198a13cbf6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746277"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>Соглашения об именах (мастер формирования схем) (службы Analysis Services — многомерные данные)
   Страница **Соглашения о наименовании** для определения соглашений об именовании, которые мастер формирования схем будет использовать при создании объектов схемы.  
@@ -37,7 +37,7 @@ ms.locfileid: "48226254"
 |**Суффикс свойств пользовательской свертки**|Строка, добавляемая к имени каждого столбца свойств специальной свертки. Значение по умолчанию — **CustomRollupProperties**.|  
 |**Суффикс унарного оператора**|Строка, добавляемая к имени каждого столбца унарного оператора. Значение по умолчанию — **UnaryOperator**.|  
   
- **Value**  
+ **Значение**  
  Укажите значение параметра, указанного в поле **Параметр** для использования при создании схемы.  
   
 ## <a name="see-also"></a>См. также  

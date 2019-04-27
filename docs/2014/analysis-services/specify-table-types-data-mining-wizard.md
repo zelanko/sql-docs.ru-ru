@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84946cd0dadd467e7998106f89868a5e9d401f13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746346"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>Определение типов таблиц (мастер интеллектуального анализа данных)
   Страница **Определение типов таблиц** используется для идентификации таблиц, используемых для определения структуры интеллектуального анализа данных. Если таблица не выбрана, она не будет использоваться для определения структуры интеллектуального анализа данных.  
@@ -26,7 +26,7 @@ ms.locfileid: "48202644"
 > [!NOTE]  
 >  Таблицы можно добавлять позже на вкладке **Структура интеллектуального анализа данных** в окне **Конструктор интеллектуального анализа данных**.  
   
- **Дополнительные сведения:** [Вложенные таблицы (службы Analysis Services — интеллектуальный анализ данных)](data-mining/nested-tables-analysis-services-data-mining.md), [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-wizard-analysis-services-data-mining.md) и [Создание реляционной структуры интеллектуального анализа данных](data-mining/create-a-relational-mining-structure.md).  
+ **Дополнительные сведения:** [Вложенные таблицы &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/nested-tables-analysis-services-data-mining.md), [мастер интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Создание реляционной структуры](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Параметры  
  **Таблицы**  

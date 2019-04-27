@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef93edfe6e78dd86963c7e810d33ec413194746a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746128"
 ---
 # <a name="specify-source-information-partition-wizard"></a>Определение исходных сведений (мастер секционирования)
   С помощью страницы **Определение исходных сведений** можно выбрать группу мер, в которой создается секция, а также представление источника данных, и отфильтровать таблицы для секции.  
@@ -50,6 +50,6 @@ ms.locfileid: "48120561"
 >  Если выбирается несколько таблиц, страницу **Ограничение на строки** невозможно отобразить, и нельзя ограничить строки для секций, созданных из выбранных таблиц. Для ограничения строк во всех секциях мастер секционирования должен выполняться по одному разу для каждой таблицы, из которых должна создаваться секция.  
   
 ## <a name="see-also"></a>См. также  
- [Секции &#40;службы Analysis Services — многомерные данные&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Секции (службы Analysis Services — многомерные данные)](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

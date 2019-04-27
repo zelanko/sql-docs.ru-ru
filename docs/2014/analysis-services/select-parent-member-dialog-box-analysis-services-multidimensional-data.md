@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14ba9b6439938461b6cb9cbe4146f0046cc1f7cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747196"
 ---
 # <a name="select-parent-member-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Выбор родительского элемента» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Выбор родительского элемента** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для выбора родительского элемента для вычисляемого элемента. Чтобы вызвать диалоговое окно **Выбор родительского элемента** , в конструкторе кубов на вкладке **Вычисления** на панели **Редактор форм вычисляемого элемента** нажмите кнопку **Изменить** .  

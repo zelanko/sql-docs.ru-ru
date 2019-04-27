@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754246"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Определение правильного числа контейнеров для хэш-индексов
   Необходимо указать значение для параметра `BUCKET_COUNT` при создании оптимизированной для памяти таблицы. Этот раздел содержит рекомендации по определению соответствующего значения для параметра `BUCKET_COUNT`. Если не удается определить нужное число контейнеров, пользуйтесь вместо этого некластеризованным индексом.  Неверное значение `BUCKET_COUNT`, особенно слишком низкое, может значительно повлиять на производительность рабочей нагрузки, а также на время восстановления базы данных. Рекомендуется пересмотреть число контейнеров.  

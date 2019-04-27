@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c5e697003246ec00121c203a6b77fe68fed378fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748686"
 ---
 # <a name="prediction-query-builder-data-mining"></a>Построитель прогнозирующих запросов (интеллектуальный анализ данных)
   Представление **Прогноз модели интеллектуального анализа данных** позволяет создавать прогнозы на основе моделей интеллектуального анализа данных, содержащихся в структуре интеллектуального анализа данных.  
@@ -25,7 +25,7 @@ ms.locfileid: "48095054"
   
 -   [Учебник по основам интеллектуального анализа данных](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [Создание и выполнение запросов к моделям интеллектуального анализа данных с помощью расширений интеллектуального анализа данных: учебники &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [Создание и выполнение запросов к моделям интеллектуального анализа данных с помощью расширений интеллектуального анализа данных: Учебники по &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
 -   [Запросы интеллектуального анализа данных](data-mining/data-mining-queries.md)  
   

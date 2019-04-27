@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 384d1cd437947e23f571cf30b6ec7fad84704942
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746946"
 ---
 # <a name="thread-pool-properties"></a>Свойства пула потоков
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] использует многопоточность во многих операциях, повышая общую производительность сервера за счет параллельного выполнения нескольких заданий. Чтобы эффективнее управлять потоками, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] использует пулы потоков для предварительного выделения ресурсов и обеспечения доступности потоков для последующих заданий.  

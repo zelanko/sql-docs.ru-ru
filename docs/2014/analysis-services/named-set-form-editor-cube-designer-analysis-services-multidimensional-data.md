@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32f384889a8d68bc4683bd8773ea4618329ea44a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743649"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Редактор формы именованного набора (вкладка «Вычисления», конструктор кубов) (службы Analysis Services — многомерные данные)
   Панель **Редактор формы именованных наборов** на вкладке **Вычисления** в конструкторе кубов позволяет создавать и изменять именованный набор.  
@@ -27,7 +27,7 @@ ms.locfileid: "48119748"
 >  Данная панель отображается только в представлении формы.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **Name**  
  Введите имя именованного набора.  
   
  **Выражение**  

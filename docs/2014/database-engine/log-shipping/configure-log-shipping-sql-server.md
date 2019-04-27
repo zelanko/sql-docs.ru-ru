@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774588"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Настройка доставки журналов (SQL Server)
   В данном разделе описывается настройка доставки журналов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -78,7 +78,7 @@ ms.locfileid: "48049244"
   
 8.  Обратите внимание на расписание в поле **Расписание** в разделе **Задание резервного копирования**. Если нужно изменить расписание, нажмите кнопку **Расписание** и задайте расписание для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по своему усмотрению.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). При создании конфигурации доставки журналов можно управлять поведением сжатия резервных копий журналов, выбрав один из следующих параметров: **Использовать параметр сервера по умолчанию**, **Сжимать резервные копии**или **Не сжимать резервные копии**. Дополнительные сведения см. в статье [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). При создании конфигурации доставки журналов, можно управлять поведением сжатия резервных копий журналов, выбрав один из следующих вариантов: **Использовать параметр сервера по умолчанию**, **сжатие резервных копий**, или **не сжимать резервные копии**. Дополнительные сведения см. в статье [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
 10. Нажмите кнопку **ОК**.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "48049244"
 -   [Переход на вторичный сервер доставки журналов (SQL Server)](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
 ## <a name="see-also"></a>См. также  
- [О доставке журналов &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
+ [Сведения о доставке журналов (SQL Server)](about-log-shipping-sql-server.md)   
  [Таблицы доставки журналов и хранимые процедуры](log-shipping-tables-and-stored-procedures.md)  
   
   

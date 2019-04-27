@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a58daa6e66f591dee73f823b3a401ae9ac45d80a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748026"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Сохранение файла» (службы Analysis Services — многомерные данные)
   Диалоговое окно **Сохранение файла** отображает список доступных файлов в папках журналов и данных, определенных для экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Можно выбрать файл из списка или, при необходимости, указать другую папку и файл. Диалоговое окно **Сохранение файла** можно вызвать одним из следующих способов:  

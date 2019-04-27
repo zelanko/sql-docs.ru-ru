@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774747"
 ---
 # <a name="password-expired"></a>Срок действия пароля истек
   Появляется при соединении с сервером, на котором установлена среда [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и который использует проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , если введен верный пароль, срок действия которого истек. Также появляется при соединении с сервером с применением новой учетной записи, созданной при помощи параметра **Пользователь должен сменить пароль при следующем входе в систему** . Используйте диалоговое окно **Срок действия пароля истек** , чтобы сменить пароль для этого имени входа с проверкой подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
