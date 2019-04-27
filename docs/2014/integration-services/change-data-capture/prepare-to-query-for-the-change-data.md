@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 559af9cdd7e7014e114b431dddf25b09dd18dc81
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771300"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>Подготовка к запросу информации об изменениях
   В потоке управления пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , который выполняет добавочную загрузку измененных данных, третья и последняя задача состоит в том, чтобы подготовить запрос для измененных данных и добавить задачу потока данных.  
@@ -198,6 +198,6 @@ ms.locfileid: "58387442"
 ## <a name="next-step"></a>Следующий шаг  
  Завершив подготовку строки запроса и настройку задачи потока данных, приступайте к следующему шагу — созданию функции с табличным значением для получения измененных данных из базы данных.  
   
- **Следующая тема:** [Создание функции для получения информации об изменениях данных](create-the-function-to-retrieve-the-change-data.md)  
+ **Следующая статья:** [Создание функции для получения информации об изменениях данных](create-the-function-to-retrieve-the-change-data.md)  
   
   

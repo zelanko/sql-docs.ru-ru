@@ -15,27 +15,27 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3551cf4db3ab1b84f04ba13dea414943fbb2ef44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773897"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Прозрачное шифрование данных в Базе данных SQL Azure
-  [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] прозрачное шифрование данных (Предварительная версия) защищает от угроз вредоносных действий выполняет в реальном времени шифрование и расшифровку базы данных, связанных резервных копий и неактивных файлов журналов транзакций без необходимости изменения приложения.  
+  Прозрачное шифрование данных [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] (предварительная версия) защищает от угроз вредоносных действий, в реальном времени выполняя шифрование и расшифровку неактивных файлов базы данных, связанных резервных копий и журнала транзакций. При этом способ использования не меняется.  
   
  TDE шифрует пространство хранения всей базы данных, используя симметричный ключ, который называется ключом шифрования базы данных. В [!INCLUDE[ssSDS](../includes/sssds-md.md)] для защиты ключа шифрования базы данных используется встроенный сертификат сервера. Встроенный сертификат сервера уникален для каждого сервера [!INCLUDE[ssSDS](../includes/sssds-md.md)] . Если база данных находится в отношении GeoDR, на каждом сервере для защиты используется разный ключ. Если две базы данных подключены к одному серверу, используется один встроенный сертификат. [!INCLUDE[msCoName](../includes/msconame-md.md)] автоматически меняет эти сертификаты каждые 90 дней. Общее описание прозрачного шифрования данных см. в разделе [Прозрачное шифрование данных (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md).  
   
- [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] не поддерживает интеграцию хранилища ключей Azure с TDE. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , запущенный на виртуальной машине Azure, может использовать асимметричный ключ из хранилища ключей. Дополнительные сведения см. в разделе [пример а. прозрачное шифрование данных с помощью асимметричного ключа из хранилища ключей](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA).  
+ [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] не поддерживает интеграцию хранилища ключей Azure с TDE. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , запущенный на виртуальной машине Azure, может использовать асимметричный ключ из хранилища ключей. Дополнительные сведения см. в разделе [пример а. Прозрачное шифрование данных с помощью асимметричного ключа из хранилища ключей](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA).  
   
 ||  
 |-|  
-|**Применяется к**: [!INCLUDE[sqldbesa](../includes/sqldbesa-md.md)] ([Предварительная версия в некоторых регионах](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+|**Область применения**: [!INCLUDE[sqldbesa](../includes/sqldbesa-md.md)] ([Предварительная версия в некоторых регионах](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
 > [!IMPORTANT]  
->  В настоящий момент это предварительная версия функции. Я признаю и соглашаюсь, что [!INCLUDE[ssSDS](../includes/sssds-md.md)] в моих базах данных прозрачного шифрования данных регламентируется условиями предварительной версии в моем лицензионном соглашении (например соглашения Enterprise, соглашении Microsoft Azure или Microsoft Online Subscription Соглашение), а также всем применимым [дополнительные условия использования предварительной версии Microsoft Azure](http://azure.microsoft.com/support/legal/preview-supplemental-terms/).  
+>  В настоящий момент это предварительная версия функции. Я признаю и соглашаюсь, что в отношении использования в моих базах данных прозрачного шифрования данных [!INCLUDE[ssSDS](../includes/sssds-md.md)] действуют условия предварительной версии, приведенные в моем лицензионном соглашении (например, Соглашении Enterprise, соглашении для Microsoft Azure или соглашении Microsoft Online Subscription), а также [дополнительные условия использования предварительных версий Microsoft Azure](http://azure.microsoft.com/support/legal/preview-supplemental-terms/).  
   
- Просмотр состояния TDE применяется даже в подмножестве географических регионов, в которых сообщается, что версия семейства V12 [!INCLUDE[ssSDS](../includes/sssds-md.md)] теперь общедоступна. Прозрачное шифрование данных для [!INCLUDE[ssSDS](../includes/sssds-md.md)] не используется в рабочих базах данных до тех пор, пока [!INCLUDE[msCoName](../includes/msconame-md.md)] не объявит, что функция TDE становится общедоступной. Дополнительные сведения о [!INCLUDE[ssSDS](../includes/sssds-md.md)] V12 можно найти в разделе [Новые возможности версии 12 базы данных SQL](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).  
+ Просмотр состояния прозрачного шифрования данных применяется даже в подмножестве географических регионов, где версия семейства V12 [!INCLUDE[ssSDS](../includes/sssds-md.md)] объявляется теперь в общедоступном состоянии. Прозрачное шифрование данных для [!INCLUDE[ssSDS](../includes/sssds-md.md)] не используется в рабочих базах данных до тех пор, пока [!INCLUDE[msCoName](../includes/msconame-md.md)] не объявит, что функция TDE становится общедоступной. Дополнительные сведения о [!INCLUDE[ssSDS](../includes/sssds-md.md)] V12 можно найти в разделе [Новые возможности версии 12 базы данных SQL](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).  
   
 ##  <a name="Permissions"></a> Permissions  
  Чтобы подписаться на предварительную версию и настроить TDE через портал Azure с помощью REST API или PowerShell, необходимо подключиться в качестве владельца, участника или диспетчера безопасности SQL Azure.  
@@ -44,7 +44,7 @@ ms.locfileid: "48049784"
   
 -   Нужен доступ к предварительной версии TDE.  
   
--   Чтобы создать ключ шифрования базы данных, необходимо быть [!INCLUDE[ssSDS](../includes/sssds-md.md)] администратора и у вас должен быть членом **dbmanager** роли в базе данных master базы данных и имеют **УПРАВЛЕНИЯ** разрешение в базе данных.  
+-   Чтобы создать ключ шифрования базы данных, нужны права администратора [!INCLUDE[ssSDS](../includes/sssds-md.md)] или роль **dbmanager** в базе данных master и разрешение **CONTROL** .  
   
 -   Чтобы выполнить инструкцию ALTER DATABASE с параметром SET, нужна только роль **dbmanager** .  
   
@@ -169,8 +169,8 @@ ms.locfileid: "48049784"
   
 ## <a name="see-also"></a>См. также  
  [Прозрачное шифрование данных (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md)   
- [CREATE CREDENTIAL (Transact-SQL)](/sql/t-sql/statements/create-credential-transact-sql)   
- [CREATE ASYMMETRIC KEY (Transact-SQL)](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
  [CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](/sql/t-sql/statements/create-database-encryption-key-transact-sql)   
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
  [Параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)  

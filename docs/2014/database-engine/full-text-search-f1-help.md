@@ -11,14 +11,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 447b91ee1aa99642647dd1377976feef026b9a08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778975"
 ---
 # <a name="full-text-search-f1-help"></a>Справка F1 по полнотекстовому поиску
-  Этот раздел содержит разделы о [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Full-Text Search диалоговых окон в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Чтобы получить доступ к разделу о пользовательском интерфейсе, нажмите клавишу F1 или кнопку **Справка** в открытом диалоговом окне.  
+  Данный раздел содержит подразделы справки по диалоговым окнам полнотекстового поиска в среде [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] пакета [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Чтобы получить доступ к разделу о пользовательском интерфейсе, нажмите клавишу F1 или кнопку **Справка** в открытом диалоговом окне.  
   
 |||  
 |-|-|  
