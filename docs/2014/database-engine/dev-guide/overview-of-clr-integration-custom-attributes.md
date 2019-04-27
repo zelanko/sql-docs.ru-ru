@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781109"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>Общие сведения о пользовательских атрибутах интеграции со средой CLR
   В среде CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] допускается использование описательных ключевых слов, именуемых атрибутами. Эти атрибуты содержат дополнительную информацию по многим элементам, таким как методы и классы. Эти атрибуты сохраняются в сборке с метаданными объекта и могут быть использованы для описания кода другим инструментальным средствам разработки или для изменения поведения на этапе выполнения внутри [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

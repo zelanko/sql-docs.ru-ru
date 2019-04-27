@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b741f98dec0b2f6233f4c51c1c809c1a7baf4d81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778935"
 ---
 # <a name="get-the-fields-for-all-events"></a>получить поля для всех событий
   Выполнение этой задачи предполагает использование редактора запросов в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "48154314"
   
 -   column_type  
   
- Можно использовать приведенные выше сведения при настройке сеансов событий, в которых используются сегментированные цели. Дополнительные сведения см. в разделе [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md).  
+ Можно использовать приведенные выше сведения при настройке сеансов событий, в которых используются сегментированные цели. Дополнительные сведения см. в статье [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md).  
   
 ## <a name="before-you-begin"></a>Перед началом работы  
  Перед созданием сеанса расширенных событий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] рекомендуется выявить поля, связанные с этими событиями.  

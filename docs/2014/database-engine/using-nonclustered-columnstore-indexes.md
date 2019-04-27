@@ -11,18 +11,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e97aed3a5a4f5b49e482479b58928d2092a314f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773795"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>Использование некластеризованных индексов columnstore
-  Описывает основные задачи при использовании некластеризованного индекса columnstore в таблице [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  Описывает основные задачи при использовании некластеризованного индекса columnstore в таблице [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- Общие сведения об индексах columnstore см. в разделе [индексам ColumnStore](../relational-databases/indexes/columnstore-indexes-described.md).  
+ Общие сведения об индексах columnstore см. в разделе [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
   
- Сведения о кластеризованных индексах columnstore см. в разделе [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
+ Дополнительные сведения о кластеризованных индексах columnstore см. в разделе [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
 ## <a name="contents"></a>Содержание  
   

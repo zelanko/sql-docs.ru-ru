@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4c5cfdc3a7afa210b88bbe0410d31b5b655d95a7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753010"
 ---
 # <a name="task-5-adding-data-flow-task"></a>Задача 5. Добавление задачи потока данных
   В этой задаче вы добавите задачу потока данных в поток управления пакетом служб SSIS.  

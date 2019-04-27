@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774347"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Подробные сведения об управляемом экземпляре (служебная программа SQL Server)
   Представление «Сведения об управляемых экземплярах» проводника служебной программы отображает сведения об использовании для отдельных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], журнал использования ЦП, подробные сведения об использовании хранилища на уровне файлов, а также позволяет просматривать и обновлять пороговые значения политик. Пороговые значения политик могут быть изменены на уровне экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , для компьютера, для файлов баз данных и файлов журналов и на уровне томов хранилища. Также можно просмотреть подробные сведения о свойствах отдельных управляемых экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -68,7 +68,7 @@ ms.locfileid: "53374576"
   
 -   Выпуск SQL Server:  
   
--   Кластеризованная: (True или False)  
+-   Кластеризованный: (True или False)  
   
 -   Каталог резервного копирования:  
   
@@ -78,7 +78,7 @@ ms.locfileid: "53374576"
   
 -   Язык:  
   
--   Последнее сообщение о времени: В этом столбце содержится локальная дата и время в формате UCP с использованием типа данных datetime. Дополнительные сведения см. в разделе [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) электронной документации по SQL Server. При использовании объектной модели служебной программы обратите внимание, что среда SSMS использует тип данных datetimeoffset. Дополнительные сведения см. в разделе [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) электронной документации по SQL Server.  
+-   Время последнего отчета: Этот столбец показывает точки управления служебной Программой локальной даты и времени с использованием типа данных datetime. Дополнительные сведения см. в разделе [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) электронной документации по SQL Server. При использовании объектной модели служебной программы обратите внимание, что среда SSMS использует тип данных datetimeoffset. Дополнительные сведения см. в разделе [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) электронной документации по SQL Server.  
   
  Вкладка «Использование ЦП»  
  На вкладке "Использование ЦП" параллельно показываются графы журнальных данных по использованию процессора компьютером и экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -165,7 +165,7 @@ ms.locfileid: "53374576"
   
 -   Выпуск SQL Server:  
   
--   Кластеризованная: (True или False)  
+-   Кластеризованный: (True или False)  
   
 -   Каталог резервного копирования:  
   

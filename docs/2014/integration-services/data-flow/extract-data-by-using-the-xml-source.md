@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3c7a9b107a05b0645f2286f534f457d46a1b6f11
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771100"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>Извлечение данных с помощью XML-источника
   Чтобы добавить и настроить источник XML, пакет должен уже содержать не менее одной задачи потока данных.  

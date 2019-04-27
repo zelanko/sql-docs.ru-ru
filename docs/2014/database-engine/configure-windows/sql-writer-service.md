@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7204d2f20c7c299a2bcefcc66409182c8846affc
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755432"
 ---
 # <a name="sql-writer-service"></a>cлужба «Модуль записи SQL»
   Служба «Модуль записи SQL» предоставляет дополнительные возможности резервного копирования и восстановления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью механизма службы теневого копирования тома.  

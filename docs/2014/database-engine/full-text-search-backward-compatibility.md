@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5a749bb4da4511f30a231f6ab2dd05a35ebdb11d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779264"
 ---
 # <a name="full-text-search-backward-compatibility"></a>Обратная совместимость компонента Full-Text Search
   В подразделах раздела, посвященного обратной совместимости, описаны изменения в поведении полнотекстового поиска в прежних версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  

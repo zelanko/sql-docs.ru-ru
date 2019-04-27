@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5a6c9c1b30adee7b42f9424d648d33dacc52e0c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780270"
 ---
 # <a name="wmi-provider-events-and-errors"></a>Ошибки и события поставщика WMI
   Этот раздел содержит сведения о причинах некоторых ошибок инструментария WMI, имеющих отношение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и способах их устранения.  

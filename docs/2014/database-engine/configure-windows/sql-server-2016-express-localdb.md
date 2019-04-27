@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756990"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` — Это режим выполнения [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] предназначенный для разработчиков программ. `LocalDB` Программа установки копирует минимальный набор файлов, необходимых для запуска [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Один раз `LocalDB` — установлен, разработчики могут установить соединение с помощью специальной строки подключения. При соединении необходимая инфраструктура [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается и запускается автоматически, что позволяет приложению использовать базу данных без выполнения сложной настройки, занимающей много времени. Средства разработчика позволяют использовать [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] для написания и проверки кода [!INCLUDE[tsql](../../includes/tsql-md.md)] без необходимости управления полным экземпляром сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Экземпляр [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] `LocalDB` осуществляется с помощью `SqlLocalDB.exe` служебной программы. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB` следует использовать вместо [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] функции пользовательского экземпляра, который является устаревшим.  

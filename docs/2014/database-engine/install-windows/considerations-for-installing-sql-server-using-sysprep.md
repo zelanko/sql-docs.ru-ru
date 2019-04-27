@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779140"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Вопросы по установке SQL Server с помощью SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep позволяет подготавливать отдельные экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютере и завершать настройку позднее. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep для настройки отдельного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]применяется процесс, состоящий из двух действий. Эти действия включают следующие шаги.  

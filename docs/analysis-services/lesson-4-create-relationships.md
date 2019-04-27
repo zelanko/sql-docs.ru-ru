@@ -1,5 +1,5 @@
 ---
-title: Урок 4. Создание связей | Документы Майкрософт
+title: 'Занятие 4: Создание связей | Документы Майкрософт'
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2cfa28b4fa5575fbdda06ed64f8f52994b596186
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753149"
 ---
-# <a name="lesson-4-create-relationships"></a>Урок 4. Создание связей
+# <a name="lesson-4-create-relationships"></a>Занятие 4: Создание связей
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 На этом занятии будут проверены связи, автоматически созданные во время импорта данных, и добавлены новые связи между различными таблицами. Связь — это соединение между двумя таблицами, которое определяет, каким образом должны соотноситься данные этих таблиц. Например, таблица DimProduct и таблица DimProductSubcategory содержат связь на основе того факта, что каждый продукт принадлежит подкатегории. Дополнительные сведения см. в разделе [связи](../analysis-services/tabular-models/relationships-ssas-tabular.md).
   
-Предполагаемое время выполнения данного занятия: **10 минут**  
+Предполагаемое время для выполнения этого занятия: **10 минут**  
   
 ## <a name="prerequisites"></a>предварительные требования  
-Этот раздел является частью учебника по табличному моделированию, который необходимо изучать по порядку. Прежде чем выполнять задания в этом занятии, необходимо завершить предыдущее занятие: [Занятие 3. Пометить как таблицу дат](../analysis-services/lesson-3-mark-as-date-table.md). 
+Этот раздел является частью учебника по табличному моделированию, который необходимо изучать по порядку. Перед выполнением задач на этом занятии, необходимо завершить предыдущее занятие: [Занятие 3. Пометить как таблицу дат](../analysis-services/lesson-3-mark-as-date-table.md). 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>Обзор существующих связей и добавление новых  
 При импорте данных с помощью мастера импорта таблиц, вы получили семь таблиц из базы данных AdventureWorksDW. Как правило при импорте данных из реляционного источника существующие связи автоматически импортируются вместе с данными. Однако необходимо проверить правильность создания связей между таблицами, прежде чем продолжить создание модели. В этом учебнике будут также созданы три новые связи.  
@@ -56,7 +56,7 @@ ms.locfileid: "52411301"
     |Да|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
     |Да|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
   
-    Если какие-либо связи в приведенной выше таблице отсутствуют, убедитесь, что модель включает следующие таблицы: DimCustomer, DimDate, DimGeography, DimProduct, DimProductCategory, DimProductSubcategory и FactInternetSales. Если таблицы импортируются из одного подключения к источнику данных несколько раз, связи между этими таблицами не будут созданы и их нужно будет создавать вручную.  
+    Если какие-либо связи в приведенной выше таблице отсутствуют, убедитесь, что модель включает в себя следующие таблицы: DimCustomer, DimDate, DimGeography, DimProduct, DimProductCategory, DimProductSubcategory и FactInternetSales. Если таблицы импортируются из одного подключения к источнику данных несколько раз, связи между этими таблицами не будут созданы и их нужно будет создавать вручную.  
 
 ### <a name="take-a-closer-look"></a>Рассмотрим это более подробно
 В представлении схемы вы заметите стрелка, звездочка и число на линиях, обозначающих связи между таблицами.
@@ -91,7 +91,7 @@ ms.locfileid: "52411301"
      ![как табличных lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
   
 ## <a name="whats-next"></a>Дальнейшие действия
-Перейдите к следующему занятию: [Занятие 5. Создание вычисляемых столбцов](../analysis-services/lesson-5-create-calculated-columns.md).
+Перейдите к следующему занятию: [Занятие 5. Создание вычисляемых столбцов](../analysis-services/lesson-5-create-calculated-columns.md).
   
   
   

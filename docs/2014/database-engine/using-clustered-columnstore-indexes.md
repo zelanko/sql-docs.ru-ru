@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1e65c3e277eb9a3e5e3703525b9c1ac06b423c96
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773745"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Использование кластеризованных индексов columnstore
   Задачи при использовании кластеризованных индексов columnstore в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -83,9 +83,9 @@ GO
 |Строки для массовой загрузки|Строки, добавленные в Columnstore|Строки, добавленные в Deltastore|  
 |-----------------------|-----------------------------------|----------------------------------|  
 |102,000|0|102,000|  
-|145,000|145,000<br /><br /> Размер Rowgroup: 145,000|0|  
-|1,048,577|1 048 576<br /><br /> Размер Rowgroup: 1,048,576.|1|  
-|2,252,152|2,252,152<br /><br /> Размеры Rowgroup: 1,048,576, 1,048,576, 155,000.|0|  
+|145,000|145,000<br /><br /> Размер группы строк: 145,000|0|  
+|1,048,577|1 048 576<br /><br /> Размер группы строк: 1 048 576.|1|  
+|2,252,152|2,252,152<br /><br /> Размеры групп строк: 1 048 576, 1 048 576, 155 000.|0|  
   
  В следующем примере показаны результаты загрузки 1 048 577 строк в секцию. Результаты показывают наличие одной СЖАТОЙ rowgroup в columnstore (в виде сжатых сегментов столбцов) и 1 строки в deltastore.  
   

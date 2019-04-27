@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19eae2e3ace3859d61048536be9b70bf58ad66f5
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775419"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>Обновление доставки журналов до SQL Server 2014 (Transact-SQL)
   При обновлении с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]конфигурацию доставки журналов можно сохранить. В этом разделе описаны альтернативные сценарии и рекомендации по обновлению конфигурации доставки журналов.  

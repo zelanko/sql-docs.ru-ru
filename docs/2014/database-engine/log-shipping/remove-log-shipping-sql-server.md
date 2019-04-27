@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 270ca92b723aa67938dc1f56d72425d7e1c98040
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774998"
 ---
 # <a name="remove-log-shipping-sql-server"></a>Удаление доставки журналов (SQL Server)
   В данном разделе описывается удаление доставки журналов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -95,7 +95,7 @@ ms.locfileid: "48111927"
 -   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ## <a name="see-also"></a>См. также  
- [О доставке журналов &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
+ [Сведения о доставке журналов (SQL Server)](about-log-shipping-sql-server.md)   
  [Таблицы доставки журналов и хранимые процедуры](log-shipping-tables-and-stored-procedures.md)  
   
   

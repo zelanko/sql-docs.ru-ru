@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da44ae47d7e6eaea78a1d14736367ed5cc41d311
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757262"
 ---
 # <a name="enable-directquery-design-mode-ssas-tabular"></a>Включить режим разработки DirectQuery (табличные службы SSAS)
   Чтобы создать модель в режиме DirectQuery, следует сначала изменить среду времени разработки так, чтобы она поддерживала пользователя режима DirectQuery. Когда это будет сделано, конструктор также сделает следующее:  
@@ -42,6 +42,6 @@ ms.locfileid: "48172586"
 4.  При наличии ошибок откройте в Visual Studio **Список ошибок** и устраните проблемы, мешающие перевести модель в режим DirectQuery.  
   
 ## <a name="see-also"></a>См. также  
- [Режим DirectQuery &#40;табличные службы SSAS&#41;](directquery-mode-ssas-tabular.md)  
+ [Режим DirectQuery (табличные службы SSAS)](directquery-mode-ssas-tabular.md)  
   
   

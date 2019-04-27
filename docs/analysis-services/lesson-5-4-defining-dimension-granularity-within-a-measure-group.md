@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e047f955f9c4ecccc02404dc139d557935e0f090
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752476"
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Урок 5 – 4-определение степени детализации измерения в группе мер
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

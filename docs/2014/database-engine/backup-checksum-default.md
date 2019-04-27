@@ -10,11 +10,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1db1ae871082ffe5b638e249592c75064eba47fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788803"
 ---
 # <a name="backup-checksum-default"></a>Контрольная сумма резервной копии: значение по умолчанию
   Во время резервного копирования и восстановления можно проверять контрольную сумму резервной копии. Для этого нужно выбрать соответствующее значение параметра контрольной суммы резервной копии.  
@@ -23,9 +23,9 @@ ms.locfileid: "48126742"
   
 |||  
 |-|-|  
-|**Value**|**Значение**|  
+|**Значение**|**Значение**|  
 |0|Отключено. Это параметр по умолчанию.|  
-|1|Включено|  
+|1|Enabled|  
   
  Изменение этой настройки вступает в силу немедленно.  
   

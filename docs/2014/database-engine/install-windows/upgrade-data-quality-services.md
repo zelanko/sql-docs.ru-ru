@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c76fda112acae7b8a9314d217f5c32d197e87f9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775634"
 ---
 # <a name="upgrade-data-quality-services"></a>Обновление служб Data Quality Services
   Этот раздел предоставляет сведения о том, как обновить существующую установку служб Data Quality Services (DQS) в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] версии CTP2. В процессе обновления сервера служб DQS в службах DQS в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], необходимо обновить схему базы данных служб DQS.  

@@ -34,11 +34,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779880"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Неподдерживаемые функции ядра СУБД в SQL Server 2014
   В этом разделе описаны функции компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , которые больше не доступны в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -46,14 +46,14 @@ ms.locfileid: "54132622"
 ## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>Неподдерживаемые функции в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  В следующей таблице перечислены функции, которые были исключены из [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-|Категория|Неподдерживаемая функция|Замена|  
+|Category|Неподдерживаемая функция|Замена|  
 |--------------|--------------------------|-----------------|  
 |Уровень совместимости|Уровень совместимости 90|Уровень совместимости базы данных должен быть не менее 100. При обновлении базы данных с уровнем совместимости менее 100 до версии [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]во время операции обновления для этой базы данных устанавливается уровень совместимости 100.|  
   
 ## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>Неподдерживаемые функции в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  В следующей таблице перечислены функции, которые были исключены из [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
-|Категория|Неподдерживаемая функция|Замена|  
+|Category|Неподдерживаемая функция|Замена|  
 |--------------|--------------------------|-----------------|  
 |Резервное копирование и восстановление|**Резервное копирование {базы данных &#124; LOG} WITH PASSWORD** и **резервной копии {базы данных &#124; LOG} WITH MEDIAPASSWORD** не поддерживаются. **ВОССТАНОВИТЬ {базы данных &#124; ЖУРНАЛА} с [MEDIA] PASSWORD**остается устаревшей.|None|  
 |Резервное копирование и восстановление|**RESTORE {DATABASE &AMP;#124; ЖУРНАЛА}... WITH DBO_ONLY**|**RESTORE {DATABASE &AMP;#124; ЖУРНАЛА}...... С ПОМОЩЬЮ RESTRICTED_USER**|  

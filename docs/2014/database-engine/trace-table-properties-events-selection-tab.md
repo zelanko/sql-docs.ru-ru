@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 77660e19bed6781d73efdd36e6a752ae5c3cc1fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773470"
 ---
 # <a name="trace-table-properties-events-selection-tab"></a>Свойства таблицы трассировки (вкладка «Выбор событий»)
   Используйте вкладку **Выбор событий** в диалоговом окне **Свойства таблицы трассировки** для просмотра событий и свойств столбца данных трассировки или для удаления событий или столбцов из трассировки.  
