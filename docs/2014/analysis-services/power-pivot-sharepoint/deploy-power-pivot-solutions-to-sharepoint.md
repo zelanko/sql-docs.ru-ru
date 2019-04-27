@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af3b98aab31aeaa3a01b1026eca8b3098ce97bef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749250"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Развертывание решений PowerPivot в SharePoint
   Используйте следующие инструкции для выполнения вручную развертывания двух пакетов решений, добавляющих функции PowerPivot в среде SharePoint Server 2010. Развертывание решений — это обязательный шаг настройки PowerPivot для SharePoint на сервере SharePoint 2010. Чтобы просмотреть полный список обязательных шагов, см. в разделе [Настройка и администрирование сервера PowerPivot в центре администрирования](power-pivot-server-administration-and-configuration-in-central-administration.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "52515975"
   
  [О решениях PowerPivot](#intro)  
   
-##  <a name="bkmk_classic"></a> Предварительные требования. Проверка использования классического режима проверки подлинности в веб-приложении  
+##  <a name="bkmk_classic"></a> Обязательное требование: Убедитесь, что веб-приложения используется классический режим проверки подлинности  
  PowerPivot для SharePoint поддерживается только в тех веб-приложениях, которые используют классическую проверку подлинности Windows. Чтобы проверить, использует ли приложение классический режим, выполните следующий командлет PowerShell из **консоль управления SharePoint 2010**, заменив `http://<top-level site name>` с именем сайта SharePoint:  
   
 ```  
@@ -48,7 +48,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  Должно быть возвращено значение **false**. Если это **true**, не может получить доступ к данным PowerPivot с помощью этого веб-приложения.  
   
-##  <a name="bkmk_farm"></a> Шаг 1. Разверните решение фермы  
+##  <a name="bkmk_farm"></a> Шаг 1. Развертывание решения фермы  
  В этом разделе показано, как развертывать решения с помощью PowerShell, но для этой задачи можно использовать и средство PowerPivot Configuration Tool. Дополнительные сведения см. в разделе [Настройка или восстановление PowerPivot для SharePoint 2010 &#40;средство настройки PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
   
  Эта задача выполняется один раз после установки PowerPivot для SharePoint.  
@@ -69,7 +69,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a> Шаг 2. Разверните решение веб-приложения PowerPivot в центре администрирования.  
+##  <a name="deployCA"></a> Шаг 2. Развертывание решения веб-PowerPivot приложения в центре администрирования  
  После развертывания решения фермы следует развернуть решение веб-приложения для центра администрирования. Этот шаг добавляет в центр администрирования панель управления PowerPivot.  
   
 1.  Откройте консоль управления SharePoint 2010, выбрав команду **Запуск от имени администратора** .  
@@ -96,7 +96,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  Теперь, когда решение веб-приложения развернуто в центре администрирования, оставшиеся шаги конфигурации можно выполнить с помощью центра администрирования.  
   
-##  <a name="deployUI"></a> Шаг 3. Разверните решение для веб-приложений PowerPivot для остальных веб-приложений.  
+##  <a name="deployUI"></a> Шаг 3. Развертывание решения PowerPivot веб приложения для других веб-приложений  
  В предыдущей задаче решение powerpivotwebapp.wsp было развернуто в центре администрирования. В этом разделе описано развертывание решения powerpivotwebapp.wsp для каждого веб-приложения, поддерживающего доступ к данным PowerPivot. При добавлении других веб-приложений в дальнейшем необходимо будет повторить для них этот шаг.  
   
 1.  В разделе «Системные параметры» центра администрирования выберите **Управление решениями фермы**.  

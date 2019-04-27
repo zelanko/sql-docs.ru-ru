@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85eb934b93d22acc2534d1eb34aa967cbb4f2714
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774256"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>просмотреть отчет доставки журналов (среда SQL Server Management Studio)
   В этом подразделе описывается, как в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]просмотреть отчет «Состояние доставки журналов транзакций», Отчет состояния может быть запущен на сервере-источнике, сервере-получателе или сервере мониторинга. Для получения наиболее полных сведений о конфигурации доставки журналов просматривайте отчет на экземпляре сервера мониторинга.  

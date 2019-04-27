@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a527ad5c165ff7b155b04627a41062a2b553c62b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62750192"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>Соединение семантической модели бизнес-аналитики PowerPivot (BISM)
   Соединение семантической модели бизнес-аналитики (BISM-файл) — это переносимое соединение, связывающее отчеты Excel или [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] с базой данных табличной модели [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или экземпляром [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] во многомерном режиме. Определение и использование BISM-файлов в определенной степени аналогично файлам подключения к данным Оffice (ODC).  
@@ -28,7 +28,7 @@ ms.locfileid: "53362246"
 ##  <a name="bkmk_prereq"></a> Поддерживаемые базы данных  
  Соединение семантической модели бизнес-аналитики указывает на данные табличной модели. Существует три источника этих данных.  
   
--   Табличный шаблон базы данных, запущенный на отдельном экземпляре служб Analysis Services в режиме табличного сервера. Развертывание отдельного экземпляра служб Analysis Services выполняется вне пределов фермы. Для доступа к источникам данных, находящимся за пределами фермы, требуются дополнительные разрешения, о которых можно прочитать в следующем разделе: [Создание соединения семантической модели в базу данных табличной модели](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+-   Табличный шаблон базы данных, запущенный на отдельном экземпляре служб Analysis Services в режиме табличного сервера. Развертывание отдельного экземпляра служб Analysis Services выполняется вне пределов фермы. Доступ к источникам данных, находящимся за пределами фермы, требуются дополнительные разрешения, которых можно узнать из этой статьи: [Создание соединения семантической модели в базу данных табличной модели](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 -   Книги PowerPivot, сохраненные в SharePoint. Базы данных PowerPivot, внедренные в книги Excel, эквивалентны табличным шаблонам баз данных, запущенным на отдельном сервере Analysis Services в табличном режиме. Если PowerPivot для Excel и PowerPivot для SharePoint уже используются, то можно определить соединение семантической модели бизнес-аналитики, указывающее на книги PowerPivot из библиотеки SharePoint, и создавать отчеты [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] с использованием существующих данных PowerPivot.  Можно использовать книги, созданные в версиях PowerPivot для Excel в SQL Server 2008 R2 или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
   

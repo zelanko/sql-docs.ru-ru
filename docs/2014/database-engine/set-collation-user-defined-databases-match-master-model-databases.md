@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfb00b1cc1a9930f7a374403b40e2c0d793eb090
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773319"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>Задание параметров сортировки пользовательских баз данных в соответствии с параметрами баз данных master и model
   Это правило проверяет, определены ли в пользовательской базе данных те же параметры сортировки, что и в базах данных master и model.  

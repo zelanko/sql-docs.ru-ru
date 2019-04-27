@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7cf6f979058fd1003440e17fb5c479e136413bcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773448"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>Приложение SQL Server Profiler — организация столбцов
   Диалоговое окно **Упорядочение столбцов** используется для выбора столбцов данных для событий группирования и статистической обработки, которые отображаются в трассировке. Это позволяет упростить просмотр и анализ больших файлов и таблиц трассировки.  
@@ -51,7 +51,7 @@ ms.locfileid: "48218004"
 ## <a name="see-also"></a>См. также  
  [Упорядочивание столбцов, отображаемых в трассировке &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
  [Создать трассировку &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [Создание шаблона трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [Создание шаблона трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [Открытие файла трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [Открыть таблицу трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)  
   

@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774192"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Открытие конструктора таблиц (визуальные инструменты для баз данных)
   Конструктор таблиц является визуальным средством, позволяющим разрабатывать и отображать таблицы подключенной базы данных. С помощью конструктора таблиц можно создавать, редактировать и удалять таблицы, столбцы, ключи, индексы, связи и ограничения.  

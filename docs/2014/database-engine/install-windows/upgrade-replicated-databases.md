@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775329"
 ---
 # <a name="upgrade-replicated-databases"></a>Обновление реплицируемых баз данных
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает обновление реплицируемых баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предыдущих версий, при этом на время обновления узла прекращать работу с другими узлами не требуется. Соблюдайте следующие правила, определяющие допустимые версии объектов репликации.  
@@ -89,7 +89,7 @@ ms.locfileid: "54132404"
  Чтобы обеспечить неизменность параметров репликации при восстановлении реплицированной базы данных, имеющей более раннюю версию, выполните восстановление на сервер и в базу данных, имеющих те же имена, что и у сервера или базы данных, для которых была сделана резервная копия.  
   
 ## <a name="see-also"></a>См. также  
- [Администрирование репликации часто задаваемые вопросы](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Вопросы и ответы об администрировании репликации](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Обратная совместимость репликации](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
  [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Обновление до SQL Server 2014](upgrade-sql-server.md)  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb44454c12dec173e586fd2a94d0147dfde01eef
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757251"
 ---
 # <a name="impersonation-ssas-tabular"></a>Олицетворение (табличные службы SSAS)
   В этом разделе авторы табличных моделей узнают, каким образом учетные данные используются службами Analysis Services при подключении к источнику данных для импорта и обработки (обновления) данных.  

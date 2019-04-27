@@ -11,11 +11,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d871fb9ce1c163ba3a099f70050447537a03909e
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774085"
 ---
 # <a name="breaking-changes-to-sql-server-features-in-sql-server-2014"></a>Критические изменения функций SQL Server в SQL Server 2014
   В этом разделе описаны критические изменения в службах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Эти изменения могут проявиться при обновлении и повлиять на работу приложений, скриптов или функций, которые основаны на выпущенных ранее версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Использование помощника по обновлению для подготовки к обновлениям](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  

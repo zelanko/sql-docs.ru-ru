@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4cfdd308ab7488633721ddaac55d3d926a276b0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779411"
 ---
 # <a name="full-text-stoplist-properties"></a>Свойства полнотекстового списка стоп-слов
   Это диалоговое окно используется для добавления и удаления отдельных стоп-слов, удаления всех стоп-слов указанного языка, а также для очистки текущего списка стоп-слов. Стоп-слово — это часто употребляемое слово, включенное в список стоп-слов. Стоп-слова из этого списка исключаются при полнотекстовом индексировании таблиц, в которых используется список стоп-слов. Дополнительные сведения см. в разделе [Настройка стоп-слов и списков стоп-слов для полнотекстового поиска и управление ими](../relational-databases/search/full-text-search.md).  

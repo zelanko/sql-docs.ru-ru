@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 767e89a777fc530d4622a32f31c984d0e48004ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774298"
 ---
 # <a name="manage-checkins"></a>Управление возвратами
   Чтобы сохранить изменения в файле, контролируемом системой управления версиями, необходимо вернуть файл. Когда файл возвращается, созданная версия файла копируется поставщику системы управления версиями и становится последней версией файла, как правило, доступной пользователям с соответствующими разрешениями.  

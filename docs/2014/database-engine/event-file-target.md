@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ea74f0361d5152ade31a91424d594d376e513f8
-ms.sourcegitcommit: b5cea9c67c7f896944065f09dace17b4929a34f7
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52267899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779457"
 ---
 # <a name="event-file-target"></a>Event File Target
   Цель «Файл событий» — это цель, осуществляющая запись всех буферов на диск.  

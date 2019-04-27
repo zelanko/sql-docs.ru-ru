@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6db97cfdbf1b7ea37289c943c8acaaee312c4bf3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755532"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Присоединение и отсоединение баз данных DQS
   В этом разделе описывается, как отсоединять и присоединять базы данных DQS.  

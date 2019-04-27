@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0e0af29d348ff55b415d22d44bc8e8e48a35d290
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775754"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>Установка SQL Server «2014» с помощью мастера установки (программы установки)
   В этом разделе приведена пошаговая процедура установки нового экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В мастере установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] доступно единое дерево для установки всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поэтому их не требуется устанавливать по отдельности. Дополнительные сведения о различных компонентах, которые могут быть установлены, см. в разделе [установки для SQL Server 2014](installation-for-sql-server.md).  Дополнительные сведения об установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонентов по отдельности, см. в разделе [Установка SQL Server 2014](install-sql-server.md).  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04c366bc668fe09d1ebf57d169587ec11476f707
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749707"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>Обновление данных PowerPivot с SharePoint 2013
   Обновление данных служб [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в SharePoint 2013 использует службы Excel в качестве основного компонента для загрузки и обновления данных модели на экземпляре [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Сервер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] работает на внешней ферме SharePoint.  

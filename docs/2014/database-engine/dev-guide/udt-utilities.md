@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cfd005746302bef4b8e03b520babfdef41768083
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780223"
 ---
 # <a name="udt-utilities"></a>Программы определяемых пользователем типов
   Образец программ определяемых пользователем типов содержит набор служебных функций. В их число входят функции для предоставления метаданных сборки в Transact-SQL, образцы потоковых функций, возвращающих типы в сборке в виде таблицы, и функции, возвращающие поля, методы и свойства в определяемом пользователем типе данных. При этом, в частности, демонстрируются возвращающие потоковые функции с табличным значением, отражение API-интерфейсов .NET Framework и вызов из Transact-SQL возвращающих табличные значения функций.  

@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773816"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Панель мониторинга программ (служебная программа SQL Server)
   Чтобы просмотреть данные на панели мониторинга служебной программы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], выберите верхний узел дерева обозревателя программ, который называется "Utility<Имя_UCP>\\(Имя_компьютера\UCP)". На панели мониторинга отображаются сводка и подробные данные всех управляемых экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и всех приложений уровня данных в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Чтобы обновить данные на панели мониторинга, щелкните правой кнопкой мыши верхний узел в дереве обозревателя программ и выберите команду **Обновить**.  

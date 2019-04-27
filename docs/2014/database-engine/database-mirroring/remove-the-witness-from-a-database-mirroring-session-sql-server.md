@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0fee60fa1a78c2d6d0becb63b2319105016adf1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754667"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>Удаление следящего сервера из сеанса зеркального отображения базы данных (SQL Server)
   В этом разделе описано, как удалить следящий сервер из сеанса зеркального отображения базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Во время сеанса зеркального отображения владелец базы данных в любой момент может отключить следящий сервер для сеанса зеркального отображения базы данных.  
@@ -36,7 +36,7 @@ ms.locfileid: "48205514"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Дальнейшие действия**  [После удаления следящего сервера](#FollowUp)  
+-   **Дальнейшие действия.**  [После удаления следящего сервера](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48205514"
 -   Когда безопасность транзакций отключена, сеанс работает асинхронно (в режиме высокой производительности), не требуя кворума. При отключенной безопасности транзакций настоятельно рекомендуется также отключить следящий сервер.  
   
 > [!TIP]  
->  Параметры безопасности транзакций для каждого участника на экземпляре сервера доступны через представление каталога [sys.database_mirroring](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql), в столбцах **mirroring_safety_level** и **mirroring_safety_level_desc**.  
+>  Параметры безопасности транзакций для каждого участника в экземпляре сервера доступны через представление каталога [sys.database_mirroring](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql) в столбцах **mirroring_safety_level** и **mirroring_safety_level_desc** .  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   

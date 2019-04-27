@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2c5509699945db857bd0b763192c7aea21ac90da
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771222"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Задание интервала для информации об изменениях данных
   Первой задачей в потоке управления пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , который выполняет добавочную загрузку информации об измененных данных, является вычисление конечных точек интервала изменений. Эти конечные точки имеют значения `datetime` и сохраняются в переменных пакета для дальнейшего использования в пакете.  
@@ -105,7 +105,7 @@ ms.locfileid: "58381152"
 ## <a name="next-step"></a>Следующий шаг  
  После вычисления начальной и конечной точек диапазона изменений необходимо определить, готовы ли измененные данные.  
   
- **Следующая тема:** [Определение готовности информации об изменениях данных](determine-whether-the-change-data-is-ready.md)  
+ **Следующая статья:** [Определение готовности информации об изменениях данных](determine-whether-the-change-data-is-ready.md)  
   
 ## <a name="see-also"></a>См. также  
  [Использование переменных в пакетах](../use-variables-in-packages.md)   

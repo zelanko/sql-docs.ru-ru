@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771580"
 ---
 # <a name="ssis-catalog"></a>Каталог служб SSIS
   `SSISDB` Каталога служит центральным пунктом для работы с [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] проектов (SSIS), которые вы развернули в [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сервера. Например, можно задавать параметры проектов и пакетов, настраивать среды для указания значений времени выполнения для пакетов, выполнять пакеты и проводить устранение неполадок, а также управлять операциями на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

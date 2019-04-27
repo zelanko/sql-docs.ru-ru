@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6a81258e87bf2422f3ae5a55afc5eb6429856b2
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774326"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Просмотр и чтение файлов журналов программы установки SQL Server
   Каждом выполнении программы установки создаются файлы журналов находятся в новой папке журналов с меткой времени в папке % programfiles %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\. Формат папки журналов с меткой времени — ГГГГММДД_ччммсс. При запуске программы установке в автоматическом режиме журналы создаются в % temp%\sqlsetup*.log. Все файлы в папке журналов архивируются в файле Log\*.cab в соответствующей папке журналов.  

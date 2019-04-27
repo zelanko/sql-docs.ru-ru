@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7d04a071bd5d74ddff6c2dc682c0f6153a8f8b2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771590"
 ---
 # <a name="folder-properties-dialog-box"></a>Диалоговое окно «Свойства папки»
   В папке содержатся проекты и среды в каталоге служб `SSISDB`. Каждая папка определяет разрешения, которые применяются к ее содержимому. Дополнительные сведения о разрешениях [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] см. в статье [catalog.grant_permission (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database).  

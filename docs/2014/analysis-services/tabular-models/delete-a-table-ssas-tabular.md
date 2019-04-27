@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 142a775415da489e67bc00b048651209a2a30179
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757243"
 ---
 # <a name="delete-a-table-ssas-tabular"></a>Удаление таблицы (табличные службы SSAS)
   В конструкторе моделей разрешено удалять ненужные таблицы из базы данных рабочей области модели. Удаление таблицы не влияет на исходный источник данных. Удаление коснется только данных, которые были импортированы и над которыми велась работа. Удаление таблицы отменить нельзя.  
@@ -34,6 +34,6 @@ ms.locfileid: "48224764"
 -   Если с помощью этой таблицы были созданы вычисляемые столбцы, столбцы в этой таблице все равно будут удалены, а все вычисляемые столбцы в другой таблице, использующие столбцы удаленной таблицы, отобразят ошибку.  
   
 ## <a name="see-also"></a>См. также  
- [Таблицы и столбцы &#40;табличные службы SSAS&#41;](tables-and-columns-ssas-tabular.md)  
+ [Таблицы и столбцы (табличные службы SSAS)](tables-and-columns-ssas-tabular.md)  
   
   

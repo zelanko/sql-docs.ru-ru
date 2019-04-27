@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e11eea40558a8e44232eed22f08d9a60bcd7742b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771090"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>Роли пользователя для изменения служб отслеживания данных для Oracle от Attunity.
   В этом разделе описываются роли пользователей для службы системы отслеживания измененных данных для Oracle компании Attunity. Описываемые роли — это роли базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , роли Windows или роли базы данных Oracle.  
@@ -23,7 +23,7 @@ ms.locfileid: "58394322"
 ## <a name="windows-user-roles"></a>Роли пользователей Windows  
  Ниже описываются роли пользователей Windows, которые используются службой Oracle CDC.  
   
-### <a name="computer-administrator-oracle-cdc-service"></a>Администратор компьютера. Служба CDC Oracle  
+### <a name="computer-administrator-oracle-cdc-service"></a>Администратор компьютера. Служба Oracle CDC Service  
  Администратор компьютера — это пользователь Windows, который отвечает за создание и поддержание службы CDC на компьютере. Этот пользователь должен принадлежать к группе администраторов локального компьютера.  
   
  Задачи, выполняемые администратором компьютера, на котором запущены службы Oracle CDC, включают в себя следующее:  
@@ -52,7 +52,7 @@ ms.locfileid: "58394322"
   
 -   Выполнение действий администратора компьютера, прошедшего проверку подлинности в качестве администратора на компьютере, на котором установлена служба CDC для Oracle. Это лицо устанавливает службу CDC для Oracle и использует консоль конфигурации службы CDC для настройки службы CDC для Oracle на локальном компьютере.  
   
-### <a name="service-account-oracle-cdc-service"></a>Учетная запись службы. Служба CDC Oracle  
+### <a name="service-account-oracle-cdc-service"></a>Учетная запись службы: Служба Oracle CDC Service  
  Это учетная запись службы Windows для службы Oracle CDC, которая является учетной записью Windows, используемой для запуска службы Oracle CDC (учетная запись службы).  
   
  Единственные необходимые права для этой учетной записи службы заключаются в разрешении на использование клиента Oracle и собственного клиента Native Client источника данных ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этой учетной записи не нужен доступ к файлам, если это не требуется для конкретных поставщиков (например, если строка подключения клиента Oracle обращается к экземплярам базы данных Oracle в файле **tnsnames.ora** , то к этому файлу необходим доступ учетной записи службы для чтения).  

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 22f47a80a73efc8d462ef8f26f2e6b0fb5b3f3c7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787608"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>Настройка параметра конфигурации сервера locks
   В этом разделе описывается настройка параметра конфигурации сервера **locks** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **locks** устанавливает максимальное число доступных блокировок, ограничивая таким образом объем памяти, используемый для них в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Значение 0 (по умолчанию) позволяет компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] динамически выделять и освобождать структуры блокировок в зависимости от изменяющихся системных требований.  
@@ -97,7 +97,7 @@ GO
   
  Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После задания параметра locks  
+##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра locks  
  Чтобы изменения вступили в силу, необходимо перезапустить сервер.  
   
 ## <a name="see-also"></a>См. также  

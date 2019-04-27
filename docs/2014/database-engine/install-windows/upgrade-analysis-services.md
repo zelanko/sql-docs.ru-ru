@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8bbec3cd552434070d76913f72812b302440bcdb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775036"
 ---
 # <a name="upgrade-analysis-services"></a>Обновление служб Analysis Services
   Используйте пакет установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Подробные сведения об обновлении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме интеграции с SharePoint см. в разделе [обновление PowerPivot для SharePoint](upgrade-power-pivot-for-sharepoint.md). Дополнительные сведения об обновлении существующего SQL Server экземпляра, см. в разделе [обновление до SQL Server 2014 с помощью мастера установки &#40;установки&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  

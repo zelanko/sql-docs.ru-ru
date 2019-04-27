@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 27ec5fcac246c9907d38d8e0eff4e82befb0a04e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771310"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>Как управлять локальной службой CDC
   В этой процедуре описывается использование консоли настройки службы CDC для управления конкретными службами CDC.  
@@ -44,7 +44,7 @@ ms.locfileid: "58380112"
   
          Можно также щелкнуть правой кнопкой мыши службу CDC, которую необходимо удалить, и выбрать команду **Удалить**.  
   
-         **Примечание.** Если на момент удаления службы она запущена, перед удалением выполняется ее остановка.  
+         **Примечание.** Если служба выполняется в момент удаления службы, служба остановлена перед их удалением.  
   
          Чтобы удалить определение службы Windows для Oracle CDC, программе нужен доступ в режиме UPDATE к базе данных MSXDBCDC в соответствующем экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . После нажатия кнопки **ОК** для удаления службы программа попытается выполнить удаление регистрации службы Oracle CDC в базе данных MSXDBCDC. При ошибке, возникающей из-за отсутствия необходимых разрешений, отображается диалоговое окно ввода имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с правами доступа к базе данных MSXDBCDC.  
   

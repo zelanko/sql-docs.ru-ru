@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775337"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Установка SQL Server с общей папкой SMB в качестве хранилища
   Начиная с выпуска [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], системные базы данных (Master, Model, MSDB и TempDB) и пользовательские базы данных компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] можно установить с использованием протокола SMB в качестве хранилища файлового сервера Server Message Block (SMB). Это относится как к изолированному варианту установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и к установке кластеров отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -113,8 +113,8 @@ ms.locfileid: "54136054"
 -   После отсоединения базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , которая находится в хранилище, подключенном к сети, при попытке повторного присоединения базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возможны проблемы с разрешением доступа к базе данных. Эта проблема описывается в [этой статье базы знаний](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321). Информацию о решении этой проблемы см. в разделе **Дополнительные сведения** статьи из базы знаний.  
   
 -   Некоторые решения сторонних разработчиков, например устройство NetApp, не поддерживают все вызовы API SQL Server. С этими может появиться:   
-    2015-06-04 отображаться spid9s ошибка: 17053, серьезность: 16, состояние: 1.  
-    2015-06-04 отображаться spid9s DoDevIoCtlOut() GetOverlappedResult(): Обнаружена ошибка операционной системы 1 (Неправильная функция.).  
+    2015-06-04 отображаться spid9s ошибка: 17053, Severity: 16, состояние: 1.  
+    2015-06-04 13:14:19.97 spid9s      DoDevIoCtlOut() GetOverlappedResult() : Обнаружена ошибка операционной системы 1 (Неправильная функция.).  
   
      Для файловой системы NTFS эта ошибка неопасна,  но в случае с ReFS она может привести к существенному снижению производительности.  
   

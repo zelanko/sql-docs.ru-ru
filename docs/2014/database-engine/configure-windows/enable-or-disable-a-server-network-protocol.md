@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 17b4052b8842225d729bc8de996a7b0649f85a59
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782407"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>Включение или отключение сетевого протокола сервера
   Все сетевые протоколы устанавливаются программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но некоторые могут быть включены, а некоторые — нет. В этом разделе описано, как включить или отключить сетевой протокол сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или PowerShell. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] необходимо остановить и перезапустить, чтобы изменения вступили в силу.  

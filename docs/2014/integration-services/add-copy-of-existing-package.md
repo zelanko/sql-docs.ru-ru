@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0611b37de9af37e5ae8442514ac0720e5eb89e01
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772250"
 ---
 # <a name="add-copy-of-existing-package"></a>Добавление копии существующего пакета
   Используйте диалоговое окно **Добавление копии существующего пакета** для добавления копии пакета из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], файловой системы или хранилища пакетов служб SSIS к проекту служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

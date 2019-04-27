@@ -1,5 +1,5 @@
 ---
-title: 'В книге путь подключения к данным указывает на файл, находящийся на локальном жестком диске, или является недопустимым URI. Следующие соединения не удалось обновить: данные PowerPivot | Документация Майкрософт'
+title: 'В книге путь подключения к данным указывает на файл, находящийся на локальном жестком диске, или является недопустимым URI. Следующие соединения не удалось обновить: Данные PowerPivot | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6242e258c8516b4ebd6e46e9290dabe31cbaf168
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749091"
 ---
 # <a name="the-data-connection-path-in-the-workbook-points-to-a-file-on-the-local-drive-or-is-an-invalid-uri-the-following-connections-failed-to-refresh-powerpivot-data"></a>В книге путь подключения к данным указывает на файл, находящийся на локальном жестком диске, или является недопустимым URI. Следующие соединения не удалось обновить: Данные PowerPivot
   Служба Excel Services возвращает эту ошибку для книг Excel, содержащих данные PowerPivot, если она не может подключиться к внедренным источникам данных.  
@@ -25,7 +25,7 @@ ms.locfileid: "48164124"
   
 |||  
 |-|-|  
-|Область применения|PowerPivot для SharePoint|  
+|Применение|PowerPivot для SharePoint|  
 |Номер версии продукта|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Причина|Служба Excel Services настроена так, что разрешаются только соединения из файлов ODC, которые находятся в библиотеке доверенных подключений к данным.|  
 |Текст сообщения|В книге путь подключения к данным указывает на файл, находящийся на локальном жестком диске, или является недопустимым URI. Следующие соединения не удалось обновить: Данные PowerPivot|  

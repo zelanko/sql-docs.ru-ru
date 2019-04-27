@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1bd9e18d1dfe7226d043a7c8c968999da680da08
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775013"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Переименование компьютера, на который установлен изолированный экземпляр SQL Server
   Если изменить имя компьютера, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], новое имя будет распознано в момент следующего запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Не нужно заново запускать программу установки, чтобы изменить имя компьютера. Вместо этого следует выполнить следующие шаги для обновления системных метаданных, хранимых в представлении каталога sys.servers и возвращаемых системной функцией @@SERVERNAME. Обновите системные метаданные таким образом, чтобы отразить в них изменения в именах компьютеров для удаленных соединений и приложений, в которых используется системная функция @@SERVERNAME или которые запрашивают имя сервера в представлении каталога sys.servers.  

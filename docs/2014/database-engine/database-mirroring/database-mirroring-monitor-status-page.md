@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1cec7e92d8c32cd8c50098ece83082b61bca7ae2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754712"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Монитор зеркального отображения баз данных (страница «Состояние»)
   На этой странице, предназначенной только для чтения, отображаются самые последние сведения о состоянии зеркального отображения для экземпляров основного и зеркального сервера текущей базы данных, выбранной в дереве навигации. Если сведения об экземпляре в настоящее время недоступны, некоторые ячейки в сетке **Состояние** , соответствующие этому экземпляру, будут выглядеть недоступными и отображать **Неизвестно**.  

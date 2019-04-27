@@ -1,5 +1,5 @@
 ---
-title: Урок 4. Определение дополнительных свойств атрибутов и измерений | Документация Майкрософт
+title: 'Занятие 4: Определение дополнительных свойств атрибутов и измерений | Документация Майкрософт'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e99a6db1198422f137e281ea52da6b135172fcd7
-ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52951586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752771"
 ---
-# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Урок 4. Определение расширенных свойств атрибутов и измерений
+# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Занятие 4: Определение расширенных атрибутов и свойств измерений
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 На этом занятии изучается использование расширенных свойств атрибутов, иерархий атрибутов и свойств измерений.  
@@ -48,7 +48,7 @@ ms.locfileid: "52951586"
 В этой задаче требуется настроить свойства UnknownMember и UnknownMemberName для обработки условий возникновения ошибок, вызванных элементами измерений со значением NULL.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 5. Определение связей между измерениями и группами мер](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[Занятие 5. Определение связей между измерениями и группами мер](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
 ## <a name="see-also"></a>См. также  
 [Сценарий учебника по службам Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  

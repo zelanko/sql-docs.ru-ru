@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64fa315457361e8d160735f38156e79ea667a4da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774196"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>Переход на вторичный сервер доставки журналов (SQL Server)
   Переход на вторичный сервер доставки журналов может быть полезен в случаях, когда происходит сбой экземпляра сервера-источника или требуется его обслуживание.  

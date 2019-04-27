@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 47710b89cdad74ac7e17a6091592af0d379ce2e6
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781404"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>Открытие администратора источника данных ODBC
   В этом разделе описывается открытие администратора источников данных ODBC. Администратор источника данных ODBC представляет собой компонент Windows. Используйте администратор источника данных ODBC для создания источников данных ODBC и управления ими.  

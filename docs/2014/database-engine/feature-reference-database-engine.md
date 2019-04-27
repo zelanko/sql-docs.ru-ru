@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be016421136f10f7f78bdebffd8c524e4bee72e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779759"
 ---
 # <a name="feature-reference-database-engine"></a>Справочник по компонентам (компонент Database Engine)
   Компонент [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] содержит несколько средств и приложений для создания, просмотра объектов и данных базы данных и управления ими. Кроме того, существуют средства, которые можно использовать для мониторинга и диагностики сервера и производительности базы данных, а также включения и отключения функций, служб и сетевых протоколов. В этом разделе приводятся определенные подразделы, описывающие диалоговые окна этих средств и приложений.  

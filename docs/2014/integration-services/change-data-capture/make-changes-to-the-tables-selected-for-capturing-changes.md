@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e8b98135d07ecc51ce2570a481fac4924266668
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771141"
 ---
 # <a name="make-changes-to-the-tables-selected-for-capturing-changes"></a>Внесение изменений в выбранные для отслеживания изменений таблицы
   В этом диалоговом окне можно выбрать столбцы из выбранной таблицы, изменения данных в которых будут отслеживаться. Можно также изменить **Роль безопасности** и **Экземпляр отслеживания** .  

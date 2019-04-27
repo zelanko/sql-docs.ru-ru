@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8134b7a69df7254ce3609ddce24a15293c47efd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779737"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Настройка SQL Server на установке Server Core
   Этот раздел содержит сведения о настройке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на установке Server Core из [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1). 
@@ -175,7 +175,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
   
      `GO`  
   
-### <a name="enable-and-start-the-sql-server-browser-service"></a>Включите и запустите службу обозревателя SQL Server  
+### <a name="enable-and-start-the-sql-server-browser-service"></a>Включить и запустить службу обозревателя SQL Server  
  По умолчанию эта служба отключена.  Если она отключена на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , работающем на Server Core, то для ее включения выполните следующую команду из командной строки:  
   
  `sc config SQLBROWSER start= auto`  
@@ -238,7 +238,7 @@ $Tcp
 ##  <a name="use-troubleshooting-tools"></a>Использование средств устранения неполадок  
  Для определения аудита можно дистанционно использовать среду [SQLdiag Utility](../../tools/sqldiag-utility.md) позволяет выполнять сбор файлов журналов и данных с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и других типов серверов, а также мониторинг серверов и устранение определенных неполадок на серверах. SQLdiag предназначена для исследования и упрощения сбора диагностической информации для Microsoft Customer Support Services.  
   
- Служебную программу можно запустить в командной строке администратора в Server Core, используя синтаксис, описанный в разделе: [Программа SQLdiag](../../tools/sqldiag-utility.md).  
+ Вы можете запустить программу в командной строке администратора в Server Core, используя синтаксис, описанный в разделе: [Программа SQLdiag](../../tools/sqldiag-utility.md).  
   
 ## <a name="see-also"></a>См. также  
  [Установка SQL Server 2014 на Server Core](install-sql-server-on-server-core.md)   

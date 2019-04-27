@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: febf7ccdc4a57f92a14048e3ddeea2d00bd9b32d
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753866"
 ---
 # <a name="architecture-of-clr-integration"></a>Архитектура интеграции со средой CLR
   Интеграция [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] со средой CLR платформы .NET Framework позволяет программистам работать с базами данных, используя такие языки, как Visual C#, Visual Basic .NET, Visual C++. С помощью этих языков программисты могут создавать различные объекты бизнес-логики, например: функции, хранимые процедуры, триггеры, типы данных и агрегаты.  

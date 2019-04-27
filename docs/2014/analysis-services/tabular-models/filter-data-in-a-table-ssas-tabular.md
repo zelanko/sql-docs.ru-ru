@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d33148543677c58a353253a86bbdf99f1c892326
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757211"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>Фильтрация данных в таблице (табличные службы SSAS)
   Чтобы ограничить число строк, загружаемых в таблицу во время импорта данных, можно применить фильтры. После выполнения импорта данных отдельные строки удалить нельзя. Можно применить пользовательские фильтры для отображения строк. Строки, не соответствующие условиям сортировки, скрыты. Фильтрацию можно выполнять по одному или нескольким столбцам. Фильтры добавляются друг к другу, что означает, что каждый дополнительный фильтр основывается на текущем фильтре и еще более ограничивает подмножество данных.  
@@ -53,8 +53,8 @@ ms.locfileid: "48079704"
 2.  В меню **Столбец** выберите пункт **Очистить все фильтры**.  
   
 ## <a name="see-also"></a>См. также  
- [Фильтрация и сортировка данных &#40;табличные службы SSAS&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [Перспективы &#40;табличные службы SSAS&#41;](perspectives-ssas-tabular.md)   
- [Роли &#40;табличные службы SSAS&#41;](roles-ssas-tabular.md)  
+ [Сортировка и фильтрация данных (табличные службы SSAS)](../filter-and-sort-data-ssas-tabular.md)   
+ [Перспективы (табличные службы SSAS)](perspectives-ssas-tabular.md)   
+ [Роли (табличные службы SSAS)](roles-ssas-tabular.md)  
   
   

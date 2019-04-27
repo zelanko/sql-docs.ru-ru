@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f64fa8d79f3f44a1f7c62dfe13c931509408d42
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749774"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>Доступность и аварийное восстановление PowerPivot (SQL Server 2014)
   Планы доступности и аварийного восстановления для [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] зависят главным образом от проекта фермы SharePoint, продолжительности простоя, приемлемой для различных компонентов, а также средств и методов работы, которые используются для поддержания доступности SharePoint. В этом разделе содержатся сведения о технологии и диаграммы с примерами топологий, которые следует рассматривать при планировании доступности и аварийного восстановления для развертывания [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  

@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 824a722c527b600fd09c8f68725ad033ab1a1b8c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780171"
 ---
 # <a name="utf8-string-user-defined-data-type-udt"></a>UTF8 String User-Defined Data Type (UDT)
   Образец UTF8String для SQL Server демонстрирует реализацию определяемого пользователем типа данных. Этот образец показывает реализацию определяемого пользователем типа данных UTF8, который расширяет систему типов базы данных, обеспечивая возможность хранения значений в кодировке UTF8. Этот тип также реализует программный код для преобразования строк в Юникоде в формат UTF8 и обратно.  

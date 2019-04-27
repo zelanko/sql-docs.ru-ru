@@ -16,11 +16,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 28559b6037fa6b0e95bb6748f85d3d0cecd2df8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774174"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>Параметры (текстовый редактор - Transact-SQL-общие страницы)
   Используйте диалоговое окно параметров **Общие** для изменения общего режима правок в редакторе запросов компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , который используется для изменения скриптов [!INCLUDE[tsql](../includes/tsql-md.md)] . Чтобы открыть эту страницу, выберите пункт **Параметры** в меню **Сервис** , откройте вложенную папку **Transact-SQL** , а затем откройте страницу **Общие**.  

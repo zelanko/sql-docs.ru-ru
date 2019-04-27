@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775424"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Обновление до версии SQL Server 2014 с помощью мастера установки (программа установки)
   Мастер установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает обновление всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через единое дерево компонентов. Можно также установить [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] параллельно с предыдущей версией или выполнить перенос существующих баз данных и параметров конфигурации из предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем применить их к экземпляру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

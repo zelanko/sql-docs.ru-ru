@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786739"
 ---
 # <a name="collations-and-code-pages"></a>Параметры сортировки и кодовые страницы
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] имеет ограничения на поддерживаемые кодовые страницы для столбцов (var)char в оптимизированных для памяти таблицах и на параметры сортировки, используемые в индексах и скомпилированные в собственном коде в хранимых процедурах.  

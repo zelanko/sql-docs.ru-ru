@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1060520a9c1fc6b5db20d1cca5e8c2d19cbd429a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773300"
 ---
 # <a name="view-file-history"></a>Просмотр журнал файла
   Можно использовать **журнал** команду для просмотра истории версий файлов, контролируемых системой управления версиями. Этот журнал содержит дату и время добавления или возврата файла в систему управления версиями.  

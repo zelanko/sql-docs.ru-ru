@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5630579e787a3bfcb5d64ee3bcf0ec5bee368611
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782400"
 ---
 # <a name="cross-db-ownership-chaining-server-configuration-option"></a>Параметр конфигурации сервера «cross db ownership chaining»
   Используйте параметр **cross db ownership chaining** , чтобы настроить межбазовые цепочки владения для экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

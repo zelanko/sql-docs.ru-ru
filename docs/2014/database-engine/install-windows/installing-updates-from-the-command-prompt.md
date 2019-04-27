@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 51ad82519e8afd5e4a871046465e0cafec2f783e
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774988"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>Установка обновлений из командной строки
   Проверьте скрипты установки и доработайте их в соответствии с задачами организации.  
@@ -23,7 +23,7 @@ ms.locfileid: "51018769"
 ## <a name="sample-syntax-for-installation"></a>Образец синтаксиса для программы установки  
  Имя пакета может быть разным и включает обозначение языка, выпуска и архитектуры процессора. Применение обновления из командной строки. Замените <имя_пакета> именем конкретного пакета обновления:  
   
--   Обновление одного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и всех общих компонентов, таких как службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и средства управления: экземпляр можно указать с помощью параметра InstanceName или InstanceID. Чтобы обновить подготовленный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо указать параметр InstanceID <имя_пакета>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance или <имя_пакета>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<Instance ID>.  
+-   Обновление одного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и всех общих компонентов, таких как [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и средства управления: Можно указать экземпляр с помощью параметра InstanceName или параметра InstanceID. Чтобы обновить подготовленный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо указать параметр InstanceID <имя_пакета>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance или <имя_пакета>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<Instance ID>.  
   
 -   Программа установки может интегрировать последние обновления продукта в основную установку продукта, чтобы он и применимые обновления устанавливались одновременно. Можно подготовить установку экземпляра ядра СУБД, включающую обновление продукта: setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateEnabled=True /UpdateSource=\<путь, откуда скачивается обновление> /INSTANCEID=\<Instance ID>/FEATURES=SQLEngine.  
   

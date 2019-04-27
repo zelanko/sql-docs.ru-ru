@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf88f781199937c5b74d8c4645764f883d812a0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749735"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Создание соединения семантической модели бизнес-аналитики с табличным шаблоном базы данных
   Сведения, приведенные в этом разделе, помогут настроить соединение семантической модели бизнес-аналитики, которое перенаправляется на базу данных табличной модели, запущенную в экземпляре служб Analysis Services за пределами фермы SharePoint.  

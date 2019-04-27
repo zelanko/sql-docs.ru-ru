@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b16eb8fdfaf18bac628bf902427fed0edb1962c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773510"
 ---
 # <a name="sqlcmd-how-to-topics"></a>Связанные инструкции по sqlcmd
   Программа [sqlcmd](../tools/sqlcmd-utility.md) позволяет вводить инструкции [!INCLUDE[tsql](../includes/tsql-md.md)], системные процедуры и файлы скриптов из командной строки в редактор запросов в режиме SQLCMD, в файл скрипта Windows или шаг задания операционной системы (Cmd.exe) задания агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

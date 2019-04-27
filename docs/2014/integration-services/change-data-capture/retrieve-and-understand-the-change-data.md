@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76635a5c1f1140bb66adf1d9ac40885c3dc43269
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771250"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>Получение и интерпретация измененных данных
   В потоке данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , выполняющего добавочную загрузку измененных данных, первая задача — выполнение запроса, который получает информацию об изменениях. Этот запрос выполняется внутри исходного компонента задачи потока данных. Затем можно использовать нисходящие преобразования и назначения, чтобы применить данные об изменениях к назначению.  
@@ -57,6 +57,6 @@ ms.locfileid: "58388662"
 ## <a name="next-step"></a>Следующий шаг  
  После настройки источника OLE DB для получения измененных данных начинается проектирование потока данных в пакете.  
   
- **Следующая тема:** [Обработка операций вставки, обновления и удаления](process-inserts-updates-and-deletes.md)  
+ **Следующая статья:** [Обработка операций вставки, обновления и удаления](process-inserts-updates-and-deletes.md)  
   
   

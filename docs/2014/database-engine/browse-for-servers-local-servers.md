@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb24a0615fcfbe2a04fa6daedbd0e08ac90875d6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787871"
 ---
 # <a name="browse-for-servers-local-servers"></a>Обзор серверов (локальные серверы)
   Если при подключении к компоненту [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] неизвестно точное имя [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], в поле **Имя сервера** нажмите кнопку **Обзор**, чтобы открыть диалоговое окно **Выбор серверов** .  

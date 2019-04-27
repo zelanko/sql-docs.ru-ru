@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6d398c2c9d8439025c7ff5ec7a8e4295b24d337
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754682"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>Удаление зеркального отображения базы данных (SQL Server)
   В этом разделе описано, как удалить зеркальное отображение базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  Владелец базы данных может в любое время удалить зеркальное отображение базы данных. Для этого он должен вручную остановить сеанс.  
@@ -69,7 +69,7 @@ ms.locfileid: "52506116"
     ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
     ```  
   
-##  <a name="FollowUp"></a> Дальнейшие действия: Удаление зеркального отображения базы данных  
+##  <a name="FollowUp"></a> Дальнейшие действия. Удаление зеркального отображения базы данных  
   
 > [!NOTE]  
 >  Дополнительные сведения о последствиях удаления зеркального отображения базы данных см. в статье [Удаление зеркального отображения базы данных (SQL Server)](database-mirroring-sql-server.md).  

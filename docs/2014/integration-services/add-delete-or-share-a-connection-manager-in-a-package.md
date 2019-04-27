@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fdcc6285ba1a75827f91f856319d296c0cbbff5d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772270"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>Добавление, удаление или совместное использование диспетчера соединений в пакете
   Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] содержат множество диспетчеров соединений, предназначенных для соединения с различными источниками данных: реляционными базами данных, базами данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и файлами в форматах CSV и XML. Можно создать диспетчер соединений на уровне пакета или на уровне проекта. Диспетчер соединений, созданный на уровне проекта, доступен всем пакетам в проекте. Диспетчер соединений, созданный на уровне пакета, доступен только этому определенному пакету.  

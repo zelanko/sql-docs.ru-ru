@@ -21,11 +21,11 @@ ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: 2a0a1f82685cb107902c8065f2f696f615ad3930
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62744076"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>sys.server_resource_stats (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "58566513"
 |start_time|**datetime2**|Время в формате UTC, с которой начинается 15 секундного интервала отчетности|  
 |end_time|**datetime**|Время в формате UTC, указывающее окончание 15 секундного интервала отчетности|
 |resource_type|nvarchar(128)|Тип ресурса, для которого предоставляются метрики|
-|имя_ресурса|nvarchar(128)|Имя ресурса.|
-|sku|nvarchar(128)|Уровень служб управляемого экземпляра экземпляра. Допустимы следующие значения: <br><ul><li>Общее назначение</li></ul><ul><li>Критические задачи для бизнеса</li></ul>|
-|hardware_generation|nvarchar(128)|Идентификатор поколения оборудования: Gen 4 или 5-го поколений|
+|имя_ресурса|NVARCHAR(128)|Имя ресурса.|
+|sku|NVARCHAR(128)|Уровень служб управляемого экземпляра экземпляра. Допустимы следующие значения: <br><ul><li>Общее назначение</li></ul><ul><li>Критические задачи для бизнеса</li></ul>|
+|hardware_generation|NVARCHAR(128)|Идентификатор поколения оборудования: Gen 4 или 5-го поколений|
 |virtual_core_count|ssNoversion|Представляет количество виртуальных ядер на один экземпляр (8, 16 или 24 в общедоступной предварительной версии)|
 |avg_cpu_percent|Decimal(5,2)|Среднее использование вычислительных ресурсов в процентах от предела для уровня управляемый экземпляр службы, используемой экземпляром. Он вычисляется как сумма времени ЦП все пулы ресурсов для всех баз данных в экземпляре а деленное доступного времени ЦП для этого уровня в заданном интервале.|
 |reserved_storage_mb|BIGINT|Зарезервированные хранилища на экземпляр (объем хранилища пространства этого клиента, приобретенных в управляемом экземпляре)|

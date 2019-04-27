@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 11da8d77f5ea97dc435b9af23090d1d34da0f05c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753123"
 ---
 # <a name="data-collector-programming"></a>Программирование сборщика данных
   API-интерфейс сборщика данных (пространство имен <xref:Microsoft.SqlServer.Management.Collector>) обеспечивает программное управление всеми операциями настройки через объектную модель. Кроме того, многие операции сбора данных, использующие API, реализованы в виде хранимых процедур, установленных на сервере.  

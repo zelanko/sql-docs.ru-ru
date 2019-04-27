@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b511f5d241216c2586870adadeb3c8586ee803be
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752961"
 ---
 # <a name="rds-programming-model-in-detail"></a>Подробные сведения о модели программирования RDS
 Ниже приведены ключевые элементы модели программирования служб удаленных рабочих СТОЛОВ.  

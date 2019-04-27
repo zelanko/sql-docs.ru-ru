@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 08e05c68bf69bcb7ca54d2f0920ee041aae3ca99
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752598"
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Занятие 4 – 7-определение Unknown Member и Null Processing свойства
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -179,7 +179,7 @@ ms.locfileid: "52525923"
     ![Уровень имя продукта, с компонентами сборки](../analysis-services/media/l4-assemblycomponents-1.gif "уровень название продукта, с компонентами сборки")  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 5. Определение связей между измерениями и группами мер](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[Занятие 5. Определение связей между измерениями и группами мер](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   
   

@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773756"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Администрирование программ (служебная программа SQL Server)
   Вкладки «Администрирование программ» используются для управления настройками политики, безопасности и хранилища данных для утилиты [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Дополнительные сведения об основных понятиях служебной программы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] см. в статье [Функции и задачи служебной программы SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
@@ -89,11 +89,11 @@ ms.locfileid: "48128844"
  Сведения о конфигурации хранилища данных служебной программы  
  Перечисленные далее параметры конфигурации не могут быть изменены в этой версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   UMDW name: Sysutility_mdw_\<GUID>_DATA.  
+-   Имя UMDW: Sysutility_mdw_\<GUID>_DATA.  
   
--   Частота передачи набора элементов сбора: каждые 15 минут.  
+-   Частота передачи набора элементов сбора: Каждые 15 минут.  
   
- Каталог UMDW можно настроить: <системный диск\<:\Program Files\Microsoft SQL Server\MSSQL10_50.<имя_UCP>\MSSQL\Data\\, где \<системный диск> — это чаще всего диск C:\. Файл журнала, UMDW_\<GUID>_LOG, находится в том же каталоге.  
+ Каталог UMDW можно настроить: \<Системный диск >: \Program Files\Microsoft SQL Server\MSSQL10_50. < имя_пункта_управления_программой > \MSSQL\Data\\, где \<системный диск > — это обычно C:\ диск. Файл журнала, UMDW_\<GUID>_LOG, находится в том же каталоге.  
   
 > [!NOTE]  
 >  Расположение файла UMDW (sysutility_mdw) можно изменить путем отсоединения и присоединения или с помощью инструкции ALTER DATABASE. Рекомендуется использовать инструкцию ALTER DATABASE. Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql).  

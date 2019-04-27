@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 172aa2a77293dd7e9a9ee50bfe0002a71c59cbb9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831392"
 ---
 # <a name="integration-services-containers"></a>Контейнеры служб Integration Services
   Контейнеры в службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] представляют собой объекты, содержащие структуру пакетов и службы для задач. Они поддерживают повторение потоков управления в пакетах, а также группируют задачи и контейнеры в единые рабочие объекты. Кроме задач контейнеры могут включать другие контейнеры.  

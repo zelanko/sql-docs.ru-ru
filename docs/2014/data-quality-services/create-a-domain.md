@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6db2481777a79697e109400786399a5db9daf448
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755754"
 ---
 # <a name="create-a-domain"></a>Создание домена
   В этом разделе описывается, как создать домен в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Значения в домене являются семантическим представлением данных в поле. Дополнительные сведения о доменах см. в разделе [Управление доменом](../../2014/data-quality-services/managing-a-domain.md).  

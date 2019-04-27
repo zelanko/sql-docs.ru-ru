@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774286"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>Управление именами входа и заданиями для баз данных группы доступности (SQL Server)
   Необходимо постоянно поддерживать одинаковый набор имен входа пользователей и заданий агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в каждой базе данных-источнике группы доступности AlwaysOn и соответствующих баз данных-получателей. Имена входа и задания необходимо воспроизвести на каждом экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , на котором размещается реплика доступности для группы доступности.  

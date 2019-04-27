@@ -25,11 +25,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1258797d76df49a2622335ee798120632706c78
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772231"
 ---
 # <a name="adding-connections-programmatically"></a>Добавление соединений программным образом
   Класс <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> представляет физические соединения с внешними источниками данных. Класс <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> изолирует данные о реализации соединения от среды выполнения. Это обеспечивает согласованное и прогнозируемое взаимодействие среды выполнения с каждым диспетчером соединений. Диспетчеры соединений содержат набор основных свойств, общих для всех соединений, например, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> и <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>. Однако, как правило, только свойства <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> и <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> требуются для настройки диспетчера соединений. Обычно классами соединения используются такие методы, как `Open` или `Connect`, чтобы установить физическое соединение с источником данных, однако обработчик среды выполнения управляет всеми соединениями пакета во время его выполнения.  

@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c27057a5968ac9c415852d7cb934251056af9d99
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779690"
 ---
 # <a name="edit-trace-template-properties-general-tab"></a>Изменение свойств шаблона трассировки (вкладка «Общие»)
   Используйте вкладку **Общие** диалогового окна **Свойства шаблона трассировки** для просмотра и редактирования имеющихся шаблонов трассировки с помощью следующих параметров. Чтобы открыть это диалоговое окно, в меню [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **Файл** укажите пункт **Шаблоны**и выберите команду **Изменить шаблон**.  

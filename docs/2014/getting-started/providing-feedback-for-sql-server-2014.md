@@ -23,11 +23,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772282"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>Отзывы по SQL Server 2014
   Корпорация [!INCLUDE[msCoName](../includes/msconame-md.md)] ценит, что вы уделили часть своего времени, чтобы помочь в улучшении продуктов и документации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Можно предоставлять отчеты об ошибках и выдвигать предложения, касающиеся характеристик продуктов или пользовательского интерфейса, предоставлять отзывы о документации; кроме того, можно разрешить автоматическую отправку отчетов об ошибках и данных об использовании продуктов в [!INCLUDE[msCoName](../includes/msconame-md.md)] для дальнейшего анализа. Каждый из трех методов обратной связи описывается в этом разделе.  

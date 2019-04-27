@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 70f9bc727ba86d10a48dbc9265c9c2d3655d9fe0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754644"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Possible Failures During Database Mirroring
   К сбою во время сеанса зеркального отображения базы данных могут привести различные физические неисправности, ошибки операционной системы или ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сеанс зеркального отображения базы данных не выполняет активных проверок компонентов, на которые опирается процесс Sqlservr.exe, и не контролирует правильность их работы. Однако при сбоях некоторых типов затронутый компонент сообщает приложению Sqlservr.exe об ошибке. Ошибка, о которой сообщил другой компонент, называется *постоянной ошибкой*. Чтобы обнаружить другие сбои, которые в противном случае могли быть не замечены, для зеркального отображения базы данных реализован собственный механизм ожидания. По истечении времени ожидания для зеркального отображения базы данных предполагается, что произошел сбой и объявляется *кратковременная ошибка*. Однако некоторые ошибки, которые возникают на уровне экземпляра SQL Server, не превышают времени ожидания зеркального отображения и поэтому не обнаруживаются.  
@@ -109,7 +109,7 @@ ms.locfileid: "48179074"
   
 ## <a name="see-also"></a>См. также  
  [Оценка прерывания обслуживания во время переключения ролей (зеркальное отображение базы данных)](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Режимы работы зеркального отображения базы данных](database-mirroring-operating-modes.md)   
+ [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)   
  [Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Зеркальное отображение базы данных (SQL Server)](database-mirroring-sql-server.md)  
   

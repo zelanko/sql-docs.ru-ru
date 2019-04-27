@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7f50c5e77e93fcddbf7eb6f1d16432dd54bc7625
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755809"
 ---
 # <a name="data-quality-client-application"></a>Клиентское приложение DQS
   Приложение [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] позволяет выполнять операции по обеспечению качества данных с помощью изолированного средства. Это приложение позволяет создавать базы знаний, создавать и выполнять проекты качества данных и выполнять административные задачи.  

@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bf74ad2591fd7ed745648b29a60674431310ba0c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787108"
 ---
 # <a name="configure-the-remote-query-timeout-server-configuration-option"></a>Настройка параметра конфигурации сервера remote query timeout
   В этом разделе описываются способы настройки параметра конфигурации сервера **remote query timeout** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **remote query timeout** позволяет задать время ожидания [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (в секундах), в течение которого может выполняться удаленная операция. Значение по умолчанию для этого параметра составляет 600, и это означает ожидание в течение 10 минут. Это значение применяется для исходящих подключений, инициированных компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] как удаленный запрос. Это значение не влияет на запросы, получаемые ядром СУБД [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Чтобы отключить время ожидания, установите значение 0. Запрос будет ожидать до момента его завершения.  
@@ -86,7 +86,7 @@ GO
   
  Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра времени ожидания удаленного запроса  
+##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра remote query timeout  
  Параметр вступает в силу немедленно, без перезапуска сервера.  
   
 ## <a name="see-also"></a>См. также  

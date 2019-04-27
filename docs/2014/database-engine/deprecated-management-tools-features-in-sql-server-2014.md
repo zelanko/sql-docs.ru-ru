@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f8de4a3ce8ac36de33d96b71170cb64eb4dd5da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753956"
 ---
 # <a name="deprecated-management-tools-features-in-sql-server-2014"></a>Устаревшие возможности средств управления в SQL Server 2014
   В этом разделе описаны устаревшие возможности средств управления, которые все еще доступны в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Эти функции будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  
@@ -26,10 +26,10 @@ ms.locfileid: "48083874"
 |sqlps.exe|Предупреждение|  
 |osql.exe|Предупреждение|  
 |SQLMail|Предупреждение|  
-|Класс SMO: класс Microsoft.SQLServer.Management.Smo.Information|Объявление|  
-|Класс SMO: класс Microsoft.SQLServer.Management.Smo.Settings|Объявление|  
-|Класс SMO: класс Microsoft.SQLServer.Management.Smo.DatabaseOptions|Объявление|  
-|Класс SMO: свойство Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication|Объявление|  
+|Класс SMO: Класс Microsoft.SQLServer.Management.Smo.Information|Объявление|  
+|Класс SMO: Класс Microsoft.SqlServer.Management.SMO.Setting|Объявление|  
+|Класс SMO: Класс Microsoft.SQLServer.Management.Smo.DatabaseOptions|Объявление|  
+|Класс SMO: Свойство Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication|Объявление|  
 |Система проекта базы данных в среде SSMS, включая интеграцию системы управления версиями|Объявление|  
 |Уведомления net send (агент[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] )|Объявление|  
 |Уведомления по пейджинговой связи (агент[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] )|Объявление|  

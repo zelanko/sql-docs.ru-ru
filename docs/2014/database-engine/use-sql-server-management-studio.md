@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773906"
 ---
 # <a name="use-sql-server-management-studio"></a>Использование среды SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) — это интегрированная среда для доступа, настройки, управления, администрирования и разработки всех компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Служба SSMS сочетает в себе обширную группу графических инструментов с рядом отличных редакторов сценариев для обеспечения доступа к службе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для разработчиков и администраторов всех профессиональных уровней.  

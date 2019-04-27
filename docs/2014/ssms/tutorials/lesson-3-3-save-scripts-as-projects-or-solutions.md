@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6d17dd44f597d7b3ddfce574670e9e6bfd55f908
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753049"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>Сохранение скриптов в виде проектов или решений
   Разработчики, знакомые со средой [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, найдут удобным обозреватель решений в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Скрипты, которые поддерживают бизнес, могут быть сгруппированы в проекты скриптов, а проектами скриптов можно одновременно управлять как решением. Когда скрипты помещены в проекты скриптов и решения, они могут быть открыты вместе как группа или сохранены вместе в системе управления версиями, например Visual SourceSafe. Проекты скриптов включают данные о соединениях, необходимые для правильного выполнения скриптов, а также могут содержать файлы других типов, такие как вспомогательные текстовые файлы.  
@@ -63,6 +63,6 @@ ms.locfileid: "54134834"
 12. Чтобы сохранить проект скрипта и решение, в меню **Файл** выберите команду **Сохранить все**.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Сводка: Решения и проекты скриптов](lesson-3-4-summary-solutions-and-script-projects.md)  
+ [Сводка. Решения и проекты скриптов](lesson-3-4-summary-solutions-and-script-projects.md)  
   
   

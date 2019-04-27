@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 67b7e72e0c4b248e8951667561eaf7548bfba1b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778859"
 ---
 # <a name="full-text-index-properties-columns-page"></a>Свойства полнотекстового индекса (страница «Столбцы»)
   **Чтобы просмотреть или изменить свойства полнотекстового индекса**  
