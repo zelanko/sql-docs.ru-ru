@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8282cf7060f106798f2fa482f474bc5e364492ee
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768320"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>Редактор диспетчера соединений с неструктурированными файлами (страница «Общие»)
   Используйте страницу **Общие** диалогового окна **Редактор диспетчера соединений с неструктурированными файлами** , чтобы выбрать файл и формат данных. Соединение с неструктурированным файлом дает пакету возможность установить соединение с текстовым файлом.  

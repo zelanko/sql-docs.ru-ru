@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ee87fc2c435701649a328d38d5b54c82c898b4f4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62986983"
 ---
 # <a name="finding-and-viewing-reports-in-report-manager-report-builder-and-ssrs"></a>Поиск и просмотр отчетов в диспетчере отчетов (построитель отчетов и службы SSRS)
   Диспетчер отчетов — это веб-инструмент, включающее в себя функции просмотра отчетов и управления ими. Он устанавливается как часть сервера отчетов. Чтобы открыть диспетчер отчетов, введите в окне браузера его URL-адрес. Сведения о требованиях к браузеру см. в разделе [планирование служб Reporting Services и поддержки Power View в браузерах &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md). Для получения дополнительных сведений о настройке URL-адреса диспетчера отчетов на сервере отчетов свяжитесь с системным администратором. Дополнительные сведения см. в разделе [Настройка диспетчера отчетов (собственный режим)](../report-server/configure-web-portal.md).  

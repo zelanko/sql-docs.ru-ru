@@ -1,5 +1,5 @@
 ---
-title: 'Следующие функции не поддерживаются службами Excel и могут не отображаться или отображаться лишь частично: комментарии, фигуры или другие объекты | Документация Майкрософт'
+title: 'Следующие объекты не поддерживаются службой Excel Services и могут не отображаться совсем или отображаться лишь частично: Комментарии, фигуры или другие объекты | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16269f5c0d7b3d64c9639862995dee44146efb9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743936"
 ---
 # <a name="the-following-features-are-not-supported-by-excel-services-and-may-not-display-or-may-display-only-partially-comments-shapes-or-other-objects"></a>Следующие объекты не поддерживаются службой Excel Services и могут не отображаться совсем или отображаться лишь частично: комментарии, фигуры или другие объекты.
   Эта ошибка возникает при добавлении в книгу PowerPivot срезов из списка полей PowerPivot.  
@@ -25,7 +25,7 @@ ms.locfileid: "48188704"
   
 |||  
 |-|-|  
-|Область применения|PowerPivot для SharePoint|  
+|Применение|PowerPivot для SharePoint|  
 |Номер версии продукта|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Причина|Веб-служба доступа Excel не может обработать объект «Фигура», который используется для управления расположением и форматированием срезов, добавленных в книгу из списка полей PowerPivot.|  
 |Текст сообщения|Следующие объекты не поддерживаются службой Excel Services и могут не отображаться совсем или отображаться лишь частично:<br /><br /> комментарии, фигуры или другие объекты.<br /><br /> Некоторые функции, например запросы внешних данных, отображают данные из кэша, которые можно обновить только в Microsoft Excel.|  

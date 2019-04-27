@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b80a13d61e1ddb1187f8114f756484dd608ad7b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740962"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Синхронизация баз данных служб Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] имеют функцию синхронизации баз данных, которая делает две базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] идентичными, копируя данные и метаданные из базы данных на исходном сервере в базу данных на целевом сервере. Используйте функцию синхронизации баз данных для выполнения следующих задач:  

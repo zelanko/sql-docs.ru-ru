@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8a1462a2cc1338e973df3d0fd84641aa24d0bc41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748586"
 ---
 # <a name="processing-and-storage-locations-partition-wizard"></a>Места обработки и хранения (мастер секционирования)
   На странице **Места обработки и хранения** можно определить экземпляр служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] куба, владеющий секцией, а также экземпляр служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , где хранятся данные секции. Чтобы определить секцию как удаленную, укажите либо удаленный экземпляр служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , либо место хранения, отличающееся от места хранения по умолчанию. Дополнительные сведения об удаленных секциях см. в разделе [Удаленные секции](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "48198624"
   
 ## <a name="see-also"></a>См. также  
  [Справка F1 мастера секционирования &#40;службы Analysis Services — многомерные данные&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)   
- [Секции &#40;службы Analysis Services — многомерные данные&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Секции (службы Analysis Services — многомерные данные)](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Выбор удаленной папки-диалоговое окно &#40;службы Analysis Services — многомерные данные&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
   

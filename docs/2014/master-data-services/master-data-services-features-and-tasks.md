@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7b614f31292999dd5424935d57e4cd1412dee864
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62764846"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Функции и задачи служб Master Data Services
   Сведения об использовании [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] для управления основными данными организации. Сведения о создании и обработке объектов модели, которые являются контейнерами для данных. Сведения об организации и обслуживании основных данных. Сведения об импорте и экспорте основных данных, а также о совместном использовании моделей в тестовой и рабочей средах. Наконец, сведения о разработке пользовательских приложений, обращающихся к веб-службе [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 722c2ae62376d30076b5cf5cf582ff80be311e50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748488"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>Диалоговое окно «Обновление представления источников данных»
   Используйте диалоговое окно **Обновление представления источников данных** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для подтверждения или отмены изменений, которые произойдут в результате обновления представления источников данных. Это диалоговое окно отображает изменения, которые произойдут в представлении источника данных в результате изменений, произошедших в источнике данных. Нажмите кнопку **ОК** чтобы принять изменения и обновить представления источников данных, или кнопку **Отмена** чтобы проигнорировать изменения и не менять представление источника данных. Диалоговое окно **Обновление представления источников данных** можно отобразить следующим образом:  
@@ -38,6 +38,6 @@ ms.locfileid: "48119624"
   
 ## <a name="see-also"></a>См. также  
  [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Конструктор представлений источников данных &#40;службы Analysis Services — многомерные данные&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Конструктор представлений источников данных (службы Analysis Services — многомерные данные)](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

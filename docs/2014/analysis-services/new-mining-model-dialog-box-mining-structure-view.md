@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b02eab5b0b2d6f6010df51151929c71188290b9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743610"
 ---
 # <a name="new-mining-model-dialog-box-mining-structure-view"></a>Диалоговое окно «Создание модели интеллектуального анализа данных» (представление структуры интеллектуального анализа данных)
   Используйте диалоговое окно **Создание модели интеллектуального анализа данных** , чтобы добавить новую модель в структуру интеллектуального анализа данных.  

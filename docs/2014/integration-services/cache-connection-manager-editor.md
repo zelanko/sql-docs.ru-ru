@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af7696c1d5194af721b6ff803736193db0285b8b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771732"
 ---
 # <a name="cache-connection-manager-editor"></a>Редактор диспетчера соединений с кэшем
   Диспетчер соединений с кэшем читает эталонный набор данных из преобразования кэша или из файла кэша (CAW) и может сохранить эти данные в файле кэша. Данные всегда сохраняются в памяти.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0e7ca6765ee44201badc54d15fb2a20aa9a863a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62853474"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,10 +51,10 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 >  Список алгоритмов, поддерживаемых текущим поставщиком могут быть получены с помощью [набор строк DMSCHEMA_MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Чтобы просмотреть алгоритмы, поддерживаемые в текущий экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], см. в разделе [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
   
  *список параметров*  
- Необязательный. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
+ Необязательный параметр. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
   
  *XML-строка*  
- (Для опытных пользователей.) Модель, закодированная на языке XML (PMML). Строка должна быть заключена в одиночные кавычки (').  
+ (Только для расширенного использования.) XML-кодировке модели (PMML). Строка должна быть заключена в одиночные кавычки (').  
   
  **СЕАНСА** предложение позволяет создавать модель интеллектуального анализа данных, которая автоматически удаляется с сервера при закрытии соединения или превышении времени ожидания. **СЕАНС** модели интеллектуального анализа данных полезны, поскольку они не требуют, чтобы пользователь был администратором базы данных, и они только место на диске для до тех пор, пока открыто соединение.  
   

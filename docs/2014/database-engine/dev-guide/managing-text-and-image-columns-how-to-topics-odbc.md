@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8645cf56a37e41d681daed2c05c3db9bf34c98e8
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780989"
 ---
 # <a name="managing-text-and-image-columns-how-to-topics-odbc"></a>Инструкции по работе со столбцами типа text и image (ODBC)
   Драйвер ODBC Microsoft® SQL Server™ поддерживает использование параметров типа text и image, а также получение данных из столбцов типа text, ntext и image в результирующих наборах.  

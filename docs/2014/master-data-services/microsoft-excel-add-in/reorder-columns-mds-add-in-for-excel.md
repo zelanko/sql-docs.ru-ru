@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f4e2af15b9ce2f9536d85c1d2c34f80247e12156
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765562"
 ---
 # <a name="reorder-columns-mds-add-in-for-excel"></a>Переупорядочение порядка столбцов (надстройка MDS для Excel)
   В службах [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]можно переупорядочить столбцы, отфильтровав список перед загрузкой.  

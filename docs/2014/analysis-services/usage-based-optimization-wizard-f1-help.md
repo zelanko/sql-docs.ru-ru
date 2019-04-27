@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 732b1c979f0dbf3a346ad85fc11bb8e0c5097c4f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756136"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>Справка F1 мастера оптимизации с учетом использования
   Результаты работы мастера оптимизации с учетом использования похожи на результаты, выдаваемые мастером статистических схем, и используются для разработки статистических схем для секции. Но в отличие от него мастер оптимизации с учетом использования разрабатывает схемы на основе определенных шаблонов использования, которые записываются в журнал запросов экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Статистическая обработка повышает производительность, позволяя службам [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] извлекать предварительно вычисленные итоги напрямую из хранилища куба, не загружая данные из базового источника данных и не вычисляя их для каждого запроса.  

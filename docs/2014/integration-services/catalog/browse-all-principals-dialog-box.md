@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 46d6fd5d4ecd821a3ccfeb35679e8fa7bab6104e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771724"
 ---
 # <a name="browse-all-principals-dialog-box"></a>Просмотр всех участников-диалоговое окно
   Диалоговое окно **Просмотр всех участников** используется для выбора участника базы данных с тем, чтобы изменить его разрешения для выбранного проекта или для всех проектов, содержащихся в выбранной папке.  

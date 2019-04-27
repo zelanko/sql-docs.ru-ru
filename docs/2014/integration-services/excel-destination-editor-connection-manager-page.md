@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f790e0cc9193f2f31c7f021c4d4901e7a825fb13
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769740"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Редактор назначения «Excel» (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** в диалоговом окне **Редактор назначения «Excel»** , чтобы задать сведения об источнике данных и просмотреть результаты. Назначение «Excel» загружает данные в лист или именованный диапазон в книге [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] .  
@@ -43,7 +43,7 @@ ms.locfileid: "58387172"
 |Параметр|Описание|  
 |------------|-----------------|  
 |Таблица или представление|Загружает данные в лист или именованный диапазон источника данных Excel.|  
-|Переменная, содержащая имя таблицы или представления|Укажите переменную, содержащую имя листа или диапазона.<br /><br /> **Сведения, связанные с**: [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)|  
+|Переменная, содержащая имя таблицы или представления|Укажите переменную, содержащую имя листа или диапазона.<br /><br /> **Дополнительные сведения** [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)|  
 |Команда SQL|Загрузка данных в назначение «Excel» с помощью SQL-запроса.|  
   
  **Имя листа Excel**  

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27a3cc8a768f60a5e2d430fe04ca514aafe1f37
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771660"
 ---
 # <a name="project-properties-dialog-box"></a>Диалоговое окно свойств проекта
   Проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] представляет собой единицу развертывания. Каждый проект может содержать пакеты, параметры и ссылки на среду. Проект является защищаемым объектом и может определять разрешения для участников базы данных. При повторном развертывании проекта предыдущая версия проекта может быть сохранена в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

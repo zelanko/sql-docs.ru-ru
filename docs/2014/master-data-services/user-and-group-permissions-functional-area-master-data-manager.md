@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bb4422ea0b2ac93ec928bc8ae755f715cb4def44
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763370"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>Функциональная область разрешений пользователей и групп (диспетчер основных данных)
   В функциональной области «Разрешения пользователей и групп» администраторы могут предоставить разрешение для функциональных областей, атрибутов (на вкладке «Модели») и элементов (на вкладке «Элементы иерархии»). Перекрывающиеся разрешения анализируются с целью определить разрешения пользователя для каждого отдельного значения атрибута.  

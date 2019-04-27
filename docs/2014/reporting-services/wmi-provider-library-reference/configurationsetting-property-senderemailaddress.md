@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e003ab3ce273febbdb36b046654da96cf85ecc47
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59957480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646230"
 ---
 # <a name="senderemailaddress-property-wmi-msreportserverconfigurationsetting"></a>Свойство SenderEmailAddress (WMI MSReportServer_ConfigurationSetting)
   Возвращает адрес, используемый для отправки электронной почты с сервера отчетов. Только для чтения.  

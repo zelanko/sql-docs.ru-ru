@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dccbdee0e7db72a9946e92229d06dce519ca94a1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774797"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)
   В этом разделе содержатся сведения о клиентских компонентах [!INCLUDE[ssHADR](../includes/sshadr-md.md)] и функциях переключения приложений.  
@@ -216,7 +216,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
  [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Подключение клиента AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [Сведения о доступе клиентского подключения к репликам доступности (SQL Server)](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Активные вторичные реплики. Вторичные реплики для чтения &#40;группы доступности AlwaysOn&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [Активные вторичные реплики: Вторичные реплики для чтения &#40;группы доступности AlwaysOn&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Подключение клиентов к сеансу зеркального отображения базы данных (SQL Server)](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)
   
   

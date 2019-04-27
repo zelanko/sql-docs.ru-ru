@@ -10,11 +10,11 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 911086beaaaeb28a036a764e066402d7ba6f1da7
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747076"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Установить сервер машинного обучения (автономный) или с помощью программы установки SQL Server R Server (изолированный)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -149,7 +149,7 @@ ms.locfileid: "58510881"
 
 В следующей таблице перечислены пути для R и Python распределениям, созданным используемый установщиками Майкрософт. Для полноты информации в таблице содержатся пути, создаваемые программы установки SQL Server, а также отдельный установщик для сервера машинного обучения Майкрософт.
 
-|Версия| Метод установки | Папка по умолчанию|
+|Version| Метод установки | Папка по умолчанию|
 |----|----|----|
 |Сервер SQL Server 2017 машинного обучения (автономный) |  Мастер установки SQL Server 2017 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER` <br/>`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |Microsoft Machine Learning Server (изолированный) |  Автономный установщик Windows |`C:\Program Files\Microsoft\ML Server\R_SERVER`<br/>`C:\Program Files\Microsoft\ML Server\PYTHON_SERVER`|

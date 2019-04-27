@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96e4cf621a1c0f7f701012ed479797fc450d1533
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743275"
 ---
 # <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>настроить максимальный размер передаваемого файла (PowerPivot для SharePoint)
   Книги PowerPivot часто содержат большие объемы данных, при этом размер файлов превышает максимально возможный для передачи в SharePoint. При попытке передать файл, размер которого больше предельно допустимого, на SharePoint возникнет следующая ошибка:  

@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8fc2fd14849661a3467bf1c7f401df2b19caf009
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774767"
 ---
 # <a name="options-query-execution-analysis-server-general-page"></a>Параметры (запроса выполнения Analysis Server — "Общие")
   Используйте эту страницу, чтобы задать параметры для запросов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Чтобы открыть страницу настроек в меню **Сервис** выберите пункт **Параметры**. На странице **Выполнение запросов** откройте папку **Сервер анализа данных** и выберите пункт **Общие**.  

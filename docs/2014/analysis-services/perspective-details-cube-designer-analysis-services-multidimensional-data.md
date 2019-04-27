@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e64c7ae51bf68c8a26cfb601172f214b6c710f80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743460"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>Подробности перспективы (вкладка «Перспективы», конструктор кубов) (службы Analysis Services — многомерные данные)
   С помощью панели **Подробности перспективы** на вкладке **Перспективы** конструктора кубов можно управлять метаданными, доступными пользователям, запрашивающим выбранную перспективу.  

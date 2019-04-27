@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3718a084211e7c3b2b7a14973e195a4b1c3b6b1a
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780727"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>Сценарии использования и примеры интеграции со средой CLR
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включает примеры приложений, образцы пакетов и многочисленные образцы кода, которые можно использовать для изучения возможностей программирования в условиях интеграции со средой CLR.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7dddb6aec8d55a2a0495900b87661a431f8de9d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643351"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Сценарий учебника по службам Analysis Services
   Этот учебник основывается на вымышленной организации [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] — крупная транснациональная производственная компания, производящая и реализующая металлические и композитные велосипеды на рынках Северной Америки, Европы и Азии. Штаб-квартира компании [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] находится в городе Боселл, штат Вашингтон. В ней работают 500 сотрудников компании. Кроме того, компания [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] имеет в своем составе несколько групп сбыта на региональных рынках.  
@@ -61,9 +61,9 @@ ms.locfileid: "48106754"
   
 -   предоставлять возможность локализации пользователям за пределами Соединенных Штатов.  
   
- Занятия в учебнике по службам Analysis Services позволяют изучить создание базы данных куба, которая удовлетворяет всем этим требованиям. Чтобы приступить к изучению этого учебника, перейдите к первому занятию: [Занятие 1. Создание нового проекта табличной модели](lesson-1-create-a-new-tabular-model-project.md).  
+ Занятия в учебнике по службам Analysis Services позволяют изучить создание базы данных куба, которая удовлетворяет всем этим требованиям. Чтобы приступить к работе, перейдите к первому занятию: [Занятие 1. Создание нового проекта табличной модели](lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="see-also"></a>См. также  
- [Многомерное моделирование &#40;руководством по Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [Многомерное моделирование (учебник по Adventure Works)](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

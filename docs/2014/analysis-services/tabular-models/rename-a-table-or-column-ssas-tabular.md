@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f9a869b4a280f8df44fce4c506c5f77afc7e8f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756633"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>Переименование таблицы или столбца (табличные службы SSAS)
   Имя таблицы можно изменить во время импорта, указав **Понятное имя** на странице **Выбор таблиц и представлений** **мастера импорта таблиц**. Имена таблицы и столбцов также можно изменить, если данные импортируются с помощью запроса на странице **Указание SQL-запроса** **мастера импорта таблиц**.  
@@ -57,8 +57,8 @@ ms.locfileid: "48085587"
  Вычисления, использующие переименованную таблицу или столбцы из переименованной таблицы, тоже должны быть обновлены, а данные, получаемые из этих вычислений, должны быть обновлены и пересчитаны. В зависимости от числа таблиц и вычислений, которых коснулось это изменение, выполнение этой операции может занять определенное время. Поэтому лучше всего переименовывать таблицы во время операции импорта или до начала построения сложных связей или вычислений.  
   
 ## <a name="see-also"></a>См. также  
- [Таблицы и столбцы &#40;табличные службы SSAS&#41;](tables-and-columns-ssas-tabular.md)   
+ [Таблицы и столбцы (табличные службы SSAS)](tables-and-columns-ssas-tabular.md)   
  [Импорт из PowerPivot &#40;табличные службы SSAS&#41;](import-from-power-pivot-ssas-tabular.md)   
- [Импорт из служб Analysis Services &#40;табличные службы SSAS&#41;](import-from-analysis-services-ssas-tabular.md)  
+ [Импорт из служб Analysis Services (табличные службы SSAS)](import-from-analysis-services-ssas-tabular.md)  
   
   

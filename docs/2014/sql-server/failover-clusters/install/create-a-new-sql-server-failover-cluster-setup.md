@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 696d8becd23f7a7136011a5e1c61eb9669c58e12
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740612"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Создание нового отказоустойчивого кластера SQL Server (программа установки)
   Чтобы установить или обновить отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , необходимо запустить программу установки на каждом узле кластера. Чтобы добавить узел в существующий отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , необходимо запустить программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на узле, который добавляется в экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Не выполняйте программу установки на активном узле для управления другими узлами.  
@@ -234,7 +234,7 @@ ms.locfileid: "53359386"
   
 ##  <a name="prepare"></a> подготовка  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Расширенная установка отказоустойчивого кластера / установка выпуска Enterprise. Шаг 1: подготовка  
+#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Шаг установки отказоустойчивого кластера расширенная 1. подготовка  
   
 1.  Вставьте установочный носитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , перейдите в корневую папку и дважды щелкните файл Setup.exe. Чтобы выполнить установку из общего сетевого ресурса, перейдите в корневой каталог общего сетевого ресурса и дважды щелкните файл Setup.exe. Дополнительные сведения об установке обязательных компонентов см. в разделе [Before Installing Failover Clustering](before-installing-failover-clustering.md). Может появиться запрос на установку обязательных компонентов, если они не установлены ранее.  
   
@@ -328,7 +328,7 @@ ms.locfileid: "53359386"
   
 ## <a name="complete"></a>Завершение  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Шаг 2 расширенной установки (установки выпуска Enterprise) отказоустойчивого кластера — Завершение  
+#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Шаг установки отказоустойчивого кластера расширенная 2. Завершение  
   
 1.  После подготовки всех узлов, как описано в пункте [шаг подготовки](#prepare), выполните программу установки на одном из подготовленных узлов, лучше всего на том, который является владельцем общего диска. На странице **Дополнительно** центра установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] щелкните **Завершение расширенного кластера**.  
   

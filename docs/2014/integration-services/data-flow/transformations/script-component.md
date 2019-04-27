@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d9a601a710531aa6905f35a2fe5ca7f02a9177f1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770694"
 ---
 # <a name="script-component"></a>Компонент скрипта
   Компонент скрипта размещает скрипт и позволяет пакету включать и выполнять пользовательский код скрипта. Можно использовать компонент скрипта в пакетах для следующих целей.  
