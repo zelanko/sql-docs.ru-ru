@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30d358dab4ab983109d354238b35b64a3d7976da
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864438"
 ---
 # <a name="visual-c-extensions"></a>Расширения Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>Интерфейс IADORecordBinding

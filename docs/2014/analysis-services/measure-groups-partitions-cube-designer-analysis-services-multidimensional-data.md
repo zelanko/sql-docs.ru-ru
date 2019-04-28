@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ffd5b3ff4eb98c96e1832e353e64f1953bd62e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727990"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Группы мер (вкладка «Секции», конструктор кубов) (службы Analysis Services — многомерные данные)
   Используйте панель **Группы мер** на вкладке **Секции** в конструкторе кубов для управления секциями, связанными с каждой группой мер в кубе.  
