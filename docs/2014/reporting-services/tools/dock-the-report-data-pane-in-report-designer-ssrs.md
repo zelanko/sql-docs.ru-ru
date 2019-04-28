@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa9537784b4e7118567ddc262aecac3e722432ee
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711261"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Закрепление области данных отчета в конструкторе отчетов (службы SSRS)
   Панель данных отчета конструктора отчетов среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]отображает иерархическую структуру объектов данных, которые можно использовать в отчете, в том числе источники данных, наборы данных, поля, параметры и изображения. Источники данных, показанные в этом представлении, могут быть внедренными, а также представлять собой ссылки на общие источники данных, выводимые в обозревателе решений.  

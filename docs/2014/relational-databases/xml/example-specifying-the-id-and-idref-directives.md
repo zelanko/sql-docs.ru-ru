@@ -1,5 +1,5 @@
 ---
-title: Пример Указание директив ID и IDREF | Документация Майкрософт
+title: Пример Указание директив ID и IDREF | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f985745f450b402781685ded5c0a655e3f4e497c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704829"
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>Пример Указание директив ID и IDREF
   Данный пример почти совпадает с примером [Указание директивы ELEMENTXSINIL](example-specifying-the-elementxsinil-directive.md) . Единственная разница заключается в указании в данном запросе директив **ID** и **IDREF** . Эти директивы перезаписывают типы атрибута **SalesPersonID** в элементах <`OrderHeader`> и <`OrderDetail`>. Образуются связи внутри документа. Для просмотра перезаписанных типов необходима схема. Поэтому в запросе указывается параметр **XMLDATA** в предложении FOR XML для получения схемы.  

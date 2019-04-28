@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: edafc34bc4a2e9e860edd1101b5ce17bddd02a37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720007"
 ---
 # <a name="capture-ado-error-codes"></a>Записать коды ошибок объектов ADO
 Помимо ошибок поставщика, возвращаемых в [ошибка](../../../ado/reference/ado-api/error-object.md) объектов [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md) коллекции, ADO, сам может возвращать ошибки в механизм обработки исключений среды выполнения. Использовать механизм перехвата ошибок, язык программирования, например **On Error** инструкции в Microsoft® Visual Basic, или **try-catch** блока в Microsoft Visual C++®, чтобы перехватить ошибки ADO.

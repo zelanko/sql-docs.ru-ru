@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2585452ee31c911ea6e288effc3e5e91fff88a64
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721267"
 ---
 # <a name="generate-sql-script-replication-objects"></a>Диалоговое окно «Формирование скрипта SQL» (объекты репликации)
   Скрипт репликации содержит системные хранимые процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] , необходимые для реализации используемых в скрипте компонентов репликации, например публикации или подписки. Все компоненты репликации в топологии должны использоваться в скриптах как часть плана аварийного восстановления, а скрипты могут также использоваться для автоматизации повторяющихся задач. Для использования в сценарии объектов репликации она предоставляет два диалоговых окна.  

@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8e672b7227ba24a37ec4b1a385c1d8fd58589f04
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691608"
 ---
 # <a name="model-object-permissions-master-data-services"></a>Разрешения объекта модели (службы Master Data Services)
 
@@ -43,7 +43,7 @@ ms.locfileid: "52813116"
 ## <a name="external-resources"></a>Внешние ресурсы  
  Запись блога [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376)(Улучшения безопасности) на портале msdn.com.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Разрешения модели (службы Master Data Services)](../master-data-services/model-permissions-master-data-services.md)   
  [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)   

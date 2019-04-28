@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 55f67c71bfa1247d9b8df411889091527c95de48
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695547"
 ---
 # <a name="installation-tasks-for-master-data-services"></a>Задачи установки для служб Master Data Services
 
@@ -26,16 +26,16 @@ ms.locfileid: "51703892"
   
 -   [Предварительная подготовка](#preinstall). Проверьте системные требования перед установкой [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
--   [Установка](#install). Установите [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] с помощью программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или командной строки.  
+-   [Установка](#install): Установка [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установки или командной строки.  
   
--   [Дополнительная настройка](#postinstall). Завершите настройку, используя [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] . Создайте и настройте базу данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , веб-приложение [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] и веб-службу, а также разверните образец модели.  
+-   [Действия после установки](#postinstall). Откройте [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] и выполните действия после установки. Создайте и настройте базу данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , веб-приложение [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] и веб-службу, а также разверните образец модели.  
   
 ##  <a name="preinstall"></a> Предварительная подготовка  
   
 |Действие|Сведения|См. также|  
 |------------|-------------|--------------------|  
 |Проверьте требования к установке|Компьютер, на котором запускается программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , должен соответствовать минимальным требованиям.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к установке;<br /><br /> Веб-приложение [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] и веб-службы.<br /><br /> База данных служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , если она размещается на этом же компьютере в виде веб-приложения.<br /><br /> <br /><br /> Веб-сервер и база данных могут находиться на разных компьютерах, для этого нужно запустить установку только на компьютере веб-сервера и создать базу данных служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] на удаленном компьютере, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]поддерживаемой версии и выпуска.|[Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)<br /><br /> [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)<br /><br /> [Требования веб-приложений (службы Master Data Services)](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)<br /><br /> [Требования к базе данных (службы Master Data Services)](../../master-data-services/install-windows/database-requirements-master-data-services.md)|  
-|Настройка необходимых ролей, служб ролей и компонентов|Перед запуском установки настройте на компьютере необходимые роли Windows, службы ролей и компоненты.<br /><br /> Этот этап можно выполнить и позже, но мы рекомендуем настроить все необходимое перед началом установки. Таким образом вы сможете приступить к веб-настройке сразу после завершения установки.|[Требования веб-приложений (службы Master Data Services)](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)|  
+|Настройка необходимых ролей, служб ролей и компонентов|Перед запуском установки настройте на компьютере необходимые роли Windows, службы ролей и компоненты.<br /><br /> Примечание. Этот этап можно выполнить позже в рабочем процессе, однако рекомендуется провести такую настройку до запуска программы установки, чтобы можно было выполнять сразу после нее задач веб-конфигурации.|[Требования веб-приложений (службы Master Data Services)](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)|  
 |Общие сведения о поддержке языков|Определите язык установки и пользовательского интерфейса служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Многоязычное и международное развертывание (службы Master Data Services)](../../master-data-services/install-windows/multi-lingual-and-global-deployments-master-data-services.md)|  
   
 ##  <a name="install"></a> Установка  
@@ -52,7 +52,7 @@ ms.locfileid: "51703892"
 |Создание базы данных служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|С помощью [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] создайте базу данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] для хранения основных данных.|[Создание базы данных служб Master Data Services](../../master-data-services/install-windows/create-a-master-data-services-database.md)|  
 |Создание веб-приложения служб [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]|С помощью программы [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] создайте и настройте веб-приложение для размещения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|[Создание веб-приложения мастера основных данных (службы Master Data Services)](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)|  
 |Свяжите базу данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] с веб-приложением|Свяжите веб-приложение [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] с базой данных [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] с помощью программы [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Связывание базы данных служб Master Data Services и веб-приложения](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)|  
-|Настройка улучшенной безопасности в Internet Explorer|При установке [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] на компьютер под управлением ОС Windows Server 2012 может понадобиться настроить улучшенную безопасность в Internet Explorer, чтобы разрешить использование скриптов на сайте приложения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . Без этого просмотр сайта приложения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] в браузере на серверном компьютере работать не будет.|[Конфигурация усиленной безопасности Internet Explorer 8](https://go.microsoft.com/fwlink/p/?LinkId=223869)|  
+|Настройка улучшенной безопасности в Internet Explorer|При установке [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] на компьютер под управлением ОС Windows Server 2012 может понадобиться настроить улучшенную безопасность в Internet Explorer, чтобы разрешить использование скриптов на сайте приложения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . Без этого просмотр сайта приложения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] в браузере на серверном компьютере работать не будет.|[Internet Explorer: Конфигурация усиленной безопасности](https://go.microsoft.com/fwlink/p/?LinkId=223869)|  
 |Установка [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|Пользователи, которые будут работать с основными данными, могут установить [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)].|[https://go.microsoft.com/fwlink/?LinkID=398159](https://go.microsoft.com/fwlink/?LinkID=398159)|  
 |Включение интеграции со службами Data Quality Services|Для пользователей [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]включите интеграцию с компонентом DQS, который можно использовать для сравнения похожих данных.|[Включение интеграции служб Data Quality Services со службами Master Data Services](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)|  
 |Развертывание образца модели|Пакеты модели образца установлены с помощью служб Master Data Services и могут быть развернуты с применением MDSModelDeploy.exe.|[Развертывание образцов MDS в SQL Server](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md)|
@@ -61,7 +61,7 @@ ms.locfileid: "51703892"
   
  Если службы [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] больше не требуются, их можно удалить [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , указав, следует ли удалять объекты, не затронутые процессом удаления Дополнительные сведения см. в статье [Удаление служб Master Data Services](../../sql-server/install/uninstall-and-remove-master-data-services.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Установка SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
   
   

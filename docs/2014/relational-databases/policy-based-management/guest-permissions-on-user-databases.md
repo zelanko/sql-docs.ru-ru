@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 325242c6660aa49c9358399b38c92d72e21aaf46
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705121"
 ---
 # <a name="guest-permissions-on-user-databases"></a>Разрешения гостя для пользовательских баз данных
   Это правило определяет, имеет ли пользователь «Гость» разрешение на доступ к базе данных. Это правило применяется только к пользовательским базам данных.  

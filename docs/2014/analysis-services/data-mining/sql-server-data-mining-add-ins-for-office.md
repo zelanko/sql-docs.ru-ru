@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3126726849b0f434eb0edb33c9f97cb227ca5b2e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732892"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Надстройки интеллектуального анализа данных SQL Server для Office
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Надстройки для интеллектуального анализа данных — это упрощенный набор средств для прогнозирующего анализа, позволяющий использовать данные в Excel для построения аналитических моделей для прогнозирования, рекомендации и исследования.  

@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0c33336f1e58dadb8781072afc1d4f694a402e01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690242"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47709172"
 |**идентификатор**|**int**|Идентификатор таблицы, которой принадлежит данный индекс.|  
 |**status**|**int**|Сведения о состоянии системы.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**first**|**binary(6)**|Указатель на первую или корневую страницу.<br /><br /> Не используется, если **indid** = 0.<br /><br /> NULL = индекс секционируется, если **indid** > 1.<br /><br /> NULL = таблица секционируется, если **indid** равен 0 или 1.|  
-|**Если столбец indid равен**|**smallint**|Идентификатор индекса:<br /><br /> 0 = куча;<br /><br /> 1 = кластеризованный индекс;<br /><br /> >1 = некластеризованный индекс|  
+|**Если столбец indid равен**|**smallint**|Идентификатор индекса:<br /><br /> 0 = куча;<br /><br /> 1 = кластеризованный индекс;<br /><br /> > 1 = некластеризованный индекс|  
 |**Корневой**|**binary(6)**|Для **indid** > = 1, **корневой** является указателем на корневую страницу.<br /><br /> Не используется, если **indid** = 0.<br /><br /> NULL = индекс секционируется, если **indid** > 1.<br /><br /> NULL = таблица секционируется, если **indid** равен 0 или 1.|  
 |**minlen**|**smallint**|Минимальный размер строки.|  
 |**keycnt**|**smallint**|Количество ключей.|  
@@ -66,7 +66,7 @@ ms.locfileid: "47709172"
 |**name**|**sysname**|Имя индекса или статистики. Возвращает значение NULL, если **indid** = 0. Измените приложение, чтобы оно выполняло поиск кучи с именем NULL.|  
 |**statblob**|**image**|Статистический большой двоичный объект (BLOB).<br /><br /> Возвращает значение NULL.|  
 |**MaxLen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**строки**|**int**|Счетчик строк уровня данных на основе **indid** = 0 и **indid** = 1, и значение повторяется для **indid** > 1.|  
+|**rows**|**int**|Счетчик строк уровня данных на основе **indid** = 0 и **indid** = 1, и значение повторяется для **indid** > 1.|  
   
 ## <a name="remarks"></a>Примечания  
  Столбцы, определенные как зарезервированные, не должны использоваться.  

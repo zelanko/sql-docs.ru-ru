@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6f87cda5fb38fad586e5272d7d7c3ea255a478b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728340"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>Обработка данных вручную (табличные службы SSAS)
   В этом разделе описан процесс обработки данных рабочей области вручную в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -74,7 +74,7 @@ ms.locfileid: "48189775"
  Нажмите, чтобы остановить операцию обработки. Этот параметр может оказаться полезным в том случае, если операция развертывания занимает слишком много времени или обнаружено слишком много ошибок.  
   
 ## <a name="see-also"></a>См. также  
- [Обработка данных &#40;табличные службы SSAS&#41;](process-data-ssas-tabular.md)   
- [Устранение неполадок в данных процесса &#40;табличные службы SSAS&#41;](troubleshoot-process-data-ssas-tabular.md)  
+ [Обработка данных (табличные службы SSAS)](process-data-ssas-tabular.md)   
+ [Устранение неполадок обработки данных (табличные службы SSAS)](troubleshoot-process-data-ssas-tabular.md)  
   
   

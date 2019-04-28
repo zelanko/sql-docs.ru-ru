@@ -1,5 +1,5 @@
 ---
-title: Выражения (MDX) | Документы Microsoft
+title: Выражения (MDX) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77ef7250c7af3918509e38c9aa1f5350f3ac5610
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690835"
 ---
 # <a name="expressions-mdx"></a>Выражения (многомерные выражения)
 
 
-  Выражение представляет собой сочетание идентификаторов, значений и операторов, которые можно вычислить для получения результата. Данные могут использоваться в разных местах для доступа и изменения данных. Например, выражение можно использовать как часть данных, извлекаемых в запросе, либо как условие поиска для отбора данных, отвечающих набору критериев.  
+  Выражение представляет собой сочетание идентификаторов, значений и операторов, которые могут вычисляться для получения результата. Данные могут использоваться в разных местах для доступа и изменения данных. Например, выражение можно использовать как часть данных, извлекаемых в запросе, либо как условие поиска для отбора данных, отвечающих набору критериев.  
   
 ## <a name="simple-and-complex-expressions"></a>Простые и сложные выражения  
  Многомерные выражения могут быть простыми или сложными.  
@@ -85,7 +85,7 @@ WHERE [Product].[Category].[Bikes]
 |[Работа с пустыми значениями](../mdx/working-with-empty-values.md)|Пустые значения и способы их обработки.|  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по языку многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-language-reference-mdx.md)   
- [Основные принципы запросов многомерных Выражений &#40;служб Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Справочник по языку многомерных выражений (многомерные выражения)](../mdx/mdx-language-reference-mdx.md)   
+ [Основные принципы запросов многомерных выражений (службы Analysis Services)](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 96fd36d1710a166285fecba092735c7d2495271e
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690448"
 ---
 # <a name="sysdmpdwdmsworkers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "58658248"
 |dms_step_index|**int**|Шаг в плане DMS, на котором выполняется этот рабочий процесс.<br /><br /> Идентификатор request_id step_index и dms_step_index формируют ключ для этого представления.||  
 |pdw_node_id|**int**|Узел, который выполняется рабочая роль.|См. в разделе node_id в [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
 |distribution_id|**Int**|Распределение, которое выполняется рабочая роль, если таковые имеются.|См. в разделе идентификатор distribution_id в [sys.pdw_distributions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md).|  
-|Тип|**nvarchar(32)**|Тип DMS рабочий поток, который представляет эту запись.|«DIRECT_CONVERTER», «DIRECT_READER», «FILE_READER», «HASH_CONVERTER», «HASH_READER», «ROUNDROBIN_CONVERTER», «EXPORT_READER», «EXTERNAL_READER», «EXTERNAL_WRITER», «PARALLEL_COPY_READER», «REJECT_WRITER», «ЗАПИСИ»|  
+|type|**nvarchar(32)**|Тип DMS рабочий поток, который представляет эту запись.|«DIRECT_CONVERTER», «DIRECT_READER», «FILE_READER», «HASH_CONVERTER», «HASH_READER», «ROUNDROBIN_CONVERTER», «EXPORT_READER», «EXTERNAL_READER», «EXTERNAL_WRITER», «PARALLEL_COPY_READER», «REJECT_WRITER», «ЗАПИСИ»|  
 |status|**nvarchar(32)**|Состояние исполнителя DMS.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|Чтение или запись пропускную способность за последнюю секунду.|Больше или равно 0. Имеет значение NULL, если запрос был отменен, или не удалось выполнить, прежде чем выполнить рабочей роли.|  
 |bytes_processed|**bigint**|Общее число байтов, обработанных этим исполнителем.|Больше или равно 0. Имеет значение NULL, если запрос был отменен, или не удалось выполнить, прежде чем выполнить рабочей роли.|  

@@ -1,5 +1,5 @@
 ---
-title: Добавление логики измерений к измерению | Документы Microsoft
+title: Добавление логики измерений к измерению | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ad714bfefa8010664a8105eebf1f45d63799847c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717351"
 ---
-# <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>Мастер бизнес-Аналитики — Добавление логики измерений к измерению
+# <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>Мастер бизнес-аналитики — добавление логики изменения к измерению
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Добавьте расширение логики измерений к кубу или измерению, чтобы задать для измерения стандартный бизнес-тип. Данное расширение также указывает соответствующие типы атрибутов измерения. Клиентские приложения могут использовать эти характеристики типа при анализе данных.  
   
@@ -36,6 +36,6 @@ ms.locfileid: "34027211"
  Например, необходимо добавить логику измерений к измерению «Учетные записи». В списке **Тип измерения**выберите пункт **Учетные записи**. Затем, если у измерения есть атрибуты **Тип учетной записи** и **Описание учетной записи** , в столбце **Включить** установите флажки напротив типов учетной записи **Имя учетной записи** и **Тип учетной записи** . В столбце **Атрибут измерения** свяжите эти типы учетной записи с атрибутами измерения **Описание учетной записи** и **Тип учетной записи** соответственно.  
   
 ## <a name="see-also"></a>См. также  
- [Определение логика операций со временем с использованием мастера бизнес-аналитики](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
+ [Определение вычислений логики операций со временем с использованием мастера бизнес-аналитики](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
   
   

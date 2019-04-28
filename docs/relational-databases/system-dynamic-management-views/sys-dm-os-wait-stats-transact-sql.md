@@ -22,11 +22,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d271d8e7a0601353439df8a5848978f2a89af3e2
-ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52886889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690788"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,7 +89,7 @@ GO
   
  В следующей таблице перечислены типы ожиданий, с которыми могут сталкиваться задачи.  
 
-|Тип |Описание| 
+|type |Описание| 
 |-------------------------- |--------------------------| 
 |ABR |Указано только в ознакомительных целях. Не поддерживается. Совместимость с будущими версиями не гарантируется.| | 
 |AM_INDBUILD_ALLOCATION |TBD <br />**Применимо к**: с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

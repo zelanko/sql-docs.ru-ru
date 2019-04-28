@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dfae5c36cd05f7122645479980517b14bd2c328d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722123"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>создать копию модели интеллектуального анализа данных
   Создание копии модели интеллектуального анализа полезно, если необходимо быстро создать несколько моделей интеллектуального анализа данных на основе одних и тех же данных. После копирования модели новую копию можно редактировать путем изменения параметров или добавления фильтра.  

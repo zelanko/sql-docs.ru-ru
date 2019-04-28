@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721504"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>выполнить отладку обработчика бизнес-логики (программирование репликации)
   Используйте обработчик бизнес-логики для вызова пользовательской бизнес-логики во время синхронизации подписки на публикацию слиянием. Дополнительные сведения см. в статье [Выполнение бизнес-логики при синхронизации слиянием](merge/execute-business-logic-during-merge-synchronization.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "54128764"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>Отладка обработчика бизнес-логики на локальном компьютере  
   
-1.  Настройте публикацию и распространение, создайте новую публикацию, а затем подписку на нее. Дополнительные сведения см. в разделе [Настройка публикации и распространения](configure-publishing-and-distribution.md) и [создать публикацию](publish/create-a-publication.md).  
+1.  Настройте публикацию и распространение, создайте новую публикацию, а затем подписку на нее. Дополнительные сведения см. в статьях [Настройка публикации и распространения](configure-publishing-and-distribution.md) и [Создание публикации](publish/create-a-publication.md).  
   
 2.  Создайте и зарегистрируйте обработчик бизнес-логики. Дополнительные сведения см. в статье [Реализация обработчика бизнес-логики для статьи публикации слиянием](implement-a-business-logic-handler-for-a-merge-article.md).  
   

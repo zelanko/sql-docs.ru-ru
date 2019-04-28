@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e3f0f24aec895c482ba357dbc4330baaf2798ba6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726258"
 ---
 # <a name="specifying-configuration-settings-for-solution-deployment"></a>Указание настроек конфигурации для развертывания решения
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Мастер развертывания служб считывает секций и ролей варианты развертывания, используемые в скрипте развертывания, из \< *имя_проекта*> .configsettings файл. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] создает этот файл при построении проекта служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует настройки конфигурации текущего проекта для создания \< *имя_проекта*> .configsettings файл.  

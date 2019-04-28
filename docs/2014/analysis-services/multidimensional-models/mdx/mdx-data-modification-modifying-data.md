@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9e83cd72f972107b83bb6efea27d28857053e200
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699670"
 ---
 # <a name="modifying-data-mdx"></a>Изменение данных (многомерные выражения)
   Наряду с использованием многомерных выражений для получения и обработки данных измерений и кубов можно использовать многомерные выражения для обновления и *обратной записи* данных измерений и кубов. Обновления могут быть как временными, например в случае гипотетического анализа «что, если...», так и постоянными, когда изменения должны происходить на основе анализа данных.  
@@ -37,6 +37,6 @@ ms.locfileid: "48177604"
  Дополнительные сведения см. в разделе [Обратная запись в куб (многомерные выражения)](mdx-data-modification-using-cube-writebacks.md).  
   
 ## <a name="see-also"></a>См. также  
- [Основные принципы запросов многомерных Выражений &#40;служб Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Основные принципы запросов многомерных выражений (службы Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 989b84d027db5dc1f5956aab6e2e4fec84ae6461
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732560"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Представление источника данных (вкладка «Структура измерения» конструктора измерений) (службы Analysis Services — многомерные данные)
   Панель **Представление источника данных** используется для просмотра таблиц и столбцов в представлении источника данных, связанном с выбранным измерением. На панели можно создавать атрибуты, свойства элементов, иерархии и уровни, перетаскивая столбцы из панели **Представление источника данных** на панель **Атрибуты** или **Иерархии и уровни** .  

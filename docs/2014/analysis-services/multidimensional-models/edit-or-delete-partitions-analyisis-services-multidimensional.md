@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db1d69bcd614144a33aabde0934d7c4d12060e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726097"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>Изменение и удаление секций (Analysis Services — многомерные данные)
   Секции куба редактируются с помощью вкладки **Секции** в конструкторе кубов в [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]. На вкладке **Секции** перечислены секции для всех групп мер в кубе. А также секции обратной записи с включенной функцией обратной записи.  
@@ -48,8 +48,8 @@ ms.locfileid: "48104915"
  Хранилище можно настроить отдельно для каждой секции каждой группы мер в кубе. Также можно установить настройки хранилища по умолчанию для куба или группы мер. Хранилище настраивается на вкладке **Секции** мастера кубов.  
   
 ## <a name="see-also"></a>См. также  
- [Создание и управление ими локальной секции &#40;служб Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
- [Проектирование агрегатов &#40;службы Analysis Services — многомерные&#41;](designing-aggregations-analysis-services-multidimensional.md)   
- [Слияние секций в службах Analysis Services &#40;службы SSAS — многомерные&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Создание локальной секции и управление ею (службы Analysis Services)](create-and-manage-a-local-partition-analysis-services.md)   
+ [Проектирование агрегатов (службы Analysis Services — многомерные данные)](designing-aggregations-analysis-services-multidimensional.md)   
+ [Объединение секций в службах Analysis Services (службы SSAS — многомерные данные)](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

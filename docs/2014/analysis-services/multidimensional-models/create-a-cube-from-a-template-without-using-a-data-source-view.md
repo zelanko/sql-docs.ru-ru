@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0125550f8ec4a3fa290ea29df3d33cc3bebe3c7e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700322"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Создание куба на основе шаблона без использования представления источников данных
   На первой странице мастера кубов выберите **Построить куб без использования источника данных** , чтобы создать куб, не обращаясь к представлению источника данных. Позже можно с помощью мастера формирования схем создать реляционную схему для представления источников данных на основе структуры куба и, возможно, других объектов [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Дополнительные сведения о генерации схемы см. в разделе [Мастер формирования схем (службы Analysis Services)](schema-generation-wizard-analysis-services.md).  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cf56b6614587c333f473136f1cafc72128846a2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719764"
 ---
 # <a name="datacontrol-object-error-codes"></a>Коды ошибок DataControl объекта
 В следующей таблице перечислены [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта коды ошибок. Положительное десятичное преобразование низкой два байта, показаны отрицательное десятичное преобразование кода ошибку переполнения и шестнадцатеричные значения.

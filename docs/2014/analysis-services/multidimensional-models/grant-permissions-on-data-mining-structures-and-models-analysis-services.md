@@ -22,14 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3c898401e97bbc993fa0d913a46c4e264def40a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725878"
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>Предоставление разрешений структурам интеллектуального анализа данных и моделям интеллектуального анализа данных (службы Analysis Services)
-  По умолчанию, только администратор сервера службы Analysis Services обладает разрешениями на просмотр интеллектуального анализа данных или моделей интеллектуального анализа данных в базе данных.   Следуйте инструкциям, приведенным ниже, для предоставления разрешений пользователям без прав администратора.  
+  По умолчанию, только администратор сервера службы Analysis Services обладает разрешениями на просмотр интеллектуального анализа данных или моделей интеллектуального анализа данных в базе данных. Следуйте инструкциям, приведенным ниже, для предоставления разрешений пользователям без прав администратора.  
   
 ## <a name="set-permissions-to-access-a-mining-structure"></a>Установка разрешений для доступа к интеллектуальному анализу данных  
   
@@ -69,8 +69,8 @@ ms.locfileid: "48051214"
   
 ## <a name="see-also"></a>См. также  
  [Предоставление разрешений администратора сервера &#40;служб Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [Предоставление разрешений кубу или модели &#40;служб Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [Предоставление настраиваемого доступа к данным измерения &#40;служб Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [Предоставление настраиваемого доступа к данным ячейки &#40;служб Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [Предоставление разрешений кубу или модели (службы Analysis Services)](grant-cube-or-model-permissions-analysis-services.md)   
+ [Предоставление настраиваемого доступа к данным измерений (службы Analysis Services)](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Предоставление настраиваемого доступа к данным ячейки (службы Analysis Services)](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

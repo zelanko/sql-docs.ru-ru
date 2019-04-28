@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebbb4e6510f8896b9c931d6a582eaf6b3e2b0c24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703126"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>Многомерное моделирование (учебник по Adventure Works)
   Добро пожаловать в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. В этом учебнике рассматривается, как использовать среду [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] при разработке и развертывании проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] на примере вымышленной компании [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] .  
@@ -51,21 +51,21 @@ ms.locfileid: "48049425"
   
 |Занятие|Предположительное время выполнения|  
 |------------|--------------------------------|  
-|[Урок 1. Определение представления источников данных в проекте Analysis Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 минут|  
-|[Урок 2. Определение и развертывание куба](lesson-2-defining-and-deploying-a-cube.md)|30 минут|  
-|[Урок 3. Изменение мер, атрибутов и иерархий](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 минут|  
-|[Урок 4. Определение расширенных свойств атрибутов и измерений](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 минут|  
-|[Урок 5. Определение связей между измерениями и группами мер](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 минут|  
-|[Урок 6. Определение вычислений](lesson-6-defining-calculations.md)|45 минут|  
-|[Занятие 7: Определение ключевых показателей эффективности &#40;ключевые показатели эффективности&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 минут|  
-|[Урок 8. Определение действий](lesson-8-defining-actions.md)|30 минут|  
-|[Урок 9. Определение перспектив и преобразований](lesson-9-defining-perspectives-and-translations.md)|30 минут|  
-|[Урок 10. Определение ролей администрирования](lesson-10-defining-administrative-roles.md)|15 минут|  
+|[Занятие 1. Определение представления источника данных в Analysis Services Project](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 минут|  
+|[Занятие 2. Определение и развертывание куба](lesson-2-defining-and-deploying-a-cube.md)|30 минут|  
+|[Занятие 3. Изменение мер, атрибутов и иерархий](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 минут|  
+|[Занятие 4. Определение расширенных атрибутов и свойств измерений](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 минут|  
+|[Занятие 5. Определение связей между измерениями и группами мер](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 минут|  
+|[Занятие 6. Определение вычислений](lesson-6-defining-calculations.md)|45 минут|  
+|[Занятие 7. Определение ключевых показателей эффективности &#40;ключевые показатели эффективности&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 минут|  
+|[Занятие 8. Определение действий](lesson-8-defining-actions.md)|30 минут|  
+|[Занятие 9. Определение перспектив и переводов](lesson-9-defining-perspectives-and-translations.md)|30 минут|  
+|[Занятие 10. Определение ролей администрирования](lesson-10-defining-administrative-roles.md)|15 минут|  
   
 > [!NOTE]  
 >  База данных куба, которая будет создана в этом учебнике, представляет собой упрощенную версию проекта многомерной модели служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , который входит в состав образцов баз данных Adventure Works, доступных для загрузки на сайте CodePlex. Учебная версия многомерной базы данных Adventure Works была упрощена с целью обеспечить ускоренное овладение рядом основных навыков. После завершения работы с учебником попробуйте поработать с проектом многомерной модели самостоятельно, чтобы более детально ознакомиться с многомерным моделированием в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="next-step"></a>Следующий шаг  
- Чтобы приступить к изучению этого учебника, перейдите к первому занятию: [Занятие 1. Определение представления источников данных в проекте служб Analysis Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
+ Чтобы приступить к изучению учебника, перейдите к первому занятию: [Занятие 1. Определение представления источника данных в Analysis Services Project](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
   
   

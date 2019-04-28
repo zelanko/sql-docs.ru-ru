@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bddbad8ebe91aaa57ab76fdd4f30a5ebb9e5ab3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700115"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Создание куба с использованием представления источников данных
   Этот метод служит для создания нового куба, если планируется использование существующего представления источников данных. Этот метод позволяет задать представление источника данных и выбрать таблицы фактов и таблицы измерений для использования в представлении источника данных. Затем необходимо выбрать измерения и меры для включения в куб.  

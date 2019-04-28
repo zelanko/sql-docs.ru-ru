@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dbb34719b79ba5a12249cdb96187b178450d5802
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732685"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>Вкладка «Дерево принятия решений» (средство просмотра моделей интеллектуального анализа данных)
   В области **Дерево решений** отображается визуальное представление правил принятия решений, созданных в модели дерева принятия решений. Правила принятия решений описывают путь для достижения определенного результата.  
   
- **Дополнительные сведения:** [Алгоритм дерева принятия решений (Майкрософт)](data-mining/microsoft-decision-trees-algorithm.md), [Просмотр модели с помощью средства просмотра деревьев (Майкрософт)](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ **Дополнительные сведения:** [Алгоритм дерева принятия решений Майкрософт](data-mining/microsoft-decision-trees-algorithm.md), [просмотр модели в средстве просмотра деревьев (Майкрософт)](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="options"></a>Параметры  
  **Обновить содержимое средства просмотра**  
@@ -66,8 +66,8 @@ ms.locfileid: "48194494"
  Переместите ползунок вправо или влево, чтобы изменить количество уровней, отображаемых на диаграмме дерева. Чтобы увидеть все узлы в модели, переместите ползунок в крайнее правое положение.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Просмотра моделей интеллектуального анализа &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Средства просмотра моделей интеллектуального анализа данных (конструктор моделей интеллектуального анализа данных)](mining-model-viewers-data-mining-model-designer.md)   
  [Средства просмотра моделей интеллектуального анализа данных](data-mining/data-mining-model-viewers.md)  
   
   

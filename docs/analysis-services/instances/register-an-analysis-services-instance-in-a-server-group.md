@@ -1,5 +1,5 @@
 ---
-title: Регистрация экземпляра служб Analysis Services в группе серверов | Документы Microsoft
+title: Регистрация экземпляра служб Analysis Services в группе серверов | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 45edecf23d0db4580aad134780ee31ea938e887c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62708989"
 ---
 # <a name="register-an-analysis-services-instance-in-a-server-group"></a>Регистрация экземпляра служб Analysis Services в группе серверов
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   При наличии большого числа экземпляров сервера служб Analysis Services можно создавать группы серверов в среде Management Studio и тем самым упростить администрирование сервера. Группа серверов должна обеспечить близость связанных серверов внутри рабочей области администрирования. Предположим, нужно управлять десятью отдельными экземплярами служб Analysis Services. Группирование по режиму сервера, времени работы или отделу или региону может упростить просмотр и подключение к экземплярам с одинаковыми характеристиками. Вы можете также добавить описательную информацию, которая поможет вспомнить, каким образом используется сервер.  
   
- ![Область зарегистрированного сервера со рядовых серверов](../../analysis-services/instances/media/ssas-ssms-registerserver.gif "область зарегистрированных серверов с рядовыми серверами")  
+ ![Панель Server зарегистрировано с рядовыми серверами](../../analysis-services/instances/media/ssas-ssms-registerserver.gif "панели зарегистрированных серверов с рядовыми серверами")  
   
  Группы серверов создаются в виде иерархической структуры. Локальная группа серверов — корневой узел. Он всегда содержит экземпляры служб Analysis Services, запущенные на локальном компьютере. Удаленные серверы можно добавить в любую группу, включая локальную группу.  
   

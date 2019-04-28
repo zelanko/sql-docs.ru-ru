@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8a74bac81874eaeeecd9b9abcdcbfee27e07909c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62696567"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>Диалоговое окно «Свойства набора данных» — «Запрос» (построитель отчетов)
   Выберите **Запрос** в диалоговом окне **Свойства набора данных** , чтобы выбрать общий набор данных на сервере отчетов или создать внедренный набор данных. Для внедренного набора данных необходимо выбрать источник данных и создать запрос.  

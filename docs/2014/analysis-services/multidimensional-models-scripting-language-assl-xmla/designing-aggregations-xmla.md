@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81450789395dfef84f81896990fa251514d3489e
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702121"
 ---
 # <a name="designing-aggregations-xmla"></a>Создание агрегатов (XMLA)
   Статические схемы связываются с секциями определенных групп мер, чтобы эти секции при хранении агрегатов использовали одинаковую структуру. Используя ту же структуру хранилища для секций позволяет легко определить секции, которые могут быть объединены с помощью [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) команды. Дополнительные сведения о статистических схем см. в разделе [агрегаты и статистические схемы](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  

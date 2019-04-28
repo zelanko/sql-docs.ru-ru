@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f8c9664baa2803bbab4282b6897d49f0ddb1831
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812711"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>Настройка управляемого резервного копирования (SQL Server Management Studio)
   **Управляемое резервное копирование** диалоговое окно позволяет настроить [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] значения по умолчанию для экземпляра. В этом разделе описывается, как использовать это диалоговое окно для настройки значений [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] по умолчанию для экземпляра, а также рассматриваются параметры, которые необходимо учитывать при этом. Если для экземпляра настроен [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], параметры применяются для любой новой базы данных, создаваемой в дальнейшем.  
@@ -51,7 +51,7 @@ ms.locfileid: "52523631"
   
  Членство в роли базы данных `db_backupoperator` с разрешениями `ALTER ANY CREDENTIAL` и разрешениями `EXECUTE` для хранимой процедуры `sp_delete_backuphistory`.  
   
- Разрешения `SELECT` для функции `smart_admin.fn_get_current_xevent_settings`.  
+ `SELECT` разрешения на `smart_admin.fn_get_current_xevent_settings` функции.  
   
  `EXECUTE` разрешения на `smart_admin.sp_get_backup_diagnostics` хранимой процедуры. Кроме того, необходимы разрешения `VIEW SERVER STATE`, так как процедура автоматически вызывает другие системные объекты, которым требуется это разрешение.  
   

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6de68556d6bbd7277324e6083d70f979fa1303fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725548"
 ---
 # <a name="creating-query-scoped-calculated-members-mdx"></a>Создание вычисляемых элементов с областью действия запроса (многомерные выражения)
   Если вычисляемый элемент используется только в одном многомерном запросе, его можно определить с помощью ключевого слова WITH. Вычисляемый элемент, созданный с помощью ключевого слова WITH, удаляется сразу после выполнения запроса.  
@@ -92,8 +92,8 @@ WHERE [Product].[Category].[Bikes]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [Инструкция SELECT &#40;многомерных Выражений&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [Создание с областью действия сеанса вычисляемые элементы &#40;многомерных Выражений&#41;](mdx-calculated-members-session-scoped-calculated-members.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](/sql/mdx/mdx-function-reference-mdx)   
+ [Инструкция SELECT (многомерные выражения)](/sql/mdx/mdx-data-manipulation-select)   
+ [Создание вычисляемых элементов с областью действия сеанса (многомерные выражения)](mdx-calculated-members-session-scoped-calculated-members.md)  
   
   

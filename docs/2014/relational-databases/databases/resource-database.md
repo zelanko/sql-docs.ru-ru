@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4595fbd7be23414f55a51c2333eee7ebe4f39899
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871111"
 ---
 # <a name="resource-database"></a>База данных Resource
   База данных Resource — это доступная только для чтения база данных, которая содержит все системные объекты, включенные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Системные объекты физически хранятся в базе данных Resource, но логически отображаются в схеме sys любой базы данных. База данных Resource не содержит пользовательских данных или метаданных.  

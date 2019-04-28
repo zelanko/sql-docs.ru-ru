@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7ac547ffe8a4e102b4e3c4b0c29c6783e0c4857
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715241"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Создание запроса содержимого к модели интеллектуального анализа данных
   Запрашивать содержимое модели интеллектуального анализа данных можно программным способом с помощью объектов AMO или XML/A, но легче создать запрос, используя расширения интеллектуального анализа данных. Также можно создавать запросы к наборам строк схемы интеллектуального анализа данных, устанавливая соединение с экземпляром [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и создавая запрос с помощью динамических административных представлений, предоставляемых службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

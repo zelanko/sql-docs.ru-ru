@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 40cf44e416a7507693b44cc691a89ad3a5ac95af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726448"
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Определение логических связей в представлении источника данных (службы Analysis Services)
   Мастер представлений источников данных и конструктор представлений источников данных автоматически определяют связи между таблицами, добавленными к представлению источника данных (DSV), основываясь на базовых связях базы данных или на указанном критерии совпадения имен.  

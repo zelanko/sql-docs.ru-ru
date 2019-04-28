@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4389ab6f8cd2df0f744eca5b4552a4bb18723627
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721986"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Технический справочник по алгоритму взаимосвязей (Майкрософт)
   Алгоритм правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой простую реализацию хорошо известного априорного алгоритма.  

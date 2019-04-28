@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0f71f7b3f8d2cb6f7bd50ef676742282ee73d540
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703753"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Определение режима работы сервера экземпляра служб Analysis Services
-  Службы Analysis Services могут быть установлены в одном из трех серверных режимов: многомерный и интеллектуальный анализ данных (по умолчанию), PowerPivot для SharePoint и табличный. Режим сервера экземпляра служб Analysis Services определяется во время установки, когда пользователь выбирает параметры для установки сервера.  
+  Службы Analysis Services можно установить одним из трех серверных режимов: Многомерный и интеллектуальный анализ данных (по умолчанию), PowerPivot для SharePoint и табличный. Режим сервера экземпляра служб Analysis Services определяется во время установки, когда пользователь выбирает параметры для установки сервера.  
   
  Режим сервера определяет тип создаваемого и развертываемого решения. Если программное обеспечение сервера не было установлено и необходимо узнать, в каком режиме установлен сервер, режим можно определить, следуя указаниям в этом разделе. Дополнительные сведения о доступных функциях в определенном режиме см. в разделе [Сравнение табличных и многомерных решений (службы SSAS)](../comparing-tabular-and-multidimensional-solutions-ssas.md).  
   

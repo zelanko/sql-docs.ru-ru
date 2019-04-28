@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9323b5d28c0b41b56f4b6fb78c39d8bfacf0ba8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721317"
 ---
 # <a name="errors-and-events-reference-replication"></a>Справочник по ошибкам и событиям (репликация)
   Этот раздел документации содержит информацию о причинах и способах устранения ошибок, связанных с репликацией.  
@@ -76,7 +76,7 @@ ms.locfileid: "52781036"
 |MSSQL_ENG021642. См. раздел [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md).|Для разнородных издателей требуется использовать связанный сервер. Связанный сервер с именем "%s" уже существует. Удалите связанный сервер или выберите иное название издателя.|  
 |MSSQL_ENG021663. См. раздел [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md).|Не найден правильный первичный ключ для исходной таблицы [%s]. [%s].|  
 |MSSQL_ENG021684. См. раздел [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md).|Разрешений, связанных с именем входа администратора для издателя Oracle «%s», недостаточно.|  
-|[MSSQL_ENG021797](mssql-eng021797.md)|'%s' должно быть допустимым именем входа Windows, представленным в следующем виде: "КОМПЬЮТЕР\имя_входа" или "ДОМЕН\имя_входа". См. документацию по "%s".»|  
+|[MSSQL_ENG021797](mssql-eng021797.md)|«%s» должен быть допустимым именем входа Windows в виде: «КОМПЬЮТЕР\имя_входа» или «ДОМЕН\имя_входа». См. документацию по "%s".»|  
 |[MSSQL_ENG021798](mssql-eng021798.md)|«Перед тем как продолжить, необходимо добавить задание агента "%s" через "%s". См. документацию по "%s".»|  
 |[MSSQL_REPL020011](mssql-repl020011.md)|Процессу не удалось выполнить '%1' на '%2'.|  
 |[MSSQL_REPL027056](mssql-repl027056.md)|Процессу слияния не удалось изменить журнал поколений в '%1'. В целях диагностики запустите синхронизацию повторно, включив подробное протоколирование и укажите выходной файл для записи.|  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a4765c6b9ef6dce7511a2ffe120d60efe8b6d235
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721996"
 ---
 # <a name="articles"></a>Статьи
   На странице **Статьи** указываются объекты базы данных, которые нужно включить в качестве статей в публикацию. При публикации объекта базы данных, зависящего от одного или нескольких других объектов базы данных, необходимо опубликовать и все связанные с ним объекты. Например, при публикации представления, зависящего от таблицы, необходимо также опубликовать и таблицу.  

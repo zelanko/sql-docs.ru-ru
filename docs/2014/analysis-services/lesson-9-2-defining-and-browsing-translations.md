@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 39db8cb33e2adbf24ff03b6ad84dfefe0e8bfb81
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728326"
 ---
 # <a name="defining-and-browsing-translations"></a>Определение и просмотр переводов
   Перевод — это представление на некотором языке названий следующих объектов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]: Объекты включают в себя группы мер, меры, измерения, атрибуты, иерархии, ключевые показатели эффективности, действия и вычисляемые элементы. Переводы обеспечивают серверную поддержку клиентских приложений, которые поддерживают несколько языков. Такой клиент передает идентификатор локали экземпляру служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], который на его основе подбирает набор переводов, которые будут использоваться при выдаче метаданных для объектов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Если объект служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] не содержит перевода для указанного языка или не содержит перевода для конкретного объекта, метаданные будут возвращены клиенту на языке по умолчанию. Например, если пользователь из Франции обращается к кубу с рабочей станции, работающей с французскими настройками локали, ему будут доступны заголовки и значения свойств элементов на французском языке при условии наличия перевода для французского языка. Однако если к тому же кубу обращается пользователь из Германии с рабочей станции, работающий с немецкими настройками локали, то ему будут доступны заголовки и значения свойств элементов на немецком языке. Дополнительные сведения см. в разделе [переводы измерений](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [Переводы куба](multidimensional-models-olap-logical-cube-objects/cube-translations.md), [переводы &#40;служб Analysis Services&#41;](translations-analysis-services.md).  

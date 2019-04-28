@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0299be9a1cb480a567e0b166c990d25588598aba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711061"
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>Соединение таблицы вручную (визуальные инструменты для баз данных)
   При добавлении двух (и более) таблиц к запросу [Конструктор запросов и представлений](visual-database-tools.md) пытается соединить таблицы, основываясь на общих данных или на сведениях о связи между этими таблицами, хранящихся в базе данных. Дополнительные сведения см. в статье [Автоматическое соединение таблиц (визуальные инструменты для баз данных)](join-tables-automatically-visual-database-tools.md). Однако если конструктор запросов и представлений не соединил таблицы автоматически или если нужно создать дополнительные условия соединения таблиц, можно соединить таблицы вручную.  

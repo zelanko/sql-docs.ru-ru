@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: d02a1d50e9c7a5f906e78fa6753d594edced341f
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691046"
 ---
 # <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "58658126"
 |step_index|**int**|Этап запроса, который вызывает этот рабочий процесс DMS.<br /><br /> Идентификатор request_id step_index и dms_step_index формируют ключ для этого представления.|Совпадение с кодом step_index в [sys.dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |dms_step_index|**int**|Текущий шаг в плане DMS.<br /><br /> Идентификатор request_id step_index и dms_step_index формируют ключ для этого представления.|Совпадение с кодом dms___step_index в [sys.dm_pdw_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md).|  
 |pdw_node_id|**int**|Узел, на котором выполняется рабочий DMS.|Совпадение с кодом node_id в [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|Тип|**nvarchar(60)**|Тип внешней операции, которые этот узел работает под управлением.<br /><br /> РАЗДЕЛИТЬ ФАЙЛ представляет собой операцию на внешний файл Hadoop, был разбит на несколько небольших падает.|«ФАЙЛ РАЗБИЕНИЕ»|  
+|type|**nvarchar(60)**|Тип внешней операции, которые этот узел работает под управлением.<br /><br /> РАЗДЕЛИТЬ ФАЙЛ представляет собой операцию на внешний файл Hadoop, был разбит на несколько небольших падает.|«ФАЙЛ РАЗБИЕНИЕ»|  
 |work_id|**int**|Файл разделить код.|Больше или равно 0.<br /><br /> Уникальным для каждого вычислительного узла.|  
 |input_name|**nvarchar(60)**|Строковое имя для входных данных, для чтения.|Для файла Hadoop это имя файла Hadoop.|  
 |read_location|**bigint**|Смещение расположения для чтения.||  

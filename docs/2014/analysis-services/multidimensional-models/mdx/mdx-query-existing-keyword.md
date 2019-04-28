@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ceaeac711ed30028dab3bc09827df9b6ae1f0e0a
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725358"
 ---
 # <a name="existing-keyword-mdx"></a>Ключевое слово EXISTING (многомерные выражения)
   Указывает, что заданный набор должен вычисляться принудительно в текущем контексте.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a18669d646dcf6e46f609faeb0861e5fa9732850
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732573"
 ---
 # <a name="database-properties-dialog-box-ssas---multidimensional"></a>Диалоговое окно «Свойства базы данных» (службы SSAS — многомерные)
   Используйте диалоговое окно **Свойства базы данных** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для установки свойств базы данных в базе данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Можно отобразить диалоговое окно **Свойства базы данных** , щелкнув правой кнопкой мыши базу данных в обозревателе объектов и выбрав пункт **Свойства**.  
@@ -27,7 +27,7 @@ ms.locfileid: "48196734"
   
 |Термин|Определение|  
 |----------|----------------|  
-|**Название**|Введите новое имя базы данных вместо прежнего.|  
+|**Name**|Введите новое имя базы данных вместо прежнего.|  
 |**Идентификатор**|Отображает идентификатор базы данных.|  
 |**Описание**|Введите новое описание базы данных вместо прежнего.|  
 |**Отметка времени создания**|Отображает дату и время создания базы данных.|  
@@ -40,6 +40,6 @@ ms.locfileid: "48196734"
   
 ## <a name="see-also"></a>См. также  
  [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Многомерный шаблон баз данных &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Базы данных многомерных моделей (службы SSAS)](multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

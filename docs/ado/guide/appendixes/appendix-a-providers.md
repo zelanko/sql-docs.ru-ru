@@ -1,5 +1,5 @@
 ---
-title: Приложение а. поставщики | Документация Майкрософт
+title: Приложение А. Поставщики | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,13 +18,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14194998e699fa3d16ab50ab488c8d1577660dcc
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719907"
 ---
-# <a name="appendix-a-data-and-service-providers"></a>Приложение а данных и поставщики услуг
+# <a name="appendix-a-data-and-service-providers"></a>Приложение А. Данные и поставщиков услуг
 В этом разделе рассматриваются три вида поставщиков: поставщики данных, поставщиков служб и компонентов службы. Поставщики делятся на две категории: те, предоставляющая данные и их предоставления служб. Объект *поставщик данных* владеет собственными данными и передают их в табличную форму в приложение. Объект *поставщика услуг* инкапсулирует службы, создавая и используя данные, дополнение функции в приложениях ADO. Поставщик услуг может также быть указан как *компонент службы*, который должны работать вместе с других поставщиков служб или компонентов.
 
 ## <a name="data-providers"></a>Поставщики данных

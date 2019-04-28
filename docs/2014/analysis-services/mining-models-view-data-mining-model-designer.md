@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 99b53c2559bf13f612a82c29ed7d41a5d58ac7cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702996"
 ---
 # <a name="mining-models-view-data-mining-model-designer"></a>Представление модели интеллектуального анализа данных (конструктор моделей интеллектуального анализа данных)
   Используйте представление **Модели интеллектуального анализа данных** для создания или изменения моделей интеллектуального анализа данных, содержащихся в структуре интеллектуального анализа данных.  
@@ -29,7 +29,7 @@ ms.locfileid: "48160434"
   
 ## <a name="see-also"></a>См. также  
  [Представление структуры интеллектуального &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-structure-view-data-mining-model-designer.md)   
- [Просмотра моделей интеллектуального анализа &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Средства просмотра моделей интеллектуального анализа данных (конструктор моделей интеллектуального анализа данных)](mining-model-viewers-data-mining-model-designer.md)   
  [Конструктор диаграммы точности интеллектуального &#40;интеллектуального анализа данных&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Построитель прогнозирующих запросов &#40;интеллектуального анализа данных&#41;](prediction-query-builder-data-mining.md)  
   

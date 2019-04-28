@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f55324123716289fec88b9d9bc531dccb22848d3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720431"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Ячейки, строки и столбцы области данных табликса (построитель отчетов и службы SSRS)
   Чтобы эффективнее управлять процессом отображения данных в строках и столбцах области данных табликса в отчете, необходимо уметь определять метки, итоги, строки и столбцы для подробных данных и групп. Во многих случаях для отображения данных можно пользоваться структурами по умолчанию для таблиц, матриц и списков. Дополнительные сведения см. в разделе [таблиц &#40;построитель отчетов и службы SSRS&#41;](tables-report-builder-and-ssrs.md), [матрицы &#40;построитель отчетов и службы SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), или [перечислены &#40;построитель отчетов и SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  

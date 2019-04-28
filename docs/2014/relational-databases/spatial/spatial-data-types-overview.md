@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 135541d4474ab68fc8bdbc294663c8d9bcbc7c14
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715051"
 ---
 # <a name="spatial-data-types-overview"></a>Основные сведения о типах пространственных данных
   Существует два типа пространственных данных. Тип данных `geometry` поддерживает планарные или эвклидовы данные (система координат для плоской Земли). Тип данных `geometry` соответствует спецификации «Simple Features for SQL» консорциума OGC версии 1.1.0 и стандарту SQL MM (стандарт ISO).  
@@ -192,7 +192,7 @@ SELECT @g.ToString(), @g.STLength();
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');  
 ```  
   
- Экземпляры `CompoundCurve` позволяют использовать компоненты `LineString` и `CircularString`, поэтому необходимо знать только две точки сегментов линии среза круговой диаграммы.  В этом примере кода показано, как использовать тип `CompoundCurve` для хранения той же фигуры:  
+ `CompoundCurve` экземпляры позволяют `LineString` и `CircularString` компоненты, чтобы только две точки сегментов линии среза круговой диаграммы должны быть известны.  В этом примере кода показано, как использовать тип `CompoundCurve` для хранения той же фигуры:  
   
 ```sql  
 DECLARE @g geometry;  

@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7616ec615e70015abc671740d7a18b7a18e35c74
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704462"
 ---
 # <a name="rollback-member-revision-history-master-data-services"></a>Откат журнала изменений элемента (Master Data Services)
 
@@ -40,7 +40,7 @@ ms.locfileid: "52796222"
   
 4.  Выберите версию для отката и нажмите **Откат**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Журнал изменений элемента (Master Data Services)](../master-data-services/member-revision-history-master-data-services.md)   
  [Изменение типа журнала транзакций сущности (Master Data Services)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5b38ae218dbe1f5f2cc1f0f1090ed2d82e52a96e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715371"
 ---
 # <a name="create-a-new-relational-mining-structure"></a>создать новую реляционную структуру интеллектуального анализа данных
   Создайте в мастере интеллектуального анализа данных новую структуру интеллектуального анализа данных, используя данные из реляционной базы данных или другого источника, а затем сохраните структуру и связанные с ней модели в базе данных служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  

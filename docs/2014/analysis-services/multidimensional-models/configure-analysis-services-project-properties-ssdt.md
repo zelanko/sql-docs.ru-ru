@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bb5490f023a2529d102d9ca505092b7f2bc28fec
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726828"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Настройка свойств проекта служб Analysis Services (среда SSDT)
   В [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]проект [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] определяется с некоторыми свойствами по умолчанию, которые влияют на сборку и развертывание проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  

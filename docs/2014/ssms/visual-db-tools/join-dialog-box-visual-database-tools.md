@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e266d398debd65a8a03f73d7f8726899c97b7e13
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711143"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>Диалоговое окно «Соединение» (визуальные инструменты для баз данных)
   Это диалоговое окно позволяет задать параметры соединения таблиц. Чтобы открыть это окно, выберите на панели **Проект** линию соединения. Затем в окне **Свойства** щелкните **Условие и тип соединения**, затем нажмите кнопку с многоточием **(…)** справа от этого свойства.  

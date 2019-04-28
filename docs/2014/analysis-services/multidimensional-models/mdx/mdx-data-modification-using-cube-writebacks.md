@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f471800a72bdbec154fe7bedb89d9b5a10593132
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699753"
 ---
 # <a name="using-cube-writebacks-mdx"></a>Обратная запись в куб (многомерные выражения)
   Для обновления куба используется инструкция [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube) . Эта инструкция позволяет записать в кортеж указанное значение. Для эффективного использования инструкции UPDATE CUBE необходимо понимать ее синтаксис, ситуации, в которых может возникнуть ошибка, и влияние обновления на весь куб.  
@@ -118,6 +118,6 @@ USE_EQUAL_ALLOCATION
 -   Изменение степени гранулярности измерения, которое содержится в обратной записи.  
   
 ## <a name="see-also"></a>См. также  
- [Изменение данных &#40;многомерных Выражений&#41;](mdx-data-modification-modifying-data.md)  
+ [Изменение данных (многомерные выражения)](mdx-data-modification-modifying-data.md)  
   
   

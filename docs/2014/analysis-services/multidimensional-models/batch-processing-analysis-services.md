@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58b0ea08b09e62881de6cef073ae931ecb598978
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701212"
 ---
 # <a name="batch-processing-analysis-services"></a>Пакетная обработка (службы Analysis Services)
   В службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]вы можете использовать команду «Пакет», чтобы отправить несколько команд обработки на сервер в одном запросе. Пакетная обработка позволяет выбирать объекты для обработки и управлять порядком их обработки. Кроме того, пакет можно выполнить как серию изолированных заданий или как транзакцию, в которой сбой одного из процессов влечет за собой откат всего пакета.  
@@ -36,7 +36,7 @@ ms.locfileid: "48188894"
 ##  <a name="bkmk_ssdt"></a> Пакетная обработка в SQL Server Data Tools  
  Прежде чем обрабатывать объекты в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], необходимо произвести развертывание содержащего их проекта. Дополнительные сведения см. в статье [Развертывание проектов служб Analysis Services (среда SSDT)](deploy-analysis-services-projects-ssdt.md).  
   
-1.  Откройте среду [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+1.  Откройте [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 2.  Откройте развернутый проект.  
   

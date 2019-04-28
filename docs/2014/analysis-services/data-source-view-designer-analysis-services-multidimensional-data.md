@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b0fc58cf501cf758c6b76a7445d0abfde3e227ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732672"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>Конструктор представлений источников данных (службы Analysis Services — многомерные данные)
   Представление источника данных (DSV) — это логическое представление внешнего реляционного источника данных, используемых для создания кубов и измерений в многомерной модели.  
@@ -46,14 +46,14 @@ ms.locfileid: "48075314"
   
 |||  
 |-|-|  
-|Переименование столбцов или таблиц, а также создание новых вычисляемых столбцов. Например, объединение столбцов имени и фамилии в новый столбец «Ф. И. О.».|[Определение именованных вычислений в представлении источника данных &#40;служб Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)|  
-|Добавление связей между таблицами вручную|[Определение логических связей в представлении источника данных &#40;служб Analysis Services&#41;](multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md)|  
-|Создание именованного запроса для определения нового объекта на основе запроса T-SQL.|[Определение именованных запросов в представлении источника данных &#40;служб Analysis Services&#41;](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)|  
-|Просмотр базовых данных, позволяющий анализировать сами значения данных, представленные объектами модели.<br /><br /> Просмотр данных позволяет визуально проверить и скопировать данные, возвращаемые из базовой многомерной таблицы или запроса. По умолчанию в просмотре данных используется метод выборки первых 5000 строк, но эти параметры можно изменить.|[Просмотр данных в представлении источника данных &#40;служб Analysis Services&#41;](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|  
-|Отображение в виде диаграмм всех или некоторых таблиц и связей в представлении источника данных|[Работа с диаграммами в конструкторе представлений источников данных &#40;служб Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|  
+|Переименование столбцов или таблиц, а также создание новых вычисляемых столбцов. Например, объединение столбцов имени и фамилии в новый столбец «Ф. И. О.».|[Определение именованных вычислений в представлении источника данных (службы Analysis Services)](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)|  
+|Добавление связей между таблицами вручную|[Определение логических связей в представлении источника данных (службы Analysis Services)](multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md)|  
+|Создание именованного запроса для определения нового объекта на основе запроса T-SQL.|[Определение именованных запросов в представлении источника данных (службы Analysis Services)](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)|  
+|Просмотр базовых данных, позволяющий анализировать сами значения данных, представленные объектами модели.<br /><br /> Просмотр данных позволяет визуально проверить и скопировать данные, возвращаемые из базовой многомерной таблицы или запроса. По умолчанию в просмотре данных используется метод выборки первых 5000 строк, но эти параметры можно изменить.|[Просмотр данных в представлении источника данных (службы Analysis Services)](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|  
+|Отображение в виде диаграмм всех или некоторых таблиц и связей в представлении источника данных|[Работа с диаграммами в конструкторе представлений источника данных (службы Analysis Services)](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|  
   
 ## <a name="see-also"></a>См. также  
  [Представления источников данных в многомерных моделях](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Добавление или удаление таблиц или представлений данных представление источника &#40;служб Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [Добавление или удаление таблиц или представлений в представлении источника данных (службы Analysis Services)](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
   

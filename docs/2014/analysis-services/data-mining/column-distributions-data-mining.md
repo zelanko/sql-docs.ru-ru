@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a4969e3665aca4ed5aef588fa9595e96b846e98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715428"
 ---
 # <a name="column-distributions-data-mining"></a>Распределения столбцов (интеллектуальный анализ данных)
   В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно определить распределения столбцов в структуре интеллектуального анализа данных, чтобы влиять на то, как алгоритмы обрабатывают данные в этих столбцах при создании моделей интеллектуального анализа данных. В некоторых алгоритмах лучше задавать распределение для всех столбцов, содержащих непрерывные данные, до начала обработки модели в случае, если указанные столбцы содержат общие распределения значений. Если распределения не заданы, создаваемые модели интеллектуального анализа данных могут работать менее точно, чем модели с заданными распределениями, так как на вход алгоритмов будет подаваться меньшее количество данных для анализа.  
@@ -48,10 +48,10 @@ ms.locfileid: "48058638"
  Дополнительные сведения об алгоритмах в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] см. в разделе [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining-algorithms-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>См. также  
- [Типы содержимого &#40;интеллектуального анализа данных&#41;](content-types-data-mining.md)   
- [Структуры интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-structures-analysis-services-data-mining.md)   
- [Методы дискретизации &#40;интеллектуального анализа данных&#41;](discretization-methods-data-mining.md)   
- [Дистрибутивы &#40;расширений интеллектуального анализа данных&#41;](/sql/dmx/distributions-dmx)   
+ [Типы содержимого (интеллектуальный анализ данных)](content-types-data-mining.md)   
+ [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-structures-analysis-services-data-mining.md)   
+ [Методы дискретизации (интеллектуальный анализ данных)](discretization-methods-data-mining.md)   
+ [Распределения (расширения интеллектуального анализа данных)](/sql/dmx/distributions-dmx)   
  [Столбцы структуры интеллектуального анализа данных](mining-structure-columns.md)  
   
   

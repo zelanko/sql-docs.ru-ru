@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc4a06bd637d6fce460fb15739f8b291c95a3361
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702426"
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>Измерения (службы Analysis Services — многомерные данные)
   В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], измерения являются основными компонентами куба. В измерениях данные привязаны к некоторой предметной области, например заказчики, магазины или служащие. В службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] измерения содержат атрибуты, которые соответствуют столбцам в таблицах измерения. Эти атрибуты отображаются как иерархии атрибутов и могут быть организованы в пользовательские иерархии или определены как иерархии типа «родители-потомки» на основе столбцов базовой таблицы измерений. Эти иерархии применяются для организации мер, которые содержатся в кубе. Следующие подразделы содержат описание измерений, атрибутов и иерархий.  

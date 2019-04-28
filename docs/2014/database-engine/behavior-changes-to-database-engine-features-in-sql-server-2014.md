@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a951590c1284f39cb2dfea1f9e97c05a04a3e7ca
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813255"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>Изменения в работе функций компонента Database Engine в SQL Server 2014
   В этом разделе описаны изменения в компоненте [!INCLUDE[ssDE](../includes/ssde-md.md)]. Изменения в работе оказывают влияние на способ выполнения функций или взаимодействие между ними в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] по сравнению с предыдущими версиями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -85,9 +85,9 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
   
 |Исходный тип данных XS|Целевой тип данных SQL Server|  
 |-------------------------|--------------------------------------|  
-|byte<br /><br /> short<br /><br /> ssNoversion<br /><br /> integer<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|TINYINT<br /><br /> smallint<br /><br /> ssNoversion<br /><br /> BIGINT<br /><br /> Decimal<br /><br /> NUMERIC|  
+|byte<br /><br /> short<br /><br /> ssNoversion<br /><br /> integer<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|tinyint<br /><br /> smallint<br /><br /> ssNoversion<br /><br /> BIGINT<br /><br /> Decimal<br /><br /> NUMERIC|  
 |Decimal|Decimal<br /><br /> NUMERIC|  
-|FLOAT|REAL|  
+|FLOAT|real|  
 |double|FLOAT|  
   
  Новые правила повышают производительность, если можно пропустить промежуточное преобразование. Однако при сбое преобразования данных появляются сообщения об ошибке, отличные от тех, которые возникают при преобразовании из промежуточного значения xs:string. Например, если метод value не смог преобразовать значение 100 000 типа `int` в `smallint`, то предыдущее сообщение об ошибке будет выглядеть так:  

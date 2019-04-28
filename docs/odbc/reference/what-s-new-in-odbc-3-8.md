@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a333aa44d0424c0fe612b7790ce77cabe6fca585
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714021"
 ---
 # <a name="what39s-new-in-odbc-38"></a>Что&#39;возможности ODBC 3.8
 Windows 8 включает в себя обновленную версию ODBC 3.8. ODBC 3.8 в Windows 8 включает в себя следующие компоненты:  
@@ -33,9 +33,9 @@ Windows 8 включает в себя обновленную версию ODBC 
   
 -   Асинхронное выполнение операций соединения. Дополнительные сведения см. в разделе [асинхронное выполнение (метод опроса)](../../odbc/reference/develop-app/asynchronous-execution-polling-method.md).  
   
--   Потоковых выходных параметров. Дополнительные сведения см. в разделе [получение выходных параметров с помощью метода SQLGetData](../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
+-   Потоковых выходных параметров. Дополнительные сведения см. в разделе [Получение выходных параметров с помощью метода SQLGetData](../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
--   Тип данных ODBC C расширяемости. Дополнительные сведения см. в разделе [типы данных C в ODBC](../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
+-   Тип данных ODBC C расширяемости. Дополнительные сведения о типах данных см. в разделе [Типы данных C в ODBC](../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   
  Драйвер записи следует прочитать [обновления драйвера 3.5 до 3.8](../../odbc/reference/develop-driver/upgrading-a-3-5-driver-to-a-3-8-driver.md).  
   

@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 21a9d96d54f1a5afcce2d5e2671b30460350cd76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62696314"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>Создание веб-приложения мастера основных данных (службы Master Data Services)
 
@@ -48,7 +48,7 @@ ms.locfileid: "47694554"
   
 #### <a name="to-create-a-master-data-manager-web-application-in-a-new-website"></a>Создание веб-приложения диспетчера основных данных на новом веб-сайте  
   
-1.  Откройте среду [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+1.  Откройте [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
 2.  На панели слева щелкните элемент **Веб-конфигурация**.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "47694554"
   
 -   В случае если требуется шифровать содержимое при помощи протокола SSL, на веб-сайте, содержащем веб-приложение [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , можно настроить использование HTTPS-привязки. Для настройки сертификата сервера для веб-сервера, а также настройки HTTPS-привязки и параметров SSL для сайта необходимо использовать средства служб IIS, например диспетчер IIS. Дополнительные сведения см. в статье [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Установка служб Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

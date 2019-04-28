@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58bfdace704ee1be0c5b902fd24007844fcc4e45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699798"
 ---
 # <a name="building-measures-in-mdx"></a>Построение мер в многомерных выражениях
   В многомерных выражениях мера — это именованное DAX-выражение, которое разрешается путем вычисления и возвращает значение в табличную модель. В этом определении кроется огромный потенциал. Создание и использование мер в многомерных запросах дает широкие возможности для табличных данных.  
@@ -44,8 +44,8 @@ from [Model]
 |2004|25808962.34||  
   
 ## <a name="see-also"></a>См. также  
- [Инструкция CREATE MEMBER &#40;многомерных Выражений&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [Инструкция SELECT &#40;многомерных Выражений&#41;](/sql/mdx/mdx-data-manipulation-select)  
+ [Инструкция CREATE MEMBER (многомерные выражения)](/sql/mdx/mdx-data-definition-create-member)   
+ [Справочник по функциям многомерных выражений (многомерные выражения)](/sql/mdx/mdx-function-reference-mdx)   
+ [Инструкция SELECT (многомерные выражения)](/sql/mdx/mdx-data-manipulation-select)  
   
   

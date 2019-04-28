@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1cd0b6d1af8d6a059742a257071a78f7b5002c6
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726491"
 ---
 # <a name="database-readwritemodes"></a>Режимы ReadWriteModes базы данных
   Часто возникает ситуация, когда администратору базы данных (dba) служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо переключить базу данных из режима для чтения и записи в режим только для чтения или наоборот. Обычно это продиктовано производственной необходимостью, например, чтобы обеспечить общий доступ нескольким серверам к папке базы данных для масштабирования решения и повышения производительности. В подобных случаях `ReadWriteMode` базы данных позволяет свойство [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] администратор базы данных, чтобы легко изменять режим работы базы данных.  
@@ -31,9 +31,9 @@ ms.locfileid: "50146899"
   
 |Режим «только для чтения»|Ограничения на операции|  
 |-------------------|---------------------------|  
-|Команды XML/A<br /><br /> <br /><br /> Примечание. При выполнении любой из следующих команд возникает ошибка.|`Create`<br /><br /> `Alter`<br /><br /> `Delete`<br /><br /> `Process`<br /><br /> `MergePartitions`<br /><br /> `DesignAggregations`<br /><br /> `CommitTransaction`<br /><br /> `Restore`<br /><br /> `Synchronize`<br /><br /> `Insert`<br /><br /> `Update`<br /><br /> `Drop`<br /><br /> <br /><br /> Примечание. Обратная запись в ячейку для базы данных в режиме только для чтения является допустимой, однако нельзя зафиксировать изменения.|  
-|Инструкции многомерных выражений<br /><br /> <br /><br /> Примечание. При выполнении любой из следующих инструкций происходит ошибка.|`COMMIT TRAN`<br /><br /> `CREATE SESSION CUBE`<br /><br /> `ALTER CUBE`<br /><br /> `ALTER DIMENSION`<br /><br /> `CREATE DIMENSION MEMBER`<br /><br /> `DROP DIMENSION MEMBER`<br /><br /> `ALTER DIMENSION`<br /><br /> <br /><br /> Примечание. Пользователи Excel не могут использовать функцию группирования в сводных таблицах, так как внутренне эта функция реализована с помощью команд `CREATE SESSION CUBE`.|  
-|Инструкции расширений интеллектуального анализа данных<br /><br /> <br /><br /> Примечание. При выполнении любой из следующих инструкций происходит ошибка.|`CREATE [SESSION] MINING STRUCTURE`<br /><br /> `ALTER MINING STRUCTURE`<br /><br /> `DROP MINING STRUCTURE`<br /><br /> `CREATE [SESSION] MINING MODEL`<br /><br /> `DROP MINING MODEL`<br /><br /> `IMPORT`<br /><br /> `SELECT INTO`<br /><br /> `INSERT`<br /><br /> `UPDATE`<br /><br /> `DELETE`|  
+|Команды XML/A<br /><br /> <br /><br /> Примечание. При выполнении любой из этих команд, возникает ошибка.|`Create`<br /><br /> `Alter`<br /><br /> `Delete`<br /><br /> `Process`<br /><br /> `MergePartitions`<br /><br /> `DesignAggregations`<br /><br /> `CommitTransaction`<br /><br /> `Restore`<br /><br /> `Synchronize`<br /><br /> `Insert`<br /><br /> `Update`<br /><br /> `Drop`<br /><br /> <br /><br /> Примечание. Обратную запись в ячейки допускается в базах данных, перевод в режим только для чтения; Однако нельзя зафиксировать изменения.|  
+|Инструкции многомерных выражений<br /><br /> <br /><br /> Примечание. При выполнении любой из этих инструкций, возникает ошибка.|`COMMIT TRAN`<br /><br /> `CREATE SESSION CUBE`<br /><br /> `ALTER CUBE`<br /><br /> `ALTER DIMENSION`<br /><br /> `CREATE DIMENSION MEMBER`<br /><br /> `DROP DIMENSION MEMBER`<br /><br /> `ALTER DIMENSION`<br /><br /> <br /><br /> Примечание. Пользователи Excel не может использовать функцию группирования в сводных таблицах, так как внутренне эта функция реализована с помощью `CREATE SESSION CUBE` команды.|  
+|Инструкции расширений интеллектуального анализа данных<br /><br /> <br /><br /> Примечание. При выполнении любой из этих инструкций, возникает ошибка.|`CREATE [SESSION] MINING STRUCTURE`<br /><br /> `ALTER MINING STRUCTURE`<br /><br /> `DROP MINING STRUCTURE`<br /><br /> `CREATE [SESSION] MINING MODEL`<br /><br /> `DROP MINING MODEL`<br /><br /> `IMPORT`<br /><br /> `SELECT INTO`<br /><br /> `INSERT`<br /><br /> `UPDATE`<br /><br /> `DELETE`|  
 |Фоновые операции|Отключены все фоновые операции, которые могут привести к изменению базы данных. В их число входят отложенная обработка и упреждающее кэширование.|  
   
 ## <a name="readwritemode-usage"></a>Использование свойства ReadWriteMode  

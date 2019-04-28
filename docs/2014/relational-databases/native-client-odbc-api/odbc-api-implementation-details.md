@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8370db6cfcf3d410e563a0134221d0d48da09a8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715091"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
   В данном разделе описываются функции ODBC, демонстрирующие специфичное для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поведение при использовании с драйвером ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Здесь перечислены не все функции ODBC. В отдельных разделах обсуждаются только те проблемы, которые специфичны для функции ODBC в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Они не являются полным справочником по функциям ODBC.  

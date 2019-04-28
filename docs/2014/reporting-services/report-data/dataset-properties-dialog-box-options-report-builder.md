@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cbf7814d51fd0f726a60d3b177af18fbeba223d2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62696755"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>Диалоговое окно «Свойства набора данных» — «Настройки» (построитель отчетов)
   Перейдите на вкладку **Настройки** в диалоговом окне **Свойства набора данных** , чтобы изменить параметры данных для запроса, такие как параметры сортировки и обработка промежуточных итогов как подробных данных. Дополнительные сведения о параметрах сортировки см. в разделе [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md) в [электронной документации по SQL Server](https://go.microsoft.com/fwlink/?linkid=98335).  

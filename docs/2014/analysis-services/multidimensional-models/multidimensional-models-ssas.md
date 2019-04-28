@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 47efdd38b14a22f28026f98d2289c1c67fc65b9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699016"
 ---
 # <a name="multidimensional-modeling-ssas"></a>Многомерное моделирование (службы SSAS)
   Многомерное решение служб Analysis Services использует структуры кубов для анализа бизнес-данных по нескольким измерениям. Многомерный режим является режимом сервера по умолчанию для служб Analysis Services. Он включает подсистему запросов и вычислений для данных OLAP с режимами хранения HOLAP, MOLAP и ROLAP, сочетающий производительность с требованиями к масштабируемости данных. Ядро OLAP служб Analysis Services является лучшим в отрасли сервером OLAP, хорошо работающим с широким диапазоном средств бизнес-аналитики. В большинстве случаев службы Analysis Services устанавливаются как обычные серверы OLAP.  
@@ -27,13 +27,13 @@ ms.locfileid: "48117564"
  Другим важным преимуществом использования многомерных баз данных служб Analysis Services является интеграция с распространенными средствами создания отчетов бизнес-аналитики, например Excel, службами Reporting Services и PerformancePoint, а также с пользовательскими приложениями и решениям сторонних производителей.  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Решения многомерной модели &#40;SSAS&#41;](multidimensional-model-solutions-ssas.md)  
+ [Решения многомерной модели (службы SSAS)](multidimensional-model-solutions-ssas.md)  
   
- [Многомерный шаблон баз данных &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
+ [Базы данных многомерных моделей (службы SSAS)](multidimensional-model-databases-ssas.md)  
   
  [Обработка объектов многомерной модели](processing-a-multidimensional-model-analysis-services.md)  
   
- [Роли и разрешения &#40;служб Analysis Services&#41;](roles-and-permissions-analysis-services.md)  
+ [Роли и разрешения (службы Analysis Services)](roles-and-permissions-analysis-services.md)  
   
  [Power View для многомерных моделей](power-view-for-multidimensional-models.md)  
   

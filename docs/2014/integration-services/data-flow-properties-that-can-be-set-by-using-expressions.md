@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbb609a65c70cb44c8fda81feb75927060ed289b
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62829146"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Свойства потока данных, которые можно задавать с помощью выражений
   Значения определенных свойств объектов потока данных можно указать с помощью выражений свойств, доступных в контейнере задачи потока данных.  

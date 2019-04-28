@@ -1,5 +1,5 @@
 ---
-title: Выбор и сопоставление входных данных для прогнозирующего запроса | Документы Microsoft
+title: Выбор и сопоставление входных данных для прогнозирующего запроса | Документация Майкрософт
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0781c35dfe7bcc1ea99be3d68fcbb839d5f9374b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724870"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Выбор и сопоставление входных данных для прогнозирующего запроса
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -113,7 +114,7 @@ ms.lasthandoff: 05/10/2018
   
      Если связь уже имеется, то столбцы в модели интеллектуального анализа данных автоматически сопоставляются со столбцами, имеющими то же имя во входной таблице. Связь между вложенной таблицей и таблицей вариантов можно изменить, нажав кнопку **Изменить соединение**, после чего откроется диалоговое окно **Создание связи** .  
   
-## <a name="see-also"></a>См. также раздел  
- [Прогнозирующие запросы & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+## <a name="see-also"></a>См. также  
+ [Прогнозирующие запросы (интеллектуальный анализ данных)](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

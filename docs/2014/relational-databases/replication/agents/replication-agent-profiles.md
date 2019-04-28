@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95692fd0ecf365f1fb54c8c1c3a090227b0d9a38
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721756"
 ---
 # <a name="replication-agent-profiles"></a>Профили агента репликации
   При настройке репликации на распространителе устанавливается набор профилей агентов. Профиль агента содержит набор параметров, используемых при каждом запуске агента: каждый агент регистрируется на распространителе во время запуска и запрашивает параметры в своем профиле. Для подписок на публикацию слиянием, которые используют веб-синхронизацию, профили загружаются и хранятся на подписчике. Если профиль изменяется, профиль, хранящийся на подписчике, обновляется при следующем запуске агента слияния. Дополнительные сведения о веб-синхронизации см. в разделе [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md).  

@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c68e181a1ad0992e85c638accad26a0418be4b5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715352"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Создание DMX-запроса в среде SQL Server Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет набор возможностей, упрощающих создание прогнозирующих запросов, запросов содержимого и запросов определения данных к моделям интеллектуального анализа данных и структурам интеллектуального анализа данных.  
@@ -87,6 +87,6 @@ ms.locfileid: "48101414"
   
 ## <a name="see-also"></a>См. также  
  [Интерфейсы запросов интеллектуального анализа данных](data-mining-query-tools.md)   
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; ссылки](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

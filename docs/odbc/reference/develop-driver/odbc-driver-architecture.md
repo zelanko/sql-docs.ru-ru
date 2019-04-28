@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 260767c88fdf980466a21d4cc9658b259b91c854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690658"
 ---
 # <a name="odbc-driver-architecture"></a>Архитектура драйвера ODBC
 Драйвер модулей записи необходимо иметь в виду, что архитектура драйвера могут повлиять на приложения, могут ли использовать СУБД SQL.  
@@ -45,11 +45,11 @@ ms.locfileid: "47788152"
   
  Дополнительные сведения о драйверов можно найти в местах, описанных в следующей таблице.  
   
-|Проблема|Раздел|Местоположение|  
+|Проблемы|Раздел|Местоположение|  
 |-----------|-----------|--------------|  
 |Проблемы совместимости с приложениями и драйверами|[Совместимость приложений и драйверов](../../../odbc/reference/develop-app/application-and-driver-compatibility.md)|[Замечания по программированию](../../../odbc/reference/develop-app/programming-considerations.md), справочника по программированию ODBC|  
 |Написание драйверов ODBC|[Написание драйверов ODBC 3.x](../../../odbc/reference/develop-app/writing-odbc-3-x-drivers.md)|[Замечания по программированию](../../../odbc/reference/develop-app/programming-considerations.md), справочника по программированию ODBC|  
-|Рекомендации по драйверов для обеспечения обратной совместимости|[Рекомендации по драйверов для обеспечения обратной совместимости](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)|[Приложение ж драйвер рекомендации для обеспечения обратной совместимости](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md), справочника по программированию ODBC|  
+|Рекомендации по драйверов для обеспечения обратной совместимости|[Рекомендации по драйверов для обеспечения обратной совместимости](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)|[Приложение ж Рекомендации по драйверов для обеспечения обратной совместимости](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md), справочника по программированию ODBC|  
 |Подключение к драйвера|[Выбор источника данных или драйвера](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)|[Подключение к данным источника или драйвер](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md), справочника по программированию ODBC|  
 |Определение драйверов|[Просмотр драйверов](../../../odbc/admin/viewing-drivers.md)|[Просмотр драйверов](../../../odbc/admin/viewing-drivers.md), интерактивной справки администратора источников данных ODBC|  
 |Включение организация пулов соединений|[Организация пулов соединений ODBC](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)|[Подключение к данным источника или драйвер](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md), справочника по программированию ODBC|  

@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b390fd7b731f37be46aae06f0b79473bda4f2e81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699599"
 ---
 # <a name="building-named-sets-in-mdx-mdx"></a>Построение именованных наборов в многомерных выражениях
   Выражение набора может быть длинной и сложной декларацией, которую трудно проследить и понять. Или выражение набора может использоваться настолько часто, что его повторное определение может стать утомительным. Чтобы облегчить работу с длинными, сложными или часто используемыми выражениями, в многомерных выражениях можно определить такое выражение, как *именованный набор*.  
@@ -41,8 +41,8 @@ ms.locfileid: "48083064"
      Дополнительные сведения об использовании инструкции CREATE SET для создания именованных наборов см. в разделе [Создание именованных наборов с областью действия сеанса (многомерные выражения)](mdx-named-sets-creating-session-scoped-named-sets.md).  
   
 ## <a name="see-also"></a>См. также  
- [Инструкция SELECT &#40;многомерных Выражений&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [Инструкция CREATE SET &#40;многомерных Выражений&#41;](/sql/mdx/mdx-data-definition-create-set)   
- [Основные принципы запросов многомерных Выражений &#40;служб Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Инструкция SELECT (многомерные выражения)](/sql/mdx/mdx-data-manipulation-select)   
+ [Инструкция CREATE SET (многомерные выражения)](/sql/mdx/mdx-data-definition-create-set)   
+ [Основные принципы запросов многомерных выражений (службы Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
   
   

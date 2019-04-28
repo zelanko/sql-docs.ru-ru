@@ -1,5 +1,5 @@
 ---
-title: Предоставление доступа к объектам и операциям (Analysis Services) | Документы Microsoft
+title: Авторизация доступа к объектам и операциям (службы Analysis Services) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 88290b9598ffdbbcfc90a738654a9485107da464
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717601"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Предоставление доступа к объектам и операциям (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "34024041"
   
  Далее, после создания табличного или многомерного решения оно развертывается на сервере как база данных. Администратор сервера может делегировать задачи администрирования базы данных, определив роль с разрешениями "Полный доступ" для соответствующей базы данных. Участники этой роли могут обработать или запросить объекты в базе данных, а также создать дополнительные роли для доступа к кубам, измерениям и другим объектам в самой базе данных. Дополнительные сведения см. в разделе [Предоставление разрешений базы данных (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md).  
   
- **Шаг 3. Разрешение доступа к кубу или модели для запроса и обработки рабочих нагрузок**  
+ **Шаг 3. Включение доступа к кубу или модели для запроса и обработки рабочих нагрузок**  
   
  По умолчанию только администраторы сервера и базы данных имеют доступ к кубам или табличным моделям. Для предоставления этих структур данных другим пользователям организации требуются назначения дополнительных ролей, которые сопоставляют учетные записи пользователя и группы Windows с кубами или моделями, а также с разрешениями, определяющими привилегии **Read** . Дополнительные сведения см. в разделе [Предоставление разрешений куба или модели (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "34024041"
 > [!NOTE]  
 >  Пользователям не требуется ни разрешений для реляционных таблиц в базовой реляционной базе данных, из которой службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] загружают свои данные, ни разрешений на уровне файла на компьютере, на котором запущен экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- **Шаг 4. (Необязательно) Разрешение или отклонение доступа к внутренним объектам кубов**  
+ **Шаг 4 (необязательно): Разрешить или запретить доступ к внутренним объектам кубов**  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляет параметры безопасности для разрешений безопасности на индивидуальных объектах, включая элементы измерения и ячейки в модели данных. Дополнительные сведения см. в разделах [Предоставление настраиваемого доступа к данным измерений (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) и [Предоставление настраиваемого доступа к данным ячейки (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md).  
   

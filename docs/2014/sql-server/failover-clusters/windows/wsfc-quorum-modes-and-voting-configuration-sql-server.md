@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7febab9f8ecf6cae4df08f110a16c0bdc512a948
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711439"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Режимы кворума WSFC и участвующая в голосовании конфигурация (SQL Server)
   И [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], и экземпляры отказоустойчивого кластера (FCI) в режиме AlwaysOn используют платформу отказоустойчивых кластеров Windows Server (WSFC).  В WSFC для мониторинга общей исправности кластера и обеспечения максимальной отказоустойчивости на уровне узлов используется подход, основанный на кворуме. Для проектирования, эксплуатации и устранения неполадок решений высокого уровня доступности режима AlwaysOn и решений аварийного восстановления требуется отличное знание режимов кворума WSFC и конфигурации голосования узлов.  
@@ -48,7 +48,7 @@ ms.locfileid: "53349934"
 > [!IMPORTANT]  
 >  Если кластер WSFC переводится в режим «вне сети» из-за отсутствия кворума, перевести его обратно в оперативный режим потребуется вручную.  
 >   
->  Дополнительные сведения см. в разделе: [Аварийное восстановление WSFC через принудительный кворум &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
+>  Дополнительные сведения см. в разделе: [Аварийное восстановление WSFC через принудительный кворум (SQL Server)](wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
 ##  <a name="QuorumModes"></a> Режимы кворума  
  *Режим кворума* настраивается на уровне кластера WSFC, который определяет метод проведения голосования с кворумом.  Диспетчер отказоустойчивого кластера рекомендует режим кворума на основании количества узлов в кластере.  
@@ -87,7 +87,7 @@ ms.locfileid: "53349934"
 > [!IMPORTANT]  
 >  Для использования параметров NodeWeight необходимо применить следующее исправление ко всем серверам в кластере WSFC:  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036): Доступно исправление, позволяющее настраивать узел кластера, не имеющий голосов кворума, в [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] и [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): Доступно исправление, позволяющее настраивать узел кластера, не имеющий голосов кворума в [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] и в [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> Рекомендуемые настройки для голосования с кворумом  
  При включении или отключении голоса конкретного узла WSFC соблюдайте следующие правила.  
@@ -128,9 +128,9 @@ ms.locfileid: "53349934"
   
 -   [Проверка конфигурации голосов кворума в мастерах групп доступности AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/archive/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing.aspx)  
   
--   [Технологии Windows Server:  Отказоустойчивые кластеры](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Технологии Windows Server.  Отказоустойчивые кластеры](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [Пошаговое руководство по отказоустойчивым кластерам: Настройка кворума в отказоустойчивом кластере](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+-   [Пошаговое руководство по отказоустойчивым кластерам. Настройка кворума в отказоустойчивом кластере](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Аварийное восстановление WSFC через принудительный кворум (SQL Server)](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   

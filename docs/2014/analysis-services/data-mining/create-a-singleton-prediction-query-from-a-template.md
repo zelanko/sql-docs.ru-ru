@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6bcd9aa80170719a32ff3bf75f0ac36dc83cf021
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715101"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>создать одноэлементный прогнозирующий запрос из шаблона
   Одноэлементный запрос полезно в тех случаях, когда у вас есть модель, которая будет использоваться для прогнозирования, но не требуется сопоставляется с внешним набором входных данных или массовых прогнозов. Одноэлементный запрос позволяет предоставлять модели значения и мгновенно видеть спрогнозированное значение.  

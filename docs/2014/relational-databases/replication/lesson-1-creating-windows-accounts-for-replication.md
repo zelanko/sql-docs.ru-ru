@@ -14,13 +14,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721158"
 ---
-# <a name="lesson-1-creating-windows-accounts-for-replication"></a>Урок 1. Создание учетных записей Windows для репликации
+# <a name="lesson-1-creating-windows-accounts-for-replication"></a>Урок 1. Создание Windows учетных записей для репликации
   На этом занятии будут созданы учетные записи Windows для запуска агентов репликации. На локальном сервере будут созданы отдельные учетные записи Windows для следующих агентов:  
   
 |Агент|Местоположение|Имя учетной записи|  
@@ -62,7 +62,7 @@ ms.locfileid: "54127464"
 6.  Щелкните **Закрыть**.  
   
 ## <a name="next-steps"></a>Следующие шаги  
- Создание учетных записей Windows для агентов репликации успешно выполнено. Далее предстоит настроить папку моментальных снимков. См. в разделе [Урок 2: Подготовка папки моментальных снимков](lesson-2-preparing-the-snapshot-folder.md).  
+ Создание учетных записей Windows для агентов репликации успешно выполнено. Далее предстоит настроить папку моментальных снимков. См. [Занятие 2. Подготовка папки моментальных снимков](lesson-2-preparing-the-snapshot-folder.md).  
   
 ## <a name="see-also"></a>См. также  
  [Обзор агентов репликации](agents/replication-agents-overview.md)  

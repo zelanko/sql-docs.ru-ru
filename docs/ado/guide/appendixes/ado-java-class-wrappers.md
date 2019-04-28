@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ddcbba246f0bdcfb5c3a22766f5d335a2bd5893e
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719974"
 ---
 # <a name="ado-java-class-wrappers"></a>Классы-оболочки Java для объектов ADO
 Этот код объявляет экземпляр ADO [записей](../../../ado/reference/ado-api/recordset-object-ado.md) оболочки класса и инициализирует его, все в одной строке кода. Кроме того, он объявляет переменные для каждого аргумента в [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) метод, особенно для [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) и [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (так как Java не поддерживает перечисленные типы). Он открывает и закрывает **записей** объекта. Задав Rs1 NULL просто планирует эту переменную, чтобы освободить после ее выпуска систематический и с периодической неиспользуемых объектов выполняет Java.  

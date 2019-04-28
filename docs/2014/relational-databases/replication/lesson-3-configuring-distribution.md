@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d873d3664c88963b17550734b488e6872a9cc84
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721098"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Урок 3. Настройка распространения
   На этом занятии предстоит настроить распространение на издателе и установить необходимые разрешения на базу данных публикации и распространителя. Если распространитель уже настроен, необходимо отключить публикацию и распространение перед тем, как приступить к занятию. Не следует этого выполнять в случае, если необходимо сохранить существующую топологию репликации.  

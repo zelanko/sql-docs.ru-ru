@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7410371f7d96f9770536a129de3a916b5f297a74
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724039"
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -146,7 +146,7 @@ sp_cursoropen cursor OUTPUT, stmt
  Курсор FAST_FORWARD автоматически закрыт.  
   
 > [!NOTE]  
->  Если процедура sp_cursoropen выполнена успешно, то отправляются возвращаемые параметры RPC и результирующий набор с информацией в виде столбцов TDS (сообщения 0xa0 и 0xa1). В случае ошибки отправляется одно или несколько сообщений TDS об ошибках. В обоих случаях данные строк не возвращается и *сделать* количество сообщений, будут равны нулю. Если используется версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ранее 7.0, то возвращаются сообщения 0xa0 и 0xa1 (стандартные для инструкции SELECT) с потоками токенов 0xa5 и 0xa4. Если используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0, то возвращается сообщение 0x81 (стандартное для инструкций SELECT) с потоками токенов 0xa5 и 0xa4.  
+>  Если процедура sp_cursoropen выполнена успешно, возвращаемые параметры RPC и результирующий набор с сведения о форматировании столбцов TDS (сообщения 0xa0 и 0xa1 сообщений) отправляются. В случае ошибки отправляется одно или несколько сообщений TDS об ошибках. В обоих случаях данные строк не возвращается и *сделать* количество сообщений, будут равны нулю. Если используется версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ранее 7.0, то возвращаются сообщения 0xa0 и 0xa1 (стандартные для инструкции SELECT) с потоками токенов 0xa5 и 0xa4. Если используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0, то возвращается сообщение 0x81 (стандартное для инструкций SELECT) с потоками токенов 0xa5 и 0xa4.  
   
 ## <a name="remarks"></a>Примечания  
   
@@ -207,7 +207,7 @@ sp_cursoropen cursor OUTPUT, stmt
 ### <a name="boundparam-parameter"></a>Параметр bound_param  
  Все параметры после пятого передаются в план инструкции как входные. Первый параметр должен представлять собой строку следующего вида:  
   
- *{Тип данных имени локальной переменной} [,... n].*  
+ *{Тип данных имени локальной переменной} [,... n]*  
   
  Последующие параметры используются для передачи значений должен быть замещен *имя локальной переменной* в инструкции.  
   

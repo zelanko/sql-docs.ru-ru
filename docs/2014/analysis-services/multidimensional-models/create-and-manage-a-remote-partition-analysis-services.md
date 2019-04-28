@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b5f451a9948315a32710bdb1755bb95a5b8d3b98
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700578"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Создание удаленной секции и управление ей (Analysis Services)
   При секционировании группы мер можно указать в качестве хранилища секции базу данных-получатель на удаленном экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -63,11 +63,11 @@ ms.locfileid: "53356641"
   
 #### <a name="create-and-deploy-a-secondary-database-in-ssdt"></a>Создайте и разверните базу данных-получатель (в SSDT)  
   
-1.  На подчиненном сервере: Создайте новый проект служб Analysis Services для базы данных хранилища.  
+1.  На подчиненном сервере: Создайте новый проект служб Analysis Services для хранения базы данных.  
   
 2.  На подчиненном сервере: В обозревателе решений создайте новый источник данных, указывающий на базу данных куба db-master. Используйте **собственный поставщик OLE DB или поставщик Microsoft OLE DB для служб Analysis Services 11.0**.  
   
-3.  На подчиненном сервере: Разверните решение.  
+3.  На подчиненном сервере: Развертывание решения.  
   
 #### <a name="enable-features-in-ssms"></a>Включите функции (в среде SSMS)  
   

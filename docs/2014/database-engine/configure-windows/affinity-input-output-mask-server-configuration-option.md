@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 65e412a3dfdfc71931e6af4d449c5be88ae351b7
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813682"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>Параметр конфигурации сервера "affinity Input-Output mask"
   Для одновременного выполнения множества задач операционные системы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 и Windows Server 2003 иногда распределяют потоки обработки задач по различным процессорам. Хотя с точки зрения операционной системы эти действия эффективны, они могут снизить производительность [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при больших системных нагрузках, так как данные кэша каждого процессора будут постоянно обновляться. В этих условиях назначение определенного потока задач процессору может улучшить производительность, поскольку количество перезагрузок процессора будет снижено; такая связь между определенным потоком задач и процессором называется соответствием процессоров.  

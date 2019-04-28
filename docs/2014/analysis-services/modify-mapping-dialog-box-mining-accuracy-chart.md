@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81a5b8439de7ac3af004846448767d5ca5cfe9ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703189"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>Диалоговое окно «Изменение сопоставления» (диаграмма точности интеллектуального анализа данных)
   Диалоговое окно **Изменение сопоставления** позволяет изменить способ присоединения входных столбцов к столбцам модели интеллектуального анализа данных. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] сопоставит столбцы автоматически на основании столбца имя и тип данных, но можно использовать это диалоговое окно для изменения сопоставления столбцов. При внесении изменений необходимо убедиться, что тип данных и тип содержимого в столбцах внешнего источника данных соответствует столбцам в проверяемой модели интеллектуального анализа данных.  
@@ -33,6 +33,6 @@ ms.locfileid: "48106484"
 ## <a name="see-also"></a>См. также  
  [Конструктор диаграммы точности интеллектуального &#40;интеллектуального анализа данных&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Тестирование и проверка задачи и инструкции по &#40;интеллектуального анализа данных&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Тестирование и проверка &#40;интеллектуального анализа данных&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Тестирование и проверка (интеллектуальный анализ данных)](data-mining/testing-and-validation-data-mining.md)  
   
   

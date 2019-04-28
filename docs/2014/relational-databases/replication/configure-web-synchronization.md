@@ -24,11 +24,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721659"
 ---
 # <a name="configure-web-synchronization"></a>Настроить веб-синхронизацию
   Поддержка веб-синхронизации для репликации слиянием [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет производить репликацию данных по протоколу HTTPS через Интернет. Чтобы использовать веб-синхронизацию, сначала необходимо выполнить следующие действия.  

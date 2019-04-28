@@ -1,5 +1,5 @@
 ---
-title: Выбор типа диаграммы точности и задание параметров диаграммы | Документы Microsoft
+title: Выбор типа диаграммы точности и задание параметров диаграммы | Документация Майкрософт
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1a2ab960740e15091868103113bcdaed0ef8833c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724963"
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>Выбор типа диаграммы точности и задание параметров диаграммы
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляет несколько методов определения точности моделей интеллектуального анализа данных. Тип диаграммы точности, которую можно создать для каждой модели или структуры, зависит от следующих факторов.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предусмотрено несколько методов определения точности моделей интеллектуального анализа данных. Тип диаграммы точности, которую можно создать для каждой модели или структуры, зависит от следующих факторов.  
   
 -   Тип алгоритма, который использовался для создания модели.  
   

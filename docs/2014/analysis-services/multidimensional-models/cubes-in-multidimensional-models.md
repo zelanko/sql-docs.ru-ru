@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adb21e802d437f7cd1e2d805f90c4525d6f9e8ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700130"
 ---
 # <a name="cubes-in-multidimensional-models"></a>Кубы в многомерных моделях
   Куб является многомерной структурой, содержащей сведения для анализа. Главными составными элементами куба являются измерения и меры. Измерения определяют структуру куба, используемую для срезов данных, а меры предоставляют статистически вычисленные числовые значения, представляющие интерес для конечного пользователя. В качестве логической структуры куб позволяет клиентскому приложению получать значения мер в виде ячеек куба, определенных для всех возможных суммарных значений. Ячейка куба определяется пересечением элементов измерения и содержит статистически вычисляемые значения мер в этом конкретном пересечении.  
@@ -38,9 +38,9 @@ ms.locfileid: "48103964"
 |Меры и их группы|[Создание мер и групп мер в многомерных моделях](create-measures-and-measure-groups-in-multidimensional-models.md)|  
 |Секции|[Секции в многомерных моделях](partitions-in-multidimensional-models.md)|  
 |перспективами|[Перспективы в многомерных моделях](perspectives-in-multidimensional-models.md)|  
-|Иерархии|[Создание определяемых пользователем иерархий](user-defined-hierarchies-create.md)|  
+|Иерархии|[Создание пользовательских иерархий](user-defined-hierarchies-create.md)|  
 |Действия|[Действия в многомерных моделях](actions-in-multidimensional-models.md)|  
-|Ключевые показатели эффективности (KPI)|[Ключевые показатели эффективности &#40;ключевые показатели эффективности&#41; в многомерных моделях](key-performance-indicators-kpis-in-multidimensional-models.md)|  
+|Ключевые показатели эффективности (KPI)|[Ключевые показатели эффективности в многомерных моделях](key-performance-indicators-kpis-in-multidimensional-models.md)|  
 |Вычисления|[Вычисления в многомерных моделях](calculations-in-multidimensional-models.md)|  
 |Translations|[Переводы в многомерных моделях](translations-in-multidimensional-models-analysis-services.md)|  
   

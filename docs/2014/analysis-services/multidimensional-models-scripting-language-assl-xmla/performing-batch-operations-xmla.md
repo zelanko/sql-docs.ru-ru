@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bd661506dbb792eb55194c61d7284d619e63a5f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702065"
 ---
 # <a name="performing-batch-operations-xmla"></a>Выполнение пакетных операций (XMLA)
   Можно использовать [пакета](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla) в XML для аналитики (XMLA) для выполнения нескольких команд XMLA при помощи только одного команда [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) метод. Несколько команд, содержащихся в команде `Batch`, можно выполнить либо как одну транзакцию, либо как отдельные транзакции для каждой команды, последовательно или параллельно. Можно также указать out-привязок и другие свойства в `Batch` команды для обработки нескольких [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объектов.  

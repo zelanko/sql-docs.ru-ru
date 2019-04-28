@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 245ae929b9a267f06b675b9380760f3db6067d1c
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809058"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Запуск SQL Server в однопользовательском режиме
   При определенных обстоятельствах экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нужно запустить в однопользовательском режиме (используется **параметр запуска -m**). Например, может понадобиться изменить параметры конфигурации сервера, восстановить поврежденную базу данных master или другую системную базу данных. Для обоих этих действий необходим запуск экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме.  
@@ -55,7 +55,7 @@ ms.locfileid: "52640895"
   
 4.  Уточните у администратора кластера или с помощью консоли управления отказоустойчивым кластером, остается ли ресурс [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме «вне сети».  
   
-5.  Теперь подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью приведенной ниже команды и выполните необходимую операцию: SQLCMD -E -S\<servername >.  
+5.  Подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] теперь следующую команду и выполните необходимую операцию: SQLCMD -E -S\<servername >.  
   
 6.  После завершения операции закройте командную строку и переведите SQL и другие ресурсы обратно в режим «в сети», обратившись к администратору кластера.  
   

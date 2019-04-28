@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac916f4ae4c62eff9207ec0891e3f45d5e46bd97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726915"
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>Создание отчета Power View с многомерными источниками данных
   Создание отчета Power View на основе многомерной модели не отличается от создания отчета на основе книги PowerPivot или табличной модели служб Analysis Services. Отчеты Power View создаются из файла соединения с источником данных отчета (RSDS) в библиотеке SharePoint. Дополнительные сведения о создании RSDS см. в разделе [Create a Report Data Source](create-a-report-data-source.md).  

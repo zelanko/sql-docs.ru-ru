@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714721"
 ---
 # <a name="filter-a-trace"></a>Фильтрация трассировки
   Фильтры ограничивают накопление событий в трассировке. Если фильтр не установлен, то на выход трассировки возвращаются все события выбранных классов событий. Например, ограничение в трассировке по отслеживанию только имен определенных пользователей Windows сокращает объем выходных данных до объема данных только для этих пользователей.  

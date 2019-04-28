@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 444c67248da2ade5db322fcf6630f6230e46c032
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62698712"
 ---
 # <a name="custom-rollup-operators-in-parent-child-dimensions"></a>Операторы пользовательской свертки в измерениях типа «родители-потомки»
   Операторы пользовательской свертки предоставляют простой способ контроля свертки значений элементов в значения родительских элементов в иерархии типа «родители-потомки». В измерении, содержащем связь типа «родители-потомки», указывается столбец, содержащий унарные операторы, указывающие свертку для всех невычисляемых элементов родительского атрибута. Унарный оператор применяется к элементам каждый раз, когда оцениваются значения родительских элементов.  
@@ -36,6 +36,6 @@ ms.locfileid: "48054225"
   
 ## <a name="see-also"></a>См. также  
  [Определение нестандартных формул элементов](attribute-properties-define-custom-member-formulas.md)   
- [Унарные операторы в измерениях типа "родители-потомки"](parent-child-dimension-attributes-unary-operators.md)  
+ [Унарные операторы в измерениях типа «родители-потомки»](parent-child-dimension-attributes-unary-operators.md)  
   
   

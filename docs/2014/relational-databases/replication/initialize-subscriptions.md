@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f781dd3c1a9a98857c8e2e72e82792632fdb17c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721144"
 ---
 # <a name="initialize-subscriptions"></a>Инициализировать подписки
   Необходимо инициализировать подписчиков, прежде чем они смогут начать прием реплицируемых данных. Начальный набор данных не требуется, но подписчик должен, по крайней мере, обладать схемой для каждого реплицируемого объекта и всеми таблицами метаданных и процедурами, необходимыми для репликации.  
@@ -32,7 +32,7 @@ ms.locfileid: "52794476"
 >  Мастер может запросить соединение с распространителем, чтобы запустить соответствующее задание для агента распространителя или агента слияния.  
   
 ## <a name="see-also"></a>См. также  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Создание подписки по запросу](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Инициализация подписки](initialize-a-subscription.md)   
  [Подписка на публикации](subscribe-to-publications.md)  

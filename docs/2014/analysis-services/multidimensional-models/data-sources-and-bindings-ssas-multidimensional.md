@@ -35,11 +35,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60b3e29ae94c4dcf5d136bcc01bf291a9a6118fe
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700087"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Источники данных и привязки (многомерные службы SSAS)
   Кубы, измерения и другие объекты служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно привязать к источнику данных. Источником данных может быть один из следующих объектов.  
@@ -67,7 +67,7 @@ ms.locfileid: "52510536"
 |Целочисленный|32-разрядное целое число со знаком. Этот тип данных соответствует типу данных Int32 в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_I4 в OLE DB.|  
 |Один|Число с плавающей запятой одинарной точности в диапазоне от -3,40E +38 до 3,40E +38. Этот тип данных соответствует типу данных Single в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_R4 в OLE DB.|  
 |SmallInt|16-разрядное целое число со знаком. Этот тип данных соответствует типу данных Int16 в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_I2 в OLE DB.|  
-|TinyInt|8-разрядное число со знаком. Этот тип данных соответствует типу данных SByte в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_I1 в OLE DB.<br /><br /> Примечание. Если источник данных содержит поля, имеющие тип данных tinyint, и свойство AutoIncrement имеет значение True, то в представлении источника данных они будут преобразованы в целые числа.|  
+|TinyInt|8-разрядное число со знаком. Этот тип данных соответствует типу данных SByte в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_I1 в OLE DB.<br /><br /> Примечание. Если источник данных содержит поля, имеющие тип данных tinyint, и свойство AutoIncrement имеет значение True, то они будут преобразованы в целые числа в представлении источника данных.|  
 |UnsignedBigInt|64-разрядное целое число без знака. Этот тип данных соответствует типу данных UInt64 в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_UI8 в OLE DB.|  
 |UnsignedInt|32-разрядное целое число без знака. Этот тип данных соответствует типу данных UInt32 в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_UI4 в OLE DB.|  
 |UnsignedSmallInt|16-разрядное целое число без знака. Этот тип данных соответствует типу данных UInt16 в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_UI2 в OLE DB.|  

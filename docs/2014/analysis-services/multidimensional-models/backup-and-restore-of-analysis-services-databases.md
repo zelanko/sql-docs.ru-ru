@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a74de18847236ca36677678da130aca87c128262
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701787"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Создание и восстановление резервных копий баз данных служб Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предусмотрено резервное копирование и восстановление базы данных и ее объектов на определенный момент времени. Резервное копирование и восстановление подходит для переноса баз данных на модернизированные серверы, между серверами или для развертывания базы данных на рабочем сервере. Если есть ценные данные, но пока нет плана резервного копирования, то необходимо как можно скорее разработать и реализовать такой план на случай последующего восстановления данных.  

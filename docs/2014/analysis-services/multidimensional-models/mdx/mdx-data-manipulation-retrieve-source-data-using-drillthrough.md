@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93a9f80d25619aafe6a8a46f7baa7b7106b93351
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699865"
 ---
 # <a name="using-drillthrough-to-retrieve-source-data-mdx"></a>Извлечение данных из источника с помощью функции DRILLTHROUGH (многомерные выражения)
   В языке многомерных выражений для извлечения набора строк из источника данных для ячейки куба используется инструкция [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough).  
@@ -29,7 +29,7 @@ ms.locfileid: "48076224"
  Чтобы в кубе можно было выполнять инструкцию `DRILLTHROUGH`, для него следует определить действие детализации. Чтобы определить действие детализации, в конструкторе кубов в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]на панели **Действия** выберите на панели инструментов пункт **Создать действие детализации**. Для действия детализации укажите имя, цель и условие действия, а также столбцы, возвращаемые инструкцией `DRILLTHROUGH`.  
   
 ## <a name="drillthrough-statement-syntax"></a>Синтаксис инструкции DRILLTHROUGH  
- `DRILLTHROUGH` Инструкция использует следующий синтаксис:  
+ Синтаксис инструкции `DRILLTHROUGH`:  
   
 ```  
 <drillthrough> ::= DRILLTHROUGH [<Max_Rows>] [<First_Rowset>] <MDX select> [<Return_Columns>]  
@@ -38,7 +38,7 @@ ms.locfileid: "48076224"
    <Return_Columns> ::= RETURN <member or attribute> [, <member or attribute>]  
 ```  
   
- `SELECT` Предложение определяет ячейку куба, содержащую исходные данные должны быть получены. Это предложение `SELECT` эквивалентно обычной инструкции многомерных выражений `SELECT`, за исключением того, что в предложении `SELECT` на каждой оси можно указывать только один элемент. Если на оси указано несколько элементов, возникает ошибка.  
+ Предложение `SELECT` определяет ячейку куба, содержащую извлекаемые исходные данные. Это предложение `SELECT` эквивалентно обычной инструкции многомерных выражений `SELECT`, за исключением того, что в предложении `SELECT` на каждой оси можно указывать только один элемент. Если на оси указано несколько элементов, возникает ошибка.  
   
  Синтаксическая конструкция `<Max_Rows>` задает максимальное количество строк в каждом возвращаемом наборе строк. Если поставщик OLE DB, используемый для соединения с источником данных, не поддерживает параметр `DBPROP_MAXROWS`, аргумент `<Max_Rows>` не учитывается.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48076224"
  Синтаксическая конструкция `<Return_Columns>` определяет возвращаемые столбцы базовой базы данных.  
   
 ## <a name="drillthrough-statement-example"></a>Пример инструкции DRILLTHROUGH  
- В следующем примере показано использование `DRILLTHROUGH` инструкции. В этом примере инструкция DRILLTHROUGH обращается с запросом к концевым элементам измерений Store, Product и Time вдоль измерения Stores (ось среза) и возвращает группу мер Department, идентификатор отдела и имя сотрудника.  
+ В следующем примере иллюстрируется использование инструкции `DRILLTHROUGH`. В этом примере инструкция DRILLTHROUGH обращается с запросом к концевым элементам измерений Store, Product и Time вдоль измерения Stores (ось среза) и возвращает группу мер Department, идентификатор отдела и имя сотрудника.  
   
 ```  
 DRILLTHROUGH  
@@ -57,6 +57,6 @@ RETURN [Department MeasureGroup].[Department Id], [Employee].[First Name]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Обработка данных &#40;многомерных Выражений&#41;](mdx-data-manipulation-manipulating-data.md)  
+ [Манипулирование данными (многомерные выражения)](mdx-data-manipulation-manipulating-data.md)  
   
   

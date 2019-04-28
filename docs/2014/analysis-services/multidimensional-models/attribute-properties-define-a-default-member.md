@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49120d810eac622d75a8d3691654b65b78d0d570
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703779"
 ---
 # <a name="define-a-default-member"></a>Определение элемента по умолчанию
   Элемент по умолчанию иерархии атрибута предназначен для вычисления выражений в том случае, если иерархия атрибутов не включена в запрос. Этот элемент не обрабатывается, если запрос содержит иерархию атрибута или пользовательскую иерархию, в которых присутствует атрибут, являющийся источником иерархии атрибута. В этом случае используется элемент, указанный в запросе.  

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4c789ea6cececcfacbc428fda393c1c13684765
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704857"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>Диалоговое окно «Свойства аспекта», вкладка «Общие»
   Это диалоговое окно предназначено для просмотра свойств аспекта управления на основе политик. Каждый аспект может быть применен к одному или нескольким типам целевого объекта, например к серверу, базе данных или таблице. Используйте эту страницу, чтобы просмотреть целевые типы, связанные с данным аспектом. Свойства аспекта определяются во время его создания и их нельзя изменить на этой странице.  

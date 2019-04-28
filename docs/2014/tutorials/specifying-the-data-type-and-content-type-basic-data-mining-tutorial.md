@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 583a6fda2dbb4698405a3d69f33955531b3c1c10
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720053"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>Указание типа данных и типа содержимого (учебник по интеллектуальному анализу данных — начальный уровень)
   Теперь, после выбора столбцов для построения структуры и обучения моделей, необходимо внести изменения в данные по умолчанию и в типы содержимого, заданные мастером.  

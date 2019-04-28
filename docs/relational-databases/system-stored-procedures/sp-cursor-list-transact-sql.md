@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c6cef14177e871f35ccd5c84af4a2b28e35aff5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724049"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  [ @cursor_return=] *cursor_variable_name*выходных данных  
  Имя объявленной переменной курсора. *cursor_variable_name* — **курсор**, не имеет значения по умолчанию. Этот аргумент является динамическим, прокручиваемым и предназначенным только для чтения.  
   
- [ @cursor_scope=] *cursor_scope*  
+ [ @cursor_scope= ] *cursor_scope*  
  Определяет, какие уровни курсоров включаются в отчет. *cursor_scope* — **int**, по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 90d3e9e50ef16e51e9669a92cfb53f5f734c83ef
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827917"
 ---
 # <a name="connect-components-in-a-data-flow"></a>Соединение компонентов в потоке данных
   Эта процедура описывает способ соединения выхода компонентов в потоке данных с другими компонентами того же потока.  

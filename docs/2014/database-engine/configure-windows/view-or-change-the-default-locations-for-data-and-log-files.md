@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06d17a4feaec0db614f61fb7761b37ea415efc24
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808715"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files-sql-server-management-studio"></a>Просмотр или изменение расположения по умолчанию для файлов данных и журнала (среда SQL Server Management Studio)
   Данный раздел описывает функции просмотра и изменения расположения по умолчанию для новых файлов данных и файлов журнала в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Путь по умолчанию берется из реестра. После изменения местоположения все новые базы данных, созданные в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , будут использовать это местоположение, если не указано другое местоположение.  
@@ -54,7 +54,7 @@ ms.locfileid: "52639322"
   
 3.  В области **Места хранения, используемые базой данных по умолчанию**можно просмотреть текущие расположения, используемые по умолчанию для новых файлов данных и файлов журнала. Чтобы изменить местоположение по умолчанию, введите новый путь по умолчанию в поле **Данные** или **Журнал** или нажмите кнопку обзора, перейдите к нужному пути и выберите его.  
   
-##  <a name="FollowUp"></a> Дальнейшие действия: После изменения местоположения по умолчанию  
+##  <a name="FollowUp"></a> Дальнейшие действия. После изменения расположений по умолчанию  
  Необходимо остановить и запустить службу SQL Server для завершения изменения.  
   
 ## <a name="see-also"></a>См. также  

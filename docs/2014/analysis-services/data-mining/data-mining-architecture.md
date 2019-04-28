@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64e7e0fe7a8f68ce9248c02e3a59f34e1b7f65bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722656"
 ---
 # <a name="data-mining-architecture"></a>Архитектора интеллектуального анализа данных
   В этом разделе описывается архитектура решений интеллектуального анализа данных, размещаемых на экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. В подразделах этого раздела описывается логическая и физическая архитектура экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , который поддерживает интеллектуальный анализ данных, а также приводятся сведения о клиентах, поставщиках и протоколах, которые используются для связи с серверами интеллектуального анализа данных и работы с объектами интеллектуального анализа как локально, так и удаленно.  
@@ -34,15 +34,15 @@ ms.locfileid: "48121054"
  Дополнительные сведения о реализации интеллектуального анализа данных в решении бизнес-аналитики см. в разделе «Руководства к решениям» в библиотеке MSDN.  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Логическая архитектура &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [Логическая архитектура (службы Analysis Services — интеллектуальный анализ данных)](logical-architecture-analysis-services-data-mining.md)  
   
- [Физическая архитектура &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [Физическая архитектура (службы Analysis Services — интеллектуальный анализ данных)](physical-architecture-analysis-services-data-mining.md)  
   
  [Службы интеллектуального анализа данных и источники данных](data-mining-services-and-data-sources.md)  
   
  [Управление решениями и объектами интеллектуального анализа данных](management-of-data-mining-solutions-and-objects.md)  
   
- [Общие сведения о безопасности &#40;интеллектуального анализа данных&#41;](security-overview-data-mining.md)  
+ [Общие сведения о безопасности (интеллектуальный анализ данных)](security-overview-data-mining.md)  
   
 ## <a name="see-also"></a>См. также  
  [Программирование многомерной модели](../multidimensional-models/multidimensional-model-programming.md)   

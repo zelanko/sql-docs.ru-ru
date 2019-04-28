@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721555"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Настройка сервера IIS 7 для веб-синхронизации
   В этой статье описывается процесс настройки вручную служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) версии 7 и более поздней, которые будут использоваться при веб-синхронизации для репликации слиянием. 
@@ -28,7 +28,7 @@ ms.locfileid: "52819336"
  Обзор процесса настройки см. в статье [Настройка веб-синхронизации](configure-web-synchronization.md).  
   
 > [!IMPORTANT]  
->  Убедитесь в том, что приложение использует только [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] или более позднюю версию, а более ранние версии [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] на IIS-сервере не установлены. Более ранние версии платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] могут вызывать ошибки, например: «Недопустимый формат сообщения во время веб-синхронизации. Убедитесь в том, что компоненты репликации на веб-сервере настроены правильно».  
+>  Убедитесь в том, что приложение использует только [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] или более позднюю версию, а более ранние версии [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] на IIS-сервере не установлены. Более ранние версии [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] может привести к ошибкам, такие как: «Недопустимый формат сообщения во время веб-синхронизации. Убедитесь в том, что компоненты репликации на веб-сервере настроены правильно».  
   
  Чтобы использовать веб-синхронизацию, необходимо настроить службы IIS 7, выполнив следующие шаги. Каждый шаг подробно описан в данном разделе.  
   

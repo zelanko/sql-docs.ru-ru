@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0cbd4465152e3f862d53dec66bd7888c70b393a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728090"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>Вкладка «Диаграмма точности прогнозов» (представление диаграммы точности интеллектуального анализа данных)
   Панель **Диаграмма точности прогнозов** позволяет просмотреть диаграмму, в которой сравниваются все выбранные модели интеллектуального анализа данных, имеющиеся в выбранной структуре интеллектуального анализа данных.  
@@ -46,6 +46,6 @@ ms.locfileid: "48168134"
 ## <a name="see-also"></a>См. также  
  [Конструктор диаграммы точности интеллектуального &#40;интеллектуального анализа данных&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Тестирование и проверка задачи и инструкции по &#40;интеллектуального анализа данных&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Тестирование и проверка &#40;интеллектуального анализа данных&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Тестирование и проверка (интеллектуальный анализ данных)](data-mining/testing-and-validation-data-mining.md)  
   
   

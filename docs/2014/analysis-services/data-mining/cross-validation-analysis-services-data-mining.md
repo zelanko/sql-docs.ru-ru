@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 550914167b005803e7ff39ebbcf3727f7b6b0b8c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722777"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Перекрестная проверка (службы Analysis Services — интеллектуальный анализ данных)
   *Перекрестная проверка* — стандартное средство в аналитике, она очень важна при разработке и настройке моделей интеллектуального анализа данных. После создания структуры интеллектуального анализа данных и связанных моделей интеллектуального анализа данных можно использовать перекрестную проверку, чтобы оценить допустимость модели.  У перекрестной проверки есть следующие применения.  

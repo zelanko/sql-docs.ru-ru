@@ -1,5 +1,5 @@
 ---
-title: Пример Переименование &lt;строки&gt; элемент | Документация Майкрософт
+title: Пример Переименование элемента &lt;row&gt; | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01b835696c5e64182cffb72aea80d53b3c3bb776
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704905"
 ---
-# <a name="example-renaming-the-ltrowgt-element"></a>Пример Переименование &lt;строки&gt; элемент
+# <a name="example-renaming-the-ltrowgt-element"></a>Пример Переименование элемента &lt;row&gt;
   Для каждой строки результирующего набора режим RAW создает элемент `<row>`. При необходимости можно задать другое имя для этого элемента путем определения дополнительного аргумента в режиме RAW, как показано в данном запросе. Запрос возвращает элемент <`ProductModel`> для каждой строки из набора строк.  
   
 ## <a name="example"></a>Пример  

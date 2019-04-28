@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57ad0c696eb8c81a029160417a7d847d6e0600ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711828"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login, класс событий
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает событие класса **Audit Database Mirroring Login** для составления отчета о сообщениях аудита, связанных с безопасностью транспорта при зеркальном отображении базы данных.  
@@ -50,7 +50,7 @@ ms.locfileid: "52776487"
 |**SPID**|**int**|Идентификатор процесса сервера, который [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присвоил процессу, связанному с клиентом.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если доступно.|14|Да|  
 |**Состояние**|**int**|Указывает место в исходном коде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которое вызвало это событие. Каждое место, которое может вызвать это событие, обозначается отдельным кодом состояния. Сотрудник службы технической поддержки Microsoft может использовать этот код состояния для обнаружения участка, выполнение которого привело к событию.|30|Нет|  
-|**TargetUserName**|**nvarchar**|Состояние входа. Может принимать одно из следующих значений.<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> ошибка<br /><br /> <br /><br /> Примечание. ISC = Initiate Security Context (инициирование контекста безопасности). ASC = Accept Security Context (принятие контекста безопасности).|39|Нет|  
+|**TargetUserName**|**nvarchar**|Состояние входа. Может принимать одно из следующих значений.<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> ошибка<br /><br /> <br /><br /> Примечание. ISC = инициировать контекст безопасности. ASC = Accept Security Context (принятие контекста безопасности).|39|Нет|  
 |**TransactionID**|**bigint**|Назначенный системой идентификатор транзакции.|4|Нет|  
   
  Следующая таблица содержит список значений подклассов события для этого класса событий.  
