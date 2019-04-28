@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9287cc028357c8db8e37242153e9815398b11858
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699400"
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>Основные принципы запросов многомерных выражений (службы Analysis Services)
   В языке многомерных выражений можно обращаться с запросом к таким многомерным объектам, как кубы, и возвращать многомерные наборы ячеек, содержащие данные куба. Этот раздел и его подразделы содержат общие сведения о многомерных запросах.  

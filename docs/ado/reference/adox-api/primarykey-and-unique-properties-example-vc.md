@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7d8943249f6780de448e4eb22dcd3088dbc55bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709813"
 ---
 # <a name="primarykey-and-unique-properties-example-vc"></a>Примеры свойств PrimaryKey и Unique (Visual C++)
 В этом примере показано [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) и [Unique](../../../ado/reference/adox-api/unique-property-adox.md) свойства [индекс](../../../ado/reference/adox-api/index-object-adox.md). Код создает новую таблицу с двумя столбцами. **PrimaryKey** и **Unique** свойства используются, чтобы один столбец первичного ключа, для которого не допускаются повторяющиеся значения.  

@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4697af2463587fcca244a291be0c8dace2907cc8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732845"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Задачи и решения по тестированию и проверке (интеллектуальный анализ данных)
   Вкладку **Диаграмма точности интеллектуального анализа** конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] можно использовать для сравнения точности прогнозов моделей интеллектуального анализа данных в структуре интеллектуального анализа.  
@@ -46,7 +46,7 @@ ms.locfileid: "48143294"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Создание диаграммы точности прогнозов, диаграммы роста прибыли или матрицы классификации](create-a-lift-chart-profit-chart-or-classification-matrix.md)  
+-   [Создать диаграмму точности прогнозов, диаграмму роста прибыли или матрицу классификации](create-a-lift-chart-profit-chart-or-classification-matrix.md)  
   
 -   [Создание отчета перекрестной проверки](create-a-cross-validation-report.md)  
   

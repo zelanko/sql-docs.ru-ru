@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea756a960ee5030d974ef38a3ceeb1b72d1ad703
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703280"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Наблюдение за экземпляром служб Analysis Services
   Производительность служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно отслеживать при помощи системного монитора [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , который иногда называют приложением **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] предоставляет возможность создания трассировок и управления ими, а также анализа и воспроизведения результатов трассировок. Системный монитор сообщает состояние сервера, индексированное посредством определенных счетчиков, которые описаны в следующем разделе.  

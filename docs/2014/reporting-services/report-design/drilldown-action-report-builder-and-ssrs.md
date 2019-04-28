@@ -42,11 +42,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0b939882e5021eb08925f974bad71d1720c6eff7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62825316"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>Действие детализации (построитель отчетов и службы SSRS)
   Размещение значков плюса и минуса в текстовом поле позволяет пользователям интерактивно скрывать и отображать элементы. Это действие называется *углубленной детализацией* . Для таблицы или матрицы можно показывать или скрывать статические строки и столбцы или строки и столбцы, связанные с группами.  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 119ff7b3bb46e0ea05f1e3cbe87f497132468713
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62869376"
 ---
 # <a name="mssqlserver1904"></a>MSSQLSERVER_1904
     
@@ -38,7 +38,7 @@ ms.locfileid: "48064254"
 ## <a name="user-action"></a>Действие пользователя  
  Измените список ключевых столбцов, чтобы он включал не больше указанного максимального количества столбцов.  
   
- Применительно к некластеризованным индексам рассмотрите возможность использования предложения INCLUDE в инструкции CREATE INDEX для добавления столбцов к индексу в качестве неключевых столбцов. Этот метод позволяет предотвратить превышение текущего ограничения на размер индекса, которое составляет максимум 16 ключевых столбцов. Дополнительные сведения см. в статье [Создание индексов с включенными столбцами](../indexes/create-indexes-with-included-columns.md).  
+ Применительно к некластеризованным индексам рассмотрите возможность использования предложения INCLUDE в инструкции CREATE INDEX для добавления столбцов к индексу в качестве неключевых столбцов. Этот метод позволяет предотвратить превышение текущего ограничения на размер индекса, которое составляет максимум 16 ключевых столбцов. Дополнительные сведения см. в статье [Create Indexes with Included Columns](../indexes/create-indexes-with-included-columns.md).  
   
 ## <a name="see-also"></a>См. также  
  [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)   

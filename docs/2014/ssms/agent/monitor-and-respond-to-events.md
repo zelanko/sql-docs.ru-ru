@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bb16e6e7fc21d3b399d63d2e833eb846d62278ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720135"
 ---
 # <a name="monitor-and-respond-to-events"></a>Наблюдение за событиями и их обработка
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент производит мониторинг и автоматическую обработку различных *событий*: сообщений от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], некоторых условий производительности и событий инструментария управления Windows (WMI).  
@@ -38,7 +38,7 @@ ms.locfileid: "52822008"
  [Создание пользовательского события](create-a-user-defined-event.md)  
  Содержит сведения о том, как создать событие, отличное от стандартного для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Операторы](operators.md)  
+ [Инструкции](operators.md)  
  Содержит сведения о создании псевдонимов для администраторов, которым агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рассылает уведомления при успешном или неуспешном выполнении заданий.  
   
 ## <a name="about-monitoring-and-responding-to-events"></a>О мониторинге и обработке событий  

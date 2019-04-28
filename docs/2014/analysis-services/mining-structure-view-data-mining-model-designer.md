@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25de20d08a477eb4a1bcb1d98f17ad7c179f356d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702935"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>Вид структуры интеллектуального анализа (конструктор модели интеллектуального анализа данных)
   Представления для вида **Структура интеллектуального анализа данных** используются для изменения структур интеллектуального анализа и обработки структуры интеллектуального анализа данных, и всех связанных с ней моделей интеллектуального анализа данных.  
@@ -33,7 +33,7 @@ ms.locfileid: "48144584"
   
 ## <a name="see-also"></a>См. также  
  [Представление моделей интеллектуального &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-models-view-data-mining-model-designer.md)   
- [Просмотра моделей интеллектуального анализа &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Средства просмотра моделей интеллектуального анализа данных (конструктор моделей интеллектуального анализа данных)](mining-model-viewers-data-mining-model-designer.md)   
  [Конструктор диаграммы точности интеллектуального &#40;интеллектуального анализа данных&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Построитель прогнозирующих запросов &#40;интеллектуального анализа данных&#41;](prediction-query-builder-data-mining.md)  
   

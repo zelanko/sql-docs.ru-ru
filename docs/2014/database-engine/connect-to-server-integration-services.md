@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64c565c45288de157a3ba4c6c367ae7f8849dfee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808708"
 ---
 # <a name="connect-to-server-integration-services"></a>Соединение с сервером (службы Integration Services)
   Используйте это диалоговое окно для просмотра или задания параметров при соединении со службами [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "48096264"
 > [!NOTE]  
 >  Не используйте  *\<servername >*\\*\<instancename >*, так как [!INCLUDE[ssIS](../includes/ssis-md.md)] не поддерживают несколько экземпляров на одном компьютере.  
   
- **Проверка подлинности**  
+ **Authentication**  
  Для служб [!INCLUDE[msCoName](../includes/msconame-md.md)] доступна только проверка подлинности [!INCLUDE[ssIS](../includes/ssis-md.md)]Windows. Режим проверки подлинности Windows позволяет подключаться с учетной записью Windows.  
   
  **Имя пользователя**  

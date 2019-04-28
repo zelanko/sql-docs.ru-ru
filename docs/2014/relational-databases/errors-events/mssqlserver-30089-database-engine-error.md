@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f452da206afd91c2db49d32600c34397ef7b2609
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62868779"
 ---
 # <a name="mssqlserver30089"></a>MSSQLSERVER_30089
     
@@ -45,6 +45,6 @@ ms.locfileid: "48212764"
 ## <a name="see-also"></a>См. также  
  [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
  [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [Настройка поисковых фильтров и управление ими](../search/configure-and-manage-filters-for-search.md)  
+ [Настройка и управление фильтрами для поиска](../search/configure-and-manage-filters-for-search.md)  
   
   

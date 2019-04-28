@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00181ef49b8656065aea9382d21df0b16cff187a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703763"
 ---
 # <a name="remove-an-attribute-from-a-dimension"></a>Удаление атрибута из измерения
   Чтобы удалить атрибут из измерения в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], щелкните его правой кнопкой мыши на панели **Атрибуты**, размещенной на вкладке **Структура измерения** конструктора измерений в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], а затем выберите **Удалить**. В диалоговом окне **Удаление объектов** нажмите кнопку **ОК**. Благодаря этим действиям, атрибут из измерения будет удален, но представление источника данных для измерения останется неизменным.  

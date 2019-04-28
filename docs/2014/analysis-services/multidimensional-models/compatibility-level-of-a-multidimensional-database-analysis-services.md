@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fcf32b558d34340d727a357136884b8d6530887b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701060"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>Задание уровня совместимости для многомерной базы данных (службы Analysis Services)
   В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]свойство "уровень совместимости" базы данных определяет ее функциональный уровень. Уровень совместимости уникален для каждого типа модели. Например, уровень совместимости `1100` имеет разное значение в зависимости от того, является ли базы данных многомерной или табличной.  

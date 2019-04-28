@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eeaebadd43fe1969ae1c728f8e2f8284ddf7f7ac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822213"
 ---
-# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Упражнение 1. Создание базы знаний и доменов
+# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Упражнение 1. Создание базы знаний и домены
   В этой задаче вы создадите **поставщики** знаний и домены, используется для очистки и сопоставления данных, чтобы удалить повторяющиеся значения.  
   
 1.  Запустите **Data Quality Client**. Нажмите кнопку **запустить**, пункты **все программы**, нажмите кнопку **Microsoft SQL Server 2012**, нажмите кнопку **служб Data Quality Services**, а затем нажмите кнопку  **Клиент Data Quality**.  

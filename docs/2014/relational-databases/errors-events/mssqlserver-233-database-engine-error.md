@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4e18ce61356947754423cfb878cf47f90534b40f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62869224"
 ---
 # <a name="mssqlserver233"></a>MSSQLSERVER_233
     
@@ -32,7 +32,7 @@ ms.locfileid: "48146914"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя||  
-|Текст сообщения|Соединение с сервером было успешно установлено, но при входе в систему произошла ошибка. (Поставщик: поставщик общей памяти, ошибка: 0 — На другом конце канала отсутствует процесс.) (Microsoft SQL Server, ошибка: 233)|  
+|Текст сообщения|Соединение с сервером было успешно установлено, но при входе в систему произошла ошибка. (поставщик: Поставщик общей памяти, ошибка: 0 — На другом конце канала отсутствует процесс.) (Microsoft SQL Server, ошибка: 233)|  
   
 ## <a name="explanation"></a>Объяснение  
  Клиенту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не удается установить соединение с сервером. Эта ошибка может возникать, если на сервере не настроен прием удаленных соединений.  

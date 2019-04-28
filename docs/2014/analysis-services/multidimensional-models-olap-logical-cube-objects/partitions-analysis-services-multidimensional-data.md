@@ -24,11 +24,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 47a7b4c2b11a6d17a52af20aef71ee13863ea29c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702621"
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>Секции (службы Analysis Services — многомерные данные)
   Секция — это контейнер для части данных группы мер. В запросах многомерных выражений секции не различаются; все запросы отражают полное содержимое группы мер независимо от того, сколько секций определено для этой группы мер. Содержимое данных секции определяется путем связывания запроса с секцией, а также с помощью выражения выделения среза.  

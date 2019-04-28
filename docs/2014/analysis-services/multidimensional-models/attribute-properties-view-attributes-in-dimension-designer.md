@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e7e5ea7af394905d9f5efcb27dce4d102fb5d3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727535"
 ---
 # <a name="view-attributes-in-dimension-designer"></a>Просмотр атрибутов в конструкторе измерений
   Атрибуты создаются на объектах измерений. Просматривать и настраивать атрибуты можно с помощью конструктора измерений в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Панель **Атрибуты** на вкладке **Структура измерения** конструктора измерений содержит список атрибутов в измерении. Эта панель используется для добавления, удаления или настройки атрибутов. Можно также выбрать атрибуты и использовать их как уровень в новой иерархии или добавить как уровень в существующую иерархию.  
@@ -38,7 +38,7 @@ ms.locfileid: "48180044"
 |Значок|Использование атрибута|  
 |----------|---------------------|  
 |![Значок атрибута](../media/as-icon-attribute.gif "значок атрибута")|Regular или AccountType|  
-|![Значок ключевого атрибута](../media/as-icon-key-attribute.gif "значок ключа атрибута")|Key|  
+|![Значок ключевого атрибута](../media/as-icon-key-attribute.gif "значок ключа атрибута")|Ключ|  
 |![Значок родительского атрибута](../media/as-icon-parent-attribute.gif "значок родительского атрибута")|Parent|  
   
 ## <a name="see-also"></a>См. также  

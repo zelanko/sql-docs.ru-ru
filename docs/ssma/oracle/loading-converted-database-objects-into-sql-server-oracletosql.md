@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 57d66d48591304d5481cb86c7418ed0ac27051db
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62818929"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>Загрузка преобразованных объектов базы данных в SQL Server (OracleToSQL)
 После преобразования схем Oracle для SQL Server, можно загрузить результирующие объекты базы данных в SQL Server. Можно иметь SSMA создания объектов, или можно внести в скрипт объекты и запускать сценарии самостоятельно. Кроме того SSMA позволяет обновлять целевые метаданные с фактическое содержимое базы данных SQL Server.  

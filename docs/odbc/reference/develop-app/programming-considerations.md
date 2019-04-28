@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f7c22eea63e00126eb674532736071ed39aa9a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861670"
 ---
 # <a name="programming-considerations"></a>Замечания по программированию
 В этом разделе кратко рассматриваются различные аспекты для написания приложения ODBC и драйверами.  

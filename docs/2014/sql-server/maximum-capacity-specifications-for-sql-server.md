@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49e86c8b47a3a0de48a0138d96cec22d585901c6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711449"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Задание максимальной вместимости SQL Server
   В следующих таблицах приведены максимальные размеры и количество для различных объектов, определяемых в компонентах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Чтобы перейти к таблице, относящейся к технологии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , щелкните ссылку на нее:  
@@ -86,7 +86,7 @@ ms.locfileid: "52771777"
 |Вложенных запросов|32|32|  
 |Уровней вложенных триггеров|32|32|  
 |Количество некластеризованных индексов на одну таблицу|999|999|  
-|Количество уникальных выражений в предложении GROUP BY, если присутствует одна из следующих конструкций: CUBE, ROLLUP, GROUPING SETS, WITH CUBE, WITH ROLLUP|32|32|  
+|Количество уникальных выражений в предложении GROUP BY при наличии любой из следующих: CUBE, ROLLUP, GROUPING SETS, WITH CUBE, WITH ROLLUP|32|32|  
 |Количество группирующих наборов, сформированных операторами в предложении GROUP BY|4096|4096|  
 |Параметров на одну хранимую процедуру|2100|2100|  
 |Параметров на одну определяемую пользователем функцию|2100|2100|  

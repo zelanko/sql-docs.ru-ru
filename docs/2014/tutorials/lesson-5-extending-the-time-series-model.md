@@ -1,5 +1,5 @@
 ---
-title: Занятие 5. Расширение временных рядов модели | Документация Майкрософт
+title: 'Занятие 5.: Расширение временных рядов модели | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822078"
 ---
-# <a name="lesson-5-extending-the-time-series-model"></a>Занятие 5. Расширение модели временных рядов
+# <a name="lesson-5-extending-the-time-series-model"></a>Занятие 5.: Расширение временных рядов модели
   В выпуске [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise в модель временных рядов можно добавлять новые данные и автоматически встраивать в эту модель новые данные. Добавить новые данные в модель интеллектуального анализа данных временных рядов можно одним из двух способов.  
   
 -   Использовать PREDICTION JOIN для соединения данных из внешнего источника с обучающими данными.  

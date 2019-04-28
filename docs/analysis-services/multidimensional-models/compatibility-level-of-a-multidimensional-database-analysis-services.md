@@ -1,5 +1,5 @@
 ---
-title: Уровень совместимости многомерной базы данных (службы Analysis Services) | Документы Microsoft
+title: Уровень совместимости многомерной базы данных (службы Analysis Services) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d8f11bb819073ef054582a55620b553865469466
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62825899"
 ---
 # <a name="compatibility-level-of-a-multidimensional-database-analysis-services"></a>Уровень совместимости многомерной базы данных (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34024231"
   
  Для многомерной базы данных допустимы следующие значения для свойства **CompatibilityLevel** :  
   
-|Настройка|Описание|  
+|Параметр|Описание|  
 |-------------|-----------------|  
 |**1050**|Это значение недоступно в скриптах и инструментах, но соответствует базам данных, созданным в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]или [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Любая база данных, в которой значение **CompatibilityLevel** явным образом не задано, неявно работает на уровне **1050** .|  
 |**1100**|Это значение по умолчанию для новых баз данных, созданных в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. К тому же его можно задавать для баз данных, созданных в более ранних версиях служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , чтобы разрешить использование функций, которые поддерживаются только на этом уровне совместимости, а именно увеличенного хранилища строк для атрибутов измерений или мер числа различных объектов, содержащих строковые данные.<br /><br /> Базы данных, для которых **CompatibilityLevel** имеет значение **1100** , получают дополнительное свойство, **StringStoresCompatibilityLevel**. Оно позволяет выбрать другое хранилище строк для измерений и секций.|  

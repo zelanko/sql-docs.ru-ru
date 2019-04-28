@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7fdd72ba8d23a58e26ec8db00596be6399bef729
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722456"
 ---
 # <a name="edit-the-data-source-view-used-for-a-mining-structure"></a>Изменение представления источников данных, используемого для структуры интеллектуального анализа данных
   В конструкторе интеллектуального анализа данных можно открыть представление источника данных, а затем изменить его.  

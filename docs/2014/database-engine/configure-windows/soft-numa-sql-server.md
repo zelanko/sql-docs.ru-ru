@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6ad0e30c0db83daf7e0cae4f7353d1f0a96a96d9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809046"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>Настройка использования программной архитектуры NUMA (SQL Server) в SQL Server
 Современные процессоры имеют несколько или множество ядер на одном сокете. Каждый сокет обычно представлен одним узлом NUMA. Ядро базы данных SQL Server секционирует разные внутренние структуры и потоки служб в узлы NUMA. С процессорами, содержащий 10 и более ядрами на сокет, с помощью программного обеспечения NUMA (soft-NUMA) для разделения узлами оборудования NUMA, обычно повышает производительность и масштабируемость.   

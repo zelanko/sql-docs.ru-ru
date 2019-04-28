@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e183c1e25aa81b05c897674fc5c9f4a2dd8d0c5b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62718135"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Создать диаграмму точности прогнозов, диаграмму роста прибыли или матрицу классификации
   Диаграмма точности для модели интеллектуального анализа данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создается в пять простых шагов.  

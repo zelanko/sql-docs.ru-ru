@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec3b57b08460b834868581ac8872ac3c78a38bbe
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727815"
 ---
 # <a name="dimension-relationships"></a>Связи измерений
   Использование измерений определяет связи между измерением куба и группами мер в нем. Измерение куба представляет собой экземпляр измерения базы данных, используемый в конкретном кубе. Куб может содержать (и часто содержит) измерения, которые не связаны непосредственно с группой мер, но которые могут быть косвенно связаны с ней через другое измерение или группу мер. При добавлении базы данных измерения или группы мер в кубе, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] пытается определить использование измерения, анализируя связи между таблицами измерений и таблицами фактов в представлении источника данных куба, а связи между атрибутами в измерениях. Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] автоматически устанавливают параметры использования измерений для связей, которые они смогли обнаружить.  

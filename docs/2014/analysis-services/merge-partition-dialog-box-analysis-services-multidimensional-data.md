@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c18ffdaa50c6ee48896f2d2e6e65db46c8fe3349
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727910"
 ---
 # <a name="merge-partition-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Слияние секций» (службы Analysis Services — многомерные данные)
   Диалоговое окно **Слияние секций** в среде **SQL Server Management Studio** позволяет объединять секции для группы мер в кубе. Для вывода диалогового окна **Слияние секций** щелкните правой кнопкой мыши папку "Секции" в **обозревателе объектов** и выберите команду **Слияние секций** из контекстного меню.  
@@ -27,7 +27,7 @@ ms.locfileid: "48117434"
  **Server**  
  Выберите имя экземпляра службы Analysis Services, содержащего нужную секцию.  
   
- **Название**  
+ **Name**  
  Выберите имя существующей секции для использования в качестве секции назначения.  
   
  **Папка**  
@@ -48,7 +48,7 @@ ms.locfileid: "48117434"
 |**Последняя обработка**|Выводит дату и время последней обработки исходной секции.|  
   
 ## <a name="see-also"></a>См. также  
- [Секции &#40;службы Analysis Services — многомерные данные&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Слияние секций в службах Analysis Services &#40;службы SSAS — многомерные&#41;](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Секции (службы Analysis Services — многомерные данные)](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Объединение секций в службах Analysis Services (службы SSAS — многомерные данные)](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

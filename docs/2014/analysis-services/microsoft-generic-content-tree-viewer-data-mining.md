@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5df092bc94bcab3dcfd2909807eb650e696e9be0
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727929"
 ---
 # <a name="microsoft-generic-content-tree-viewer-data-mining"></a>Средство просмотра деревьев содержимого общего вида (Майкрософт) (интеллектуальный анализ данных)
   **Средство просмотра деревьев содержимого общего вида (Майкрософт)** отображает подробные сведения о содержимом модели интеллектуального анализа данных в стандартизованном табличном формате HTML. Это представление полезно, так как показывает фундаментальную структуру модели, а также сообщает подробности о коэффициентах, распределении значений и многом другом.  

@@ -1,5 +1,5 @@
 ---
-title: Занятие 2. Подготовка папки моментальных снимков | Документация Майкрософт
+title: Урок 2. Подготовка папки моментальных снимков | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721023"
 ---
-# <a name="lesson-2-preparing-the-snapshot-folder"></a>Занятие 2. Подготовка папки моментальных снимков
+# <a name="lesson-2-preparing-the-snapshot-folder"></a>Урок 2. Подготовка папки моментальных снимков
   На этом занятии можно научиться настраивать папку моментальных снимков для создания и хранения моментального снимка публикации.  
   
 ### <a name="to-create-a-share-for-the-snapshot-folder-and-assign-permissions"></a>Создание ресурса для папки моментальных снимков и настройка разрешений  
@@ -51,7 +51,7 @@ ms.locfileid: "54128494"
 10. Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно **Свойства repldata** , и создайте ресурс repldata.  
   
 ## <a name="next-steps"></a>Следующие шаги  
- Настройка ресурса папки моментальных снимков выполнена успешно. Далее предстоит настроить распространение. См. в разделе [занятие 3: Настройка распространения](lesson-3-configuring-distribution.md).  
+ Настройка ресурса папки моментальных снимков выполнена успешно. Далее предстоит настроить распространение. См. [Занятие 3. Настройка распространения](lesson-3-configuring-distribution.md).  
   
 ## <a name="see-also"></a>См. также  
  [Организация безопасности папки моментальных снимков](security/secure-the-snapshot-folder.md)  

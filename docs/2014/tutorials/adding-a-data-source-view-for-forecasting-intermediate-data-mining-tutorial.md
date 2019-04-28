@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f60ea2b2a642cf9435ed8366c42e43abb927e426
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823134"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>Добавление представления источников данных для прогнозирования (учебник по интеллектуальному анализу данных — средний уровень)
   В этой задаче добавляется новое представление источника данных, которое будет использоваться в сценарии прогнозирования. Модель прогнозирования требует, чтобы данные содержали столбец, который может быть использован для идентификации шагов временных рядов. Если планируется анализировать несколько рядов данных, то все ряды должны заканчиваться на одном и том же шаге даты или времени.  

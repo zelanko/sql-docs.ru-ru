@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c2691573c6a3ca0ae860339177780f707c5277b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726999"
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>Создание и выполнение скрипта многомерных выражений SQL Server Data Tools
   Чтобы создать и запустить скрипт многомерных выражений в службах  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], необходимо находиться в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] с уже созданным и готовым к редактированию кубом.  
@@ -36,8 +36,8 @@ ms.locfileid: "48218614"
 4.  Чтобы запустить скрипт многомерных выражений, разверните и обработайте куб с вновь внесенными изменениями скрипта многомерных выражений.  
   
 ## <a name="see-also"></a>См. также  
- [Базовый скрипт многомерных Выражений &#40;многомерных Выражений&#41;](mdx/the-basic-mdx-script-mdx.md)   
- [Основные принципы создания скриптов многомерных Выражений &#40;служб Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [Инструкции сценариев многомерных Выражений &#40;многомерных Выражений&#41;](/sql/mdx/mdx-scripting-statements-mdx)  
+ [Базовый скрипт многомерных выражений (многомерные выражения)](mdx/the-basic-mdx-script-mdx.md)   
+ [Основные принципы создания скриптов многомерных выражений (службы Analysis Services)](mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Инструкции для создания скриптов многомерных выражений (многомерные выражения)](/sql/mdx/mdx-scripting-statements-mdx)  
   
   

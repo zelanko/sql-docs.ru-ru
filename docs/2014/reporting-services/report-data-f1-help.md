@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9979c894d4dc74fc3f9c2783bdc7a46131f94e5c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62697707"
 ---
 # <a name="report-data-f1-help"></a>Справка F1 по данным отчета
   Этот раздел содержит информацию о параметрах, которые можно задавать для источников данных, общих источников данных и баз данных, а также о конструкторах запросов, доступных в конструкторах отчетов.  

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecc6eefcf6fea5ee815190e1d4204a00cca60f0a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701398"
 ---
 # <a name="define-attribute-relationships"></a>Определение связей атрибутов
   В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]атрибуты играют роль строительных блоков, из которых создается измерение. Измерение содержит набор атрибутов, организованных на основе связей между ними.  

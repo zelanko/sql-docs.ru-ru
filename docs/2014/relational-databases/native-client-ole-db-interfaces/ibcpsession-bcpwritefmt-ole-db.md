@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b4022f14c1f39984b1feaa0a45adef2154c1d0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62826846"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
   Записывает в файл форматирования сведения о формате каждого из столбцов.  
@@ -37,9 +37,9 @@ const wchar_t *pwszFormatFile);
 ## <a name="remarks"></a>Примечания  
  Файл форматирования определяет формат данных, содержащихся в файле данных, создаваемом при массовом копировании. Вызовы методов [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) и [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) определяют формат файла данных. Метод **BCPWriteFmt** сохраняет это определение в файле, на который ссылается аргумент pwszFormatFile.  
   
- Метод **BCPWriteFmt** может сохранять файлы форматирования в формате xml или текстовом формате. Это должно определяться с помощью параметра управления BCP_OPTION_XML методом [IBCPSession::BCPControl](ibcpsession-bcpcontrol-ole-db.md).  
+ Метод **BCPWriteFmt** может сохранять файлы форматирования в формате xml или текстовом формате. Это должно определяться при помощи параметра управления BCP_OPTION_XML методом [IBCPSession::BCPControl](ibcpsession-bcpcontrol-ole-db.md) .  
   
- Для загрузки сохраненного файла форматирования используется метод [IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md).  
+ Для загрузки сохраненного файла форматирования используется метод [IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md) .  
   
 ## <a name="arguments"></a>Аргументы  
  *pwszFormatFile*[in]  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3db82b977725bdcb615ec67bd66e530b38f385c5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822453"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>Расширенные прогнозы временных рядов (учебник по интеллектуальному анализу данных — средний уровень)
   В ходе изучения модели прогнозирования было показано, что хотя продажи в большинстве регионов и следуют схожему шаблону, некоторые регионы и некоторые модели, например модель M200 в Тихоокеанском регионе, имеют очень разные тренды. Это не удивляет, поскольку различия между регионами не являются редкостью и могут быть вызваны многими факторами, включая маркетинговые акции, неточные отчеты или геополитические события.  
@@ -152,7 +152,7 @@ ms.locfileid: "56032805"
   
      **Источник данных**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Выбор таблиц и представлений**: не выбирайте никаких таблиц  
+     **Выбор таблиц и представлений**: Не выбирайте никаких таблиц  
   
      **Имя**: `T1000 Pacific Region`  
   

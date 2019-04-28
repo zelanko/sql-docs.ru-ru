@@ -1,5 +1,5 @@
 ---
-title: EXCEPT (многомерные Выражения) | Документы Microsoft
+title: EXCEPT (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 03d9b5140eb0cbf9d868e43c65213efe917994a9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690881"
 ---
 # <a name="except-mdx-function"></a>EXCEPT, функция (многомерные Выражения)
 
@@ -59,6 +59,6 @@ WHERE
   
 ## <a name="see-also"></a>См. также  
  [- &#40;За исключением&#41; &#40;многомерных Выражений&#41;](../mdx/except-mdx-operator.md)   
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

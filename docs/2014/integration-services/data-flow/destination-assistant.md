@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 33cb6954cab5777799809b3897a10a8d339d8991
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827286"
 ---
 # <a name="destination-assistant"></a>Помощник назначения
   Компонент помощника назначения помогает создавать компонент назначения и диспетчер соединений. Компонент расположен в разделе **Избранное** панели инструментов служб SSIS.  

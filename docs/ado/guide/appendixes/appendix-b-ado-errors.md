@@ -1,5 +1,5 @@
 ---
-title: Приложение б. ошибки объектов ADO | Документация Майкрософт
+title: Приложение Б. Ошибки ADO | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 392b14a057c42091acb6b92e0c64d41d94b8eb10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719927"
 ---
-# <a name="appendix-b-ado-error-codes"></a>Приложение б. коды ошибок объектов ADO
+# <a name="appendix-b-ado-error-codes"></a>Приложение Б. Коды ошибок объектов ADO
 См. Дополнительные сведения о сообщениях конкретную ошибку в следующих разделах:
 
 -   [Коды ошибок объектов ADO](../../../ado/guide/appendixes/ado-error-codes.md)

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8b561e7bfd1e791dee90d8076fef68f81d2ca8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722026"
 ---
 # <a name="manually-edit-a-prediction-query"></a>Изменение прогнозирующего запроса вручную
   После проектирования запроса с использованием построителя прогнозирующих запросов можно изменить этот запрос, переключившись в представление «Текст запроса» на вкладке **Прогноз модели интеллектуального анализа данных** конструктора интеллектуального анализа данных. В нижней части экрана появится текстовый редактор, отображающий запрос, созданный построителем запросов.  
@@ -45,7 +45,7 @@ ms.locfileid: "48065544"
   
 ## <a name="see-also"></a>См. также  
  [Запросы интеллектуального анализа данных](data-mining-queries.md)   
- [Построитель прогнозирующих запросов &#40;интеллектуального анализа данных&#41;](../prediction-query-builder-data-mining.md)   
- [Занятие 6: Создание прогнозов и работа с &#40;учебник интеллектуального анализа данных&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Построитель прогнозирующих запросов (интеллектуальный анализ данных)](../prediction-query-builder-data-mining.md)   
+ [Занятие 6. Создание прогнозов и работа с &#40;учебник интеллектуального анализа данных&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

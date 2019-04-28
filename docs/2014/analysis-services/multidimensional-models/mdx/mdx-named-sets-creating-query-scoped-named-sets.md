@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbf5ac9c4bbb313ee6e7c608a64409273ef11c0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725378"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>Создание именованных наборов с областью действия запроса (многомерные выражения)
   Если именованный набор нужен только в одном запросе многомерных выражений, этот набор можно определить с помощью ключевого слова WITH. Именованный набор, созданный с использованием ключевого слова WITH, уничтожается после выполнения запроса.  
@@ -94,7 +94,7 @@ FROM Sales
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Инструкция SELECT &#40;многомерных Выражений&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [Создание с областью действия сеанса именованных наборов с &#40;многомерных Выражений&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [Инструкция SELECT (многомерные выражения)](/sql/mdx/mdx-data-manipulation-select)   
+ [Создание именованных наборов с областью действия сеанса (многомерные выражения)](mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

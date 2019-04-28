@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5efb31c8fa537c1483635128755aa20fc9c898db
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705133"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Диалоговое окно «Выполнение политик», страница «Результаты выполнения»
   С помощью этого диалогового окна можно просмотреть результаты оценки политики и применить политики управления на основе политик к набору целей, которые не соответствуют этим политикам.  
@@ -29,7 +29,7 @@ ms.locfileid: "52798326"
  **Результаты: Сообщение**  
  Ссылка на сведения, если произошла ошибка.  
   
- **Данные целевого объекта: Сервер**  
+ **Данные целевого объекта: Server**  
  Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , по отношению к которому оцениваются политики.  
   
  **Данные целевого объекта: Целевой объект**  

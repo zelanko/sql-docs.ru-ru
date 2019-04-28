@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812952"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>Модернизация или обновление серверов группы доступности при минимальных значениях времени простоя и потери данных
   При обновлении или модернизации экземпляров сервера с переходом от SQL Server 2012 на пакет обновления или более новую версию можно сократить время простоя для группы доступности лишь до единственного перехода на другой ресурс вручную путем последовательного обновления или модернизации. Обновления версий SQL Server принято называть последовательной модернизацией, а обновления текущих версий SQL Server с применением исправлений или пакетов обновления именуются последовательным обновлением.  

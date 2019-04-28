@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bbeceddb135649223be29956d0796e76fd5d57f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62816603"
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>Возвращаемые значения SQLGetInfo для текстовых файлов
 В следующей таблице перечислены языка C# defines для *fInfoType* аргумент и соответствующие значения, возвращаемые методом **SQLGetInfo**. Эти сведения можно получить, передав перечисленных языка C# defines **SQLGetInfo** в *fInfoType* аргумент. Дополнительные сведения о значениях, возвращаемых **SQLGetInfo**, см. в разделе [Справочник по программированию ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
@@ -87,7 +87,7 @@ ms.locfileid: "47676702"
 |SQL_DATABASE_NAME|Текущий каталог базы данных|  
 |SQL_DATETIME_LITERALS|0|  
 |SQL_DBMS_NAME|«ТЕКСТ»|  
-|SQL_DBMS_VER|ISAM: текст<br /><br /> Версия: 1.0<br /><br /> Формат номера версии: 01.00.0000|  
+|SQL_DBMS_VER|ISAM: Text<br /><br /> Версия: 1.0<br /><br /> Формат номера версии: 01.00.0000|  
 |SQL_DDL_INDEX|0|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
@@ -142,7 +142,7 @@ ms.locfileid: "47676702"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Несколько значений|  
-|SQL_ODBC_SAG_CLI_ СООТВЕТСТВИЯ|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|Из диспетчера драйверов|  
 |SQL_OJ_CAPABILITIES|Несколько значений|  

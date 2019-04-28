@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90b72b0e60550b0b6bdf89e0ba39e6089c5d8de2
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727750"
 ---
 # <a name="debugging-stored-procedures"></a>Отладка хранимых процедур
   Хранимые процедуры служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в реальности представляют собой библиотеки CLR или COM (обычно DLL), написанные на языке C# (или на любом другом языке CLR или COM). Таким образом, отладка хранимой процедуры практически аналогична отладке любого другого приложения в среде отладки Visual Studio. Отладка хранимых процедур в среде разработки Visual Studio производится с использованием интегрированных функций отладки. Они позволяют осуществлять остановку процедуры в определенных местах, контролировать значения в памяти и регистрах, изменять переменные, следить за трафиком сообщений и подробно анализировать работу кода.  

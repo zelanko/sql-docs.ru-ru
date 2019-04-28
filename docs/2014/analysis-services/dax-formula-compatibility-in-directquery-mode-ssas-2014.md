@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6da2326c22d0581f59c2307abf018a54915857a5
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732476"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>Совместимость формул DAX в режиме DirectQuery (SSAS 2014)
 Язык выражений анализа данных (DAX) может использоваться для создания мер и других пользовательских формул для использования в табличным моделям Analysis Services, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] модели данных в книгах Excel и модели данных Power BI Desktop. В большинстве аспектов модели, создаваемые в этих средах, идентичны, и можно использовать меры, связи и ключевые показатели эффективности, и т.д. Тем не менее если Analysis Services табличной модели и развернуть его в режиме DirectQuery, существуют некоторые ограничения на формулы, которые можно использовать. В этом разделе представлен обзор эти различия, перечисляет функции, которые не поддерживаются в SQL Server 2014 Analysis Services tabulars модели с уровнем совместимости 1100 или 1103 и в режиме DirectQuery, и перечисляет функции, которые поддерживаются, но может возвращать разные результаты.  

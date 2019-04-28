@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13dd6e87b6442b8c1b908ceb73d1e5c7f135308c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815344"
 ---
 # <a name="contained-databases-with-always-on-availability-groups-sql-server"></a>Автономные базы данных с группами доступности AlwaysOn (SQL Server)
   Этот раздел содержит сведения об использовании автономной базы данных с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -39,6 +39,6 @@ ms.locfileid: "48107554"
   
 ## <a name="see-also"></a>См. также  
  [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Contained Databases](../../../relational-databases/databases/contained-databases.md)  
+ [Автономные базы данных](../../../relational-databases/databases/contained-databases.md)  
   
   

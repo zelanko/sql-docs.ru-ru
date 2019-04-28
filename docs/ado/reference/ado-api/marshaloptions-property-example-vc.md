@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5180ab3b7b633916f51b4a35a5128dc017cd751
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864005"
 ---
 # <a name="marshaloptions-property-example-vc"></a>Пример свойства MarshalOptions (Visual C++)
 В этом примере используется [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) свойство, чтобы указать, какие строки отправляются на сервер - все или только изменения строк.  

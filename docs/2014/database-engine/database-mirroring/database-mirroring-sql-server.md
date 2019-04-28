@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97a3132099a6007f99f6a0119fc3df63a58b9b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807934"
 ---
 # <a name="database-mirroring-sql-server"></a>Зеркальное отображение базы данных (SQL Server)
     
@@ -111,7 +111,7 @@ ms.locfileid: "48154944"
  После запуска или возобновления сеанса зеркального отображения процесс, при помощи которого собранные на основном сервере записи журнала основной базы данных отправляются на зеркальный сервер, который как можно быстрее записывает их на диск, чтобы приблизиться к состоянию основного сервера.  
   
  Безопасность транзакций  
- Характерное для зеркального отображения свойство базы данных, которое определяет, будет работать сеанс зеркального отображения базы данных в синхронном или асинхронном режиме. Предусмотрены два уровня безопасности: FULL и OFF.  
+ Характерное для зеркального отображения свойство базы данных, которое определяет, будет работать сеанс зеркального отображения базы данных в синхронном или асинхронном режиме. Существует два уровня безопасности: FULL и OFF.  
   
  Свидетель  
  Дополнительный экземпляр SQL Server для использования только в режиме повышенной безопасности, который позволяет зеркальному серверу узнавать время начала автоматического перехода на другой ресурс. В отличие от двух партнеров по обеспечению отработки отказа, следящий сервер не обслуживает базу данных. Его единственная функция заключается в поддержке автоматического перехода на другой ресурс.  
@@ -329,7 +329,7 @@ ms.locfileid: "48154944"
  [Конечная точка зеркального отображения базы данных (SQL Server)](the-database-mirroring-endpoint-sql-server.md)   
  [Автоматическое восстановление страниц &#40;для групп доступности и зеркального отображения базы данных&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Диагностика конфигурации зеркального отображения базы данных (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Зеркальное отображение базы данных: взаимодействие и сосуществание (SQL Server)](database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Зеркальное отображение базы данных: взаимодействие и совместимость &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Предварительные условия, ограничения и рекомендации по зеркальному отображению базы данных](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   
  [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Сведения о доставке журналов (SQL Server)](../log-shipping/about-log-shipping-sql-server.md)  

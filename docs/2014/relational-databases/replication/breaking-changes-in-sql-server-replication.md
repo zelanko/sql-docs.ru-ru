@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd0b8c5e1957a6cf803fbb741d6b9bad5bbb9613
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721776"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>Критические изменения репликации в SQL Server
   В этом разделе описываются критические изменения в репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эти изменения могут нарушать работу приложений, скриптов или механизмов, основанных на более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При обновлении могут возникнуть следующие проблемы. Дополнительные сведения см. в разделе [Использование помощника по обновлению для подготовки к обновлениям](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  

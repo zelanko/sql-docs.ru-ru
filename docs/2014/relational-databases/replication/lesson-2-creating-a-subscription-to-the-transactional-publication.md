@@ -1,5 +1,5 @@
 ---
-title: Занятие 2. Создание подписки на публикацию транзакций | Документация Майкрософт
+title: Урок 2. Создание подписки на публикацию транзакций | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721085"
 ---
-# <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Занятие 2. Создание подписки на публикацию транзакций
+# <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Урок 2. Создание подписки на публикацию транзакций
   На этом занятии с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]будет создана подписка. Это занятие требует, что выполнены предыдущем занятии [занятии 1: Публикация данных с помощью репликации транзакций](lesson-1-publishing-data-using-transactional-replication.md).  
   
 ### <a name="to-create-the-subscription"></a>Создание подписки  
@@ -65,7 +65,7 @@ ms.locfileid: "54129394"
 3.  Если подписка не отображается под публикацией **AdvWorksProductTrans**, нажмите клавишу F5 для обновления списка.  
   
 ## <a name="next-steps"></a>Следующие шаги  
- Создание подписки на публикацию транзакций успешно завершено. Ввиду того, что агент распространителя для этой подписки постоянно запущен, подписка инициализируется при создании. Далее необходимо использовать трассировочные токены, чтобы проверить выполнение репликации изменений и определить задержку. См. в разделе [занятие 3: Проверка подписки и измерение задержки](lesson-3-validating-the-subscription-and-measuring-latency.md).  
+ Создание подписки на публикацию транзакций успешно завершено. Ввиду того, что агент распространителя для этой подписки постоянно запущен, подписка инициализируется при создании. Далее необходимо использовать трассировочные токены, чтобы проверить выполнение репликации изменений и определить задержку. См. [Занятие 3. Проверка подписки и измерение задержки](lesson-3-validating-the-subscription-and-measuring-latency.md).  
   
 ## <a name="see-also"></a>См. также  
  [Инициализация подписки с помощью моментального снимка](initialize-a-subscription-with-a-snapshot.md)   

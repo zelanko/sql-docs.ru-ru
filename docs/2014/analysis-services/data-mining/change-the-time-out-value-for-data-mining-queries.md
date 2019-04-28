@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11480432c19f84d58c5804927c3c22ac31be4342
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711818"
 ---
 # <a name="change-the-time-out-value-for-data-mining-queries"></a>изменить значение времени ожидания для запросов интеллектуального анализа данных
   При построении диаграммы точности прогнозов или выполнении прогнозирующего запроса иногда может потребоваться много времени для создания всех данных, необходимых для формирования прогноза. Чтобы предотвратить возможность завершения запроса из-за истечения времени ожидания, можно изменить значение, управляющее тем, как долго сервер служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ожидает завершения запроса.  
@@ -36,7 +36,7 @@ ms.locfileid: "48077468"
 3.  В текстовое поле **Время ожидания запроса** введите значение в секундах.  
   
 ## <a name="see-also"></a>См. также  
- [Задачи запроса интеллектуального анализа данных и инструкции по](data-mining-query-tasks-and-how-tos.md)   
+ [Задачи и инструкции по запросам интеллектуального анализа данных](data-mining-query-tasks-and-how-tos.md)   
  [Запросы интеллектуального анализа данных](data-mining-queries.md)  
   
   

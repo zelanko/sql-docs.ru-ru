@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b985d915d3d7bb6b3130ccb63a400f314fa05a38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62860916"
 ---
 # <a name="sysservereventnotifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47646492"
 |**object_id**|**int**|Идентификационный номер объекта. Уникален в пределах **master** базы данных.|  
 |**parent_class**|**tinyint**|Класс родителя. Всегда равен 100 = Сервер.|  
 |**parent_class_desc**|**nvarchar(60)**|Описание класса родителя. Всегда SERVER.|  
-|**parent_ID**|**int**|Всегда равно 0.|  
+|**parent_id**|**int**|Всегда равно 0.|  
 |**create_date**|**datetime**|Дата создания.|  
 |**modify_date**|**datetime**|Дата последнего изменения объекта с помощью инструкции ALTER.|  
 |**service_name**|**nvarchar(256)**|Имя целевой службы, куда посылается уведомление.|  

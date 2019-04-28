@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: fe1e59c83160b3a6e5f21c9713d023b451e27dd5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704743"
 ---
 # <a name="reserved-words-master-data-services"></a>Зарезервированные слова (службы Master Data Services)
 
@@ -59,7 +59,7 @@ ms.locfileid: "52752116"
   
 -   **LastChgUserName**  
   
--   **Название**  
+-   **Name**  
   
 -   **EnterDTM**  
   
@@ -80,7 +80,7 @@ ms.locfileid: "52752116"
 ##  <a name="members"></a> Члены  
  Для элементов нельзя использовать **MDMMemberStatus**, **MDMUnused**или **ROOT** в качестве значения атрибута **Code** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о службах Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
   

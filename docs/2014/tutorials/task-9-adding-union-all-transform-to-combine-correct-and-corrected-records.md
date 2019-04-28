@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2a3861e7de24e4fdf43ea11cf447b448c9d17b48
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866437"
 ---
-# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>Задача 9. Добавление преобразования «Объединить все» для объединения допустимых и исправленных записей
+# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>Задача 9. Добавление объединить все преобразования для объединения верных и исправленных записей
   В этой задаче в поток данных добавляется преобразование «Объединить все». Преобразование «Объединить все» объединяет несколько входов в один выход. В вашем сценарии это преобразование позволяет объединить верные и исправленные записи в одном потоке.  
   
 1.  Перетащите **объединить все** преобразования из **распространенных** раздел **область элементов служб SSIS** для **потока данных** вкладку и поместите его под **Выбор верных и исправленных записей**.  

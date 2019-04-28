@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a43ac39754a5f5e83e664a2e21be904c2525bd53
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866385"
 ---
-# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Задача 7. Добавление преобразования «Очистка DQS» в поток данных
+# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Задача 7. Преобразование очистки DQS, добавление к потоку данных
   В этой задаче вы добавите преобразование очистки DQS в поток данных для очистки входных данных о поставщиках с помощью служб DQS. См. в разделе **[преобразование очистки DQS](https://msdn.microsoft.com/library/ee677619.aspx)** Дополнительные сведения о преобразовании.  
   
 1.  Щелкните правой кнопкой мыши **очистки DQS** в **потока данных** , а щелкните **Переименовать**. Тип **Очистка данных о поставщике**и нажмите клавишу **ввод**.  

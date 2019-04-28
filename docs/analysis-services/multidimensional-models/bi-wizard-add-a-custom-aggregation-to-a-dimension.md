@@ -1,5 +1,5 @@
 ---
-title: Добавление нестандартного статистического выражения к измерению | Документы Microsoft
+title: Добавление нестандартного статистического выражения к измерению | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbe5c4a1f043ccc8e7f442213b8b024a3920663e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717381"
 ---
-# <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>Мастер бизнес-Аналитики — Добавление нестандартного статистического выражения к измерению
+# <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>Мастер бизнес-аналитики — добавление нестандартного статистического выражения к измерению
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Добавление нестандартного статистического выражения к кубу или измерению для статистических вычислений, связанных с элементом измерения, производится по умолчанию другим унарным оператором. Эта функция задает в таблице измерения столбец унарных операторов, который определяет сдвиг элементов в иерархии родители-потомки. Унарный оператор действует в качестве родительского атрибута в иерархии родители-потомки.  
   

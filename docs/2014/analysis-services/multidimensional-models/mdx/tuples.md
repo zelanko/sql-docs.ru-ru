@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8e6565d727ad6fd3f11e2332f53e32fb2c942687
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725168"
 ---
 # <a name="tuples"></a>Кортежи
   Кортеж однозначно определяет срез данных в кубе. Кортеж формируется сочетанием элементов измерения, если отсутствует несколько элементов, принадлежащих одной иерархии.  
@@ -64,9 +64,9 @@ FROM [Adventure Works]
 >  На элемент атрибута можно ссылаться по имени или ключу. В предыдущем примере ссылку [CY 2004] можно изменить на &[2004].  
   
 ## <a name="see-also"></a>См. также  
- [Основные понятия многомерных выражений &#40;служб Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [Пространство куба](cube-space.md)   
+ [Основные понятия многомерных выражений (службы Analysis Services)](../key-concepts-in-mdx-analysis-services.md)   
+ [Cube Space](cube-space.md)   
  [Автоматическая проверка существования](autoexists.md)   
- [Работа с элементами, кортежами и наборами &#40;многомерных Выражений&#41;](working-with-members-tuples-and-sets-mdx.md)  
+ [Работа с элементами, кортежами и наборами (многомерные выражения)](working-with-members-tuples-and-sets-mdx.md)  
   
   

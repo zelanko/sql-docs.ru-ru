@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 102b3defa150707412012d506e0e9e542d80b9a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813257"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>Просмотр свойств группы доступности (SQL Server)
   В этом разделе описывается просмотр свойств группы доступности для группы доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -33,7 +33,7 @@ ms.locfileid: "48126362"
   
 3.  Щелкните правой кнопкой мыши группу доступности, свойства которой нужно просмотреть, и выберите команду **Свойства** .  
   
-4.  В диалоговом окне **Свойства группы доступности** просмотреть и в некоторых случаях изменить свойства выбранной группы доступности можно на страницах **Общие** и **Настройки резервного копирования** . Дополнительные сведения см. в статье [Свойства группы доступности и создание группы доступности (страница "Общие")](availability-group-properties-new-availability-group-general-page.md) и [Свойства группы доступности и создание группы доступности (страница "Параметры резервного копирования")](availability-group-properties-new-availability-group-backup-preferences-page.md).  
+4.  В диалоговом окне **Свойства группы доступности** просмотреть и в некоторых случаях изменить свойства выбранной группы доступности можно на страницах **Общие** и **Настройки резервного копирования** . Дополнительные сведения см. в разделе [свойства группы доступности и создание группы доступности &#40;страница "Общие"&#41; ](availability-group-properties-new-availability-group-general-page.md) и [свойства группы доступности: Создание группы доступности &#40;страница настроек резервного копирования&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md).  
   
      На странице **Разрешения** можно просмотреть текущие имена входа, роли и явные разрешения, связанные с группой доступности. Дополнительные сведения см. в статье [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md).  
   

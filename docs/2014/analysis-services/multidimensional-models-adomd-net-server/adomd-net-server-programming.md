@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fcd6feff1bdcd1e53aeb6af45be3edea9c80d50c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703030"
 ---
 # <a name="adomdnet-server-programming"></a>Программирование сервера ADOMD.NET
   Серверные компоненты ADOMD.NET находятся в пространстве имен `Microsoft.AnalysisServices.AdomdServer` (в файле msmgdsrv.dll). Эти серверные компоненты используются для создания пользовательских функций многомерных выражений (MDX) и хранимые процедуры, которые выполняются в экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Серверные объекты обеспечивают возможность выполнения запросов к кубам и моделям интеллектуального анализа данных, а также для вычисления выражений в данном контексте. Среди преимуществ создания пользовательских функций и хранимых процедур — быстрое выполнение, централизованное развертывание и удобство поддержки.  

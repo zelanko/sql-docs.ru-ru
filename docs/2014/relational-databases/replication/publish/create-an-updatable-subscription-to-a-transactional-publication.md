@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691598"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>Создание обновляемой подписки для публикации транзакций (среда Management Studio)
 
@@ -159,7 +159,7 @@ ms.locfileid: "54131614"
      * `2` — Использовать существующее определенное пользователем имя входа на связанный сервер, созданное с помощью процедуры [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).
 
 
-## <a name="create-a-queued-updating-pull-subscription"></a>Создание обновляемых посредством очередей подписки по запросу ##
+## <a name="create-a-queued-updating-pull-subscription"></a>Создание обновляемой посредством очередей подписки по запросу ##
 
 1. Проверьте на издателе, что публикация поддерживает обновляемые посредством очередей подписки. Для этого выполните процедуру [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql). 
 
@@ -200,7 +200,7 @@ ms.locfileid: "54131614"
 1. Проверьте на издателе, что публикация поддерживает обновляемые посредством очередей подписки. Для этого выполните процедуру [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql). 
 
     * Если значение allow_queued_tran в результирующем наборе равно 1, то публикация поддерживает немедленное обновление подписок.
-    * Если значение allow_queued_tran в результирующем наборе равно 0, публикацию необходимо создать заново с включенной возможностью обновления подписок посредством очередей. Дополнительные сведения см. в разделе Как Включение обновляемых подписок для публикаций транзакций (Программирование репликации Transact-SQL).
+    * Если значение allow_queued_tran в результирующем наборе равно 0, публикацию необходимо создать заново с включенной возможностью обновления подписок посредством очередей. Дополнительные сведения см. в разделе как: включить обновляемые подписки для публикаций транзакций (программирование репликации на языке Transact-SQL)".
 
 2. Проверьте на издателе, что публикация поддерживает принудительные подписки. Для этого выполните процедуру [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql). 
 

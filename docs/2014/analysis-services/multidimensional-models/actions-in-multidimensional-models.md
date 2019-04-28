@@ -17,18 +17,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b447531f813d55be8f5318b192909c21e42e78d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701938"
 ---
 # <a name="actions-in-multidimensional-models"></a>Действия в многомерных моделях
   Действие представляет собой инициированную пользователем операцию для выбранного куба или его части. Эта операция может запускать приложение, для которого в качестве параметра используется выбранный элемент, или получать сведения о выбранном элементе. Дополнительные сведения о действиях см. в разделе [Действия (службы Analysis Services — многомерные данные)](actions-analysis-services-multidimensional-data.md).  
   
  Для построения действий для куба используется вкладка **Действия** конструктора кубов. Укажите следующее.  
   
- **Название**  
+ **Name**  
  Выберите имя для идентификации действия.  
   
  **Цель действия**  

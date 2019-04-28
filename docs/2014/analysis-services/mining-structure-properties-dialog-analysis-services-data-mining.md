@@ -16,18 +16,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d6a908fb7d309b9e41b7392f35efb25dadef04c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727870"
 ---
 # <a name="mining-structure-properties-dialog-analysis-services---data-mining"></a>Диалоговое окно «Свойства структуры интеллектуального анализа данных» (службы Analysis Services — интеллектуальный анализ данных)
   Диалоговое окно **Свойства структуры интеллектуального анализа данных** в среде **SQL Server Management Studio** используется для задания свойств структуры интеллектуального анализа данных в базе данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Можно вызвать диалоговое окно **Свойства структуры интеллектуального анализа данных** , щелкнув правой кнопкой мыши структуру интеллектуального анализа данных в **Обозревателе объектов** , и выбрать **Свойства** в контекстном меню.  
   
  Диалоговое окно **Свойства структуры интеллектуального анализа данных** содержит следующие страницы.  
   
-## <a name="pages"></a>Страницы  
+## <a name="pages"></a>Pages  
   
 |Страница|Описание|  
 |----------|-----------------|  
@@ -35,6 +35,6 @@ ms.locfileid: "48177544"
 |**Конфигурация ошибок**|Используйте страницу **Конфигурация обработки ошибок** для отображения и изменения настроек конфигурации обработки ошибок в структуре интеллектуального анализа данных. Дополнительные сведения об этой странице см. в разделе [Конфигурация ошибок (диалоговое окно "Структура интеллектуального анализа данных") (службы Analysis Services — многомерные данные)](error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>См. также  
- [Структуры интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: b71d7468e668db88b26e038bc5593d6a83bcc0d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812823"
 ---
 # <a name="cause-and-resolution-of-database-engine-errors"></a>Причины ошибок компонента Database Engine и способы их устранения
   Этот раздел содержит сведения о причинах некоторых ошибок компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]и способах их устранения.  
@@ -24,7 +24,7 @@ ms.locfileid: "48080274"
 ## <a name="in-this-section"></a>в этом разделе  
  Подразделы по сообщениям об ошибках в этом разделе содержат объяснения сообщений об ошибке, возможные причины и действия по устранению проблемы.  
   
-## <a name="reference"></a>Справочник  
+## <a name="reference"></a>Ссылка  
  [Основные сведения об ошибках ядра СУБД](../relational-databases/native-client-ole-db-errors/errors.md)  
   
 ## <a name="see-also"></a>См. также  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 606fe679f4cc58a627b2d2978b52d9865da741c1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728469"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Определение и использование действия детализации
   Распределение данных фактов по измерениям фактов без верной фильтрации данных, возвращаемых запросом, может привести к снижению его производительности. Чтобы избежать этого, можно определить действие детализации, которое ограничит общее число возвращаемых строк. Это позволит значительно повысить производительность выполнения запросов.  

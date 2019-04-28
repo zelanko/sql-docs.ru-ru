@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13d14fafd18fb9e0cdb156617798c8d2f15ff661
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815367"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>Создание группы доступности (Transact-SQL)
   В данном разделе описывается использование [!INCLUDE[tsql](../../../includes/tsql-md.md)] для создания и настройки группы доступности на основе экземпляров [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , на которых включена функция [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, и набор партнеров по обеспечению отработки отказа, называемых *репликами доступности*и поддерживающих отработку отказа.  
@@ -58,7 +58,7 @@ ms.locfileid: "53365187"
 ##  <a name="TsqlProcedure"></a> Создание и настройка группы доступности с помощью Transact-SQL  
   
 > [!NOTE]  
->  Примеры процедуры настройки с примерами кода всех этих инструкций [!INCLUDE[tsql](../../../includes/tsql-md.md)] см. в разделе [Пример: Настройка группы доступности, использующей проверку подлинности Windows](#ExampleConfigAGWinAuth).  
+>  Образец процедуры настройки с примерами кода для каждой из этих [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкций, см. в разделе [пример: Настройка группы доступности, использующей проверку подлинности Windows](#ExampleConfigAGWinAuth)  
   
 1.  Подключитесь к экземпляру сервера, на котором должна быть размещена первичная реплика.  
   
@@ -66,11 +66,11 @@ ms.locfileid: "53365187"
   
 3.  Присоедините новую вторичную реплику к группе доступности. Дополнительные сведения см. в разделе [Присоединение вторичной реплики к группе доступности (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-4.  Для каждой базы данных в группе доступности создайте базу данных-получатель путем восстановления последней резервной копии базы данных-источника с помощью инструкции RESTORE WITH NORECOVERY. Дополнительные сведения см. в примере [: Настройка доступности группы с помощью Windows проверки подлинности (Transact-SQL)](create-an-availability-group-transact-sql.md), начиная с шага восстановления резервной копии базы данных.  
+4.  Для каждой базы данных в группе доступности создайте базу данных-получатель путем восстановления последней резервной копии базы данных-источника с помощью инструкции RESTORE WITH NORECOVERY. Дополнительные сведения см. в разделе [пример: Настройка группы доступности с использованием проверки подлинности Windows (Transact-SQL)](create-an-availability-group-transact-sql.md), начиная с шага восстановления резервной копии базы данных.  
   
 5.  Присоедините каждую новую базу данных-получатель к группе доступности. Дополнительные сведения см. в разделе [Присоединение вторичной реплики к группе доступности (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-##  <a name="ExampleConfigAGWinAuth"></a> Пример: Настройка группы доступности, использующей проверку подлинности Windows  
+##  <a name="ExampleConfigAGWinAuth"></a> Пример. Настройка группы доступности, использующей проверку подлинности Windows  
  В этом примере создается образец процедуры настройки [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , где [!INCLUDE[tsql](../../../includes/tsql-md.md)] используется для настройки конечных точек зеркального отображения базы данных, использующих проверку подлинности Windows для создания и настройки группы доступности и ее баз данных-получателей.  
   
  Этот пример содержит следующие разделы:  
@@ -510,7 +510,7 @@ GO
   
 -   **Блоги**  
   
-     [AlwaysON — HADRON обучающая серия. Использование рабочего пула для HADRON баз данных с поддержкой](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON — HADRON обучающая серия. Использование рабочего пула для баз данных с HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [Блоги группы AlwaysOn SQL Server: Официальный блог по SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
   
@@ -518,7 +518,7 @@ GO
   
 -   **Видеоролики**  
   
-     [Серия Microsoft SQL Server с кодовым названием «Denali» AlwaysOn, часть 1: Представляем решение высокого уровня доступности следующего поколения](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Серия Microsoft SQL Server с кодовым названием «Denali» AlwaysOn, часть 1: вводные сведения о решении следующего поколения по обеспечению высокого уровня доступности](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Серия Microsoft SQL Server с кодовым названием «Denali» AlwaysOn, часть 2: Создание решения критически важных высокого уровня доступности с помощью AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   

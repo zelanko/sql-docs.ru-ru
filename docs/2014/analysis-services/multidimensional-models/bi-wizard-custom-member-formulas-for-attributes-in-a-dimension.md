@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8850ce0f77b69be681bf99bcdcaeddc5234656c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700989"
 ---
 # <a name="set-custom-member-formulas-for-attributes-in-a-dimension"></a>Настройка нестандартных формул элементов для атрибутов в измерении
   Добавьте расширение нестандартных формул элементов к кубу или измерению, чтобы заменить статистическое вычисление по умолчанию, связанное с элементом измерения, результатами многомерного выражения. (Это расширение устанавливает свойство `CustomRollupColumn` для указанного атрибута в измерении.)  

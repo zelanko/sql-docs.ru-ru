@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26c5b80fe5932906324d7131e967760a6a918aaf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62698919"
 ---
 # <a name="audit-database-object-gdr-event-class"></a>Audit Database Object GDR, класс событий
   Класс событий **Audit Database Object GDR** возникает, когда инструкции GRANT, REVOKE или DENY выдаются для объектов базы данных, таких как сборки и схемы.  

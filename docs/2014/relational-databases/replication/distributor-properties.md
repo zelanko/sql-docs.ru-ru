@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ae7c7197fffcad7f64a82cf7c060e2e35e9bf460
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721405"
 ---
 # <a name="sql-server-replication-distributor-properties"></a>Свойства распространителя репликации SQL Server
 В этом разделе обсуждаются свойства, найденных на **Общие**, **издателей**, и **базы данных распространителя** страниц в **свойства распространителя**  окно. 

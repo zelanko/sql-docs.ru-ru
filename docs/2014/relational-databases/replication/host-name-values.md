@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4f8f7f1304b0d72cf59467aee16c04481fbd51ad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721188"
 ---
 # <a name="hostname-values"></a>Значения функции HOST_NAME
   Публикации слиянием с параметризованными фильтрами используют функции SUSER_SNAME() или HOST_NAME() для фильтрации данных. Функция задается в мастере создания публикаций или диалоговом окне **Свойства публикации** .  
@@ -32,7 +32,7 @@ ms.locfileid: "52752206"
  Введите значения для каждого подписчика в столбце **Значение HOST_NAME** или оставьте значение по умолчанию, которое соответствует имени компьютера подписчика.  
   
 ## <a name="see-also"></a>См. также  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Создание подписки по запросу](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Просмотр и изменение свойств подписки по запросу](view-and-modify-pull-subscription-properties.md)   
  [Просмотр и изменение свойств принудительной подписки](view-and-modify-push-subscription-properties.md)   

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea31ff7c14baff6a102ad9aa11c227e9c333da60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725538"
 ---
 # <a name="building-calculated-members-in-mdx-mdx"></a>Создание вычисляемых элементов в многомерных выражениях (многомерные выражения)
   В многомерных выражениях вычисляемым называется элемент, разрешаемый путем вычисления многомерного выражения, возвращающего значение. В этом определении кроется огромный потенциал. Возможность создания и использования вычисляемых элементов в многомерных запросах дает широкие возможности для манипулирования данными.  
@@ -39,8 +39,8 @@ ms.locfileid: "48051800"
      Дополнительные сведения о создании вычисляемых элементов в сеансе с помощью инструкции CREATE MEMBER см. в разделе [Создание вычисляемых элементов с областью действия сеанса (многомерные выражения)](mdx-calculated-members-session-scoped-calculated-members.md).  
   
 ## <a name="see-also"></a>См. также  
- [Инструкция CREATE MEMBER &#40;многомерных Выражений&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [Инструкция SELECT &#40;многомерных Выражений&#41;](/sql/mdx/mdx-data-manipulation-select)  
+ [Инструкция CREATE MEMBER (многомерные выражения)](/sql/mdx/mdx-data-definition-create-member)   
+ [Справочник по функциям многомерных выражений (многомерные выражения)](/sql/mdx/mdx-function-reference-mdx)   
+ [Инструкция SELECT (многомерные выражения)](/sql/mdx/mdx-data-manipulation-select)  
   
   

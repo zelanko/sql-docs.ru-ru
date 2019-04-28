@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35e720872257f1a1c96d8aa50aef8458daf574ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699823"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>Создание вычислений ячеек с областью действия запроса (многомерные выражения)
-  Ключевое слово `WITH` в многомерном выражении описывает вычисляемые ячейки в контексте запроса. `WITH` Ключевого слова имеет следующий синтаксис:  
+  Ключевое слово `WITH` в многомерном выражении описывает вычисляемые ячейки в контексте запроса. Синтаксис ключевого слова `WITH` имеет следующий вид:  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -30,7 +30,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  Значение `CellCalc_Identifier` — это имя вычисляемых ячеек. Значение `String_Expression` — это перечень ортогональных одномерных выражений набора многомерных выражений. Каждое выражение набора должно разрешаться к одной из перечисленных ниже категорий.  
   
-|Категория|Описание|  
+|Category|Описание|  
 |--------------|-----------------|  
 |Пустой набор|Выражение набора многомерных выражений, которое разрешается к пустому набору. В этом случае областью вычисляемой ячейки является весь куб.|  
 |Одноэлементный набор|Выражение набора многомерных выражений, которое разрешается к единственному элементу.|  
@@ -55,6 +55,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  С другой стороны, многомерное выражение обрабатывает формулу вычисления всякий раз, когда в кубе выполняется запрос многомерных выражений, работающий с ячейками, входящими в определение вычисляемых ячеек. Такая обработка выполняется независимо от области при создании определения.  
   
 ## <a name="see-also"></a>См. также  
- [Инструкция CREATE CELL CALCULATION &#40;многомерных Выражений&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
+ [Инструкция CREATE CELL CALCULATION (многомерные выражения)](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
   

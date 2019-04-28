@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff10d4c1c2c70049549d848dd31736dbd898fb28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702742"
 ---
 # <a name="move-table-dialog-box-ssas"></a>Диалоговое окно «Перемещение таблицы» (SSAS)
   Диалоговое окно **Перемещение таблицы** позволяет изменить порядок отображения таблиц в конструкторе моделей. Чтобы открыть это диалоговое окно, щелкните правой кнопкой мыши вкладку в нижней части перемещаемой таблицы и выберите команду **Переместить**.  

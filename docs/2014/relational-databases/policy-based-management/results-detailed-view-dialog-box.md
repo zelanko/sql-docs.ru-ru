@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1bef947b8cad04acc69afe005a04747ceb85c3d2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691710"
 ---
 # <a name="results-detailed-view-dialog-box"></a>Диалоговое окно «Подробный просмотр результатов»
   В этом диалоговом окне отображаются результаты оценки политики после ее запуска с помощью диалогового окна **Выполнить политики** и нажатия кнопки **Оценить**. Это диалоговое окно доступно только для чтения; оно помогает понять, в какой части выражения свойства может содержаться ошибка.  

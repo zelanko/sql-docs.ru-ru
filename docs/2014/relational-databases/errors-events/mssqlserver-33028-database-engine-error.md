@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_33028 | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 33028 (Database Engine error)
 ms.assetid: c5cec0e4-0bcd-4907-826f-e7d835cfcb37
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89f02cfd7ab2116528adb82d6e98023c912c6437
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62868667"
 ---
 # <a name="mssqlserver33028"></a>MSSQLSERVER_33028
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>Сведения  
   
 |||  
@@ -33,10 +34,10 @@ ms.locfileid: "48150324"
 |Текст сообщения|Не удается открыть сеанс для %S_MSG '%.*ls'. Код ошибки поставщика: %d.|  
   
 ## <a name="explanation"></a>Объяснение  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не смог открыть поставщик служб шифрования, указанный в сообщении об ошибке. Поставщик служб шифрования предоставляет указанный код ошибки. Возможно, придется обратиться к поставщику служб шифрования за дополнительными сведениями об ошибке.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не смог открыть поставщик служб шифрования, указанный в сообщении об ошибке. Поставщик служб шифрования предоставляет указанный код ошибки. Возможно, придется обратиться к поставщику служб шифрования за дополнительными сведениями об ошибке.  
   
 |Код ошибки|Описание|  
-|----------------|-----------------|  
+|--------------|---------------|  
 |0|Успешно. Нет ошибки.|  
 |1|Ошибка. Произошла неуказанная или непредвиденная ошибка. Дополнительные сведения об ошибке недоступны.|  
 |2|Недостаточно места в буфере. Нельзя выделить пространство для поставщика служб шифрования.|  
@@ -46,6 +47,5 @@ ms.locfileid: "48150324"
 |6|Недопустимый аргумент. Поставщику служб шифрования передан неправильный аргумент.|  
   
 ## <a name="user-action"></a>Действие пользователя  
- Устраните ошибку или обратитесь к поставщику служб шифрования за дополнительными сведениями.  
-  
+Устраните ошибку или обратитесь к поставщику служб шифрования за дополнительными сведениями.  
   

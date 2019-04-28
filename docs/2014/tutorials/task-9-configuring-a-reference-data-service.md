@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: adbde32de86da407bdd2655f66d036021e6784f8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866238"
 ---
 # <a name="task-9-configuring-a-reference-data-service"></a>Задача 9. Настройка службы ссылочных данных
   В этой задаче вы настроите службы DQS для использования службы ссылочных данных в Windows Azure Marketplace. В следующей задаче вы настроите **проверка адреса** домена для использования этой службы. Во время выполнения при проведении очистки данных службы DQS передают значения доменов в **проверка адреса** домена со службой для очистки. См. в разделе [Configure DQS to Use Reference Data](https://msdn.microsoft.com/library/hh213070.aspx) для получения дополнительных сведений.  

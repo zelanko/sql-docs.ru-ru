@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 173dd379ac2857cef0faafda27aa74d7026b791a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727840"
 ---
 # <a name="model-tab-mining-model-viewers"></a>Вкладка «Модель» (средства просмотра модели интеллектуального анализа)
   Вкладка **Модель** средства просмотра временных рядов (Майкрософт) отображает представление временных рядов как узла диаграммы аналогично используемым в моделях диаграммы дерева принятия решений.  
   
  Используйте это представление модели временных рядов для извлечения полезной информации об анализе временных рядов, включая уравнение для диаграммы, члены ARIMA и коэффициенты.  
   
- **Дополнительные сведения:** [Алгоритм временных рядов (Майкрософт)](data-mining/microsoft-time-series-algorithm.md), [Просмотр модели с помощью средства просмотра временных рядов (Майкрософт)](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [Алгоритм временных рядов (Майкрософт)](data-mining/microsoft-time-series-algorithm.md)  
+ **Дополнительные сведения:** [Алгоритм временных рядов](data-mining/microsoft-time-series-algorithm.md), [просмотр модели в средстве просмотра временных рядов](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [алгоритм временных рядов](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>Параметры  
  **Обновить содержимое средства просмотра**  
@@ -71,8 +71,8 @@ ms.locfileid: "48164174"
  Измените число уровней, отображаемых в этом дереве.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Просмотра моделей интеллектуального анализа &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Средства просмотра моделей интеллектуального анализа данных (конструктор моделей интеллектуального анализа данных)](mining-model-viewers-data-mining-model-designer.md)   
  [Средства просмотра моделей интеллектуального анализа данных](data-mining/data-mining-model-viewers.md)  
   
   

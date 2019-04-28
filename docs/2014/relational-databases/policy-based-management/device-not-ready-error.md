@@ -1,25 +1,27 @@
 ---
 title: 'Ошибка: устройство не готово | Документация Майкрософт'
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/01/2017
+ms.prod: sql
+ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 85ec53ed-d887-4d95-a028-08cb502a3356
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2801eb44acca5241ad051904747c370f5ef2b24b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705260"
 ---
 # <a name="device-not-ready-error"></a>Ошибка отсутствия готовности устройства
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Это правило проверяет журнал системных событий на наличие события с идентификатором EventId 15. Ошибка вызывается неисправностями хост-адаптера SCSI или связанными проблемами.  
   
 ## <a name="best-practices-recommendations"></a>Рекомендации  

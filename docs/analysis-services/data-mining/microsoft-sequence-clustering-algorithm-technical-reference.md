@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 331a7c4df759114e18fd47007058ddc38b2f77d9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724905"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Технический справочник по алгоритму кластеризации последовательностей (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "52418385"
  Применяется к столбцу структуры интеллектуального анализа данных.  
   
  MODEL_EXISTENCE_ONLY  
- Столбец будет обрабатываться так, как будто у него два возможных состояния: **Отсутствует** и **существующие**. NULL означает отсутствие значения — **Missing** .  
+ Означает, что столбец будет обрабатываться как имеющий два возможных состояния: **Отсутствует** и **существующие**. NULL означает отсутствие значения — **Missing** .  
   
  Применяется к столбцу модели интеллектуального анализа данных.  
   

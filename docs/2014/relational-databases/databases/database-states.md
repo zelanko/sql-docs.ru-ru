@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b6e2072e06e1ea5d61802a4c6a006737bc04762
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871702"
 ---
 # <a name="database-states"></a>Состояния базы данных
   База данных всегда находится в определенном состоянии. Например, к этим состояниям относятся состояния ONLINE, OFFLINE или SUSPECT. Чтобы проверить текущее состояние базы данных, выберите столбец **state_desc** в представлении каталога [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) или свойство **Status** в функции [DATABASEPROPERTYEX](/sql/t-sql/functions/databasepropertyex-transact-sql) .  

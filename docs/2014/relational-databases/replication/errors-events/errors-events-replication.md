@@ -10,11 +10,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 1f66ba095ef884e9b3a876ced0565aedbbf54629
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721295"
 ---
 # <a name="errors-and-events-replication"></a>Ошибки и события (репликация)
   Сведения и способах их устранения для ошибок, связанных с репликацией, см. в разделе [ошибки и события (репликация)](../errors-and-events-reference-replication.md).  

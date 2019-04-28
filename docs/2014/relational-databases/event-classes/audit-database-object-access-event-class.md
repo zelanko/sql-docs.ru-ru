@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 62a6b3a1f92723d43fde32060c6d4ccbbfc14a98
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699013"
 ---
 # <a name="audit-database-object-access-event-class"></a>Audit Database Object Access, класс событий
   Класс событий **Audit Database Object Access** возникает, когда происходит доступ к таким объектам базы данных, как, например, схемы.  

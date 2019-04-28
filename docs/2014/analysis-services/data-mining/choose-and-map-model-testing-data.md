@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac7a8f813aa884cc4267c73fbcedc88eecfb0a36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705957"
 ---
 # <a name="choose-and-map-model-testing-data"></a>Выбрать и сопоставить данные проверки модели
   Чтобы создать диаграмму точности прогнозов в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], необходимо выбрать данные, которые будут использоваться для проверки модели, и сопоставить эти данные с моделью.  

@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e63ef1a2463f65e108ade9a43b748e02831da57
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725258"
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>Роли безопасности (службы Analysis Services — многомерные данные)
   Роли в службах [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] используются для управления безопасностью объектов или данных служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Роли связывают идентификаторы безопасности (SID) пользователей и групп Microsoft Windows, имеющих определенные права доступа и разрешения, определенные для объектов, управляемых экземпляром служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. В службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]имеет два типа ролей:  

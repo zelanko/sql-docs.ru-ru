@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca6e9661c65098bed1175c7108b18a482b14a542
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730324"
 ---
 # <a name="defining-a-data-source-view"></a>Определение представления источников данных
   После определения источников данных, используемых в проекте служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], на следующем этапе, как правило, определяется представление источника данных для этого проекта. Представление источника данных является отдельным единым представлением метаданных из указанных таблиц и представлений, определяемых источником данных для проекта. Хранение метаданных в представлении источника данных позволяет работать с метаданными в процессе разработки, не устанавливая соединений с базовыми источниками данных. Дополнительные сведения см. в разделе [Представления источников данных в многомерных моделях](multidimensional-models/data-source-views-in-multidimensional-models.md).  

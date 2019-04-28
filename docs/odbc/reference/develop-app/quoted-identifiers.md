@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0a81237eddd4836394cc9797a79690ba4b49a35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861649"
 ---
 # <a name="quoted-identifiers"></a>Заключенные в кавычки идентификаторы
 В инструкции SQL идентификаторы, содержащие специальные символы или ключевые слова match должны заключаться в *идентификатор кавычки*; идентификаторы, заключенные в такие символы называются *заключенные в кавычки идентификаторы*(также известный как *идентификаторов с разделителями* в SQL-92). Например, Зарплата идентификатор в кавычках в следующем **ВЫБЕРИТЕ** инструкции:  

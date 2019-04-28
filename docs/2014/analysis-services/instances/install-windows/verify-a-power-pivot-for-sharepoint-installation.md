@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0be629b4c2b8c47ed191651260bf1a722b40f007
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703320"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>Проверка установки PowerPivot для SharePoint
   Администрирование экземпляра PowerPivot для SharePoint, устанавливаемого в ферме SharePoint, осуществляется с помощью центра администрирования SharePoint. Как минимум, можно проверить страницы в центре администрирования и на сайтах SharePoint, чтобы убедиться в доступности компонентов и функций сервера PowerPivot. Однако, чтобы полностью проверить установку, необходимо иметь книгу PowerPivot, которую можно опубликовать в SharePoint и открывать из библиотеки. В целях тестирования можно опубликовать образец книги, в котором уже есть данные PowerPivot, и с его помощью удостовериться в правильности настройки интеграции с SharePoint.  

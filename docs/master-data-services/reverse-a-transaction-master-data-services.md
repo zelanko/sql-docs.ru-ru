@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7a23e955452408c5c1b57adcaf8de6ece84aa2fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704410"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>Отмена транзакции (службы Master Data Services)
 
@@ -48,7 +48,7 @@ ms.locfileid: "52751857"
   
 7.  В диалоговом окне подтверждения нажмите кнопку **ОК**. В сетку добавляется еще одна транзакция, соответствующая отмененной транзакции.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Транзакции (службы Master Data Services)](../master-data-services/transactions-master-data-services.md)   
  [Повторная активация элемента или коллекции (службы Master Data Services)](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
  [Откат журнала изменений элемента](../master-data-services/rollback-member-revision-history-master-data-services.md)

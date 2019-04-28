@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ff75840ba60d8ab93a3adeeeef949263e607b35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722706"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>Создание запросов детализации с помощью расширений интеллектуального анализа данных
   Для всех моделей с поддержкой детализации можно извлечь данные вариантов и структуры путем создания запроса DMX в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или любом другом клиенте с поддержкой DMX.  
@@ -45,7 +45,7 @@ WHERE [Model Region] = 'M200 Pacific'
  Обратите внимание, что в этом примере столбец структуры переименован с использованием псевдонима. Если столбцу структуры не присвоить псевдоним, то он будет возвращен с именем Expression. Это поведение по умолчанию для всех безымянных столбцов.  
   
 ## <a name="see-also"></a>См. также  
- [Запросы детализации &#40;интеллектуального анализа данных&#41;](drillthrough-queries-data-mining.md)   
+ [Запросы детализации (интеллектуальный анализ данных)](drillthrough-queries-data-mining.md)   
  [Детализация структур интеллектуального анализа данных](drillthrough-on-mining-structures.md)  
   
   

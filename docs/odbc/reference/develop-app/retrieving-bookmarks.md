@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9d7d4bd52a5f6e5b03a084cef4402e0a9044f97d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861404"
 ---
 # <a name="retrieving-bookmarks"></a>Извлечение закладок
 Если приложение будет использовать закладки, его необходимо задать атрибут инструкции SQL_ATTR_USE_BOOKMARKS для SQL_UB_VARIABLE до подготовки или выполнения инструкции. Это необходимо, так как создание и обслуживание закладки может быть ресурсоемкой операцией, закладки должно быть включено только в том случае, если можно строить приложения их использования.  

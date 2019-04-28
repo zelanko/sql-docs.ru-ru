@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 175e07432d3f67374710d6e33f3006f2b3b6bf68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726618"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>Предоставление разрешений доступа (службы Analysis Services)
   В качестве администратора вы можете создать роль, предназначенную для осуществления операций обработки службы Analysis Services, которая позволит вам делегировать это отдельное задание другим пользователям или приложениям, которые используются для автоматической обработки по расписанию. Разрешения на обработку могут быть предоставлены на уровнях базы данных, куба, измерения и структуры интеллектуального анализа данных. Пока вы не работаете с очень большим кубом или табличной базой данных, мы рекомендуем вам предоставить права на обработку на уровне базы данных, включающие все объекты, включая те, которые зависят друг от друга.  
@@ -27,9 +27,9 @@ ms.locfileid: "48181274"
  Разрешения предоставляются через роли, которые связывают объекты с разрешениями и учетными записями пользователи или группы Windows. Помните о том, что разрешения являются аддитивными. Если одна роль предоставляет разрешение на обработку куба, в то время как вторая роль предоставляет этому же пользователю разрешение на обработку измерения, разрешения от двух разных ролей соединяются для предоставления пользователю разрешения как на обработку куба, как и на обработку определенного измерения в рамках этой базы данных.  
   
 > [!IMPORTANT]  
->  Пользователь, чья роль обладает лишь разрешениями на Обработку, не будет способен использовать службу [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или службу [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для подключения к службе [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и обработки объектов. Данные средства требуют `Read Definition` разрешение на доступ к метаданным объекта. Без возможности использовать оба средства, сценарий XMLA должен быть использован для выполнения операции обработки.   
+>  Пользователь, чья роль обладает лишь разрешениями на Обработку, не будет способен использовать службу [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или службу [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для подключения к службе [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и обработки объектов. Данные средства требуют разрешение `Read Definition` для доступа к метаданным объекта. Без возможности использовать оба средства, сценарий XMLA должен быть использован для выполнения операции обработки.  
 >   
->  Мы советуем вам также предоставить `Read Definition` разрешения для целей тестирования. Пользователь, который обладает оба `Read Definition` и `Process Database` объекты могут обрабатываться разрешения [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], в интерактивном режиме. Дополнительные сведения см. в разделе [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) .  
+>  Мы советуем вам также предоставить разрешения `Read Definition` для целей проверки. Пользователь, который обладает и разрешением `Read Definition` и разрешением `Process Database` , могут интерактивно обрабатывать объекты в службе [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Предоставление разрешений на чтение описания метаданным объекта (службы Analysis Services)](grant-read-definition-permissions-on-object-metadata-analysis-services.md) .  
   
 ## <a name="set-processing-permissions-at-the-database-level"></a>Установка разрешений на обработку на уровне базы данных  
  Данный раздел предоставляет информацию о том, как активировать обработку для всех кубов, измерений, интеллектуальных анализов или моделей интеллектуального анализа в базе данных пользователю без прав администратора.  
@@ -93,7 +93,7 @@ ms.locfileid: "48181274"
 ## <a name="see-also"></a>См. также  
  [Обработка базы данных, таблицы или секции](../tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Обработка объектов многомерной модели](processing-a-multidimensional-model-analysis-services.md)   
- [Предоставление разрешений базы данных &#40;служб Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [Предоставление разрешений на чтение описания метаданным объекта &#40;служб Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [Предоставление разрешений базы данных (службы Analysis Services)](grant-database-permissions-analysis-services.md)   
+ [Предоставление разрешений на чтение описания метаданным объекта (службы Analysis Services)](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Классифицированных столбцов (интеллектуальный анализ данных) | Документы Microsoft
+title: Классифицированных столбцов (интеллектуальный анализ данных) | Документация Майкрософт
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b014f82376b15d9d29834103d8827bf31231ef90
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724839"
 ---
 # <a name="classified-columns-data-mining"></a>Классифицированные столбцы (интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,8 +49,8 @@ ms.locfileid: "34019951"
  Значение в столбце является весом, коэффициентом репликации объекта, связанного значения.  
   
 ## <a name="see-also"></a>См. также  
- [Содержимого типы & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/content-types-data-mining.md)   
- [Структуры интеллектуального анализа данных и &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Типы данных & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [Типы содержимого (интеллектуальный анализ данных)](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Типы данных (интеллектуальный анализ данных)](../../analysis-services/data-mining/data-types-data-mining.md)  
   
   

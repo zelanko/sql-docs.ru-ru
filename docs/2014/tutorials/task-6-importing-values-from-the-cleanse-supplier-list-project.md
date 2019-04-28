@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0780636d3bcaecfe0519192bd450bb538d78bbf9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866788"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Задача 6. Импорт значений из проекта очистки списка поставщиков
   В этой задаче вы импортируете наборы знаний служб DQS, полученные в процессе очистки. Дополнительные сведения см. в разделе [Импорт значений проекта очистки в домен](https://msdn.microsoft.com/library/hh479581.aspx) . Вы также экспортируете базу знаний в файл служб DQS перед публикацией обновленной базы знаний **Поставщики** .  

@@ -1,5 +1,5 @@
 ---
-title: Пакетная обработка (службы Analysis Services) | Документы Microsoft
+title: Пакетная обработка (службы Analysis Services) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6d2f72dd0c7b380391a7b500d494d5aac83c4c6f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717691"
 ---
 # <a name="batch-processing-analysis-services"></a>Пакетная обработка (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "34023651"
 ##  <a name="bkmk_ssdt"></a> Пакетная обработка в SQL Server Data Tools  
  Прежде чем обрабатывать объекты в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], необходимо произвести развертывание содержащего их проекта. Дополнительные сведения см. в статье [Развертывание проектов служб Analysis Services (среда SSDT)](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   
-1.  Откройте среду [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+1.  Откройте [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 2.  Откройте развернутый проект.  
   

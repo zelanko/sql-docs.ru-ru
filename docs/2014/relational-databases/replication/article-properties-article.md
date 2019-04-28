@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721786"
 ---
 # <a name="article-properties---ltarticlegt"></a>Свойства статьи — &lt;Статья&gt;
   Диалоговое окно **Свойства статьи** доступно из мастера создания публикаций и диалогового окна **Свойства публикации** . Оно позволяет просматривать и устанавливать свойства для всех типов статей. Некоторые свойства могут быть установлены только при создании публикации, а другие могут устанавливаться только в случае, если у публикации нет активных подписок. Свойства, которые не могут быть установлены, отображаются как доступные только для чтения.  
@@ -88,7 +88,7 @@ ms.locfileid: "54124994"
  Этот параметр применяется только к хранимым процедурам. Он определяет, следует ли выполнять репликацию для определения хранимой процедуры (инструкция CREATE PROCEDURE) или для ее выполнения. При репликации выполнения процедуры репликация определения процедуры выполняется на подписчик при инициализации подписки; при выполнении процедуры на издателе репликация выполняет соответствующую процедуру на подписчике. Таким образом, существенно улучшается производительность в ситуациях, когда выполняются большие групповые операции. Дополнительные сведения см. в статье [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Параметры публикаций слиянием  
- **Свойства статьи** диалоговое окно для публикаций слиянием имеет две вкладки: **Свойства** и **Сопоставитель**.  
+ Диалоговое окно **Свойства статьи** для публикаций слиянием имеет две вкладки: **Свойства** и **Сопоставитель**.  
   
 ### <a name="properties-tab"></a>Вкладка «Свойства»  
  **Направление синхронизации**  
@@ -135,7 +135,7 @@ ms.locfileid: "54124994"
  Все основанные на COM арбитры, предоставляемые [!INCLUDE[msCoName](../../includes/msconame-md.md)] , заверяются подписью. Выберите этот параметр, чтобы проверять допустимость сопоставителя при синхронизации.  
   
 ## <a name="options-for-oracle-publications"></a>Параметры публикаций Oracle  
- **Свойства статьи** диалоговое окно для публикаций Oracle имеет две вкладки: **Свойства** и **сопоставление данных**. Публикации Oracle поддерживают не все свойства, поддерживаемые публикациями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
+ Диалоговое окно **Свойства статьи** для публикаций Oracle имеет две вкладки: **Свойства** и **Сопоставление данных**. Публикации Oracle поддерживают не все свойства, поддерживаемые публикациями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ### <a name="properties-tab"></a>Вкладка «Свойства»  
  **Копировать хранимые процедуры INSERT, UPDATE и DELETE**  

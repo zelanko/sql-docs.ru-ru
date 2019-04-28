@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b1541073379aa27c932fcadf7558de7d34c57e8d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62824354"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>Внедрение изображения в отчет (построитель отчетов и службы SSRS)
   Отчет может содержать внедренное изображение. Внедрение изображения гарантирует постоянную доступность изображения для отчета, однако увеличивает размер определения отчета (файла, который определяет отчет). Изображения, внедренные в отчет, перечислены на панель данных отчета.  

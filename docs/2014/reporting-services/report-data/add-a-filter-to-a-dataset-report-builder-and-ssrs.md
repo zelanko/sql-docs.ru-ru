@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb2c717ca9d88d9c1ff1fe4f02fb89c46fe8f0e1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62697755"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>Добавление фильтра к набору данных (построитель отчетов и службы SSRS)
   Добавление фильтра к набору данных ограничивает данные в отчете после извлечения данных из внешнего источника данных. При добавлении фильтра к набору данных все элементы отчета или области данных используют только данные, соответствующие условиям фильтра.  

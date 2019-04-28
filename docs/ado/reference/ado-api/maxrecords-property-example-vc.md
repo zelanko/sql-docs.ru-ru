@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d4c9d8f6f39abf50238866dae9decfb6f04651f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863701"
 ---
 # <a name="maxrecords-property-example-vc"></a>Пример свойства MaxRecords (Visual C++)
 В этом примере используется [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) свойства, чтобы открыть [записей](../../../ado/reference/ado-api/recordset-object-ado.md) содержащий 10 самые дорогостоящие книги в ***заголовки*** таблицы.  
@@ -168,13 +168,13 @@ void PrintComError(_com_error &e) {
   
  **Верхние 10 заголовки по цене:**  
 **Но это понятное для пользователя? ---22.95**  
-**Компьютера Phobic и не боятся частных лиц: Изменений поведения---21,59**  
-**Луковиц Ликс и чесночный: кулинарные секреты морская---20.95**  
+**Компьютер Phobic и не боятся частных лиц: Изменений поведения---21,59**  
+**Луковиц Ликс и чесночный: Приготовление секреты морская---20.95**  
 **Секреты Силиконовой долине---20,00**  
 **Руководство по базе данных занят руководителя---19,99**  
 **Рассказывают о компьютерах---19,99**  
 **Обрабатывает в Силиконовой долине Gastronomic---19,99**  
-**Deprivation длительного данных: Четыре примеры внедрения---19,99**  
+**Deprivation длительного данных: Четыре конкретных примера---19,99**  
 **Суши, любой пользователь? ---14.99**  
 **50 лет в машины Buckingham Palace---11.95**   
 ## <a name="see-also"></a>См. также  

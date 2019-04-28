@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1dec9e1281d2ff61dcab9312cdf5a7ad1ecb8da3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866841"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>Улучшения функций даты и времени (OLE DB)
   В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] добавлены новые типы данных даты-времени. В этом разделе описывается, каким образом эти новые типы доступны в виде расширений в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Общие сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддержки собственным клиентом новые типы даты и времени данных, см. в разделе [время улучшения функций даты и](../native-client/features/date-and-time-improvements.md). Пример, см. в разделе [использования улучшенных возможностей даты и времени &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "52818101"
  Предоставляет сведения о OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client), поддерживающих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных даты и времени.  
   
  [Метаданные &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
- Содержит сведения о структуре DBBINDING, методах `ICommandWithParameters::GetParameterInfo`, `ICommandWithParameters::SetParameterInfo`, `IColumnsRowset::GetColumnsRowset` и I`ColumnsInfo::GetColumnInfo`. Также предоставляет сведения об обновлениях наборов строк схем OLE DB.  
+ Содержит сведения о структуре DBBINDING `ICommandWithParameters::GetParameterInfo`, `ICommandWithParameters::SetParameterInfo`, `IColumnsRowset::GetColumnsRowset`и я`ColumnsInfo::GetColumnInfo`. Также предоставляет сведения об обновлениях наборов строк схем OLE DB.  
   
  [Привязки и преобразования &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
  Описывает правила преобразования существующих и новых типов данных между сервером и клиентом.  

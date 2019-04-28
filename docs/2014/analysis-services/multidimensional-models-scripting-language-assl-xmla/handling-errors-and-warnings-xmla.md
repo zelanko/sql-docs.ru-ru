@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 856886a5edfa5dcae604b44f5c2dca356ba0addb
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702137"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Обработка ошибок и предупреждений (XMLA)
   Обработка ошибок является обязательным, если XML для аналитики (XMLA) [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) или [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) вызов метода не выполняется, выполняется успешно, но создает ошибки или предупреждения, или выполняется успешно, но возвращает результаты содержащие ошибки.  
