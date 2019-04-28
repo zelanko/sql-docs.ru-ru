@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 442505d470d1c7b7a82a02610d650d9f0b8c8d07
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678380"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Отправка отзыва о телеметрии в корпорацию Майкрософт для системы платформы аналитики
 Система Analytics Platform System имеет функцию необязательные данные телеметрии, которая отправляет данные в консоли администрирования Microsoft. 
@@ -42,7 +42,7 @@ ms.locfileid: "53591145"
     > [!NOTE]  
     > Для импорта, вам необходимо использовать две точки в команде.  
   
-    **Пример:**  
+    **Пример.**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -92,7 +92,7 @@ ms.locfileid: "53591145"
     > [!NOTE]  
     > Для импорта, вам необходимо использовать две точки в команде.  
   
-    **Пример:**  
+    **Пример.**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -100,7 +100,7 @@ ms.locfileid: "53591145"
   
 4.  Вызвать `Disable-RemoteMonitoring` команду без параметров. Эта команда будет остановлена, Отправка обратной связи. (Это не повлияет локального мониторинга.) Тем не менее команда будет не отключить DNS-сервер пересылки и/или отключить подключения к Интернету. Это необходимо сделать вручную после успешного отключения обратной связи.  
   
-    **Пример:**  
+    **Пример.**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Disable-RemoteMonitoring  

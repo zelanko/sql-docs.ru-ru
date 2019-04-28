@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 101a6d829955bff1e0314acf673cbc01a0d8033d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729270"
 ---
 # <a name="modifying-measures"></a>Изменение мер
   Свойство **FormatString** позволяет определить параметры форматирования, управляющие способом отображения мер для пользователей. В этой задаче предстоит указать свойства форматирования мер валюты и процентов в кубе учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -66,7 +66,7 @@ ms.locfileid: "48216589"
 11. В меню **Файл** выберите команду **Сохранить все**.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Изменение измерения Customer](lesson-3-2-modifying-the-customer-dimension.md)  
+ [Изменение измерения «Заказчик»](lesson-3-2-modifying-the-customer-dimension.md)  
   
 ## <a name="see-also"></a>См. также  
  [Определение измерений базы данных](multidimensional-models/define-database-dimensions.md)   

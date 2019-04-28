@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc4a4431d3352ec0cd8135e2d7c44ad66cb4a88e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680637"
 ---
 # <a name="completing-the-wizard-schema-generation-wizard-analysis-services---multidimensional-data"></a>Завершение работы мастера (мастер формирования схем) (службы Analysis Services — многомерные данные)
   Используйте страницу **Завершение работы мастера** , чтобы подтвердить принятые решения, и создать новый проект и представления источников данных.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a48ac22eb47eca8e265958289fdb461d4dd7f032
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794285"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Сведения о переводе (вкладка «Переводы», конструктор кубов) (службы Analysis Services — многомерные данные)
   Используйте панель **Сведения перевода** на вкладке **Переводы** конструктора кубов для определения и управления переводами куба, выбранного в настоящее время.  
@@ -32,35 +32,35 @@ ms.locfileid: "48118754"
   
 -   Группа мер  
   
-     `Caption` Свойство  
+     Свойство `Caption`  
   
 -   Measure  
   
-     `Caption` и `DisplayFolder` свойства  
+     Свойства `Caption` и `DisplayFolder`  
   
 -   Измерение  
   
-     `Caption` Свойство  
+     Свойство `Caption`  
   
 -   Перспектива  
   
-     `Caption` Свойство  
+     Свойство `Caption`  
   
 -   Ключевой показатель эффективности (KPI)  
   
-     `Caption`, `Description`, и `DisplayFolder` свойства  
+     Свойства `Caption`, `Description` и `DisplayFolder`  
   
 -   Действие  
   
-     `Caption` Свойство  
+     Свойство `Caption`  
   
 -   Именованный набор  
   
-     `Caption` Свойство  
+     Свойство `Caption`  
   
 -   вычисляемый элемент  
   
-     `Caption` Свойство  
+     Свойство `Caption`  
   
  **\<Язык >**  
  Введите значение свойства для объекта куба в выбранном языке.  

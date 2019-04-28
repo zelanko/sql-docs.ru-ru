@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2b8d842e9febc94d35f2a8c53c6106159f44423a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667442"
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>Выбор и настройка объектов для тестирования (SybaseToSQL)
 На этом этапе вы выберите объекты для тестирования и настроить параметры для сравнения процедуры и "функции выходные параметры, а также возвращаемые значения функции.  

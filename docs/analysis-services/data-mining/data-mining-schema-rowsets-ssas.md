@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 127111dcbcdef14d511c7e296743ba23a5ca1cdd
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670457"
 ---
 # <a name="data-mining-schema-rowsets-ssas"></a>Наборы строк схемы интеллектуального анализа данных (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "50144290"
 ## <a name="examples"></a>Примеры  
  В следующем разделе даны некоторые примеры запросов к наборам строк схемы интеллектуального анализа данных.  
   
-### <a name="example-1-list-data-mining-services"></a>Пример 1. Перечисление служб интеллектуального анализа данных  
+### <a name="example-1-list-data-mining-services"></a>Пример 1. Список служб интеллектуального анализа данных  
  Следующий запрос возвращает список служб интеллектуального анализа, доступных на текущем сервере, что свидетельствует о том, что алгоритмы включены. Столбцы для каждой службы интеллектуального анализа содержат флаги моделирования и типы содержимого, которые может использовать каждый алгоритм; идентификатор GUID для каждой службы и любые пределы прогнозирования, назначенные для каждой службы.  
   
 ```  
@@ -52,7 +52,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### <a name="example-2-list-mining-model-parameters"></a>Пример 2. Перечисление параметров модели интеллектуального анализа данных  
+### <a name="example-2-list-mining-model-parameters"></a>Пример 2. Список, интеллектуального анализа данных параметров модели  
  Следующий запрос возвращает параметры, которые использовались для создания конкретной модели интеллектуального анализа.  
   
 ```  

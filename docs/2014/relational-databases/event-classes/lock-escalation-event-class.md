@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c85b6983cbff901ae39c365503a6ab1ae0fcede1
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662377"
 ---
 # <a name="lockescalation-event-class"></a>Класс событий Lock:Escalation
   Класс событий **Lock:Escalation** возникает при укрупнении уровня блокировки, например при преобразовании блокировки строки в блокировку объекта. Класс событий Escalation имеет идентификатор события 60.  

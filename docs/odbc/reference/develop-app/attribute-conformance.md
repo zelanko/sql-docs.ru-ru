@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44f1311d98f37412454ad2352366492a8d5a1768
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62672533"
 ---
 # <a name="attribute-conformance"></a>Соответствие атрибутов
 Следующая таблица указывает уровень соответствия каждого атрибута ODBC среде, где это является правильно определенным.  
@@ -40,7 +40,7 @@ ms.locfileid: "47818845"
 |Компонент|Уровень соответствия|  
 |--------------|-----------------------|  
 |SQL_ATTR_ACCESS_MODE|Основные сведения|  
-|АТРИБУТУ SQL_ATTR_ASYNC_ENABLE|Уровень 1/уровня 2 [1]|  
+|SQL_ATTR_ASYNC_ENABLE|Уровень 1/уровня 2 [1]|  
 |SQL_ATTR_AUTO_IPD|Уровень 2|  
 |SQL_ATTR_AUTOCOMMIT|уровне 1|  
 |SQL_ATTR_CONNECTION_DEAD|уровне 1|  
@@ -52,7 +52,7 @@ ms.locfileid: "47818845"
 |SQL_ATTR_QUIET_MODE|Основные сведения|  
 |SQL_ATTR_TRACE|Основные сведения|  
 |SQL_ATTR_TRACEFILE|Основные сведения|  
-|НАСТРОЙКИ SQL_ATTR_TRANSLATE_LIB|Основные сведения|  
+|SQL_ATTR_TRANSLATE_LIB|Основные сведения|  
 |SQL_ATTR_TRANSLATE_OPTION|Основные сведения|  
 |SQL_ATTR_TXN_ISOLATION|Уровень 1/уровня 2 [2]|  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47818845"
 |--------------|-----------------------|  
 |SQL_ATTR_APP_PARAM_DESC|Основные сведения|  
 |SQL_ATTR_APP_ROW_DESC|Основные сведения|  
-|АТРИБУТУ SQL_ATTR_ASYNC_ENABLE|Уровень 1/уровня 2 [1]|  
+|SQL_ATTR_ASYNC_ENABLE|Уровень 1/уровня 2 [1]|  
 |SQL_ATTR_CONCURRENCY|Уровень 1/уровня 2 [2]|  
 |SQL_ATTR_CURSOR_SCROLLABLE|уровне 1|  
 |SQL_ATTR_CURSOR_SENSITIVITY|Уровень 2|  
@@ -75,8 +75,8 @@ ms.locfileid: "47818845"
 |SQL_ATTR_FETCH_BOOKMARK_PTR|Уровень 2|  
 |SQL_ATTR_IMP_PARAM_DESC|Основные сведения|  
 |SQL_ATTR_IMP_ROW_DESC|Основные сведения|  
-|АТРИБУТА SQL_ATTR_KEYSET_SIZE|Уровень 2|  
-|ЗНАЧЕНИЯ SQL_ATTR_MAX_LENGTH|уровне 1|  
+|SQL_ATTR_KEYSET_SIZE|Уровень 2|  
+|SQL_ATTR_MAX_LENGTH|уровне 1|  
 |SQL_ATTR_MAX_ROWS|уровне 1|  
 |SQL_ATTR_METADATA_ID|Основные сведения|  
 |SQL_ATTR_NOSCAN|Основные сведения|  
@@ -93,7 +93,7 @@ ms.locfileid: "47818845"
 |SQL_ATTR_ROW_BIND_TYPE|Основные сведения|  
 |SQL_ATTR_ROW_NUMBER|уровне 1|  
 |SQL_ATTR_ROW_OPERATION_PTR|уровне 1|  
-|ЗНАЧЕНИЯ SQL_ATTR_ROW_STATUS_PTR|Основные сведения|  
+|SQL_ATTR_ROW_STATUS_PTR|Основные сведения|  
 |SQL_ATTR_ROWS_FETCHED_PTR|Основные сведения|  
 |SQL_ATTR_SIMULATE_CURSOR|Уровень 2|  
 |SQL_ATTR_USE_BOOKMARKS|Уровень 2|  

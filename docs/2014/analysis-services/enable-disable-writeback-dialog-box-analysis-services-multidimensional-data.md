@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6682d8ced6b80e12aea783857da548498641ddd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731506"
 ---
 # <a name="enable-disable-writeback-dialog-box-analysis-services---multidimensional-data"></a>Включение и отключение обратной записи диалоговое окно (службы Analysis Services — многомерные данные)
   Диалоговое окно **Включение или отключение обратной записи** включает или отключает обратную запись для группы мер в кубе. Включение обратной записи в группе мер определяет секцию обратной записи и создает таблицу обратной записи для этой группы мер. Отключение обратной записи в группе мер удаляет секцию обратной записи, но сохраняет таблицу обратной записи, чтобы избежать непредвиденной потери данных. Диалоговое окно **Включение/отключение обратной записи** отображается следующими способами:  

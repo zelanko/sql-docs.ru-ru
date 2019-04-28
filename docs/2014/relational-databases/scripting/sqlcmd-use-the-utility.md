@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3647937630b259d60670cc470bbd1014dd288404
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666909"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Использование программы sqlcmd
   Служебная программа `sqlcmd` представляет собой программу командной строки для нерегламентированного интерактивного выполнения инструкций и скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)], а также для автоматизации задач скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)]. Интерактивная работа с `sqlcmd` и создание файлов скриптов, исполняемых с помощью `sqlcmd`, требует от пользователя понимания языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Программа `sqlcmd` обычно применяется следующим образом.  

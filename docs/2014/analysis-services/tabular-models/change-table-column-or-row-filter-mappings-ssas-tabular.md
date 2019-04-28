@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af4604c6a645c181aab1b95db99d545ae0bb5221
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795361"
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>Изменение сопоставлений фильтров таблиц, столбцов и строк (табличные службы SSAS)
   В этом разделе описано, как изменить сопоставления таблиц, столбцов или фильтров строк в диалоговом окне **Изменение свойств таблицы** в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -45,6 +45,6 @@ ms.locfileid: "48201494"
          В случае ошибки и при необходимости начать заново нажмите кнопку **Очистить фильтры строк**.  
   
 ## <a name="see-also"></a>См. также  
- [Изменить таблицу-диалоговое окно свойств &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
+ [Диалоговое окно "Изменение свойств таблицы" (службы SSAS)](../edit-table-properties-dialog-box-ssas.md)  
   
   

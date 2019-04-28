@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ae3ac89f40c67a8097db676ba0628a25d260fbeb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731445"
 ---
 # <a name="explore-data-sql-server-data-mining-add-ins"></a>Просмотр данных (надстройки интеллектуального анализа данных SQL Server)
   ![Просмотр данных](media/dmc-explore.gif "Мастер просмотра данных")  

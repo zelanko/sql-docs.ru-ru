@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8b6e7fca1013811f8a5a8b36e85970bd7a74b6d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730262"
 ---
 # <a name="creating-an-analysis-services-project"></a>Создание проекта служб Analysis Services
   В следующей задаче используется [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для создания нового [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проект с именем `Analysis Services Tutorial`, основываясь на [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] шаблона проекта. *Проект* представляет собой коллекцию связанных объектов. Проекты содержатся в решении, которое может включать несколько проектов. Дополнительные сведения см. в разделе [Создание проекта служб Analysis Services (среда SSDT)](multidimensional-models/create-an-analysis-services-project-ssdt.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "48066972"
  [Определение источника данных](lesson-1-2-defining-a-data-source.md)  
   
 ## <a name="see-also"></a>См. также  
- [Создание многомерных моделей с помощью SQL Server Data Tools &#40;SSDT&#41;](multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Создание проекта служб Analysis Services &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+ [Создание многомерных моделей с помощью SQL Server Data Tools (SSDT)](multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Создание проекта служб Analysis Services (среда SSDT)](multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   

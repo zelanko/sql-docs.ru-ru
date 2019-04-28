@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 264eb3c9b16c5eb12a578090d55e4f64884177c8
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62649701"
 ---
 # <a name="external-tools"></a>Внешние инструменты
   С помощью этого диалогового окна можно добавить в меню **Сервис** внешние инструменты, такие как диспетчер конфигурации SQL Server или "Блокнот". Добавление внешних средств позволяет легко запускать другие приложения во время работы в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. При запуске средств можно указать аргументы и рабочий каталог. Кроме того, выходные данные некоторых средств могут отображаться в окне «Вывод». Диалоговое окно **Внешние инструменты** доступно в меню **Сервис** .  

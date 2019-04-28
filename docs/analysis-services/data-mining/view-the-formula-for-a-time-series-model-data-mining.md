@@ -1,5 +1,5 @@
 ---
-title: Просмотр формулы для временного ряда модели (интеллектуальный анализ данных) | Документы Microsoft
+title: Просмотр формулы для временного ряда модели (интеллектуальный анализ данных) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0aaa1be07dcd5857585e7db3dbd4a78a44d41ff3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659732"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Просмотр формулы для модели временных рядов (интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34017231"
   
      В первой половине вкладки **Условные обозначения интеллектуального анализа данных**в области **Уравнение узла дерева**выводится формула ARTXP.  
   
-     ![Просмотр формулы временных рядов в условных обозначениях](../../analysis-services/data-mining/media/ssdm-timeserieslegend.png "Просмотр формулы временных рядов в условных обозначениях")  
+     ![Просмотр формулы временного ряда в условных обозначениях](../../analysis-services/data-mining/media/ssdm-timeserieslegend.png "Просмотр формулы временного ряда в условных обозначениях")  
   
 ### <a name="to-view-the-arima-formula-for-a-time-series-model"></a>Просмотр формулы ARIMA для модели временных рядов  
   
@@ -80,7 +80,7 @@ ms.locfileid: "34017231"
     >  При просмотре содержимого смешанной модели, объединяющей модели ARIMA и ARTXP, эти модели отображаются в виде отдельных деревьев, соединенных в корневом узле, который представляет собой модель. Несмотря на то, что для удобства модели ARIMA и ARTXP отображаются вместе, их структуры существенно различаются, а уравнения не комбинируются и не подходят для сравнения. Например, дерево ARTXP больше похоже на дерево принятия решений, в то время как дерево ARIMA представляет собой последовательность скользящих средних значений.  
   
 ## <a name="see-also"></a>См. также  
- [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Просмотр модели в средство просмотра временных рядов](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Просмотр модели с помощью средства просмотра временных рядов (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
   

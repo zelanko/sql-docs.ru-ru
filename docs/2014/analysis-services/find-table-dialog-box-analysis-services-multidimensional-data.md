@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc73bc6fbdbcbeb350bc32681bfd8dae3e01a642
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731203"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Поиск таблицы» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Поиск таблицы** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для поиска таблицы в представлении источников данных, связанном с измерением, кубом или структурой интеллектуального анализа данных. Чтобы открыть это диалоговое окно в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , выполните одно из следующих действий.  

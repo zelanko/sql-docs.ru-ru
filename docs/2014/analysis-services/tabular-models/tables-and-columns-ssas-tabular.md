@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3fd3692049ef1a5fb85ef188a73d453762d4daf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794297"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>Таблицы и столбцы (табличные службы SSAS)
   После добавления в модель таблиц и данных с помощью мастера импорта таблиц можно начать работу с таблицами — добавление новых столбцов данных, создание связей между таблицами, определение вычислений для расширения данных, фильтрацию и сортировку данных в таблицах для упрощения просмотра.  

@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41131b63817ababfe20e171185f0c27dc5f0ca06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807498"
 ---
 # <a name="database-engine-powershell-reference"></a>Справочник по PowerShell для ядра СУБД
   В состав [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] включен набор командлетов Windows PowerShell 2.0 для выполнения обычных действий в компоненте [!INCLUDE[ssDE](../includes/ssde-md.md)]. Кроме того, выражения запросов и универсальные имена ресурса (URN) можно преобразовать в пути SQL Server PowerShell либо использовать для указания одного или нескольких объектов в компоненте [!INCLUDE[ssDE](../includes/ssde-md.md)].  
@@ -31,11 +31,11 @@ ms.locfileid: "48222304"
   
 |Описание|Командлет|  
 |-----------------|------------|  
-|Выполняет скрипты Transact-SQL и XQuery, например скрипты, которые могут выполняться с помощью `sqlcmd` служебной программы.|[Командлет Invoke-Sqlcmd](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
+|Выполняет скрипты Transact-SQL и XQuery, например скрипты, которые можно выполнить с помощью программы `sqlcmd`.|[Invoke-Sqlcmd, командлет](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
 |Определяет, соответствует ли объект компонента Database Engine политике управления на основе политик.|[Invoke-PolicyEvaluation, командлет](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)|  
   
 ### <a name="information-about-other-cmdlets"></a>Сведения о других командлетах  
- `Encode-Sqlname` И `Decode-Sqlname` командлеты помогают указать идентификаторы SQL Server, которые содержат символы, не поддерживаемые в путях PowerShell. Дополнительные сведения см. в статье [SQL Server Identifiers in PowerShell](../powershell/sql-server-identifiers-in-powershell.md).  
+ Командлеты `Encode-Sqlname` и `Decode-Sqlname` помогают указать идентификаторы SQL Server, содержащие символы, не поддерживаемые в путях Windows PowerShell. Дополнительные сведения см. в статье [SQL Server Identifiers in PowerShell](../powershell/sql-server-identifiers-in-powershell.md).  
   
  Используйте командлет `Convert-UrnToPath`, чтобы преобразовать уникальное имя ресурса для объекта компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] в путь для поставщика SQL Server PowerShell. Дополнительные сведения см. в статье [Convert URNs to SQL Server Provider Paths](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md).  
   

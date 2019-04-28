@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd78b9b59b69614958abb86febcd2bd290b9f302
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680814"
 ---
 # <a name="cluster-characteristics-tab-mining-model-viewer"></a>Вкладка «Характеристики кластеров» (средство просмотра моделей интеллектуального анализа данных)
   На вкладке **Характеристики кластера** можно рассмотреть характеристики кластера в модели кластеризации или набор всех вариантов в модели. На диаграмме показана важность каждой пары «атрибут-значение» как характеристики, определяющей кластер, в сравнении с другими кластерами.  
   
- **Дополнительные сведения:** [Алгоритм кластеризации (Майкрософт)](data-mining/microsoft-clustering-algorithm.md), [Просмотр модели с помощью средства просмотра кластеров (Майкрософт)](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **Дополнительные сведения:** [Алгоритм кластеризации (Майкрософт)](data-mining/microsoft-clustering-algorithm.md), [просмотр модели в средстве просмотра кластеров (Microsoft)](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>Параметры  
  **Обновить содержимое средства просмотра**  
@@ -48,8 +48,8 @@ ms.locfileid: "48141604"
 |**Вероятность**|Полоса показывает важность пары «атрибут-значение» как отличительной характеристики этого кластера. Наведя курсор мыши на полосу, можно увидеть значение вероятности в процентах. При данном сочетании атрибута и значения в любом конкретном варианте эта величина указывает вероятность, что данный вариант принадлежит кластеру.|  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Просмотра моделей интеллектуального анализа &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Средства просмотра моделей интеллектуального анализа данных (конструктор моделей интеллектуального анализа данных)](mining-model-viewers-data-mining-model-designer.md)   
  [Средства просмотра моделей интеллектуального анализа данных](data-mining/data-mining-model-viewers.md)  
   
   

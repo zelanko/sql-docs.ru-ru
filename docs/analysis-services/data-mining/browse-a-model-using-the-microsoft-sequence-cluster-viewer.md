@@ -1,5 +1,5 @@
 ---
-title: Просмотр модели в средстве просмотра кластеризации последовательностей Майкрософт | Документы Microsoft
+title: Просмотр модели с помощью средства просмотра кластеризации последовательностей Майкрософт | Документация Майкрософт
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cce1203b73f5a1685634c4b50f6e5941bed3eb98
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671322"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Просмотр модели с помощью средства просмотра кластеризации последовательностей (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34016791"
  [В начало](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Profile"></a> Профили кластеров  
- Вкладка **Профили кластера** предоставляет общий вид кластеров, создаваемых алгоритмом в модели. Каждый столбец, идущий за столбцом **Заполнение** в сетке, представляет кластер, обнаруженный моделью. \<Атрибута > .Samples представляет различные последовательности данных, которая существует в кластере, и \<атрибут > строка описывает все элементы, которые содержит кластер и их общее распределение.  
+ Вкладка **Профили кластера** предоставляет общий вид кластеров, создаваемых алгоритмом в модели. Каждый столбец, идущий за столбцом **Заполнение** в сетке, представляет кластер, обнаруженный моделью. \<Атрибут > .Samples представляет различные последовательности данных, который существует в кластере, и \<атрибут > строка описывает всех элементов, содержащихся в кластере и их общее распределение.  
   
  Параметр **Столбцы гистограммы** управляет количеством видимых столбцов на гистограмме. Если доступно больше столбцов, чем выбрано для отображения, то наиболее важные столбцы сохраняются, а оставшиеся группируются в сегмент серого цвета.  
   
@@ -81,11 +81,11 @@ ms.locfileid: "34016791"
  [В начало](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>См. также  
- [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Алгоритм кластеризации последовательностей (Майкрософт)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [Средства интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-tools.md)   
  [Средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-model-viewers.md)   
- [Просмотр модели в средстве просмотра кластеров (Microsoft)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ [Просмотр модели с помощью средства просмотра кластеров (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
   

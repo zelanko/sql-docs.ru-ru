@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d2a9f40c2d1566a1f8ca5f054467f61da1920e5f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62805940"
 ---
 # <a name="configure-your-utility-control-point-data-warehouse-sql-server-utility"></a>Настройка хранилища данных точки управления служебной программы (служебная программа SQL Server)
   Данные, собранные управляемыми экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , хранятся в хранилище данных управления для программы (UMDW), имя файла UMDW — sysutility_mdw.  
@@ -26,9 +26,9 @@ ms.locfileid: "52804046"
   
 -   Имя UMDW: Sysutility_mdw.  
   
--   Частота передачи набора элементов сбора: каждые 15 минут.  
+-   Частота передачи набора элементов сбора: Каждые 15 минут.  
   
- Каталог UMDW может быть настроен: \<Системный диск >: \Program Files\Microsoft SQL Server\MSSQL10_50. < имя_пункта_управления_программой > \MSSQL\Data\\, где \<системный диск > — это обычно диск C:\. Файл журнала Sysutility_mdw_\<GUID>_LOG находится в том же каталоге.  
+ Каталог UMDW можно настроить: \<Системный диск >: \Program Files\Microsoft SQL Server\MSSQL10_50. < имя_пункта_управления_программой > \MSSQL\Data\\, где \<системный диск > — это обычно C:\ диск. Файл журнала Sysutility_mdw_\<GUID>_LOG находится в том же каталоге.  
   
 > [!NOTE]  
 >  Расположение файла UMDW (sysutility_mdw) можно изменить путем отсоединения и присоединения или с помощью инструкции ALTER DATABASE. Рекомендуется использовать инструкцию ALTER DATABASE. Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql).  

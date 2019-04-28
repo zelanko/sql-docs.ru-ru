@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53299289e4daf504eef9cb382469225d14efd698
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732636"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>Просмотр или изменение флагов модели (интеллектуальный анализ данных)
   Флаги модели представляют собой свойства, которые можно задать в столбце структуры интеллектуального анализа данных или столбцах модели интеллектуального анализа данных для определения того, как алгоритм обрабатывает данные во время анализа.  
@@ -52,7 +52,7 @@ ms.locfileid: "48050144"
     ```  
   
 ## <a name="see-also"></a>См. также  
- [Задачи модели интеллектуального анализа данных и инструкции по](mining-model-tasks-and-how-tos.md)   
- [Флаги моделирования &#40;интеллектуального анализа данных&#41;](modeling-flags-data-mining.md)  
+ [Задачи и инструкции по модели интеллектуального анализа данных](mining-model-tasks-and-how-tos.md)   
+ [Флаги моделирования (интеллектуальный анализ данных)](modeling-flags-data-mining.md)  
   
   

@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d4fd0da06ec6e0cbdc578fe55e2549cefdc2794
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681181"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>Вкладка «Диаграмма» (средства просмотра моделей интеллектуального анализа данных)
   Панель **Диаграмма** используется для отображения исторических данных, используемых при обучении модели временной последовательности, наряду с прогнозируемыми значениями. Вертикальная ось диаграммы представляет значение ряда, а горизонтальная — время. Будущие прогнозы представлены пунктирной линией.  
   
- **Дополнительные сведения:** [Алгоритм временных рядов (Майкрософт)](data-mining/microsoft-time-series-algorithm.md), [Просмотр модели с помощью средства просмотра временных рядов (Майкрософт)](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ **Дополнительные сведения:** [Алгоритм временных рядов](data-mining/microsoft-time-series-algorithm.md), [просмотр модели в средстве просмотра временных рядов](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
 ## <a name="options"></a>Параметры  
  **Обновить содержимое средства просмотра**  
@@ -60,8 +60,8 @@ ms.locfileid: "48146020"
  Откройте диалоговое окно, в котором можно выбрать последовательность, которую следует включить в средство просмотра.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Просмотра моделей интеллектуального анализа &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Средства просмотра моделей интеллектуального анализа данных (конструктор моделей интеллектуального анализа данных)](mining-model-viewers-data-mining-model-designer.md)   
  [Средства просмотра моделей интеллектуального анализа данных](data-mining/data-mining-model-viewers.md)  
   
   

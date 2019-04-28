@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 398b24ddbb9d128446012d36f4b691596433054c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662228"
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile, класс событий
   События класса событий Showplan All for Query Compile происходят, когда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компилирует инструкцию SQL. Включите этот класс событий, чтобы идентифицировать операторы инструкции Showplan. Включаемые в эти события сведения представляют собой часть данных, доступных в классе событий Showplan XML For Query Compile.  

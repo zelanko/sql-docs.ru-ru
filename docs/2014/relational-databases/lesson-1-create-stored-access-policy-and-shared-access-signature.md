@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7ddcef5d5e0695041742784151103c358a973d55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806735"
 ---
 # <a name="lesson-2-create-a-policy-on-container-and-generate-a-shared-access-signature-sas-key"></a>Занятие 2. Создание политики в контейнере ключа и ключа подписанного URL-адреса
   На этом занятии вы узнаете, как создать политику в контейнере больших двоичных объектов, а также сформировать ключ SAS.  
@@ -25,7 +25,7 @@ ms.locfileid: "48124084"
   
  Вы можете создать политику и подписанный URL-адрес с помощью одного из следующих методов:  
   
--   Операции Windows Azure REST API: [создать контейнер](https://msdn.microsoft.com/library/azure/dd179468.aspx), [Set ACL контейнера](https://msdn.microsoft.com/library/azure/dd179391.aspx), и [получение списка управления Доступом контейнера](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
+-   Операции Windows Azure REST API: [Создание контейнера](https://msdn.microsoft.com/library/azure/dd179468.aspx), [задать ACL контейнера](https://msdn.microsoft.com/library/azure/dd179391.aspx), и [получить ACL контейнера](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
   
 -   [Метод CloudBlobContainer.GetSharedAccessSignature](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storageclient.cloudblobcontainer.getsharedaccesssignature.aspx) в Windows Azure SDK.  
   

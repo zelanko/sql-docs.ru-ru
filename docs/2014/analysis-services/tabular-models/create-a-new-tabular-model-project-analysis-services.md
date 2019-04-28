@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f89e4b5e6d209efeb3fd37661a5f4b925aaeb63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795411"
 ---
 # <a name="create-a-newtabular-model-project-ssas-tabular"></a>Создание нового проекта табличной модели (табличные службы SSAS)
   В этом разделе описано, как создать новый пустой проект табличной модели в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Создав пустой проект, можно перейти к разработке модели путем импорта данных из источников данных.  
@@ -32,7 +32,7 @@ ms.locfileid: "48171544"
  После создания нового проекта необходимо задать свойства проекта и модели. Дополнительные сведения см. в разделах [Project Properties &#40;SSAS Tabular&#41;](properties-ssas-tabular.md) и [Model Properties &#40;SSAS Tabular&#41;](model-properties-ssas-tabular.md).  
   
 ## <a name="see-also"></a>См. также  
- [Свойства проекта &#40;табличные службы SSAS&#41;](properties-ssas-tabular.md)   
- [Свойств модели &#40;табличные службы SSAS&#41;](model-properties-ssas-tabular.md)  
+ [Свойства проекта (табличные службы SSAS)](properties-ssas-tabular.md)   
+ [Свойства модели (табличные службы SSAS)](model-properties-ssas-tabular.md)  
   
   

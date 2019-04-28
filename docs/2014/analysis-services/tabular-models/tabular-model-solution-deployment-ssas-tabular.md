@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01f4bcc06ca7bf8bcee3cf581ad0c2bec3ba4f9f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794610"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>Развертывание решений табличной модели (табличные службы SSAS)
   После создания проекта табличной модели необходимо развернуть эту модель, чтобы пользователи могли ее просматривать с помощью клиентского приложения для создания отчетов. В этом разделе описываются различные свойства и методы, которые можно использовать для развертывания решений табличных моделей в своей среде.  
