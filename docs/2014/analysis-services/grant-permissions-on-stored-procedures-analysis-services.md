@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f24a5ca8ea44f3e05bc11d0148ab30d6f83e993
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730789"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>Предоставление разрешений на хранимые процедуры (службы Analysis Services)
-  Хранимые процедуры или сборки, в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] представляют собой внешние подпрограммы, написанные на [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET, языке программирования, которые расширяют возможности [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Сборки позволяют разработчику использовать преимущества межъязыковой интеграции, обработки исключений, контроля версий, поддержки развертывания и отладки.  
+  В службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] хранимые процедуры или сборки представляют собой внешние подпрограммы, написанные на языке программирования [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET, которые расширяют возможности служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Сборки позволяют разработчику использовать преимущества межъязыковой интеграции, обработки исключений, контроля версий, поддержки развертывания и отладки.  
   
  Чтобы зарегистрировать сборку, необходимо быть администратором сервера. См. в разделе [предоставление разрешений администратора сервера &#40;служб Analysis Services&#41;](instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   

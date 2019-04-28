@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7fc769436a919a4d522fb48699c6fc6faa0d6e5c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670263"
 ---
 # <a name="reset-method-rds"></a>Метод Reset (служба удаленных рабочих столов)
 Выполняет сортировки или фильтрации на стороне клиента **записей** на основе указанного Сортировка и фильтрация свойств.  
@@ -39,7 +39,7 @@ DataControl.Reset(value)
  Объектную переменную, которая представляет [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта.  
   
  *value*  
- Необязательный параметр. Объект **логическое** значение, являющееся **True** (по умолчанию), если нужно выполнить фильтрацию в текущем наборе строк «фильтрованный». **False** указывает, что отфильтровать в исходном наборе строк, удаляя все предыдущие параметры фильтра.  
+ Необязательный. Объект **логическое** значение, являющееся **True** (по умолчанию), если нужно выполнить фильтрацию в текущем наборе строк «фильтрованный». **False** указывает, что отфильтровать в исходном наборе строк, удаляя все предыдущие параметры фильтра.  
   
 ## <a name="remarks"></a>Примечания  
  [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), и [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)свойства предоставляют функций на стороне клиента кэша сортировки и фильтрации. Функция сортировки упорядочивает записей по значения одного столбца. Функция фильтрации отображается лишь часть записи на основе критерия поиска, при полной [записей](../../../ado/reference/ado-api/recordset-object-ado.md) сохраняется в кэше. **Сброс** метод будет выполнять критерии и замените текущую **записей** с обновляемый **записей**.  

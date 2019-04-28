@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: a376ac534182f5ebdae8a3af5e32f9c4a536f8aa
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62668240"
 ---
 # <a name="sysdmpdwlockwaits-transact-sql"></a>sys.dm_pdw_lock_waits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "56014125"
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|Позиция в списке ожидания запроса.|Отсчитываемый от нуля порядковый номер. Это не является уникальным во всех записях ожидания.|  
 |session_id|**nvarchar(32)**|Идентификатор сеанса, в котором возникло состояние ожидания.|См. в разделе session_id в [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|Тип|**nvarchar(255)**|Тип ожидания, которые представляет эта запись.|Возможные значения:<br /><br /> Shared<br /><br /> SharedUpdate<br /><br /> ExclusiveUpdate<br /><br /> Монопольно|  
+|type|**nvarchar(255)**|Тип ожидания, которые представляет эта запись.|Возможные значения:<br /><br /> Shared<br /><br /> SharedUpdate<br /><br /> ExclusiveUpdate<br /><br /> Монопольно|  
 |object_type|**nvarchar(255)**|Тип объекта, который зависит от ожидания.|Возможные значения:<br /><br /> OBJECT<br /><br /> DATABASE<br /><br /> SYSTEM<br /><br /> SCHEMA<br /><br /> APPLICATION|  
 |object_name|**nvarchar(386)**|Имя или идентификатор GUID для указанного объекта, который был подвергнут ожидания.|Таблицы и представления отображаются имена из трех частей.<br /><br /> Индексы и статистику отображаются четырехкомпонентные имена.<br /><br /> Имена субъектов и баз данных являются строковыми именами.|  
 |request_id|**nvarchar(32)**|Идентификатор запроса, в котором произошло состояния ожидания.|Идентификатор запроса.<br /><br /> Это идентификатор GUID для запросов на загрузку.|  

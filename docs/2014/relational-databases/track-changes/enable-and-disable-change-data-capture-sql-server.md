@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f66cb56380f0e027d08e53154c05b7ad1e3be89f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670580"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Включение и отключение отслеживания измененных данных (SQL Server)
   В этом разделе описано, как включить или отключить систему отслеживания измененных данных для базы данных и таблицы.  

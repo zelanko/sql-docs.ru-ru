@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 289ffeeb6158da7b2dce6d5be1ac0aa88ac029e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650595"
 ---
 # <a name="attribute-relationships-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Связи атрибутов (вкладка «Конструктор связей атрибутов», конструктор измерений) (службы Analysis Services — многомерные данные)
   Используйте список **Связи атрибутов** , чтобы отыскать конкретную связь в диаграмме связей атрибутов и управлять этой связью. Эта панель окна размещается непосредственно под панелью, содержащей диаграмму связей атрибутов.  

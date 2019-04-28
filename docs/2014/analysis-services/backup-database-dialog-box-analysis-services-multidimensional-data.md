@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 741f3b761e4c6645cee7c43c3e8f593dbad13219
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650469"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Создание резервной копии базы данных» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Создание резервной копии базы данных** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], чтобы осуществлять резервное копирование базы данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в файл резервной копии, использующий формат файла резервной копии служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (ABF).  

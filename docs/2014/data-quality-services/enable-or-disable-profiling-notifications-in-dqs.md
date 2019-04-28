@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ae8564c14523f7febad0416df03fb0464933a26c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792956"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>Включение или отключение уведомлений по профилированию в DQS
   В этом разделе описывается включение или отключение уведомлений по профилированию в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). По умолчанию уведомления по профилированию в DQS включены. Уведомления по профилированию сообщают важные сведения об источнике данных и эффективности текущего действия, выполняемого с данными. Дополнительные сведения см. в статье [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  

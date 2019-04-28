@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26da2a16462b9853489c6430a6c80e1ab2a6f3b8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662971"
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction, класс событий
   Используйте класс событий **DTCTransaction** для контроля состояния транзакций компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , координируемых с помощью координатора распределенных транзакций [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Сюда входят транзакции, задействующие две или более баз данных на одном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], или распределенные транзакции, задействующие несколько экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

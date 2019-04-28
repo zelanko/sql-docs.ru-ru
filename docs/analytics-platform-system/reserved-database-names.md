@@ -1,6 +1,6 @@
 ---
-title: Зарезервированные имена баз данных - Parallel Data Warehouse | Документы Microsoft
-description: Зарезервированные имена баз данных в аналитику платформы системы Parallel Data Warehouse.
+title: Зарезервированные имена баз данных - Parallel Data Warehouse | Документация Майкрософт
+description: Зарезервированные имена баз данных в Analytics платформы системы Parallel Data Warehouse.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,16 +10,16 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 713927c6c0b32cb87353b39e562e3a6ab1a94132
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679273"
 ---
-# <a name="reserved-database-names-in-parallel-data-warehouse"></a>Имена баз данных зарезервированные в параллельное хранилище данных
-Зарезервированное имя базы данных — это имя, которое не может быть назначен пользовательской базы данных в SQL Server PDW.  
+# <a name="reserved-database-names-in-parallel-data-warehouse"></a>Зарезервированные имена баз данных в Parallel Data Warehouse
+Зарезервированное имя базы данных — это имя, которое не может присваиваться пользовательской базы данных в SQL Server PDW.  
   
-Список имен зарезервированные базы данных:  
+Список зарезервированные имена баз данных:  
   
 -   master  
   

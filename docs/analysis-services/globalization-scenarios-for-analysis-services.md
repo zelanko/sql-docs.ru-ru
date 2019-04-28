@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f9af9e0eaf06fca60da515a16e7e6830dcb8462d
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659699"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Сценарии глобализации для служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "58658328"
   
 -   Файлы журнала будут содержать как английские, так и локализованные сообщения, при условии что вы установили языковой пакет на сервере Windows, на котором работают службы Analysis Services.  
   
--   Документация и инструменты, такие как [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] и [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], переведены на следующие языки: китайский (упрощенное письмо), китайский (традиционное письмо), французский, немецкий, итальянский, японский, корейский, русский, португальский (Бразилия) и испанский. Культура указывается в процессе установки.  
+-   Документация и средства, такие как [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] и [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], переводятся на следующие языки: Китайский упрощенный, китайский традиционный, французский, немецкий, итальянский, японский, корейский, португальский (Бразилия), русский и испанский. Культура указывается в процессе установки.  
   
  Для многомерных моделей службы Analysis Services позволяют задать язык, параметры сортировки и преобразования независимо друг от друга по всей иерархии объектов.  Для табличных моделей можно добавлять только преобразования: язык и параметры сортировки наследуются операционной системой сервера виртуальных машин.  
   

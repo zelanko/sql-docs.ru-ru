@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fcbca7ac7ae5d218d99623d1b98dd64e19dcda77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689441"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Просмотр модели с помощью средства просмотра нейронных сетей (Майкрософт)
   Средство просмотра нейронных сетей ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, построенные с помощью алгоритма нейронной сети ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Алгоритм нейронной сети [!INCLUDE[msCoName](../../includes/msconame-md.md)] создает классификационные и регрессивные модели интеллектуального анализа данных, с помощью которых можно выполнять анализ из нескольких входящих и исходящих источников. Это делает его полезным при выполнении различных видов открытого анализа и изучения. Дополнительные сведения об этом алгоритме см. в разделе [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md).  
@@ -70,16 +70,16 @@ ms.locfileid: "48117864"
  [В начало](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Characteristics"></a> Переменные  
- Сетка на вкладке **Переменные** содержит следующие столбцы: **Атрибут**, **Значение**, **Предпочтения [значение 1]** и **Предпочтения [значение 2]**. По умолчанию таблица отсортирована по столбцу **Предпочитает [значение 1]** по возрастанию. Чтобы изменить порядок сортировки, щелкните заголовок нужного столбца.  
+ Сетка в **переменных** вкладка содержит следующие столбцы: **Атрибут**, **значение**, **предпочтения [значение 1]**, и **предпочтения [значение 2]**. По умолчанию таблица отсортирована по столбцу **Предпочитает [значение 1]** по возрастанию. Чтобы изменить порядок сортировки, щелкните заголовок нужного столбца.  
   
  Полоса, находящаяся справа от атрибута, показывает, какое состояние выходного атрибута является предпочтительным для указанного состояния входного атрибута. Размер этой полосы показывает, насколько строго выходное состояние соответствует входному.  
   
  [В начало](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритм нейронной сети (Майкрософт)](microsoft-neural-network-algorithm.md)   
- [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](mining-model-viewer-tasks-and-how-tos.md)   
- [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](mining-model-viewer-tasks-and-how-tos.md)   
+ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
+ [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](mining-model-viewer-tasks-and-how-tos.md)   
+ [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](mining-model-viewer-tasks-and-how-tos.md)   
  [Средства интеллектуального анализа данных](data-mining-tools.md)   
  [Средства просмотра моделей интеллектуального анализа данных](data-mining-model-viewers.md)  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fa14cea178d732332ab4729b1c653ef6d19cfab9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731788"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>Конструктор измерений (службы Analysis Services — многомерные данные)
   Конструктор измерений в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] применяется для просмотра данных, содержащихся в измерении, и изменения различных свойств существующего измерения: атрибутов, иерархий, уровней, связей атрибутов и преобразований.  

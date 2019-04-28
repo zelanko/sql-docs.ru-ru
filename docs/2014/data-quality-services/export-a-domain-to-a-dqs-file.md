@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 46f2cd765667a64062c3a47ac91973eed8c94664
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792741"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>Экспорт домена в файл .dqs
   В этом разделе описывается экспорт домена в файл .dqs в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Экспортировать в файл данных можно домен или всю базу знаний. Сведения об экспорте базы знаний см. в разделе [Экспорт базы знаний в файл DQS](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md).  

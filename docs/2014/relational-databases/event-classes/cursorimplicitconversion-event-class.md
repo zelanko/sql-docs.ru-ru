@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efc615e9aa873a322ef9a31b2c293e6c5c4793da
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663530"
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion, класс событий
   Класс событий **CursorImplicitConversion** описывает события неявного преобразования курсора, происходящие в программных интерфейсах (API) и курсорах [!INCLUDE[tsql](../../includes/tsql-md.md)] . События неявного преобразования курсора происходят, когда компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] выполняет инструкцию Transact-SQL, не поддерживаемую запрошенным типом серверных курсоров. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] возвращает ошибку, указывающую, что тип курсора изменился.  

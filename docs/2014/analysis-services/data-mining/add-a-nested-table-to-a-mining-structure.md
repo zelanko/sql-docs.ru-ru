@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00ac2368cdba8d1f84141cf7881bc97563bab684
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689371"
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>добавить вложенную таблицу в структуру интеллектуального анализа данных
   Используйте конструктор интеллектуального анализа данных, чтобы добавить к структуре вложенную таблицу, предварительно созданную мастером интеллектуального анализа данных.  

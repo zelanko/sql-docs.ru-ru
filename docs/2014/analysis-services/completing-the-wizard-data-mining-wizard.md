@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 99cc8b42d30bd19e878283d0641d23c894d1abb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680617"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>Завершение работы мастера (мастер интеллектуального анализа данных)
   Используйте страницу **Завершение работы мастера** , чтобы проверить созданную структуру интеллектуального анализа данных после окончания работы с мастером. Можно также задать имя структуры интеллектуального анализа данных.  
@@ -28,7 +28,7 @@ ms.locfileid: "48202574"
 > [!NOTE]  
 >  Вид этой страницы меняется в зависимости от того, что было выбрано на странице мастера **Выбор метода определения**: **На основе существующей реляционной базы данных или хранилища данных** или **На основе существующего куба**.  
   
- **Дополнительные сведения:** [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Конструктор интеллектуального анализа данных](data-mining/data-mining-designer.md), [Создание реляционной структуры интеллектуального анализа данных](data-mining/create-a-relational-mining-structure.md)  
+ **Дополнительные сведения:** [Мастер интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [конструктор интеллектуального анализа данных](data-mining/data-mining-designer.md), [Создание реляционной структуры](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Параметры  
  **Имя структуры интеллектуального анализа данных**  

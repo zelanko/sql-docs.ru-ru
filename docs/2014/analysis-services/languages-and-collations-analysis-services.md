@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6300606195ea435a0290d828109b821d0d6702c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730225"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Языки и параметры сортировки (службы Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживает языки и параметры сортировки, предоставляемые операционными системами Windows [!INCLUDE[msCoName](../includes/msconame-md.md)] . Свойства `Language` и `Collation` изначально устанавливаются на уровне экземпляра во время установки, но их можно изменить позднее на разных уровнях иерархии объектов.  

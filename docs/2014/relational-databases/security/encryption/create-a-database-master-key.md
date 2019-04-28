@@ -13,11 +13,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: be6b5614258d5fc2941d3355c680138f59d873f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655324"
 ---
 # <a name="create-a-database-master-key"></a>Создание главного ключа базы данных
   В этом разделе описывается создание главного ключа базы данных в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "48170424"
   
 1.  Выберите пароль для шифрования копии главного ключа базы данных, которая будет храниться в базе данных.  
   
-2.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+2.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 3.  На стандартной панели выберите пункт **Создать запрос**.  
   

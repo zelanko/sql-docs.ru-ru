@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e84b6e148774fc9b48b6174fa8be87579290fec4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657328"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Установка PowerPivot из командной строки
   Программу установки SQL Server PowerPivot для SharePoint можно запустить из командной строки. В команду необходимо включить параметр `/ROLE` и исключить из нее параметр `/FEATURES`.  

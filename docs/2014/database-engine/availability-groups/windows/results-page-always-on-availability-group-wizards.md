@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a76c87b38dc333f55745c61620398f086a3db5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789015"
 ---
 # <a name="results-page-alwayson-availability-group-wizards"></a>Страница результатов (мастера групп доступности AlwaysOn)
   В этом разделе описываются параметры, приведенные на странице **Результаты** . Эта тема относится к [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]и [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Эта страница используется для просмотра результатов работы мастера.  
@@ -28,7 +28,7 @@ ms.locfileid: "48104954"
 ##  <a name="PageOptions"></a> Параметры страницы результатов  
  Сетка **Сводка** содержит следующие столбцы:  
   
- **Название**  
+ **Name**  
  Отображает фразу, которая описывает конкретную операцию.  
   
  **Результат**  

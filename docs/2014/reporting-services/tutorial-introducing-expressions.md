@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d155dd77380b202938476e7a34fdb51d212b4330
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62649202"
 ---
 # <a name="tutorial-introducing-expressions"></a>Учебник. Общие сведения о выражениях
   Выражения позволяют создавать мощные и гибкие отчеты. С помощью этого учебника вы научитесь создавать и реализовывать выражения с часто используемыми функциями и операторами. Вы воспользуетесь **выражение** диалоговое окно, чтобы создавать выражения, производящие объединение значений имен, поиск значений в отдельном наборе данных, отображающие различные изображения в зависимости от значений полей и т. д.  

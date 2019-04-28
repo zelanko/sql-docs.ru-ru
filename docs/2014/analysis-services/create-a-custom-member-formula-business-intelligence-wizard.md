@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 116a9c05069d59e3ae458e232f7451be04411794
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679898"
 ---
 # <a name="create-a-custom-member-formula-business-intelligence-wizard"></a>Создание нестандартной формулы элемента (мастер бизнес-аналитики)
   Используйте **Создание нестандартной формулы элемента** страницы связывайте атрибуты в указанном измерении со столбцами нестандартной формулы элемента столбцы-, содержащими инструкции многомерных выражений (MDX), определяющие значения элементов для Этот атрибут.  

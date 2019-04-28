@@ -19,19 +19,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2fd8058518d59e5eb3fcf8a8514425c69339dfb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792084"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>Ручная подготовка базы данных-получателя для присоединения к группе доступности (SQL Server)
-  В этом разделе описывается подготовка базы данных-получателя для группы доступности AlwaysOn в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell. Подготовка базы данных-получателя выполняется в два этапа: (1) восстановление базы данных из последней резервной копии базы данных-источника и соответствующих резервных копий журнала на каждом экземпляре сервера, где размещена вторичная реплика доступности, при помощи инструкции RESTORE WITH NORECOVERY и (2) присоединение восстановленной базы данных к группе доступности.  
+  В этом разделе описывается подготовка базы данных-получателя для группы доступности AlwaysOn в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell. Подготовка базы данных-получателя в два этапа: (1) восстановление последней резервной копии базы данных из базы данных-источника и последующие резервные копии журналов на каждом экземпляре сервера, на котором размещена вторичная реплика, с помощью инструкции RESTORE WITH NORECOVERY и (2) присоединение восстановленной базы данных к группе доступности.  
   
 > [!TIP]  
 >  Если имеется существующая конфигурация доставки журналов, можно будет преобразовать базу данных-источник доставки журналов вместе с одной или более базой данных-получателем в базу данных-источник AlwaysOn и одну или более баз данных-получателей AlwaysOn. Дополнительные сведения см. в разделе [необходимые условия для перехода от использования доставки журналов для групп доступности AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
   
--   **Перед началом работы**  
+-   **Перед началом:**  
   
      [Требования и ограничения](#Prerequisites)  
   
@@ -277,7 +277,7 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
   
 ```  
   
-##  <a name="FollowUp"></a> Дальнейшие действия: После подготовки базы данных-получателя  
+##  <a name="FollowUp"></a> Дальнейшие действия. После подготовки базы данных-получателя  
  Чтобы завершить настройку базы данных-получателя, необходимо присоединить только что восстановленную базу данных к группе доступности. Дополнительные сведения см. в статье [Присоединение базы данных-получателя к группе доступности (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 ## <a name="see-also"></a>См. также  

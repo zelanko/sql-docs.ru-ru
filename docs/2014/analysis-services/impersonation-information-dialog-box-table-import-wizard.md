@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d271bbfdf31a24304961d71e4501ea7ae4579440
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730706"
 ---
 # <a name="impersonation-information-dialog-box-table-import-wizard"></a>Диалоговое окно «Сведения об олицетворении» (мастер импорта таблиц)
   Страница **Сведения об олицетворении** служит для указания учетных данных, которые будут использоваться [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] для соединения с источником данных. Дополнительные сведения об олицетворении учетных данных см. в разделе [Impersonation &#40;SSAS Tabular&#41;](tabular-models/impersonation-ssas-tabular.md).  
@@ -43,6 +43,6 @@ ms.locfileid: "48047565"
  Выберите этот параметр для использования учетных данных безопасности, связанных со службой [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , управляющей моделью.  
   
 ## <a name="see-also"></a>См. также  
- [Олицетворение &#40;табличные службы SSAS&#41;](tabular-models/impersonation-ssas-tabular.md)  
+ [Олицетворение (табличные службы SSAS)](tabular-models/impersonation-ssas-tabular.md)  
   
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24d35372e81b131ce9053649bc964edd9251efa4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680129"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>Копирование и вставка данных (табличные службы SSAS)
   Табличные данные можно скопировать из внешнего приложения и вставить в новую или существующую таблицу в конструкторе моделей. Данные, вставляемые из буфера обмена, должны иметь формат HTML, например, как и данные, копируемые из Excel или Word. Конструктор моделей автоматически обнаруживает и применяет типы данных для вставляемых данных. Также можно изменить тип данных или формат отображения столбца вручную.  
@@ -87,8 +87,8 @@ ms.locfileid: "48129304"
  Показывает образец содержимого буфера обмена. Существующие данные будут удалены из целевой таблицы, и будут вставлены новые строки.  
   
 ## <a name="see-also"></a>См. также  
- [Импорт данных &#40;табличные службы SSAS&#41;](import-data-ssas-tabular.md)   
- [Источники данных, поддерживаемые &#40;табличные службы SSAS&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [Задайте тип данных столбца &#40;табличные службы SSAS&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
+ [Импорт данных (табличные службы SSAS)](import-data-ssas-tabular.md)   
+ [Поддерживаемые источники данных (табличные службы SSAS)](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Выбор типа данных столбца (табличные службы SSAS)](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
   
   

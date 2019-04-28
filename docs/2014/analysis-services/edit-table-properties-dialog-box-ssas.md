@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11e2dbc6cdd0911361aff76f252e9a772104789b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731496"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Диалоговое окно «Изменение свойств таблицы» (SSAS)
   В диалоговом окне **Изменение свойств таблицы** можно просмотреть и изменить свойства таблиц, импортированных в конструктор моделей с помощью мастера импорта таблиц. Чтобы открыть это диалоговое окно, выберите таблицу в конструкторе моделей, а затем выберите пункт **Свойства таблицы** в меню **Таблица**.  
@@ -100,6 +100,6 @@ ms.locfileid: "48229284"
  Нажмите, чтобы применить все выполненные изменения, включая замену столбцов.  
   
 ## <a name="see-also"></a>См. также  
- [Таблицы и столбцы &#40;табличные службы SSAS&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+ [Таблицы и столбцы (табличные службы SSAS)](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

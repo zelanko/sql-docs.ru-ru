@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a3994aa8a442f0ec1522bdf2314e0d6023e94bcf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667068"
 ---
 # <a name="mssqleng002601"></a>MSSQL_ENG002601
     
@@ -41,7 +41,7 @@ ms.locfileid: "52760247"
   
 -   Используется таблица со столбцом идентификаторов, однако управление столбцом осуществляется неверно.  
   
--   В репликации слиянием Эта ошибка также может возникнуть во время вставки в системную таблицу **MSmerge_contents**; возникающая ошибка аналогична: Невозможно вставить повторяющуюся строку ключей в объект 'MSmerge_contents' с уникальным индексом 'ucl1SycContents'.  
+-   В репликации слиянием Эта ошибка также может возникнуть во время вставки в системную таблицу **MSmerge_contents**; возникающая ошибка аналогична: Не удается вставить повторяющуюся строку ключа в объект 'MSmerge_contents' с уникальным индексом 'ucl1SycContents'.  
   
 ## <a name="user-action"></a>Действие пользователя  
  Действие по устранению проблемы зависит от причины, по которой она возникла:  

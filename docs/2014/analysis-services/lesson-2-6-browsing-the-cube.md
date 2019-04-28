@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11369983a3fd977db2f7ba09e4a4c69fd09abc0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729333"
 ---
 # <a name="browsing-the-cube"></a>Просмотр куба
   После развертывания куба данные куба отображаются на вкладке **Обозреватель** конструктора кубов, а данные измерений отображаются на вкладке **Браузер** конструктора измерений. Просмотр данных куба и измерения позволяет постепенно проверять свою работу. Можно видеть, что небольшие изменения свойств, связей и других объектов оказывают нужный эффект после обработки объекта. Вкладка «Обозреватель» используется как для данных куба, так и для данных измерения, однако в зависимости от просматриваемого объекта она предлагает разные возможности.  
@@ -40,7 +40,7 @@ ms.locfileid: "48077514"
      Левая панель конструктора отображает объекты куба учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . В правой части вкладки **Браузер** находятся две панели: верхняя — панель **Фильтр** , нижняя — панель **Данные** . На следующем занятии будет выполнен анализ с помощью средства просмотра кубов.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 3. Изменение мер, атрибутов и иерархий](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+ [Занятие 3. Изменение мер, атрибутов и иерархий](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>См. также  
  [Редактор запросов многомерных выражений (службы Analysis Services — многомерные данные)](mdx-query-editor-analysis-services-multidimensional-data.md)  

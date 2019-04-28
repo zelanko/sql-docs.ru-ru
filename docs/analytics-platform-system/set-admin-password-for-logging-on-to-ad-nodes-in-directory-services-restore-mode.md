@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 3df6203a4d98bace5d23a92e70a596a34dedb60e
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678348"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Задание пароля администратора для входа в систему узлы AD в службах каталогов восстановление (DSRM) - Analytics Platform System
 Режим восстановления служб каталогов (DSRM) — это режим загрузки для восстановления в доменных службах Active Directory (AD DS). Он используется для входа на устройство AD узлы после сбоя AD DS или AD DS должны быть восстановлены. Пароль DSRM был инициализирован во время настройки устройства на сайте поставщика оборудования и следует изменять администратор устройства. Система Analytics Platform System имеет два AD DS (контроллеры домена);  **_appliance_domain_-AD01** и  **_appliance_domain_-AD02**. Для каждого узла устройства AD измените пароль DSRM, выполнив следующие действия.  

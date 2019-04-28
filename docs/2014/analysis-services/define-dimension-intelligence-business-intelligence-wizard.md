@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2aaef74d9e94446022b8c0585749a4eb0bf05cd2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732120"
 ---
 # <a name="define-dimension-intelligence-business-intelligence-wizard"></a>Определение логики операций с измерениями (мастер бизнес-аналитики)
   Страница **Определение логики операций с измерениями** позволяет сопоставить существующие атрибуты измерения с типами атрибутов для указанного типа измерения.  

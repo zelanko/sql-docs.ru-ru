@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0a4c8105b023bbb98387315a37a770f7e034937
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648877"
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Учебники по службам Analysis Services (SSAS)
   Этот раздел содержит учебники для служб Analysis Services [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
@@ -37,7 +37,7 @@ ms.locfileid: "53359016"
  Большинство учебников по SQL Server 2008 R2 работают на сервере [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Если вы не знакомы с интеллектуальным анализом данных, воспользуйтесь ссылкой, чтобы найти учебники по интеллектуальному анализу данных в SQL Server 2008 R2, которые также подойдут для экземпляра [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] служб Analysis Services.  
   
 ## <a name="see-also"></a>См. также  
- [Вики-сайте TechNet: Образцы SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)   
+ [TechNet WIKI: Образцы SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)   
  [Набор данных «Пикник» (образец данных)](https://go.microsoft.com/fwlink/?linkID=219108)  
   
   

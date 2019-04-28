@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c919eb7c63a241c780d5e56b3e530921c6b51d6d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663915"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack, класс событий
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует событие **Broker:Remote Message Ack** , когда компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] отправляет или получает подтверждение сообщения.  
@@ -37,7 +37,7 @@ ms.locfileid: "52812266"
 |**EventSequence**|**int**|Порядковый номер этого события.|51|Нет|  
 |**EventSubClass**|**nvarchar**|Тип подкласса события, предоставляющий дополнительные сведения о каждом классе событий. Этот столбец может содержать следующие значения.<br /><br /> **Сообщение с подтверждение отправки**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] отправил подтверждение как часть обычного последовательного сообщения.<br /><br /> **Подтверждение отправки**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] отправил подтверждение вне обычного последовательного сообщения.<br /><br /> **Сообщение получено подтверждение**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] получил подтверждение как часть обычного последовательного сообщения.<br /><br /> **Получено подтверждение**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] получил подтверждение вне обычного последовательного сообщения.|21|Да|  
 |**GUID**|**uniqueidentifier**|Идентификатор диалога. Этот идентификатор передается в составе сообщения и является общим для обоих участников диалога.|54|Нет|  
-|**HonorBrokerPriority**|**Int**|Текущее значение параметра базы данных HONOR_BROKER_PRIORITY: 0 = выключен, 1 = включен.|32|Да|  
+|**HonorBrokerPriority**|**Int**|Текущее значение базы данных honor_broker_priority: 0 = ВЫКЛЮЧЕНО, 1 = ON.|32|Да|  
 |**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Заполнение этого столбца данных производится в том случае, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |**IntegerData**|**int**|Номер фрагмента сообщения, содержащего подтверждение.|25|Нет|  
 |**IntegerData2**|**int**|Номер фрагмента подтверждаемого сообщения.|55|Нет|  

@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c3ff85f2d8f99f530ad784b3a68c3ef2bfcd6432
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650275"
 ---
 # <a name="cluster-resource-group"></a>Группа кластерных ресурсов
   Страница «Группа кластерных ресурсов» используется для указания диска, на котором будет располагаться группа кластерных ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

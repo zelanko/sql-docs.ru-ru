@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43a55174bae1bb03034ea005749055701884848f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806877"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-outbound-connections-transact-sql"></a>Включение использования сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)
   В этом подразделе описаны этапы настройки экземпляров сервера для использования сертификатов проверки подлинности исходящих соединений при зеркальном отображении базы данных. Конфигурацию исходящих соединений необходимо выполнить до настройки входящих соединений.  
@@ -168,7 +168,7 @@ GO
   
  Дополнительные сведения о создании зеркальной базы данных, содержащей пример Transact-SQL, см. в разделе [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
- Пример запроса Transact-SQL, устанавливающий сеанс с режимом высокой производительности, см. в разделе [Пример. Настройка зеркального отображения базы данных с помощью сертификатов (Transact-SQL)](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
+ Пример Transact-SQL, устанавливающий сеанс с режимом высокой производительности, см. в разделе [пример: Настройка зеркального отображения с помощью сертификатов &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
 ## <a name="net-framework-security"></a>Безопасность .NET Framework  
  За исключением случаев, когда сеть гарантированно защищена, рекомендуется для соединений зеркального отображения базы данных применять шифрование.  
@@ -179,7 +179,7 @@ GO
  [Выбор алгоритма шифрования](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [ALTER ENDPOINT (Transact-SQL)](/sql/t-sql/statements/alter-endpoint-transact-sql)   
- [Пример. Настройка зеркального отображения базы данных с помощью сертификатов (Transact-SQL)](example-setting-up-database-mirroring-using-certificates-transact-sql.md)   
+ [Пример. Настройка зеркального отображения с помощью сертификатов &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)   
  [Конечная точка зеркального отображения базы данных (SQL Server)](the-database-mirroring-endpoint-sql-server.md)   
  [Диагностика конфигурации зеркального отображения базы данных (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [Настройка зашифрованной зеркальной базы данных](set-up-an-encrypted-mirror-database.md)  

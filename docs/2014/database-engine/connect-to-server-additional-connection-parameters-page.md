@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e92fbb8bc29aed54e43925a0670d9a365388df62
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808685"
 ---
 # <a name="connect-to-server-additional-connection-parameters-page"></a>Соединение с сервером (страница «Дополнительные параметры соединения»)
   В диалоговом окне **Подключение к** среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] наиболее широко применяемые значения в строке подключения представлены в виде параметров. С помощью страницы **Дополнительные параметры соединения** можно добавить дополнительные параметры соединения к строке подключения.  
@@ -45,14 +45,14 @@ ms.locfileid: "48087954"
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="example-a-connecting-to-the-database-engine"></a>Пример А. Соединение с ядром СУБД  
+### <a name="example-a-connecting-to-the-database-engine"></a>Пример а. Подключение к ядру СУБД  
  Чтобы подключиться к базе данных [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] на сервере ACCOUNTING, введите следующее на странице **Дополнительные параметры соединения** :  
   
 ```  
 ;SERVER=ACCOUNTING;DATABASE=AdventureWorks2012  
 ```  
   
-### <a name="example-b-connecting-to-analysis-services"></a>Пример Б. Соединение со службами Analysis Services  
+### <a name="example-b-connecting-to-analysis-services"></a>Пример б Подключение к службам Analysis Services  
  Чтобы подключиться к службам Analysis Services, указать, что все секции, прослушивающие уведомления, должны запрашиваться в реальном времени (с обходом кэширования) и задать время ожидания обратной записи равным 5, введите следующее на странице **Дополнительные параметры соединения** :  
   
 ```  

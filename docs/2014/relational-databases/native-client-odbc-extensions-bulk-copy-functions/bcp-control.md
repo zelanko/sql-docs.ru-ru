@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 323ea04d32501f04156ffa81452fad5e5cf86664
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689509"
 ---
 # <a name="bcpcontrol"></a>bcp_control
   Изменяет значения по умолчанию различных параметров управления для массового копирования между файлом и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -120,7 +120,7 @@ iValue
  BCPODBC  
  Если значение равно TRUE, указывает, что **datetime** и **smalldatetime** будет использовать значения, сохраняемые в символьном формате, управляющие последовательности ODBC timestamp префикс и суффикс. Параметр BCPODBC применяется только к BCP_OUT.  
   
- Если задано значение FALSE, **datetime** значение, представляющее 1 января 1997 преобразуется в символьную строку: 00:00:00.000 1997-01-01. При значении TRUE же **datetime** интерпретируется так: {ts "00:00:00.000 1997-01-01"}.  
+ Если задано значение FALSE, **datetime** значение, представляющее 1 января 1997 преобразуется в символьную строку: 1997-01-01 00:00:00.000. При значении TRUE же **datetime** интерпретируется так: {ts "00:00:00.000 1997-01-01"}.  
   
  BCPROWCOUNT  
  Возвращает число строк, на которые распространяется действие текущей (или последней) операции bcp.  

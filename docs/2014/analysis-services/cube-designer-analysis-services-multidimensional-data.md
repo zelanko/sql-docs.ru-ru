@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a4333b9d2c15097b1954144738543250bb591621
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679630"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Конструктор кубов (службы Analysis Services — многомерные данные)
   **Конструктор кубов** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] используется для изменения различных свойств существующего куба, включая группы мер и меры, измерения куба и их связи, вычисления, ключевые показатели эффективности, действия, секции, перспективы и переводы, включенные в куб, а также для обзора данных, содержащихся в кубе. Диалоговое окно **Конструктор кубов** можно открыть следующими способами:  

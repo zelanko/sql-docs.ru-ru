@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5604aafbbc8a6d77081e829269955c8b7600f4ee
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657813"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента расширяет SQLGetStmtAttr для предоставления атрибутов инструкции, относящиеся к драйверу.  

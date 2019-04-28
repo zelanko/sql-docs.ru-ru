@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6829f4f5197fca28944e5bc9d2f636f6624c9d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653336"
 ---
 # <a name="odbc-function-summary"></a>Сводка по функциям ODBC
 В следующей таблице перечислены функции ODBC, сгруппированные по типу задачи и включает обозначение соответствия и краткое описание назначения каждой функции. Дополнительные сведения о обозначения соответствия, см. в разделе [ODBC и стандартная инфраструктура CLI](../../../odbc/reference/odbc-and-the-standard-cli.md). Дополнительные сведения о синтаксисе и семантике для каждой функции см. в разделе [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Приложение может вызвать **SQLGetInfo** функцию для получения соответствия сведений о драйвере. Чтобы получить сведения о поддержке для определенной функции в драйвере, приложение может вызвать **SQLGetFunctions**.  
   
-|Задача|Имя функции|Соответствие стандартам|Назначение|  
+|Задача|Имя функции|Соответствие стандартам|Цель|  
 |----------|-------------------|-----------------|-------------|  
 |Подключение к источнику данных|[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|ISO-92|Получает дескриптор среды, подключения, инструкции или дескриптора.|  
 ||[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|ISO-92|Подключается к конкретный драйвер, имя источника данных, идентификатор пользователя и пароль.|  

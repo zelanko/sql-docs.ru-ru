@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7f35be763558ecfab37b799b776eb5661ea32ca8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729905"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Диалоговое окно «Вставка функции» (SSAS)
   Диалоговое окно **Вставка функции** используется для выбора из списка тех функций, которые можно применять при построении формул. Для доступа к этому диалоговому окну из конструктора моделей нажмите кнопку функции (**fx**) в строке формул над каждой таблицей. Дополнительные сведения о выборе функций для применения в формулах см. в разделах «Введение в DAX» и «Построение формулы».  
@@ -45,12 +45,12 @@ ms.locfileid: "48125950"
   
  Статистические  
   
- Текста  
+ Text  
   
 ## <a name="measures-and-formulas"></a>Меры и формулы  
  Диалоговое окно **Вставка функции** доступно только при построении формулы. Вычисления можно создавать либо в вычисляемых столбцах, либо в сводных таблицах и сводных диаграммах. Формулы, создаваемые явно для применения в сводной таблице, также называются *мерами*. Дополнительные сведения см. в разделах [Создание вычисляемого столбца (табличные службы SSAS)](tabular-models/ssas-calculated-columns-create-a-calculated-column.md) и [Создание мер и управление ими (табличные службы SSAS)](tabular-models/measures-ssas-tabular.md).  
   
 ## <a name="see-also"></a>См. также  
- [Вычисления &#40;табличные службы SSAS&#41;](tabular-models/calculations-ssas-tabular.md)  
+ [Вычисления (табличные службы SSAS)](tabular-models/calculations-ssas-tabular.md)  
   
   

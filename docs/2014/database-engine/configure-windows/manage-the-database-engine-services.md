@@ -25,11 +25,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e747a85c816c8e57757be9acb61b14204266ff35
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782055"
 ---
 # <a name="manage-the-database-engine-services"></a>Управление службами компонента Database Engine
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускается в операционной системе в качестве службы. Служба — это особый вид приложения, которое выполняется в системе в фоновом режиме. Службы обычно обеспечивают базовые функции операционной системы, например: ведение журнала событий, доступ к файлам или веб-страницам. Службы могут выполняться без отображения своего пользовательского интерфейса на рабочем столе компьютера. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и некоторые другие компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняются как службы и обычно запускаются при запуске операционной системы. Некоторые службы по умолчанию не запускаются, это зависит от указанных при установке параметров. В этом разделе описывается управление различными службами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Прежде чем входить в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо уметь запускать, останавливать, приостанавливать и возобновлять, а также перезапускать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После входа можно выполнять различные задачи: администрировать сервер или выполнять запросы к базе данных.  

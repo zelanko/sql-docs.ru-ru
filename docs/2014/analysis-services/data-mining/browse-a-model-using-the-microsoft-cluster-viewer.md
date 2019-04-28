@@ -24,11 +24,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 78172be64641195f787e0e807149b4995c3b5805
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689536"
 ---
 # <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>Просмотр модели с помощью средства просмотра кластеров (Майкрософт)
   Средство просмотра кластеров [!INCLUDE[msCoName](../../includes/msconame-md.md)] в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, построенные с помощью алгоритма кластеризации [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Алгоритм кластеризации [!INCLUDE[msCoName](../../includes/msconame-md.md)] является алгоритмом сегментации, он используется для просмотра данных с целью обнаружения аномалий в данных и создания прогнозов. Дополнительные сведения об этом алгоритме см. в статье [Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md).  

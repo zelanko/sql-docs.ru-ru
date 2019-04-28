@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b46deb42a6729cbf122aca0fcb4618143bc786a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667101"
 ---
 # <a name="step-through-transact-sql-code"></a>Пошаговая отладка кода Transact-SQL
   Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет выбирать инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые будут выполняться в окне редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Отладчик можно останавливать на отдельных инструкциях, а затем просматривать состояние элементов кода в этой точке.  

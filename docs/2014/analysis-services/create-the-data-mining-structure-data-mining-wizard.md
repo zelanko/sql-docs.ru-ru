@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06aa74bed451075f0b6749870fa25275703c3181
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679679"
 ---
 # <a name="create-the-data-mining-structure-data-mining-wizard"></a>Создание структуры интеллектуального анализа данных (мастер интеллектуального анализа данных)
   Структуру интеллектуального анализа данных и при необходимости связанную с ней модель интеллектуального анализа данных можно создать с помощью страницы **Создание структуры интеллектуального анализа данных** .  
   
  При создании модели интеллектуального анализа данных необходимо также указать применяемый алгоритм интеллектуального анализа данных. Если создается только структура, модель интеллектуального анализа данных можно добавить к структуре позже.  
   
- **Дополнительные сведения:** [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-algorithms-analysis-services-data-mining.md), [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-wizard-analysis-services-data-mining.md) и [Создание реляционной структуры интеллектуального анализа данных](data-mining/create-a-relational-mining-structure.md).  
+ **Дополнительные сведения:** [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md), [мастер интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Создание реляционной структуры](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Параметры  
  **Создание структуры интеллектуального анализа данных с моделью интеллектуального анализа данных**  

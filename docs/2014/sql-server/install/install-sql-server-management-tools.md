@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8298e0cf1e635d2adea47457d7d8827c9b530fcd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657629"
 ---
 # <a name="install-sql-server-management-tools"></a>Установка базовой версии средств управления SQL Server
   Средства управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включают следующие компоненты.  
@@ -33,9 +33,9 @@ ms.locfileid: "48061952"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] надстройки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
- Обратите внимание, что среда [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] является отдельным параметром при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Обратите внимание, что среда [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] является отдельным параметром при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Независимо от количества устанавливаемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливается только одна копия средств управления [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Независимо от количества устанавливаемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]или [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливается только одна копия средств управления [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Средства управления могут работать side-by-side на одном компьютере с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] средства управления.  
   

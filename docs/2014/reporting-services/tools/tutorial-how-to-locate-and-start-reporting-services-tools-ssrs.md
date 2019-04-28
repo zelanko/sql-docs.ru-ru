@@ -23,11 +23,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03fb1d70046fe784fecafd8d9b3092ce21962498
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658013"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Учебник. Инструкции по поиску и запуску отчетов служб Services Tools (SSRS)
   В этом учебнике рассказывается о средствах, используемых для настройки сервера отчетов, управления содержимым и операциями сервера отчетов, создания и публикации отчетов. Этот учебник призван помочь новым пользователям понять, как найти и открыть каждый инструмент. Если вы уже знакомы с этими средствами, то можете перейти к другим учебникам, которые помогут научиться правильно использовать службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Дополнительные сведения о других учебниках см. в разделе [учебники по службам Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6319d9b1c5e091297e371c03949daf73e9551bd7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787950"
 ---
 # <a name="behavior-changes-to-management-tools-features-in-sql-server-2014"></a>Изменения в работе функций средств управления в SQL Server 2014
   В этом разделе описаны изменения в работе функций средств управления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Изменения в работе оказывают влияние на способ выполнения функций или взаимодействие между ними в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] по сравнению с предыдущими версиями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

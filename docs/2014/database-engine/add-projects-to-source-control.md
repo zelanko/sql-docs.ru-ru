@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0936af9b97d08c6bcd5033e61d9fa1c9153272e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791804"
 ---
 # <a name="add-projects-to-source-control"></a>Добавление проектов в систему управления версиями
   Решения среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] могут содержать несколько проектов скриптов. Способ добавления проекта к системе управления версиями зависит от того, находится ли под управлением системы решение, к которому относится проект. Если решение контролируется системой управления версиями, то возврат решения добавляет проект к системе управления версиями автоматически. Дополнительные сведения о возврате решений см. в разделе [вернуть файлы](../../2014/database-engine/check-in-files.md).  

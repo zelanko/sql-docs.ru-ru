@@ -1,5 +1,5 @@
 ---
-title: Занятие 2. Создание и управление данными в иерархической таблице | Документация Майкрософт
+title: Урок 2. Создание и управление данными в иерархической таблице | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4553d98faf18c00fff6ad90a09d0ee9071a71d32
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659936"
 ---
-# <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Занятие 2. Создание данных и управление ими в иерархической таблице
+# <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Урок 2. Создание и управление данными в иерархической таблице
   В занятии 1 существующая таблица была изменена, чтобы использовать тип данных `hierarchyid`, а также столбец `hierarchyid` был заполнен представлением существующих данных. На этом занятии будет создана новая таблица и вставлены данные с помощью иерархических методов. Затем с помощью иерархических методов будет выполнен запрос данных и показано управление данными.  
   
  Это занятие содержит следующие разделы:  
@@ -32,7 +32,7 @@ ms.locfileid: "52760906"
   
 -   [Переупорядочение данных в иерархической таблице с помощью иерархических методов](lesson-2-4-reordering-data-in-a-hierarchical-table-using-hierarchical-methods.md)  
   
--   [Сводка: Управление данными в иерархической таблице](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
+-   [Сводка. Управление данными в иерархической таблице](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Создание таблицы с помощью типа данных hierarchyid](lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md)  

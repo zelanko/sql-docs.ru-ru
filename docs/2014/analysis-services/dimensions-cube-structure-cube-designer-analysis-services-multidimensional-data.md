@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72d896e4d8e7b098729fb65c7b2d21ff81df96fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731700"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Измерения (вкладка «Структура куба», конструктор кубов) (службы Analysis Services — многомерные данные)
   Панель **Измерения** используется для просмотра и правки измерений куба, включая иерархии и атрибуты, на вкладке **Структура куба** конструктора кубов.  
@@ -64,13 +64,13 @@ ms.locfileid: "48072024"
 > [!NOTE]  
 >  Этот параметр выводится, только если выбрано измерение.  
   
- **вверх**  
+ **Вверх**  
  Выберите этот пункт для перемещения выбранной базы данных куба на одну позицию вверх.  
   
 > [!NOTE]  
 >  Этот параметр выводится, только если выбрано измерение.  
   
- **вниз**  
+ **Вниз**  
  Выберите этот пункт для перемещения выбранного атрибута базы данных куба на одну позицию вниз.  
   
 > [!NOTE]  

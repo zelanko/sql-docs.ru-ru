@@ -13,22 +13,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2b925540844a45d94fb2ee823a8ac5e9bc7ef2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788132"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Использование мастера добавления реплики Azure (SQL Server)
   Использование мастера добавления реплики Azure для создания новой виртуальной машины Windows Azure в гибридной ИТ-среде и настройки ее в качестве вторичной реплики для новой или существующей группы доступности AlwaysOn.  
   
--   **Перед началом работы**  
+-   **Перед началом:**  
   
      [Предварительные требования](#Prerequisites)  
   
      [безопасность](#Security)  
   
--   **Для добавления реплики воспользуйтесь инструкциями из раздела**  [Мастер добавления реплики Azure (среда SQL Server Management Studio)](#SSMSProcedure)  
+-   **Добавление реплики с помощью**  [Мастера добавления реплики Azure (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  Если любая реплика доступности никогда не добавлены в группу доступности, см. в разделе «Экземпляры сервера» и «группы доступности и реплики» разделов [условия, ограничения и рекомендации для групп доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 809a6706ccf75a66ec7b6bf7eefed969221b9624
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802887"
 ---
 # <a name="visual-c-extensions-example"></a>Образец расширения Visual C++
 Эта программа показывает, получение значения из полей и преобразовать в переменных C/C++.  
@@ -51,7 +51,7 @@ _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- Так, как реализуются расширения Visual C++ **записей** object, конструктор для смарт-указателя, `picRs`, принимает _`RecordsetPtr` указатель, `pRs`. Конструктор вызывает `QueryInterface` с помощью `pRs` найти `IADORecordBinding` интерфейс.  
+ Так как визуальный C++ реализуются расширения **записей** object, конструктор для смарт-указателя, `picRs`, принимает _`RecordsetPtr` указатель, `pRs`. Конструктор вызывает `QueryInterface` с помощью `pRs` найти `IADORecordBinding` интерфейс.  
   
 ```cpp
 // Visual_Cpp_Extensions_Example.cpp  

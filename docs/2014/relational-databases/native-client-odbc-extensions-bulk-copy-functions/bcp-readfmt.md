@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76ccc4271877b81ae103a89b5df727b74017d9ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688669"
 ---
 # <a name="bcpreadfmt"></a>bcp_readfmt
   Считывает определение формата файла данных из указанного файла форматирования.  
@@ -55,7 +55,7 @@ szFormatFile
 ## <a name="remarks"></a>Примечания  
  После `bcp_readfmt` считывает значения формата, он выполняет соответствующие вызовы [bcp_columns](bcp-columns.md) и [bcp_colfmt](bcp-colfmt.md). Пользователю не требуется анализировать файл форматирования и выполнять эти вызовы.  
   
- Чтобы сохранить файл форматирования, вызовите [bcp_writefmt](bcp-writefmt.md). Вызовы `bcp_readfmt` можно ссылаться на сохраненные форматы. Дополнительные сведения см. в разделе [bcp_init](bcp-init.md).  
+ Чтобы сохранить файл форматирования, вызовите функцию [bcp_writefmt](bcp-writefmt.md). Вызовы `bcp_readfmt` можно ссылаться на сохраненные форматы. Дополнительные сведения см. в разделе [bcp_init](bcp-init.md).  
   
  Кроме того, программа массового копирования (**bcp**) может сохранять определяемые пользователем форматы данных в файлы, которые могут ссылаться `bcp_readfmt`. Дополнительные сведения о **bcp** служебной программы и структура **bcp** файлов форматирования данных, см. в разделе [массовый импорт и экспорт данных &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
   

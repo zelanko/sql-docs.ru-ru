@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678632"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Power устройства, включить или отключить для Analytics Platform System
 В этом разделе описывается, как степень вашей Systemappliance платформы Analytics включения и выключения питания, на котором выполняется Parallel Data Warehouse. Используйте этот раздел при перемещении в Analytics Platform System appliance, или степень устройство с поддержкой после разрушительного сбоя.  

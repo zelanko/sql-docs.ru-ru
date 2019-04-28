@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1177dfb7260959940eb89a31dde740e290ab73f8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650643"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Учебник. Создание детализированных и главных отчетов (построитель отчетов)
   Это учебник описывает создание отчетов двух типов: детализированного отчета и основного отчета. Образцы данных по продажам, использованные в этих отчетах, извлекаются из куба служб Analysis Services. На приведенной ниже иллюстрации показаны отчеты, которые предстоит создать.  

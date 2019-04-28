@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 758c2b42d09e120bf0621bcdedf26b93f130b39f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786808"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>Настройка параметра конфигурации сервера query governor cost limit
   В этом разделе описываются способы настройки `query governor cost limit` параметр конфигурации сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Используйте параметр предела стоимости регулятора запросов для того, чтобы задать верхнюю границу времени выполнения запроса. Цена запроса — это предполагаемое время в секундах, которое требуется для завершения запроса в конкретной конфигурации оборудования. Значение по умолчанию для этого параметра — 0, при котором регулятор запросов отключен. Это позволяет обрабатывать запросы без временных ограничений. Если задать значение больше нуля, регулятор запросов запрещает выполнение всех запросов, оценочная стоимость которых превышает это значение.  
@@ -91,7 +91,7 @@ GO
   
  Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра query governor cost limit  
+##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметру предельных затрат регулятора запросов  
  Параметр вступает в силу немедленно, без перезапуска сервера.  
   
 ## <a name="see-also"></a>См. также  

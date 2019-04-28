@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 967de27eb9bc1f191b138e8b5962b04c145fe191
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689360"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Применение фильтров к данным проверки модели
   Задавая внешний источник данных для использования при тестировании модели, можно при необходимости применить фильтр для ограничения входных данных. Например, необходимо проверить модель конкретно по прогнозам для клиентов с определенным уровнем дохода.  

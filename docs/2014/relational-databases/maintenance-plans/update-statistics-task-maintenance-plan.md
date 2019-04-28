@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 51a3deffc9db182f7b3ad8f50d27c24e0f74dc6d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807119"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>Задача «Обновление статистики» (план обслуживания)
   Диалоговое окно **Задача «Обновление статистики»** служит для обновления сведений [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] о данных в таблицах и индексах. Эта задача осуществляет повторную выборку статистики распределения каждой пользовательской таблицы или индекса. При помощи статистики распределения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оптимизирует перемещение по таблицам во время обработки инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] . Для автоматического сбора статистики распределения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] периодически осуществляет выборку данных в соответствующей таблице по каждому индексу. Размер выборки зависит от количества строк в таблице и частоты изменения данных. Данный параметр используется для дополнительной выборки с использованием заданного процента данных в таблице. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эти сведения используются для оптимизации планов запросов.  

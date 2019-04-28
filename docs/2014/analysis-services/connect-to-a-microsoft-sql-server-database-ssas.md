@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e3015f589f40dfc8bafc30da3a30316004f086a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680185"
 ---
 # <a name="connect-to-a-microsoft-sql-server-database-ssas"></a>Соединение с базой данных Microsoft SQL Server (SSAS)
   Эта страница **мастера импорта таблиц** используется для задания параметров подключения к базе данных Microsoft SQL Server. Для доступа к мастеру из [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите пункт **Импорт из источника данных** в меню **Модель**.  

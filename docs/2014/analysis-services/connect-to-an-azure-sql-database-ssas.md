@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94a830bba0339262148a0a7f826f3bcb89371274
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680245"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>Подключение к базе данных SQL Azure (SSAS)
   Эта страница **мастера импорта таблиц** позволяет установить соединение с [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. Для доступа к мастеру из [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите пункт **Импорт из источника данных** в меню **Модель**.  

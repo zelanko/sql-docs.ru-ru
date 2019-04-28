@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788731"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)
   Администраторы баз данных используют панель мониторинга AlwaysOn, чтобы быстро определять исправность группы доступности AlwaysOn, а также ее реплик доступности и баз данных в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Далее приведены некоторые стандартные варианты использования панели мониторинга AlwaysOn.  
@@ -120,7 +120,7 @@ ms.locfileid: "49120371"
 ##  <a name="AvReplicaDetails"></a> Подробные сведения о реплике доступности  
  На панели **Реплика доступности** отображаются следующие столбцы.  
   
- **Название**  
+ **Name**  
  Отображает имя экземпляра сервера, на котором размещена реплика доступности. Этот столбец отображается по умолчанию.  
   
  **Роль**  
@@ -218,7 +218,7 @@ ms.locfileid: "49120371"
   
  Панель, на которой отображаются сгруппированные сведения, содержит следующие столбцы:  
   
- **Название**  
+ **Name**  
  Имя базы данных доступности. Это значение отображается по умолчанию.  
   
  **Реплика**  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7e3bee7fa85c98e50fdb940d2dfb23f76f3a462c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731761"
 ---
 # <a name="dmx-templates"></a>Шаблоны расширений интеллектуального анализа данных
   Шаблоны интеллектуального анализа данных позволяют быстро создавать сложные запросы. Хотя общий синтаксис для DMX-запросов хорошую описан в документации, использование шаблонов облегчает построение запросов, так как можно просто щелкать и указывать аргументы и источники данных.  

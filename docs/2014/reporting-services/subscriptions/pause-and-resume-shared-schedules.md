@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a4d54a696ade739eb13cb0dc50c39e4ee5ea503
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62656154"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Приостановка и возобновление общих расписаний
   Можно приостановить и возобновить общее расписание, используемое в данное время. Приостановка выполнения общего расписания позволяет временно приостановить действие расписания, инициирующего обработку отчетов и подписок. Приостанавливать и возобновлять можно только общие расписания. Расписания конкретных отчетов приостанавливать нельзя.  

@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 880546e50479de28c8b3aa98bb0439e54bd594b9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807440"
 ---
 # <a name="database-engine-features-and-tasks"></a>Функции и задачи компонента Database Engine
   Найти сведения, любой пользователь конструктор, разработчика, аналитик или администратору — желающему [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] баз данных.  

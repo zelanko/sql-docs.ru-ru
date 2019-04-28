@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807477"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Зеркальное отображение баз данных и доставка журналов (SQL Server)
   Для каждой базы данных может быть создано зеркальное отображение и доставка журналов; они также могут существовать одновременно. При выборе подхода примите во внимание следующее.  
@@ -75,7 +75,7 @@ ms.locfileid: "48112114"
 ## <a name="setting-up-mirroring-and-log-shipping-together"></a>Совместная настройка зеркального отображения и доставки журналов  
  Чтобы совместно настроить зеркальное отображение и доставку журналов, выполните следующие шаги:  
   
-1.  Восстановите резервные копии основной базы данных-источника с параметром NORECOVERY на другой экземпляр сервера, который затем будет использоваться как зеркальная база данных основной базы данных-источника. Дополнительные сведения см. в разделе [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md).  
+1.  Восстановите резервные копии основной базы данных-источника с параметром NORECOVERY на другой экземпляр сервера, который затем будет использоваться как зеркальная база данных основной базы данных-источника. Дополнительные сведения см. в статье [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 2.  Настройте зеркальное отображение базы данных. Дополнительные сведения см. в статьях [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](establish-database-mirroring-session-windows-authentication.md) и [Настройка зеркального отображения базы данных (SQL Server)](setting-up-database-mirroring-sql-server.md).  
   

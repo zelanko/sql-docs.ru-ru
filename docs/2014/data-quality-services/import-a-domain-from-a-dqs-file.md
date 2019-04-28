@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c22babc0f8a4ff56ef845ca0fc0b5cd2b31475e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792960"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Импорт домена из файла .dqs
   В этом разделе описывается импорт домена из файла .dqs в существующую базу знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Файл данных .dqs создается путем экспорта домена или базы знаний из приложения [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Файл данных .dqs зашифрован, поэтому его нельзя просмотреть.  
@@ -51,7 +51,7 @@ ms.locfileid: "56011476"
   
 6.  Убедитесь, что импортированный домен отображается в списке **Домен** . Если был импортирован составной домен, убедитесь, что он и отдельные домены, входящие в его состав, отображаются в списке **Домен** .  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. после импорта домена из файла .dqs  
+##  <a name="FollowUp"></a> Дальнейшие действия. После импорта домена из файла DQS  
  После импорта домена из файла DQS можно добавить набор знаний в домен или использовать его в проекте очистки данных или сопоставления в зависимости от содержания домена. Дополнительные сведения см. в разделах [Обнаружение знаний](../../2014/data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../../2014/data-quality-services/managing-a-domain.md), [Управление составным доменом](../../2014/data-quality-services/managing-a-composite-domain.md), [Создание политики сопоставления](../../2014/data-quality-services/create-a-matching-policy.md), [Очистка данных](../../2014/data-quality-services/data-cleansing.md) и [Сопоставление данных](../../2014/data-quality-services/data-matching.md).  
   
   

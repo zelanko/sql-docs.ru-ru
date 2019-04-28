@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5b2a481de3c100e65f780d28aa23650bd8fd4711
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791982"
 ---
 # <a name="change-the-failover-mode-of-an-availability-replica-sql-server"></a>Изменение режима отработки отказа для реплики доступности (SQL Server)
   В этом разделе описывается изменение режима отработки отказа для реплики доступности в группе доступности AlwaysOn в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell. Режим отработки отказа ― это свойство реплики, которое определяет режим отработки отказа для реплик, работающих в режиме доступности с синхронной фиксацией. Дополнительные сведения см. в разделах [Отработка отказа и режимы отработки отказа (группы доступности AlwaysOn)](failover-and-failover-modes-always-on-availability-groups.md) и [Режимы доступности (группы доступности AlwaysOn)](availability-modes-always-on-availability-groups.md).  
@@ -101,7 +101,7 @@ ms.locfileid: "48205604"
   
 1.  Перейдите в каталог (`cd`) экземпляра сервера, на котором находится первичная реплика.  
   
-2.  Используйте `Set-SqlAvailabilityReplica` командлет с `FailoverMode` параметра. При настройке для автоматической отработки отказа реплики, может потребоваться использовать `AvailabilityMode` параметр, чтобы перевести реплику в режим доступности с синхронной фиксацией.  
+2.  Используйте командлет `Set-SqlAvailabilityReplica` с параметром `FailoverMode`. При выборе автоматического перехода на другой ресурс для реплики может потребоваться указать параметр `AvailabilityMode`, чтобы перевести реплику в режим доступности с синхронной фиксацией.  
   
      Например, следующая команда изменяет реплику `MyReplica` в группе доступности `MyAg` , устанавливая использование режима доступности с синхронной фиксацией и поддержку автоматического перехода на другой ресурс.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48205604"
     ```  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, используйте `Get-Help` командлет в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] среде PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   

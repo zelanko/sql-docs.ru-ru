@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8d4858d55d9c37529e44cdf7759bf9fe6ce2630
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792007"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] — решение высокого уровня доступности и аварийного восстановления, появившееся в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Требует наличия отказоустойчивого кластера Windows Server (WSFC). Кроме того, хотя [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] не зависит от отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на экземпляре отказоустойчивого кластера (FCI) можно размещать реплику для группы доступности. При проектировании среды [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] важно знать роль каждой из технологий кластеризации, а также иметь представления о необходимых требованиях.  
@@ -120,7 +120,7 @@ ms.locfileid: "53352312"
   
 -   **Технические документы**  
   
-     [Руководство по архитектуре AlwaysOn. Построение высокого уровня доступности и аварийного восстановления с помощью экземпляров отказоустойчивого кластера и групп доступности](https://msdn.microsoft.com/library/jj215886.aspx)  
+     [Руководство по архитектуре AlwaysOn. Построение решения для обеспечения высокого уровня доступности и аварийного восстановления с помощью экземпляров отказоустойчивого кластера и групп доступности](https://msdn.microsoft.com/library/jj215886.aspx)  
   
      [Microsoft SQL Server AlwaysOn Solutions Guide for высокий уровень доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

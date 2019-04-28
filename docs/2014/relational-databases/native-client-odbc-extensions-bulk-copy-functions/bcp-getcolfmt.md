@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db8b433652829b16890552a70bd1e0d08d1c1bc4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689089"
 ---
 # <a name="bcpgetcolfmt"></a>bcp_getcolfmt
   Используется для нахождения значения свойства формата столбца.  
@@ -76,9 +76,9 @@ pcbLen
  SUCCEED или FAIL.  
   
 ## <a name="remarks"></a>Примечания  
- Значения свойства формата столбца перечислены в [bcp_setcolfmt](bcp-setcolfmt.md) раздела. Они устанавливаются с помощью вызова функции **bcp_setcolfmt** , а для их поиска используется функция **bcp_getcolfmt** .  
+ Значения свойства формата столбца перечислены в разделе [bcp_setcolfmt](bcp-setcolfmt.md) . Они устанавливаются с помощью вызова функции **bcp_setcolfmt** , а для их поиска используется функция **bcp_getcolfmt** .  
   
- Изменения в поведении заметны при подключении к [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (или более поздней версии) компьютере сервера, по сравнению с ранее [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версий. Дополнительные сведения см. в разделе [Обнаружение метаданных](../native-client/features/metadata-discovery.md).  
+ Изменения в поведении заметны при подключении к серверному компьютеру с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (или более поздней версии), если сравнивать с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Обнаружение метаданных](../native-client/features/metadata-discovery.md).  
   
 ## <a name="bcpgetcolfmt-support-for-enhanced-date-and-time-features"></a>Поддержка функцией bcp_getcolfmt улучшенных возможностей даты-времени  
  Типы, используемые со `BCP_FMT_TYPE` свойство для типов даты и времени, как указано в [изменения массового копирования для типов усиленной даты и времени &#40;OLE DB и ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  

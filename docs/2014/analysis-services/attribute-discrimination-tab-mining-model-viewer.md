@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f10fdf70b27f2bcea53ce32a1d64dec65e34893
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650758"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>Вкладка «Сравнение атрибутов» (средство просмотра моделей интеллектуального анализа данных)
   Используйте вкладку **Сравнение атрибутов** , чтобы сравнить состояние входных атрибутов и выяснить, как они связаны с атрибутом результата. Значения атрибутов, имеющих наибольшее влияние на разницу между состояниями двух выбранных прогнозируемых атрибутов, перечисляются в начале списка.  

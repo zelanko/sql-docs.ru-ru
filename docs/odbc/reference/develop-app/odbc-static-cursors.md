@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ddd2b4d998ab2718757db4dd58de6aea8bee05e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62799012"
 ---
 # <a name="odbc-static-cursors"></a>Статические курсоры (ODBC)
 Статический курсор является одним появится результирующий набор будут статическими. Он обычно обнаруживает изменения, внесенные в членство, порядок или значения результирующего набора, после открытия курсора. Предположим, например, статический курсор извлекает строки и другое приложение, а затем обновляет этой строки. Если статический курсор refetches строки, значения, которые видит ничем не отличаются, несмотря на изменения, выполненные с помощью другого приложения.  

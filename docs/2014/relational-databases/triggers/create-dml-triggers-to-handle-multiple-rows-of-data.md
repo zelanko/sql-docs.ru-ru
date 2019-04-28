@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d960ae015bb2e52daa183e1f55d6ff119f234b18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676461"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>Создание триггеров DML для обработки нескольких строк данных
   При написании кода для триггера DML следует учитывать, что инициирующая триггер отдельная инструкция может влиять на несколько строк, а не на одну строку данных. Такой режим работы является стандартным для триггеров UPDATE и DELETE, поскольку эти инструкции зачастую касаются нескольких строк, и в меньшей степени распространен для триггеров INSERT, поскольку базовая инструкция INSERT добавляет только одну строку. Тем не менее, так как допускается запуск триггера инструкцией INSERT INTO (*table_name*) SELECT, вставка множества строк может привести к вызову одного триггера.  

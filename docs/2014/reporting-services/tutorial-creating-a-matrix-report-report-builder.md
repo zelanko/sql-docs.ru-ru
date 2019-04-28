@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86bffd9c3cf98732da253e511287a9c9e722f4a7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647515"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Учебник. Создание матричного отчета (построитель отчетов)
   Это учебник поможет создать простой матричный отчет на основе образца данных по продажам. Матрица имеет вложенные группы строк и столбцов и смежную группу столбцов. Вы узнаете, как форматировать столбцы и поворачивать текст. На приведенном далее рисунке показан отчет, похожий на тот, который будет в итоге создан.  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e52a160dd72e541e51a57a002919aa2cc251e7e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731516"
 ---
 # <a name="find-node-dialog-box-mining-model-viewer"></a>Диалоговое окно «Найти узел» (средство просмотра моделей интеллектуального анализа данных)
   Используйте диалоговое окно **Поиск узла** на вкладке **Сеть зависимостей** модели для поиска конкретного узла. Эта возможность полезна в сложных схемах, которые содержат много узлов или наборов элементов.  
@@ -36,8 +36,8 @@ ms.locfileid: "48218546"
  Выберите имя узла в списке и нажмите **ОК**. Диалоговое окно закроется, а выбранный узел будет выделен в средстве просмотра.  
   
 ## <a name="see-also"></a>См. также  
- [Просмотра моделей интеллектуального анализа &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Средства просмотра моделей интеллектуального анализа данных (конструктор моделей интеллектуального анализа данных)](mining-model-viewers-data-mining-model-designer.md)   
  [Средства просмотра моделей интеллектуального анализа данных](data-mining/data-mining-model-viewers.md)   
- [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 340accda9321eb8732f909e73729ccaf5193e9a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730387"
 ---
 # <a name="import-data-ssas-tabular"></a>Импорт данных (табличные службы SSAS)
   Данные можно импортировать в табличную модель из разнообразных источников. Здесь представлены разделы, в которых описано использование мастера импорта данных для подключения и выбора данных, импортируемых в проект модели.  
@@ -43,6 +43,6 @@ ms.locfileid: "48146008"
 |[Импорт из многомерного источника данных &#40;табличные службы SSAS&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|Описывает, как импортировать данные из многомерного куба служб SQL Server Analysis Services.|  
 |[Импорт из потока данных &#40;табличные службы SSAS&#41;](import-from-a-data-feed-ssas-tabular.md)|Описывает, как импортировать данные из веб-канала данных, такого как отчет служб Microsoft Reporting Services или набор данных Azure Data Market Dataset.|  
 |[Импорт из текстового файла &#40;табличные службы SSAS&#41;](import-from-a-text-file-ssas-tabular.md)|Описывает, как импортировать данные из книги Microsoft Excel или текстового файла.|  
-|[Копирование и вставка данных &#40;табличные службы SSAS&#41;](copy-and-paste-data-ssas-tabular.md)|Описывает, как добавить данные в существующую таблицу в конструкторе моделей с помощью команд «Вставить» и «Вставить с добавлением».|  
+|[Копирование и вставка данных (табличные службы SSAS)](copy-and-paste-data-ssas-tabular.md)|Описывает, как добавить данные в существующую таблицу в конструкторе моделей с помощью команд «Вставить» и «Вставить с добавлением».|  
   
   

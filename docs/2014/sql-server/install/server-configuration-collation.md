@@ -16,18 +16,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dbc80b6f50ea023a998b6a7958577933afd007a7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654017"
 ---
 # <a name="server-configuration---collation"></a>Настройка сервера — параметры сортировки
   На странице «Конфигурация сервера — Параметры сортировки» мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно изменить параметры сортировки, используемые компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] и службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Это позволят согласовать параметры сортировки для различных установок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или на разных компьютерах.  
   
 ## <a name="options"></a>Параметры  
  Настроить для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет две группы параметров сортировки: Параметры сортировки Windows и параметры сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Параметры сортировки для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]могут быть индивидуальными или одинаковыми.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет две группы параметров сортировки: Параметры сортировки Windows и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметры сортировки. Параметры сортировки для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]могут быть индивидуальными или одинаковыми.  
   
  По умолчанию для англоязычных локалей систем выбираются параметры сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В локализованных версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметры сортировки по умолчанию определяются локалью системы Windows для компьютера.  
   

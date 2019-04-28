@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07c02b92ecd22140253c2f893ed974024a0c681f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646631"
 ---
 # <a name="removeurl-method-wmi-msreportserverconfigurationsetting"></a>Метод RemoveURL (WMI MSReportServer_ConfigurationSetting)
   Удаляет URL-адрес, зарезервированный для сервера отчетов. Если нужно удалить несколько URL-адресов, это должно быть сделано одним вызовом данного API.  

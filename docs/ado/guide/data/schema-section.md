@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45e8e37d8bb85e727771072abda9249b8155076f
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802668"
 ---
 # <a name="schema-section"></a>Раздел схемы
 Раздел схемы является обязательным. Как показано в предыдущем примере ADO записывает подробные метаданные о каждом столбце, чтобы сохранить семантику значений данных, насколько это возможно, для обновления. Тем не менее чтобы загрузить в XML, ADO требуется только имена столбцов и строк, к которому они принадлежат. Ниже приведен пример минимальную схему:  

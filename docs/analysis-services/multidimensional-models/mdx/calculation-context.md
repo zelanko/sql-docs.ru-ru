@@ -1,5 +1,5 @@
 ---
-title: Контекст вычисления | Документы Microsoft
+title: Контекст вычисления | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 340d03ba8d0c5a66d89937627ab9389fc49abcae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807737"
 ---
 # <a name="calculation-context"></a>Контекст вычисления
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34021771"
   
 5.  Ячейки куба или вложенного куба на каждой оси, устраняющие пустые кортежи на оси и применяющие предложение HAVING.  
   
-6.  Дополнительные сведения см. в разделе [Establishing Cube Context in a Query &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md).  
+6.  Дополнительные сведения см. в разделе [Определение контекста куба в запросе (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md).  
   
  В следующем запросе контекст вычисления для каждой оси строк ограничен элементом атрибута Country и элементом атрибута Calendar Year, указанным в предложении WHERE.  
   
@@ -70,8 +70,8 @@ WHERE (Customer.Country.France,
 >  Чтобы увеличить производительность запроса, следует удалить элементы и кортежи как можно раньше в процессе разрешений. Таким образом уменьшается время вычисления сложного запроса на конечном наборе элементов, поскольку запрос обрабатывает минимально возможное количество ячеек.  
   
 ## <a name="see-also"></a>См. также  
- [Определение контекста куба в запросе & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
- [Основные принципы запросов многомерных Выражений & #40; Службы Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [Ключевые понятия многомерных Выражений & #40; Службы Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [Определение контекста куба в запросе (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
+ [Основные принципы запросов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [Основные понятия многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
   

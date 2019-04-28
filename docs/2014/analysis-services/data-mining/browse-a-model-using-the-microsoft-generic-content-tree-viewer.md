@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e0d945e1fe95fe95d8ed655a0bd6b94e132f3c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689380"
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>Просмотр модели в средстве просмотра деревьев содержимого общего вида (Майкрософт)
   Средство просмотра содержимого общего вида модели интеллектуального анализа данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] предоставляет подробные сведения о закономерностях, обнаруженных алгоритмом интеллектуального анализа данных, а также доступ к различной статистической информации, созданной в процессе анализа. Объем и тип этих сведений зависит от использованного алгоритма, но может включать в себя следующие категории:  
@@ -50,7 +50,7 @@ SELECT * FROM [<mining model name>].CONTENT
  Дополнительные сведения см. в статье [Запросы интеллектуального анализа данных](data-mining-queries.md).  
   
 ## <a name="see-also"></a>См. также  
- [Средство просмотра деревьев содержимого общего Microsoft &#40;интеллектуального анализа данных&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
- [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Средство просмотра деревьев содержимого общего вида (Майкрософт) (интеллектуальный анализ данных)](../microsoft-generic-content-tree-viewer-data-mining.md)   
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

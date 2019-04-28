@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ba60e3b8c871f885c2cd7d4115c0ae7dc2c40433
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650441"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Создание допустимых атрибутов типа ID, IDREF и IDREFS с использованием sql:prefix (SQLXML 4.0)
   Атрибут может быть задан как атрибут типа ID. Атрибуты, заданные как IDREF или IDREFS, могут затем использоваться для ссылки на атрибуты типа ID, создавая ссылки между документами.  
@@ -52,7 +52,7 @@ ms.locfileid: "52793448"
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. Задание типов ID и IDREFS  
- В следующей схеме  **\<клиента >** элемент состоит из  **\<порядок >** дочерний элемент.  **\<Порядок >** элемент содержит дочерний элемент, а также  **\<OrderDetail >** элемент.  
+ В следующей схеме  **\<клиента >** элемент состоит из  **\<порядок >** дочерний элемент. **\<Порядок >** элемент содержит дочерний элемент, а также **\<OrderDetail >** элемент.  
   
  **OrderIDList** атрибут  **\<клиента >** является атрибутом типа IDREFS, ссылающийся на **OrderID** атрибут  **\< Порядок >** элемент.  
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad6aa7b55906e68dba6615140ef2c6afcc3efaa5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62668937"
 ---
 # <a name="filestream-support-ole-db"></a>Поддержка FILESTREAM (OLE DB)
   Начиная с версии [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент версии 10.0, OLE DB поддерживает улучшенную функциональность FILESTREAM. Дополнительные сведения об этой функции см. в разделе [поддержка FILESTREAM](../features/filestream-support.md). Примеры, см. в разделе [Filestream и OLE DB](../../native-client-ole-db-how-to/filestream/filestream-and-ole-db.md).  

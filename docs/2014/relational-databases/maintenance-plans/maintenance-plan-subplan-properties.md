@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c9dbc755d5ee95b74991b249bc037fb6fc5a9f11
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806706"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>План обслуживания (свойства вложенного плана)
   Диалоговое окно **План обслуживания (свойства вложенного плана)** используется для указания имени, описания и расписания вложенного плана для плана обслуживания. Чтобы открыть это диалоговое окно, щелкните **Свойства вложенного плана** на вкладке **Создать** плана обслуживания или дважды щелкните вложенный план в сетке конструктора.  

@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2f7b0d8a4c5e3403e326cd88d2a7eafa5726addb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689422"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Просмотр модели с помощью средства просмотра деревьев (Майкрософт)
   Средство просмотра деревьев [!INCLUDE[msCoName](../../includes/msconame-md.md)] в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает деревья принятия решений, построенные с помощью алгоритма дерева принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Алгоритм дерева принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] — это гибридный алгоритм дерева принятия решений, который поддерживает и классификацию, и регрессию. Поэтому это средство просмотра можно использовать для просмотра моделей, основанных на алгоритме линейной регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Алгоритм дерева принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] используется для прогнозирующего моделирования дискретных и непрерывных атрибутов. Дополнительные сведения об этом алгоритме см. в разделе [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md).  
@@ -105,9 +105,9 @@ ms.locfileid: "48104740"
  [В начало](#BKMK_TabsPanes)  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритм дерева принятия решений Майкрософт](microsoft-decision-trees-algorithm.md)   
- [Просмотра моделей интеллектуального анализа &#40;конструктор моделей интеллектуального анализа данных&#41;](../mining-model-viewers-data-mining-model-designer.md)   
- [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](mining-model-viewer-tasks-and-how-tos.md)   
+ [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)   
+ [Средства просмотра моделей интеллектуального анализа данных (конструктор моделей интеллектуального анализа данных)](../mining-model-viewers-data-mining-model-designer.md)   
+ [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](mining-model-viewer-tasks-and-how-tos.md)   
  [Средства интеллектуального анализа данных](data-mining-tools.md)   
  [Средства просмотра моделей интеллектуального анализа данных](data-mining-model-viewers.md)  
   

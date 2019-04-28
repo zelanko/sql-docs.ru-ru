@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4996a1026b4c85b105efc09b8381913f7a47942a
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789461"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>Обзор командлетов PowerShell для групп доступности AlwaysOn (SQL Server)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell ― это оболочка командной строки для задач и язык скриптов, разработанный специально для администрирования систем. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] содержит набор командлетов PowerShell для [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , которые позволяют развертывать, управлять и отслеживать группы доступности, реплики доступности и базы данных доступности.  
@@ -59,7 +59,7 @@ ms.locfileid: "49169204"
   
 |Командлеты|Описание|Поддерживается на|  
 |-------------|-----------------|------------------|  
-|`Backup-SqlDatabase`|Создает резервную копию данных или журнала.|Любая база данных, находящаяся в режиме «в сети» (для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] база данных на том экземпляре сервера, на котором размещена первичная реплика)|  
+|`Backup-SqlDatabase`|Создает резервную копию данных или журнала.|Любая база данных, находящаяся в режиме «в сети» (для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]база данных на том экземпляре сервера, на котором размещена первичная реплика)|  
 |`Restore-SqlDatabase`|Восстанавливает резервную копию.|Любой экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]экземпляр сервера, на котором размещена вторичная реплика)<br /><br /> **&#42;&#42;Важные &#42; &#42;**  при подготовке базы данных-получателя, необходимо использовать `-NoRecovery` параметр в каждом `Restore-SqlDatabase` команды.|  
   
  Дополнительные сведения об использовании этих командлетов для подготовки базы данных-получателя см. в разделе [Подготовка базы данных-получателя для присоединения к группе доступности (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  

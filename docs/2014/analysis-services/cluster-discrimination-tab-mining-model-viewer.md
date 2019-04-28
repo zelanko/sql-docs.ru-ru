@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 68f52f1e64d46b2509ae995a1f0dfa56c4dad22f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680834"
 ---
 # <a name="cluster-discrimination-tab-mining-model-viewer"></a>Вкладка «Сравнения кластеров» (средство просмотра моделей интеллектуального анализа данных)
   Вкладка **Сравнения кластеров** используется для сравнения двух кластеров, существующих в модели кластеризации. Вы можете увидеть представление различных сочетаний атрибутов и значений внутри кластеров.  

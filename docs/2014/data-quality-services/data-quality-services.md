@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4c9e337bfd091c02645119c1f8f4c81eb8daab29
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793021"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) — это продукт, предназначенный для повышения качества данных на основе знаний. DQS позволяет построить базу знаний и использовать ее для выполнения разнообразных важных задач по обеспечению качества данных, включая исправление, дополнение, стандартизацию и устранение дубликатов данных. DQS позволяет выполнять очистку данных с использованием служб эталонных данных, расположенных в облаке и предоставляемых поставщиками эталонных данных. DQS также предоставляет функции профилирования, встроенные в задачи по обеспечению качества данных, что позволяет анализировать целостность данных.  

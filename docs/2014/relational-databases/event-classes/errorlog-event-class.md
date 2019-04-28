@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3a1509f9debebe1370c416bc780e4a367d3d88db
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662829"
 ---
 # <a name="errorlog-event-class"></a>ErrorLog, класс событий
   Класс событий ErrorLog свидетельствует о записи сообщений в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

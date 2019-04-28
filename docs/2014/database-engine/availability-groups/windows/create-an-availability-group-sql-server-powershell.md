@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 824479a4fa58e171cee07a3187b85e5a1be94699
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62790673"
 ---
 # <a name="create-an-availability-group-sql-server-powershell"></a>Создание группы доступности (SQL Server PowerShell)
   В данном разделе описывается использование командлетов PowerShell для создания и настройки группы доступности AlwaysOn в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, а также набор партнеров по обеспечению отработки отказа, называемых *репликами доступности*и поддерживающих отработку отказа.  
@@ -47,7 +47,7 @@ ms.locfileid: "53350304"
   
 |Задача|Командлеты PowerShell (если доступны) или инструкции Transact-SQL|Место выполнения задачи**<sup>*</sup>**|  
 |----------|--------------------------------------------------------------------|-------------------------------------------|  
-|Создание конечной точки зеркального отображения базы данных (одна точка на экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|`New-SqlHadrEndPoint`|Выполнить на каждом экземпляре сервера, у которого нет конечной точки зеркального отображения базы данных.<br /><br /> Примечание. Для изменения существующей конечной точки зеркального отображения базы данных используйте `Set-SqlHadrEndpoint`.|  
+|Создание конечной точки зеркального отображения базы данных (одна точка на экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|`New-SqlHadrEndPoint`|Выполнить на каждом экземпляре сервера, у которого нет конечной точки зеркального отображения базы данных.<br /><br /> Примечание. Для изменения существующей конечной точки зеркального отображения базы данных, используйте `Set-SqlHadrEndpoint`.|  
 |Создание группы доступности|Во-первых, используйте командлет `New-SqlAvailabilityReplica` с параметром `-AsTemplate` для создания объекта реплики доступности в памяти для каждой из двух реплик доступности, которые планируется включить в группу доступности.<br /><br /> Затем создайте группу доступности с помощью командлета `New-SqlAvailabilityGroup`, ссылаясь на объекты реплики доступности.|Выполнить на экземпляре сервера, где будет размещена исходная первичная реплика.|  
 |Присоединить вторичную реплику к группе доступности|`Join-SqlAvailabilityGroup`|Выполнить на каждом экземпляре сервера, размещающем вторичную реплику.|  
 |Подготовьте базу данных-получатель|`Backup-SqlDatabase` и `Restore-SqlDatabase`|Создайте резервные копии на экземпляре сервера, размещающем первичную реплику.<br /><br /> Восстановите резервные копии на каждом из тех экземпляров сервера, на которых размещена вторичная реплика, при помощи параметра восстановления `NoRecovery`. Если пути к файлам различны на компьютерах, на которых размещена основная реплика и целевая вторичная реплика, также следует использовать параметр восстановления `RelocateFile`.|  
@@ -88,7 +88,7 @@ ms.locfileid: "53350304"
 > [!NOTE]  
 >  Если учетные записи службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляров сервера запускаются в контексте других учетных записей пользователей домена, создайте имя входа для другого экземпляра сервера и предоставьте этому имени разрешение CONNECT для подключения к конечной точке зеркального отображения локальной базы данных.  
   
-##  <a name="ExampleConfigureGroup"></a> Пример: Использование PowerShell для создания группы доступности  
+##  <a name="ExampleConfigureGroup"></a> Пример. Использование PowerShell для создания группы доступности  
  В следующем примере использования PowerShell создается и настраивается простая группа доступности с именем `MyAG` с двумя репликами доступности и с одной базой данных доступности. Пример.  
   
 1.  Выполняется резервное копирование базы данных `MyDatabase` и ее журнала транзакций.  
@@ -219,7 +219,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   **Блоги**  
   
-     [AlwaysON — HADRON обучающая серия. Использование рабочего пула для HADRON баз данных с поддержкой](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON — HADRON обучающая серия. Использование рабочего пула для баз данных с HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [Настройка AlwaysOn с помощью SQL Server PowerShell](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/configuring-alwayson-with-sql-server-powershell.aspx)  
   
@@ -229,7 +229,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   **Видеоролики**  
   
-     [Серия Microsoft SQL Server с кодовым названием «Denali» AlwaysOn, часть 1: Представляем решение высокого уровня доступности следующего поколения](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Серия Microsoft SQL Server с кодовым названием «Denali» AlwaysOn, часть 1: вводные сведения о решении следующего поколения по обеспечению высокого уровня доступности](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Серия Microsoft SQL Server с кодовым названием «Denali» AlwaysOn, часть 2: Создание решения критически важных высокого уровня доступности с помощью AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   

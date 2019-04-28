@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 663b12f2e83de016d3f1799536b8a3ed674ef544
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680867"
 ---
 # <a name="cluster-profiles-tab-mining-model-viewer"></a>Вкладка «Профили кластеров» (средство просмотра моделей интеллектуального анализа данных)
   Вкладка **Профили кластеров** используется для общего представления кластеров, обнаруженных алгоритмом в модели кластеризации. Эта вкладка выводит каждый атрибут и распределение этого атрибута в каждом кластере.  
   
- **Дополнительные сведения:** [Алгоритм кластеризации (Майкрософт)](data-mining/microsoft-clustering-algorithm.md), [Просмотр модели с помощью средства просмотра кластеров (Майкрософт)](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **Дополнительные сведения:** [Алгоритм кластеризации (Майкрософт)](data-mining/microsoft-clustering-algorithm.md), [просмотр модели в средстве просмотра кластеров (Microsoft)](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>Параметры  
  **Обновить содержимое средства просмотра**  
@@ -51,8 +51,8 @@ ms.locfileid: "48196084"
  В этом разделе содержится столбец для каждого кластера модели. Для каждого атрибута гистограмма показывает распределение значений в атрибуте только для этого кластера. В диаграмме также есть столбец **Заполнение**, в котором также используются гистограммы, отображающие распределение значений для каждого атрибута, но для всех вариантов в модели.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Просмотра моделей интеллектуального анализа &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Средства просмотра моделей интеллектуального анализа данных (конструктор моделей интеллектуального анализа данных)](mining-model-viewers-data-mining-model-designer.md)   
  [Средства просмотра моделей интеллектуального анализа данных](data-mining/data-mining-model-viewers.md)  
   
   

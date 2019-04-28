@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679183"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Свойства SQL Server (вкладка «Параметры запуска»)
   Используйте это диалоговое окно для добавления и удаления параметров запуска для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Параметры запуска могут сильно влиять на производительность компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Прежде чем добавлять или изменять параметры запуска, ознакомьтесь с разделом «Использование параметров запуска службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] » в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -77,6 +77,6 @@ ms.locfileid: "52780127"
 -   Учетная запись домена, используемая [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] настроен для работы под определенной учетной записью домена.  
   
 ## <a name="books-online-references"></a>Электронная документация  
- Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметры запуска, см. в разделе «как: настроить параметры запуска сервера (диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Дополнительные сведения о параметрах запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе о настроить параметры запуска сервера (диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   

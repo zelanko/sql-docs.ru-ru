@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55bf692e1b24bb0184f9b126a0bde5c0ee7e0657
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729376"
 ---
 # <a name="modifying-the-customer-dimension"></a>Изменение измерения «Заказчик»
   Существует много способов повысить удобство использования и функциональность измерений куба. При выполнении задач этого раздела будет изменено измерение «Заказчик».  

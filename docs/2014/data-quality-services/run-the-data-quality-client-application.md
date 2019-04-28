@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3b40e0243b8ab330a4c865514d6bc047f7b0b2d5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792302"
 ---
 # <a name="run-the-data-quality-client-application"></a>Запуск клиентского приложения DQS
   Чтобы использовать [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), следует запустить клиент [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] и войти на сервер [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  

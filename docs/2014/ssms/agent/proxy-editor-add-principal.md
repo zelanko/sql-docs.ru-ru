@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c16001cf0b96c42ed2f14c3d63dc0ecd7c456988
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650500"
 ---
 # <a name="proxy-editor-and--add-principal"></a>Редактор прокси-сервера и добавление субъекта
   При помощи этой страницы можно предоставить участникам сервера доступ к учетной записи-посреднику агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

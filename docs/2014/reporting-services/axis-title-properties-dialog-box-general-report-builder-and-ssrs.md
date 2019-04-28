@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f6f6f0f1140b4cd46ecdea496ecb593bea7a0eb9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666854"
 ---
 # <a name="axis-title-properties-dialog-box-general-report-builder-and-ssrs"></a>Диалоговое окно «Свойства заголовка оси» — «Общие» (построитель отчетов и службы SSRS)
   Чтобы задать параметры заголовка оси, выберите **Общие** в диалоговом окне **Свойства заголовка оси** . Заголовок оси выводится под осью X или рядом с осью Y.  

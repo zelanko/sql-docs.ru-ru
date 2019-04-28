@@ -1,5 +1,5 @@
 ---
-title: Просмотр модели в средство просмотра временных рядов | Документы Microsoft
+title: Просмотр модели в средстве просмотра временных рядов | Документация Майкрософт
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fd57ae140adee0909c0f00647a334bd62f26c170
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671365"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Просмотр модели с помощью средства просмотра временных рядов (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34015441"
  **Примечание** Информация, отображаемая для содержимого модели и к условным обозначениям интеллектуального анализа данных, зависит от используемого в модели алгоритма. Тем не менее, вкладки **Модель** и **Диаграммы** остаются одинаковыми, независимо от применяемого сочетания алгоритмов.  
   
 ###  <a name="BKMK_Tree"></a> Модель  
- При построении модели временных рядов службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] представляют завершенную модель в виде дерева. Если рассматриваемые данные содержат несколько рядов вариантов, службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] формируют отдельное дерево для каждого ряда. Например, необходимо создать прогноз продаж для тихоокеанского, североамериканского и европейского регионов. Прогнозы для каждой из этих областей — это ряды вариантов. Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создают отдельное дерево для каждого из этих рядов. Чтобы рассмотреть конкретный ряд, выберите этот ряд из списка **Дерево** .  
+ При построении модели временных рядов службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] представляют завершенную модель в виде дерева. Если рассматриваемые данные содержат несколько рядов вариантов, службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] формируют отдельное дерево для каждого ряда. Например, необходимо создать прогноз продаж для тихоокеанского, североамериканского и европейского регионов. Прогнозы для каждой из этих областей — это ряды вариантов. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создают отдельное дерево для каждого из этих рядов. Чтобы рассмотреть конкретный ряд, выберите этот ряд из списка **Дерево** .  
   
  Для каждого дерева модель временных рядов содержит узел **Все** , затем делится на ряд узлов, которые представляют периодические структуры, обнаруженные алгоритмом. Можно щелкнуть каждый узел, чтобы отобразить статистические данные, например количество вариантов и уравнение.  
   
@@ -78,9 +78,9 @@ ms.locfileid: "34015441"
  [В начало](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>См. также  
- [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Алгоритм временных рядов](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Примеры запросов для модели временных рядов](../../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Microsoft Time Series Algorithm](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
+ [Примеры запросов моделей временных рядов](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Пространство куба | Документы Microsoft
+title: Пространство куба | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 58f1a22cbba10eff6c10d2fc70dffcb13632b15d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62800210"
 ---
 # <a name="cube-space"></a>Пространство куба
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  Пространство куба — это совокупность элементов иерархий атрибутов куба с мерами куба. Поэтому пространство куба определяется комбинаторным сочетанием всех элементов иерархии атрибута в кубе и мер куба и определяет максимальный размер куба. Важно иметь ввиду, что это пространство включает все возможные сочетания элементов иерархии атрибута, даже сочетания, которые могут показаться невозможными в реальном мире, например сочетания, где городом является Париж, а странами — Соединенное Королевство, Испания, Япония или Индия, и т. д.  
+  Пространство куба — это совокупность элементов иерархий атрибутов куба с мерами куба. Поэтому пространство куба определяется комбинаторным сочетанием всех элементов иерархии атрибута в кубе и мер куба и определяет максимальный размер куба. Важно иметь ввиду, что это пространство включает все возможные сочетания элементов иерархии атрибута, даже сочетания, которые могут показаться невозможными в реальном мире, например сочетания, где городом является Париж, а странами — Англия, Испания, Япония или Индия, и т. д.  
   
 ## <a name="autoexists-and-cube-space"></a>Автоматическая проверка существования и пространство куба  
  Понятие *автоматическая проверка существования* ограничивает пространство куба ячейками, которые действительно существуют. Элементы иерархии атрибута в измерении могут не существовать с элементами другой иерархии атрибута в том же измерении.  
@@ -129,12 +129,12 @@ FROM [Adventure Works]
 ## <a name="calculation-context"></a>Контекст вычисления  
   
 ## <a name="see-also"></a>См. также  
- [Ключевые понятия многомерных Выражений & #40; Службы Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Основные понятия многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Кортежи](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
- [Автоматическая проверка существования](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [Работа с членами, кортежей и наборов & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
+ [Работа с элементами, кортежами и наборами (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [Визуальные и невизуальные итоги](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
- [Справочник по языку многомерных Выражений & #40; Многомерные Выражения & #41;](../../../mdx/mdx-language-reference-mdx.md)   
- [Многомерные выражения & #40; Многомерные Выражения & #41; Ссылка](../../../mdx/multidimensional-expressions-mdx-reference.md)  
+ [Справочник по языку многомерных выражений (многомерные выражения)](../../../mdx/mdx-language-reference-mdx.md)   
+ [Справочник по многомерным выражениям (многомерные выражения)](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

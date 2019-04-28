@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 82b2d4a687c490ed1909a27fc55fdece9cc3662c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794366"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Выбор типа данных столбца (табличные службы SSAS)
   При импорте данных или вставке данных в модель конструктор модели автоматически обнаруживает и применяет типы данных. После добавления данных в модель можно вручную изменить тип данных столбца, чтобы изменить способ хранения данных. Если необходимо только изменить формат отображения данных, не изменяя способ их хранения, так и сделайте.  
@@ -69,6 +69,6 @@ ms.locfileid: "48083220"
  Подробные сведения о типах данных, которые используются в семантических моделях бизнес-аналитики, о способах неявного преобразования и использовании разных типов данных в формулах см. в разделе [Data Types Supported &#40;SSAS Tabular&#41;](data-types-supported-ssas-tabular.md).  
   
 ## <a name="see-also"></a>См. также  
- [Поддерживаемые типы данных &#40;табличные службы SSAS&#41;](data-types-supported-ssas-tabular.md)  
+ [Поддерживаемые типы данных (табличные службы SSAS)](data-types-supported-ssas-tabular.md)  
   
   

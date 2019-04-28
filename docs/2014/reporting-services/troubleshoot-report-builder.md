@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0b0287d9b8533cc551f31c4c054db9bf87c5415a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657423"
 ---
 # <a name="troubleshoot-report-builder"></a>Устранение неполадок в построителе отчетов
   Построитель отчетов — это средство разработки отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , которое позволяет строить отчеты с использованием разного рода источников данных, а также публиковать отчеты на сервере отчетов или на сайте SharePoint. Созданные отчеты можно просматривать в построителе отчетов, в веб-браузере или как часть приложения [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows или сайта SharePoint.  

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9918aca57caaef0dc460e810f5ed5ca2d1106ac3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663813"
 ---
 # <a name="broker-event-category"></a>Категория событий Broker
   Категория событий **Broker** содержит общие события компонента Service Broker.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 764884f73cb554794edfb998f2c8d7b8f8d7d1fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680418"
 ---
 # <a name="connect-to-a-data-source-ssas"></a>Подключение к источнику данных (SSAS)
   На этой странице **мастера импорта таблиц** создается новое соединение с источником данных. Поддерживаются разнообразные источники данных, в том числе реляционные базы данных, каналы данных и файлы. Для доступа к мастеру из [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите пункт **Импорт из источника данных** в меню **Модель**.  

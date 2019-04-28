@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4fd42458d59f7d591bf7de8279e983e30f754164
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794374"
 ---
 # <a name="sort-data-in-a-table-ssas-tabular"></a>Сортировка данных в таблице (табличные службы SSAS)
   Данные могут быть отсортированы по алфавиту (в прямом или обратном порядке) и по значениям (по возрастанию или по убыванию) в одном или нескольких столбцах.  
@@ -48,8 +48,8 @@ ms.locfileid: "48081854"
     >  Если результаты не соответствуют ожиданию, возможно, столбец содержит числа, сохраненные в формате текста. Например, отрицательные числа, импортированные из систем составления отчетности, или число, введенное с апострофом «’» в начале, сохраняются как текст.  
   
 ## <a name="see-also"></a>См. также  
- [Фильтрация и сортировка данных &#40;табличные службы SSAS&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [Перспективы &#40;табличные службы SSAS&#41;](perspectives-ssas-tabular.md)   
- [Роли &#40;табличные службы SSAS&#41;](roles-ssas-tabular.md)  
+ [Сортировка и фильтрация данных (табличные службы SSAS)](../filter-and-sort-data-ssas-tabular.md)   
+ [Перспективы (табличные службы SSAS)](perspectives-ssas-tabular.md)   
+ [Роли (табличные службы SSAS)](roles-ssas-tabular.md)  
   
   

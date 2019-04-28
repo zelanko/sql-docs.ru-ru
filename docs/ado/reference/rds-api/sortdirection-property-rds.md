@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9ef187cd2ae291413fccf10e2af51642c50e06e5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670880"
 ---
 # <a name="sortdirection-property-rds"></a>Свойство SortDirection (служба удаленных рабочих столов)
 Указывает, ли порядок сортировки по возрастанию или по убыванию.  
@@ -38,7 +38,7 @@ DataControl.SortDirection = value
  *DataControl*  
  Объектную переменную, которая представляет [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта.  
   
- *Value*  
+ *Значение*  
  Объект **логическое** значение, которое, если значение **True**, указывает направление сортировки по возрастанию. **False** указывает порядок по убыванию.  
   
 ## <a name="remarks"></a>Примечания  

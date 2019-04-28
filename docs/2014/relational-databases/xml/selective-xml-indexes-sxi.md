@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679825"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Выборочный XML-индекс (SXI)
   Селективные XML-индексы — это еще один тип XML-индексов, доступный наряду с обычными XML-индексами. Селективный XML-индекс используется в следующих целях.  
@@ -123,7 +123,7 @@ FOR
   
 -   Индексирование узлов с двоичными типами XS: например, base64Binary и hexBinary.  
   
--   Указание узлов для индексирования с выражениями Xpath, которые содержат символ-шаблон `*` в конце. Например `/a/b/c/*`, `/a//b/*`, или `/a/b/*:c`.  
+-   Указание узлов для индексирования с выражениями XPath, которые содержат подстановочный знак `*` в конце: Например, `/a/b/c/*`, `/a//b/*` или `/a/b/*:c`.  
   
 -   Индексирование любых осей, отличных от осей дочерних элементов, атрибутов или объектов-потомков. Вариант `//<step>` допускается как исключение.  
   

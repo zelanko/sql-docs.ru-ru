@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d425a6896a64f06bf1610ed8f6be87dd60af25d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658187"
 ---
 # <a name="new-features"></a>Новые возможности
 Следующие новые функциональные возможности представлена в ODBC 3. *x*. ODBC 3. *x* приложение, которое работает с ODBC 2 *.x* драйвер не сможете использовать эту функцию. ODBC 3. *x* диспетчер драйверов не удается сопоставить эти возможности при работе с ODBC 2 *.x* драйвера.  

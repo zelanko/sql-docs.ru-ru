@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aeb4df3ea92cd6df608325a8b2ddb7ffaa285787
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792534"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export and Import DQS Knowledge Bases Using DQSInstaller.exe
   Для существующей установки DQS все базы знаний на сервере [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] вы можете экспортировать в файл резервной копии DQS (DQSB) одновременно, а затем использовать файл DQSB для одновременного импорта всех баз знаний на другой сервер [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] посредством запуска файла DQSInstaller.exe из командной строки. Дополнительные сведения о запуске DQSInstaller.exe из командной строки см. в подразделе [Запуск DQSInstaller.exe из командной строки](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) раздела [Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  

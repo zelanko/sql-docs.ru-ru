@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6c5ddad15af74e45313d3e71b059fae36d166560
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808695"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>Параметр конфигурации сервера «transform noise words»
   Используйте `transform noise words` параметр конфигурации сервера, чтобы подавить сообщение об ошибке если неучитываемые слова, то есть [стоп-слов](../../relational-databases/search/full-text-search.md), логическая операция на полнотекстовый запрос возвращает 0 строк. Этот параметр удобно использовать в полнотекстовых запросах с предикатом CONTAINS, в котором логические операции или операции NEAR содержат пропускаемые слова. Возможные значения описаны в следующей таблице.  

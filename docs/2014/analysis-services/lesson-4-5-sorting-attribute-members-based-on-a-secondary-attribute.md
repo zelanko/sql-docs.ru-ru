@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f199238c09be6409f9d8fe9266acd547738a0076
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728630"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>Сортировка элементов атрибута по вторичному атрибуту
   На третьем занятии рассматривалась сортировка элементов атрибута по имени или значению ключа. Кроме того, было показано, как изменять элементы атрибута и порядок сортировки с помощью составных ключей элементов. Дополнительные сведения см. в разделе [Изменение измерения Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). Однако, если ни имя, ни значение ключа первичного атрибута не обеспечивают требуемого порядка сортировки, можно использовать вторичный атрибут. Посредством определения связи между атрибутами можно использовать второй атрибут для сортировки элементов первого атрибута.  

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807428"
 ---
 # <a name="cross-container-transactions"></a>Транзакции между контейнерами
   Транзакции между контейнерами представляют собой неявные или явные пользовательские транзакции, включающие вызовы хранимых процедур, скомпилированных в собственном коде, или операции над оптимизированными для памяти таблицами.  

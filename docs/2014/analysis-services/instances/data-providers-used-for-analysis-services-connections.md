@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 739723a42580c404d0529a6d84d907cf665f8270
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731138"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Поставщики данных, используемые для соединений со службами Analysis Services
   Службы Analysis Services предоставляют 3 поставщика данных для сервера и доступа к данным. Все приложения подключаются к службам Analysis Services с помощью одного из следующих поставщиков. Два из этих поставщиков, ADOMD.NET и управляющие объекты AMO служб Analysis Services, — управляемые поставщики данных. Поставщик OLE DB для служб Analysis Services (MSOLAP DLL) является собственным поставщиком данных.  
@@ -87,7 +87,7 @@ ms.locfileid: "53368516"
   
  MSOLAP130.dll — это версия поставщика OLE DB служб Analysis Services, которая поставляется в составе [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. К другим более ранним версиям относятся MSOLAP10.dll (для SQL Server 2008 и 2008 R2) и MSOLAP90.dll (для SQL Server 2005).  
   
- Поставщики OLE DB часто указываются в строках подключения. В строке подключения к службам Analysis Services используется другая спецификация для ссылки на поставщик OLE DB: MSOLAP. \<версия > .dll  
+ Поставщики OLE DB часто указываются в строках подключения. Строки подключения к Analysis Services используется другая спецификация для ссылки на поставщик OLE DB: MSOLAP.\<version>.dll  
   
  MSOLAP.5.dll — это текущий поставщик Analysis Services OLE DB, устанавливаемый в составе Excel 2013. На рабочих станциях, где работают более старые версии Excel, часто можно найти предыдущие версии, например MSOLAP.4.dll или MSOLAP.3.dll. Для некоторых компонентов служб Analysis Services, таких как надстройка PowerPivot, требуются определенные версии поставщика OLE DB. Дополнительные сведения см. в разделе [Свойства строки подключения (службы Analysis Services)](connection-string-properties-analysis-services.md).  
   

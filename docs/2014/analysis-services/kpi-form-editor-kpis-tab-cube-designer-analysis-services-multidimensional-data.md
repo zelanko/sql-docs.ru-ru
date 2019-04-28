@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 233e8f36f103d1a5adac6937d47e1040dfe6395d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729644"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Редактор формы ключевого показателя эффективности (вкладка «Ключевые показатели эффективности», конструктор кубов) (службы Analysis Services — многомерные данные)
   Панель **Редактор формы ключевого показателя эффективности** на вкладке **Ключевые показатели эффективности** в конструкторе кубов используется для создания или изменения выбранного ключевого показателя эффективности.  

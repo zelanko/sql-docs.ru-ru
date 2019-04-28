@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 75af6924104764f372eefd0731799ec3566d0a0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808379"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>согласовать трассировку с данными журнала производительности Windows (приложение SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] может согласовывать счетчики системного монитора Microsoft Windows с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] события. Системный монитор Windows регистрирует системную активность указанных счетчиков журнала производительности.  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] может согласовывать счетчики системного монитора Windows с событиями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или событиями служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Системный монитор Windows регистрирует системную активность указанных счетчиков журнала производительности.  
   
 > [!NOTE]  
 >  Дополнительные сведения об общем доступе к журналам между различными версиями Windows приведены в конце данного подраздела.  

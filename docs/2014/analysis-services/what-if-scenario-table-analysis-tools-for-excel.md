@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8355c828cdc3479b108a693b07b3dfb5a92a289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793234"
 ---
 # <a name="what-if-scenario-table-analysis-tools-for-excel"></a>Сценарий «Анализ гипотетических вариантов» (средства анализа таблиц для Excel)
   ![Какая кнопка сценарий в средства анализа таблиц](media/tat-whatif.gif "кнопку гипотетических сценарий в средства анализа таблиц")  
@@ -84,7 +84,7 @@ ms.locfileid: "48140364"
   
  **«Покупка велосипеда» = Да**  
   
- **Достоверности: справедливого**  
+ **Надежности: Равномерное**  
   
  Поскольку данный результат основан на существующей строке таблицы данных, он говорит о том, что с увеличением возраста до 25 лет при неизменности всех остальных характеристик конкретного покупателя он купит велосипед с большей вероятностью.  
   

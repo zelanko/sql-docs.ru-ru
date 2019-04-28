@@ -28,11 +28,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbe1c8932c082ce537cd5dc3f2b12d98c05c3811
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728560"
 ---
 # <a name="dimension-types"></a>Типы измерений
   Настройка свойства `Type` предоставляет данные о содержимом измерения серверу и клиентским приложениям. В некоторых случаях настройка `Type` предоставляет клиентским приложениям только справочные сведения и является необязательной. В других случаях, например для измерений `Accounts` или `Time`, настройка свойства `Type` для измерения и его атрибутов определяет конкретные режимы, относящиеся к серверу, и может быть необходимой для реализации определенных режимов куба. Например, для свойства `Type` измерения можно установить значение `Accounts`, тем самым указывая клиентским приложениям, что в стандартном измерении содержатся атрибуты счетов.  Дополнительные сведения о времени, счетов и измерениях валют см. в разделе [Создание измерения типа Date](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [Создание учетной записи Finance с измерением типа родители потомки](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), и [Создание валюты Введите измерения](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  

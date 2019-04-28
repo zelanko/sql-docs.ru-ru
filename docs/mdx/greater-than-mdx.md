@@ -1,5 +1,5 @@
 ---
-title: '&gt; (Больше) (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ) | Документы Microsoft'
+title: '&gt; (Больше) (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ) | Документация Майкрософт'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0b7eb0cdcfbe6a22a18236362b4a2277eb42eb42
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653494"
 ---
 # <a name="gt-greater-than-mdx"></a>&gt; (Больше) (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ)
 
@@ -37,7 +37,7 @@ MDX_Expression > MDX_Expression
   
 -   **значение true,** Если оба аргумента не равны null и первый параметр имеет значение, которое больше значения второго параметра.  
   
--   **false** Если оба аргумента не равны null и первый параметр имеет значение, которое равно или меньше значения второго параметра.  
+-   **false** Если оба аргумента не равны null и первый параметр имеет значение, которое меньше значения второго аргумента или равно.  
   
 -   Равно NULL, если любой из параметров или оба параметра возвращают значение NULL.  
   
@@ -63,6 +63,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по операторам Многомерных &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Справочник по операторам многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

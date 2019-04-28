@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 870e0fb8cb24a62a2914281e58915c7749771213
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689468"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Просмотр модели с помощью средства просмотра кластеризации последовательностей (Майкрософт)
   В средстве просмотра кластеризации последовательностей [!INCLUDE[msCoName](../../includes/msconame-md.md)] в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображаются модели интеллектуального анализа, построенные с использованием алгоритма кластеризации последовательностей [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Этот алгоритм [!INCLUDE[msCoName](../../includes/msconame-md.md)] является алгоритмом анализа последовательностей для исследования данных, содержащих события, которые могут быть связаны с помощью следования путям или *последовательностям*. Дополнительные сведения об этом алгоритме см. в статье [Алгоритм кластеризации последовательностей (Майкрософт)](microsoft-sequence-clustering-algorithm.md).  

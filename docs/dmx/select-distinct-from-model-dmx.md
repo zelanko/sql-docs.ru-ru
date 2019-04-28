@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 95a8a1d40792c2993d44624a321bccf99030e181
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658896"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;модели &gt; (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  Условие ограничения значений, возвращаемых из списка столбцов.  
   
  *expression*  
- Необязательный параметр. Выражение, возвращающее скалярное значение.  
+ Необязательный. Выражение, возвращающее скалярное значение.  
   
 ## <a name="remarks"></a>Примечания  
  **SELECT DISTINCT FROM** оператор работает только с одним столбцом или с набором связанных столбцов. С набором несвязанных столбцов это предложение не работает.  
@@ -129,7 +129,7 @@ FROM [TM Decision Tree]
   
  К примеру, если при просмотре модели с помощью средства просмотра дерева решений щелкнуть узел, содержащий сгруппированных по показателю дохода клиентов, во всплывающей подсказке отобразятся следующие свойства узла:  
   
- Age >=69 AND Yearly Income < 39 221,41  
+ Возраст > = 69 AND Yearly Income < 39 221,41  
   
 > [!NOTE]  
 >  Минимальное значение минимального сегмента и максимальное значение максимального сегмента представляют собой самое высокое и самое низкое наблюдаемое значение. Предполагается, что все значения, остающиеся за пределами этого наблюдаемого диапазона, принадлежат минимальному и максимальному сегментам.  

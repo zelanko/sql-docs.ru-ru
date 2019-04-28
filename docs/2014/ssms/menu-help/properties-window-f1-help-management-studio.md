@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62661761"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Справка F1 окна свойств (среда Management Studio)
   В окне **Свойства** можно просмотреть свойства выбранных элементов. Кроме того, в окне **Свойства** можно просматривать свойства файла, проекта или решения. Чтобы открыть окно **Свойства** , щелкните **Окно "Свойства"** в меню **Вид** .  

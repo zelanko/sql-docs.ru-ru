@@ -1,5 +1,5 @@
 ---
-title: Использование ДЕТАЛИЗАЦИИ для извлечения исходных данных (многомерные Выражения) | Документы Microsoft
+title: С помощью функции DRILLTHROUGH извлечение данных из источника (многомерные Выражения) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 81c873d0ea6e5c21d97fc719ce1c72a773df43e5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802833"
 ---
-# <a name="mdx-data-manipulation---retrieve-source-data-using-drillthrough"></a>Управление данными MDX - получение источника данных с помощью функции DRILLTHROUGH
+# <a name="mdx-data-manipulation---retrieve-source-data-using-drillthrough"></a>Обработка данных многомерных выражений — извлечение источника данных с помощью DRILLTHROUGH
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   В языке многомерных выражений для извлечения набора строк из источника данных для ячейки куба используется инструкция [DRILLTHROUGH](../../../mdx/mdx-data-manipulation-drillthrough.md).  
   
@@ -51,6 +51,6 @@ RETURN [Department MeasureGroup].[Department Id], [Employee].[First Name]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Обработка данных & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [Манипулирование данными (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

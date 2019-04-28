@@ -1,5 +1,5 @@
 ---
-title: Создание вычисляемых элементов в многомерных Выражениях (многомерные Выражения) | Документы Microsoft
+title: Создание вычисляемых элементов в многомерных Выражениях (многомерные Выражения) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9235b9e3531e2ca40cabe211d85c077e629dacee
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806144"
 ---
-# <a name="mdx-calculated-members---building-calculated-members"></a>Многомерные Выражения вычисляемых элементов — Создание вычисляемых элементов
+# <a name="mdx-calculated-members---building-calculated-members"></a>Вычисляемые элементы многомерных выражений — создание вычисляемых элементов
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   В многомерных выражениях вычисляемым называется элемент, разрешаемый путем вычисления многомерного выражения, возвращающего значение. В этом определении кроется огромный потенциал. Возможность создания и использования вычисляемых элементов в многомерных запросах дает широкие возможности для манипулирования данными.  
   
@@ -32,9 +32,9 @@ ms.locfileid: "34021791"
   
      Дополнительные сведения о создании вычисляемых элементов в сеансе с помощью инструкции CREATE MEMBER см. в разделе [Создание вычисляемых элементов с областью действия сеанса (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
   
-## <a name="see-also"></a>См. также:  
- [CREATE MEMBER, инструкция #40; Многомерные Выражения & #41;](../../../mdx/mdx-data-definition-create-member.md)   
- [Справочник по функциям многомерных Выражений & #40; Многомерные Выражения & #41;](../../../mdx/mdx-function-reference-mdx.md)   
- [Инструкция SELECT & #40; Многомерные Выражения & #41;](../../../mdx/mdx-data-manipulation-select.md)  
+## <a name="see-also"></a>См. также  
+ [Инструкция CREATE MEMBER (многомерные выражения)](../../../mdx/mdx-data-definition-create-member.md)   
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../../../mdx/mdx-function-reference-mdx.md)   
+ [Инструкция SELECT (многомерные выражения)](../../../mdx/mdx-data-manipulation-select.md)  
   
   

@@ -12,16 +12,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11b55e2faeb251f8c3a7ab5220d9716476e66639
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667590"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Строка состояния (редактор запросов к ядру СУБД)
   В строках состояния в окнах редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] могут быть цветовые обозначения, указывающие, к какому экземпляру [!INCLUDE[ssDE](../../includes/ssde-md.md)] подключено данное окно.  
   
-1.  **Перед началом работы**  [Цвета строки состояния](#StatusBarColors)  
+1.  **Перед началом:**  [Цвета строки состояния](#StatusBarColors)  
   
 2.  **Чтобы задать цвета состояния сервера в:**  [Обозреватель объектов](#SetOEServerColor), [зарегистрированный сервер](#SetRegServerColor)  
   

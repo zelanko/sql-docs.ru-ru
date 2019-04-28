@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 898a36e6f8dc65be24f386159a34158f23c1125a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662407"
 ---
 # <a name="ftcrawl-stopped-event-class"></a>Класс событий FT:Crawl Stopped
   Класс событий **:Crawl Stopped** указывает на то, что полнотекстовое сканирование (заполнение) было остановлено. Остановка может быть результатом успешного завершения сканирования или появления неустранимой ошибки.  

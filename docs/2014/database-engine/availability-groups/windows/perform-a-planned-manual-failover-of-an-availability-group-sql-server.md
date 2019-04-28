@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 386e07bd1be4eaac4c75541665fc6951e2a24fd3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789341"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>Выполнение запланированного перехода на другой ресурс вручную для группы доступности (SQL Server)
   В этом разделе описывается выполнение перехода на другой ресурс вручную без потери данных (*запланированный переход на другой ресурс вручную*) в группе доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Группа доступности выполняет переход на другой ресурс на уровне реплики доступности. Запланированный переход на другой ресурс вручную, как и любая отработка отказа [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , переводит вторичную реплику в роль первичной и одновременно переводит реплику, бывшую первичной, в роль вторичной.  
@@ -89,12 +89,12 @@ ms.locfileid: "48155350"
 ##  <a name="PowerShellProcedure"></a> Использование PowerShell  
  **Переход на другой ресурс группы доступности вручную**  
   
-1.  Перейдите в каталог (`cd`) к экземпляру сервера, на котором размещена целевая вторичная реплика.  
+1.  Перейдите в каталог (`cd`) экземпляра сервера, на котором размещается целевая вторичная реплика.  
   
-2.  Используйте `Switch-SqlAvailabilityGroup` командлета.  
+2.  Используйте командлет `Switch-SqlAvailabilityGroup`.  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, используйте `Get-Help` командлет в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] среде PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
      В следующем примере группа доступности *MyAg* вручную выполняет отработку отказа на вторичную реплику с указанным путем.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48155350"
   
 -   [Поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
+-   [Получение справок по SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ##  <a name="FollowUp"></a> Дальнейшие действия. После ручной отработки отказа группы доступности  
  Если переход был выполнен на ресурс, находящийся за пределами группы доступности [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] , настройте кворум узлов кластера WSFC, чтобы отразить новую конфигурацию группы доступности. Дополнительные сведения см. в статье [Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  

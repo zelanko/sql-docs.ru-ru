@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dcfd16ae7e49392c9ba0a001ea8d205c4fa88d1c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795345"
 ---
 # <a name="understanding-the-tabular-object-model"></a>Основные сведения о табличной объектной модели
   Табличная модель — это логическое представление таблиц, связей, иерархий, перспектив, мер и ключевых показателей эффективности. В этом разделе представлены сведения о внутренней реализации с помощью объектов AMO. См. в разделе [Разработка объектов управления аналитикой &#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo) Если вы пользовались объектами AMO.  

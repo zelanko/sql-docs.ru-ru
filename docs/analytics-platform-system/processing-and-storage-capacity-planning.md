@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f20de8ebc4e3b2970e439dbc413e588aa08b5324
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678554"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Обработка и емкость хранилища в Analytics Platform System
 Бизнес-требований определить количество единиц масштабирования данных и размер дисков узел вычислений, которые необходимы вашим устройством Analytics Platform System (APS). Используйте эти вычисления, обработки и хранения для приобретения и решения по планированию емкости.  

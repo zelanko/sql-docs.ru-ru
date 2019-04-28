@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cea836d49b46bd7931d7230d3d22824af9506961
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729786"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Планирование задач администрирования служб SSAS с помощью агента SQL Server
   Используя службу агента SQL Server, вы можете запланировать административные задачи [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в нужном порядке и в нужное время. Планирование задач позволяет автоматизировать процессы, выполняющиеся регулярно или с предсказуемой цикличностью. Задачи типа обработки кубов могут быть запланированы на периоды низкой деловой активности. Кроме того, при создании шагов задания агента SQL Server пользователь имеет возможность определить порядок, в котором будут выполняться задачи. Например, можно выполнить обработку куба, а затем создать его резервную копию.  

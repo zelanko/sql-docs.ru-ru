@@ -1,5 +1,5 @@
 ---
-title: Основные сведения о добавочном создании | Документы Microsoft
+title: Основные сведения о добавочном создании | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 71b3f839326bec0a8b5606e2c7de3f25584b4ff1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802703"
 ---
 # <a name="understanding-incremental-generation"></a>Основные сведения о добавочном создании
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "34024351"
  С другой стороны, при изменении строки соединения с источником данных на другую базу данных по сравнению с предыдущим формированием не возникает ошибки. Используется эта новая база данных, а в предыдущую базу данных не вносятся никакие изменения.  
   
 ## <a name="see-also"></a>См. также  
- [Управление изменениями для представления источников данных и источники данных](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
- [Мастер формирования схем & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
+ [Управление изменениями в источниках данных и представлениях источников данных](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
+ [Мастер формирования схем (службы Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
   
   

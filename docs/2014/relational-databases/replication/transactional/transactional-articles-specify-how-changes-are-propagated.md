@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655679"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>Указание способа распространения изменений для статей транзакций
   Репликация транзакций позволяет указывать, как изменения данных распространяются от издателя к подписчикам. Для каждой опубликованной таблицы можно указать один из четырех способов, которым каждая операция (INSERT, UPDATE или DELETE) должна распространяться на подписчик:  

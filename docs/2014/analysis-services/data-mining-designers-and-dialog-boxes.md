@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f42a30372d3f12e767a1cc64a4e77f5bfe8d1b42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689637"
 ---
 # <a name="data-mining-designers-and-dialog-boxes"></a>Конструкторы и диалоговые окна служб интеллектуального анализа данных
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] имеются средства разработки, которые можно использовать для создания, просмотра, тестирования и создания прогнозов на основе моделей интеллектуального анализа данных.  
@@ -29,7 +29,7 @@ ms.locfileid: "48146024"
 |Раздел|Описание|  
 |-----------|-----------------|  
 |[Конструктор моделей интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining-model-designer-analysis-services-data-mining.md)|Используйте средства среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для определения новых структур интеллектуального анализа и связанных с ними моделей интеллектуального анализа данных.|  
-|[Просмотра моделей интеллектуального анализа &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-model-viewers-data-mining-model-designer.md)|Используйте пользовательские средства просмотра, доступные и в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , и в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , для просмотра готовых моделей и для лучшего понимания закономерностей в анализируемых данных.|  
+|[Средства просмотра моделей интеллектуального анализа данных (конструктор моделей интеллектуального анализа данных)](mining-model-viewers-data-mining-model-designer.md)|Используйте пользовательские средства просмотра, доступные и в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , и в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , для просмотра готовых моделей и для лучшего понимания закономерностей в анализируемых данных.|  
 |[Конструктор диаграммы точности интеллектуального &#40;интеллектуального анализа данных&#41;](mining-accuracy-chart-designer-data-mining.md)|Используйте инструменты диаграмм точности, такие как диаграммы точности прогнозов, матрицу классификации и перекрестную проверку для оценки моделей интеллектуального анализа данных и наборов данных, используемых для обучения. Все средства контроля точности доступны и в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , и в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .|  
 |[Построитель прогнозирующих запросов &#40;интеллектуального анализа данных&#41;](prediction-query-builder-data-mining.md)|Используйте построитель прогнозирующих запросов, доступный и в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , и в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .|  
 |[Диалоговое окно свойств структуры интеллектуального &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)<br /><br /> [Диалоговое окно свойств модели интеллектуального &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-properties-dialog-box-analysis-services-data-mining.md)|Измените свойства структуры интеллектуального анализа данных или модели интеллектуального анализа данных, чтобы воздействовать на способ обработки данных, добавить флаги модели или изменить метаданные.|  

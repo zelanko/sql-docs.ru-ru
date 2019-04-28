@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fb3dcd1729805c9458b7cc882e1d33f6be918e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730742"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>Выделение исключений (средства анализа таблиц для Excel)
   ![«Выделение исключений» на ленте](media/tat-highlightex.gif "выделение исключений кнопки на ленте")  

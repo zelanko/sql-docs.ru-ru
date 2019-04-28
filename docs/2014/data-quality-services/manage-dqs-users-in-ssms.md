@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d8d7e0c31b1e022445006598f791716d765b98c9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792394"
 ---
 # <a name="manage-dqs-users-in-ssms"></a>Управление пользователями DQS в среде SSMS
   В этом разделе описывается создание дополнительных пользователей в экземпляре SQL Server с помощью SQL Server Management Studio, а также предоставление соответствующих ролей [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) в базе данных DQS_MAIN.  
@@ -42,7 +42,7 @@ ms.locfileid: "56027985"
   
 5.  После проверки пользователя щелкните страницу **Сопоставление пользователей** в левой части окна.  
   
-6.  В области справа установите флажок в разделе **карты** столбец для **DQS_MAIN** базы данных, а затем выберите **dqs_administrator**, **dqs_kb_editor** , или **dqs_kb_operator** флажок в **членство в роли для базы данных: DQS_MAIN** области, в зависимости от уровня доступа, необходимые пользователю.  
+6.  В области справа установите флажок в столбце **Сопоставление** для базы данных **DQS_MAIN**, а затем установите флажок **dqs_administrator**, **dqs_kb_editor** или **dqs_kb_operator** на панели **Членство в роли базы данных для: DQS_MAIN** в зависимости от уровня доступа, необходимого пользователю.  
   
 7.  В диалоговом окне **Создание имени входа** нажмите кнопку **ОК**, чтобы применить изменения.  
   

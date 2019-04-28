@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d5f3c133b105c905b79589d86952658b6d39f0f6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653391"
 ---
 # <a name="odbc-service-provider-interface-summary"></a>Сводка по интерфейсу поставщика служб ODBC
 Ниже перечислены функции интерфейса ODBC поставщика услуг. Дополнительные сведения о синтаксисе и семантике для каждой функции см. в разделе [Справочник по ODBC службы поставщика интерфейса (SPI)](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md).  

@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8713ed58df138efbaacd8f6ff4b5d31ef0708d85
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730797"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Советы и рекомендации по глобализации (службы Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Только многомерные  
@@ -69,7 +69,7 @@ ms.locfileid: "53357311"
   
      В КНР и Сингапуре служба поддержки Майкрософт обычно применяет китайский (упрощенное письмо) и порядок сортировки пиньинь. Рекомендуемые параметры сортировки: Chinese_PRC (для SQL Server 2000), Chinese_PRC_90 (для SQL Server 2005) или Chinese_Simplified_Pinyin_100 (SQL Server 2008 и более поздних версий).  
   
-     На Тайване чаще используется китайский (Тайвань), а рекомендуемый порядок сортировки основывается на количестве штрихов: Chinese_Taiwan_Stroke (для SQL Server 2000), Chinese_Taiwan_Stroke_90 (для SQL Server 2005) или Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 и более поздних версий).  
+     На Тайване это чаще используется для просмотра списка китайском (традиционном) порядок сортировки основывается на количестве штрихов: Chinese_Taiwan_Stroke (для SQL Server 2000), Chinese_Taiwan_Stroke_90 (для SQL Server 2005) или Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 и более поздних версий).  
   
      Для других регионов (например, Гонконг и Макао) используется китайский (традиционное письмо). Для сортировке в Гонконге часто используется Chinese_Hong_Kong_Stroke_90 (в SQL Server 2005). В Макао, САР довольно часто встречается Chinese_Traditional_Stroke_Count_100 (в SQL Server 2008 и более поздних версиях).  
   
@@ -140,7 +140,7 @@ ms.locfileid: "53357311"
   
 3.  **Использование форматов даты ISO для получения универсальных сведений о дате и времени**  
   
-     Один [служб Analysis Services специалист](http://geekswithblogs.net/darrengosbell/Default.aspx) дает следующую рекомендацию: "Я всегда использую формат даты ISO yyyy-mm-dd для всех строк дат, которые я передаю в запросах в SQL или MDX, поскольку этот формат однозначен и работает вне зависимости от региональных параметров сервера и клиента. Я соглашусь с тем, что сервер должен игнорировать свои региональные настройки при синтаксическом анализе неоднозначного формата даты, но я также думаю, если у вас есть вариант, интерпретируемый одинаково, лучше остановиться на нем".  
+     Один [служб Analysis Services специалист](http://geekswithblogs.net/darrengosbell/Default.aspx) дает следующую рекомендацию: «Я всегда использую ISO формат даты гггг мм дд для любой строки даты, которая передается в запросах SQL или MDX, так как он однозначный и будет работать независимо от клиента или региональных параметров сервера. Я соглашусь с тем, что сервер должен игнорировать свои региональные настройки при синтаксическом анализе неоднозначного формата даты, но я также думаю, если у вас есть вариант, интерпретируемый одинаково, лучше остановиться на нем".  
   
 4.  `Use the Format function to enforce a specific format, regardless of regional language settings`  
   

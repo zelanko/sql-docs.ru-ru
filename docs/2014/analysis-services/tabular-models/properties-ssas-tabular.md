@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 934ad51c8855b5b4aadd49af628ee8348bf960d9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794602"
 ---
 # <a name="properties-ssas-tabular"></a>Свойства (табличные службы SSAS)
   Проекты табличной модели в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] имеют различные свойства, которые определяют поведение проекта, модели, отчетов и развертывания. Параметры свойств сохраняются в формате XML в файле Model.bim, однако все свойства, описанные в этом разделе, можно настроить в окнах **Свойства** в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  

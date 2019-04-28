@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c169795ceb4c16d7928a9cc55b9f9bc9b9917dda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730129"
 ---
 # <a name="connect-to-analysis-services"></a>Подключение к службам Analysis Services
   В этом разделе содержатся сведения о свойствах строки подключения, клиентских библиотеках, используемых для подключений, методах проверки подлинности, поддерживаемых службами Analysis Services, настройке и отмене подключений перед переводом сервера в автономный режим.  
@@ -32,18 +32,18 @@ ms.locfileid: "48195252"
   
 |Ссылка|Описание задачи|  
 |----------|----------------------|  
-|[Подключение из клиентских приложений &#40;служб Analysis Services&#41;](connect-from-client-applications-analysis-services.md)|Пользователи, не имеющие опыта работы со службами Analysis Services, должны прочитать этот раздел, прежде чем приступать к работе со средствами и приложениями, которые наиболее часто используются со службами Analysis Services.|  
-|[Свойства строки подключения &#40;служб Analysis Services&#41;](connection-string-properties-analysis-services.md)|Службы Analysis Services включают множество свойств сервера и базы данных, позволяющих настроить соединение для конкретного приложения, независимо от настройки экземпляра или базы данных.|  
+|[Подключение из клиентских приложений (службы Analysis Services)](connect-from-client-applications-analysis-services.md)|Пользователи, не имеющие опыта работы со службами Analysis Services, должны прочитать этот раздел, прежде чем приступать к работе со средствами и приложениями, которые наиболее часто используются со службами Analysis Services.|  
+|[Свойства строки подключения (службы Analysis Services)](connection-string-properties-analysis-services.md)|Службы Analysis Services включают множество свойств сервера и базы данных, позволяющих настроить соединение для конкретного приложения, независимо от настройки экземпляра или базы данных.|  
 |[Методики проверки подлинности, поддерживаемые службами Analysis Services](authentication-methodologies-supported-by-analysis-services.md)|Этот раздел представляет собой краткое введение в методы проверки подлинности, используемые службами Analysis services.|  
 |[Настройка служб Analysis Services для ограниченного делегирования Kerberos](configure-analysis-services-for-kerberos-constrained-delegation.md)|Для многих решений бизнес-аналитики требуется олицетворение, чтобы гарантировать, что каждый пользователь получает только разрешенные данные. В этом разделе рассматриваются требования для использования олицетворения. В этом разделе также приводится описание действий по настройке служб Analysis Services для ограниченного делегирования Kerberos.|  
 |[Регистрация имени участника-службы для экземпляра служб Analysis Services](spn-registration-for-an-analysis-services-instance.md)|Для проверки подлинности Kerberos требуется имя участника-службы, которая олицетворяет или делегирует удостоверения пользователя в многосерверных решениях. Сведения в этом разделе позволяют получить представление о разработке и шагах для регистрации имени участника-службы для служб Analysis Services.|  
-|[Настройка HTTP-доступа к службам Analysis Services в службах IIS &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)|Обычная проверка подлинности и кросс-доменные границы — две веские причины для настройки служб Analysis Services для доступа по протоколу HTTP.|  
-|[Поставщики данных, используемые для соединений служб Analysis Services](data-providers-used-for-analysis-services-connections.md)|Службы Analysis Services предоставляют три клиентские библиотеки для доступа к операциям на сервере или данным служб Analysis Services. Этот раздел содержит краткое введение в ADOMD.NET, службы Analysis Services (AMO) и работу поставщика OLE DB для служб Analysis Services (MSOLAP).|  
+|[Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)|Обычная проверка подлинности и кросс-доменные границы — две веские причины для настройки служб Analysis Services для доступа по протоколу HTTP.|  
+|[Поставщики данных, используемые для соединений со службами Analysis Services](data-providers-used-for-analysis-services-connections.md)|Службы Analysis Services предоставляют три клиентские библиотеки для доступа к операциям на сервере или данным служб Analysis Services. Этот раздел содержит краткое введение в ADOMD.NET, службы Analysis Services (AMO) и работу поставщика OLE DB для служб Analysis Services (MSOLAP).|  
 |[Отключение пользователей и сеансов на сервере служб Analysis Services](disconnect-users-and-sessions-on-analysis-services-server.md)|Сбросьте существующие сеансы и соединения, прежде чем переводить сервер в режим «вне сети» или выполнять базовые тесты производительности.|  
   
 ## <a name="see-also"></a>См. также  
- [Настройка после установки &#40;служб Analysis Services&#41;](post-install-configuration-analysis-services.md)   
+ [Настройка после установки (службы Analysis Services)](post-install-configuration-analysis-services.md)   
  [Настройка свойств сервера в службах Analysis Services](../server-properties/server-properties-in-analysis-services.md)   
- [Скрипты для административных задач в службах Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
+ [Создание скриптов для административных задач в службах Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   
   

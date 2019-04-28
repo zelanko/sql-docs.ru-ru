@@ -19,11 +19,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666872"
 ---
 # <a name="monitoring-replication"></a>Наблюдение (репликация)
   Наблюдение за топологией репликации является важным аспектом развертывания репликации. Так как активность репликации является распределенной, важно отслеживать активность и состояние всех компьютеров, участвующих в репликации. Для наблюдения за репликацией можно использовать следующие средства:  
@@ -34,7 +34,7 @@ ms.locfileid: "54134304"
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
-     Среда[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] предоставляет доступ к монитору репликации. Здесь же существует возможность просмотра текущего состояния и последнего сообщения, записанного в журнал следующими агентами, а так же здесь можно запускать и останавливать все агенты: агент чтения журнала, агент моментальных снимков и агент распространителя. Дополнительные сведения см. в статье [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
+     Среда[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] предоставляет доступ к монитору репликации. Кроме того, он дает возможность просмотра текущего состояния и последнего сообщения в журнал следующими агентами, а также можно запускать и останавливать все агенты: Агент чтения журнала, агент моментальных снимков, агент слияния и агент распространителя. Дополнительные сведения см. в статье [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] и объекты управления репликацией (RMO)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54134304"
      Системный монитор может использоваться для наблюдения за производительностью, предоставляя ряд счетчиков для репликаций. Дополнительные сведения см. в статье [Monitoring Replication with System Monitor](monitor/monitoring-replication-with-system-monitor.md).  
   
 ## <a name="see-also"></a>См. также  
- [Администрирование репликации часто задаваемые вопросы](administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Вопросы и ответы об администрировании репликации](administration/frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
 
   

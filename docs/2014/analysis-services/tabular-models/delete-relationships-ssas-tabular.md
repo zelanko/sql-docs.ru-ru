@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3be65edb0300b2ab47f22784cb7b109372062e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795472"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>Удаление связей (табличные службы SSAS)
-  Удалять существующие связи можно с помощью конструктора моделей в представлении диаграмм или диалогового окна «Управление связями». Сведения об использовании связей в табличных моделях см. в разделе [Relationships &#40;SSAS Tabular&#41;](relationships-ssas-tabular.md).  
+  Удалять существующие связи можно с помощью конструктора моделей в представлении диаграмм или диалогового окна «Управление связями». Сведения об использовании связей в табличных моделях см. в разделе [Связи (табличные службы SSAS)](relationships-ssas-tabular.md).  
   
 ## <a name="considerations-for-deleting-relationships"></a>Замечания об удалении связей  
  Принимая решение об удалении связи, необходимо учитывать следующие моменты.  
@@ -53,7 +53,7 @@ ms.locfileid: "48130644"
 4.  В диалоговом окне **Управление связями** нажмите кнопку **Закрыть**.  
   
 ## <a name="see-also"></a>См. также  
- [Связи &#40;табличные службы SSAS&#41;](relationships-ssas-tabular.md)   
- [Создание связи между двумя таблицами &#40;табличные службы SSAS&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
+ [Связи (табличные службы SSAS)](relationships-ssas-tabular.md)   
+ [Создание связи между двумя таблицами (табличные службы SSAS)](create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   

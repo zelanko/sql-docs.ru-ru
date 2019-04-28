@@ -21,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff184ad75c495d9f18f5e9d9e1d3aa1bdfa7132e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654592"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Форматирование чисел и дат (построитель отчетов и службы SSRS)
   Формат чисел и дат в областях данных можно задать, выбрав формат на странице **Число** в диалоговом окне **Свойства** соответствующей области данных.  

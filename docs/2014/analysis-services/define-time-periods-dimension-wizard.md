@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a8839c847d9c415a549ac829a3f24c351ed1cb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732140"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>Определение временных периодов (мастер измерений)
   Используйте страницу **Определение временных периодов** , чтобы указать календарные данные для включения в измерение времени или серверное измерение времени.  

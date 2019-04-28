@@ -14,16 +14,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca659230443301ed816dfb8adeffdd3b361cd5fc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680259"
 ---
 # <a name="create-an-activex-script-job-step"></a>Create an ActiveX Script Job Step
   В этом разделе описывается создание и определение шага агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , выполняющего скрипт ActiveX, с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или управляющих объектов SQL Server.  
   
--   **Перед началом работы**  
+-   **Перед началом:**  
   
      [Ограничения](#Restrictions)  
   

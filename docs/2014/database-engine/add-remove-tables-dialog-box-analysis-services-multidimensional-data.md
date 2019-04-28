@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f903e6c783f71add561cafb1e1d5087b85c8d314
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792139"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Добавление и удаление диалоговое окно «таблицы» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Добавление или удаление таблиц** в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для добавления или удаления таблиц в источнике данных или представлении источника данных. Способы открытия диалогового окна **Добавление или удаление таблиц**:  
@@ -54,6 +54,6 @@ ms.locfileid: "48200424"
   
 ## <a name="see-also"></a>См. также  
  [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Конструктор представлений источников данных &#40;службы Analysis Services — многомерные данные&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Конструктор представлений источников данных (службы Analysis Services — многомерные данные)](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

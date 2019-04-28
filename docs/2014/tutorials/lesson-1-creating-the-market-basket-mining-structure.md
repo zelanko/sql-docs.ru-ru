@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6a6e123e525512a72d70bcc8ca2eba549d1347e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676281"
 ---
-# <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Урок 1. Создание структуры интеллектуального анализа «Потребительская корзина»
+# <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Урок 1. Создание структуры интеллектуального анализа данных потребительской корзины
   На этом занятии требуется создать структуру интеллектуального анализа, позволяющуюй делать прогнозы относительно товаров [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], которые клиент обычно покупает одновременно. Если вы не знакомы со структурами интеллектуального анализа данных и их роли в интеллектуальном анализе данных, см. в разделе [структур интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
  Структуре интеллектуального анализа взаимосвязей, который вы создадите в этом занятии, поддерживает добавление моделей интеллектуального анализа данных, на основе [Microsoft Association Algorithm](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md). На следующих занятиях с помощью этих моделей интеллектуального анализа будет сформирован прогноз относительно типов товара, покупаемых клиентом одновременно, называемый анализом потребительской корзины.  Например, можно обнаружить, что обычно клиенты покупают одновременно горные велосипеды, шины для велосипедов и шлемы.  

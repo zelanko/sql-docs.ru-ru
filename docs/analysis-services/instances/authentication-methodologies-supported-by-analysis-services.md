@@ -1,5 +1,5 @@
 ---
-title: Методики проверки подлинности, поддерживаемые службами Analysis Services | Документы Microsoft
+title: Методики проверки подлинности, поддерживаемые службами Analysis Services | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fe2c4021792c3285165440fc0627aa7eab374882
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659223"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Методики проверки подлинности, поддерживаемые службами Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "34019141"
   
 ## <a name="see-also"></a>См. также  
  [Использование олицетворения и безопасность транспорта](http://go.microsoft.com/fwlink/?LinkId=311727)   
- [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
+ [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Настройка служб Analysis Services для ограниченного делегирования Kerberos](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   
  [Регистрация имени участника-службы для экземпляра служб Analysis Services](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
  [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  

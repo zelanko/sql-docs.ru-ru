@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 978a14c59c92328add341427c990b4f9b14b8f79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650685"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>Связи атрибутов (конструктор измерений) (службы Analysis Services - многомерные данные)
   Вкладка **Связи атрибутов** в конструкторе измерений используется, чтобы создать, изменить или удалить связи атрибутов выбранного измерения.  

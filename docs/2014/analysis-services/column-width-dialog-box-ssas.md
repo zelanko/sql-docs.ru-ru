@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 097b29ca68b03d6711265c9194c318397fd03381
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680607"
 ---
 # <a name="column-width-dialog-box-ssas"></a>Диалоговое окно «Ширина столбца» (SSAS)
   Диалоговое окно **Ширина столбца** позволяет задать ширину столбца в конструкторе моделей. Чтобы открыть это диалоговое окно, щелкните столбец правой кнопкой мыши поле и выберите пункт **Ширина столбца**. Кроме того, можно включить для столбца автоматическое изменение размера по содержимому. Для этого дважды щелкните линию сетки с правого края столбца.  

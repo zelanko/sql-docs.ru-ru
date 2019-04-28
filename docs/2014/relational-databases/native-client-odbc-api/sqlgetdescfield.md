@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657788"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента предоставляет поля дескриптора для дескрипторе строки реализации (IRD) только. В IRD [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ссылки на поля дескриптора атрибуты столбца специфические для драйвера. Дополнительные сведения о полном списке поля дескриптора доступны специфические для драйвера, см. в разделе [SQLColAttribute](sqlcolattribute.md).  

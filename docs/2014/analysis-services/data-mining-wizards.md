@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e74e63268a79915413955e33fdb2ed9f714f8a12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689485"
 ---
 # <a name="data-mining-wizards"></a>Мастера интеллектуального анализа данных
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] предоставляет мастеры для использования в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] и [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -40,9 +40,9 @@ ms.locfileid: "48099234"
   
 ## <a name="see-also"></a>См. также  
  [Средства интеллектуального анализа данных](data-mining/data-mining-tools.md)   
- [Учебник интеллектуального анализа данных](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Учебник по основам интеллектуального анализа данных](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Создание структуры интеллектуального анализа данных OLAP](data-mining/create-an-olap-mining-structure.md)   
- [Создание реляционной структуры](data-mining/create-a-relational-mining-structure.md)   
+ [Создание реляционной структуры интеллектуального анализа данных](data-mining/create-a-relational-mining-structure.md)   
  [Создать новую структуру интеллектуального анализа реляционных данных](data-mining/create-a-new-relational-mining-structure.md)   
  [Создание структуры интеллектуального анализа OLAP](data-mining/create-a-new-olap-mining-structure.md)  
   

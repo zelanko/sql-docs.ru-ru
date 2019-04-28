@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786749"
 ---
 # <a name="check-out-files"></a>Извлечение файлов
   Если в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] не разрешено изменение возвращенных файлов, то перед изменением файла его необходимо извлечь. После извлечения файла его версия копируется на локальный диск, а атрибут файла «Только для чтения» снимается.  
@@ -57,7 +57,7 @@ ms.locfileid: "48051224"
      **Изменить**  
      Изменить элемент, не извлекая его. Кнопка **Редактировать** появляется только в том случае, если конфигурация среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] настроена на поддержку редактирования возвращаемых файлов.  
   
-     **Название**  
+     **Name**  
      Отображает имена элементов, доступных для извлечения. Рядом с выбранными элементами отображаются флажки отметки. Если какой-либо элемент не надо извлекать, снимите его флажок.  
   
      **Параметры**  

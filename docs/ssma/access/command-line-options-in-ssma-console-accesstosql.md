@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: fc8065bcfda3066fae31be982e25f054c07bca3a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650768"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>Параметры командной строки в консоли SSMA (AccessToSQL)
 Майкрософт предоставляет широкий набор параметров командной строки для выполнения и SSMA действия управления. Последующих разделах приведены дополнительные сведения.  

@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60c5dc93ea10042ff87b48bdb8ca4c8d6de1108b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730211"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>Вкладка «Наборы элементов» (средство просмотра моделей интеллектуального анализа данных)
   Можно использовать панель **Наборы элементов** для просмотра часто используемых наборов элементов, которые содержит модель интеллектуального анализа правил взаимосвязи. Модель взаимосвязей может содержать много наборов элементов, поэтому в средстве просмотра предоставляются функции управления, упрощающие фильтрацию наборов элементов, отображаемых в средстве просмотра.  
   
- **Дополнительные сведения:** [Алгоритм взаимосвязей (Майкрософт)](data-mining/microsoft-association-algorithm.md), [Просмотр модели с помощью средства просмотра правил взаимосвязи (Майкрософт)](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **Дополнительные сведения:** [Алгоритм взаимосвязей (Майкрософт)](data-mining/microsoft-association-algorithm.md), [просмотр модели с помощью средства просмотра правил взаимосвязей (Майкрософт)](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>Параметры  
  **Обновить содержимое средства просмотра**  
@@ -79,8 +79,8 @@ ms.locfileid: "48060344"
  Показывает описание каждого набора элементов. По умолчанию наборы элементов представлены как разделенный запятыми список атрибутов и их значений. Вы можете изменить способ их отображения с помощью параметра **Показать** .  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Просмотра моделей интеллектуального анализа &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Средства просмотра моделей интеллектуального анализа данных (конструктор моделей интеллектуального анализа данных)](mining-model-viewers-data-mining-model-designer.md)   
  [Средства просмотра моделей интеллектуального анализа данных](data-mining/data-mining-model-viewers.md)  
   
   

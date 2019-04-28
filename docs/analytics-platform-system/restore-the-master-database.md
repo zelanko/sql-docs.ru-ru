@@ -1,6 +1,6 @@
 ---
-title: Восстановление базы данных master - система платформы аналитики | Документы Microsoft
-description: Восстановите базу данных master в Analytics Platform System.
+title: Восстановление базы данных master - Analytics Platform System | Документация Майкрософт
+description: Восстановление базы данных master в Analytics Platform System.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 184184f332225e76e152c2d909cfff788b4fea91
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678432"
 ---
-# <a name="restore-the-master-database-in-analytics-platform-system"></a>Восстановите базу данных master в система платформы аналитики
+# <a name="restore-the-master-database-in-analytics-platform-system"></a>Восстановление базы данных master в Analytics Platform System
 **Восстановление базы данных Master** страница SQL Server PDW Configuration Manager позволяет восстановить базу данных master из резервной копии.  
   
 ## <a name="before-you-begin"></a>Перед началом  
   
 > [!IMPORTANT]  
-> Для выполнения восстановления, SQL Server PDW необходимо удалить текущий основной базы данных, содержащей сведения о безопасности пользователя, а также каталог базы данных. Рекомендуется выровнять перед восстановлением резервной копии текущей базы данных master.  
+> Чтобы выполнить восстановление, SQL Server PDW необходимо удалить текущей базе данных master, которая содержит сведения о безопасности пользователя и каталоге базы данных. Мы рекомендуем, создания резервной копии текущей базы данных master, прежде чем выполнять восстановление.  
   
 ## <a name="to-restore-the-master-database"></a>Восстановление базы данных master  
   
-1.  Запустите диспетчер конфигурации. Дополнительные сведения см. в разделе [запустите диспетчер конфигурации &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
+1.  Запустите диспетчер конфигурации. Дополнительные сведения см. в разделе [запустить диспетчер конфигурации служб &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
   
 2.  В левой области Configuration Manager щелкните **восстановление базы данных Master**.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "31538404"
   
 4.  Нажмите кнопку **Применить**.  
   
-5.  Для выполнения восстановления, SQL Server PDW завершить работу всех служб на устройство и отключите всех пользователей. После завершения восстановления SQL Server PDW перезагрузится служб устройства.  
+5.  Чтобы выполнить восстановление, SQL Server PDW завершать работу всех служб на устройство и отключите всех пользователей. После завершения восстановления, SQL Server PDW будет перезапустить службы устройство.  
   
-![Master, восстановить PDW устройств DWConfig](./media/restore-the-master-database/SQL_Server_PDW_DWConfig_ApplPDWRestore.png "SQL_Server_PDW_DWConfig_ApplPDWRestore")  
+![Восстановление PDW устройств DWConfig устройство базы данных master](./media/restore-the-master-database/SQL_Server_PDW_DWConfig_ApplPDWRestore.png "SQL_Server_PDW_DWConfig_ApplPDWRestore")  
   

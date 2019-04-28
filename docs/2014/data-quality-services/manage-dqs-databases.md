@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bd5a24a76963532c7fa70100bfccc171ba3c90ff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792412"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
   В этом разделе приведены сведения о действиях по управлению базами данных, которые можно выполнять с базами данных DQS, например резервное копирование и восстановление или отсоединение и присоединение.  

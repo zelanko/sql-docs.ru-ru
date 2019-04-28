@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc2b6d2ba25ee487053a7f9f711c499356a5ec59
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662348"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning, класс событий
   Класс событий Hash Warning можно использовать для мониторинга возникновения рекурсии хэша или остановки хэширования (аварийного хэширования) во время операции хэширования.  

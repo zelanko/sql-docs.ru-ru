@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4bc9f0865ed5ff00099f121f254d17aafc298f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807464"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Добавление или замена следящего сервера зеркального отображения базы данных (среда SQL Server Management Studio)
   Если конечные точки зеркального отображения базы данных используют проверку подлинности Windows, для добавления или замены следящего сервера можно использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Добавление следящего сервера в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] изменяет текущий режим работы на режим высокого уровня безопасности с автоматической отработкой отказа.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eab2902600f26abfc0f714b231fcf1bb684f513b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662218"
 ---
 # <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink, класс событий
   Класс событий **Log File Auto Shrink** указывает на то, что файл журнала сжимается автоматически. Данное событие не запускается, если файл журнала сжимается из-за явной инструкции ALTER DATABASE.  

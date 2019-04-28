@@ -1,5 +1,5 @@
 ---
-title: Просмотр модели в средстве просмотра деревьев (Microsoft) | Документы Microsoft
+title: Просмотр модели в средстве просмотра деревьев (Майкрософт) | Документация Майкрософт
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 26d56116652e389e60edfb269ce2e23c14bb824f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671192"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Просмотр модели с помощью средства просмотра деревьев (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -90,9 +91,9 @@ ms.lasthandoff: 05/10/2018
  [В начало](#BKMK_TabsPanes)  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритм дерева принятия решений Майкрософт](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
- [Средства просмотра моделей интеллектуального анализа данных & #40; конструктор моделей интеллектуального анализа данных & #41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)   
- [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
+ [Средства просмотра моделей интеллектуального анализа данных (конструктор моделей интеллектуального анализа данных)](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)   
+ [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Средства интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-tools.md)   
  [Средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   

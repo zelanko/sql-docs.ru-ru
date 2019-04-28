@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06a5b4261ecde623dc8c31c7b8045042513a8da2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689609"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Добавление моделей интеллектуального анализа данных в структуру (службы Analysis Services — интеллектуальный анализ данных)
   Структура интеллектуального анализа данных должна поддерживать несколько моделей интеллектуального анализа данных. Поэтому после выхода из мастера можно открыть структуру и добавить в нее новые модели интеллектуального анализа данных. Каждый раз при создании модели можно использовать другой алгоритм, изменять параметры или применять фильтры для использования другого подмножества данных.  

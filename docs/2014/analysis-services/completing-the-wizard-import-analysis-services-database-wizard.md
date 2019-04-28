@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8367869193670fcc6573738521852ab62aced714
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680547"
 ---
 # <a name="completing-the-wizard-import-analysis-services-database-wizard"></a>Завершение работы мастера (мастер импорта базы данных служб Analysis Services)
   Страница **Завершение работы мастера** выводит индикатор хода выполнения данного мастера по мере того, как данные и метаданные из базы данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] импортируются в проект служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

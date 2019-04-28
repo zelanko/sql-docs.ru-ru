@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd2040199aa2f24f0ae794bda9d13255a4e1d583
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807508"
 ---
 # <a name="create-history-and-status-reports"></a>Создание журналов и отчетов состояния
   По данным журнала или текущему состоянию файлов загруженного на данный момент решения можно создать отчет. Также можно выполнить предварительный просмотр отчета, а затем направить отчет на печать, в файл или буфер обмена. Эти отчеты создает не [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Отчет создает система [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe.  

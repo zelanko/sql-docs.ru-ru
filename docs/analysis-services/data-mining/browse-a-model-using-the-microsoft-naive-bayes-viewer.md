@@ -1,5 +1,5 @@
 ---
-title: Просмотр модели с помощью средства просмотра упрощенного алгоритма Байеса Майкрософт упрощенного | Документы Microsoft
+title: Просмотр модели с помощью средства просмотра упрощенного алгоритма Байеса (Майкрософт) | Документация Майкрософт
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e7afe60ffa61af8e2c1ae5b60deb596230738a78
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678814"
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Просмотр модели с помощью средства просмотра упрощенного алгоритма Байеса (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -66,19 +66,19 @@ ms.locfileid: "34014781"
  Перечисляет другие атрибуты из набора данных, которые содержат состояние, сильно благоприятствующее одному из состояний прогнозируемого атрибута.  
   
  **Значения**  
- Показывает значение атрибута в столбце **Атрибут** .  
+ Показывает значение атрибута в столбце **Атрибут**.  
   
- **Отдает приоритет \<значение 1 >**  
+ **Подходит к \<значение 1 >**  
  Выводит цветную полоску, показывающую, насколько значение атрибута соответствует значению прогнозируемого атрибута, показанному в поле **Значение 1**.  
   
- **Отдает приоритет \<значение 2 >**  
+ **Подходит к \<равное 2 >**  
  Выводит цветную полоску, показывающую, насколько значение атрибута соответствует значению прогнозируемого атрибута, показанному в поле **Значение 2**.  
   
  [В начало](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритма Байеса (Майкрософт)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
- [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
+ [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Средства интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-tools.md)   
  [Средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   

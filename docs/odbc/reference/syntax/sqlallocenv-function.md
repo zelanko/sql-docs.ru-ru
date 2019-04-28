@@ -21,21 +21,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f744abc1bca3077ca4ba191782f7ccdcfafdb0a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62652801"
 ---
 # <a name="sqlallocenv-function"></a>Функция SQLAllocEnv
 **Соответствие стандартам**  
- Версия была введена: ODBC 1.0 соответствует стандартам: устарело  
+ Представленные версии: Соответствие стандартам 1.0 ODBC: Устарело  
   
  **Сводка**  
  In ODBC 3. *x*, ODBC 2. *x* функция **SQLAllocEnv** был заменен классом **SQLAllocHandle**. Дополнительные сведения см. в разделе [SQLAllocHandle, функция](../../../odbc/reference/syntax/sqlallochandle-function.md).  
   
 > [!NOTE]  
->  Дополнительные сведения о какие диспетчера драйверов сопоставляет эту функцию, чтобы при ODBC 2. *x* при работе с ODBC 3. *x* драйвера, см. в разделе [сопоставление устаревшей функции](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: драйвер рекомендации для обеспечения обратной совместимости.  
+>  Дополнительные сведения о какие диспетчера драйверов сопоставляет эту функцию, чтобы при ODBC 2. *x* при работе с ODBC 3. *x* драйвера, см. в разделе [сопоставление устаревшей функции](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: Рекомендации по драйверов для обеспечения обратной совместимости.  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 78c60832ea6111b0682e8a6d2b5ab3540a19cfb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680265"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>Подключение к источнику данных (клиент интеллектуального анализа данных для Excel)
   В этом разделе описано, как создавать и использовать новые соединения, используемые для хранения моделей интеллектуального анализа данных, а также для доступа к внешним данным, хранящимся в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -161,7 +161,7 @@ ms.locfileid: "48159744"
   
 -   ntext  
   
--   BINARY  
+-   binary  
   
 ## <a name="see-also"></a>См. также  
  [Трассировки &#40;клиент интеллектуального анализа данных для Excel&#41;](trace-data-mining-client-for-excel.md)  

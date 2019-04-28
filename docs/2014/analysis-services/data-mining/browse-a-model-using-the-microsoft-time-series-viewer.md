@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b05aec565feb655f9c66df928656ecef4bc675f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689479"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Просмотр модели с помощью средства просмотра временных рядов (Майкрософт)
   В средстве просмотра временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображаются модели интеллектуального анализа данных, построенные с помощью алгоритма временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Алгоритм временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой алгоритм регрессии, который создает модели интеллектуального анализа данных для прогнозирования столбцов с непрерывными данными, таких, как данные о продажах продукта, в сценарии прогнозирования. Эти модели временных рядов могут включать информацию, основанную на других алгоритмах:  
@@ -87,8 +87,8 @@ ms.locfileid: "48137564"
  [В начало](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>См. также  
- [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](mining-model-viewer-tasks-and-how-tos.md)   
- [Алгоритм временных рядов](microsoft-time-series-algorithm.md)   
+ [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](mining-model-viewer-tasks-and-how-tos.md)   
+ [Microsoft Time Series Algorithm](microsoft-time-series-algorithm.md)   
  [Примеры запросов моделей временных рядов](time-series-model-query-examples.md)   
  [Средства просмотра моделей интеллектуального анализа данных](data-mining-model-viewers.md)  
   

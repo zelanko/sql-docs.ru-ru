@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e8ef7aa7a4354f5a3fbc334504512b2ee8d131b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688833"
 ---
 # <a name="bcpsendrow"></a>bcp_sendrow
   Отправляет строку данных из переменных программы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -47,13 +47,13 @@ hdbc
  SUCCEED или FAIL.  
   
 ## <a name="remarks"></a>Примечания  
- **Bcp_sendrow** функция формирует строку из переменных программы и отправляет ее в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Функция **bcp_sendrow** формирует строку из переменных программы и отправляет ее в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Перед вызовом **bcp_sendrow**, необходимо вызвать функцию [bcp_bind](bcp-bind.md) чтобы указать переменные программы, содержащие данные строки.  
+ Перед вызовом функции **bcp_sendrow**необходимо вызвать функцию [bcp_bind](bcp-bind.md) , чтобы указать переменные программы, содержащие данные строки.  
   
- Если функция **bcp_bind** вызывается с указанием типа данных большого объема переменной длины, например параметра *eDataType* SQLTEXT и параметра *pData* , отличного от значения NULL, функция **bcp_sendrow** отправляет все данные значения, также как и для любого другого типа данных. Если, однако **bcp_bind** имеет значение NULL *pData* параметр, **bcp_sendrow** возвращает управление приложению сразу после отправляются все указанные столбцы с данными [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Затем приложение может вызвать [bcp_moretext](bcp-moretext.md) многократно, чтобы отправлять данные long и variable-length [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], данных за раз. Дополнительные сведения см. в разделе [bcp_moretext](bcp-moretext.md).  
+ Если функция **bcp_bind** вызывается с указанием типа данных большого объема переменной длины, например параметра *eDataType* SQLTEXT и параметра *pData* , отличного от значения NULL, функция **bcp_sendrow** отправляет все данные значения, также как и для любого другого типа данных. Однако, если в функции **bcp_bind** параметр *pData* имеет значение NULL, функция **bcp_sendrow** возвращает управление приложению сразу после того, как все указанные столбцы с данными отправляются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Затем приложение может повторно вызывать функцию [bcp_moretext](bcp-moretext.md) , чтобы отправлять данные большого объема переменной длины в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]по одному фрагменту данных за раз. Дополнительные сведения см. в разделе [bcp_moretext](bcp-moretext.md).  
   
- Когда **bcp_sendrow** используется для массового копирования строк из переменных программы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы, строки фиксируются только в том случае, когда пользователь вызывает [bcp_batch](bcp-batch.md) или [bcp_done](bcp-done.md) . Пользователь может вызывать функцию **bcp_batch** один раз для каждой из *n* строк или во время перерыва между периодами поступления данных. Если функция **bcp_batch** никогда не вызывается, то строки фиксируются при вызове функции **bcp_done** .  
+ Если функция **bcp_sendrow** используется для массового копирования строк из переменных программы в таблицы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , строки фиксируются только при вызове пользователем функции [bcp_batch](bcp-batch.md) или [bcp_done](bcp-done.md). Пользователь может вызывать функцию **bcp_batch** один раз для каждой из *n* строк или во время перерыва между периодами поступления данных. Если функция **bcp_batch** никогда не вызывается, то строки фиксируются при вызове функции **bcp_done** .  
   
  Сведения о важных изменениях в массовом копировании, начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], см. в разделе [выполнение операций массового копирования &#40;ODBC&#41;](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   

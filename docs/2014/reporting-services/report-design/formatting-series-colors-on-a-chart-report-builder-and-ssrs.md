@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d2c8f3d7062f0ab720767c13bb486a4060cec8ab
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654486"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)
   В службах Reporting Services предоставляется несколько встроенных палитр для диаграмм, а также предусмотрена возможность определить пользовательскую палитру. По умолчанию в диаграммах используется встроенная **светло-пастельный** цветовую палитру для заливки каждого ряда. Эти цвета появляются также в условных обозначениях. При добавлении к диаграмме нескольких рядов происходит присваивание каждому ряду на диаграмме цветов в том порядке, в каком цвета определены в палитре.  

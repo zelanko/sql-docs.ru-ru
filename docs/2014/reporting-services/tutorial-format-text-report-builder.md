@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e509fb84ffd35085e7930925fd71499a6c96c87
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647544"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Учебник. Форматирование текста (построитель отчетов)
   В этом учебнике приведено описание различных способов форматирования текста. После настройки пустого отчета с источником данных и набором данных выберите разделы, которые необходимо изучить.  

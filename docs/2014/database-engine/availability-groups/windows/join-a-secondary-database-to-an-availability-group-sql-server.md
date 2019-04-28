@@ -19,14 +19,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c66cf723f81e6676e991251ea1305bc2005722e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62790194"
 ---
 # <a name="join-a-secondary-database-to-an-availability-group-sql-server"></a>Присоединение базы данных-получателя к группе доступности (SQL Server)
-  В этом разделе объясняется, как присоединить базу данных-получатель к группе доступности AlwaysOn с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. После подготовки базы данных-получателя для вторичной реплики необходимо как можно скорее присоединить базу данных к группе доступности. При этом начнется перемещение данных из соответствующей основной базы данных в базу данных-получатель.  
+  В этом разделе описывается присоединение базы данных-получателя к группе доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. После подготовки базы данных-получателя для вторичной реплики необходимо как можно скорее присоединить базу данных к группе доступности. При этом начнется перемещение данных из соответствующей основной базы данных в базу данных-получатель.  
   
 -   **Перед началом работы**  
   
@@ -96,9 +96,9 @@ ms.locfileid: "48064684"
 ##  <a name="PowerShellProcedure"></a> Использование PowerShell  
  **Присоединение базы данных-получателя к группе доступности**  
   
-1.  Перейдите в каталог (`cd`) к экземпляру сервера, на котором размещена вторичная реплика.  
+1.  Перейдите в каталог (`cd`) экземпляра сервера, на котором размещается вторичная реплика.  
   
-2.  Используйте `Add-SqlAvailabilityDatabase` командлет, чтобы присоединить один или несколько баз данных-получателей к группе доступности.  
+2.  С помощью командлета `Add-SqlAvailabilityDatabase` присоедините одну или несколько баз данных-получателей к группе доступности.  
   
      Например, следующая команда присоединяет базу данных-получатель `Db1`к группе доступности `MyAG` в одном из экземпляров сервера, на котором находится вторичная реплика.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "48064684"
     ```  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, используйте `Get-Help` командлет в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] среде PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   

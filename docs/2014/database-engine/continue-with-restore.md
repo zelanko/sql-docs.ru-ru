@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d396dd41c7643991063bfa476059362c668673e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808256"
 ---
 # <a name="continue-with-restore"></a>Продолжить восстановление
   Диалоговое окно **Продолжение восстановления** используется для указания, нужно ли восстанавливать следующий резервный набор данных в последовательности восстановления. Чтобы приостановить операцию восстановления, например при смене ленты, завершите подготовительные операции и нажмите кнопку **ОК**.  
@@ -38,6 +38,6 @@ ms.locfileid: "48139984"
  [Просмотр содержимого ленты или файла резервной копии (SQL Server)](../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)   
  [Просмотр свойств и содержимого логического устройства резервного копирования (SQL Server)](../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)   
  [Восстановление резервной копии базы данных &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
- [Восстановление резервной копии журнала транзакций &#40;SQL Server&#41;](../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
+ [Восстановление резервной копии журнала транзакций (SQL Server)](../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
   

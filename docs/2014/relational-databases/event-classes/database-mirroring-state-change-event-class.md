@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f81b196ee1b686fbe2dd3563f694411a0e00d962
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663048"
 ---
 # <a name="database-mirroring-state-change-event-class"></a>Database Mirroring State Change, класс событий
   Класс событий **Database Mirroring State Change** указывает на изменение состояния зеркальной базы данных. Он включается в трассировки, выполняющие мониторинг состояния зеркальных баз данных.  

@@ -14,11 +14,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a10f892c8fd635892d76061e9f33649340e69593
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655484"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Пользователи автономной базы данных — создание переносимой базы данных
   Используйте пользователей автономной базы данных для проверки подлинности подключений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)] на уровне базы данных. Автономная база данных — это база данных, изолированная от других баз данных и от экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (и базы данных master), на котором размещена эта база данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает пользователей автономной базы данных для проверки подлинности Windows и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При использовании [!INCLUDE[ssSDS](../../includes/sssds-md.md)]объединяйте пользователей автономной базы данных с правилами брандмауэра уровня базы данных. В этом разделе рассматриваются различия и преимущества использования модели автономной базы данных по сравнению с традиционной моделью имя для входа/ пользователь и правилами брандмауэра в Windows или на уровне сервера. Конкретные сценарии, управляемость или приложение бизнес-логики могут по-прежнему требовать использования традиционной модели имя для входа/ пользователь и правила брандмауэра на уровне сервера.  

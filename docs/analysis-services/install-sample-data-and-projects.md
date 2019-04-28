@@ -10,29 +10,29 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df7311aad9c356376fffafc8a4882af8e29e746b
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659243"
 ---
 # <a name="install-sample-data-and-multidimensional-projects"></a>Установка образцов данных и многомерные проекты 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
 
 Используйте указания и ссылки, приведенные в этой статье для установки файлов данных и проектов, используемых в учебники по службам Analysis Services. 
   
-## <a name="step-1-install-prerequisites"></a>Шаг 1. Установка необходимых компонентов 
+## <a name="step-1-install-prerequisites"></a>Шаг 1. Установка необходимых компонентов 
 В занятиях этого учебника предполагается, что установлено следующее программное обеспечение. Все функции можно установить на одном компьютере. Для установки этих компонентов запустите программу установки SQL Server и выберите их на странице «Выбор компонентов».  
   
 -   Компонент SQL Server Database Engine  
   
 -   SQL Server Analysis Services (SSAS) 
   
-    Службы Analysis Services доступны только в следующих выпусках: Evaluation, Enterprise, Business Intelligence, Standard. Многомерных моделях не поддерживаются в Azure Analysis Services.
+    Службы Analysis Services доступна только в следующих выпусках: Evaluation, Enterprise, Business Intelligence, Standard. Многомерных моделях не поддерживаются в Azure Analysis Services.
   
     По умолчанию служб Analysis Services 2016 и более поздние версии устанавливается как табличный экземпляр, который можно переопределить, выбрав многомерном режиме сервера на сервере конфигурации страницы мастера установки.
   
-## <a name="step-2-download-and-install-developer-and-management-tools"></a>Этап 2. Скачайте и установите средства разработки и управления
+## <a name="step-2-download-and-install-developer-and-management-tools"></a>Шаг 2. Скачайте и установите средства разработки и управления
 SQL Server Data Tools (SSDT) для Visual Studio загружается и устанавливается отдельно от других компонентов SQL Server. Конструкторы и шаблоны проектов, используемый для создания моделей бизнес-Аналитики и отчетов, включенных в SSDT для Visual Studio 2015 или как [пакеты Nuget](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) для Visual Studio 2017.  
   
 [Скачайте SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=827542).   

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f5ca47ac10549a727f284eb412ba2b35127a518
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731592"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>Заполнение по примеру (средства анализа таблиц для Excel)
   ![Кнопка "Заполнение по примеру в средства анализа таблиц](media/tat-fillex.gif "кнопку заполнение по примеру в средства анализа таблиц")  
@@ -62,7 +62,7 @@ ms.locfileid: "48160906"
   
 |Столбец|Значение|Подходит|Относительное влияние|  
 |------------|-----------|------------|---------------------|  
-|StateProvinceCode|AB|>500 километров|80 %|  
+|StateProvinceCode|AB|> 500 километров|80 %|  
   
  Это означает, что значение AB в **StateProvinceCode** столбца точно прогнозирует расстояние доставки > 500 километров.  
   

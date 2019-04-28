@@ -1,5 +1,5 @@
 ---
-title: Копирование удаленной таблицы - Parallel Data Warehouse | Документы Microsoft
+title: Копирование удаленных таблиц - Parallel Data Warehouse | Документация Майкрософт
 description: С помощью копирования удаленной таблицы в Analytics платформы системы Parallel Data Warehouse.
 author: mzaman1
 manager: craigg
@@ -10,40 +10,40 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 5ed517a471368e4192ad7393a92274424d37f975
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678564"
 ---
-# <a name="remote-table-copy"></a>Копирование удаленной таблицы
-Описывает, как использовать функцию копирования удаленной таблицы копирование таблиц из базы данных SQL Server PDW для удаленных баз данных SMP SQL Server (отличных от устройства). Используйте копию удаленной таблицы включает звезда сценарии для SQL Server PDW.  
+# <a name="remote-table-copy"></a>Копирование удаленных таблиц
+Описывает способы использования функцией копирования удаленной таблицы для копирование таблиц из базы данных SQL Server PDW в удаленных базах данных SMP SQL Server (не являющийся устройством). Копирование удаленных таблиц к сценариям звездообразной позволяет используйте для SQL Server PDW.  
   
-## <a name="BasicsPDE"></a>Понимать копирования удаленной таблицы для SQL Server PDW  
-Копирование удаленной таблицы — это функция служб SQL Server PDW, позволяет использовать сценарии, звезда, копируя результаты SQL-инструкцию SELECT в таблицу в базе данных SMP. Копирование удаленной таблицы для инициализации [СОЗДАНИЯ УДАЛЕННОГО TABLE AS SELECT](../t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md) инструкции.  
+## <a name="BasicsPDE"></a>Общие сведения о копирования удаленной таблицы для SQL Server PDW  
+Копирование удаленных таблиц — это функция SQL Server PDW, позволяет реализовать сценарии звездообразной копируя результаты SQL-инструкцию SELECT на таблицу в базе данных SMP. Копирование удаленных таблиц инициируется с [создать REMOTE TABLE AS SELECT](../t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md) инструкции.  
   
-## <a name="BasicsPrerequisites"></a>Требования к использованию копирования удаленной таблицы  
-Таблиц копирования для копирования удаленной таблицы из SQL Server PDW в базе данных SQL Server можно использовать при выполнении следующих условий:  
+## <a name="BasicsPrerequisites"></a>Требования к использованию копирование удаленных таблиц  
+Таблицы копирования для копирования удаленной таблицы из SQL Server PDW в базе данных SQL Server можно использовать при выполнении этих условий:  
   
--   Целевой базы данных должен быть экземпляр Microsoft® SQL Server®, на котором выполняется в системе Microsoft Windows®, можно подключиться к SQL Server PDW appliance, но не находится на сервере в устройстве. Удаленный экземпляр SQL Server может подключаться к сети InfiniBand с помощью SQL Server PDW или через сеть Ethernet.  
+-   Целевой базы данных должен представлять собой экземпляр Microsoft® SQL Server®, на котором выполняется в системе Microsoft Windows®, которая может подключаться к SQL Server PDW appliance, но не находится на сервере в пределах устройства. Удаленный экземпляр SQL Server может подключаться к сети InfiniBand SQL Server PDW или через сеть Ethernet.  
   
--   Данные для копирования должен быть доступным для выбора один допустимый SQL Server PDW [ВЫБЕРИТЕ](../t-sql/queries/select-transact-sql.md) инструкции.  
+-   Данные для копирования должен быть один допустимый SQL Server PDW с помощью [ВЫБЕРИТЕ](../t-sql/queries/select-transact-sql.md) инструкции.  
   
--   Целевой сервер не должен быть устройством. Не удается скопировать данные непосредственно из одного устройства в другую с помощью инструкции в этом разделе.  
+-   Целевой сервер не должен быть устройством. Не удается скопировать данные непосредственно с одного устройства на другой с помощью инструкций в этом разделе.  
   
--   Сервер назначения должны быть доступны для всех узлов в сети Infiniband устройства.  
+-   Конечный сервер должны быть доступны всем узлам в сети Infiniband устройства.  
   
 ## <a name="ConfigureRemote"></a>Настройка копирования удаленной таблицы  
-Использовать копию удаленной таблицы, требуется приобрести и настроить Windows server, настройки SQL Server на сервере Windows server и настроить SQL Server PDW. Используйте следующие ссылки для выполнения этих трех этапов.  
+Чтобы использовать копирование удаленных таблиц, вы должны приобрести и настроить сервер Windows, настройки SQL Server на сервере Windows и настроить SQL Server PDW. Используйте следующие ссылки для выполнения этих трех этапов настройки.  
   
-1.  [Настройки Windows внешние системы для получения копии удаленной таблицы с помощью InfiniBand](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md)  
+1.  [Настройки Windows внешние системы для получения копий удаленных таблиц с помощью InfiniBand](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md)  
   
-2.  [Настройка внешних SMP SQL Server для получения копии удаленной таблицы](configure-an-external-smp-sql-server-to-receive-remote-table-copies.md)  
+2.  [Настройка внешнего SMP SQL Server для получения копий удаленных таблиц](configure-an-external-smp-sql-server-to-receive-remote-table-copies.md)  
   
-3.  [Настройка для удаленной таблицы копии SQL Server PDW](configure-sql-server-pdw-for-remote-table-copies.md)  
+3.  [Настройка SQL Server PDW для копий удаленных таблиц](configure-sql-server-pdw-for-remote-table-copies.md)  
   
-## <a name="PerformRemote"></a>Выполнить копирование удаленной таблицы  
-Чтобы выполнить копирование удаленной таблицы, используйте [СОЗДАНИЯ УДАЛЕННОГО TABLE AS SELECT](../t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md) инструкции SQL. Примеры включаются в разделе CREATE REMOTE TABLE.  
+## <a name="PerformRemote"></a>Копирование удаленной таблицы  
+Чтобы выполнить копирование удаленной таблицы, используйте [создать REMOTE TABLE AS SELECT](../t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md) инструкции SQL. Примеры включены в разделе CREATE REMOTE TABLE.  
   
 <!-- MISSING LINKS 
 ## See Also  

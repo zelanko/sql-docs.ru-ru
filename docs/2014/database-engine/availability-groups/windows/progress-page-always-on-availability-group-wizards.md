@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3c87b2a3c6ac2156a4d52ece48efa2982bb4ca2d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789114"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>Страница «Выполнение» (мастера групп доступности AlwaysOn)
   Используйте это диалоговое окно для просмотра шагов мастера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , запущенного в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Индикатор выполнения указывает относительный прогресс шагов мастера.  
@@ -33,7 +33,7 @@ ms.locfileid: "48130844"
  **Дополнительные сведения**  
  Щелкните стрелку вниз, чтобы отобразить сетку выполнения, в которой по порядку отображены любые завершенные шаги, за которыми отображается текущая операция. Сетка содержит следующие столбцы:  
   
- **Название**  
+ **Name**  
  Отображает фразу, которая описывает конкретный шаг.  
   
  **Состояние**  

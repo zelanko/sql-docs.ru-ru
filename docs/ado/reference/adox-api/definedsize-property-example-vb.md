@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11d57cc1e5d880acebb4a44678ec147d24a5582d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62661526"
 ---
 # <a name="definedsize-property-example-vb"></a>Пример свойства DefinedSize (Visual Basic)
 В этом примере показано [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) свойство [столбец](../../../ado/reference/adox-api/column-object-adox.md). Код будет переопределить размер столбца FirstName **сотрудников** таблицы *Northwind* базы данных. Затем изменения в значениях FirstName [поле](../../../ado/reference/ado-api/field-object.md) из [записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе **сотрудников** отображается таблица. Обратите внимание, что по умолчанию для поля FirstName становится дополняются пробелами после переопределении **DefinedSize** свойство.  

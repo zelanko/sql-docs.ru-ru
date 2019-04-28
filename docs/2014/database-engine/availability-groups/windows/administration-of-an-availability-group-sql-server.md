@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4896c9219632d816565fdd30c11aa82ccbf7fef1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791898"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>Администрирование группы доступности (SQL Server)
   Управление существующей группой доступности AlwaysOn в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] включает в себя одну или несколько следующих задач.  
@@ -123,7 +123,7 @@ ms.locfileid: "53355361"
   
 -   **Видеоролики**  
   
-     [Серия Microsoft SQL Server с кодовым названием «Denali» AlwaysOn, часть 1: Представляем решение высокого уровня доступности следующего поколения](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Серия Microsoft SQL Server с кодовым названием «Denali» AlwaysOn, часть 1: вводные сведения о решении следующего поколения по обеспечению высокого уровня доступности](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Серия Microsoft SQL Server с кодовым названием «Denali» AlwaysOn, часть 2: Создание решения критически важных высокого уровня доступности с помощью AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
@@ -139,12 +139,12 @@ ms.locfileid: "53355361"
  [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Настройка экземпляра сервера для групп доступности AlwaysOn &#40;SQL Server&#41;](configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)  
  [Создание и настройка групп доступности (SQL Server)](creation-and-configuration-of-availability-groups-sql-server.md)   
- [Активные вторичные реплики. Вторичные реплики для чтения &#40;группы доступности AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [Активные вторичные реплики. Резервного копирования во вторичных репликах &#40;группы доступности AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [Активные вторичные реплики: Вторичные реплики для чтения &#40;группы доступности AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [Активные вторичные реплики: Резервного копирования во вторичных репликах &#40;группы доступности AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
  [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../listeners-client-connectivity-application-failover.md)   
  [Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [Отслеживание групп доступности (SQL Server)](monitoring-of-availability-groups-sql-server.md)   
- [Группы доступности AlwaysOn: Взаимодействие &#40;SQL Server&#41;](always-on-availability-groups-interoperability-sql-server.md)   
+ [Группы доступности AlwaysOn: взаимодействие (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [Общие сведения об инструкциях Transact-SQL для групп доступности AlwaysOn &#40;SQL Server&#41;](transact-sql-statements-for-always-on-availability-groups.md)   
  [Обзор командлетов PowerShell для групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: '— Занятие 14: Развертывание | Документация Майкрософт'
+title: Занятие 14. Развертывание | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,19 +12,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea979963906af46a1d032614ad6b398f70ef3483
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729460"
 ---
 # <a name="lesson-14-deploy"></a>Занятие 14. Развертывание
   На этом занятии мы выполним настройку свойства развертывания, указав экземпляр сервера развертывания служб Analysis Services в табличном режиме и имя развертываемой модели. Затем мы выполним развертывание модели на указанном экземпляре. После развертывания пользователи смогут подключаться к модели с помощью клиентского приложения создания отчетов. Дополнительные сведения см. в разделе [Развертывание решений табличной модели (табличные службы SSAS)](tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
   
- Предполагаемое время выполнения этого занятия: **5 минут**.  
+ Предполагаемое время для выполнения этого занятия: **5 минут**  
   
 ## <a name="prerequisites"></a>предварительные требования  
- Этот раздел является частью учебника по табличному моделированию, который необходимо изучать по порядку. Прежде чем выполнять задания в этом занятии, необходимо завершить предыдущее [Занятие 13. Анализ в Excel](lesson-12-analyze-in-excel.md).  
+ Этот раздел является частью учебника по табличному моделированию, который необходимо изучать по порядку. Перед выполнением задач на этом занятии, необходимо завершить предыдущее занятие: [Занятие 13. Анализ в Excel](lesson-12-analyze-in-excel.md).  
   
 ## <a name="deploy-the-model"></a>Развертывание модели  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48196234"
   
 ## <a name="see-also"></a>См. также  
  [Режим DirectQuery (табличные службы SSAS)](tabular-models/directquery-mode-ssas-tabular.md)   
- [Настройка моделирования данных по умолчанию и свойств развертывания &#40;табличные службы SSAS&#41;](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
- [Базы данных табличной модели &#40;табличные службы SSAS&#41;](tabular-models/tabular-model-databases-ssas-tabular.md)  
+ [Настройка моделирования данных по умолчанию и свойств развертывания (табличные службы SSAS)](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [Базы данных табличной модели (табличные службы SSAS)](tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   

@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 340423e23037ae401b1e5749fbed38b1822cfb41
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62677014"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>Просмотр или изменение свойств условия управления на основе политик
   В этом разделе описывается просмотр и изменение свойств условия управления на основе политик в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -54,7 +54,7 @@ ms.locfileid: "54100589"
   
 4.  Щелкните знак «плюс», чтобы развернуть папку **Условия** .  
   
-5.  Щелкните правой кнопкой мыши условие, свойства которого необходимо просмотреть или изменить, и выберите пункт **Свойства**. Дополнительные сведения о параметрах, доступных в **Открытие условия -**_condition_name_ диалоговом окне см. в разделе [Создание нового условия "или" Открытие "диалогового окна условия, страница" Общие "](../../integration-services/general-page-of-integration-services-designers-options.md), [Открыть диалоговое окно условие, зависимые политики страницы](open-condition-dialog-box-dependent-policies-page.md), [Создание нового условия "или" Открытие условия» диалогового окна «страница "Описание"](create-new-condition-or-open-condition-dialog-box-description-page.md), и [расширенного редактирования &#40; Условие&#41; диалоговое окно](advanced-edit-condition-dialog-box.md).  
+5.  Щелкните правой кнопкой мыши условие, свойства которого необходимо просмотреть или изменить, и выберите пункт **Свойства**. Дополнительные сведения о параметрах, доступных в диалоговом окне **Открытие условия —**_имя_условия_, см. в статьях [Диалоговое окно "Создание нового условия" или "Открытие условия", страница "Общее"](../../integration-services/general-page-of-integration-services-designers-options.md), [Диалоговое окно "Открытие условия", вкладка "Зависимые политики"](open-condition-dialog-box-dependent-policies-page.md), [Диалоговое окно "Создание нового условия" или "Открытие условия", страница "Описание"](create-new-condition-or-open-condition-dialog-box-description-page.md) и [Диалоговое окно "Расширенное редактирование" (условие)](advanced-edit-condition-dialog-box.md).  
   
 6.  После завершения нажмите кнопку **ОК**.  
   

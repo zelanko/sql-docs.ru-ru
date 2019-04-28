@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f96156bc22f730a8e550ef6007bb45401284f60
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666690"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Создание новой диаграммы базы данных (визуальные инструменты для баз данных)
   Для создания новых диаграмм баз данных можно использовать обозреватель объектов. Диаграммы базы данных графически изображают структуру баз данных. При помощи диаграмм баз данных можно создавать и изменять таблицы, столбцы, связи и ключи. Кроме того, можно изменять индексы и ограничения.  

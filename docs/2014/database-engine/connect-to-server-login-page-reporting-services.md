@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7369e9d37e5f706786410f8e171c89c6c38287d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808730"
 ---
 # <a name="connect-to-server-login-page-reporting-services"></a>Соединение с сервером служб Reporting Services (страница «Вход»)
   Используйте эту вкладку для просмотра или задания следующих параметров при соединении со службами [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "48108714"
   
  Для сервера отчетов, работающего в режиме интеграции с SharePoint, необходимо указать сайт SharePoint. Можно указать любой сайт из семейства сайтов, интегрированного со службами [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Введенный URL-адрес должен содержать префикс HTTP или HTTPS. Чтобы подключиться к сайту SharePoint из среды Management Studio, необходимо иметь разрешение на доступ к нему. Уровень разрешений определяет набор объектов, которые доступны для просмотра и управления. Дополнительные сведения см. в разделе [соединиться с сервером отчетов в среде Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   
- **Проверка подлинности**  
+ **Authentication**  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] можно настроить для принятия запросов проверки подлинности Windows или запросов проверки подлинности с помощью форм, обрабатываемых нестандартным модулем проверки подлинности. При подключении к службам Reporting Services выберите один из следующих режимов проверки подлинности.  
   
  **Режим проверки подлинности Windows (проверка подлинности Windows)**  
@@ -63,8 +63,8 @@ ms.locfileid: "48108714"
  Отображаются дополнительные параметры соединения сервера, например запоминание пароля.  
   
 ## <a name="see-also"></a>См. также  
- [Настройка подключения к базе данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Настройка подключения к базе данных сервера отчетов (диспетчер конфигураций служб Reporting Services)](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Подключение к серверу отчетов в среде Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Аутентификация с использованием сервера отчетов](../reporting-services/security/authentication-with-the-report-server.md)  
+ [Проверка подлинности с использованием сервера отчетов](../reporting-services/security/authentication-with-the-report-server.md)  
   
   

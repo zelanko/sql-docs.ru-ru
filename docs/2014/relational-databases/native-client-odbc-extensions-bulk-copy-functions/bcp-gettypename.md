@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689031"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
   Возвращает имя типа SQL для указанного токена типа BCP.  
@@ -80,7 +80,7 @@ fIsMaxType
 |`SQLVARBINARY`|Нет|**varbinary**|  
 |`SQLIMAGE`|Допустим любой вариант|**Изображение**|  
 |`SQLINTN`|Допустим любой вариант|**int-null**|  
-|`SQLDATETIMN`|Допустим любой вариант|**DateTime-null**|  
+|`SQLDATETIMN`|Допустим любой вариант|**datetime-null**|  
 |`SQLMONEYN`|Допустим любой вариант|**Money null**|  
 |`SQLFLTN`|Допустим любой вариант|**число с плавающей запятой от null**|  
 |`SQLAOPSUM`|Допустим любой вариант|**Sum**|  

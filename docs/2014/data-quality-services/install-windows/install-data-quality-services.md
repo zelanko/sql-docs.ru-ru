@@ -11,18 +11,18 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 728d69dcf44e0cab436c73396d833f754891a3f5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792630"
 ---
 # <a name="install-data-quality-services"></a>Установка служб Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) содержит два компонента: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** и **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**.  
   
 |Компонент DQS|Описание|  
 |-------------------|-----------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] устанавливается поверх компонента [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Database Engine и включают три базы данных: базы данных DQS_MAIN, DQS_PROJECTS и DQS_STAGING_DATA. База данных DQS_MAIN содержит хранимые процедуры DQS, ядро DQS и опубликованные базы знаний. База данных DQS_PROJECTS содержит сведения о проекте служб DQS. DQS_STAGING_DATA представляет собой промежуточную область для копирования источника данных с целью выполнения операций DQS и последующего экспорта обработанных данных.|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] устанавливается поверх компонента [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] компонент Database Engine и включает три базы данных: DQS_MAIN, DQS_PROJECTS и DQS_STAGING_DATA. База данных DQS_MAIN содержит хранимые процедуры DQS, ядро DQS и опубликованные базы знаний. База данных DQS_PROJECTS содержит сведения о проекте служб DQS. DQS_STAGING_DATA представляет собой промежуточную область для копирования источника данных с целью выполнения операций DQS и последующего экспорта обработанных данных.|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] — это автономное приложение, которое позволяет подключаться к [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]и имеет наглядный графический пользовательский интерфейс, используемый в операциях обеспечения качества данных и выполнения других административных задач служб DQS.|  
   
 > [!IMPORTANT]
@@ -33,11 +33,11 @@ ms.locfileid: "56019644"
   
  Установка DQS представляет собой процесс из трех частей.  
   
--   [Предваряющие установку задачи](#PreInstallationTasks): Перед установкой DQS проверьте требования к системе.  
+-   [Предварительная подготовка](#PreInstallationTasks). Проверьте системные требования перед установкой DQS.  
   
--   [Службы Data Quality Services задач установки](#DQSInstallation): Установите службы DQS с помощью программы установки SQL Server.  
+-   [Задачи по установке служб Data Quality Services](#DQSInstallation). Установите DQS с помощью программы установки SQL Server.  
   
--   [Действия перед установкой](#PostInstallationTasks): Для завершения установки служб DQS после окончания работы программы установки SQL Server выполните следующие задачи.  
+-   [Действия после установки](#PostInstallationTasks). Выполните следующие задачи после окончания работы программы установки SQL Server для завершения установки DQS.  
   
 > [!NOTE]  
 >  Этот раздел не содержит инструкций по запуску программы установки из командной строки. Сведения о параметрах командной строки для установки [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] и клиентом, см. в разделе [параметры компонентов](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature) в [Установка SQL Server 2014 из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
@@ -75,7 +75,7 @@ ms.locfileid: "56019644"
 |Сделайте ваши данные доступными для операций DQS.|Убедитесь, что исходные данные доступны для операций DQS и возможен экспорт обработанных данных в таблицу в базе данных.|[Предоставление доступа к данным для операций со службами DQS](access-data-for-the-dqs-operations.md)|  
   
 ## <a name="see-also"></a>См. также  
- [Видео: Установка и настройка DQS](https://go.microsoft.com/fwlink/?LinkId=238241)   
+ [Видео: Install and Configure DQS (Установка и настройка служб DQS)](https://go.microsoft.com/fwlink/?LinkId=238241)   
  [Обновление сборок SQLCLR после обновления .NET Framework](upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [Экспорт и импорт баз знаний DQS с помощью DQSInstaller.exe](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [Обновление служб Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   

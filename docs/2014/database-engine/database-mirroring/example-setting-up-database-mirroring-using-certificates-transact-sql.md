@@ -16,13 +16,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806755"
 ---
-# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Пример Настройка зеркального отображения базы данных при помощи сертификатов (язык Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Пример Настройка зеркального отображения с помощью сертификатов (язык Transact-SQL)
   В этом примере описаны все действия, выполняемые при создании сеанса зеркального отображения базы данных с использованием проверки подлинности на основе сертификатов. Примеры в этом подразделе используют язык [!INCLUDE[tsql](../../includes/tsql-md.md)]. За исключением случаев, когда сеть гарантированно защищена, рекомендуется для соединений зеркального отображения базы данных применять шифрование.  
   
  При копировании сертификата на другую систему используйте безопасный метод копирования. Отнеситесь с особым вниманием к хранению сертификатов в безопасном месте.  

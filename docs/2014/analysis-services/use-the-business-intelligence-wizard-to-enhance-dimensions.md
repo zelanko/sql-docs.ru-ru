@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3da3588c59dfe98ee92baf6a34274696bffc9d5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793363"
 ---
 # <a name="use-the-business-intelligence-wizard-to-enhance-dimensions"></a>Использование мастера бизнес-аналитики для улучшения измерений
   В дополнение к непосредственному изменению свойств измерений и объектов измерений, можно также воспользоваться мастером бизнес-аналитики для настройки и усовершенствования измерений.  
@@ -38,7 +38,7 @@ ms.locfileid: "48173784"
 ## <a name="see-also"></a>См. также  
  [Определение измерений базы данных](multidimensional-models/define-database-dimensions.md)   
  [Справочник по свойствам атрибута измерения](multidimensional-models/dimension-attribute-properties-reference.md)   
- [Создание определяемых пользователем иерархий](multidimensional-models/user-defined-hierarchies-create.md)   
+ [Создание пользовательских иерархий](multidimensional-models/user-defined-hierarchies-create.md)   
  [Определение связей атрибутов](multidimensional-models/attribute-relationships-define.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

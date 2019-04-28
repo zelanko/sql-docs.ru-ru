@@ -12,23 +12,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b325a96c096f0e49f3bbfb2961d0de6cac387a3e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730359"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Установка образцов данных и проектов для учебника по многомерному моделированию в службах Analysis Services
   Используйте указания и ссылки, приведенные в этом разделе, для установки всех файлов данных и проектов, используемых в учебниках по службам Analysis Services.  
   
-## <a name="step-1-install-sql-server-software"></a>Шаг 1. Установка SQL Server  
+## <a name="step-1-install-sql-server-software"></a>Шаг 1. Установка SQL Server  
  В занятиях этого учебника предполагается, что установлено следующее программное обеспечение. Все перечисленное ниже программное обеспечение устанавливается с установочного носителя SQL Server. Для простоты развертывания все компоненты можно установить на одном компьютере. Для установки этих компонентов запустите программу установки SQL Server и выберите их на странице «Выбор компонентов». Дополнительные сведения см. в разделе [Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 -   Компонент Database Engine  
   
 -   Службы Analysis Services  
   
-     Службы Analysis Services доступны только в следующих выпусках: Evaluation, Enterprise, Business Intelligence, Standard.  
+     Службы Analysis Services доступна только в следующих выпусках: Evaluation, Enterprise, Business Intelligence, Standard.  
   
      Обратите внимание, что выпуски SQL Server Express не включают службы Analysis Services. [Скачайте ознакомительный выпуск](https://go.microsoft.com/fwlink/?LinkId=392824), если хотите опробовать программное обеспечение бесплатно.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "53355075"
   
  Кроме того, данные можно просматривать с помощью конструктора запросов многомерных выражений, который встроен в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Конструктор запросов возвращает те же данные, только представленные в виде плоского набора строк.  
   
-## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>Этап 2. Скачать SQL Server Data Tools — бизнес-аналитика для Visual Studio 2012  
+## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>Шаг 2. Скачать SQL Server Data Tools — бизнес-аналитика для Visual Studio 2012  
  В этом выпуске средства SQL Server Data Tools загружаются и устанавливаются отдельно от других компонентов SQL Server. Конструкторы и шаблоны проектов, используемых для создания моделей и отчетов бизнес-аналитики, доступны для бесплатной загрузки в сети.  
   
 -   [Скачайте версию Business Intelligence средств SQL Server Data Tools](https://go.microsoft.com/fwlink/p/?LinkID=322038). Файл будет сохранен в папке «Загрузки». Запустите программу установки средства.  
@@ -72,7 +72,7 @@ ms.locfileid: "53355075"
   
 7.  В сведениях о базе данных удалите запись файла журнала. Программа установки предполагает, что имеется файл журнала, но в примере файла журнала нет. При присоединении базы данных будет автоматически создан новый файл журнала. Выберите файл журнала и нажмите кнопку **Удалить**, а затем нажмите кнопку **ОК** , чтобы присоединить только файл базы данных-источника.  
   
-## <a name="step-4-grant-database-permissions"></a>Шаг 4. Предоставление разрешений для базы данных  
+## <a name="step-4-grant-database-permissions"></a>Шаг 4. Предоставить разрешения базы данных  
  В образцах проектов используются параметры олицетворения источников данных, указывающие контекст безопасности, в котором импортируются и обрабатываются данные. По умолчанию в параметрах олицетворения для доступа к данных указана учетная запись службы Analysis Services. Чтобы использовать значение по умолчанию, необходимо убедиться в том, что у учетной записи, от имени которой выполняются службы Analysis Services, имеются разрешения на чтение данных из базы данных **AdventureWorksDW2012** .  
   
 > [!NOTE]  

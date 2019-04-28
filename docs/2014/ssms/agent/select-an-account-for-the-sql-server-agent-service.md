@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 204d312e1350e7284b335806a0286baf9603c9a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666801"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Выбор учетной записи для службы агента SQL Server
   Стартовая учетная запись службы определяет учетную запись [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которой запускается агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также его сетевые разрешения. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется как заданная учетная запись пользователя. Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет выбрать учетную запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из следующих вариантов:  
@@ -92,23 +92,23 @@ ms.locfileid: "52788466"
  <sup>4</sup> см. следующее ограничение № 4.  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Ограничение 1. Использование неадминистративных учетных записей для администрирования нескольких серверов  
- Прикрепление целевого сервера к главному серверу может завершиться ошибкой, после чего появляется следующее сообщение: «Не удалось выполнить операцию прикрепления».  
+ Прикрепление целевых серверов к главному серверу может завершиться ошибкой со следующим сообщением: «Ошибка операцию прикрепления».  
   
  Чтобы устранить эту ошибку, перезапустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>Ограничение 2. Использование учетной записи Local System для администрирования нескольких серверов  
+### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>Ограничение 2. С помощью учетной записи Local System для администрирования нескольких серверов  
  Администрирование нескольких серверов поддерживается при выполнении службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под учетной записью Local System только в том случае, если целевой и главный серверы расположены на одном и том же компьютере. При использовании этой конфигурации, при прикреплении целевого сервера к главному серверу, возвращается следующее сообщение:  
   
  "Убедитесь, что стартовая учетная запись агента для *<имя_компьютера_целевого_сервера>* имеет права для входа на сервер targetServer".  
   
  Данное сообщение можно пропустить. Операция прикрепления должна быть завершена успешно. Дополнительные сведения см. в статье [Создание многосерверной среды](create-a-multiserver-environment.md).  
   
-### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>Ограничение 3. Использование учетной записи сетевой службы, которая является учетной записью SQL Server  
+### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>Ограничение 3. С помощью учетной записи сетевой службы, если это пользователь SQL Server  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] При запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может произойти сбой, если он запускается под учетной записью сетевой службы, которая уже явным образом получила доступ к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Для решения этой проблемы перезагрузите компьютер, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это действие необходимо выполнить однократно.  
   
-### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>Ограничение № 4. Использование учетной записи сетевой службы при выполнении служб SQL Server Reporting Services на том же самом компьютере  
+### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>Ограничение 4. С помощью учетной записи сетевой службы, если SQL Server Reporting Services работает на одном компьютере  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент не может быть запущен, если служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется под учетной записью сетевой службы, а службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] запущены на этом же самом компьютере.  
   
  Для решения этой проблемы перезагрузите компьютер, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а затем перезапустите службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и службу агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это действие необходимо выполнить однократно.  

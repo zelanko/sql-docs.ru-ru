@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d4a5067598b475ed8fe103606088d0e4d6d0554
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689405"
 ---
 # <a name="bcpwritefmt"></a>Функция bcp_writefmt
   Создает файл форматирования, содержащий описание формата текущего файла данных массового копирования.  
@@ -53,14 +53,14 @@ szFormatFile
  SUCCEED или FAIL.  
   
 ## <a name="remarks"></a>Примечания  
- Файл форматирования определяет формат данных, содержащихся в файле данных, создаваемом при массовом копировании. Вызовы [bcp_columns](bcp-columns.md) и [bcp_colfmt](bcp-colfmt.md) определяют формат файла данных. Функция**bcp_writefmt** сохраняет это определение в файле, на который ссылается аргумент *szFormatFile*. Дополнительные сведения см. в разделе [bcp_init](bcp-init.md).  
+ Файл форматирования определяет формат данных, содержащихся в файле данных, создаваемом при массовом копировании. Вызовы функций [bcp_columns](bcp-columns.md) и [bcp_colfmt](bcp-colfmt.md) определяют формат файла данных. Функция**bcp_writefmt** сохраняет это определение в файле, на который ссылается аргумент *szFormatFile*. Дополнительные сведения см. в разделе [bcp_init](bcp-init.md).  
   
  Дополнительные сведения о структуре **bcp** файлов форматирования данных, см. в разделе [массовый импорт и экспорт данных с помощью программы bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
- Для загрузки сохраненного файла форматирования используется [bcp_readfmt](bcp-readfmt.md).  
+ Для загрузки сохраненного файла форматирования используется функция [bcp_readfmt](bcp-readfmt.md).  
   
 > [!NOTE]  
->  Файлы форматирования, созданные **bcp_writefmt** поддерживается только в версиях **bcp** поставки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0 и более поздних версий.  
+>  Файлы форматирования, созданные функцией **bcp_writefmt** , поддерживаются только версиями программы **bcp** , входящими в комплект поставки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0 и выше.  
   
 ## <a name="example"></a>Пример  
   

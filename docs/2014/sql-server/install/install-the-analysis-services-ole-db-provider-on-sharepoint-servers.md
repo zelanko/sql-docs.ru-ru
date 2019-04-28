@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: c24c5f07d18bc8d63ff0d113c762f776dccf9a41
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657944"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>Установка поставщика OLE DB служб Analysis Services на серверах SharePoint
   Поставщик Microsoft OLE DB для служб Analysis Services (MSOLAP) представляет собой интерфейс, используемый клиентскими приложениями для взаимодействия с данными служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. В среде SharePoint, где установлен [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], поставщик обрабатывает запросы на подключение к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
@@ -126,7 +126,7 @@ ms.locfileid: "53376646"
 ##  <a name="bkmk_kj"></a> Установите поставщик SQL Server 2008 R2 OLE DB для размещения более ранней версии книги  
  Используйте следующие инструкции, чтобы установить версию [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] поставщика MSOLAP.4 и зарегистрировать файл Microsoft.AnalysisServices.ChannelTransport.dll. ChannelTransport является дочерним компонентом поставщика OLE DB служб Analysis Services. Версия [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] поставщика читает реестр с помощью метода ChannelTransport для установления подключения. Регистрация этого файла после выполнения установки требуется только для тех соединений, которые обрабатываются поставщиком [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] на сервере [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
-#### <a name="step-1-download-and-install-the-client-library"></a>Шаг 1. Загрузка и установка клиентской библиотеки  
+#### <a name="step-1-download-and-install-the-client-library"></a>Шаг 1. Загрузка и установка клиентской библиотеки  
   
 1.  На [страницы пакета дополнительных компонентов SQL Server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=159570), найти поставщик Microsoft Analysis Services OLE DB для Microsoft SQL Server 2008 R2.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "53376646"
   
 4.  Если в ферме есть другие серверы, которые используют только службы Excel Services, без [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] на том же компьютере, повторите предыдущие шаги, чтобы установить версию 2008 R2 поставщика на компьютер со службами Excel Services.  
   
-#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>Этап 2. Зарегистрируйте файл Microsoft.AnalysisServices.ChannelTransport.dll  
+#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>Шаг 2. Зарегистрируйте файл Microsoft.AnalysisServices.ChannelTransport.dll  
   
 1.  Используйте программу regasm.exe для регистрации файла. Если вы не использовали программу regasm.exe перед, добавьте ее родительскую папку, C:\Windows\Microsoft.NET\Framework64\v4.0.30319\\, переменную системного пути.  
   

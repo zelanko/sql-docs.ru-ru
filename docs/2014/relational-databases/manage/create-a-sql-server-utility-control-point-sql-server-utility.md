@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c027b6648da799be5a2b9381a0f19dc437563242
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806379"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>создать точку управления служебной программы SQL Server (служебная программа SQL Server)
   На предприятии может работать несколько служебных программ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , при этом каждая служебная программа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может управлять несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и приложениями уровня данных. У каждой служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеется одна и только одна точка управления служебной программой (UCP). Для каждой служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо создать точку управления служебной программой. Каждый управляемый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и каждый компонент приложения уровня данных относится только к одной служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и управляется одной точкой управления служебной программой.  
@@ -76,7 +76,7 @@ ms.locfileid: "53377666"
   
 -   Эта процедура должна выполняться пользователем, имеющим разрешения sysadmin, необходимые для создания точки управления служебной программой.  
   
--   Из точки управления служебной программой необходимо удалить все управляемые экземпляры SQL Server. Заметьте, что сама точка управления также является управляемым экземпляром SQL Server. Дополнительные сведения см. в разделе [как: Удаление экземпляра SQL Server из служебной программы SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
+-   Из точки управления служебной программой необходимо удалить все управляемые экземпляры SQL Server. Заметьте, что сама точка управления также является управляемым экземпляром SQL Server. Дополнительные сведения см. в разделе [Как Удаление экземпляра SQL Server из служебной программы SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
   
  Эта процедура предназначена для удаления точки управления служебной программой SQL Server из служебной программы SQL Server. После завершения операции в экземпляре SQL Server можно снова создать точку управления служебной программой.  
   

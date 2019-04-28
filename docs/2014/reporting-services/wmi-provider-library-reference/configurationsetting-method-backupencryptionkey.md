@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b4d05dd66aa795579172aba5472a0f38c5f320bc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647058"
 ---
 # <a name="backupencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>Метод BackupEncryptionKey (WMI MSReportServer_ConfigurationSetting)
   Создает резервную копию ключа шифрования для указанного экземпляра сервера отчетов. Ключ шифрования хранится в зашифрованном виде под защитой пароля.  

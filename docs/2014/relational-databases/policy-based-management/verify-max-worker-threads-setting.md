@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 861e24cf64a29d55a01fc9a10300e4174cd76d5f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676962"
 ---
 # <a name="verify-max-worker-threads-setting"></a>Проверка параметра максимального числа рабочих потоков
   Это правило проверяет возможные неверные значения параметра сервера «max worker threads». Установка низкого значения параметра «max worker threads» может привести к так называемой «нехватке потоков», необходимых для своевременного обслуживания входящих клиентских запросов. Однако слишком большое значение может вызвать неэффективное расходование адресного пространства, поскольку каждому активному потоку требуется 512 КБ на 32-разрядном сервере и до 4 МБ на 64-разрядном сервере.  

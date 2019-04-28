@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0f53d25c99da4ae193f3f37ea07748f603b9cf2e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792670"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Импорт значений в домен из файла Excel
   В этом разделе описывается, как импортировать значения из файла Excel в домен [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Использование файла Excel для импорта значений домена в приложение [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] позволяет упростить процесс создания набора знаний, экономя время и усилия. Это позволяет пользователям, у которых имеется список допустимых значений данных в файле формата Excel или в текстовом файле, импортировать эти значения в домен. Из файла Microsoft Excel вы можете импортировать значения домена в домен или домены в базу знаний. (Дополнительные сведения об импорте доменов в базу знаний см. в разделе [Импорт доменов из файла Excel при обнаружении набора знаний](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md).) Экспорт в файл Excel не поддерживается.  
@@ -70,7 +70,7 @@ ms.locfileid: "56019605"
   
 14. Нажмите кнопку **Готово** , чтобы добавить новые значения в базу знаний.  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После импорта значений в домен из файла Excel  
+##  <a name="FollowUp"></a> Дальнейшие действия. После импорта значений из файла Excel в домен  
  После импорта значений в домен вы можете выполнить другие задачи по управлению доменами для этого домена, провести обнаружение набора знаний для добавления его в домен или добавить в домен политику сопоставления. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../../2014/data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../../2014/data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Synonyms"></a> Импорт синонимов  

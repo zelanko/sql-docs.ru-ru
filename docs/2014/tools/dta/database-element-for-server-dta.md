@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b23e8d7f68cca0722691863a2c5c8d5e095c33c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62661836"
 ---
 # <a name="database-element-for-server-dta"></a>Элемент Database описания сервера (DTA)
   Позволяет задать базу данных, которую необходимо настроить на конкретном сервере.  

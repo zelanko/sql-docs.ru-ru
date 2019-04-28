@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 329bc7fb351406f0c53c69e4addb4513dca1c556
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789475"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>Выбор начальной страницы синхронизации данных (мастера группы доступности AlwaysOn)
   Используйте страницу AlwaysOn **Выбор начальной синхронизации данных** для указания нужных предпочтений по синхронизации начальных данных для новых баз данных-получателей. Эта страница используется тремя мастерами — [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] и [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)].  

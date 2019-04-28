@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cf96d8118d35fab87e50f1a4237bafcb9b586c2e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666874"
 ---
 # <a name="security-considerations-for-sql-server-compact-replication"></a>Рекомендации по безопасности для репликации баз данных выпуска SQL Server Compact
   Для обеспечения безопасности соединения между экземпляром компонента [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Engine и [!INCLUDE[ssEW](../../../includes/ssew-md.md)] необходимо правильно настроить параметры безопасности как для служб Microsoft Internet Information Services (IIS), так и для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

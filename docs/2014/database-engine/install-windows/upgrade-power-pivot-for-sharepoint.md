@@ -11,11 +11,11 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de63ecc80b175385846845f5901fde5eb37ec97c
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775662"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>Обновление PowerPivot для SharePoint
   В этом разделе описаны шаги, необходимые для обновления развертывания [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] до [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. Конкретная последовательность действий зависит от версии SharePoint вашей среды и включает надстройку PowerPivot для SharePoint (**spPowerPivot.msi**).  
@@ -187,7 +187,7 @@ ms.locfileid: "58434505"
   
     10. Обновление решений и компонентов в ферме может занять несколько минут. В это время запросы на подключение к данным PowerPivot будут завершаться с ошибками «Не удалось обновить данные» или «ошибка при попытке выполнить запрошенное действие. Повторите попытку". После завершения обновления сервер станет доступным, и эти ошибки больше не будут возникать.  
   
-8.  **Повторите процесс** для каждой службы SQL Server Analysis Services (PowerPivot) в ферме: 1. Запустите программу установки SQL Server. 2. Запустите средство настройки PowerPivot.  
+8.  **Повторите процесс** для каждой службы SQL Server Analysis Services (PowerPivot) в ферме: Программа установки SQL Server 1) запустите 2) запустите средство настройки PowerPivot.  
   
 9. Убедитесь, что обновление выполнено успешно, выполнив шаги после завершения обновления и проверив версию серверов PowerPivot в ферме. Подробные сведения см. в разделе [Post-upgrade verification tasks](#verify) и следующем разделе.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "58434505"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  Просмотрите существующие развертывания для уточнения следующих сведений: **Тип** — откат или развертывание, **Файл** — powerpivotwebapp.wsp или powerpivotfarm.wsp.  
+    2.  Просмотрите существующие развертывания для следующие сведения: **Тип** — откат или развертывание, **Файл** — powerpivotwebapp.wsp или powerpivotfarm.wsp.  
   
     3.  Для развертываний или откатов, связанных с решениями PowerPivot, скопируйте значение GUID для **JobId** и вставьте его в следующую команду (используйте команды выделения, копирования и вставки в меню правки консоли для копирования значения GUID):  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1787687db39fe4a9d9516c3753d59f59907dce47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731563"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Дублирование роли безопасности служб Analysis Services» (службы Analysis Services — многомерные данные)
   Используйте **Analysis Services дублирование роли безопасности — \<имя базы данных >- \<копия из имени роли >** диалогового окна в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для дублирования существующей роли в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] базы данных. Для вывода диалогового окна **Дублирование роли** щелкните роль в обозревателе объектов правой кнопкой мыши и выберите пункт **Дублировать**.  
@@ -31,6 +31,6 @@ ms.locfileid: "48194554"
   
 ## <a name="see-also"></a>См. также  
  [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Роли безопасности &#40;службы Analysis Services — многомерные данные&#41;](multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+ [Роли безопасности (службы Analysis Services — многомерные данные)](multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

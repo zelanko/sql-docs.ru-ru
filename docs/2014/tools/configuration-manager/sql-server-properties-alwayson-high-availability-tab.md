@@ -11,11 +11,11 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: daf3ed025405b753116bba267ce6f4c50d350601
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678455"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>Свойства SQL Server (вкладка «Высокий уровень доступности AlwaysOn»)
   На вкладке **Высокий уровень доступности AlwaysOn** в диалоговом окне **Свойства SQL Server** в диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно включить или отключить функцию «Группы доступности AlwaysOn» в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Включение функции «Группы доступности AlwaysOn» является предварительным требованием для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы группы доступности использовались в качестве решения высокого уровня доступности и аварийного восстановления.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27c22caf9c3b6dfebede60cd795496496562c19b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730769"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>Импорт из потока данных (табличные службы SSAS)
   Потоки данных — это один или несколько потоков XML-данных, формируемых из источника данных в сети и направляемых в целевой документ или приложение. Данные из веб-канала данных можно импортировать в модель с помощью мастера импорта таблиц.  
@@ -191,10 +191,10 @@ ms.locfileid: "48099844"
 12. На странице **Выбор таблиц и представлений** нажмите кнопку **Готово**.  
   
 ## <a name="see-also"></a>См. также  
- [Источники данных, поддерживаемые &#40;табличные службы SSAS&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [Поддерживаемые типы данных &#40;табличные службы SSAS&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
- [Олицетворение &#40;табличные службы SSAS&#41;](tabular-models/impersonation-ssas-tabular.md)   
- [Обработка данных &#40;табличные службы SSAS&#41;](process-data-ssas-tabular.md)   
- [Импорт данных &#40;табличные службы SSAS&#41;](import-data-ssas-tabular.md)  
+ [Поддерживаемые источники данных (табличные службы SSAS)](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Поддерживаемые типы данных (табличные службы SSAS)](tabular-models/data-types-supported-ssas-tabular.md)   
+ [Олицетворение (табличные службы SSAS)](tabular-models/impersonation-ssas-tabular.md)   
+ [Обработка данных (табличные службы SSAS)](process-data-ssas-tabular.md)   
+ [Импорт данных (табличные службы SSAS)](import-data-ssas-tabular.md)  
   
   

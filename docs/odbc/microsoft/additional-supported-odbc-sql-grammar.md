@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b34584a32d5a0adbf95a76415d1141a464b3fe8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658264"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>Дополнительная поддерживаемая грамматика SQL (ODBC)
 Драйверы ODBC полностью поддерживают грамматики минимум 2,5 ODBC и следующие предложения в грамматике основные и расширенные 2.5 ODBC. Дополнительные сведения, которые могут отображаться путем перехода [инструкции ALTER TABLE](../../odbc/microsoft/alter-table-statement.md), [корреляционные имена](../../odbc/microsoft/correlation-names.md), и [вызова процедуры](../../odbc/microsoft/procedure-invocation.md) разделы.  
@@ -40,7 +40,7 @@ ms.locfileid: "47675492"
   
 -   [Арифметические операции с датами](../../odbc/microsoft/date-arithmetic.md)  
   
--   [Jet: литералы даты, времени и отметок времени](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
+-   [Jet: Литералы отметки времени, даты и времени](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
   
 -   [Инструкция DROP INDEX](../../odbc/microsoft/drop-index-statement.md)  
   

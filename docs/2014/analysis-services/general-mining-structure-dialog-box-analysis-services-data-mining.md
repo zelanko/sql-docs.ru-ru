@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 82c8ee7fcc998f8c8524cfe4d09474a707d0051a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730981"
 ---
 # <a name="general-mining-structure-dialog-box-analysis-services---data-mining"></a>Общие (диалоговое окно «Структура интеллектуального анализа данных») (службы Analysis Services — интеллектуальный анализ данных)
   Для установки общих свойств структуры интеллектуального анализа данных в базе данных служб **используется страница** Общие **диалогового окна** Свойства структуры интеллектуального анализа данных **в среде** SQL Server Management Studio [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -27,7 +27,7 @@ ms.locfileid: "48099224"
   
 |Термин|Определение|  
 |----------|----------------|  
-|**Название**|Отображает структуры интеллектуального анализа данных.|  
+|**Name**|Отображает структуры интеллектуального анализа данных.|  
 |**Идентификатор**|Выводит идентификатор структуры интеллектуального анализа данных.|  
 |**Описание**|Выводит описание структуры интеллектуального анализа данных.|  
 |**Отметка времени создания**|Отображает дату и время создания структуры интеллектуального анализа данных.|  
@@ -36,6 +36,6 @@ ms.locfileid: "48099224"
 |**Последняя обработка**|Отображает дату и время последней обработки структуры интеллектуального анализа данных.|  
   
 ## <a name="see-also"></a>См. также  
- [Структуры интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

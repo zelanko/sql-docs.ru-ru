@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c685a2050611ce9cc55309847608bf50521fff16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728779"
 ---
-# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Урок 4. Определение расширенных свойств атрибутов и измерений
+# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Занятие 4: Определение расширенных атрибутов и свойств измерений
   На этом занятии изучается использование расширенных свойств атрибутов, иерархий атрибутов и свойств измерений.  
   
 > [!NOTE]  
@@ -48,7 +48,7 @@ ms.locfileid: "48184074"
  В этой задаче требуется настроить свойства UnknownMember и UnknownMemberName для обработки условий возникновения ошибок, вызванных элементами измерений со значением NULL.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 5. Определение связей между измерениями и группами мер](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [Занятие 5. Определение связей между измерениями и группами мер](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
 ## <a name="see-also"></a>См. также  
  [Сценарий учебника по службам Analysis Services](analysis-services-tutorial-scenario.md)   

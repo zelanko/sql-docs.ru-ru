@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 923467270901b91c35b40005c75207e7b1799194
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732603"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>Диалоговое окно "Фильтр набора данных" или "Фильтр модели"
   Это диалоговое окно позволяет создавать фильтры, которые можно применить к набору данных.  Набор данных может быть внешним набором данных, используемых для проверки, или данными варианта для модели интеллектуального анализа данных. Имя диалогового окна изменяется в зависимости от того, предназначен ли фильтр для внешнего набора данных или для модели интеллектуального анализа данных.  

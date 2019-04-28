@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 9f32e51122df8d2d13d6eada726a1a5e9bea82f0
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659515"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>Масштаб параллельного выполнения внешних скриптов в службах машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

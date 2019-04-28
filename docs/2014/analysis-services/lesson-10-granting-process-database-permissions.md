@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 955cb236d3b89d5fe682770150b7ab723865ff0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729505"
 ---
 # <a name="granting-process-database-permissions"></a>Предоставление разрешений на обработку базы данных
   После установки экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] все члены роли администратора сервера [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в этом экземпляре получают разрешения уровня сервера для выполнения любых задач в пределах этого экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. По умолчанию другие пользователи не имеют разрешения на администрирование или просмотр объектов данного экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -57,6 +57,6 @@ ms.locfileid: "48171764"
 >  Завершенный проект десятого занятия доступен для загрузки и установки образцов. Дополнительные сведения см. в статье [Установка образцов данных и проектов для учебника по многомерному моделированию в службах Analysis Services](install-sample-data-and-projects.md).  
   
 ## <a name="see-also"></a>См. также  
- [Роли и разрешения &#40;служб Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)  
+ [Роли и разрешения (службы Analysis Services)](multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

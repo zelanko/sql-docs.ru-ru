@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 936862a702d7ca6f82dab5104c5354105443c3be
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679762"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Диалоговые окна «Создание связи атрибутов» и «Изменение связи атрибутов» (вкладка «Конструктор связей», конструктор измерений) (службы Analysis Services — многомерные данные)
   Диалоговое окно **Создание связи атрибутов** используется, чтобы определить новые связи атрибутов, а диалоговое окно **Изменение связи атрибутов** — чтобы изменить связь атрибутов. Дополнительные сведения см. в разделе [Определение связей атрибутов](multidimensional-models/attribute-relationships-define.md).  

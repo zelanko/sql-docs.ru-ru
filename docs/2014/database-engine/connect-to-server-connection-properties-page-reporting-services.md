@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dcf8984e678a9aba926be1fdc50dff073f82b6ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808665"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>Соединение с сервером (страница «Свойства соединения») (службы Reporting Services)
   Используйте эту вкладку для просмотра или указания параметров при соединении с [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] или при регистрации служб [!INCLUDE[ssRS](../includes/ssrs.md)] в списке **Зарегистрированные серверы**. Кнопки**Соединить** и **Параметры** появляются в этом диалоговом окне только при соединении. Кнопки**Проверить** и **Сохранить** появляются в этом диалоговом окне только при регистрации компонента [!INCLUDE[ssRS](../includes/ssrs.md)].  
@@ -42,8 +42,8 @@ ms.locfileid: "48066984"
  Сохраняет параметры в списке **Зарегистрированные серверы**.  
   
 ## <a name="see-also"></a>См. также  
- [Настройка подключения к базе данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Настройка подключения к базе данных сервера отчетов (диспетчер конфигураций служб Reporting Services)](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Подключение к серверу отчетов в среде Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Аутентификация с использованием сервера отчетов](../reporting-services/security/authentication-with-the-report-server.md)  
+ [Проверка подлинности с использованием сервера отчетов](../reporting-services/security/authentication-with-the-report-server.md)  
   
   

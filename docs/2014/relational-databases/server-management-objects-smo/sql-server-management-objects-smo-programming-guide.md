@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4dfa741f79b0a6dec95250edd9f7eb8cee4afb1d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655304"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>Учебник по программированию управляющих объектов SQL Server (SMO)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Управляющие объекты (SMO) — это коллекция объектов, которые предназначены для программирования всех аспектов управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RMO — это набор объектов, который инкапсулирует управление репликацией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

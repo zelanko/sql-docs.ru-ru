@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f53a0cdb7ccc30afb425197d12dad2b9ca5fa345
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676308"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>Создание запроса на создание таблицы (визуальные инструменты для баз данных)
   При помощи запросов на создание таблицы в новую таблицу можно копировать строки, что может оказаться полезным для создания подмножества данных и копирования содержимого таблиц из одной базы данных в другую. Запрос на создание таблицы похож на запрос на вставку результатов, но создает новую таблицу, в которую затем копируются строки.  

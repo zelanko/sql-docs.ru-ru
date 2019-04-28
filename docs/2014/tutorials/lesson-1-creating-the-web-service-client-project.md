@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: aa992d78e8075459115fb4a298b8c8dba02a8157
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676049"
 ---
-# <a name="lesson-1-creating-the-web-service-client-project"></a>Урок 1. Создание клиентского проекта веб-службы
+# <a name="lesson-1-creating-the-web-service-client-project"></a>Урок 1. Создание проекта клиента веб-службы
   В этом пошаговом руководстве предстоит создать простое приложение командной строки, которое обращается к веб-службе сервера отчетов. Предполагается, что разработка ведется в среде [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
 ### <a name="to-create-a-console-application"></a>Создание приложения командной строки  

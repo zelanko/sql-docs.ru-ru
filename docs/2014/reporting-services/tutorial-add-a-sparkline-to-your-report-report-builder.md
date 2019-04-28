@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 72a8778ce3edc2370c08d971703b5db09cd7f38d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648696"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Учебник. Добавление спарклайна в отчет (построитель отчетов)
   Этот учебник помогает создать простой табличный отчет на основе образцов данных продаж и добавить спарклайн-график в ячейку таблицы.  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 484aafea03bb1b053239e9948ac498403b5ac25d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667422"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Добавление и удаление издателей в мониторе репликации
   Сервер, с которого запускается монитор репликации, автоматически добавляется в монитор, если это издатель. Дополнительные издатели могут быть добавлены в диалоговом окне **Добавление издателя** . После добавления издателя он отображается в группе на левой панели монитора. Группа **Мои издатели** включена в состав по умолчанию, но можно создать новые группы для управления одной или несколькими топологиями репликации. Сведения о запуске монитора репликации см. в [этой статье](start-the-replication-monitor.md).  

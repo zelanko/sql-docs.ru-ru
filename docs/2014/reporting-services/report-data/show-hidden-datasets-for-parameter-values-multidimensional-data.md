@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce84fc2829334d202fde2f41f35fe1c4cbac856e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654786"
 ---
 # <a name="show-hidden-datasets-for-parameter-values-for-multidimensional-data-report-builder-and-ssrs"></a>Отображение скрытых наборов данных для значений параметра в многомерных данных (построитель отчетов и службы SSRS)
   Отчет может включать автоматически создаваемые наборы данных (называемые также скрытыми наборами данных), которые по умолчанию не отображаются на панели данных отчета. Эти наборы данных создаются следующими способами.  

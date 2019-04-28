@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 520afc917b3ee91e7b41eb74c21d050127deed56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680498"
 ---
 # <a name="completing-the-wizard-dimension-wizard"></a>Завершение работы мастера (мастер измерений)
   Используйте страницу **Завершение работы мастера** , чтобы выполнить следующие процедуры.  
@@ -34,7 +34,7 @@ ms.locfileid: "48223404"
 -   В **обозревателе решений** [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] щелкните правой кнопкой мыши папку **Измерения** для проекта [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а затем выберите команду **Новое измерение**.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **Name**  
  Введите имя нового измерения.  
   
  **Предварительный просмотр**  

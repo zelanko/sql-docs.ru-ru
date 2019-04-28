@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04f2f2c71c3560fe892d63dd5263b8b6f846a241
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794544"
 ---
 # <a name="process-tabular-model-partitions-ssas-tabular"></a>Обработка секций табличной модели (табличные службы SSAS)
   Секции разделяют таблицу на логические части. Каждая секция затем может обрабатываться (обновляться) независимо от других секций. Приведенные в этом разделе задачи описывают обработку секций в базе данных model с помощью диалогового окна **Обработка секций** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

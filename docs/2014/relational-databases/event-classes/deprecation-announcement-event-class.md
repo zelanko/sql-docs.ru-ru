@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16cb4a7d0ac1cec33f3f9907b1b49e5588f45247
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663005"
 ---
 # <a name="deprecation-announcement-event-class"></a>Deprecation Announcement, класс событий
   Класс событий **Deprecation Announcement** происходит при использовании функции, которая будет удалена из будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](но не начиная со следующего выпуска). Для продления срока службы приложения избегайте использования функциональных возможностей, вызывающих события класса **Deprecation Announcement** или **Deprecation Final Support** .  

@@ -1,5 +1,5 @@
 ---
-title: Просмотр модели в средстве просмотра кластеров (Microsoft) | Документы Microsoft
+title: Просмотр модели в средстве просмотра кластеров (Microsoft) | Документация Майкрософт
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 38091ba5623d84bf5876e7a6200a0bd1b2b3897e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676819"
 ---
 # <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>Просмотр модели с помощью средства просмотра кластеров (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -67,9 +67,9 @@ ms.locfileid: "34016401"
  [В начало](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритм кластеризации Майкрософт](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
- [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Microsoft Clustering Algorithm](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
+ [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Средства интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-tools.md)   
  [Средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   

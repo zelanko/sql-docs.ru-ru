@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b3fa68b63e9ccf1a11712192d675c46ece7a86b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680311"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>Подключение к неструктурированному файлу (SSAS)
   Эта страница **мастера импорта таблиц** используется для соединения с неструктурированным файлом (TXT), файлом с разделителями в виде символов табуляции (TAB) или файлом с разделителями-запятыми (CSV). Для доступа к мастеру из [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите пункт **Импорт из источника данных** в меню **Модель**.  

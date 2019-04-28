@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a19c67f19c6b1b73947ef752a09516449eeec1a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655357"
 ---
 # <a name="smo-syntax-conventions"></a>Синтаксические обозначения в SMO
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Условные обозначения Management Objects (SMO) основаны на тех, которые используются в [!INCLUDE[msCoName](../../includes/msconame-md.md)] справочные материалы по Visual Studio .NET.  

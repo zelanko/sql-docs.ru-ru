@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd66205c6f7a03d1bba0783aabbed3936b25e691
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681032"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>Вкладка «Диаграмма кластеров» (средство просмотра моделей интеллектуального анализа данных)
   Вкладка **Диаграмма кластеров** выводит графическое представление всех кластеров, содержащихся в данной модели кластеризации.  
   
- **Дополнительные сведения:** [Алгоритм кластеризации (Майкрософт)](data-mining/microsoft-clustering-algorithm.md), [Просмотр модели с помощью средства просмотра кластеров (Майкрософт)](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **Дополнительные сведения:** [Алгоритм кластеризации (Майкрософт)](data-mining/microsoft-clustering-algorithm.md), [просмотр модели в средстве просмотра кластеров (Microsoft)](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>Параметры  
  **Обновить содержимое средства просмотра**  
@@ -67,12 +67,12 @@ ms.locfileid: "48184205"
  **Состояние**  
  Выберите одно состояние **Переменной заливки** для использования в диаграмме кластеров.  
   
- **Ссылки**  
+ **Links**  
  Укажите количество ссылок, отображаемых между кластерами, передвинув ползунок вверх или вниз. При перемещении ползунка вниз остаются только самые тесные взаимосвязи между кластерами.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Просмотра моделей интеллектуального анализа &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Средства просмотра моделей интеллектуального анализа данных (конструктор моделей интеллектуального анализа данных)](mining-model-viewers-data-mining-model-designer.md)   
  [Средства просмотра моделей интеллектуального анализа данных](data-mining/data-mining-model-viewers.md)  
   
   

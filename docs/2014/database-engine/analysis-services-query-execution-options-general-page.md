@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5da62b03c3bbda0d17be404ccf0e96bfa712b64e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791833"
 ---
 # <a name="analysis-services-query-execution-options-general-page"></a>Параметры выполнения запросов служб Analysis Services (страница «Общие»)
   На этой странице можно выбрать параметры отображения результатов запроса служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 20787347abe92f83ea2163f5cd297804153d364d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659233"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>Формирование веб-каналов данных из отчета (построитель отчетов и службы SSRS)
   Можно формировать Atom-совместимые потоки данных из отчетов, а затем использовать эти потоки данных в приложениях, например в клиенте [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , который может использовать потоки данных.  

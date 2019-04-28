@@ -30,11 +30,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0c5cb588e96bcabad464339b7227ada3aef86221
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678065"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Типы данных XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "56039925"
 |Ни один из них не представляет собой набор узлов.|Преобразует оба операнда для **номер** , а затем сравнить.|Преобразует оба операнда к одному типу, а затем сравнивает их. Преобразовать в **логическое** при выполнении любого **логическое**, **номер** при выполнении любого **номер**; в противном случае преобразование в **строка**.|  
   
 > [!NOTE]  
->  Поскольку реляционные операторы XPath всегда преобразуют операнды к **номер**, **строка** сравнения невозможны. Чтобы включить сравнение дат, SQL Server 2000 предлагает следующее изменение спецификации XPath. Когда Реляционный оператор сравнивает **строка** для **строка**, node-set **строка**, или строковое значение набор узлов строковыми значениями — набор узлов,  **Строка** сравнения (не **номер** сравнения) выполняется.  
+>  Поскольку реляционные операторы XPath всегда преобразуют операнды к **номер**, **строка** сравнения невозможны. Чтобы включить Сравнение дат, SQL Server 2000 предлагает следующее изменение спецификации XPath: Когда Реляционный оператор сравнивает **строка** для **строка**, node-set **строка**, или строковое значение набор узлов строковыми значениями — набор узлов,  **Строка** сравнения (не **номер** сравнения) выполняется.  
   
 ## <a name="node-set-conversions"></a>Преобразования наборов узлов  
  Преобразования наборов узлов не всегда интуитивно понятны. Набор узлов преобразуется в **строка** , используя строковое значение только первого узла в наборе. Набор узлов преобразуется в **номер** путем преобразования его в **строка**и его преобразование в **строка** для **номер**. Набор узлов преобразуется в **логическое** путем проверки ее наличие.  
@@ -95,7 +95,7 @@ ms.locfileid: "56039925"
 |number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|number|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|строка|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|н/д (в XPath нет типа данных, эквивалентного типу fixed14.4 XDR)|CONVERT(money, EmployeeID)|  
-|Дата|строка|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|date|строка|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |time<br /><br /> time.tz|строка|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  Преобразования даты и времени, предназначены для работы ли значение хранится в базе данных с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** тип данных или **строка**. Обратите внимание, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** тип данных не использует **часовой пояс** и имеет меньшую точность, чем XML **время** тип данных. Для включения **часовой пояс** тип данных или более высокую точность, хранить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью **строка** типа.  
@@ -131,7 +131,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ||Х неизвестен|X — **строка**|X — **номер**|X — **логическое**|  
 |string(X)|CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
 |number(X)|CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
-|boolean(X)|-|LEN(X) > 0|X != 0|-|  
+|boolean(X)|-|LEN(X) &GT; 0|X != 0|-|  
   
 ## <a name="examples"></a>Примеры  
   

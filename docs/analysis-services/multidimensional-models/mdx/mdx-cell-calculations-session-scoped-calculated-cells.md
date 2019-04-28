@@ -1,5 +1,5 @@
 ---
-title: Создание областью действия сеанса вычисляемых ячеек | Документы Microsoft
+title: Создание с областью действия сеанса вычисляемых ячеек | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4ca621d103f294a88fec93dbf6f24d7402279efa
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62799540"
 ---
-# <a name="mdx-cell-calculations---session-scoped-calculated-cells"></a>Вычисления многомерных Выражений ячейки - вычисляемых ячеек с областью действия сеанса
+# <a name="mdx-cell-calculations---session-scoped-calculated-cells"></a>Вычисления ячеек многомерных Выражений — вычисляемых ячеек с областью действия сеанса
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
     
 > [!IMPORTANT]  
@@ -73,14 +73,14 @@ FOR String_Expression AS 'MDX_Expression'
   
  Значение выражения `String_Expression` содержит список ортогональных многомерных выражений набора с одним измерением, каждое из которых должно приводиться к одной из следующих категорий наборов:  
   
-|Категория|Description|  
+|Category|Описание|  
 |--------------|-----------------|  
 |Пустой набор|Выражение набора многомерных выражений, которое разрешается к пустому набору. В этом случае областью вычисляемой ячейки является весь куб.|  
 |Одноэлементный набор|Выражение набора многомерных выражений, которое разрешается к единственному элементу.|  
 |Набор элементов уровня|Выражение набора многомерных выражений, которое разрешается к элементам одного уровня. Примером является функция многомерных выражений *Level_Expression*.**Members** . Чтобы включить вычисляемые элементы, используйте функцию многомерных выражений *Level_Expression*.**AllMembers** .<br /><br /> Дополнительные сведения см. в разделе [AllMembers (многомерные выражения)](../../../mdx/allmembers-mdx.md).|  
 |Набор потомков|Выражение набора многомерных выражений, которое разрешается к потомкам одного элемента. Примером является функция многомерных выражений **Descendants**(*Member_Expression*, *Level_Expresion*, *Desc_Flag*).<br /><br /> Дополнительные сведения см. в разделе [Descendants (многомерные выражения)](../../../mdx/descendants-mdx.md).|  
   
-## <a name="see-also"></a>См. также:  
- [Построение вычислений значений ячеек в многомерных Выражений & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)  
+## <a name="see-also"></a>См. также  
+ [Построение вычислений значений ячеек в многомерном выражении (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)  
   
   

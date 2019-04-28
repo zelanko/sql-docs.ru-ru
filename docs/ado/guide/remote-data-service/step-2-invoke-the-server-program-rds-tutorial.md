@@ -1,5 +1,5 @@
 ---
-title: 'Шаг 2: Вызовите программу сервера (учебник по RDS) | Документация Майкрософт'
+title: Шаг 2. Вызовите программу сервера (учебник по RDS) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a64e45f68003948f0d0f45d3932c1edf9b94972a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62675816"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Шаг 2. Вызовите программу сервера (учебник по RDS)
 При вызове метода на клиенте *прокси-сервера*, самой программы на сервере выполняется метод. На этом шаге будет выполняться запрос на сервере.  
@@ -65,5 +65,5 @@ Sub RDSTutorial2B()
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Шаг 3: Сервер получает набор записей (учебник по RDS)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
+ [Шаг 3. Сервер получает набор записей (учебник по RDS)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
  [Учебник по RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

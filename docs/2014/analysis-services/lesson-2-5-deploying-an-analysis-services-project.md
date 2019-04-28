@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d7f04f586511140b9e21c8eca80ec19b43fa90eb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729390"
 ---
 # <a name="deploying-an-analysis-services-project"></a>Развертывание проекта служб Analysis Services
   Чтобы просмотреть куб и данные измерения для объектов куба «Учебник по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]» проекта «Учебник по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]», необходимо развернуть проект на указанном экземпляре служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], а затем выполнить обработку куба и его измерений. *Развертывание* [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проекта создаются определенные объекты в экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. При*обработке* объектов в экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] данные из базовых источников данных копируются в объекты кубов. Дополнительные сведения см. в разделах [Развертывание проектов служб Analysis Services (среда SSDT)](multidimensional-models/deploy-analysis-services-projects-ssdt.md) и [Настройка свойств проекта служб Analysis Services (среда SSDT)](multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80f8108b894c2a20ef0f0ea7d8ffb1be22bacc40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793693"
 ---
 # <a name="user-interface-reference-analysis-services"></a>Справочник по пользовательскому интерфейсу (службы Analysis Services)
   В этот раздел включены подразделы справки по службам [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Эти разделы доступны также из пользовательского интерфейса. Для обращения к ним нужно нажать клавишу F1 или кнопку **Справка** на страницах мастеров, конструкторов и в диалоговых окнах.  

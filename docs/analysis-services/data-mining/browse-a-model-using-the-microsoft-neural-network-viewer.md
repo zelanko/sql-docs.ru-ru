@@ -1,5 +1,5 @@
 ---
-title: Просмотр модели с помощью средства просмотра нейронных сетей Майкрософт | Документы Microsoft
+title: Просмотр модели с помощью средства просмотра нейронных сетей Майкрософт | Документация Майкрософт
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 280e8fa3702868ff36c799443b87b0827a962a89
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676083"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Просмотр модели с помощью средства просмотра нейронных сетей (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -62,16 +62,16 @@ ms.locfileid: "34014551"
  [В начало](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Characteristics"></a> Переменные  
- Сетка на вкладке **Переменные** содержит следующие столбцы: **Атрибут**, **Значение**, **Предпочтения [значение 1]** и **Предпочтения [значение 2]**. По умолчанию таблица отсортирована по столбцу **Предпочитает [значение 1]** по возрастанию. Чтобы изменить порядок сортировки, щелкните заголовок нужного столбца.  
+ Сетка в **переменных** вкладка содержит следующие столбцы: **Атрибут**, **значение**, **предпочтения [значение 1]**, и **предпочтения [значение 2]**. По умолчанию таблица отсортирована по столбцу **Предпочитает [значение 1]** по возрастанию. Чтобы изменить порядок сортировки, щелкните заголовок нужного столбца.  
   
  Полоса, находящаяся справа от атрибута, показывает, какое состояние выходного атрибута является предпочтительным для указанного состояния входного атрибута. Размер этой полосы показывает, насколько строго выходное состояние соответствует входному.  
   
  [В начало](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>См. также раздел  
- [Алгоритм нейронной сети Майкрософт](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+## <a name="see-also"></a>См. также  
+ [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Средства интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-tools.md)   
  [Средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   

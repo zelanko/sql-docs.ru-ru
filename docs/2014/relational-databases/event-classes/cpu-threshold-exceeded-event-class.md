@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc8252d0049953f0958ea331015aae51fd737709
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663487"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>класс событий CPU Threshold Exceeded
   Класс событий CPU Threshold Exceeded указывает, что регулятор ресурсов обнаружил запрос, превышающий пороговое значение ЦП, заданное параметром REQUEST_MAX_CPU_TIME_SEC.  
@@ -36,7 +36,7 @@ ms.locfileid: "52770456"
 |EventSubClass|`int`|Нарушение ограничения ЦП.|21|Да|  
 |GroupID|`int`|Идентификатор группы, в которой произошло нарушение.|66|Да|  
 |OwnerID|`int`|Идентификатор SPID процесса, который вызвал нарушение.|58|Да|  
-|SPID|`int`|Идентификатор процесса сервера, запустившего данное событие.<br /><br /> Примечание. Он может отличаться от действительного пользовательского идентификатора SPID, если в потоке операционной системы проверка использования ЦП является фоновой задачей.|12|Да|  
+|SPID|`int`|Идентификатор процесса сервера, запустившего данное событие.<br /><br /> Примечание. Он может отличаться от действительного пользовательского идентификатора SPID, если в потоке операционной системы Проверка использования ЦП является фоновой задачей.|12|Да|  
 |StartTime|`datetime`|Время срабатывания события.|14|Да|  
   
 ## <a name="see-also"></a>См. также  

@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7605f4e5fd2fd6601cf1d132b438187edeeb29fb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792044"
 ---
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>Добавление вторичной реплики к группе доступности (SQL Server)
   В этом разделе описано, как добавить вторичную реплику в существующую группу доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
--   **Перед началом работы**  
+-   **Перед началом:**  
   
      [Требования и ограничения](#PrerequisitesRestrictions)  
   
@@ -121,7 +121,7 @@ ms.locfileid: "52525852"
   
 -   [Поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Дальнейшие действия: После добавления вторичной реплики  
+##  <a name="FollowUp"></a> Дальнейшие действия. После добавления вторичной реплики  
  Для добавления реплики в существующую группу доступности необходимо выполнить следующие шаги.  
   
 1.  Подключитесь к экземпляру сервера, на котором должна быть размещена новая вторичная реплика доступности.  

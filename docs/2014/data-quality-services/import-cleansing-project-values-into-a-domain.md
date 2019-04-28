@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 07992b9a5150e6b81d869aa21831e019c32ae6e4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792731"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Импорт значений проекта очистки в домен
   В службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) можно импортировать в домен знания о качестве данных, собранные в проекте очистки данных о качестве или в пакете служб Integration Services с компонентом DQS Cleansing. Это позволяет не допустить потери надежных знаний и обеспечить постоянное улучшение базы знаний.  

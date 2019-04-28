@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 345d92c6d0d276a24a3d7d7abbc7c633205bc972
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792024"
 ---
 # <a name="connect-to-existing-secondary-replicas-page-add-replica-wizard-and-add-databases-wizard"></a>Подключение к странице существующих вторичных реплик (мастер добавления реплики и мастер добавления баз данных)
   В этом разделе описываются параметры на странице **Подключение к существующим вторичным репликам** . Этот раздел используется в [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] и [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] из [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  

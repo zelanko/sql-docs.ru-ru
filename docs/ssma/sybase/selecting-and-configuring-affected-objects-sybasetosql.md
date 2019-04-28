@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 48d5305854d214e61036e00ca23a94b85313138a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667511"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Выбор и настройка обрабатываемых объектов (SybaseToSQL)
 На этой странице можно выбрать таблицы и внешние ключи, изменения, в которой следует сравнивать при SSMA проверяет результаты выполнения для объектов, выбранным в предыдущем шаге. Кроме того можно настроить параметры проверки.  

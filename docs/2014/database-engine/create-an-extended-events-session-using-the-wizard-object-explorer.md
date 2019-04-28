@@ -33,11 +33,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc69e3683656c5705e7e82df27b80a8a41cb81a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807366"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>создать сеанс расширенных событий с помощью пользовательского интерфейса нового сеанса (обозреватель объектов)
   Для повышения удобства выбора и отслеживания событий на сервере в расширенных событиях предусмотрен мастер создания сеансов, который помогает создавать сеансы расширенных событий. Мастер создания сеанса предоставляет доступ к большинству функций для обработки расширенных событий. В диалоговом окне [Создание сеанса](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md) также можно задать сеанс расширенных событий, в ходе которого будет выполняться сбор, отображение и анализ данных. Диалоговое окно «Создание сеанса» включает все функции расширенных событий.  

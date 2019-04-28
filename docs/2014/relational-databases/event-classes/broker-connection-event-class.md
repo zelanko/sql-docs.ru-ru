@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22cb73877dcea8fb880d4c565b809990e5ce7123
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664380"
 ---
 # <a name="brokerconnection-event-class"></a>Broker:Connection, класс событий
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует событие **Broker:Connection** для уведомления о состоянии транспортного соединения, управляемого компонентом Service Broker.  

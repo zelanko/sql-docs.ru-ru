@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0220e81325345e84524ec0218dbaff7d6143bdd8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663695"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill, класс событий
   Класс событий **Exchange Spill** показывает, что буфер связи в параллельном плане запроса временно записан в базу данных **tempdb** . Это происходит редко и только если план запроса содержит несколько просмотров диапазона.  

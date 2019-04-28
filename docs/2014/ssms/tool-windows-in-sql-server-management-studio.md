@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 398a808ab90ab3ea8b97304d4e22865b40cc0ac4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62661856"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Окна инструментов в среде SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] содержит множество эффективных окон инструментов для всех этапов разработки и администрирования. Некоторые средства можно использовать для любого компонента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , другие — только для определенных компонентов. В следующей таблице описаны средства, которые могут быть использованы для всех компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

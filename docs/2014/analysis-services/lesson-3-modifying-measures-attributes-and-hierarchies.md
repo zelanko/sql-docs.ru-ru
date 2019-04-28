@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01122ad03366af6c296046fb2bb91982f02385eb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729360"
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Урок 3. Изменение мер, атрибутов и иерархий
   После определения начального куба можно увеличить его полезность и удобство использования. Это можно сделать, добавив иерархии, поддерживающие навигацию и агрегаты на разных уровнях, применив форматы к конкретной мере и определив вычисления и связи.  

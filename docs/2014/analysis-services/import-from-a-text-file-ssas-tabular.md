@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 324f333a355dfb9813340fd1ed11a6876bd84698
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730414"
 ---
 # <a name="import-from-a-text-file-ssas-tabular"></a>Импорт из текстового файла (табличные службы SSAS)
   Можно импортировать данные из файлов Microsoft Excel и текстовых файлов с помощью мастера импорта таблиц.  
@@ -32,7 +32,7 @@ ms.locfileid: "48055784"
 3.  Выполните шаги мастера импорта таблиц. На последующих страницах можно будет выбрать отдельные таблицы и применить фильтры на странице **Выбор таблиц и представлений** .  
   
 ## <a name="see-also"></a>См. также  
- [Импорт данных &#40;табличные службы SSAS&#41;](import-data-ssas-tabular.md)   
- [Поддерживаемые источники данных &#40;табличные службы SSAS&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
+ [Импорт данных (табличные службы SSAS)](import-data-ssas-tabular.md)   
+ [Поддерживаемые источники данных (табличные службы SSAS)](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

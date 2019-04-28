@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 47e1840318adf5e2b3638dd412de50144f7b2372
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729410"
 ---
 # <a name="defining-a-cube"></a>Определение куба
   Мастер кубов помогает определить для куба группы мер и измерения. В следующей задаче с помощью мастера кубов будет построен куб.  
@@ -68,7 +68,7 @@ ms.locfileid: "48117480"
 15. В меню **Файл** выберите команду **Сохранить все**.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Добавление атрибутов в измерения](lesson-2-3-adding-attributes-to-dimensions.md)  
+ [Добавление атрибутов к измерениям](lesson-2-3-adding-attributes-to-dimensions.md)  
   
 ## <a name="see-also"></a>См. также  
  [Кубы в многомерных моделях](multidimensional-models/cubes-in-multidimensional-models.md)   

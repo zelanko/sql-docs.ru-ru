@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5418cadc533b5253e15f8677753dd0213319ef0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729349"
 ---
 # <a name="browsing-the-deployed-cube"></a>Просмотр развернутого куба
   В этой задаче будет проводиться просмотр куба [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. Так как при проведении анализа сравниваются несколько измерений, для просмотра данных воспользуемся сводной таблицей Excel. Разместим в сводной таблице информацию о клиенте, дате и продукте на разных осях, чтобы было видно, как изменяются продажи через Интернет в различные периоды времени, для различных групп клиентов и продуктовых линий.  
@@ -46,6 +46,6 @@ ms.locfileid: "48077803"
      ![Продажи через Интернет по регионам и сериям продуктов](../../2014/tutorials/media/l3-cube-browser-finish.gif "продажи через Интернет по регионам и сериям продуктов")  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 4. Определение расширенных свойств атрибутов и измерений](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+ [Занятие 4. Определение расширенных атрибутов и свойств измерений](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   

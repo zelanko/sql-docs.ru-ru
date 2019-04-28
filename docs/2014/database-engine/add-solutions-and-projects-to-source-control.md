@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d9cc15f79235e225dc6589a16b48c373479e639
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792094"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>Добавление решений и проектов в систему управления версиями
   При добавлении решения в систему управления версиями это решение становится частью динамического архива истории версий, созданного и поддерживаемого поставщиком управления версиями. Каждый раз, когда кто-либо возвращает новую версию решения, она становится частью архива, доступной другим пользователям системы управления версиями.  

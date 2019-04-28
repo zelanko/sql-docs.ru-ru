@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cedf0226f4386be5b822a06dc85f384044e94f0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732168"
 ---
 # <a name="deploying-and-scaling-mining-models-data-mining-add-ins-for-excel"></a>Развертывание и масштабирование моделей интеллектуального анализа данных (надстройки интеллектуального анализа данных для Excel)
   Средства в **использование модели** и **управления** группы предназначены для управления и просматривать существующие модели интеллектуального анализа данных. Эти средства можно использовать для просмотра всех моделей, которые хранятся в экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], не только для тех, созданных с помощью надстроек.  

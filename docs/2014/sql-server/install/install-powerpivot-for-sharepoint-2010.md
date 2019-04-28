@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e02b80c1967059f91e3a97fb940a2715c6beebb8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62656777"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>Установка PowerPivot для SharePoint 2010
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] представляет собой набор служб среднего уровня и серверных служб, которые обеспечивают доступ к данным PowerPivot в ферме SharePoint 2010. Если для создания книг с аналитическими данными в компании используется клиентское приложение [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel 2010, то для доступа к этим данным в серверной среде потребуется [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . В этой теме пошагово рассматривается процесс установки и приводятся ссылки на другие темы, которые помогут при настройке PowerPivot.  
@@ -51,7 +51,7 @@ ms.locfileid: "53356805"
   
     -   [Указания по использованию функций бизнес-аналитики SQL Server в ферме SharePoint 2010](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)  
   
-##  <a name="InstallSQL"></a> Шаг 1. Установка PowerPivot для SharePoint  
+##  <a name="InstallSQL"></a> Шаг 1. Установка PowerPivot для SharePoint  
  На этом шаге запускается программа установки SQL Server для установки [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. На следующем шаге после установки выполняется настройка сервера.  
   
 1.  Вставьте установочный носитель в привод или откройте папку, в которой содержатся установочные файлы SQL Server, и дважды щелкните **setup.exe**.  
@@ -116,12 +116,12 @@ ms.locfileid: "53356805"
 > [!TIP]  
 >  Если требуется выполнить устранение неисправностей при установке SQL Server, см. раздел [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-##  <a name="bkmk_config"></a> Шаг 2. Настройка сервера  
+##  <a name="bkmk_config"></a> Шаг 2. Настройка сервера  
   
 > [!IMPORTANT]  
 >  Перед настройкой [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] или фермы SharePoint, в которой используется сервер баз данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , необходимо установить пакет обновления SharePoint 2010 SP2. Если пакет обновления еще не установлен, установите его перед тем, как начать настройку сервера.  
   
- Установка не будет завершена до настройки сервера. В этом выпуске настройка сервера всегда выполняется после установки с использованием одного из следующих средств: Средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], центр администрирования или PowerShell. Для продолжения выберите один из следующих вариантов.  
+ Установка не будет завершена до настройки сервера. В этом выпуске Настройка сервера всегда выполняется как задача после установки, с помощью одного из следующих подходов: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Средство настройки, центра администрирования или PowerShell. Для продолжения выберите один из следующих вариантов.  
   
 -   [Настройка или восстановление PowerPivot для SharePoint 2010 &#40;средство настройки PowerPivot&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)  
   
@@ -131,7 +131,7 @@ ms.locfileid: "53356805"
   
  **Соединение с экземпляром компонента Database Engine.** После установки [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]программа установки SQL Server предлагает возможность добавить к установке экземпляр компонента Database Engine. Вы может добавили экземпляр компонента Database Engine для установки при настройке новой фермы и нужен сервер для выполнения конфигурации фермы и базы данных содержимого. Если вы добавили компонент Database Engine, то он был установлен как именованный экземпляр [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . При любой необходимости задать подключение к этому экземпляру (например, в мастере настройки фермы при использовании мастера для настройки фермы), не забудьте ввести имя базы данных в следующем формате: <`servername`> \PowerPivot.  
   
-##  <a name="bkmk_redist"></a> Шаг 3. Установка поставщиков OLE DB служб Analysis Services на серверах приложений служб Excel  
+##  <a name="bkmk_redist"></a> Шаг 3. Установка поставщиков OLE DB служб Analysis Services на серверах приложений служб Excel  
  Потребуются дополнительные шаги установки, если службы вычислений Excel и [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] запускаются на разных серверах приложений. На серверах приложений, использующих службы вычислений Excel, установите соответствующую версию поставщика OLE DB для служб Analysis Services (MSOLAP).  
   
 -   Версия [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] MSOLAP включена в программу установки SQL Server, поэтому установка версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] MSOLAP требуется только в том случае, если сервер приложений не является сервером приложений PowerPivot.  

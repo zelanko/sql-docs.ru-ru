@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c39b81594339dbeac5e5487fcab7d054a80293a6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654658"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>Форматирование текста в текстовом поле (построитель отчетов и службы SSRS)
   Любую часть текста в текстовом поле можно отформатировать отдельно, при этом в одном текстовом поле можно объединить текст заполнителя и статический текст. Такая возможность смешивания форматов и добавления текста заполнителей позволяет создавать в отчете объединенные адреса электронной почты или создавать шаблоны текста. С помощью заполнителя можно определить и по отдельности отформатировать любое выражение.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0ad91ac53d2ff041c3da32fd9a609e67e8b9d1c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730824"
 ---
 # <a name="analysis-services-instance-management"></a>Управление экземплярами служб Analysis Services
   Экземпляр служб Analysis Services — это копия исполняемого файла `msmdsrv.exe`, который запускается как служба операционной системы. Каждый экземпляр полностью независим от других экземпляров на том же сервере и обладает собственной конфигурацией, разрешениями, портами, стартовыми учетными записями, областью хранения файлов и свойствами режима сервера.  
@@ -41,21 +41,21 @@ ms.locfileid: "48196226"
  Как правило, большинство необходимых административных задач можно выполнить в одном режиме. Системный администратор служб Analysis Services может с помощью одних тех же процедур и скриптов управлять любым экземпляром Analysis Services в сети, вне зависимости от типа установки.  
   
 > [!NOTE]  
->  Единственным исключением является PowerPivot для SharePoint. Администрирование развернутой на сервере системы PowerPivot всегда осуществляется в контексте фермы SharePoint. PowerPivot отличается от других режимов сервера тем, что всегда существует лишь один экземпляр, который управляется либо из центра администрирования SharePoint, либо средствами настройки PowerPivot. Несмотря на то, что существует возможность подключения к PowerPivot для SharePoint в SQL Server Management Studio или [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], но нежелательно. Ферма SharePoint включает инфраструктуру, выполняющую синхронизацию состояния сервера и отслеживающую доступность сервера. Использование других средств может повлиять на эти операции. Дополнительные сведения об администрировании сервера PowerPivot см. в разделе [PowerPivot для SharePoint &#40;SSAS&#41;](../power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
+>  Единственным исключением является PowerPivot для SharePoint. Администрирование развернутой на сервере системы PowerPivot всегда осуществляется в контексте фермы SharePoint. PowerPivot отличается от других режимов сервера тем, что всегда существует лишь один экземпляр, который управляется либо из центра администрирования SharePoint, либо средствами настройки PowerPivot. Подключение PowerPivot для SharePoint к среде SQL Server Management Studio или к среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]возможно, но нежелательно. Ферма SharePoint включает инфраструктуру, выполняющую синхронизацию состояния сервера и отслеживающую доступность сервера. Использование других средств может повлиять на эти операции. Дополнительные сведения об администрировании сервера PowerPivot см. в разделе [PowerPivot для SharePoint &#40;SSAS&#41;](../power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
 |Ссылка|Описание задачи|  
 |----------|----------------------|  
-|[Настройка после установки &#40;служб Analysis Services&#41;](post-install-configuration-analysis-services.md)|Описываются обязательные и необязательные задачи, которые завершают или изменяют установку служб Analysis.|  
+|[Настройка после установки (службы Analysis Services)](post-install-configuration-analysis-services.md)|Описываются обязательные и необязательные задачи, которые завершают или изменяют установку служб Analysis.|  
 |[Подключение к службам Analysis Services](connect-to-analysis-services.md)|Описывает свойства строки подключения, клиентские библиотеки, методики проверки подлинности и действия по установке или завершению соединений.|  
-|[Мониторинг экземпляра Analysis Services](monitor-an-analysis-services-instance.md)|Описываются средства и способы наблюдения за экземпляром сервера, в том числе сведения об использовании средства отслеживания производительности и приложения SQL Server Profiler.|  
-|[Скрипты для административных задач в службах Analysis Services](../script-administrative-tasks-in-analysis-services.md)|Сведения о том, как автоматизировать многие задачи администрирования, включая обработку.|  
+|[Наблюдение за экземпляром служб Analysis Services](monitor-an-analysis-services-instance.md)|Описываются средства и способы наблюдения за экземпляром сервера, в том числе сведения об использовании средства отслеживания производительности и приложения SQL Server Profiler.|  
+|[Создание скриптов для административных задач в службах Analysis Services](../script-administrative-tasks-in-analysis-services.md)|Сведения о том, как автоматизировать многие задачи администрирования, включая обработку.|  
 |[Сценарии глобализации для многомерных служб Analysis Services](../globalization-scenarios-for-analysis-services-multiidimensional.md)|Описывает поддерживаемые языки и параметры сортировки, действия по изменению обоих свойств и рекомендации по настройке и тестированию поведений языка и параметров сортировки.|  
-|[Журнал операций в службы Analysis Services](log-operations-in-analysis-services.md)|Описывает журналы и способы их настройки.|  
+|[Журнал операций в службах Analysis Services](log-operations-in-analysis-services.md)|Описывает журналы и способы их настройки.|  
   
 ## <a name="see-also"></a>См. также  
- [Сравнение табличных и многомерных решений &#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md)   
+ [Сравнение табличных и многомерных решений (службы SSAS)](../comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [Средства настройки PowerPivot](../power-pivot-sharepoint/power-pivot-configuration-tools.md)   
  [Настройка и администрирование сервера PowerPivot в центре администрирования](../power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Определение режима работы сервера экземпляра служб Analysis Services](determine-the-server-mode-of-an-analysis-services-instance.md)  

@@ -1,5 +1,5 @@
 ---
-title: Занятие 2. Определение и развертывание куба | Документация Майкрософт
+title: Урок 2. Определение и развертывание куба | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7396b5c5bf46abcbc60ac9e3a984fb2d7a7a2ee5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729400"
 ---
-# <a name="lesson-2-defining-and-deploying-a-cube"></a>Занятие 2. Определение и развертывание куба
+# <a name="lesson-2-defining-and-deploying-a-cube"></a>Урок 2. Определение и развертывание куба
   После определения представления источников данных в проекте служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] можно определить исходный куб служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  Кроме того, можно определить куб и его измерения за один проход с помощью мастера кубов. Также можно определить одно или несколько измерений, а затем с помощью мастера кубов определить куб, в котором они будут использоваться. Разработку сложного решения обычно начинают с определения измерений. Дополнительные сведения см. в разделе [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md) или [Кубы в многомерных моделях](multidimensional-models/cubes-in-multidimensional-models.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "53374506"
  В этой задаче будут просмотрены данные куба и измерения с помощью Excel и конструктора запросов многомерных выражений.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 3. Изменение мер, атрибутов и иерархий](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+ [Занятие 3. Изменение мер, атрибутов и иерархий](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>См. также  
  [Сценарий учебника по службам Analysis Services](analysis-services-tutorial-scenario.md)   

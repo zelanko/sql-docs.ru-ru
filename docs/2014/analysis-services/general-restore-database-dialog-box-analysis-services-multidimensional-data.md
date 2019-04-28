@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b63beac3d5034d041488b44202c4173b759a1884
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730407"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Общие (диалоговое окно «Восстановление базы данных») (службы Analysis Services - многомерные данные)
   Для задания файла резервной копии и общих настроек используется страница **Общие** диалогового окна **Восстановление базы данных** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] при восстановлении базы данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -75,7 +75,7 @@ ms.locfileid: "48099314"
  Если файл резервной копии зашифрован, то введите пароль, использовавшийся для его шифрования.  
   
 ## <a name="see-also"></a>См. также  
- [Восстановление базы данных-диалоговое окно &#40;службы Analysis Services — многомерные данные&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Диалоговое окно "Восстановление базы данных" (службы Analysis Services — многомерные данные)](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Секции &#40;восстановление базы данных-диалоговое окно&#41; &#40;службы Analysis Services — многомерные данные&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Создание и восстановление резервных копий баз данных служб Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c5066a27097bb0919a6d0af0ffa9ad1c53e8624
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730374"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services
   Важный первый шаг предоставления доступа к [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] по сети состоит в определении того, требуется ли разблокировать порты брандмауэра. Для большинства установок необходимо создать по крайней мере одно правило брандмауэра для входящих подключений, которое разрешает подключаться к службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -68,7 +68,7 @@ ms.locfileid: "53371166"
   
 -   Запустите `netstat -ao -p TCP` из командной строки, чтобы просмотреть сведения TCP-порта для этого идентификатора PID.  
   
--   Проверьте порт с использованием среды SQL Server Management Studio и подключитесь к серверу служб Analysis Services в следующем формате: \<IP-адрес >:\<номер_порта >.  
+-   Проверьте порт с помощью SQL Server Management Studio и подключитесь к серверу служб Analysis Services в следующем формате: \<IP-адрес >:\<номер_порта >.  
   
  Хотя приложение может прослушивать указанный порт, подключения будут неудачными, если брандмауэр блокирует доступ. Для подключений к экземпляру служб Analysis Services необходимо разблокировать доступ к файлу msmdsrv.exe или фиксированному порту в брандмауэре, по которому ведется прослушивание. Остальные подразделы в этом разделе содержат соответствующие инструкции.  
   

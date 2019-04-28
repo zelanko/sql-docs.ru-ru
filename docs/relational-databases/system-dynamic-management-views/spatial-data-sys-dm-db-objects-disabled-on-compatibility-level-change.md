@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fece91698147ef11496855985f27ea81f84f62a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62669452"
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Пространственные данные - sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### <a name="behavior-of-the-disabled-objects"></a>Поведение отключенных объектов  
  **Индексы**  
   
- Если кластеризованный индекс отключен или принудительно включен некластеризованный индекс, появляется следующая ошибка: «Обработчику запросов не удалось предоставить план, так как индекс "%. \*ls для таблицы или представления "%. \*ls отключен.» Для повторного включения данных объектов необходимо перестроить индексы после обновления путем вызова **ALTER INDEX ON... REBUILD**.  
+ Если кластеризованный индекс отключен или принудительно некластеризованного индекса, возникает следующая ошибка: «Обработчику запросов не удалось предоставить план, так как индекс "%. \*ls для таблицы или представления "%. \*ls отключен.» Для повторного включения данных объектов необходимо перестроить индексы после обновления путем вызова **ALTER INDEX ON... REBUILD**.  
   
  **Куч**  
   

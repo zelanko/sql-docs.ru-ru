@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a0fd00201f782bba8b06ddde8753a86aeb89046
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660092"
 ---
 # <a name="browsing-a-clustering-model"></a>Просмотр модели кластеризации
   При открытии модели кластеризации с помощью **Обзор**, модель отображается в интерактивном средстве просмотра, аналогичном средству просмотра кластеризации в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Средство просмотра позволяет просмотреть кластеры и понять характеристики кластеров. Также можно сравнить и сопоставить отдельные сегменты с другими сегментами или с заполнением.  

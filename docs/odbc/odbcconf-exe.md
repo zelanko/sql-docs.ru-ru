@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 33688a46be5e5e33aa940f3553c98db5091b159d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62677374"
 ---
-# <a name="odbcconfexe"></a>ODBCCONF. EXE-ФАЙЛА
+# <a name="odbcconfexe"></a>ODBCCONF.EXE
 ODBCCONF.exe является средством командной строки, которое позволяет настроить ODBC драйверы и имена источников данных.  
   
 > [!NOTE]  
->  ODBCCONF.exe будет поддерживаться в будущих версиях Windows Data Access Components. Избегайте использования этой функции и запланируйте изменение приложений, которые сейчас ее используют. Можно использовать команды PowerShell для управления драйверами и источников данных. Дополнительные сведения об этих командах PowerShell см. в разделе [командлеты компонентов доступа к данным Windows](https://technet.microsoft.com/library/hh771019.aspx).  
+>  ODBCCONF.exe будет поддерживаться в будущих версиях Windows Data Access Components. Избегайте использования этой функции и запланируйте изменение приложений, которые сейчас ее используют. Вы можете управлять драйверами и источниками данных с использованием команд PowerShell. Дополнительные сведения об этих командах PowerShell см. в разделе [командлеты компонентов доступа к данным Windows](https://technet.microsoft.com/library/hh771019.aspx).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -58,11 +58,11 @@ ODBCCONF [switches] action
   
 |Действие|Описание|  
 |------------|-----------------|  
-|CONFIGDRIVER *имя_драйвера ** params конфигурации драйвера*|Загружает DLL-файлов установки соответствующего драйвера и вызовы **ConfigDriver** функции.<br /><br /> Эквивалентно [функция SQLConfigDriver](../odbc/reference/syntax/sqlconfigdriver-function.md).<br /><br /> Пример:<br /><br /> /A {CONFIGDRIVER «Имя драйвера» «CPTimeout = 60»}<br /><br /> /A {CONFIGDRIVER «Имя драйвера» «DriverODBCVer = 03.80»}|  
-|CONFIGDSN *имя_драйвера* DSN =*имя* &#124; *атрибуты*|Добавляет или изменяет системный источник данных.<br /><br /> Эквивалентно [функция SQLConfigDataSource](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Пример:<br /><br /> /A {CONFIGDSN «SQL Server» «DSN = имя &#124; Server = srv»}|  
-|CONFIGSYSDSN *имя_драйвера* DSN =*имя* &#124; *атрибуты*|Добавляет или изменяет системный источник данных.<br /><br /> Эквивалентно [функция SQLConfigDataSource](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Пример:<br /><br /> /A {CONFIGSYSDSN «SQL Server» «DSN = имя &#124; Server = srv»}|  
-|INSTALLDRIVER|Эквивалентно [функция SQLInstallDriverEx](../odbc/reference/syntax/sqlinstalldriverex-function.md).<br /><br /> Сведения о синтаксисе пары ключевое_слово значение, передаваемое INSTALLDRIVER см. в разделе [подразделы спецификаций драйверов](../odbc/reference/install/driver-specification-subkeys.md).<br /><br /> Пример:<br /><br /> /A {INSTALLDRIVER «драйвер &#124; Driver=c:\your.dll &#124; Setup=c:\your.dll &#124; APILevel = 2 &#124; ConnectFunctions = YYY &#124; DriverODBCVer = 03.50 &#124; FileUsage = 0 &#124; SQLLevel = 1»}|  
-|INSTALLTRANSLATOR *translator конфигурации ** пути драйвера*|Добавляет сведения о translator, чтобы **HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST. Переводчики INI\ODBC** раздел реестра.<br /><br /> Эквивалентно [функция SQLInstallTranslatorEx](../odbc/reference/syntax/sqlinstalltranslatorex-function.md).<br /><br /> Сведения о синтаксисе пары ключевое_слово значение, передаваемое INSTALLDRIVER см. в разделе [подразделы спецификаций преобразователей](../odbc/reference/install/translator-specification-subkeys.md).<br /><br /> Пример:<br /><br /> /A {INSTALLTRANSLATOR «Мои Translator &#124; Translator=c:\my.dll &#124; Setup=c:\my.dll»}|  
+|CONFIGDRIVER *имя_драйвера ** params конфигурации драйвера*|Загружает DLL-файлов установки соответствующего драйвера и вызовы **ConfigDriver** функции.<br /><br /> Эквивалентно [функция SQLConfigDriver](../odbc/reference/syntax/sqlconfigdriver-function.md).<br /><br /> Пример:<br /><br /> /A {CONFIGDRIVER «Имя драйвера» «CPTimeout = 60»}<br /><br /> /A {CONFIGDRIVER " Driver Name" "DriverODBCVer=03.80"}|  
+|CONFIGDSN *имя_драйвера* DSN =*имя* &#124; *атрибуты*|Добавляет или изменяет системный источник данных.<br /><br /> Эквивалентно [функция SQLConfigDataSource](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Пример:<br /><br /> /A {CONFIGDSN "SQL Server" "DSN=name &#124; Server=srv"}|  
+|CONFIGSYSDSN *driver_name* DSN=*name* &#124; *attributes*|Добавляет или изменяет системный источник данных.<br /><br /> Эквивалентно [функция SQLConfigDataSource](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Пример:<br /><br /> /A {CONFIGSYSDSN "SQL Server" "DSN=name &#124; Server=srv"}|  
+|INSTALLDRIVER|Эквивалентно [функция SQLInstallDriverEx](../odbc/reference/syntax/sqlinstalldriverex-function.md).<br /><br /> Сведения о синтаксисе пары ключевое_слово значение, передаваемое INSTALLDRIVER см. в разделе [подразделы спецификаций драйверов](../odbc/reference/install/driver-specification-subkeys.md).<br /><br /> Пример:<br /><br /> /A {INSTALLDRIVER  "Your Driver &#124; Driver=c:\your.dll &#124; Setup=c:\your.dll &#124; APILevel=2 &#124; ConnectFunctions=YYY &#124; DriverODBCVer=03.50 &#124; FileUsage=0 &#124; SQLLevel=1"}|  
+|INSTALLTRANSLATOR *translator конфигурации ** пути драйвера*|Добавляет сведения о translator, чтобы **HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST. Переводчики INI\ODBC** раздел реестра.<br /><br /> Эквивалентно [функция SQLInstallTranslatorEx](../odbc/reference/syntax/sqlinstalltranslatorex-function.md).<br /><br /> Сведения о синтаксисе пары ключевое_слово значение, передаваемое INSTALLDRIVER см. в разделе [подразделы спецификаций преобразователей](../odbc/reference/install/translator-specification-subkeys.md).<br /><br /> Пример:<br /><br /> /A {INSTALLTRANSLATOR  "My Translator &#124; Translator=c:\my.dll &#124; Setup=c:\my.dll"}|  
 |REGSVR *dll*|Регистрирует библиотеки DLL.<br /><br /> Эквивалент regsvr32.exe.<br /><br /> Пример:<br /><br /> /A {REGSVR c:\my.dll}|  
 |SETFILEDSNDIR|Когда HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC. DSN\DefaultDSNDir INI\ODBC файл не существует, действие SETFILEDSNDIR создаст его и присвойте ей значение в HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CommonFilesDir, дополненный \ODBC\Data источников.<br /><br /> Значение по HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC. Файл DSN\DefaultDSNDir INI\ODBC указывает расположение по умолчанию, администратор источников данных ODBC при создании источника данных на основе файла.<br /><br /> Пример:<br /><br /> /A {SETFILEDSNDIR}|  
   

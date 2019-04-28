@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c3f6654480635966c2e77beb73ad6adc24add6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671042"
 ---
 # <a name="calculation-properties-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Свойства вычисления» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Свойства вычислений** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , чтобы просматривать или изменять папку отображения и свойства вычислений связанной группы мер, определенных на вкладке **Вычисления** конструктора кубов для выбранного куба. Диалоговое окно **Свойства вычислений** можно вызвать, щелкнув **Свойства вычислений** на панели **Панель инструментов** вкладки **Вычисления** конструктора кубов.  

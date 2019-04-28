@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678522"
 ---
-# <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Урок 1. Создание проекта Visual Studio «RDL-схема»
+# <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Урок 1. Создание проекта Visual Studio RDL-схемы
   В этом учебнике будет создано простое приложение командной строки. Предполагается, что разработка ведется в среде [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
   
 > [!NOTE]  
@@ -197,7 +197,7 @@ ms.locfileid: "56018915"
     ```  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- На следующем занятии предстоит использовать программу определения XML-схемы (Xsd.exe) для формирования классов из RDL-схемы и включения их в проект. См. в разделе [Урок 2: Создания классов из RDL-схемы с помощью инструмента xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
+ На следующем занятии предстоит использовать программу определения XML-схемы (Xsd.exe) для формирования классов из RDL-схемы и включения их в проект. См. [Занятие 2. Создания классов из RDL-схемы с помощью инструмента xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
   
 ## <a name="see-also"></a>См. также  
  [Обновление отчетов с помощью классов, созданных из RDL-схемы &#40;учебник по службам SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

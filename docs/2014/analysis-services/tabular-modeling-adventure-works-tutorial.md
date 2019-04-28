@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2693bd51da682e9af0133c8400f2cfeacd2737ca
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795541"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Табличное моделирование (учебник по Adventure Works)
   В этом учебнике содержатся уроки по созданию табличной модели служб [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services с помощью среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -70,9 +70,9 @@ ms.locfileid: "53373686"
 |------------|--------------------------------|  
 |[Занятие 1. Создание нового проекта табличной модели](lesson-1-create-a-new-tabular-model-project.md)|10 минут.|  
 |[Занятие 2. Добавление данных](lesson-2-add-data.md)|20 минут|  
-|[Занятие 3. Переименование столбцов](rename-columns.md)|20 минут|  
+|[Занятие 3. Переименование столбцов](rename-columns.md)|20 минут|  
 |[Занятие 4. Пометить как таблицу дат](lesson-3-mark-as-date-table.md)|3 минуты|  
-|[Занятие 5. Создание связей](lesson-4-create-relationships.md)|10 минут.|  
+|[Занятие 5. Создание связей](lesson-4-create-relationships.md)|10 минут.|  
 |[Занятие 6. Создание вычисляемых столбцов](lesson-5-create-calculated-columns.md)|15 минут|  
 |[Занятие 7. Создание мер](lesson-6-create-measures.md)|30 минут|  
 |[Занятие 8. Создание ключевых показателей эффективности](lesson-7-create-key-performance-indicators.md)|15 минут|  
@@ -94,6 +94,6 @@ ms.locfileid: "53373686"
 |[Настройка свойств отчетов для отчетов Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)Настройка свойств отчетов для отчетов Power View|30 минут|  
   
 ## <a name="next-step"></a>Следующий шаг  
- Чтобы приступить к изучению этого учебника, перейдите к первому занятию: [Занятие 1. Создание нового проекта табличной модели](lesson-1-create-a-new-tabular-model-project.md).  
+ Чтобы приступить к изучению учебника, перейдите к первому занятию: [Занятие 1. Создание нового проекта табличной модели](lesson-1-create-a-new-tabular-model-project.md).  
   
   

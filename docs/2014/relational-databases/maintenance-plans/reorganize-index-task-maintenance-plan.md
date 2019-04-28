@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a0f354280da857be236049a564a77716e93cd351
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807072"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>Задача «Реорганизация индекса» (план обслуживания)
   Используйте диалоговое окно **Задача ReorganizeIndex** для изменения порядка страниц индекса в целях повышения эффективности поиска. Эта задача использует инструкцию `ALTER INDEX REORGANIZE` с базами данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  

@@ -12,11 +12,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 028d14230f0f48f04bd94f327c1e46c5bee42b56
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774734"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Функции SQL Server, больше не поддерживаемые в SQL Server 2014
   В этом разделе описаны функции, которые становятся недоступными после обновления до [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "53351017"
 ### <a name="discontinued-active-directory-helper-service"></a>Неподдерживаемая служба поддержки Active Directory  
  Служба поддержки Active Directory больше не поддерживается, а связанные с ней компоненты удалены. В следующей таблице перечислены связанные компоненты, которые были удалены.  
   
-|Категория|Неподдерживаемая функция|Замена|  
+|Category|Неподдерживаемая функция|Замена|  
 |--------------|--------------------------|-----------------|  
 |Системные хранимые процедуры|sp_ActiveDirectory_Obj<br /><br /> sp_ActiveDirectory_SCP<br /><br /> sp_ActiveDirectory_Start|Замена отсутствует|  
   

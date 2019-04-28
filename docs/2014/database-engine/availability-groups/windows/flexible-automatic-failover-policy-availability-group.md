@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 63c9f56894ede1002b358c624ab763935fd42fc1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789896"
 ---
 # <a name="flexible-failover-policy-for-automatic-failover-of-an-availability-group-sql-server"></a>Гибкая политика отработки отказа для автоматического перехода на другой ресурс группы доступности (SQL Server)
   Гибкая политика отработки отказа предоставляет гранулярное управление условиями, которые могут вызвать [автоматический переход на другой ресурс](failover-and-failover-modes-always-on-availability-groups.md) для группы доступности. Изменяя условия отказа, которые инициируют автоматический переход на другой ресурс, и частоту проверки исправности, вы можете увеличить или уменьшить вероятность автоматического перехода на другой ресурс и добиться высокого уровня доступности соглашения об уровне обслуживания.  
@@ -48,7 +48,7 @@ ms.locfileid: "53374646"
   
 |Level|Условия сбоя|[!INCLUDE[tsql](../../../includes/tsql-md.md)] Значение|Значение PowerShell|  
 |-----------|-----------------------|------------------------------|----------------------|  
-|Один|При остановке работы сервера. Это наименее ограничительный уровень. Указывает, что автоматический переход на другой ресурс инициируется при возникновении любой из следующих ситуаций:<br /><br /> Служба [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] остановлена.<br /><br /> Аренда группы доступности для подключения к кластеру WSFC истекла, поскольку от экземпляра сервера не было получено сообщение ACK. Дополнительные сведения см. в разделе [как это работает: Время ожидания аренды AlwaysOn SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx).|1|`OnServerDown`|  
+|Один|При остановке работы сервера. Это наименее ограничительный уровень. Указывает, что автоматический переход на другой ресурс инициируется при возникновении любой из следующих ситуаций:<br /><br /> Служба [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] остановлена.<br /><br /> Аренда группы доступности для подключения к кластеру WSFC истекла, поскольку от экземпляра сервера не было получено сообщение ACK. Дополнительные сведения см. в разделе [Как это работает: Время ожидания аренды AlwaysOn SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx).|1|`OnServerDown`|  
 |Два|При отсутствии ответа от сервера. Указывает, что автоматический переход на другой ресурс инициируется при возникновении любой из следующих ситуаций:<br /><br /> Экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не подключается к кластеру, а определяемый пользователем порог времени ожидания проверки исправности для группы доступности превышен.<br /><br /> Реплика доступности находится в неисправном состоянии.|2|`OnServerUnresponsive`|  
 |Три|В случае критической ошибки сервера. Указывает, что автоматический переход на другой ресурс инициируется в случае появления критических внутренних ошибок [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , таких как потерянные спин-блокировки, серьезные нарушения доступа для записи или формирование слишком больших дампов. Это уровень, заданный по умолчанию.|3|`OnCriticalServerError`|  
 |Четыре|В случае ошибки сервера средней значимости. Указывает, что автоматический переход на другой ресурс инициируется в случае появления умеренных внутренних ошибок [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , например устойчивое состояние нехватки памяти в пуле внутренних ресурсов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|4|`OnModerateServerError`|  
@@ -68,7 +68,7 @@ ms.locfileid: "53374646"
   
 ##  <a name="RelatedContent"></a> См. также  
   
--   [Принцип работы. Время ожидания аренды AlwaysOn SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx)  
+-   [Принцип работы: Время ожидания аренды AlwaysOn SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

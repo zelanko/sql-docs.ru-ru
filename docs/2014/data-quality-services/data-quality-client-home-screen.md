@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0c6e29b89a4ff5908ac48cc70bf0b94c75195455
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792930"
 ---
 # <a name="data-quality-client-home-screen"></a>Главный экран клиента DQS
   Этот экран обеспечивает доступ к пользовательским интерфейсам каждой из трех основных групп задач служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): управление базами знаний, проекты служб DQS и администрирование.  

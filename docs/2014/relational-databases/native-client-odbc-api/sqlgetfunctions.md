@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e7dbd69379bd59e75ac39fc5765514ab8e1b4151
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657833"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
   Интерфейс ODBC-драйвера собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует трем определенным уровням соответствия ODBC (ISO, Open Group и ODBC уровня 2). Функция**SQLGetFunctions** сообщает, что все функции ODBC поддерживаются для ODBC-драйвера собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

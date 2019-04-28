@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 735162edb8e7eda06e99d69ed74d4752b7f0d950
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676920"
 ---
 # <a name="sql-server-replication-add-publisher-dialog-box"></a>Диалоговое окно «Добавление издателя репликации SQL Server» 
   Диалоговое окно **Добавление издателя** позволяет добавить одного или несколько издателей в левую панель монитора репликации. После добавления издателя в правой панели отображаются сведения об издателе, выбранном в левой панели.  

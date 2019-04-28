@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 87f260bc69a582726c2e995ed1934d10a1481db9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654980"
 ---
 # <a name="ddl-triggers"></a>Триггеры DDL
   Триггеры DDL активируются в ответ на различные события языка DDL. Эти события в основном соответствуют инструкциям [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые начинаются с ключевых слов CREATE, ALTER, DROP, GRANT, DENY, REVOKE или UPDATE STATISTICS. Системные хранимые процедуры, выполняющие операции, подобные операциям DDL, также могут запускать триггеры DDL.  

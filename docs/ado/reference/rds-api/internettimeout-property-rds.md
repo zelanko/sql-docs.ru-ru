@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ebc5caa6ccdb3c14faf722f1ccc66c46befa6fbb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670351"
 ---
 # <a name="internettimeout-property-rds"></a>Свойство InternetTimeout (служба удаленных рабочих столов)
 Указывает количество миллисекунд для ожидания, по истечении времени ожидания запроса.  

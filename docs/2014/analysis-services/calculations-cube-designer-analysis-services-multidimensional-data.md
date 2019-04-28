@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fdd640d2772773e2acc634fed261b72389f971b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681091"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>Вычисления (конструктор кубов) (службы Analysis Services — многомерные данные)
   Вкладка **Вычисления** в конструкторе кубов используется для просмотра и изменения вычислений, включая вычисляемые элементы, именованные наборы и команды скриптов многомерных выражений для выбранного куба.  
@@ -56,7 +56,7 @@ ms.locfileid: "48103914"
 ## <a name="see-also"></a>См. также  
  [Объекты куба &#40;службы Analysis Services — многомерные данные&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Вычисления](multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [Основные принципы создания скриптов многомерных Выражений &#40;служб Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Основные принципы создания скриптов многомерных выражений (службы Analysis Services)](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Конструктор кубов &#40;службы Analysis Services — многомерные данные&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Создание именованных наборов](multidimensional-models/create-named-sets.md)  
   

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 020b692bc97afc4c76447274b3b900a6355d99d8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792554"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Предоставление ролей DQS пользователям
   В этом разделе описывается создание имен входа SQL Server на основе участников Windows и предоставление им ролей служб [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) в базе данных DQS_MAIN.  
@@ -38,7 +38,7 @@ ms.locfileid: "56035457"
   
 5.  После проверки пользователя щелкните страницу **Сопоставление пользователей** в левой части окна.  
   
-6.  В области справа установите флажок в разделе **карты** столбец для **DQS_MAIN** базы данных, а затем выберите **dqs_administrator**, **dqs_kb_editor** , или **dqs_kb_operator** флажок в **членство в роли для базы данных: DQS_MAIN** области, в зависимости от уровня доступа, необходимые пользователю. Дополнительные сведения о трех ролях служб DQS см. в разделе [DQS Security](../dqs-security.md).  
+6.  В области справа установите флажок в столбце **Сопоставление** для базы данных **DQS_MAIN**, а затем установите флажок **dqs_administrator**, **dqs_kb_editor** или **dqs_kb_operator** на панели **Членство в роли базы данных для: DQS_MAIN** в зависимости от уровня доступа, необходимого пользователю. Дополнительные сведения о трех ролях служб DQS см. в разделе [DQS Security](../dqs-security.md).  
   
 7.  В диалоговом окне **Создание имени входа** нажмите кнопку **ОК**, чтобы применить изменения.  
   

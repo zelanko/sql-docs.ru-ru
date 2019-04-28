@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8dda4ea693774fabcc88e261ccd61f71350a6a79
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650559"
 ---
 # <a name="check-files-in-use"></a>Проверка используемых файлов
   Чтобы избежать необходимости перезагрузки Windows после установки обновлений для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на странице «Проверка используемых файлов» можно найти процессы, которые блокируют файлы, необходимые программе установки обновлений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 82f448c652bfb36f0f09eba975e3fecd8915afab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729537"
 ---
 # <a name="modifying-default-table-names"></a>Изменение имен таблиц по умолчанию
   Значение свойства **FriendlyName** для объектов в представлении источника данных можно изменить, сделав его имя более понятным и простым в использовании.  
@@ -47,10 +47,10 @@ ms.locfileid: "48065414"
 7.  В меню **Файл** выберите пункт [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]Сохранить все **(или нажмите соответствующую кнопку на панели инструментов среды** ), чтобы сохранить изменения, внесенные в проект учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Если необходимо, здесь можно прервать работу с учебником, чтобы продолжить ее позже.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 2. Определение и развертывание куба](lesson-2-defining-and-deploying-a-cube.md)  
+ [Занятие 2. Определение и развертывание куба](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>См. также  
  [Представления источников данных в многомерных моделях](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Изменение свойств в представлении источника данных &#40;служб Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
+ [Изменение свойств в представлении источника данных (службы Analysis Services)](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   
