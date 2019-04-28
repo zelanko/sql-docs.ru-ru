@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96b34d8b3fd2dce31f604c50a7431b993a29beca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699583"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>Создание именованных наборов с областью действия сеанса (многомерные выражения)
   Для создания именованного набора, доступного в сеансе многомерных выражений, используется инструкция [CREATE SET](/sql/mdx/mdx-data-definition-create-set). Именованный набор, созданный с помощью инструкции CREATE SET, удаляется только при закрытии сеанса многомерных выражений.  
@@ -54,6 +54,6 @@ select SetCities_2_3 on 0 from [Store]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Создание, областью действия запроса именованных наборов с &#40;многомерных Выражений&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
+ [Создание именованных наборов с областью действия запроса (многомерные выражения)](mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

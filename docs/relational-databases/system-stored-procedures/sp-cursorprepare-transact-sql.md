@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1f26ada2f116d684091f7e5e928d04e3530567f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724139"
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |-----------|-----------------|  
 |0|Success|  
 |0x0001|Failure|  
-|1FF6|Невозможно вернуть метаданные.<br /><br /> Примечание. Причина в том, что эта инструкция не создает результирующий набор. Например, это инструкция INSERT или DDL.|  
+|1FF6|Невозможно вернуть метаданные.<br /><br /> Примечание. Причиной этого является то, что инструкция не создает результирующий набор; Например это инструкция INSERT или DDL.|  
   
 ## <a name="examples"></a>Примеры  
  Когда *stmt* параметризован и *scrollopt* значение PARAMETERIZED_STMT имеет значение ON, используется следующий формат строки:  

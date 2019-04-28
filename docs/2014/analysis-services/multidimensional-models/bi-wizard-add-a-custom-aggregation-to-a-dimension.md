@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15c37f8fa070c3faf3d8fe5bc86213e90519cf54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726888"
 ---
 # <a name="add-a-custom-aggregation-to-a-dimension"></a>Добавление нестандартного статистического выражения к измерению
   Добавление нестандартного статистического выражения к кубу или измерению для статистических вычислений, связанных с элементом измерения, производится по умолчанию другим унарным оператором. Эта функция задает в таблице измерения столбец унарных операторов, который определяет сдвиг элементов в иерархии родители-потомки. Унарный оператор действует в качестве родительского атрибута в иерархии родители-потомки.  

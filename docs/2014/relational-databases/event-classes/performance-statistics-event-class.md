@@ -15,17 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3888782f93dde5726ed808383ea7da0c9a02a4d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827197"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics, класс событий
   Класс событий Performance Statistics можно использовать для наблюдения за производительностью выполняемых запросов, хранимых процедур и триггеров. Каждый из шести подклассов событий обозначает событие, относящееся ко времени существования запросов, хранимых процедур и триггеров в системе. Сочетая эти подклассы событий и связанные с ними динамические административные представления sys.dm_exec_query_stats, sys.dm_exec_procedure_stats и sys.dm_exec_trigger_stats, можно восстановить историю производительности любого заданного запроса, хранимой процедуры или триггера.  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Столбцы данных класса событий Performance Statistics  
- Следующие таблицы описывают столбцы данных класса событий, связанные с каждым из следующих подклассов событий: EventSubClass 0, EventSubClass 1, EventSubClass 2, EventSubClass 3, EventSubClass 4 и EventSubClass 5.  
+ Следующие таблицы описывают столбцы данных класса событий, связанных с каждым из следующих подклассов событий: EventSubClass 0, EventSubClass 1, EventSubClass 2, EventSubClass 3, EventSubClass 4 и EventSubClass 5.  
   
 ### <a name="eventsubclass-0"></a>EventSubClass 0  
   

@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98da3e0f7a9b61b178372d9b24b8b595ab6b6626
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727168"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>Вставка, обновление и удаление элементов (XMLA)
   Можно использовать [вставить](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla), [обновление](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla), и [Drop](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla) команды XML для аналитики (XMLA) чтобы соответственно вставлять, обновления или удаления элементов из измерения, доступного для записи. Дополнительные сведения о записи измерений, см. в разделе [измерениях](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  

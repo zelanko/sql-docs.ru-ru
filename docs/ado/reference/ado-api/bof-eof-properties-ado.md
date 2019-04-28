@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72954cb199976f05eacd7c79ba0e89cab0a45bbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62821445"
 ---
 # <a name="bof-eof-properties-ado"></a>Свойства BOF и EOF (ADO)
 -   **BOF** указывает, что текущая запись позиция находится перед первой записи в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -62,9 +62,9 @@ ms.locfileid: "47748122"
 ||BOF|EOF|  
 |------|---------|---------|  
 |**MoveFirst**, **MoveLast**|Значение **True**|Значение **True**|  
-|**Переместить** 0|Изменений нет|Изменений нет|  
-|**MovePrevious**, **переместить** < 0|Значение **True**|Изменений нет|  
-|**MoveNext**, **переместить** > 0|Изменений нет|Значение **True**|  
+|**Переместить** 0|Без изменений|Без изменений|  
+|**MovePrevious**, **переместить** < 0|Значение **True**|Без изменений|  
+|**MoveNext**, **переместить** > 0|Без изменений|Значение **True**|  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

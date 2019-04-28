@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7890360221f3adae73efef7a58ae1179e19760a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727940"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>Средства просмотра моделей интеллектуального анализа данных (конструктор моделей интеллектуального анализа данных)
   Вкладкой **Средство просмотра моделей интеллектуального анализа данных** можно воспользоваться для обзора моделей интеллектуального анализа данных, содержащихся в структуре интеллектуального анализа данных.  

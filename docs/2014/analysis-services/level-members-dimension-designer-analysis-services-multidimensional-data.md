@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a737b79944635af1a45dd4fc51a9ef2e2967a31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728161"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Уровень и элементы (вкладка «Браузер» конструктора измерений) (службы Analysis Services — многомерные данные)
   Данная панель используется для просмотра элементов выбранных в настоящий момент иерархии и языка. Чтобы выбрать иерархию или язык для просмотра, используйте параметры **Иерархия** и **Язык** на **Панели инструментов** . Дополнительные сведения об этой панели инструментов см. в разделе [Toolbar &#40;Browser Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="writeback-mode"></a>Режим обратной записи  
- При включении режима обратной записи функциональность данной панели изменяется. Выбранного измерения должна быть возможность записи (другими словами, `WriteEnabled` свойства измерения необходимо указать значение true) и измерения должны быть развернуты в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] экземпляра, чтобы включить режим обратной записи.  
+ При включении режима обратной записи функциональность данной панели изменяется. Для включения режима обратной записи для выбранного измерения должна быть включена возможность записи (другими словами, свойство `WriteEnabled` измерения должно быть установлено равным true) и измерение должно быть развернуто на экземпляре служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  Для включения режима обратной записи можно либо выбрать элемент **Обратная запись** в области **Панель инструментов** , либо щелкнуть правой кнопкой мыши панель **Уровень и элементы** и выбрать пункт **Обратная запись** из контекстного меню.  
   

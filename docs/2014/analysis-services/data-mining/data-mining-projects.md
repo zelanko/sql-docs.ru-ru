@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6370034c90acf91bcf69fc0dee697f48458b7e22
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722911"
 ---
 # <a name="data-mining-projects"></a>Проекты интеллектуального анализа данных
   Проект интеллектуального анализа данных — это часть решения служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Во время проектирования объекты, создаваемые в этом проекте, доступны для тестирования и запросов в составе базы данных рабочей области. Чтобы дать пользователям возможность просматривать объекты в проекте и составлять к ним запросы, необходимо развернуть проект в экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , работающем в многомерном режиме.  

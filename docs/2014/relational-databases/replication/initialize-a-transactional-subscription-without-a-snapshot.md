@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cef8a7e8a64935cca6b378e14c00eb0d80f6b8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721151"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialize a Transactional Subscription Without a Snapshot
   По умолчанию инициализация подписки на публикацию транзакций осуществляется с помощью моментального снимка, созданного агентом моментальных снимков и применяемого агентом распространителя. Например, в некоторых сценариях, использующих большие исходные наборы данных, лучше инициализировать подписку другим методом. Другие методы инициализации подписчика:  

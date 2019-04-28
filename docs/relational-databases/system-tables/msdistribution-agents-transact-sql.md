@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 357d0cf774d3e95d700c840f88bb0165bdb9a12f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817165"
 ---
 # <a name="msdistributionagents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52785756"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**int**|Идентификатор агента распространителя.|  
-|**name**|**Nvarchar(100)**|Имя агента распространителя.|  
+|**name**|**nvarchar(100)**|Имя агента распространителя.|  
 |**publisher_database_id**|**int**|Идентификатор базы данных издателя.|  
 |**publisher_id**|**smallint**|Идентификатор издателя.|  
 |**publisher_db**|**sysname**|Имя базы данных издателя.|  
@@ -50,7 +50,7 @@ ms.locfileid: "52785756"
 |**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**anonymous_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**creation_date**|**datetime**|Дата и время, когда был создан агент распространителя или агент слияния.|  
-|**queue_id**|**sysname**|Идентификатор для поиска очереди для очереди обновляемых подписок. Для подписок, не использующих очереди, значение равно NULL. Для публикаций на основе очереди сообщений [!INCLUDE[msCoName](../../includes/msconame-md.md)] значением является идентификатор GUID, который однозначно идентифицирует очередь, используемую подпиской. Для публикаций в очереди на основе SQL Server, столбец содержит значение **SQL**.<br /><br /> Примечание. Компонент [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing устарел и больше не поддерживается.|  
+|**queue_id**|**sysname**|Идентификатор для поиска очереди для очереди обновляемых подписок. Для подписок, не использующих очереди, значение равно NULL. Для публикаций на основе очереди сообщений [!INCLUDE[msCoName](../../includes/msconame-md.md)] значением является идентификатор GUID, который однозначно идентифицирует очередь, используемую подпиской. Для публикаций в очереди на основе SQL Server, столбец содержит значение **SQL**.<br /><br /> Примечание. С помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing устарел и больше не поддерживается.|  
 |**queue_status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offload_enabled**|**bit**|Указывает, может ли агент быть активизирован удаленно.<br /><br /> **0** указывает, что агент не может быть активирован удаленно.<br /><br /> **1** указывает, что агент может быть активизирован удаленно и на удаленном компьютере, указанном в *offload_server* свойство.|  
 |**offload_server**|**sysname**|Сетевое имя сервера для удаленной активации.|  

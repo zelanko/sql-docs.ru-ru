@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7996eaaad9d900a8839191d22c86cf7ab014e516
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704947"
 ---
 # <a name="keep-the-affinity-mask-default-value"></a>Сохранение значения маски сходства по умолчанию
   Это правило проверяет, указано ли в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] значение по умолчанию для маски сходства, равное 0. Параметр маски сходства динамически управляет соответствием процессоров.  

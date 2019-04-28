@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 14fa0cb949505ab2aeb15d1236add9acba9a1ab1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703729"
 ---
 # <a name="project-settings-azure-sql-db--sybasetosql"></a>Параметры проекта (база данных SQL Azure) (SybaseToSQL)
 Параметры проекта базы данных SQL Azure позволяют настраивать суффикс базы данных Azure SQL DB для добавляться в диалоговом окне соединения, а также позволяет реализовать механизм пульса в соединении базы данных SQL Azure.  

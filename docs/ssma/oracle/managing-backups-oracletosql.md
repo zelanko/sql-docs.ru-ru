@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 7fb88b22ae3c1a1ebdee9dc0167169e2cdbc4b3c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62816513"
 ---
 # <a name="managing-backups-oracletosql"></a>Управление резервными копиями (OracleToSQL)
 Управление резервным копированием Oracle позволяет резервного копирования и восстановления данные таблицы, до или после выполнения теста. Кроме того, вы можете управлять содержимое резервной копии с помощью диалогового окна управления содержимое резервной копии.  

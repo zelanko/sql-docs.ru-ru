@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ba10d54fb2c18e29a6cc41d74e8d79bc6355e63e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62712811"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Определение признаков конца поля и строки (SQL Server)
   Для символьных полей данных можно определить символы, которые являются разделителями полей и строк в файле данных, указав *признак конца поля* и *признак конца строки*. Для программ, считывающих файлы данных, это единственный способ определить, какими символами в нем разделяются строки и столбцы.  

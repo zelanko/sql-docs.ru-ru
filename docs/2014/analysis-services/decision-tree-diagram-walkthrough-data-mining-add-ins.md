@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55bdeb41ed62fd727a6e5eb637734a67d21660fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732439"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>Пошаговое руководство по диаграмме дерева принятия решений (надстройки интеллектуального анализа данных)
   При создании модели дерева принятия решений, можно создать настраиваемую диаграмму в Visio при помощи либо фигуры дерева принятия решений, либо фигуры сети зависимостей. В этом разделе описываются настройки, можно выполнить с помощью **дерево принятия решений** фигуры и эти элементы управления:  

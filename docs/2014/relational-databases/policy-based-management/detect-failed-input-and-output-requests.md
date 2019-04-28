@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0abd1541baeda6152a80980e85e6c902b45e886c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705170"
 ---
 # <a name="detect-failed-input-output-request"></a>Обнаружения запроса неудачных входов и выходов
   Это правило проверяет журнал системных событий на наличие события с идентификатором EventId 50. Ошибка вызвана сбоем запроса ввода-вывода.  

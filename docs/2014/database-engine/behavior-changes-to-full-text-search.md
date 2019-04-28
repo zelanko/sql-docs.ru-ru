@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813200"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Изменения в функциях полнотекстового поиска
   В этом разделе описаны изменения поведения полнотекстового поиска. Изменения в работе оказывают влияние на способ выполнения функций или взаимодействие между ними в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] по сравнению с предыдущими версиями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -68,7 +68,7 @@ ms.locfileid: "52508869"
   
 |**Термин**|**Результаты с предыдущего разбиения по словам и парадигматического модуля**|**Результаты с помощью нового разбиения по словам и парадигматического модуля**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
-|jěˊÿqℭžl<br /><br /> *(где термы не являются допустимыми символами английского языка)*|«jěˊÿqℭžl»|je yq zl|  
+|jěˊÿｑℭžl<br /><br /> *(где термы не являются допустимыми символами английского языка)*|'jěˊÿｑℭžl'|je yq zl|  
 |table's|table's<br /><br /> table|table's|  
 |cat-|cat<br /><br /> cat-|cat|  
 |v-z *(где v и z являются пропускаемыми словами)*|*(нет результатов)*|v-z|  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 500a3e38599b0041b036eb148f837afc67260849
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719833"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Служба курсора Майкрософт для OLE DB Обзор
 Служба курсора Майкрософт для OLE DB дополняет поддержки курсорных функций какого поставщиков данных. Таким образом пользователь понимает относительно однообразного функциональные возможности из всех поставщиков данных.

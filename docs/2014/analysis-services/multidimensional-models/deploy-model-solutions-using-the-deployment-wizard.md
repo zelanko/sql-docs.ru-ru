@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0136631904a9f4bf8a0cdb7c22e7c9241ba3aff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726281"
 ---
 # <a name="deploy-model-solutions-using-the-deployment-wizard"></a>Развертывание решений модели с использованием мастера развертывания
   Мастер развертывания служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] использует выходные XML-файлы, создаваемые в проекте служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , в качестве входных. Эти входные файлы можно легко изменить для настройки развертывания проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Сформированный скрипт развертывания можно затем либо сразу запустить, либо сохранить и запустить позднее.  
@@ -42,7 +42,7 @@ ms.locfileid: "48087654"
   
 ## <a name="see-also"></a>См. также  
  [Развертывание решений модели с помощью XMLA](deploy-model-solutions-using-xmla.md)   
- [Синхронизация баз данных Analysis Services](synchronize-analysis-services-databases.md)   
+ [Синхронизация баз данных служб Analysis Services](synchronize-analysis-services-databases.md)   
  [Основные сведения о входных файлах, применяемых для создания скрипта развертывания](deployment-script-files-input-used-to-create-deployment-script.md)   
  [Развертывание решений моделей с использованием программы развертывания](deploy-model-solutions-with-the-deployment-utility.md)  
   

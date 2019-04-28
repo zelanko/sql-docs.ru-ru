@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dd6b8e754ea4bc56884b456d673e5af31a013d5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812638"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Адаптер для облака для SQL Server
   Служба Cloud Adapter создается в ходе провизионирования [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на виртуальной машине Windows Azure. Служба адаптера для облака создает самозаверяющий SSL-сертификат в рамках своего первого запуска, а затем запускается от имени учетной записи **Local System** . Она создает файл конфигурации, который используется для ее настройки. Служба адаптера для облака также создает правило брандмауэра Windows для разрешения входящих TCP-подключений на стандартный порт 11435.  
@@ -52,11 +52,11 @@ ms.locfileid: "52518260"
   
         -   \<appSettings >  
   
-            -   \<Добавьте ключ = «WebServicePort» value = "» / >  
+            -   \<add key="WebServicePort" value="" />  
   
-            -   \<Добавьте ключ = «WebServiceCertificate» value = «GUID» / >  
+            -   \<add key="WebServiceCertificate" value="GUID" />  
   
-            -   \<Добавьте ключ = «ExposeExceptionDetails» value = «true» / >  
+            -   \<add key="ExposeExceptionDetails" value="true" />  
   
         -   \</appSettings >  
   

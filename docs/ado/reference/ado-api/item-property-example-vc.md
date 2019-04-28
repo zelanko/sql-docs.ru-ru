@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b228ad46c89766475e8a74e26a0aaf389130acd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864436"
 ---
 # <a name="item-property-example-vc"></a>Пример свойства Item (Visual C++)
 В этом примере показано, как [элемент](../../../ado/reference/ado-api/item-property-ado.md) свойство обращается к членам коллекции. В примере открывается ***авторов*** таблицы ***Pubs*** базы данных с помощью параметризованные команды.  

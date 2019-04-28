@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32b55e112b7150f1c84f894a36f56a21c58292a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732150"
 ---
 # <a name="details-ssas"></a>Сведения (SSAS)
   На этой странице **Мастера импорта таблиц** можно просмотреть сведения об операции импорта данных, завершившейся успешно или неудачно. Для доступа к мастеру из [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите пункт **Импорт из источника данных** в меню **Модель**.  

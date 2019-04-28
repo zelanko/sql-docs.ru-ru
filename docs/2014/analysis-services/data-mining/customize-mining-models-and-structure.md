@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df563ae17a04d37d7d3ea667e79cf9de2c7d9a51
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722675"
 ---
 # <a name="customize-mining-models-and-structure"></a>Настройка структуры и моделей интеллектуального анализа данных
   После выбора алгоритма в соответствии с задачами организации, можно выполнить индивидуальную настройку модели, что может повысить эффективность результатов. Настройка выполняется следующими способами.  

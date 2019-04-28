@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cfa2d33d949aad49701e5294329349dc231965db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722858"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Задачи и инструкции по запросам интеллектуального анализа данных
   Чтобы воспользоваться моделями интеллектуального анализа данных, чрезвычайно важно грамотно составлять запросы. В этом разделе приведены ссылки на примеры создания запросов к модели интеллектуального анализа данных с помощью средств, предоставляемых в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Дополнительные сведения о том, что представляет собой запрос к модели интеллектуального анализа данных, а также о типах создаваемых запросов см. в разделе [Запрос интеллектуального анализа данных](data-mining-queries.md).  
@@ -46,10 +46,10 @@ ms.locfileid: "48189644"
  [Создание одноэлементного прогнозирующего запроса из шаблона](create-a-singleton-prediction-query-from-a-template.md)  
  Описывает использование средств в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для построения и выполнения прогнозирующего запроса.  
   
- [Создание одноэлементного прогнозирующего запроса из шаблона](create-a-singleton-prediction-query-from-a-template.md)  
+ [создать одноэлементный прогнозирующий запрос из шаблона](create-a-singleton-prediction-query-from-a-template.md)  
  Описывает использование шаблонов, предоставляемых в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , для добавления параметров прогнозирующего запроса.  
   
- [Изменение значения времени ожидания для запросов интеллектуального анализа данных](change-the-time-out-value-for-data-mining-queries.md)  
+ [изменить значение времени ожидания для запросов интеллектуального анализа данных](change-the-time-out-value-for-data-mining-queries.md)  
  Описывает задание на сервере свойств, управляющих поведением запросов, связанных с интеллектуальным анализом данных.  
   
  [Создание запроса содержимого к модели интеллектуального анализа данных](create-a-content-query-on-a-mining-model.md)  
@@ -59,7 +59,7 @@ ms.locfileid: "48189644"
  Описывает создание запросов содержимого модели интеллектуального анализа данных с помощью XMLA-шаблонов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="see-also"></a>См. также  
- [Запрос и справочник по языку выражений &#40;служб Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
- [Хранимые процедуры интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Справочник по языку запросов и выражений (службы Analysis Services)](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
+ [Хранимые процедуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

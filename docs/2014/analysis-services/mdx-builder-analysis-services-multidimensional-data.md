@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b3121646cbcfee823be71b575349b814fbf36c1a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728030"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>Конструктор многомерных выражений (службы Analysis Services - Многомерные Данные)
   Используйте диалоговое окно **Конструктор многомерных выражений** среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] или [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для создания многомерных выражений. Можно отобразить **Конструктор многомерных Выражений** диалоговое окно, нажав кнопку **Изменить многомерное Выражение** кнопку с многоточием (**...** ) для **Разрешить чтение содержимого куба** параметр, **Разрешить чтение содержимого ячейки, зависящее от безопасности ячеек** параметр, или **Разрешить чтение и запись содержимого куба** параметр **данные ячейки** странице **конструктора ролей**.  

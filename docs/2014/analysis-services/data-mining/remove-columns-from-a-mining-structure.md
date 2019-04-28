@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c48f659931fc1329df0a25afd74ff1e7bcc38cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733096"
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>удалить столбцы из структуры интеллектуального анализа данных
   Конструктор интеллектуального анализа данных можно использовать для удаления столбцов структуры интеллектуального анализа данных после ее создания. Возможны следующие причины удаления столбца структуры интеллектуального анализа данных.  

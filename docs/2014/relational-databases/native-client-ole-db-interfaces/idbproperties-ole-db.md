@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3b6dada26e15fc83d890b270ad553eb051bb08fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692182"
 ---
 # <a name="idbproperties-ole-db"></a>IDBProperties (OLE DB)
   Стандартная спецификация OLE DB допускает задание поставщиками VT_EMPTY для `DBPROPINFO::vValues`. Тем не менее [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB для собственного клиента всегда возвращает VT_EMPTY при вызове `IDBProperties::GetPropertyInfo` с `DBPROPSET_ROWSETALL` для извлечения свойств набора строк.  

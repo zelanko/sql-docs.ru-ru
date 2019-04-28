@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee8a63632d54c727051e405dff2f237b58849c2d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817710"
 ---
 # <a name="approval-required-master-data-services"></a>Требуется утверждение (Master Data Services)
 
@@ -50,7 +50,7 @@ ms.locfileid: "52759185"
   
 4.  Нажмите кнопку **Изменить**, выберите **Требуется утверждение**, а затем нажмите кнопку **Сохранить**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Наборы изменений (Master Data Services)](../master-data-services/changesets-master-data-services.md)  
   
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92ceb297f1004770903f4eadd7323bfef98e7cd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711469"
 ---
 # <a name="cursor-properties"></a>Свойства курсора
   Общие характеристики курсора определяются установкой либо типа курсора в стиле ODBC, либо режима работы курсоров SQL-92/ISO. В следующих разделах описываются дополнительные атрибуты инструкций и соединений, влияющие на поведение курсора.  

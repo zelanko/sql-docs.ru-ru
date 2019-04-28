@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c479c8e7026e549c33b838c39017c9063894b607
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828774"
 ---
 # <a name="custom-messages-for-logging"></a>Пользовательские сообщения для ведения журнала
   Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предусматривают большой набор пользовательских событий, предполагающих добавление записей в журнал для пакетов и многих задач. Записывая стандартные события или определенные пользователем сообщения с целью последующего анализа, можно сохранить подробные сведения о процессе выполнения, результатах и проблемах. Например, можно записать, когда начинается и заканчивается массовая вставка, чтобы идентифицировать проблемы с производительностью при выполнении пакета.  

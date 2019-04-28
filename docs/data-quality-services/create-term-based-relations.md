@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 20968e8218eb2440873a60ed3f99ef746ff6f2d2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62862751"
 ---
 # <a name="create-term-based-relations"></a>Создание связей на основе термина
 

@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3545732db24865e47853b023233a127695ada894
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809486"
 ---
 # <a name="server-network-configuration"></a>Сетевая конфигурация сервера
   Задачи сетевой конфигурации сервера включают активацию протоколов, изменение порта или канала, используемого протоколом, настройку шифрования, настройку службы браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , отображение или скрытие компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в сети и регистрацию имени участника-службы сервера. Обычно изменять сетевую конфигурацию сервера не требуется. Проводить перенастройку сетевых протоколов сервера следует только в случае особых требований сети.  

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ca341e5de77a1677e197b4263b554e99956fee9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715141"
 ---
 # <a name="create-a-cross-validation-report"></a>создать отчет перекрестной проверки
   В данном разделе описывается создание отчета перекрестной проверки с помощью вкладки «Диаграмма точности» в конструкторе интеллектуального анализа данных. Дополнительные сведения о том, как выглядит отчет перекрестной проверки, и содержащихся в нем статистических мерах см. в разделе [Перекрестная проверка (службы Analysis Services — интеллектуальный анализ данных)](cross-validation-analysis-services-data-mining.md).  

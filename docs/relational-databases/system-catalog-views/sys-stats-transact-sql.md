@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5150dfbccb6998c69151ca4cf02d9fe88a222830
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856015"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47832373"
 |**object_id**|**int**|Идентификатор объекта, которому принадлежит статистика.|  
 |**name**|**sysname**|Имя статистики. Уникален в пределах объекта.|  
 |**stats_id**|**int**|Идентификатор статистики. Уникален в пределах объекта.<br /><br />Если статистика соответствует индексу, *stats_id* значение совпадает со значением *index_id* значение в [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) представления каталога.|  
-|**флаг auto_created**|**bit**|Указывает, была ли статистика создана автоматически [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0 = статистика не была автоматически создана [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = статистика была автоматически создана [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**auto_created**|**bit**|Указывает, была ли статистика создана автоматически [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0 = статистика не была автоматически создана [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = статистика была автоматически создана [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**user_created**|**bit**|Указывает, была ли статистика создана пользователем.<br /><br /> 0 = статистика не была создана пользователем.<br /><br /> 1 = статистика была создана пользователем.|  
 |**no_recompute**|**bit**|Указывает, была ли статистика создана с помощью **NORECOMPUTE** параметр.<br /><br /> 0 = статистика не была создана с помощью **NORECOMPUTE** параметр.<br /><br /> 1 = Статистика была создана с **NORECOMPUTE** параметр.|  
 |**has_filter**|**bit**|0 = Статистика не имеет фильтр и рассчитывается для всех строк.<br /><br /> 1 = Статистика имеет фильтр и рассчитывается только для строк, которые удовлетворяют определению фильтра.|  

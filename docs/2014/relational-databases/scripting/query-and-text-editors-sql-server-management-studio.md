@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e2f2e0f35f1d910e31bd8f3f93201660fca51c0b
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62867163"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Редакторы запросов и текста (среда SQL Server Management Studio)
   Для интерактивного изменения и проверки скриптов [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , многомерных выражений, расширений интеллектуального анализа данных или XML/A либо изменения простого текстового файла или XML-файла можно использовать один из редакторов среды [!INCLUDE[tsql](../../includes/tsql-md.md)]. В каждом редакторе поддерживается выделение цветом ключевых слов и проверка ошибок синтаксиса и применения для конкретного языка. В редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] есть отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] , с помощью которого можно находить и исправлять ошибки в коде [!INCLUDE[tsql](../../includes/tsql-md.md)] .  

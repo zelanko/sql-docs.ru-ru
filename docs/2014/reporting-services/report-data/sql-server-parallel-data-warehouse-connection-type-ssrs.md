@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c628f8c853879a4c601e1c9529f97fd7877551df
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720677"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Тип соединения с параллельным хранилищем данных SQL Server (SSRS)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] является виртуальным устройством масштабируемого хранилища данных, которое обеспечивает производительность и масштабируемость посредством расширенной параллельной обработки. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] использует базы данных [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] для распределенной обработки и хранения данных.  

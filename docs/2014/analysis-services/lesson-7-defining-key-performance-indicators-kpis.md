@@ -1,5 +1,5 @@
 ---
-title: Занятие 7. Определение ключевых показателей (эффективности KPI) | Документация Майкрософт
+title: 'Занятие 7: Определение ключевых показателей (эффективности KPI) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd6a27cfbbe4a499f6ac2c598e80f30409a37ba2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728219"
 ---
-# <a name="lesson-7-defining-key-performance-indicators-kpis"></a>Занятие 7. Определение ключевых показателей эффективности
+# <a name="lesson-7-defining-key-performance-indicators-kpis"></a>Занятие 7: Определение ключевых показателей эффективности
   На этом занятии обсуждается определение ключевых показателей эффективности в проекте служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Ключевые показатели эффективности предоставляют среду для определения вычислений по мерам деятельности организации на стороне сервера, а также приводят к единому виду отображения результатов. Ключевые показатели эффективности могут отображаться в отчетах, на порталах и инструментальных панелях, через API-интерфейсы доступа к данным, а также с использованием средств [!INCLUDE[msCoName](../includes/msconame-md.md)] и средств сторонних производителей. Ключевые показатели эффективности представляют собой упакованные в метаданные обычные меры и иные многомерные выражения. Дополнительные сведения см. в разделе [Ключевые показатели эффективности в многомерных моделях](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md).  
   
 > [!NOTE]  

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 50e6eeb4c2f2a8ba5b1ce6430111586e6e3b8207
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722700"
 ---
 # <a name="data-mining-solutions"></a>Решения интеллектуального анализа данных
   Решение по интеллектуальному анализу данных представляет собой решение служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , которое содержит один или несколько проектов интеллектуального анализа данных.  

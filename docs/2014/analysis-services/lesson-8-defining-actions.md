@@ -1,5 +1,5 @@
 ---
-title: Занятие 8. Определение действий | Документация Майкрософт
+title: Урок 8. Определение действий | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92abf8eb92301af8dd3bf32d5ac5f6a38b1b5481
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728199"
 ---
-# <a name="lesson-8-defining-actions"></a>Занятие 8. Определение действий
+# <a name="lesson-8-defining-actions"></a>Урок 8. Определение действий
   На этом занятии определяются действия в проекте служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Действие представляет собой инструкцию многомерных выражений, хранимую в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , которая может быть включена в клиентские приложения и выполнена пользователем.  
   
 > [!NOTE]  

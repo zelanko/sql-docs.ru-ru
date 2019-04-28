@@ -14,13 +14,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f6123f66d687327ba56601419328e44fd920a2a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815755"
 ---
-# <a name="always-on-availability-groups-interoperability-sql-server"></a>Группы доступности AlwaysOn Совместимость (SQL Server)
+# <a name="always-on-availability-groups-interoperability-sql-server"></a>Группы доступности AlwaysOn Взаимодействие (SQL Server)
   В этом разделе описывается совместимость [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] с другими функциями [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 
@@ -36,7 +36,7 @@ ms.locfileid: "53368008"
 |Шифрование базы данных|[Зашифрованные базы данных с группами доступности AlwaysOn &#40;SQL Server&#41;](encrypted-databases-with-always-on-availability-groups-sql-server.md)|  
 |Моментальные снимки базы данных|[Моментальные снимки с группами доступности AlwaysOn для баз данных &#40;SQL Server&#41;](database-snapshots-with-always-on-availability-groups-sql-server.md)|  
 |FILESTREAM и FileTable|[FILESTREAM и FileTable с группами доступности AlwaysOn &#40;SQL Server&#41;](filestream-and-filetable-with-always-on-availability-groups-sql-server.md)|  
-|Полнотекстовый поиск|Примечание. Полнотекстовые индексы синхронизируются с базами данных-получателями AlwaysOn.|  
+|Полнотекстовый поиск|Примечание. Полнотекстовые индексы синхронизируются с базами данных-получателя AlwaysOn.|  
 |доставка журналов;|[Необходимые условия для перехода от использования доставки журналов для групп доступности AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)|  
 |Удаленное хранилище больших двоичных объектов|[Remote Blob Store &#40;RBS&#41; и группы доступности AlwaysOn &#40;SQL Server&#41;](remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)|  
 |Репликация[Настройка репликации для групп доступности AlwaysOn (SQL Server)](configure-replication-for-always-on-availability-groups-sql-server.md)<br /><br /> [Обслуживание базы данных публикации AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)<br /><br /> [Репликация, отслеживание изменений, измененных данных и групп доступности AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)<br /><br /> [Подписчики репликации и группы доступности AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)|  

@@ -1,5 +1,5 @@
 ---
-title: Занятие 9. Определение перспектив и переводов | Документация Майкрософт
+title: Урок 9. Определение перспектив и переводов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a9bad2db754aca80d6cf1501a0c178f694e9210
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728100"
 ---
-# <a name="lesson-9-defining-perspectives-and-translations"></a>Занятие 9. Определение перспектив и переводов
+# <a name="lesson-9-defining-perspectives-and-translations"></a>Урок 9. Определение перспектив и переводов
   На этом занятии предстоит изучить, как определять перспективы и переводы. Определение перспектив позволяет снизить сложность куба, а определение переводов позволяет пользователям просматривать метаданные куба на разных языках.  
   
 > [!NOTE]  

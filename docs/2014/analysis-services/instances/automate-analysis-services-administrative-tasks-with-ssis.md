@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d5d1b3d68038843e15717564e25cb88c181c2bda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729972"
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>Автоматизация административных задач служб Analysis Services с помощью служб SSIS
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] позволяют автоматизировать выполнение скриптов DDL, задач по обработке кубов и моделей интеллектуального анализа данных, а также задач запросов интеллектуального анализа данных. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно рассматривать как набор задач потока управления и задач по обслуживанию, которые можно соединять, образуя последовательные и параллельные задания по обработке данных.  
@@ -41,8 +41,8 @@ ms.locfileid: "48099264"
 ## <a name="see-also"></a>См. также  
  [Назначение обработки секции](../../integration-services/data-flow/partition-processing-destination.md)   
  [Назначение «Обработка измерений»](../../integration-services/data-flow/dimension-processing-destination.md)   
- [Преобразование «запрос интеллектуального анализа данных»](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)   
+ [Преобразование «Запрос интеллектуального анализа данных»](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)   
  [Обработка объектов многомерной модели](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Скрипты для административных задач в службах Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
+ [Создание скриптов для административных задач в службах Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   
   

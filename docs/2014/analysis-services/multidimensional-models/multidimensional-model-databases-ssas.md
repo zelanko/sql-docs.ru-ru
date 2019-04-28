@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adba97ff78d22ef2e82bb53065952a716f71a1d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699233"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Базы данных многомерной модели (службы SSAS)
   База данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] — это коллекция источников данных, представлений источников данных, кубов, измерений и ролей. База данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может также включать структуры для интеллектуального анализа данных и пользовательские сборки, позволяющие добавлять в базу данных определяемые пользователем функции.  
@@ -50,19 +50,19 @@ ms.locfileid: "48082804"
   
  [Перемещение базы данных служб Analysis Services](move-an-analysis-services-database.md)  
   
- [Переименование многомерной базы данных &#40;служб Analysis Services&#41;](rename-a-multidimensional-database-analysis-services.md)  
+ [Переименование многомерной базы данных (службы Analysis Services)](rename-a-multidimensional-database-analysis-services.md)  
   
  [Уровень совместимости многомерной базы данных &#40;служб Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
   
- [Задание свойств многомерной базы данных &#40;служб Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
+ [Задание свойств многомерной базы данных (службы Analysis Services)](set-multidimensional-database-properties-analysis-services.md)  
   
  [Синхронизация баз данных служб Analysis Services](synchronize-analysis-services-databases.md)  
   
  [Переключение базы данных служб Analysis Services между режимами ReadOnly и ReadWrite](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
 ## <a name="see-also"></a>См. также  
- [Подключение в режиме в сети для базы данных служб Analysis Services](connect-in-online-mode-to-an-analysis-services-database.md)   
- [Создание проекта служб Analysis Services &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
+ [Подключение в режиме «в сети» к базе данных служб Analysis Services](connect-in-online-mode-to-an-analysis-services-database.md)   
+ [Создание проекта служб Analysis Services (среда SSDT)](create-an-analysis-services-project-ssdt.md)   
  [Запрос многомерных данных с помощью многомерных выражений](mdx/querying-multidimensional-data-with-mdx.md)  
   
   

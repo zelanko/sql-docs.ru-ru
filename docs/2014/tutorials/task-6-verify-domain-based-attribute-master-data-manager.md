@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ef3d063db5578485e89dc18b4a5e93af800b15fe
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866196"
 ---
 # <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Задача 6. Убедитесь, что атрибут на основе домена создан с помощью диспетчера основных данных
   В этой задаче вы проверите, создана ли сущность **Штат** в службах **MDS** и является ли атрибут **Штат** сущности **Поставщик** атрибутом на основе домена, который зависит от сущности **Штат**, с помощью **диспетчера основных данных**.  

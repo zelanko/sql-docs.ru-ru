@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5665db92828c5a6ea6a6d94587414dc6b411a01b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726808"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Создание локальной секции и управление ей (Analysis Services)
   Для улучшения производительности обработки можно создать дополнительные секции для группы мер. Несколько секций позволяют разделять фактические данные между соответствующим числом файлов физических данных на локальном и удаленных серверах. В службах Analysis Services секции могут обрабатываться параллельно, что дает больше контроля над процессом обработки рабочих нагрузок на сервере.  
@@ -123,8 +123,8 @@ ms.locfileid: "48091304"
  В качестве последнего действия обычно необходимо удалить секцию по умолчанию, которая была основана на самой таблице (если она еще есть), иначе секции, основанные на запросах, будут перекрываться с запросом, основанным на полной таблице.  
   
 ## <a name="see-also"></a>См. также  
- [Секции &#40;службы Analysis Services — многомерные данные&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Секции (службы Analysis Services — многомерные данные)](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Удаленные секции](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Слияние секций в службах Analysis Services &#40;службы SSAS — многомерные&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Объединение секций в службах Analysis Services (службы SSAS  — многомерные данные)](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1413171abde49f8ae35ef55664135ba924cee5f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715061"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Создание одноэлементного запроса в конструкторе интеллектуального анализа данных
   Одноэлементный запрос используется при необходимости создать прогноз для одного объекта. Дополнительные сведения об одноэлементных запросах см. в разделе [Запросы интеллектуального анализа данных](data-mining-queries.md).  
@@ -81,6 +81,6 @@ AS [t]
      Откроется новый экран, в котором отобразится результат запроса. Чтобы просмотреть созданную DMX-инструкцию, щелкните **SQL**.  
   
 ## <a name="see-also"></a>См. также  
- [Прогнозирующие запросы &#40;интеллектуального анализа данных&#41;](prediction-queries-data-mining.md)  
+ [Прогнозирующие запросы (интеллектуальный анализ данных)](prediction-queries-data-mining.md)  
   
   

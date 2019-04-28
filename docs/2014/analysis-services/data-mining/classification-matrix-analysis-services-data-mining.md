@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7949729f3ebee87d06e5e591c46513c111b70016
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62718181"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>Матрица классификации (службы Analysis Services — интеллектуальный анализ данных)
   *Матрица классификации* сортирует все варианты из модели по категориям, определяя, соответствовало ли прогнозируемое значение действительному. Затем все варианты в каждой категории пересчитываются, и полученные количества выводятся в виде матрицы. Матрица классификации — это стандартный инструмент для оценки статистических моделей, иногда ее называют *матрицей противоречий*.  

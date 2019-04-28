@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adbed9b575be07354cfe1d1a3bf5f2c0526f458c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722852"
 ---
 # <a name="data-mining-model-viewers"></a>Средства просмотра моделей интеллектуального анализа данных
   После обучения модели интеллектуального анализа данных в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно просматривать модель для поиска интересующих трендов. Ввиду того что результаты моделей интеллектуального анализа данных сложны для понимания в необработанном формате, визуальное исследование данных часто представляет собой самый простой путь к пониманию правил и связей, которые алгоритмы обнаруживают в данных.  
@@ -83,7 +83,7 @@ ms.locfileid: "48068864"
  Описывает подробные сведения, доступные в общем средстве просмотра для всех моделей интеллектуального анализа данных, и содержит примеры интерпретации информации для каждого алгоритма.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining-algorithms-analysis-services-data-mining.md)   
  [Конструктор интеллектуального анализа данных](data-mining-designer.md)  
   
   

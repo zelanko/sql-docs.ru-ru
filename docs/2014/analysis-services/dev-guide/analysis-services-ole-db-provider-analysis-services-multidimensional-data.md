@@ -13,11 +13,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0af68d7aa25d00f257399ade415e0287dd275fe
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732190"
 ---
 # <a name="analysis-services-ole-db-provider-analysis-services---multidimensional-data"></a>Поставщик OLE DB служб Analysis Services (службы Analysis Services — многомерные данные)
   Поставщик Analysis Services OLE DB — интерфейс для приложения, взаимодействующие с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Используется для построения клиентских приложений, взаимодействующих с многомерными данными. Этот поставщик также предоставляет методы для интеллектуального анализа многомерных данных и реляционных данных как в сети, так и вне сети. Поставляется в составе служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Его можно распространять в сторонних клиентских приложениях.  

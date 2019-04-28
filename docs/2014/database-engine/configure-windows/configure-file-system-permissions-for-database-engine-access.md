@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b23ed3a3a1f128d24bfec2a0066e63b09753311a
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62811328"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Настройка разрешений файловой системы для доступа к компоненту ядра СУБД
   В этом разделе описана процедура предоставления компоненту [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]доступа к тому расположению в файловой системе, где хранятся файлы базы данных. Служба компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] должна иметь разрешение файловой системы Windows для доступа к папке, в которой хранятся файлы базы данных. Разрешение на расположение по умолчанию задается во время установки. Если файла базы данных размещаются в другом расположении, то необходимо выполнить эти действия, чтобы предоставить компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] разрешение полного доступа к этому расположению.  

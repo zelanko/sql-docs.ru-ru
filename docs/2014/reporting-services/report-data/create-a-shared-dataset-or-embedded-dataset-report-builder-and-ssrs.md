@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dc91e50c96018e14066f6e6cc0ad4625c128b639
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62697496"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)
   Можно создавать внедренные наборы данных для использования в отдельных отчетах или общие наборы данных для сохранения на сервере отчетов и использования в нескольких отчетах. Для создания набора данных необходим внедренный или общий источник данных.  

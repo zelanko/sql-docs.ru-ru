@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c8306a7d8e3247e77579d0bebc9147c3f9a1cc56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863491"
 ---
 # <a name="move-method-ado"></a>Метод Move (ADO)
 Перемещает положение элемента текущей записи в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -39,7 +39,7 @@ recordset.Move NumRecords, Start
  Со знаком **Long** выражение, указывающее количество записей, перемещает текущую позицию записи.  
   
  *Запуск*  
- Необязательный параметр. Объект **строка** значение или **Variant** , результатом которого является закладка. Можно также использовать [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) значение.  
+ Необязательный. Объект **строка** значение или **Variant** , результатом которого является закладка. Можно также использовать [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) значение.  
   
 ## <a name="remarks"></a>Примечания  
  **Переместить** метод поддерживается на всех **записей** объектов.  

@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 36f447ce365f25135a521ea7e1760599aa17f9bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812598"
 ---
 # <a name="compare-files"></a>Сравнение файлов
   Сравнение файлов применяется для выяснения истории изменения файла до текущего состояния. Например, если в сборке проекта кода обнаружен дефект после возврата определенной версии исходного файла в систему управления версиями, можно сравнить текущую версию файла с предыдущей. Это поможет выявить код, вызвавший дефект.  

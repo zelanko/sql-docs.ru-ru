@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0be8ed6cf2a163b3c195cfb5e4e18440549b501c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815729"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>Использование мастера добавления базы данных в группу доступности (среда SQL Server Management Studio)
   Используйте мастер добавления базы данных в группу доступности для добавления одной или нескольких баз данных в существующую группу доступности AlwaysOn.  
@@ -30,13 +30,13 @@ ms.locfileid: "48055643"
   
  **В этом разделе:**  
   
--   **Перед началом работы**  
+-   **Перед началом:**  
   
      [Требования и ограничения](#Prerequisites)  
   
      [безопасность](#Security)  
   
--   **Чтобы добавить базу данных, воспользуйтесь инструкциями из раздела:**  [Мастер добавления базы данных в группу доступности (среда SQL Server Management Studio)](#SSMSProcedure)  
+-   **Добавление базы данных, с помощью:**  [Добавление базы данных мастер группы доступности (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  Если еще не приходилось добавлять базу данных в группу доступности, см. в разделе «Базы данных доступности» в [условия, ограничения и рекомендации для групп доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  

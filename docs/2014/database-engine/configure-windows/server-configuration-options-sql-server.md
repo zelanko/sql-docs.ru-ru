@@ -28,11 +28,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 645aee1374f7dbf3c290500bb35ca47115983670
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809572"
 ---
 # <a name="server-configuration-options-sql-server"></a>Параметры конфигурации сервера (SQL Server)
   Управление и оптимизация ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] производятся на основе параметров конфигурации с применением среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или системной хранимой процедуры sp_configure. Наиболее часто используемые параметры конфигурации сервера доступны в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]; доступ ко всем параметрам конфигурации можно получить при помощи sp_configure. Взвесьте возможные последствия для системы, прежде чем устанавливать эти параметры. Дополнительные сведения см. в разделе [Просмотр или изменение свойств сервера (SQL Server)](view-or-change-server-properties-sql-server.md).  

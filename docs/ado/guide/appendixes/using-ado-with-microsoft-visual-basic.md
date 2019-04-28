@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d409f874e9fcec059c01ddef91d83d8a70fdeb47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864520"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Использование ADO с Microsoft Visual Basic и Visual Basic для приложений
 Настройка в проект ADO и написания кода ADO аналогично ли вы использовать Visual Basic или Visual Basic для приложений. Этот раздел описывает, с помощью ADO в Visual Basic и Visual Basic для приложений и отмечает все различия.
@@ -64,7 +64,7 @@ ms.locfileid: "47694182"
 4.  Нажмите кнопку **ОК**.
 
 ## <a name="creating-ado-objects-in-visual-basic"></a>Создание объектов ADO в Visual Basic
- Чтобы создать переменную службы автоматизации и экземпляр объекта для этой переменной, можно использовать два метода: **Dim** или **CreateObject**.
+ Чтобы создать переменную службы автоматизации и экземпляр объекта для этой переменной, можно использовать два метода: **DIM** или **CreateObject**.
 
 ### <a name="dim"></a>Dim
  Можно использовать **New** ключевого слова with **Dim** объявления и создания экземпляров объектов ADO за один шаг:

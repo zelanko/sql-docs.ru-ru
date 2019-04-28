@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 171bb649f5e4f91df947ed2a0a3113786755efe4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828651"
 ---
 # <a name="data-flow-taps"></a>Вкладки «Поток данных»
   В [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] представлена новая функция, которая позволяет добавить отвод данных в путь потока данных пакета во время выполнения и перенаправить отвод данных во внешний файл. Для использования этой функции следует развернуть проект служб SSIS на сервере служб SSIS с помощью модели развертывания проекта. После развертывания пакета на сервере до выполнения пакета следует выполнить T-SQL скрипты на базе данных SSISDB, чтобы добавить отводы данных. Пример сценария.  
@@ -68,7 +68,7 @@ EXEC [SSISDB].[catalog].remove_data_tap @tap_id
 ```  
   
 ## <a name="listing-all-data-taps"></a>Перечисление всех отводов данных  
- С помощью представления add_data_tap можно перечислить все отводы данных. В следующем примере показано, как извлечь отводы данных для экземпляра выполнения спецификации (ID: 54).  
+ С помощью представления add_data_tap можно перечислить все отводы данных. Следующий пример извлекает отводы данных для экземпляра выполнения спецификации (ID: 54).  
   
 ```  
 select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid  

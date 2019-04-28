@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf59757e72b8892e0b32202d9e7f5dc9a3d66be3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728185"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Расположение файлов базы данных» (службы Analysis Services — многомерные данные)
   Диалоговое окно **Расположение файлов базы данных** отображает список доступных файлов в папках журналов и данных, определенных для экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Можно выбрать файл из списка или, при необходимости, указать другую папку и файл. Способы вызова диалогового окна **Расположение файлов базы данных** :  

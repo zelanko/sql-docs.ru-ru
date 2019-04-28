@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 343975c2c6ad39c67dcd10c0d55886d21e69f3f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711562"
 ---
 # <a name="using-autofetch-with-odbc-cursors"></a>Использование автоматической выборки с помощью курсоров ODBC
   При подключении к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента поддерживает автоматическую выборку при использовании любого типа серверного курсора. С помощью автоматической выборки **SQLExecute** или **SQLExecDirect** функция, открывающая курсор также использует неявную [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)функция (SQL_FIRST). Строки, составляющие первый набор строк, возвращаются в привязанные переменные приложения в ходе выполнения инструкции; это позволяет сэкономить одно обращение через сеть к серверу [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) не поддерживается, если включен параметр автоматической выборки; столбцы результирующего набора должны быть привязаны к переменным программы.  

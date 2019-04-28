@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fd22b4419b8300fdaf8db6e98a3eab9683fd226e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62698418"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Учебник. Создание стандартного отчета с диаграммой автономный режим (построитель отчетов)
   В этом учебнике будет создана круговая диаграмма с помощью мастера, а затем она будет немного изменена, чтобы получить общее представление о том, что можно сделать. Задания этого учебника вы можете выполнить двумя различными способами. Оба метода имеют же результат a круговой диаграммы как показано на следующем рисунке:  

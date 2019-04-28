@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 71eef27236a42f7e1869cb619b7ba557785ba4e7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717753"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship и правило упорядочения ключа (SQLXML 4.0)
   Поскольку при массовой загрузке XML записи создаются в момент включения узлов в область действия, а затем отправляются в Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], то при их выходе из области действия данные для этих записей должны находиться в пределах области действия узла.  
@@ -115,7 +115,7 @@ ms.locfileid: "52787186"
     set objBL=Nothing  
     ```  
   
-     В результате массовая загрузка XML вставит значение NULL во внешний ключевой столбец CustomerID в таблице CustOrder. Если изменить данные образца XML таким образом, чтобы  **\<CustomerID >** дочерний элемент находился перед  **\<порядок >** дочерний элемент, вы получаете ожидаемый результат: массовая загрузка XML вставит указанное значение внешнего ключа в столбец.  
+     В результате массовая загрузка XML вставит значение NULL во внешний ключевой столбец CustomerID в таблице CustOrder. Если изменить данные образца XML таким образом, чтобы  **\<CustomerID >** дочерний элемент находился перед  **\<порядок >** дочерний элемент, вы получаете ожидаемый результат: Массовая загрузка XML вставит указанное значение внешнего ключа в столбец.  
   
  Эквивалентная схема XDR:  
   

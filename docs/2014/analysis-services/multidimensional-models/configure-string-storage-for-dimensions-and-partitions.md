@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29f5e6952c733ac56671e48fd1ec809b3f0ab329
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700934"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Настройка хранилища строк для измерений и секций
   Можно изменить конфигурацию хранилища строк, чтобы оно обеспечивало хранение очень больших строк в атрибутах измерений или секциях, превышающих предельный размер файла в 4 ГБ для хранилищ строк. Если измерения или секции содержат хранилища строк такого размера, можно обойти ограничение размера файла, изменив свойство **StringStoresCompatibilityLevel** на уровне измерения или секции для локальных, а также связанных объектов (локальных или удаленных).  
@@ -62,7 +62,7 @@ ms.locfileid: "48060394"
   
  Уровню совместимости базы данных должно быть присвоено значение 1100. Если база данных создавалась или развертывалась с использованием [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] и [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или более поздней версии [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], то уровень совместимости базы данных уже установлен в значение 1100. Если база данных, созданная в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] более ранней версии, перемещалась в ssSQL11 или более позднюю версию, необходимо обновить уровень совместимости. Для баз данных, которые перемещаются без повторного развертывания, можно задать уровень совместимости в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Дополнительные сведения см. в разделе [установить уровень совместимости многомерной базы данных &#40;служб Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
-##  <a name="bkmk_step1"></a> Шаг 1. Задание свойства StringStoreCompatiblityLevel в SQL Server Data Tools  
+##  <a name="bkmk_step1"></a> Шаг 1. Задание свойства StringStoreCompatiblityLevel в SQL Server Data Tools  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект, содержащий измерения или секции, которые необходимо изменить.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48060394"
   
 8.  Сохраните файл.  
   
-##  <a name="bkmk_step2"></a> Шаг 2. Обработка объектов  
+##  <a name="bkmk_step2"></a> Шаг 2. Обработка объектов  
  После обработки объектов будет использоваться новая архитектура хранилища. Обработка объектов также подтверждает успешное разрешение проблемы с ограничением размера хранилища, поскольку сообщение об ошибке переполнения хранилища строк больше не возникает.  
   
 -   В обозревателе решений щелкните правой кнопкой мыши только что измененное измерение и выберите пункт **Обработать**.  
@@ -88,9 +88,9 @@ ms.locfileid: "48060394"
  Следует использовать параметр «Обработка. Полная» для каждого объекта, который использует новую архитектуру хранилища строк. До обработки обязательно выполните анализ влияния для измерения, чтобы проверить необходимость повторной обработки зависимых объектов.  
   
 ## <a name="see-also"></a>См. также  
- [Средства и способы обработки &#40;служб Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
- [Настройка параметров обработки &#40;служб Analysis Services&#41;](processing-options-and-settings-analysis-services.md)   
- [Режимы хранения и обработки](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
+ [Средства и способы обработки (службы Analysis Services)](tools-and-approaches-for-processing-analysis-services.md)   
+ [Настройка параметров обработки (службы Analysis Services)](processing-options-and-settings-analysis-services.md)   
+ [Режимы хранения и обработка секции](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [Хранение измерений](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   

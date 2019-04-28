@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc4d831d2c6b42a591dff5fc3c8424a55ac91062
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725142"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>Визуальные и невизуальные итоги
   Visual Totals — это итоги в конце столбца или строки, которые представляют собой сумму всех элементов, видимых в столбце или строке. Это поведение применяется по умолчанию при отображении большинства таблиц. Но иногда нужно, чтобы в таблице отображались только определенные столбцы, а итоги выводились для всей строки, в том числе для неотображаемых столбцов. Такие итоги принято называть `Non Visual Totals`, поскольку они складываются из видимых и невидимых значений.  
@@ -91,19 +91,19 @@ ms.locfileid: "48197054"
 |||||  
 |-|-|-|-|  
 ||Все продукты|Accessories|Clothing|  
-|Все торговые посредники|$ 73 694 430,80|$ 506 172,45|$ 1 524 906,93|  
+|All Resellers|$ 73 694 430,80|$ 506 172,45|$ 1 524 906,93|  
 |Value Added Reseller|$ 34 967 517,33|$ 175 002,81|$ 592 385,71|  
 |Warehouse|$ 38 726 913,48|$ 331 169,64|$ 932 521,23|  
   
  При сравнении с предыдущими результатами можно заметить, что в строке [All Resellers] складываются отображаемые значения [Value Added Reseller] и [Warehouse], однако столбец [All Products] отображает общее значение для всех продуктов, включая те, которые не отображаются.  
   
 ## <a name="see-also"></a>См. также  
- [Основные понятия многомерных выражений &#40;служб Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [Автоматическая проверка существования](autoexists.md)   
- [Работа с элементами, кортежами и наборами &#40;многомерных Выражений&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [Основные принципы запросов многомерных Выражений &#40;служб Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [Базовый запрос многомерных Выражений &#40;многомерных Выражений&#41;](mdx-query-the-basic-query.md)   
- [Ограничение запроса с помощью осей запроса и среза &#40;многомерных Выражений&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
- [Определение контекста куба в запросе &#40;многомерных Выражений&#41;](establishing-cube-context-in-a-query-mdx.md)  
+ [Основные понятия многомерных выражений (службы Analysis Services)](../key-concepts-in-mdx-analysis-services.md)   
+ [Autoexists](autoexists.md)   
+ [Работа с элементами, кортежами и наборами (многомерные выражения)](working-with-members-tuples-and-sets-mdx.md)   
+ [Основные принципы запросов многомерных выражений (службы Analysis Services)](mdx-query-fundamentals-analysis-services.md)   
+ [Базовый запрос многомерных выражений (многомерные выражения)](mdx-query-the-basic-query.md)   
+ [Ограничение запроса с помощью осей запроса и среза (многомерные выражения)](mdx-query-and-slicer-axes-restricting-the-query.md)   
+ [Определение контекста куба в запросе (многомерные выражения)](establishing-cube-context-in-a-query-mdx.md)  
   
   
