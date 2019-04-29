@@ -27,11 +27,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b297d329f11e05ed1b1995004150644e4b76ec9b
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874840"
 ---
 # <a name="mapping-clr-parameter-data"></a>Сопоставление данных о параметрах CLR
   В следующей таблице перечислены [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных, их эквиваленты в системе common language runtime (CLR) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в `System.Data.SqlTypes` пространства имен и их собственные эквиваленты CLR в [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
@@ -110,8 +110,8 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**Тип данных CLR (SQL Server)**|**Тип данных SQL Server**|  
-|`Decimal`|SMALLMONEY|  
-|`SqlMoney`|SMALLMONEY|  
+|`Decimal`|smallmoney|  
+|`SqlMoney`|smallmoney|  
 |`Decimal`|money|  
 |`DateTime`|smalldatetime|  
 |`SQLDateTime`|smalldatetime|  

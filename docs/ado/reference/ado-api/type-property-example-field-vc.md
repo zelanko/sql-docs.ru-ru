@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3185f7666d628b6461c3ae3a432393a6965be89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910446"
 ---
 # <a name="type-property-example-field-vc"></a>Пример свойства Type (объект Field) (Visual C++)
 В этом примере показано [тип](../../../ado/reference/ado-api/type-property-ado.md) свойство, отображая имя константы, которая соответствует значению **тип** всех [поле](../../../ado/reference/ado-api/field-object.md) объектов в ***Сотрудников*** таблицы. Функция FieldType является обязательным для выполнения этой процедуры.  
@@ -158,15 +158,15 @@ void PrintComError(_com_error &e) {
  **Имя: emp_id**  
  **Тип: adChar**  
  **Имя: fname**  
- **Тип: adVarChar**  
+ **Type: adVarChar**  
  **Имя: minit**  
  **Тип: adChar**  
  **Имя: lname**  
- **Тип: adVarChar**  
+ **Type: adVarChar**  
  **Имя: job_id**  
  **Тип: adSmallInt**  
  **Имя: job_lvl**  
- **Тип: adUnsignedTinyInt**  
+ **Type: adUnsignedTinyInt**  
  **Имя: pub_id**  
  **Тип: adChar**  
  **Имя: hire_date**  

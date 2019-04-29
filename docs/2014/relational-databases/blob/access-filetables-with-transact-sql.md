@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 28447ca0e1e503e73826aba5e02b22bf71cff6c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920311"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Доступ к таблицам FileTable с помощью Transact-SQL
   Описывает, как команды языка обработки данных DML [!INCLUDE[tsql](../../includes/tsql-md.md)] работают c таблицами FileTable.  
@@ -72,6 +72,6 @@ ms.locfileid: "48209694"
  [выполнить загрузку файлов в таблицу FileTables](load-files-into-filetables.md)   
  [Работа с каталогами и путями в таблицах FileTable](work-with-directories-and-paths-in-filetables.md)   
  [Доступ к таблицам FileTable с помощью API-интерфейсов ввода-вывода файлов](access-filetables-with-file-input-output-apis.md)   
- [Инструкции DDL, функции, хранимые процедуры и представления для FileTable](../views/views.md)  
+ [Инструкции FileTable языка DDL, функции, хранимые процедуры и представления](../views/views.md)  
   
   

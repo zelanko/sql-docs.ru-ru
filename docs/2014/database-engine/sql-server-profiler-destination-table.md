@@ -16,18 +16,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6b48d02ff1ed38f2c2e49d509ef6c483af4cc44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842745"
 ---
 # <a name="sql-server-profiler---destination-table"></a>Приложение SQL Server Profiler — Целевая таблица
   Диалоговое окно **Целевая таблица** используется для указания таблицы, в которой необходимо хранить трассировку.  
   
 ## <a name="options"></a>Параметры  
  **SQL Server**  
- Указывает экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], к которому в данный момент установлено подключение. Это поле заполняется автоматически и не может быть изменено. Чтобы изменить сервер, нажмите **Отмена** и подключитесь к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , на котором необходимо хранить таблицу трассировки.  
+ Указывает экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , к которому в данный момент установлено подключение. Это поле заполняется автоматически и не может быть изменено. Чтобы изменить сервер, нажмите **Отмена** и подключитесь к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , на котором необходимо хранить таблицу трассировки.  
   
  **База данных**  
  Позволяет указать базу данных, в которой необходимо хранить таблицу трассировки.  
@@ -39,7 +39,7 @@ ms.locfileid: "48227564"
  Позволяет указать имя таблицы, в которой необходимо хранить трассировку.  
   
 ## <a name="see-also"></a>См. также  
- [Сохранение результатов трассировки в таблицу &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
+ [Сохранение результатов трассировки в таблицу (приложение SQL Server Profiler)](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
  [Шаблоны и разрешения приложения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Приложение SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   

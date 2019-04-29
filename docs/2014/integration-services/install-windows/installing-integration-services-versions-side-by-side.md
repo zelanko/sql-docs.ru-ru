@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3bc3c5ca8209c3b04aabdfc7fb27e7ce014121e3
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892956"
 ---
 # <a name="interoperability-and-coexistence-integration-services"></a>Функциональная совместимость и параллельная работа (службы Integration Services)
   Службы [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) могут работать совместно со службами [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services и [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services.  

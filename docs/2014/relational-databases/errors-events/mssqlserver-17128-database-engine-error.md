@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a73f2469c38d611b95e3446e80755687f40346e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62869712"
 ---
 # <a name="mssqlserver17128"></a>MSSQLSERVER_17128
     
@@ -30,7 +30,7 @@ ms.locfileid: "52507042"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|INIT_NOBUFSPACE|  
-|Текст сообщения|initdata: Недостаточно памяти для буферов ядра.|  
+|Текст сообщения|исходные данные: Недостаточно памяти для буферов ядра.|  
   
 ## <a name="explanation"></a>Объяснение  
  Не удается провести начальное выделение памяти из буферного пула или резервирование памяти. SQL Server завершает работу.  

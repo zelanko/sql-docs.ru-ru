@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 29addb89a5713b32b98df374a673fff4d549d771
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62853449"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Общие сведения о поставщике Microsoft OLE DB удаленного взаимодействия
 Поставщик Microsoft OLE DB удаленного взаимодействия позволяет локального пользователя на клиентском компьютере для вызова поставщиков данных на удаленном компьютере. Укажите параметры поставщика данных для удаленного компьютера, как это делается, если локальный пользователь на удаленном компьютере. Затем укажите параметры, используемые поставщиком удаленного взаимодействия для доступа к удаленной машине. Можно затем получить удаленный компьютер, как если бы вы были локального пользователя.

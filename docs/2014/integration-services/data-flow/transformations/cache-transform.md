@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 301a6b6970c03b620783af7ca176de34846557d9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900808"
 ---
 # <a name="cache-transform"></a>преобразование кэша
   Преобразование «Преобразование кэша» создает ссылочный набор данных для преобразования «Уточняющий запрос», выполняя запись из подключенного источника данных в потоке данных в диспетчер соединений с кэшем. Преобразование «Подстановка» выполняет подстановки, соединяя данные из входных столбцов подключенного источника данных и данные из столбцов в связанной базе данных.  

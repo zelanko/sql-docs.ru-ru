@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2d3b785785e9f3481b8dfb5f661b4b78f1923629
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836358"
 ---
 # <a name="connecting-data-flow-components-programmatically"></a>Программное соединение компонентов потока данных
   После добавления компонентов в задачу потока данных их следует соединить, чтобы создать дерево выполнения, представляющее поток данных из источников через преобразования в назначения. Объекты <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> используются для соединения компонентов в потоке данных.  

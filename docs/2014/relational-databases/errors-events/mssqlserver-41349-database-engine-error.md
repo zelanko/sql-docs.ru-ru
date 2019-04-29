@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c5bd805a6c737862adbfe9fdef507e61d4035eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914020"
 ---
 # <a name="mssqlserver41349"></a>MSSQLSERVER_41349
     
@@ -30,7 +30,7 @@ ms.locfileid: "48083674"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|HK_ENCRYPTION_ON|  
-|Текст сообщения|Предупреждение. Шифрование включено для базы данных, содержащей одну или несколько оптимизированных в памяти таблиц с долговечностью SCHEMA_AND_DATA. Данные в этих оптимизированных для памяти таблицах зашифрованы не будут.|  
+|Текст сообщения|Предупреждение: Шифрование было включено для базы данных, которая содержит один или несколько оптимизированных для памяти таблиц с устойчивостью SCHEMA_AND_DATA. Данные в этих оптимизированных для памяти таблицах зашифрованы не будут.|  
   
 ## <a name="see-also"></a>См. также  
  [Выполняющаяся в памяти OLTP (оптимизация в памяти)](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

@@ -1,5 +1,5 @@
 ---
-title: Шаг 3. Добавление пакетов и других файлов | Документация Майкрософт
+title: Шаг 3. Добавление пакетов и других файлов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7db3e293c95b358d78e445e6b7534f90ea7b9310
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892211"
 ---
 # <a name="step-3-adding-packages-and-other-files"></a>Шаг 3. Добавление пакетов и других файлов
   В этой задаче к проекту, созданному в предыдущей задаче учебника по развертыванию, добавляются существующие пакеты, вспомогательные файлы для поддержки отдельных пакетов, а также файл сведений. Например, будет добавлен файл XML-данных, содержащий данные для пакета, и текстовый файл Readme с данными о всех пакетах проекта.  

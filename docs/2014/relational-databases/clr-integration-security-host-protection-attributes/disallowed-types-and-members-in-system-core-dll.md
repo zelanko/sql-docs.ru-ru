@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f078caae791e4009a309e7cc70d7af333ca4c90f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919558"
 ---
 # <a name="disallowed-types-and-members-in-systemcoredll"></a>Недопустимые типы и элементы в библиотеке System.Core.dll
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] общего программирования интеграции (со средой CLR) языка не допускает использования типа или члена, имеющего `HostProtectionAttribute` , указывающий `System.Security.Permissions.HostProtectionResource` перечисление со значением `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **SharedState**, `Synchronization`, или `UI`. В следующей таблице перечислены элементы и типы сборок библиотеки System.Core.dll, значения атрибутов защиты узла которых запрещены.  
@@ -115,7 +115,7 @@ ms.locfileid: "48207124"
 |System.Diagnostics.PerformanceData.CounterSetInstanceCounterDataSet|MayLeakOnAbort|  
 |System.Diagnostics.PerformanceData.CounterSet|MayLeakOnAbort|  
 |System.Diagnostics.PerformanceData.CounterSetInstance|MayLeakOnAbort|  
-|System.Collections.Generic.HashSet`1|MayLeakOnAbort|  
+|System.Collections.Generic.HashSet'1| MayLeakOnAbort|  
 |System.IO.Pipes.PipeStream|MayLeakOnAbort|  
 |System.IO.Pipes.AnonymousPipeServerStream|MayLeakOnAbort|  
 |System.IO.Pipes.AnonymousPipeClientStream|MayLeakOnAbort|  

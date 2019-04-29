@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 286b37195b200761ce8cd8e941076c8a27e61011
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836813"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>Добавление компонентов потока данных программным образом
   Построение потока данных начинается с добавления компонентов. Затем необходимо настроить эти компоненты и соединить их друг с другом, чтобы образовался поток данных времени выполнения. В этом разделе описывается добавление компонента в задачу потока данных, создание экземпляра компонента времени разработки и последующая настройка компонента. Дополнительные сведения о соединении компонентов см. в статье [Программное соединение компонентов потока данных](../building-packages-programmatically/connecting-data-flow-components-programmatically.md).  

@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1034c021c35efa7c7fb7c6a7090f61c848aa224e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62895013"
 ---
 # <a name="comparing-scripting-solutions-and-custom-objects"></a>Сравнение решений со сценариями и пользовательских объектов
   Задача «Скрипт» или компонент скрипта служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] может реализовать значительную часть функций, которые обеспечиваются пользовательской управляемой задачей или компонентом потока данных. Ниже приведены некоторые рекомендации, которые помогут выбрать тип задачи, отвечающий потребностям пользователя.  

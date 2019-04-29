@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f9e78216d333303cfacaf49ed85b7ac2c6c8f1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844412"
 ---
 # <a name="trace-template-properties-general-tab"></a>Свойства шаблона трассировки (вкладка «Общие»)
   Вкладка **Общие** диалогового окна **Свойства шаблона трассировки** используется для создания новых шаблонов трассировки с использованием следующих параметров. Чтобы открыть это диалоговое окно, в меню приложения [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **Файл** выберите **Шаблоны**, а затем выберите **Создать шаблон**.  
@@ -39,7 +39,7 @@ ms.locfileid: "48088814"
  Этот шаблон используется по умолчанию для трассировок, созданных для этого типа сервера.  
   
 ## <a name="see-also"></a>См. также  
- [Создание шаблона трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [Создание шаблона трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [Шаблоны и разрешения приложения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Приложение SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   

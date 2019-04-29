@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c69c75c9dff4bf8d0542dae71cddcf1a431ab063
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890860"
 ---
 # <a name="step-3-testing-the-lesson-6-package"></a>Шаг 3. Тестирование пакета занятия 6
   Во время выполнения пакет получит значение для свойства Directory из параметра VarFolderName.  

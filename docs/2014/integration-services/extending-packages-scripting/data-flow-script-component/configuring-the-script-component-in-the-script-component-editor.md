@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b2b588c61742d5ab9c57d934b0f4f11230f1ca5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894818"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Настройка компонента скрипта в редакторе компонента скрипта
   Прежде чем приступать к написанию пользовательского кода в компоненте скрипта, необходимо выбрать тип компонента потока данных, который должен быть создан (источник, преобразование или назначение), а затем настроить метаданные и свойства компонента в окне **Редактор преобразования "скрипт"**.  

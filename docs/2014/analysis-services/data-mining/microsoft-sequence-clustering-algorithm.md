@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc90c76792ae6eaaa21ba3e32bea66e4942c354f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733703"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Алгоритм кластеризации последовательностей (Майкрософт)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритм кластеризации последовательностей является алгоритмом анализа последовательностей, предоставляемый [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Этот алгоритм можно использовать для изучения данных, содержащих события, которые могут быть связаны с помощью следования путям или *последовательностей*. Алгоритм находит самые распространенные последовательности, выполняя группирование или кластеризацию идентичных последовательностей. Ниже приведено несколько примеров данных, содержащих последовательности, которые могут быть использованы для интеллектуального анализа данных и получения сведений о стандартных проблемах или бизнес-сценариях.  
@@ -78,9 +78,9 @@ ms.locfileid: "48190784"
 -   Поддерживается использование моделей интеллектуального анализа OLAP и создание измерений интеллектуального анализа данных.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Технический справочник по алгоритму кластеризации последовательностей (Майкрософт)](microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Примеры запросов модели кластеризации последовательностей](clustering-model-query-examples.md)   
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Примеры запросов к модели кластеризации последовательностей](clustering-model-query-examples.md)   
  [Просмотр модели с помощью средства просмотра кластеризации последовательностей (Майкрософт)](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   

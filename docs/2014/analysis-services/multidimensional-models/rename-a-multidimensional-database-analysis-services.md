@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6b27b086e84f173e72a61cf01341d5d01ec7ea9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736752"
 ---
 # <a name="rename-a-multidimensional-database-analysis-services"></a>Переименование многомерной базы данных (службы Analysis Services)
   Способ изменения имени базы данных служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] зависит от способа подключения к базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Чтобы изменить имя существующей базы данных, необходимо подключиться к ней в режиме в сети. Чтобы изменить имя базы данных, в которой будут создаваться экземпляры объектов проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , необходимо подключиться к ней в режиме проекта.  
@@ -53,8 +53,8 @@ ms.locfileid: "48168224"
   
 ## <a name="see-also"></a>См. также  
  [Настройка свойств сервера в службах Analysis Services](../server-properties/server-properties-in-analysis-services.md)   
- [Задание свойств многомерной базы данных &#40;служб Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)   
- [Настройка свойств проекта служб Analysis Services &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
- [Развертывание проектов служб Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
+ [Задание свойств многомерной базы данных (службы Analysis Services)](set-multidimensional-database-properties-analysis-services.md)   
+ [Настройка свойств проекта служб Analysis Services (среда SSDT)](configure-analysis-services-project-properties-ssdt.md)   
+ [Развертывание проектов служб Analysis Services (среда SSDT)](deploy-analysis-services-projects-ssdt.md)  
   
   

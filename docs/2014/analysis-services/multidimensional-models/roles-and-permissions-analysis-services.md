@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc36b27bea2c546582cb167046affcc0fbd0d5a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736588"
 ---
 # <a name="roles-and-permissions-analysis-services"></a>Роли и разрешения (службы Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] включает ролевую модель авторизации, которая предоставляет доступ к операциям, объектам и данным. Все пользователи получают доступ к экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или базе данных в контексте некоторой роли.  
@@ -30,34 +30,34 @@ ms.locfileid: "48114120"
   
  Распространенной практикой является разделение операций по созданию ролей и назначению членства. Часто разработчик моделей добавляет роли на этапе проектирования. Таким образом, все определения ролей отражаются в файлах проекта, определяющих модели. Членство в ролях обычно определяется позднее, когда база данных переносится в рабочую среду. Обычно членство назначают администраторы базы данных, которые создают скрипты для разработки, тестирования и выполнения в качестве независимой операции.  
   
- Вся авторизация выполняется по допустимому удостоверению пользователя Windows. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют для проверки подлинности удостоверений пользователей исключительно проверку подлинности Windows. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляет метод не собственные механизмы проверки подлинности. См. в разделе [методики проверки подлинности, поддерживаемые службами Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md).  
+ Вся авторизация выполняется по допустимому удостоверению пользователя Windows. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют для проверки подлинности удостоверений пользователей исключительно проверку подлинности Windows. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] не предоставляет собственный способ проверки подлинности. См. раздел [Методики проверки подлинности, поддерживаемые службами Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md).  
   
 > [!IMPORTANT]  
 >  Разрешения являются аддитивными для каждого пользователя или группы Windows, по всем ролям базы данных. Если одна роль запрещает пользователю или группе выполнять определенные задачи или просматривать определенные данные, а другая роль предоставляет такое разрешение указанному пользователю или группе, то этому пользователю или группе будет разрешено выполнять упомянутые задачи или просматривать упомянутые данные.  
   
 ## <a name="in-this-section"></a>В этом разделе  
   
--   [Авторизация доступа к объектам и операциям &#40;служб Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Предоставление доступа к объектам и операциям (службы Analysis Services)](authorizing-access-to-objects-and-operations-analysis-services.md)  
   
--   [Предоставление разрешений базы данных &#40;служб Analysis Services&#41;](grant-database-permissions-analysis-services.md)  
+-   [Предоставление разрешений базы данных (службы Analysis Services)](grant-database-permissions-analysis-services.md)  
   
--   [Предоставление разрешений кубу или модели &#40;служб Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
+-   [Предоставление разрешений кубу или модели (службы Analysis Services)](grant-cube-or-model-permissions-analysis-services.md)  
   
--   [Предоставление разрешений на обработку &#40;служб Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
+-   [Предоставление разрешений на обработку (службы Analysis Services)](grant-process-permissions-analysis-services.md)  
   
--   [Предоставление разрешений на чтение описания метаданным объекта &#40;служб Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+-   [Предоставление разрешений на чтение описания метаданным объекта (службы Analysis Services)](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
--   [Предоставление разрешений на объект источника данных &#40;служб Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+-   [Предоставление разрешений объекту источника данных (службы Analysis Services)](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
--   [Предоставление разрешений на структур интеллектуального анализа данных и моделей &#40;служб Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)  
+-   [Предоставление разрешений структурам интеллектуального анализа данных и моделям интеллектуального анализа данных (службы Analysis Services)](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)  
   
--   [Предоставление разрешений на измерение &#40;служб Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)  
+-   [Предоставление разрешений измерению (службы Analysis Services)](grant-permissions-on-a-dimension-analysis-services.md)  
   
--   [Предоставление настраиваемого доступа к данным измерения &#40;служб Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)  
+-   [Предоставление настраиваемого доступа к данным измерений (службы Analysis Services)](grant-custom-access-to-dimension-data-analysis-services.md)  
   
--   [Предоставление настраиваемого доступа к данным ячейки &#40;служб Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+-   [Предоставление настраиваемого доступа к данным ячейки (службы Analysis Services)](grant-custom-access-to-cell-data-analysis-services.md)  
   
 ## <a name="see-also"></a>См. также  
- [Создание и управление ролями &#40;табличные службы SSAS&#41;](../tabular-models/roles-ssas-tabular.md)  
+ [Создание ролей и управление ими (табличные службы SSAS)](../tabular-models/roles-ssas-tabular.md)  
   
   

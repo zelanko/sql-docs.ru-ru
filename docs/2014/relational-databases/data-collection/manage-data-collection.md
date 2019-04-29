@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 543f972f5c5805bb1508b6a256f7a7ed3a2aaa3b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918596"
 ---
 # <a name="manage-data-collection"></a>Управление сбором данных
   Хранимые процедуры и функции среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)] могут быть использованы для управления различными аспектами сбора данных (например, включать или отключать сбор данных, изменять конфигурацию набора сбора или просматривать данные в хранилище данных управления).  

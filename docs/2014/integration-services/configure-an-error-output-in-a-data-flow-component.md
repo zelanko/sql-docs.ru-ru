@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6e06ee3d9bdd3f987fb03701e56fdb5db133d0bc
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835170"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>Настройка вывода ошибок в компоненте потока данных
   Многие компоненты потока данных поддерживают вывод ошибок. Основываясь на компоненте, конструктор [!INCLUDE[ssIS](../includes/ssis-md.md)] предлагает различные пути настройки вывода ошибок. Кроме настройки вывода ошибок, можно также настроить его столбцы. Сюда входит настройка столбцов **ErrorCode** и **ErrorColumn** , добавляемых этим компонентом.  

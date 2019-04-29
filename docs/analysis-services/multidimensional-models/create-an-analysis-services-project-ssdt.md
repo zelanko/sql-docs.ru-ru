@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4fe65216ad293786496f412c9cc1451e6b92a7bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62867024"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Создание проекта служб Analysis Services (среда SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -143,7 +143,7 @@ ms.locfileid: "52503392"
   
  Шаблоны элементов, список которых приведен в следующей таблице, доступны в категории элементов проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в диалоговом окне **Добавление нового элемента** .  
   
-|Категория|Шаблон элемента|Описание|  
+|Category|Шаблон элемента|Описание|  
 |--------------|-------------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Элементы проекта|Cube|Запускает «Мастер кубов» для добавления нового куба к проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Источник данных|Запускает «Мастер источников данных», чтобы добавить новый источник данных к проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  

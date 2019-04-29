@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71efd530222ce548bb867b9e886b1891d5aedb05
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62899452"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Справочник по ошибкам и событиям (службы Integration Services)
   Этот раздел документации содержит сведения о некоторых ошибках и событиях, связанных со службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Сведения о причинах и способах устранения включены в сообщения об ошибках.  

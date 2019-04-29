@@ -1,5 +1,5 @@
 ---
-title: Этап 2. Проверка пакета развертывания | Документация Майкрософт
+title: Шаг 2. Проверка пакета развертывания | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 127044042eed7f082b6f1f7ba7ae6918232ba9ff
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891773"
 ---
-# <a name="step-2-verifying-the-deployment-bundle"></a>Этап 2. Проверка пакета развертывания
+# <a name="step-2-verifying-the-deployment-bundle"></a>Шаг 2. Проверка пакета развертывания
   На занятии 1 был создан проект учебного развертывания и в него добавлены пакеты и вспомогательные файлы; в предыдущей задаче была построена программа развертывания для проекта.  
   
  В этой задаче будет проверено содержимое пакета развертывания. Пакет развертывания представляет собой папку, которая будет скопирована на целевой компьютер и использована для установки пакетов. Если в качестве местонахождения для программы развертывания было использовано значение по умолчанию bin\Deployment, пакетом развертывания будет папка Bin\Deployment в папке Deployment Tutorial в проекте [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aba9a971b703a3344fc209c1c01943f10c76d767
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833069"
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>Предложение типов столбцов диалогового окна справочника по пользовательскому интерфейсу
   Диалоговое окно **Предлагаемые типы столбцов** используется для идентификации типа данных и длины столбцов в диспетчере соединений с неструктурированными файлами на основе содержимого файла.  

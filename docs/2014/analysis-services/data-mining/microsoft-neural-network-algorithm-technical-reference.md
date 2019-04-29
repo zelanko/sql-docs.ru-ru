@@ -30,11 +30,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51551dd92ee0cca193abd88041e4ad7cc183718a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733832"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Технический справочник по алгоритму нейронной сети (Майкрософт)
   Алгоритм нейронной сети ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) использует сеть в виде *многослойного перцептрона* , также известного под названием *сеть дельта-правила с обратным распространением*, в состав которой может входить до трех слоев нейронов, или *перцептронов*. Такими слоями являются входной слой, необязательный скрытый слой и выходной слой.  

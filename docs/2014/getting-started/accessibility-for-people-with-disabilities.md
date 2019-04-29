@@ -22,11 +22,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3df8c5c308502e3e3e50e79c174f1ed96bbeacf9
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842755"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Специальные функции для людей с ограниченными возможностями
   [!INCLUDE[msCoName](../includes/msconame-md.md)] работает над тем, чтобы сделать свои продукты и услуги еще более простыми в использовании. Данный раздел содержит сведения о следующих функциях, продуктах и службах, которые делают продукты семейства [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server более доступными для людей с физическими нарушениями.  

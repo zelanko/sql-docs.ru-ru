@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89a988a5d664e460a3148cf910c0be31ba07a5dd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916764"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Рекомендации по обеспечению безопасности автономных баз данных
   С автономными базами данных связаны некоторые уникальные угрозы, о которых администраторы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] должны знать (и принимать меры по их устранению). Большая часть угроз связана с процессом проверки подлинности `USER WITH PASSWORD`, который перемещает границу проверки подлинности с уровня компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] на уровень базы данных.  

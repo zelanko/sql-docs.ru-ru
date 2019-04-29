@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 52933b6bc560ecf2e1d7efda8b54502bafe72a6b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877420"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>Редактор источника «XML» (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** компонента **Редактор источника «XML»** для указания XML-файла и XSD-схемы, выполняющей преобразование XML-данных.  
@@ -34,7 +34,7 @@ ms.locfileid: "58393892"
 |Значение|Описание|  
 |-----------|-----------------|  
 |Расположение XML-файла|Извлечь данные из XML-файла.|  
-|XML-файл из переменной|Указать имя XML-файла в переменной.<br /><br /> **Сведения, связанные с**: [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)|  
+|XML-файл из переменной|Указать имя XML-файла в переменной.<br /><br /> **Дополнительные сведения** [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)|  
 |XML-данные из переменной|Извлечь XML-данные из значения переменной.|  
   
  **Использовать встроенную схему**  

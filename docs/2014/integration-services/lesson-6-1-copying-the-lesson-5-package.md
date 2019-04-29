@@ -1,5 +1,5 @@
 ---
-title: Шаг 1. Копирование пакета занятия 5 | Документация Майкрософт
+title: Шаг 1. Копирование пакета занятия 5 | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890760"
 ---
-# <a name="step-1-copying-the-lesson-5-package"></a>Шаг 1. Копирование пакета занятия 5
+# <a name="step-1-copying-the-lesson-5-package"></a>Шаг 1. Копирование пакета занятия 5
   В этой задаче будет создана копия пакета Lesson 5.dtsx, созданного на занятии 5. Либо можно добавить пакет для занятия 5, прилагаемый к учебнику по проекту, и скопировать его. Полученная копия впоследствии будет использоваться на протяжении всего занятия 6.  
   
 ### <a name="to-copy-the-lesson-5-package"></a>Копирование пакета занятия 5  

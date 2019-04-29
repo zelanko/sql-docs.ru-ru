@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 761d42ba234dceda7cd6689af89e6a3038b901eb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898955"
 ---
 # <a name="deprecated-integration-services-features-in-sql-server-2014"></a>Устаревшие функции служб SQL Server 2014 Integration Services
   В этом разделе описаны устаревшие [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] функции, которые по-прежнему доступны в текущем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Эти функции будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  

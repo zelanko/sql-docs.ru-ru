@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad3d6233ef9678933aa9492ccc81f306186592b3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737098"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Обновление схемы в представлении источника данных (службы Analysis Services)
   После определения представления источников данных в проекте или базе данных [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] можно изменить схему базового источника данных. Эти изменения не определяются и не обновляются автоматически в проекте разработки. Более того, при развертывании проекта на сервере будут возникать ошибки обработки, если службы Analysis Services не смогут подключиться к внешнему источнику данных.  

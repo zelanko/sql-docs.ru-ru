@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b10717491672e0323afb39ada55aafff5c056caf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733056"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>запросить параметры, используемые для создания модели интеллектуального анализа данных
   На составление модели интеллектуального анализа данных влияют не только обучающие варианты, но и параметры, заданные при создании модели. Поэтому может быть полезно извлечь значения параметров существующей модели, чтобы лучше разобраться в ее поведении. Получение параметров также может быть полезным при создании документации по конкретной версии модели.  
@@ -68,7 +68,7 @@ WHERE MODEL_NAME = 'TM Clustering'
  CLUSTER_COUNT=10,CLUSTER_SEED=0,CLUSTERING_METHOD=1,MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_STATES=100,MINIMUM_SUPPORT=1,MODELLING_CARDINALITY=10,SAMPLE_SIZE=50000,STOPPING_TOLERANCE=10  
   
 ## <a name="see-also"></a>См. также  
- [Задачи запроса интеллектуального анализа данных и инструкции по](data-mining-query-tasks-and-how-tos.md)   
+ [Задачи и инструкции по запросам интеллектуального анализа данных](data-mining-query-tasks-and-how-tos.md)   
  [Запросы интеллектуального анализа данных](data-mining-queries.md)  
   
   

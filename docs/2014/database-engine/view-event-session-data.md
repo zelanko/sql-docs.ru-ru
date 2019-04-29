@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: befef498ab4cda12ce38a34678b78a2b5dcd278c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842901"
 ---
 # <a name="view-event-session-data"></a>Просмотр данных о сеансе событий
   В этом разделе описывается использование пользовательского интерфейса для просмотра и анализа данных расширенных событий.  
@@ -45,7 +45,7 @@ ms.locfileid: "49120301"
   
 -   Для целевого объекта event_file XEL-файл с данными можно просматривать одним из следующих методов.  
   
-    -   Использовать команду «Файл -> Открыть» в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+    -   Используйте файл -> Открыть в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
     -   Перетащить файл в среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   

@@ -30,11 +30,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d6b41901176a57ca65f72efe90cb1644a272e5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732912"
 ---
 # <a name="testing-and-validation-data-mining"></a>Тестирование и проверка (интеллектуальный анализ данных)
   Проверка представляет собой процесс оценки соответствия моделей интеллектуального анализа данных фактическим данным. Важно выяснить качество и характеристики моделей интеллектуального анализа данных до их развертывания в рабочей среде.  
@@ -87,13 +87,13 @@ ms.locfileid: "48077754"
 |Подраздел|Ссылки|  
 |------------|-----------|  
 |Узнайте, как создать набор проверочных данных, с помощью мастера или команд расширений интеллектуального анализа данных|[Обучающие и проверочные наборы данных](training-and-testing-data-sets.md)|  
-|Узнайте, как проверить распределение и репрезентативность данных в структуре интеллектуального анализа данных|[Перекрестная проверка &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Узнайте о типах диаграмм точности, имеющихся в [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)].|[Диаграмма точности прогнозов &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Диаграмма роста прибыли &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Точечная диаграмма &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|Узнайте о создании матрицы классификации, которую иногда также называют матрицей несоответствий, для оценки нескольких условий.|[Матрица классификации &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](classification-matrix-analysis-services-data-mining.md)|  
+|Узнайте, как проверить распределение и репрезентативность данных в структуре интеллектуального анализа данных|[Перекрестная проверка (службы Analysis Services — интеллектуальный анализ данных)](cross-validation-analysis-services-data-mining.md)|  
+|Узнайте о типах диаграмм точности, имеющихся в [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)].|[Диаграмма точности прогнозов (службы Analysis Services — интеллектуальный анализ данных)](lift-chart-analysis-services-data-mining.md)<br /><br /> [Диаграмма роста прибыли (службы Analysis Services — интеллектуальный анализ данных)](profit-chart-analysis-services-data-mining.md)<br /><br /> [Точечная диаграмма (службы Analysis Services — интеллектуальный анализ данных)](scatter-plot-analysis-services-data-mining.md)|  
+|Узнайте о создании матрицы классификации, которую иногда также называют матрицей несоответствий, для оценки нескольких условий.|[Матрица классификации (службы Analysis Services — интеллектуальный анализ данных)](classification-matrix-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>См. также  
  [Средства интеллектуального анализа данных](data-mining-tools.md)   
  [Решения для интеллектуального анализа данных](data-mining-solutions.md)   
- [Тестирование и проверка задачи и инструкции по &#40;интеллектуального анализа данных&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Задачи и решения по тестированию и проверке (интеллектуальный анализ данных)](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

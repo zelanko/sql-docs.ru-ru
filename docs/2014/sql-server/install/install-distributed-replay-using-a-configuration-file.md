@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1ba661a0a00931f52aa7d38cc8d96730c685fa7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913542"
 ---
 # <a name="install-distributed-replay-using-a-configuration-file"></a>Установка компонентов распределенного воспроизведения с помощью файла конфигурации
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] дает возможность создать файл конфигурации на основе данных пользователя и значений системы по умолчанию. Если необходимо установить средства управления, можно использовать файл конфигурации для развертывания трех компонентов распределенного воспроизведения (средство администрирования, контроллер распределенного воспроизведения и клиент распределенного воспроизведения). Поддерживает установку, восстановление и удаление компонентов распределенного воспроизведения.  

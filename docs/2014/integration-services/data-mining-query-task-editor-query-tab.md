@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 361c1c06afb8c599e983751ea7d7deef656631e6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62899818"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Редактор задачи «Запрос интеллектуального анализа данных» (вкладка «Запрос»)
   Используйте вкладку **Запрос** диалогового окна **Задача «Запрос интеллектуального анализа данных»** , чтобы создать запросы прогноза, основанные на модели интеллектуального анализа данных. В этом диалоговом окне также можно привязать параметры и результирующие наборы к переменным.  

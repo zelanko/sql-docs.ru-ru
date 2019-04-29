@@ -1,5 +1,5 @@
 ---
-title: Создание измерения с помощью мастера измерений | Документы Microsoft
+title: Создание измерения с помощью мастера измерений | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ba906ab17169b2e2faf6bef54137fcc4e6210660
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866894"
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>Создание измерения с помощью мастера измерений
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -70,6 +70,6 @@ ms.locfileid: "34023271"
     >  После добавления, удаления и настройки атрибутов и иерархий в измерении с помощью мастера измерений можно использовать конструктор измерений.  
   
 ## <a name="see-also"></a>См. также  
- [Создать измерение с помощью существующей таблицы](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
+ [Создание измерения с помощью существующей таблицы](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
   
   

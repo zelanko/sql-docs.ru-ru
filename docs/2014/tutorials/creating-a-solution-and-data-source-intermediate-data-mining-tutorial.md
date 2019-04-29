@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2f089f487586b6def3d2ddd4eecdbbde1532952b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855344"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>Создание решения и источника данных (учебник по интеллектуальному анализу данных — средний уровень)
   Для работы с интеллектуальным анализом данных необходимо сначала создать проект в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] на основе шаблона **Проект многомерных данных и интеллектуального анализа данных служб Analysis Services**. После открытия шаблона он загружает в конструктор все схемы, которые могут понадобиться для интеллектуального анализа данных: источники данных, структуры и модели интеллектуального анализа данных и даже кубы, если в структуре интеллектуального анализа данных используются многомерные данные.  

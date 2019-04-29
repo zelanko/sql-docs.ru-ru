@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c2c5f2d0cb6a12ad4d9c879633c97365d15b0287
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731840"
 ---
 # <a name="dimension-wizard-f1-help"></a>Справка F1 мастера измерений
   Мастер измерений в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] используется для создания измерения базы данных в проекте служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . После создания измерения базы данных можно использовать конструктор измерений, чтобы изменить его свойства. Дополнительные сведения о конструкторе измерений см. в разделе [Конструктор измерений (службы Analysis Services — многомерные данные)](dimension-designer-analysis-services-multidimensional-data.md).  

@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d71ffe723df317733841450713ddccc3d03ddb36
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834297"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>настроить преобразование «Команда OLE DB»
   Для добавления и настройки преобразования «Команда OLE DB» пакет должен уже содержать по меньшей мере одну задачу потока данных и такой источник, как источник неструктурированного файла или источник OLE DB. Преобразование обычно используется для выполнения параметризованных запросов.  

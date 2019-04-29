@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0ca7153fc8f36792c61f5c2720117dfd9996893
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736558"
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>Мастер формирования схем (службы Analysis Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] поддерживает два метода работы с реляционными схемами при определении объектов OLAP в рамках проекта или базы данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . В целом, определение объектов OLAP основано на модели логических данных, созданной в представлении источника данных в проекте или базе данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Такое представление источника данных определяется на основе элементов схемы одного или более источников реляционных данных в соответствии с настройками представления источников данных.  
@@ -40,7 +40,7 @@ ms.locfileid: "48219524"
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[Использовать мастер формирования схем &#40;служб Analysis Services&#41;](schema-generation-wizard-analysis-services.md)|Содержит описание формирования схемы для баз данных предметной области и промежуточной области хранения.|  
+|[Использование мастера формирования схем (службы Analysis Services)](schema-generation-wizard-analysis-services.md)|Содержит описание формирования схемы для баз данных предметной области и промежуточной области хранения.|  
 |[Основные сведения о схемах баз данных](understanding-the-database-schemas.md)|Содержит описание схемы, формируемой для баз данных предметной области и промежуточной области.|  
 |[Основные сведения о добавочном создании](understanding-incremental-generation.md)|Содержит описание возможностей постепенного создания мастера формирования схем.|  
   

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 949e3ef39b0c3ef7b4fec6b3f99735dec287d5d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913368"
 ---
 # <a name="mssqlserver7936"></a>MSSQLSERVER_7936
     
@@ -30,7 +30,7 @@ ms.locfileid: "48123200"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_ORPHANED_COLUMN_DIRECTORY|  
-|Текст сообщения|Ошибка таблицы: существует каталог FILESTREAM для столбца с идентификатором C_ID объекта с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID, однако этот столбец имеет тип, отличный от FILESTREAM.|  
+|Текст сообщения|Ошибка таблицы: Каталог FileStream существует для идентификатора столбца C_ID идентификатора объекта O_ID, Идентификатором индекса I_ID, Идентификатором секции PN_ID, однако этот столбец не является столбцом Filestream.|  
   
 ## <a name="explanation"></a>Объяснение  
  Во время выполнения команды DBCC CHECKDB для указанного столбца был найден каталог файловых потоков, но этот столбец не является столбцом `FILESTREAM`.  

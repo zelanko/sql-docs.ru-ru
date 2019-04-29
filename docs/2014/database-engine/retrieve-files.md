@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 548fac7dbc7d1f2750a130da9847be406361d8bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843670"
 ---
 # <a name="retrieve-files"></a>Получение файлов
   После открытия проекта, контролируемого системой управления версиями, среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] позволяет загрузить локальную копию файлов проекта из хранилища системы управления версиями в локальный каталог проекта.  

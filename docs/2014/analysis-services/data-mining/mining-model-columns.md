@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92cee93affaedab7c36517c730e09914ba842041
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733626"
 ---
 # <a name="mining-model-columns"></a>Столбцы модели интеллектуального анализа данных
   Модель интеллектуального анализа данных применяет алгоритм интеллектуального анализа к данным, представленным структурой интеллектуального анализа данных. Модель интеллектуального анализа данных, как и структура интеллектуального анализа, содержит столбцы. Модель интеллектуального анализа содержится в структуре интеллектуального анализа и наследует все значения свойств, определенных этой структурой. Модель может использовать все столбцы, содержащиеся в структуре интеллектуального анализа данных, или подмножества этих столбцов.  
@@ -46,10 +46,10 @@ ms.locfileid: "48167994"
  Дополнительные сведения об установке свойства использования и программном определении флагов моделирования с помощью расширений интеллектуального анализа данных см. в разделе [CREATE MINING MODEL (расширения интеллектуального анализа данных)](/sql/dmx/create-mining-model-dmx). Дополнительные сведения об установке свойства использования и определении флагов моделирования в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] см. в разделе [Перемещение объектов интеллектуального анализа данных](moving-data-mining-objects.md).  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Структуры интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-structures-analysis-services-data-mining.md)   
  [Изменение свойств модели интеллектуального анализа данных](change-the-properties-of-a-mining-model.md)   
- [Исключить столбец из модели интеллектуального анализа данных](exclude-a-column-from-a-mining-model.md)   
+ [исключить столбец из модели интеллектуального анализа данных](exclude-a-column-from-a-mining-model.md)   
  [Столбцы структуры интеллектуального анализа данных](mining-structure-columns.md)  
   
   

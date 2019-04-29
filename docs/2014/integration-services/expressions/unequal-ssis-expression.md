@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4752685d9590056cb47e88ee2ec4fea5128cc86b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62896523"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (не равно) (выражение служб SSIS)
   Осуществляет сравнение для определения того, выполняется ли условие неравенства двух выражений с совместимыми типами данных. Перед проведением сравнения средство оценки выражений автоматически преобразует большинство типов данных.  
@@ -52,7 +52,7 @@ expression1 != expression2
     > [!NOTE]  
     >  Сравнения строк производятся с учетом регистра, диакритических знаков, японской азбуки и ширины символов.  
   
--   **Даты, времени или даты и времени** оба *expression1* и *expression2* должны иметь один из следующих типов данных: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET или DT_FILETIME.  
+-   **Дата, время или дата и время**. Значения выражений *expression1* и *expression2* должны иметь один из следующих типов данных: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET или DT_FILETIME.  
   
     > [!NOTE]  
     >  Система не поддерживает сравнения выражений, значения которых имеют тип данных даты, времени или даты-времени. Возникнет ошибка.  
@@ -81,7 +81,7 @@ expression1 != expression2
   
 -   **Двоичный** . Значения выражений *expression1* и *expression2* должны иметь тип данных DT_BYTES.  
   
--   **Большой двоичный объект** оба *expression1* и *expression2* должны иметь один и тот же тип данных больших двоичных объектов блока (BLOB): DT_TEXT, DT_NTEXT или DT_IMAGE.  
+-   **Большой двоичный объект**. Значения выражений *expression1* и *expression2* должны иметь один и тот же тип данных больших двоичных объектов (BLOB): DT_TEXT, DT_NTEXT, or DT_IMAGE.  
   
  Дополнительные сведения о типах данных см. в разделе [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   

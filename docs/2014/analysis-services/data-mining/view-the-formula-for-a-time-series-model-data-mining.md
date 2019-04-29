@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c9225b2eb95d267c78caaf7521a8dee0b436db08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733683"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Просмотр формулы для модели временных рядов (интеллектуальный анализ данных)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] InData средства просмотра временных рядов конструктора интеллектуального анализа данных предоставляет удобный способ просмотра уравнения регрессии, используемых в модели временных рядов.  
@@ -79,8 +79,8 @@ ms.locfileid: "48164004"
 5.  Если вкладка **Условные обозначения интеллектуального анализа данных** недоступна, щелкните узел правой кнопкой мыши и выберите **Показать обозначения**.  
   
 ## <a name="see-also"></a>См. также  
- [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](mining-model-viewer-tasks-and-how-tos.md)   
- [Просмотр модели в средстве просмотра временных рядов](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](mining-model-viewer-tasks-and-how-tos.md)   
+ [Просмотр модели с помощью средства просмотра временных рядов (Майкрософт)](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Примеры запросов моделей временных рядов](time-series-model-query-examples.md)  
   
   

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8561661b2893cceb1cea9a31326d856bc1287acb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917209"
 ---
 # <a name="database-object-extended-properties-page"></a>Объект базы данных (страница «Расширенные свойства»)
   Расширенные свойства позволяют добавлять пользовательские характеристики объектам базы данных. Используйте эту страницу, чтобы просмотреть или изменить свойства выбранного объекта. Страница **Расширенные свойства** отображается одинаково для всех типов объектов базы данных.  

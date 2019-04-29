@@ -17,11 +17,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5a25f4f151bb7aa1a9deef24486bd533d5755b2
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837524"
 ---
 # <a name="legal-notice-for-documentation"></a>Юридическое уведомление для документации
   Данный документ предоставляется «как есть». Сведения и представления, приведенные в этом документе, включают URL-адреса и другие ссылки на веб-сайты, которые могут изменяться без предупреждения. Вы принимаете на себя риски их использования.  

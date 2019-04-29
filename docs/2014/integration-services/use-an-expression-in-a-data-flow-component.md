@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7ece364cb1d0bbe2cc36b07de58873fc95acaed
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877931"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>Использование выражения в компоненте потока данных
   Ниже описана процедура добавления выражения в преобразование «Условное разбиение» или «Производный столбец». Преобразование «Условное разбиение» с помощью выражений определяет условия, которые направляют строки данных в выход преобразования, а преобразование «Производный столбец» с помощью выражений определяет значения, присваиваемые столбцам.  

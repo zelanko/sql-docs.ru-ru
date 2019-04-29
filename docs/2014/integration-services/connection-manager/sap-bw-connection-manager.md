@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b3ee629cd7701d8b06351e8932daac57637b195e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833693"
 ---
 # <a name="sap-bw-connection-manager"></a>Диспетчер соединений SAP BW
   Диспетчер соединений SAP BW — это компонент диспетчера соединений [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW. Таким образом, диспетчер соединений SAP BW обеспечивает подключение к системе SAP Netweaver BW версии 7, необходимое компонентам источника и назначения [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW. (Источник и назначение SAP BW, входящие в состав пакета [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW, являются единственными компонентами служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , которые используют диспетчер соединений SAP BW.)  

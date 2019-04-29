@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833824"
 ---
 # <a name="flat-file-connection-manager"></a>Диспетчер соединений с неструктурированными файлами
   Диспетчер соединений с неструктурированными файлами дает возможность пакету получить доступ к данным неструктурированного файла. Например, исходные и целевые неструктурированные файлы могут использоваться диспетчерами соединений с неструктурированными файлами для извлечения и загрузки данных.  

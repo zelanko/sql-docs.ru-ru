@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62901191"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>Изменение запроса источника OData во время выполнения
   Можно изменить запрос источника OData во время выполнения, добавив выражение в свойство **[OData Source].[Query]** задачи потока данных.  

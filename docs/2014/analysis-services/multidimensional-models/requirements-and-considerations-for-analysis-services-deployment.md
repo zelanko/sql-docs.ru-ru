@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6759c38aa519979bdf05ba8848aaccbb89f37a94
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736732"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Требования и вопросы, связанные с развертыванием служб Analysis Services
   Производительность и доступность решения зависят от многих факторов, среди которых мощность оборудования, топология серверов, характеристики решения (например, использование секций, распределенных на нескольких серверах, или хранилища ROLAP, которому требуется прямой доступ к реляционному механизму), соглашения на уровне служб, а также сложность модели данных.  

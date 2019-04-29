@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d6616f5f09ce39682a24c74808ca90084ee775f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732832"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>Определение ссылки на местную валюту (мастер бизнес-аналитики)
   Используйте страницу **Определение ссылки на местную валюту** , чтобы определить местные валюты для функции конвертации валют, которая обеспечивает типы конвертации "Многие ко многим" и "Многие к одному", указанные на странице **Выбор типа конвертации валют** . Местная валюта — это валюта, в формате которой хранятся транзакции для мер, выбранных на странице **Выбор мер** .  

@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a6a226ae76f75a07b483b74a09ecafc0191eee2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919961"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>Работа с определяемыми пользователем типами в SQL Server
   Можно получить доступ к функциональности определяемого пользователем типа (UDT) в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из [!INCLUDE[tsql](../../includes/tsql-md.md)] языка с помощью синтаксиса обычных запросов. Определяемые пользователем типы можно использовать в определениях объектов базы данных, как переменные в пакетах [!INCLUDE[tsql](../../includes/tsql-md.md)], в функциях и хранимых процедурах, а также как аргументы функций и хранимых процедур.  

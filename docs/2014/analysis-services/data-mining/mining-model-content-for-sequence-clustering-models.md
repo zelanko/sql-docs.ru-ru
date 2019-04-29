@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94224bbc5c254b01fab49c850b554427757b714b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733437"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей кластеризации последовательностей (службы Analysis Services — интеллектуальный анализ данных)
   В этом разделе приведено описание содержимого модели интеллектуального анализа данных, характерного для моделей, в которых используется алгоритм кластеризации последовательностей (Майкрософт). Описание общей и статистической терминологии, связанной с содержимым модели интеллектуального анализа данных, областью применения которого являются модели всех типов, см. в статье [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -262,8 +262,8 @@ ORDER BY Count(*) DESC
  Сведения о том, как получить список наблюдаемых путей с помощью запроса содержимого модели, а также другие примеры запросов, основанных на модели кластеризации последовательностей, см. в разделе [Примеры запросов к модели кластеризации последовательностей](clustering-model-query-examples.md).  
   
 ## <a name="see-also"></a>См. также  
- [Содержимое модели интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Алгоритм кластеризации последовательностей (Майкрософт)](microsoft-sequence-clustering-algorithm.md)   
+ [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-analysis-services-data-mining.md)   
+ [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
  [Примеры запросов к модели кластеризации последовательностей](clustering-model-query-examples.md)  
   
   

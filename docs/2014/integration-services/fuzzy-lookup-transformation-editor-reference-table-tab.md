@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e2a9a349435c48c3f9c4a9ea4672ec52e83ce01d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62893371"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Редактор преобразования «Нечеткий уточняющий запрос» (вкладка «Ссылочная таблица»)
   Вкладка **Ссылочная таблица** в диалоговом окне **Редактор преобразования «Нечеткий уточняющий запрос»** позволяет указать исходную таблицу и индекс поиска. Эталонный источник данных должен быть таблицей в базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

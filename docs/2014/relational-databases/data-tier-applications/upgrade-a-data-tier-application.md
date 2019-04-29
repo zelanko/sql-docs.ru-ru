@@ -25,18 +25,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 553f35862684c7b7c860b70211f903dec253a799
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872660"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Обновление приложения уровня данных
   Используйте мастер обновления приложений уровня данных или скрипт Windows PowerShell, чтобы изменить схему и свойства приложения уровня данных (DAC), развернутого на данный момент, для соответствия схеме и свойствам, заданным в новой версии приложений уровня данных.  
   
--   **Перед началом работы**  [Выбор параметров обновления DAC](#ChoseDACUpgOptions), [ограничения](#LimitationsRestrictions), [предварительные требования](#Prerequisites), [безопасности](#Security), [разрешения](#Permissions)  
+-   **Перед началом:**  [Выбор параметров обновления DAC](#ChoseDACUpgOptions), [Ограничения](#LimitationsRestrictions), [Предварительные требования](#Prerequisites), [Безопасность](#Security), [Разрешения](#Permissions)  
   
--   **Для обновления приложения уровня данных, с помощью:**  [Обновление Data-tier Application Wizard](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **Обновление приложения уровня данных с использованием:**  [мастера обновления приложения уровня данных](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  Обновление приложения уровня данных — это процесс, который выполняется на месте и изменяет схему существующей базы для соответствия схеме, заданной в новой версии приложения уровня данных. Новая версия приложения уровня данных содержится в файле пакета приложения уровня данных. Дополнительные сведения о создании пакета DAC см. в разделе [Приложения уровня данных](data-tier-applications.md).  

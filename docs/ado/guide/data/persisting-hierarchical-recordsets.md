@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3382e222a03f7538d3c666c3b85527b487d499f7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911517"
 ---
 # <a name="persisting-hierarchical-recordsets"></a>Сохранение иерархических наборов записей
-Вы можете сохранить иерархической **записей** в файл в формате XML или ADTG путем вызова [Сохранить](../../../ado/reference/ado-api/save-method.md) метод. Однако два ограничения применяются при сохранении иерархические **набор записей**s в формате XML: не удается сохранить в формате XML, если иерархическое **набор записей** содержит ожидающие обновления, и вы не можете сохранить параметризованную иерархические **записей**.  
+Вы можете сохранить иерархической **записей** в файл в формате XML или ADTG путем вызова [Сохранить](../../../ado/reference/ado-api/save-method.md) метод. Однако два ограничения применяются при сохранении иерархические **записей**s в формате XML: Не удается сохранить в формате XML, если иерархическое **записей** содержит ожидающие обновления, и вы не можете сохранить параметризованную иерархические **набор записей**.  
   
  Дополнительные сведения о поставщике формирования данных см. в разделе [службы Microsoft Data Shaping Service для OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (ADO) и [обзором службы Data Shaping Service для OLE DB](https://msdn.microsoft.com/9f51e471-8e85-448e-9fb8-b64bbf767bf3).  
   

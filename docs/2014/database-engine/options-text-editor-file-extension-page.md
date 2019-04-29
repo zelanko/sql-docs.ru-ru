@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: dd5309a335f637ae205993d930fde7ad25fdf21f
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844165"
 ---
 # <a name="options-text-editor---file-extension-page"></a>Параметры ("Текстовый редактор" — страница "Расширение файла")
   Используйте диалоговое окно **Параметры**, чтобы задать способ обработки файлов с определенными расширениями в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Для каждого введенного расширения можно выбрать соответствующий редактор. Таким образом, можно выбрать редактор среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], в котором будут открываться документы определенного типа. Чтобы открыть параметры расширений файлов, выберите **Параметры** в меню **Сервис**, разверните **Редактор текстов** и выберите **Расширение файла**.  

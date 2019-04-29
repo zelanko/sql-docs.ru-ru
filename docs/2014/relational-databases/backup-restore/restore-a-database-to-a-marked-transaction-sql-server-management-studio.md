@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 919c10372e397f0c2d66d7648363aef7916ec598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875599"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Восстановление базы данных до помеченной транзакции (среда SQL Server Management Studio)
   Если база данных находится в состоянии восстановления, то для ее восстановления в какое-либо состояние, доступное среди резервных копий, можно использовать диалоговое окно **Восстановление журнала транзакций** .  
@@ -45,7 +45,7 @@ ms.locfileid: "48050434"
   
      В приведенной ниже таблице перечислены заголовки столбцов сетки, а также даны описания их значений.  
   
-    |Заголовок|Значение|  
+    |Header|Значение|  
     |------------|-----------|  
     |\<пусто>|Отображает флажок для выбора маркера.|  
     |**Отметка транзакции**|Имя помеченной транзакции, заданное пользователем при фиксации транзакции.|  
@@ -57,6 +57,6 @@ ms.locfileid: "48050434"
   
 ## <a name="see-also"></a>См. также  
  [Восстановление резервной копии базы данных &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
- [Восстановление резервной копии журнала транзакций &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
+ [Восстановление резервной копии журнала транзакций (SQL Server)](restore-a-transaction-log-backup-sql-server.md)  
   
   

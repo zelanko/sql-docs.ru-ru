@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d047cbc4fe3ba3f4945acd9da4f627a05992e779
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842403"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>Системные представления, хранимые процедуры, динамические административные представления и типы ожидания для выполняющейся в памяти OLTP
   В этой статье представлены краткие описания многих объектов баз данных, которые поддерживают In-Memory OLTP, и ссылки на них.  

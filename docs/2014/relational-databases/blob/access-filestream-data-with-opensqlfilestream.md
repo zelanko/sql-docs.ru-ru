@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c40d22c19f8398ef9499cb23c80ab80dab16b5b4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875100"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>Доступ к данным FILESTREAM с OpenSqlFilestream
   OpenSqlFilestream API Получает дескриптор файла, совместимый с Win32 для FILESTREAM большой двоичный объект (BLOB), хранящиеся в файловой системе. Дескриптор может быть передан в любой из следующих API-интерфейсов Win32: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), или [ FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). При передаче этого дескриптора любому другому API Win32 будет возвращена ошибка ERROR_ACCESS_DENIED. Дескриптор следует закрыть, передав его API-интерфейсу Win32 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) перед фиксацией или откатом транзакции. Если дескриптор не будет закрыт, то это вызовет утечку ресурсов со стороны сервера.  

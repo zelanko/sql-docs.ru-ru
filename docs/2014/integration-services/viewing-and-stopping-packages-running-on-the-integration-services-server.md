@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac4874c47f4aae25b87a72b1a6a62ddeb3f7962c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877955"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Просмотр и остановка пакетов, выполняющихся на сервере служб Integration Services
   В базе данных служб `SSISDB` хранится журнал выполнения во внутренних таблицах, невидимых для пользователей. Однако сведения, которые она предоставляет, можно получить с помощью запросов к общим представлениям. Также она предоставляет хранимые процедуры, которые можно вызвать для выполнения стандартных задач, связанных с пакетами.  

@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bce3bd6862e612a8cefa35d1c981d608bf2c341c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843002"
 ---
 # <a name="source-control-basics"></a>Основы системы управления версиями
   Система управления версиями осуществляется в системе, в которой центральная часть программного обеспечения сервера реализует хранение и отслеживание версий файлов, а также управляет доступом к файлам. Обычная система управления версиями включает поставщика управления версиями и несколько клиентов управления версиями.  

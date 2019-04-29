@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b630442c1a47bcd4ebabee75b82cff9b8f64d006
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62901115"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Редактор источников SAP BW (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор источника SAP BW** , чтобы выбрать диспетчер соединений SAP BW для источника SAP BW. На этой странице можно также выбрать режим выполнения и параметры для извлечения данных из источника данных системы SAP Netweaver BW.  

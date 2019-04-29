@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 577ab402178272c5f20f3a17f167c8dadb4fe7fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733752"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Алгоритм логистической регрессии (Майкрософт)
   Логистическая регрессия является известным статистическим методом, применяемым для моделирования двоичных результатов.  
@@ -80,8 +80,8 @@ ms.locfileid: "48179394"
 -   Не поддерживается использование языка разметки прогнозирующих моделей (PMML) для создания моделей интеллектуального анализа данных.  
   
 ## <a name="see-also"></a>См. также  
- [Модель интеллектуального анализа данных для моделей логистической регрессии &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-for-logistic-regression-models.md)   
- [Технический справочник по алгоритму логистической регрессии Майкрософт](microsoft-logistic-regression-algorithm-technical-reference.md)   
+ [Содержимое моделей интеллектуального анализа данных для моделей логистической регрессии (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-for-logistic-regression-models.md)   
+ [техническом справочнике по алгоритму логистической регрессии (Майкрософт)](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [Примеры запросов модели логистической регрессии](logistic-regression-model-query-examples.md)  
   
   

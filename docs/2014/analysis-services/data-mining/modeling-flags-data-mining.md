@@ -24,11 +24,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 427744a5971cae92f5a3a8e111a85dd5a858b882
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733190"
 ---
 # <a name="modeling-flags-data-mining"></a>Флаги моделирования (интеллектуальный анализ данных)
   Флаги моделирования можно использовать в службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , чтобы включить в алгоритм интеллектуального анализа данных дополнительные сведения о данных, которые определены в таблице вариантов. Алгоритм может использовать эти сведения для создания более точной модели интеллектуального анализа данных.  

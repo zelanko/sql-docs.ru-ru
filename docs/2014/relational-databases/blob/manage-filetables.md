@@ -14,16 +14,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2e8522cde5be0ccc34f858ce6bff945433af11ac
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874791"
 ---
 # <a name="manage-filetables"></a>Управление таблицами FileTable
   Описывает стандартные административные задачи по управлению таблицами FileTables.  
   
-##  <a name="HowToEnumerate"></a> Инструкции: получить список таблиц FileTable и связанных объектов  
+##  <a name="HowToEnumerate"></a> Инструкции: Получение списка таблиц Filetable и связанных объектов  
  Чтобы получить список таблиц FileTable, выполните запрос к одному из следующих представлений каталогов:  
   
 -   [sys.filetables (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-filetables-transact-sql)  
@@ -79,7 +79,7 @@ GO
   
 -   Если FILESTREAM отключен на уровне экземпляра, невидимыми будут все каталоги уровня базы данных этого экземпляра.  
   
-###  <a name="HowToDisable"></a> Инструкции: отключить и снова включить нетранзакционный доступ на уровне базы данных  
+###  <a name="HowToDisable"></a> Инструкции: Отключение и повторное включение нетранзакционного доступа на уровне базы данных  
  Дополнительные сведения см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  **Отключение полного нетранзакционного доступа**  
@@ -106,7 +106,7 @@ ALTER DATABASE database_name
 GO  
 ```  
   
-###  <a name="visible"></a> Инструкции: обеспечить видимость таблиц FileTables в базе данных  
+###  <a name="visible"></a> Инструкции: Обеспечение видимости таблиц filetables в базе данных  
  Каталог уровня базы данных и находящиеся в нем каталоги FileTable отображаются при соблюдении всех следующих условий.  
   
 1.  Функция FILESTREAM включена на уровне экземпляра.  
@@ -138,7 +138,7 @@ GO
   
 -   Каталог таблицы FileTable, а также содержащиеся в нем файлы и каталоги появляются в файловой системе и становятся доступными для файлового ввода-вывода.  
   
-###  <a name="HowToEnableNS"></a> Инструкции: отключить и снова включить пространство имен FileTable на уровне таблицы  
+###  <a name="HowToEnableNS"></a> Инструкции: Отключение и повторное включение пространства имен FileTable на уровне таблицы  
  Вызовите инструкцию ALTER TABLE с параметром **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** .  
   
  **Отключение пространства имен FileTable**  
@@ -161,7 +161,7 @@ GO
 > [!WARNING]  
 >  При уничтожении открытых дескрипторов файлов пользователи могут потерять несохраненные данные. Такое поведение согласуется с поведением самой файловой системы.  
   
-###  <a name="HowToListOpen"></a> Инструкции: получить список открытых дескрипторов файлов, связанных с таблицей FileTable  
+###  <a name="HowToListOpen"></a> Инструкции: Получить список дескрипторов открытых файлов, связанных с таблицей FileTable  
  Выполните запрос к представлению каталога [sys.dm_filestream_non_transacted_handles (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql).  
   
 ```sql  
@@ -169,7 +169,7 @@ SELECT * FROM sys.dm_filestream_non_transacted_handles;
 GO  
 ```  
   
-###  <a name="HowToKill"></a> Инструкции: уничтожить открытые дескрипторы файлов, связанные с таблицей FileTable  
+###  <a name="HowToKill"></a> Инструкции: Уничтожить открытые дескрипторы файлов связанных с таблицей FileTable  
  Чтобы уничтожить все открытые дескрипторы файлов в базе данных или в таблице FileTable либо конкретный дескриптор, вызовите хранимую процедуру [sp_kill_filestream_non_transacted_handles (Transact-SQL)](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles).  
   
 ```  
@@ -188,7 +188,7 @@ EXEC sp_kill_filestream_non_transacted_handles @handle_id = integer_handle_id;
 GO  
 ```  
   
-###  <a name="HowToIdentifyLocks"></a> Инструкции: определить блокировки, имеющиеся в таблицах FileTable  
+###  <a name="HowToIdentifyLocks"></a> Инструкции: Определение блокировок хранящихся в таблицах Filetable  
  Большинство блокировок в таблице FileTable связано с файлами, открытыми приложениями.  
   
  **Определение открытых файлов и связанных с ними блокировок**  

@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fab91a2df7d0401e8301589b1dd0d21027e579c6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891297"
 ---
-# <a name="step-5-testing-the-lesson-4-tutorial-package"></a>Шаг 5. Проверка учебного пакета, созданного на занятии 4
+# <a name="step-5-testing-the-lesson-4-tutorial-package"></a>Шаг 5. Проверка учебного пакета занятия 4
   На стадии выполнения произойдет ошибка поиска соответствия при работе преобразования «Уточняющий запрос» для Currency Key в поврежденном файле Currency_BAD.txt. Так как вывод ошибок преобразования «Уточняющий запрос» для Currency Key настроен на перенаправление строк новому адресату «неудачные обращения», операция не завершится ошибкой, и пакет будет успешно выполнен. Все ошибочные строки будут записаны в файл ErrorOutput.txt.  
   
  В этой задаче требуется проверить измененную конфигурацию вывода ошибок, запустив пакет на выполнение. После успешного выполнения пакета проверьте содержимое файла ErrorOutput.txt.  
@@ -44,7 +44,7 @@ ms.locfileid: "58377822"
   
 ### <a name="to-verify-the-contents-of-the-erroroutputtxt-file"></a>Проверка содержимого файла ErrorOutput.txt  
   
--   Откройте файл ErrorOutput.txt в приложении «Блокнот» или другом текстовом редакторе. Порядок столбцов по умолчанию: AverageRate, CurrencyID, CurrencyDate, EndOfDateRate, ErrorCode, ErrorColumn, ErrorDescription.  
+-   Откройте файл ErrorOutput.txt в приложении «Блокнот» или другом текстовом редакторе. Порядок столбцов по умолчанию является: AverageRate, CurrencyID, CurrencyDate, EndOfDateRate, ErrorCode, ErrorColumn, ErrorDescription.  
   
      Обратите внимание, что все строки файла содержат несовпадающие значения в столбце CurrencyID, значение столбца ErrorCode равно -1071607778, значение столбца ErrorColumn равно 0 и значение столбца ErrorDescription равно «В результате уточняющего запроса для строки не обнаружено соответствия». Значение столбца ErrorColumn равно 0, поскольку ошибка не является специфической для данного столбца. Это неудавшаяся операция уточняющего запроса. .  
   

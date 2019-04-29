@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856335"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Создание структуры и модели нейронной сети (учебник по интеллектуальному анализу данных — средний уровень)
   Чтобы создать модель интеллектуального анализа данных, сначала необходимо воспользоваться мастером интеллектуального анализа данных, чтобы создать новую структуру интеллектуального анализа, основанную на новом представлении источника данных. В этой задаче будет использовать мастер для создания структуры интеллектуального анализа данных и в то же время создания связанных с ней модели на основе [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритма нейронной сети.  
@@ -96,15 +96,15 @@ ms.locfileid: "56037725"
     |AutomaticResponses|Непрерывный|Long|  
     |AverageTimePerIssue|Непрерывный|Long|  
     |Вызовы|Непрерывный|Long|  
-    |DayOfWeek|Discrete|Текста|  
+    |DayOfWeek|Discrete|Text|  
     |FactCallCenterID|Ключ|Long|  
     |IssuesRaised|Непрерывный|Long|  
     |LevelOneOperators|Непрерывный|Long|  
     |LevelTwoOperators|Непрерывный|Long|  
     |Orders|Непрерывный|Long|  
     |ServiceGrade|Непрерывный|Double|  
-    |Shift|Discrete|Текста|  
-    |WageType|Discrete|Текста|  
+    |Shift|Discrete|Text|  
+    |WageType|Discrete|Text|  
   
 13. На **Create set тестирования** странице, очистите текстовое поле для параметра **процент проверочных данных**. Нажмите кнопку **Далее**.  
   

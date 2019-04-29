@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e09e41535ad878a3f20ae74df07ace7bda6fa7e4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889587"
 ---
 # <a name="query-builder"></a>Построитель запросов
   Используйте диалоговое окно **Построитель запросов** , чтобы создать запрос для использования в задаче «Выполнение SQL», в источнике и цели OLE DB, а также в преобразовании «Уточняющий запрос».  

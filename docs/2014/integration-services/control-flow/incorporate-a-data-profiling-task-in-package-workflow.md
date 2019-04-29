@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5d8096ee89a9c0b63c89849a02317dc23b2b130e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831634"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Включение задачи «Профилирование данных» в рабочий процесс пакета
   Профилирование и очистка данных на ранних стадиях не подходят для автоматизации. В службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]выходные данные задачи профилирования данных обычно требуют визуального анализа и вмешательства человека, чтобы определить, являются ли зафиксированные нарушения реальными. Для очистки данных, даже после обнаружения проблем с их качеством, нужен хорошо продуманный план.  

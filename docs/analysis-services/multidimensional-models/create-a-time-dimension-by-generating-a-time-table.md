@@ -1,5 +1,5 @@
 ---
-title: Создание измерения времени посредством формирования таблицы времени | Документы Microsoft
+title: Создание измерения времени посредством формирования таблицы времени | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d35cf55f64b977e952b57416a31c35cd669fc468
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62867071"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Создание измерения времени посредством формирования таблицы времени
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "34022051"
  [Представления источников данных в многомерных моделях](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Создание измерения типа Date](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)   
  [Свойства измерений базы данных](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
- [Связей измерений](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Создание измерения путем формирования в источнике данных таблицы не содержащую время](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
+ [Связи измерений](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
+ [Создание измерения путем формирования в источнике данных таблицы, отличной от таблицы времени](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

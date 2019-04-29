@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b83da069beee9440703b5dc0817668559c469d26
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889354"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>Выбор расположения источника (мастер обновления пакетов служб SSIS)
   Используйте страницу **Выбор исходного расположения** для задания местонахождения источника обновляемых пакетов.  

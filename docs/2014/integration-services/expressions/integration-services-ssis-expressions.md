@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a9d7fe2f1f65f0a698e727e5bad6df392c91546
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898079"
 ---
 # <a name="integration-services-ssis-expressions"></a>Выражения служб Integration Services (SSIS)
   Выражение — это сочетание символов (идентификаторов, литералов, функций и операторов), которое дает одно значение данных. Простые выражения могут включать одну константу, переменную или функцию. Чаще встречаются сложные выражения, включающие несколько операторов и функций и ссылающиеся на несколько столбцов и переменных. В службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]выражения могут использоваться для определения условий в инструкциях CASE, создания и обновления значений в столбцах данных, присвоения значений переменным, обновления или заполнения свойств во время выполнения, определения ограничений в управлении очередностью и указания выражений, используемых контейнером «цикл по элементам».  

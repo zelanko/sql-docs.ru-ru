@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dd7e7f6177695cd78e6893a78bdcef4d61c0e788
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62738762"
 ---
 # <a name="views-limitations"></a>Ограничения представлений
 Не поддерживается для dBASE, драйверы Microsoft Excel, Paradox или текст.

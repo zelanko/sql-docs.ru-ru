@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 559f13c3c777931270f4bc289f890f2360361030
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898842"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Редактор задачи «Выполнение SQL» (страница «Общие»)
   Используйте страницу **Общие** диалогового окна **Редактор задачи «Выполнение SQL»** для настройки задачи «Выполнение SQL» и формирования инструкции SQL, которую запускает задача.  
@@ -55,7 +55,7 @@ ms.locfileid: "58382281"
  **ConnectionType**  
  Выберите тип, используемый диспетчером соединений для соединения с источником данных. В качестве возможных типов соединения могут быть: **OLE DB**, **ODBC**, **ADO**, **ADO.NET** и **SQLMOBILE**.  
   
- **См. также:** [Диспетчер соединений OLE DB](connection-manager/ole-db-connection-manager.md), [диспетчер соединений ODBC](connection-manager/odbc-connection-manager.md), [диспетчер соединений ADO](connection-manager/ado-connection-manager.md), [диспетчера соединений ADO.NET](connection-manager/ado-net-connection-manager.md), [SQL Server Диспетчер соединений Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **См. также:** подробные сведения о [диспетчере подключений OLE DB](connection-manager/ole-db-connection-manager.md), [диспетчере подключений ODBC](connection-manager/odbc-connection-manager.md), [диспетчере подключений ADO](connection-manager/ado-connection-manager.md), [диспетчере подключений ADO.NET](connection-manager/ado-net-connection-manager.md), [диспетчере подключений SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md).  
   
  **Соединение**  
  Выберите соединение из списка определенных диспетчеров соединений. Для создания соединения выберите \<**Создать соединение...**>.  
@@ -104,13 +104,13 @@ ms.locfileid: "58382281"
  **FileConnection**  
  Выберите существующий диспетчер подключений файлов или нажмите кнопку \<**Создать подключение...**>, чтобы создать новый диспетчер подключений.  
   
- **См. также:** [Диспетчер подключения файлов](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
+ **См. также:** подробные сведения о [диспетчере файловых подключений](connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../2014/integration-services/file-connection-manager-editor.md).  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = Переменная  
  **SourceVariable**  
  Выберите существующую переменную или щелкните \<**Создать переменную...**>, чтобы создать ее.  
   
- **См. также:** [Службы Integration Services &#40;SSIS&#41; переменных](integration-services-ssis-variables.md), [добавить переменную](../../2014/integration-services/add-variable.md)  
+ **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) и о [добавлении переменной](../../2014/integration-services/add-variable.md).  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

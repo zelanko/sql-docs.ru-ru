@@ -13,11 +13,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0da9467d293c0081309accd99fb46d7589fb4b8b
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736578"
 ---
 # <a name="xmla-concepts"></a>Основные понятия XML для аналитики
   Открытый стандарт XML для аналитики (XMLA) поддерживает доступ к данным в источниках данных, находящихся в Интернете. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] реализует XML для Аналитики в соответствии со спецификацией XMLA 1.1.  

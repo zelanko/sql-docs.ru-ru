@@ -15,18 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4aaac5f66e8c01364419d8d2d9d5e853bf929ef7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62878227"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>Установка свойств определяемой пользователем переменной
   Чтобы задать свойства определяемой пользователем переменной в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], можно использовать один из следующих способов.  
   
 -   Окно «Переменные».  
   
--   Окно «Свойства». **Свойства** окне указаны свойства для настройки переменных, которые недоступны в **переменных** окна: Description, EvaluateAsExpression, Expression, ReadOnly, ValueType и IncludeInDebugDump.  
+-   Окно «Свойства». В окне **Свойства** указаны свойства для настройки переменных, которые недоступны в окне **Переменные**: Description, EvaluateAsExpression, Expression, ReadOnly, ValueType и IncludeInDebugDump.  
   
 > [!NOTE]  
 >  Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют также набор системных переменных, свойства которых нельзя обновить, за исключением свойства RaiseChangedEvent.  

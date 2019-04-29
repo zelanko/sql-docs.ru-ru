@@ -12,11 +12,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4abd066dd2fc971528468fb7104cb0c11e088150
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53348789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843048"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>Функции SQL Server, устаревшие в SQL Server 2014
   В этом разделе описаны устаревшие функции, которые все еще доступны в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Эти функции будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  
@@ -24,7 +24,7 @@ ms.locfileid: "53348789"
 ## <a name="features-not-supported-in-the-next-version-of-includessnoversionincludesssnoversion-mdmd"></a>Функции, неподдерживаемые в следующей версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Следующие функции компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] не будут поддерживаться в следующей версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не используйте их при работе над новыми приложениями и как можно скорее измените приложения, в которых они в настоящее время используются. Название компонента отображается в событиях трассировки в столбце ObjectName, а в счетчиках производительности и в динамическом административном представлении sys.dm_os_performance_counters в столбце instance_name. Идентификатор компонента отображается в событиях трассировки в столбце ObjectId.  
   
-|Категория|Устаревшая функция|Замена|Имя функции|Идентификатор функции|  
+|Category|Устаревшая функция|Замена|Имя функции|Идентификатор функции|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Программирование данных|[методы sys.soap_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-soap-endpoints-transact-sql)|Технология Windows Communications Foundation (WCF) или ASP.NET|Собственные веб-службы с поддержкой XML|22|  
 |Программирование данных|[sys.endpoint_webmethods &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-endpoint-webmethods-transact-sql)|Технология Windows Communications Foundation (WCF) или ASP.NET|Собственные веб-службы с поддержкой XML|23|  

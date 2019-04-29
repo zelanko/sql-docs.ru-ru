@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44bf8de8ea4c33a20a6159c5702db0b7eaee9eed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735050"
 ---
 # <a name="transferring-data-in-its-binary-form"></a>Передача данных в двоичной форме
 Приложение может безопасно передавать данные (Внутренняя формы, используемые указанную СУБД) между двумя источниками данных, которые используют же СУБД и аппаратной платформы. Для данного фрагмента данных типы данных SQL необходимо соответствующим образом в исходной и целевой источников данных. Тип данных C — SQL_C_BINARY.  

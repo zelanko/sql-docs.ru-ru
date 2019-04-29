@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c35eeb8905a5f4753572ae89adce0c8fdfbec691
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732875"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>Указание столбца, который будет использоваться в модели в качестве регрессора
   Модель линейной регрессии представляет значение прогнозируемого атрибута как результат формулы, в которой входные данные комбинируются таким образом, чтобы они как можно ближе соответствовали предполагаемой линии регрессии. Этот алгоритм принимает только числовые значения и автоматически обнаруживает входные данные, которые обеспечивают наиболее близкое соответствие.  
@@ -63,7 +63,7 @@ ms.locfileid: "48179935"
 ## <a name="see-also"></a>См. также  
  [Алгоритм линейной регрессии (Майкрософт)](microsoft-linear-regression-algorithm.md)   
  [Запросы интеллектуального анализа данных](data-mining-queries.md)   
- [Технический справочник по алгоритму линейной регрессии Майкрософт](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Модель интеллектуального анализа данных для моделей линейной регрессии &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Технический справочник по алгоритму линейной регрессии (Майкрософт)](microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Содержимое моделей интеллектуального анализа данных для моделей линейной регрессии (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ab92e158fe5da6312959cc0797ff48e1c44e0080
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835233"
 ---
 # <a name="common-properties"></a>Общие свойства
   Объекты потока данных в объектной модели служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] имеют общие свойства и пользовательские свойства на уровне компонента, входы и выходы, а также входные и выходные столбцы. Многие свойства имеют значения, доступные только для чтения и присваиваемые подсистемой обработки потока данных на этапе выполнения.  
@@ -98,7 +98,7 @@ ms.locfileid: "58378882"
 |PipelineVersion|Целочисленный|Версия задачи потока данных, в которой должен выполняться компонент.|  
 |UsesDispositions|Логическое значение|Указывает, имеет ли компонент вывод ошибок на выходе.|  
 |ValidateExternalMetadata|Логическое значение|Указывает, проверены ли метаданные внешних столбцов. Значение по умолчанию этого свойства равно `True`.|  
-|Версия|Целочисленный|Версия компонента.|  
+|Version|Целочисленный|Версия компонента.|  
   
 ##  <a name="inputs"></a> Входные свойства  
  В объектной модели служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] преобразования и назначения имеют входы. Вход компонента потока данных реализует интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>.  
@@ -174,7 +174,7 @@ ms.locfileid: "58378882"
 |ComparisonFlags|Целочисленный|Набор флагов, задающий правила сравнения столбцов, имеющих символьный тип данных. Дополнительные сведения см. в статье [Comparing String Data](data-flow/comparing-string-data.md).|  
 |Описание|String|Описывает выходной столбец.|  
 |ErrorOrTruncationOperation|String|Дополнительная строка, указывающая типы ошибок или типы усечения, которые могут происходить при обработке строки.|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, указывающее порядок обработки ошибок. Допустимые значения — `Fail component`, `Ignore failure` и `Redirect row`. Значение по умолчанию — `Fail component`.|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, указывающее порядок обработки ошибок. Допустимые значения — `Fail component`, `Ignore failure` и `Redirect row`. Значение по умолчанию — `Fail component`.|  
 |ExternalMetadataColumnID|Целочисленный|Идентификатор столбца внешних метаданных, присвоенный входному столбцу.|  
 |ID|Целочисленный|Значение, уникально определяющее выходной столбец.|  
 |IdentificationString|String|Строка, определяющая выходной столбец.|  
@@ -182,7 +182,7 @@ ms.locfileid: "58378882"
 |Имя|String|Имя выходного столбца.|  
 |SortKeyPosition|Целочисленный|Значение указывает, является ли столбец отсортированным, порядок его сортировки и последовательность, в которой отсортированы несколько столбцов. Значение **0** указывает на то, что столбец не отсортирован. Дополнительные сведения см. в разделе [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |SpecialFlags|Целочисленный|Значение, содержащее специальные флаги выходного столбца.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, определяющее, как компонент обрабатывает усечения, происходящие при обработке строк. Допустимые значения — `Fail component`, `Ignore failure` и `Redirect row`. Значение по умолчанию — `Fail component`.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, определяющее, как компонент обрабатывает усечения, происходящие при обработке строк. Допустимые значения — `Fail component`, `Ignore failure` и `Redirect row`. Значение по умолчанию — `Fail component`.|  
   
  Выходные столбцы также содержат набор свойств типа данных.  
   

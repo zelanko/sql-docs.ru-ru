@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0650d15ece36593139ae804f6535315eacbf9294
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843444"
 ---
 # <a name="what39s-new-database-engine"></a>Что&#39;s (ядро СУБД)
   В этом последнем выпуске [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] появились новые средства и усовершенствования, которые расширяют возможности и повышают производительность архитекторов, разработчиков и администраторов, занимающихся проектированием, созданием и обслуживанием систем хранения данных. Ниже перечислены улучшения, внесенные в компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] .  
@@ -118,7 +118,7 @@ ms.locfileid: "53371556"
   
   
 ###  <a name="OnlineEvent"></a> Класс событий Online Index Operation  
- Отчет о состоянии для класса событий «операции с индексами в сети» теперь содержит 2 новых столбца данных: **PartitionId** и **PartitionNumber**. Дополнительные сведения см. в разделе [Progress Report: Класс событий Online Index Operation](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md).  
+ Отчет о состоянии для класса событий операции с индексами в сети теперь содержит два новых столбца данных: **PartitionId** и **PartitionNumber**. Дополнительные сведения см. в разделе [Progress Report: Класс событий Online Index Operation](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md).  
   
   
 ###  <a name="Compat"></a> Уровень совместимости базы данных  

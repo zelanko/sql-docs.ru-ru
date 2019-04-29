@@ -1,5 +1,5 @@
 ---
-title: Урок 6. Использование параметров в модели развертывания проекта | Документация Майкрософт
+title: 'Занятие 6: Использование параметров в модели развертывания проекта | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d559defe1dd08f26077738cdd0aea219e8f7554b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890549"
 ---
-# <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>Урок 6. Использование параметров в модели развертывания проекта
+# <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>Занятие 6: Использование параметров в модели развертывания проекта
   В SQL Server 2012 была добавлена новая модель развертывания, позволяющая развертывать проекты на сервере служб Integration Services. Сервер служб Integration Services позволяет управлять пакетами, запускать пакеты, а также настраивать значения времени выполнения для пакетов.  
   
  На этом занятии будет изменить пакет, созданный в [занятия 5: Добавление конфигурации пакета в модель развертывания пакетов](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md) использовать модель развертывания проекта. Значение конфигурации будет заменено на параметр, чтобы указать местоположение образцов данных. Также можно скопировать пакет завершенного урока 5, который включен в учебник.  

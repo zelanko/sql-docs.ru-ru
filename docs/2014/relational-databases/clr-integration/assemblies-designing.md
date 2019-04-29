@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874932"
 ---
 # <a name="designing-assemblies"></a>Конструирование сборок
   В этом подразделе описываются факторы, которые следует принять во внимание при конструировании сборок:  

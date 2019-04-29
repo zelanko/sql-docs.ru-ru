@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84a7ae52cf3556d7c79e3b9ca8d6027f8a5f14db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734139"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Алгоритм линейной регрессии (Майкрософт)
   Алгоритм линейной регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] является разновидностью алгоритма дерева принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] , помогающего рассчитать линейную связь между зависимой и независимой переменной, а затем использовать эту связь при прогнозировании.  
@@ -78,9 +78,9 @@ ms.locfileid: "48180414"
 -   Поддерживается использование моделей интеллектуального анализа OLAP.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Технический справочник по алгоритму линейной регрессии Майкрософт](microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Технический справочник по алгоритму линейной регрессии (Майкрософт)](microsoft-linear-regression-algorithm-technical-reference.md)   
  [Примеры запросов модели линейной регрессии](linear-regression-model-query-examples.md)   
- [Модель интеллектуального анализа данных для моделей линейной регрессии &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Содержимое моделей интеллектуального анализа данных для моделей линейной регрессии (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

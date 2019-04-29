@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3959e998111d5fa45eee45b3d7de35501f86f794
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876512"
 ---
 # <a name="create-an-encrypted-backup"></a>Создание зашифрованной резервной копии
   В этом разделе описаны шаги, необходимые для создания зашифрованной резервной копии с помощью Transact-SQL.  
@@ -88,7 +88,7 @@ ms.locfileid: "52531849"
     , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account  
     ```  
   
-2.  **Создание главного ключа базы данных:** Выберите пароль для шифрования копии главного ключа базы данных, которая будет храниться в базе данных. Подключитесь к ядру СУБД, откройте новое окно запроса, скопируйте в него следующий пример и нажмите кнопку **Выполнить**.  
+2.  **Создайте главный ключ базы данных.** Выберите пароль для шифрования копии главного ключа базы данных, которая будет храниться в базе данных. Подключитесь к ядру СУБД, откройте новое окно запроса, скопируйте в него следующий пример и нажмите кнопку **Выполнить**.  
   
     ```  
     -- Creates a database master key.  

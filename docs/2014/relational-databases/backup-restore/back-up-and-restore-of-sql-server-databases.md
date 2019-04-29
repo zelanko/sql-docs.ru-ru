@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96eab9a3b388c8cb68203dce22e8bd1abc013e4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922945"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Резервное копирование и восстановление баз данных SQL Server
   В этом разделе описываются преимущества резервного копирования баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , основные условия резервного копирования и восстановления, а также приводятся стратегии резервного копирования и восстановления для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и рассматриваются вопросы безопасности, связанные с резервным копированием и восстановлением в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

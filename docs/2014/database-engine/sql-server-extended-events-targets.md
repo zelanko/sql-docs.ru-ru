@@ -15,14 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97dbdfcdbc1ddf2a8aba10845f1bc5e3c785a9ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842519"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Целями расширенных событий являются потребители события. Цели могут записывать события в файл, хранить данные событий в буфере памяти и cобирать статистические данные о событиях. Цели могут обрабатывать данные в синхронном или асинхронном режиме.  
+  Целями расширенных событий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] являются потребители события. Цели могут записывать события в файл, хранить данные событий в буфере памяти и cобирать статистические данные о событиях. Цели могут обрабатывать данные в синхронном или асинхронном режиме.  
   
  Структура расширенных событий гарантирует, что цели получают события единственный раз за сеанс.  
   

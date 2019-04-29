@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0c792bc2b37bbaae5161b856a7423adb4b707228
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843818"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>Параметры ("Текстовый редактор" — "XML" — страница "Форматирование")
 

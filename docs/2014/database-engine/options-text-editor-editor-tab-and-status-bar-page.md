@@ -1,5 +1,5 @@
 ---
-title: 'Параметры (текстовый редактор: вкладка редактора и строка состояния на странице) | Документация Майкрософт'
+title: 'Параметры (текстовый редактор: Вкладка редактора и строка состояния на странице) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 241a74861a7f634389324276daf9b03a8590e64d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844276"
 ---
-# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Параметры (текстовый редактор: страница "Вкладка редактора и строка состояния")
+# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Параметры (текстовый редактор: Вкладка редактора и строка состояния на странице)
   На странице **Вкладка редактора и строка состояния** можно настроить сведения, которые показываются в редакторах запросов [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Можно указать уровень сведений, отображаемых на вкладке и в строке состояния редактора запросов, а также место расположения строки состояния: вверху или внизу окна редактора.  
   
 ## <a name="option-settings-by-editor"></a>Параметры, задаваемые с помощью редактора  
@@ -93,7 +93,7 @@ ms.locfileid: "48055454"
  Включает имя сервера. Для локальных соединений это имя экземпляра. Для удаленных соединений это имя удаленного компьютера и имя экземпляра.  
   
 ## <a name="see-also"></a>См. также  
- [Параметры &#40;среды: шрифты и цвета страницы&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
+ [Параметры &#40;среды: Шрифты и цвета страницы&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
  [Выделение цветом в редакторах запросов](../relational-databases/scripting/color-coding-in-query-editors.md)  
   
   

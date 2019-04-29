@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7627a52322563a03881d138f6d3244d97cb8ca29
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733170"
 ---
 # <a name="neural-network-model-query-examples"></a>Примеры запросов к модели нейронной сети
   К модели интеллектуального анализа данных можно создать два вида запросов: запросы содержимого, возвращающие подробные сведения о закономерностях, обнаруженных при анализе, и прогнозирующие запросы, в которых используются закономерности, содержащиеся в модели, для прогнозирования новых данных. Например, запрос содержимого для модели нейронной сети может вернуть метаданные модели — в частности, число скрытых слоев. Или же прогнозирующий запрос может дать сведения для классификации на основе входа и, по желанию, предоставить значения вероятности для каждой классификации.  
@@ -226,6 +226,6 @@ NATURAL PREDICTION JOIN
  [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
  [Технический справочник по алгоритму нейронной сети (Майкрософт)](microsoft-neural-network-algorithm-technical-reference.md)   
  [Содержимое моделей интеллектуального анализа данных для моделей нейронных сетей (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Занятие 5. Построение моделей логистической регрессии нейронной сети и &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Занятие 5. Построение моделей логистической регрессии нейронной сети и &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

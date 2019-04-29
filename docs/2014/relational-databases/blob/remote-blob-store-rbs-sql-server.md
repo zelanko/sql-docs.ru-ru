@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2d9711b5b9d079df0396ba9874b203a89f26344f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874805"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Удаленное хранилище больших двоичных объектов (SQL Server)
   Удаленное хранилище больших двоичных объектов (RBS) для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это дополнительный компонент, позволяющий администраторам баз данных хранить большие двоичные объекты в отдельных хранилищах вместо хранения непосредственно на основном сервере базы данных.  

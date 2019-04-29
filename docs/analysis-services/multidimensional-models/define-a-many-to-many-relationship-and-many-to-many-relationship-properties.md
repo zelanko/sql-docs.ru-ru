@@ -1,5 +1,5 @@
 ---
-title: Определить многие ко многим "и" многие ко многим свойства | Документы Microsoft
+title: Определение связи многие ко многим и свойств связей многие ко многим | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 53b20b10aea985722f9c498079a3267a5ddb6969
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62825750"
 ---
-# <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Определение связей «многие ко многим» и свойств связей «многие ко многим»
+# <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Определение связей "многие ко многим" и свойств связей "многие ко многим"
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   В этом разделе рассматривается измерения «многие ко многим» в службах Analysis Services, включая случаи их использования и способы создания.  
   
@@ -41,11 +41,11 @@ ms.locfileid: "34026901"
   
  Связь «многие ко многим» не отображается визуально в диаграмме куба. Вместо нее используйте вкладку «Использование измерения» для быстрого определения подобных связей в модели. Связь «многие ко многим» обозначается следующим значком:  
   
- ![Значок многие ко многим при использовании измерения](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "многие ко многим значок при использовании измерения")  
+ ![Многие ко многим значок в окне использования измерений](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "многие ко многим значок в окне использования измерений")  
   
  Нажмите кнопку, чтобы открыть окно «Определение связи» и проверить тип связи, а также узнать, какая промежуточная группа мер используется в связи.  
   
- ![Определение связи кнопки при использовании измерения](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "кнопку Задание связи при использовании измерения")  
+ ![Определить связь кнопки в окне использования измерений](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "кнопку Задание связи в окне использования измерений")  
   
  В последующих подразделах вы узнаете, как настраивать измерение «многие ко многим» и тестировать поведение модели. Если вы предпочитаете сначала просмотреть дополнительную информацию или пройти обучение, см. раздел **Дополнительные сведения** в конце данной статьи.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "34026901"
   
  Для иллюстрации шагов по созданию связи «многие ко многим» данная процедура воссоздает одну из подобных связей в кубе Adventure Works. Если у вас есть источник данных (в данном случае хранилище данных примера Adventure Works), установленный на экземпляре реляционной СУБД, вы можете выполнить следующую процедуру.  
   
-#### <a name="step-1-verify-dsv-relationships"></a>Шаг 1. Проверка связей представления источника данных  
+#### <a name="step-1-verify-dsv-relationships"></a>Шаг 1. Проверка связей представления источника данных  
   
 1.  В приложении SQL Server Data Tools для многомерного проекта создайте источник данных для реляционного хранилища данных Adventure Works DW 2012, размещенного на экземпляре SQL Server Database Engine.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "34026901"
   
      ![Представление источника данных, отображающее связанные таблицы](../../analysis-services/multidimensional-models/media/ssas-m2m-dsvpkeys.PNG "представления источника данных, отображающее связанные таблицы")  
   
-#### <a name="step-2-create-dimensions-and-measure-groups"></a>Шаг 2. Создание измерений и групп мер  
+#### <a name="step-2-create-dimensions-and-measure-groups"></a>Шаг 2. Создание измерений и групп мер  
   
 1.  В среде SQL Server Data Tools для многомерного проекта щелкните правой кнопкой мыши папку **Измерения** и выберите **Создать измерение**.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "34026901"
   
      Выберите все атрибуты.  
   
-     ![Список атрибутов в новое измерение](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesreason.PNG "список атрибутов в новое измерение")  
+     ![Список атрибутов в новом измерении](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesreason.PNG "список атрибутов в новое измерение")  
   
 3.  Создайте второе измерение на основе существующей таблицы Fact Internet Sales. Эта таблица фактов содержит информацию измерения Sales Order. Мы используем ее для построения этого измерения.  
   
@@ -97,11 +97,11 @@ ms.locfileid: "34026901"
   
 5.  На следующей странице мастера выберите атрибуты. В данном примере можно выбрать только **SalesOrderNumber**.  
   
-     ![Список атрибутов отображение измерение заказа на продажу](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesorderattrib.PNG "Отображение списка Sales order измерения атрибута")  
+     ![Список атрибутов отображение измерение заказа на продажу](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesorderattrib.PNG "атрибут Отображение списка для Sales order измерения")  
   
 6.  Переименуйте измерение в **Dim Sales Orders**, придерживаясь согласованного порядка именования измерений.  
   
-     ![Страница мастера, отображающая Переименование измерения](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesorders.PNG "страница мастера, отображающая Переименование измерения")  
+     ![Страница мастера, отображающая Переименование измерения](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesorders.PNG "страницы мастера, отображающая Переименование измерения")  
   
 7.  Щелкните правой кнопкой мыши **Кубы** и выберите пункт **Создать куб**.  
   
@@ -119,17 +119,17 @@ ms.locfileid: "34026901"
   
 11. Присвойте кубу имя и нажмите кнопку **Готово**.  
   
-#### <a name="step-3-define-many-to-many-relationship"></a>Шаг 3. Определение связи "многие ко многим"  
+#### <a name="step-3-define-many-to-many-relationship"></a>Шаг 3. Определите многие ко многим связи  
   
 1.  В конструкторе кубов перейдите на вкладку «Использование измерений». Обратите внимание, что между измерениями **Dim Sales Reason** и **Fact Internet Sales**уже имеется связь "многие ко многим". Напомним, что связь «многие ко многим» обозначается следующим значком.  
   
-     ![Значок многие ко многим при использовании измерения](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "многие ко многим значок при использовании измерения")  
+     ![Многие ко многим значок в окне использования измерений](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "многие ко многим значок в окне использования измерений")  
   
 2.  Щелкните ячейку на пересечении **Dim Sales Reason** и **Fact Internet Sales**, затем нажмите кнопку, чтобы открыть окно определения связи.  
   
      В этом диалоговом окне можно указать связь «многие ко многим». Если бы мы добавляли измерения с обычной связью, то в этом окне изменили бы их на «многие ко многим».  
   
-     ![Определение связи кнопки при использовании измерения](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "кнопку Задание связи при использовании измерения")  
+     ![Определить связь кнопки в окне использования измерений](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "кнопку Задание связи в окне использования измерений")  
   
 3.  Разверните проект в многомерный экземпляр служб Analysis Services. В следующем шаге мы откроем куб в Excel, чтобы проверить его поведение.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "34026901"
   
      Немного ниже вы увидите сумму продаж и причины для заказа с номером **SO5382**. Общая сумма этого заказа — **539,99**, а в качестве причин указаны Promotion, Other и Price.  
   
-     ![Лист Excel, показывающая агрегаты многие ко многим](../../analysis-services/multidimensional-models/media/ssas-m2m-excel.png "листа Excel, показывающая многие ко многим агрегаты")  
+     ![Лист Excel с агрегаты многие ко многим](../../analysis-services/multidimensional-models/media/ssas-m2m-excel.png "лист Excel с многие ко многим агрегатов")  
   
      Обратите внимание, что столбец Sales Amount для этого заказа вычислен правильно; здесь показано **539,99** за весь заказ. Хотя **539,99** указано для каждой причины, это значение не суммируется для всех трех причин, что привело бы к ошибке в общем итоге.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "34026901"
   
 5.  Выполните прокрутку до нижней части листа. Теперь хорошо видно, что Price (Цена) является самой важной причиной для покупок клиентов по сравнению с другими причинами и общей суммой.  
   
-     ![Книга Excel отображаются итоги в многие ко многим](../../analysis-services/multidimensional-models/media/ssas-m2m-excelgrandtotal.png "отображаются итоги в многие ко многим книги Excel")  
+     ![Книга Excel, отображение итогов в многие ко многим](../../analysis-services/multidimensional-models/media/ssas-m2m-excelgrandtotal.png "книги Excel, отображение итогов в многие ко многим")  
   
 #### <a name="tips-for-handling-unexpected-query-results"></a>Советы по обработке непредвиденных результатов запросов  
   
@@ -179,12 +179,12 @@ ms.locfileid: "34026901"
   
  [Революция концепции «многие ко многим» 2.0](http://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [Руководство. Пример измерения "многие ко многим" для служб SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324761)  
+ [Учебник. Многие ко многим пример измерения для SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>См. также  
- [Связей измерений](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Установка образцов данных и проектов для служб Analysis Services многомерное моделирование учебник](../../analysis-services/install-sample-data-and-projects.md)   
- [Развертывание проектов служб Analysis Services & #40; SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
+ [Связи измерений](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
+ [Установка образцов данных и проектов для учебника по многомерному моделированию в службах Analysis Services](../../analysis-services/install-sample-data-and-projects.md)   
+ [Развертывание проектов служб Analysis Services (среда SSDT)](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
  [Перспективы в многомерных моделях](../../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   

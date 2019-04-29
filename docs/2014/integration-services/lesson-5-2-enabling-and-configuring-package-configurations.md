@@ -1,5 +1,5 @@
 ---
-title: Этап 2. Включение и настройка конфигурации пакетов | Документация Майкрософт
+title: Шаг 2. Включение и настройка конфигурации пакетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891073"
 ---
-# <a name="step-2-enabling-and-configuring-package-configurations"></a>Этап 2. Активация и настройка конфигурации пакетов
+# <a name="step-2-enabling-and-configuring-package-configurations"></a>Шаг 2. Включение и настройка конфигурации пакетов
   В этой задаче вы преобразуете проект в модель развертывания пакета и включите конфигурации пакетов с помощью мастера настройки пакета. Этот мастер будет использован для создания файла конфигурации в формате XML, который содержит параметры конфигурации для свойства `Directory` контейнера «цикл по каждому элементу». Значение свойства Directory содержится в новой переменной уровня пакета, обновление которой можно осуществлять в процессе выполнения. Кроме того, будет заполнена новая папка с образцами данных для использования при проверке.  
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>Создание новой переменной уровня пакета, сопоставленной со свойством Directory  

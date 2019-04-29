@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4025a4812b7bb284d5fdf0540491d1506f05cdea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844290"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Параметры ("Текстовый редактор" — "Обычный текст" — страница "Вкладки")
   Используйте это диалоговое окно для изменения режима табуляции в текстовом редакторе, который используется для редактирования документа, не связанного с определенным языком разработки. Для вывода этих параметров щелкните пункт **Параметры** в меню **Сервис**, раскройте узел **Текстовый редактор**, узел **Неформатированный текст**, затем щелкните **Табуляция**.  

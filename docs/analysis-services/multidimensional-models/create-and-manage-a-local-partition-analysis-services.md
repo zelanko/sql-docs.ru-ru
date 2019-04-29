@@ -1,5 +1,5 @@
 ---
-title: Создание и управление локальной секции (службы Analysis Services) | Документы Microsoft
+title: Создание и управление ими локальной секции (службы Analysis Services) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 49ac59377001eb6007f7f647d3817993c6121b74
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866686"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Создание локальной секции и управление ей (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -118,8 +118,8 @@ ms.locfileid: "34024701"
  В качестве последнего действия обычно необходимо удалить секцию по умолчанию, которая была основана на самой таблице (если она еще есть), иначе секции, основанные на запросах, будут перекрываться с запросом, основанным на полной таблице.  
   
 ## <a name="see-also"></a>См. также  
- [Секций & #40; Analysis Services — многомерные данные & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Секции (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Удаленные секции](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Слияние секций в службы Analysis Services & #40; Службы SSAS — многомерные & #41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Объединение секций в службах Analysis Services (службы SSAS  — многомерные данные)](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

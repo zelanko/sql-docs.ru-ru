@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d2378426a3cd55b6df183cac7782d63578e2ed0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62830227"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Установка задачи «Профилирование данных»
   Перед просмотром профиля исходных данных необходимо сначала настроить и выполнить задачу «Профилирование данных». Эта задача создается в пакете служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Задача «Профилирование данных» настраивается с помощью редактора задачи «Профилирование данных». Этот редактор позволяет выбрать расположение, в которое будут выводиться профили, в том числе профили, требуемые для вычисления. После настройки задачи запускается пакет, вычисляющий профили данных.  

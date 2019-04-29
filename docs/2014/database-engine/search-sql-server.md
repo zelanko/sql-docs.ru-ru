@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 441fbef735366b63ad56fc6652f79c977378ba2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843729"
 ---
 # <a name="search-sql-server"></a>Поиск (SQL Server)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] предоставляет функции поиска текста и документов, которые выходят за пределы функции [!INCLUDE[tsql](../includes/tsql-md.md)] `LIKE` ключевое слово.  

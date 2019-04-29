@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 874d28c4a2ff53f0e9146dbf9a8af5a42f5b6519
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732503"
 ---
 # <a name="database-designer-analysis-services---multidimensional-data"></a>Конструктор баз данных (службы Analysis Services — многомерные данные)
   Конструктор баз данных в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] позволяет изменить свойства и просмотреть предупреждения базы данных служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -32,6 +32,6 @@ ms.locfileid: "48187794"
   
 ## <a name="see-also"></a>См. также  
  [Конструкторы и диалоговые окна служб Analysis Services &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Многомерный шаблон баз данных &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Базы данных многомерных моделей (службы SSAS)](multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

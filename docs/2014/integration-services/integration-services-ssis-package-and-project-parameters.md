@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cfd6a65e1561f252574ff919c8b63b0bbd57876f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892266"
 ---
 # <a name="integration-services-ssis-parameters"></a>Параметры служб Integration Services (SSIS)
   Параметры служб[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) могут быть использованы для присвоения значений свойствам внутри пакетов во время выполнения пакетов. Можно создать *параметры проекта* на уровне проекта и *параметры пакета* на уровне пакета. Параметры проекта используются для предоставления любых внешних данных, получаемых проектом, одному пакету в проекте или более. Параметры пакета позволяют изменить выполнение пакета. При этом изменять пакет и развертывать его повторно не придется.  
@@ -102,6 +102,6 @@ ms.locfileid: "58377982"
  [Настройка значений параметров после развертывания проекта](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
   
 ## <a name="related-content"></a>См. также  
- Запись в блоге [SSIS Quick Tip: Обязательные параметры](https://go.microsoft.com/fwlink/?LinkId=239781), на сайте mattmasson.com.  
+ Запись в блоге [SSIS Quick Tip: Required Parameters](https://go.microsoft.com/fwlink/?LinkId=239781) (Краткие рекомендации по службам SSIS. Необходимые параметры) на сайте mattmasson.com.  
   
   
