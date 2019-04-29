@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3133c92dd5bf9b8aeae01b69393d2874fd9afa24
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752728"
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>Занятие 5-2-Определение связи фактов
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "52518838"
   
 14. На панели **Атрибуты** конструктора измерений для измерения **Подробности заказа через Интернет** выберите атрибут **Номер заказа**и в окне свойств задайте для свойства **Name** значение **Описание позиции**.  
   
-15. В **NameColumn** свойства ячейки, нажмите кнопку обзора **(...)** . В диалоговом окне Столбец имени выберите в списке Исходная таблица значение **Product** , в списке **Исходный столбец** — значение **EnglishProductName**и нажмите кнопку **ОК**.  
+15. В **NameColumn** свойства ячейки, нажмите кнопку обзора **(...)** . В диалоговом окне **Столбец имени** выберите в списке **Исходная таблица** значение **Product** , в списке **Исходный столбец** — значение **EnglishProductName**и нажмите кнопку **ОК**.  
   
 16. Добавьте атрибут **Номер заказа на покупку** к этому измерению, перетащив столбец **SalesOrderNumber** из таблицы **InternetSales** панели **Представление источника данных** на панели **Атрибуты** .  
   

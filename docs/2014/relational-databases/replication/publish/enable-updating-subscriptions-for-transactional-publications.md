@@ -16,7 +16,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 963fe86b0d5939c82bffb9c07d5adacbadadba89
 ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/09/2019
 ms.locfileid: "54135954"
@@ -37,7 +37,7 @@ ms.locfileid: "54135954"
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Включение обновляемых подписок для публикаций транзакций производится на странице **Тип публикации** мастера создания публикаций. Дополнительные сведения об использовании мастера см. в статье [Создание публикации](create-a-publication.md). После того как публикация создана, обновляемые подписки невозможно включить.  
   
- Для использования обновляемых подписок необходимо также настроить параметры в мастере создания подписки. Дополнительные сведения см. в статье [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+ Для использования обновляемых подписок необходимо также настроить параметры в мастере создания подписки. Дополнительные сведения см. в разделе [Создание обновляемых подписок для публикаций транзакций](../publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 #### <a name="to-enable-updating-subscriptions"></a>Включение обновляемых подписок  
   
@@ -109,7 +109,7 @@ ms.locfileid: "54135954"
  [Типы публикации для репликации транзакций](../transactional/transactional-replication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Create a Publication](create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [Создание обновляемой подписки для публикации транзакций](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Использование программы sqlcmd с переменными скрипта](../../scripting/sqlcmd-use-with-scripting-variables.md)  
   

@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775307"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Установка SQL Server 2014 с помощью SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, доступны в центре установки. На странице **Дополнительно** **центра установки** имеется два параметра: **Подготовка образа изолированного экземпляра[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** и **Завершение образа подготовленного изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. В разделах [Подготовка](#prepare) и [Завершение](#complete) подробно описывается процесс установки. Дополнительные сведения см. в разделе [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
@@ -171,7 +171,7 @@ ms.locfileid: "58658345"
   
 7.  На странице **Выбор подготовленного** экземпляра выберите в раскрывающемся списке подготовленный экземпляр, создание которого необходимо завершить. Выберите ненастроенный экземпляр в списке **Идентификатор экземпляра** .  
   
-     **Установленные экземпляры:** в этой сетке отображаются все экземпляры на этом компьютере, включая подготовленные.  
+     **Установленные экземпляры:** В этой сетке отображаются все экземпляры, включая подготовленные на этом компьютере.  
   
 8.  На странице **Обзор компонента** будут отображены выбранные средства и компоненты, включенные в установку на шаге подготовки. Если необходимо добавить дополнительные компоненты к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , не включенному в подготовленный экземпляр, то сначала завершите данный шаг, чтобы закончить создание экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а затем добавьте компоненты на странице **Добавить компоненты** в **Центре установки**.  
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a2e06d49f22180ae99bf5f41bb4007fda1e03f84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795380"
 ---
 # <a name="create-and-manage-tabular-model-partitions-ssas-tabular"></a>Создание секций табличной модели и управление ими (табличные службы SSAS)
   Секции разделяют таблицу на логические части. Каждая секция затем может обрабатываться (обновляться) независимо от других секций. Секции, определенные для модели во время разработки модели, дублируются в модели развертывания. После развертывания можно настроить управление секциями с помощью диалогового окна **Секции** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью скрипта. В задачах этого раздела описывается создание и управление секциями в развернутой модели.  
@@ -64,7 +64,7 @@ ms.locfileid: "48113606"
 -   В диалоговом окне **Секции** в списке **Секции** выберите секцию, которую необходимо удалить, и нажмите кнопку **Удалить** .  
   
 ## <a name="see-also"></a>См. также  
- [Секции табличных моделей &#40;табличные службы SSAS&#41;](partitions-ssas-tabular.md)   
- [Обработка секций табличной модели &#40;табличные службы SSAS&#41;](process-tabular-model-partitions-ssas-tabular.md)  
+ [Секции табличных моделей (табличные службы SSAS)](partitions-ssas-tabular.md)   
+ [Обработка секций табличной модели (табличные службы SSAS)](process-tabular-model-partitions-ssas-tabular.md)  
   
   

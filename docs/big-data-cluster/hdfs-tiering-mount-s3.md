@@ -10,18 +10,18 @@ ms.date: 04/15/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd4a5fc600a937b5cc29ea4356a7cc2eb14966b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+ms.openlocfilehash: 79c09d5bcff26c9f5867e5b0fb38bd019b681b5c
+ms.sourcegitcommit: 89abd4cd4323ae5ee284571cd69a9fe07d869664
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63317123"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64330599"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Как S3 подключения для HDFS, распределение по уровням в кластере больших данных
 
 Следующие разделы содержат пример того, как настроить распределение по уровням с источником данных S3 хранилища HDFS.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - [Развернутые больших данных кластера](deployment-guidance.md)
 - [Средства работы с большими данными](deploy-big-data-tools.md)
@@ -30,7 +30,7 @@ ms.locfileid: "63317123"
 - Создание и передача данных в контейнер S3 
   - Отправить CSV-ФАЙЛ или файлы для контейнера S3 Parquet. Это внешние данные HDFS, который будет подключен к HDFS в кластере больших данных.
 
-## <a name="access-keys"></a>Ключи доступа
+## <a name="access-keys"></a>Клавиши доступа
 
 1. Откройте командную строку на клиентском компьютере с доступом к кластеру больших данных.
 
@@ -42,7 +42,7 @@ ms.locfileid: "63317123"
    ```
 
    > [!TIP]
-   > Дополнительные сведения о создании S3 ключи доступа (`<s3-access-key>`), см. в разделе [ключи доступа S3](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).
+   > Дополнительные сведения о создании ключей доступа S3 см. в разделе [ключи доступа S3](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).
 
 ## <a id="mount"></a> Подключение удаленного хранилища HDFS
 
