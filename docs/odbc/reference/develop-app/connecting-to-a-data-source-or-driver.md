@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8c468b71b4c4126386d75c02b368cba9965fe1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043339"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>Подключение к источнику данных или драйверу
 Приложение может подключаться ко множеству драйверах и источниках данных. Это могут быть различные драйверы и источники данных, один драйвер и различных источников данных или даже нескольких подключений на один драйвер и источник данных.  

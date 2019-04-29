@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9bafb97065c86a4d227f79b62c3d388d45c1445f
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62845968"
 ---
 # <a name="modify-the-trace-results-view"></a>Изменение представления результатов трассировки
   Данный раздел содержит описание процесса изменения представления результатов трассировки сеанса расширенных событий в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] посредством выполнения следующих задач.  
@@ -149,7 +149,7 @@ ms.locfileid: "49120387"
 ##  <a name="AggregateResults"></a> Агрегатная обработка результатов  
  Расширенные события поддерживают пять агрегатных функций:  
   
--   SUM  
+-   Sum  
   
 -   Min  
   

@@ -10,22 +10,22 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: ca12b3926fb848defc2a19a08ffa9702516726fd
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034941"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>Инструкции T-SQL для Parallel Data Warehouse
 Инструкции Transact-SQL (T-SQL) для аналитической Platform System (APS) SQL Server Parallel Data хранилища (PDW).
 
 ## <a name="data-definition-language-ddl-statements"></a>Данные инструкции языка определения (DDL)
-* [ИЗМЕНЕНИЕ БАЗЫ ДАННЫХ](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)
+* [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)
 * [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
 * [ИЗМЕНЕНИЕ СХЕМЫ](../t-sql/statements/alter-schema-transact-sql.md)
-* [ИНСТРУКЦИЯ ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)
-* [СОЗДАНИЕ ИНДЕКСА COLUMNSTORE](../t-sql/statements/create-columnstore-index-transact-sql.md)
+* [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)
+* [CREATE COLUMNSTORE INDEX](../t-sql/statements/create-columnstore-index-transact-sql.md)
 * [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
 * [СОЗДАНИЕ ДАННЫХ ДЛЯ БАЗЫ ДАННЫХ УЧЕТНЫХ ДАННЫХ](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [СОЗДАНИЕ ВНЕШНЕГО ИСТОЧНИКА ДАННЫХ](../t-sql/statements/create-external-data-source-transact-sql.md)
@@ -85,7 +85,7 @@ ms.locfileid: "39400767"
 * [Вложенные запросы](../t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md)
 
 ## <a name="security-statements"></a>Инструкции безопасности
-* Разрешения: [GRANT](../t-sql/statements/grant-transact-sql.md), [DENY](../t-sql/statements/deny-transact-sql.md), [ОТОЗВАТЬ](../t-sql/statements/revoke-transact-sql.md)
+* Разрешения: [ПРЕДОСТАВЛЕНИЕ](../t-sql/statements/grant-transact-sql.md), [DENY](../t-sql/statements/deny-transact-sql.md), [ОТОЗВАТЬ](../t-sql/statements/revoke-transact-sql.md)
 * [ALTER AUTHORIZATION](../t-sql/statements/alter-authorization-transact-sql.md)
 * [ALTER CERTIFICATE](../t-sql/statements/alter-certificate-transact-sql.md)
 * [ИЗМЕНИТЬ КЛЮЧ ШИФРОВАНИЯ БАЗЫ ДАННЫХ](../t-sql/statements/alter-database-encryption-key-transact-sql.md)
@@ -97,8 +97,8 @@ ms.locfileid: "39400767"
 * [CLOSE MASTER KEY](../t-sql/statements/close-master-key-transact-sql.md)
 * [СОЗДАНИЕ СЕРТИФИКАТА](../t-sql/statements/create-certificate-transact-sql.md)
 * [СОЗДАНИЕ КЛЮЧА ШИФРОВАНИЯ БАЗЫ ДАННЫХ](../t-sql/statements/create-database-encryption-key-transact-sql.md)
-* [СОЗДАНИЕ ИМЕНИ ВХОДА](../t-sql/statements/create-login-transact-sql.md)
-* [СОЗДАНИЕ ГЛАВНОГО КЛЮЧА](../t-sql/statements/create-master-key-transact-sql.md)
+* [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)
+* [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)
 * [СОЗДАНИЕ РОЛИ](../t-sql/statements/create-role-transact-sql.md)
 * [СОЗДАНИЕ ПОЛЬЗОВАТЕЛЯ](../t-sql/statements/create-user-transact-sql.md)
 * [УДАЛИТЬ СЕРТИФИКАТ](../t-sql/statements/drop-certificate-transact-sql.md)

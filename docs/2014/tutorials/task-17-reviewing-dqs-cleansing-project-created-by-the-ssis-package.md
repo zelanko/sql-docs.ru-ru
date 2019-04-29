@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4653ce040e19b82b9e70daa7ebfc02047d71b194
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057854"
 ---
-# <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>Задача 17. Обзор проекта очистки данных DQS, созданного пакетом служб SSIS
+# <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>Задача 17. Обзор DQS очистки проекта, созданного пакетом служб SSIS
   В этой задаче вы откроете проект служб DQS, созданный пакетом служб SSIS в клиенте DQS, просмотрите результаты очистки и при желании выполните интерактивную очистку и экспортируете результаты.  
   
 1.  Запустите **Data Quality Client**.  
@@ -26,7 +26,7 @@ ms.locfileid: "56024445"
   
 3.  Сортировать список по **время начала действия** Чтобы получить последнюю запись.  
   
-4.  Обратите внимание, что имя проекта отображается в следующем формате: **CleanseAndCurate.Cleanse Supplier Data.GUID**.  
+4.  Обратите внимание на то, что вы видите имя проекта в следующем формате: **CleanseAndCurate.Cleanse Supplier Data.GUID**.  
   
      ![Проект очистки DQS, созданный пакетом SSIS](../../2014/tutorials/media/et-reviewingdqscpcreatedbythessispackage.jpg "проект очистки DQS, созданный пакетом служб SSIS")  
   

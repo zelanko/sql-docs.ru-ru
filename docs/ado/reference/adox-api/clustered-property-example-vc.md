@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0df3ce437d97f2111aa4f980ce926b1fdaccbded
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184012"
 ---
 # <a name="clustered-property-example-vc"></a>Пример свойства Clustered (Visual C++)
 В этом примере показано [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) свойство [индекс](../../../ado/reference/adox-api/index-object-adox.md). Обратите внимание, что базы данных Microsoft Jet не поддерживают кластеризованные индексы, поэтому этот пример возвращает **False** для **Clustered** свойства во всех индексах в *Northwind* База данных.  

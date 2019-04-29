@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9a48a4dfa0689e4ee30036c41980c1f4ad929108
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044148"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Тип соединения Oracle (службы SSRS)
   Чтобы использовать в отчете данные из базы данных Oracle, необходимо иметь набор данных, основанный на источнике данных Oracle. Этот встроенный тип источника данных основан на управляемом поставщике .NET Framework для Oracle и требует наличия клиентского программного обеспечения Oracle.  

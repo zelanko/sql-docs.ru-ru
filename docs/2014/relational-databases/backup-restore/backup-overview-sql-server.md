@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2b3b550ec7eb42597862c5b20e557aabdc909f13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922125"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   В этом разделе представлены сведения о компоненте резервного копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Резервное копирование базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет важное значение для защиты данных. Здесь представлено описание типов резервных копий и ограничений резервного копирования. В рамках данной темы также рассмотрены устройства резервного копирования и носители данных резервных копий в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -156,7 +156,7 @@ ms.locfileid: "48049404"
   
 -   [Восстановление резервной копии с устройства (SQL Server)](restore-a-backup-from-a-device-sql-server.md)  
   
--   [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Учебник. Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **Создание резервной копии**  
   
@@ -179,7 +179,7 @@ ms.locfileid: "48049404"
   
 -   [Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (Transact-SQL)](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Учебник. Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>См. также  
  [Резервное копирование и восстановление баз данных SQL Server](back-up-and-restore-of-sql-server-databases.md)   

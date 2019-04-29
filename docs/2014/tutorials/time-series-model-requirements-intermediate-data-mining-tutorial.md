@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5b3438e832f28329cb0fec764d3a4846bae18ede
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043120"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>Основные сведения о требованиях для модели временных рядов (учебник по интеллектуальному анализу данных — средний уровень)
   Данные для модели прогнозирования при подготовке должны содержать один столбец, который может быть использован для идентификации этапов временных рядов. Этот столбец будет обозначаться `Key Time`. Этот столбец является ключом и должен содержать уникальные числовые значения.  

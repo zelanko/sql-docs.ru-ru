@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 02dc045c97f79f70263d2ad2edabdbc2c0d2983f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065057"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Примеры кода ADO в Microsoft JScript
 Используйте в следующих примерах кода, чтобы узнать, как использовать ADO методы, свойства и события при записи в JScript.  
@@ -60,4 +60,4 @@ ms.locfileid: "47646679"
  [Примеры кода ADO в Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [VBScript примеры кода ADO](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Примеры кода ADO в Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [Приложение Г. Образцы объектов ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [Приложение г. Примеры ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

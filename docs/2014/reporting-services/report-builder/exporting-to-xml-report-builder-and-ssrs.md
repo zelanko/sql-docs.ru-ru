@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 22090b659e78ac322aee9376a93f31bebfe77be0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988022"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Экспорт в XML (построитель отчетов и службы SSRS)
   Модуль подготовки XML-отчета возвращает отчет в XML-формате. Схема для XML-документа, используемого в отчете, создается специально для этого отчета и содержит только данные. Данные макета не обрабатываются модулем подготовки XML-отчета, и разбивка на страницы не сохраняется. XML-документ, сформированный данным модулем, можно импортировать в базу данных, использовать как сообщение XML-данных или отправить пользовательскому приложению.  

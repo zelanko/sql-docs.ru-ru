@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f1814c96a5f58052be6271d2a35c1bbf78f87b1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63066482"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>Правила обновления результатов (визуальные инструменты для баз данных)
   В большинстве случаев результирующий набор, отображенный на [панели результатов](visual-database-tools.md), можно обновить. Однако в некоторых случаях этого сделать нельзя.  

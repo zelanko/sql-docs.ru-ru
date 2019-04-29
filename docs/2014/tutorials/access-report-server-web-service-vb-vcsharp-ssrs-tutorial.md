@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 9f8c549bef9d07f7b206f4dd8a9a652c8c72896f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62824535"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>Доступ к веб-службе сервера отчетов на языке Visual Basic или Visual C# (учебник по службам SSAS)
   Следующие руководства показано, как для доступа к серверу веб-службы отчетов из приложения, созданного с помощью [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] или [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  

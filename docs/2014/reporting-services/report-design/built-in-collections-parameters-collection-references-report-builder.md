@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0aeef25c70e3e8ff7be1cbec739063ffe2c20dbb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185691"
 ---
 # <a name="parameters-collection-references-report-builder-and-ssrs"></a>Ссылки на коллекцию параметров (построитель отчетов и службы SSRS)
   Параметры отчета являются одной из встроенных коллекций, на которые можно ссылаться из выражения. Включая в выражение параметры, можно настраивать внешний вид и данные отчета в соответствии с выбором пользователя. Выражения могут использоваться в любом свойстве элемента отчета или текстового поля, имеющего параметр (*Fx*) или \<**Expression**>. Кроме того, выражения применяются для дополнительного управления содержимым отчета и его внешним видом. Дополнительные сведения см. в разделе [Примеры выражений (построитель отчетов и службы SSRS)](expression-examples-report-builder-and-ssrs.md).  

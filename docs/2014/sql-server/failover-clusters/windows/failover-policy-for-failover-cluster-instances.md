@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9df2b0158504577630caa6830687a2665c91327
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050088"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Политика отработки отказа для экземпляров отказоустойчивого кластера
   В экземпляре отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (FCI) в каждый момент времени только один узел может быть владельцем группы ресурсов кластера WSFC. Клиентские запросы в FCI обслуживаются через этот узел. В случае сбоя и неуспешного перезапуска владельцем группы становится другой узел WSFC в экземпляре FCI. Этот процесс называется отработкой отказа. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] повышает надежность обнаружения сбоев и обеспечивает гибкую политику отработки отказов.  

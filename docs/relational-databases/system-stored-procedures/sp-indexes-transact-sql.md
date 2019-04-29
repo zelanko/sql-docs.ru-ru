@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b1a14d1cf8c9eac0ace93e3aac6e16219fd60eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62961916"
 ---
 # <a name="spindexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_indexes [ @table_server = ] 'table_server'
  [ @table_name=] '*table_name*"  
  Имя удаленной таблицы, для которой возвращаются сведения об индексе. *TABLE_NAME* — **sysname**, значение по умолчанию NULL. Если NULL, возвращаются все таблицы указанной базы данных.  
   
- [ @table_schema=] '*table_schema*"  
+ [ @table_schema= ] '*table_schema*'  
  Задает схему таблицы. В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует владельцу таблицы. *table_schema* — **sysname**, значение по умолчанию NULL.  
   
  [ @table_catalog=] '*table_db*"  
@@ -60,7 +60,7 @@ sp_indexes [ @table_server = ] 'table_server'
  [ @index_name=] '*index_name*"  
  Имя индекса, для которого запрашиваются сведения. *Индекс* — **sysname**, значение по умолчанию NULL.  
   
- [ @is_unique=] '*is_unique*"  
+ [ @is_unique= ] '*is_unique*'  
  Тип индекса, для которого запрашиваются сведения. *is_unique* — **бит**, значение по умолчанию NULL, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -85,7 +85,7 @@ sp_indexes [ @table_server = ] 'table_server'
 |ASC_OR_DESC|**varchar**|Порядок, используемые в параметрах сортировки:<br /><br /> A = по возрастанию<br /><br /> D = по убыванию<br /><br /> NULL = неприменимо<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда возвращает A.|  
 |CARDINALITY|**int**|Число строк в таблице или уникальных значений в индексе.|  
 |PAGES|**int**|Число страниц для хранения индекса или таблицы.|  
-|FILTER_CONDITION|**nvarchar (** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение.|  
+|FILTER_CONDITION|**nvarchar(** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение.|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для схемы.  

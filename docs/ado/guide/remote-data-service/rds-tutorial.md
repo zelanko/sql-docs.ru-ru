@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c9136f1fc1fdf7538744501984af50e2ca52f04
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62929889"
 ---
 # <a name="rds-tutorial"></a>Учебник по RDS
 Этот учебник демонстрирует использование модели программирования служб удаленных рабочих СТОЛОВ для запроса и обновления источника данных. Во-первых он описывает действия, необходимые для выполнения этой задачи. Затем руководства повторяется в Microsoft® Visual Basic Scripting Edition (с ADO ввода для Windows Foundation Classes (ADO и WFC)).  
@@ -55,20 +55,20 @@ ms.locfileid: "51558631"
   
  Этот учебник содержит следующие разделы.  
   
--   [Шаг 1. Укажите программу сервера (учебник по RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
+-   [Шаг 1. Укажите программу сервера (учебник по RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
   
--   [Шаг 2. Вызовите программу сервера (учебник по RDS)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)  
+-   [Шаг 2. Вызовите программу сервера (учебник по RDS)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)  
   
--   [Шаг 3. Сервер получает набор записей (учебник по RDS)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)  
+-   [Шаг 3. Сервер получает набор записей (учебник по RDS)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)  
   
--   [Шаг 4. Сервер возвращает набор записей (учебник по RDS)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
+-   [Шаг 4. Сервер возвращает набор записей (учебник по RDS)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
   
--   [Шаг 5. DataControl теперь можно использовать (учебник по RDS)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)  
+-   [Шаг 5. DataControl — можно использовать (учебник по RDS)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)  
   
--   [Шаг 6. Изменения отправлены на сервер (учебник по RDS)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
+-   [Шаг 6. Изменения отправляются на сервер (учебник по RDS)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
   
 -   [Учебник по RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
   
 ## <a name="see-also"></a>См. также  
- [Шаг 1: Укажите программу сервера (учебник по RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
+ [Шаг 1. Укажите программу сервера (учебник по RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
  [Учебник по RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

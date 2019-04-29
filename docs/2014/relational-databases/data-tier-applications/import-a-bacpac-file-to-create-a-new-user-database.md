@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 12e5d699615018c2d9e20a8fd49953931850a106
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918190"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Импорт файла BACPAC для создания новой пользовательской базы данных
   Импортируйте файл приложения уровня данных (DAC) (файл BACPAC) для создания копии исходной базы данных с данными в новом экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)] или компоненте [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Операции экспорта-импорта могут быть совмещены для переноса приложения уровня данных или базы данных из одного экземпляра в другой или для создания логического резервного копирования, например создания находящейся на предприятии копии базы данных, развернутой в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

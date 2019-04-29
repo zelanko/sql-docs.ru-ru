@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 379877d3a08c60a293b96c5c57d55a2894ba0a79
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63074063"
 ---
 # <a name="handle-multiple-job-steps"></a>Обработка множественных шагов задания
   Если в задании содержится более одного шага, необходимо указать порядок выполнения шагов задания. Это называется *управлением потоком***. Добавить новые шаги задания и реорганизовать поток шагов задания можно в любое время; изменения вступают в силу при следующем выполнении задания. На этой иллюстрации показано управление потоком для задания резервного копирования базы данных.  

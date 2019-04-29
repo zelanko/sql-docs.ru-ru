@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 648fd220988a0b32837ddcdf2b4c1c23de5e9f69
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911191"
 ---
 # <a name="receiving-results"></a>Получение результатов
 В ADO большинство команд привести некоторые сведения, возвращается вызывающей стороне. Для команд, возвращает набор строк, результаты получаются в **записей** объект, который является, вероятно, наиболее часто используемые объекты ADO.  

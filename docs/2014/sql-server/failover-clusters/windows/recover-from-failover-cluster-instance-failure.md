@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c4da45e57342288cc23a9783709666f4c02d0bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050017"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>Восстановление по журналу после сбоя экземпляра отказоустойчивого кластера
   В этом разделе описывается восстановление кластера с помощью оснастки «Диспетчер отказоустойчивости кластеров» после отработки отказа в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Оснастка «Диспетчер отказоустойчивости кластеров» — это приложение управления кластером для службы WSFC.  

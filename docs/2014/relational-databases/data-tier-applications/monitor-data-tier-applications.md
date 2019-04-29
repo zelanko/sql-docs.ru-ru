@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8fe96b7d84a2e363166238c3e840cac383f443dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918146"
 ---
 # <a name="monitor-data-tier-applications"></a>Наблюдение за приложениями уровня данных
   Наблюдение за приложениями уровня данных (DAC) может осуществляться из **обозревателя программ** или **обозревателя объектов** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) наряду с системными представлениями и таблицами. Кроме того, для наблюдения за всеми объектами базы данных, содержащейся в DAC, могут применяться стандартные методы наблюдения за базой данных и компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  

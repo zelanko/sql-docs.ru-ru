@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067680"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   Можно использовать `SQLColAttribute` для получения атрибута столбца результирующего набора для подготовленных или выполненных инструкций ODBC. Вызов `SQLColAttribute` в подготовленной инструкции приводит к обращению к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента получает данные столбца результирующего набора в процессе выполнения инструкции, поэтому вызов `SQLColAttribute` после завершения **SQLExecute** или **SQLExecDirect** does не включать обращения к серверу.  

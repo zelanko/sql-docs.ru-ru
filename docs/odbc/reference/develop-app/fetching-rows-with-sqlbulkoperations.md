@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a99592210ff315db026d60b8743d4a3bca13c969
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061632"
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>Выборка строк с помощью SQLBulkOperations
 Данные можно refetched в набор строк с помощью закладок с помощью вызова **SQLBulkOperations.** Строки, которые необходимо извлечь идентифицируются по закладки столбца привязанного закладки. Столбцы со значением SQL_COLUMN_IGNORE не извлекаются.  

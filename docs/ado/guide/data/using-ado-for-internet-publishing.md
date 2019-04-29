@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d779204046b9bca2591fbdc9459d7c6b53061ff4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184965"
 ---
 # <a name="using-ado-for-internet-publishing"></a>Использование ADO для публикации в Интернете
 [Поставщик OLE DB для публикаций в Интернете](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) показано содержится конкретный пример, доступ к разнородных данных с помощью ADO. Несмотря на то, что в примерах этого раздела будет специально для использования поставщика Интернет-публикаций, демонстрируются принципы должен выглядеть при использовании ADO с другими поставщиками для разнородных данных, таких как поставщик в хранилище по электронной почте.  

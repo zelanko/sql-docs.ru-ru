@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0fdb1789c6640c072ec013c341bd4889b28bb469
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128098"
 ---
 # <a name="driver-architecture-overview"></a>Обзор архитектуры драйвера
 Драйвер ODBC Microsoft Visual FoxPro является 32-разрядный драйвер, который позволяет открыть и запроса базы данных Microsoft Visual FoxPro или таблицы FoxPro через интерфейс откройте Database Connectivity (ODBC). Вы сможете использовать данные FoxPro, используя следующие типы приложений:  

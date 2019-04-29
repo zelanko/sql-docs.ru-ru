@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3823b6d55439aad860d9176933c348e44acc1ba5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922853"
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>Идентификаторы SQL Server в PowerShell
   Поставщик [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для Windows PowerShell использует идентификаторы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в путях Windows PowerShell. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] могут содержать символы, которые не поддерживаются в путях Windows PowerShell. Такие символы при использовании в идентификаторах в составе путей Windows PowerShell следует экранировать или применять для них специальную кодировку.  

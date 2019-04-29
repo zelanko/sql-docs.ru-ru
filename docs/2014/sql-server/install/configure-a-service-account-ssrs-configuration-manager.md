@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0ffc525e4d9ab516481eadf4cc303a704ce56da6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033634"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>Настройка учетной записи службы (диспетчер конфигурации служб SSRS)
   В установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] веб-служба сервера отчетов, диспетчер отчетов и приложение фоновой обработки работают в составе одной службы. Учетная запись, от которой запускается эта служба, должна быть задана в процессе установки на странице «Удостоверение службы», однако если есть необходимость сменить учетную запись или пароль, то можно воспользоваться для этого программой настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -65,9 +65,9 @@ ms.locfileid: "48136384"
 -   При обновлении учетной записи службы могут возникнуть ошибки резервирования URL-адресов. Каждое резервирование URL-адресов предусматривает создание дескриптора безопасности, который включает список разграничительного управления доступа DACL, который предоставляет учетной записи службы разрешение на прием запросов по данному URL-адресу. После обновления учетной записи URL-адрес должен быть создан повторно, чтобы обновить список DACL на основе новых сведений об учетной записи. Если резервирование URL-адресов не может быть выполнено повторно, но известно, что учетная запись является действительной, то можно попробовать перезапустить компьютер. Если после этого ошибка не исчезла, попробуйте воспользоваться другой учетной записью.  
   
 ## <a name="see-also"></a>См. также  
- [Диспетчер конфигурации служб Reporting Services &#40;собственный режим&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Настройка подключения к базе данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Настройка подключения к базе данных сервера отчетов (диспетчер конфигураций служб Reporting Services)](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Учетная запись службы &#40;собственный режим служб SSRS&#41;](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
  [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   

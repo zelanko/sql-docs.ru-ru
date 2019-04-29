@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8fe60270cd3737e3c372fbf92ccb906beb8d06cb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182917"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Урок 3. Проектирование родительского отчета с помощью мастера отчетов
   После создания подключения к данным и таблицы данных для родительского отчета следующий шаг состоит в проектировании родительского отчета в конструкторе отчетов с помощью мастера отчетов. Дополнительные сведения о конструкторе отчетов см. в разделе [Разработка отчетов с использованием конструктора отчетов (SSRS)](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  

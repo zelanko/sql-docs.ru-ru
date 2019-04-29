@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d75b32b9b1e25c23855d35e0f8e77bbf78c24688
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185901"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>Добавление, перемещение или удаление текстового поля (построитель отчетов и службы SSRS)
   Текстовые поля — это наиболее часто используемые элементы отчета. В текст отчета можно добавить текстовое поле, в котором будут отображаться такие сведения, как заголовки, выбранные значения параметров, встроенные поля и даты.  

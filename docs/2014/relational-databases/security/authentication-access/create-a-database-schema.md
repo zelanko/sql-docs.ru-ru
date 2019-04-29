@@ -18,11 +18,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3c3747149b23c6217f321eff9d19621189b89b66
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011988"
 ---
 # <a name="create-a-database-schema"></a>Создание схемы базы данных
   В этом разделе описывается создание схемы в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -74,7 +74,7 @@ ms.locfileid: "52541219"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Дополнительные параметры  
- **Схема-создать** диалоговое окно также предлагает варианты на двух дополнительных страницах: **Разрешения** и **расширенные свойства**.  
+ Диалоговое окно **Схема — создать** также содержит параметры на двух дополнительных страницах: **Разрешения** и **Расширенные свойства**.  
   
 -   На странице **Разрешения** перечислены все возможные защищаемые объекты и разрешения на эти объекты, которые могут быть предоставлены для имени входа.  
   

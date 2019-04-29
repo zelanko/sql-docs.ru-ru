@@ -19,11 +19,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 761cb5368c0b586b63f92952f3938d8708daaf86
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183056"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Выполнение команд консоли SSMA (MySQLToSQL)
 Корпорация Майкрософт предоставляет широкий набор сценариев файл команды для выполнения и контроля над SSMA действий.  
@@ -483,9 +483,9 @@ map-schema
   
 3.  `on-error:` Указывает, следует ли для указания ошибок синхронизации в качестве предупреждения или ошибки. Доступные параметры для при ошибке:  
   
-    -   Общее число отчетов как предупреждение  
+    -   report-total-as-warning  
   
-    -   отчет each как предупреждение  
+    -   report-each-as-warning  
   
     -   Сбой скрипта  
   
@@ -546,9 +546,9 @@ map-schema
   
 3.  `on-error:` Указывает, следует ли для указания ошибок синхронизации в качестве предупреждения или ошибки. Доступные параметры для при ошибке:  
   
-    -   Общее число отчетов как предупреждение  
+    -   report-total-as-warning  
   
-    -   отчет each как предупреждение  
+    -   report-each-as-warning  
   
     -   Сбой скрипта  
   
@@ -597,7 +597,7 @@ map-schema
   
 **Command**  
   
-Сохранить как сценарий  
+save-as-script  
   
 Позволяет сохранить скрипты объектов в файле, упомянутом при метабазы = цель, это является альтернативой команду синхронизации, где в мы получить скрипты и выполнить соответствует в целевой базе данных.  
   

@@ -11,20 +11,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19308ee2838238f0dea6cfdaeb228a250591613b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049340"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Просмотр и чтение журнала диагностики экземпляра отказоустойчивого кластера
   Все критические ошибки и события предупреждений для библиотеки ресурсов SQL Server записываются в журнал событий Windows. Диагностические сведения, связанные с SQL Server и записываемые в журнал, перехватываются хранимой процедурой [sp_server_diagnostics (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) и записываются в файлы журнала диагностики отказоустойчивого кластера SQL Server (также называемые журналами *SQLDIAG*).  
   
--   **Перед началом работы**: [рекомендации](#Recommendations), [безопасность](#Security)  
+-   **Перед началом:**  [Рекомендации по](#Recommendations), [безопасности](#Security)  
   
--   **Просмотр журнала диагностики с помощью следующих средств**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Просмотр журнала диагностики с помощью:**  [среды SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Настройка параметров журнала диагностики с помощью** [Transact-SQL](#TsqlConfigure)  
+-   **Чтобы Настройка параметров журнала диагностики, с помощью:** [Transact-SQL](#TsqlConfigure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 1623f824c062c270268323fd45ebf0e9533c8788
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044194"
 ---
 # <a name="time-series-prediction-dmx-tutorial"></a>Учебник по расширениям интеллектуального анализа данных для прогнозирования временных рядов
   В этом учебнике объясняется, как создавать структуры интеллектуального анализа временных рядов, создать дерево моделей интеллектуального анализа временных рядов, а затем делать прогнозы с помощью этих моделей.  

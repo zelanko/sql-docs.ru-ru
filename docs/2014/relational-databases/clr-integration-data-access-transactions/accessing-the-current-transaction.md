@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad369e49298c4d39a7e936ce8acf47ca2035c8f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920017"
 ---
 # <a name="accessing-the-current-transaction"></a>Доступ к текущей транзакции
   Если транзакция является активной в той точке, в которой вызывается код среды CLR, применяемой в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то транзакция становится доступной через класс `System.Transactions.Transaction`. Для доступа к текущей транзакции используется свойство `Transaction.Current`. В большинстве случаев в получении явного доступа к транзакции нет необходимости. Что касается подключений к базам данных, то в ADO.NET автоматически происходят проверка `Transaction.Current` при вызове метода `Connection.Open` и явное прикрепление соединения к этой транзакции (если только в строке соединения ключевое слово `Enlist` не задано равным false).  
@@ -61,7 +61,7 @@ Msg 3991, Level 16, State 1, Procedure uspRollbackFromProc, Line 1
 The context transaction which was active before entering user defined routine, trigger or aggregate " uspRollbackFromProc " has been ended inside of it, which is not allowed. Change application logic to enforce strict transaction nesting. The statement has been terminated.  
 ```  
   
- Это исключение также является ожидаемым, и чтобы обеспечить дальнейшее выполнение, необходимо заключить в блок try-catch инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)], которая выполняет действие, вызывающее запуск триггера. Несмотря на два активизированных исключения, происходит откат транзакции, а изменения не фиксируются.  
+ Это исключение также является ожидаемым, и чтобы обеспечить дальнейшее выполнение, необходимо заключить в блок try-catch инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] , которая выполняет действие, вызывающее запуск триггера. Несмотря на два активизированных исключения, происходит откат транзакции, а изменения не фиксируются.  
   
 ### <a name="example"></a>Пример  
  Ниже приведен пример транзакции, откат которой осуществляется из управляемой процедуры с помощью метода `Transaction.Rollback`. Обратите внимание на то, что метод `Transaction.Rollback` в управляемом коде заключен в блок try-catch. В скрипте [!INCLUDE[tsql](../../includes/tsql-md.md)] создаются сборка и управляемая хранимая процедура. Имейте в виду, что `EXEC uspRollbackFromProc` упаковывается в блок try/catch, чтобы перехватывается исключение, возникающее при завершении выполнения управляемой процедуры.  

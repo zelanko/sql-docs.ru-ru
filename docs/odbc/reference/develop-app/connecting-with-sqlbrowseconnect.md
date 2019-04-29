@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec1cd42e6704bc5168b1eb20841100fc279a66ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042770"
 ---
 # <a name="connecting-with-sqlbrowseconnect"></a>Подключение с помощью SQLBrowseConnect
 **SQLBrowseConnect**, например **SQLDriverConnect**, использует строку подключения. Тем не менее, с помощью **SQLBrowseConnect**, приложение может создать полную строку подключения во время выполнения. Это позволяет приложению:  

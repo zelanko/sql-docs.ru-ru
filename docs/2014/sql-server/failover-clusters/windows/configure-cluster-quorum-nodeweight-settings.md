@@ -14,18 +14,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: efd73d5b433deeb21b1f3469882a3f0e5dbe7c2b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049527"
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>Настройка параметров NodeWeight кворума кластера
   В этом разделе описан порядок настройки параметров NodeWeight для узла элемента в отказоустойчивом кластере Windows Server (WSFC). Параметры NodeWeight используются при определении голосов в кворуме для поддержки аварийного восстановления и сценариев с несколькими подсетями для экземпляров отказоустойчивого кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   **Перед началом работы:**  [Предварительные требования](#Prerequisites), [безопасности](#Security)  
+-   **Перед началом работы:**  [Обязательные условия](#Prerequisites), [Безопасность](#Security)  
   
--   **Для просмотра параметров NodeWeight кворума с помощью:** [С помощью Powershell](#PowerShellProcedure), [использование Cluster.exe](#CommandPromptProcedure)  
+-   **Просмотр параметров NodeWeight кворума с помощью:** [С помощью Powershell](#PowerShellProcedure), [использование Cluster.exe](#CommandPromptProcedure)  
   
 -   [См. также](#RelatedContent)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "53349886"
 > [!IMPORTANT]  
 >  Для использования параметров NodeWeight необходимо применить следующее исправление ко всем серверам в кластере WSFC:  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036): Доступно исправление, позволяющее настраивать узел кластера, не имеющий голосов кворума, в [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] и [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): Доступно исправление, позволяющее настраивать узел кластера, не имеющий голосов кворума в [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] и в [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 > [!TIP]  
 >  Если это исправление не установлено, то в примерах этого раздела будут возвращены пустые значения или значения NULL для NodeWeight.  

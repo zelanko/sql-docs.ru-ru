@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d8b542e709ed7104d851652e75be41ae4d6afec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911481"
 ---
 # <a name="named-pipes-properties"></a>Свойства именованных каналов
   Используйте страницу **Протокол**в диалоговом окне **Свойства именованных каналов** , чтобы просмотреть или изменить именованный канал, который прослушивается [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , во время использования протокола именованных каналов.  

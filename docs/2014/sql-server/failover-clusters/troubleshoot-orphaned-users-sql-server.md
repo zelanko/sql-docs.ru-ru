@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035686"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Диагностика пользователей, утративших связь с учетной записью (SQL Server)
   Чтобы войти в экземпляр Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], участник должен иметь допустимое имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это имя используется в процессе проверки подлинности, который проверяет, разрешено ли участнику подключаться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Имена входа на экземпляре сервера, отображаются в **sys.server_principals** представления каталога и **sys.syslogins** Просмотр в режиме совместимости.  

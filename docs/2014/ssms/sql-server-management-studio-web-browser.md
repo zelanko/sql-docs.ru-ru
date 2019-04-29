@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d8969e2a299f501fb35eb56a435c6a2e56a5bb2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127034"
 ---
 # <a name="sql-server-management-studio-web-browser"></a>Веб-браузер среды SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] интегрирована версия веб-обозревателя [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer. Этот веб-браузер позволяет переходить по URL-адресам, а также просматривать разделы справки библиотеки MSDN, не покидая среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Чтобы открыть веб-браузер, в меню **Вид** выберите пункт **Веб-браузер** , а затем **Показать браузер**.  

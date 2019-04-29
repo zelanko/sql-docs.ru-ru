@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d5ff1d19e6ead1cb24ebe666a7bab2187ddaa13
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126184"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>Выполнение массового копирования без файла форматирования (ODBC)
   В этом образце показывается, как использовать функции массового копирования без файла форматирования для создания файла данных в собственном режиме. Этот образец разработан для ODBC версии 3.0 или более поздней.  
@@ -44,7 +44,7 @@ ms.locfileid: "53366796"
   
     -   Имя файла данных, в который сохраняются все сообщения об ошибках массового копирования (укажите значение NULL, если файл для сообщений не требуется).  
   
-    -   Направление копирования: DB_IN из файла в представление или таблицу, или DB_OUT из таблицы или представления в файл.  
+    -   Направление копирования: DB_IN из файла в представление или таблицу или db_out — в файл из таблицы или представления.  
   
 5.  Вызовите [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) для выполнения операции массового копирования.  
   

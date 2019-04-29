@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 42e52d92d993627129f79f215fa536001f44538d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63074069"
 ---
 # <a name="template-explorer"></a>Template Explorer
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет целый ряд шаблонов. Шаблоны — это файлы со стандартным текстом, содержащие скрипты SQL, которые помогают создавать объекты в базе данных. Первом открытии обозревателя шаблонов копия шаблонов помещается в папке C:\Users, затем AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates пользователя.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5350fd4c4fd8fc447f3987ad502c49a2704e6762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184772"
 ---
 # <a name="adox-fundamentals"></a>Основные принципы ADOX
 Модули Microsoft® ActiveX® Data объекты для языка описания данных и безопасности (ADOX) — это расширение объектов ADO и модель программирования. ADOX содержит объекты для создания схем и изменения, а также безопасности. Поскольку это объектно ориентированный подход для операций со схемой, можно написать код, который будет работать для различных данных источников независимо от различий в их собственном вариантов синтаксиса.  

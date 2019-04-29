@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f63af414d59afed2bbe2e8eed3fba7a1362bb4bb
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061482"
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle, функция
 **Соответствие стандартам**  
@@ -58,7 +58,7 @@ SQLRETURN SQLFreeHandle(
   
 -   SQL_HANDLE_ENV  
   
--   ЗНАЧЕНИЕ SQL_HANDLE_STMT  
+-   SQL_HANDLE_STMT  
   
  Дескриптор SQL_HANDLE_DBC_INFO_TOKEN используется только для диспетчера драйверов и драйверов. Приложения не должны использовать этот тип дескриптора. Дополнительные сведения о SQL_HANDLE_DBC_INFO_TOKEN, см. в разделе [драйвера ODBC с поддержкой пула подключений разработка](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
   

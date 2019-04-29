@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: da6d71521f72ff23b4caf2f27dbc663dee684592
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057824"
 ---
 # <a name="what-is-polybase"></a>Что такое PolyBase?
 PolyBase позволяет вашей Analytics Platform System (APS) для обработки запросов Transact-SQL, которые могут считывать данные из и записывать данные с внешними источниками данных. Те же запросы, которые обращаются к внешним данным можно также включить связанных таблиц в вашей ТД. Это позволяет объединять данные из внешних источников с реляционными данными в базах данных APS, высокой ценности.
@@ -34,6 +34,6 @@ PolyBase на точках доступа поддерживает чтение 
 
 ## <a name="see-also"></a>См. также
 - [Hadoop](polybase-configure-hadoop.md)
-- [Хранилище больших двоичных объектов](polybase-configure-azure-blob-storage.md)
+- [Хранилище BLOB-объектов Azure](polybase-configure-azure-blob-storage.md)
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  
   

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d6255750df935fd3112f0e3b41941983a4882a0b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063419"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Занятие 4: Добавление таблицы в отчет (службы Reporting Services)
   После определения набора данных вы можете приступать к конструированию отчета. Макет отчета создается путем перетаскивания в область конструктора областей данных, текстовых полей, изображений и других элементов, которые необходимо включить в отчет.  

@@ -1,5 +1,5 @@
 ---
-title: UnknownMember (многомерные Выражения) | Документы Microsoft
+title: UnknownMember (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84eda6f42b674ebde8793605816f98e82af350d8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065047"
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember (многомерные выражения)
 
@@ -33,7 +33,7 @@ Hierarchy_Expression.UnknownMember
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Member_Expression.*  
+ *Member_Expression*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
  *Hierarchy_Expression*  
@@ -50,7 +50,7 @@ Hierarchy_Expression.UnknownMember
   
  Если выражение элемента указано, **UnknownMember** функция возвращает неизвестный дочерний элемент указанного элемента. Если указанный элемент не существует, функция возвращает значение NULL.  
   
- Если указано выражение иерархии, **UnknownMember** функция возвращает неизвестный элемент верхнего уровня, если он существует.  
+ Если выражение иерархии указано, **UnknownMember** функция возвращает неизвестный элемент верхнего уровня, если он существует.  
   
  Если неизвестный элемент не существует для уровня или элемента, **UnknownMember** функция создает элемент null.  
   
@@ -81,6 +81,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

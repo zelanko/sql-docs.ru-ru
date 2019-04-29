@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d5089921156f97509e157f771dbe20e1c33cf569
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925972"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>Условия бизнес-правил (службы Master Data Services)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]условия бизнес-правил — это условия, которые должны быть соблюдены для выполнения одного или нескольких действий.  

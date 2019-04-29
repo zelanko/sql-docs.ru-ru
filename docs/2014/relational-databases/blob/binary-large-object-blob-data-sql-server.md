@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: f954925cc33bccb5706c5609d8d45359282fd159
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920302"
 ---
 # <a name="binary-large-object-blob-data-sql-server"></a>Данные большого двоичного объекта (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет решения для хранения файлов и документов в базе данных или на удаленных устройствах хранения.  
@@ -26,7 +26,7 @@ ms.locfileid: "48185524"
  [Сравнение параметров для хранения больших двоичных объектов (SQL Server)](compare-options-for-storing-blobs-sql-server.md)  
  Сравнение преимуществ FILESTREAM, таблиц FileTable и удаленного хранилища больших двоичных объектов.  
   
- [FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md)  
+ [FILESTREAM (SQL Server)](filestream-sql-server.md)  
  FILESTREAM позволяет приложениям на основе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]хранить в файловой системе неструктурированные данные, например документы и изображения. Приложения могут одновременно использовать многопоточные API-интерфейсы и производительность файловой системы, тем самым обеспечивая транзакционную согласованность между неструктурированными и соответствующими им структурированными данными.  
   
  [FileTables (SQL Server)](filetables-sql-server.md)  

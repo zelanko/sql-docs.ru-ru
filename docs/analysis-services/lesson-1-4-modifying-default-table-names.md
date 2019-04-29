@@ -1,5 +1,5 @@
 ---
-title: Изменение имен таблиц по умолчанию | Документы Microsoft
+title: Изменение имен таблиц по умолчанию | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,12 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 40d580a79371cfb73dd38bc92a0dd69c50df1cd6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63053135"
 ---
-# <a name="lesson-1-4---modifying-default-table-names"></a>Урок 1-4 - изменение имен таблиц по умолчанию
+# <a name="lesson-1-4---modifying-default-table-names"></a>Урок 1 – 4-изменение имен таблиц по умолчанию
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Значение свойства **FriendlyName** для объектов в представлении источника данных можно изменить, сделав его имя более понятным и простым в использовании.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/10/2018
 7.  В меню **Файл** выберите пункт [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]Сохранить все **(или нажмите соответствующую кнопку на панели инструментов среды** ), чтобы сохранить изменения, внесенные в проект учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Если необходимо, здесь можно прервать работу с учебником, чтобы продолжить ее позже.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 2: Определение и развертывание куба](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
+[Занятие 2. Определение и развертывание куба](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>См. также  
 [Представления источников данных в многомерных моделях](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  

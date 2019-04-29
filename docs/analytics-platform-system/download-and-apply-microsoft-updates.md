@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d71a6ddc965b422f0f96f40788352213501b4db2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042351"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Скачивание и применение обновлений Майкрософт для системы платформы аналитики
 Здесь описывается, как загрузить обновления из каталога Центра обновления Майкрософт для Windows Server Update Services (WSUS) и применить эти обновления к серверам Analytics Platform System appliance. Центр обновления Майкрософт установит все необходимые обновления для Windows и SQL Server. На виртуальной машине VMM устройства установлена служба WSUS.  

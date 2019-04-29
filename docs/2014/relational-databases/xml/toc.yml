@@ -94,19 +94,19 @@
       href: invalid-characters-and-escape-rules.md
     - name: Использование с RAW Mode для FOR XML
       href: use-raw-mode-with-for-xml.md
-    - name: Пример. Получение сведений о модели продукта в формате XML
+    - name: Пример Получение сведений о модели продукта в формате XML
       href: example-retrieving-product-model-information-as-xml.md
-    - name: Пример. Указание XSINIL с директивой ELEMENTS
+    - name: Пример Определение XSINIL с директивой ELEMENTS
       href: example-specifying-xsinil-with-the-elements-directive.md
-    - name: 'Пример: запросы к схемам как к результатам с помощью параметров XMLDATA и XMLSCHEMA'
+    - name: Пример Запросы к схемам как к результатам с помощью параметров XMLDATA и XMLSCHEMA
       href: example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
-    - name: Пример. Получение двоичных данных
+    - name: Пример Получение двоичных данных
       href: example-retrieving-binary-data.md
-    - name: Пример. Переименование элемента <row>
+    - name: Пример Переименование элемента <row>
       href: example-renaming-the-row-element.md
-    - name: 'Пример. Задание корневого элемента для XML-документа, сформированного предложением FOR XML'
+    - name: 'Пример Определение корневого элемента для XML-документа, созданного предложением FOR XML'
       href: example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
-    - name: Пример. Запросы к столбцам XMLType
+    - name: Пример Запросы к столбцам XMLType
       href: example-querying-xmltype-columns.md
     - name: Использование с AUTO Mode для FOR XML
       href: use-auto-mode-with-for-xml.md
@@ -114,29 +114,29 @@
       href: use-the-binary-base64-option.md
     - name: 'Эвристические методы режима AUTO, используемые при формировании возвращаемого XML-кода'
       href: auto-mode-heuristics-in-shaping-returned-xml.md
-    - name: Примеры. Использование режима AUTO
+    - name: 'Примеры: Использование режима AUTO'
       href: examples-using-auto-mode.md
     - name: Использование режима EXPLICIT совместно с предложением FOR XML
       href: use-explicit-mode-with-for-xml.md
-    - name: Пример. Получение сведений о сотрудниках
+    - name: Пример Получение сведений о сотрудниках
       href: example-retrieving-employee-information.md
-    - name: Пример. Указание директивы ELEMENT
+    - name: Пример Определение директивы ELEMENT
       href: example-specifying-the-element-directive.md
-    - name: Пример. Задание директивы ELEMENTXSINIL
+    - name: Пример Определение директивы ELEMENTXSINIL
       href: example-specifying-the-elementxsinil-directive.md
-    - name: 'Пример: конструирование одноуровневых элементов в режиме EXPLICIT'
+    - name: Пример Конструирование одноуровневых элементов в режиме EXPLICIT
       href: example-constructing-siblings-with-explicit-mode.md
-    - name: Пример. Указание директив ID и IDREF
+    - name: Пример Указание директив ID и IDREF
       href: example-specifying-the-id-and-idref-directives.md
-    - name: Пример. Указание директив ID и IDREFS
+    - name: Пример Указание директив ID и IDREFS
       href: example-specifying-the-id-and-idrefs-directives.md
-    - name: Примеры. Указание директивы HIDE
+    - name: Пример Определение директивы HIDE
       href: example-specifying-the-hide-directive.md
-    - name: Пример. Указание директивы ELEMENT и кодировка сущности
+    - name: Пример Указание директивы ELEMENT и кодировка сущности
       href: example-specifying-the-element-directive-and-entity-encoding.md
-    - name: Пример. Задание директивы CDATA
+    - name: Пример Определение директивы CDATA
       href: example-specifying-the-cdata-directive.md
-    - name: Пример. Указание директивы XMLTEXT
+    - name: Пример Определение директивы XMLTEXT
       href: example-specifying-the-xmltext-directive.md
     - name: Использование режима PATH совместно с FOR XML
       href: use-path-mode-with-for-xml.md
@@ -154,7 +154,7 @@
       href: columns-that-contain-a-null-value-by-default.md
     - name: Поддержка пространства имен в режиме PATH
       href: namespace-support-in-path-mode.md
-    - name: 'Примеры, использование режима PATH'
+    - name: 'Примеры: Использование режима PATH'
       href: examples-using-path-mode.md
     - name: Директива TYPE в запросах FOR XML
       href: type-directive-in-for-xml-queries.md
@@ -191,7 +191,7 @@
 - name: OPENXML
   href: openxml-sql-server.md
   items:
-    - name: Примеры. Использование OPENXML
+    - name: 'Примеры: Использование OPENXML'
       href: examples-using-openxml.md
     - name: Определение метасвойств в инструкции OPENXML
       href: specify-metaproperties-in-openxml.md

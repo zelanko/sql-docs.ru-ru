@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3d742c1b3c81ca995c106591fe7c610251537d5d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181508"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Причины ошибок служб Reporting Services и способы их устранения
   Этот раздел содержит сведения о причинах некоторых ошибок компонента служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и способах их устранения. Подразделы по сообщениям об ошибках в этом разделе содержат объяснения сообщений об ошибке, возможные причины и действия по устранению проблемы.  

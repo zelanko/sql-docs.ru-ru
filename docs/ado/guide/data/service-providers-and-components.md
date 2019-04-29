@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 050d1c9ec8aa5a158d5c08fb77d3743e55567699
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062870"
 ---
 # <a name="service-providers-and-components"></a>Поставщики служб и компоненты
 Поставщики услуг — это компоненты, которые расширяют функциональные возможности поставщиков данных, реализовав расширенные интерфейсы, которые изначально не поддерживаются хранилищем данных.  
@@ -29,4 +29,4 @@ ms.locfileid: "51602244"
   
  Например, механизм курсора, таких как [служба курсора для OLE DB](https://msdn.microsoft.com/57638feb-4ecd-4051-becb-8f828d21cf44), — это компонент службы, использующие данные из хранилища данных последовательных, последовательного прокручиваемые данные. Включать других поставщиков услуг, часто используемые ADO [поставщик Microsoft OLE DB сохраняемости (поставщик услуг ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) (для сохранения данных в файл), [службы Microsoft Data Shaping Service для OLE DB (поставщик услуг ADO) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (для иерархических **наборы записей**) и [поставщик Microsoft OLE DB удаленного взаимодействия (поставщик услуг ADO)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) (для вызова поставщиков данных на удаленном компьютере).  
   
- Дополнительные сведения о службе и поставщики данных, см. в разделе [приложение а. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md).
+ Дополнительные сведения о службе и поставщики данных, см. в разделе [приложении a. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md).

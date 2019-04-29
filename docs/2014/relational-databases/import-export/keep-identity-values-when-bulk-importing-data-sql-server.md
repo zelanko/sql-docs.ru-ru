@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c994a04f41b548599deff4ff5a0a99ba89be6c7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064592"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Сохранение значений идентификаторов при массовом импорте данных (SQL Server)
   Для файлов данных, содержащих значения идентификаторов, можно выполнить массовый импорт в экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию значения столбца идентификаторов в импортируемом файле данных не учитываются, и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически присваивает им уникальные значения на основе начального значения и значения приращения, указанных при создании таблицы.  
@@ -74,7 +74,7 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
  Дополнительные сведения о создании файла форматирования см. в разделе [Создание файла форматирования (SQL Server)](create-a-format-file-sql-server.md).  
   
 ### <a name="a-using-bcp-and-keeping-identity-values"></a>A. Использование команды bcp с сохранением значений идентификаторов  
- В следующем примере показан способ сохранения значений идентификаторов при использовании команды `bcp` для массового импорта данных. `bcp` Команда использует файл форматирования, `myDepartment-f-n-x.Xml`и содержит следующие параметры:  
+ В следующем примере показан способ сохранения значений идентификаторов при использовании команды `bcp` для массового импорта данных. Команда `bcp` использует файл форматирования `myDepartment-f-n-x.Xml` и содержит следующие параметры:  
   
 |Квалификаторы|Описание|  
 |----------------|-----------------|  
@@ -170,7 +170,7 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
- [Программа bcp](../../tools/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
  [Табличные указания (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-table)  

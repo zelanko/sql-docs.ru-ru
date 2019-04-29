@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 71db7ba5246e151bbca8a52972a2ba835b80ddb6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855870"
 ---
 # <a name="creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Построение связанной модели кластеризации последовательностей (учебник по интеллектуальному анализу данных — средний уровень)
   В результате исследования модели кластеризации последовательностей выяснилось, что другие атрибуты, например, Region или Income, оказывают значительное влияние на модели. Поэтому, чтобы упростить понимание последовательностей, будет создана связанная модель кластеризации последовательностей и будут удалены атрибуты, относящиеся к демографическим данным клиента.  

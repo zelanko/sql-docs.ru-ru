@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85e0008e22e38b82fbd006a91eca80f67d7d8289
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046729"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
   Функция**SQLMoreResults** позволяет приложению получать несколько наборов результирующих строк. Если в инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT содержится предложение COMPUTE или отправленный пакет инструкций ODBC или [!INCLUDE[tsql](../../includes/tsql-md.md)] , это это приведет к тому, что драйвер поставщика ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создаст несколько результирующих наборов. В любом из случаев [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не допускает создания серверного курсора для обработки результатов. Таким образом, разработчик должен убедиться, что инструкция ODBC блокируется. Он должен исчерпать все возвращенные данные или отменить инструкцию ODBC до обработки данных от других активных инструкций соединения.  

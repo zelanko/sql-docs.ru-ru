@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 753deabf2c8ae69c535b60f5c43dca20b002ed63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063010"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>Создание экземпляра события ADO: ADO и WFC
 ADO ввода для Windows Foundation Classes (ADO и WFC) основан на модели событий ADO и предоставляет упрощенный интерфейс программирования. Как правило ADO и WFC перехватывает события ADO, объединяет параметры события в классе событий, а затем вызывает обработчик событий.  

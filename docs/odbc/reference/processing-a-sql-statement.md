@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: edf912bf3b8073a05dd900cd00511715020ee0c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045508"
 ---
 # <a name="processing-a-sql-statement"></a>Обработка инструкции SQL
 Прежде чем обсуждать методы программным способом с помощью SQL, бывает необходимо обсудить, как происходит обработка инструкции SQL. Этапы являются общими для всех трех методов, несмотря на то, что каждому из них выполняет их в разное время. На следующем рисунке изображены действия при обработке инструкции SQL, которые рассматриваются в оставшейся части этого раздела.  

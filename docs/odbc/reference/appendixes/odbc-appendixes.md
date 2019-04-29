@@ -12,25 +12,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4934ed875a427e68938ed09d4353b7fe14f3aee2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181291"
 ---
 # <a name="odbc-appendixes"></a>Приложения по ODBC
 Технические сведения, относящиеся к интерфейсу Microsoft ODBC содержатся в следующих приложений:  
   
--   [Приложение А. Коды ошибок ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
+-   [Приложение а. Коды ошибок ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
   
--   [Приложение Б. Таблицы перехода состояния ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)  
+-   [Приложение б. Таблицы перехода состояния ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)  
   
--   [Приложение В. Грамматика SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)  
+-   [Приложение c. Грамматика SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)  
   
--   [Приложение Г. Типы данных](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
+-   [Приложение г. Типы данных](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
   
--   [Приложение Д. Скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)  
+-   [Приложение д. Скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)  
   
--   [Приложение Е. Библиотека курсоров ODBC](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)  
+-   [Приложение е. Библиотека курсоров ODBC](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)  
   
--   [Приложение Ж. Рекомендации по обеспечению обратной совместимости с драйвером](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)
+-   [Приложение ж Рекомендации по драйверов для обеспечения обратной совместимости](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)

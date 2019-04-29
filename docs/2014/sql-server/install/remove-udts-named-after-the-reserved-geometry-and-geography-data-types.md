@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f93b179da229793c65db452e4f38bb1f08fbfad1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855885"
 ---
 # <a name="remove-udts-named-after-the-reserved-geometry-and-geography-data-types"></a>Удалите определяемые пользователем типы с именами, совпадающими с зарезервированными типами данных GEOMETRY и GEOGRAPHY
   Помощник по обновлению обнаружил определяемый пользователем тип, имя которого совпадает с именем, зарезервированным для типа данных `geometry` или `geography`. Типы данных `geometry` и `geography` являются частью компонента для обработки пространственных данных.  

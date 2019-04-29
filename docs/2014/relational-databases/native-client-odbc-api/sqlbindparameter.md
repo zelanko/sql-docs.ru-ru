@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cba973be9b4dc2ec0da286b2d01b636f0ca4e2b4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067832"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
   `SQLBindParameter` может, это снижает нагрузку преобразования данных при использовании для предоставления данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента, приводит к значительный прирост производительности для компонентов клиента и сервера приложений. Другие преимущества — снижение потери точности при вставке или изменении приблизительных числовых типов данных.  

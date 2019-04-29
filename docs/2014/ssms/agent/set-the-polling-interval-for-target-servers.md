@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1578bbefc9ae17baae56799d943e5ae6186628ea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033651"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>Установка интервала опроса на целевых серверах
   В этом разделе описывается установка частоты, с которой агент [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обновляет данные с главного сервера на целевых серверах. Задание — это указанная последовательность действий, выполняемых агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Многосерверное задание — это задание, которое главный сервер выполняет на одном или нескольких целевых серверах.  
   
--   **Перед началом работы**  [Безопасность](#Security)  
+-   **Перед началом:**  [Безопасность](#Security)  
   
--   **Чтобы задать интервал опроса на целевых серверах с помощью:**  [SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
+-   **Чтобы задать интервал опроса на целевых серверах с помощью:**  [среды SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  На каждом целевом сервере может одновременно выполняться только один экземпляр одного и того же задания. Каждый целевой сервер периодически опрашивает главный сервер, загружает копию новых назначенных ему заданий и отключается. Целевой сервер выполняет задание локально, а затем снова подключается к главному серверу, чтобы передать результирующее состояние задания.  

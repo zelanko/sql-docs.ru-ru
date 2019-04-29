@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 91b4d64095c02fbf3f969248fc78d375a191fe72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065282"
 ---
 # <a name="adcpropupdatecriteriaenum"></a>ADCPROP_UPDATECRITERIA_ENUM
 Указывает, какие поля можно использовать для обнаружения конфликтов во время обновления оптимистичного строки источника данных с помощью [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  

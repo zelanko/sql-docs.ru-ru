@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0b24db48d6a76c221e72944e8e5e6826cb8d5d55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127988"
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>Сообщения об ошибках (драйвер ODBC для Visual FoxPro)
 При возникновении ошибки, Visual FoxPro драйвер возвращает следующую информацию:  
@@ -49,8 +49,8 @@ ms.locfileid: "47804422"
   
 |Источник данных|Prefix|Значение|  
 |-----------------|------------|-----------|  
-|Диспетчер драйверов|[поставщик]<br />[ODBC_component]<br />[источник_данных]|[Майкрософт]<br />[Диспетчер драйверов ODBC]<br />Недоступно|  
-|Драйвер Visual FoxPro|поставщика]<br />[ODBC_component]<br />[источник_данных]|[Майкрософт]<br />[ODBC Visual FoxPro driver]<br />Недоступно|  
+|Диспетчер драйверов|[поставщик]<br />[ODBC_component]<br />[источник_данных]|[Майкрософт]<br />[Диспетчер драйверов ODBC]<br />Н/Д|  
+|Драйвер Visual FoxPro|поставщика]<br />[ODBC_component]<br />[источник_данных]|[Майкрософт]<br />[ODBC Visual FoxPro driver]<br />Н/Д|  
   
  Например если драйвер ODBC для Visual FoxPro не удалось найти файл employee.dbf, может быть возвращено следующее сообщение об ошибке:  
   

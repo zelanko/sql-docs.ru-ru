@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71cd369568d8fc66764345038568818a551f9fb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046599"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Вставка данных в параметры, возвращающие табличные значения
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Собственный поставщик OLE DB клиента поддерживает две модели задания данных для строк табличных параметров потребителем: Принудительная и по запросу. Образец, в котором демонстрируется применение модели по запросу, см. в разделе [Образцы программирования служб SQL Server](http://msftdpprodsamples.codeplex.com/).  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127878"
 ---
 # <a name="select---sql-command"></a>SELECT (команда SQL)
 Извлекает данные из одной или нескольких таблиц.  
@@ -195,7 +195,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `customer.country NOT LIKE "USA"`  
   
- Выполняет поиск данное условие фильтра для каждого поля, которое соответствует *cExpression*. Знак процента (%) и подстановочные знаки подчеркивания (_) можно использовать как часть *cExpression*. Символ подчеркивания представляет одному неизвестному символу в строке.  
+ Выполняет поиск данное условие фильтра для каждого поля, которое соответствует *cExpression*. Можно использовать знак процента (%) и подстановочные знаки подчеркивания (_) как часть *cExpression*. Символ подчеркивания представляет одному неизвестному символу в строке.  
   
  GROUP BY *GroupColumn* [, *GroupColumn* ...]  
  Группы строк в запросе на основе значений в один или несколько столбцов. *GroupColumn* может принимать одно из следующих:  

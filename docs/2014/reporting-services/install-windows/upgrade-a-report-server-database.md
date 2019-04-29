@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3ee79dc617ed6fc9f49c0b2f95d4df43fcaf9eb4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065342"
 ---
 # <a name="upgrade-a-report-server-database"></a>Обновление базы данных сервера отчетов
   База данных сервера отчетов обеспечивает хранение одного или нескольких экземпляров сервера отчетов. Схема базы данных сервера отчетов с каждым новым выпуском служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]может меняться, поэтому версия базы данных должна совпадать с версией используемого экземпляра сервера отчетов. В большинстве случаев обновление базы данных сервера отчетов может быть выполнено автоматически, без необходимости выполнения каких-либо действий со стороны пользователя.  

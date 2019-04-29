@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 42bde038458e817ad572e8b5049e13acb60a49af
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127792"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>Выполнение дельты с использованием управляемых классов SQLXML
   В этом примере показано, как выполнять файл дельты в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] среды .NET Framework для применения данных обновляет до [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицы с помощью управляемых классов SQLXML (Microsoft.Data.SqlXml).  
@@ -52,7 +52,7 @@ ms.locfileid: "52806016"
 </ROOT>  
 ```  
   
-  **\<Перед >** блок содержит  **\<клиента >** элемент (**diffgr: ID = «Customer1»**).  **\<DataInstance >** блок содержит соответствующий  **\<клиента >** элемент с таким же **идентификатор**.  **\<Клиента >** элемент в  **\<NewDataSet >** также указывает **diffgr: HasChanges = «modified»**. Это указывает на операцию по обновлению, и запись о заказчике в таблице Cust соответствующим образом обновляется. Обратите внимание, что если **diffgr: HasChanges** атрибут не указан, то логика обработки дельты пропустит этот элемент и обновления не выполняются.  
+ **\<Перед >** блок содержит  **\<клиента >** элемент (**diffgr: ID = «Customer1»**). **\<DataInstance >** блок содержит соответствующий **\<клиента >** элемент с таким же **идентификатор**. **\<Клиента >** элемент в **\<NewDataSet >** также указывает **diffgr: HasChanges = «modified»**. Это указывает на операцию по обновлению, и запись о заказчике в таблице Cust соответствующим образом обновляется. Обратите внимание, что если **diffgr: HasChanges** атрибут не указан, то логика обработки дельты пропустит этот элемент и обновления не выполняются.  
   
  Ниже приведен код для приложения C# tutorial, показывающий, как использовать управляемые классы SQLXML для выполнить выше дельту и обновления двух таблиц (Cust, Ord), также создается в **tempdb** базы данных.  
   

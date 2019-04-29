@@ -23,7 +23,7 @@
   items:
     - name: Параметры ("Среда" — "Общие")
       href: options-environment-general-page.md
-    - name: Параметры ("Среда" — "Шрифты и цвета")
+    - name: "Параметры (страница \"Среда\"\_— \"Шрифты и цвета\")"
       href: options-environment-fonts-and-colors-page.md
     - name: Options (Environment/Keyboard Page)
       href: options-environment-keyboard-page.md

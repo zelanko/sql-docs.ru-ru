@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efba2e73c3043ddbf25fef06b57ef039f6eacea5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183470"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>Задания, содержащие ссылки на расписание
   Это диалоговое окно позволяет просматривать данные о заданиях, имеющих ссылки на определенное расписание.  

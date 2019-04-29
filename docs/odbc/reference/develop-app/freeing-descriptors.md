@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d643ccad0110796127524a10e82aef7c3339b163
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061492"
 ---
 # <a name="freeing-descriptors"></a>Освобождение дескрипторов
 Явно выделенные дескрипторы могут быть освобождены либо явно, путем вызова **SQLFreeHandle** с *HandleType* SQL_HANDLE_DESC или неявно, когда дескриптор соединения освобождается. Когда освобождается явно выделенные дескриптор, все дескрипторы инструкций, к которым дескриптор освобожденные применяется автоматически вернуться к дескрипторам неявно выделенную для них.  

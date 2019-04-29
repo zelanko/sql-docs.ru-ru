@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7b7e5141a465249c818b50466b34a8155adc1d6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982185"
 ---
 # <a name="sqlfetchscroll-function"></a>Функция SQLFetchScroll
 **Соответствие стандартам**  
@@ -67,7 +67,7 @@ SQLRETURN SQLFetchScroll(
   
  SQL_FETCH_RELATIVE  
   
- ИНСТРУКЦИЯ SQL_FETCH_BOOKMARK  
+ SQL_FETCH_BOOKMARK  
   
  Дополнительные сведения см. в разделе «Позиционирования курсора» в разделе «Примечания».  
   
@@ -77,7 +77,7 @@ SQLRETURN SQLFetchScroll(
  Количество строк для выборки. Интерпретация этого аргумента зависит от значения *FetchOrientation* аргумент. Дополнительные сведения см. в разделе «Позиционирования курсора» в разделе «Примечания».  
   
 ## <a name="returns"></a>Возвращает  
- Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, значение SQL_ERROR или SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLFetchScroll** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с HandleType значение SQL_HANDLE_STMT и дескриптор StatementHandle. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLFetchScroll** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное. При возникновении ошибки по одному столбцу, **SQLGetDiagField** может вызываться с DiagIdentifier SQL_DIAG_COLUMN_NUMBER для определения столбца, произошла ошибка; в противном и **SQLGetDiagField** может вызываться с помощью DiagIdentifier SQL_DIAG_ROW_NUMBER для определения строки, содержащий этот столбец.  
@@ -137,7 +137,7 @@ SQLRETURN SQLFetchScroll(
 |SQL_FETCH_ABSOLUTE|Возвращают набор строк, начиная со строки *FetchOffset*.|  
 |SQL_FETCH_FIRST|Возвращает первый набор строк в результирующем наборе.<br /><br /> **SQLFetchScroll** игнорирует значение *FetchOffset*.|  
 |SQL_FETCH_LAST|Возвращает последний полный набор строк в результирующем наборе.<br /><br /> **SQLFetchScroll** игнорирует значение *FetchOffset*.|  
-|ИНСТРУКЦИЯ SQL_FETCH_BOOKMARK|Возвращает набор строк FetchOffset строки из закладки, указанном в атрибуте инструкции SQL_ATTR_FETCH_BOOKMARK_PTR.|  
+|SQL_FETCH_BOOKMARK|Возвращает набор строк FetchOffset строки из закладки, указанном в атрибуте инструкции SQL_ATTR_FETCH_BOOKMARK_PTR.|  
   
  Драйверы не требуются для поддержки всех ориентациях выборки; приложение вызывает **SQLGetInfo** с типом сведения SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 или SQL_STATIC_CURSOR_ATTRIBUTES1 (в зависимости от типа курсора) чтобы определить, какие выборки драйвер поддерживает ориентации. Просмотрите приложения и SQL_CA1_NEXT, SQL_CA1_RELATIVE, SQL_CA1_ABSOLUTE и WQL_CA1_BOOKMARK битовой маски в эти типы сведений. Кроме того, если курсор может перемещаться только вперед и FetchOrientation не SQL_FETCH_NEXT, **SQLFetchScroll** возвращает SQLSTATE HY106 (тип выборки за пределами диапазона).  
   
@@ -192,7 +192,7 @@ SQLRETURN SQLFetchScroll(
 |Условие|Первая строка новый набор строк|  
 |---------------|-----------------------------|  
 |*(Перед работы и FetchOffset > 0) ИЛИ (после окончания и FetchOffset < 0)*|*--* <sup>[1]</sup>|  
-|*BeforeStart и FetchOffset < = 0*|*Перед запуском*|  
+|*BeforeStart AND FetchOffset <= 0*|*Перед запуском*|  
 |*CurrRowsetStart = 1 и FetchOffset < 0*|*Перед запуском*|  
 |*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Перед запуском*|  
 |*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
@@ -241,7 +241,7 @@ SQLRETURN SQLFetchScroll(
   
  [1] Если размер набора строк были изменены с момента предыдущего вызова метода для получения строк, это новый размер набора строк.  
   
-## <a name="sqlfetchbookmark"></a>ИНСТРУКЦИЯ SQL_FETCH_BOOKMARK  
+## <a name="sqlfetchbookmark"></a>SQL_FETCH_BOOKMARK  
  Применяются следующие правила.  
   
 |Условие|Первая строка новый набор строк|  

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8bad2cc35a30f5c6f5855292ff73635cef6072b2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067850"
 ---
 # <a name="sqlcancel"></a>SQLCancel
   [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516) разделе говорится, что в ODBC 2.x, если приложение вызывает `SQLCancel` когда обработка не выполняется в операторе, `SQLCancel` имеет тот же эффект, что `SQLFreeStmt` с `SQL_CLOSE` параметр; это поведение определяется только для полноты информации, и приложение должно вызывать `SQLFreeStmt` или `SQLCloseCursor` закрытия курсора. Но даже если приложение собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет версию ODBC API 3.5.x или более позднюю, функция `SQLCancel` будет использовать поведение ODBC 2.x.  

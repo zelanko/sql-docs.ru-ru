@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4213bcee1d17d27bf63da9eb286b21dea4cc5a02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921934"
 ---
 # <a name="partial-backups-sql-server"></a>Частичные резервные копии (SQL Server)
   Все модели восстановления в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживают частичные резервные копии, поэтому данный раздел относится ко всем базам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Однако частичные резервные копии предназначены для использования в простой модели восстановления с целью повышения гибкости при резервном копировании очень больших баз данных, которые содержат одну или несколько файловых групп только для чтения.  
@@ -32,7 +32,7 @@ ms.locfileid: "48063814"
   
  Резервные копии файловых групп, доступных только для чтения, могут совмещаться с частичными резервными копиями. Сведения о резервных копиях файлов см. в статье [Полные резервные копии файлов (SQL Server)](full-file-backups-sql-server.md).  
   
- Частичная резервная копия может служить *базовой копией для разностного копирования* для частичных разностных резервных копий. Дополнительные сведения см. в статье [Разностные резервные копии (SQL Server)](differential-backups-sql-server.md).  
+ Частичная резервная копия может служить *базовой копией для разностного копирования* для частичных разностных резервных копий. Дополнительные сведения см. в разделе [Разностные резервные копии (SQL Server)](differential-backups-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
@@ -45,9 +45,9 @@ ms.locfileid: "48063814"
   
  **Использование частичной резервной копии в последовательности восстановления**  
   
--   [Пример. Поэтапное восстановление базы данных (простая модель восстановления)](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Пример. Поэтапное восстановление базы данных &#40;простая модель восстановления&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [Пример. Поэтапное восстановление отдельных файловых групп (простая модель восстановления)](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [Пример. Поэтапное восстановление отдельных файловых групп &#40;простая модель восстановления&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о резервном копировании (SQL Server)](backup-overview-sql-server.md)   

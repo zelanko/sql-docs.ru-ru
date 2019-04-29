@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3e3f5e41c6e20abbdcf78759c078632543217617
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926246"
 ---
 # <a name="view-log-entries-in-the-log-events-window"></a>Просмотр записей журнала в окне "Регистрация событий"
   Эта процедура описывает, как выполнить пакет и просмотреть записи журнала, которые он записывает. Записи журнала можно просмотреть в реальном времени. Записи журнала, которые записываются в окно **Регистрация событий** , также можно копировать и сохранять для будущего анализа.  

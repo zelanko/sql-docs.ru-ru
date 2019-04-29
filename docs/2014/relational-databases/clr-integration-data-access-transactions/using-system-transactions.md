@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e39106ea1c4077d1aee90cedc17c5af07503a136
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919539"
 ---
 # <a name="using-systemtransactions"></a>Использование System.Transactions
   Пространство имен `System.Transactions` предоставляет новую платформу транзакций, полностью интегрированную с ADO.NET и со средой CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Класс `System.Transactions.TransactionScope` делает блок кода транзакционным, неявно прикрепляя соединения к распределенной транзакции. В конце блока `Complete`, перед тем, как выйти из него, необходимо вызвать метод `TransactionScope`. Когда выполнение программы покидает блок кода, вызывается метод `Dispose`, что вызывает прерывание транзакции, если не поддерживается метод `Complete`. При возникновении исключения, в результате которого исполнение кода выходит за пределы области действия, транзакция считается неподдерживаемой.  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93a8d8b8c93dc340b4ffa0337f14478bc4bf910a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185638"
 ---
 # <a name="change-the-text-of-a-legend-item-report-builder-and-ssrs"></a>Изменение текста элемента условных обозначений (построитель отчетов и службы SSRS)
   При помещении поля в область «Значения» диаграммы автоматически создается элемент условных обозначений, содержащий имя этого поля. Каждый элемент условных обозначений связан с отдельным рядом на диаграмме, за исключением фигурных диаграмм, в которых условные обозначения связаны с конкретными точками данных, а не с отдельными рядами.  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0eda0980b3b8ffbc748f15933ea397ae3d0b71e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913418"
 ---
 # <a name="mssqlserver7916"></a>MSSQLSERVER_7916
     
@@ -30,7 +30,7 @@ ms.locfileid: "48134714"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_REPAIR_RECORD_DELETED|  
-|Текст сообщения|Исправление: удалена запись для объекта с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID, идентификатором единицы распределения A_ID (тип TYPE) на странице P_ID, слот S_ID. Индексы будут перестроены.|  
+|Текст сообщения|Исправление: Удалена запись для объекта с Идентификатором O_ID, Идентификатором индекса I_ID, Идентификатором секции PN_ID, Идентификатором единицы распределения A_ID (тип TYPE), на странице P_ID, область памяти S_ID. Индексы будут перестроены.|  
   
 ## <a name="explanation"></a>Объяснение  
  Данное информационное сообщение отправлено функцией REPAIR и означает, что указанная запись была удалена со страницы.  

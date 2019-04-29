@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 955dcff3399f6936fb5b1f8042dae4658a55a11f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844788"
 ---
 # <a name="query-options-execution-general-page"></a>Выполнение параметров запроса (страница «Общие»)
   Используйте эту страницу, чтобы задать параметры для запросов [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Для доступа к этому диалоговому окну щелкните правой кнопкой мыши тело окна "Редактор запросов", а затем щелкните **Параметры запроса**.  

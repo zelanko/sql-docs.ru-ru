@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d8162c7654d99cd2ebab41d290c0a39c6c686686
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63058100"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Имя входа для обновляемых подписок
   Если выбрано **Репликация** на странице **Обновляемые подписки** данного мастера, то требуется задать учетную запись на подписчике, под которой будут устанавливаться соединения с издателем для подписок, обновляемых немедленно. Соединения используются триггерами, которые запускаются на подписчике и распространяют изменения на издатель. Эта учетная запись необходима, даже если выбран пункт **Ставить изменения в очередь и фиксировать по возможности** на странице **Обновляемые подписки** , так как по умолчанию мастер создания подписки настраивает обновление посредством очередей с возможностью переключения на немедленное обновление при необходимости.  
@@ -52,7 +52,7 @@ ms.locfileid: "54135374"
  Для данного параметра необходим уже определенный связанный или удаленный сервер. Дополнительные сведения см. в статьях [Linked Servers (Database Engine)](../linked-servers/linked-servers-database-engine.md) (Связанные серверы (ядро СУБД)) и [Remote Servers](../../database-engine/configure-windows/remote-servers.md) (Удаленные серверы). Убедитесь в том, что имя входа, используемое для связанного сервера или удаленного сервера, имеет надежный пароль и обладает только разрешениями, описанными в данном разделе.  
   
 ## <a name="see-also"></a>См. также  
- [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [Создание обновляемой подписки для публикации транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Просмотр и изменение параметров безопасности репликации](security/view-and-modify-replication-security-settings.md)   
  [Updatable Subscriptions- For Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)  (Обновляемые подписки для репликации транзакций)  
  [Подписка на публикации](subscribe-to-publications.md)  

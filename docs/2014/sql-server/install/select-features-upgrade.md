@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 527d57daa253cdab0f9107b38e2e8de87c9b2b8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931600"
 ---
 # <a name="select-features-upgrade"></a>Выбор компонентов (обновление)
   На странице **Выбор компонентов** мастера установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно просмотреть компоненты, которые должны быть обновлены до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

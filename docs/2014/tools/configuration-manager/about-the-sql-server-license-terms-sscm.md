@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035323"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>Об условиях лицензионного соглашения SQL Server (SSCM)
   Условия лицензирования программного обеспечения [!INCLUDE[msCoName](../../includes/msconame-md.md)]копируются на локальный компьютер во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если на один компьютер устанавливаются нескольких экземпляров одного выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на одном языке, то ко всем экземплярам выпуска на этом языке будет применена одна копия лицензионного соглашения. Файлы записываются в: %ProgramFiles%\Microsoft SQL Server\110\License Terms\ или % ProgramFiles (x86) %\Microsoft SQL Server\110\License условия\\.  

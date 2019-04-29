@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c7d864d61d2782955a52ce6e20a7025379cc946
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028073"
 ---
 # <a name="getdataproviderdso-method"></a>Метод GetDataProviderDSO
 В базовом объекте источника данных OLE DB извлекает из поставщик Data Shape.  
@@ -39,5 +39,5 @@ HRESULT GetDataProviderDSO(
 ## <a name="remarks"></a>Примечания  
  Этот метод не выполняет не addref указатель интерфейса. Если вызывающий объект планирует указатель, вызывающий объект должен выполнить необходимые addref и release.  
   
-## <a name="applies-to"></a>Область применения  
+## <a name="applies-to"></a>Применение  
  [Интерфейс IDSOShapeExtensions](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)

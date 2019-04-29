@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 775e9ac76d6c3b16d2c9ba6ce688a2a3dfbf48d6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127701"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Основные сведения об использовании запросов XPath (SQLXML 4.0)
   Запрос на языке XPath может быть указан как часть URL-адреса или внутри шаблона. Схема сопоставления определяет структуру этого результирующего фрагмента, а значения извлекаются из базы данных. Этот процесс имеет сходные концепции с созданием представлений при помощи инструкции CREATE VIEW и написания SQL-запросов к ним.  
@@ -116,7 +116,7 @@ ms.locfileid: "52753376"
   
  При указании запросов XPath в шаблоне обратите внимание на следующее поведение.  
   
--   XPath может содержать символы, такие как < or &, которые имеют особые значения в XML (и шаблон является XML-документом). При использовании &-кодировки XML необходимо экранировать эти символы или указывать XPath в URL-адресе.  
+-   XPath может содержать символы, такие как < или &, имеют специальное значение в формате XML (и шаблон — это документ XML). Необходимо экранировать эти символы, с помощью XML &-кодировки, или указывать XPath в URL-адрес.  
   
 ## <a name="see-also"></a>См. также  
  [Использование запросов XPath в SQLXML 4.0](using-xpath-queries-in-sqlxml-4-0.md)  

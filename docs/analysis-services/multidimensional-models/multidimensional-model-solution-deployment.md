@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3aba02dfe34f91b12a98f4d557bdb2dc516b1b1f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042470"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Развертывание решений многомерных моделей
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  После завершения разработки проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базу данных можно развернуть на сервере служб Analysis Services. Службы Analysis Services предоставляют шесть возможных методов развертывания, которые могут быть использованы для перемещения базы данных на тестовый или рабочий сервер. Ниже эти методы перечислены в порядке приоритетности: автоматизация объектов AMO, XML для аналитики, мастер развертывания, программа развертывания, мастер синхронизации, резервное копирование и восстановление.  
+  После завершения разработки проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базу данных можно развернуть на сервере служб Analysis Services. Службы Analysis Services предоставляют шесть возможных методов развертывания, которые могут быть использованы для перемещения базы данных на тестовый или рабочий сервер. Эти методы перечислены ниже в порядке приоритетности: Автоматизация объектов AMO, XMLA, мастер развертывания, программа развертывания синхронизации мастера, резервное копирование и восстановление.  
   
  Этот раздел включает следующие подразделы:  
   

@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5288fe363350aebacba436cef388ae51e2bdd73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982165"
 ---
 # <a name="sqlsetdescrec-function"></a>Функция SQLSetDescRec
 **Соответствие стандартам**  
- Версия была введена: ODBC 3.0 соответствует стандартам: ISO-92  
+ Представленные версии: ODBC 3.0 стандартов соответствия: ISO-92  
   
  **Сводка**  
  **SQLSetDescRec** функция задает несколько поля дескриптора, которые определяют тип данных, а буфер к столбца или параметра данных.  

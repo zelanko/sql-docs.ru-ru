@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6b7e6e38ca10cf23179872ddc3ff4476bc3657d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063300"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Урок 2. Определение подключения к данным и таблицы данных для родительского отчета
   После создания нового проекта веб-сайта с использованием шаблона веб-сайта ASP.NET для Visual C# далее необходимо создать подключение к данным и таблицу данных для родительского отчета. В этом учебнике в качестве источника подключения к данным используется база данных AdventureWorks2008. Предусмотрена также возможность установить подключение к базе данных AdventureWorks2012.  

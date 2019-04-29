@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81cdf1738d35d89c35c34500900be79f7702f877
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045956"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Драйверы ODBC Майкрософт для баз данных на настольном компьютере
 ODBC — это API, который использует Structured Query Language (SQL) в качестве языка доступа к базе данных. С помощью того же исходного кода ODBC, которая включена в исходный код приложения доступны самых разнообразных систем управления базами данных (СУБД). Microsoft ODBC Desktop драйверы для баз данных пользователь приложения с поддержкой ODBC можно открыть, запроса и обновить базу данных рабочего стола через интерфейс ODBC.  
@@ -38,7 +38,7 @@ ODBC — это API, который использует Structured Query Langua
   
 -   для dBASE  
   
--   Текста  
+-   Text  
   
  См. в разделе [драйвер ODBC для Visual FoxPro](../../odbc/microsoft/visual-foxpro-odbc-driver.md) подробную документацию о драйвер ODBC для Microsoft Visual FoxPro®.  
   

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 830854a26d3f9b05465ee37aac6a9b7584750fe2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063490"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Установка изолированной версии построителя отчетов (построитель отчетов)
   Можно установить построитель отчетов из [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] пакет дополнительных компонентов на [центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkID=168472) или расположения как общая папка, к которому имеет файл ReportBuilder3_x86.msi — пакет установщика Windows для построителя отчетов было загружено.  

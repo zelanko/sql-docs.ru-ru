@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044104"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>Проверка модели с фильтром (учебник по интеллектуальному анализу данных — начальный уровень)
   Теперь, когда выяснилось, что `TM_Decision_Tree` наиболее точной является модель, будет настроить модель для удовлетворения потребностей [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] кампании прямой почтовой рассылки. В частности отдел маркетинга бы хотели узнать, если имеются различия между мужского и женского клиентов. Сведения могут помочь им в выборе журналов для размещения рекламы и продуктов, которые в почтовых рассылках.  

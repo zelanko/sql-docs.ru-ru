@@ -18,11 +18,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5f3a9b9197862f6bcaf947edc27080dba52b568f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045129"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>Выполнение дельты с использованием управляемых классов SQLXML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "56042755"
 </ROOT>  
 ```  
   
-  **\<Перед >** блок содержит  **\<клиента >** элемент (**diffgr: ID = «Customer1»**).  **\<DataInstance >** блок содержит соответствующий  **\<клиента >** элемент с таким же **идентификатор**.  **\<Клиента >** элемент в  **\<NewDataSet >** также указывает **diffgr: HasChanges = «modified»**. Это указывает на операцию по обновлению, и запись о заказчике в таблице Cust соответствующим образом обновляется. Обратите внимание, что если **diffgr: HasChanges** атрибут не указан, то логика обработки дельты пропустит этот элемент и обновления не выполняются.  
+ **\<Перед >** блок содержит  **\<клиента >** элемент (**diffgr: ID = «Customer1»**). **\<DataInstance >** блок содержит соответствующий **\<клиента >** элемент с таким же **идентификатор**. **\<Клиента >** элемент в **\<NewDataSet >** также указывает **diffgr: HasChanges = «modified»**. Это указывает на операцию по обновлению, и запись о заказчике в таблице Cust соответствующим образом обновляется. Обратите внимание, что если **diffgr: HasChanges** атрибут не указан, то логика обработки дельты пропустит этот элемент и обновления не выполняются.  
   
  Ниже приведен код для приложения C# tutorial, показывающий, как использовать управляемые классы SQLXML для выполнить выше дельту и обновления двух таблиц (Cust, Ord), также создается в **tempdb** базы данных.  
   

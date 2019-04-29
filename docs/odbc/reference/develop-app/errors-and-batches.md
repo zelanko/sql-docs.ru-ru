@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 97179574407dca56026f9d5216e4978069cffc1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62942987"
 ---
 # <a name="errors-and-batches"></a>Ошибки и пакеты
 При возникновении ошибки во время выполнения пакет инструкций SQL, один из следующих четырех результатов возможны. (Каждый возможный результат — это данные, зависящие от источника и даже может зависеть от инструкции, входящие в пакете).  

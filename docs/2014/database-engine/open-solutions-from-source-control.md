@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f8405c9fcb04559b6f25d2244bc36dde760a182
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844772"
 ---
 # <a name="open-solutions-from-source-control"></a>Открытие решений из системы управления версиями
   Среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] можно использовать для открытия решений непосредственно из системы управления версиями. В этом случае среда Studio создает копию последней версии файлов решения в указанном месте.  

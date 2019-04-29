@@ -24,11 +24,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce09e2c607600273f5b5778251c3c58fdf57f9dc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63016929"
 ---
 # <a name="caching-reports-ssrs"></a>Кэширование отчетов (службы SSRS)
   Сервер отчетов может кэшировать копию обработанного отчета и вернуть эту копию при открытии отчета пользователем. Единственным свидетельством того, что отчет является копией сохраненного в кэш отчета, являются дата и время выполнения отчета. Если дата или время не являются текущими, и отчет представляет собой моментальный снимок, то отчет был извлечен из кэша.  

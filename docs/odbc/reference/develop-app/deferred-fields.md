@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1c7800e7da867b4eb0c34fa3feeba5edb2d41cd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049876"
 ---
 # <a name="deferred-fields"></a>Отложенные поля
 Значения *отложенного поля* не используются, когда они заданы, но драйвер сохраняет адреса переменных для отложенного создания эффекта. Для дескриптора параметра приложения, драйвер использует значения переменных во время вызова **SQLExecDirect** или **SQLExecute**. Для дескриптор строки приложения драйвер использует значения переменных во время выборки.  

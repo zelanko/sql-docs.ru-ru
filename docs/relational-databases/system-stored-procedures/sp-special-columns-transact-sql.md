@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d96c8565a8d908518504cf86eb253fc5913f1a85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004161"
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_special_columns [ @table_name = ] 'table_name'
  [ @qualifier=] '*квалификатор*"  
  Имя квалификатора таблицы. *квалификатор* — **sysname**, значение по умолчанию NULL. Различные продукты СУБД поддерживают трехкомпонентные имена таблиц (*qualifier.owner.name*). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, в которой находится таблица.  
   
- [ @col_type=] '*col_type*"  
+ [ @col_type=] '*col_type*'  
  Тип — Column. *col_type* — **char (** 1 **)**, значение по умолчанию R. тип R возвращает оптимальный столбец или набор столбцов, получая значения из столбца или столбцов, позволяет любую строку в указанном Таблица для однозначной идентификации. Столбец может быть либо псевдостолбцом, специально созданным для этой цели, либо столбцом или столбцами любого уникального индекса таблицы. Тип V возвращает столбец или столбцы в указанной таблице, которые источник данных обновляет автоматически, когда любое значение в строке обновляется транзакцией.  
   
  [ @scope=] '*область*"  
@@ -67,7 +67,7 @@ sp_special_columns [ @table_name = ] 'table_name'
  [ @nullable=] '*допускает значения NULL*"  
  Определяет, допускают ли специальные столбцы значение NULL. *допускает значения NULL* — **char (** 1 **)**, значение по умолчанию U. O указывает специальные столбцы, которые не допускают значения null. U указывает столбцы, частично допускающие значения NULL.  
   
- [ @ODBCVer=] '*Аргумент ODBCVer*"  
+ [ @ODBCVer=] '*ODBCVer*'  
  Используемая версия ODBC. *Аргумент ODBCVer* — **int (** 4 **)**, значение по умолчанию 2. Это значение соответствует версии ODBC 2.0. Дополнительные сведения о различиях между ODBC версии 2.0 и ODBC версии 3.0 см. в спецификации ODBC SQLSpecialColumns для ODBC версии 3.0.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

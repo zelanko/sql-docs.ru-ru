@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da22ba86ea49532f460b081b13e18d6b7d95211c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042760"
 ---
 # <a name="copying-descriptors"></a>Копирование дескрипторов
 **SQLCopyDesc** функция вызывается для копирования поля один дескриптор другим дескриптором. Поля могут быть скопированы только дескриптор приложений или IPD, но не IRD. Поля можно скопировать из любого типа дескриптора. Копируются только поля, которые определены для исходной и целевой дескрипторов. **SQLCopyDesc** не копирует поле SQL_DESC_ALLOC_TYPE, поскольку невозможно изменить тип выделения дескриптора. Скопированные поля перезаписывают существующие поля.  

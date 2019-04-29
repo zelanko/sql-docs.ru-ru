@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49a10795cbb9177837960739890baebc221c0712
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035603"
 ---
 # <a name="sortintempdb-option-for-indexes"></a>Параметр SORT_IN_TEMPDB для индексов
   При создании или перестроении индекса можно установить параметр SORT_IN_TEMPDB в значение ON, чтобы компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использовал базу данных **tempdb** для хранения промежуточных результатов сортировки, которые применяются для построения индекса. Данный параметр увеличивает место на диске, временно занимаемое при построении индекса, но с его помощью можно сократить время, необходимое для создания или перестроения индекса, когда **tempdb** находится в наборе дисков, отличном от набора, используемого для размещения пользовательской базы данных. Дополнительные сведения о параметре **tempdb**см. в разделе [Настройка параметра конфигурации сервера index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md).  
@@ -72,7 +72,7 @@ ms.locfileid: "48145271"
 -   если параметр SORT_IN_TEMPDB имеет значение OFF, с целью сохранения окончательной таблицы должно быть свободное пространство для целевой файловой группы. Это включает структуры всех индексов. При наличии большего объема свободного пространства может быть повышена степень непрерывности экстента таблицы и индекса.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
+ [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)  
   
  [Реорганизация и перестроение индексов](indexes.md)  
   

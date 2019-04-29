@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 3d1b1d0a5a4d2210bd916795eaf36d7c4eadb7d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183690"
 ---
 # <a name="shortcut-keysoracle-to-sql"></a>Сочетания клавиш (OracleToSQL)
 Можно использовать сочетания клавиш для перемещения по SSMA приложения. Дополнительные сведения см. в следующих разделах:  

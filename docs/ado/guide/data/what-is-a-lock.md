@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 744ae9a9541b5c73d579e097f375b4141e771fce
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184862"
 ---
 # <a name="what-is-a-lock"></a>Что такое блокировка?
 Блокировка — это процесс, по которому СУБД ограничивает доступ к строке в многопользовательской среде. Если строки или столбца заблокирован в монопольном режиме, другим пользователям не разрешается доступа к заблокированным данным до снятия блокировки. Это гарантирует, что два пользователя не может одновременно обновить того же столбца в строку.  

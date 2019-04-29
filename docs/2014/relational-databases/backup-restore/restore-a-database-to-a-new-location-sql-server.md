@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a50004cfb39b93ecd0c144fb0d92d37545c83ee
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921184"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Восстановление базы данных в новое место (SQL Server)
   В этом разделе описано, как восстановить базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в новую папку и при необходимости переименовать ее в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Эта процедура позволяет переместить базу данных по новому пути каталога или создать копию базы данных на том же или другом экземпляре сервера.  
@@ -98,7 +98,7 @@ ms.locfileid: "58535706"
   
          После добавления нужных устройств в списке **Носитель резервной копии** нажмите кнопку **ОК** для возвращения на страницу **Общие** .  
   
-         В списке **Источник: Устройство: База данных** выберите имя базы данных, из которой нужно восстановить резервные копии.  
+         В **источника: Устройство: База данных** выберите имя базы данных, из которой нужно восстановить резервные копии.  
   
          **Примечание.** Этот список доступен, только если выбрано **Устройство** . Будут выбраны только те базы данных, резервные копии которых доступны на выбранном устройстве.  
   
@@ -191,7 +191,7 @@ ms.locfileid: "58535706"
  В приведенном ниже примере создается база данных `MyAdvWorks` посредством восстановления резервной копии образца базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , в которой содержатся два файла: [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data и [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log. В этой базе данных используется простая модель восстановления. База данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] уже существует на экземпляре сервера, поэтому файлы в резервной копии должны быть восстановлены в новом месте. Количество и имена восстанавливаемых файлов базы данных можно определить с помощью инструкции RESTORE FILELISTONLY. Резервная копия базы данных является первым резервным набором данных на устройстве резервного копирования.  
   
 > [!NOTE]  
->  В примерах резервного копирования и восстановления журнала транзакций из резервной копии, включая восстановление на момент времени, используется база данных `MyAdvWorks_FullRM`, которая создается из базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], как в следующем примере с базой данных `MyAdvWorks`. Однако полученную базу данных `MyAdvWorks_FullRM` необходимо изменить для использования модели полного восстановления с помощью следующей инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]: ALTER DATABASE <database_name> SET RECOVERY FULL.  
+>  В примерах резервного копирования и восстановления журнала транзакций из резервной копии, включая восстановление на момент времени, используется база данных `MyAdvWorks_FullRM`, которая создается из базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], как в следующем примере с базой данных `MyAdvWorks`. Тем не менее полученный в результате `MyAdvWorks_FullRM` базы данных необходимо изменить для использования модели полного восстановления с помощью следующих [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции: ALTER DATABASE < database_name > SET RECOVERY FULL.  
   
 ```sql  
 USE master;  

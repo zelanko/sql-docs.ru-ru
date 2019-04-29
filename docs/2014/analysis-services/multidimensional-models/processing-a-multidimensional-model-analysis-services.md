@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3877278e26b6373c9121ad6b5c7e8249b73dc166
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736921"
 ---
 # <a name="multidimensional-model-object-processing"></a>Обработка объектов многомерной модели
   Обработка ― это шаг или последовательность шагов, в которых службы Analysis Services загружают данные из реляционного источника данных в многомерную модель. Для объектов, использующих режим хранения MOLAP, данные сохраняются на диске в папке файла базы данных. Для режима хранения ROLAP обработка происходит по запросу, в ответ на запрос многомерных выражений к объекту. Для объектов, использующих режим хранения ROLAP, обработка относится к обновлению кэш-памяти до возврата результатов запроса.  
@@ -80,7 +80,7 @@ ms.locfileid: "48173324"
  При обработке объектов в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно выбрать параметр обработки или включить службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для определения соответствующего типа обработки. Доступные методы обработки отличаются от одного объекта к другому и зависят от типа объекта. Кроме того, доступные методы зависят от типа изменений, внесенных в объект с момента его последней обработки. Если включить в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] автоматический выбор типа обработки, будет использоваться метод, возвращающий объект в полностью обработанном состоянии за минимальное время. Дополнительные сведения см. в разделе [Настройка параметров обработки (службы Analysis Services)](processing-options-and-settings-analysis-services.md).  
   
 ## <a name="see-also"></a>См. также  
- [Логическая архитектура &#40;службы Analysis Services — многомерные данные&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Объекты базы данных &#40;службы Analysis Services — многомерные данные&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Логическая архитектура (службы Analysis Services — многомерные данные)](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Объекты баз данных (службы Analysis Services — многомерные данные)](olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

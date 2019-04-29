@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8648a1702dfb54f8272adfb84f2ee0e916ed3dbd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183896"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Примеры метода Close для объекта Connection и свойства Type для объекта Table (Visual Basic)
 Установка [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) свойства **Nothing** следует закрыть соединение с каталогом. Связанные коллекции будет пустым. Любые объекты, которые были созданы из объектов схемы в каталоге, окажутся потерянными. Свойства на те объекты, которые были кэшированы по-прежнему будут доступны, но попытка чтения свойства, требуется вызывать поставщик завершится ошибкой.  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ece0e6856f43e2296fb0feab4abe38ffbba568b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028331"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>Диалоговое окно «Столбцы полнотекстовых индексов» (визуальные инструменты для баз данных)
   В этом диалоговом окне приводится список столбцов, участвующих в полнотекстовом индексе для таблицы, открытой в конструкторе таблиц. Чтобы открыть это диалоговое окно, щелкните правой кнопкой мыши таблицу в конструкторе таблиц, выберите **Полнотекстовой индекс** и в диалоговом окне **Полнотекстовой индекс** выберите индекс, который нужно просмотреть или отредактировать. После этого щелкните поле **Столбцы** в сетке справа и нажмите кнопку с многоточием (**...**).  

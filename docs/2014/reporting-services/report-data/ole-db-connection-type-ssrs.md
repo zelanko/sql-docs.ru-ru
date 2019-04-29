@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 34c3551fca12694b25a731bf1e18c913e4591299
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044219"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>Тип соединения OLE DB (службы SSRS)
   Для включения данных из источника данных OLE DB необходим набор данных на основе источника данных отчета типа OLE DB. Этот встроенный тип источника данных основан на модуле обработки данных OLE DB служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

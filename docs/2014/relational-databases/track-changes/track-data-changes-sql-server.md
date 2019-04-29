@@ -34,11 +34,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63073995"
 ---
 # <a name="track-data-changes-sql-server"></a>Отслеживание измененных данных (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] предоставляет две функции отслеживания изменений в базе данных: [система отслеживания измененных данных](#Capture) и [отслеживание изменений](#Tracking). Эти функции позволяют приложениям обнаруживать изменения DML (операции вставки, обновления и удаления), произведенные в пользовательских таблицах базы данных. Отслеживание измененных данных и отслеживание изменений можно включить для одной и той же базы данных без каких-либо дополнительных действий. Для выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] что поддержка сбора данных изменений и отслеживание изменений, см. в разделе [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -168,7 +168,7 @@ ms.locfileid: "53351705"
   
 -   [Центр разработки Microsoft Sync Framework](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     Содержит полную документацию по [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] и [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. В документации по [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)], раздел «как: использовать отслеживание изменений SQL Server» содержит подробные сведения и примеры программного кода.  
+     Содержит полную документацию по [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] и [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. В документации по [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)] раздел «Как Использование отслеживания изменений SQL Server» содержит подробные сведения и примеры кода.  
   
   
 ## <a name="related-tasks-required"></a>Связанные задачи (обязательно)  

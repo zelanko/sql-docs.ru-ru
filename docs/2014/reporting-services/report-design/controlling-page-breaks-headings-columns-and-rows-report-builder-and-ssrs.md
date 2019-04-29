@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03ac60e59b1859ed4e77f3db5e355a1fb9f556f3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186510"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>Управление разрывами страниц, заголовками, столбцами и строками (построитель отчетов и службы SSRS)
   Разрыв страницы разделяет отчет на отдельные страницы для просмотра и печати. Разрывы страниц определяют, как содержимое соответствует странице отчета для оптимального представления, когда выполняется предварительный просмотр отчета или экспорт в другой формат файла.  

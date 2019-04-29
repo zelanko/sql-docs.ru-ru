@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 9e18bd902635a8016234ec714d9929bb48ffbfbc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127668"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>Применение преобразования XSL (управляемые классы SQLXML)
   В этом примере SQL-запрос выполняется в базе данных AdventureWorks. Преобразование XSL применяется к результату запроса для формирования состоящей из двух столбцов таблицы с именами и фамилиями служащих.  

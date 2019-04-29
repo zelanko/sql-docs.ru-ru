@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08230bedfa4c9e62a890a34db9ac12d99cae589a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59957010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011936"
 ---
 # <a name="enable-and-disable-my-reports"></a>Включение и отключение папки «Мои отчеты»
   Функция «Мои отчеты» выделяет место для личного хранилища в базе данных сервера отчетов, чтобы пользователи могли сохранять в личной папке отчеты, которыми они владеют. Администратор сервера отчетов может включать и отключать эту функцию или изменить ее работу, меняя параметры настройки безопасности, управляющие теми операциями, которые пользователи могут осуществлять в этом рабочем пространстве.  

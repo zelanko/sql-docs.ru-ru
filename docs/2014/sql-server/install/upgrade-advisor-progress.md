@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7efb9258203efcffeb98bf4404faee5f80aff9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63016343"
 ---
 # <a name="upgrade-advisor-progress"></a>Ход выполнения помощника по обновлению
   Анализ помощника по обновлению начинается с запуска выделенного анализатора, производящего анализ каждого выбранного компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Как выполняется анализ компонентов, о состоянии сообщается в **ход выполнения** диалоговое окно.  
@@ -47,8 +47,8 @@ ms.locfileid: "48160364"
 >  Предыдущие отчеты сохраняются при каждом анализе сервера. При сохранении отчетов в качестве имени файла используется отметка времени. Средство просмотра отчетов отображает пять последних сохраненных отчетов.  
   
 ## <a name="see-also"></a>См. также  
- [Практическое: запустить помощник по обновлению](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
- [Практическое: запустить мастер анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Как Запустите помощник по обновлению](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
+ [Как Запустить мастер анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Компоненты SQL Server](../../../2014/sql-server/install/sql-server-components.md)   
  [Справочник по пользовательскому интерфейсу помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [Работа с помощником по обновлению](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

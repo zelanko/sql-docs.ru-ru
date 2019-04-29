@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126032"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>переименовать экземпляр отказоустойчивого кластера SQL Server
   Если экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] является частью отказоустойчивого кластера, процесс переименования виртуального сервера отличается от процесса переименования изолированного экземпляра. Дополнительные сведения см. в статье [Переименование компьютера, на который установлен изолированный экземпляр SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "53362627"
   
  **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** После изменения сетевого имени [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] отказоустойчивого кластера с помощью средства "Администратор кластера Windows" в будущем обновления экземпляра или операции удаления может завершиться ошибкой. Для решения данной проблемы обновите **ClusterName** реестр запись, следуя указаниям в разделе решения [это](https://go.microsoft.com/fwlink/?LinkId=244002) (https://go.microsoft.com/fwlink/?LinkId=244002).  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Служба агента:** Проверьте и выполните дополнительные действия для службы агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Служба агента:** Проверьте и выполните следующие дополнительные действия для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] служба агента:  
   
 -   Исправьте параметры в реестре, если агент SQL Server настроен на пересылку событий. Дополнительные сведения см. в статье [Назначение сервера пересылки событий (среда SQL Server Management Studio)](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md).  
   

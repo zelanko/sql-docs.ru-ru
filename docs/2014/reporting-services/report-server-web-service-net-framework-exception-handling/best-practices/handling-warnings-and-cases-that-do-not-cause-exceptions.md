@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4c2c58a5edf42966ba828288c2aa8b84dbb49967
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046106"
 ---
 # <a name="handling-warnings-and-cases-that-do-not-cause-exceptions"></a>Обработка предупреждений и ситуаций, не вызывающих исключения
   В службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] не формируются исключения применительно к предупреждениям и некоторым ошибкам. Например, при использовании метода <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> с целью публикации нового отчета на сервере отчетов все возникающие предупреждения возвращаются в виде массива объектов <xref:ReportService2010.Warning>. Эти предупреждения должны быть обработаны и отображены, чтобы можно было осуществлять соответствующие действия.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b85ba458b96a8c5b48a2f40f1bf777374775c3b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065469"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>Примеры ActualSize и Definedsize свойства (Visual C++)
 В этом примере используется [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) и [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) свойства для отображения определенного размера, а фактический размер поля.  
@@ -130,22 +130,22 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ```  
   
  **Имя Store: Эрик чтения книги**  
-**Размер: 40**  
+**Заданный размер: 40**  
 **Фактический размер: 19**  
-**Имя Store: Barnum**  
-**Размер: 40**  
+**Имя Store: В Barnum**  
+**Заданный размер: 40**  
 **Фактический размер: 8**  
 **Имя Store: Новости и Brews**  
-**Размер: 40**  
+**Заданный размер: 40**  
 **Фактический размер: 12**  
-**Имя Store: Doc-U-Mat: стирки качества и книги**  
-**Размер: 40**  
+**Имя Store: Doc-U-Mat: Качество стирки и книги**  
+**Заданный размер: 40**  
 **Фактический размер: 36**  
 **Имя Store: Fricative Bookshop**  
-**Размер: 40**  
+**Заданный размер: 40**  
 **Фактический размер: 18**  
-**Store Name: Bookbeat**  
-**Размер: 40**  
+**Имя Store: Bookbeat**  
+**Заданный размер: 40**  
 **Фактический размер: 8**   
 ## <a name="see-also"></a>См. также  
  [Свойство ActualSize (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   

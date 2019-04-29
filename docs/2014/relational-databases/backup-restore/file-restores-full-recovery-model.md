@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a78b177b1fb429535a4bb9b271d0b1dbc4eedc79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921945"
 ---
 # <a name="file-restores-full-recovery-model"></a>Файлы из резервных копий (модель полного восстановления)
   Сведения этого раздела относятся только к тем базам данных, которые содержат несколько файловых групп в модели полного восстановления или модели восстановления с неполным протоколированием.  
@@ -50,7 +50,7 @@ ms.locfileid: "48141254"
      Дополнительные сведения о поддержке оперативного восстановления страниц и файлов см. в разделе [Возможности, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Дополнительные сведения об оперативном восстановлении см. в разделе [Оперативное восстановление (SQL Server)](online-restore-sql-server.md).  
   
     > [!TIP]  
-    >  Если желательно, чтобы база данных находилась в режиме "вне сети" при восстановлении файлов, переведите ее в режим "вне сети" перед запуском последовательности восстановления, выполнив следующую инструкцию [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) : ALTER DATABASE *имя_базы_данных* SET OFFLINE.  
+    >  Если желательно, чтобы база данных находилась в режиме "вне сети" для восстановления файлов, переведите ее в этот режим перед запуском последовательности восстановления, выполнив следующую инструкцию [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options): ALTER DATABASE *имя_базы_данных* SET OFFLINE.  
   
   
   
@@ -114,11 +114,11 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 ## <a name="examples"></a>Примеры  
   
--   [Пример. Оперативное восстановление файла, доступного для чтения и записи (модель полного восстановления)](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [Пример. Оперативное восстановление файла, доступного для чтения и записи &#40;модель полного восстановления&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
--   [Пример. Оперативное восстановление файла, доступного только для чтения (модель полного восстановления)](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
+-   [Пример. Оперативное восстановление файла, доступного только для чтения &#40;модель полного восстановления&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
--   [Пример. Автономное восстановление основной и еще одной файловой группы (модель полного восстановления)](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [Пример. Автономное восстановление основной и еще одной файловой группы &#40;модель полного восстановления&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
  **Восстановление файлов и файловых групп**  
@@ -132,7 +132,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
 
   
 ## <a name="see-also"></a>См. также  
- [Резервное копирование и восстановление: взаимодействие и сосуществование (SQL Server)](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Резервное копирование и восстановление: взаимодействие и совместимость &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Разностные резервные копии (SQL Server)](differential-backups-sql-server.md)   
  [Полные резервные копии файлов (SQL Server)](full-file-backups-sql-server.md)   
  [Общие сведения о резервном копировании (SQL Server)](backup-overview-sql-server.md)   

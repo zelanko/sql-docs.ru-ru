@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0558ded6ed10284df39270ddeca9d92434daf40e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057552"
 ---
 # <a name="mssqleng018752"></a>MSSQL_ENG018752
     
@@ -48,7 +48,7 @@ ms.locfileid: "54133734"
 ## <a name="user-action"></a>Действие пользователя  
  Выполнение следующих шагов может помочь устранить проблему. Если на каком-либо шаге можно запустить агент чтения журнала без ошибок, то в выполнении оставшихся шагов нет необходимости.  
   
--   Проверьте журнал агента чтения журнала. Возможно, имеются другие ошибки, вызывающие данную ошибку. Сведения о просмотре агента состояние и сведения об ошибке в мониторе репликации см. в разделе [Просмотр сведений и выполнение задач с помощью монитора репликации](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+-   Проверьте журнал агента чтения журнала. Возможно, имеются другие ошибки, вызывающие данную ошибку. Сведения о просмотре состояния агента и сведений об ошибках в мониторе репликации см. в статье [Просмотр сведений и выполнение задач с помощью монитора репликации](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Проверьте, есть ли в выходных данных процедуры [sp_who &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql) идентификаторы процессов (SPIDs), подключенных к опубликованной базе данных. Закройте все соединения, для которых могла выполняться процедура **sp_repldone**, **sp_replcmds**или **sp_replshowcmds**.  
   

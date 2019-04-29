@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98ccc6dfdc904c2789f1ee8a68c0097d5ec6f817
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910872"
 ---
 # <a name="supports-method-example-vc"></a>Пример метода Supports (Visual C++)
 В этом примере используется [поддерживает](../../../ado/reference/ado-api/supports-method.md) метод для отображения параметров, поддерживаемых набор записей открыт с различные типы курсоров. Функция DisplaySupport является обязательным для выполнения этого примера.  

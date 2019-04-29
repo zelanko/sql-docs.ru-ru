@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 060de551afa266dae4d5384fe765e16b997bcccd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062652"
 ---
 # <a name="step-4-populate-the-details-text-box"></a>Шаг 4. Заполнение текстового поля сведений
 Для заполнения текстового поля сведений, создайте новый подпрограмму с именем **recFields** и вставьте следующий код:  

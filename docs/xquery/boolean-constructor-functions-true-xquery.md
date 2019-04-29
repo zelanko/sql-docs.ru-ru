@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 611d23ad84df3087a259cbaf60870129b841715b
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047618"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>Функции логического конструктора — true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ go
 -- result = 1  
 ```  
   
- В следующем примере задается запрос к типизированному **xml** столбца. Выражение `if` проверяет типизированное логическое значение элемента <`ROOT`> и, соответственно, возвращает созданный XML. В примере выполняются следующие действия.  
+ В следующем примере задается запрос к типизированному **xml** столбца. `if` Выражение проверяет типизированное логическое значение элемента <`ROOT`> элемент и возвращает созданный XML, соответствующим образом. В примере выполняются следующие действия.  
   
--   Создается коллекция XML-схем, которая задает элемент <`ROOT`> типа xs:boolean.  
+-   Создает коллекцию схем XML, который определяет <`ROOT`> элемент типа xs: Boolean.  
   
 -   Создается таблица с типизированным **xml** столбца с помощью коллекции XML-схем.  
   

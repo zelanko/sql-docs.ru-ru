@@ -1,5 +1,5 @@
 ---
-title: AllMembers (многомерные Выражения) | Документы Microsoft
+title: AllMembers (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 92cde0acf07f62d0678da6dd96efa707dedc1a1f
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63066252"
 ---
 # <a name="allmembers-mdx"></a>AllMembers (многомерные выражения)
 
@@ -46,7 +46,7 @@ Level_Expression.AllMembers
 >  Если измерение содержит единственную видимую иерархию, на нее можно сослаться по имени измерения или по имени иерархии, поскольку имя измерения в этом случае разрешается в единственную видимую иерархию. Например, многомерное выражение `Measures.AllMembers` является допустимым, поскольку измерение Measures разрешается в единственную видимую иерархию.  
   
 > [!NOTE]  
->  **AllMembers** функция семантически схожа с [AddCalculatedMembers (многомерные Выражения)](../mdx/addcalculatedmembers-mdx.md) функции.  
+>  **AllMembers** функция семантически аналогична методу [AddCalculatedMembers (многомерные Выражения)](../mdx/addcalculatedmembers-mdx.md) функции.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример возвращает все элементы в [`Date].[Calendar Year]` иерархии атрибута по оси столбцов, это включает в себя вычисляемые элементы и набор всех потомков `[Product].[Model Name]` иерархии на оси строк из атрибута **Adventure Works** куба.  
@@ -59,7 +59,7 @@ FROM
    [Adventure Works]  
 ```  
   
- Следующий пример возвращает все элементы в **меры** измерение по оси столбцов, это включает в себя все вычисляемые элементы и набор всех потомков `[Product].[Model Name]` иерархии на оси строк из атрибута **Adventure Works** куба.  
+ Следующий пример возвращает все элементы в **меры** измерения на оси столбцов, сюда входят все вычисляемые элементы и набор всех потомков `[Product].[Model Name]` иерархии на оси строк атрибута из **Adventure Works** куба.  
   
 ```  
 SELECT  
@@ -70,8 +70,8 @@ FROM
 ```  
   
 ## <a name="see-also"></a>См. также  
- [AddCalculatedMembers &#40;многомерных Выражений&#41;](../mdx/addcalculatedmembers-mdx.md)   
- [Дочерние элементы &#40;многомерных Выражений&#41;](../mdx/children-mdx.md)   
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [AddCalculatedMembers (многомерные выражения)](../mdx/addcalculatedmembers-mdx.md)   
+ [Children (многомерные выражения)](../mdx/children-mdx.md)   
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

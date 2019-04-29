@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 193bdadaf36e975b1f79327bfef161daaaed427b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049855"
 ---
 # <a name="descriptor-field-conformance"></a>Соответствие поля дескриптора
 Следующая таблица указывает уровень соответствия каждого ODBC поле заголовка дескриптора, где это является правильно определенным.  
@@ -47,8 +47,8 @@ ms.locfileid: "47642312"
 |SQL_DESC_CATALOG_NAME|Уровень 2|  
 |SQL_DESC_CONCISE_TYPE|Основные сведения|  
 |SQL_DESC_DATA_PTR|Основные сведения|  
-|КОД SQL_DESC_DATETIME_INTERVAL_|Core [1]|  
-|ТОЧНОСТЬ SQL_DESC_DATETIME_INTERVAL_|Core [1]|  
+|SQL_DESC_DATETIME_INTERVAL_ CODE|Core [1]|  
+|SQL_DESC_DATETIME_INTERVAL_ PRECISION|Core [1]|  
 |SQL_DESC_DISPLAY_SIZE|Основные сведения|  
 |SQL_DESC_FIXED_PREC_SCALE|Основные сведения|  
 |SQL_DESC_INDICATOR_PTR|Основные сведения|  

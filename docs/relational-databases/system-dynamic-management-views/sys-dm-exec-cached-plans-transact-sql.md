@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8d23ba5a1fbb88bd430c1422019087a5df70c884
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013535"
 ---
 # <a name="sysdmexeccachedplans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "58072338"
 |size_in_bytes|**int**|Число байтов, занимаемых объектом кэша.|  
 |memory_object_address|**varbinary(8)**|Адрес памяти кэшированной записи. Это значение может быть использовано с [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) чтобы проанализировать распределение памяти кэшированного плана и с [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)для определения затрат на кэширование записи.|  
 |cacheobjtype|**nvarchar(34)**|Тип объекта в кэше. Значение может быть одним из следующих:<br /><br /> Compiled Plan (скомпилированный план)<br /><br /> Compiled Plan Stub (заглушка скомпилированного плана)<br /><br /> Parse Tree (дерево синтаксического анализа)<br /><br /> Extended Proc (расширенные процедуры)<br /><br /> CLR Compiled Func (скомпилированная функция CLR)<br /><br /> CLR Compiled Proc (скомпилированная процедура CLR)|  
-|objtype|**nvarchar(16) в формате**|Тип объекта. Ниже приведены возможные значения и их соответствующие описания.<br /><br /> Проц.: Хранимая процедура<br />Подготовить. Подготовленная инструкция<br />Adhoc. Нерегламентированный запрос. Ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] отправляемым как языковые события с помощью **osql** или **sqlcmd** вместо виде удаленных вызовов процедур.<br />ReplProc: Процедура фильтра репликации<br />Триггер: Триггер<br />Представление: Представление<br />По умолчанию: Значение по умолчанию<br />UsrTab: Пользовательская таблица<br />SysTab: Системная таблица<br />Проверка: Ограничение CHECK<br />Правило: Правило|  
+|objtype|**nvarchar(16) в формате**|Тип объекта. Ниже приведены возможные значения и их соответствующие описания.<br /><br /> Proc: Хранимая процедура<br />Подготовить. Подготовленная инструкция<br />Adhoc. Нерегламентированный запрос. Ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] отправляемым как языковые события с помощью **osql** или **sqlcmd** вместо виде удаленных вызовов процедур.<br />ReplProc: Процедура фильтра репликации<br />Триггер: Триггер<br />Представление: Представление<br />По умолчанию: Значение по умолчанию<br />UsrTab: Пользовательская таблица<br />SysTab: Системная таблица<br />Проверка: Ограничение CHECK<br />Правило: Правило|  
 |plan_handle|**varbinary(64)**|Идентификатор плана в оперативной памяти. Этот идентификатор является временным и константным, только пока план сохраняется в кэше. Это значение можно использовать со следующими функциями динамического управления:<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|Идентификатор пула ресурсов, для которого подсчитывается использование памяти для плана.|  
 |pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  

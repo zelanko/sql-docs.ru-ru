@@ -23,16 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918194"
 ---
 # <a name="deploy-a-data-tier-application"></a>Развертывание приложения уровня данных
   Приложение уровня данных (DAC) вы можете развернуть из пакета DAC на существующем экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)] или [!INCLUDE[ssSDS](../../includes/sssds-md.md)] с помощью мастера или скрипта Powershell. Процесс развертывания регистрирует экземпляр приложения уровня данных путем сохранения определения приложения уровня данных в системной базе данных **msdb** (**master** в [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), создает базу данных и заполняет ее всеми объектами базы данных, заданными в приложении уровня данных.  
   
--   **Перед началом работы**  [Служебная программа SQL Server](#SQLUtility), [базы данных, параметры и настройки](#DBOptSettings), [ограничения](#LimitationsRestrictions), [предварительные требования](#Prerequisites), [безопасности](#Security), [Разрешения](#Permissions)  
+-   **Перед началом:**  [Служебная программа SQL Server](#SQLUtility), [базы данных, параметры и настройки](#DBOptSettings), [ограничения](#LimitationsRestrictions), [предварительные требования](#Prerequisites), [безопасности](#Security), [Разрешения](#Permissions)  
   
 -   **Для развертывания приложения уровня данных, с помощью:**  [Развертывание Data-tier Application Wizard](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
   

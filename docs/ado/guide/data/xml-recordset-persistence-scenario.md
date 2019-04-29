@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65f4705eb926c116d935384163cffe4f33b11a88
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184835"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Сценарий сохраняемости набора записей XML
 В этом сценарии вы создадите приложение Active Server Pages (ASP), сохраняет содержимое объекта Recordset непосредственно в объекте отклика ASP.  
@@ -38,10 +38,10 @@ ms.locfileid: "51600244"
   
 -   Получение и отображение данных  
   
-## <a name="step-1-set-up-the-application"></a>Шаг 1: Настройка приложения  
+## <a name="step-1-set-up-the-application"></a>Шаг 1. Настройка приложения  
  Создайте виртуальный каталог IIS, с именем «XMLPersist» и внести в скрипт разрешения. Создайте два новых текстовых файлов в папке, на который виртуального каталога указывает, один именованный «XMLResponse.asp,» другие именованные «Default.htm».  
   
-## <a name="step-2-get-the-data"></a>Шаг 2: Получение данных  
+## <a name="step-2-get-the-data"></a>Шаг 2. Получить данные  
  На этом шаге вы напишете код, чтобы открыть набор записей ADO и Подготовка к отправить его клиенту. Откройте файл XMLResponse.asp в текстовом редакторе, таком как Блокнот и вставьте следующий код.  
   
 ```  
@@ -70,7 +70,7 @@ ms.locfileid: "51600244"
   
  Оставьте файл открытым и переходите к следующему шагу.  
   
-## <a name="step-3-send-the-data"></a>Шаг 3: Отправка данных  
+## <a name="step-3-send-the-data"></a>Шаг 3. Отправка данных  
  Теперь, когда у вас есть набор записей, его необходимо отправить клиенту, сохранив его в формате XML в объект ответа ASP. Добавьте следующий код в нижнюю часть XMLResponse.asp.  
   
 ```  
@@ -89,7 +89,7 @@ ms.locfileid: "51600244"
   
  Сохраните и закройте XMLResponse.asp перед переходом к следующему шагу. Также скопируйте файл adovbs.inc из папки установки по умолчанию ADO библиотеки в ту же папку, где был сохранен файл XMLResponse.asp.  
   
-## <a name="step-4-receive-and-display-the-data"></a>Шаг 4: Получение и отображение данных  
+## <a name="step-4-receive-and-display-the-data"></a>Шаг 4. Получение и отображение данных  
  На этом шаге вы создадите файл HTML с помощью встроенного [объекта DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) объект, который указывает на файл XMLResponse.asp для получения набора записей. Откройте файл default.htm в текстовом редакторе, таком как Блокнот и добавьте следующий код. Замените на имя вашего сервера «sqlserver» в URL-адрес.  
   
 ```  

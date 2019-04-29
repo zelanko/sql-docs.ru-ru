@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 268d5f00d787cef8dfdcb29bd9e091f81a5ed2c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125589"
 ---
 # <a name="catalog-functions"></a>Функции работы с каталогами
 Все базы данных имеют структуру, описывающий, каким образом данные будут храниться в базе данных. Например база данных простой заказа на продажу может иметь структуру, представленную на следующем рисунке, в котором используются столбцы идентификатора установить связь между таблицами.  

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918974"
 ---
 # <a name="set-or-change-the-column-collation"></a>Задание или изменение параметров сортировки столбца
   Для типов данных `char`, `varchar`, `text`, `nchar`, `nvarchar` и `ntext` параметры сортировки базы данных можно переопределить, указав другие параметры сортировки для определенного столбца таблицы одним из следующих способов.  
@@ -87,7 +87,7 @@ GO
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
- Так как **tempdb** использует параметры сортировки сервера по умолчанию и `TestPermTab.Col1` использует другие параметры сортировки, SQL Server возвращает эту ошибку: «Невозможно разрешить конфликт параметров сортировки между 'Latin1_General_CI_AS_KS_WS' и 'Estonian_CS_AS' в операции равенства».  
+ Так как **tempdb** использует параметры сортировки сервера по умолчанию и `TestPermTab.Col1` использует другие параметры сортировки, SQL Server возвращает эту ошибку: «Не удалось разрешить конфликт параметров сортировки между «Latin1_General_CI_AS_KS_WS» и «Estonian_CS_AS» в равенства для операции».  
   
  Избавиться от этой ошибки можно одним из следующих способов:  
   

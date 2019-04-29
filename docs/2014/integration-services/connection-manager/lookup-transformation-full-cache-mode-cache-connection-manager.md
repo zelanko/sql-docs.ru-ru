@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ddfed959b0f8147a8a4e48a011f65ec011f3846c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833716"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера соединений с кэшем
   Можно настроить преобразование «Уточняющий запрос», чтобы использовать режим полного кэширования и диспетчер соединений с кэшем. В режиме полного кэширования эталонный набор данных загружается в кэш еще до запуска преобразования «Уточняющий запрос».  
@@ -61,7 +61,7 @@ ms.locfileid: "58384282"
   
 -   [Контейнер последовательности](../control-flow/sequence-container.md)  
   
- Видеоматериал, в котором показано, как реализовать преобразование «Уточняющий запрос» в режиме полного кэширования с помощью диспетчера соединений с кэшем, см. в разделе [как: Реализовать преобразование «Уточняющий запрос» в режиме полного кэширования (видеоматериал SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
+ Видео, в котором показано, как реализовать преобразование "Уточняющий запрос" в режиме полного кэширования с помощью диспетчера подключений к кэшу, см. в статье [Как реализовать преобразование "Уточняющий запрос" в режиме полного кэширования (видеоматериал по SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>Реализация преобразования «Уточняющий запрос» в режиме полного кэширования в одном пакете с использованием диспетчера соединений с кэшем и источника данных в потоке данных  
   

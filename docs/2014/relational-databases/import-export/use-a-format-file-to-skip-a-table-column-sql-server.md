@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 9bf80986582802ad70c39d62ae0fbb835fcb360e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065733"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Пропуск столбца таблицы с помощью файла форматирования (SQL Server)
   В этом подразделе описываются файлы форматирования. Если поле не существует в файле данных, то импорт столбца таблицы можно пропустить с помощью файла форматирования. Файл данных может содержать меньше полей, чем таблица столбцов, только если пропущенные столбцы необязательно определяемы и (или) имеют значение по умолчанию.  

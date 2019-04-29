@@ -1,6 +1,6 @@
 ---
-title: Элементы языка T-SQL - Parallel Data Warehouse | Документы Microsoft
-description: Элементы языка T-SQL для аналитической Platform System (APS) SQL Server Parallel данных хранилища (PDW).
+title: Элементы языка T-SQL - Parallel Data Warehouse | Документация Майкрософт
+description: Элементы языка T-SQL для аналитической Platform System (APS) SQL Server Parallel Data хранилища (PDW).
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d9e2011ef30864e35245f59cab0861ea116d1502
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035005"
 ---
-# <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Элементы языка T-SQL для параллельного хранилища данных
-Элементы языка T-SQL для аналитической Platform System (APS) SQL Server Parallel данных хранилища (PDW).
+# <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Элементы языка T-SQL для Parallel Data Warehouse
+Элементы языка T-SQL для аналитической Platform System (APS) SQL Server Parallel Data хранилища (PDW).
 
-## <a name="core-elements"></a>Корневые элементы
-* [синтаксические обозначения](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+## <a name="core-elements"></a>Описание основных элементов
+* [Синтаксические обозначения](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [правила именования объектов](../relational-databases/databases/database-identifiers.md)
 * [зарезервированные ключевые слова](../t-sql/language-elements/reserved-keywords-transact-sql.md)
 * [Параметры сортировки](https://msdn.microsoft.com/library/ff848763.aspx)
@@ -30,11 +30,11 @@ ms.locfileid: "31539574"
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
 * [Выражения](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
-* [Инструкции по решению свойство IDENTITY](../t-sql/statements/create-table-transact-sql-identity-property.md)
+* [Временное решение свойства IDENTITY](../t-sql/statements/create-table-transact-sql-identity-property.md)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
 * [USE](../t-sql/language-elements/use-transact-sql.md)
 
-## <a name="batches-control-of-flow-and-variables"></a>Пакеты, поток управления и переменные
+## <a name="batches-control-of-flow-and-variables"></a>Пакеты управления потоком и переменные
 * [BEGIN...END](../t-sql/language-elements/begin-end-transact-sql.md)
 * [BREAK](../t-sql/language-elements/break-transact-sql.md)
 * [DECLARE @local_variable](../t-sql/language-elements/declare-local-variable-transact-sql.md)
@@ -54,11 +54,11 @@ ms.locfileid: "31539574"
 * [/ (деление)](../t-sql/language-elements/divide-transact-sql.md)
 * [Остаток от деления](../t-sql/language-elements/modulo-transact-sql.md)
 
-## <a name="wildcard-characters-to-match"></a>Подстановочные символы для совпадения
+## <a name="wildcard-characters-to-match"></a>Подстановочные знаки для сопоставления
 * [= (равно)](../t-sql/language-elements/equals-transact-sql.md)
 * [> (Больше)](../t-sql/language-elements/greater-than-transact-sql.md)
 * [< (Меньше)](../t-sql/language-elements/less-than-transact-sql.md)
-* [> = (большие, чем или равно)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
+* [> = (отлично подходит, чем или равно)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
 * [< = (меньше или равно)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
 * [<> (Не равно)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
 * [\!= (Не равно)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
@@ -69,7 +69,7 @@ ms.locfileid: "31539574"
 * [НЕТ](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
-* [или](../t-sql/language-elements/or-transact-sql.md)
+* [OR](../t-sql/language-elements/or-transact-sql.md)
 
 ### <a name="bitwise-operators"></a>Побитовые операторы
 * [& (побитовое И)](../t-sql/language-elements/bitwise-and-transact-sql.md)
@@ -227,7 +227,7 @@ ms.locfileid: "31539574"
 ## <a name="transactions"></a>Transactions
 * [Транзакции](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
-## <a name="diagnostic-sessions"></a>Диагностических сеансов
+## <a name="diagnostic-sessions"></a>Сеансы диагностики
 * [Создание сеанса диагностики](../t-sql/language-elements/create-diagnostics-session-transact-sql.md)
 
 ## <a name="procedures"></a>Процедуры
@@ -259,7 +259,7 @@ ms.locfileid: "31539574"
 * [SET ANSI_NULL_DFLT_ON](../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)
 * [SET ANSI_NULLS](../t-sql/statements/set-ansi-nulls-transact-sql.md)
 * [SET ANSI_PADDING](../t-sql/statements/set-ansi-padding-transact-sql.md)
-* [ПАРАМЕТР SET ANSI_WARNINGS](../t-sql/statements/set-ansi-warnings-transact-sql.md)
+* [SET ANSI_WARNINGS](../t-sql/statements/set-ansi-warnings-transact-sql.md)
 * [SET ARITHABORT](../t-sql/statements/set-arithabort-transact-sql.md)
 * [SET ARITHIGNORE](../t-sql/statements/set-arithignore-transact-sql.md)
 * [SET CONCAT_NULL_YIELDS_NULL](../t-sql/statements/set-concat-null-yields-null-transact-sql.md)
@@ -268,7 +268,7 @@ ms.locfileid: "31539574"
 * [SET FMTONLY](../t-sql/statements/set-fmtonly-transact-sql.md)
 * [НАБОР IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
 * [SET LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)
-* [НАБОР NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
+* [SET NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
 * [SET QUOTED_IDENTIFIER](../t-sql/statements/set-quoted-identifier-transact-sql.md)
 * [SET ROWCOUNT](../t-sql/statements/set-rowcount-transact-sql.md)
 * [SET TEXTSIZE](../t-sql/statements/set-textsize-transact-sql.md)
@@ -276,7 +276,7 @@ ms.locfileid: "31539574"
 * [SET XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
 
 ## <a name="next-steps"></a>Следующие шаги
-Дополнительные справочные сведения см. в разделе [инструкции T-SQL](tsql-statements.md) и [системных представлений T-SQL](tsql-system-views.md).
+Дополнительные справочные сведения см. в разделе [инструкций T-SQL](tsql-statements.md) и [системные представления T-SQL](tsql-system-views.md).
 
 <!--Image references-->
 

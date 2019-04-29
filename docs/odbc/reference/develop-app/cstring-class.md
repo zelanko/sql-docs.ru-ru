@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f5752602de4848b35298fb4c4a6a1efdf6519dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042490"
 ---
 # <a name="cstring-class"></a>Класс CString
 Так как объекты **CString** подписываются класса в Microsoft Visual C++® и строковых аргументов в функции ODBC без знака, приложений, которые передают **CString** объекты функций без приведение их будут получать предупреждения компилятора.

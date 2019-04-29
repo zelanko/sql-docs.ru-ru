@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c1eced0fae443a67c85cc1f3f8ec9b44867ce464
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184912"
 ---
 # <a name="using-pages"></a>Использование страниц
 Используйте **PageCount** свойство, чтобы определить, сколько страниц данных в **записей** объекта. *Страницы* представляют собой группы записи, размер которого равен размеру **PageSize** значение свойства. Даже если последней страницы не завершена, так как меньше записей, чем **PageSize** значение, он считается дополнительную страницу в **PageCount** значение. Если **записей** объект не поддерживает это свойство **PageCount** будет равно -1, чтобы указать, что **PageCount** является неопределенной.  

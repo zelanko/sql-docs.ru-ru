@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 783c20de7f1ea23f41dcbc4fb645644bdaf5ad7d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183077"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, объект SQL Statistics
   Объект **SQLServer: статистика SQL** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает работу счетчиков для наблюдения компиляции и типов запросов, отправляемых экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Наблюдение за числом компиляций и повторных компиляций запросов и числа пакетов, полученных экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , дает представление о том, как быстро [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет запросы пользователей и насколько эффективно их обрабатывает оптимизатор запросов.  

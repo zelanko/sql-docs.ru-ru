@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 8ee6e9cca2e16a180f869df7bcec07bb7b09e390
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63071150"
 ---
 # <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>Миграция баз данных DB2 в SQL Server (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) для DB2 — это комплексное среда, которая поможет вам быстро перенос баз данных DB2 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базе данных SQL Azure. С помощью SSMA для DB2, можно просмотреть объекты базы данных и данных, оценка баз данных для миграции, миграция объектов базы данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или база данных SQL Azure, и затем перенести данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базе данных SQL Azure. Обратите внимание на то, не может выполнить миграцию схемы SYS и системы DB2.  

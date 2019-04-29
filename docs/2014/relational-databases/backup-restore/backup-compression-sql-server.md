@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: af3e8d9184b12a726361643c563402242c6b04cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876811"
 ---
 # <a name="backup-compression-sql-server"></a>Сжатие резервных копий (SQL Server)
   В этом разделе описывается сжатие резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в том числе ограничения, влияние сжатия резервных копий на производительность, настройка конфигурации сжатия резервных копий и коэффициент сжатия.  

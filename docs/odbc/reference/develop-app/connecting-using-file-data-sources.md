@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6fec2cea71ba818e955e0b6c2ce31c58f2c07357
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043889"
 ---
 # <a name="connecting-using-file-data-sources"></a>Подключение с использованием файловых источников данных
 Сведения о соединении для источника данных хранится в файле .dsn. Таким образом строку подключения можно использовать несколько раз одним пользователем или совместно использовать несколько пользователей, если они имеют установлены соответствующие драйверы. Файл содержит имя драйвера (или другой источник данных в случае такие источники данных) и при необходимости строка подключения, который может использоваться с **SQLDriverConnect**. Диспетчер драйверов формирует строку подключения для вызова **SQLDriverConnect** из ключевых слов в файле .dsn.  

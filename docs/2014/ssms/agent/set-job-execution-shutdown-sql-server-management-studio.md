@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca9343fe8a6f9e89ba9f26dbbbb12dd7362aff91
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033610"
 ---
 # <a name="set-job-execution-shutdown-sql-server-management-studio"></a>Настройка интервала ожидания задания при завершении работы (SQL Server Management Studio)
   В этом разделе описано, как задать время, в течение которого агент [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет ожидать завершения выполнения заданий, прежде чем агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] завершит работу в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

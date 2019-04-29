@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3190e622790c1c9e58e26e18c1a963b14db1afab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033466"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>ConnectionString, ConnectionTimeout и пример свойства состояния (Visual C++)
 В этом примере рассматриваются различные способы использования [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойства, чтобы открыть [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Он также использует [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) свойство, чтобы задать период ожидания соединения и [состояние](../../../ado/reference/ado-api/state-property-ado.md) свойство для проверки состояния подключения. Функция GetState является обязательным для выполнения этой процедуры.  

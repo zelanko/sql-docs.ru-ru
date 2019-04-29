@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86a68dfd8a84892ba3706250dfdde612a429c765
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182827"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Занятие 6: Добавить элемент управления ReportViewer в приложение
   После завершения проектирования дочернего отчета с помощью мастера отчетов далее необходимо добавить в приложение веб-сайта элемент управления ReportViewer.  

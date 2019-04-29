@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 80bb427800f57ddaa07e5e53f21b03df9e8317d3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62933696"
 ---
 # <a name="functions-on-sequences---id"></a>Функции с последовательностями — id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ fn:id($arg as xs:IDREF*) as element()*
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** -столбцов в [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базы данных.  
   
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. Получение элементов, основанных на значении атрибута IDREF  
- В следующем примере используется функция fn:id для получения элементов <`employee`>, основанных на атрибуте управляющего IDREF. В данном примере атрибут управляющего является атрибутом типа IDREF, а атрибут eid — атрибутом типа ID.  
+ В следующем примере используется функция fn: ID для получения <`employee`> элементы, на основании атрибуте управляющего IDREF. В данном примере атрибут управляющего является атрибутом типа IDREF, а атрибут eid — атрибутом типа ID.  
   
  Для значения атрибута иному менеджеру **id()** функция находит <`employee`> элемент, значение атрибута ID совпадает с входным значением IDREF. Другими словами, для указанного работника **id()** функция возвращает менеджера сотрудника.  
   
@@ -99,7 +99,7 @@ Go
  Запрос возвращает значение «Dave». Это значит, что Дэйв является управляющим Джо.  
   
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>Б. Извлечение элементов, основанных на значении атрибута OrderList IDREFS  
- В следующем примере атрибут OrderList элемента <`Customer`> является атрибутом типа IDREFS. Он перечисляет идентификаторы заказов определенного заказчика. Для каждого идентификатора заказа существует дочерний элемент <`Order`> в элементе <`Customer`>, предоставляющем значение заказа.  
+ В следующем примере атрибут OrderList элемента <`Customer`> элемент является атрибутом типа IDREFS. Он перечисляет идентификаторы заказов определенного заказчика. Для каждого идентификатора заказа <`Order`> дочерний элемент в разделе <`Customer`> предоставляющем значение заказа.  
   
  Выражение запроса `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` получает первое значение из списка IDRES для первого заказчика. Это значение затем передается **id()** функции. Эта функция находит <`Order`> элемент, значение атрибута OrderID которого совпадает с входом **id()** функции.  
   

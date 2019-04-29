@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0979892b6770b9a9c2d0d9c4e8a0d734d873c085
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062203"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Сопоставление типов данных в наборах строк и параметрах
   В наборах строк и значения параметра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представляет поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных с помощью следующей OLE DB определенных типов данных, сообщаемых в функциях **IColumnsInfo::GetColumnInfo** и  **ICommandWithParameters::GetParameterInfo**.  
@@ -89,7 +89,7 @@ ms.locfileid: "52766046"
   
 |||  
 |-|-|  
-|Свойство SSPROP_ALLOWNATIVEVARIANT|Тип: VT_BOOL<br /><br /> Чтение-запись: Чтение/запись<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание. Определяет, имеют ли данные, полученные в результате выборки, тип DBTYPE_VARIANT или DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: Возвращается тип столбца DBTYPE_SQLVARIANT. В этом случае в буфере сохраняется структура SSVARIANT.<br /><br /> VARIANT_FALSE: Возвращается столбец типа DBTYPE_VARIANT и в буфере сохраняется структура VARIANT.|  
+|Свойство SSPROP_ALLOWNATIVEVARIANT|Тип: VT_BOOL<br /><br /> И ЗАПИСЬ: Чтение и запись<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание. Определяет, является ли данные, полученные в качестве DBTYPE_VARIANT или DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: Возвращается тип столбца dbtype_sqlvariant в котором случае буфера будет сохраняется структура SSVARIANT.<br /><br /> VARIANT_FALSE: Тип столбца возвращается DBTYPE_VARIANT и буфера будет иметь структура VARIANT.|  
   
 ## <a name="see-also"></a>См. также  
  [Типы данных &#40;OLE DB&#41;](data-types-ole-db.md)  

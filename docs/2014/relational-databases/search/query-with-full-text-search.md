@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 244161359910896533a1d7179f2ce80b5cb03d86
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046166"
 ---
 # <a name="query-with-full-text-search"></a>Запрос с полнотекстовым поиском
   Для определения полнотекстового поиска в полнотекстовых запросах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используются полнотекстовые предикаты (CONTAINS и FREETEXT) и функции (CONTAINSTABLE и FREETEXTTABLE). Эти предикаты и функции поддерживают расширенный синтаксис [!INCLUDE[tsql](../../includes/tsql-md.md)] , который поддерживает разнообразные формы выражений запроса. Для создания полнотекстовых запросов нужно знать, когда и как использовать полнотекстовые предикаты и функции.  

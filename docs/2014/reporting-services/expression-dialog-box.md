@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 074932c980ab047d734c21dfe8ba03bdb4b12393
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181460"
 ---
 # <a name="expression-dialog-box"></a>Диалоговое окно «Выражение»
   Используйте **выражение** диалоговое окно, чтобы написать [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] свойств элемента выражения для отчетов. Выражения можно использовать для задания многих свойств, в том числе цвета, шрифта, границ. Во время выполнения обработчик отчета вычисляет выражения и заменяет их результатами значения свойств.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a3fba818dbedfe7d21f3b3a9527ed3b83f085ef
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63055170"
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016"></a>Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "52407391"
   
 -   Сервер в [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] режиме. Office Online Server будет использовать экземпляр служб SQL Server Analysis Services в качестве сервера [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Службы Analysis Services могут работать на локальном сервере SharePoint или на удаленном компьютере. Эти службы нельзя установить на сервер Office Online Server.  
   
--   **Разрешения:** Чтобы установить [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)], текущий пользователь должен иметь права администратора на компьютере и в группе администраторов фермы SharePoint.  
+-   **Разрешения**: Чтобы установить [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)], текущий пользователь должен иметь права администратора на компьютере и в группе администраторов фермы SharePoint.  
   
 -   Дополнительные сведения о требованиях и необходимых условиях для [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] см. в статье [Требования к оборудованию и программному обеспечению для сервера служб Analysis Services в режиме интеграции с SharePoint](http://msdn.microsoft.com/library/fb86ca0a-518c-4c61-ae78-7680c57fae1f).  
   

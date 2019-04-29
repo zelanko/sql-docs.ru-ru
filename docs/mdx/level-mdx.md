@@ -1,5 +1,5 @@
 ---
-title: Level (многомерные Выражения) | Документы Microsoft
+title: Level (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8406d02e167258901c3a6ce9ed3a1d7de935df54
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048518"
 ---
 # <a name="level-mdx"></a>Level (многомерные выражения)
 
@@ -29,11 +29,11 @@ Member_Expression.Level
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Member_Expression.*  
+ *Member_Expression*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
 ### <a name="examples"></a>Примеры  
- В следующем примере используется **уровень** функция, возвращающая все месяцы в кубе Adventure Works.  
+ В следующем примере используется **уровень** функция возвращаются все месяцы в кубе Adventure Works.  
   
 ```  
 SELECT[Date].[Fiscal].[Month].[February 2002].Level.Members ON 0,  
@@ -41,7 +41,7 @@ SELECT[Date].[Fiscal].[Month].[February 2002].Level.Members ON 0,
 FROM [Adventure Works]  
 ```  
   
- В следующем примере используется **уровень** функция, возвращающая имя уровня для элемента All-Purpose Bike Stand в иерархии атрибута Model Name в кубе Adventure Works.  
+ В следующем примере используется **уровень** функция возвращает имя уровня для элемента All-Purpose Bike Stand в иерархии атрибута Model Name в кубе Adventure Works.  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -51,6 +51,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

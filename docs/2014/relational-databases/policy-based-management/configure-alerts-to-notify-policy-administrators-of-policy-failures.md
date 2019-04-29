@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 57eb4f021a25fa2fa559fa7ff21d12bb621cc53a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126914"
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>Настройка предупреждений для уведомления администраторов политик об ошибках политик
   Если при управлении на основе политик в одном из трех автоматизированных режимов оценки возникает нарушение политики, то сообщение об этом записывается в журнал событий. Для уведомления о записи этого сообщения в журнал событий можно создать предупреждение, определяющее сообщение и выполняющее действие. Предупреждение должно определять сообщения, как показано в следующей таблице.  

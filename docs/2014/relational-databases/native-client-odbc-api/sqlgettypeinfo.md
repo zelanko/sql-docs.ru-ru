@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60c4c4d364f9c07e9ca241dd357535f7f7acb42d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046702"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Отчеты драйвер ODBC для собственного клиента, дополнительный столбец USERTYPE в результирующем наборе `SQLGetTypeInfo`. USERTYPE возвращает определение типа данных DB-Library. Этот столбец полезен разработчикам, которые переносят существующие приложения DB-Library в ODBC.  

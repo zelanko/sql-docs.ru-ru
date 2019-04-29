@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 05cc6dc2647b5297b8d7176cd4bc70261b78cb71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181412"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
 >  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: полный  
+ Поддержка: Полное  
   
- Соответствия API ODBC: 1 уровень  
+ Соответствие API ODBC: уровне 1  
   
  Возвращает сведения о типах данных, поддерживаемых источником данных. Драйвер возвращает сведения в результирующем наборе SQL. В следующей таблице перечислены типы данных ODBC и соответствующие типы данных Visual FoxPro.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47733062"
 |SQL_BIT|Логические|  
 |SQL_CHAR|Символ|  
 |SQL_DATE|Дата|  
-|SQL_DECIMAL|Числовой|  
+|SQL_DECIMAL|Numeric|  
 |SQL_DOUBLE|Double|  
 |SQL_FLOAT|Double|  
 |SQL_INTEGER|Целочисленный|  
@@ -46,7 +46,7 @@ ms.locfileid: "47733062"
 |SQL_REAL|Double|  
 |SQL_SMALLINT|Целочисленный|  
 |SQL_TIME|Не поддерживается. Имеется не Visual FoxPro *время* типа.|  
-|SQL_TIMESTAMP|DateTime|  
+|SQL_TIMESTAMP|Datetime|  
 |SQL_TINYINT|Целочисленный|  
 |SQL_VARBINARY|MEMO (двоичный) *, общие|  
 |SQL_VARCHAR|Символ|  

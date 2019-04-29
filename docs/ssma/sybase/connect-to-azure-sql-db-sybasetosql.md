@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 057a39fd393be6cce9232d787b0d110a4be2035a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060997"
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Подключение к базе данных SQL Azure (SybaseToSQL)
 Используйте Connect для базы данных SQL Azure диалоговое окно для подключения к базе данных Azure SQL DB, которые требуется перенести.  
@@ -61,7 +61,7 @@ SSMA рекомендует зашифрованное подключение к
   
 3.  Во время создания базы данных следующие два параметра, назначается в качестве входных данных:  
   
-    1.  **Имя базы данных:** введите имя базы данных.  
+    1.  **Имя базы данных:** Введите имя базы данных.  
   
-    2.  **Размер базы данных:** выбрать размер базы данных, который необходимо создать в учетной записи базы данных SQL Azure.  
+    2.  **Размер базы данных:** Выберите размер базы данных, который необходимо создать в учетной записи базы данных SQL Azure.  
   

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ae8fddf7e008c1c97c30c18deb2d8aec60b77415
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185742"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Просмотр элементов отчета и назначение папки по умолчанию (построитель отчетов и службы SSRS)
   Самым простым способом создания отчетов является добавление существующих элементов отчета, таких как таблицы и диаграммы, к отчету из галереи элементов отчетов. При добавлении элемента отчета к отчету добавляется также все, что необходимо для его выполнения. Например, все элементы отчета, используемые для отображения данных, зависят от набора данных, т. е. запроса и соединения с источником данных. После добавления элемента отчета к отчету ее можно изменить в соответствии с требованиями.  

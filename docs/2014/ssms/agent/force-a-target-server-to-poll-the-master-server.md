@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044059"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>Принудительный опрос главного сервера целевым сервером
   В этом подразделе описана реализация принудительного опроса главного сервера целевым сервером. Целевой сервер должен быть зарегистрирован на главном.  
@@ -30,9 +30,9 @@ ms.locfileid: "52764216"
 > [!NOTE]  
 >  Если главный сервер недоступен в момент, когда целевой сервер пытается передать состояние задания, то сведения о состоянии задания помещаются в очередь, пока главный сервер не станет доступен.  
   
--   **Перед началом работы**  [Ограничения](#Restrictions), [безопасности](#Security)  
+-   **Перед началом:**  [Ограничения](#Restrictions), [Безопасность](#Security)  
   
--   **Для принудительного опроса главного сервера целевым сервером с помощью:**  [SQL Server Management Studio](#SSMS)  
+-   **Для принудительного опроса главного сервера целевым сервером с помощью:**  [Среда SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   

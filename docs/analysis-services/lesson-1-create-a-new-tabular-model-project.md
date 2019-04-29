@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 988a091fa7d536386cadd2ed3412213a2e608564
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63052921"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Урок 1. Создание нового проекта табличной модели
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 На этом занятии будет создан новый пустой проект табличной модели в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. После создания нового проекта можно начать добавлять данные с помощью мастера импорта таблиц. Кроме того, это занятие содержит краткое введение в среду в SSDT для создания табличных моделей.  
   
-Предполагаемое время выполнения данного занятия: **10 минут**  
+Предполагаемое время для выполнения этого занятия: **10 минут**  
   
 ## <a name="prerequisites"></a>предварительные требования  
 Этот раздел — первое занятие учебника по созданию табличных моделей. Для этого занятия необходимо иметь образца базы данных AdventureWorksDW, установленные на экземпляре SQL Server. Дополнительные сведения см. в разделе [табличное моделирование &#40;учебник по Adventure Works&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md).  

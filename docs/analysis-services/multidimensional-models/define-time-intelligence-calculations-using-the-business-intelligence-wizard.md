@@ -1,5 +1,5 @@
 ---
-title: Логика операций со временем с использованием мастера бизнес-аналитики определить | Документы Microsoft
+title: Определение вычислений логики операций со времени, используя мастер бизнес-аналитики | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2d3659fd80d09f5f0b5ec17301606b23810df3fe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043239"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>Определение вычислений логики операций со временем с использованием мастера бизнес-аналитики
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "34026921"
 ## <a name="viewing-the-time-intelligence-enhancement"></a>Просмотр расширения логики операций со временем  
  На последней странице мастера бизнес-аналитики можно просмотреть изменения, которые будут внесены в базу данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Для расширения логики операций со временем мастер изменит выбранное измерение времени, связанное представление источника данных и связанный куб (см. описание в таблице ниже).  
   
-|Объект|Изменить|  
+|Object|Изменить|  
 |------------|------------|  
 |Измерение времени|Добавляет атрибут для каждого вычисления (или представления).|  
 |Представление источника данных|Добавляет вычисляемый столбец в таблице времени для каждого нового атрибута в измерении времени.|  

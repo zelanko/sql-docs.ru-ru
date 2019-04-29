@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dbef278f3f25b572ddc44e87d60b5cdcd33058c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043829"
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>Характеристики и тип курсора
 Приложение может указать характеристики курсора вместо указания типа курсора (однопроходный, статический, управляемые набором ключей или динамического). Для этого приложение выбирает прокрутки курсора (путем установки атрибута инструкции SQL_ATTR_CURSOR_SCROLLABLE) и чувствительности (путем установки атрибута инструкции SQL_ATTR_CURSOR_SENSITIVITY) перед открытием курсора в инструкции дескриптор. Драйвер затем выбирает тип курсора, который наиболее эффективным образом предоставляет характеристики, запрошенное приложение.  

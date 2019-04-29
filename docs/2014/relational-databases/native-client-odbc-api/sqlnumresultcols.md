@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 88edec63a97ff6c463f07add895ff8399fc4268a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046759"
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
   Для выполненных инструкций драйверу ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нет необходимости обращаться к серверу для сообщения о числе столбцов результирующего набора. В этом случае `SQLNumResultCols` не вызывает обращения к серверу. Как и [SQLDescribeCol](sqldescribecol.md) и [SQLColAttribute](sqlcolattribute.md), вызов `SQLNumResultCols` для подготовленных, но не выполненных инструкций приводит к обращению к серверу.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 49590cafe124410e74c150d228fbc621db93f779
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023413"
 ---
 # <a name="log-file-auto-grow-event-class"></a>Log File Auto Grow, класс событий
   Класс событий **Log File Auto Grow** указывает, что файл журнала увеличился автоматически. Это событие не происходит при явном увеличении файла журнала с помощью инструкции ALTER DATABASE.  

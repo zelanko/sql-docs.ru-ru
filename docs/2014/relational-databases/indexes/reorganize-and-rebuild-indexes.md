@@ -31,11 +31,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: af52376ae4749d42c8d746a64518632e6a047591
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63036238"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Реорганизация и перестроение индексов
   В этом разделе описывается реорганизация или перестроение фрагментированного индекса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] автоматически поддерживает состояние индексов при выполнении операций вставки, обновления или удаления в отношении базовых данных. Со временем эти изменения могут привести к тому, что данные в индексе окажутся разбросанными по базе данных (фрагментированными). Фрагментация имеет место в тех случаях, когда в индексах содержатся страницы, для которых логический порядок, основанный на значении ключа, не совпадает с физическим порядком в файле данных. Значительно фрагментированные индексы могут серьезно снижать производительность запросов и служить причиной замедления откликов приложения.  
@@ -44,7 +44,7 @@ ms.locfileid: "53367736"
   
  **В этом разделе**  
   
--   **Перед началом работы**  
+-   **Перед началом:**  
   
      [Выявление фрагментации](#Fragmentation)  
   

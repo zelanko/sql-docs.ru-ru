@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d593bd3ad745f316b833b375ceaae8b764d21ec2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184985"
 ---
 # <a name="updating-data"></a>Обновление данных
 Поведение обновления и функции во многом зависит от обновления режима (тип блокировки), тип курсора и положения курсора.  

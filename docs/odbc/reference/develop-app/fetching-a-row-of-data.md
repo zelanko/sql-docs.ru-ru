@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 012e454d03a0eb4ad16095353351d67e50d9586a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061522"
 ---
 # <a name="fetching-a-row-of-data"></a>Выборка строки данных
 Для получения строки данных, приложение вызывает **SQLFetch**. **SQLFetch** может вызываться с любого типа курсора, но только курсор перемещается в набор строк в направлении только вперед. **SQLFetch** перемещает курсор на следующую строку и возвращает данные для всех столбцов, которые были связаны с вызовами **SQLBindCol**. Когда курсор достигает конца результат задано, **SQLFetch** не вернет значение SQL_NO_DATA. Для примера вызова **SQLFetch**, см. в разделе [использование SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).  

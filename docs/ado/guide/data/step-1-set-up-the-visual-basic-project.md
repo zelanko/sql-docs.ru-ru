@@ -1,5 +1,5 @@
 ---
-title: 'Шаг 1: Настройка проекта Visual Basic | Документация Майкрософт'
+title: Шаг 1. Настройка проекта Visual Basic | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,13 +12,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce9e337a1ea45db851bafd32e0af476ae33fd3c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062810"
 ---
-# <a name="step-1-set-up-the-visual-basic-project"></a>Шаг 1. Настройка проекта Visual Basic
+# <a name="step-1-set-up-the-visual-basic-project"></a>Шаг 1. Настройка проекта Visua Basic
 В этом сценарии предполагается наличие Microsoft Visual Basic 6.0, ADO 2.5 или более поздней версии и поставщик Microsoft OLE DB для публикаций в Интернете на компьютере. Вы сначала создайте новый проект и затем добавить некоторые элементы управления в форму по умолчанию в проекте.  
   
 ### <a name="to-create-an-ado-project"></a>Чтобы создать проект ADO:  
@@ -39,4 +39,4 @@ ms.locfileid: "47798802"
   
 ## <a name="see-also"></a>См. также  
  [Сценарий публикации в Интернете](../../../ado/guide/data/internet-publishing-scenario.md)   
- [Шаг 2. Инициализация главного списка](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)
+ [Шаг 2. Инициализация главного списка](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)

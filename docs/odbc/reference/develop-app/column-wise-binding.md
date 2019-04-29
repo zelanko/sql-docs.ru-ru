@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f5a8237e32479bed033b8b9a8003726556a3b25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126336"
 ---
 # <a name="column-wise-binding"></a>Привязка на уровне столбца
 При использовании привязки на уровне столбца, приложение привязывает один или два или в некоторых случаях три, массивы с каждым столбцом, для которого будет возвращаться данных. Первый массив содержит значения данных, а второй массив содержит буфер длины/индикатора. Индикаторы и значений длины могут храниться в отдельных буферах, установка полей дескриптора SQL_DESC_INDICATOR_PTR и SQL_DESC_OCTET_LENGTH_PTR разные значения; Если это сделано, привязывается третий массив. Каждый массив содержит столько элементов, сколько строк в наборе строк.  

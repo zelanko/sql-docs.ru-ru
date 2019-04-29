@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76fbb95117b1aae982242f24dc2cb1e815bc2356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063100"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Агрегатные функции, функция CALC и ключевое слово NEW
 Формирование данных поддерживает следующие функции. — Имя, назначенное в главе, которая содержит столбец обрабатываемом *Глава alias*.  
@@ -60,7 +60,7 @@ ms.locfileid: "47625932"
 |DBTYPE_I8|adBigInt|  
 |DBTYPE_UI8|adUnsignedBigInt|  
 |DBTYPE_GUID|adGuid|  
-|DBTYPE_BYTES|adLongVarBinary adBinary AdVarBinary,|  
+|DBTYPE_BYTES|adBinary, AdVarBinary, adLongVarBinary|  
 |DBTYPE_STR|adChar, adVarChar, adLongVarChar|  
 |DBTYPE_WSTR|adWChar, adVarWChar, adLongVarWChar|  
 |DBTYPE_NUMERIC|adNumeric|  

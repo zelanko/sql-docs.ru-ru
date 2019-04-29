@@ -18,11 +18,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1819fe94f3fac39d1697f2d4ee08738020e57d17
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63058140"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>параметры конфигурации служб Reporting Services (SSRS)
   Для задания параметров, определяющих способ установки и настройки сервера отчетов, служит страница **Настройка служб Reporting Services** мастера установки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Доступность того или иного параметра установки зависит от того, какие параметры были выбраны на странице **Выбор компонентов** , а также от того, устанавливается ли одновременно с сервером отчетов также и локальный экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
@@ -49,7 +49,7 @@ ms.locfileid: "53375686"
 #### <a name="install-only"></a>Установить только  
  Устанавливает программные файлы сервера отчетов, создает учетную запись службы сервера отчетов и регистрирует поставщик данных инструментария управления Windows (WMI) сервера отчетов. Этот параметр установки называется «Только файлы». Выберите этот параметр, если использование конфигурации по умолчанию нежелательно. Это единственный доступный параметр, если невозможно установить конфигурацию по умолчанию или устанавливается кластер отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , включающий службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Дополнительные сведения об установке только файлов см. в разделе [режиме установки (службы Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199093) (https://go.microsoft.com/fwlink/?LinkId=199093).  
   
- После завершения программы установки, прежде чем сервер отчетов можно будет использовать, следует создать базу данных сервера отчетов и настроить сервер отчетов. Чтобы настроить сервер отчетов и создать базу данных, воспользуйтесь диспетчером конфигурации служб Reporting Services. Дополнительные сведения см. в разделе [как: Создать базу данных сервера отчетов (Настройка служб Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094) и [Настройка подключения к базе данных сервера отчетов](https://go.microsoft.com/fwlink/?LinkId=199095) (https://go.microsoft.com/fwlink/?LinkId=199095).  
+ После завершения программы установки, прежде чем сервер отчетов можно будет использовать, следует создать базу данных сервера отчетов и настроить сервер отчетов. Чтобы настроить сервер отчетов и создать базу данных, воспользуйтесь диспетчером конфигурации служб Reporting Services. Дополнительные сведения см. в разделе [Как Создать базу данных сервера отчетов (Настройка служб Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094) и [Настройка подключения к базе данных сервера отчетов](https://go.microsoft.com/fwlink/?LinkId=199095) (https://go.microsoft.com/fwlink/?LinkId=199095).  
   
 ### <a name="reporting-services-sharepoint-mode"></a>Службы Reporting Services в режиме SharePoint  
   

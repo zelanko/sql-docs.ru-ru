@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da7d6541f7bf31920519cc7462bdfd24a5f6dc0d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067695"
 ---
 # <a name="sqlclosecursor"></a>SQLCloseCursor
   **SQLCloseCursor** заменяет [SQLFreeStmt](sqlfreestmt.md) с *параметр* значение SQL_CLOSE. По получении функции **SQLCloseCursor**драйвер собственного клиента ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отбрасывает строки ожидающих результирующих наборов. Обратите внимание, что содержащиеся в инструкции привязки параметров и столбцов (если они существуют) **SQLCloseCursor**оставляет без изменений.  

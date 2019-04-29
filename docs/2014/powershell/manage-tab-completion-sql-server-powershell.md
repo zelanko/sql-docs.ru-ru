@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ec946a26c898c4ed66bd60e1ad71e69c008766df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922955"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>Управление завершением по нажатию клавиши Tab (SQL Server PowerShell)
   В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell введены три системные переменные (`$SqlServerMaximumTabCompletion`, `$SqlServerMaximumChildItems` и `$SqlServerIncludeSystemObjects`) для управления функцией завершения Windows PowerShell по клавише TAB. Функция завершения по клавише TAB позволяет сократить объем вводимого текста, поскольку возвращает таблицы элементов, имена которых начинаются с набранной строки.  

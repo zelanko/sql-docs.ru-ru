@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 661752a55b808b010f8a111bcc18e47048a3999b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065111"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Собственные сообщения об ошибках драйвера ODBC для Visual FoxPro
 В следующих таблицах перечислены сообщения об ошибках, представленный на драйвер ODBC для Visual FoxPro.  
@@ -167,7 +167,7 @@ ms.locfileid: "47677242"
 |492|Ключевые столбцы не указаны для таблицы "обновление" \\ *значение*\\. Свойство KeyFieldList курсора.|  
 |493|Отсутствует параметр SQL.|  
 |494|Определение представления было изменено.|  
-|495|Предупреждение: Ключ, определенный свойством KeyField для таблицы *значение* не является уникальным.|  
+|495|Предупреждение: Ключ, определяемую свойством KeyField для таблицы *значение* не является уникальным.|  
 |498|Инструкции SQL SELECT является недопустимым.|  
 |499|Параметр SQL *значение* является недопустимым.|  
   

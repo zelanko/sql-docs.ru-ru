@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2a52ca419f3f06e4156c278cb0ba8999c24e09ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63071140"
 ---
 # <a name="execute-method-ado-connection"></a>Метод Execute (объект Connection ADO)
 Выполняет указанный запрос, инструкцию SQL, хранимая процедура или поставщика текста.  
@@ -46,7 +46,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  Необязательный параметр. Объект **Long** переменной, в которой поставщик возвращает количество записей, затронутых операцией.  
   
  *Параметры*  
- Необязательный параметр. Объект **Long** значение, указывающее, как поставщик должен оценить аргумент CommandText. Может быть битовой маской, из одного или нескольких [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) или [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значения.  
+ Необязательный. Объект **Long** значение, указывающее, как поставщик должен оценить аргумент CommandText. Может быть битовой маской, из одного или нескольких [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) или [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значения.  
   
  **Примечание** используйте **ExecuteOptionEnum** значение **adExecuteNoRecords** для повышения производительности, сводя к минимуму внутренней обработки и для приложений, переносе из Visual Basic 6.0.  
   

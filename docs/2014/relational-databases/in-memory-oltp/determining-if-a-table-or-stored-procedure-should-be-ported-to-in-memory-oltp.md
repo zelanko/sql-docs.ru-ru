@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63072390"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Определение, должна ли таблица или хранимая процедура быть перенесена в In-Memory OLTP
   Сборщик данных о производительности транзакции в [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] позволяет оценить, если In-Memory OLTP производительность приложения базы данных. В отчете об анализе производительности транзакции также показано, сколько работы необходимо выполнить, чтобы включить In-Memory OLTP в приложении. После определения дисковой таблицы, которая переносится в In-Memory OLTP, можно для упрощения миграции таблицы использовать [советник по оптимизации для выполнения в памяти](memory-optimization-advisor.md). Аналогичным образом [Native Compilation Advisor](native-compilation-advisor.md) позволяет перенести хранимую процедуру в изначально скомпилированную хранимую процедуру.  

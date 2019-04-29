@@ -1,5 +1,5 @@
 ---
-title: 'События класса TM: Класс события Rollback Tran Starting | Документация Майкрософт'
+title: TM. Класс события Rollback Tran Starting | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a761d04ebb9bef40deacb19081d7dfdf6a329ea4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061273"
 ---
-# <a name="tm-rollback-tran-starting-event-class"></a>События класса TM: Класс события Rollback Tran Starting
-  События класса TM: Rollback Tran Starting указывает на выполнение запроса ROLLBACK TRANSACTION. Клиент направляет этот запрос через интерфейс управления транзакциями. Столбец EventSubClass указывает, будет ли начата новая транзакция после отката текущей транзакции.  
+# <a name="tm-rollback-tran-starting-event-class"></a>TM. Класс события Rollback Tran Starting
+  TM: ROLLBACK Tran Starting, класс событий указывает, что запрос ROLLBACK TRANSACTION начался. Клиент направляет этот запрос через интерфейс управления транзакциями. Столбец EventSubClass указывает, будет ли начата новая транзакция после отката текущей транзакции.  
   
-## <a name="tm-rollback-tran-starting-event-class-data-columns"></a>События класса TM: Столбцы данных класса событий TM:Rollback Tran Starting  
+## <a name="tm-rollback-tran-starting-event-class-data-columns"></a>TM. ROLLBACK Tran Starting столбцы данных класса событий  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  

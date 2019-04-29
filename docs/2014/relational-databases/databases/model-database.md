@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916950"
 ---
 # <a name="model-database"></a>База данных model
   База данных **model** используется в качестве шаблона для всех баз данных, созданных для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Так как база данных **tempdb** создается при каждом запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , база данных **model** всегда должна существовать в системе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Содержимое базы данных **model** (включая параметры базы данных) полностью копируется в новую базу данных. Некоторые параметры базы данных **model** используются также при создании новой базы данных **tempdb** во время загрузки, поэтому наличие базы данных **model** в системе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обязательно.  

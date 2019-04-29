@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3e8545fe1d612991eb79a7e75e896089b525a996
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047137"
 ---
 # <a name="sysdmosmemorybrokers-transact-sql"></a>sys.dm_os_memory_brokers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "48906354"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|**int**|Идентификатор пула ресурсов, если он связан с пулом регулятора ресурсов.|  
-|**memory_broker_type**|**nvarchar(60)**|Тип брокера памяти. В настоящее время существует три типа брокеров памяти в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], перечисленных ниже, с их компонентами.<br /><br /> **MEMORYBROKER_FOR_CACHE** : память, выделенную для использования кэшированных объектов (кэш не буферный пул).<br /><br /> **MEMORYBROKER_FOR_STEAL** : память, заимствованная из буферного пула. Эта память недоступна для повторного использования другими компонентами до тех пор, пока она не будет освобождена текущим владельцем.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : память, зарезервированная для будущего использования, выполняемыми в настоящий момент запросы.|  
+|**memory_broker_type**|**nvarchar(60)**|Тип брокера памяти. В настоящее время существует три типа брокеров памяти в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], перечисленных ниже, с их компонентами.<br /><br /> **MEMORYBROKER_FOR_CACHE** : Объем памяти, выделенной для использования с кэшированными объектами (не буферный пул кэша).<br /><br /> **MEMORYBROKER_FOR_STEAL** : Память, заимствованная из буферного пула. Эта память недоступна для повторного использования другими компонентами до тех пор, пока она не будет освобождена текущим владельцем.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : Памяти, зарезервированной для использования в будущем, в данный момент запросы.|  
 |**allocations_kb**|**bigint**|Объем памяти, в килобайтах (КБ), выделенный для этого типа брокера.|  
 |**allocations_kb_per_sec**|**bigint**|Интенсивность операций выделения памяти, в килобайтах (КБ) в секунду. Это значение может быть отрицательным для операций освобождения выделенной памяти.|  
 |**predicted_allocations_kb**|**bigint**|Прогнозируемый объем выделенной памяти для брокера. Основывается на закономерности использования памяти.|  

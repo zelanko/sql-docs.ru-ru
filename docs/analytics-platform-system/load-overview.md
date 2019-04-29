@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f4551f77b1348ece34dc87dc8abeb91e27290d00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183480"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>Загрузка данных в Parallel Data Warehouse
 Можно загрузить или вставки данных в SQL Server Parallel Data хранилища (PDW) с помощью службы Integration Services, [служебная программа bcp](../tools/bcp-utility.md), **dwloader** загрузчика командной строки или инструкции SQL INSERT.  

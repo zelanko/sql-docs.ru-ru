@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f3d98314bf142340d97d218b93670a14c9f56e3a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923014"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Создание резервных копий файлов и файловых групп (SQL Server)
   В этом разделе описывается создание резервной копии файлов и файловых групп в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или PowerShell. Если размер базы данных и требования по производительности делают полное резервное копирование базы данных нецелесообразным, можно создать резервную копию файлов. *Резервная копия файлов* содержит данные одного или нескольких файлов или файловых групп. Дополнительные сведения о резервных копиях файлов см. в разделах [Полные резервные копии файлов (SQL Server)](full-file-backups-sql-server.md) и [Разностные резервные копии (SQL Server)](differential-backups-sql-server.md).  

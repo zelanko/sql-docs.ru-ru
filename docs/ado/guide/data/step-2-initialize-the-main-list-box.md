@@ -1,5 +1,5 @@
 ---
-title: Этап 2. Инициализация главного списка | Документация Майкрософт
+title: Шаг 2. Инициализация главного списка | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,13 +12,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 90b7d50d6cb0a6fd8c0814d1b4bcbb631e5e8376
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062800"
 ---
-# <a name="step-2-initialize-the-main-list-box"></a>Этап 2. Инициализация главного списка
+# <a name="step-2-initialize-the-main-list-box"></a>Шаг 2. Инициализация главного списка
 Чтобы объявить глобальные объекты набора записей и записи, вставьте следующий код в (Общие) (объявления) для Form1:  
   
 ```  

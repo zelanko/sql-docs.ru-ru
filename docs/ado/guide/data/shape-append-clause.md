@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13a91d6b8512b2c1287c3cc8e36e43a1317022d7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062860"
 ---
 # <a name="shape-append-clause"></a>Предложение APPEND для формирования данных
 Предложение APPEND для формирования команды добавляет столбец или столбцы для **записей**. Часто, эти столбцы являются столбцами Глава, указывающие на дочерний элемент **записей**.  
@@ -43,7 +43,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
   
 -   Таблица ключевое слово, за которым следует имя таблицы в поставщике данных.  
   
- *родительский alias*  
+ *parent-alias*  
  Дополнительный псевдоним, который ссылается на родительский **записей**.  
   
  *Список столбцов*  
@@ -87,7 +87,7 @@ SHAPE [parent-command [[AS] parent-alias]]
  *PARAM-number*  
  См. в разделе [параметризованных команд](../../../ado/guide/data/operation-of-parameterized-commands.md).  
   
- *Глава alias*  
+ *chapter-alias*  
  Псевдоним, который ссылается на столбец добавляется к родительскому элементу.  
   
 > [!NOTE]

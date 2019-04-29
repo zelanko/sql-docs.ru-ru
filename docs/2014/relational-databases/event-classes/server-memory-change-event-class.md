@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 358d468c900d367496cd904b4f401b0948af0853
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044159"
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change, класс событий
   Событие класса **Server Memory Change** происходит, когда использование памяти экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] увеличивается или уменьшается на 1 МБ или на 5 % от максимального объема памяти сервера, в зависимости от того что больше.  

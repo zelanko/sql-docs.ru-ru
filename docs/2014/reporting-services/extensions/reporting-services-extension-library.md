@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d09464ce4a61903a3e9b74711482d2ce07bd0c4e
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62985753"
 ---
 # <a name="reporting-services-extension-library"></a>Библиотека модулей служб Reporting Services
   Библиотека модулей служб Reporting Services — это набор классов, интерфейсов и типов значений, включенных в службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Эта библиотека предоставляет доступ к системным функциям и предназначена в качестве основы для расширения компонентов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с помощью приложений [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  

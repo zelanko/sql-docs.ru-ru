@@ -13,18 +13,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 07147f530cf9860514ad6fb830205d14361d539f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033537"
 ---
 # <a name="large-clr-user-defined-types"></a>Большие определяемые пользователем типы данных CLR
   В SQL Server 2005 определяемые пользователем типы данных (UDT) в среде CLR были ограничены размером в 8000 байт. Это ограничение было снято в [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] и более поздних версиях. Теперь определяемые пользователем типы данных CLR обрабатываются подобно типам больших объектов (LOB). То есть объекты определяемого пользователем типа размером не более 8000 байт ведут себя так же, как в SQL Server 2005, но такие же объекты большего размера поддерживаются и сообщают о своем размере как о неограниченном.  
   
  Дополнительные сведения см. в разделе [Large CLR User-Defined типы &#40;OLE DB&#41; ](../ole-db/large-clr-user-defined-types-ole-db.md) и [Large CLR User-Defined типы &#40;ODBC&#41;](../odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="use-cases"></a>Способы применения  
+## <a name="use-cases"></a>Варианты использования  
  Для ODBC поддержка больших объектов определяемого пользователем типа включает в себя возможность отправить значения определяемого пользователем типа по частям как параметры с данными времени выполнения. Это делается с помощью SQLPutData.  
   
  Для OLE DB поддержка больших пользовательских типов включает в себя возможность передать потоком значения пользовательского типа на сервер и обратно с помощью привязки ISequentialStream.  

@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e0807838468e00ea9d6a323ac5ab1542ac1e06d6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185929"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter-report-builder-and-ssrs"></a>Добавление, изменение и удаление допустимых значений параметра отчета (построитель отчетов и службы SSRS)
   После создания параметра отчета можно указать список допустимых значений, которые будут выведены для пользователя. Список допустимых значений ограничивает значения, которые может выбрать пользователь, набором допустимых значений.  

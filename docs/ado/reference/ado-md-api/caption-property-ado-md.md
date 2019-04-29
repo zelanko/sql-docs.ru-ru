@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c1481faee1574f74e786a561c25ceb2ce8c4876
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062595"
 ---
 # <a name="caption-property-ado-md"></a>Свойство Caption (многомерные объекты ADO)
 Указывает заголовок текста, используемый при отображении [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md) или [член](../../../ado/reference/ado-md-api/member-object-ado-md.md) объекта.  

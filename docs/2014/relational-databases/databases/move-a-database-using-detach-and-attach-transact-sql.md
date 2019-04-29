@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917100"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Перенос базы данных путем отсоединения и присоединения (язык Transact-SQL)
   В этом разделе описывается перемещение отсоединенной базы данных в другое местоположение и ее повторное присоединение к тому же или другому экземпляру сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Однако рекомендуется переносить базы данных с помощью процедуры запланированного переноса ALTER DATABASE, а не путем отсоединения и присоединения. Дополнительные сведения см. в статье [Move User Databases](move-user-databases.md).  
@@ -60,7 +60,7 @@ ms.locfileid: "54136104"
     GO  
     ```  
   
-2.  Скопируйте любым образом файлы базы данных (AdventureWorks208R2_Data.mdf и AdventureWorks208R2_log) в папки «C:\MySQLServer\AdventureWorks208R2_Data.mdf» и «C:\MySQLServer\AdventureWorks208R2_Log.ldf» соответственно.  
+2.  С помощью метода по своему усмотрению, скопируйте файлы базы данных (AdventureWorks208R2_Data.mdf и AdventureWorks208R2_log): C:\MySQLServer\AdventureWorks208R2_Data.mdf and C:\MySQLServer\AdventureWorks208R2_Log.ldf, respectively.  
   
     > [!IMPORTANT]  
     >  При работе с производственными базами данных помещайте базу данных и журналы транзакций на отдельные диски.  

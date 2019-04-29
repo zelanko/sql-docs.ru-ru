@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 81828ba434bbfeae72083859725701518a8950f6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127737"
 ---
 # <a name="using-diffgrams-to-modify-data-in-sqlxml-40"></a>Использование дельт для изменения данных в SQLXML 4.0
   Формат DiffGram впервые появился в **набора данных** компонент [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. На платформе .NET Framework можно создать дельты и использовать их для изменения данных в таблицах в базах данных Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

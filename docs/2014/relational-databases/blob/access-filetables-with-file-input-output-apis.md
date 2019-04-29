@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8c12736694451d1a6fd1dff34c4f883cb45694e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876916"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Доступ к таблицам FileTable с помощью API-интерфейсов ввода-вывода файлов
   Описание работы файловой системы ввода-вывода с таблицами FileTable.  
@@ -129,6 +129,6 @@ ms.locfileid: "48082212"
  [выполнить загрузку файлов в таблицу FileTables](load-files-into-filetables.md)   
  [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)   
  [Доступ к таблицам FileTable с помощью Transact-SQL](access-filetables-with-transact-sql.md)   
- [Инструкции DDL, функции, хранимые процедуры и представления для FileTable](../views/views.md)  
+ [Инструкции FileTable языка DDL, функции, хранимые процедуры и представления](../views/views.md)  
   
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0865502928e98329764ae6085ab2b67aa26f0517
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128031"
 ---
 # <a name="drop-table-command"></a>Команда DROP TABLE
 Удаляет таблицу из базы данных, указанной с источником данных и удаляет его с диска.  

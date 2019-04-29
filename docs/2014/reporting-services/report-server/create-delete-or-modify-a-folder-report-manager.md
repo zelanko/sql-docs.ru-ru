@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b5db8ffafa6697f085d9594939d80140865efe5a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010740"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>создать, изменить или удалить папку (диспетчер отчетов)
   Для упорядочения элементов и управления элементами, публикуемыми на сервере отчетов, можно создать папки. Создание папок поможет пользователям находить интересующие их отчеты. Для диспетчеров содержимого папки обеспечивают инфраструктуру для применения разрешений. Можно создать назначения ролей для определенных папок, чтобы ограничить доступ к отчетам, которые находятся на стадии разработки или не подлежат широкому распространению.  

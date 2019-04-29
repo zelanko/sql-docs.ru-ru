@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be88f92c6dbf2a2fc0f04c3f29c54816174aafa0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033668"
 ---
 # <a name="create-statistics"></a>Создание статистики
   Создать статистику по оптимизации запроса для одного или нескольких столбцов таблицы или индексированного представления в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Для большинства запросов оптимизатор уже создает необходимую статистику для формирования высококачественного плана запроса, но в некоторых случаях нужно создавать дополнительные статистические данные.  

@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2e86fff86e24668e7fe6382545e024bed1a4025
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62927104"
 ---
 # <a name="security-overview-integration-services"></a>Общие сведения о безопасности (службы Integration Services)
   Безопасность служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] обеспечивается несколькими уровнями защиты, которые составляют насыщенную и гибкую среду безопасности. Эти уровни безопасности включают в себя использование цифровых подписей, свойств уровня пакетов, ролей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и разрешений операционной системы. Большинство этих функций безопасности относятся к категории управления доступом и удостоверениями.  

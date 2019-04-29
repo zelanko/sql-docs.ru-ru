@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58d94afea9c6801d75a67f6f9136441d536eb696
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62956167"
 ---
 # <a name="add-existing-items-to-a-project"></a>Добавление существующих элементов в проект
-  Для расширения возможностей приложения в проект можно добавлять новые элементы. Существующий элемент может быть запросом или произвольным файлом. Среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] имеет два типа проектов: проект скрипта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и проект скрипта служб Analysis Services. Тип проекта определяет типы файлов запросов, которые могут быть добавлены в проект. Например, запрос [!INCLUDE[tsql](../../includes/tsql-md.md)] (SQL-файл) можно добавить в проект скрипта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но нельзя добавить в проект скрипта служб Analysis Services. Чтобы связать расширения файлов с типом проекта, см. в разделе [связывание расширения файла с редактором кода](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
+  Для расширения возможностей приложения в проект можно добавлять новые элементы. Существующий элемент может быть запросом или произвольным файлом. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] имеет два типа проектов: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проект скрипта и проект скрипта служб Analysis Services. Тип проекта определяет типы файлов запросов, которые могут быть добавлены в проект. Например, запрос [!INCLUDE[tsql](../../includes/tsql-md.md)] (SQL-файл) можно добавить в проект скрипта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но нельзя добавить в проект скрипта служб Analysis Services. Чтобы связать расширения файлов с типом проекта, см. в разделе [связывание расширения файла с редактором кода](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
   
 ### <a name="to-add-an-existing-query-or-a-miscellaneous-file-to-a-project"></a>Добавление существующего запроса или произвольного файла в проект  
   

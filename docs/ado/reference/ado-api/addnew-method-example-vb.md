@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7ce53a2ef95631ee27f7691cb9193424980b2956
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065283"
 ---
 # <a name="addnew-method-example-vb"></a>Пример метода AddNew (Visual Basic)
 В этом примере используется [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) метод, чтобы создать новую запись с указанным именем.  

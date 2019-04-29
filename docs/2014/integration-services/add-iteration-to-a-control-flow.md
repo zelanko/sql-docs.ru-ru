@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26c555b22ae219eeec9e0b1670f407c2504ac7f7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837282"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>Добавление итерации к потоку управления
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] включает в себя контейнер "Цикл по элементам" — элемент потока управления, который позволяет легко использовать циклы, в зависимости от определенных условий повторяющие поток управления в пакете. Дополнительные сведения см. в статье [For Loop Container](control-flow/for-loop-container.md).  
