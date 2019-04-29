@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d437313d93871de4a8f7cdb21b3c0e18df8c1f8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756983"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>Управление ролями с помощью среды SSMS (табличные службы SSAS)
   С помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]можно создавать, изменять роли развернутой табличной модели или управлять ими.  
@@ -83,6 +83,6 @@ ms.locfileid: "48218934"
 -   В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]разверните шаблон базы данных, содержащий роль, которую нужно удалить, разверните **Роли**, щелкните правой кнопкой мыши роль и выберите команду **Удалить**.  
   
 ## <a name="see-also"></a>См. также  
- [Роли &#40;табличные службы SSAS&#41;](roles-ssas-tabular.md)  
+ [Роли (табличные службы SSAS)](roles-ssas-tabular.md)  
   
   

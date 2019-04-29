@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1e942df4681595be19f31aa6a9d7c6fd3a6dd12
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766107"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>Использование значений переменных и параметров в дочернем пакете
   Данная процедура описывает создание конфигурации пакета, которая использует тип конфигурации родительской переменной. Данный тип конфигурации, позволяет дочернему пакету, который запускается из родительского, получить доступ к переменной в родительском элементе.  

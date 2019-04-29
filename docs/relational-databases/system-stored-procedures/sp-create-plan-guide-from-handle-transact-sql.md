@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 29e5bd9f5dc682862d636b49d77e6b338fe937b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724499"
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
  [ @plan_handle =] *plan_handle*  
  Определяет пакет в кэше планов. *plan_handle* — **varbinary(64)**. *plan_handle* можно получить из [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) динамическое административное представление.  
   
- [ @statement_start_offset =] { *statement_start_offset* | NULL}]  
+ [ @statement_start_offset = ] { *statement_start_offset* | NULL } ]  
  Идентифицирует начальную позицию инструкции внутри пакета, указываемого *plan_handle*. *statement_start_offset* — **int**, значение по умолчанию NULL.  
   
  Смещение инструкции соответствует столбцу statement_start_offset в [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) динамическое административное представление.  

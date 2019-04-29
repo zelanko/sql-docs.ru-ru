@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774985"
 ---
 # <a name="upgrade-database-engine"></a>Обновление [компонент ядра СУБД]
   В данном разделе содержатся сведения, которые понадобятся для понимания процесса обновления при подготовке к нему. Он состоит из следующих подразделов.  
@@ -43,7 +43,7 @@ ms.locfileid: "51018569"
 >  Если обновление производится с одного выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до другого, то сначала проверьте, поддерживаются ли в целевом выпуске все используемые функции.  
   
 > [!NOTE]  
->  При обновлении до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с предыдущей версии выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise выберите "Enterprise Edition: лицензирование по числу ядер" и "Enterprise Edition". Эти выпуски Enterprise отличаются только режимом лицензирования. Дополнительные сведения см. в разделе [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+>  При обновлении до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] из предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition, выбирать Enterprise Edition: Лицензирование и Enterprise Edition. Эти выпуски Enterprise отличаются только режимом лицензирования. Дополнительные сведения см. в разделе [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Контрольный список действий перед обновлением  
  Программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает обновление предыдущей версии до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Есть также возможность выполнить миграцию баз данных из предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Миграция может быть произведена из одного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в другой на том же компьютере или из экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на другой компьютер. Произвести ее можно следующими способами: при помощи мастера копирования баз данных, функций резервного копирования и восстановления, мастера импорта и экспорта служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], а также при помощи массового экспорта и импорта.  

@@ -72,7 +72,7 @@ ms.locfileid: "54124744"
   
 -   [Определение и изменение фильтра столбцов](publish/define-and-modify-a-column-filter.md)    
 -   [Определение и изменение статического строкового фильтра](publish/define-and-modify-a-static-row-filter.md)    
--   [Define and Modify a Parameterized Row Filter for a Merge Article](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
+-   [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
 -   [Optimize Parameterized Row Filters (Оптимизация параметризованных фильтров строк)](publish/optimize-parameterized-row-filters.md)    
 -   [Define and Modify a Join Filter Between Merge Articles](publish/define-and-modify-a-join-filter-between-merge-articles.md) (Определение и изменение фильтра соединения между статьями публикации слиянием)  
   

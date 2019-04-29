@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 148180d95bcbff1626069e72fb66dd9a3ca859c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667924"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Параметры проекта (сопоставление типов) (SybaseToSQL)
 На странице сопоставления типов **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA преобразует типы данных Sybase Adaptive Server Enterprise (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных.  
@@ -87,13 +87,13 @@ ms.locfileid: "47708642"
 |**longsysname**|**nvarchar [255]**|  
 |**money**|**money**|  
 |**National char**|**nchar**|  
-|**National char [\*.. 4000]**|**nchar [\*]**|  
+|**National char [\*.. 4000]**|**nchar[\*]**|  
 |**National char varying**|**nvarchar**|  
 |**National char varying [\*.. 4000]**|**nvarchar [\*]**|  
 |**National char varying [4001..\*]**|**nvarchar(max)**|  
 |**National char [4001..\*]**|**nvarchar(max)**|  
 |**символов национального алфавита**|**nchar**|  
-|**символов национального алфавита [\*.. 4000]**|**nchar [\*]**|  
+|**символов национального алфавита [\*.. 4000]**|**nchar[\*]**|  
 |**символов национального алфавита [4001..\*]**|**nvarchar(max)**|  
 |**изменение символов национального алфавита**|**nvarchar**|  
 |**различных национальных символов [\*.. 4000]**|**nvarchar [\*]**|  
@@ -105,7 +105,7 @@ ms.locfileid: "47708642"
 |**изменения nchar**|**nvarchar**|  
 |**nchar varying [\*.. 4000]**|**nvarchar [\*]**|  
 |**nchar varying [4001..\*]**|**nvarchar(max)**|  
-|**nchar [\*.. 4000]**|**nchar [\*]**|  
+|**nchar [\*.. 4000]**|**nchar[\*]**|  
 |**nchar [4001..\*]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
 |**числовые [\*.. \*]**|**числовые [\*]**|  
@@ -127,7 +127,7 @@ ms.locfileid: "47708642"
 |**изменения unichar**|**nvarchar**|  
 |**Изменение unichar [\*.. 4000]**|**nvarchar [\*]**|  
 |**Изменение unichar [4001..\*]**|**nvarchar(max)**|  
-|**unichar [\*.. 4000]**|**nchar [\*]**|  
+|**unichar [\*.. 4000]**|**nchar[\*]**|  
 |**unichar [4001..\*]**|**nvarchar(max)**|  
 |**unitext**|**nvarchar(max)**|  
 |**univarchar**|**nvarchar**|  

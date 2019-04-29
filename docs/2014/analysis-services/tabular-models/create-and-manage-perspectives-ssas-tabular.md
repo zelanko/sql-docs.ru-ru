@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25f8de0649f82abbcc6ceb4ac6a92844de04b4b7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795402"
 ---
 # <a name="create-and-manage-perspectives-ssas-tabular"></a>Создание перспектив и управление ими (табличные службы SSAS)
   Перспективы определяют просматриваемые подмножества модели, реализующие точки наблюдения модели, которые сосредоточены на определенном аспекте либо предназначены для конкретных деловых целей или использования в конкретном приложении. Приведенные в этом разделе задачи описывают создание и управление перспективами с помощью диалогового окна **Перспективы** конструктора моделей.  
