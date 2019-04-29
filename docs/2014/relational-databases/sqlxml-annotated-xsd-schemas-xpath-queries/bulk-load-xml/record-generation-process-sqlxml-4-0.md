@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b7192fda17360ec473956332db03ed3b4feab5bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717461"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Процесс создания записей (SQLXML 4.0)
   Массовая загрузка XML обрабатывает входные XML-данные и готовит записи для соответствующих таблиц в Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Логика массовой загрузки XML определяет, когда формируется новая запись, какие значения дочерних элементов или атрибута копировать в поля записи, и когда запись завершена и готова к отправке в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для вставки.  

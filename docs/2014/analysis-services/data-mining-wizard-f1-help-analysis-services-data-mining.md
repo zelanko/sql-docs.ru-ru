@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d90f2a1504daecf80901157b34dcaffa4220261b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689425"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>Справка F1 мастера интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
   Чтобы создать новую структуру интеллектуального анализа данных и при необходимости связанную с ней модель интеллектуального анализа данных, используется **Мастер интеллектуального анализа данных** .  
@@ -31,7 +31,7 @@ ms.locfileid: "48087764"
   
  Дополнительные сведения см. в разделе [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md).  
   
- **Мастер интеллектуального анализа данных** содержит следующие этапы.  
+  **Мастер интеллектуального анализа данных** содержит следующие этапы.  
   
 -   Выберите тип источника данных, на базе которого будет создаваться модель интеллектуального анализа данных.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "48087764"
  После создания структуры интеллектуального анализа данных и необязательной модели интеллектуального анализа данных с помощью **Конструктора моделей интеллектуального анализа данных** можно изменить их свойства.  
   
 ## <a name="see-also"></a>См. также  
- [Мастер интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
- [Конструктор интеллектуального анализа данных](data-mining/data-mining-designer.md)   
- [Создание реляционной структуры](data-mining/create-a-relational-mining-structure.md)   
+ [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [конструктор интеллектуального анализа данных](data-mining/data-mining-designer.md)   
+ [Создание реляционной структуры интеллектуального анализа данных](data-mining/create-a-relational-mining-structure.md)   
  [Выбор метода определения &#40;мастер интеллектуального анализа данных&#41;](select-the-definition-method-data-mining-wizard.md)   
  [Создание структуры интеллектуального анализа данных &#40;мастер интеллектуального анализа данных&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
  [Выберите представление источника данных &#40;мастер интеллектуального анализа данных&#41;](select-data-source-view-data-mining-wizard.md)   
