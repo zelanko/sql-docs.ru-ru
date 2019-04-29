@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 87bfaef1ad5dc4c9b1f907c27955ca3f156038a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067810"
 ---
 # <a name="results-pane-visual-database-tools"></a>Панель результатов (визуальные инструменты для баз данных)
   панель результатов отображает результаты самого последнего выполненного запроса SELECT (результаты запросов других типов отображаются в окнах сообщений). Чтобы открыть панель результатов, откройте или создайте запрос или представление или получите данные таблицы. Если панель результатов не отображается по умолчанию, в меню **Конструктор запросов** выберите пункт **Панель**и щелкните **Результаты**.  

@@ -14,18 +14,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917732"
 ---
 # <a name="create-a-database-mail-account"></a>Создание учетной записи компонента Database Mail
   Для создания учетной записи компонента Database Mail применяется **мастер настройки компонента Database Mail** или [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
--   **Перед началом работы**  [Предварительные требования](#Prerequisites)  
+-   **Перед началом:**  [Предварительные требования](#Prerequisites)  
   
--   **Чтобы создать запись компонента Database Mail, используйте:**  [Базы данных мастер конфигурации почты](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Чтобы создать запись компонента Database Mail, используйте:**  [мастера настройки компонента Database Mail](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 -   **Дальнейшие действия.**  [Дальнейшие действия по настройке компонента Database Mail](#FollowUp)  
   
@@ -84,7 +84,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> Дальнейшие действия: Следующие шаги настройки компонента Database Mail  
+##  <a name="FollowUp"></a> Дальнейшие действия. Следующие шаги настройки компонента Database Mail  
   
 -   [Создание профиля компонента Database Mail](create-a-database-mail-profile.md)  
   
