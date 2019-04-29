@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3967e3f8548a7b8ef804d054cf746243a8fb5b96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047197"
 ---
 # <a name="sysdmosloadedmodules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47794322"
 |**Предварительные выпуски**|**bit**|1 = Модуль является предварительной версией загруженного модуля.|  
 |**private_build**|**bit**|1 = Модуль является внутренней сборкой загруженного модуля.|  
 |**special_build**|**bit**|1 = Модуль является специальной сборкой загруженного модуля.|  
-|**Язык**|**int**|Язык сведений о версии модуля.|  
+|**language**|**int**|Язык сведений о версии модуля.|  
 |**Компании**|**nvarchar(256)**|Имя компании, создавшей модуль.|  
 |**Описание**|**nvarchar(256)**|Описание модуля.|  
 |**name**|**nvarchar(255)**|Имя модуля. Включает полный путь к модулю.|  

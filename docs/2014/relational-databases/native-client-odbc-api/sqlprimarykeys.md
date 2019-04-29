@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a12392f9e70fec2fae3b7790b43f12779b8868b5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046698"
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
   Таблица может содержать столбец или столбцы, которые служат уникальными идентификаторами строк и таблицы, созданные без ограничения PRIMARY KEY возвращает пустой результирующий набор для SQLPrimaryKeys. Функции ODBC [SQLSpecialColumns](sqlspecialcolumns.md) отчеты строки идентификатора кандидатами для таблицы без первичных ключей.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2c8afa1fbbb51947bef28ae45cabd445aaf0bf2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046437"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Обновление приложения с переходом от компонентов MDAC к собственному клиенту SQL Server
   Между собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и компонентами доступа к данным MDAC существует несколько различий; начиная с Windows Vista, компоненты доступа к данным стали называться компонентами доступа к данным Windows, или Windows DAC. Хотя обе программы реализуют собственный доступ к базам данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует новые функции [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] особым образом, обеспечивая в то же время обратную совместимость с ранними версиями.  
@@ -108,7 +108,7 @@ ms.locfileid: "52541916"
   
 -   С помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, ITransactionLocal::BeginTransaction вызывает немедленный запуск транзакции. При использовании компонентов MDAC запуск транзакции задерживается до выполнения приложением инструкции, которой требуется транзакция в неявном режиме. Дополнительные сведения см. в разделе [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](/sql/t-sql/statements/set-implicit-transactions-transact-sql).  
   
--   Ошибки могут возникнуть при использовании [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента с System.Data.Odbc для доступа к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сервер, используются новые, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-определенные типы данных или функций. System.Data.Odbc обеспечивает универсальную реализацию ODBC и, соответственно, не предоставляет определенные функции и расширения поставщика. (Драйвер собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обновлен для обеспечения поддержки новейших функций [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].) Чтобы обойти эту проблему, можно вернуться к MDAC, или перенести System.Data.SqlClient.  
+-   Ошибки могут возникнуть при использовании [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента с System.Data.Odbc для доступа к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сервер, используются новые, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-определенные типы данных или функций. System.Data.Odbc обеспечивает универсальную реализацию ODBC и, соответственно, не предоставляет определенные функции и расширения поставщика. ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента обновляется для встроенной поддержки последнюю версию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] функции.) Чтобы обойти эту проблему, можно вернуться к MDAC, или перенести System.Data.SqlClient.  
   
  Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и MDAC поддерживают уровень изоляции транзакций read committed при использовании управления версиями строк, однако изоляцию транзакций моментальных снимков поддерживает только собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. (С точки зрения программирования уровень изоляции транзакций READ COMMITTED с управлением версиями строк представляет собой то же, что и транзакция READ COMMITTED.)  
   

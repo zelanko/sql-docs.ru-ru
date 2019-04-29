@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc16e820671aa69c15365413d44fb9bcf807236b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061551"
 ---
 # <a name="freeing-a-statement-handle-odbc"></a>Освобождение дескриптора инструкции (ODBC)
 Как упоминалось ранее, более эффективным будет повторное использование инструкций, чем их удаление и выделение. Перед выполнением новой инструкции SQL на инструкции, приложений, следует убедиться, что что текущих параметров инструкции подходят. в частности атрибуты инструкции, привязки параметров и привязки результирующего набора. Как правило, требуется параметров и результирующих наборов для старой инструкции SQL отменяется привязка (путем вызова **SQLFreeStmt** с параметрами SQL_RESET_PARAMS и SQL_UNBIND) и восстановления для новой инструкции SQL.  
